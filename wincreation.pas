@@ -1470,6 +1470,8 @@ procedure TWinCreations.PhaseSave(NouvellePhase: Integer);
       Xp := XmlCalculXp();
       Personnage.LivresAcceptes:=LivresPersonnages;
       directoryPath := GetCurrentDir+ConstCheminPersonnage+EditNomPersonnag.text;
+      // installation neuve : SAVED_CARACTERS\<version> n'existe pas encore (CreateDir n'est pas recursif)
+      ForceDirectories(GetCurrentDir+ConstCheminPersonnage);
       if not CreateDir(directoryPath) then
           ShowMessage(GetTexteLibelle('RULES-MESS_001')+' '+directoryPath)
       else

@@ -6077,7 +6077,7 @@ Procedure PdfTexteSurArc(PdfPage: TPDFPage; XC, YC, Rayon: Single; Texte: String
   end;
 
 Procedure PdfFeldoImagesEntete(PDFDoc: TPDFDocument; PdfPage: TPDFPage; DessinDebutHautEntete: Single);
-// Version sans licence uniquement (DEFAULTLICENSELESS=1) - embleme maison : disque rouge cercle d'or, "WARHAMMER" sur la
+// Embleme maison, sans les logos officiels (sans licence ou sans PICTURES) : disque rouge cercle d'or, "WARHAMMER" sur la
 // moitie haute, "FANTASY" sur la moitie basse, version du jeu (V4/V5) dans un medaillon central.
 // Memes couleurs que le reste de l'habillage (PdfTeinte : niveaux de gris, PdfEconomie : sans fond).
 var
@@ -6085,8 +6085,10 @@ var
   Version: String;
   PdfImgWarhammer, PdfImgFantasy, PdfImgUbersreik: Integer;
 begin
-  // Version avec images (PICTURES present) : les trois logos du livre, comme avant.
-  if not ImagesDefautSeul then
+  // Logos du livre quand ils sont la (PICTURES present), comme avant ; sinon l'embleme maison
+  // (version sans licence, ou installation publique sans PICTURES).
+  if (not ImagesDefautSeul) and
+     FileExists(CheminImage(GetCurrentDir + StringReplace(ConstCheminPdfUbersreik, ConstLangue, ValLangue, [rfReplaceAll]))) then
     begin
       PdfImgWarhammer  := PdfAjouteImage(PdfDoc, CheminImagePdf(GetCurrentDir+StringReplace(ConstCheminPdfWarhammer, ConstLangue, ValLangue, [rfReplaceAll])));
       PdfPage.DrawImage(152, DessinDebutHautEntete - 5, 36, 5, PdfImgWarhammer);
