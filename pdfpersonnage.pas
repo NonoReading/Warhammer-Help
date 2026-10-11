@@ -6038,16 +6038,105 @@ begin
   end;
 end;
 
+// Texte en courbe : chaque lettre est posee puis tournee (WriteText avec ADegrees) sur un cercle de
+// rayon Rayon centre en (XC, YC). Haut = arc du dessus, lu de gauche a droite, pieds des lettres
+// vers le centre ; sinon arc du dessous, lu de gauche a droite, tetes des lettres vers le centre
+// (Rayon est alors le rayon de la ligne de base). Police et couleur : celles deja reglees.
+Procedure PdfTexteSurArc(PdfPage: TPDFPage; XC, YC, Rayon: Single; Texte: String; Taille: Integer; Haut: Boolean);
+  const
+    Chasse = 0.35;   // espacement ajoute entre lettres, en mm
+  var
+    Ind: Integer;
+    Larg: array of Single;
+    Total, Cumul, Theta, Phi, PX, PY: Single;
+  begin
+    SetLength(Larg, Length(Texte));
+    Total := 0;
+    for Ind := 1 to Length(Texte) do
+      begin
+        Larg[Ind - 1] := TailleTexte(Texte[Ind], Taille) + Chasse;
+        Total := Total + Larg[Ind - 1];
+      end;
+    Cumul := 0;
+    for Ind := 1 to Length(Texte) do
+      begin
+        if Haut then
+          Theta := Pi / 2 + (Total / 2 - Cumul - Larg[Ind - 1] / 2) / Rayon
+        else
+          Theta := 3 * Pi / 2 - (Total / 2 - Cumul - Larg[Ind - 1] / 2) / Rayon;
+        if Haut then
+          Phi := Theta - Pi / 2
+        else
+          Phi := Theta - 3 * Pi / 2;
+        PX := XC + Rayon * Cos(Theta) - (Larg[Ind - 1] / 2) * Cos(Phi);
+        PY := YC + Rayon * Sin(Theta) - (Larg[Ind - 1] / 2) * Sin(Phi);
+        if Texte[Ind] <> ' ' then
+          PdfPage.WriteText(PX, PY, Texte[Ind], RadToDeg(Phi));
+        Cumul := Cumul + Larg[Ind - 1];
+      end;
+  end;
+
 Procedure PdfFeldoImagesEntete(PDFDoc: TPDFDocument; PdfPage: TPDFPage; DessinDebutHautEntete: Single);
+// Version sans licence uniquement (DEFAULTLICENSELESS=1) - embleme maison : disque rouge cercle d'or, "WARHAMMER" sur la
+// moitie haute, "FANTASY" sur la moitie basse, version du jeu (V4/V5) dans un medaillon central.
+// Memes couleurs que le reste de l'habillage (PdfTeinte : niveaux de gris, PdfEconomie : sans fond).
 var
+  XC, YC, R, RMed: Single;
+  Version: String;
   PdfImgWarhammer, PdfImgFantasy, PdfImgUbersreik: Integer;
 begin
-  PdfImgWarhammer  := PdfAjouteImage(PdfDoc, CheminImagePdf(GetCurrentDir+StringReplace(ConstCheminPdfWarhammer, ConstLangue, ValLangue, [rfReplaceAll])));
-  PdfPage.DrawImage(152, DessinDebutHautEntete - 5, 36, 5, PdfImgWarhammer);
-  PdfImgFantasy    := PdfAjouteImage(PdfDoc, CheminImagePdf(GetCurrentDir+StringReplace(ConstCheminPdfRolePlay, ConstLangue, ValLangue, [rfReplaceAll])));
-  PdfPage.DrawImage(152, DessinDebutHautEntete - 17, 36, 12, PdfImgFantasy);
-  PdfImgUbersreik  := PdfAjouteImage(PdfDoc, CheminImagePdf(GetCurrentDir+StringReplace(ConstCheminPdfUbersreik, ConstLangue, ValLangue, [rfReplaceAll])));
-  PdfPage.DrawImage(152, DessinDebutHautEntete - 55, 36, 38, PdfImgUbersreik);
+  // Version avec images (PICTURES present) : les trois logos du livre, comme avant.
+  if not ImagesDefautSeul then
+    begin
+      PdfImgWarhammer  := PdfAjouteImage(PdfDoc, CheminImagePdf(GetCurrentDir+StringReplace(ConstCheminPdfWarhammer, ConstLangue, ValLangue, [rfReplaceAll])));
+      PdfPage.DrawImage(152, DessinDebutHautEntete - 5, 36, 5, PdfImgWarhammer);
+      PdfImgFantasy    := PdfAjouteImage(PdfDoc, CheminImagePdf(GetCurrentDir+StringReplace(ConstCheminPdfRolePlay, ConstLangue, ValLangue, [rfReplaceAll])));
+      PdfPage.DrawImage(152, DessinDebutHautEntete - 17, 36, 12, PdfImgFantasy);
+      PdfImgUbersreik  := PdfAjouteImage(PdfDoc, CheminImagePdf(GetCurrentDir+StringReplace(ConstCheminPdfUbersreik, ConstLangue, ValLangue, [rfReplaceAll])));
+      PdfPage.DrawImage(152, DessinDebutHautEntete - 55, 36, 38, PdfImgUbersreik);
+      Exit;
+    end;
+  XC   := 170;
+  YC   := DessinDebutHautEntete - 18;
+  R    := 17;
+  RMed := 4.8;
+  Version := 'V4';
+  if Length(ValVersion) >= 5 then
+    Version := 'V' + Copy(ValVersion, 5, 1);
+  // disque
+  if not PdfEconomie then
+    begin
+      PdfPage.SetColor(PdfTeinte(PdfCouleurRouge), False);
+      PdfPage.DrawEllipse(XC - R, YC - R, 2 * R, 2 * R, 0, True, False);
+    end;
+  PdfPage.SetColor(PdfTeinte(PdfCouleurOr), True);
+  PdfPage.DrawEllipse(XC - R, YC - R, 2 * R, 2 * R, 1.2, False, True);
+  PdfPage.DrawEllipse(XC - R + 1.6, YC - R + 1.6, 2 * R - 3.2, 2 * R - 3.2, 0.4, False, True);
+  // diametre
+  PdfPage.DrawLine(XC - R + 1.6, YC, XC + R - 1.6, YC, 0.6);
+  // medaillon central
+  if not PdfEconomie then
+    begin
+      PdfPage.SetColor(PdfTeinte(PdfCouleurMise), False);
+      PdfPage.DrawEllipse(XC - RMed, YC - RMed, 2 * RMed, 2 * RMed, 0, True, False);
+    end;
+  PdfPage.SetColor(PdfTeinte(PdfCouleurOr), True);
+  PdfPage.DrawEllipse(XC - RMed, YC - RMed, 2 * RMed, 2 * RMed, 0.8, False, True);
+  // textes
+  PdfTaillePolice(PdfPage, PdfFontBold, ConstPoliceArial + ConstPoliceGras, 7);
+  if PdfEconomie then
+    PdfPage.SetColor(PdfTeinte(PdfCouleurEncre), False)
+  else
+    PdfPage.SetColor(PdfTeinte(PdfCouleurParchemin), False);
+  PdfTexteSurArc(PdfPage, XC, YC, 11.8, 'WARHAMMER', 7, True);
+  PdfTexteSurArc(PdfPage, XC, YC, 14.2, 'FANTASY', 7, False);
+  PdfPage.SetColor(PdfTeinte(PdfCouleurEncre), False);
+  PdfTaillePolice(PdfPage, PdfFontBold, ConstPoliceArial + ConstPoliceGras, 10);
+  PdfCentre(PdfPage, XC - RMed, XC + RMed, YC - 1.5, Version);
+  // retour a l'etat attendu par la suite de la page
+  PdfPage.SetColor(clBlack, False);
+  PdfStyleEncre(PdfPage);
+  PdfTaillePolice(PdfPage, PdfFontBack, ConstPoliceCarlson + ConstPoliceGras, 10);
 end;
 
 Procedure PdfFeldoEncombrement(PdfPage: TPDFPage; DessinDebColCompG: Integer; DessinLargeurEnc, DessinDebutHautEnc, DessinHauteurEnc: Single; DessinNbLigEnc, EncArmure, EncArme, EncDivers, BF, BE, BonusEncomb: Integer);

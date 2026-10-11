@@ -465,6 +465,10 @@
         <IgnoredMessages idx6058="True" idx5091="True" idx5071="True" idx4105="True" idx4104="True" idx3124="True" idx3123="True"/>
       </CompilerMessages>
       <CompilerPath Value="C:\lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe"/>
+      <ExecuteAfter>
+        <Command Value="C:\lazarus\fpc\3.2.2\bin\x86_64-win64\strip.exe --strip-all &quot;$(TargetFile)&quot;"/>
+        <CompileReasons Run="False"/>
+      </ExecuteAfter>
     </Other>
   </CompilerOptions>
   <Debugging>
