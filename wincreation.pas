@@ -1,0 +1,4797 @@
+unit WinCreation;
+
+{$mode ObjFPC}{$H+}
+{$ModeSwitch ArrayOperators}
+interface
+
+uses
+  PdfUtils,
+  Classes, SysUtils, StrUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, Grids,
+  ComCtrls, StdCtrls, Spin, Buttons, ChargeConstantes, ChargeEspece, GlobalFonts, ChargeRace,
+  ChargeRegle, ChargeTirageMetier, ChargeSigneAstral,
+  Types, ChargeMetier, ChargeAttribut, ChargeRaceAttribut, ChargeMetierNiveau,
+  ChargeMetierAttribut, UnitCalcul, ChargeRaceTalent, ChargeTalent,
+  ChargeTalentCreation, ChargeRaceCompetence, ChargeCompetence, ChargeRaceCreation,
+  ChargeMetierCompetence, ChargeArme, ChargeArmure, ChargeTrapping, ChargeMetierEquipement, ChargeClassEquipement, ChargeFabrication,
+  WinMetier, WinRaces, ChargeTexte, WinTalent, WinCompetence, ChargeLivre,
+  ChargeMetierSousMetier, ChargeMetierRaceChoixMetier, WinSpecialisation,
+  ChargeMetierTalent, ChargePersonnage, BGRABitmap, BGRABitmapTypes, BCButton,
+  BCLabel, WinLanceDe, WinPhysique, ChargeRacePhysique, BCLabelContour;
+
+type
+  { TWinCreations }
+  TWinCreations = class(TForm)
+    AffMetierSousMetier: TMemo;
+    MemoMetierRegles: TMemo;
+    ButtonAttributHasard: TBCButton;
+    ButtonLibellePhase: TBCButton;
+    ButtonMetierCompetenceHasard: TBCButton;
+    ButtonMetierEquipementHasard: TBCButton;
+    ButtonNomHasard: TBCButton;
+    ButtonMetierHasard: TBCButton;
+    ButtonMetierSelectionner: TBCButton;
+    ButtonMetierSousMetierSelectionner: TBCButton;
+    ButtonMetierSousMetierValider: TBCButton;
+    ButtonMetierValider: TBCButton;
+    ButtonPhaseSuivante: TBCButton;
+    ButtonRaceCompetenceHasard: TBCButton;
+    ButtonRaceHasard: TBCButton;
+    ButtonRaceSelectionner: TBCButton;
+    ButtonRaceValider: TBCButton;
+    ButtonTalentHasard: TBCButton;
+    ButtonTotalMetierCompetence: TButton;
+    ComboBoxRegle: TComboBox;
+    ComboRaceCreation: TComboBox;
+    EditMetierResultat: TSpinEdit;
+    EditMetierSousMetierResultat: TSpinEdit;
+    EditNomPersonnag: TEdit;
+    ButtonPhysique: TBCButton;
+    ButtonNom: TBCButton;
+    LabSigne: TEdit;
+    ComboBoxSigne: TComboBox;
+    ButtonSigne: TBCButton;
+    ButtonSigneSpe: TButton;
+    MemoSigne: TMemo;
+    ComboBoxSexeNom: TComboBox;
+    CheckBoxNoble: TCheckBox;
+    LabNoble: TEdit;
+    ComboBoxRegleNom: TComboBox;
+    CodesRegleNom: TStringList;   // code de la regle de chaque item du combo (0 = aucune)
+    LabPhysiqueResume: TEdit;
+    EditRaceResultat: TSpinEdit;
+    GroupBoxAttribut: TGroupBox;
+    GroupBoxMetier: TGroupBox;
+    GroupBoxRegle: TGroupBox;
+    GroupBoxRace: TGroupBox;
+    ImageScroll: TImage;
+    LabDestin: TEdit;
+    LabelAttribut: TBCLabelContour;
+    LabelCompetence: TBCLabelContour;
+    LabelMetier: TBCLabelContour;
+    LabelRace: TBCLabelContour;
+    LabelTalent: TBCLabelContour;
+    LabLivre: TEdit;
+    LabNomPersonnage: TEdit;
+    LabPointSupp: TEdit;
+    LabRegle: TEdit;
+    LabResilience: TEdit;
+    LibMetier: TEdit;
+    LibRace: TEdit;
+    ImageRace1: TImage;
+    ImageRace2: TImage;
+    ImageMetier: TImage;
+    ImageWar: TImage;
+    PageEtapes: TPageControl;
+    RadioButtonAttributHasard: TRadioButton;
+    RadioButtonAttributHasardAffecte: TRadioButton;
+    RadioButtonAttributResultat: TRadioButton;
+    RadioButtonAttributRepartition: TRadioButton;
+    RadioButtonAttributResultatAffecte: TRadioButton;
+    RadioButtonMetierChoix: TRadioButton;
+    RadioButtonMetierHasard: TRadioButton;
+    RadioButtonMetierResultat: TRadioButton;
+    RadioButtonRaceChoix: TRadioButton;
+    RadioButtonRaceHasard: TRadioButton;
+    RadioButtonRaceResultat: TRadioButton;
+    RecapTalent: TStringGrid;
+    RecapComp: TStringGrid;
+    RecapAttribut: TStringGrid;
+    TabCreationChoix: TStringGrid;
+    TabAttribut: TStringGrid;
+    TabAttributLanceDe: TStringGrid;
+    TabCreationHasard: TStringGrid;
+    TabLivre: TStringGrid;
+    TabMetier: TStringGrid;
+    TabMetierCompetence: TStringGrid;
+    TabMetierEquipement: TStringGrid;
+    TabRace: TStringGrid;
+    TabRaceCompetence: TStringGrid;
+    TabSheetAttribut: TTabSheet;
+    TabSheetCompMetier: TTabSheet;
+    TabSheetCompRace: TTabSheet;
+    TabSheetEquipement: TTabSheet;
+    TabSheetLivre: TTabSheet;
+    TabSheetMetier: TTabSheet;
+    TabSheetNom: TTabSheet;
+    TabSheetRace: TTabSheet;
+    TabSheetTalent: TTabSheet;
+    TabTalent: TStringGrid;
+    TrackBarPointSupp: TTrackBar;
+
+    // générales
+    procedure ButtonMetierSelectionnerClick({%H-}Sender: TObject);
+    procedure ButtonMetierSousMetierSelectionnerClick({%H-}Sender: TObject);
+    procedure ButtonMetierSousMetierValiderClick({%H-}Sender: TObject);
+    procedure ButtonRaceSelectionnerClick({%H-}Sender: TObject);
+    procedure ButtonTalentHasardClick(Sender: TObject);
+    procedure ComboRaceCreationSelect({%H-}Sender: TObject);
+    procedure FormCloseQuery({%H-}Sender: TObject; var {%H-}CanClose: Boolean);
+    procedure FormCreate({%H-}Sender: TObject);
+    procedure ChargerImage();
+    Procedure ChargeImageNiveau(Niveau: Integer);
+    Procedure ChargeImagesNiveau();
+    procedure LibMetierDblClick({%H-}Sender: TObject);
+    procedure LibRaceDblClick({%H-}Sender: TObject);
+    procedure RecapAttributSelectEditor({%H-}Sender: TObject; {%H-}aCol, {%H-}aRow: Integer;
+      var Editor: TWinControl);
+    procedure RecapCompDblClick({%H-}Sender: TObject);
+    procedure RecapCompSelectEditor({%H-}Sender: TObject; {%H-}aCol, {%H-}aRow: Integer;
+      var Editor: TWinControl);
+    procedure RecapTalentDblClick({%H-}Sender: TObject);
+    procedure RecapTalentSelectEditor({%H-}Sender: TObject; {%H-}aCol, {%H-}aRow: Integer;
+      var Editor: TWinControl);
+    procedure TabCreationChoixDblClick(Sender: TObject);
+    procedure TabCreationChoixPrepareCanvas(Sender: TObject; aCol,
+      aRow: Integer; aState: TGridDrawState);
+    procedure TabCreationHasardDblClick(Sender: TObject);
+    procedure TabCreationHasardPrepareCanvas(Sender: TObject; aCol,
+      aRow: Integer; aState: TGridDrawState);
+    procedure TabLivreDblClick({%H-}Sender: TObject);
+    procedure TabMetierCompetenceDblClick({%H-}Sender: TObject);
+    procedure TabMetierEquipementDblClick({%H-}Sender: TObject);
+    procedure TabRaceCompetenceDblClick({%H-}Sender: TObject);
+    procedure TabTalentDblClick({%H-}Sender: TObject);
+    Procedure TalentFenetre(Choix: Integer; CodeTalent: String);
+    Procedure CompetenceFenetre(CodeCompetence: String);
+    Procedure RaceFenetre(CodeRace: String);
+    Procedure MetierFenetre(CodeMetier: String);
+    procedure ChargerLivre();
+    Procedure ReconstruitChoixCreation();
+    Procedure AfficheChoixCreation();
+
+    // Phases
+    procedure ButtonPhaseSuivanteClick({%H-}Sender: TObject);
+    procedure ButtonPhysiqueClick({%H-}Sender: TObject);
+    procedure ButtonNomClick({%H-}Sender: TObject);
+    procedure ButtonNomHasardClick({%H-}Sender: TObject);
+    procedure ChargeReglesNom();
+    procedure TabSheetNomShow({%H-}Sender: TObject);
+    procedure ButtonSigneClick({%H-}Sender: TObject);
+    procedure ButtonSigneSpeClick({%H-}Sender: TObject);
+    procedure MajTexteSigne();
+    Function TalentMaxCreation(CodeTalent: String): Integer;
+    procedure AjouteTalentSigne();
+    procedure ComboBoxSigneSelect({%H-}Sender: TObject);
+    procedure ChargeSignesAstraux();
+    procedure AppliqueSigneAstral(Indice: Integer);
+    procedure ChangementPhase(Changement: Integer);
+    Function PageEtapesChange(): boolean;
+    Procedure PhaseSave(NouvellePhase: Integer);
+
+    // XML
+    function XmlCalculXp(): Integer;
+
+    // Race
+    procedure ChargeTabRaces(Livre: String='');
+    procedure TabRaceDrawCell({%H-}Sender: TObject; aCol, aRow: Integer;
+      aRect: TRect; {%H-}aState: TGridDrawState);
+    procedure TabRacePrepareCanvas({%H-}Sender: TObject; {%H-}aCol, aRow: Integer;
+      {%H-}aState: TGridDrawState);
+    procedure TrackBarPointSuppChange({%H-}Sender: TObject);
+    procedure UpdateSheetMetier(Hasard: Boolean);
+    procedure AfficheImageRace();
+    procedure ButtonRaceHasardClick({%H-}Sender: TObject);
+    procedure ButtonRaceValiderClick({%H-}Sender: TObject);
+    procedure RadioButtonRaceHasardClick({%H-}Sender: TObject);
+    procedure RadioButtonRaceClick({%H-}Sender: TObject);
+    procedure TabRaceResultat(Resul: Integer);
+
+    // Métier
+    procedure ChargeTabMetier();
+    procedure ChargeComboRegle();
+    procedure ComboBoxRegleSelect({%H-}Sender: TObject);
+    function  RegleEnCours(): String;
+    procedure TabMetierDrawCell({%H-}Sender: TObject; aCol, aRow: Integer;
+      aRect: TRect; {%H-}aState: TGridDrawState);
+    procedure TabMetierPrepareCanvas({%H-}Sender: TObject; {%H-}aCol, {%H-}aRow: Integer;
+      {%H-}aState: TGridDrawState);
+    procedure UpdateSheetRace(Hasard: Boolean);
+    procedure AfficheImageMetier();
+    procedure ButtonMetierHasardClick({%H-}Sender: TObject);
+    procedure ButtonMetierValiderClick({%H-}Sender: TObject);
+    procedure RadioButtonMetierHasardClick({%H-}Sender: TObject);
+    procedure RadioButtonMetierClick({%H-}Sender: TObject);
+    procedure TabMetierResultat(Resul: Integer);
+    procedure AfficheMetierAutresRegles(Resul: Integer; CodeMetier: String);
+
+    // Attributs
+    procedure ChargeTabAttribut();
+    procedure TabAttributDrawCell({%H-}Sender: TObject; aCol, aRow: Integer;
+      aRect: TRect; aState: TGridDrawState);
+    procedure TabAttributSelectEditor({%H-}Sender: TObject; aCol, {%H-}aRow: Integer;
+      var Editor: TWinControl);
+    procedure ButtonAttributHasardClick({%H-}Sender: TObject);
+    procedure UpdateSheetAttribut(Hasard: boolean);
+    Procedure CalculTabAttribut(Hasard: Boolean; Affectation: Boolean);
+    procedure TabAttributLanceDeEditingDone({%H-}Sender: TObject);
+    procedure TabAttributLanceDeSelectCell({%H-}Sender: TObject; aCol,
+      aRow: Integer; var CanSelect: Boolean);
+    procedure RadioButtonAttributClick({%H-}Sender: TObject);
+    procedure ComboBoxSelectAttribut(Sender: TObject);
+    procedure TabAttributLanceDeSetEditText({%H-}Sender: TObject; {%H-}ACol, ARow: Integer;
+      const {%H-}Value: string);
+    procedure TabAttributLanceDeClickCombo();
+    function RepartitionMax(): Integer;
+
+    // Talent
+    //function TalentTest(Num: Integer; Code: String; Hasard: Boolean): Boolean;
+    Function LibelleChoixMultiple(Code: String): String;
+    Function ChoixCreationComplet(): Boolean;
+    Function RangSuivant(Source, ParentLigne: String): Integer;
+    Function ListeTalentsDejaPris(Exclu: String): TStringList;
+    Procedure AjouteTalentsResolus();
+
+    // Compétences de race
+    procedure TabRaceCompetenceDrawCell({%H-}Sender: TObject; aCol, aRow: Integer;
+      aRect: TRect; {%H-}aState: TGridDrawState);
+    procedure TabRaceCompetenceMouseDown({%H-}Sender: TObject; {%H-}Button: TMouseButton;
+      {%H-}Shift: TShiftState; X, Y: Integer);
+    procedure ButtonRaceCompetenceHasardClick({%H-}Sender: TObject);
+    procedure ClickRaceCompetence(aCol, aRow: Integer);
+    procedure CalculNbRaceCompetence();
+
+    // Compétence de métier
+    procedure TabMetierCompetenceDrawCell({%H-}Sender: TObject; aCol, aRow: Integer;
+      aRect: TRect; aState: TGridDrawState);
+    procedure TabMetierCompetenceSelectEditor({%H-}Sender: TObject; aCol,
+      {%H-}aRow: Integer; var Editor: TWinControl);
+    procedure TabMetierCompetenceValidateEntry({%H-}Sender: TObject; aCol,
+      {%H-}aRow: Integer; const OldValue: string; var NewValue: String);
+    procedure CalculTotalMetierCompetence();
+    procedure ButtonMetierCompetenceHasardClick({%H-}Sender: TObject);
+    function CompetenceAuHasard(Grille: TStringGrid; const CodeGen: String): String;
+    procedure ButtonEquipementHasardClick({%H-}Sender: TObject);
+
+    // Equipement
+//    procedure TabMetierEquipementDrawCell({%H-}Sender: TObject; aCol, aRow: Integer;
+//      aRect: TRect; {%H-}aState: TGridDrawState);
+    procedure TabMetierEquipementSelectEditor({%H-}Sender: TObject; {%H-}aCol,
+      {%H-}aRow: Integer; var Editor: TWinControl);
+    procedure TabSelectEditor({%H-}Sender: TObject; {%H-}aCol, {%H-}aRow: Integer;
+      var Editor: TWinControl);
+
+  private
+    FEditingCol: Integer;
+    FEditingRow: Integer;
+
+
+  public
+
+  end;
+
+Const
+  PhaseDebut = 0;
+  // 9 étapes depuis le 21/08/2026 : le choix des livres est devenu l'étape 0, avant l'ethnie
+  // (idée de Nono, CONTEXT.md §2.14). Ajouter une étape demande de toucher, dans l'ordre :
+  // PhaseMax, ListPhase (ChargerImage), les deux case de PageEtapesChange et PhaseSave, et
+  // l'ordre des TTabSheet dans le .lfm - rien d'autre ne code un numéro d'étape en dur.
+  PhaseMax   = 8;
+
+var
+  WinCreations:                  TWinCreations;
+
+  // Phases
+  PhaseEnCours:                  Integer = 0;
+  ListPhase:                     TStringList;
+
+  // Vrai si le signe astral en cours vient du tirage et n'a pas ete change ensuite : +25 XP
+  // (Archives of the Empire II p.39). Un signe choisi a la main ne donne rien.
+  SigneTire:                     Boolean = False;
+
+  // Pour les images
+  ColorLoc:                      TColor;
+  ColorList:                     array of TColor;
+  // ListImage et Path etaient absents d'ici : non declares, ils se resolvaient sur les
+  // globales de WinRaces (derniere unite de la clause uses a les declarer), si bien que
+  // cette fenetre remplissait la liste d'images d'une AUTRE fenetre. Sans consequence tant
+  // que tout le monde chargeait les memes icones generiques ; devenu faux le jour ou les
+  // icones dependent du livre. Declares ici le 30/08/2026.
+  ListImage:                     TImageList;
+  Path:                          String;
+
+  // Race
+  RaceEnCours:                   String;
+  RaceLibEnCours:                String;
+  LastRandomRaceResultat:        Integer = 0;
+  LastCheckRaceResultat:         Integer = 0;
+  ModDesti:                      Boolean = false;
+  // Vrai quand le radio des 100 points est coche (Rulebook, 3e palier des attributs)
+  ModRepartition:                Boolean = false;
+    // Compétence
+    NbRaceCompetenceTab:         Integer = 0;
+    CompetenceRaceStates:        array of array of Boolean;
+    NbRaceComp:                  Integer = 0;
+    NbTrois:                     Integer = 0;
+    NbCinq:                      Integer = 0;
+    // Talent
+    TalentRaceChoix1:            String;
+    TalentRaceChoix2:            String;
+    TalentRaceChoix3:            String;
+    TalentRaceChoix4:            String;
+    //NbGenerique:                 Integer = 0;
+
+  // Métier
+  MetierEnCours:                 String;
+  MetierLibEnCours:              String;
+  MetierEnCoursPrincipal:        String;
+  LastRandomMetierResultat:      Integer = 0;
+  LastCheckMetierResultat:       Integer = 0;
+  LastCheckMetierSousMetierResul:Integer = 0;
+    // Compétences
+    NbMetierCompetenceTab:       Integer = 0;
+    TotalMetierCompetence:       Integer = 0;
+    // Equipement
+    NbMetierEquipementTab:       Integer = 0;
+
+  // fenêtre de choix
+  FenMetier:                   TWinMetiers;
+  FenRace:                     TWinRace;
+  FenTalent:                   TWintTalent;
+  FenCompetence:               TWinCompetence;
+  FenSpecialisation:           TWinSpecialisations;
+  FenLanceDe:                  TWinLanceDes;
+
+  // gérer click sur les choix de talents multiples
+  FirstClick1:                 Boolean = true;
+  FirstClick2:                 Boolean = true;
+  FirstClick3:                 Boolean = true;
+  FirstClick4:                 Boolean = true;
+
+  // objet personnage
+  Personnage:                  StructurePersonnage;
+  PersonnageAttribut:          StructurePersonnageAttribut;
+  PersonnageCompetence:        StructurePersonnageCompetence;
+  PersonnageTalent:            StructurePersonnageTalent;
+  PersonnageEquipement:        StructurePersonnageEquipement;
+  PersonnageMetier:            StructurePersonnageMetier;
+
+  // Livres
+  LivresPersonnages:           String;
+
+  // Tableau CHOIX
+  ColChoixOrigine: Integer = 1;
+  ColChoixLib:     Integer = 2;   // libellé du code source
+  ColChoixLibSel:  Integer = 3;   // libellé du choix retenu
+  ColChoixSource:  Integer = 4;   // caché
+  ColChoixSel:     Integer = 5;   // caché
+  ColChoixParent:  Integer = 6;   // caché
+  ColChoixRang:    Integer = 7;   // caché
+
+  // Tableau ALÉATOIRE
+  ColHasOrigine:   Integer = 1;
+  ColHasLib:       Integer = 2;
+  ColHasJet:       Integer = 3;
+  ColHasLibSel:    Integer = 4;
+  ColHasSource:    Integer = 5;   // caché
+  ColHasSel:       Integer = 6;   // caché
+  ColHasRang:      Integer = 7;   // caché
+  ColHasParent:    Integer = 8;   // caché
+  ColHasLibSpe:    Integer = 9;   // libellé de la spécialisation retenue
+  ColHasSpe:       Integer = 10;  // caché
+
+//  ChoixWinJetDeja: TStringList;
+
+  ListeChoixCreation: array of StructureChoixCreation;
+
+implementation
+
+{$R *.lfm}
+
+var
+  ChoixAdaptationCle:   String = '';
+  ChoixAdaptationMemo:  String = '';
+
+// Adaptations facultatives (Adapting Careers) du couple carriere/ethnie en cours : demandees
+// une seule fois par couple (l'ecran est reconstruit a chaque affichage), memorisees ensuite.
+function ChoixAdaptationCreation(): String;
+begin
+  if (MetierEnCours = '') or (RaceEnCours = '') then
+    begin
+      Result := '';
+      Exit;
+    end;
+  if ChoixAdaptationCle <> MetierEnCours + '|' + RaceEnCours then
+    begin
+      ChoixAdaptationCle  := MetierEnCours + '|' + RaceEnCours;
+      ChoixAdaptationMemo := DemanderAdaptationsFacultatives(MetierEnCours, RaceEnCours, '');
+    end;
+  Result := ChoixAdaptationMemo;
+end;
+
+{ TWinCreations }
+
+////////////////////////////////////////////////////////////////////////////////
+//                                GENERIQUES                                  //
+////////////////////////////////////////////////////////////////////////////////
+
+procedure TWinCreations.FormCreate(Sender: TObject);
+  var
+    Bmp: TBGRABitmap;
+  begin
+    MiseEnFormeDesChamp(self);
+    // grilles sans saisie : ligne entiere selectionnee, couleur commune
+    SelectionGrilleWarhammer(TabLivre);
+    SelectionGrilleWarhammer(TabTalent);
+    SelectionGrilleWarhammer(TabMetier);
+    SelectionGrilleWarhammer(RecapAttribut);
+    SelectionGrilleWarhammer(RecapTalent);
+    SelectionGrilleWarhammer(RecapComp);
+    SelectionGrilleWarhammer(TabCreationChoix);
+    SelectionGrilleWarhammer(TabCreationHasard);
+    ChargerImage();
+    ChargerLivre();
+    ChargeComboRegle();
+    ChangementPhase(ConstSuivant);
+    EditRaceResultat.MinValue    := 0;
+    EditRaceResultat.MaxValue    := 100;
+    EditMetierResultat.MinValue  := 0;
+    EditMetierResultat.MaxValue  := 100;
+
+    // charges les images des niveaux
+    ChargeImagesNiveau();
+
+    if FileExists(CheminImage(GetCurrentDir+ConstCheminScroll)) then
+       begin
+         Bmp := TBGRABitmap.Create(CheminImage(GetCurrentDir+ConstCheminScroll));
+         ImageScroll.Picture.Bitmap.Assign(Bmp);
+         Bmp.Free;
+         ImageScroll.SendToBack;
+       end;
+
+    LastRandomRaceResultat              := 0;
+    LastRandomMetierResultat            := 0;
+    LastCheckRaceResultat               := 0;
+    LastCheckMetierResultat             := 0;
+    LastCheckMetierSousMetierResul      := 0;
+
+    LabelRace.Caption                          := GetTexteLibelle('RULES-LAB_042');
+    LabelMetier.Caption                        := GetTexteLibelle('RULES-LAB_006');
+    LabelAttribut.Caption                      := GetTexteLibelle('RULES-LAB_008');
+    LabelTalent.Caption                        := GetTexteLibelle('RULES-LAB_007');
+    LabelCompetence.Caption                    := GetTexteLibelle('RULES-LAB_009');
+    Self.Caption                               := GetTexteLibelle('RULES-LAB_081');
+    GroupBoxRace.Caption                       := GetTexteLibelle('RULES-LAB_084');
+    GroupBoxAttribut.Caption                   := GetTexteLibelle('RULES-LAB_084');
+    GroupBoxMetier.Caption                     := GetTexteLibelle('RULES-LAB_084');
+    ButtonAttributHasard .Caption              := GetTexteLibelle('RULES-LAB_085');
+    ButtonRaceHasard.Caption                   := GetTexteLibelle('RULES-LAB_085');
+    ButtonTalentHasard.Caption                 := GetTexteLibelle('RULES-LAB_085');
+    ButtonRaceCompetenceHasard.Caption         := GetTexteLibelle('RULES-LAB_085');
+    ButtonMetierHasard.Caption                 := GetTexteLibelle('RULES-LAB_085');
+    ButtonMetierCompetenceHasard .Caption      := GetTexteLibelle('RULES-LAB_085');
+    ButtonRaceValider.Caption                  := GetTexteLibelle('RULES-LAB_086');
+    ButtonMetierValider.Caption                := GetTexteLibelle('RULES-LAB_086');
+    ButtonRaceSelectionner.Caption             := GetTexteLibelle('RULES-LAB_004');
+    ButtonMetierSelectionner.Caption           := GetTexteLibelle('RULES-LAB_004');
+    TabSheetRace.Caption                       := GetTexteLibelle('RULES-LAB_042');
+    TabSheetMetier.Caption                     := GetTexteLibelle('RULES-LAB_006');
+    TabSheetAttribut.Caption                   := GetTexteLibelle('RULES-LAB_008');
+    TabSheetTalent.Caption                     := GetTexteLibelle('RULES-LAB_007');
+    TabSheetCompRace.Caption                   := GetTexteLibelle('RULES-LAB_087');
+    TabSheetCompMetier.Caption                 := GetTexteLibelle('RULES-LAB_088');
+    TabSheetEquipement.Caption                 := GetTexteLibelle('RULES-LAB_013');
+    TabSheetNom.Caption                        := GetTexteLibelle('RULES-LAB_014');
+    ButtonPhysique.Caption                     := GetTexteLibelle('RULES-LAB_266');
+    ButtonNom.Caption                          := GetTexteLibelle('RULES-LAB_267');
+    LabSigne.Text                              := GetTexteLibelle('RULES-LAB_272');
+    ButtonSigne.Caption                        := GetTexteLibelle('RULES-LAB_273');
+    // Bouton de specialisation du talent generique du signe (Craftsman...), pose en code sous le memo
+    MemoSigne.Height                           := MemoSigne.Height - 36;
+    ButtonSigneSpe                             := TButton.Create(Self);
+    ButtonSigneSpe.Parent                      := MemoSigne.Parent;
+    ButtonSigneSpe.SetBounds(MemoSigne.Left, MemoSigne.Top + MemoSigne.Height + 4, MemoSigne.Width, 30);
+    ButtonSigneSpe.Caption                     := GetTexteLibelle('RULES-LAB_275');
+    ButtonSigneSpe.Visible                     := False;
+    ButtonSigneSpe.OnClick                     := @ButtonSigneSpeClick;
+    ButtonMetierEquipementHasard.Caption       := GetTexteLibelle('RULES-LAB_085');
+    ButtonNomHasard.Caption                    := GetTexteLibelle('RULES-LAB_085');
+    ComboBoxSexeNom.Items[0]                   := GetTexteLibelle('RULES-LAB_268');
+    ComboBoxSexeNom.Items[1]                   := GetTexteLibelle('RULES-LAB_269');
+    ComboBoxSexeNom.ItemIndex                  := 0;
+    // Regle de nom (declaree par les livres, <NameRule>) : un combo cree en code remplace la case Noble
+    CheckBoxNoble.Visible                      := False;
+    LabNoble.Visible                           := False;
+    ComboBoxRegleNom                           := TComboBox.Create(Self);
+    ComboBoxRegleNom.Parent                    := CheckBoxNoble.Parent;
+    ComboBoxRegleNom.SetBounds(CheckBoxNoble.Left, CheckBoxNoble.Top, 180, 28);
+    ComboBoxRegleNom.Style                     := csDropDownList;
+    ComboBoxRegleNom.Visible                   := False;
+    CodesRegleNom                              := TStringList.Create;
+    TabSheetNom.OnShow                         := @TabSheetNomShow;
+    RadioButtonRaceHasard.Caption              := GetTexteLibelle('RULES-LAB_085')+' (20xp)';
+    RadioButtonMetierHasard.Caption            := GetTexteLibelle('RULES-LAB_085')+' (50xp)';
+    RadioButtonAttributHasard.Caption          := GetTexteLibelle('RULES-LAB_085')+' (50xp)';
+    RadioButtonRaceResultat.Caption            := GetTexteLibelle('RULES-LAB_089')+' (20xp)';
+    RadioButtonMetierResultat.Caption          := GetTexteLibelle('RULES-LAB_089')+' (50xp)';
+    RadioButtonAttributResultat.Caption        := GetTexteLibelle('RULES-LAB_089')+' (50xp)';
+    RadioButtonRaceChoix.Caption               := GetTexteLibelle('RULES-LAB_084')+' (0xp)';
+    RadioButtonMetierChoix.Caption             := GetTexteLibelle('RULES-LAB_084')+' (0xp)';
+    RadioButtonAttributHasardAffecte.Caption   := GetTexteLibelle('RULES-LAB_090')+' (25xp)';
+    RadioButtonAttributResultatAffecte.Caption := GetTexteLibelle('RULES-LAB_091')+' (25xp)';
+    RadioButtonAttributRepartition.Caption     := GetTexteLibelle('RULES-LAB_316')+' (0xp)';
+    LabPointSupp.Caption                       := GetTexteLibelle('RULES-LAB_092');
+    LabDestin.Caption                          := GetTexteLibelle('RULES-LAB_093');
+    LabResilience.Caption                      := GetTexteLibelle('RULES-LAB_094');
+    LabNomPersonnage.Caption                   := GetTexteLibelle('RULES-LAB_095');
+    ButtonMetierSousMetierSelectionner.Caption := GetTexteLibelle('RULES-LAB_004');
+    ButtonPhaseSuivante.Caption                := GetTexteLibelle('RULES-LAB_134');
+    LabRegle.Caption                           := GetTexteLibelle('RULES-LAB_135');
+    LabLivre.Caption                           := GetTexteLibelle('RULES-LAB_137');
+
+    ButtonRaceCompetenceHasard.BringToFront;
+    ButtonMetierCompetenceHasard.BringToFront;
+    ButtonMetierEquipementHasard.BringToFront;
+    ButtonNomHasard.BringToFront;
+    // Le TShape pose par MiseEnFormeDesChamp sur chaque onglet cache les controles non
+    // fenetres (TBCButton) : meme piege que les boutons ci-dessus (CONTEXT.md 4).
+    ButtonPhysique.BringToFront;
+    ButtonNom.BringToFront;
+    ButtonSigne.BringToFront;
+
+    KeyPreview := true;
+
+    LivresPersonnages := LivresCharges;
+
+    // Par defaut, chaque selecteur est sur "au hasard" (le bouton Hasard est donc visible)
+    // (OnClick coupe : Checked le declencherait avant qu'une race/un metier existe)
+    RadioButtonRaceHasard.OnClick      := nil;
+    RadioButtonMetierHasard.OnClick    := nil;
+    RadioButtonAttributHasard.OnClick  := nil;
+    RadioButtonRaceHasard.Checked      := true;
+    RadioButtonMetierHasard.Checked    := true;
+    RadioButtonAttributHasard.Checked  := true;
+    RadioButtonRaceHasard.OnClick      := @RadioButtonRaceHasardClick;
+    RadioButtonMetierHasard.OnClick    := @RadioButtonMetierHasardClick;
+    RadioButtonAttributHasard.OnClick  := @RadioButtonAttributClick;
+    UpdateSheetRace(false);
+    UpdateSheetMetier(false);
+    UpdateSheetAttribut(false);
+  end;
+
+procedure TWinCreations.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+  var
+    i: Integer;
+  begin
+    ColorLoc := clDefault;
+    SetLength(ColorList, 0);
+    for i := Low(CompetenceRaceStates) to High(CompetenceRaceStates) do
+      SetLength(CompetenceRaceStates[i], 0);
+    SetLength(CompetenceRaceStates, 0);
+    MetierEnCours := '';
+    RaceEnCours   := '';
+  end;
+
+procedure TWinCreations.ButtonMetierSelectionnerClick(Sender: TObject);
+  var
+    PMetier: StructureMetier;
+  begin
+    // ouvrir les métiers
+    SelectWinMetierRace := RaceEnCours;
+    SelectWinLivre      := LivresPersonnages;
+    FenMetier           := TWinMetiers.Create(Application);
+    FenMetier.Position  := poOwnerFormCenter;
+    FenMetier.ShowModal;
+
+    if ChoixWinMetierRace <> '' then
+      begin
+        PMetier          := chercheMetier(ChoixWinMetierRace);
+        MetierEnCours    := PMetier.CodeMetier;
+        MetierLibEnCours := PMetier.Libelle;
+        // Le metier vient de changer : les icones de niveau peuvent en dependre.
+        ChargeImagesNiveau();
+        AfficheImageMetier();
+        UpdateSheetMetier(true);
+      end;
+
+    SelectWinMetierRace:= '';
+    ChoixWinMetierRace := '';
+  end;
+
+
+procedure TWinCreations.ButtonMetierSousMetierSelectionnerClick(Sender: TObject);
+  var
+    PMetier: StructureMetier;
+  begin
+    // ouvrir les métiers
+    SelectWinMetier     := MetierEnCours;
+    SelectWinMetierRace := RaceEnCours;
+    FenMetier           := TWinMetiers.Create(Application);
+    FenMetier.Position  := poOwnerFormCenter;
+    FenMetier.ShowModal;
+
+    if ChoixWinMetierRace <> '' then
+      begin
+        PMetier          := chercheMetier(ChoixWinMetierRace);
+        MetierEnCours    := PMetier.CodeMetier;
+        MetierLibEnCours := PMetier.Libelle;
+        // Le metier vient de changer : les icones de niveau peuvent en dependre.
+        ChargeImagesNiveau();
+        AfficheImageMetier();
+        UpdateSheetMetier(true);
+      end;
+
+    SelectWinMetierRace:= '';
+    ChoixWinMetierRace := '';
+    ButtonMetierSousMetierSelectionner.enabled := false;
+  end;
+
+
+procedure TWinCreations.ButtonMetierSousMetierValiderClick(Sender: TObject);
+  Var
+    PMetier:  StructureMetier;
+  begin
+    if (EditMetierSousMetierResultat.Value = 0) then
+       ShowMessage(GetTexteLibelle('RULES-MESS_019'))
+    else
+    begin
+      LastCheckMetierSousMetierResul := EditMetierSousMetierResultat.Value;
+      MetierEnCours := ResultMetierSousMetier(MetierEnCoursPrincipal, LastCheckMetierSousMetierResul, LivresPersonnages);
+      // Idem. Si MetierEnCours porte encore un choix multiple, la resolution ne trouvera
+      // pas de metier et retombera sur l'ethnie : sans effet, pas d'erreur.
+      ChargeImagesNiveau();
+      if pos(SeparateurMulti,MetierEnCours) = 0 then
+        begin
+          PMetier          := chercheMetier(MetierEnCours);
+          MetierLibEnCours := PMetier.Libelle;
+          AfficheImageMetier();
+          UpdateSheetMetier(true);
+        end
+      else
+        begin
+          ButtonMetierSousMetierValider.enabled       := false;
+          ButtonMetierSousMetierSelectionner.visible  := true;
+          ButtonMetierSousMetierSelectionner.BringToFront;
+        end;
+    end
+  end;
+
+procedure TWinCreations.ButtonRaceSelectionnerClick(Sender: TObject);
+begin
+  // ouvrir les métiers
+  SelectWinRace     := ConstSelectionne;
+  SelectWinLivre    := LivresPersonnages;
+  FenRace           := TWinRace.Create(Application);
+  FenRace.Position  := poOwnerFormCenter;
+  FenRace.ShowModal;
+
+  if ChoixWinRace <> '' then
+    begin
+      TabRaceResultat(0);
+      AfficheImageRace();
+      UpdateSheetRace(true);
+    end;
+
+  SelectWinRace  := '';
+  ChoixWinRace   := '';
+  SelectWinLivre := '';
+end;
+
+procedure TWinCreations.ButtonTalentHasardClick(Sender: TObject);
+  var
+    Ind:      Integer;
+    NbTour:   Integer = 0;
+    ListOpt:  TStringList;
+    ListLibre:TStringList;
+    Deja:     TStringList;
+    IndOpt:   Integer;
+    Jet:      Integer;
+    CodeTire: String;
+    NbEssai:  Integer;
+  begin
+
+    repeat
+      // 1 - resoudre les choix
+      for Ind := 0 to High(ListeChoixCreation) do
+        if (ListeChoixCreation[Ind].CodeChoisi = '') and (not ListeChoixCreation[Ind].Aleatoire) then
+          begin
+            ListOpt := ListeTalent(ListeChoixCreation[Ind].CodeSource);
+            // Ecarter les talents deja pris. Le tirage des CHOIX n'avait pas cette protection,
+            // contrairement au tirage aleatoire juste en dessous (TalentDejaPossede) : ca ne se
+            // voyait pas tant qu'aucune ethnie ne proposait DEUX FOIS la meme liste. Le Skink de
+            // Lustria est le premier ("2 talents parmi les 6 listes", p.160) et tombait deux fois
+            // sur le meme talent. CONTEXT.md 2.15.
+            Deja      := ListeTalentsDejaPris('');
+            ListLibre := TStringList.Create;
+            for IndOpt := 0 to ListOpt.Count - 1 do
+              if not TalentDejaPossede(ListOpt[IndOpt], Deja) then
+                ListLibre.Add(ListOpt[IndOpt]);
+            // Repli sur la liste complete si tout est deja pris : mieux vaut un doublon qu'un
+            // choix vide qui bloquerait l'etape.
+            if ListLibre.Count > 0 then
+              ListeChoixCreation[Ind].CodeChoisi := ListLibre[Random(ListLibre.Count)]
+            else if ListOpt.Count > 0 then
+              ListeChoixCreation[Ind].CodeChoisi := ListOpt[Random(ListOpt.Count)];
+            ListLibre.Free;
+            Deja.Free;
+            ListOpt.Free;
+          end;
+      ReconstruitChoixCreation();
+
+      // 2 - resoudre les tirages
+      for Ind := 0 to High(ListeChoixCreation) do
+        if (ListeChoixCreation[Ind].CodeChoisi = '') and ListeChoixCreation[Ind].Aleatoire then
+          begin
+            Deja := ListeTalentsDejaPris('');
+            NbEssai := 0;
+            repeat
+              Jet      := Random(100) + 1;
+              CodeTire := TalentAleatoire(Jet, RaceEnCours);
+              NbEssai  := NbEssai + 1;
+            until ((CodeTire <> '') and (not TalentDejaPossede(CodeTire, Deja))) or (NbEssai >= 100);
+            Deja.Free;
+            if CodeTire <> '' then
+              begin
+                ListeChoixCreation[Ind].Jet        := Jet;
+                ListeChoixCreation[Ind].CodeChoisi := CodeTire;
+              end;
+          end;
+      ReconstruitChoixCreation();
+
+      // 3 - resoudre les specialisations
+      for Ind := 0 to High(ListeChoixCreation) do
+        if (Pos(ValeurGenerique, ListeChoixCreation[Ind].CodeChoisi) > 0)
+           and (ListeChoixCreation[Ind].CodeSpecialise = '') then
+          begin
+            ListOpt := ListeTalent(ListeChoixCreation[Ind].CodeChoisi);
+            if ListOpt.Count > 0 then
+              ListeChoixCreation[Ind].CodeSpecialise := ListOpt[Random(ListOpt.Count)];
+            ListOpt.Free;
+          end;
+      ReconstruitChoixCreation();
+
+      NbTour := NbTour + 1;
+    until ChoixCreationComplet() or (NbTour >= 10);
+  end;
+
+procedure TWinCreations.ComboRaceCreationSelect(Sender: TObject);
+  begin
+    ChargeTabRaces(ComboRaceCreation.Text);
+  end;
+
+procedure TWinCreations.ChargerImage();
+    procedure ChargerImagePhases();
+      begin
+          ListPhase := TStringList.Create;
+          ListPhase.Add(GetTexteLibelle('RULES-LAB_173'));   // étape 0 : choix des livres
+          ListPhase.Add(GetTexteLibelle('RULES-LAB_026'));
+          ListPhase.Add(GetTexteLibelle('RULES-LAB_027'));
+          ListPhase.Add(GetTexteLibelle('RULES-LAB_028'));
+          ListPhase.Add(GetTexteLibelle('RULES-LAB_029'));
+          ListPhase.Add(GetTexteLibelle('RULES-LAB_030'));
+          ListPhase.Add(GetTexteLibelle('RULES-LAB_031'));
+          ListPhase.Add(GetTexteLibelle('RULES-LAB_032'));
+          ListPhase.Add(GetTexteLibelle('RULES-LAB_033'));
+          PageEtapes.ActivePageIndex := 0;
+          PhaseEnCours := -1;
+          // Logo
+          if FileExists(CheminImage(GetCurrentDir+ConstCheminLogo1)) then
+              ImageWar.Picture.LoadFromFile(CheminImage(GetCurrentDir+ConstCheminLogo1));
+      end;
+
+    procedure ChargerImageRecapitulatif();
+      var
+        I: Integer;
+        PAttribut: StructureAttribut;
+      begin
+          // Attribut
+          RecapAttribut.ColCount     := 11;
+          RecapAttribut.RowCount     := 2;
+          RecapAttribut.ColWidths[0] := 0;
+          for I := 1 to 10 do
+            begin
+              PAttribut := ListeAttribut.Items[I-1];
+              RecapAttribut.ColWidths[I]:= 43;
+              RecapAttribut.Cells[I, 0] := PAttribut.Resume;
+            end;
+          // Talent
+          RecapTalent.RowCount       := 10;
+          RecapTalent.ColCount       := 3;
+          RecapTalent.ColWidths[0]   := 0;
+          RecapTalent.ColWidths[1]   := 208;
+          RecapTalent.ColWidths[2]   := 0;
+          // Compétences
+          RecapComp.ColCount         := 6;
+          RecapComp.ColWidths[0]     := 0;
+          RecapComp.ColWidths[1]     := 128;
+          RecapComp.ColWidths[2]     := 40;
+          RecapComp.ColWidths[3]     := 40;
+          RecapComp.ColWidths[4]     := 0;
+          RecapComp.ColWidths[5]     := 0;
+      end;
+
+    procedure ChargerImageRace();
+      begin
+          // Mise en forme du tableau de choix des Races
+          TabRace.Options          := TabRace.Options + [goEditing, goAlwaysShowEditor];
+          TabRace.ColCount         := 5;
+          TabRace.RowCount         := NbRace+1;
+          TabRace.ColWidths[0]     := 30;
+          TabRace.Cells[1, 0]      := GetTexteLibelle('RULES-LAB_006');
+          TabRace.ColWidths[1]     := 0;
+          TabRace.Cells[2, 0]      := GetTexteLibelle('RULES-LAB_014');
+          TabRace.ColWidths[2]     := 140;
+          TabRace.Cells[3, 0]      := GetTexteLibelle('RULES-LAB_023');
+          TabRace.ColWidths[3]     := 105;
+          TabRace.Cells[4, 0]      := 'Sel';
+          TabRace.ColWidths[4]     := 0;
+          TabRace.Height           := TabRace.DefaultRowHeight * TabRace.RowCount + 5;
+          ChargeTabRaces();
+          AdjustGridColumnsWidth(TabRace, TabSheetRace.ClientHeight, false, true);
+      end;
+
+    procedure ChargerImageMetier();
+      begin
+          // Mise en forme du tableau de choix des Metiers
+          // Grille de consultation : activée pour que l'ascenseur et la molette répondent
+          // (un contrôle désactivé n'accepte aucune souris), mais SANS les options d'édition -
+          // c'est ce que le Enabled=False d'origine cherchait à empêcher. TabMetierDrawCell
+          // continue de peindre les cellules lui-même, l'aspect ne change donc pas.
+          TabMetier.Options          := TabMetier.Options - [goEditing, goAlwaysShowEditor];
+          TabMetier.ColCount         := 6;
+          TabMetier.RowCount         := 1;
+          TabMetier.ColWidths[0]     := 30;
+          TabMetier.Cells[1, 0]      := GetTexteLibelle('RULES-LAB_006');
+          TabMetier.ColWidths[1]     := 0;
+          TabMetier.Cells[2, 0]      := GetTexteLibelle('RULES-LAB_014');
+          TabMetier.ColWidths[2]     := 140;
+          TabMetier.Cells[3, 0]      := GetTexteLibelle('RULES-LAB_023');
+          TabMetier.ColWidths[3]     := 80;
+          TabMetier.Cells[4, 0]      := 'Sel';
+          TabMetier.ColWidths[4]     := 0;
+          TabMetier.Cells[5, 0]      := 'Tri';   // clé de tri sur la valeur de début, colonne masquée
+          TabMetier.ColWidths[5]     := 0;
+      end;
+
+    procedure ChargerImageAttributs();
+      var
+        I, J: Integer;
+        ComboBoxAttribut: TComboBox;
+        PAttribut: StructureAttribut;
+      begin
+          // Mise en forme du tableau de choix des Attributs
+          TabAttribut.Options          := TabAttribut.Options + [goEditing, goAlwaysShowEditor];
+          TabAttribut.ColCount         := 1;
+          TabAttribut.RowCount         := NbAttribut +1;
+          TabAttribut.ColWidths[0]     := 30;
+          TabAttribut.Columns.add;
+          TabAttribut.Columns[0].Title.Caption  := GetTexteLibelle('RULES-LAB_001');
+          TabAttribut.ColWidths[1]     := 0;
+          TabAttribut.Columns.add;
+          TabAttribut.Columns[1].Title.Caption      := GetTexteLibelle('RULES-LAB_019');
+          TabAttribut.ColWidths[2]     := 30;
+          TabAttribut.Columns[1].Alignment:= tacenter;
+          TabAttribut.Columns.add;
+          TabAttribut.Columns[2].Title.Caption      := GetTexteLibelle('RULES-LAB_008');
+          TabAttribut.ColWidths[3]     := 175;
+          TabAttribut.Columns.add;
+          TabAttribut.Columns[3].Title.Caption      := GetTexteLibelle('RULES-LAB_020');
+          TabAttribut.ColWidths[4]     := 80;
+          TabAttribut.Columns.add;
+          TabAttribut.Columns[4].Title.Caption      := GetTexteLibelle('RULES-LAB_022');
+          TabAttribut.ColWidths[5]     := 90;
+          TabAttribut.Columns.add;
+          TabAttribut.Columns[5].Title.Caption      := GetTexteLibelle('RULES-LAB_021');
+          TabAttribut.ColWidths[6]     := 90;
+          TabAttribut.Columns.add;
+          TabAttribut.Columns[6].Title.Caption      := '';
+          TabAttribut.ColWidths[7]     := 0;
+          TabAttribut.Height           := TabAttribut.DefaultRowHeight * TabAttribut.RowCount + 5;
+          // Mise en forme du tableau de lancé de dé des attributs
+          TabAttributLanceDe.Options     := TabAttributLanceDe.Options + [goEditing, goAlwaysShowEditor];
+          TabAttributLanceDe.ColCount    := 12;
+          TabAttributLanceDe.RowCount    := 3;
+          TabAttributLanceDe.ColWidths[0]:= 20;
+          TabAttributLanceDe.OnSetEditText := @TabAttributLanceDeSetEditText;
+          For I := 1 to 10 do
+            begin
+              TabAttributLanceDe.Cells[I, 0]  := 'D'+IntToStr(I);
+              TabAttributLanceDe.ColWidths[I] := 53;
+            end;
+          TabAttributLanceDe.Cells[I+1, 0]    := GetTexteLibelle('RULES-LAB_021');
+          TabAttributLanceDe.ColWidths[I+1]   := 56;
+          TabAttributLanceDe.Height           := TabAttributLanceDe.DefaultRowHeight * TabAttributLanceDe.RowCount + 5;
+          TabAttributLanceDe.Width            := 620;
+          // Création du composant TComboBox personnalisé pour la ligne 2
+           for I := 1 to 11 do
+           begin
+             ComboBoxAttribut                := TComboBox.Create(Self);
+             ComboBoxAttribut.Style          := csDropDownList;
+             ComboBoxAttribut.Parent         := TabAttributLanceDe;
+             ComboBoxAttribut.DropDownCount  := 10;
+             ComboBoxAttribut.Visible        := false; // On le cache initialement
+             ComboBoxAttribut.Items.Add(ValeurNonRenseignee);
+             for J := 0 to 9 do
+             begin
+                PAttribut := ListeAttribut.Items[J];
+                ComboBoxAttribut.Items.Add(PAttribut.Resume);
+             end;
+             ComboBoxAttribut.ItemIndex       := 0; // Sélectionner le premier élément
+             ComboBoxAttribut.OnChange        := @ComboBoxSelectAttribut;
+             TabAttributLanceDe.Objects[I, 2] := ComboBoxAttribut;
+           end;
+           // Charger les Attributs
+          ChargeTabAttribut();
+      end;
+
+    procedure ChargerImageTalents();
+      begin
+           // Mise en forme du tableau de choix des Talents
+           TabTalent.Options          := TabTalent.Options + [goAlwaysShowEditor];
+           TabTalent.ColCount         := 3;
+           TabTalent.RowCount         := 10;
+           TabTalent.ColWidths[0]     := 30;
+           TabTalent.Cells[1, 0]      := GetTexteLibelle('RULES-LAB_001');
+           TabTalent.ColWidths[1]     := 0;
+           TabTalent.Cells[2, 0]      := GetTexteLibelle('RULES-LAB_007');
+           TabTalent.ColWidths[2]     := 200;
+           TabTalent.Height           := TabTalent.DefaultRowHeight * TabTalent.RowCount + 5;
+           TabTalent.Width            := 235;
+
+           // Talent avec choix
+          TabCreationChoix.RowCount := 1;
+          TabCreationChoix.ColCount := 8;
+          TabCreationChoix.FixedRows := 1;
+          TabCreationChoix.Options := TabCreationChoix.Options + [goRowSelect];
+          TabCreationChoix.Cells[ColChoixOrigine, 0] := GetTexteLibelle('RULES-LAB_174');
+          TabCreationChoix.Cells[ColChoixLib, 0]     := GetTexteLibelle('RULES-LAB_175');
+          TabCreationChoix.Cells[ColChoixLibSel, 0]  := GetTexteLibelle('RULES-LAB_176');
+          TabCreationChoix.ColWidths[0]               := 0;
+          TabCreationChoix.ColWidths[ColChoixOrigine] := 0;
+          TabCreationChoix.ColWidths[ColChoixLib]     := 250;
+          TabCreationChoix.ColWidths[ColChoixLibSel]  := 250;
+          TabCreationChoix.ColWidths[ColChoixSource]  := 0;
+          TabCreationChoix.ColWidths[ColChoixSel]     := 0;
+          TabCreationChoix.ColWidths[ColChoixParent]  := 0;
+          TabCreationChoix.ColWidths[ColChoixRang]    := 0;
+          TabCreationChoix.Width:= 2000;
+
+          // --- Tableau ALÉATOIRE
+          TabCreationHasard.RowCount := 1;
+          TabCreationHasard.ColCount := 11;
+          TabCreationHasard.FixedRows := 1;
+          TabCreationHasard.Options := TabCreationChoix.Options + [goRowSelect];
+          TabCreationHasard.ColWidths[0]             := 0;
+          TabCreationHasard.ColWidths[ColHasOrigine] := 0;
+          TabCreationHasard.ColWidths[ColHasLib] := 250;
+          TabCreationHasard.ColWidths[ColHasJet] := 250;
+          TabCreationHasard.ColWidths[ColHasLibSel] := 250;
+          TabCreationHasard.ColWidths[ColHasSource] := 0;
+          TabCreationHasard.ColWidths[ColHasSel] := 0;
+          TabCreationHasard.ColWidths[ColHasRang] := 0;
+          TabCreationHasard.ColWidths[ColHasParent] := 0;
+          TabCreationHasard.ColWidths[ColHasLibSpe] := 250;
+          TabCreationHasard.ColWidths[ColHasSpe] := 0;
+          TabCreationHasard.Width:= 2000;
+      end;
+
+    procedure ChargerImageCompetencesRace();
+      var
+        I, J: Integer;
+      begin
+           // Mise en forme dy tableau de choix des Compétences de race
+           TabRaceCompetence.Options          := TabRaceCompetence.Options + [goEditing, goAlwaysShowEditor];
+           TabRaceCompetence.ColCount         := 1;
+           TabRaceCompetence.RowCount         := 1;
+           TabRaceCompetence.ColWidths[0]     := 30;
+           TabRaceCompetence.Columns.Add;
+           TabRaceCompetence.Columns[0].Title.Caption      := GetTexteLibelle('RULES-LAB_001');
+           TabRaceCompetence.ColWidths[1]     := 0;
+           TabRaceCompetence.Columns.Add;
+           TabRaceCompetence.Columns[1].Title.Caption      := GetTexteLibelle('RULES-LAB_019');
+           TabRaceCompetence.ColWidths[2]     := 30;
+           TabRaceCompetence.Columns[1].Alignment := taCenter;
+           TabRaceCompetence.Columns.Add;
+           TabRaceCompetence.Columns[2].Title.Caption      := GetTexteLibelle('RULES-LAB_009');
+           TabRaceCompetence.ColWidths[3]     := 265;
+           TabRaceCompetence.Columns.Add;
+           // valeurs par defaut : reecrites par ethnie au remplissage du tableau (voir plus bas,
+           // "Competences de race") - toutes les races en prennent 3 et 3, le Skink 2 et 2
+           TabRaceCompetence.Columns[3].Title.Caption      := '3x 5pts';
+           TabRaceCompetence.ColWidths[4]     := 80;
+           TabRaceCompetence.Columns.Add;
+           TabRaceCompetence.Columns[4].Title.Caption      := '3x 3pts';
+           TabRaceCompetence.ColWidths[5]     := 90;
+           // définir la case à cocher et l'initialiser
+           SetLength(CompetenceRaceStates, 6, NbMaxCompetence + 1);
+           for I := 4 to 5 do
+             for J := 1 to NbMaxCompetence do
+               CompetenceRaceStates[I, J] := false;
+      end;
+
+    procedure ChargerImageCompetencesMetier();
+      begin
+           // Mise en forme dy tableau de choix des Compétences de métier
+           TabMetierCompetence.Options          := TabMetierCompetence.Options + [goEditing, goAlwaysShowEditor];
+           TabMetierCompetence.ColCount         := 1;
+           TabMetierCompetence.RowCount         := 1;
+           TabMetierCompetence.ColWidths[0]     := 30;
+           TabMetierCompetence.Columns.Add;
+           TabMetierCompetence.Columns[0].title.caption      := GetTexteLibelle('RULES-LAB_001');
+           TabMetierCompetence.ColWidths[1]     := 0;
+           TabMetierCompetence.Columns.Add;
+           TabMetierCompetence.Columns[1].title.caption      := 'R';
+           TabMetierCompetence.ColWidths[2]     := 30;
+           TabMetierCompetence.Columns[1].Alignment:=Tacenter;
+           TabMetierCompetence.Columns.Add;
+           TabMetierCompetence.Columns[2].title.caption      := GetTexteLibelle('RULES-LAB_009');
+           TabMetierCompetence.ColWidths[3]     := 345;
+           TabMetierCompetence.Columns.Add;
+           TabMetierCompetence.Columns[3].title.caption      := '40 Pts';
+           TabMetierCompetence.ColWidths[4]     := 90;
+           TabMetierCompetence.Columns.Add;
+           TabMetierCompetence.Columns[4].title.caption      := GetTexteLibelle('RULES-LAB_078');
+           TabMetierCompetence.ColWidths[5]     := 80;
+           TabMetierCompetence.Columns.Add;
+           TabMetierCompetence.Columns[5].title.caption      := '';
+           TabMetierCompetence.ColWidths[6]     := 0;
+      end;
+
+    procedure ChargerImageEquipementMetier();
+      begin
+          // Mise en forme dy tableau de choix des équipement de métier
+          TabMetierEquipement.Options          := TabMetierEquipement.Options + [goEditing, goAlwaysShowEditor];
+          TabMetierEquipement.ColCount         := 8;
+          TabMetierEquipement.RowCount         := 1;
+          TabMetierEquipement.ColWidths[0]     := 30;
+          TabMetierEquipement.Cells[1, 0]      := GetTexteLibelle('RULES-LAB_001');
+          TabMetierEquipement.ColWidths[1]     := 0;
+          TabMetierEquipement.Cells[2, 0]      := GetTexteLibelle('RULES-LAB_013');
+          TabMetierEquipement.ColWidths[2]     := 200;
+          TabMetierEquipement.Cells[3, 0]      := GetTexteLibelle('RULES-LAB_010');
+          TabMetierEquipement.ColWidths[3]     := 0;
+          TabMetierEquipement.Cells[4, 0]      := GetTexteLibelle('RULES-LAB_078');
+          TabMetierEquipement.ColWidths[4]     := 75;
+          TabMetierEquipement.Cells[5, 0]      := '';
+          TabMetierEquipement.ColWidths[5]     := 0;
+          TabMetierEquipement.Cells[6, 0]      := '';
+          TabMetierEquipement.ColWidths[6]     := 0;
+          // Col 7, cachee : pour une ligne "au choix", une quantite par code de la col 3 (memes
+          // rangs, separees par ','), lue au double-clic pour poser la col 5.
+          TabMetierEquipement.Cells[7, 0]      := '';
+          TabMetierEquipement.ColWidths[7]     := 0;
+      end;
+
+  begin
+    // PHASES
+    ChargerImagePhases();
+    // 0 - RECAPITULATIF
+    ChargerImageRecapitulatif();
+    // 1 - RACE
+    ChargerImageRace();
+    // 2 - METIER
+    ChargerImageMetier();
+    // 3 - ATTRIBUTS
+    ChargerImageAttributs();
+    // 4 - TALENTS
+    ChargerImageTalents();
+    // 5 - COMPETENCES DE RACES
+    ChargerImageCompetencesRace();
+    // 6 - COMPETENCE DE METIER
+    ChargerImageCompetencesMetier();
+    // 7 - EQUIPEMENT DE METIER
+    ChargerImageEquipementMetier();
+  end;
+
+procedure TWinCreations.TabSelectEditor(Sender: TObject; aCol,
+  aRow: Integer; var Editor: TWinControl);
+  // pour ne pas pouvoir saisir dans certaines tables
+  begin
+    Editor := nil;
+  end;
+
+// Recharge icones et couleurs de niveau pour le couple metier/ethnie du moment. Les deux
+// changent en cours de creation, dans les deux sens : cette procedure est donc appelee a
+// chaque fois que l'un des deux est fixe.
+procedure TWinCreations.ChargeImagesNiveau();
+  var
+    IndNiv: Integer;
+    MaxNiv: Integer;
+  begin
+    if not Assigned(ListImage) then
+      ListImage := TImageList.Create(nil);
+    ListImage.Clear;
+    SetLength(ColorList, 0);
+    // Dimensionne sur la donnee et non sur une constante : voir MaxNiveauMetier.
+    // Pas MaxNiveauMetier : le dossier NIV contient aussi des pastilles de couleur
+    // rangees apres le dernier niveau. Voir MaxIndiceIconeNiveau.
+    MaxNiv := MaxIndiceIconeNiveau();
+    SetLength(ColorList, MaxNiv + 1);
+    For IndNiv := 0 to MaxNiv Do
+      ChargeImageNiveau(IndNiv);
+  end;
+
+procedure TWinCreations.ChargeImageNiveau(Niveau: Integer);
+  // pour afficher les images des niveaux
+  begin
+      Picture  := TPicture.Create;
+      Bitmap   := TBitmap.Create;
+      try
+        // Meme resolution que la fiche de personnage : le metier d'abord - sa
+        // declaration prouve que son livre est charge - puis l'ethnie, puis sa race,
+        // puis \PICTURES\NIV\. Voir CheminNiveauImageMetierRace dans ChargeMetier.
+        Path   := CheminNiveauImageMetierRace(MetierEnCours, RaceEnCours, Niveau);
+        // Icone absente pour ce niveau : on ajoute QUAND MEME une image, neutre, sinon
+        // les index de ListImage se decalent d'un cran et chaque niveau afficherait
+        // l'icone du suivant. Le cas se produit des qu'un livre amene un niveau plus haut
+        // que ce que PICTURES\NIV\ contient.
+        if FileExists(Path) then
+          begin
+            Picture.LoadFromFile(Path);
+            Bitmap.Assign(Picture.graphic);
+            ColorLoc := CouleurFondIcone(Bitmap);
+          end
+        else
+          begin
+            Bitmap.SetSize(8, 8);
+            Bitmap.Canvas.Brush.Color := CouleurGrisFonce;
+            Bitmap.Canvas.FillRect(0, 0, 8, 8);
+            ColorLoc := CouleurGrisFonce;
+          end;
+        ListImage.Add(Bitmap, nil); // Ajout de l'image au TImageList
+        ColorList[Niveau] := ColorLoc;
+      finally
+        Picture.Free;
+        Bitmap.Free;
+      end;
+  end;
+
+procedure TWinCreations.LibMetierDblClick(Sender: TObject);
+  begin
+    MetierFenetre(MetierEnCours);
+  end;
+
+procedure TWinCreations.LibRaceDblClick(Sender: TObject);
+  begin
+    RaceFenetre(RaceEnCours);
+  end;
+
+
+////////////////////////////////////////////////////////////////////////////////
+//                               PHASES                                       //
+////////////////////////////////////////////////////////////////////////////////
+
+procedure TWinCreations.PhaseSave(NouvellePhase: Integer);
+    procedure PhaseSaveRace();
+      begin
+      Personnage.Race                              := RaceEnCours;
+      Personnage.CreationAttribut                  := [];
+      Personnage.CreationCompetence35              := [];
+      Personnage.CreationCompetence40              := [];
+      Personnage.CreationTalent                    := [];
+      Personnage.Equipement                        := [];
+      Personnage.MetierAncien                      := [];
+      Personnage.MetierCompetence                  := [];
+      Personnage.MetierTalent                      := [];
+      // L'APPARTENANCE (regiment, ordre, culte) est conditionnee par l'ethnie : changer
+      // d'ethnie invalide ce qui a pu etre choisi. CONTEXT.md 2.44.
+      Personnage.Appartenance                      := '';
+      // Les details physiques (Rulebook p.40) dependent de l'ethnie : on repart de zero
+      Personnage.Age                               := 0;
+      Personnage.Height                            := 0;
+      Personnage.HeightUnit                        := UniteTaille;
+      Personnage.HairColors                        := '';
+      Personnage.EyeColors                         := '';
+      LabPhysiqueResume.Text                       := '';
+      // Nouvelle creation : pas de signe astral herite d'une creation precedente
+      Personnage.SigneAstral                       := '';
+      Personnage.SigneAstralVariante               := '';
+      Personnage.SigneAstralTalent                 := '';
+      SigneTire                                    := False;
+      ChargeTabMetier();
+      end;
+
+    procedure PhaseSaveMetier();
+      begin
+      PersonnageMetier.CodeMetier   := MetierEnCours;
+      PersonnageMetier.NiveauMetier := 1;
+      PersonnageMetier.CoutXp       := 0;
+      Personnage.MetierEnCours      := PersonnageMetier;
+      Personnage.ChoixAdaptation    := ChoixAdaptationCreation();
+      Personnage.MetierAncien       += [PersonnageMetier];
+      end;
+
+    procedure PhaseSaveAttributs();
+      var
+        IndTab: Integer;
+      begin
+      For IndTab := 1 to (TabAttribut.Rowcount-1) do
+        begin
+          if TabAttribut.Cells[5, IndTab] <> '' then
+            begin
+              PersonnageAttribut.CodeAttribut := TabAttribut.Cells[7, IndTab];
+              PersonnageAttribut.Valeur       := StrToIntdef(TabAttribut.Cells[5, IndTab],0);
+              Personnage.CreationAttribut     += [PersonnageAttribut];
+            end;
+          if IndTab <= 10 then
+              RecapAttribut.Cells[IndTab, 1]               := IntToStr(StrToIntDef(TabAttribut.Cells[6, IndTab], 0)
+                + SigneAstralAttributModif(Personnage.SigneAstral, Personnage.SigneAstralVariante, TabAttribut.Cells[7, IndTab]));
+        end;
+      RecapAttribut.visible := true;
+      end;
+
+    procedure PhaseSaveTalents();
+      var
+        IndTab: Integer;
+        PTalent: StructureTalent;
+      begin
+       AjouteTalentsResolus();
+       for IndTab := 1 to (TabTalent.RowCount-1) do
+         begin
+           if TabTalent.Cells[1, IndTab] <> '' then
+             begin
+               PersonnageTalent.CodeTalent                  := TabTalent.Cells[1, IndTab];
+               PersonnageTalent.Valeur                      := 1;
+               Personnage.CreationTalent                    += [PersonnageTalent];
+             end;
+         end;
+       IndTab := 0;
+       For PersonnageTalent in Personnage.CreationTalent do
+         Begin
+           PTalent                      := ChercheTalent(PersonnageTalent.CodeTalent);
+           // RecapTalent est dimensionnee une fois pour toutes a 10 lignes dans
+           // ChargerImage : au-dela, l'ecriture levait EGridException (Index Out of range).
+           // Personne n'avait plus de 10 talents de creation avant le Skink, qui en cumule
+           // 6 traits + 2 choix + les specialisations. CONTEXT.md 2.15.
+           if IndTab >= RecapTalent.RowCount then
+             RecapTalent.RowCount := IndTab + 1;
+           RecapTalent.Cells[1, IndTab] := PTalent.Libelle;
+           RecapTalent.Cells[2, IndTab] := PTalent.CodeTalent;
+           Inc(IndTab);
+         end;
+       RecapTalent.visible := true;
+      end;
+
+    procedure PhaseSaveCompetencesRace();
+      var
+        IndTab: Integer;
+        PCompetence: StructureCompetence;
+        PRace: StructureRace;
+      begin
+      Prace := chercheRace(RaceEnCours);
+      for IndTab := 1 to TabRaceCompetence.RowCount - 1 do
+        begin
+          if CompetenceRaceStates[4, IndTab] then
+            begin
+              NbRaceComp                                   := NbRaceComp + 1;
+              PersonnageCompetence.CodeCompetence          := TabRaceCompetence.Cells[1, IndTab];
+              PersonnageCompetence.Valeur                  := PRace.Point3;
+              Personnage.CreationCompetence35              += [PersonnageCompetence];
+            end;
+          if CompetenceRaceStates[5, IndTab] then
+            begin
+              NbRaceComp                                   := NbRaceComp + 1;
+              PersonnageCompetence.CodeCompetence          := TabRaceCompetence.Cells[1, IndTab];
+              PersonnageCompetence.Valeur                  := PRAce.Point5;
+              Personnage.CreationCompetence35              += [PersonnageCompetence];
+            end;
+        end;
+
+      IndTab := 0;
+      For PersonnageCompetence in Personnage.CreationCompetence35 do
+         Begin
+           PCompetence := ChercheCompetence(PersonnageCompetence.CodeCompetence);
+           // meme precaution que RecapTalent : la grille n'est jamais agrandie a la saisie
+           if IndTab >= RecapComp.RowCount then
+             RecapComp.RowCount := IndTab + 1;
+           RecapComp.Cells[1, IndTab] := PCompetence.Libelle;
+           RecapComp.Cells[2, IndTab] := IntToStr(PersonnageCompetence.Valeur);
+           RecapComp.Cells[5, IndTab] := PCompetence.CodeCompetence;
+           Inc(Indtab);
+         end;
+      RecapComp.visible := true;
+      end;
+
+    procedure PhaseSaveCompetencesMetier();
+      var
+        IndTab: Integer = 0;
+        NbMetierComp: Integer = 0;
+        DebMetierRec: Integer = 0;
+        Row: Integer;
+        NbAdd: Integer = 0;
+        PCompetence: StructureCompetence;
+        PMetierCompetence: StructureMetierCompetence;
+        PMetierTalent: StructureMetierTalent;
+        CandidatsAppart: String;
+      begin
+      DebMetierRec := NbRaceComp;
+      for IndTab := 1 to TabMetierCompetence.RowCount - 1 do
+        begin
+          // ajout si quantité
+          if StrToIntdef(TabMetierCompetence.Cells[4, IndTab],0) > 0 then
+            begin
+              NbMetierComp                        := NbMetierComp + 1;
+              PersonnageCompetence.CodeCompetence := TabMetierCompetence.Cells[1, IndTab];
+              PersonnageCompetence.Valeur         := StrToIntdef(TabMetierCompetence.Cells[4, IndTab],0);
+              Personnage.CreationCompetence40     += [PersonnageCompetence];
+            end;
+          // liste des compétesnces de ce métier
+          PersonnageCompetence.CodeCompetence     := TabMetierCompetence.Cells[1, IndTab];
+          PersonnageCompetence.Valeur             := 1;
+          Personnage.MetierCompetence             += [PersonnageCompetence];
+        end;
+
+      // Adapting Careers (DATA_CAREER_ADAPTATION) : la competence peut etre remplacee
+      // pour l'ethnie du personnage ; vide = simplement retiree. Facultatives : pas
+      // encore branchees (Choix vide).
+      for PMetierCompetence in ListMetierCompetence do
+        if (PMetierCompetence.CodeMetier = MetierEnCours) and (PMetierCompetence.NiveauMetier <> 1) then
+          begin
+            PersonnageCompetence.CodeCompetence := AdapterElement(MetierEnCours, Personnage.Race, Personnage.ChoixAdaptation,
+                                                     PMetierCompetence.NiveauMetier, ConstXmlCompetence,
+                                                     PMetierCompetence.CodeCompetence);
+            if PersonnageCompetence.CodeCompetence = '' then
+              continue;
+            PersonnageCompetence.Valeur         := PMetierCompetence.NiveauMetier;
+            Personnage.MetierCompetence         += [PersonnageCompetence];
+          end;
+
+      IndTab := 0;
+      For PersonnageCompetence in Personnage.CreationCompetence40 do
+        Begin
+          PCompetence := ChercheCompetence(PersonnageCompetence.CodeCompetence);
+          Row         := FindRowByText(RecapComp, PCompetence.CodeCompetence, 4);
+          if Row = -1 then
+            begin
+              Row     := DebMetierRec + NbAdd;
+              NbAdd   := NbAdd + 1;
+              if Row >= RecapComp.RowCount then
+                RecapComp.RowCount := Row + 1;
+              RecapComp.Cells[1, Row] := PCompetence.Libelle;
+              RecapComp.Cells[3, Row] := IntToStr(PersonnageCompetence.Valeur);
+              RecapComp.Cells[5, Row] := PCompetence.CodeCompetence;
+              Inc(IndTab);
+            end;
+        end;
+
+      // liste des talents de ce métier (tous niveaux)
+      for PMetierTalent in ListMetierTalent do
+         if (PMetierTalent.CodeMetier = MetierEnCours) then
+           begin
+             PersonnageTalent.CodeTalent := AdapterElement(MetierEnCours, Personnage.Race, Personnage.ChoixAdaptation,
+                                              PMetierTalent.NiveauMetier, ConstXmlTalent,
+                                              PMetierTalent.CodeTalent);
+             if PersonnageTalent.CodeTalent = '' then
+               continue;
+             PersonnageTalent.Valeur     := PMetierTalent.NiveauMetier;
+             Personnage.MetierTalent     += [PersonnageTalent];
+           end;
+
+      // Entrer dans une carriere ouvre le droit a une APPARTENANCE (regiment, ordre
+      // de chevalerie, culte). A la creation il n'y a pas de garde de niveau : on est
+      // par definition au niveau 1. Rien n'est propose s'il ne reste aucun candidat.
+      // CONTEXT.md 2.44.
+      CandidatsAppart := AppartenancesCandidates(MetierEnCours, Personnage.Race,
+                                                 Personnage.Appartenance);
+      if CandidatsAppart <> '' then
+        begin
+          ChoixWinTypeFichier         := ConstXmlDataCareerBonus;
+          ChoixWinCareerBonus         := CandidatsAppart;
+          // Remise a vide OBLIGATOIRE : fermer la fenetre sans double-cliquer ne
+          // touche pas a SelectWin..., qui garderait sinon une reponse precedente.
+          SelectWinCareerBonus        := '';
+          FenSpecialisation           := TWinSpecialisations.Create(Application);
+          FenSpecialisation.Position  := poOwnerFormCenter;
+          FenSpecialisation.ShowModal;
+          if SelectWinCareerBonus <> '' then
+            if Trim(Personnage.Appartenance) = '' then
+              Personnage.Appartenance := SelectWinCareerBonus
+            else
+              Personnage.Appartenance := Personnage.Appartenance + ',' + SelectWinCareerBonus;
+        end;
+
+      // Les APPARTENANCES greffent leurs competences et talents sur la carriere,
+      // "as if added to their Career". L'appel vient APRES les deux boucles
+      // ci-dessus, qui repartent d'une liste vide : place avant, il serait efface.
+      // CONTEXT.md 2.44.
+      PersonnageAppliqueGreffes(Personnage);
+      end;
+
+    procedure PhaseSaveEquipements();
+      var
+        IndTab: Integer;
+        StringsCodeEns: TStringList;
+        StringsTypeEns: TStringList;
+        IndEns: Integer;
+      begin
+      ChargeSignesAstraux();
+      for IndTab := 1 to TabMetierEquipement.RowCount - 1 do
+        begin
+          if Pos(SeparateurEnsemble, TabMetierEquipement.Cells[1, IndTab]) > 0 then
+            begin
+              // ensemble : la ligne porte deux codes joints par SeparateurEnsemble
+              // (AfficheImageMetier) - une seule ligne de creation, mais les deux
+              // objets doivent exister separement dans Personnage.Equipement.
+              StringsCodeEns := TStringList.Create;
+              StringsTypeEns := TStringList.Create;
+              ExtractStrings([SeparateurEnsemble], [], PChar(TabMetierEquipement.Cells[1, IndTab]), StringsCodeEns);
+              ExtractStrings([SeparateurEnsemble], [], PChar(TabMetierEquipement.Cells[6, IndTab]), StringsTypeEns);
+              for IndEns := 0 to StringsCodeEns.Count - 1 do
+                begin
+                  PersonnageEquipement.CodeEquipement    := StringsCodeEns[IndEns];
+                  PersonnageEquipement.QualiteEquipement := QualiteDepuisCode(PersonnageEquipement.CodeEquipement);
+                  PersonnageEquipement.TypeEquipement    := StringsTypeEns[IndEns];
+                  // Fabrication D'ORIGINE (gromril, Jade Longsword...) : posee seulement si
+                  // le joueur n'a pas deja un (Q) a choisir. CONTEXT.md 2.29.
+                  if PersonnageEquipement.QualiteEquipement = '' then
+                    PersonnageEquipement.QualiteEquipement := FabricationDuCatalogue(PersonnageEquipement.CodeEquipement, PersonnageEquipement.TypeEquipement);
+                  PersonnageEquipement.Porte             := False;
+                  PersonnageEquipement.Quantite          := StrToIntDef(TabMetierEquipement.Cells[5, IndTab], 1);
+                  Personnage.Equipement                  += [PersonnageEquipement];
+                end;
+              StringsCodeEns.Free;
+              StringsTypeEns.Free;
+            end
+          else
+            begin
+              PersonnageEquipement.CodeEquipement          := TabMetierEquipement.Cells[1, IndTab];
+              PersonnageEquipement.QualiteEquipement       := QualiteDepuisCode(PersonnageEquipement.CodeEquipement);
+              PersonnageEquipement.TypeEquipement          := TabMetierEquipement.Cells[6, IndTab];
+              // Fabrication D'ORIGINE (gromril, Jade Longsword...) : posee seulement si le
+              // joueur n'a pas deja un (Q) a choisir. CONTEXT.md 2.29.
+              if PersonnageEquipement.QualiteEquipement = '' then
+                PersonnageEquipement.QualiteEquipement := FabricationDuCatalogue(PersonnageEquipement.CodeEquipement, PersonnageEquipement.TypeEquipement);
+              // Comme un achat en jeu (winpersonnage.pas) : l'equipement de depart arrive
+              // non porte, a cocher explicitement ensuite.
+              PersonnageEquipement.Porte                   := False;
+              // Col 5, cachee : quantite posee par AfficheImageMetier (CONTEXT.md 2.77).
+              // Vide (choix multiple, ou aucune quantite du livre) = 1 exemplaire.
+              PersonnageEquipement.Quantite                := StrToIntDef(TabMetierEquipement.Cells[5, IndTab], 1);
+              Personnage.Equipement                        += [PersonnageEquipement];
+            end;
+        end;
+      end;
+
+    procedure PhaseSaveSauvegarde();
+      var
+        Xp: Integer;
+        directoryPath: String;
+      begin
+      AjouteTalentSigne();
+      Xp := XmlCalculXp();
+      Personnage.LivresAcceptes:=LivresPersonnages;
+      directoryPath := GetCurrentDir+ConstCheminPersonnage+EditNomPersonnag.text;
+      if not CreateDir(directoryPath) then
+          ShowMessage(GetTexteLibelle('RULES-MESS_001')+' '+directoryPath)
+      else
+        begin
+          if PersonnageXmlCreation(Personnage, Xp, Xp, directoryPath + '\' + FormatDateTime('yyyymmdd', Date) + '-' + FormatDateTime('hhnnss', Time) + '.xml', EditNomPersonnag.text) then
+            begin
+              NeedUpdate          := true;
+              RecherchePersonnage := EditNomPersonnag.text;
+              close;
+            end
+          else
+            ShowMessage(GetTexteLibelle('RULES-MESS_066'));
+        end;
+      end;
+
+  Begin
+    // supprimer les éléments des phases suivants
+    // NouvellePhase est la phase où l'on ARRIVE : chaque branche enregistre donc le résultat de
+    // la phase précédente et efface ce qui vient après.
+    case NouvellePhase of
+      1: Begin         // Livres
+           // Le choix des livres vient d'être quitté. Rien à enregistrer ici : LivresPersonnages
+           // est déjà tenu à jour par TabLivreDblClick, et il n'est recopié dans le personnage
+           // qu'à la sauvegarde finale (phase 9).
+           //
+           // Pas d'invalidation à prévoir non plus : la création n'avance que vers l'avant
+           // (ButtonPhaseSuivante -> ChangementPhase(ConstSuivant), il n'existe aucun bouton
+           // retour, et les onglets des autres phases sont TabVisible=False). Le jour où un
+           // retour arrière existera, c'est ici qu'il faudra tout remettre à zéro.
+         end;
+
+      2: PhaseSaveRace();
+      3: PhaseSaveMetier();
+      4: PhaseSaveAttributs();
+      5: PhaseSaveTalents();
+      6: PhaseSaveCompetencesRace();
+      7: PhaseSaveCompetencesMetier();
+      8: PhaseSaveEquipements();
+      9: PhaseSaveSauvegarde();
+      end;
+  end;
+
+Procedure TWinCreations.TalentFenetre(Choix: Integer; CodeTalent: String);
+  BEGIN
+    // ouvrir les Talents
+    if (Choix = 1) and (FirstClick1 = true) then
+        FirstClick1 := false
+    else if (choix = 2) and (FirstClick2 = true) then
+        FirstClick2 := false
+    else if (choix = 3) and (FirstClick3 = true) then
+        FirstClick3 := false
+    else if (choix = 4) and (FirstClick4 = true) then
+        FirstClick4 := false
+    else if (CodeTalent <> '') then
+      begin
+        SelectWinTalent     := CodeTalent;
+        FenTalent           := TWintTalent.Create(Application);
+        FenTalent.Position  := poOwnerFormCenter;
+        FenTalent.ShowModal;
+        SelectWinTalent     := '';
+        ChoixWinTalent      := '';
+      end;
+  end;
+
+Procedure TWinCreations.CompetenceFenetre(CodeCompetence: String);
+  BEGIN
+      SelectWinCompetence     := CodeCompetence;
+      FenCompetence           := TWinCompetence.Create(Application);
+      FenCompetence.Position  := poOwnerFormCenter;
+      FenCompetence.ShowModal;
+      SelectWinCompetence     := '';
+      ChoixWinCompetence      := '';
+  end;
+
+Procedure TWinCreations.RaceFenetre(CodeRace: String);
+  BEGIN
+      SelectWinRace     := CodeRace;
+      FenRace           := TWinRace.Create(Application);
+      FenRace.Position  := poOwnerFormCenter;
+      FenRace.ShowModal;
+      SelectWinRace     := '';
+      ChoixWinRace      := '';
+  end;
+
+Procedure TWinCreations.MetierFenetre(CodeMetier: String);
+  BEGIN
+      SelectWinMetier     := CodeMetier;
+      FenMetier           := TWinMetiers.Create(Application);
+      FenMetier.Position  := poOwnerFormCenter;
+      FenMetier.ShowModal;
+      SelectWinMetier     := '';
+      ChoixWinMetierRace  := '';
+  end;
+
+
+procedure TWinCreations.RecapAttributSelectEditor(Sender: TObject; aCol,
+  aRow: Integer; var Editor: TWinControl);
+  begin
+    Editor := nil;
+  end;
+
+procedure TWinCreations.RecapCompDblClick(Sender: TObject);
+  begin
+    CompetenceFenetre(RecapComp.Cells[5, RecapComp.Row]);
+  end;
+
+procedure TWinCreations.RecapCompSelectEditor(Sender: TObject; aCol,
+  aRow: Integer; var Editor: TWinControl);
+  begin
+    Editor := nil;
+  end;
+
+procedure TWinCreations.RecapTalentDblClick(Sender: TObject);
+  begin
+    TalentFenetre(0,RecapTalent.Cells[2,RecapTalent.Row]);
+  end;
+
+procedure TWinCreations.RecapTalentSelectEditor(Sender: TObject; aCol,
+  aRow: Integer; var Editor: TWinControl);
+  begin
+    Editor := nil;
+  end;
+
+procedure TWinCreations.TabCreationHasardDblClick(Sender: TObject);
+  var
+    Ind:      Integer;
+    Source:   String;
+    CodeParentLigne:   String;
+    Jet:      Integer;
+    CodeTire: String;
+  begin
+    if TabCreationHasard.Row < 1 then Exit;
+
+    // colonne spécialisation : choisir la spécialité du talent tiré
+        if TabCreationHasard.Col = ColHasLibSpe then
+          begin
+            if Pos(ValeurGenerique, TabCreationHasard.Cells[ColHasSel, TabCreationHasard.Row]) = 0 then Exit;
+            ChoixWinTypeFichier := ConstXmlSousChapitreTalent;
+            ChoixWinTalent      := TabCreationHasard.Cells[ColHasSel, TabCreationHasard.Row];
+            SelectWinTalent     := '';
+            FenSpecialisation           := TWinSpecialisations.Create(Application);
+            FenSpecialisation.Position  := poOwnerFormCenter;
+            FenSpecialisation.ShowModal;
+            if SelectWinTalent = '' then Exit;
+
+            for Ind := 0 to High(ListeChoixCreation) do
+              if (ListeChoixCreation[Ind].CodeSource = TabCreationHasard.Cells[ColHasSource, TabCreationHasard.Row])
+                 and (ListeChoixCreation[Ind].CodeParent = TabCreationHasard.Cells[ColHasParent, TabCreationHasard.Row])
+                   and (ListeChoixCreation[Ind].Rang = StrToIntDef(TabCreationHasard.Cells[ColHasRang, TabCreationHasard.Row], 0)) then
+                begin
+                  ListeChoixCreation[Ind].CodeSpecialise := SelectWinTalent;
+                  break;
+                end;
+            ReconstruitChoixCreation();
+            Exit;
+          end;
+
+    Source := TabCreationHasard.Cells[ColHasSource, TabCreationHasard.Row];
+    CodeParentLigne := TabCreationHasard.Cells[ColHasParent, TabCreationHasard.Row];
+
+    ChoixWinJetRace := RaceEnCours;
+    ChoixWinJetValeur := StrToIntDef(TabCreationHasard.Cells[ColHasJet, TabCreationHasard.Row], 0);
+    ChoixWinJetDeja := ListeTalentsDejaPris(TabCreationHasard.Cells[ColHasSel, TabCreationHasard.Row]);
+    FenLanceDe                 := TWinLanceDes.Create(Application);
+    FenLanceDe.Position        := poOwnerFormCenter;
+    FenLanceDe.ShowModal;
+    ChoixWinJetDeja.Free;
+    ChoixWinJetDeja := nil;
+    if SelectWinJetTalent = '' then Exit;
+    Jet      := SelectWinJet;
+    CodeTire := SelectWinJetTalent;
+
+    for Ind := 0 to High(ListeChoixCreation) do
+          if (ListeChoixCreation[Ind].CodeSource = Source)
+             and (ListeChoixCreation[Ind].CodeParent = CodeParentLigne)
+               and (ListeChoixCreation[Ind].Rang = StrToIntDef(TabCreationHasard.Cells[ColHasRang, TabCreationHasard.Row], 0)) then
+        begin
+          ListeChoixCreation[Ind].Jet        := Jet;
+          ListeChoixCreation[Ind].CodeChoisi := CodeTire;
+          ListeChoixCreation[Ind].CodeSpecialise := '';
+          break;
+        end;
+
+    ReconstruitChoixCreation();
+  end;
+
+procedure TWinCreations.TabCreationHasardPrepareCanvas(Sender: TObject; aCol, aRow: Integer; aState: TGridDrawState);
+  begin
+    if aRow < 1 then Exit;
+    if TabCreationHasard.Cells[ColHasSel, aRow] = '' then
+      TabCreationHasard.Canvas.Brush.Color := CouleurFondNot;
+  end;
+
+procedure TWinCreations.TabCreationChoixDblClick(Sender: TObject);
+  var
+    Ind:    Integer;
+    Source: String;
+    CodeParentLigne: String;
+    ListOptLigne: TStringList;
+    RienAChoisir: Boolean;
+  begin
+    if TabCreationChoix.Row < 1 then Exit;
+    Source := TabCreationChoix.Cells[ColChoixSource, TabCreationChoix.Row];
+    CodeParentLigne := TabCreationChoix.Cells[ColChoixParent, TabCreationChoix.Row];
+
+    // Une ligne dont la source est un talent CONCRET n'a rien a choisir : c'est un talent
+    // accorde sec par une option de trait (CONTEXT.md 2.41). Sans cette garde, le double
+    // clic ouvrirait le catalogue COMPLET des talents - ChargeSpecialisation bascule sur
+    // le catalogue des qu'un code n'a ni '/' ni '_*' - et laisserait le joueur remplacer
+    // un talent que le livre lui impose.
+    if ChercheTrait(Source).CodeTrait = '' then
+      begin
+        ListOptLigne := ListeTalent(Source);
+        RienAChoisir := (ListOptLigne.Count = 0);
+        ListOptLigne.Free;
+        if RienAChoisir then
+          Exit;
+      end;
+
+    ChoixWinTypeFichier        := ConstXmlSousChapitreTalent;
+    ChoixWinTalent             := Source;
+    SelectWinTalent            := '';
+    FenSpecialisation          := TWinSpecialisations.Create(Application);
+    FenSpecialisation.Position := poOwnerFormCenter;
+    FenSpecialisation.ShowModal;
+
+    if SelectWinTalent <> '' then
+      begin
+        for Ind := 0 to High(ListeChoixCreation) do
+          if (ListeChoixCreation[Ind].CodeSource = Source)
+             and (ListeChoixCreation[Ind].CodeParent = CodeParentLigne)
+               and (ListeChoixCreation[Ind].Rang = StrToIntDef(TabCreationChoix.Cells[ColChoixRang, TabCreationChoix.Row], 0)) then            begin
+              ListeChoixCreation[Ind].CodeChoisi := SelectWinTalent;
+              break;
+            end;
+        ReconstruitChoixCreation();
+      end;
+    SelectWinTalent := '';
+  end;
+
+procedure TWinCreations.TabCreationChoixPrepareCanvas(Sender: TObject; aCol, aRow: Integer; aState: TGridDrawState);
+  begin
+    if aRow < 1 then Exit;
+    if TabCreationChoix.Cells[ColChoixSel, aRow] = '' then
+      TabCreationChoix.Canvas.Brush.Color := CouleurFondNot;
+  end;
+
+procedure TWinCreations.TabLivreDblClick(Sender: TObject);
+  var
+    ind:  Integer;
+  begin
+    // cocher ou décocher le livre en cours (sauf RULESBOOK qui est en 1)
+    if (TabLivre.Row > 1) then
+      if TabLivre.Cells[2, TabLivre.Row] <> '' then
+        if TabLivre.Cells[1, TabLivre.Row] <> ConstSelectionne then
+          TabLivre.Cells[1, TabLivre.Row] := ConstSelectionne
+        else
+          TabLivre.Cells[1, TabLivre.Row] := '';
+
+     // actualiser les livres que se personnages veut prendre en compte
+     LivresPersonnages := '';
+     for Ind := 1 to TabLivre.RowCount - 1 do
+       if TabLivre.Cells[1, Ind] = ConstSelectionne then
+         LivresPersonnages := LivresPersonnages + AjouteAccolade(TabLivre.Cells[3, Ind]);
+  end;
+
+procedure TWinCreations.TabMetierCompetenceDblClick(Sender: TObject);
+  begin
+    if (TabMetierCompetence.Cells[5, TabMetierCompetence.Row] = ConstArbreAuChoix) then
+      begin
+        ChoixWinTypeFichier         := ConstXmlSousChapitreCompetence;
+        ChoixWinCompetence          := TabMetierCompetence.Cells[6, TabMetierCompetence.Row];
+        FenSpecialisation           := TWinSpecialisations.Create(Application);
+        FenSpecialisation.Position  := poOwnerFormCenter;
+        FenSpecialisation.ShowModal;
+        if SelectWinCompetence <> '' then
+          begin
+            TabMetierCompetence.Cells[5, TabMetierCompetence.Row] := '';
+            TabMetierCompetence.Cells[1, TabMetierCompetence.Row] := SelectWinCompetence;
+            TabMetierCompetence.Cells[3, TabMetierCompetence.Row] := SelWinLibelle;
+          end;
+      end
+    else
+      CompetenceFenetre(TabMetierCompetence.Cells[1, TabMetierCompetence.Row]);
+  end;
+
+procedure TWinCreations.TabMetierEquipementDblClick(Sender: TObject);
+var
+  Codes:           TStringList;
+  Quantites:       TStringList;
+  IndChoix:        Integer;
+  QuantiteChoisie: Integer;
+begin
+  if TabMetierEquipement.Cells[2, TabMetierEquipement.Row] = ConstArbreAuChoix then
+    begin
+      ChoixWinTypeFichier         := ConstXmlChapitreEquipement;
+      ChoixWinEquipement          := TabMetierEquipement.Cells[3, TabMetierEquipement.Row];
+      FenSpecialisation           := TWinSpecialisations.Create(Application);
+      FenSpecialisation.Position  := poOwnerFormCenter;
+      FenSpecialisation.ShowModal;
+      if SelectWinEquipement <> '' then
+        begin
+          TabMetierEquipement.Cells[1, TabMetierEquipement.Row] := SelectWinEquipement;
+          // Quantite de la branche retenue : meme rang dans la col 7 que le code dans la col 3.
+          // Sans correspondance (ou sans quantite par branche), on garde celle de l'item.
+          QuantiteChoisie := StrToIntDef(TabMetierEquipement.Cells[5, TabMetierEquipement.Row], 1);
+          if TabMetierEquipement.Cells[7, TabMetierEquipement.Row] <> '' then
+            begin
+              Codes      := TStringList.Create;
+              Quantites  := TStringList.Create;
+              try
+                ExtractStrings([','], [], PChar(TabMetierEquipement.Cells[3, TabMetierEquipement.Row]), Codes);
+                ExtractStrings([','], [], PChar(TabMetierEquipement.Cells[7, TabMetierEquipement.Row]), Quantites);
+                IndChoix := Codes.IndexOf(SelectWinEquipement);
+                if (IndChoix >= 0) and (IndChoix < Quantites.Count) then
+                  QuantiteChoisie := StrToIntDef(Quantites[IndChoix], 1);
+              finally
+                Codes.Free;
+                Quantites.Free;
+              end;
+            end;
+          TabMetierEquipement.Cells[2, TabMetierEquipement.Row] := SelWinLibelle + QuantiteSuffixe(QuantiteChoisie);
+          TabMetierEquipement.Cells[4, TabMetierEquipement.Row] := '';
+          TabMetierEquipement.Cells[5, TabMetierEquipement.Row] := IntToStr(QuantiteChoisie);
+          TabMetierEquipement.Cells[6, TabMetierEquipement.Row] := SelWinType;
+        end;
+    end;
+end;
+
+procedure TWinCreations.TabRaceCompetenceDblClick(Sender: TObject);
+  begin
+    // Meme moule que TabMetierCompetenceDblClick, mais SANS colonne technique : un code
+    // d'ethnie encore au choix se reconnait a lui seul - il porte ValeurGenerique
+    // ("Trade (Any)") ou SeparateurMulti ("Trade (Farming or Mining)"). Une fois resolu il
+    // ne porte plus ni l'un ni l'autre, donc la condition s'eteint d'elle-meme.
+    // CONTEXT.md 2.45.
+    if (Pos(ValeurGenerique, TabRaceCompetence.Cells[1, TabRaceCompetence.Row]) > 0) or
+       (Pos(SeparateurMulti, TabRaceCompetence.Cells[1, TabRaceCompetence.Row]) > 0) then
+      begin
+        ChoixWinTypeFichier         := ConstXmlSousChapitreCompetence;
+        ChoixWinCompetence          := TabRaceCompetence.Cells[1, TabRaceCompetence.Row];
+        FenSpecialisation           := TWinSpecialisations.Create(Application);
+        FenSpecialisation.Position  := poOwnerFormCenter;
+        FenSpecialisation.ShowModal;
+        if SelectWinCompetence <> '' then
+          begin
+            TabRaceCompetence.Cells[1, TabRaceCompetence.Row] := SelectWinCompetence;
+            TabRaceCompetence.Cells[3, TabRaceCompetence.Row] := SelWinLibelle;
+          end;
+      end
+    else
+      CompetenceFenetre(TabRaceCompetence.Cells[1, TabRaceCompetence.Row]);
+  end;
+
+procedure TWinCreations.TabTalentDblClick(Sender: TObject);
+  begin
+    TalentFenetre(0, TabTalent.Cells[1, TabTalent.Row]);
+  end;
+
+procedure TWinCreations.ChangementPhase(Changement: Integer);
+  var
+    i: Integer;
+    TabSheet: TTabSheet;
+  begin
+    if (PhaseEnCours <> -1) and (Changement > 0) and (not PageEtapesChange()) then
+      begin
+         Exit;
+      end;
+    PhaseSave(PhaseEnCours + changement);
+    // gérer le changement de phase (avant ou arrière) pour activer/désactiver les onglets
+    PhaseEnCours := PhaseEnCours + changement;
+    if PhaseEnCours < PhaseDebut then PhaseEnCours := PhaseDebut;
+    if PhaseEnCours > PhaseMax   then PhaseEnCours := PhaseMax;
+    for i := 0 to PageEtapes.PageCount - 1 do
+    begin
+      TabSheet := PageEtapes.Pages[i];
+      if (i = PhaseEnCours) then
+        Begin
+          TabSheet.TabVisible := true;
+          ButtonLibellePhase.Caption := Format(GetTexteLibelle('RULES-LAB_315'), [i+1, PhaseMax+1, ListPhase[i]]);
+          TabSheet.Caption := IntToStr(i+1)+' sur '+IntToStr(PhaseMax+1);
+        end
+      else
+        TabSheet.TabVisible := False;
+    end;
+  end;
+
+procedure TWinCreations.TabMetierEquipementSelectEditor(Sender: TObject; aCol,
+  aRow: Integer; var Editor: TWinControl);
+  begin
+    Editor := nil;
+  end;
+
+Function TWinCreations.PageEtapesChange(): boolean;
+  // Phase 0 : choix des livres
+  function VerifLivres: Boolean;
+    begin
+      // Au moins un livre doit rester coché : LivresPersonnages part de LivresCharges
+      // (les livres actifs du menu principal), le joueur ne fait qu'en retirer.
+      if LivresPersonnages = '' then
+         begin
+            ShowMessage(GetTexteLibelle('RULES-MESS_056'));
+            Result := False;
+         end
+      else
+            Result := true;
+    end;
+
+  // Phase 1 : choix de la race
+  function VerifRace: Boolean;
+    begin
+      if RaceEnCours = '' then
+         begin
+            ShowMessage(GetTexteLibelle('RULES-MESS_002'));
+            Result := False;
+         end
+      else
+            Result := true;
+    end;
+
+  // Phase 2 : choix du metier
+  function VerifMetier: Boolean;
+    begin
+      if MetierEnCours = '' then
+         begin
+            ShowMessage(GetTexteLibelle('RULES-MESS_003'));
+            Result := False;
+         end
+      else
+            Result := true;
+    end;
+
+  // Phase 3 : choix des attributs
+  function VerifAttributs: Boolean;
+    var
+      Vide: Integer;
+      IndTab: Integer;
+    begin
+      Vide  := 0;
+      for IndTab := 1 to 10 do
+        If TabAttribut.Cells[5, Indtab] = '' then
+          Vide := Vide+1;
+
+      if Vide > 0 then
+          begin
+           ShowMessage(GetTexteLibelle('RULES-MESS_004'));
+           Result := False;
+          end
+        else if RadioButtonAttributRepartition.Checked and (StrToIntDef(TabAttributLanceDe.Cells[11, 1], 0) <> 100) then
+          begin
+           ShowMessage(GetTexteLibelle('RULES-MESS_065'));
+           Result := False;
+          end
+        else
+           Result := true;
+    end;
+
+  // Phase 4 : choix des talents
+  function VerifTalents: Boolean;
+    var
+      Ok: Boolean;
+    begin
+      Ok := True;
+      if not ChoixCreationComplet() then
+        begin
+          ShowMessage(GetTexteLibelle('RULES-MESS_005'));
+          Ok := False;
+        end;
+      result := Ok;
+    end;
+
+  // Phase 5 : choix des competences de race
+  function VerifCompetencesRace: Boolean;
+    var
+      Ok: Boolean;
+      IndTab: Integer;
+      PRaceNb: StructureRace;
+    begin
+      Ok := True;
+      // Le nombre attendu vient de l'ethnie, il n'est plus ecrit en dur : toutes les
+      // races du livre de regles en prennent 3 et 3, le Skink de Lustria 2 et 2
+      // (CONTEXT.md 2.15). MESS_013/014 portent un %d, d'ou le Format.
+      PRaceNb := ChercheRace(RaceEnCours);
+      if (NbCinq <> PRaceNb.NbPoint5) and (Ok) then
+        begin
+          ShowMessage(Format(GetTexteLibelle('RULES-MESS_013'), [PRaceNb.NbPoint5]));
+          Ok := False;
+        end;
+      if (NbTrois <> PRaceNb.NbPoint3) and (Ok) then
+        begin
+          ShowMessage(Format(GetTexteLibelle('RULES-MESS_014'), [PRaceNb.NbPoint3]));
+          Ok := False;
+        end;
+      // Pendant de la branche 6 : on refuse de quitter la phase tant qu'une ligne
+      // COCHEE porte encore un code non resolu. Ici la "quantite saisie" est une case
+      // a cocher, d'ou le test sur CompetenceRaceStates[4] / [5]. CONTEXT.md 2.45.
+      for IndTab := 1 to TabRaceCompetence.RowCount - 1 do
+        if (CompetenceRaceStates[4, IndTab] or CompetenceRaceStates[5, IndTab]) and
+           ((Pos(ValeurGenerique, TabRaceCompetence.Cells[1, IndTab]) > 0) or
+            (Pos(SeparateurMulti, TabRaceCompetence.Cells[1, IndTab]) > 0)) then
+          begin
+            ShowMessage(GetTexteLibelle('RULES-MESS_042'));
+            Ok := False;
+          end;
+      result := Ok;
+    end;
+
+  // Phase 6 : choix des competences de metier
+  function VerifCompetencesMetier: Boolean;
+    var
+      Ok: Boolean;
+      IndTab: Integer;
+    begin
+      Ok := True;
+      if TotalMetierCompetence <> 40 then
+        begin
+          ShowMessage(GetTexteLibelle('RULES-MESS_015'));
+          Ok := False;
+        end;
+      for IndTab := 1 to TabMetierCompetence.RowCount - 1 do
+        if (StrToIntDef(TabMetierCompetence.Cells[4, IndTab],0) <> 0) and (TabMetierCompetence.Cells[5, IndTab] = ConstArbreAuChoix) then
+          begin
+            ShowMessage(GetTexteLibelle('RULES-MESS_042'));
+            Ok := False;
+          end;
+      result := Ok;
+    end;
+
+  // Phase 7 : choix des equipements
+  function VerifEquipement: Boolean;
+    var
+      Ok: Boolean;
+      IndTab: Integer;
+    begin
+      Ok := True;
+      for IndTab := 1 to TabMetierEquipement.RowCount - 1 do
+        If (TabMetierEquipement.Cells[1, IndTab] = '') then
+          begin
+            ShowMessage(GetTexteLibelle('RULES-MESS_016'));
+            Ok := False;
+            Break;
+          end;
+      result := Ok;
+    end;
+
+  // Phase 8 : choix du nom de personnage
+  function VerifNom: Boolean;
+    var
+      Ok: Boolean;
+    begin
+      Ok := True;
+      // Un espace en debut/fin est invisible pour Nono mais casse la creation du
+      // dossier : CreateDir l'accepte en le tronquant silencieusement, puis
+      // l'ecriture du XML avec le nom non tronque echoue (dossier vide) - crash au
+      // demarrage suivant en tentant de charger un personnage sans fichier XML.
+      EditNomPersonnag.text := Trim(EditNomPersonnag.text);
+      if EditNomPersonnag.text = '' then
+        begin
+          ShowMessage(GetTexteLibelle('RULES-MESS_017'));
+          Ok := False;
+        end
+      else
+        begin
+          if DirectoryExists(GetCurrentDir+ConstCheminPersonnage+EditNomPersonnag.text) then
+            begin
+              ShowMessage(GetTexteLibelle('RULES-MESS_018'));
+              Ok := False;
+            end;
+        end;
+      result := Ok;
+    end;
+
+  begin
+    Result := True;
+    case PhaseEnCours of
+      0: Result := VerifLivres;
+      1: Result := VerifRace;
+      2: Result := VerifMetier;
+      3: Result := VerifAttributs;
+      4: Result := VerifTalents;
+      5: Result := VerifCompetencesRace;
+      6: Result := VerifCompetencesMetier;
+      7: Result := VerifEquipement;
+      8: Result := VerifNom;
+    end;
+  end;
+
+procedure TWinCreations.ButtonPhaseSuivanteClick(Sender: TObject);
+  begin
+    ChangementPhase(ConstSuivant);
+  end;
+
+// Details physiques : meme fenetre que sur la fiche (WinPersonnage). Le resultat va
+// directement dans Personnage, ecrit a la sauvegarde de la phase 9.
+procedure TWinCreations.ButtonPhysiqueClick(Sender: TObject);
+  var
+    FenPhysique: TWinPhysique;
+  begin
+    PhysiqueCodeRace := Personnage.Race;
+    PhysiqueAge      := Personnage.Age;
+    PhysiqueTaille   := Personnage.Height;
+    PhysiqueUnite    := Personnage.HeightUnit;
+    PhysiqueYeux     := Personnage.EyeColors;
+    PhysiqueCheveux  := Personnage.HairColors;
+    FenPhysique          := TWinPhysique.Create(Application);
+    FenPhysique.Position := poOwnerFormCenter;
+    try
+      FenPhysique.ShowModal;
+    finally
+      FenPhysique.Free;
+    end;
+    if PhysiqueValide then
+      begin
+        Personnage.Age        := PhysiqueAge;
+        Personnage.Height     := PhysiqueTaille;
+        Personnage.HeightUnit := PhysiqueUnite;
+        Personnage.EyeColors  := PhysiqueYeux;
+        Personnage.HairColors := PhysiqueCheveux;
+        LabPhysiqueResume.Text := IntToStr(Personnage.Age) + ' - ' + FormateTaille(Personnage.Height, Personnage.HeightUnit)
+                                     + ' - ' + Personnage.HairColors + ' - ' + Personnage.EyeColors;
+      end;
+  end;
+
+// Generateur de noms de l'ethnie (Rulebook p.38-39, Dwarf Player's Guide p.39) : le resultat
+// remplace le contenu du champ Nom, que le joueur peut ensuite retoucher.
+procedure TWinCreations.ButtonNomClick(Sender: TObject);
+  var
+    Nom: String;
+  begin
+    if not RaceANoms(Personnage.Race) then
+      begin
+        ShowMessage(GetTexteLibelle('RULES-LAB_270'));
+        Exit;
+      end;
+    Nom := TireNom(Personnage.Race, IfThen(ComboBoxSexeNom.ItemIndex = 1, 'F', 'M'), IfThen(ComboBoxRegleNom.ItemIndex > 0, CodesRegleNom[ComboBoxRegleNom.ItemIndex], ''));
+    if Nom = '' then
+      ShowMessage(GetTexteLibelle('RULES-LAB_270'))
+    else
+      EditNomPersonnag.Text := Nom;
+  end;
+
+// Hasard de la derniere phase : sexe et nom (un nom deja pris par un autre personnage est
+// retire), details physiques, puis signe astral si un livre en propose (le signe tire donne
+// +25 XP, comme ButtonSigneClick) avec sa specialisation au hasard s'il accorde un talent generique.
+procedure TWinCreations.ButtonNomHasardClick(Sender: TObject);
+  var
+    Nom, Yeux, Cheveux, CodeGenerique: String;
+    Essai, Age, Taille:                Integer;
+    ListOpt:                           TStringList;
+  begin
+    // 1 - nom
+    if RaceANoms(Personnage.Race) then
+      begin
+        ComboBoxSexeNom.ItemIndex := Random(2);
+        for Essai := 1 to 20 do
+          begin
+            Nom := TireNom(Personnage.Race, IfThen(ComboBoxSexeNom.ItemIndex = 1, 'F', 'M'),
+                           IfThen(ComboBoxRegleNom.ItemIndex > 0, CodesRegleNom[ComboBoxRegleNom.ItemIndex], ''));
+            if (Nom <> '') and not DirectoryExists(GetCurrentDir + ConstCheminPersonnage + Trim(Nom)) then
+              Break;
+          end;
+        if Nom <> '' then
+          EditNomPersonnag.Text := Nom;
+      end;
+
+    // 2 - details physiques
+    if TireDetailsPhysiques(Personnage.Race, Age, Taille, Yeux, Cheveux) then
+      begin
+        Personnage.Age         := Age;
+        Personnage.HeightUnit  := UniteTaille;
+        Personnage.Height      := ConvertitTaille(Taille, ConstUniteInch, UniteTaille);
+        Personnage.EyeColors   := Yeux;
+        Personnage.HairColors  := Cheveux;
+        LabPhysiqueResume.Text := IntToStr(Personnage.Age) + ' - ' + FormateTaille(Personnage.Height, Personnage.HeightUnit)
+                                     + ' - ' + Personnage.HairColors + ' - ' + Personnage.EyeColors;
+      end;
+
+    // 3 - signe astral (regle optionnelle : rien si aucun livre charge n'en porte)
+    if ListSigneAstral.Count > 0 then
+      begin
+        ButtonSigneClick(nil);
+        CodeGenerique := SigneAstralTalentGenerique(Personnage.SigneAstral, Personnage.SigneAstralVariante);
+        if (CodeGenerique <> '') and (Personnage.SigneAstralTalent = '') then
+          begin
+            ListOpt := ListeTalent(CodeGenerique);
+            try
+              if ListOpt.Count > 0 then
+                Personnage.SigneAstralTalent := ListOpt[Random(ListOpt.Count)];
+            finally
+              ListOpt.Free;
+            end;
+            MajTexteSigne();
+          end;
+      end;
+  end;
+
+// Remplit le combo des regles de nom avec celles que l'ethnie declare (NameRule) ; masque si elle
+// n'en declare aucune. L'item 0 = pas de regle (noms ordinaires) ; CodesRegleNom garde les codes.
+procedure TWinCreations.ChargeReglesNom();
+  var
+    Regles: TStringList;
+    I:      Integer;
+    Ancien: String;
+  begin
+    Regles := TStringList.Create;
+    try
+      Ancien := '';
+      if ComboBoxRegleNom.ItemIndex > 0 then
+        Ancien := CodesRegleNom[ComboBoxRegleNom.ItemIndex];
+      ReglesNomRace(Personnage.Race, Regles);
+      ComboBoxRegleNom.Items.Clear;
+      CodesRegleNom.Clear;
+      ComboBoxRegleNom.Items.Add(GetTexteLibelle('RULES-LAB_314'));
+      CodesRegleNom.Add('');
+      for I := 0 to Regles.Count - 1 do
+        begin
+          ComboBoxRegleNom.Items.Add(GetTexteLibelle(Regles.ValueFromIndex[I], Regles.ValueFromIndex[I]));
+          CodesRegleNom.Add(Regles.Names[I]);
+        end;
+      ComboBoxRegleNom.ItemIndex := 0;
+      for I := 1 to CodesRegleNom.Count - 1 do
+        if CodesRegleNom[I] = Ancien then
+          ComboBoxRegleNom.ItemIndex := I;
+      ComboBoxRegleNom.Visible := Regles.Count > 0;
+    finally
+      Regles.Free;
+    end;
+  end;
+
+procedure TWinCreations.TabSheetNomShow(Sender: TObject);
+  begin
+    ChargeReglesNom();
+  end;
+
+// Signes astraux (Archives of the Empire II p.39-50) : systeme optionnel apres la determination des
+// caracteristiques. Les effets ne sont pas ecrits dans les valeurs : le signe est memorise sur le
+// personnage (SigneAstral) et calcule au vol (PersonnageMutationTalent, PdfPersonnageAttribut).
+// Remplit la liste des signes (ceux des livres choisis a l'etape 0) ; rien n'est montre si aucun
+// livre charge n'en porte.
+procedure TWinCreations.ChargeSignesAstraux();
+  var
+    Ind:    Integer;
+    IndSel: Integer;
+    Actif:  Boolean;
+  begin
+    Actif                := ListSigneAstral.Count > 0;
+    LabSigne.Visible     := Actif;
+    ComboBoxSigne.Visible:= Actif;
+    ButtonSigne.Visible  := Actif;
+    MemoSigne.Visible    := Actif;
+    if not Actif then
+      ButtonSigneSpe.Visible := False;
+    if not Actif then
+      Exit;
+    ComboBoxSigne.Items.Clear;
+    ComboBoxSigne.Items.Add(GetTexteLibelle('RULES-LAB_274'));
+    IndSel := 0;
+    for Ind := 0 to ListSigneAstral.Count - 1 do
+      begin
+        ComboBoxSigne.Items.Add(ListSigneAstral[Ind].Libelle);
+        if ListSigneAstral[Ind].CodeSigne = Personnage.SigneAstral then
+          IndSel := Ind + 1;
+      end;
+    ComboBoxSigne.ItemIndex := IndSel;   // sans quoi la variante d'un signe deja retenu serait retiree
+    AppliqueSigneAstral(IndSel);
+  end;
+
+// Indice 0 = aucun signe ; sinon Indice - 1 est le rang dans ListSigneAstral. Un signe a variantes
+// (Witchling Star) tire son sous-tirage d10 a chaque application.
+procedure TWinCreations.AppliqueSigneAstral(Indice: Integer);
+  begin
+    if (Indice <= 0) or (Indice > ListSigneAstral.Count) then
+      begin
+        Indice                         := 0;
+        Personnage.SigneAstral         := '';
+        Personnage.SigneAstralVariante := '';
+        Personnage.SigneAstralTalent   := '';
+        SigneTire                      := False;
+      end
+    else
+      begin
+        Personnage.SigneAstral         := ListSigneAstral[Indice - 1].CodeSigne;
+        // Un signe deja retenu garde sa variante (retour en arriere dans les etapes)
+        if not ((Personnage.SigneAstralVariante <> '') and (ComboBoxSigne.ItemIndex = Indice)) then
+          Personnage.SigneAstralVariante := SigneAstralTireVariante(Personnage.SigneAstral);
+      end;
+    ComboBoxSigne.ItemIndex := Indice;
+    MajTexteSigne();
+  end;
+
+// Texte du signe retenu, et bouton de specialisation s'il accorde un talent generique
+procedure TWinCreations.MajTexteSigne();
+  var
+    CodeGenerique: String;
+  begin
+    CodeGenerique := SigneAstralTalentGenerique(Personnage.SigneAstral, Personnage.SigneAstralVariante);
+    MemoSigne.Text := ResumeSigneAstral(Personnage.SigneAstral, Personnage.SigneAstralVariante);
+    if CodeGenerique <> '' then
+      begin
+        if Personnage.SigneAstralTalent <> '' then
+          MemoSigne.Text := MemoSigne.Text + LineEnding + ChercheTalent(Personnage.SigneAstralTalent).Libelle
+        else
+          MemoSigne.Text := MemoSigne.Text + LineEnding + GetTexteLibelle('RULES-LAB_276');
+      end;
+    if SigneTire and (Personnage.SigneAstral <> '') then
+      MemoSigne.Text := MemoSigne.Text + LineEnding + '+25 XP';
+    ButtonSigneSpe.Visible := MemoSigne.Visible and (CodeGenerique <> '');
+  end;
+
+// Meme calcul de plafond que TabAugmentationTalentCalcul (winpersonnage.pas) : MaxiTalent est
+// soit un nombre, soit une formule "(BXX)" (bonus de la caracteristique XX). Ici la caracteristique
+// est lue dans TabAttribut (encore chargee a la phase 9) plutot que dans la grille de progression,
+// modificateur du signe astral inclus (meme calcul que RecapAttribut, ligne au-dessus).
+function TWinCreations.TalentMaxCreation(CodeTalent: String): Integer;
+  var
+    PTalent:   StructureTalent;
+    ValeurMax: Integer;
+    Calcul:    String;
+    Carac:     String;
+    IndTab:    Integer;
+    Total:     Integer;
+  begin
+    Result  := 0;
+    PTalent := ChercheTalent(CodeTalent);
+    if PTalent.MaxiTalent = '' then
+      Exit;
+    if TryStrToInt(PTalent.MaxiTalent, ValeurMax) then
+      Exit(ValeurMax);
+    Calcul := PTalent.MaxiTalent;
+    Carac  := StringReplace(ExtractStringAfter(Calcul, '(B'),')','',[rfReplaceAll]);
+    for IndTab := 1 to (TabAttribut.Rowcount-1) do
+      if CodeSansLivre(TabAttribut.Cells[7, IndTab]) = Carac then
+        begin
+          Total  := StrToIntDef(TabAttribut.Cells[6, IndTab], 0)
+                    + SigneAstralAttributModif(Personnage.SigneAstral, Personnage.SigneAstralVariante, TabAttribut.Cells[7, IndTab]);
+          Result := Trunc(Total / 10);
+          Break;
+        end;
+  end;
+
+// Le signe n'existe qu'a la creation (Archives II p.39) : son talent est ecrit dans CreationTalent, comme
+// un talent de depart. Un talent deja pris gagne un niveau (une seule ligne), plafonne au maximum du
+// talent (bonus de caracteristique) s'il en a un : le livre ne dit pas ce qu'il advient du niveau perdu,
+// choix retenu ici, on ne depasse simplement pas le maximum, comme le fait deja la grille de progression.
+procedure TWinCreations.AjouteTalentSigne();
+  var
+    PEffet:    StructureSigneEffet;
+    PTalent:   StructurePersonnageTalent;
+    Code:      String;
+    Ind:       Integer;
+    Trouve:    Boolean;
+    ValeurMax: Integer;
+  begin
+    if Personnage.SigneAstral = '' then
+      Exit;
+    for PEffet in ListSigneEffet do
+      if (PEffet.CodeSigne = Personnage.SigneAstral) and (PEffet.CodeTalent <> '')
+         and ((PEffet.Variante = '') or (PEffet.Variante = Personnage.SigneAstralVariante)) then
+        begin
+          Code := PEffet.CodeTalent;
+          if Pos(ValeurGenerique, Code) > 0 then
+            Code := Personnage.SigneAstralTalent;
+          if Code = '' then
+            Continue;
+          Trouve := False;
+          for Ind := 0 to High(Personnage.CreationTalent) do
+            if Personnage.CreationTalent[Ind].CodeTalent = Code then
+              begin
+                ValeurMax := TalentMaxCreation(Code);
+                if (ValeurMax <= 0) or (Personnage.CreationTalent[Ind].Valeur < ValeurMax) then
+                  Personnage.CreationTalent[Ind].Valeur := Personnage.CreationTalent[Ind].Valeur + 1;
+                Trouve := True;
+                Break;
+              end;
+          if not Trouve then
+            begin
+              PTalent.CodeTalent := Code;
+              PTalent.Valeur     := 1;
+              PTalent.Asterisque := 0;
+              PTalent.Source     := '';
+              Personnage.CreationTalent += [PTalent];
+            end;
+        end;
+  end;
+
+// Le joueur choisit toujours la specialisation (Craftsman : le metier ; Impassioned Zeal : l'objet du zele)
+procedure TWinCreations.ButtonSigneSpeClick(Sender: TObject);
+  var
+    CodeGenerique: String;
+  begin
+    CodeGenerique := SigneAstralTalentGenerique(Personnage.SigneAstral, Personnage.SigneAstralVariante);
+    if CodeGenerique = '' then
+      Exit;
+    ChoixWinTypeFichier := ConstXmlSousChapitreTalent;
+    ChoixWinTalent      := CodeGenerique;
+    SelectWinTalent     := '';
+    FenSpecialisation           := TWinSpecialisations.Create(Application);
+    FenSpecialisation.Position  := poOwnerFormCenter;
+    FenSpecialisation.ShowModal;
+    if SelectWinTalent <> '' then
+      Personnage.SigneAstralTalent := SelectWinTalent;
+    SelectWinTalent := '';
+    MajTexteSigne();
+  end;
+
+procedure TWinCreations.ButtonSigneClick(Sender: TObject);
+  var
+    Jet:  Integer;
+    Code: String;
+    Ind:  Integer;
+  begin
+    Code := TireSigneAstral(Jet);
+    if Code = '' then
+      Exit;
+    for Ind := 0 to ListSigneAstral.Count - 1 do
+      if ListSigneAstral[Ind].CodeSigne = Code then
+        begin
+          Personnage.SigneAstralVariante := '';
+          Personnage.SigneAstralTalent   := '';
+          ComboBoxSigne.ItemIndex        := -1;
+          SigneTire                      := True;
+          AppliqueSigneAstral(Ind + 1);
+          Break;
+        end;
+  end;
+
+procedure TWinCreations.ComboBoxSigneSelect(Sender: TObject);
+  var
+    Indice: Integer;
+  begin
+    Indice                         := ComboBoxSigne.ItemIndex;
+    Personnage.SigneAstralVariante := '';
+    Personnage.SigneAstralTalent   := '';
+    SigneTire                      := False;
+    AppliqueSigneAstral(Indice);
+  end;
+
+////////////////////////////////////////////////////////////////////////////////
+//                                 XML                                        //
+////////////////////////////////////////////////////////////////////////////////
+
+function TWinCreations.XmlCalculXp(): Integer;
+  var
+    Total: Integer = 0;
+//    RadioGroup1.ItemIndex
+  begin
+    if RadioButtonRaceHasard.Checked or RadioButtonRaceResultat.Checked then
+      Total := Total + 20;
+    if RadioButtonMetierHasard.Checked or RadioButtonMetierResultat.checked then
+      Total := Total + 50;
+    if RadioButtonAttributHasard.Checked or RadioButtonAttributResultat.checked then
+      Total := Total + 50
+    else if not RadioButtonAttributRepartition.Checked then
+      Total := Total + 25;
+    if SigneTire and (Personnage.SigneAstral <> '') then
+      Total := Total + 25;
+    Result := Total;
+  end;
+
+////////////////////////////////////////////////////////////////////////////////
+//                                 RACE                                       //
+////////////////////////////////////////////////////////////////////////////////
+
+procedure TWinCreations.TabRaceDrawCell(Sender: TObject; aCol, aRow: Integer;
+  aRect: TRect; aState: TGridDrawState);
+  begin
+    // Vérifier si la ligne actuelle doit avoir une couleur spéciale
+    if TabRace.Cells[4, aRow] = '1' then
+      TabRace.Canvas.Brush.Color := clLtGray  // Changer la couleur de fond en vert
+    else
+      TabRace.Canvas.Brush.Color := clWhite; // Utiliser la couleur de fond par défaut
+
+    // Dessiner la cellule avec la couleur modifiée
+    TabRace.Canvas.FillRect(aRect);
+    TabRace.Canvas.TextOut(aRect.Left + 2, aRect.Top + 2, TabRace.Cells[aCol, aRow]);
+  end;
+
+procedure TWinCreations.TabRacePrepareCanvas(Sender: TObject; aCol,
+  aRow: Integer; aState: TGridDrawState);
+  begin
+    if (ARow = 0) then
+    begin
+      TabRace.Canvas.Brush.Color := clBtnFace; // Couleur de fond de l'en-tête désactivé
+      TabRace.Canvas.Font.Color := ClBlack; // Couleur du texte de l'en-tête désactivé
+    end;
+  end;
+
+Procedure TWinCreations.ChargeTabRaces(Livre: String='');
+  Var
+    IndTabRace:    Integer;
+    PRaceCreation: StructureRaceCreation;
+    PRace:         StructureRace;
+    OldLivre:      String = '';
+    Ind:           Integer;
+  Begin
+    if Livre = '' then
+      begin
+        ComboRaceCreation.Style    := csDropDownList;
+        for PRaceCreation in ListRaceCreation do
+          begin
+            if OldLivre <> PRaceCreation.Livre then
+              begin
+                ComboRaceCreation.Items.add(PRaceCreation.Livre);
+                OldLivre := PRaceCreation.Livre
+              end;
+          end;
+        Livre := ConstRulesBook;
+        for ind := 0 to ComboRaceCreation.items.count -1 do
+          if ComboRaceCreation.items[Ind] = Livre then
+            begin
+              ComboRaceCreation.itemindex := Ind;
+              break;
+            end;
+
+      end;
+
+    if TabRace.RowCount>0 then
+      begin
+        ClearStringGrid(TabRace);
+        TabRace.Rowcount := 1;
+      end;
+
+    IndTabRace        := 0;
+
+    For PRaceCreation in ListRaceCreation do
+      begin
+        if PRaceCreation.Livre = Livre then
+          begin
+            PRace := chercheRace(PRaceCreation.CodeRace);
+            Inc(IndTabRace);
+            TabRace.Rowcount := IndTabRace+1;
+            TabRace.Cells[1, IndTabRace] := PRace.CodeRace;
+            TabRace.Cells[2, IndTabRace] := PRace.Libelle;
+            TabRace.Cells[3, IndTabRace] := PRaceCreation.Chance;
+          end;
+    end;
+    AdjustGridColumnsWidth(TabRace,0,false,false);
+  end;
+
+procedure TWinCreations.ButtonRaceHasardClick(Sender: TObject);
+  begin
+       LastRandomRaceResultat := (Random(99) + 1);
+       TabRaceResultat(LastRandomRaceResultat);
+       AfficheImageRace();
+       UpdateSheetRace(true);
+  end;
+
+procedure TWinCreations.ButtonRaceValiderClick(Sender: TObject);
+  begin
+       if (EditRaceResultat.Value = 0) then
+          ShowMessage(GetTexteLibelle('RULES-MESS_19'))
+       else
+       begin
+         LastCheckRaceResultat := EditRaceResultat.Value;
+         TabRaceResultat(LastCheckRaceResultat);
+         AfficheImageRace();
+         UpdateSheetRace(true);
+       end
+  end;
+
+var
+  ZoneImagesRace: TZoneImagesRace;
+
+Procedure TWinCreations.AfficheImageRace();
+  Var
+    indTabAttribut:          integer;
+    Talent1:                 String;
+    Multi:                   boolean;
+    NbTalentTab:             Integer;
+    PTalent:                 StructureTalent;
+    PRaceTalent:             StructureRaceTalent;
+    PRaceAttribut:           StructureRaceAttribut;
+    CheminImage1:            String;
+    CheminImage2:            String;
+
+  begin
+    NbTalentTab              := 0;
+    NbRaceCompetenceTab      := 0;
+
+
+    if RaceEnCours <> '' then
+      begin
+       CheminImage1       := CheminRaceImage(RaceEnCours,'2');
+       CheminImage2       := CheminRaceImage(RaceEnCours,'1');
+       end
+    else
+      begin
+        CheminImage1       := '';
+        CheminImage2       := '';
+      end;
+    if FileExists(CheminImage1) then
+       ImageRace1.Picture.LoadFromFile(CheminImage1)
+    else
+       ImageRace1.Picture := nil;
+
+    if FileExists(CheminImage2) then
+       ImageRace2.Picture.LoadFromFile(CheminImage2)
+    else
+       ImageRace2.Picture := nil;
+    // ethnie sans illustration : icone de sa race de base, nom de la race au milieu
+    if (RaceEnCours <> '') and not FileExists(CheminImage1) and not FileExists(CheminImage2) then
+      AfficheIconeEspece(ImageRace1, ChercheRace(RaceEnCours).Espece,
+                         ChercheEspece(ChercheRace(RaceEnCours).Espece).Libelle);
+    // une seule illustration (ou l'icone de race) : elle prend la place des deux
+    PlaceImagesRace(ImageRace1, ImageRace2, ZoneImagesRace,
+                    (ImageRace1.Picture.Graphic <> nil) and not ImageRace1.Picture.Graphic.Empty,
+                    (ImageRace2.Picture.Graphic <> nil) and not ImageRace2.Picture.Graphic.Empty);
+
+    LibRace.Text            := RaceLibEnCours;
+    LibRace.visible         := (RaceLibEnCours <> '');
+
+    UpdateSheetRace(false);
+
+    // ATTRIBUTS
+
+    For PRaceAttribut in ListRaceAttribut do
+      if CompareRechercheValeur(PRaceAttribut.CodeRace, RaceEnCours) then
+        for IndTabAttribut := 0 to TabAttribut.RowCount -1 do
+           if TabAttribut.Cells[7, IndTabAttribut] = PRaceAttribut.CodeAttribut then
+             begin
+                TabAttribut.Cells[4, IndTabAttribut] := PRaceAttribut.CalculRace;
+                if CompareRechercheValeur(PRaceAttribut.CodeAttribut, ConstCaracPointSupp) then
+                  begin
+                    LabPointSupp.Text           := PRaceAttribut.CalculRace+' '+GetTexteLibelle('RULES-LAB_119');
+                    TrackBarPointSupp.Min       := 0;
+                    TrackBarPointSupp.Max       := StrToInt(PRaceAttribut.CalculRace);
+                    TrackBarPointSupp.Frequency := 1;
+                  end;
+             end;
+
+    // TALENTS
+
+    For PRaceTalent in ListRaceTalent do
+      if CompareRechercheValeur(PRaceTalent.CodeRace, RaceEnCours) then
+        Begin
+          Multi   := (pos(SeparateurMulti, PRaceTalent.CodeTalent) > 0);
+          if Multi then
+             Begin
+               Talent1 := ExtractStringBefore(PRaceTalent.CodeTalent, SeparateurMulti);
+             end
+          else
+             begin
+               Talent1 := PRaceTalent.CodeTalent;
+             end;
+
+             For PTalent in ListTalent do
+               if CompareRechercheValeur(PTalent.CodeTalent, Talent1)
+                  and (not CompareRechercheValeur(PTalent.CodeTalent, TalentGenerique))
+                    and (not Multi) then
+                 begin
+                   NbTalentTab                     := NbTalentTab + 1;
+                   TabTalent.Cells[1, NbTalentTab] := PTalent.CodeTalent;
+                   TabTalent.Cells[2, NbTalentTab] := PTalent.Libelle;
+                 end;
+        end;
+    ReconstruitChoixCreation();
+    ButtonTalentHasard.visible   := (Length(ListeChoixCreation) > 0);
+    ButtonTalentHasard.BringToFront;
+  end;
+
+procedure TWinCreations.TabRaceResultat(Resul: Integer);
+  var
+    IndTab: Integer;
+    Deb: Integer;
+    Fin: Integer;
+    Ch: String;
+    IndS: Integer;
+    Trouve: Boolean = false;
+    PRace: StructureRace;
+  begin
+    for IndTab := 1 to TabRace.RowCount - 1 do
+      begin
+        Ch := TabRace.Cells[3, IndTab];
+        IndS := Pos(SeparateurChance, Ch);
+        if IndS > 0 then
+          begin
+            Deb := StrToInt(Copy(Ch, 1, IndS-1));
+            Fin := StrToInt(Copy(Ch, IndS+1, Length(Ch)));
+          end
+        else
+          begin
+            Deb := StrToInt(Ch);
+            Fin := StrToInt(Ch);
+          end;
+
+        if ChoixWinRace <> '' then
+          begin
+            if TabRace.Cells[1, Indtab] = ChoixWinRace then
+              begin
+                IndS := Pos(SeparateurChance, Ch);
+                if IndS > 0 then
+                  Resul := StrToInt(Copy(Ch, 1, IndS-1))
+                else
+                  Resul := StrToInt(Ch);
+              end
+            else
+              Deb := 101;
+          end;
+
+        if (Deb <= Resul) and (Resul <= Fin) then
+          begin
+            RaceEnCours              := TabRace.Cells[1, indTab];
+            RaceLibEnCours           := TabRace.Cells[2, indTab];
+            // L'ethnie vient de changer : elle intervient dans la resolution des icones.
+            ChargeImagesNiveau();
+            TabRace.Cells[4, IndTab] := '1';
+            TabRace.Invalidate;
+            Break;
+            Trouve := True;
+          end;
+      end;
+    if (ChoixWinRace <> '') and not Trouve then
+      begin
+        PRace          := chercheRace(ChoixWinRace);
+        RaceEnCours    := Prace.CodeRace;
+        RaceLibEnCours := PRace.Libelle;
+        // Idem.
+        ChargeImagesNiveau();
+      end;
+  end;
+
+procedure TWinCreations.RadioButtonRaceClick(Sender: TObject);
+  begin
+    LastRandomRaceResultat := 0;
+    LastCheckRaceResultat  := 0;
+    RaceEnCours            := '';
+    RaceLibEnCours         := '';
+    TabRaceResultat(0);
+    AfficheImageRace();
+    UpdateSheetRace(false);
+  end;
+
+procedure TWinCreations.RadioButtonRaceHasardClick(Sender: TObject);
+  begin
+    LastRandomRaceResultat := 0;
+    LastCheckRaceResultat  := 0;
+    RaceEnCours            := '';
+    RaceLibEnCours         := '';
+    TabRaceResultat(0);
+    AfficheImageRace();
+    UpdateSheetRace(false);
+  end;
+
+procedure TWinCreations.UpdateSheetRace(Hasard: Boolean);
+  Begin
+    // Au Hasard
+    ButtonRaceHasard.Visible  := RadioButtonRaceHasard.Checked;
+    ButtonRaceHasard.Enabled  := (LastRandomRaceResultat = 0);
+    ButtonRaceHasard.BringToFront;
+
+    // donner le résultat de votre lancé de dé
+    EditRaceResultat.Visible  := RadioButtonRaceResultat.Checked;
+    EditRaceResultat.enabled  := (LastCheckRaceResultat = 0);
+    ButtonRaceValider.Visible := RadioButtonRaceResultat.Checked;
+    ButtonRaceValider.Enabled := (LastCheckRaceResultat = 0);
+    ButtonRaceValider.BringToFront;
+
+    // choisir votre race
+    ButtonRaceSelectionner.visible := RadioButtonRaceChoix.Checked;
+    ButtonRaceSelectionner.BringToFront;
+
+    // choisir les livres ou les règles
+    ComboRaceCreation.Enabled := (not RadioButtonRaceHasard.Checked and not RadioButtonRaceResultat.Checked and not RadioButtonRaceChoix.Checked);
+
+    if Hasard then
+      GroupBoxRace.enabled    := false;
+
+  end;
+
+
+////////////////////////////////////////////////////////////////////////////////
+//                               METIER                                       //
+////////////////////////////////////////////////////////////////////////////////
+
+procedure TWinCreations.TabMetierPrepareCanvas(Sender: TObject; aCol,
+  aRow: Integer; aState: TGridDrawState);
+  begin
+    TabMetier.Canvas.Brush.Color := clBtnFace; // Couleur de fond de l'en-tête désactivé
+    TabMetier.Canvas.Font.Color := ClBlack; // Couleur du texte de l'en-tête désactivé
+  end;
+
+procedure TWinCreations.TabMetierDrawCell(Sender: TObject; aCol, aRow: Integer;
+  aRect: TRect; aState: TGridDrawState);
+  begin
+    // Vérifier si la ligne actuelle doit avoir une couleur spéciale
+    if TabMetier.Cells[4, aRow] = '1' then
+      TabMetier.Canvas.Brush.Color := clLtGray  // Changer la couleur de fond en vert
+    else
+      TabMetier.Canvas.Brush.Color := clWhite; // Utiliser la couleur de fond par défaut
+
+    // Dessiner la cellule avec la couleur modifiée
+    TabMetier.Canvas.FillRect(aRect);
+    TabMetier.Canvas.TextOut(aRect.Left + 2, aRect.Top + 2, TabMetier.Cells[aCol, aRow]);
+  end;
+
+// La liste des règles disponibles : la table de tirage par défaut (celle du livre de
+// règles) en premier, puis une ligne par règle optionnelle apportée par un livre chargé.
+// L'index dans le combo suit exactement ListRegle, donc rien à maintenir en parallèle.
+Procedure TWinCreations.ChargeComboRegle();
+  Var
+    PRegle: StructureRegle;
+  Begin
+    ComboBoxRegle.Items.Clear;
+    ComboBoxRegle.Items.Add(GetTexteLibelle(ConstRulesBook, '', '', true));
+    For PRegle in ListRegle do
+      ComboBoxRegle.Items.Add(PRegle.Libelle);
+    ComboBoxRegle.ItemIndex := 0;
+    GroupBoxRegle.Visible   := (ListRegle.Count > 0);
+  end;
+
+// '' = table de tirage par défaut (celle des SUBCHAPTER_CAREER, livre de règles).
+Function TWinCreations.RegleEnCours(): String;
+  Begin
+    if (ComboBoxRegle.ItemIndex <= 0) or (ComboBoxRegle.ItemIndex > ListRegle.Count) then
+      Result := ''
+    else
+      Result := ListRegle[ComboBoxRegle.ItemIndex - 1].CodeRegle;
+  end;
+
+Procedure TWinCreations.ComboBoxRegleSelect(Sender: TObject);
+  Begin
+    ChargeTabMetier();
+  end;
+
+Procedure TWinCreations.ChargeTabMetier();
+  Var
+    IndTabMetier:  Integer;
+    PMetier:       StructureMetier;
+    Tirage:        TListTirageMetier;
+    Ligne:         StructureTirageMetier;
+
+  Begin
+    IndTabMetier        := 0;
+    TabMetier.RowCount  := 1;
+
+    // Les bornes ne sont plus dans le XML (il ne porte que le poids de chaque métier) : elles
+    // se calculent dans la langue active, dans l'ordre des tables imprimées (classe puis
+    // libellé). Règle non applicable à l'ethnie, partielle ou totale : voir ChargeTirageMetier.
+    Tirage := TListTirageMetier.Create;
+    try
+      CalculeTirageMetier(RaceEnCours, RegleEnCours(), Tirage);
+      For Ligne in Tirage do
+        begin
+          PMetier := ChercheMetier(Ligne.CodeMetier);
+          Inc(IndTabMetier);
+          TabMetier.RowCount := TabMetier.RowCount + 1;
+          TabMetier.Cells[1, IndTabMetier] := PMetier.CodeMetier;
+          TabMetier.Cells[2, IndTabMetier] := PMetier.Libelle;
+          TabMetier.Cells[3, IndTabMetier] := FormateTranche(Ligne.Debut, Ligne.Fin);
+          TabMetier.Cells[5, IndTabMetier] := Format('%.3d', [Ligne.Debut]);
+        end;
+    finally
+      Tirage.Free;
+    end;
+
+    // pas de table de tirage pour cette ethnie (V5) : pas de jet, le metier se choisit
+    ButtonMetierHasard.Enabled := (TabMetier.RowCount > 1);
+
+    AdjustGridColumnsWidth(TabMetier, TabSheetMetier.ClientHeight, false, false);
+  end;
+
+procedure TWinCreations.ButtonMetierHasardClick(Sender: TObject);
+  begin
+     LastRandomMetierResultat := (Random(99) + 1);
+     TabMetierResultat(LastRandomMetierResultat);
+     AfficheImageMetier();
+     UpdateSheetMetier(true);
+  end;
+
+// Equipement de classe effectif pour une classe : les ajouts de tous les livres acceptes, dans
+// l'ordre de chargement, puis les actions (Remove / Replace) appliquees dans le meme ordre.
+// Un objet cible absent est ignore en silence ; une partie d'un ensemble A+B se retire ou se
+// remplace seule ; un choix "A/B" ne se retire qu'en entier (code complet). L'appelant libere.
+function ClasseEquipementEffectif(const Classe: String): TListClassEquipement;
+var
+  P, N:    StructureClassEquipement;
+  I, K, J: Integer;
+  Codes:   TStringList;
+  Types:   TStringList;
+  CodeEns: String;
+  TypEns:  String;
+begin
+  Result := TListClassEquipement.Create;
+  if Classe = '' then
+    Exit;
+  for P in ListClassEquipement do
+    if CompareRechercheValeur(P.CodeClasse, Classe) then
+      begin
+        if P.Action = '' then
+          begin
+            Result.Add(P);
+            Continue;
+          end;
+        for I := 0 to Result.Count - 1 do
+          begin
+            N := Result[I];
+            if N.Equipement = P.Cible then
+              begin
+                if P.Action = 'REMOVE' then
+                  Result.Delete(I)
+                else
+                  begin
+                    N.Equipement     := P.Equipement;
+                    N.TypeEquipement := P.TypeEquipement;
+                    if P.QuantiteListe <> '' then
+                      begin
+                        N.QuantiteListe := P.QuantiteListe;
+                        N.Quantite      := 1;
+                      end
+                    else if P.Quantite > 0 then
+                      begin
+                        N.Quantite      := P.Quantite;
+                        N.QuantiteListe := '';
+                      end;
+                    Result[I] := N;
+                  end;
+                Break;
+              end
+            else if Pos(SeparateurEnsemble, N.Equipement) > 0 then
+              begin
+                Codes := TStringList.Create;
+                Types := TStringList.Create;
+                try
+                  ExtractStrings([SeparateurEnsemble], [], PChar(N.Equipement), Codes);
+                  ExtractStrings([SeparateurEnsemble], [], PChar(N.TypeEquipement), Types);
+                  K := Codes.IndexOf(P.Cible);
+                  if K >= 0 then
+                    begin
+                      if P.Action = 'REMOVE' then
+                        begin
+                          Codes.Delete(K);
+                          if K < Types.Count then
+                            Types.Delete(K);
+                        end
+                      else
+                        begin
+                          Codes[K] := P.Equipement;
+                          if K < Types.Count then
+                            Types[K] := P.TypeEquipement;
+                        end;
+                      if Codes.Count = 0 then
+                        Result.Delete(I)
+                      else
+                        begin
+                          CodeEns := '';
+                          TypEns  := '';
+                          for J := 0 to Codes.Count - 1 do
+                            begin
+                              if CodeEns <> '' then CodeEns := CodeEns + SeparateurEnsemble;
+                              CodeEns := CodeEns + Codes[J];
+                            end;
+                          for J := 0 to Types.Count - 1 do
+                            begin
+                              if TypEns <> '' then TypEns := TypEns + SeparateurEnsemble;
+                              TypEns := TypEns + Types[J];
+                            end;
+                          N.Equipement     := CodeEns;
+                          N.TypeEquipement := TypEns;
+                          if (P.Action = 'REPLACE') and (P.Quantite > 0) then
+                            N.Quantite := P.Quantite;
+                          Result[I] := N;
+                        end;
+                      Break;
+                    end;
+                finally
+                  Codes.Free;
+                  Types.Free;
+                end;
+              end;
+          end;
+      end;
+end;
+
+Procedure TWinCreations.AfficheImageMetier();
+  // Phase 2 : le metier est choisi, on remplit les grilles des etapes suivantes. Les blocs
+  // sont appeles dans l'ordre d'origine ; les deux boucles d'equipement (Carriere puis
+  // Classe) partagent EcritLigneEnsemble / EcritLigneSimple, qui ecrivent la ligne
+  // NbMetierEquipementTab de TabMetierEquipement.
+
+  // Ligne d'ensemble : la ligne porte deux codes joints par SeparateurEnsemble ; les deux
+  // objets sont acquis en meme temps (ex. Storm Lantern + Lamp Oil), une seule ligne de
+  // creation = une seule coche d'avancement (CONTEXT.md, chantier equipement/avancement) -
+  // pas un choix, donc pas de ConstArbreAuChoix/double-clic.
+  procedure EcritLigneEnsemble(const Equipement, TypeEq: String; Quantite: Integer);
+    var
+      StringsCodeEns: TStringList;
+      StringsTypeEns: TStringList;
+      IndEns:         Integer;
+      CodeUnit:       String;
+      LibUnit:        String;
+      TypUnit:        String;
+      LibEns:         String;
+      CodeEns:        String;
+      TypEns:         String;
+      PArme:          StructureArme;
+      PArmure:        StructureArmure;
+      PTrapping:      StructureTrapping;
+    begin
+      StringsCodeEns := TStringList.Create;
+      StringsTypeEns := TStringList.Create;
+      ExtractStrings([SeparateurEnsemble], [], PChar(Equipement), StringsCodeEns);
+      ExtractStrings([SeparateurEnsemble], [], PChar(TypeEq), StringsTypeEns);
+      LibEns  := '';
+      CodeEns := '';
+      TypEns  := '';
+      For IndEns := 0 to StringsCodeEns.Count - 1 do
+        begin
+          CodeUnit := StringsCodeEns[IndEns];
+          if InList(StringsTypeEns[IndEns],TypeEquipMetierArme) then
+              begin
+                PArme    := ChercheArme(CodeUnit);
+                LibUnit  := PArme.Libelle;
+                TypUnit  := TypeEquipWe;
+              end
+            else if StringsTypeEns[IndEns] = TypeEquipAR then
+              begin
+                PArmure  := ChercheArmure(CodeUnit);
+                LibUnit  := PArmure.Libelle;
+                TypUnit  := TypeEquipAr;
+              end
+            else if StringsTypeEns[IndEns] = TypeEquipDI then
+              begin
+                PTrapping := ChercheTrapping(CodeUnit);
+                if PTrapping.CodeTrapping <> '' then
+                  LibUnit := PTrapping.Libelle
+                else
+                  LibUnit := CodeUnit;
+                TypUnit  := TypeEquipDi;
+              end;
+          if LibEns  <> '' then LibEns  := LibEns  + ' + ';
+          LibEns  := LibEns  + LibUnit;
+          if CodeEns <> '' then CodeEns := CodeEns + SeparateurEnsemble;
+          CodeEns := CodeEns + CodeUnit;
+          if TypEns  <> '' then TypEns  := TypEns  + SeparateurEnsemble;
+          TypEns  := TypEns  + TypUnit;
+        end;
+      StringsCodeEns.Free;
+      StringsTypeEns.Free;
+      TabMetierEquipement.Cells[1, NbMetierEquipementTab] := CodeEns;
+      TabMetierEquipement.Cells[2, NbMetierEquipementTab] := LibEns + QuantiteSuffixe(Quantite);
+      TabMetierEquipement.Cells[5, NbMetierEquipementTab] := IntToStr(Quantite);
+      TabMetierEquipement.Cells[6, NbMetierEquipementTab] := TypEns;
+    end;
+
+  // Ligne simple (un seul objet, pas de choix). Un code Divers peut en realite etre un
+  // Trapping catalogue (RULES-TRAP_xxx) - la classification reste TypeEquipDI (CONTEXT.md
+  // 2.77bis), seul l'affichage est resolu ici, comme winlivre.pas:1200. Col 5, cachee :
+  // quantite (CONTEXT.md 2.77), lue a l'etape 8 pour PersonnageEquipement.Quantite au lieu
+  // de rester figee a 1.
+  procedure EcritLigneSimple(const Code, TypeEq: String; Quantite: Integer);
+    var
+      Lib:       String;
+      Typ:       String;
+      PArme:     StructureArme;
+      PArmure:   StructureArmure;
+      PTrapping: StructureTrapping;
+    begin
+      if InList(TypeEq,TypeEquipMetierArme) then
+          begin
+            PArme   := ChercheArme(Code);
+            Lib     := PArme.Libelle;
+            Typ     := TypeEquipWe;
+          end
+        else if TypeEq = TypeEquipAR then
+          begin
+            PArmure := ChercheArmure(Code);
+            Lib     := PArmure.Libelle;
+            Typ     := TypeEquipAr;
+          end
+        else if TypeEq = TypeEquipDI then
+          begin
+            PTrapping := ChercheTrapping(Code);
+            if PTrapping.CodeTrapping <> '' then
+              Lib := PTrapping.Libelle
+            else
+              Lib := Code;
+            Typ     := TypeEquipDi;
+          end;
+      Lib := Lib + QuantiteSuffixe(Quantite);
+      TabMetierEquipement.Cells[1, NbMetierEquipementTab] := Code;
+      TabMetierEquipement.Cells[2, NbMetierEquipementTab] := Lib;
+      TabMetierEquipement.Cells[5, NbMetierEquipementTab] := IntToStr(Quantite);
+      TabMetierEquipement.Cells[6, NbMetierEquipementTab] := Typ;
+    end;
+
+  procedure AfficheEnteteMetier();
+    var
+      indTabAttribut:  integer;
+      PMetierAttribut: StructureMetierAttribut;
+      CheminImage1:    String;
+    begin
+      if MetierEnCours <> '' then
+         CheminImage1       := CheminMetierImage(MetierEnCours)
+      else
+          CheminImage1      := '';
+
+      if FileExists(CheminImage1) then
+         ImageMetier.Picture.LoadFromFile(CheminImage1)
+      else
+         ImageMetier.Picture := nil;
+
+      LibMetier.Text            := MetierLibEnCours;
+      LibMetier.visible         := (MetierLibEnCours <> '');
+
+      UpdateSheetMetier(false);
+
+      For PMetierAttribut in ListMetierAttribut do
+        if CompareRechercheValeur(PMetierAttribut.CodeMetier, MetierEnCours) then
+          for IndTabAttribut := 0 to TabAttribut.RowCount -1 do
+            if (TabAttribut.Cells[7, IndTabAttribut] = PMetierAttribut.CodeAttribut) and (PMetierAttribut.NiveauMetier > 0) then
+              TabAttribut.Cells[2, IndTabAttribut] := IntToStr(PMetierAttribut.NiveauMetier);
+    end;
+
+  procedure AfficheCompetencesRace();
+    var
+      PCompetence:       StructureCompetence;
+      PRaceEntete:       StructureRace;
+      PRaceCompetence:   StructureRaceCompetence;
+      PMetierCompetence: StructureMetierCompetence;
+    begin
+      // Compétences de race
+      // En-tetes des deux colonnes de choix : le nombre ET la valeur viennent de l'ethnie
+      // (NbPoint5/NbPoint3 et Point5/Point3), plus rien n'est ecrit en dur - un Skink affiche
+      // "2x 5pts" et "2x 3pts". CONTEXT.md 2.15.
+      PRaceEntete := ChercheRace(RaceEnCours);
+      TabRaceCompetence.Columns[3].Title.Caption := Format('%dx %dpts', [PRaceEntete.NbPoint5, PRaceEntete.Point5]);
+      TabRaceCompetence.Columns[4].Title.Caption := Format('%dx %dpts', [PRaceEntete.NbPoint3, PRaceEntete.Point3]);
+
+      // Les lignes sont recreees : les cases 5pts/3pts, indexees par numero de ligne, le sont
+      // aussi (remise a zero). Le tableau est REDIMENSIONNE au nombre reel de competences de
+      // race : NbMaxCompetence (12) est plus petit que la liste des Hauts Elfes d'Ellyrion (13),
+      // et la 13e ligne lisait hors du tableau (case cochee au hasard).
+      SetLength(CompetenceRaceStates[4], ListRaceCompetence.Count + 2);
+      SetLength(CompetenceRaceStates[5], ListRaceCompetence.Count + 2);
+      for IndTab := 0 to High(CompetenceRaceStates[4]) do
+        begin
+          CompetenceRaceStates[4, IndTab] := false;
+          CompetenceRaceStates[5, IndTab] := false;
+        end;
+      NbCinq := 0;
+      NbTrois := 0;
+      NbRaceCompetenceTab          := 0;
+      TabRaceCompetence.RowCount   := 1;
+      NbRaceComp                   := 0;
+      For PRaceCompetence in ListRaceCompetence do
+        if CompareRechercheValeur(PRaceCompetence.CodeRace, RaceEnCours) then
+          Begin
+             NbRaceCompetenceTab                             := NbRaceCompetenceTab + 1;
+             TabRaceCompetence.RowCount                      := NbRaceCompetenceTab + 1;
+             TabRaceCompetence.Cells[1,NbRaceCompetenceTab]  := PRaceCompetence.CodeCompetence;
+             PCompetence                                     := ChercheCompetence(PRaceCompetence.CodeCompetence);
+             TabRaceCompetence.Cells[3,NbRaceCompetenceTab]  := PCompetence.Libelle;
+             PMetierCompetence                               := ChercheMetierCompetence(MetierEnCours,PRaceCompetence.CodeCompetence);
+             if PMetierCompetence.CodeMetier <> '' then
+               TabRaceCompetence.Cells[2,NbRaceCompetenceTab]:= IntToStr(PMetierCompetence.NiveauMetier);
+          end;
+      TabRaceCompetence.Height      := TabRaceCompetence.DefaultRowHeight * TabRaceCompetence.RowCount + 5;
+      AdjustGridColumnsWidth(TabRaceCompetence, TabSheetCompRace.ClientHeight, false, true);
+    end;
+
+  procedure AfficheCompetencesMetier();
+    var
+      PCompetence:       StructureCompetence;
+      PRaceCompetence:   StructureRaceCompetence;
+      PMetierCompetence: StructureMetierCompetence;
+      CodeCompAdapt:     String;
+    begin
+      // Compétences de Métier
+      NbMetierCompetenceTab         := 0;
+      TabMetierCompetence.RowCount  := 1;
+      NbTrois                       := 0;
+      NbCinq                        := 0;
+      for PMetierCompetence in ListMetierCompetence do
+        if CompareRechercheValeur(PMetierCompetence.CodeMetier, MetierEnCours) and (PMetierCompetence.NiveauMetier = 1) then
+          Begin
+               // Adapting Careers : competence de niveau 1 remplacee (ou retiree) pour l'ethnie.
+               CodeCompAdapt := AdapterElement(MetierEnCours, RaceEnCours, ChoixAdaptationCreation(), 1,
+                                                     ConstXmlCompetence, PMetierCompetence.CodeCompetence);
+               if CodeCompAdapt = '' then
+                 continue;
+               NbMetierCompetenceTab        := NbMetierCompetenceTab + 1;
+               TabMetierCompetence.RowCount := NbMetierCompetenceTab + 1;
+               TabMetierCompetence.Cells[1,NbMetierCompetenceTab] := CodeCompAdapt;
+               PCompetence                  := ChercheCompetence(CodeCompAdapt);
+               TabMetierCompetence.Cells[3,NbMetierCompetenceTab] := PCompetence.Libelle;
+
+               if (Pos(ValeurGenerique, PCompetence.CodeCompetence) > 0) or (pos(SeparateurMulti, PCompetence.CodeCompetence) > 0) then
+                 begin
+                   TabMetierCompetence.Cells[5,NbMetierCompetenceTab] := ConstArbreAuChoix;
+                   TabMetierCompetence.Cells[6,NbMetierCompetenceTab] := PCompetence.CodeCompetence;
+                 end;
+
+               PRaceCompetence              := ChercheRaceCompetence(RaceEnCours,CodeCompAdapt);
+               if PRaceCompetence.CodeCompetence <> '' then
+                  TabMetierCompetence.Cells[2,NbMetierCompetenceTab] := IntToStr(PMetierCompetence.NiveauMetier);
+           end;
+      TabMetierCompetence.Height          := TabMetierCompetence.DefaultRowHeight * TabMetierCompetence.RowCount + 5;
+      CalculTotalMetierCompetence();
+      AdjustGridColumnsWidth(TabMetierCompetence, TabSheetCompMetier.ClientHeight, false, true);
+    end;
+
+  procedure AfficheEquipementMetier();
+    var
+      PMetierEquipement: StructureMetierEquipement;
+      ListeCode:         String;
+      ListeQuantites:    String;
+    begin
+      // Equipement de métier
+      NbMetierEquipementTab        := 0;
+      TabMetierEquipement.RowCount := 1;
+      For PMetierEquipement in ListMetierEquipement do
+        if CompareRechercheValeur(PMetierEquipement.CodeMetier, MetierEnCours) and (PMetierEquipement.NiveauMetier = 1) then
+          Begin
+             NbMetierEquipementTab        := NbMetierEquipementTab + 1;
+             TabMetierEquipement.RowCount := NbMetierEquipementTab + 1;
+             if Pos(SeparateurEnsemble, PMetierEquipement.Equipement) > 0 then
+               EcritLigneEnsemble(PMetierEquipement.Equipement, PMetierEquipement.TypeEquipement, PMetierEquipement.Quantite)
+             else
+               begin
+                 ListeCode                    := GetListeEquipement(PMetierEquipement.Equipement, PMetierEquipement.TypeEquipement, PMetierEquipement.QuantiteListe, ListeQuantites);
+
+                 if Pos(',',ListeCode) > 0 then
+                   begin
+                     TabMetierEquipement.Cells[2, NbMetierEquipementTab]   := ConstArbreAuchoix;
+                     TabMetierEquipement.Cells[3, NbMetierEquipementTab]   := ListeCode;
+                     TabMetierEquipement.Cells[7, NbMetierEquipementTab]   := ListeQuantites;
+                     // Quantite de l'item entier (col 5) tant qu'aucune branche n'est choisie ;
+                     // le double-clic la remplace par celle de la branche retenue.
+                     TabMetierEquipement.Cells[5, NbMetierEquipementTab]   := IntToStr(PMetierEquipement.Quantite);
+                   end
+                 else
+                   EcritLigneSimple(PMetierEquipement.Equipement, PMetierEquipement.TypeEquipement, PMetierEquipement.Quantite);
+               end;
+          end;
+    end;
+
+  procedure AfficheEquipementClasse();
+    var
+      PMetierClasse:    StructureMetier;
+      PClassEquipement: StructureClassEquipement;
+      ListClasseEff:    TListClassEquipement;
+    begin
+      // Equipement de Classe (Rulebook p.37, "Class Trappings", CONTEXT.md chantier "AUDIT DES
+      // TXT" Rulebook) : donne une fois en plus de l'equipement de la Carriere choisie (pas de
+      // niveau, pas de choix "/" ni de doublon de logique - meme boucle que ci-dessus, juste une
+      // source differente). <Class> de la Carriere deja charge dans StructureMetier.LibelleGroupe.
+      PMetierClasse := ChercheMetier(MetierEnCours);
+      ListClasseEff := ClasseEquipementEffectif(PMetierClasse.LibelleGroupe);
+      try
+        For PClassEquipement in ListClasseEff do
+          if CompareRechercheValeur(PClassEquipement.CodeClasse, PMetierClasse.LibelleGroupe) then
+            Begin
+               NbMetierEquipementTab        := NbMetierEquipementTab + 1;
+               TabMetierEquipement.RowCount := NbMetierEquipementTab + 1;
+               if Pos(SeparateurEnsemble, PClassEquipement.Equipement) > 0 then
+                 EcritLigneEnsemble(PClassEquipement.Equipement, PClassEquipement.TypeEquipement, PClassEquipement.Quantite)
+               else
+                 EcritLigneSimple(PClassEquipement.Equipement, PClassEquipement.TypeEquipement, PClassEquipement.Quantite);
+            end;
+      finally
+        ListClasseEff.Free;
+      end;
+
+      AdjustGridColumnsWidth(TabMetierEquipement, TabSheetEquipement.ClientHeight, false, true, true, 10);
+    end;
+
+begin
+  AfficheEnteteMetier();
+
+  // COMPETENCES
+  if MetierEnCours <> '' then
+    begin
+      AfficheCompetencesRace();
+      AfficheCompetencesMetier();
+      AfficheEquipementMetier();
+      AfficheEquipementClasse();
+    end;
+end;
+
+procedure TWinCreations.ButtonMetierValiderClick(Sender: TObject);
+begin
+     if (EditMetierResultat.Value = 0) then
+        ShowMessage(GetTexteLibelle('RULES-MESS_019'))
+     else
+     begin
+       LastCheckMetierResultat := EditMetierResultat.Value;
+       TabMetierResultat(LastCheckMetierResultat);
+       AfficheImageMetier();
+       UpdateSheetMetier(true);
+     end
+end;
+
+procedure TWinCreations.RadioButtonMetierHasardClick(Sender: TObject);
+  begin
+    LastRandomMetierResultat := 0;
+    LastCheckMetierResultat  := 0;
+    LastCheckMetierSousMetierResul := 0;
+    MetierEnCours            := '';
+    MetierLibEnCours         := '';
+    TabMetierResultat(0);
+    AfficheImageMetier();
+    UpdateSheetMetier(false);
+  end;
+
+procedure TWinCreations.RadioButtonMetierClick(Sender: TObject);
+  begin
+    LastRandomMetierResultat := 0;
+    LastCheckMetierResultat  := 0;
+    LastCheckMetierSousMetierResul := 0;
+    MetierEnCours            := '';
+    MetierLibEnCours         := '';
+    TabMetierResultat(0);
+    AfficheImageMetier();
+    UpdateSheetMetier(false);
+  end;
+
+procedure TWinCreations.UpdateSheetMetier(Hasard: Boolean);
+  Begin
+    // Au Hasard
+    ButtonMetierHasard.Visible  := RadioButtonMetierHasard.Checked;
+    ButtonMetierHasard.Enabled  := (LastRandomMetierResultat = 0);
+    ButtonMetierHasard.BringToFront;
+
+    // donner le résultat de votre lancé de dé
+    EditMetierResultat.Visible  := RadioButtonMetierResultat.Checked;
+    EditMetierResultat.enabled  := (LastCheckMetierResultat = 0);
+    ButtonMetierValider.Visible := RadioButtonMetierResultat.Checked;
+    ButtonMetierValider.Enabled := (LastCheckMetierResultat = 0);
+    ButtonMetierValider.BringToFront;
+
+    // choisir votre Metier
+    ButtonMetierSelectionner.visible:= RadioButtonMetierChoix.Checked;
+    ButtonMetierSelectionner.BringToFront;
+
+    // Sous-métier / substitution raciale : leur visibilité est pilotée par TabMetierResultat,
+    // mais le BringToFront doit être refait ICI, car UpdateSheetMetier s'exécute APRES et
+    // remonte les autres boutons au premier plan. Sans ça ils restaient sous le TShape de
+    // fond que MiseAJourUnContenaire (globalfonts.pas) crée en alClient sur chaque onglet -
+    // les TMemo y échappent (contrôles fenêtrés), pas les TBCButton.
+    if ButtonMetierSousMetierValider.Visible then
+      ButtonMetierSousMetierValider.BringToFront;
+    if ButtonMetierSousMetierSelectionner.Visible then
+      ButtonMetierSousMetierSelectionner.BringToFront;
+
+    if Hasard then
+       GroupBoxMetier.Enabled   := false;
+  end;
+
+////////////////////////////////////////////////////////////////////////////////
+//                             ATTRIBUTS                                      //
+////////////////////////////////////////////////////////////////////////////////
+
+
+procedure TWinCreations.RadioButtonAttributClick(Sender: TObject);
+  var
+    I:         Integer;
+    WasRepart: Boolean;
+  begin
+    WasRepart := ModRepartition;
+    UpdateSheetAttribut(false);
+    // Entree dans la repartition : 10 partout (= 100) ; sortie : on efface les valeurs
+    // Ligne 2 : le nom de l'attribut en texte (les combos sont masques dans ce mode)
+    if ModRepartition and not WasRepart then
+      for I := 1 to 10 do
+        begin
+          TabAttributLanceDe.Cells[I, 1] := '10';
+          TabAttributLanceDe.Cells[I, 2] := TabAttribut.Cells[1, I];
+        end
+    else if WasRepart and not ModRepartition then
+      for I := 1 to 10 do
+        begin
+          TabAttributLanceDe.Cells[I, 1] := '';
+          TabAttributLanceDe.Cells[I, 2] := '';
+        end;
+    CalculTabAttribut(false, (ModDesti=false));
+    if not ModRepartition then
+      TabAttributLanceDeClickCombo();
+  end;
+
+procedure TWinCreations.TabAttributLanceDeEditingDone(Sender: TObject);
+  var
+    CellValue: Integer;
+  begin
+    if (FEditingRow = 1) and (FEditingCol > 0) and ModRepartition then
+    begin
+      // Repartition des 100 points : 4 mini, 18 maxi (V4) ou 16 (V5)
+      CellValue := StrToIntDef(TabAttributLanceDe.Cells[FEditingCol, FEditingRow], 0);
+      if (CellValue < 4) or (CellValue > RepartitionMax()) then
+      begin
+        TabAttributLanceDe.Cells[FEditingCol, FEditingRow] := '10';
+        ShowMessage(Format(GetTexteLibelle('RULES-MESS_064'), [4, RepartitionMax()]));
+        CalculTabAttribut(false, false);
+      end;
+    end
+    else if (FEditingRow = 1) and (FEditingCol > 0) then
+    begin
+      // Récupérer la valeur de la cellule
+      CellValue := StrToIntDef(TabAttributLanceDe.Cells[FEditingCol, FEditingRow], 0);
+
+      // Vérifier les limites de valeur
+      if (CellValue > 0) and ((CellValue < 2) or (CellValue > 20)) then
+      begin
+        // Rétablir la valeur précédente
+        TabAttributLanceDe.Cells[FEditingCol, FEditingRow] := '';
+        ShowMessage(GetTexteLibelle('RULES-MESS_020'));
+      end;
+    end;
+  end;
+
+procedure TWinCreations.TabAttributLanceDeSelectCell(Sender: TObject; aCol, aRow: Integer; var CanSelect: Boolean);
+  var
+    ComboBoxAttribut: TComboBox;
+    cellRect: TRect;
+  begin
+    FEditingCol := aCol;
+    FEditingRow := aRow;
+    CanSelect := true;
+
+    if (CanSelect = True) and (aRow = 2) and (not ModRepartition) then
+    Begin
+      ComboBoxAttribut := TabAttributLanceDe.Objects[ACol, ARow] as TComboBox;
+      if Assigned(ComboBoxAttribut) then
+      begin
+        // Récupérer la cellule sélectionnée
+        cellRect := TabAttributLanceDe.CellRect(aCol, aRow);
+
+        // Afficher le composant TComboBox dans la cellule sélectionnée
+        ComboBoxAttribut.SetBounds(cellRect.Left, cellRect.Top, cellRect.Width, cellRect.Height);
+        ComboBoxAttribut.Visible := True;
+      end;
+    end;
+  end;
+
+procedure TWinCreations.TabAttributDrawCell(Sender: TObject; aCol, aRow: Integer; aRect: TRect; aState: TGridDrawState);
+var
+  ImageIndex: Integer;
+  CellWidth, CellHeight: Integer;
+  MaxWidth, MaxHeight, ImageWidth, ImageHeight: Integer;
+  AspectRatio: Double;
+  LeftOffset, TopOffset: Integer;
+  ImageRect: TRect;
+  TopLeftPixelColor: TColor;
+  Bitmap: TBitmap;
+begin
+
+  if (aRow > 0) then
+    begin
+      TabAttribut.Canvas.Font.Color := clBlack;
+      if (aCol = 2) then
+        begin
+          // Récupérer la valeur de la cellule correspondante (colonne 2)
+          ImageIndex := StrToIntDef(TabAttribut.Cells[aCol, aRow], -1);
+
+          // Vérifier que la valeur est valide et se situe dans la plage d'index d'image
+          if (ImageIndex >= 0) and (ImageIndex < ListImage.Count) then
+            begin
+              // Calculer la taille de la cellule
+              CellWidth := aRect.Right - aRect.Left;
+              CellHeight := aRect.Bottom - aRect.Top;
+
+              // Calculer la taille maximale pour l'image en utilisant la taille de la cellule
+              // et en ajustant l'aspect ratio de l'image
+              MaxWidth := CellWidth;
+              MaxHeight := CellHeight;
+              ImageWidth := ListImage.Width;
+              ImageHeight := ListImage.Height;
+              if ImageWidth > 0 then
+                begin
+                  AspectRatio := ImageHeight / ImageWidth;
+                  if ImageWidth > MaxWidth then
+                    begin
+                      ImageWidth := MaxWidth;
+                      ImageHeight := Round(ImageWidth * AspectRatio);
+                    end;
+                  if ImageHeight > MaxHeight then
+                    begin
+                      ImageHeight := MaxHeight;
+                      ImageWidth := Round(ImageHeight / AspectRatio);
+                    end;
+                end;
+
+              // Calculer la position de l'image pour centrer verticalement et horizontalement
+              // dans la cellule
+              LeftOffset := (CellWidth - ImageWidth) div 2;
+              TopOffset := (CellHeight - ImageHeight) div 2;
+              ImageRect := Rect(aRect.Left + LeftOffset, aRect.Top + TopOffset, aRect.Left + LeftOffset + ImageWidth, aRect.Top + TopOffset + ImageHeight);
+
+              // Obtenir la couleur du pixel en haut à gauche de l'image
+              Bitmap := TBitmap.Create;
+              try
+                if (ImageIndex >= 0) and (ImageIndex < Length(ColorList)) then
+                  TopLeftPixelColor := ColorList[ImageIndex]
+                else
+                  begin
+                    ListImage.GetBitmap(ImageIndex, Bitmap);
+                    TopLeftPixelColor := Bitmap.Canvas.Pixels[0, 0];
+                  end;
+              finally
+                Bitmap.Free;
+              end;
+
+              // Dessiner l'image dans la cellule avec la taille ajustée
+              ListImage.Draw(TabAttribut.Canvas, ImageRect.Left, ImageRect.Top, ImageIndex);
+            end
+          else
+            // Dessiner du texte par défaut si la valeur de l'index d'image est invalide
+            TabAttribut.DefaultDrawCell(aCol, aRow, aRect, aState);
+        end
+      else if (aCol >= 3) and (aCol <= 6) then
+        begin
+          // Obtenir la couleur du pixel en haut à gauche de l'image de la cellule précédente (colonne 2)
+          Bitmap := TBitmap.Create;
+          try
+            ImageIndex := StrToIntDef(TabAttribut.Cells[2, aRow], -1);
+            if (ImageIndex >= 0) and (ImageIndex < ListImage.Count) then
+              begin
+                if (ImageIndex >= 0) and (ImageIndex < Length(ColorList)) then
+                  TopLeftPixelColor := ColorList[ImageIndex]
+                else
+                  begin
+                    ListImage.GetBitmap(ImageIndex, Bitmap);
+                    TopLeftPixelColor := Bitmap.Canvas.Pixels[0, 0];
+                  end;
+              end
+            else
+              TopLeftPixelColor := clNone;
+          finally
+            Bitmap.Free;
+          end;
+
+          // Changer la couleur de fond de la cellule avec la couleur du pixel en haut à gauche de l'image
+          if TopLeftPixelColor <> clNone then
+            begin
+              TabAttribut.Canvas.Brush.Color := TopLeftPixelColor;
+              TabAttribut.Canvas.FillRect(aRect);
+            end;
+
+          // Changer la couleur du texte pour les colonnes 3 à 6
+          TabAttribut.Canvas.Font.Color := clBlack;
+
+          // Dessiner le texte de la cellule
+          TabAttribut.DefaultDrawCell(aCol, aRow, aRect, aState);
+        end
+      else
+        begin
+          // Dessiner normalement le contenu textuel des autres cellules
+          TabAttribut.DefaultDrawCell(aCol, aRow, aRect, aState);
+        end;
+    end
+  else
+    TabAttribut.DefaultDrawCell(aCol, aRow, aRect, aState);
+end;
+
+procedure TWinCreations.TabAttributSelectEditor(Sender: TObject; aCol, aRow: Integer; var Editor: TWinControl);
+  begin
+      // seul le lancé de dé est modifiable
+    if (aCol <> 5)  then
+      Editor := nil;
+  end;
+
+procedure TWinCreations.TrackBarPointSuppChange(Sender: TObject);
+  begin
+    // Récupérer la valeur actuelle du TrackBar
+    CalculTabAttribut(false, (ModDesti=false));
+  end;
+
+Procedure TWinCreations.ChargeTabAttribut();
+  Var
+    IndTabAttribut:  Integer;
+    PAttribut:       StructureAttribut;
+  Begin
+    IndTabAttribut        := 0;
+    For PAttribut in ListeAttribut do
+      begin
+        Inc(IndTabAttribut);
+        TabAttribut.Cells[1, IndTabAttribut] := PAttribut.Resume;
+        TabAttribut.Cells[3, IndTabAttribut] := PAttribut.Libelle;
+        TabAttribut.Cells[7, IndTabAttribut] := PAttribut.CodeAttribut;
+      end;
+  end;
+
+procedure TWinCreations.TabAttributLanceDeSetEditText(Sender: TObject; ACol, ARow: Integer; const Value: string);
+  begin
+    if aRow = 1 then
+      Begin
+        CalculTabAttribut(false, false);
+      end;
+  end;
+
+function TWinCreations.RepartitionMax(): Integer;
+  begin
+    // Rulebook V4 : 18 maxi par caracteristique ; V5 : 16
+    if ValVersion = 'WFRP5' then
+      Result := 16
+    else
+      Result := 18;
+  end;
+
+procedure TWinCreations.TabAttributLanceDeClickCombo();
+  Var
+    CellRect:             TRect;
+    I:                    Integer;
+  begin
+    for I := 1 to 11 do
+      begin
+        CellRect := TabAttributLanceDe.CellRect(I, 2);
+        // simuler un click de souris
+        TabAttributLanceDe.Perform(WM_LBUTTONDOWN, 0, CellRect.Left or (CellRect.Top shl 16));
+        TabAttributLanceDe.Perform(WM_LBUTTONUP, 0, CellRect.Left or (CellRect.Top shl 16));
+      end;
+  end;
+
+procedure TWinCreations.ButtonAttributHasardClick(Sender: TObject);
+  begin
+    CalculTabAttribut(True, (RadioButtonAttributHasard.checked));
+    UpdateSheetAttribut(true);
+  end;
+
+procedure TWinCreations.CalculTabAttribut(Hasard: Boolean; Affectation: Boolean);
+var
+  PartDe:               String;
+  TypeDe:               Integer;
+  NbDe:                 Integer;
+  PlusDe:               Integer;
+  TotalDe:              Integer;
+  I,J:                  Integer;
+  Ch:                   String;
+  IndS:                 Integer;
+  TotL:                 Integer;
+  ComboBoxAttribut:     TComboBox;
+  Index:                Integer;
+  Car:                  String;
+  ColCombo, RowCombo:   Integer;
+  BF, BE, BFM:          Integer;
+begin
+  TotL := 0;
+    // vider les colonnes
+    For I:= 1 to TabAttribut.RowCount -1 do
+    begin
+      TabAttribut.Cells[5, I] := '';
+      TabAttribut.Cells[6, I] := '';
+    end;
+
+  For I:= 1 to TabAttribut.RowCount -1 do
+    begin
+      Ch := TabAttribut.Cells[4, I];
+      if I <= 10 then
+      // caractéristoqies normales
+          begin
+            // séparer les dé du bonus
+            IndS := Pos('+', Ch);
+            PartDe := Copy(Ch, 1, IndS-1);
+            PlusDe := StrToInt(Copy(Ch, IndS+1, Length(Ch)));
+            // séparer le nombre de dé du type
+            IndS := Pos('d', PartDe);
+             if IndS > 0 then
+               begin
+                 NbDe  := StrToInt(Copy(PartDe, 1, IndS-1));
+                 TypeDe:= StrToInt(Copy(PartDe, IndS+1, Length(PartDe)));
+               end
+             else
+               begin
+                 NbDe  := 1;
+                 TypeDe:= StrToInt(Copy(PartDe, 2, IndS));
+               end;
+
+             if Hasard then
+               begin
+                 TotalDe    := 0;
+                 for J := 1 to NbDe Do
+                   TotalDe := TotalDe + (Random(TypeDe-1) + 1);
+                 TabAttributLanceDe.Cells[i, 1] := intToStr(TotalDe);
+               end
+             else
+                TotalDe := StrToIntDef(TabAttributLanceDe.Cells[i, 1],0);
+
+             TotL := TotL + TotalDe;
+             Index:= -1;
+             ComboBoxAttribut := TabAttributLanceDe.Objects[I, 2] as TComboBox;
+             if ModRepartition then
+               begin
+                 // pas d'affectation : la colonne I va a l'attribut I
+                 Index    := I;
+                 ColCombo := I;
+               end
+             else if Affectation then
+               begin
+                 Car                        := TabAttribut.cells[1, I];
+                 Index                      := ComboBoxAttribut.Items.IndexOf(Car);
+                 if Index > 0 then
+                   begin
+                    ComboBoxAttribut.enabled   := true;
+                    ComboBoxAttribut.ItemIndex := Index;
+                    ColCombo                   := I;
+                   end
+               end
+             else
+               begin
+                 Car   := ComboBoxAttribut.Text;
+                 if Car <> ValeurNonRenseignee then
+                   begin
+                     Index := ComboBoxAttribut.Items.IndexOf(Car);
+                     TabAttributLanceDe.MouseToCell(ComboBoxAttribut.Left, ComboBoxAttribut.Top, ColCombo, RowCombo);
+                   end
+               end;
+
+          if Index > 0 then
+            begin
+              TabAttribut.Cells[5, Index] := TabAttributLanceDe.Cells[ColCombo, 1];
+              TabAttribut.Cells[6, Index] := IntToStr(StrToIntDef(TabAttributLanceDe.Cells[Index, 1],0)+ PlusDe);
+              if TabAttribut.Cells[7, Index] = ConstCaracE then
+                BE := StrToInt(TabAttribut.Cells[6, Index])
+              else if TabAttribut.Cells[7, Index] = ConstCaracF then
+                BF := StrToInt(TabAttribut.Cells[6, Index])
+              else if TabAttribut.Cells[7, Index] = ConstCaracFM then
+                BFM := StrToInt(TabAttribut.Cells[6, Index]);
+              end
+          end
+     else if TabAttribut.Cells[7, I] = ConstCaracBlessure then
+       begin
+          TabAttribut.Cells[6, I] := IntToStr(CalculBlessure(Ch, BF, BE, BFM));
+       end
+     else if TabAttribut.Cells[7, I] = ConstCaracDestin then
+       begin
+         TabAttribut.Cells[5, I]  := IntToStr(TrackBarPointSupp.Max - TrackBarPointSupp.Position);
+          TabAttribut.Cells[6, I] := IntToStr(StrToInt(TabAttribut.Cells[4, I]) + StrToIntDef(TabAttribut.Cells[5, I],0));
+       end
+     else if TabAttribut.Cells[7, I] = ConstCaracResil then
+       begin
+         TabAttribut.Cells[5, I] := IntToStr(TrackBarPointSupp.Position);
+         TabAttribut.Cells[6, I] := IntToStr(StrToInt(TabAttribut.Cells[4, I]) + StrToIntDef(TabAttribut.Cells[5, I],0));
+       end
+    end;
+    TabAttributLanceDe.Cells[11, 1] := InttoStr(TotL);
+    if ModRepartition then
+      TabAttributLanceDe.Cells[11, 0] := Format(GetTexteLibelle('RULES-LAB_317'), [100 - TotL])
+    else
+      TabAttributLanceDe.Cells[11, 0] := GetTexteLibelle('RULES-LAB_021');
+    UpdateSheetAttribut(false);
+end;
+
+procedure TWinCreations.ComboBoxSelectAttribut(Sender: TObject);
+Var
+   AttEnCours:        String;
+   AttLigne:          String;
+   ComboBoxAttribut:  TCombobox;
+   Col, Row, C:       Integer;
+   Index:             Integer;
+begin
+  ComboBoxAttribut := Sender as TComboBox;
+  TabAttributLanceDe.MouseToCell(ComboBoxAttribut.Left, ComboBoxAttribut.Top, Col, Row);
+
+  AttEnCours       := ComboBoxAttribut.Text;
+
+  //// voir si elle n'est pas déjà utilisée
+  for C := 1 to TabAttributLanceDe.colCount -2 do
+    if (C <> Col) then
+      begin
+        ComboBoxAttribut :=   TabAttributLanceDe.Objects[C, TabAttributLanceDe.Row] as TComboBox;
+        if Assigned(ComboBoxAttribut) then
+          begin
+            AttLigne       := ComboBoxAttribut.Text;
+
+            if (AttLigne <> '') and (AttLigne = AttEncours) then
+               begin
+                  Index := ComboBoxAttribut.Items.IndexOf(ValeurNonRenseignee);
+                  ComboBoxAttribut.ItemIndex := Index;
+               end;
+          end;
+      end;
+
+  CalculTabAttribut(False, (RadioButtonAttributHasard.checked));
+end;
+
+procedure TWinCreations.UpdateSheetAttribut(Hasard: boolean);
+Var
+  I: Integer;
+Begin
+  ButtonAttributHasard.Visible    := (RadioButtonAttributHasard.Checked or RadioButtonAttributHasardAffecte.Checked);
+  ButtonAttributHasard.BringToFront;
+  ModDesti                        := (RadioButtonAttributHasardAffecte.Checked or RadioButtonAttributResultatAffecte.Checked);
+  ModRepartition                  := RadioButtonAttributRepartition.Checked;
+  if ModRepartition then
+    for I := 1 to 11 do
+      if Assigned(TabAttributLanceDe.Objects[I, 2]) then
+        (TabAttributLanceDe.Objects[I, 2] as TComboBox).Visible := false;
+  TabAttributLanceDe.visible      := true;
+  TabAttribut.enabled             := false;
+
+  if Hasard then
+    begin
+      // Tirage fait : plus de nouveau tirage, mais les 100 points restent permis (dernier palier du Rulebook)
+      RadioButtonAttributHasard.Enabled          := false;
+      RadioButtonAttributResultat.Enabled        := false;
+      RadioButtonAttributHasardAffecte.Enabled   := false;
+      RadioButtonAttributResultatAffecte.Enabled := false;
+      ButtonAttributHasard.Enabled:= false;
+    end;
+end;
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+//                              TALENTS                                       //
+////////////////////////////////////////////////////////////////////////////////
+
+// Information seule : ce que donne le MEME jet sous chacune des autres règles qui touchent
+// l'ethnie (la table de base comprise), quand le métier diffère de celui retenu. La règle
+// choisie dans le combo reste la seule qui compte. Une règle qui ne couvre pas l'ethnie
+// retombe sur la table de base (RegleCouvreRace) : elle n'apporte rien et est ignorée.
+procedure TWinCreations.AfficheMetierAutresRegles(Resul: Integer; CodeMetier: String);
+  var
+    Tirage:   TListTirageMetier;
+    Lignes:   TStringList;
+    Courante: String;
+    PRegle:   StructureRegle;
+
+  procedure Essaie(CodeRegle, LibRegle: String);
+    var
+      Ligne: StructureTirageMetier;
+    begin
+      if CodeRegle = Courante then
+        exit;
+      if (CodeRegle <> '') and not RegleCouvreRace(CodeRegle, RaceEnCours) then
+        exit;
+      CalculeTirageMetier(RaceEnCours, CodeRegle, Tirage);
+      For Ligne in Tirage do
+        if (Ligne.Debut <= Resul) and (Resul <= Ligne.Fin) then
+          begin
+            if Ligne.CodeMetier <> CodeMetier then
+              Lignes.Add(Format(GetTexteLibelle('RULES-LAB_578'), [LibRegle, ChercheMetier(Ligne.CodeMetier).Libelle]));
+            break;
+          end;
+    end;
+
+  begin
+    MemoMetierRegles.Visible := false;
+    if (CodeMetier = '') or (ListRegle.Count = 0) then
+      exit;
+    Courante := RegleEnCours();
+    Tirage   := TListTirageMetier.Create;
+    Lignes   := TStringList.Create;
+    try
+      Essaie('', GetTexteLibelle(ConstRulesBook, '', '', true));
+      For PRegle in ListRegle do
+        Essaie(PRegle.CodeRegle, PRegle.Libelle);
+      if Lignes.Count > 0 then
+        begin
+          Lignes.Insert(0, GetTexteLibelle('RULES-LAB_577'));
+          MemoMetierRegles.Lines.Assign(Lignes);
+          MemoMetierRegles.Visible := true;
+        end;
+    finally
+      Lignes.Free;
+      Tirage.Free;
+    end;
+  end;
+
+procedure TWinCreations.TabMetierResultat(Resul: Integer);
+  var
+    IndTab:   Integer;
+    Deb:      Integer = 0;
+    Fin:      Integer = 0;
+    Ch:       String;
+    IndS:     Integer;
+    SousM:    Boolean = False;
+    RaceC:    Boolean = False;
+  begin
+    MemoMetierRegles.Visible := false;
+    for IndTab := 1 to TabMetier.RowCount-1 do
+      begin
+        Ch := TabMetier.Cells[3, IndTab];
+        DebutFin(Ch, Deb, Fin);
+        if ChoixWinMetierRace <> '' then
+          begin
+            if TabMEtier.Cells[1, Indtab] = ChoixWinMetierRace then
+              begin
+                IndS := Pos(SeparateurChance, Ch);
+                if IndS > 0 then
+                  Resul := StrToInt(Copy(Ch, 1, IndS-1))
+                else
+                  Resul := StrToInt(Ch);
+              end
+            else
+              Deb := 101;
+          end;
+
+        if (Deb <= Resul) and (Resul <= Fin) then
+          begin
+            AffMetierSousMetier.text := TexteMetierSousMetier(TabMetier.Cells[1, indTab], LivresPersonnages);
+            if AffMetierSousMetier.text <> '' then
+              SousM := True
+            else
+              begin
+                AffMetierSousMetier.text := TexteMetierRaceChoixMetier(TabMetier.Cells[1, indTab], RaceEnCours, LivresPersonnages);
+                if AffMetierSousMetier.text <> '' then
+                  RaceC := True;
+              end;
+            if not SousM and not RaceC then
+              begin
+                MetierEnCours              := TabMetier.Cells[1, indTab];
+                MetierLibEnCours           := TabMetier.Cells[2, indTab];
+                TabMetier.Cells[4, IndTab] := '1';
+                TabMetier.TopRow           := indtab;
+                TabMetier.Invalidate;
+                AfficheMetierAutresRegles(Resul, MetierEnCours);
+              end
+            else
+              begin
+                if SousM then
+                  begin
+                    // second jet de dé
+                    MetierEnCoursPrincipal                := TabMetier.Cells[1, indTab];
+                    EditMetierSousMetierResultat.visible  := true;
+                    ButtonMetierSousMetierValider.visible := true;
+                    ButtonMetierSousMetierValider.BringToFront;
+                    AffMetierSousMetier.visible           := true;
+                  end
+                else
+                  begin
+                    MetierEnCours                              := ResultMetierRaceChoixMetier(TabMetier.Cells[1, indTab], RaceEnCours, LivresPersonnages);
+                    ButtonMetierSousMetierSelectionner.visible := true;
+                    ButtonMetierSousMetierSelectionner.BringToFront;
+                    AffMetierSousMetier.visible                := true;
+                  end;
+              end;
+            Break;
+          end
+      end;
+  end;
+
+////////////////////////////////////////////////////////////////////////////////
+//                          COMPETENCES DE RACE                               //
+////////////////////////////////////////////////////////////////////////////////
+
+
+procedure TWinCreations.TabRaceCompetenceDrawCell(Sender: TObject; aCol,
+  aRow: Integer; aRect: TRect; aState: TGridDrawState);
+var
+  CheckChar: string;
+  ImageIndex: Integer;
+
+  // Couleur de fond de l'icone de la ligne (colonne 2) : ColorList, sinon pixel en haut a gauche ;
+  // clNone si la ligne n'a pas d'icone valide.
+  function CouleurFondLigne(Ligne: Integer): TColor;
+  var
+    Indice: Integer;
+    Bitmap: TBitmap;
+  begin
+    Result := clNone;
+    Indice := StrToIntDef(TabRaceCompetence.Cells[2, Ligne], -1);
+    if (Indice < 0) or (Indice >= ListImage.Count) then
+      exit;
+    if Indice < Length(ColorList) then
+      Result := ColorList[Indice]
+    else
+      begin
+        Bitmap := TBitmap.Create;
+        try
+          ListImage.GetBitmap(Indice, Bitmap);
+          Result := Bitmap.Canvas.Pixels[0, 0];
+        finally
+          Bitmap.Free;
+        end;
+      end;
+  end;
+
+  // Remplit la cellule avec la couleur de fond de l'icone de sa ligne.
+  procedure RemplirFondIcone;
+  var
+    Couleur: TColor;
+  begin
+    Couleur := CouleurFondLigne(aRow);
+    if Couleur <> clNone then
+      begin
+        TabRaceCompetence.Canvas.Brush.Color := Couleur;
+        TabRaceCompetence.Canvas.FillRect(aRect);
+      end;
+  end;
+
+  // Colonne 2 : icone, reduite au cadre de la cellule en gardant ses proportions, centree.
+  procedure DessineIcone;
+  var
+    CellWidth, CellHeight: Integer;
+    ImageWidth, ImageHeight: Integer;
+    AspectRatio: Double;
+    LeftOffset, TopOffset: Integer;
+  begin
+    CellWidth := aRect.Right - aRect.Left;
+    CellHeight := aRect.Bottom - aRect.Top;
+    ImageWidth := ListImage.Width;
+    ImageHeight := ListImage.Height;
+    if ImageWidth > 0 then
+      begin
+        AspectRatio := ImageHeight / ImageWidth;
+        if ImageWidth > CellWidth then
+          begin
+            ImageWidth := CellWidth;
+            ImageHeight := Round(ImageWidth * AspectRatio);
+          end;
+        if ImageHeight > CellHeight then
+          begin
+            ImageHeight := CellHeight;
+            ImageWidth := Round(ImageHeight / AspectRatio);
+          end;
+      end;
+    LeftOffset := (CellWidth - ImageWidth) div 2;
+    TopOffset := (CellHeight - ImageHeight) div 2;
+    ListImage.Draw(TabRaceCompetence.Canvas, aRect.Left + LeftOffset, aRect.Top + TopOffset, ImageIndex);
+  end;
+
+begin
+  if (aCol = 2) and (aRow > 0) then
+    begin
+      ImageIndex := StrToIntDef(TabRaceCompetence.Cells[aCol, aRow], -1);
+      if (ImageIndex >= 0) and (ImageIndex < ListImage.Count) then
+        DessineIcone
+      else
+        // index d'image invalide : texte par defaut
+        TabRaceCompetence.DefaultDrawCell(aCol, aRow, aRect, aState);
+    end
+  else if (aCol = 3) then
+    begin
+      RemplirFondIcone;
+      TabRaceCompetence.Canvas.Font.Color := clBlack;
+      TabRaceCompetence.DefaultDrawCell(aCol, aRow, aRect, aState);
+    end
+  else if (aCol in [4,5]) and (aRow > 0) and (aRow <= NbRaceCompetenceTab) then
+    begin
+      RemplirFondIcone;
+      if CompetenceRaceStates[aCol, aRow] then
+        CheckChar := CheckCharChecked
+      else
+        CheckChar := CheckCharUnchecked;
+      TabRaceCompetence.Canvas.TextRect(aRect, aRect.Left + 2, aRect.Top + 2, CheckChar);
+    end
+  else
+    TabRaceCompetence.DefaultDrawCell(aCol, aRow, aRect, aState);
+end;
+
+procedure TWinCreations.ClickRaceCompetence(aCol, aRow: Integer);
+Begin
+  if (aCol in [4,5]) then
+  begin
+    CompetenceRaceStates[ACol, ARow] := not CompetenceRaceStates[ACol, ARow];
+    TabRaceCompetence.InvalidateCell(ACol, ARow);
+    if CompetenceRaceStates[ACol, ARow] = true then
+      begin
+        case aCol of
+          4: begin
+               CompetenceRaceStates[5, ARow]    := false;
+               TabRaceCompetence.InvalidateCell(5, ARow);
+             end;
+          5: begin
+               CompetenceRaceStates[4, ARow]    := false;
+               TabRaceCompetence.InvalidateCell(4, ARow);
+             end;
+         end;
+      end;
+      CalculNbRaceCompetence();
+  end;
+end;
+
+
+procedure TWinCreations.TabRaceCompetenceMouseDown(Sender: TObject;
+  Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+var
+  ACol, ARow: Integer;
+begin
+  TabRaceCompetence.MouseToCell(X, Y, ACol, ARow);
+  if (ARow > 0) then
+    ClickRaceCompetence(aCol, aRow);
+end;
+
+procedure TWinCreations.ButtonRaceCompetenceHasardClick(Sender: TObject);
+  var
+    IndTab:    Integer;
+    IndPass:   Integer;
+    PRaceNb:   StructureRace;
+    Choix:     String;
+  begin
+    // le nombre a atteindre vient de l'ethnie (3 et 3 partout, 2 et 2 pour le Skink)
+    PRaceNb := ChercheRace(RaceEnCours);
+    // vérifier s'il reste des Cing ou trois
+    if (NbCinq < PRaceNb.NbPoint5) or (NbTrois < PRaceNb.NbPoint3) then
+      for IndPass := 1 to 3 do
+          for IndTab := 1 to TabRaceCompetence.RowCount-1 do
+              if (not CompetenceRaceStates[4, IndTab]) and (not CompetenceRaceStates[5, IndTab]) then
+                if ((IndPass in [1,2]) and (StrToIntDef(TabRaceCompetence.Cells[2, IndTab],0) > 0)) or (IndPass = 3) then
+                  if (IndPass in [1,3]) and (NbCinq < PRaceNb.NbPoint5) then
+                    ClickRaceCompetence(4, IndTab)
+                  else if (IndPass in [2,3]) and (NbTrois < PRaceNb.NbPoint3) then
+                    ClickRaceCompetence(5, IndTab);
+    // resoudre les lignes cochees encore au choix ("Trade (Any)", "A or B")
+    for IndTab := 1 to TabRaceCompetence.RowCount-1 do
+      if (CompetenceRaceStates[4, IndTab] or CompetenceRaceStates[5, IndTab]) and
+         ((Pos(ValeurGenerique, TabRaceCompetence.Cells[1, IndTab]) > 0) or
+          (Pos(SeparateurMulti, TabRaceCompetence.Cells[1, IndTab]) > 0)) then
+        begin
+          Choix := CompetenceAuHasard(TabRaceCompetence, TabRaceCompetence.Cells[1, IndTab]);
+          if Choix <> '' then
+            begin
+              TabRaceCompetence.Cells[1, IndTab] := Choix;
+              TabRaceCompetence.Cells[3, IndTab] := ChercheCompetence(Choix).Libelle;
+            end;
+        end;
+  end;
+
+function TWinCreations.CompetenceAuHasard(Grille: TStringGrid; const CodeGen: String): String;
+  var
+    Opts:    TStringList;
+    Libres:  TStringList;
+    Filtres: TStringList;
+    I, J:    Integer;
+    Deja:    Boolean;
+  begin
+    Result  := '';
+    Opts    := ListeMetierCompetence(CodeGen);
+    Libres  := TStringList.Create;
+    Filtres := TStringList.Create;
+    try
+      for I := 0 to Opts.Count - 1 do
+        if VerifieFiltre(ChercheCompetence(Opts[I]).Livre, LivresPersonnages) then
+          begin
+            Filtres.Add(Opts[I]);
+            Deja := False;
+            for J := 1 to Grille.RowCount - 1 do
+              if Grille.Cells[1, J] = Opts[I] then
+                Deja := True;
+            if not Deja then
+              Libres.Add(Opts[I]);
+          end;
+      // repli : mieux vaut un doublon ou un livre hors selection qu'un choix vide qui bloque l'etape
+      if Libres.Count > 0 then
+        Result := Libres[Random(Libres.Count)]
+      else if Filtres.Count > 0 then
+        Result := Filtres[Random(Filtres.Count)]
+      else if Opts.Count > 0 then
+        Result := Opts[Random(Opts.Count)];
+    finally
+      Opts.Free;
+      Libres.Free;
+      Filtres.Free;
+    end;
+  end;
+
+procedure TWinCreations.CalculNbRaceCompetence();
+Var
+  IndTab: Integer;
+Begin
+  NbTrois := 0;
+  NbCinq  := 0;
+  for IndTab := 1 to TabRaceCompetence.RowCount -1 do
+    begin
+      if CompetenceRaceStates[4, IndTab] then
+        NbCinq := NbCinq + 1;
+      if CompetenceRaceStates[5, IndTab] then
+        NbTrois:= NbTrois + 1;
+    end;
+end;
+
+
+////////////////////////////////////////////////////////////////////////////////
+//                         COMPETENCES DE METIER                              //
+////////////////////////////////////////////////////////////////////////////////
+
+
+procedure TWinCreations.TabMetierCompetenceDrawCell(Sender: TObject; aCol,
+  aRow: Integer; aRect: TRect; aState: TGridDrawState);
+  Var
+    ImageIndex: Integer;
+    CellWidth, CellHeight: Integer;
+    MaxWidth, MaxHeight, ImageWidth, ImageHeight: Integer;
+    AspectRatio: Double;
+    LeftOffset, TopOffset: Integer;
+    ImageRect: TRect;
+    TopLeftPixelColor: TColor;
+    Bitmap: TBitmap;
+  begin
+    if (aCol = 2) and (aRow > 0) then
+        begin
+        // Récupérer la valeur de la cellule correspondante (colonne 2)
+        ImageIndex := StrToIntDef(TabMetierCompetence.Cells[aCol, aRow], -1);
+
+        // Vérifier que la valeur est valide et se situe dans la plage d'index d'image
+        if (ImageIndex >= 0) and (ImageIndex < ListImage.Count) then
+        begin
+          // Calculer la taille de la cellule
+          CellWidth := aRect.Right - aRect.Left;
+          CellHeight := aRect.Bottom - aRect.Top;
+
+          // Calculer la taille maximale pour l'image en utilisant la taille de la cellule
+          // et en ajustant l'aspect ratio de l'image
+          MaxWidth := CellWidth;
+          MaxHeight := CellHeight;
+          ImageWidth := ListImage.Width;
+          ImageHeight := ListImage.Height;
+          if ImageWidth > 0 then
+          begin
+            AspectRatio := ImageHeight / ImageWidth;
+            if ImageWidth > MaxWidth then
+            begin
+              ImageWidth := MaxWidth;
+              ImageHeight := Round(ImageWidth * AspectRatio);
+            end;
+            if ImageHeight > MaxHeight then
+            begin
+              ImageHeight := MaxHeight;
+              ImageWidth := Round(ImageHeight / AspectRatio);
+            end;
+          end;
+
+          // Calculer la position de l'image pour centrer verticalement et horizontalement
+          // dans la cellule
+          LeftOffset := (CellWidth - ImageWidth) div 2;
+          TopOffset := (CellHeight - ImageHeight) div 2;
+          ImageRect := Rect(aRect.Left + LeftOffset, aRect.Top + TopOffset, aRect.Left + LeftOffset + ImageWidth, aRect.Top + TopOffset + ImageHeight);
+
+          // Obtenir la couleur du pixel en haut à gauche de l'image
+          Bitmap := TBitmap.Create;
+          try
+            if (ImageIndex >= 0) and (ImageIndex < Length(ColorList)) then
+              TopLeftPixelColor := ColorList[ImageIndex]
+            else
+              begin
+                ListImage.GetBitmap(ImageIndex, Bitmap);
+                TopLeftPixelColor := Bitmap.Canvas.Pixels[0, 0];
+              end;
+          finally
+            Bitmap.Free;
+          end;
+
+          // Dessiner l'image dans la cellule avec la taille ajustée
+          ListImage.Draw(TabMetierCompetence.Canvas, ImageRect.Left, ImageRect.Top, ImageIndex);
+        end
+        else
+          // Dessiner du texte par défaut si la valeur de l'index d'image est invalide
+          TabMetierCompetence.DefaultDrawCell(aCol, aRow, aRect, aState);
+      end
+      else if (aCol > 2) and (aRow > 0) then
+      begin
+        // Obtenir la couleur du pixel en haut à gauche de l'image de la cellule précédente (colonne 2)
+        Bitmap := TBitmap.Create;
+        try
+          ImageIndex := StrToIntDef(TabMetierCompetence.Cells[2, aRow], -1);
+          if (ImageIndex >= 0) and (ImageIndex < ListImage.Count) then
+          begin
+            if (ImageIndex >= 0) and (ImageIndex < Length(ColorList)) then
+              TopLeftPixelColor := ColorList[ImageIndex]
+            else
+              begin
+                ListImage.GetBitmap(ImageIndex, Bitmap);
+                TopLeftPixelColor := Bitmap.Canvas.Pixels[0, 0];
+              end;
+          end
+          else
+            TopLeftPixelColor := clNone;
+        finally
+          Bitmap.Free;
+        end;
+
+        // Changer la couleur de fond de la cellule avec la couleur du pixel en haut à gauche de l'image
+        if TopLeftPixelColor <> clNone then
+        begin
+          TabMetierCompetence.Canvas.Brush.Color := TopLeftPixelColor;
+          TabMetierCompetence.Canvas.FillRect(aRect);
+        end;
+
+        // Changer la couleur du texte
+        TabMetierCompetence.Canvas.Font.Color := clBlack;
+
+        // Dessiner le texte de la cellule
+        TabMetierCompetence.DefaultDrawCell(aCol, aRow, aRect, aState);
+      end
+     else
+      begin
+        // Dessiner normalement le contenu textuel des autres cellules
+        TabMetierCompetence.DefaultDrawCell(aCol, aRow, aRect, aState);
+      end;
+
+  end;
+
+procedure TWinCreations.TabMetierCompetenceSelectEditor(Sender: TObject; aCol,
+  aRow: Integer; var Editor: TWinControl);
+  begin
+    // seul la saisie des 40 points est modifiable
+    if (aCol <> 4)  then
+      Editor := nil;
+  end;
+
+
+procedure TWinCreations.TabMetierCompetenceValidateEntry(Sender: TObject; aCol,
+  aRow: Integer; const OldValue: string; var NewValue: String);
+  var
+    Value: Integer;
+  begin
+    // Vérifiez si la colonne concernée est celle qui doit contenir les chiffres entre 0 et 10
+    if aCol = 4 then
+    begin
+      if NewValue <> '' then
+      begin
+        // Vérifiez si la valeur est un entier valide
+        if TryStrToInt(NewValue, Value) then
+          begin
+            // Vérifiez si la valeur est comprise entre 0 et 10
+            if (Value < 0) or (Value > 10) then
+              begin
+                // La valeur est en dehors de la plage autorisée, vous pouvez afficher un message d'erreur
+                ShowMessage(GetTexteLibelle('RULES-MESS_022'));
+                // Rétablir la valeur précédente
+                NewValue := OldValue;
+              end;
+          end
+        else
+          begin
+            // La valeur n'est pas un entier valide, vous pouvez afficher un message d'erreur
+            ShowMessage(GetTexteLibelle('RULES-MESS_023'));
+            // Rétablir la valeur précédente
+            NewValue := OldValue;
+          end;
+        CalculTotalMetierCompetence();
+      end;
+    end;
+  end;
+
+procedure TWinCreations.CalculTotalMetierCompetence();
+  Var
+    IndTab:   Integer;
+  Begin
+    TotalMetierCompetence                := 0;
+    for IndTab := 1 to TabMetierCompetence.RowCount-1 do
+      TotalMetierCompetence            := TotalMetierCompetence + StrToIntDef(TabMetierCompetence.Cells[4, IndTab],0);
+    ButtonTotalMetierCompetence.Caption  := IntToStr(TotalMetierCompetence)+' / 40 Pts';
+  end;
+
+procedure TWinCreations.ButtonMetierCompetenceHasardClick(Sender: TObject);
+  Var
+    IndTab:   Integer;
+    NbLignes: Integer;
+    Choix:    String;
+  Begin
+    // 1 - resoudre les lignes encore au choix ("Trade (Any)", "A or B")
+    for IndTab := 1 to TabMetierCompetence.RowCount - 1 do
+      if TabMetierCompetence.Cells[5, IndTab] = ConstArbreAuChoix then
+        begin
+          Choix := CompetenceAuHasard(TabMetierCompetence, TabMetierCompetence.Cells[6, IndTab]);
+          if Choix <> '' then
+            begin
+              TabMetierCompetence.Cells[5, IndTab] := '';
+              TabMetierCompetence.Cells[1, IndTab] := Choix;
+              TabMetierCompetence.Cells[3, IndTab] := ChercheCompetence(Choix).Libelle;
+            end;
+        end;
+    // 2 - repartir les 40 points sur 8 lignes au plus (5 chacune s'il y en a 8 ou plus)
+    NbLignes := TabMetierCompetence.RowCount - 1;
+    if NbLignes > 8 then NbLignes := 8;
+    if NbLignes > 0 then
+      for IndTab := 1 to TabMetierCompetence.RowCount - 1 do
+        if IndTab <= NbLignes then
+          TabMetierCompetence.Cells[4, IndTab] := IntToStr(40 div NbLignes + Ord(IndTab <= 40 mod NbLignes))
+        else
+          TabMetierCompetence.Cells[4, IndTab] := '';
+    CalculTotalMetierCompetence
+  end;
+
+procedure TWinCreations.ButtonEquipementHasardClick(Sender: TObject);
+  var
+    Row, I, IndChoix, Quantite: Integer;
+    Codes, Quantites:           TStringList;
+    Cand:                       array of Integer;
+    Res, Code, Lib, Typ:        String;
+    PArme:                      StructureArme;
+    PArmure:                    StructureArmure;
+    PTrapping:                  StructureTrapping;
+    Ok:                         Boolean;
+  begin
+    for Row := 1 to TabMetierEquipement.RowCount - 1 do
+      if TabMetierEquipement.Cells[2, Row] = ConstArbreAuChoix then
+        begin
+          Codes     := TStringList.Create;
+          Quantites := TStringList.Create;
+          try
+            ExtractStrings([','], [], PChar(TabMetierEquipement.Cells[3, Row]), Codes);
+            ExtractStrings([','], [], PChar(TabMetierEquipement.Cells[7, Row]), Quantites);
+            // candidats : armes et armures limitees aux livres retenus (comme la fenetre de choix)
+            Cand := nil;
+            for I := 0 to Codes.Count - 1 do
+              begin
+                DecoupeCodeValeur(Codes[I]);
+                Ok := True;
+                case Copy(CodeValeur, 1, 5) of
+                  EquipementCC, EquipementCT, EquipementMU:
+                    Ok := VerifieFiltre(ChercheArme(Codes[I]).Livre, LivresPersonnages);
+                  EquipementAR:
+                    Ok := VerifieFiltre(ChercheArmure(Codes[I]).Livre, LivresPersonnages);
+                end;
+                if Ok then
+                  begin
+                    SetLength(Cand, Length(Cand) + 1);
+                    Cand[High(Cand)] := I;
+                  end;
+              end;
+            if Length(Cand) > 0 then
+              begin
+                IndChoix := Cand[Random(Length(Cand))];
+                Res      := Codes[IndChoix];
+                DecoupeCodeValeur(Res);
+                case Copy(CodeValeur, 1, 5) of
+                  EquipementCC, EquipementCT, EquipementMU:
+                    begin
+                      PArme := ChercheArme(Res);
+                      Code  := PArme.CodeArme;
+                      Lib   := PArme.Libelle;
+                      Typ   := TypeEquipWe;
+                    end;
+                  EquipementAR:
+                    begin
+                      PArmure := ChercheArmure(Res);
+                      Code    := PArmure.CodeArmure;
+                      Lib     := PArmure.Libelle;
+                      Typ     := TypeEquipAr;
+                    end;
+                else
+                  begin
+                    PTrapping := ChercheTrapping(Res);
+                    Code      := Res;
+                    if PTrapping.CodeTrapping <> '' then
+                      Lib := PTrapping.Libelle
+                    else
+                      Lib := Res;
+                    Typ       := TypeEquipDi;
+                  end;
+                end;
+                // quantite de la branche retenue (meme rang dans la col 7), sinon celle de l'item
+                Quantite := StrToIntDef(TabMetierEquipement.Cells[5, Row], 1);
+                if IndChoix < Quantites.Count then
+                  Quantite := StrToIntDef(Quantites[IndChoix], Quantite);
+                TabMetierEquipement.Cells[1, Row] := Code;
+                TabMetierEquipement.Cells[2, Row] := Lib + QuantiteSuffixe(Quantite);
+                TabMetierEquipement.Cells[4, Row] := '';
+                TabMetierEquipement.Cells[5, Row] := IntToStr(Quantite);
+                TabMetierEquipement.Cells[6, Row] := Typ;
+              end;
+          finally
+            Codes.Free;
+            Quantites.Free;
+          end;
+        end;
+  end;
+
+procedure TWinCreations.ChargerLivre();
+  var
+    i:             Integer = 0;
+    strings:       TStringList;
+    Ind:           Integer;
+    Ordre:         String;
+    Livre:         String;
+    PLivre:        StructureLivre;
+  begin
+    TabLivre.Clear;
+    // mise en forme du tableau de création du Livre
+    TabLivre.ColCount         := 8;
+    TabLivre.RowCount         := 10;
+    TabLivre.ColWidths[0]     := 0;
+    TabLivre.ColWidths[1]     := 20;
+    TabLivre.Cells[2, 0]      := GetTexteLibelle('RULES-LAB_014');
+    TabLivre.ColWidths[2]     := 230;
+    TabLivre.ColWidths[3]     := 0;
+    TabLivre.ColWidths[4]     := 0;
+    TabLivre.Cells[5, 0]      := 'R';
+    TabLivre.ColWidths[5]     := 0;
+    TabLivre.Cells[6, 0]      := 'W';
+    TabLivre.ColWidths[6]     := 0;
+    TabLivre.Cells[7, 0]      := 'B';
+    TabLivre.ColWidths[7]     := 70;
+
+    strings       := TStringList.Create;
+    ExtractStrings(['['], [], PChar(LivresCharges), Strings);
+    for Ind := 0 to (Strings.count - 1) Do
+      begin
+        inc(I);
+        if TabLivre.RowCount <= I then
+          TabLivre.RowCount      := TabLivre.RowCount + 1;
+        Livre                    := Strings[ind];
+        Livre                    := StringReplace(StringReplace(Livre, '[', '', [rfReplaceAll]), ']', '', [rfReplaceAll]);
+        TabLivre.Cells[1, I]     := ConstSelectionne;
+        TabLivre.Cells[2, I]     := GetTexteLibelle(Livre,'','',true);
+        TabLivre.Cells[3, I]     := Livre;
+        PLivre                   := ChercheLivreLibelle(Livre);
+        Ordre                    := IntToStr(PLivre.Officiel);
+        if Ordre  = '2' then
+          TabLivre.Cells[7, I]   := ConstLivreFacultatif
+        else
+          TabLivre.Cells[7, I]   := ConstLivreOfficiel;
+        TabLivre.Cells[4, I]     := Ordre+Livre;
+      end;
+    Strings.Free;
+    // les lignes vides (RowCount de depart = 10) seraient triees EN TETE par SortColRow
+    if I >= 1 then
+      TabLivre.RowCount := I + 1;
+    TabLivre.SortColRow(true,4);
+    AdjustGridColumnsWidth(TabLivre, TabSheetLivre.ClientHeight, false, true);
+  end;
+
+Procedure TWinCreations.ReconstruitChoixCreation();
+  var
+    Sauve:      array of StructureChoixCreation;
+    Nouvelle:   StructureChoixCreation;
+    PRaceTalent:StructureRaceTalent;
+    Ind, Ind2:  Integer;
+    Ind3:       Integer;
+    ListOpt:    TStringList;
+    ListTal:    TStringList;
+  begin
+    // 1 - sauver l'état courant (choix faits et jets obtenus)
+    Sauve := Copy(ListeChoixCreation, 0, Length(ListeChoixCreation));
+    ListeChoixCreation := [];
+
+    // 2 - racines : talents de race
+    For PRaceTalent in ListRaceTalent do
+      if CompareRechercheValeur(PRaceTalent.CodeRace, RaceEnCours) then
+        begin
+          // Un TRAIT D'ETHNIE se comporte ici comme un choix entre talents : ses
+          // options remplacent la liste des talents. Voir CONTEXT.md 2.41. Les deux
+          // fonctions ont le meme contrat - liste toujours creee, a liberer par nous.
+          if ChercheTrait(PRaceTalent.CodeTalent).CodeTrait <> '' then
+            ListOpt := OptionsDuTrait(PRaceTalent.CodeTalent)
+          else
+            ListOpt := ListeTalent(PRaceTalent.CodeTalent);
+          if ListOpt.Count > 1 then
+            begin
+              Nouvelle.Origine    := ConstOrigineRace;
+              Nouvelle.CodeSource := PRaceTalent.CodeTalent;
+              Nouvelle.CodeParent := '';
+              Nouvelle.CodeChoisi := '';
+              Nouvelle.Aleatoire  := False;
+              Nouvelle.Jet        := 0;
+              Nouvelle.Rang := RangSuivant(Nouvelle.CodeSource, Nouvelle.CodeParent);
+              ListeChoixCreation  += [Nouvelle];
+            end
+          else if CompareRechercheValeur(PRaceTalent.CodeTalent, TalentGenerique) then
+            begin
+              Nouvelle.Origine    := ConstOrigineRace;
+              Nouvelle.CodeSource := PRaceTalent.CodeTalent;
+              Nouvelle.CodeParent := '';
+              Nouvelle.CodeChoisi := '';
+              Nouvelle.Aleatoire  := True;
+              Nouvelle.Jet        := 0;
+              Nouvelle.Rang := RangSuivant(Nouvelle.CodeSource, Nouvelle.CodeParent);
+              ListeChoixCreation  += [Nouvelle];
+            end;
+          ListOpt.Free;
+        end;
+
+    // 3 - réinjecter les choix et jets mémorisés
+    for Ind := 0 to High(ListeChoixCreation) do
+      for Ind2 := 0 to High(Sauve) do
+        if (Sauve[Ind2].CodeSource = ListeChoixCreation[Ind].CodeSource)
+          and (Sauve[Ind2].CodeParent = ListeChoixCreation[Ind].CodeParent)
+            and (Sauve[Ind2].Rang = ListeChoixCreation[Ind].Rang) then
+              begin
+                ListeChoixCreation[Ind].CodeChoisi     := Sauve[Ind2].CodeChoisi;
+                ListeChoixCreation[Ind].CodeSpecialise := Sauve[Ind2].CodeSpecialise;
+                ListeChoixCreation[Ind].Jet            := Sauve[Ind2].Jet;
+                break;
+              end;
+
+    // 4 - lignes filles engendrées par les choix retenus
+    Ind := 0;
+    while Ind <= High(ListeChoixCreation) do
+      begin
+        // UNE OPTION DE TRAIT ENGENDRE PLUSIEURS LIGNES FILLES, une par talent accordé
+        // par la province choisie ("Northern Kislev : Night Vision, One Random Talent").
+        // C'est le seul endroit du moteur où une ligne en engendre plus d'une ; le Rang,
+        // posé en 2.15 pour le Skink, suffit à les distinguer. CONTEXT.md 2.41.
+        // Chaque élément garde les formes connues et se route tout seul : un code concret
+        // arrive déjà résolu, un A/B attend un choix, un RULES-T* part au tableau Hasard.
+        if (ListeChoixCreation[Ind].CodeChoisi <> '')
+          and (ChercheTraitOption(ListeChoixCreation[Ind].CodeChoisi).CodeOption <> '') then
+          begin
+            ListTal := TStringList.Create;
+            ExtractStrings([','], [' '], PChar(ChercheTraitOption(ListeChoixCreation[Ind].CodeChoisi).ListeTalent), ListTal);
+            for Ind3 := 0 to ListTal.Count - 1 do
+              begin
+                Nouvelle.Origine    := ListeChoixCreation[Ind].Origine;
+                Nouvelle.CodeSource := ListTal[Ind3];
+                Nouvelle.CodeParent := ListeChoixCreation[Ind].CodeSource;
+                Nouvelle.Aleatoire  := CompareRechercheValeur(ListTal[Ind3], TalentGenerique);
+                // Un talent accordé sec n'est pas un choix : il arrive résolu. Le
+                // double-clic est neutralisé pour ces lignes (voir TabCreationChoixDblClick).
+                if Nouvelle.Aleatoire or (Pos(SeparateurMulti, ListTal[Ind3]) > 0)
+                   or (Pos(ValeurGenerique, ListTal[Ind3]) > 0) then
+                  Nouvelle.CodeChoisi := ''
+                else
+                  Nouvelle.CodeChoisi := ListTal[Ind3];
+                Nouvelle.CodeSpecialise := '';
+                Nouvelle.Jet        := 0;
+                Nouvelle.Rang := RangSuivant(Nouvelle.CodeSource, Nouvelle.CodeParent);
+                ListeChoixCreation  += [Nouvelle];
+                for Ind2 := 0 to High(Sauve) do
+                  if (Sauve[Ind2].CodeSource = Nouvelle.CodeSource)
+                     and (Sauve[Ind2].CodeParent = Nouvelle.CodeParent)
+                       and (Sauve[Ind2].Rang = Nouvelle.Rang) then
+                         begin
+                           ListeChoixCreation[High(ListeChoixCreation)].CodeChoisi     := Sauve[Ind2].CodeChoisi;
+                           ListeChoixCreation[High(ListeChoixCreation)].CodeSpecialise := Sauve[Ind2].CodeSpecialise;
+                           ListeChoixCreation[High(ListeChoixCreation)].Jet            := Sauve[Ind2].Jet;
+                           break;
+                         end;
+              end;
+            ListTal.Free;
+          end
+        else if (ListeChoixCreation[Ind].CodeChoisi <> '')
+          and CompareRechercheValeur(ListeChoixCreation[Ind].CodeChoisi, TalentGenerique)
+            and (Pos(ValeurGenerique, ListeChoixCreation[Ind].CodeChoisi) = 0) then          begin
+            Nouvelle.Origine    := ListeChoixCreation[Ind].Origine;
+            Nouvelle.CodeSource := ListeChoixCreation[Ind].CodeChoisi;
+            Nouvelle.CodeParent := ListeChoixCreation[Ind].CodeSource;
+            Nouvelle.CodeChoisi := '';
+            Nouvelle.Aleatoire  := True;
+            Nouvelle.Jet        := 0;
+            Nouvelle.Rang := RangSuivant(Nouvelle.CodeSource, Nouvelle.CodeParent);
+            ListeChoixCreation  += [Nouvelle];
+            // réinjecter aussi son jet éventuel
+            for Ind2 := 0 to High(Sauve) do
+              if (Sauve[Ind2].CodeSource = Nouvelle.CodeSource)
+                 and (Sauve[Ind2].CodeParent = Nouvelle.CodeParent)
+                   and (Sauve[Ind2].Rang = Nouvelle.Rang) then
+                     begin
+                       ListeChoixCreation[High(ListeChoixCreation)].CodeChoisi     := Sauve[Ind2].CodeChoisi;
+                       ListeChoixCreation[High(ListeChoixCreation)].CodeSpecialise := Sauve[Ind2].CodeSpecialise;
+                       ListeChoixCreation[High(ListeChoixCreation)].Jet            := Sauve[Ind2].Jet;
+                       break;
+                     end;
+            end;
+        Ind := Ind + 1;
+      end;
+
+    AfficheChoixCreation();
+  end;
+
+Procedure TWinCreations.AfficheChoixCreation();
+  var
+    Ind:      Integer;
+    LigChoix: Integer = 0;
+    LigHasard:Integer = 0;
+    PTalent:  StructureTalent;
+    Lib:      String;
+  begin
+    TabCreationChoix.RowCount  := 1;
+    TabCreationHasard.RowCount := 1;
+
+    for Ind := 0 to High(ListeChoixCreation) do
+      begin
+        // libellé du code source
+        PTalent := ChercheTalent(ListeChoixCreation[Ind].CodeSource);
+        Lib     := PTalent.Libelle;
+        // Un trait d'ethnie n'est ni un talent ni un choix A/B : les deux appels
+        // ci-dessus rendent une chaine vide, son libelle est dans sa propre table.
+        if Lib = '' then
+          Lib := ChercheTrait(ListeChoixCreation[Ind].CodeSource).Libelle;
+        if Lib = '' then
+          Lib := LibelleChoixMultiple(ListeChoixCreation[Ind].CodeSource);
+
+        if ListeChoixCreation[Ind].Aleatoire then
+          begin
+            LigHasard := LigHasard + 1;
+            TabCreationHasard.RowCount := LigHasard + 1;
+            TabCreationHasard.Cells[ColHasOrigine, LigHasard] := ListeChoixCreation[Ind].Origine;
+            TabCreationHasard.Cells[ColHasLib, LigHasard]     := Lib;
+            TabCreationHasard.Cells[ColHasSource, LigHasard]  := ListeChoixCreation[Ind].CodeSource;
+            TabCreationHasard.Cells[ColHasSel, LigHasard]     := ListeChoixCreation[Ind].CodeChoisi;
+            TabCreationHasard.Cells[ColHasRang, LigHasard]    := IntToStr(ListeChoixCreation[Ind].Rang);
+            TabCreationHasard.Cells[ColHasParent, LigHasard]  := ListeChoixCreation[Ind].CodeParent;
+            if ListeChoixCreation[Ind].Jet > 0 then
+              begin
+                TabCreationHasard.Cells[ColHasJet, LigHasard] := IntToStr(ListeChoixCreation[Ind].Jet);
+                PTalent := ChercheTalent(ListeChoixCreation[Ind].CodeChoisi);
+                TabCreationHasard.Cells[ColHasLibSel, LigHasard] := PTalent.Libelle;
+              end
+            else
+              begin
+                TabCreationHasard.Cells[ColHasJet, LigHasard]    := '';
+                TabCreationHasard.Cells[ColHasLibSel, LigHasard] := GetTexteLibelle(ConstLabSelSpe);
+              end;
+            // spécialisation éventuelle
+            TabCreationHasard.Cells[ColHasSpe, LigHasard] := ListeChoixCreation[Ind].CodeSpecialise;
+            if Pos(ValeurGenerique, ListeChoixCreation[Ind].CodeChoisi) > 0 then
+              begin
+                if ListeChoixCreation[Ind].CodeSpecialise = '' then
+                  TabCreationHasard.Cells[ColHasLibSpe, LigHasard] := GetTexteLibelle(ConstLabSelSpe)
+                else
+                  begin
+                    PTalent := ChercheTalent(ListeChoixCreation[Ind].CodeSpecialise);
+                    TabCreationHasard.Cells[ColHasLibSpe, LigHasard] := PTalent.Libelle;
+                  end;
+              end
+            else
+              TabCreationHasard.Cells[ColHasLibSpe, LigHasard] := '';
+          end
+        else
+          begin
+            LigChoix := LigChoix + 1;
+            TabCreationChoix.RowCount := LigChoix + 1;
+            TabCreationChoix.Cells[ColChoixOrigine, LigChoix] := ListeChoixCreation[Ind].Origine;
+            TabCreationChoix.Cells[ColChoixLib, LigChoix]     := Lib;
+            TabCreationChoix.Cells[ColChoixSource, LigChoix]  := ListeChoixCreation[Ind].CodeSource;
+            TabCreationChoix.Cells[ColChoixSel, LigChoix]     := ListeChoixCreation[Ind].CodeChoisi;
+            TabCreationChoix.Cells[ColChoixParent, LigChoix]  := ListeChoixCreation[Ind].CodeParent;
+            // Le rang n'etait PAS ecrit ici (il l'est depuis toujours dans le tableau Hasard,
+            // ColHasRang). TabCreationChoixDblClick le relit pour retrouver la bonne entree :
+            // sans lui, StrToIntDef('',0) donnait 0 pour toutes les lignes, donc le choix
+            // atterrissait toujours sur la premiere. Invisible tant qu'une ethnie n'avait pas
+            // deux lignes de meme source - le Skink de Lustria est la premiere. CONTEXT.md 2.15.
+            TabCreationChoix.Cells[ColChoixRang, LigChoix]    := IntToStr(ListeChoixCreation[Ind].Rang);
+            if ListeChoixCreation[Ind].CodeChoisi = '' then
+              TabCreationChoix.Cells[ColChoixLibSel, LigChoix] := GetTexteLibelle(ConstLabSelSpe)
+            else
+              begin
+                PTalent := ChercheTalent(ListeChoixCreation[Ind].CodeChoisi);
+                TabCreationChoix.Cells[ColChoixLibSel, LigChoix] := PTalent.Libelle;
+              end;
+          end;
+      end;
+    AdjustGridColumnsWidth(TabCreationChoix,  382, False, False, True);
+    AdjustGridColumnsWidth(TabCreationHasard, 790, False, False, True);
+  end;
+
+Function TWinCreations.ChoixCreationComplet(): Boolean;
+  var Ind: Integer;
+  begin
+    Result := True;
+    for Ind := 0 to High(ListeChoixCreation) do
+      begin
+        if ListeChoixCreation[Ind].CodeChoisi = '' then
+          begin
+            Result := False;
+            Break;
+          end;
+        if (Pos(ValeurGenerique, ListeChoixCreation[Ind].CodeChoisi) > 0)
+           and (ListeChoixCreation[Ind].CodeSpecialise = '') then
+          begin
+            Result := False;
+            Break;
+          end;
+      end;
+  end;
+
+Function TWinCreations.LibelleChoixMultiple(Code: String): String;
+  var
+    Liste:   TStringList;
+    Ind:     Integer;
+    PTalent: StructureTalent;
+  begin
+    Result := '';
+    Liste  := ListeTalent(Code);
+    for Ind := 0 to Liste.Count - 1 do
+      begin
+        PTalent := ChercheTalent(Liste[Ind]);
+        if Result <> '' then
+          Result := Result + ' / ';   // "ou"
+        Result := Result + PTalent.Libelle;
+      end;
+    Liste.Free;
+  end;
+
+
+Function TWinCreations.RangSuivant(Source, ParentLigne: String): Integer;
+  var Ind: Integer;
+  begin
+    Result := 0;
+    for Ind := 0 to High(ListeChoixCreation) do
+      if (ListeChoixCreation[Ind].CodeSource = Source)
+         and (ListeChoixCreation[Ind].CodeParent = ParentLigne) then
+        Result := Result + 1;
+  end;
+
+Function TWinCreations.ListeTalentsDejaPris(Exclu: String): TStringList;
+  var
+    Ind: Integer;
+  begin
+    Result := TStringList.Create;
+    for Ind := 1 to TabTalent.RowCount - 1 do
+      if (TabTalent.Cells[1, Ind] <> '') and (TabTalent.Cells[1, Ind] <> Exclu) then
+        Result.Add(TabTalent.Cells[1, Ind]);
+    for Ind := 0 to High(ListeChoixCreation) do
+      if (ListeChoixCreation[Ind].CodeChoisi <> '') and (ListeChoixCreation[Ind].CodeChoisi <> Exclu) then
+        Result.Add(ListeChoixCreation[Ind].CodeChoisi);
+  end;
+
+Procedure TWinCreations.AjouteTalentsResolus();
+  var
+    Ind:     Integer;
+    Lig:     Integer;
+    PTalent: StructureTalent;
+    CodeFinal: String;
+  begin
+    // se placer après la dernière ligne remplie
+    Lig := 0;
+    for Ind := 1 to TabTalent.RowCount - 1 do
+      if TabTalent.Cells[1, Ind] <> '' then
+        Lig := Ind;
+
+    for Ind := 0 to High(ListeChoixCreation) do
+      begin
+        CodeFinal := ListeChoixCreation[Ind].CodeSpecialise;
+        if CodeFinal = '' then
+          CodeFinal := ListeChoixCreation[Ind].CodeChoisi;
+        // Une option de trait n'est PAS un talent : elle a engendré ses lignes filles,
+        // ce sont elles qui produisent les talents. Sans ce test, la province choisie
+        // partait dans la fiche comme un talent au libellé vide. CONTEXT.md 2.41.
+        if (CodeFinal <> '') and (not CompareRechercheValeur(CodeFinal, TalentGenerique))
+           and (ChercheTraitOption(CodeFinal).CodeOption = '') then
+          begin
+            PTalent := ChercheTalent(CodeFinal);            Lig     := Lig + 1;
+            if Lig >= TabTalent.RowCount then
+              TabTalent.RowCount := Lig + 1;
+            TabTalent.Cells[1, Lig] := PTalent.CodeTalent;
+            TabTalent.Cells[2, Lig] := PTalent.Libelle;
+          end;
+      end;
+  end;
+
+end.

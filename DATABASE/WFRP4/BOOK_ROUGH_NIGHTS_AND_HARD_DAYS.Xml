@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"ROUGH"</CODE_BOOK>
+<BOOK>"BOOK ROUGH NIGHTS AND HARD DAYS"</BOOK>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP4"</VERSION>
+<OFFICIAL>"1"</OFFICIAL>
+<COMPLETE>"1"</COMPLETE>
+<DISCLAIMER>"No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form by any means, electronic, mechanical, photocopying, recording or otherwise without the prior permission of the publishers. Warhammer Fantasy Roleplay 4th Edition (c) Copyright Games Workshop Limited 2019. Warhammer Fantasy Roleplay 4th Edition, the Warhammer Fantasy Roleplay 4th Edition logo, GW, Games Workshop, Warhammer, The Game of Fantasy Battles, the twin-tailed comet logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likeness thereof, are either (R) or TM, and/or (c) Games Workshop Limited, variably registered around the world, and used under licence. Cubicle 7 Entertainment and the Cubicle 7 Entertainment logo are trademarks of Cubicle 7 Entertainment Limited. All rights reserved."</DISCLAIMER>
+<DATA_RACE>
+<Race id="ROUGH-SPECIE_GNOME">
+<Description language="ENGLISH">"Gnome"</Description>
+<SUBCHAPTER_PHYSICAL>
+<Age>"10d10+20"</Age>
+<Height>"40+d10"</Height>
+<EyeRolls>"1"</EyeRolls>
+<Eye name="Pale Blue">"2"</Eye>
+<Eye name="Blue">"3"</Eye>
+<Eye name="Deep Blue">"4"</Eye>
+<Eye name="Turquoise">"5-7"</Eye>
+<Eye name="Pale Green">"8-11"</Eye>
+<Eye name="Hazel">"12-14"</Eye>
+<Eye name="Pale Brown">"15-17"</Eye>
+<Eye name="Brown">"18"</Eye>
+<Eye name="Dark Brown">"19"</Eye>
+<Eye name="Violet">"20"</Eye>
+<Hair name="Black">"2"</Hair>
+<Hair name="Dark Brown">"3"</Hair>
+<Hair name="Auburn">"4"</Hair>
+<Hair name="Brown">"5-7"</Hair>
+<Hair name="Light Brown">"8-11"</Hair>
+<Hair name="Ginger">"12-14"</Hair>
+<Hair name="Red Blond">"15-17"</Hair>
+<Hair name="Golden Blond">"18"</Hair>
+<Hair name="White Blond">"19"</Hair>
+<Hair name="White">"20"</Hair>
+</SUBCHAPTER_PHYSICAL>
+<Page>87</Page>
+</Race>
+</DATA_RACE>
+<DATA_LABEL>
+<Label language="ENGLISH">
+<Text name="ROUGH-BOOK ROUGH NIGHTS AND HARD DAYS">"Rough Nights &amp; Hard Days"</Text>
+</Label>
+<Label language="FRANCAIS">
+<Text name="ROUGH-BOOK ROUGH NIGHTS AND HARD DAYS">"Rough Nights &amp; Hard Days"</Text>
+</Label>
+</DATA_LABEL>
+<DATA_SPECIE>
+<Specie id="ROUGH-RACE_GNOME">
+<Description language="ENGLISH">"Gnome"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"ROUGH-SPECIE_GNOME"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_I">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+40"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Fate">"2"</Attribut>
+<Attribut name="RULES-ATTR_Resil">"0"</Attribut>
+<Attribut name="RULES-ATTR_Wound">"0xBATTR_S+2xBATTR_T+1xBATTR_WP"</Attribut>
+<Attribut name="RULES-ATTR_Supp">"2"</Attribut>
+<Attribut name="RULES-ATTR_Move">"3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern>"Forename Clan"</NamePattern>
+<Name part="Forename" sex="F" name="Elowen">"1"</Name>
+<Name part="Forename" sex="F" name="Ia">"2"</Name>
+<Name part="Forename" sex="F" name="Kerra">"3"</Name>
+<Name part="Forename" sex="F" name="Ladoca">"4"</Name>
+<Name part="Forename" sex="F" name="Metheven">"5"</Name>
+<Name part="Forename" sex="F" name="Morwen">"6"</Name>
+<Name part="Forename" sex="F" name="Steren">"7"</Name>
+<Name part="Forename" sex="F" name="Tryfena">"8"</Name>
+<Name part="Forename" sex="M" name="Breward">"1"</Name>
+<Name part="Forename" sex="M" name="Daveth">"2"</Name>
+<Name part="Forename" sex="M" name="Gwinear">"3"</Name>
+<Name part="Forename" sex="M" name="Mawnan">"4"</Name>
+<Name part="Forename" sex="M" name="Meriasek">"5"</Name>
+<Name part="Forename" sex="M" name="Nivet">"6"</Name>
+<Name part="Forename" sex="M" name="Talan">"7"</Name>
+<Name part="Forename" sex="M" name="Ythel">"8"</Name>
+<Name part="Clan" name="Annearil">"1"</Name>
+<Name part="Clan" name="Frayne">"2"</Name>
+<Name part="Clan" name="Hawken">"3"</Name>
+<Name part="Clan" name="Landweth">"4"</Name>
+<Name part="Clan" name="Peddlar">"5"</Name>
+<Name part="Clan" name="Scantleburn">"6"</Name>
+<Name part="Clan" name="Thorne">"7"</Name>
+<Name part="Clan" name="Trethewey">"8"</Name>
+<Name part="Clan" name="Mudfoot">"9"</Name>
+<Name part="Clan" name="Glittereye">"10"</Name>
+<Name part="Clan" name="Soleheart">"11"</Name>
+<Name part="Clan" name="Patchcloak">"12"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMPFOCAL_OMBRE"</Skill>
+  <Skill>"RULES-COMPCHARM"</Skill>
+  <Skill>"RULES-COMPRESALC"</Skill>
+  <Skill>"RULES-COMPESQU"</Skill>
+  <Skill>"RULES-COMPDIVERT_*"</Skill>
+  <Skill>"RULES-COMPRAGOT"</Skill>
+  <Skill>"RULES-COMPMARCH"</Skill>
+  <Skill>"RULES-COMPLANG_GHASSALLY"</Skill>
+  <Skill>"RULES-COMPLANG_MAG"</Skill>
+  <Skill>"RULES-COMPLANG_WEST"</Skill>
+  <Skill>"RULES-COMPSURVEXT"</Skill>
+  <Skill>"RULES-COMPDISC_*"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T0078/WINDS-T0176_OMBRE"</Talent>
+  <Talent>"RULES-T0020/RULES-T0073"</Talent>
+  <Talent>"RULES-T0164"</Talent>
+  <Talent>"RULES-T0113/RULES-T0084"</Talent>
+  <Talent>"RULES-T0137/RULES-T0141"</Talent>
+  <Talent>"RULES-T0170"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-WORK02">"1"</Career>
+  <Career name="RULES-WORK33">"1"</Career>
+  <Career name="RULES-WORK36">"2"</Career>
+  <Career name="RULES-WORK49">"1"</Career>
+  <Career name="RULES-WORK23">"2"</Career>
+  <Career name="RULES-WORK58">"7"</Career>
+  <Career name="RULES-WORK01">"1"</Career>
+  <Career name="RULES-WORK03">"2"</Career>
+  <Career name="RULES-WORK37">"1"</Career>
+  <Career name="RULES-WORK21">"1"</Career>
+  <Career name="RULES-WORK34">"2"</Career>
+  <Career name="RULES-WORK52">"1"</Career>
+  <Career name="RULES-WORK07">"6"</Career>
+  <Career name="RULES-WORK39">"1"</Career>
+  <Career name="RULES-WORK15">"1"</Career>
+  <Career name="RULES-WORK04">"1"</Career>
+  <Career name="RULES-WORK20">"1"</Career>
+  <Career name="RULES-WORK44">"1"</Career>
+  <Career name="RULES-WORK56">"2"</Career>
+  <Career name="RULES-WORK24">"5"</Career>
+  <Career name="RULES-WORK32">"2"</Career>
+  <Career name="RULES-WORK05">"1"</Career>
+  <Career name="RULES-WORK29">"1"</Career>
+  <Career name="RULES-WORK10">"2"</Career>
+  <Career name="RULES-WORK40">"8"</Career>
+  <Career name="RULES-WORK19">"4"</Career>
+  <Career name="RULES-WORK63">"4"</Career>
+  <Career name="RULES-WORK11">"1"</Career>
+  <Career name="RULES-WORK55">"5"</Career>
+  <Career name="RULES-WORK38">"1"</Career>
+  <Career name="RULES-WORK14">"6"</Career>
+  <Career name="RULES-WORK06">"1"</Career>
+  <Career name="RULES-WORK25">"4"</Career>
+  <Career name="RULES-WORK16">"3"</Career>
+  <Career name="RULES-WORK22">"2"</Career>
+  <Career name="RULES-WORK09">"5"</Career>
+  <Career name="RULES-WORK53">"1"</Career>
+  <Career name="RULES-WORK30">"1"</Career>
+  <Career name="RULES-WORK51">"2"</Career>
+  <Career name="RULES-WORK64">"4"</Career>
+  <Career name="RULES-WORK27">"1"</Career>
+  <Career name="RULES-WORK57">"1"</Career>
+  </SUBCHAPTER_CAREER>
+<Page>86</Page>
+</Specie>
+</DATA_SPECIE>
+<DATA_RANDOM_SPECIE>
+<Specie name="RULES-RACE_HUM">"01-89"</Specie>
+<Specie name="RULES-RACE_HALF">"90-93"</Specie>
+<Specie name="RULES-RACE_DWAR">"94-97"</Specie>
+<Specie name="ROUGH-RACE_GNOME">"98"</Specie>
+<Specie name="RULES-RACE_HELF">"99"</Specie>
+<Specie name="RULES-RACE_WELF">"100"</Specie>
+</DATA_RANDOM_SPECIE>
+<DATA_CORRUPTION_PHYSICAL>
+<Specie name="ROUGH-RACE_GNOME">"01-50"</Specie>
+</DATA_CORRUPTION_PHYSICAL>
+<DATA_CORRUPTION_MENTAL>
+<Specie name="ROUGH-RACE_GNOME">"51-100"</Specie>
+</DATA_CORRUPTION_MENTAL>
+</DATA_BOOK>

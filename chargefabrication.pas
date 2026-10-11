@@ -1,0 +1,599 @@
+unit ChargeFabrication;
+
+{$mode ObjFPC}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, StrUtils, ChargeConstantes, ChargeTexte, UnitCalcul, Generics.Collections,
+  ChargeModificateur, ChargeArme, ChargeArmure;
+
+Type
+  StructureFabrication     = record
+    CodeFabrication:	String;
+    Libelle:            String;
+    Description:	String;
+    TypeQualite:        String;
+    Encombrement:       Integer;
+    Maximum:            String;
+    Resume:             String;
+    Livre:              String;
+    PorteeBonus:        Integer;  // accessoire d arme : ajoute a la portee
+    QualitesArme:       String;   // accessoire d arme : codes de qualites d arme ajoutees (virgules)
+    ArmeAlternative:    String;   // accessoire d arme : code d une arme du catalogue que l arme equipee devient aussi (Bayonet = Spear)
+    Applique:           String;   // Weapon, Armour, Misc (virgules) ; vide = tous les objets
+end;
+
+  TListFabrication = specialize TList<StructureFabrication>;
+
+Var
+  ListFabrication:      TListFabrication;
+  NbFabrication:        Integer;
+  // Moteur generique (ChargeModificateur) cote fabrication : une qualite de fabrication (rune
+  // naine, accessoire...) declare <ModifArmour name="...">n</ModifArmour> ; CodeSource = code
+  // complet de la fabrication. Multiplie par son niveau ("CODE 2") au calcul.
+  NbFabricationModificateur:   Integer;
+
+function ChercheFabrication(CodeFabrication :String): StructureFabrication;
+function TexteFabrication(PFabrication: StructureFabrication):String;
+Function FabricationEncombrement(ListeCode :String; Var Quality: String): Integer;
+// Somme, sur les qualites d'UN objet ("CODE niveau,..."), des modificateurs (TypeModif, Cible) de
+// fabrication multiplies par le niveau. Rune of Cleaving (ModifyDamage CC). 20/09/2026.
+Function FabricationModificateurQualite(ListeCode, TypeModif, Cible: String): Integer;
+// Code de la premiere qualite de ListeCode ("CODE niveau,...") qui porte un modificateur
+// (TypeModif, Cible), '' si aucune. Identifie une qualite par son effet, jamais par son code.
+Function ArmeQualiteDuModificateur(ListeCode, TypeModif, Cible: String): String;
+// Chiffre de Reload effectif d'une arme (Qualite portant ModifyReloadRate/RELOAD, Reload N sur
+// PArme.ListeBonus) une fois applique le ModifyReloadRate des qualites de fabrication portees
+// par l'objet du personnage (Rune of Reloading, ListeCode = PersonnageEquipement.QualiteEquipement).
+// Retourne -1 si l'arme n'a pas la Qualite Reload (rien a afficher, reglage RAW normal).
+// Plancher a 1 si l'arme porte une qualite ModifyReloadMin (Salvo) : un rechargement de
+// Salvo ne redescend jamais a 0, il augmente seulement le nombre de tirs restants (regle du livre,
+// voir A FAIRE.txt "RUNES DE MACHINES"). Base recoit le chiffre de la Qualite avant reduction
+// (pour permettre a l'appelant de retrouver le texte "Reload N" a remplacer), non definie si
+// Result = -1. 26/09/2026.
+Function ArmeReloadEffectif(PArme: StructureArme; ListeCodeFabrication: String; out Base: Integer): Integer;
+// Effets CONDITIONNELS (attribut if= du XML, stocke dans Filtre) des qualites d'UN objet, pour la
+// cible CC ou CT : "Rune of Might : +3 DR contre une cible de taille superieure / Grudge Rune :
+// +10% +1 DR contre ...". Chaine vide si aucun. Cible vide = la premiere cible trouvee par rune. Jamais ajoutes aux totaux. 20/09/2026.
+Function FabricationEffetsConditionnels(ListeCode, Cible: String): String;
+// Effets conditionnels (Filtre = if=) portes par UN element (TypeSource = SourceModif*, Code = son
+// code), en texte d'information : "Perception +10% (condition) ; ..." ; vide si aucun. Jamais
+// ajoutes aux totaux. Les ModifyWeapon sont ignores : leur Filtre est une competence, pas une condition.
+Function ModificateursConditionnelsTexte(Const TypeSource, Code: String): String;
+Function FabricationEstBulky(ListeCode :String): Boolean;
+Function FabricationEstPractical(ListeCode :String): Boolean;
+Function FabricationEstUnreliable(ListeCode :String): Boolean;
+Function FabricationPortee(ListeCode :String): Integer;
+Function FabricationQualitesArme(ListeCode :String): String;
+// Codes des armes alternatives (virgules) que les accessoires d UN objet lui donnent en plus. 20/09/2026.
+Function FabricationArmesAlternatives(ListeCode :String): String;
+procedure FabricationDetail(ListeCode :String; var BonusItem :String; var ListeBonus :String);
+function QualiteDepuisCode(var CodeEquipement: String): String;
+function QualiteSansMarqueur(ListeCode: String): String;
+// Fabrication D'ORIGINE d'une entree du catalogue arme/armure (Incandescent Spear, gromril...),
+// a poser telle quelle sur l'objet du personnage a l'acquisition. '' pour les objets ordinaires
+// et pour tout ce qui n'est ni une arme ni une armure (Divers, sort...). CONTEXT.md 2.29.
+function FabricationDuCatalogue(CodeEquipement, TypeEquipement: String): String;
+// Theme d'une fabrication ("RUNE", "QUALITY", "DEFECT"...), deduit du code (LIVRE-THEME_suffixe),
+// pour regrouper l'ecran de choix (WinFabrication) sans champ XML supplementaire. 25/09/2026.
+function FabricationTheme(CodeFabrication: String): String;
+// Libelle traduit (RULES-LAB_290 a 294) du theme d'une fabrication, pour l'affichage dans
+// WinFabrication (colonne Theme, menu CombTheme). FabricationTheme() reste la cle brute utilisee
+// pour le tri. 25/09/2026.
+function FabricationThemeLibelle(CodeFabrication: String): String;
+
+implementation
+
+uses
+  // ChargeTrapping utilise ChargeFabrication dans son interface (FabricationModificateurQualite) :
+  // dependance circulaire evitee en n'important ChargeTrapping qu'ici, pas dans l'interface
+  // ci-dessus (FabricationDuCatalogue, brique b "objets a fabrication integree", 28/09/2026).
+  ChargeTrapping, ChargeCompetence, ChargeAttribut;
+
+function FabricationTheme(CodeFabrication: String): String;
+var
+  Reste: String;
+  PosSep: Integer;
+begin
+  Reste  := ExtractStringAfter(CodeFabrication, SeparateurLivre);
+  PosSep := LastDelimiter('_', Reste);
+  if PosSep > 0 then
+    Result := Copy(Reste, 1, PosSep - 1)
+  else
+    Result := Reste;
+end;
+
+function FabricationThemeLibelle(CodeFabrication: String): String;
+begin
+  case FabricationTheme(CodeFabrication) of
+    'ARMOB':   Result := GetTexteLibelle('RULES-LAB_290');
+    'DEFECT':  Result := GetTexteLibelle('RULES-LAB_291');
+    'QUALITY': Result := GetTexteLibelle('RULES-LAB_292');
+    'RUNE':    Result := GetTexteLibelle('RULES-LAB_293');
+    'WEAPB':   Result := GetTexteLibelle('RULES-LAB_294');
+  else
+    Result := FabricationTheme(CodeFabrication);
+  end;
+end;
+
+function ChercheFabrication(CodeFabrication :String): StructureFabrication;
+var
+  PFabrication: StructureFabrication;
+Begin
+  // Sans cette ligne, Result garde le contenu du PRECEDENT appel quand rien n'est trouve
+  // (une fonction Pascal renvoyant un record ne l'initialise pas). Symptomes vus le
+  // 22/08/2026 : un libelle de talent recopie d'une ligne a l'autre, une competence
+  // affichee deux fois. CONTEXT.md 2.17.
+  Result := Default(StructureFabrication);
+  for PFabrication in ListFabrication do
+    if CompareRechercheValeur(PFabrication.CodeFabrication, CodeFabrication) then
+       Begin
+         Result := PFabrication;
+         break;
+       end;
+end;
+
+function TexteFabrication(PFabrication: StructureFabrication):String;
+  Var
+    Texte:         String;
+  begin
+    Texte           := '';
+    Texte := GetTexteLibelle('RULES-LAB_118') + ' : ';
+    if PFabrication.TypeQualite <> '' then
+      Texte  := Texte + SeparateurRetourLigne + SeparateurRetourLigne + GetTexteLibelle('RULES-LAB_018') + ' : ' + PFabrication.TypeQualite;
+    if PFabrication.Description <> '' then
+      Texte  := Texte + SeparateurRetourLigne + SeparateurRetourLigne + GetTexteLibelle('RULES-LAB_003') + ' : ' + PFabrication.Description;
+    if PFabrication.Encombrement <> 0 then
+      Texte  := Texte + SeparateurRetourLigne + SeparateurRetourLigne + GetTexteLibelle('RULES-LAB_055') + ' : ' + IntToStr(PFabrication.Encombrement);
+    if PFabrication.Maximum <> '' then
+      Texte  := Texte + SeparateurRetourLigne + SeparateurRetourLigne + GetTexteLibelle('RULES-LAB_111') + ' : ' + PFabrication.Maximum;
+    Result   := Texte;
+  end;
+
+Function FabricationEncombrement(ListeCode :String; Var Quality: String): Integer;
+  var
+    Code:         String;
+    PFabrication: StructureFabrication;
+    strings:      TStringList;
+    IndTab:       Integer;
+    Tot:          Integer = 0;
+    BTot:         Integer = 0;
+  begin
+    if not InList(ListeCode,',0') then
+      begin
+        strings            := TStringList.Create;
+        ExtractStrings([','], [], PChar(ListeCode), Strings);
+        for IndTab := 0 to Strings.Count -1 do
+          Begin
+            Code := ExtractStringBefore(Strings[IndTab],' ');
+            PFabrication := ChercheFabrication(Code);
+            if PFabrication.TypeQualite = FabricationBonus then
+              begin
+                tot := tot + (PFabrication.Encombrement * (-1) );
+                // Le libelle (Q+)/(Q-) ne doit reagir qu'aux qualites qui pesent
+                // reellement sur l'Encombrement - une qualite purement descriptive
+                // (Fine, Practical...), Encombrement=0, affichait (Q-) a tort avant ce
+                // garde-fou (TypeQualite vide comptait comme malus dans la boucle 'else').
+                if PFabrication.Encombrement <> 0 then Inc(BTot);
+              end
+            else
+              begin
+                tot := tot + (PFabrication.Encombrement * (1) );
+                if PFabrication.Encombrement <> 0 then Dec(BTot);
+              end;
+          end;
+        strings.Free;
+      end;
+    if Btot > 0 then
+      Quality := '(Q+)'
+    else if BTot < 0 then
+      Quality := '(Q-)'
+    else
+      Quality := '';
+    Result := Tot;
+  end;
+
+Function FabricationEstBulky(ListeCode :String): Boolean;
+  var
+    Code:         String;
+    PFabrication: StructureFabrication;
+    strings:      TStringList;
+    IndTab:       Integer;
+  begin
+    Result := False;
+    if not InList(ListeCode,',0') then
+      begin
+        strings            := TStringList.Create;
+        ExtractStrings([','], [], PChar(ListeCode), Strings);
+        for IndTab := 0 to Strings.Count -1 do
+          Begin
+            Code := ExtractStringBefore(Strings[IndTab],' ');
+            PFabrication := ChercheFabrication(Code);
+            if PFabrication.TypeQualite = FabricationBulky then
+              Result := True;
+          end;
+        strings.Free;
+      end;
+  end;
+
+Function FabricationEstPractical(ListeCode :String): Boolean;
+  var
+    Code:         String;
+    PFabrication: StructureFabrication;
+    strings:      TStringList;
+    IndTab:       Integer;
+  begin
+    Result := False;
+    if not InList(ListeCode,',0') then
+      begin
+        strings            := TStringList.Create;
+        ExtractStrings([','], [], PChar(ListeCode), Strings);
+        for IndTab := 0 to Strings.Count -1 do
+          Begin
+            Code := ExtractStringBefore(Strings[IndTab],' ');
+            PFabrication := ChercheFabrication(Code);
+            if PFabrication.TypeQualite = FabricationPractical then
+              Result := True;
+          end;
+        strings.Free;
+      end;
+  end;
+
+Function FabricationEstUnreliable(ListeCode :String): Boolean;
+  var
+    Code:         String;
+    PFabrication: StructureFabrication;
+    strings:      TStringList;
+    IndTab:       Integer;
+  begin
+    Result := False;
+    if not InList(ListeCode,',0') then
+      begin
+        strings            := TStringList.Create;
+        ExtractStrings([','], [], PChar(ListeCode), Strings);
+        for IndTab := 0 to Strings.Count -1 do
+          Begin
+            Code := ExtractStringBefore(Strings[IndTab],' ');
+            PFabrication := ChercheFabrication(Code);
+            if PFabrication.TypeQualite = FabricationUnreliable then
+              Result := True;
+          end;
+        strings.Free;
+      end;
+  end;
+
+Function FabricationPortee(ListeCode :String): Integer;
+  var
+    strings: TStringList;
+    IndTab:  Integer;
+  begin
+    Result := 0;
+    if not InList(ListeCode,',0') then
+      begin
+        strings := TStringList.Create;
+        ExtractStrings([','], [], PChar(ListeCode), Strings);
+        for IndTab := 0 to Strings.Count -1 do
+          Result := Result + ChercheFabrication(ExtractStringBefore(Strings[IndTab],' ')).PorteeBonus;
+        strings.Free;
+      end;
+  end;
+
+Function FabricationQualitesArme(ListeCode :String): String;
+  var
+    strings: TStringList;
+    IndTab:  Integer;
+    Ajout:   String;
+  begin
+    Result := '';
+    if not InList(ListeCode,',0') then
+      begin
+        strings := TStringList.Create;
+        ExtractStrings([','], [], PChar(ListeCode), Strings);
+        for IndTab := 0 to Strings.Count -1 do
+          begin
+            Ajout := ChercheFabrication(ExtractStringBefore(Strings[IndTab],' ')).QualitesArme;
+            if Ajout <> '' then
+              begin
+                if Result <> '' then Result := Result + ',';
+                Result := Result + Ajout;
+              end;
+          end;
+        strings.Free;
+      end;
+  end;
+
+Function FabricationArmesAlternatives(ListeCode :String): String;
+  var
+    strings: TStringList;
+    IndTab:  Integer;
+    Ajout:   String;
+  begin
+    Result := '';
+    if not InList(ListeCode,',0') then
+      begin
+        strings := TStringList.Create;
+        ExtractStrings([','], [], PChar(ListeCode), Strings);
+        for IndTab := 0 to Strings.Count -1 do
+          begin
+            Ajout := ChercheFabrication(ExtractStringBefore(Strings[IndTab],' ')).ArmeAlternative;
+            if Ajout <> '' then
+              begin
+                if Result <> '' then Result := Result + ',';
+                Result := Result + Ajout;
+              end;
+          end;
+        strings.Free;
+      end;
+  end;
+
+// Un code d equipement de metier peut porter le suffixe (Q) : on le retire du code et on renvoie la
+// valeur de QualiteEquipement a poser sur l objet (le marqueur "qualite a ajouter"), '' sinon.
+// Le marqueur disparait a l enregistrement du XML des qu une vraie fabrication est ajoutee.
+function QualiteDepuisCode(var CodeEquipement: String): String;
+  begin
+    Result := '';
+    if Pos(EquipementQualite, CodeEquipement) > 0 then
+      begin
+        CodeEquipement := Trim(StringReplace(CodeEquipement, EquipementQualite, '', [rfReplaceAll]));
+        Result         := CodeQualiteAAjouter + ' 1';
+      end;
+  end;
+
+// Retire le marqueur "qualite a ajouter" d'une liste de fabrications des qu'elle en contient une autre
+// ("CODE VAL,CODE VAL"). Seule, elle reste : l'objet est encore a qualifier.
+function QualiteSansMarqueur(ListeCode: String): String;
+  var
+    Morceaux: TStringList;
+    Ind:      Integer;
+  begin
+    Result := ListeCode;
+    if Pos(CodeQualiteAAjouter, ListeCode) = 0 then
+      exit;
+    Morceaux := TStringList.Create;
+    try
+      ExtractStrings([','], [], PChar(ListeCode), Morceaux);
+      if Morceaux.Count < 2 then
+        exit;
+      Result := '';
+      for Ind := 0 to Morceaux.Count - 1 do
+        if Pos(CodeQualiteAAjouter, Morceaux[Ind]) = 0 then
+          begin
+            if Result <> '' then
+              Result := Result + ',';
+            Result := Result + Trim(Morceaux[Ind]);
+          end;
+    finally
+      Morceaux.Free;
+    end;
+  end;
+
+procedure FabricationDetail(ListeCode :String; var BonusItem :String; var ListeBonus :String);
+  var
+    Code:         String;
+    Val:          String;
+    PFabrication: StructureFabrication;
+    strings:      TStringList;
+    IndTab:       Integer;
+  begin
+    if not InList(ListeCode,',0') then
+      begin
+        strings            := TStringList.Create;
+        ExtractStrings([','], [], PChar(ListeCode), Strings);
+        for IndTab := 0 to Strings.Count -1 do
+          Begin
+            Code := ExtractStringBefore(Strings[IndTab],' ');
+            Val  := ExtractStringAfter(Strings[IndTab],' ');
+            PFabrication := ChercheFabrication(Code);
+            if BonusItem = '-' then BonusItem := '';
+            if BonusItem <> '' then BonusItem := BonusItem + ',';
+            BonusItem := BonusItem + PFabrication.Libelle;
+            if PFabrication.Maximum <> '1' then BonusItem := BonusItem + '('+Val+')';
+            if Pos(code, ListeBonus) = 0 then
+              begin
+                If ListeBonus <> '' then ListeBonus := ListeBonus + ',';
+                ListeBonus := ListeBonus + Code;
+              end;
+          end;
+        strings.Free;
+      end;
+  end;
+
+Function FabricationModificateurQualite(ListeCode, TypeModif, Cible: String): Integer;
+  var
+    Liste:          TStringList;
+    Element, Code:  String;
+    Niveau:         Integer;
+    Ind, IndModif:  Integer;
+  begin
+    Result := 0;
+    if ListeCode = '' then Exit;
+    Liste := TStringList.Create;
+    try
+      ExtractStrings([','], [], PChar(ListeCode), Liste);
+      for Ind := 0 to Liste.Count - 1 do
+        begin
+          Element := Trim(Liste[Ind]);
+          Code    := Element;
+          Niveau  := 1;
+          if Pos(' ', Element) > 0 then
+            begin
+              Code   := Trim(ExtractStringBefore(Element, ' '));
+              Niveau := StrToIntDef(Trim(Copy(Element, Pos(' ', Element) + 1, Length(Element))), 1);
+            end;
+          for IndModif := 0 to ListModificateur.Count - 1 do
+            if EntreeFabrication(ListModificateur[IndModif]) and (ListModificateur[IndModif].TypeModif = TypeModif)
+               and (ListModificateur[IndModif].Filtre = '')
+               and CompareRechercheValeur(ListModificateur[IndModif].CodeSource, Code)
+               and CompareRechercheValeur(ListModificateur[IndModif].Cible, Cible) then
+              Result := Result + ListModificateur[IndModif].Facteur * Niveau;
+        end;
+    finally
+      Liste.Free;
+    end;
+  end;
+
+Function ArmeQualiteDuModificateur(ListeCode, TypeModif, Cible: String): String;
+  var
+    Liste:          TStringList;
+    Code:           String;
+    Ind, IndModif:  Integer;
+  begin
+    Result := '';
+    if ListeCode = '' then Exit;
+    Liste := TStringList.Create;
+    try
+      ExtractStrings([','], [], PChar(ListeCode), Liste);
+      for Ind := 0 to Liste.Count - 1 do
+        begin
+          Code := Trim(ExtractStringBefore(Trim(Liste[Ind]) + ' ', ' '));
+          for IndModif := 0 to ListModificateur.Count - 1 do
+            if EntreeFabrication(ListModificateur[IndModif]) and (ListModificateur[IndModif].TypeModif = TypeModif)
+               and CompareRechercheValeur(ListModificateur[IndModif].CodeSource, Code)
+               and CompareRechercheValeur(ListModificateur[IndModif].Cible, Cible) then
+              begin
+                Result := Code;
+                Exit;
+              end;
+        end;
+    finally
+      Liste.Free;
+    end;
+  end;
+
+Function ArmeReloadEffectif(PArme: StructureArme; ListeCodeFabrication: String; out Base: Integer): Integer;
+  var
+    Plancher: Integer;
+  begin
+    Result := -1;
+    Base   := -1;
+    // Reload N : la qualite porte ModifyReloadRate Facteur 1, le niveau N donne le chiffre de base.
+    if ArmeQualiteDuModificateur(PArme.ListeBonus, ConstXmlModifieRechargement, ConstCibleModifieRechargement) = '' then
+      Exit;
+    Base := FabricationModificateurQualite(PArme.ListeBonus, ConstXmlModifieRechargement, ConstCibleModifieRechargement);
+    if Base < 0 then
+      begin
+        Base := -1;
+        Exit;
+      end;
+    Result := Base + FabricationModificateurQualite(ListeCodeFabrication, ConstXmlModifieRechargement, ConstCibleModifieRechargement);
+    // Une qualite ModifyReloadMin (Salvo) ne perd jamais totalement le Reload (plancher = son
+    // Facteur) ; les autres armes la perdent (0 = Qualite retiree, rechargement libre) mais ne
+    // descendent jamais sous 0.
+    Plancher := FabricationModificateurQualite(PArme.ListeBonus, ConstXmlModifieRechargementMin, ConstCibleModifieRechargement);
+    if Plancher > 0 then
+      begin
+        if Result < Plancher then
+          Result := Plancher;
+      end
+    else if Result < 0 then
+      Result := 0;
+  end;
+
+Function FabricationEffetsConditionnels(ListeCode, Cible: String): String;
+  var
+    Liste:            TStringList;
+    Element, Code:    String;
+    Niveau, Degat:    Integer;
+    Pourcent:         Integer;
+    Condition:        String;
+    Ind, IndModif:    Integer;
+    Ligne:            String;
+    CibleRetenue:     String;
+  begin
+    Result := '';
+    if ListeCode = '' then Exit;
+    Liste := TStringList.Create;
+    try
+      ExtractStrings([','], [], PChar(ListeCode), Liste);
+      for Ind := 0 to Liste.Count - 1 do
+        begin
+          Element := Trim(Liste[Ind]);
+          Code    := Element;
+          Niveau  := 1;
+          if Pos(' ', Element) > 0 then
+            begin
+              Code   := Trim(ExtractStringBefore(Element, ' '));
+              Niveau := StrToIntDef(Trim(Copy(Element, Pos(' ', Element) + 1, Length(Element))), 1);
+            end;
+          Degat     := 0;
+          Pourcent  := 0;
+          Condition := '';
+          CibleRetenue := '';
+          for IndModif := 0 to ListModificateur.Count - 1 do
+            if EntreeFabrication(ListModificateur[IndModif]) and (ListModificateur[IndModif].Filtre <> '')
+               and CompareRechercheValeur(ListModificateur[IndModif].CodeSource, Code)
+               and (((Cible = '') and ((CibleRetenue = '') or (ListModificateur[IndModif].Cible = CibleRetenue)))
+                    or ((Cible <> '') and CompareRechercheValeur(ListModificateur[IndModif].Cible, Cible))) then
+              begin
+                CibleRetenue := ListModificateur[IndModif].Cible;
+                Condition := ListModificateur[IndModif].Filtre;
+                if ListModificateur[IndModif].TypeModif = ConstXmlModifieDegat then
+                  Degat := Degat + ListModificateur[IndModif].Facteur * Niveau
+                else if ListModificateur[IndModif].TypeModif = ConstXmlModifieCompetence then
+                  Pourcent := Pourcent + ListModificateur[IndModif].Facteur * Niveau;
+              end;
+          if Condition <> '' then
+            begin
+              Ligne := ChercheFabrication(Code).Libelle;
+              // Format('%+d') n'est pas gere par FPC : signe ajoute a la main.
+              if Pourcent <> 0 then
+                Ligne := Ligne + ' ' + IfThen(Pourcent > 0, '+', '') + IntToStr(Pourcent) + '%';
+              if Degat <> 0 then
+                Ligne := Ligne + ' ' + IfThen(Degat > 0, '+', '') + IntToStr(Degat) + ' DR';
+              Ligne := Ligne + ' ' + GetAllTexteLibelle(Condition);
+              if Result <> '' then
+                Result := Result + ' ; ';
+              Result := Result + Ligne;
+            end;
+        end;
+    finally
+      Liste.Free;
+    end;
+  end;
+
+Function ModificateursConditionnelsTexte(Const TypeSource, Code: String): String;
+  var
+    Ind:   Integer;
+    Entree: StructureModificateur;
+    Ligne: String;
+    Signe: String;
+  begin
+    Result := '';
+    for Ind := 0 to ListModificateur.Count - 1 do
+      begin
+        Entree := ListModificateur[Ind];
+        if (Entree.TypeSource <> TypeSource) or (Entree.Filtre = '') or (Entree.TypeModif = ConstXmlModifieArme)
+           or not CompareRechercheValeur(Entree.CodeSource, Code) then
+          Continue;
+        // Format('%+d') n'est pas gere par FPC : signe ajoute a la main.
+        Signe := IfThen(Entree.Facteur > 0, '+', '') + IntToStr(Entree.Facteur);
+        if Entree.TypeModif = ConstXmlModifieCompetence then
+          Ligne := ChercheCompetence(Entree.Cible).Libelle + ' ' + Signe + '%'
+        else if Entree.TypeModif = ConstXmlModifieDegat then
+          Ligne := Signe + ' DR'
+        else if Entree.TypeModif = ConstXmlModifieAttribut then
+          Ligne := ChercheAttribut(Entree.Cible).Libelle + ' ' + Signe
+        else if IndiceTypeEffet(Entree.TypeModif) >= 0 then
+          Ligne := GetTexteLibelle(TypesEffet[IndiceTypeEffet(Entree.TypeModif)].CodeLibelle) + ' ' + Signe
+        else
+          Continue;
+        Ligne := Ligne + ' ' + GetAllTexteLibelle(Entree.Filtre);
+        if Result <> '' then
+          Result := Result + ' ; ';
+        Result := Result + Ligne;
+      end;
+  end;
+
+function FabricationDuCatalogue(CodeEquipement, TypeEquipement: String): String;
+  begin
+    Result := '';
+    if TrimRight(TypeEquipement) = TrimRight(TypeEquipWe) then
+      Result := ChercheArme(CodeEquipement).Fabrication
+    else if TrimRight(TypeEquipement) = TrimRight(TypeEquipAr) then
+      Result := ChercheArmure(CodeEquipement).Fabrication
+    else if TrimRight(TypeEquipement) = TrimRight(TypeEquipDI) then
+      Result := ChercheTrapping(CodeEquipement).Fabrication;
+  end;
+
+end.

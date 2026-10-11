@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"TRIBE"</CODE_BOOK>
+<BOOK>"BOOK TRIBES AND TRIBULATIONS"</BOOK>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP4"</VERSION>
+<OFFICIAL>"1"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form by any means, electronic, mechanical, photocopying, recording or otherwise without the prior permission of the publishers. Warhammer Fantasy Roleplay 4th Edition (c) Copyright Games Workshop Limited 2024. Warhammer Fantasy Roleplay 4th Edition, the Warhammer Fantasy Roleplay 4th Edition logo, GW, Games Workshop, Warhammer, The Game of Fantasy Battles, the twin-tailed comet logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likeness thereof, are either (R) or TM, and/or (c) Games Workshop Limited, variably registered around the world, and used under licence. Cubicle 7 Entertainment and the Cubicle 7 Entertainment logo are trademarks of Cubicle 7 Entertainment Limited. All rights reserved."</DISCLAIMER>
+<DATA_LABEL>
+<Label language="ENGLISH">
+<Text name="TRIBE-BOOK TRIBES AND TRIBULATIONS">"Tribes and Tribulations"</Text>
+</Label>
+<Label language="FRANCAIS">
+<Text name="TRIBE-BOOK TRIBES AND TRIBULATIONS">"Tribes and Tribulations"</Text>
+</Label>
+</DATA_LABEL>
+<DATA_TALENT_SPECIALIZATION>
+  <Talent id="RULES-T0088_LWAAAGH">
+<Description language="ENGLISH">"Arcane Magic (Little Waaagh!)"</Description>
+  <Generique>"RULES-T0088_*"</Generique>
+<Page>133</Page>
+</Talent>
+<Talent id="RULES-T0088_BWAAAGH">
+<Description language="ENGLISH">"Arcane Magic (Big Waaagh!)"</Description>
+  <Generique>"RULES-T0088_*"</Generique>
+<Page>133</Page>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+<DATA_WEAPON>
+<Weapon id="TRIBE-PROJ_ARB_01">
+<Description language="ENGLISH">"Spear Chukka"</Description>
+<Skill>"RULES-COMPPROJ_ARB"</Skill>
+<Damage>"+12"</Damage>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Reach>"150"</Reach>
+<Encumbrance>"20"</Encumbrance>
+<Quality>"RULES-WEAPB16,UPINA-WEAPB35 2,RULES-WEAPB24,RULES-WEAPB23 3"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>41</Page>
+</Weapon>
+<Weapon id="TRIBE-PROJ_CATAPULT_01">
+<Description language="ENGLISH">"Doom Diver"</Description>
+<Skill>"RULES-COMPPROJ_CATAPULT"</Skill>
+<Damage>"+13"</Damage>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Reach>"120"</Reach>
+<Encumbrance>"20"</Encumbrance>
+<Quality>"RULES-WEAPB16,RULES-WEAPB24,RULES-WEAPB21,RULES-WEAPB23 3"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>41</Page>
+</Weapon>
+<Weapon id="TRIBE-PROJ_CATAPULT_02">
+<Description language="ENGLISH">"Rock Lobber"</Description>
+<Skill>"RULES-COMPPROJ_CATAPULT"</Skill>
+<Damage>"+15"</Damage>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Reach>"100"</Reach>
+<Encumbrance>"40"</Encumbrance>
+<Quality>"UPINA-WEAPB35 3,RULES-WEAPB24,RULES-WEAPB26,RULES-WEAPB23 3"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>41</Page>
+</Weapon>
+<Weapon id="TRIBE-MUNI_01">
+<Description language="ENGLISH">"Spear Chukka Bolt"</Description>
+<Skill>"RULES-COMPPROJ_ARB"</Skill>
+<Damage>"-"</Damage>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Reach>"+0"</Reach>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"RULES-WEAPB12,RULES-WEAPB22"</Quality>
+<Hand>"0"</Hand>
+<Ammunition>"1"</Ammunition>
+<Page>41</Page>
+</Weapon>
+<Weapon id="TRIBE-MUNI_02">
+<Description language="ENGLISH">"Rock Lobber Stone"</Description>
+<Skill>"RULES-COMPPROJ_CATAPULT"</Skill>
+<Damage>"-"</Damage>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Reach>"+0"</Reach>
+<Encumbrance>"3"</Encumbrance>
+<Quality>"RULES-WEAPB10,RULES-WEAPB21"</Quality>
+<Hand>"0"</Hand>
+<Ammunition>"1"</Ammunition>
+<Page>41</Page>
+</Weapon>
+</DATA_WEAPON>
+<DATA_SPELL>
+<Sort id="TRIBE-LITTLE_01">
+<Description language="ENGLISH">"Behave!"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1 (Maximum)"</Target>
+<Duration>"Willpower Bonus minutes"</Duration>
+<Range>"Willpower yards"</Range>
+<Talent>"RULES-T0088_LWAAAGH"</Talent>
+<Level>"2"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>98</Page>
+</Sort>
+<Sort id="TRIBE-LITTLE_02">
+<Description language="ENGLISH">"Cunnin' Words"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Willpower Bonus minutes"</Duration>
+<Range>"Willpower yards"</Range>
+<Talent>"RULES-T0088_LWAAAGH"</Talent>
+<Level>"0"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>98</Page>
+</Sort>
+<Sort id="TRIBE-LITTLE_03">
+<Description language="ENGLISH">"Curse of Da Bad Moon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (Willpower Bonus yards)"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"Willpower Bonus yards"</Range>
+<Talent>"RULES-T0088_LWAAAGH"</Talent>
+<Level>"9"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>98</Page>
+</Sort>
+<Sort id="TRIBE-LITTLE_04">
+<Description language="ENGLISH">"Gift of the Spider-God"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"Forest Goblins in AoE (Willpower Bonus yards)"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_LWAAAGH"</Talent>
+<Level>"3"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>98</Page>
+</Sort>
+<Sort id="TRIBE-LITTLE_05">
+<Description language="ENGLISH">"Gork'll Fix It"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"Willpower yards"</Range>
+<Talent>"RULES-T0088_LWAAAGH"</Talent>
+<Level>"5"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>98</Page>
+</Sort>
+<Sort id="TRIBE-LITTLE_06">
+<Description language="ENGLISH">"The Great Green Spite"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (Willpower Bonus yards)"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"Willpower Bonus yards"</Range>
+<Talent>"RULES-T0088_LWAAAGH"</Talent>
+<Level>"20"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>98</Page>
+</Sort>
+<Sort id="TRIBE-LITTLE_07">
+<Description language="ENGLISH">"Itchy Nuisance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"Willpower Bonus yards"</Range>
+<Talent>"RULES-T0088_LWAAAGH"</Talent>
+<Level>"4"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>98</Page>
+</Sort>
+<Sort id="TRIBE-LITTLE_08">
+<Description language="ENGLISH">"Mork Wants Ya!"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Willpower Bonus yards"</Range>
+<Talent>"RULES-T0088_LWAAAGH"</Talent>
+<Level>"9"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>98</Page>
+</Sort>
+<Sort id="TRIBE-LITTLE_09">
+<Description language="ENGLISH">"Night Shroud"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (Willpower Bonus yards)"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"Strength Bonus yards"</Range>
+<Talent>"RULES-T0088_LWAAAGH"</Talent>
+<Level>"5"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>99</Page>
+</Sort>
+<Sort id="TRIBE-LITTLE_10">
+<Description language="ENGLISH">"Nikkit!"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Willpower yards"</Range>
+<Talent>"RULES-T0088_LWAAAGH"</Talent>
+<Level>"3"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>99</Page>
+</Sort>
+<Sort id="TRIBE-LITTLE_11">
+<Description language="ENGLISH">"Sneaky Stabbin'"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (Willpower Bonus yards) Orcs and Goblins"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_LWAAAGH"</Talent>
+<Level>"8"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>99</Page>
+</Sort>
+<Sort id="TRIBE-LITTLE_12">
+<Description language="ENGLISH">"Vindictive Glare"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (Willpower Bonus yards)"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Willpower yards"</Range>
+<Talent>"RULES-T0088_LWAAAGH"</Talent>
+<Level>"7"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>99</Page>
+</Sort>
+<Sort id="TRIBE-BIG_01">
+<Description language="ENGLISH">"'Ard as Nails"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"Willpower Bonus yards"</Range>
+<Talent>"RULES-T0088_BWAAAGH"</Talent>
+<Level>"3"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>100</Page>
+</Sort>
+<Sort id="TRIBE-BIG_02">
+<Description language="ENGLISH">"Bash 'Em Lads!"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"See Text"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Willpower Bonus yards"</Range>
+<Talent>"RULES-T0088_BWAAAGH"</Talent>
+<Level>"6"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>100</Page>
+</Sort>
+<Sort id="TRIBE-BIG_03">
+<Description language="ENGLISH">"Brainbursta"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Willpower Bonus yards"</Range>
+<Talent>"RULES-T0088_BWAAAGH"</Talent>
+<Level>"5"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>100</Page>
+</Sort>
+<Sort id="TRIBE-BIG_04">
+<Description language="ENGLISH">"'Eadbutt"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"Willpower Bonus yards"</Range>
+<Talent>"RULES-T0088_BWAAAGH"</Talent>
+<Level>"6"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>100</Page>
+</Sort>
+<Sort id="TRIBE-BIG_05">
+<Description language="ENGLISH">"'Ere We Go!"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (Willpower Bonus yards) Orcs"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_BWAAAGH"</Talent>
+<Level>"7"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>100</Page>
+</Sort>
+<Sort id="TRIBE-BIG_06">
+<Description language="ENGLISH">"The Evil Sun"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (Willpower yards)"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"Willpower Bonus yards"</Range>
+<Talent>"RULES-T0088_BWAAAGH"</Talent>
+<Level>"12"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>100</Page>
+</Sort>
+<Sort id="TRIBE-BIG_07">
+<Description language="ENGLISH">"Fists of Gork"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_BWAAAGH"</Talent>
+<Level>"2"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>100</Page>
+</Sort>
+<Sort id="TRIBE-BIG_08">
+<Description language="ENGLISH">"Foot of Gork"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (Willpower Bonus yards)"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Willpower Bonus Yards"</Range>
+<Talent>"RULES-T0088_BWAAAGH"</Talent>
+<Level>"10"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>101</Page>
+</Sort>
+<Sort id="TRIBE-BIG_09">
+<Description language="ENGLISH">"Gaze of Mork"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"See Text"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Willpower yards"</Range>
+<Talent>"RULES-T0088_BWAAAGH"</Talent>
+<Level>"5"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>101</Page>
+</Sort>
+<Sort id="TRIBE-BIG_10">
+<Description language="ENGLISH">"The Hand of Gork"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"See Text"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"Willpower yards"</Range>
+<Talent>"RULES-T0088_BWAAAGH"</Talent>
+<Level>"9"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>101</Page>
+</Sort>
+<Sort id="TRIBE-BIG_11">
+<Description language="ENGLISH">"Mork Save Us!"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"See Text"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"Willpower Bonus yards"</Range>
+<Talent>"RULES-T0088_BWAAAGH"</Talent>
+<Level>"8"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>101</Page>
+</Sort>
+<Sort id="TRIBE-BIG_12">
+<Description language="ENGLISH">"WAAAGH!"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>""</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_BWAAAGH"</Talent>
+<Level>"12"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>101</Page>
+</Sort>
+</DATA_SPELL>
+</DATA_BOOK>

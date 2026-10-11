@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SCHEMA_TRADUCTION.xsd
+  Schema d un LIVRE DE TRADUCTION : un livre qui ne porte que des libelles traduits, jamais de
+  donnee de jeu. Un livre est une traduction s il porte la balise d en-tete TRANSLATION_OF
+  (CODE_BOOK du livre source) ; c est cette balise qui choisit ce schema plutot que
+  SCHEMA_WFRP4/WFRP5.
+
+  Regles :
+  - chaque element traduit ne garde que sa cle (id, ou name pour Affliction, Corruption,
+    Disease) et des balises texte portant language= ;
+  - aucun chapitre de donnees de jeu (modificateurs, prix, tirages...) n est accepte ;
+  - l ordre des chapitres et des elements est libre (un livre de traduction peut etre
+    partiel) ; les codes doivent rester uniques dans un chapitre.
+  Le texte lui-meme reste entre guillemets droits comme dans les livres normaux.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <!-- Texte traduit : attribut language obligatoire (langue du livre de traduction) -->
+  <xs:complexType name="TexteTraduit">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="language" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <!-- Balises de texte traduisibles (union de tout le corpus, releve le 08/10/2026) -->
+  <xs:group name="TextesTraduisibles">
+    <xs:choice>
+      <xs:element name="Description" type="TexteTraduit"/>
+      <xs:element name="Explanation" type="TexteTraduit"/>
+      <xs:element name="Short" type="TexteTraduit"/>
+      <xs:element name="Test" type="TexteTraduit"/>
+      <xs:element name="Contraction" type="TexteTraduit"/>
+      <xs:element name="Incubation" type="TexteTraduit"/>
+      <xs:element name="Duration" type="TexteTraduit"/>
+      <xs:element name="Symptoms" type="TexteTraduit"/>
+      <xs:element name="Title" type="TexteTraduit"/>
+      <xs:element name="Appearance" type="TexteTraduit"/>
+      <xs:element name="Personality" type="TexteTraduit"/>
+    </xs:choice>
+  </xs:group>
+
+  <!-- Element traduit, cle id -->
+  <xs:complexType name="ElementParId">
+    <xs:group ref="TextesTraduisibles" minOccurs="1" maxOccurs="unbounded"/>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <!-- Element traduit, cle name (Affliction, Corruption, Disease) -->
+  <xs:complexType name="ElementParNom">
+    <xs:group ref="TextesTraduisibles" minOccurs="1" maxOccurs="unbounded"/>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <!-- Niveaux d un metier -->
+  <xs:complexType name="NiveauxType">
+    <xs:sequence>
+      <xs:element name="Level" type="ElementParId" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Metier : textes + niveaux -->
+  <xs:complexType name="MetierTraduit">
+    <xs:choice minOccurs="1" maxOccurs="unbounded">
+      <xs:group ref="TextesTraduisibles"/>
+      <xs:element name="SUBCHAPTER_LEVEL" type="NiveauxType"/>
+    </xs:choice>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <!-- Trait d espece : textes + options -->
+  <xs:complexType name="TraitEspeceTraduit">
+    <xs:choice minOccurs="1" maxOccurs="unbounded">
+      <xs:group ref="TextesTraduisibles"/>
+      <xs:element name="Option" type="ElementParId"/>
+    </xs:choice>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <!-- Libelles : DATA_LABEL/Label language=/Text name= -->
+  <xs:complexType name="TexteLibelle">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="name" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="LabelTraduit">
+    <xs:sequence>
+      <xs:element name="Text" type="TexteLibelle" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="language" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataLabelTraduit">
+    <xs:sequence>
+      <xs:element name="Label" type="LabelTraduit"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Fabrique de chapitres : un chapitre = une liste d elements de meme balise -->
+  <xs:complexType name="ChapitreAttribut"><xs:sequence><xs:element name="Attribut" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreArmor"><xs:sequence><xs:element name="Armor" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreArmorSimp"><xs:sequence><xs:element name="ArmorSimp" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreBonusMalus"><xs:sequence><xs:element name="BonusMalus" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreAffliction"><xs:sequence><xs:element name="Affliction" type="ElementParNom" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreAdaptation"><xs:sequence><xs:element name="Adaptation" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreCareerBonus"><xs:sequence><xs:element name="CareerBonus" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreCareer"><xs:sequence><xs:element name="Career" type="MetierTraduit" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreCorruption"><xs:sequence><xs:element name="Corruption" type="ElementParNom" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreCraftsmanship"><xs:sequence><xs:element name="Craftsmanship" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreDisease"><xs:sequence><xs:element name="Disease" type="ElementParNom" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreNation"><xs:sequence><xs:element name="Nation" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreOptionRule"><xs:sequence><xs:element name="OptionRule" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreRace"><xs:sequence><xs:element name="Race" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreRule"><xs:sequence><xs:element name="Rule" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreSkill"><xs:sequence><xs:element name="Skill" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreSpecie"><xs:sequence><xs:element name="Specie" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreSpecieTrait"><xs:sequence><xs:element name="SpecieTrait" type="TraitEspeceTraduit" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreSort"><xs:sequence><xs:element name="Sort" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreStarSign"><xs:sequence><xs:element name="StarSign" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreTalent"><xs:sequence><xs:element name="Talent" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreTrapping"><xs:sequence><xs:element name="Trapping" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+  <xs:complexType name="ChapitreWeapon"><xs:sequence><xs:element name="Weapon" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
+
+  <!-- Livre de traduction -->
+  <xs:element name="DATA_BOOK">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CODE_BOOK" type="xs:string"/>
+        <xs:element name="BOOK" type="xs:string"/>
+        <xs:element name="language" type="xs:string"/>
+        <xs:element name="TRANSLATION_OF" type="xs:string"/>
+        <xs:element name="VERSION" type="xs:string"/>
+        <xs:element name="OFFICIAL" type="xs:string"/>
+        <xs:element name="COMPLETE" type="xs:string"/>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="DATA_LABEL" type="DataLabelTraduit"/>
+          <xs:element name="DATA_AFFLICTION" type="ChapitreAffliction"/>
+          <xs:element name="DATA_ARMOR" type="ChapitreArmor"/>
+          <xs:element name="DATA_ARMOR_BONUS" type="ChapitreBonusMalus"/>
+          <xs:element name="DATA_ARMOR_SIMP" type="ChapitreArmorSimp"/>
+          <xs:element name="DATA_ATTRIBUT" type="ChapitreAttribut"/>
+          <xs:element name="DATA_CAREER" type="ChapitreCareer"/>
+          <xs:element name="DATA_CAREER_ADAPTATION" type="ChapitreAdaptation"/>
+          <xs:element name="DATA_CAREER_BONUS" type="ChapitreCareerBonus"/>
+          <xs:element name="DATA_CORRUPTION_TABLE_MENTAL" type="ChapitreCorruption"/>
+          <xs:element name="DATA_CORRUPTION_TABLE_PHYSICAL" type="ChapitreCorruption"/>
+          <xs:element name="DATA_CRAFTMANSHIP" type="ChapitreCraftsmanship"/>
+          <xs:element name="DATA_DISEASE" type="ChapitreDisease"/>
+          <xs:element name="DATA_NATION" type="ChapitreNation"/>
+          <xs:element name="DATA_OPTION_RULE" type="ChapitreOptionRule"/>
+          <xs:element name="DATA_RACE" type="ChapitreRace"/>
+          <xs:element name="DATA_RULE" type="ChapitreRule"/>
+          <xs:element name="DATA_SKILL" type="ChapitreSkill"/>
+          <xs:element name="DATA_SKILL_SPECIALIZATION" type="ChapitreSkill"/>
+          <xs:element name="DATA_SPECIE" type="ChapitreSpecie"/>
+          <xs:element name="DATA_SPECIE_TRAIT" type="ChapitreSpecieTrait"/>
+          <xs:element name="DATA_SPELL" type="ChapitreSort"/>
+          <xs:element name="DATA_STARSIGN" type="ChapitreStarSign"/>
+          <xs:element name="DATA_TALENT" type="ChapitreTalent"/>
+          <xs:element name="DATA_TALENT_SPECIALIZATION" type="ChapitreTalent"/>
+          <xs:element name="DATA_TRAPPING" type="ChapitreTrapping"/>
+          <xs:element name="DATA_WEAPON" type="ChapitreWeapon"/>
+          <xs:element name="DATA_WEAPON_BONUS" type="ChapitreBonusMalus"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+
+    <!-- Un code ne se traduit qu une fois par chapitre (Level, Option : unicite dans leur parent) -->
+    <xs:unique name="LabelTexteUnique">
+      <xs:selector xpath="DATA_LABEL/Label/Text"/>
+      <xs:field xpath="@name"/>
+    </xs:unique>
+  </xs:element>
+</xs:schema>

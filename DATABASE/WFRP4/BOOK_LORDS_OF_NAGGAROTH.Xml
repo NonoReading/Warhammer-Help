@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"NAGGA"</CODE_BOOK>
+<BOOK>"BOOK LORDS OF NAGGAROTH"</BOOK>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP4"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"1"</COMPLETE>
+<DISCLAIMER>"This is a fan made supplement and in no way endorsed by Games Workshop or Cubicle 7. All art belongs to their respective artists. Warhammer Fantasy Roleplay 4th Edition (c) Copyright Games Workshop Limited 2018. Warhammer Fantasy Roleplay 4th Edition, the Warhammer Fantasy Roleplay 4th Edition logo, GW, Games Workshop, Warhammer, The Game of Fantasy Battles, the twin-tailed comet logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likeness thereof, are either (R) or TM, and/or (c) Games Workshop Limited, variably registered around the world, and used under licence. Cubicle 7 Entertainment and the Cubicle 7 Entertainment logo are trademarks of Cubicle 7 Entertainment Limited. All rights reserved."</DISCLAIMER>
+<DATA_LABEL>
+<Label language="ENGLISH">
+<Text name="NAGGA-BOOK LORDS OF NAGGAROTH">"Lords of Naggaroth"</Text>
+</Label>
+<Label language="FRANCAIS">
+<Text name="NAGGA-BOOK LORDS OF NAGGAROTH">"Lords of Naggaroth"</Text>
+</Label>
+</DATA_LABEL>
+<DATA_TALENT>
+<Talent id="NAGGA-T0185">
+<Description language="ENGLISH">"Power of Darkness"</Description>
+<Short language="ENGLISH">""</Short>
+<Explanation language="ENGLISH">""</Explanation>
+<Max>"1"</Max>
+<PDF>""</PDF>
+<Test language="ENGLISH">""</Test>
+<Page>11</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_RACE>
+<Race id="NAGGA-SPECIE_DELF">
+<Description language="ENGLISH">"Dark Elf"</Description>
+<SUBCHAPTER_PHYSICAL>
+<Age>"30+10d10"</Age>
+<Height>"71+d10"</Height>
+<EyeRolls>"2"</EyeRolls>
+<Eye name="Jet">"2"</Eye>
+<Eye name="Onyx">"3"</Eye>
+<Eye name="Turquoise">"4"</Eye>
+<Eye name="Grey agate">"5-7"</Eye>
+<Eye name="Lapis">"8-11"</Eye>
+<Eye name="Sapphire">"12-14"</Eye>
+<Eye name="Amethyst">"15-17"</Eye>
+<Eye name="Silver">"18"</Eye>
+<Eye name="Iron">"19"</Eye>
+<Eye name="Emerald">"20"</Eye>
+<Hair name="Coal black">"2"</Hair>
+<Hair name="Blue black">"3"</Hair>
+<Hair name="Ebony">"4"</Hair>
+<Hair name="Jet black">"5-7"</Hair>
+<Hair name="Raven black">"8-11"</Hair>
+<Hair name="White">"12-14"</Hair>
+<Hair name="Ice white">"15-17"</Hair>
+<Hair name="Silver">"18"</Hair>
+<Hair name="Platinum">"19"</Hair>
+<Hair name="Dyed">"20"</Hair>
+</SUBCHAPTER_PHYSICAL>
+<Page>2</Page>
+</Race>
+</DATA_RACE>
+<DATA_SPECIE>
+<Specie id="NAGGA-RACE_DELF">
+<Description language="ENGLISH">"Dark Elves"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"NAGGA-SPECIE_DELF"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_I">"2d10+40"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fate">"0"</Attribut>
+<Attribut name="RULES-ATTR_Resil">"0"</Attribut>
+<Attribut name="RULES-ATTR_Wound">"1xBATTR_S+2xBATTR_T+1xBATTR_WP"</Attribut>
+<Attribut name="RULES-ATTR_Supp">"2"</Attribut>
+<Attribut name="RULES-ATTR_Move">"5"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern>"First+Second?+End Epithet"</NamePattern>
+<Name part="First" name="Aes">"1"</Name>
+<Name part="First" name="Ath">"2"</Name>
+<Name part="First" name="Dor">"3"</Name>
+<Name part="First" name="Far">"4"</Name>
+<Name part="First" name="Gal">"5"</Name>
+<Name part="First" name="Im">"6"</Name>
+<Name part="First" name="Lin">"7"</Name>
+<Name part="First" name="Mal">"8"</Name>
+<Name part="First" name="Mor">"9"</Name>
+<Name part="First" name="Ullia">"10"</Name>
+<Name part="Second" name="a">"1"</Name>
+<Name part="Second" name="ath">"2"</Name>
+<Name part="Second" name="dia">"3"</Name>
+<Name part="Second" name="en">"4"</Name>
+<Name part="Second" name="for">"5"</Name>
+<Name part="Second" name="lor">"6"</Name>
+<Name part="Second" name="mar">"7"</Name>
+<Name part="Second" name="ol">"8"</Name>
+<Name part="Second" name="sor">"9"</Name>
+<Name part="Second" name="than">"10"</Name>
+<Name part="End" name="ek">"1"</Name>
+<Name part="End" name="us">"2"</Name>
+<Name part="End" name="arth">"3"</Name>
+<Name part="End" name="kith">"4"</Name>
+<Name part="End" name="khir">"5"</Name>
+<Name part="End" name="ian">"6"</Name>
+<Name part="End" name="athi">"7"</Name>
+<Name part="End" name="iath">"8"</Name>
+<Name part="End" name="clir">"9"</Name>
+<Name part="End" name="aris">"10"</Name>
+<Name part="Epithet" name="Beastbinder">"1"</Name>
+<Name part="Epithet" name="Darkpath">"2"</Name>
+<Name part="Epithet" name="Fangshield">"3"</Name>
+<Name part="Epithet" name="Hydrablood">"4"</Name>
+<Name part="Epithet" name="Spiteheart">"5"</Name>
+<Name part="Epithet" name="Wyrmscale">"6"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMPATHL"</Skill>
+  <Skill>"RULES-COMPCALM"</Skill>
+  <Skill>"RULES-COMPEVAL"</Skill>
+  <Skill>"RULES-COMPLANG_ELTHA"</Skill>
+  <Skill>"RULES-COMPINTIM"</Skill>
+  <Skill>"RULES-COMPCOMB_BASE"</Skill>
+  <Skill>"RULES-COMPORIENT"</Skill>
+  <Skill>"RULES-COMPPRECEP"</Skill>
+  <Skill>"RULES-COMPPARI"</Skill>
+  <Skill>"RULES-COMPPROJ_ARB"</Skill>
+  <Skill>"RULES-COMPVOILE_*"</Skill>
+  <Skill>"RULES-COMPNATA"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T0139_VUE"</Talent>
+  <Talent>"RULES-T0074/RULES-T0067"</Talent>
+  <Talent>"RULES-T0164"</Talent>
+  <Talent>"RULES-T0069_HELF"</Talent>
+  <Talent>"RULES-T0137/RULES-T0141"</Talent>
+  <Talent>"RULES-T0084"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+  <Career name="NAGGA-WORK120">"2"</Career>
+  <Career name="RULES-WORK18">"5"</Career>
+  <Career name="RULES-WORK24">"4"</Career>
+  <Career name="RULES-WORK10">"2"</Career>
+  <Career name="RULES-WORK19">"2"</Career>
+  <Career name="NAGGA-WORK121">"9"</Career>
+  <Career name="RULES-WORK11">"6"</Career>
+  <Career name="NAGGA-WORK119">"10"</Career>
+  <Career name="RULES-WORK35">"2"</Career>
+  <Career name="RULES-WORK16">"3"</Career>
+  <Career name="NAGGA-WORK122">"5"</Career>
+  <Career name="RULES-WORK53">"6"</Career>
+  <Career name="RULES-WORK30">"6"</Career>
+  <Career name="RULES-WORK51">"5"</Career>
+  <Career name="RULES-WORK08">"6"</Career>
+  <Career name="RULES-WORK27">"5"</Career>
+  <Career name="RULES-WORK12">"4"</Career>
+  <Career name="RULES-WORK28">"4"</Career>
+  <Career name="RULES-WORK61">"3"</Career>
+  <Career name="RULES-WORK57">"11"</Career>
+  </SUBCHAPTER_CAREER>
+<Page>3</Page>
+</Specie>
+</DATA_SPECIE>
+<DATA_CAREER>
+<Career id="NAGGA-WORK119">
+<Description language="ENGLISH">"Black Ark Corsair"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Class>"RULES-CLASS_RIVE"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Raider"</Description>
+<Salary>"TIERS_SILVER 1"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Corsair"</Description>
+<Salary>"TIERS_SILVER 3"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Reaver"</Description>
+<Salary>"TIERS_SILVER 6"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Corsair Captain"</Description>
+<Salary>"TIERS_GOLD 3"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"1"</Attribut>
+<Attribut name="RULES-ATTR_BS">"3"</Attribut>
+<Attribut name="RULES-ATTR_S">"1"</Attribut>
+<Attribut name="RULES-ATTR_T">"0"</Attribut>
+<Attribut name="RULES-ATTR_I">"1"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"0"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"0"</Attribut>
+<Attribut name="RULES-ATTR_Int">"0"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"4"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPESCAL">"1"</Skill>
+  <Skill name="RULES-COMPRESALC">"1"</Skill>
+  <Skill name="RULES-COMPESQU">"1"</Skill>
+  <Skill name="RULES-COMPRESIST">"1"</Skill>
+  <Skill name="RULES-COMPRAMER">"1"</Skill>
+  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
+  <Skill name="RULES-COMPVOILE_*">"1"</Skill>
+  <Skill name="RULES-COMPNATA">"1"</Skill>
+  <Skill name="RULES-COMPATHL">"2"</Skill>
+  <Skill name="RULES-COMPCALM">"2"</Skill>
+  <Skill name="RULES-COMPPARI">"2"</Skill>
+  <Skill name="RULES-COMPINTIM">"2"</Skill>
+  <Skill name="RULES-COMPINTUI">"2"</Skill>
+  <Skill name="RULES-COMPSAVOIR_TORTU">"2"</Skill>
+  <Skill name="RULES-COMPEVAL">"3"</Skill>
+  <Skill name="RULES-COMPPROJ_ARB">"3"</Skill>
+  <Skill name="RULES-COMPPRECEP">"3"</Skill>
+  <Skill name="RULES-COMPLANG_*">"3"</Skill>
+  <Skill name="RULES-COMPCOMM">"3"</Skill>
+  <Skill name="RULES-COMPCHARM">"4"</Skill>
+  <Skill name="RULES-COMPORIENT">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0163">"1"</Talent>
+  <Talent name="RULES-T0168">"1"</Talent>
+  <Talent name="RULES-T0100">"1"</Talent>
+  <Talent name="RULES-T0013_COASTAL">"1"</Talent>
+  <Talent name="RULES-T0098">"2"</Talent>
+  <Talent name="RULES-T0119">"2"</Talent>
+  <Talent name="RULES-T0025">"2"</Talent>
+  <Talent name="RULES-T0085">"2"</Talent>
+  <Talent name="RULES-T0004">"3"</Talent>
+  <Talent name="RULES-T0150">"3"</Talent>
+  <Talent name="RULES-T0131">"3"</Talent>
+  <Talent name="RULES-T0120">"3"</Talent>
+  <Talent name="RULES-T0049">"4"</Talent>
+  <Talent name="RULES-T0055">"4"</Talent>
+  <Talent name="RULES-T0053">"4"</Talent>
+  <Talent name="RULES-T0107">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="NAGGA-COMB_BASE_34">"1"</Item>
+<Item name="RULES-COMB_BASE_10">"1"</Item>
+<Item name="NAGGA-COMB_BASE_37">"2"</Item>
+<Item name="boarding hooks and rope">"2"</Item>
+<Item name="RULES-TRAP_136">"2"</Item>
+<Item name="NAGGA-PROJ_ARB_05">"3"</Item>
+<Item name="RULES-MUNI_01">"3"</Item>
+<Item name="landing party of bloodthirsty Corsairs">"3"</Item>
+<Item name="Druchii corsair ship and a villainous corsair crew">"4"</Item>
+<Item name="Parrot Lizard-hawk Reaving charts">"4"</Item>
+<Item name="RULES-TRAP_169">"4"</Item>
+<Item name="spy glass">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>7</Page>
+</Career>
+<Career id="NAGGA-WORK120">
+<Description language="ENGLISH">"Sorceress of Ghrond"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPLANG_MAG"</Skill>
+<Class>"RULES-CLASS_ACAD"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Apprentice Sorceress"</Description>
+<Salary>"TIERS_SILVER 2"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Sorceress"</Description>
+<Salary>"TIERS_SILVER 7"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Hag Sorceress"</Description>
+<Salary>"TIERS_GOLD 3"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"High Sorceress"</Description>
+<Salary>"TIERS_GOLD 7"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"1"</Attribut>
+<Attribut name="RULES-ATTR_BS">"0"</Attribut>
+<Attribut name="RULES-ATTR_S">"0"</Attribut>
+<Attribut name="RULES-ATTR_T">"0"</Attribut>
+<Attribut name="RULES-ATTR_I">"3"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"0"</Attribut>
+<Attribut name="RULES-ATTR_Int">"1"</Attribut>
+<Attribut name="RULES-ATTR_WP">"1"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"4"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPFOCAL_*">"1"</Skill>
+  <Skill name="RULES-COMPESQU">"1"</Skill>
+  <Skill name="RULES-COMPINTUI">"1"</Skill>
+  <Skill name="RULES-COMPLANG_MAG">"1"</Skill>
+  <Skill name="RULES-COMPSAVOIR_MAGIE">"1"</Skill>
+  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
+  <Skill name="RULES-COMPCOMB_HAST">"1"</Skill>
+  <Skill name="RULES-COMPPRECEP">"1"</Skill>
+  <Skill name="RULES-COMPCHARM">"2"</Skill>
+  <Skill name="RULES-COMPCALM">"2"</Skill>
+  <Skill name="RULES-COMPRAGOT">"2"</Skill>
+  <Skill name="RULES-COMPINTIM">"2"</Skill>
+  <Skill name="RULES-COMPSAVOIR_DEMO">"2"</Skill>
+  <Skill name="RULES-COMPSIGNES_CONVENTSORC">"2"</Skill>
+  <Skill name="RULES-COMPEVAL">"3"</Skill>
+  <Skill name="RULES-COMPSAVOIR_*">"3"</Skill>
+  <Skill name="RULES-COMPLANG_DARKTOUNGE">"3"</Skill>
+  <Skill name="RULES-COMPCHEV_CHEVAL/RULES-COMPCHEV_COLDONE">"3"</Skill>
+  <Skill name="RULES-COMPCHEV_DPEGASE">"4"</Skill>
+  <Skill name="RULES-COMPRECH">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0071">"1"</Talent>
+  <Talent name="NAGGA-T0185">"1"</Talent>
+  <Talent name="RULES-T0084">"1"</Talent>
+  <Talent name="RULES-T0137">"1"</Talent>
+  <Talent name="RULES-T0089">"1"</Talent>
+  <Talent name="RULES-T0088_*">"2"</Talent>
+  <Talent name="RULES-T0040">"2"</Talent>
+  <Talent name="RULES-T0141">"2"</Talent>
+  <Talent name="RULES-T0042">"2"</Talent>
+  <Talent name="RULES-T0009">"3"</Talent>
+  <Talent name="RULES-T0115">"3"</Talent>
+  <Talent name="RULES-T0098">"3"</Talent>
+  <Talent name="RULES-T0087">"3"</Talent>
+  <Talent name="RULES-T0099">"4"</Talent>
+  <Talent name="RULES-T0049">"4"</Talent>
+  <Talent name="RULES-T0167">"4"</Talent>
+  <Talent name="RULES-T0079">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="Ambition">"1"</Item>
+<Item name="Grimoire of Dark Magic">"1"</Item>
+<Item name="RULES-COMB_BASE_10">"1"</Item>
+<Item name="Staff">"1"</Item>
+<Item name="Lust for Power">"2"</Item>
+<Item name="Imp Familiar">"2"</Item>
+<Item name="Convent Vestments">"2"</Item>
+<Item name="Apprentice">"3"</Item>
+<Item name="Power overwhelming">"3"</Item>
+<Item name="Multiple familiars">"3"</Item>
+<Item name="Magical item">"3"</Item>
+<Item name="Sorcery supreme">"4"</Item>
+<Item name="enslaved spirits of evil">"4"</Item>
+<Item name="Apprentice">"4"</Item>
+<Item name="Dread Sanctum">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>8</Page>
+</Career>
+<Career id="NAGGA-WORK121">
+<Description language="ENGLISH">"Beastmaster"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPANIM"</Skill>
+<Class>"RULES-CLASS_RANG"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Apprentice Beastmaster"</Description>
+<Salary>"TIERS_SILVER 1"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Beastmaster"</Description>
+<Salary>"TIERS_SILVER 3"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Beastslaver"</Description>
+<Salary>"TIERS_SILVER 5"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"High Beastmaster"</Description>
+<Salary>"TIERS_GOLD 1"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"1"</Attribut>
+<Attribut name="RULES-ATTR_BS">"1"</Attribut>
+<Attribut name="RULES-ATTR_S">"2"</Attribut>
+<Attribut name="RULES-ATTR_T">"1"</Attribut>
+<Attribut name="RULES-ATTR_I">"3"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"0"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"0"</Attribut>
+<Attribut name="RULES-ATTR_Int">"4"</Attribut>
+<Attribut name="RULES-ATTR_WP">"0"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"0"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPSOINANI">"1"</Skill>
+  <Skill name="RULES-COMPDRESS_*">"1"</Skill>
+  <Skill name="RULES-COMPANIM">"1"</Skill>
+  <Skill name="RULES-COMPRESIST">"1"</Skill>
+  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
+  <Skill name="RULES-COMPPROJ_ENTRAV">"1"</Skill>
+  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
+  <Skill name="RULES-COMPPRECEP">"1"</Skill>
+  <Skill name="RULES-COMPATHL">"2"</Skill>
+  <Skill name="RULES-COMPCALM">"2"</Skill>
+  <Skill name="RULES-COMPINTIM">"2"</Skill>
+  <Skill name="RULES-COMPSAVOIR_BETE">"2"</Skill>
+  <Skill name="RULES-COMPPIEG">"2"</Skill>
+  <Skill name="RULES-COMPPIST">"2"</Skill>
+  <Skill name="RULES-COMPCOND">"3"</Skill>
+  <Skill name="RULES-COMPMARCH">"3"</Skill>
+  <Skill name="RULES-COMPPROJ_ARB">"3"</Skill>
+  <Skill name="RULES-COMPDISC_RURAL">"3"</Skill>
+  <Skill name="RULES-COMPCHEV_*">"4"</Skill>
+  <Skill name="RULES-COMPINTUI">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0004">"1"</Talent>
+  <Talent name="RULES-T0141">"1"</Talent>
+  <Talent name="RULES-T0059">"1"</Talent>
+  <Talent name="RULES-T0047">"1"</Talent>
+  <Talent name="RULES-T0003">"2"</Talent>
+  <Talent name="RULES-T0098">"2"</Talent>
+  <Talent name="RULES-T0013_*">"2"</Talent>
+  <Talent name="RULES-T0025">"2"</Talent>
+  <Talent name="RULES-T0132_MONSTR">"3"</Talent>
+  <Talent name="RULES-T0131">"3"</Talent>
+  <Talent name="RULES-T0024/RULES-T0105">"3"</Talent>
+  <Talent name="RULES-T0151">"3"</Talent>
+  <Talent name="RULES-T0049">"4"</Talent>
+  <Talent name="RULES-T0037">"4"</Talent>
+  <Talent name="RULES-T0107">"4"</Talent>
+  <Talent name="RULES-T0116">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-COMB_BASE_*">"1"</Item>
+<Item name="RULES-COMB_ENTRA_01">"1"</Item>
+<Item name="Trainee Lizard-hawk">"1"</Item>
+<Item name="Desire to be the very best">"1"</Item>
+<Item name="Pair of trained Beasts">"2"</Item>
+<Item name="Scars from fangs and claws">"2"</Item>
+<Item name="RULES-ARMO_03">"2"</Item>
+<Item name="Scourgerunner Chariot">"3"</Item>
+<Item name="NAGGA-PROJ_ARB_06">"3"</Item>
+<Item name="NAGGA-MUNI_09">"3"</Item>
+<Item name="Net">"3"</Item>
+<Item name="Assistant Beastmaster">"3"</Item>
+<Item name="Trained monster (typically a Manticore or War-Hydra in Naggaroth)">"4"</Item>
+<Item name="Apprentice Beastmaster">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>9</Page>
+</Career>
+<Career id="NAGGA-WORK122">
+<Description language="ENGLISH">"Disciple of Khaine"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPPRIERE"</Skill>
+<Class>"RULES-CLASS_ROGU"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Initiate"</Description>
+<Salary>"TIERS_BRASS 5"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Disciple of Khaine"</Description>
+<Salary>"TIERS_SILVER 2"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Anointed"</Description>
+<Salary>"TIERS_SILVER 3"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Bloody Handed"</Description>
+<Salary>"TIERS_SILVER 5"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"1"</Attribut>
+<Attribut name="RULES-ATTR_BS">"0"</Attribut>
+<Attribut name="RULES-ATTR_S">"1"</Attribut>
+<Attribut name="RULES-ATTR_T">"0"</Attribut>
+<Attribut name="RULES-ATTR_I">"3"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"0"</Attribut>
+<Attribut name="RULES-ATTR_Int">"0"</Attribut>
+<Attribut name="RULES-ATTR_WP">"1"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"4"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPFOCAL_KHAINITE">"1"</Skill>
+  <Skill name="RULES-COMPCALM">"1"</Skill>
+  <Skill name="RULES-COMPESQU">"1"</Skill>
+  <Skill name="RULES-COMPINTUI">"1"</Skill>
+  <Skill name="RULES-COMPSAVOIR_THEO">"1"</Skill>
+  <Skill name="RULES-COMPCOMB_*">"1"</Skill>
+  <Skill name="RULES-COMPLANG_MAG">"1"</Skill>
+  <Skill name="RULES-COMPPRIERE">"1"</Skill>
+  <Skill name="RULES-COMPATHL">"2"</Skill>
+  <Skill name="RULES-COMPCHARM">"2"</Skill>
+  <Skill name="RULES-COMPSAVOIR_TORTU">"2"</Skill>
+  <Skill name="RULES-COMPINTIM">"2"</Skill>
+  <Skill name="RULES-COMPSIGNES_KHAINE">"2"</Skill>
+  <Skill name="RULES-COMPREPRES_TORTURE">"2"</Skill>
+  <Skill name="RULES-COMPESCAL">"3"</Skill>
+  <Skill name="RULES-COMPRESIST">"3"</Skill>
+  <Skill name="RULES-COMPPRECEP">"3"</Skill>
+  <Skill name="RULES-COMPDISC_*">"3"</Skill>
+  <Skill name="RULES-COMPCOMM">"4"</Skill>
+  <Skill name="RULES-COMPCOMB_*">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0071">"1"</Talent>
+  <Talent name="RULES-T0165">"1"</Talent>
+  <Talent name="RULES-T0037">"1"</Talent>
+  <Talent name="RULES-T0107">"1"</Talent>
+  <Talent name="RULES-T0088_KHAINE">"2"</Talent>
+  <Talent name="RULES-T0098">"2"</Talent>
+  <Talent name="RULES-T0056">"2"</Talent>
+  <Talent name="RULES-T0087">"2"</Talent>
+  <Talent name="RULES-T0008">"3"</Talent>
+  <Talent name="RULES-T0049">"3"</Talent>
+  <Talent name="RULES-T0060">"3"</Talent>
+  <Talent name="RULES-T0168">"3"</Talent>
+  <Talent name="RULES-T0095">"4"</Talent>
+  <Talent name="RULES-T0132_*">"4"</Talent>
+  <Talent name="RULES-T0042">"4"</Talent>
+  <Talent name="RULES-T0025">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-COMB_BASE_10">"1"</Item>
+<Item name="RULES-COMB_BASE_*">"1"</Item>
+<Item name="cult robes">"1"</Item>
+<Item name="Grimoire of Khainite Sorcery">"1"</Item>
+<Item name="Sacred vestments">"2"</Item>
+<Item name="NAGGA-COMB_PARAD_07">"2"</Item>
+<Item name="Flesh Hooks">"2"</Item>
+<Item name="Torturers tools">"2"</Item>
+<Item name="Robes of Murder">"3"</Item>
+<Item name="Copy of the Parables of Sundered Flesh">"3"</Item>
+<Item name="NAGGA-COMB_2M_15">"4"</Item>
+<Item name="Mask of Khaines Aspect">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>10</Page>
+</Career>
+</DATA_CAREER>
+<DATA_SPELL>
+  <Sort id="NAGGA-COLOR_299">
+<Description language="ENGLISH">"Chillwind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (Special)"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Half Willpower Yards"</Range>
+<Talent>"RULES-T0088_DARK"</Talent>
+<Level>"6"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>12</Page>
+</Sort>
+<Sort id="NAGGA-COLOR_300">
+<Description language="ENGLISH">"Doombolt"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (Willpower Bonus yards)"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Willpower yards"</Range>
+<Talent>"RULES-T0088_DARK"</Talent>
+<Level>"8"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>12</Page>
+</Sort>
+<Sort id="NAGGA-COLOR_301">
+<Description language="ENGLISH">"Word of Pain"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (Willpower Bonus yards)"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"Willpower Yards"</Range>
+<Talent>"RULES-T0088_DARK"</Talent>
+<Level>"7"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>12</Page>
+</Sort>
+<Sort id="NAGGA-COLOR_302">
+<Description language="ENGLISH">"Bladewind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (Willpower Bonus yards)"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"Willpower Yards"</Range>
+<Talent>"RULES-T0088_DARK"</Talent>
+<Level>"10"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>12</Page>
+</Sort>
+<Sort id="NAGGA-COLOR_303">
+<Description language="ENGLISH">"Soul Stealer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (Willpower Bonus yards)"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Willpower Bonus yards"</Range>
+<Talent>"RULES-T0088_DARK"</Talent>
+<Level>"12"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>13</Page>
+</Sort>
+<Sort id="NAGGA-COLOR_304">
+<Description language="ENGLISH">"Black Horror"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (Willpower Bonus x2 yards)"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Willpower Yards"</Range>
+<Talent>"RULES-T0088_DARK"</Talent>
+<Level>"17"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>13</Page>
+</Sort>
+<Sort id="NAGGA-COLOR_305">
+<Description language="ENGLISH">"Dominion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (Willpower bonus yards)"</Target>
+<Duration>"Willpower Bonus Minutes"</Duration>
+<Range>"Willpower Bonus x2 yards"</Range>
+<Talent>"RULES-T0088_DARK"</Talent>
+<Level>"15"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>13</Page>
+</Sort>
+<Sort id="NAGGA-COLOR_306">
+<Description language="ENGLISH">"Bloody Hand"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_KHAINE"</Talent>
+<Level>"2"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>14</Page>
+</Sort>
+<Sort id="NAGGA-COLOR_307">
+<Description language="ENGLISH">"Blessing of Murder"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Willpower Bonus hours"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_KHAINE"</Talent>
+<Level>"3"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>15</Page>
+</Sort>
+<Sort id="NAGGA-COLOR_308">
+<Description language="ENGLISH">"Hand of Khaine"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"SL rounds"</Duration>
+<Range>"Willpower Bonus Yards"</Range>
+<Talent>"RULES-T0088_KHAINE"</Talent>
+<Level>"3"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>15</Page>
+</Sort>
+<Sort id="NAGGA-COLOR_309">
+<Description language="ENGLISH">"Cry of War"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (Special)"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"Willpower Bonus yards"</Range>
+<Talent>"RULES-T0088_KHAINE"</Talent>
+<Level>"5"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>15</Page>
+</Sort>
+<Sort id="NAGGA-COLOR_310">
+<Description language="ENGLISH">"Sting of the Scorpion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"Willpower Bonus targets"</Target>
+<Duration>"Willpower Bonus x2 Minutes"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_KHAINE"</Talent>
+<Level>"6"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>16</Page>
+</Sort>
+<Sort id="NAGGA-COLOR_311">
+<Description language="ENGLISH">"Life in Death"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_KHAINE"</Talent>
+<Level>"7"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>16</Page>
+</Sort>
+<Sort id="NAGGA-COLOR_312">
+<Description language="ENGLISH">"Visage of the Manticore"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (Special)"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"Willpower Bonus Yards"</Range>
+<Talent>"RULES-T0088_KHAINE"</Talent>
+<Level>"8"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>16</Page>
+</Sort>
+<Sort id="NAGGA-COLOR_313">
+<Description language="ENGLISH">"Maker of Widows"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"Special"</Target>
+<Duration>"10 minutes per sacrificed victim"</Duration>
+<Range>"Special"</Range>
+<Talent>"RULES-T0088_KHAINE"</Talent>
+<Level>"10"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>17</Page>
+</Sort>
+</DATA_SPELL>
+<DATA_WEAPON>
+<Weapon id="NAGGA-COMB_BASE_34">
+<Description language="ENGLISH">"Black Ark Sabre"</Description>
+<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Damage>"+(BATTR_S)+4"</Damage>
+<Availability>"RULES-DISPO_RARE"</Availability>
+<Reach>"RULES-WEAPR_MID"</Reach>
+<Price>"2CO"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"RULES-WEAPB10"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>22</Page>
+</Weapon>
+<Weapon id="NAGGA-COMB_BASE_35">
+<Description language="ENGLISH">"Lakelui"</Description>
+<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Damage>"+(BATTR_S)+4"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"RULES-WEAPR_MID"</Reach>
+<Price>"7CO"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"RULES-WEAPB21,RULES-WEAPB12"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>21</Page>
+</Weapon>
+<Weapon id="NAGGA-COMB_BASE_36">
+<Description language="ENGLISH">"Ghlaith"</Description>
+<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Damage>"+(BATTR_S)+4"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"RULES-WEAPR_MID"</Reach>
+<Price>"5CO 3PA"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"RULES-WEAPB10,RULES-WEAPB16"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>21</Page>
+</Weapon>
+<Weapon id="NAGGA-COMB_BASE_37">
+<Description language="ENGLISH">"Sea Dragon Cloak"</Description>
+<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"RULES-WEAPR_MID"</Reach>
+<Price>"10CO"</Price>
+<Encumbrance>"2"</Encumbrance>
+<Quality>"RULES-WEAPB18 2,RULES-WEAPB08,RULES-WEAPB09"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>23</Page>
+</Weapon>
+<Weapon id="NAGGA-COMB_PARAD_07">
+<Description language="ENGLISH">"Fighting Spines"</Description>
+<Skill>"RULES-COMPCOMB_PARAD"</Skill>
+<Damage>"+(BATTR_S)+2"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"RULES-WEAPR_SHORT"</Reach>
+<Price>"5CO"</Price>
+<Encumbrance>"3"</Encumbrance>
+<Quality>"RULES-WEAPB08,RULES-WEAPB11,RULES-WEAPB27"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>23</Page>
+</Weapon>
+<Weapon id="NAGGA-COMB_2M_15">
+<Description language="ENGLISH">"Draich"</Description>
+<Skill>"RULES-COMPCOMB_2M"</Skill>
+<Damage>"+(BATTR_S)+5"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"RULES-WEAPR_LONG"</Reach>
+<Price>"14CO"</Price>
+<Encumbrance>"3"</Encumbrance>
+<Quality>"RULES-WEAPB30,RULES-WEAPB21,RULES-WEAPB12"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>21</Page>
+</Weapon>
+<Weapon id="NAGGA-PROJ_ARB_04">
+<Description language="ENGLISH">"Repeater Crossbow"</Description>
+<Skill>"RULES-COMPPROJ_ARB"</Skill>
+<Damage>"+8"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"60"</Reach>
+<Price>"12CO"</Price>
+<Encumbrance>"3"</Encumbrance>
+<Quality>"RULES-WEAPB22,RULES-WEAPB03 6,RULES-WEAPB23 2"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>21</Page>
+</Weapon>
+<Weapon id="NAGGA-PROJ_ARB_05">
+<Description language="ENGLISH">"Repeater Handbow"</Description>
+<Skill>"RULES-COMPPROJ_ARB"</Skill>
+<Damage>"+6"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"10"</Reach>
+<Price>"14CO"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"RULES-WEAPB13,RULES-WEAPB03 4,RULES-WEAPB23 2"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>21</Page>
+</Weapon>
+<Weapon id="NAGGA-PROJ_ARB_06">
+<Description language="ENGLISH">"Ravager Harpoon"</Description>
+<Skill>"RULES-COMPPROJ_ARB"</Skill>
+<Damage>"+11"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"100"</Reach>
+<Price>"60CO"</Price>
+<Encumbrance>"4"</Encumbrance>
+<Quality>"RULES-WEAPB10,RULES-WEAPB23 3"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>23</Page>
+</Weapon>
+<Weapon id="NAGGA-MUNI_09">
+<Description language="ENGLISH">"Barbed Bolts"</Description>
+<Skill>"RULES-COMPPROJ_ARB"</Skill>
+<Damage>"+2"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"+0"</Reach>
+<Price>"8PA"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"RULES-WEAPB12,RULES-WEAPB17,NAGGA-WEAPB38"</Quality>
+<Hand>"0"</Hand>
+<Ammunition>"6"</Ammunition>
+<Page>9</Page>
+</Weapon>
+</DATA_WEAPON>
+<DATA_WEAPON_BONUS>
+<BonusMalus id="NAGGA-WEAPB38">
+<Description language="ENGLISH">"Barbed"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"+1 Bleed / 2SB"</Short>
+<Modifier>"+"</Modifier>
+<Page>21</Page>
+</BonusMalus>
+</DATA_WEAPON_BONUS>
+</DATA_BOOK>

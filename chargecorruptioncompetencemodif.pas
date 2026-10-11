@@ -1,0 +1,35 @@
+unit ChargeCorruptionCompetenceModif;
+
+{$mode ObjFPC}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, ChargeConstantes, Generics.Collections;
+
+Type
+  // S'applique à TOUTES les compétences dont l'attribut de rattachement est CodeAttribut (ex.
+  // "-20 to all Fellowship Tests", CORPHY_011) - sans modifier l'attribut lui-même (contrairement
+  // à StructureCorruptionAttributModif/<ModifyCarac>). Tag XML dédié <ModifySkillAttribut> pour
+  // ne pas surcharger <ModifySkill> d'un troisième sens (CONTEXT.md §2.7, étape 8). Le pendant
+  // <ModifySkill> "simple" (StructureCorruptionCompetenceModif) est passe au moteur generique
+  // le 11/09/2026 - voir ChargeModificateur/ChargeCorruptionModificateur ; celui-ci reste a
+  // part, un Cible unique (CodeCompetence) ne suffit pas a exprimer un broadcast par attribut.
+  StructureCorruptionCompetenceAttributModif   = Record
+        Livre:          string;
+        CodeCorruption: string;
+        CodeAttribut:   String;
+        Valeur:         Integer;
+end;
+
+  TListCorruptionCompetenceAttributModif = Specialize TList<StructureCorruptionCompetenceAttributModif>;
+
+Var
+  ListCorruptionCompetenceAttributModif: TListCorruptionCompetenceAttributModif;
+  NbCorruptionCompetenceAttributModif:   Integer;
+
+
+implementation
+
+
+end.

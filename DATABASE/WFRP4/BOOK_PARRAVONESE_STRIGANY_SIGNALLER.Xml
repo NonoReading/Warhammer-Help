@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"PARRA"</CODE_BOOK>
+<BOOK>"BOOK PARRAVONESE STRIGANY SIGNALLER"</BOOK>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP4"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"1"</COMPLETE>
+<DISCLAIMER>"Fan-made supplement Variant Humans for WFRP 4e (Parravonese, Strigany, and Signaller Career). The PDF names no author and no publisher."</DISCLAIMER>
+  <DATA_LABEL>
+<Label language="ENGLISH">
+<Text name="PARRA-BOOK PARRAVONESE STRIGANY SIGNALLER">"Parravonese, Strigany and Signaller"</Text>
+</Label>
+<Label language="FRANCAIS">
+<Text name="PARRA-BOOK PARRAVONESE STRIGANY SIGNALLER">"Parravonese, Strigany et Signaleur"</Text>
+</Label>
+</DATA_LABEL>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMPLANG_STRIG">
+<Description language="ENGLISH">"Language (Strigany)"</Description>
+<Generique>"RULES-COMPLANG_*"</Generique>
+<Page>124</Page>
+</Skill>
+  <Skill id="RULES-COMPSAVOIR_PARRAV">
+<Description language="ENGLISH">"Lore (Parravon)"</Description>
+<Generique>"RULES-COMPSAVOIR_*"</Generique>
+<Page>126</Page>
+</Skill>
+  <Skill id="RULES-COMPMETIER_SIGNAL">
+<Description language="ENGLISH">"Trade (Signaller)"</Description>
+<Generique>"RULES-COMPMETIER_*"</Generique>
+<Page>128</Page>
+</Skill>
+<Skill id="RULES-COMPSIGNES_SEMAPH">
+<Description language="ENGLISH">"Secret Signs (Semaphore Cipher)"</Description>
+<Generique>"RULES-COMPSIGNES_*"</Generique>
+<Page>129</Page>
+</Skill>
+  </DATA_SKILL_SPECIALIZATION>
+<DATA_TALENT>
+<Talent id="PARRA-T0001">
+<Description language="ENGLISH">"Blood of Strygos"</Description>
+<Short language="ENGLISH">""</Short>
+<Explanation language="ENGLISH">""</Explanation>
+<Max>"1"</Max>
+<PDF>""</PDF>
+<Test language="ENGLISH">""</Test>
+<Page>1</Page>
+</Talent>
+  </DATA_TALENT>
+<DATA_SPECIE>
+  <Specie id="PARRA-RACE_HPARR">
+<Description language="ENGLISH">"Humans (Parravonese)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+  <Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_I">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fate">"2"</Attribut>
+<Attribut name="RULES-ATTR_Resil">"1"</Attribut>
+<Attribut name="RULES-ATTR_Wound">"1xBATTR_S+2xBATTR_T+1xBATTR_WP"</Attribut>
+<Attribut name="RULES-ATTR_Supp">"3"</Attribut>
+<Attribut name="RULES-ATTR_Move">"4"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMPSOINANI"</Skill>
+  <Skill>"RULES-COMPESCAL"</Skill>
+  <Skill>"RULES-COMPCALM"</Skill>
+  <Skill>"RULES-COMPRAGOT"</Skill>
+  <Skill>"RULES-COMPCOMM"</Skill>
+  <Skill>"RULES-COMPINTUI"</Skill>
+  <Skill>"RULES-COMPLANG_BRET"</Skill>
+  <Skill>"RULES-COMPSAVOIR_HERAL"</Skill>
+  <Skill>"RULES-COMPSAVOIR_PARRAV"</Skill>
+  <Skill>"RULES-COMPCOMB_BASE"</Skill>
+  <Skill>"RULES-COMPCHEV_*"</Skill>
+  <Skill>"RULES-COMPPROJ_ARC"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T0171"</Talent>
+  <Talent>"RULES-T0103/RULES-T0078"</Talent>
+  <Talent>"RULES-T0168"</Talent>
+  <Talent>"RULES-T*"</Talent>
+  <Talent>"RULES-T*"</Talent>
+  </SUBCHAPTER_TALENT>
+  <SUBCHAPTER_CAREER>
+<Career name="RULES-WORK02">"1"</Career>
+  <Career name="RULES-WORK33">"1"</Career>
+  <Career name="RULES-WORK45">"1"</Career>
+  <Career name="RULES-WORK36">"1"</Career>
+  <Career name="RULES-WORK49">"1"</Career>
+  <Career name="RULES-WORK23">"1"</Career>
+  <Career name="RULES-WORK58">"1"</Career>
+  <Career name="RULES-WORK01">"3"</Career>
+  <Career name="RULES-WORK03">"3"</Career>
+  <Career name="RULES-WORK37">"2"</Career>
+  <Career name="RULES-WORK21">"1"</Career>
+  <Career name="RULES-WORK34">"2"</Career>
+  <Career name="RULES-WORK52">"1"</Career>
+  <Career name="RULES-WORK07">"1"</Career>
+  <Career name="RULES-WORK39">"1"</Career>
+  <Career name="RULES-WORK15">"1"</Career>
+  <Career name="RULES-WORK04">"1"</Career>
+  <Career name="RULES-WORK18">"1"</Career>
+  <Career name="RULES-WORK20">"4"</Career>
+  <Career name="RULES-WORK44">"3"</Career>
+  <Career name="RULES-WORK56">"3"</Career>
+  <Career name="RULES-WORK24">"3"</Career>
+  <Career name="RULES-WORK32">"2"</Career>
+  <Career name="RULES-WORK05">"3"</Career>
+  <Career name="RULES-WORK59">"1"</Career>
+  <Career name="RULES-WORK29">"1"</Career>
+  <Career name="RULES-WORK10">"2"</Career>
+  <Career name="RULES-WORK40">"2"</Career>
+  <Career name="RULES-WORK41">"1"</Career>
+  <Career name="RULES-WORK19">"1"</Career>
+  <Career name="RULES-WORK63">"6"</Career>
+  <Career name="RULES-WORK11">"1"</Career>
+  <Career name="RULES-WORK13">"1"</Career>
+  <Career name="RULES-WORK55">"2"</Career>
+  <Career name="RULES-WORK38">"1"</Career>
+  <Career name="RULES-WORK14">"2"</Career>
+  <Career name="RULES-WORK47">"1"</Career>
+  <Career name="RULES-WORK06">"2"</Career>
+  <Career name="RULES-WORK43">"2"</Career>
+  <Career name="RULES-WORK46">"1"</Career>
+  <Career name="RULES-WORK25">"2"</Career>
+  <Career name="RULES-WORK16">"1"</Career>
+  <Career name="RULES-WORK17">"1"</Career>
+  <Career name="RULES-WORK42">"1"</Career>
+  <Career name="RULES-WORK22">"2"</Career>
+  <Career name="RULES-WORK09">"1"</Career>
+  <Career name="RULES-WORK53">"1"</Career>
+  <Career name="RULES-WORK48">"1"</Career>
+  <Career name="RULES-WORK30">"5"</Career>
+  <Career name="RULES-WORK51">"1"</Career>
+  <Career name="RULES-WORK64">"2"</Career>
+  <Career name="RULES-WORK60">"1"</Career>
+  <Career name="RULES-WORK08">"1"</Career>
+  <Career name="RULES-WORK27">"1"</Career>
+  <Career name="RULES-WORK12">"7"</Career>
+  <Career name="RULES-WORK28">"1"</Career>
+  <Career name="RULES-WORK61">"1"</Career>
+  <Career name="RULES-WORK57">"1"</Career>
+  </SUBCHAPTER_CAREER>
+<Page>1</Page>
+</Specie>
+<Specie id="PARRA-RACE_HSTRI">
+<Description language="ENGLISH">"Humans (Strigany)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+  <Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_I">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fate">"2"</Attribut>
+<Attribut name="RULES-ATTR_Resil">"1"</Attribut>
+<Attribut name="RULES-ATTR_Wound">"1xBATTR_S+2xBATTR_T+1xBATTR_WP"</Attribut>
+<Attribut name="RULES-ATTR_Supp">"3"</Attribut>
+<Attribut name="RULES-ATTR_Move">"4"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMPSOINANI"</Skill>
+  <Skill>"RULES-COMPCHARM"</Skill>
+  <Skill>"RULES-COMPRESALC"</Skill>
+  <Skill>"RULES-COMPCOND"</Skill>
+  <Skill>"RULES-COMPEVAL"</Skill>
+  <Skill>"RULES-COMPRAGOT"</Skill>
+  <Skill>"RULES-COMPMARCH"</Skill>
+  <Skill>"RULES-COMPLANG_STRIG"</Skill>
+  <Skill>"RULES-COMPSAVOIR_REIKLAND"</Skill>
+  <Skill>"RULES-COMPCOMB_BASE"</Skill>
+  <Skill>"RULES-COMPRAMER"</Skill>
+  <Skill>"RULES-COMPNATA"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T0171"</Talent>
+  <Talent>"RULES-T0168"</Talent>
+  <Talent>"RULES-T0105"</Talent>
+  <Talent>"RULES-T*"</Talent>
+  <Talent>"RULES-T*"</Talent>
+  <Talent>"PARRA-T0001"</Talent>
+  </SUBCHAPTER_TALENT>
+  <SUBCHAPTER_CAREER>
+<Career name="RULES-WORK02">"3"</Career>
+  <Career name="RULES-WORK33">"1"</Career>
+  <Career name="RULES-WORK45">"1"</Career>
+  <Career name="RULES-WORK36">"1"</Career>
+  <Career name="RULES-WORK49">"1"</Career>
+  <Career name="RULES-WORK23">"1"</Career>
+  <Career name="RULES-WORK58">"1"</Career>
+  <Career name="RULES-WORK01">"2"</Career>
+  <Career name="RULES-WORK03">"2"</Career>
+  <Career name="RULES-WORK37">"2"</Career>
+  <Career name="RULES-WORK21">"1"</Career>
+  <Career name="RULES-WORK34">"2"</Career>
+  <Career name="RULES-WORK52">"1"</Career>
+  <Career name="RULES-WORK07">"1"</Career>
+  <Career name="RULES-WORK39">"1"</Career>
+  <Career name="RULES-WORK15">"1"</Career>
+  <Career name="RULES-WORK04">"2"</Career>
+  <Career name="RULES-WORK18">"1"</Career>
+  <Career name="RULES-WORK20">"1"</Career>
+  <Career name="RULES-WORK56">"1"</Career>
+  <Career name="RULES-WORK24">"1"</Career>
+  <Career name="RULES-WORK32">"1"</Career>
+  <Career name="RULES-WORK05">"1"</Career>
+  <Career name="RULES-WORK59">"2"</Career>
+  <Career name="RULES-WORK29">"4"</Career>
+  <Career name="RULES-WORK10">"2"</Career>
+  <Career name="RULES-WORK40">"1"</Career>
+  <Career name="RULES-WORK41">"5"</Career>
+  <Career name="RULES-WORK19">"3"</Career>
+  <Career name="RULES-WORK63">"2"</Career>
+  <Career name="RULES-WORK11">"1"</Career>
+  <Career name="RULES-WORK13">"1"</Career>
+  <Career name="RULES-WORK55">"4"</Career>
+  <Career name="RULES-WORK26">"1"</Career>
+  <Career name="RULES-WORK38">"1"</Career>
+  <Career name="RULES-WORK14">"3"</Career>
+  <Career name="RULES-WORK47">"1"</Career>
+  <Career name="RULES-WORK06">"2"</Career>
+  <Career name="RULES-WORK43">"2"</Career>
+  <Career name="RULES-WORK46">"1"</Career>
+  <Career name="RULES-WORK25">"3"</Career>
+  <Career name="RULES-WORK16">"3"</Career>
+  <Career name="RULES-WORK17">"3"</Career>
+  <Career name="RULES-WORK42">"2"</Career>
+  <Career name="RULES-WORK22">"2"</Career>
+  <Career name="RULES-WORK09">"3"</Career>
+  <Career name="RULES-WORK53">"2"</Career>
+  <Career name="RULES-WORK48">"1"</Career>
+  <Career name="RULES-WORK30">"2"</Career>
+  <Career name="RULES-WORK51">"2"</Career>
+  <Career name="RULES-WORK64">"2"</Career>
+  <Career name="RULES-WORK60">"1"</Career>
+  <Career name="RULES-WORK08">"2"</Career>
+  <Career name="RULES-WORK27">"1"</Career>
+  <Career name="RULES-WORK28">"2"</Career>
+  <Career name="RULES-WORK61">"2"</Career>
+  <Career name="RULES-WORK57">"1"</Career>
+  </SUBCHAPTER_CAREER>
+<Page>1</Page>
+</Specie>
+</DATA_SPECIE>
+<DATA_CAREER>
+<Career id="PARRA-WORK001">
+<Description language="ENGLISH">"Signaller"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPMETIER_SIGNAL"</Skill>
+  <Class>"RULES-CLASS_RANG"</Class>
+  <SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Spotter"</Description>
+<Salary>"TIERS_BRASS 4"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Operator"</Description>
+<Salary>"TIERS_SILVER 1"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Chief Signalling Officer"</Description>
+<Salary>"TIERS_SILVER 4"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Branch Captain"</Description>
+<Salary>"TIERS_GOLD 1"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+  <SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"0"</Attribut>
+<Attribut name="RULES-ATTR_BS">"3"</Attribut>
+<Attribut name="RULES-ATTR_S">"0"</Attribut>
+<Attribut name="RULES-ATTR_T">"0"</Attribut>
+<Attribut name="RULES-ATTR_I">"1"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"0"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"1"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2"</Attribut>
+<Attribut name="RULES-ATTR_WP">"1"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"4"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPESCAL">"1"</Skill>
+  <Skill name="RULES-COMPRESALC">"1"</Skill>
+  <Skill name="RULES-COMPCALM">"1"</Skill>
+  <Skill name="RULES-COMPRESIST">"1"</Skill>
+  <Skill name="RULES-COMPPARI">"1"</Skill>
+  <Skill name="RULES-COMPPRECEP">"1"</Skill>
+  <Skill name="RULES-COMPSIGNES_SEMAPH">"1"</Skill>
+  <Skill name="RULES-COMPMETIER_SIGNAL">"1"</Skill>
+  <Skill name="RULES-COMPSOINANI">"2"</Skill>
+  <Skill name="RULES-COMPDRESS_PIGEON">"2"</Skill>
+  <Skill name="RULES-COMPDIVERT_NARRA">"2"</Skill>
+  <Skill name="RULES-COMPSAVOIR_LOCAL">"2"</Skill>
+  <Skill name="RULES-COMPPROJ_ARB">"2"</Skill>
+  <Skill name="RULES-COMPLANG_BATAIL">"2"</Skill>
+  <Skill name="RULES-COMPLANG_*">"3"</Skill>
+  <Skill name="RULES-COMPSAVOIR_ING">"3"</Skill>
+  <Skill name="RULES-COMPPROJ_POUDRE">"3"</Skill>
+  <Skill name="RULES-COMPMETIER_ING">"3"</Skill>
+  <Skill name="RULES-COMPCOMM">"4"</Skill>
+  <Skill name="RULES-COMPRECH">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0139_VUE">"1"</Talent>
+  <Talent name="RULES-T0144">"1"</Talent>
+  <Talent name="RULES-T0081">"1"</Talent>
+  <Talent name="RULES-T0084">"1"</Talent>
+  <Talent name="RULES-T0004">"2"</Talent>
+  <Talent name="RULES-T0164">"2"</Talent>
+  <Talent name="RULES-T0045">"2"</Talent>
+  <Talent name="RULES-T0155">"2"</Talent>
+  <Talent name="RULES-T0094">"3"</Talent>
+  <Talent name="RULES-T0136_SOLD">"3"</Talent>
+  <Talent name="RULES-T0046">"3"</Talent>
+  <Talent name="RULES-T0015">"3"</Talent>
+  <Talent name="RULES-T0082">"4"</Talent>
+  <Talent name="RULES-T0109">"4"</Talent>
+  <Talent name="RULES-T0079">"4"</Talent>
+  <Talent name="RULES-T0157_INGE">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_085">"1"</Item>
+  <Item name="RULES-TRAP_150">"1"</Item>
+  <Item name="RULES-TRAP_034">"1"</Item>
+  <Item name="RULES-PROJ_ARB_01">"2"</Item>
+  <Item name="RULES-MUNI_01">"2"</Item>
+  <Item name="RULES-TRAP_133/RULES-TRAP_136">"2"</Item>
+  <Item name="RULES-TRAP_087">"2"</Item>
+  <Item name="RULES-TRAP_090">"3"</Item>
+  <Item name="PARRA-TRAP_001">"3"</Item>
+  <Item name="PARRA-TRAP_003">"3"</Item>
+  <Item name="RULES-TRAP_101">"3"</Item>
+  <Item name="RULES-TRAP_034 (Q)">"4"</Item>
+  <Item name="PARRA-TRAP_002">"4"</Item>
+  <Item name="PARRA-TRAP_003">"4"</Item>
+  <Item name="RULES-TRAP_099">"4"</Item>
+  </SUBCHAPTER_ITEM>
+<Page>2</Page>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_SPECIE>
+  <Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="PARRA-WORK001">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="PARRA-WORK001">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="PARRA-WORK001">"X"</Career>
+  </Entry>
+</DATA_CAREER_SPECIE>
+<DATA_TRAPPING>
+  <Trapping id="PARRA-TRAP_001">
+<Description language="ENGLISH">"Signal Tower"</Description>
+<Theme>"RULES-LAB_193"</Theme>
+<Encumbrance>"0"</Encumbrance>
+<Page>2</Page>
+</Trapping>
+<Trapping id="PARRA-TRAP_002">
+<Description language="ENGLISH">"Signal Tower Line"</Description>
+<Theme>"RULES-LAB_193"</Theme>
+<Encumbrance>"0"</Encumbrance>
+<Page>2</Page>
+</Trapping>
+<Trapping id="PARRA-TRAP_003">
+<Description language="ENGLISH">"Symbol of Rank"</Description>
+<Theme>"RULES-LAB_193"</Theme>
+<Encumbrance>"0"</Encumbrance>
+<Page>2</Page>
+</Trapping>
+</DATA_TRAPPING>
+</DATA_BOOK>

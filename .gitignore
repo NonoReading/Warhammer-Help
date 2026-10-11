@@ -1,0 +1,46 @@
+*.exe
+*.o
+*.a
+*.so
+*.dll
+*.obj
+*.pyc
+__pycache__/
+node_modules/
+*.rtf
+*.doc
+*.docx
+*.pdf
+.git/
+
+# Lazarus cache - REMPLACER lib/x86_64-win64/*.ppu PAR:
+lib/
+*.lps
+*.bak
+
+# Backups
+backup/
+BACKUP/
+LIVRES/
+CAMPAGNE/
+SAVED_CARACTERS/
+DATABASE_EXPORT/
+# session IDE Lazarus
+*.lps
+
+TRAVAIL/
+LOT_PDF.txt
+
+packagefiles.xml
+
+# Illustrations des livres officiels : hors du depot (decision de Nono, 11/10/2026, droits).
+# Les fichiers restent sur le disque, le programme les lit. Les images propres et publiables
+# vivent dans PICTURES_DEFAULT (suivi), repli de PICTURES (voir CheminImage, CONTEXT.md 2.117).
+DATABASE/*/PICTURES/
+PICTURES/
+
+# Texte extrait des livres officiels (PDF_TEXTE) : hors du depot (decision de Nono, 11/10/2026, droits).
+# Les fichiers restent sur le disque, les scripts de verification les lisent.
+PDF_TEXTE/
+XML_ERREURS.txt
+LOT_REECRIT.txt

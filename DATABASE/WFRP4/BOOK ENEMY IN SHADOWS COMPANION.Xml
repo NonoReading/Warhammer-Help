@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"ENEMY"</CODE_BOOK>
+<BOOK>"BOOK ENEMY IN SHADOWS COMPANION"</BOOK>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP4"</VERSION>
+<OFFICIAL>"1"</OFFICIAL>
+<COMPLETE>"1"</COMPLETE>
+<DISCLAIMER>"No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form by any means, electronic, mechanical, photocopying, recording or otherwise without the prior permission of the publishers. Warhammer Fantasy Roleplay 4th Edition (c) Copyright Games Workshop Limited 2020. Warhammer Fantasy Roleplay 4th Edition, the Warhammer Fantasy Roleplay 4th Edition logo, GW, Games Workshop, Warhammer, The Game of Fantasy Battles, the twin-tailed comet logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likeness thereof, are either (R) or TM, and/or (c) Games Workshop Limited, variably registered around the world, and used under licence. Cubicle 7 Entertainment and the Cubicle 7 Entertainment logo are trademarks of Cubicle 7 Entertainment Limited. All rights reserved."</DISCLAIMER>
+<DATA_LABEL>
+<Label language="ENGLISH">
+<Text name="ENEMY-BOOK ENEMY IN SHADOWS COMPANION">"Enemy In Shadows Companion"</Text>
+</Label>
+<Label language="FRANCAIS">
+<Text name="ENEMY-BOOK ENEMY IN SHADOWS COMPANION">"Enemy In Shadows Companion"</Text>
+</Label>
+</DATA_LABEL>
+<DATA_TALENT>
+<Talent id="ENEMY-T0179">
+<Description language="ENGLISH">"Disciple of Change"</Description>
+<Short language="ENGLISH">""</Short>
+<Explanation language="ENGLISH">""</Explanation>
+<Max>"1"</Max>
+<PDF>""</PDF>
+<Test language="ENGLISH">""</Test>
+<Page>75</Page>
+</Talent>
+<Talent id="ENEMY-T0180">
+<Description language="ENGLISH">"Double Life"</Description>
+<Short language="ENGLISH">""</Short>
+<Explanation language="ENGLISH">""</Explanation>
+<Max>"1"</Max>
+<PDF>""</PDF>
+<Test language="ENGLISH">""</Test>
+<Page>75</Page>
+</Talent>
+<Talent id="ENEMY-T0181">
+<Description language="ENGLISH">"Tzeentch’s Blessing"</Description>
+<Short language="ENGLISH">""</Short>
+<Explanation language="ENGLISH">""</Explanation>
+<Max>"1"</Max>
+<PDF>""</PDF>
+<Test language="ENGLISH">""</Test>
+<Page>75</Page>
+</Talent>
+<Talent id="ENEMY-T0182">
+<Description language="ENGLISH">"Suffused with Magic"</Description>
+<Short language="ENGLISH">""</Short>
+<Explanation language="ENGLISH">""</Explanation>
+<Max>"1"</Max>
+<PDF>""</PDF>
+<Test language="ENGLISH">""</Test>
+<Page>79</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_CAREER>
+<Career id="ENEMY-WORK106">
+<Description language="ENGLISH">"Cult Magus of Tzeentch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPLANG_MAG"</Skill>
+<Class>"RULES-CLASS_ACAD"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Cult Acolyte"</Description>
+<Salary>"TIERS_BRASS 1"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Cult Magus"</Description>
+<Salary>"TIERS_SILVER 4"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Chosen of Tzeentch"</Description>
+<Salary>"TIERS_GOLD 1"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Master Magus"</Description>
+<Salary>"TIERS_GOLD 2"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"0"</Attribut>
+<Attribut name="RULES-ATTR_BS">"0"</Attribut>
+<Attribut name="RULES-ATTR_S">"0"</Attribut>
+<Attribut name="RULES-ATTR_T">"4"</Attribut>
+<Attribut name="RULES-ATTR_I">"1"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"3"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"0"</Attribut>
+<Attribut name="RULES-ATTR_Int">"1"</Attribut>
+<Attribut name="RULES-ATTR_WP">"1"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPFOCAL_NECRO">"1"</Skill>
+  <Skill name="RULES-COMPDIVERT_INTERP">"1"</Skill>
+  <Skill name="RULES-COMPINTUI">"1"</Skill>
+  <Skill name="RULES-COMPLANG_MAG">"1"</Skill>
+  <Skill name="RULES-COMPSAVOIR_TZEENTCH">"1"</Skill>
+  <Skill name="RULES-COMPPRECEP">"1"</Skill>
+  <Skill name="RULES-COMPSIGNES_CULTIST">"1"</Skill>
+  <Skill name="RULES-COMPDISC_URB">"1"</Skill>
+  <Skill name="RULES-COMPCHARM">"2"</Skill>
+  <Skill name="RULES-COMPCALM">"2"</Skill>
+  <Skill name="RULES-COMPESQU">"2"</Skill>
+  <Skill name="RULES-COMPRESIST">"2"</Skill>
+  <Skill name="RULES-COMPRECH">"2"</Skill>
+  <Skill name="RULES-COMPESCAM">"2"</Skill>
+  <Skill name="RULES-COMPDIVERT_NARRA">"3"</Skill>
+  <Skill name="RULES-COMPINTIM">"3"</Skill>
+  <Skill name="RULES-COMPCOMM">"3"</Skill>
+  <Skill name="RULES-COMPCOMB_BASE">"3"</Skill>
+  <Skill name="RULES-COMPLANG_DARKTOUNGE">"4"</Skill>
+  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0078">"1"</Talent>
+  <Talent name="RULES-T0072">"1"</Talent>
+  <Talent name="ENEMY-T0181">"1"</Talent>
+  <Talent name="RULES-T0115">"1"</Talent>
+  <Talent name="RULES-T0089">"1"</Talent>
+  <Talent name="RULES-T0099">"2"</Talent>
+  <Talent name="RULES-T0172_TZEENTCH">"2"</Talent>
+  <Talent name="ENEMY-T0180">"2"</Talent>
+  <Talent name="RULES-T0109">"2"</Talent>
+  <Talent name="RULES-T0088_DEMON">"3"</Talent>
+  <Talent name="ENEMY-T0179">"3"</Talent>
+  <Talent name="RULES-T0093">"3"</Talent>
+  <Talent name="RULES-T0065">"3"</Talent>
+  <Talent name="RULES-T0122">"4"</Talent>
+  <Talent name="RULES-T0049">"4"</Talent>
+  <Talent name="RULES-T0056">"4"</Talent>
+  <Talent name="RULES-T0134_TZEENTCH">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="Cult Insignia">"1"</Item>
+<Item name="Ritual Vestments">"1"</Item>
+<Item name="Secret Tattoo">"1"</Item>
+<Item name="Chaos Grimoire">"2"</Item>
+<Item name="Ritual Vestments (Q)">"2"</Item>
+<Item name="Schemes">"2"</Item>
+<Item name="Cell of Cultists">"3"</Item>
+<Item name="Magic Item">"3"</Item>
+<Item name="Sacrificial Dagger">"3"</Item>
+<Item name="Chaos Cult">"4"</Item>
+<Item name="Terrible Destiny">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>77</Page>
+</Career>
+</DATA_CAREER>
+<DATA_SPELL>
+<Sort id="ENEMY-CHAOS_01">
+<Description language="ENGLISH">"Blast of Corruption"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (BATTR_WP)m"</Target>
+<Duration>"Instant"</Duration>
+<Range>"(ATTR_WP)m"</Range>
+<Talent>"RULES-T0172_*"</Talent>
+<Level>"8"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>79</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_02">
+<Description language="ENGLISH">"Bolt of Corruption"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"(ATTR_WP)m"</Range>
+<Talent>"RULES-T0172_*"</Talent>
+<Level>"8"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>79</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_03">
+<Description language="ENGLISH">"Daemonic Mien"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"(BATTR_Fel) Rounds+"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0172_*"</Talent>
+<Level>"8"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>79</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_04">
+<Description language="ENGLISH">"Foul Messenger"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"Special"</Target>
+<Duration>"Instant"</Duration>
+<Range>"(ATTR_Fel) miles"</Range>
+<Talent>"RULES-T0172_*"</Talent>
+<Level>"8"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>80</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_05">
+<Description language="ENGLISH">"Joyous Aspect"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"(BATTR_Fel) Rounds+"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0172_*"</Talent>
+<Level>"4"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>80</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_06">
+<Description language="ENGLISH">"Obsession"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"Special"</Target>
+<Duration>"SL days"</Duration>
+<Range>"(BATTR_I) miles"</Range>
+<Talent>"RULES-T0172_*"</Talent>
+<Level>"8"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>80</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_07">
+<Description language="ENGLISH">"Power of Chaos"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (BATTR_Fel)m"</Target>
+<Duration>"(BATTR_WP) Rounds"</Duration>
+<Range>"(ATTR_WP)m"</Range>
+<Talent>"RULES-T0172_*"</Talent>
+<Level>"4"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>80</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_08">
+<Description language="ENGLISH">"Rend Aethyr"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"Special"</Target>
+<Duration>"(BATTR_WP) Rounds+"</Duration>
+<Range>"(ATTR_WP)m"</Range>
+<Talent>"RULES-T0172_*"</Talent>
+<Level>"16"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>80</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_09">
+<Description language="ENGLISH">"Slave to Darkness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Special"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0172_*"</Talent>
+<Level>"8"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>81</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_10">
+<Description language="ENGLISH">"The Purple Hand"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Varies"</Duration>
+<Range>"(ATTR_Int)m"</Range>
+<Talent>"RULES-T0172_*"</Talent>
+<Level>"3"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>81</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_11">
+<Description language="ENGLISH">"Blue Fire of Tzeentch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE"</Target>
+<Duration>"Instant"</Duration>
+<Range>"(ATTR_Int)m"</Range>
+<Talent>"RULES-T0172_TZEENTCH"</Talent>
+<Level>"6"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>82</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_12">
+<Description language="ENGLISH">"Bolt of Change"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"(ATTR_Int)m"</Range>
+<Talent>"RULES-T0172_TZEENTCH"</Talent>
+<Level>"9"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>82</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_13">
+<Description language="ENGLISH">"Boon of Tzeentch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"(BATTR_I) days"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0172_TZEENTCH"</Talent>
+<Level>"9"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>81</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_14">
+<Description language="ENGLISH">"Curse of Tzeentch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Varies"</Duration>
+<Range>"(ATTR_Int)m"</Range>
+<Talent>"RULES-T0172_TZEENTCH"</Talent>
+<Level>"9"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>82</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_15">
+<Description language="ENGLISH">"The Flickering Flames of Fickle Fate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"Special"</Target>
+<Duration>"(BATTR_WP) Rounds+"</Duration>
+<Range>"(ATTR_Int)m"</Range>
+<Talent>"RULES-T0172_TZEENTCH"</Talent>
+<Level>"4"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>82</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_16">
+<Description language="ENGLISH">"Master of Fortune"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"(BATTR_WP) days"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0172_TZEENTCH"</Talent>
+<Level>"8"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>82</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_17">
+<Description language="ENGLISH">"Mindfire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"(ATTR_Int)m"</Range>
+<Talent>"RULES-T0172_TZEENTCH"</Talent>
+<Level>"6"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>83</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_18">
+<Description language="ENGLISH">"Pink Fire of Tzeentch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"(ATTR_Int)m"</Range>
+<Talent>"RULES-T0172_TZEENTCH"</Talent>
+<Level>"6"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>83</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_19">
+<Description language="ENGLISH">"Sense the Skein"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"1 Round"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0172_TZEENTCH"</Talent>
+<Level>"3"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>83</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_20">
+<Description language="ENGLISH">"Transformation of Tzeentch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"(BATTR_WP) Rounds"</Duration>
+<Range>"(BATTR_I)m"</Range>
+<Talent>"RULES-T0172_TZEENTCH"</Talent>
+<Level>"10"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>83</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_21">
+<Description language="ENGLISH">"Tzeentch’s Firestorm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (BATTR_I)m"</Target>
+<Duration>"(BATTR_WP) Rounds"</Duration>
+<Range>"(ATTR_Int)m"</Range>
+<Talent>"RULES-T0172_TZEENTCH"</Talent>
+<Level>"11"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>83</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_22">
+<Description language="ENGLISH">"Tzeentch’s Golden Aura"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"(BATTR_WP) Rounds"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0172_TZEENTCH"</Talent>
+<Level>"7"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>83</Page>
+</Sort>
+<Sort id="ENEMY-CHAOS_23">
+<Description language="ENGLISH">"Word of Tzeentch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"(BATTR_Int) Rounds"</Duration>
+<Range>"(BATTR_S)m"</Range>
+<Talent>"RULES-T0172_TZEENTCH"</Talent>
+<Level>"7"</Level>
+<TypSpell>"Chaos Magic"</TypSpell>
+<Page>83</Page>
+</Sort>
+</DATA_SPELL>
+<DATA_TRAPPING>
+<Trapping id="ENEMY-TRAP_01">
+<Description language="ENGLISH">"Chicken"</Description>
+<Theme>"RULES-LAB_260"</Theme>
+<Price>"5PA"</Price>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Page>24</Page>
+</Trapping>
+<Trapping id="ENEMY-TRAP_02">
+<Description language="ENGLISH">"Sheep"</Description>
+<Theme>"RULES-LAB_260"</Theme>
+<Price>"3SB"</Price>
+<Carries>"2"</Carries>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Page>24</Page>
+</Trapping>
+<Trapping id="ENEMY-TRAP_03">
+<Description language="ENGLISH">"Pig"</Description>
+<Theme>"RULES-LAB_260"</Theme>
+<Price>"4SB"</Price>
+<Carries>"3"</Carries>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Page>24</Page>
+</Trapping>
+<Trapping id="ENEMY-TRAP_04">
+<Description language="ENGLISH">"Dog"</Description>
+<Theme>"RULES-LAB_260"</Theme>
+<Price>"2CO"</Price>
+<Carries>"8"</Carries>
+<AnimalProfile>"4 25 0 20 20 35 30 0 15 10 25 7"</AnimalProfile>
+<AnimalTraits>"Skittish, Trained (Broken, Drive), Stride, Weapon +5"</AnimalTraits>
+<Availability>"RULES-DISPO_RARE"</Availability>
+<Page>24</Page>
+</Trapping>
+<Trapping id="ENEMY-TRAP_05">
+<Description language="ENGLISH">"Pony"</Description>
+<Theme>"RULES-LAB_260"</Theme>
+<Price>"10CO"</Price>
+<Carries>"14"</Carries>
+<AnimalProfile>"4 25 0 30 45 20 30 0 10 10 10 12"</AnimalProfile>
+<AnimalTraits>"Skittish, Stride (Quadruped), Trained (Drive or Mount), Weapon +6"</AnimalTraits>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Page>24</Page>
+</Trapping>
+<Trapping id="ENEMY-TRAP_06">
+<Description language="ENGLISH">"Donkey or Mule"</Description>
+<Theme>"RULES-LAB_260"</Theme>
+<Price>"5CO"</Price>
+<Carries>"14"</Carries>
+<AnimalProfile>"4 25 0 30 45 20 30 0 10 10 10 12"</AnimalProfile>
+<AnimalTraits>"Skittish, Stride (Quadruped), Trained (Drive or Mount), Weapon +6"</AnimalTraits>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Page>24</Page>
+</Trapping>
+<Trapping id="ENEMY-TRAP_07">
+<Description language="ENGLISH">"Draught Horse"</Description>
+<Theme>"RULES-LAB_260"</Theme>
+<Price>"4CO"</Price>
+<Carries>"20"</Carries>
+<AnimalProfile>"5 25 0 45 45 17 25 0 10 10 20 26"</AnimalProfile>
+<AnimalTraits>"Size (Large), Skittish, Stride (Quadruped), Trained (Broken, Mount, Drive), Weapon +7"</AnimalTraits>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Page>24</Page>
+</Trapping>
+<Trapping id="ENEMY-TRAP_08">
+<Description language="ENGLISH">"Heavy Draught Horse"</Description>
+<Theme>"RULES-LAB_260"</Theme>
+<Price>"8CO"</Price>
+<Carries>"30"</Carries>
+<AnimalProfile>"4 25 0 50 50 15 20 0 10 10 10 32"</AnimalProfile>
+<AnimalTraits>"Brute, Size (Large), Skittish, Stride (Quadruped), Trained (Broken, Drive), Weapon +7"</AnimalTraits>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Page>24</Page>
+</Trapping>
+<Trapping id="ENEMY-TRAP_09">
+<Description language="ENGLISH">"Ox"</Description>
+<Theme>"RULES-LAB_260"</Theme>
+<Price>"15CO"</Price>
+<Carries>"30"</Carries>
+<AnimalProfile>"3 25 0 55 55 15 20 0 10 10 10 32"</AnimalProfile>
+<AnimalTraits>"Bestial, Size (Large), Skittish, Stride (Quadruped), Trained (Drive), Weapon +8"</AnimalTraits>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Page>24</Page>
+</Trapping>
+<Trapping id="ENEMY-TRAP_10">
+<Description language="ENGLISH">"Riding Horse (Palfrey)"</Description>
+<Theme>"RULES-LAB_260"</Theme>
+<Price>"15CO"</Price>
+<Carries>"16"</Carries>
+<AnimalProfile>"7 25 0 30 45 20 30 0 10 10 20 24"</AnimalProfile>
+<AnimalTraits>"Size (Large), Skittish, Stride, Trained (Broken, Mount), Weapon +6"</AnimalTraits>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Page>23</Page>
+</Trapping>
+<Trapping id="ENEMY-TRAP_11">
+<Description language="ENGLISH">"Light Warhorse (Hobby)"</Description>
+<Theme>"RULES-LAB_260"</Theme>
+<Price>"70CO"</Price>
+<Carries>"18"</Carries>
+<AnimalProfile>"7 35 0 45 35 20 30 0 10 10 30 22"</AnimalProfile>
+<AnimalTraits>"Size (Large), Skittish, Stride, Trained (Broken, Mount, War), Weapon +7"</AnimalTraits>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Page>24</Page>
+</Trapping>
+<Trapping id="ENEMY-TRAP_12">
+<Description language="ENGLISH">"Heavy Warhorse (Destrier)"</Description>
+<Theme>"RULES-LAB_260"</Theme>
+<Price>"230CO"</Price>
+<Carries>"20"</Carries>
+<AnimalProfile>"4 35 0 50 50 20 20 0 10 10 30 32"</AnimalProfile>
+<AnimalTraits>"Size (Large), Skittish, Stride, Trained (Broken, Mount, War), Weapon +8"</AnimalTraits>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Page>24</Page>
+</Trapping>
+<Trapping id="ENEMY-TRAP_13">
+<Description language="ENGLISH">"Cart"</Description>
+<Theme>"RULES-LAB_262"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"20CO"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Carries>"25"</Carries>
+<VehicleProfile>"1 A;25;10;-"</VehicleProfile>
+<Page>27</Page>
+</Trapping>
+<Trapping id="ENEMY-TRAP_14">
+<Description language="ENGLISH">"Chair"</Description>
+<Theme>"RULES-LAB_262"</Theme>
+<Availability>"RULES-DISPO_RARE"</Availability>
+<Price>"25CO"</Price>
+<Encumbrance>"5"</Encumbrance>
+<Carries>"10"</Carries>
+<VehicleProfile>"2 O;20;8;-"</VehicleProfile>
+<Page>26</Page>
+</Trapping>
+<Trapping id="ENEMY-TRAP_15">
+<Description language="ENGLISH">"Coach"</Description>
+<Theme>"RULES-LAB_262"</Theme>
+<Availability>"RULES-DISPO_RARE"</Availability>
+<Price>"150CO"</Price>
+<Encumbrance>"100"</Encumbrance>
+<Carries>"80"</Carries>
+<VehicleProfile>"2-4 A;45;50;-"</VehicleProfile>
+<Page>27</Page>
+</Trapping>
+<Trapping id="ENEMY-TRAP_16">
+<Description language="ENGLISH">"Handcart"</Description>
+<Theme>"RULES-LAB_262"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"10CO"</Price>
+<Encumbrance>"5"</Encumbrance>
+<Carries>"50"</Carries>
+<VehicleProfile>"1-2 O;20;8;-"</VehicleProfile>
+<Page>27</Page>
+</Trapping>
+<Trapping id="ENEMY-TRAP_17">
+<Description language="ENGLISH">"Small Litter"</Description>
+<Theme>"RULES-LAB_262"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"30CO"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Carries>"10"</Carries>
+<VehicleProfile>"2 O;30;20;-"</VehicleProfile>
+<Page>27</Page>
+</Trapping>
+<Trapping id="ENEMY-TRAP_18">
+<Description language="ENGLISH">"Large Litter"</Description>
+<Theme>"RULES-LAB_262"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"45CO"</Price>
+<Encumbrance>"20"</Encumbrance>
+<Carries>"20"</Carries>
+<VehicleProfile>"2-4 O;35;35;-"</VehicleProfile>
+<Page>27</Page>
+</Trapping>
+<Trapping id="ENEMY-TRAP_19">
+<Description language="ENGLISH">"Light Wagon"</Description>
+<Theme>"RULES-LAB_262"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"75CO"</Price>
+<Encumbrance>"30"</Encumbrance>
+<Carries>"30"</Carries>
+<VehicleProfile>"2-4 A;50;35;-"</VehicleProfile>
+<Page>27</Page>
+</Trapping>
+<Trapping id="ENEMY-TRAP_20">
+<Description language="ENGLISH">"Medium Wagon"</Description>
+<Theme>"RULES-LAB_262"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"100CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Carries>"60"</Carries>
+<VehicleProfile>"2-6 A;50;60;-"</VehicleProfile>
+<Page>27</Page>
+</Trapping>
+<Trapping id="ENEMY-TRAP_21">
+<Description language="ENGLISH">"Heavy Wagon"</Description>
+<Theme>"RULES-LAB_262"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"125CO"</Price>
+<Encumbrance>"75"</Encumbrance>
+<Carries>"100"</Carries>
+<VehicleProfile>"2-8 A;50;95;-"</VehicleProfile>
+<Page>27</Page>
+</Trapping>
+</DATA_TRAPPING>
+<DATA_CAREER_SPECIE>
+  <Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="ENEMY-WORK106">"X"</Career>
+  </Entry>
+</DATA_CAREER_SPECIE>
+</DATA_BOOK>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"WARDA"</CODE_BOOK>
+<BOOK>"BOOK WOOD ELF WARDANCER"</BOOK>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP4"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"1"</COMPLETE>
+<DISCLAIMER>"This is a fan made career and in no way endorsed by Games Workshop or Cubicle 7. All art belongs to their respective artists. Warhammer Fantasy Roleplay 4th Edition (c) Copyright Games Workshop Limited 2018. Warhammer Fantasy Roleplay 4th Edition, the Warhammer Fantasy Roleplay 4th Edition logo, GW, Games Workshop, Warhammer, The Game of Fantasy Battles, the twin-tailed comet logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likeness thereof, are either (R) or TM, and/or (c) Games Workshop Limited, variably registered around the world, and used under licence. Cubicle 7 Entertainment and the Cubicle 7 Entertainment logo are trademarks of Cubicle 7 Entertainment Limited. All rights reserved."</DISCLAIMER>
+  <DATA_LABEL>
+<Label language="ENGLISH">
+<Text name="WARDA-BOOK WOOD ELF WARDANCER">"Wood Elf Wardancer Career"</Text>
+</Label>
+<Label language="FRANCAIS">
+<Text name="WARDA-BOOK WOOD ELF WARDANCER">"Wood Elf Wardancer Career"</Text>
+</Label>
+</DATA_LABEL>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMPSIGNES_WOODELF">
+<Description language="ENGLISH">"Secret Signs (Wood Elves)"</Description>
+<Generique>"RULES-COMPSIGNES_*"</Generique>
+<Page>129</Page>
+</Skill>
+  </DATA_SKILL_SPECIALIZATION>
+<DATA_TALENT>
+<Talent id="WARDA-T0001">
+<Description language="ENGLISH">"Talismanic Tattoos"</Description>
+<Short language="ENGLISH">""</Short>
+<Explanation language="ENGLISH">""</Explanation>
+<Max>"1"</Max>
+<PDF>""</PDF>
+<Test language="ENGLISH">""</Test>
+<Page>2</Page>
+</Talent>
+<Talent id="WARDA-T0002">
+<Description language="ENGLISH">"Shadow Dances of Loec"</Description>
+<Short language="ENGLISH">""</Short>
+<Explanation language="ENGLISH">""</Explanation>
+<Max>"1"</Max>
+<PDF>""</PDF>
+<Test language="ENGLISH">""</Test>
+<Page>2</Page>
+</Talent>
+  </DATA_TALENT>
+<DATA_CAREER>
+<Career id="WARDA-WORK001">
+<Description language="ENGLISH">"Wood Elf Wardancer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPCOMB_*"</Skill>
+  <Class>"RULES-CLASS_RANG"</Class>
+  <SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Trickster"</Description>
+<Salary>"TIERS_BRASS 4"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Wardancer"</Description>
+<Salary>"TIERS_SILVER 1"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Feastmaster"</Description>
+<Salary>"TIERS_SILVER 3"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Bladesinger"</Description>
+<Salary>"TIERS_SILVER 5"</Salary>
+</Level>
+  </SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"1"</Attribut>
+<Attribut name="RULES-ATTR_BS">"0"</Attribut>
+<Attribut name="RULES-ATTR_S">"2"</Attribut>
+<Attribut name="RULES-ATTR_T">"0"</Attribut>
+<Attribut name="RULES-ATTR_I">"1"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"1"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"0"</Attribut>
+<Attribut name="RULES-ATTR_Int">"0"</Attribut>
+<Attribut name="RULES-ATTR_WP">"3"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"4"</Attribut>
+</SUBCHAPTER_ATTR>
+  <SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPATHL">"1"</Skill>
+  <Skill name="RULES-COMPESQU">"1"</Skill>
+  <Skill name="RULES-COMPRESIST">"1"</Skill>
+  <Skill name="RULES-COMPINTUI">"1"</Skill>
+  <Skill name="RULES-COMPCOMB_*">"1"</Skill>
+  <Skill name="RULES-COMPREPRES_DANS">"1"</Skill>
+  <Skill name="RULES-COMPDISC_RURAL">"1"</Skill>
+  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
+  <Skill name="RULES-COMPCALM">"2"</Skill>
+  <Skill name="RULES-COMPCOMB_PARAD">"2"</Skill>
+  <Skill name="RULES-COMPSIGNES_WOODELF">"2"</Skill>
+  <Skill name="RULES-COMPESCAM">"2"</Skill>
+  <Skill name="RULES-COMPPIST">"2"</Skill>
+  <Skill name="RULES-COMPPRECEP">"2"</Skill>
+  <Skill name="RULES-COMPCHARM">"3"</Skill>
+  <Skill name="RULES-COMPDIVERT_NARRA">"3"</Skill>
+  <Skill name="RULES-COMPSAVOIR_HIST">"3"</Skill>
+  <Skill name="RULES-COMPMUSIC_*">"3"</Skill>
+  <Skill name="RULES-COMPCOMM">"4"</Skill>
+  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0004">"1"</Talent>
+  <Talent name="RULES-T0096">"1"</Talent>
+  <Talent name="RULES-T0112">"1"</Talent>
+  <Talent name="WARDA-T0001">"1"</Talent>
+  <Talent name="RULES-T0028">"2"</Talent>
+  <Talent name="RULES-T0162">"2"</Talent>
+  <Talent name="RULES-T0025">"2"</Talent>
+  <Talent name="WARDA-T0002">"2"</Talent>
+  <Talent name="RULES-T0095">"3"</Talent>
+  <Talent name="RULES-T0168">"3"</Talent>
+  <Talent name="RULES-T0037">"3"</Talent>
+  <Talent name="RULES-T0130">"3"</Talent>
+  <Talent name="RULES-T0061">"4"</Talent>
+  <Talent name="RULES-T0132_*">"4"</Talent>
+  <Talent name="RULES-T0008">"4"</Talent>
+  <Talent name="RULES-T0062">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-COMB_BASE_*">"1"</Item>
+<Item name="RULES-COMB_BASE_*">"1"</Item>
+  <Item name="buckskins">"1"</Item>
+<Item name="war paint">"1"</Item>
+<Item name="WARDA-COMB_BASE_001/ARCH1-COMB_BASE_25">"2"</Item>
+  <Item name="elven girdle">"2"</Item>
+<Item name="buckskins">"2"</Item>
+<Item name="tall tales and a storytellers finesse">"3"</Item>
+<Item name="a troupe of Wardancers">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>1</Page>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_SPECIE>
+  <Entry>
+<Specie>"RULES-SPECIE_WELF"</Specie>
+<Career name="WARDA-WORK001">"X"</Career>
+  </Entry>
+</DATA_CAREER_SPECIE>
+<DATA_WEAPON>
+<Weapon id="WARDA-COMB_BASE_001">
+<Description language="ENGLISH">"Asrai War Blade"</Description>
+<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Damage>"+(BATTR_S)+3"</Damage>
+<Availability>"RULES-DISPO_RARE"</Availability>
+<Reach>"RULES-WEAPR_MID"</Reach>
+<Price>"3CO"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"RULES-WEAPB14"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>1</Page>
+</Weapon>
+  </DATA_WEAPON>
+</DATA_BOOK>

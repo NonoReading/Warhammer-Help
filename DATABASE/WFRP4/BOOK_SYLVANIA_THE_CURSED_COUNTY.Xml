@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"SYLVA"</CODE_BOOK>
+<BOOK>"BOOK SYLVANIA THE CURSED COUNTY"</BOOK>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP4"</VERSION>
+<OFFICIAL>"1"</OFFICIAL>
+<COMPLETE>"1"</COMPLETE>
+<DISCLAIMER>"No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form by any means, electronic, mechanical, photocopying, recording, or otherwise, without the prior permission of the publishers. Warhammer Fantasy Roleplay (c) Copyright Games Workshop Limited 2026. Warhammer Fantasy Roleplay 5th Edition, the Warhammer Fantasy Roleplay 5th Edition logo, GW, Games Workshop, Warhammer, The Game of Fantasy Battles, the twin-tailed comet logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likeness thereof, are either (R) or TM, and/or (c) Games Workshop Limited, variably registered around the world, and used under licence."</DISCLAIMER>
+<DATA_LABEL>
+<Label language="ENGLISH">
+<Text name="SYLVA-BOOK SYLVANIA THE CURSED COUNTY">"Sylvania - The Cursed County"</Text>
+</Label>
+<Label language="FRANCAIS">
+<Text name="SYLVA-BOOK SYLVANIA THE CURSED COUNTY">"Sylvania - The Cursed County"</Text>
+</Label>
+</DATA_LABEL>
+<DATA_WEAPON>
+<Weapon id="SYLVA-PROJ_ARB_01">
+<Description language="ENGLISH">"Catechist Heavy Crossbow"</Description>
+<Skill>"RULES-COMPPROJ_ARB"</Skill>
+<Damage>"+9"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"60"</Reach>
+<Price>"10CO"</Price>
+<Encumbrance>"3"</Encumbrance>
+<Quality>"RULES-WEAPB22,RULES-WEAPB23 2"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>40</Page>
+</Weapon>
+<Weapon id="SYLVA-COMB_BASE_01">
+<Description language="ENGLISH">"Catechist Stake"</Description>
+<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Damage>"-"</Damage>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Reach>"RULES-WEAPR_PERSO"</Reach>
+<Price>"2PA"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"RULES-WEAPB12,RULES-WEAPB10"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>40</Page>
+</Weapon>
+</DATA_WEAPON>
+<DATA_TRAPPING>
+<Trapping id="SYLVA-TRAP_001">
+<Description language="ENGLISH">"Ale, pint (Sylvania)"</Description>
+<Theme>"RULES-LAB_192"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"5SB"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>20</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_002">
+<Description language="ENGLISH">"Ale, keg (Sylvania)"</Description>
+<Theme>"RULES-LAB_192"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"5PA"</Price>
+<Encumbrance>"2"</Encumbrance>
+<Page>20</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_003">
+<Description language="ENGLISH">"Meal (Sylvania)"</Description>
+<Theme>"RULES-LAB_192"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"1PA 6SB"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>20</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_004">
+<Description language="ENGLISH">"Rations, 1 day (Sylvania)"</Description>
+<Theme>"RULES-LAB_192"</Theme>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Price>"3PA 1SB"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>20</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_005">
+<Description language="ENGLISH">"Room, common/night (Sylvania)"</Description>
+<Theme>"RULES-LAB_192"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"15SB"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>20</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_006">
+<Description language="ENGLISH">"Room, private/night (Sylvania)"</Description>
+<Theme>"RULES-LAB_192"</Theme>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Price>"1PA 10SB"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>20</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_007">
+<Description language="ENGLISH">"Spirits, bottle (Sylvania)"</Description>
+<Theme>"RULES-LAB_192"</Theme>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Price>"2PA"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>20</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_008">
+<Description language="ENGLISH">"Spirits, drink (Sylvania)"</Description>
+<Theme>"RULES-LAB_192"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"6SB"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>20</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_009">
+<Description language="ENGLISH">"Stables/night (Sylvania)"</Description>
+<Theme>"RULES-LAB_192"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"1PA 3SB"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>20</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_010">
+<Description language="ENGLISH">"Wine, bottle (Sylvania)"</Description>
+<Theme>"RULES-LAB_192"</Theme>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Price>"1PA"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>20</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_011">
+<Description language="ENGLISH">"Wine, drink (Sylvania)"</Description>
+<Theme>"RULES-LAB_192"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"6SB"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>20</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_012">
+<Description language="ENGLISH">"Fen Moss Poultice"</Description>
+<Theme>"RULES-LAB_198"</Theme>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Price>"10PA"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>32</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_013">
+<Description language="ENGLISH">"Garlic Ropes"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"2PA"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>32</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_014">
+<Description language="ENGLISH">"Graveroot"</Description>
+<Theme>"RULES-LAB_198"</Theme>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Price>"4PA"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>32</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_015">
+<Description language="ENGLISH">"High Quality Sword"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Availability>"RULES-DISPO_UNIQUE"</Availability>
+<Price>"1CO"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Page>32</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_016">
+<Description language="ENGLISH">"Morr Oil"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Price>"1CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>32</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_017">
+<Description language="ENGLISH">"Nightwatch Candle"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Price>"1PA"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>32</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_018">
+<Description language="ENGLISH">"Scroll Case with Map of Drakenhof Castle"</Description>
+<Theme>"RULES-LAB_194"</Theme>
+<Availability>"RULES-DISPO_UNIQUE"</Availability>
+<Price>"2CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>32</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_019">
+<Description language="ENGLISH">"Sylvanian Panpipes"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"1CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>32</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_020">
+<Description language="ENGLISH">"Stand Draught"</Description>
+<Theme>"RULES-LAB_198"</Theme>
+<Availability>"RULES-DISPO_RARE"</Availability>
+<Price>"1CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>32</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_021">
+<Description language="ENGLISH">"Waldenloaf"</Description>
+<Theme>"RULES-LAB_192"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"2PA"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>32</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_022">
+<Description language="ENGLISH">"Punt"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Price>"4CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"40"</Carries>
+<BoatProfile>"2;-;3 (1);-;12;30;10"</BoatProfile>
+<Page>21</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_023">
+<Description language="ENGLISH">"Flat Bottomed Barge"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Price>"335CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"400"</Carries>
+<BoatProfile>"4;3 (3);3 (4);-;25;45;75"</BoatProfile>
+<Page>21</Page>
+</Trapping>
+<Trapping id="SYLVA-TRAP_024">
+<Description language="ENGLISH">"Strigani Narrowboat"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Price>"825CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"500"</Carries>
+<BoatProfile>"4;4 (3);4 (4);+2 SL;30;45;90"</BoatProfile>
+<AnimalTraits>"Smoothing"</AnimalTraits>
+<Page>21</Page>
+</Trapping>
+</DATA_TRAPPING>
+</DATA_BOOK>

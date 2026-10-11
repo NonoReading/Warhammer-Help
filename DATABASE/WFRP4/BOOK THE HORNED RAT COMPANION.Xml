@@ -1,0 +1,1024 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"HORNE"</CODE_BOOK>
+<BOOK>"BOOK THE HORNED RAT COMPANION"</BOOK>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP4"</VERSION>
+<OFFICIAL>"1"</OFFICIAL>
+<COMPLETE>"1"</COMPLETE>
+<DISCLAIMER>"No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form by any means, electronic, mechanical, photocopying, recording or otherwise without the prior permission of the publishers. Warhammer Fantasy Roleplay 4th Edition (c) Copyright Games Workshop Limited 2021. Warhammer Fantasy Roleplay 4th Edition, the Warhammer Fantasy Roleplay 4th Edition logo, GW, Games Workshop, Warhammer, The Game of Fantasy Battles, the twin-tailed comet logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likeness thereof, are either (R) or TM, and/or (c) Games Workshop Limited, variably registered around the world, and used under licence. Cubicle 7 Entertainment and the Cubicle 7 Entertainment logo are trademarks of Cubicle 7 Entertainment Limited. All rights reserved."</DISCLAIMER>
+<DATA_LABEL>
+<Label language="ENGLISH">
+<Text name="HORNE-BOOK THE HORNED RAT COMPANION">"The Horned Rat Companion"</Text>
+</Label>
+<Label language="FRANCAIS">
+<Text name="HORNE-BOOK THE HORNED RAT COMPANION">"The Horned Rat Companion"</Text>
+</Label>
+</DATA_LABEL>
+<DATA_TALENT>
+<Talent id="HORNE-T0196">
+<Description language="ENGLISH">"Tail Fighting"</Description>
+<Short language="ENGLISH">""</Short>
+<Explanation language="ENGLISH">""</Explanation>
+<Max>"1"</Max>
+<PDF>""</PDF>
+<Test language="ENGLISH">"Any Melee Test involving a Tail weapon"</Test>
+<Page>34</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="RULES-T0088_RUIN">
+<Description language="ENGLISH">"Arcane Magic (Ruin)"</Description>
+  <Generique>"RULES-T0088_*"</Generique>
+<Page>133</Page>
+</Talent>
+<Talent id="RULES-T0088_PLAGUE">
+<Description language="ENGLISH">"Arcane Magic (Plague)"</Description>
+  <Generique>"RULES-T0088_*"</Generique>
+<Page>133</Page>
+</Talent>
+<Talent id="RULES-T0088_STEALTH">
+<Description language="ENGLISH">"Arcane Magic (Stealth)"</Description>
+  <Generique>"RULES-T0088_*"</Generique>
+<Page>133</Page>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+<DATA_CAREER>
+<Career id="HORNE-WORK117">
+<Description language="ENGLISH">"Ironbreaker"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Class>"RULES-CLASS_WARR"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Tunnel Fighter"</Description>
+<Salary>"TIERS_BRASS 4"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Ironbreaker"</Description>
+<Salary>"TIERS_SILVER 3"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Ironbeard"</Description>
+<Salary>"TIERS_GOLD 1"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Old Guard"</Description>
+<Salary>"TIERS_GOLD 3"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"1"</Attribut>
+<Attribut name="RULES-ATTR_BS">"0"</Attribut>
+<Attribut name="RULES-ATTR_S">"2"</Attribut>
+<Attribut name="RULES-ATTR_T">"1"</Attribut>
+<Attribut name="RULES-ATTR_I">"3"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"0"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"0"</Attribut>
+<Attribut name="RULES-ATTR_Int">"0"</Attribut>
+<Attribut name="RULES-ATTR_WP">"1"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"4"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPATHL">"1"</Skill>
+  <Skill name="RULES-COMPESCAL">"1"</Skill>
+  <Skill name="RULES-COMPCALM">"1"</Skill>
+  <Skill name="RULES-COMPESQU">"1"</Skill>
+  <Skill name="RULES-COMPRESIST">"1"</Skill>
+  <Skill name="RULES-COMPDIVERT_CHANT">"1"</Skill>
+  <Skill name="RULES-COMPINTIM">"1"</Skill>
+  <Skill name="RULES-COMPLANG_BATAIL">"1"</Skill>
+  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
+  <Skill name="RULES-COMPDISC_*">"1"</Skill>
+  <Skill name="RULES-COMPRESALC">"2"</Skill>
+  <Skill name="RULES-COMPRAGOT">"2"</Skill>
+  <Skill name="RULES-COMPCOMM">"2"</Skill>
+  <Skill name="RULES-COMPSAVOIR_GEOL">"2"</Skill>
+  <Skill name="RULES-COMPCOMB_PARAD">"2"</Skill>
+  <Skill name="RULES-COMPPROJ_EXPLO">"2"</Skill>
+  <Skill name="RULES-COMPINTUI">"3"</Skill>
+  <Skill name="RULES-COMPCOMM">"3"</Skill>
+  <Skill name="RULES-COMPCOMB_2M">"3"</Skill>
+  <Skill name="RULES-COMPPRECEP">"3"</Skill>
+  <Skill name="RULES-COMPSAVOIR_GUERRE">"4"</Skill>
+  <Skill name="RULES-COMPORIENT">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0036">"1"</Talent>
+  <Talent name="RULES-T0027">"1"</Talent>
+  <Talent name="RULES-T0037">"1"</Talent>
+  <Talent name="RULES-T0067">"1"</Talent>
+  <Talent name="RULES-T0011">"2"</Talent>
+  <Talent name="RULES-T0163">"2"</Talent>
+  <Talent name="RULES-T0121">"2"</Talent>
+  <Talent name="RULES-T0076">"2"</Talent>
+  <Talent name="RULES-T0061">"3"</Talent>
+  <Talent name="RULES-T0095">"3"</Talent>
+  <Talent name="RULES-T0062">"3"</Talent>
+  <Talent name="RULES-T0138">"3"</Talent>
+  <Talent name="RULES-T0122">"4"</Talent>
+  <Talent name="RULES-T0050">"4"</Talent>
+  <Talent name="RULES-T0053">"4"</Talent>
+  <Talent name="RULES-T0025">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-ARMO_14">"1"</Item>
+<Item name="RULES-ARMO_12">"1"</Item>
+<Item name="RULES-ARMO_10">"1"</Item>
+<Item name="RULES-ARMO_13">"1"</Item>
+<Item name="RULES-COMB_BASE_08">"1"</Item>
+<Item name="UPINA-COMB_BASE_11">"1"</Item>
+<Item name="ARCH1-PROJ_EXPLO_03">"2"</Item>
+<Item name="RULES-COMB_BASE_* (Q)">"2"</Item>
+<Item name="RULES-COMB_2M_02">"3"</Item>
+<Item name="RULES-ARMO_14(Q)">"3"</Item>
+<Item name="RULES-ARMO_12(Q)">"3"</Item>
+<Item name="RULES-ARMO_10(Q)">"3"</Item>
+<Item name="RULES-ARMO_13(Q)">"3"</Item>
+<Item name="Unit of Ironbreakers">"4"</Item>
+<Item name="Weapon Bearing a Master Rune">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>81</Page>
+</Career>
+</DATA_CAREER>
+<DATA_SPELL>
+<Sort id="HORNE-PETTY_01">
+<Description language="ENGLISH">"Favour of the Horned Rat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"13 hours"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0089"</Talent>
+<Level>"0"</Level>
+<TypSpell>"Minor Magic"</TypSpell>
+<Page>42</Page>
+</Sort>
+<Sort id="HORNE-PETTY_02">
+<Description language="ENGLISH">"Ghostly Flame"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"1 hour or Instant (see desc)"</Duration>
+<Range>"(ATTR_WP)m"</Range>
+<Talent>"RULES-T0089"</Talent>
+<Level>"0"</Level>
+<TypSpell>"Minor Magic"</TypSpell>
+<Page>42</Page>
+</Sort>
+<Sort id="HORNE-PETTY_03">
+<Description language="ENGLISH">"Mark of the Horned Rat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"1d10 hours"</Duration>
+<Range>"(BATTR_WP)m"</Range>
+<Talent>"RULES-T0089"</Talent>
+<Level>"0"</Level>
+<TypSpell>"Minor Magic"</TypSpell>
+<Page>42</Page>
+</Sort>
+<Sort id="HORNE-PETTY_04">
+<Description language="ENGLISH">"Rat Thrall"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1 (see desc)"</Target>
+<Duration>"1d10 hours"</Duration>
+<Range>"(ATTR_WP)m"</Range>
+<Talent>"RULES-T0089"</Talent>
+<Level>"0"</Level>
+<TypSpell>"Minor Magic"</TypSpell>
+<Page>43</Page>
+</Sort>
+<Sort id="HORNE-RUIN_01">
+<Description language="ENGLISH">"Vector"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"24 hours"</Duration>
+<Range>"(BATTR_WP)m"</Range>
+<Talent>"RULES-T0088_RUIN"</Talent>
+<Level>"0"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>43</Page>
+</Sort>
+<Sort id="HORNE-RUIN_02">
+<Description language="ENGLISH">"Wrack"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"(BATTR_WP)m"</Range>
+<Talent>"RULES-T0088_RUIN"</Talent>
+<Level>"0"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>43</Page>
+</Sort>
+<Sort id="HORNE-RUIN_03">
+<Description language="ENGLISH">"Death Frenzy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"(BATTR_WP) Rounds+"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_RUIN"</Talent>
+<Level>"5"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>44</Page>
+</Sort>
+<Sort id="HORNE-RUIN_04">
+<Description language="ENGLISH">"Musk of Terror"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (BATTR_WP)m"</Target>
+<Duration>"(BATTR_WP) Rounds+"</Duration>
+<Range>"(ATTR_WP)m"</Range>
+<Talent>"RULES-T0088_RUIN"</Talent>
+<Level>"9"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>44</Page>
+</Sort>
+<Sort id="HORNE-RUIN_05">
+<Description language="ENGLISH">"Skitterleap"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_RUIN"</Talent>
+<Level>"6"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>44</Page>
+</Sort>
+<Sort id="HORNE-RUIN_06">
+<Description language="ENGLISH">"Crack's Call"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (ATTR_WP)m"</Target>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_RUIN"</Talent>
+<Level>"11"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>45</Page>
+</Sort>
+<Sort id="HORNE-RUIN_07">
+<Description language="ENGLISH">"Crackling Doom"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"(BATTR_WP)m"</Range>
+<Talent>"RULES-T0088_RUIN"</Talent>
+<Level>"5"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>45</Page>
+</Sort>
+<Sort id="HORNE-RUIN_08">
+<Description language="ENGLISH">"Flensing Ruin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"(BATTR_WP)m"</Range>
+<Talent>"RULES-T0088_RUIN"</Talent>
+<Level>"6"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>45</Page>
+</Sort>
+<Sort id="HORNE-RUIN_09">
+<Description language="ENGLISH">"Howling Warpgale"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (ATTR_WP)m"</Target>
+<Duration>"(BATTR_WP) Rounds+"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_RUIN"</Talent>
+<Level>"7"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>45</Page>
+</Sort>
+<Sort id="HORNE-RUIN_10">
+<Description language="ENGLISH">"Scorch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (BATTR_WP)m"</Target>
+<Duration>"Instant"</Duration>
+<Range>"(ATTR_WP)m"</Range>
+<Talent>"RULES-T0088_RUIN"</Talent>
+<Level>"8"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>45</Page>
+</Sort>
+<Sort id="HORNE-RUIN_11">
+<Description language="ENGLISH">"Warp Lightning"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"(ATTR_WP)m"</Range>
+<Talent>"RULES-T0088_RUIN"</Talent>
+<Level>"7"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>45</Page>
+</Sort>
+<Sort id="HORNE-RUIN_12">
+<Description language="ENGLISH">"Warp Shield"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"(BATTR_WP) Rounds+"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_RUIN"</Talent>
+<Level>"6"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>46</Page>
+</Sort>
+<Sort id="HORNE-RUIN_13">
+<Description language="ENGLISH">"Warp Storm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (BATTR_WP)m"</Target>
+<Duration>"(BATTR_WP) Rounds"</Duration>
+<Range>"(ATTR_WP)m"</Range>
+<Talent>"RULES-T0088_RUIN"</Talent>
+<Level>"12"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>46</Page>
+</Sort>
+<Sort id="HORNE-PLAGUE_01">
+<Description language="ENGLISH">"Pestilent Breath"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (2-yard-wide line)"</Target>
+<Duration>"Instant"</Duration>
+<Range>"(BATTR_WP)m"</Range>
+<Talent>"RULES-T0088_PLAGUE"</Talent>
+<Level>"8"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>46</Page>
+</Sort>
+<Sort id="HORNE-PLAGUE_02">
+<Description language="ENGLISH">"Poisonous Pustule"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"(BATTR_WP) hours"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_PLAGUE"</Talent>
+<Level>"5"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>46</Page>
+</Sort>
+<Sort id="HORNE-PLAGUE_03">
+<Description language="ENGLISH">"Bless with Filth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"(BATTR_WP) minutes+"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_PLAGUE"</Talent>
+<Level>"6"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>47</Page>
+</Sort>
+<Sort id="HORNE-PLAGUE_04">
+<Description language="ENGLISH">"Cloud of Corruption"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (5-yard radius)"</Target>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_PLAGUE"</Talent>
+<Level>"7"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>47</Page>
+</Sort>
+<Sort id="HORNE-PLAGUE_05">
+<Description language="ENGLISH">"Mantle of Contagion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"(BATTR_WP) days"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_PLAGUE"</Talent>
+<Level>"4"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>47</Page>
+</Sort>
+<Sort id="HORNE-PLAGUE_06">
+<Description language="ENGLISH">"Putrefy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (BATTR_WP)m"</Target>
+<Duration>"Instant"</Duration>
+<Range>"(ATTR_WP)m"</Range>
+<Talent>"RULES-T0088_PLAGUE"</Talent>
+<Level>"8"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>47</Page>
+</Sort>
+<Sort id="HORNE-PLAGUE_07">
+<Description language="ENGLISH">"Toxic Rain"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (BATTR_WP)m"</Target>
+<Duration>"(BATTR_WP) Rounds+"</Duration>
+<Range>"(ATTR_WP)m"</Range>
+<Talent>"RULES-T0088_PLAGUE"</Talent>
+<Level>"10"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>47</Page>
+</Sort>
+<Sort id="HORNE-PLAGUE_08">
+<Description language="ENGLISH">"Veil of Flies"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (BATTR_WP)m"</Target>
+<Duration>"(BATTR_WP) Rounds+"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_PLAGUE"</Talent>
+<Level>"6"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>48</Page>
+</Sort>
+<Sort id="HORNE-PLAGUE_09">
+<Description language="ENGLISH">"Weeping Wound"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"(BATTR_WP) Rounds"</Duration>
+<Range>"(ATTR_WP)m"</Range>
+<Talent>"RULES-T0088_PLAGUE"</Talent>
+<Level>"9"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>48</Page>
+</Sort>
+<Sort id="HORNE-PLAGUE_10">
+<Description language="ENGLISH">"Wither"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"(ATTR_WP)m"</Range>
+<Talent>"RULES-T0088_PLAGUE"</Talent>
+<Level>"6"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>48</Page>
+</Sort>
+<Sort id="HORNE-STEALTH_01">
+<Description language="ENGLISH">"Swiftscamper"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"(BATTR_WP) + SL Rounds"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_STEALTH"</Talent>
+<Level>"4"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>48</Page>
+</Sort>
+<Sort id="HORNE-STEALTH_02">
+<Description language="ENGLISH">"Armour of Darkness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"(BATTR_WP) minutes"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_STEALTH"</Talent>
+<Level>"6"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>48</Page>
+</Sort>
+<Sort id="HORNE-STEALTH_03">
+<Description language="ENGLISH">"Black Whirlwind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (BATTR_WP)m"</Target>
+<Duration>"(BATTR_WP) Rounds+"</Duration>
+<Range>"(ATTR_WP)m"</Range>
+<Talent>"RULES-T0088_STEALTH"</Talent>
+<Level>"12"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>49</Page>
+</Sort>
+<Sort id="HORNE-STEALTH_04">
+<Description language="ENGLISH">"Buoyant Passage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"(BATTR_WP) minutes"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_STEALTH"</Talent>
+<Level>"6"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>49</Page>
+</Sort>
+<Sort id="HORNE-STEALTH_05">
+<Description language="ENGLISH">"Flash-Bang"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (BATTR_WP)m"</Target>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_STEALTH"</Talent>
+<Level>"6"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>49</Page>
+</Sort>
+<Sort id="HORNE-STEALTH_06">
+<Description language="ENGLISH">"Pelt of the Assassin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"(BATTR_WP) minutes+"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_STEALTH"</Talent>
+<Level>"8"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>49</Page>
+</Sort>
+<Sort id="HORNE-STEALTH_07">
+<Description language="ENGLISH">"Stickypaws"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"(BATTR_WP) minutes"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_STEALTH"</Talent>
+<Level>"8"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>49</Page>
+</Sort>
+<Sort id="HORNE-STEALTH_08">
+<Description language="ENGLISH">"Traceless Demise"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"Up to (BATTR_WP) targets"</Target>
+<Duration>"(BATTR_WP) days"</Duration>
+<Range>"(BATTR_WP)m"</Range>
+<Talent>"RULES-T0088_STEALTH"</Talent>
+<Level>"11"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>49</Page>
+</Sort>
+<Sort id="HORNE-STEALTH_09">
+<Description language="ENGLISH">"Warp Star Infusion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"Special"</Target>
+<Duration>"(BATTR_WP) Rounds+"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_STEALTH"</Talent>
+<Level>"8"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>49</Page>
+</Sort>
+</DATA_SPELL>
+<DATA_WEAPON>
+<Weapon id="HORNE-COMB_BASE_01">
+<Description language="ENGLISH">"Punch Dagger"</Description>
+<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"RULES-WEAPR_CLOSE"</Reach>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"RULES-WEAPB08,RULES-WEAPB20"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>34</Page>
+</Weapon>
+<Weapon id="HORNE-COMB_BASE_02">
+<Description language="ENGLISH">"Rat Claws"</Description>
+<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Damage>"+(BATTR_S)+2"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"RULES-WEAPR_CLOSE"</Reach>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"RULES-WEAPB08,RULES-WEAPB20"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>34</Page>
+</Weapon>
+<Weapon id="HORNE-COMB_BASE_03">
+<Description language="ENGLISH">"Tail Weapon"</Description>
+<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"RULES-WEAPR_SHORT"</Reach>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"RULES-WEAPB09,RULES-WEAPB26"</Quality>
+<Hand>"0"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>34</Page>
+</Weapon>
+<Weapon id="HORNE-COMB_FLEAU_01">
+<Description language="ENGLISH">"Plague Censer"</Description>
+<Skill>"RULES-COMPCOMB_FLEAU"</Skill>
+<Damage>"+(BATTR_S)+4"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"RULES-WEAPR_LONG"</Reach>
+<Encumbrance>"3"</Encumbrance>
+<Quality>"RULES-WEAPB09,RULES-WEAPB21,RULES-WEAPB26,RULES-WEAPB25,HORNE-WEAPB45"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>34</Page>
+</Weapon>
+<Weapon id="HORNE-COMB_HAST_01">
+<Description language="ENGLISH">"Beast-Prod"</Description>
+<Skill>"RULES-COMPCOMB_HAST"</Skill>
+<Damage>"+(BATTR_S)+4"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"RULES-WEAPR_LONG"</Reach>
+<Encumbrance>"3"</Encumbrance>
+<Quality>"HORNE-WEAPB44"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>34</Page>
+</Weapon>
+<Weapon id="HORNE-COMB_HAST_02">
+<Description language="ENGLISH">"Things-Catcher"</Description>
+<Skill>"RULES-COMPCOMB_HAST"</Skill>
+<Damage>"+(BATTR_S)+2"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"RULES-WEAPR_LONG"</Reach>
+<Encumbrance>"3"</Encumbrance>
+<Quality>"RULES-WEAPB17"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>34</Page>
+</Weapon>
+<Weapon id="HORNE-COMB_BASE_04">
+<Description language="ENGLISH">"Blade of Corruption"</Description>
+<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Damage>"+(BATTR_S)+4"</Damage>
+<Availability>"RULES-DISPO_UNIQUE"</Availability>
+<Reach>"RULES-WEAPR_MID"</Reach>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"-"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>33</Page>
+</Weapon>
+<Weapon id="HORNE-ENTRA_01">
+<Description language="ENGLISH">"Electro-Whip"</Description>
+<Skill>"RULES-COMPPROJ_ENTRAV"</Skill>
+<Damage>"+(BATTR_S)+2"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"6"</Reach>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"HORNE-WEAPB44,RULES-WEAPB17"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>38</Page>
+</Weapon>
+<Weapon id="HORNE-ENTRA_02">
+<Description language="ENGLISH">"Snare-Net"</Description>
+<Skill>"RULES-COMPPROJ_ENTRAV"</Skill>
+<Damage>"0"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"4"</Reach>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"RULES-WEAPB17"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>38</Page>
+</Weapon>
+<Weapon id="HORNE-PROJ_ING_01">
+<Description language="ENGLISH">"Doomrocket"</Description>
+<Skill>"RULES-COMPPROJ_ING"</Skill>
+<Damage>"+12"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"50"</Reach>
+<Encumbrance>"4"</Encumbrance>
+<Quality>"RULES-WEAPB24,RULES-WEAPB21"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>38</Page>
+</Weapon>
+<Weapon id="HORNE-PROJ_ING_02">
+<Description language="ENGLISH">"Poisoned Wind Mortar"</Description>
+<Skill>"RULES-COMPPROJ_ING"</Skill>
+<Damage>"-"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"100"</Reach>
+<Encumbrance>"3"</Encumbrance>
+<Quality>"-"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>35</Page>
+</Weapon>
+<Weapon id="HORNE-PROJ_ING_03">
+<Description language="ENGLISH">"Ratling Gun"</Description>
+<Skill>"RULES-COMPPROJ_ING"</Skill>
+<Damage>"+9"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"20"</Reach>
+<Encumbrance>"3"</Encumbrance>
+<Quality>"RULES-WEAPB24,RULES-WEAPB23 4"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>38</Page>
+</Weapon>
+<Weapon id="HORNE-PROJ_ING_04">
+<Description language="ENGLISH">"Warpfire Thrower"</Description>
+<Skill>"RULES-COMPPROJ_ING"</Skill>
+<Damage>"+12"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"30"</Reach>
+<Encumbrance>"2"</Encumbrance>
+<Quality>"RULES-WEAPB24,HORNE-WEAPB45"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>36</Page>
+</Weapon>
+<Weapon id="HORNE-PROJ_ING_05">
+<Description language="ENGLISH">"Warp-grinder"</Description>
+<Skill>"RULES-COMPPROJ_ING"</Skill>
+<Damage>"+12"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"5"</Reach>
+<Encumbrance>"2"</Encumbrance>
+<Quality>"RULES-WEAPB22,RULES-WEAPB28,RULES-WEAPB25,HORNE-WEAPB45"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>36</Page>
+</Weapon>
+<Weapon id="HORNE-PROJ_POUDRE_01">
+<Description language="ENGLISH">"Warplock Jezzail"</Description>
+<Skill>"RULES-COMPPROJ_POUDRE"</Skill>
+<Damage>"+9"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"100"</Reach>
+<Encumbrance>"4"</Encumbrance>
+<Quality>"RULES-WEAPB16,RULES-WEAPB24,RULES-WEAPB14,RULES-WEAPB23 4"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>32</Page>
+</Weapon>
+<Weapon id="HORNE-PROJ_POUDRE_02">
+<Description language="ENGLISH">"Warplock Pistol"</Description>
+<Skill>"RULES-COMPPROJ_POUDRE"</Skill>
+<Damage>"+8"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"20"</Reach>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"RULES-WEAPB24,RULES-WEAPB13"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>36</Page>
+</Weapon>
+<Weapon id="HORNE-PROJ_POUDRE_03">
+<Description language="ENGLISH">"Warpmusket"</Description>
+<Skill>"RULES-COMPPROJ_POUDRE"</Skill>
+<Damage>"+8"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"40"</Reach>
+<Encumbrance>"2"</Encumbrance>
+<Quality>"RULES-WEAPB24,RULES-WEAPB23 2"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>38</Page>
+</Weapon>
+<Weapon id="HORNE-PROJ_LANC_01">
+<Description language="ENGLISH">"Death Globe"</Description>
+<Skill>"RULES-COMPPROJ_LANC"</Skill>
+<Damage>"-"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"(BATTR_S)X2"</Reach>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"-"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>38</Page>
+</Weapon>
+<Weapon id="HORNE-PROJ_LANC_02">
+<Description language="ENGLISH">"Infernal Bomb"</Description>
+<Skill>"RULES-COMPPROJ_LANC"</Skill>
+<Damage>"+12"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"(BATTR_S)"</Reach>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"RULES-WEAPB15 5,RULES-WEAPB24,RULES-WEAPB21,HORNE-WEAPB46"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>38</Page>
+</Weapon>
+<Weapon id="HORNE-PROJ_LANC_03">
+<Description language="ENGLISH">"Poisoned Wind Globe"</Description>
+<Skill>"RULES-COMPPROJ_LANC"</Skill>
+<Damage>"-"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"(BATTR_S)X3"</Reach>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"-"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>35</Page>
+</Weapon>
+<Weapon id="HORNE-PROJ_LANC_04">
+<Description language="ENGLISH">"Smoke Bomb"</Description>
+<Skill>"RULES-COMPPROJ_LANC"</Skill>
+<Damage>"-"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"(BATTR_S)X3"</Reach>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"-"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>38</Page>
+</Weapon>
+<Weapon id="HORNE-PROJ_LANC_05">
+<Description language="ENGLISH">"Warpstone Star"</Description>
+<Skill>"RULES-COMPPROJ_LANC"</Skill>
+<Damage>"+(BATTR_S)+3"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"(BATTR_S)X2"</Reach>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"RULES-WEAPB10,HORNE-WEAPB45"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>36</Page>
+</Weapon>
+<Weapon id="HORNE-MUNI_01">
+<Description language="ENGLISH">"Jezzail Bullet and Powder"</Description>
+<Skill>"RULES-COMPPROJ_POUDRE"</Skill>
+<Damage>"+2"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"+20"</Reach>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"RULES-WEAPB12,RULES-WEAPB22,HORNE-WEAPB45"</Quality>
+<Hand>"0"</Hand>
+<Ammunition>"12"</Ammunition>
+<Page>36</Page>
+</Weapon>
+<Weapon id="HORNE-MUNI_02">
+<Description language="ENGLISH">"Warpstone Bullet and Powder"</Description>
+<Skill>"RULES-COMPPROJ_POUDRE"</Skill>
+<Damage>"+0"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"+10"</Reach>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"RULES-WEAPB10,RULES-WEAPB22,HORNE-WEAPB45"</Quality>
+<Hand>"0"</Hand>
+<Ammunition>"1"</Ammunition>
+<Page>36</Page>
+</Weapon>
+<Weapon id="HORNE-MUNI_03">
+<Description language="ENGLISH">"Warpstone Buckshot"</Description>
+<Skill>"RULES-COMPPROJ_POUDRE"</Skill>
+<Damage>"+0"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"+0"</Reach>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"RULES-WEAPB15 +1,HORNE-WEAPB45"</Quality>
+<Hand>"0"</Hand>
+<Ammunition>"1"</Ammunition>
+<Page>36</Page>
+</Weapon>
+<Weapon id="HORNE-MUNI_04">
+<Description language="ENGLISH">"Doomrocket"</Description>
+<Skill>"RULES-COMPPROJ_ING"</Skill>
+<Damage>"+0"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"+0"</Reach>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"RULES-WEAPB15 5"</Quality>
+<Hand>"0"</Hand>
+<Ammunition>"1"</Ammunition>
+<Page>38</Page>
+</Weapon>
+<Weapon id="HORNE-MUNI_05">
+<Description language="ENGLISH">"Warpfire Fuel Vat"</Description>
+<Skill>"RULES-COMPPROJ_ING"</Skill>
+<Damage>"+0"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"+0"</Reach>
+<Encumbrance>"2"</Encumbrance>
+<Quality>"RULES-WEAPB15 2,HORNE-WEAPB45"</Quality>
+<Hand>"0"</Hand>
+<Ammunition>"1"</Ammunition>
+<Page>38</Page>
+</Weapon>
+<Weapon id="HORNE-MUNI_06">
+<Description language="ENGLISH">"Ratling Gun Belt"</Description>
+<Skill>"RULES-COMPPROJ_ING"</Skill>
+<Damage>"+0"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"+0"</Reach>
+<Encumbrance>"2"</Encumbrance>
+<Quality>"RULES-WEAPB03 1d10,HORNE-WEAPB45"</Quality>
+<Hand>"0"</Hand>
+<Ammunition>"4"</Ammunition>
+<Page>38</Page>
+</Weapon>
+</DATA_WEAPON>
+<DATA_WEAPON_BONUS>
+<BonusMalus id="HORNE-WEAPB44">
+<Description language="ENGLISH">"ZZAP!"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"AP -1, ignores metal armour"</Short>
+<Modifier>"+"</Modifier>
+<Page>32</Page>
+</BonusMalus>
+<BonusMalus id="HORNE-WEAPB45">
+<Description language="ENGLISH">"Warpstone"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Critical Wound = Minor Exposure to Corruption"</Short>
+<Modifier>"+"</Modifier>
+<Page>32</Page>
+</BonusMalus>
+<BonusMalus id="HORNE-WEAPB46">
+<Description language="ENGLISH">"Timer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"detonation delayed up to 10 rounds"</Short>
+<Modifier>"+"</Modifier>
+<Page>38</Page>
+</BonusMalus>
+</DATA_WEAPON_BONUS>
+<DATA_CRAFTMANSHIP>
+<Craftsmanship id="HORNE-QUALITY_01">
+<Description language="ENGLISH">"Warpforged"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"gains Penetrating (or ignores 2 metal AP, all non-metal AP)"</Short>
+<Applies>"Weapon"</Applies>
+<WeaponQuality>"RULES-WEAPB22"</WeaponQuality>
+<Max>"1"</Max>
+<Modifier>""</Modifier>
+<Page>33</Page>
+</Craftsmanship>
+<Craftsmanship id="HORNE-QUALITY_02">
+<Description language="ENGLISH">"Weeping Weapon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Wound = 2 Poisoned per SL"</Short>
+<Applies>"Weapon"</Applies>
+<Max>"1"</Max>
+<Modifier>""</Modifier>
+<Page>33</Page>
+</Craftsmanship>
+<Craftsmanship id="HORNE-QUALITY_03">
+<Description language="ENGLISH">"Blade of Nurglitch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Hand Weapon : Wound = Difficult (-10) Endurance or Festering Wound"</Short>
+<Applies>"Weapon"</Applies>
+<Max>"1"</Max>
+<Modifier>""</Modifier>
+<Page>33</Page>
+</Craftsmanship>
+<Craftsmanship id="HORNE-QUALITY_04">
+<Description language="ENGLISH">"Warp-blade"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Halberd or Hand Weapon : +1 Damage, ZZAP!"</Short>
+<Applies>"Weapon"</Applies>
+<ModifyDamage name="CC">1</ModifyDamage>
+<WeaponQuality>"HORNE-WEAPB44"</WeaponQuality>
+<Max>"1"</Max>
+<Modifier>""</Modifier>
+<Page>40</Page>
+</Craftsmanship>
+<Craftsmanship id="HORNE-QUALITY_05">
+<Description language="ENGLISH">"Warlock Optics"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"ranged weapon : ignores cover modifiers"</Short>
+<Applies>"Weapon"</Applies>
+<Max>"1"</Max>
+<Modifier>""</Modifier>
+<Page>40</Page>
+</Craftsmanship>
+</DATA_CRAFTMANSHIP>
+<DATA_TRAPPING>
+<Trapping id="HORNE-TRAP_01">
+<Description language="ENGLISH">"Pavise"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Encumbrance>"4"</Encumbrance>
+<Page>32</Page>
+</Trapping>
+<Trapping id="HORNE-TRAP_02">
+<Description language="ENGLISH">"Gas Mask"</Description>
+<Theme>"RULES-LAB_191"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Encumbrance>"0"</Encumbrance>
+<Page>39</Page>
+</Trapping>
+<Trapping id="HORNE-TRAP_03">
+<Description language="ENGLISH">"Liber Bubonicus"</Description>
+<Theme>"RULES-LAB_194"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Encumbrance>"0"</Encumbrance>
+<Page>39</Page>
+</Trapping>
+<Trapping id="HORNE-TRAP_04">
+<Description language="ENGLISH">"Skalm"</Description>
+<Theme>"RULES-LAB_198"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Encumbrance>"0"</Encumbrance>
+<Page>39</Page>
+</Trapping>
+<Trapping id="HORNE-TRAP_05">
+<Description language="ENGLISH">"Skavenbrew"</Description>
+<Theme>"RULES-LAB_197"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Encumbrance>"0"</Encumbrance>
+<Page>40</Page>
+</Trapping>
+<Trapping id="HORNE-TRAP_06">
+<Description language="ENGLISH">"Warp Scroll"</Description>
+<Theme>"RULES-LAB_194"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Encumbrance>"0"</Encumbrance>
+<Page>39</Page>
+</Trapping>
+<Trapping id="HORNE-TRAP_07">
+<Description language="ENGLISH">"Warp Energy Condenser"</Description>
+<Theme>"RULES-LAB_199"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Encumbrance>"0"</Encumbrance>
+<Page>40</Page>
+</Trapping>
+<Trapping id="HORNE-TRAP_08">
+<Description language="ENGLISH">"Warp-Power Accumulator"</Description>
+<Theme>"RULES-LAB_199"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Encumbrance>"0"</Encumbrance>
+<Page>40</Page>
+</Trapping>
+<Trapping id="HORNE-TRAP_09">
+<Description language="ENGLISH">"Warpstone Tokens"</Description>
+<Theme>"RULES-LAB_205"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Encumbrance>"0"</Encumbrance>
+<Page>40</Page>
+</Trapping>
+</DATA_TRAPPING>
+<DATA_CAREER_SPECIE>
+  <Entry>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="HORNE-WORK117">"X"</Career>
+  </Entry>
+</DATA_CAREER_SPECIE>
+</DATA_BOOK>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"PERSO"</CODE_BOOK>
+<BOOK>"BOOK PERSO"</BOOK>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP4"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"1"</COMPLETE>
+<DATA_LABEL>
+<Label language="ENGLISH">
+<Text name="PERSO-BOOK PERSO">"Personal Book"</Text>
+<Text name="PERSO-COND_01">"test condition"</Text>
+</Label>
+<Label language="FRANCAIS">
+<Text name="PERSO-BOOK PERSO">"Livre personnel"</Text>
+<Text name="PERSO-COND_01">"condition de test"</Text>
+</Label>
+</DATA_LABEL>
+<DATA_CONDITION>
+<Condition id="PERSO-COND_01">
+<Kind>"Conditional"</Kind>
+</Condition>
+</DATA_CONDITION>
+<DATA_ARMOR>
+<Armor id="PERSO-ARMO_01">
+<Description language="ENGLISH">"Coiffe de maille"</Description>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Price>"1CO"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"RULES-ARMOB_01,RULES-ARMOB_03,RULES-ARMOB_06"</Quality>
+<Location>"RULES-ARMOL_HEAD"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+</Armor>
+<Armor id="PERSO-ARMO_02">
+<Description language="ENGLISH">"Cotte de maille"</Description>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"3CO"</Price>
+<Encumbrance>"2"</Encumbrance>
+<Quality>"RULES-ARMOB_01,RULES-ARMOB_05"</Quality>
+<Location>"RULES-ARMOL_ARM,RULES-ARMOL_BODY,RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+</Armor>
+<Armor id="PERSO-ARMO_TEST">
+<Description language="ENGLISH">"Test armour"</Description>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"1CO"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"PERSO-ARMOB_TEST"</Quality>
+<Location>"RULES-ARMOL_BODY"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+</Armor>
+</DATA_ARMOR>
+<DATA_ARMOR_BONUS>
+<BonusMalus id="PERSO-ARMOB_TEST">
+<Description language="ENGLISH">"Test stiffness"</Description>
+<Explanation language="ENGLISH">"Test quality: -10 to Dexterity while worn."</Explanation>
+<ModifyCarac name="RULES-ATTR_Dex">-10</ModifyCarac>
+<ModifyCarac name="RULES-ATTR_Dex" if="PERSO-COND_01">5</ModifyCarac>
+<Modifier>"Dexterity -10"</Modifier>
+</BonusMalus>
+</DATA_ARMOR_BONUS>
+<DATA_WEAPON>
+<Weapon id="PERSO-COMB_TENTACLE">
+<Description language="ENGLISH">"Tentacle"</Description>
+<Skill>"RULES-COMPCOMB_BAGAR"</Skill>
+<Damage>"+(BATTR_S)+0"</Damage>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Reach>"RULES-WEAPR_PERSO"</Reach>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"RULES-WEAPB17"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+</Weapon>
+<Weapon id="PERSO-COMB_TEST">
+<Description language="ENGLISH">"Test weapon"</Description>
+<Skill>"RULES-COMPCOMB_BAGAR"</Skill>
+<Damage>"+(BATTR_S)+0"</Damage>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Reach>"RULES-WEAPR_PERSO"</Reach>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"PERSO-WEAPB_TEST"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+</Weapon>
+<Weapon id="PERSO-COMB_TEST_MODIF">
+<Description language="ENGLISH">"Test weapon with modifiers"</Description>
+<Skill>"RULES-COMPCOMB_BAGAR"</Skill>
+<Damage>"+(BATTR_S)+0"</Damage>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Reach>"RULES-WEAPR_PERSO"</Reach>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"-"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<ModifyCarac name="RULES-ATTR_I">5</ModifyCarac>
+<ModifyDamage name="CC">1</ModifyDamage>
+</Weapon>
+</DATA_WEAPON>
+<DATA_WEAPON_BONUS>
+<BonusMalus id="PERSO-WEAPB_TEST">
+<Description language="ENGLISH">"Test precision"</Description>
+<Explanation language="ENGLISH">"Test quality: +10 to hit."</Explanation>
+<Short language="ENGLISH">"+10 to hit"</Short>
+<ModifyAccurate name="ACCURATE">10</ModifyAccurate>
+<Modifier>"+"</Modifier>
+</BonusMalus>
+</DATA_WEAPON_BONUS>
+<DATA_TALENT>
+<Talent id="PERSO-T0001">
+<Modificateur Type="ModifySkill" Cible="RULES-COMPCOMB_BASE" Facteur="10"/>
+<Description language="ENGLISH">"Knight of the Order of the Hammer"</Description>
+<Short language="ENGLISH">""</Short>
+<Explanation language="ENGLISH">"Your training in the Order of the Hammer has honed your skill with basic weapons, granting +10% to Melee (Basic)."</Explanation>
+<Max>"1"</Max>
+<PDF>""</PDF>
+<Test language="ENGLISH">""</Test>
+</Talent>
+</DATA_TALENT>
+<DATA_CRAFTMANSHIP>
+<Craftsmanship id="PERSO-RUNE_TEST">
+<Description language="ENGLISH">"Test affichage"</Description>
+<Explanation language="ENGLISH">"Display test: damage, characteristic and skill modifiers in the grid, plus Encumbrance in the text."</Explanation>
+<Short language="ENGLISH">"Display test"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<ModifyDamage name="CC">1</ModifyDamage>
+<ModifyDamage name="CT">1</ModifyDamage>
+<ModifyCarac name="RULES-ATTR_I">10</ModifyCarac>
+<ModifySkill name="CC">10</ModifySkill>
+<Encumbrance>1</Encumbrance>
+<Modifier>""</Modifier>
+</Craftsmanship>
+</DATA_CRAFTMANSHIP>
+<DATA_AFFLICTION>
+<Affliction name="PERSO-AFFLICT_01">
+<Description language="ENGLISH">"Lost hand (test)"</Description>
+<Explanation language="ENGLISH">"Test affliction: the character has lost a hand (-1 hand). It can be added and removed to check the hand limit on worn weapons."</Explanation>
+<ModifyHands name="HANDS">-1</ModifyHands>
+</Affliction>
+</DATA_AFFLICTION>
+<DATA_DISEASE>
+<Disease name="PERSO-DISEASE_TEST">
+<Description language="ENGLISH">"Test disease with modifier"</Description>
+<Contraction language="ENGLISH">"Test only."</Contraction>
+<Incubation language="ENGLISH">"Instant"</Incubation>
+<Duration language="ENGLISH">"1 day"</Duration>
+<Symptoms language="ENGLISH">"Test symptoms"</Symptoms>
+<ModifyCarac name="RULES-ATTR_Fel">-10</ModifyCarac>
+</Disease>
+</DATA_DISEASE>
+</DATA_BOOK>

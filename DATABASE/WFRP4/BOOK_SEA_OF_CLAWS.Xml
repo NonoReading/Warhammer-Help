@@ -1,0 +1,2887 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"SEAOF"</CODE_BOOK>
+<BOOK>"BOOK SEA OF CLAWS"</BOOK>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP4"</VERSION>
+<OFFICIAL>"1"</OFFICIAL>
+<COMPLETE>"1"</COMPLETE>
+<DISCLAIMER>"No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form by any means, electronic, mechanical, photocopying, recording, or otherwise, without the prior permission of the publishers. Warhammer Fantasy Roleplay 4th Edition (c) Copyright Games Workshop Limited 2022. Warhammer Fantasy Roleplay 4th Edition, the Warhammer Fantasy Roleplay 4th Edition logo, GW, Games Workshop, Warhammer, The Game of Fantasy Battles, the twin-tailed comet logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likeness thereof, are either (R) or TM, and/or (c) Games Workshop Limited, variably registered around the world, and used under licence. Cubicle 7 Entertainment and the Cubicle 7 Entertainment logo are trademarks of Cubicle 7 Entertainment Limited. All rights reserved."</DISCLAIMER>
+<DATA_LABEL>
+<Label language="ENGLISH">
+<Text name="SEAOF-BOOK SEA OF CLAWS">"Sea of Claws"</Text>
+<Text name="SEAOF-CLASS_SEAF">"Seafarers"</Text>
+<Text name="SEAOF-BOATTRAIT_ARMOURED">""</Text>
+<Text name="SEAOF-BOATTRAIT_RUGGED">""</Text>
+<Text name="SEAOF-BOATTRAIT_STURDY">""</Text>
+<Text name="SEAOF-BOATTRAIT_UNWIELDY">""</Text>
+<Text name="SEAOF-BOATTRAIT_RAM">""</Text>
+<Text name="SEAOF-BOATTRAIT_SMOOTHING">""</Text>
+<Text name="SEAOF-BOATTRAIT_SHALLOWDRAUGHT">"Not described in the books available (Sea of Claws and Lustria only name it)."</Text>
+<Text name="SEAOF-BOATTRAIT_DETACHABLERUDDER">"Not described in the books available (Sea of Claws only names it)."</Text>
+<Text name="SEAOF-BOATTRAIT_SLOW">"Not described in the books available (Sea of Claws only names it)."</Text>
+</Label>
+<Label language="FRANCAIS">
+<Text name="SEAOF-BOOK SEA OF CLAWS">"Sea of Claws"</Text>
+<Text name="SEAOF-CLASS_SEAF">"Marins"</Text>
+<Text name="SEAOF-BOATTRAIT_ARMOURED">""</Text>
+<Text name="SEAOF-BOATTRAIT_RUGGED">""</Text>
+<Text name="SEAOF-BOATTRAIT_STURDY">""</Text>
+<Text name="SEAOF-BOATTRAIT_UNWIELDY">""</Text>
+<Text name="SEAOF-BOATTRAIT_RAM">""</Text>
+<Text name="SEAOF-BOATTRAIT_SMOOTHING">""</Text>
+<Text name="SEAOF-BOATTRAIT_SHALLOWDRAUGHT">"Non decrit dans les livres disponibles (Sea of Claws et Lustria ne font que le nommer)."</Text>
+<Text name="SEAOF-BOATTRAIT_DETACHABLERUDDER">"Non decrit dans les livres disponibles (Sea of Claws ne fait que le nommer)."</Text>
+<Text name="SEAOF-BOATTRAIT_SLOW">"Non decrit dans les livres disponibles (Sea of Claws ne fait que le nommer)."</Text>
+</Label>
+</DATA_LABEL>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMPSAVOIR_NORSCA">
+<Description language="ENGLISH">"Lore (Norsca)"</Description>
+<Generique>"RULES-COMPSAVOIR_*"</Generique>
+<Page>126</Page>
+</Skill>
+<Skill id="RULES-COMPSAVOIR_KHORNE">
+<Description language="ENGLISH">"Lore (Khorne)"</Description>
+<Generique>"RULES-COMPSAVOIR_*"</Generique>
+<Page>126</Page>
+</Skill>
+<Skill id="RULES-COMPLANG_GOSPO">
+<Description language="ENGLISH">"Language (Gospodarinyi)"</Description>
+<Generique>"RULES-COMPLANG_*"</Generique>
+<Page>124</Page>
+</Skill>
+<Skill id="RULES-COMPMUSIC_FIDDLE">
+<Description language="ENGLISH">"Play (Fiddle)"</Description>
+<Generique>"RULES-COMPMUSIC_*"</Generique>
+<Page>128</Page>
+</Skill>
+<Skill id="RULES-COMPMUSIC_SQUEEZE">
+<Description language="ENGLISH">"Play (Squeezebox)"</Description>
+<Generique>"RULES-COMPMUSIC_*"</Generique>
+<Page>128</Page>
+</Skill>
+<Skill id="RULES-COMPMUSIC_FIDDLE/RULES-COMPMUSIC_SQUEEZE/RULES-COMPMUSIC_PENNYW">
+<Description language="ENGLISH">"Play (Fiddle, Squeezebox or Tin Whistle)"</Description>
+  <Generique>"RULES-COMPMUSIC_*"</Generique>
+<Page>128</Page>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+<DATA_RULE>
+<Rule id="SEAOF-RULE_SEAFARER">
+<Description language="ENGLISH">"The Seafarer Class"</Description>
+<Class>"RULES-CLASS_RIVE"</Class>
+<Page>3</Page>
+</Rule>
+</DATA_RULE>
+<DATA_CAREER_ROLL>
+    <Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-RACE_HUM"</Specie>
+<Career name="SEAOF-WORK109">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-RACE_HUM"</Specie>
+<Career name="SEAOF-WORK110">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-RACE_HUM"</Specie>
+<Career name="SEAOF-WORK111">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-RACE_HUM"</Specie>
+<Career name="SEAOF-WORK112">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-RACE_HUM"</Specie>
+<Career name="SEAOF-WORK114">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-RACE_HUM"</Specie>
+<Career name="SEAOF-WORK113">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-RACE_HUM"</Specie>
+<Career name="SEAOF-WORK115">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-RACE_HUM"</Specie>
+<Career name="SEAOF-WORK116">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"UPINA-RACE_HTIL"</Specie>
+<Career name="SEAOF-WORK109">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"UPINA-RACE_HTIL"</Specie>
+<Career name="SEAOF-WORK110">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"UPINA-RACE_HTIL"</Specie>
+<Career name="SEAOF-WORK111">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"UPINA-RACE_HTIL"</Specie>
+<Career name="SEAOF-WORK112">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"UPINA-RACE_HTIL"</Specie>
+<Career name="SEAOF-WORK114">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"UPINA-RACE_HTIL"</Specie>
+<Career name="SEAOF-WORK113">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"UPINA-RACE_HTIL"</Specie>
+<Career name="SEAOF-WORK115">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"UPINA-RACE_HTIL"</Specie>
+<Career name="SEAOF-WORK116">"1"</Career>
+  </Entry>
+  <Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="SEAOF-WORK111">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="SEAOF-WORK112">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="SEAOF-WORK113">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="SEAOF-WORK115">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="SEAOF-WORK116">"1"</Career>
+  </Entry>
+  <Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="SEAOF-WORK109">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="SEAOF-WORK111">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="SEAOF-WORK113">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="SEAOF-WORK115">"2"</Career>
+  </Entry>
+  <Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-SPECIE_HELF"</Specie>
+<Career name="SEAOF-WORK110">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-SPECIE_HELF"</Specie>
+<Career name="SEAOF-WORK111">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-SPECIE_HELF"</Specie>
+<Career name="SEAOF-WORK112">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-SPECIE_HELF"</Specie>
+<Career name="SEAOF-WORK113">"10"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-SPECIE_HELF"</Specie>
+<Career name="SEAOF-WORK115">"1"</Career>
+  </Entry>
+  <Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"RULES-SPECIE_WELF"</Specie>
+<Career name="SEAOF-WORK116">"1"</Career>
+  </Entry>
+  <Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HBJOR"</Specie>
+<Career name="SEAOF-WORK109">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HBJOR"</Specie>
+<Career name="SEAOF-WORK111">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HBJOR"</Specie>
+<Career name="SEAOF-WORK113">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HBJOR"</Specie>
+<Career name="RULES-WORK46">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HBJOR"</Specie>
+<Career name="RULES-WORK25">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HBJOR"</Specie>
+<Career name="RULES-WORK16">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HBJOR"</Specie>
+<Career name="RULES-WORK17">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HBJOR"</Specie>
+<Career name="RULES-WORK42">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HSARL"</Specie>
+<Career name="SEAOF-WORK109">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HSARL"</Specie>
+<Career name="SEAOF-WORK111">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HSARL"</Specie>
+<Career name="SEAOF-WORK113">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HSARL"</Specie>
+<Career name="RULES-WORK46">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HSARL"</Specie>
+<Career name="RULES-WORK25">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HSARL"</Specie>
+<Career name="RULES-WORK16">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HSARL"</Specie>
+<Career name="RULES-WORK17">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HSARL"</Specie>
+<Career name="RULES-WORK42">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HSKAE"</Specie>
+<Career name="SEAOF-WORK109">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HSKAE"</Specie>
+<Career name="SEAOF-WORK111">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HSKAE"</Specie>
+<Career name="SEAOF-WORK113">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HSKAE"</Specie>
+<Career name="RULES-WORK46">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HSKAE"</Specie>
+<Career name="RULES-WORK25">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HSKAE"</Specie>
+<Career name="RULES-WORK16">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HSKAE"</Specie>
+<Career name="RULES-WORK17">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"SEAOF-RULE_SEAFARER"</Rule>
+<Specie>"SEAOF-RACE_HSKAE"</Specie>
+<Career name="RULES-WORK42">"1"</Career>
+  </Entry>
+</DATA_CAREER_ROLL>
+<DATA_OPTION_RULE>
+<OptionRule id="SEAOF-OPTR_01">
+<Code>"CAREERALT"</Code>
+<Description language="ENGLISH">"The Seafarer Class"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+</OptionRule>
+</DATA_OPTION_RULE>
+<DATA_CAREER_SPECIE>
+  <Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="SEAOF-WORK109">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="SEAOF-WORK110">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="SEAOF-WORK111">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="SEAOF-WORK112">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="SEAOF-WORK118">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="SEAOF-WORK113">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="SEAOF-WORK114">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="SEAOF-WORK115">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="SEAOF-WORK116">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="SEAOF-WORK109">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="SEAOF-WORK111">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="SEAOF-WORK113">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="SEAOF-WORK115">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="SEAOF-WORK111">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="SEAOF-WORK112">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="SEAOF-WORK113">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="SEAOF-WORK115">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="SEAOF-WORK116">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HELF"</Specie>
+<Career name="SEAOF-WORK110">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HELF"</Specie>
+<Career name="SEAOF-WORK111">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HELF"</Specie>
+<Career name="SEAOF-WORK112">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HELF"</Specie>
+<Career name="SEAOF-WORK113">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HELF"</Specie>
+<Career name="SEAOF-WORK115">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_WELF"</Specie>
+<Career name="SEAOF-WORK116">"X"</Career>
+  </Entry>
+</DATA_CAREER_SPECIE>
+<DATA_NATION>
+<Nation id="SEAOF-NATION_NORS">
+<Description language="ENGLISH">"Norsca"</Description>
+<Page>4</Page>
+</Nation>
+</DATA_NATION>
+<DATA_SPECIE>
+<Specie id="SEAOF-RACE_HBJOR">
+<Description language="ENGLISH">"Humans (Bjornling Norse)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<Nationality>"SEAOF-NATION_NORS"</Nationality>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_I">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fate">"2"</Attribut>
+<Attribut name="RULES-ATTR_Resil">"1"</Attribut>
+<Attribut name="RULES-ATTR_Wound">"1xBATTR_S+2xBATTR_T+1xBATTR_WP"</Attribut>
+<Attribut name="RULES-ATTR_Supp">"3"</Attribut>
+<Attribut name="RULES-ATTR_Move">"4"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename Forename:M+'sson'"</NamePattern>
+<NamePattern sex="F">"Forename Forename:M+'sdottir'"</NamePattern>
+<Name part="Forename" sex="M" name="Aeson">"1"</Name>
+<Name part="Forename" sex="M" name="Alfkaell">"2"</Name>
+<Name part="Forename" sex="M" name="Asbjorn">"3"</Name>
+<Name part="Forename" sex="M" name="Arbaal">"4"</Name>
+<Name part="Forename" sex="M" name="Björn">"5"</Name>
+<Name part="Forename" sex="M" name="Braese">"6"</Name>
+<Name part="Forename" sex="M" name="Cormac">"7"</Name>
+<Name part="Forename" sex="M" name="Dargo">"8"</Name>
+<Name part="Forename" sex="M" name="Dreng">"9"</Name>
+<Name part="Forename" sex="M" name="Egill">"10"</Name>
+<Name part="Forename" sex="M" name="Einarr">"11"</Name>
+<Name part="Forename" sex="M" name="Ekil">"12"</Name>
+<Name part="Forename" sex="M" name="Engra">"13"</Name>
+<Name part="Forename" sex="M" name="Eogric">"14"</Name>
+<Name part="Forename" sex="M" name="Erik">"15"</Name>
+<Name part="Forename" sex="M" name="Fálki">"16"</Name>
+<Name part="Forename" sex="M" name="Friðrik">"17"</Name>
+<Name part="Forename" sex="M" name="Garmr">"18"</Name>
+<Name part="Forename" sex="M" name="Gnupa">"19"</Name>
+<Name part="Forename" sex="M" name="Gotric">"20"</Name>
+<Name part="Forename" sex="M" name="Grettir">"21"</Name>
+<Name part="Forename" sex="M" name="Hafdan">"22"</Name>
+<Name part="Forename" sex="M" name="Hákon">"23"</Name>
+<Name part="Forename" sex="M" name="Halfdane">"24"</Name>
+<Name part="Forename" sex="M" name="Hallbjörn">"25"</Name>
+<Name part="Forename" sex="M" name="Halldór">"26"</Name>
+<Name part="Forename" sex="M" name="Hargir">"27"</Name>
+<Name part="Forename" sex="M" name="Hinrik">"28"</Name>
+<Name part="Forename" sex="M" name="Hjörtur">"29"</Name>
+<Name part="Forename" sex="M" name="Hrafn">"30"</Name>
+<Name part="Forename" sex="M" name="Hreðric">"31"</Name>
+<Name part="Forename" sex="M" name="Hroðgar">"32"</Name>
+<Name part="Forename" sex="M" name="Ingvar">"33"</Name>
+<Name part="Forename" sex="M" name="Ivar">"34"</Name>
+<Name part="Forename" sex="M" name="Kar">"35"</Name>
+<Name part="Forename" sex="M" name="Ketil">"36"</Name>
+<Name part="Forename" sex="M" name="Kettri">"37"</Name>
+<Name part="Forename" sex="M" name="Kharan">"38"</Name>
+<Name part="Forename" sex="M" name="Knut">"39"</Name>
+<Name part="Forename" sex="M" name="Kueldulf">"40"</Name>
+<Name part="Forename" sex="M" name="Lief">"41"</Name>
+<Name part="Forename" sex="M" name="Lud">"42"</Name>
+<Name part="Forename" sex="M" name="Morkar">"43"</Name>
+<Name part="Forename" sex="M" name="Oflati">"44"</Name>
+<Name part="Forename" sex="M" name="Orgrim">"45"</Name>
+<Name part="Forename" sex="M" name="Óskar">"46"</Name>
+<Name part="Forename" sex="M" name="Rafn">"47"</Name>
+<Name part="Forename" sex="M" name="Ragnar">"48"</Name>
+<Name part="Forename" sex="M" name="Ranulf">"49"</Name>
+<Name part="Forename" sex="M" name="Raskulf">"50"</Name>
+<Name part="Forename" sex="M" name="Rasmus">"51"</Name>
+<Name part="Forename" sex="M" name="Redwald">"52"</Name>
+<Name part="Forename" sex="M" name="Scyla">"53"</Name>
+<Name part="Forename" sex="M" name="Sigdun">"54"</Name>
+<Name part="Forename" sex="M" name="Sigvald">"55"</Name>
+<Name part="Forename" sex="M" name="Sindri">"56"</Name>
+<Name part="Forename" sex="M" name="Sitric">"57"</Name>
+<Name part="Forename" sex="M" name="Skuld">"58"</Name>
+<Name part="Forename" sex="M" name="Sorkvir">"59"</Name>
+<Name part="Forename" sex="M" name="Spjall">"60"</Name>
+<Name part="Forename" sex="M" name="Storulf">"61"</Name>
+<Name part="Forename" sex="M" name="Sven">"62"</Name>
+<Name part="Forename" sex="M" name="Torgald">"63"</Name>
+<Name part="Forename" sex="M" name="Trygve">"64"</Name>
+<Name part="Forename" sex="M" name="Tulkir">"65"</Name>
+<Name part="Forename" sex="M" name="Ulf">"66"</Name>
+<Name part="Forename" sex="M" name="Urlf">"67"</Name>
+<Name part="Forename" sex="M" name="Valnir">"68"</Name>
+<Name part="Forename" sex="M" name="Viglundr">"69"</Name>
+<Name part="Forename" sex="F" name="Anna">"1"</Name>
+<Name part="Forename" sex="F" name="Aðalbjörg">"2"</Name>
+<Name part="Forename" sex="F" name="Ásdís">"3"</Name>
+<Name part="Forename" sex="F" name="Asta">"4"</Name>
+<Name part="Forename" sex="F" name="Ástrid">"5"</Name>
+<Name part="Forename" sex="F" name="Auðr">"6"</Name>
+<Name part="Forename" sex="F" name="Bera">"7"</Name>
+<Name part="Forename" sex="F" name="Birna">"8"</Name>
+<Name part="Forename" sex="F" name="Bodil">"9"</Name>
+<Name part="Forename" sex="F" name="Brynja">"10"</Name>
+<Name part="Forename" sex="F" name="Dagny">"11"</Name>
+<Name part="Forename" sex="F" name="Drífa">"12"</Name>
+<Name part="Forename" sex="F" name="Emla">"13"</Name>
+<Name part="Forename" sex="F" name="Eríka">"14"</Name>
+<Name part="Forename" sex="F" name="Eydís">"15"</Name>
+<Name part="Forename" sex="F" name="Finna">"16"</Name>
+<Name part="Forename" sex="F" name="Friðr">"17"</Name>
+<Name part="Forename" sex="F" name="Gierdriful">"18"</Name>
+<Name part="Forename" sex="F" name="Göndul">"19"</Name>
+<Name part="Forename" sex="F" name="Gro">"20"</Name>
+<Name part="Forename" sex="F" name="Gunhild">"21"</Name>
+<Name part="Forename" sex="F" name="Gunnr">"22"</Name>
+<Name part="Forename" sex="F" name="Guðlaug">"23"</Name>
+<Name part="Forename" sex="F" name="Guðrún">"24"</Name>
+<Name part="Forename" sex="F" name="Halga">"25"</Name>
+<Name part="Forename" sex="F" name="Hela">"26"</Name>
+<Name part="Forename" sex="F" name="Herja">"27"</Name>
+<Name part="Forename" sex="F" name="Hildr">"28"</Name>
+<Name part="Forename" sex="F" name="Hilga">"29"</Name>
+<Name part="Forename" sex="F" name="Hjördis">"30"</Name>
+<Name part="Forename" sex="F" name="Hygd">"31"</Name>
+<Name part="Forename" sex="F" name="Inga">"32"</Name>
+<Name part="Forename" sex="F" name="Kára">"33"</Name>
+<Name part="Forename" sex="F" name="Kindra">"34"</Name>
+<Name part="Forename" sex="F" name="Lilja">"35"</Name>
+<Name part="Forename" sex="F" name="Liv">"36"</Name>
+<Name part="Forename" sex="F" name="Mist">"37"</Name>
+<Name part="Forename" sex="F" name="Neigla">"38"</Name>
+<Name part="Forename" sex="F" name="Pála">"39"</Name>
+<Name part="Forename" sex="F" name="Prima">"40"</Name>
+<Name part="Forename" sex="F" name="Ragnhildur">"41"</Name>
+<Name part="Forename" sex="F" name="Randgrid">"42"</Name>
+<Name part="Forename" sex="F" name="Randi">"43"</Name>
+<Name part="Forename" sex="F" name="Reginleif">"44"</Name>
+<Name part="Forename" sex="F" name="Revna">"45"</Name>
+<Name part="Forename" sex="F" name="Róta">"46"</Name>
+<Name part="Forename" sex="F" name="Shaarna">"47"</Name>
+<Name part="Forename" sex="F" name="Sif">"48"</Name>
+<Name part="Forename" sex="F" name="Signe">"49"</Name>
+<Name part="Forename" sex="F" name="Sigrid">"50"</Name>
+<Name part="Forename" sex="F" name="Sigrdrífa">"51"</Name>
+<Name part="Forename" sex="F" name="Sigrún">"52"</Name>
+<Name part="Forename" sex="F" name="Skögul">"53"</Name>
+<Name part="Forename" sex="F" name="Solveig">"54"</Name>
+<Name part="Forename" sex="F" name="Svanhildur">"55"</Name>
+<Name part="Forename" sex="F" name="Svipul">"56"</Name>
+<Name part="Forename" sex="F" name="Tora">"57"</Name>
+<Name part="Forename" sex="F" name="Tove">"58"</Name>
+<Name part="Forename" sex="F" name="Valdís">"59"</Name>
+<Name part="Forename" sex="F" name="Valkia">"60"</Name>
+<Name part="Forename" sex="F" name="Vigdís">"61"</Name>
+<Name part="Forename" sex="F" name="Tuula">"62"</Name>
+<Name part="Forename" sex="F" name="Urda">"63"</Name>
+<Name part="Forename" sex="F" name="Ulfhild">"64"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMPRESALC"</Skill>
+  <Skill>"RULES-COMPEVAL"</Skill>
+  <Skill>"RULES-COMPRAGOT"</Skill>
+  <Skill>"RULES-COMPMARCH"</Skill>
+  <Skill>"RULES-COMPLANG_REIK"</Skill>
+  <Skill>"RULES-COMPLANG_WEST"</Skill>
+  <Skill>"RULES-COMPSAVOIR_NORSCA"</Skill>
+  <Skill>"RULES-COMPCOMB_BASE"</Skill>
+  <Skill>"RULES-COMPRAMER"</Skill>
+  <Skill>"RULES-COMPVOILE_*"</Skill>
+  <Skill>"RULES-COMPNATA"</Skill>
+  <Skill>"RULES-COMPMETIER_*"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T0113/RULES-T0138"</Talent>
+  <Talent>"RULES-T0129_CHAOS"</Talent>
+  <Talent>"RULES-T0119/RULES-T0067"</Talent>
+  <Talent>"RULES-T*"</Talent>
+<Talent>"RULES-T*"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-WORK45">"2"</Career>
+  <Career name="RULES-WORK23">"2"</Career>
+  <Career name="RULES-WORK01">"3"</Career>
+  <Career name="RULES-WORK03">"3"</Career>
+  <Career name="RULES-WORK37">"2"</Career>
+  <Career name="RULES-WORK52">"1"</Career>
+  <Career name="RULES-WORK34">"2"</Career>
+  <Career name="RULES-WORK15">"3"</Career>
+  <Career name="RULES-WORK04">"1"</Career>
+  <Career name="RULES-WORK44">"1"</Career>
+  <Career name="RULES-WORK56">"7"</Career>
+  <Career name="RULES-WORK29">"3"</Career>
+  <Career name="RULES-WORK10">"4"</Career>
+  <Career name="RULES-WORK41">"3"</Career>
+  <Career name="RULES-WORK19">"3"</Career>
+  <Career name="RULES-WORK63">"6"</Career>
+  <Career name="RULES-WORK55">"2"</Career>
+  <Career name="RULES-WORK38">"1"</Career>
+  <Career name="RULES-WORK14">"3"</Career>
+  <Career name="RULES-WORK09">"2"</Career>
+  <Career name="RULES-WORK30">"3"</Career>
+  <Career name="RULES-WORK64">"4"</Career>
+  <Career name="RULES-WORK60">"3"</Career>
+  <Career name="SEAOF-WORK109">"2"</Career>
+  <Career name="SEAOF-WORK111">"3"</Career>
+  <Career name="SEAOF-WORK113">"8"</Career>
+  <Career name="SEAOF-WORK116">"5"</Career>
+  <Career name="RULES-WORK08">"3"</Career>
+  <Career name="RULES-WORK28">"4"</Career>
+  <Career name="RULES-WORK61">"3"</Career>
+  <Career name="RULES-WORK57">"8"</Career>
+  </SUBCHAPTER_CAREER>
+<Page>69</Page>
+</Specie>
+<Specie id="SEAOF-RACE_HSARL">
+<Description language="ENGLISH">"Humans (Sarl Norse)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<Nationality>"SEAOF-NATION_NORS"</Nationality>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_I">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fate">"2"</Attribut>
+<Attribut name="RULES-ATTR_Resil">"1"</Attribut>
+<Attribut name="RULES-ATTR_Wound">"1xBATTR_S+2xBATTR_T+1xBATTR_WP"</Attribut>
+<Attribut name="RULES-ATTR_Supp">"3"</Attribut>
+<Attribut name="RULES-ATTR_Move">"4"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename Forename:M+'sson'"</NamePattern>
+<NamePattern sex="F">"Forename Forename:M+'sdottir'"</NamePattern>
+<Name part="Forename" sex="M" name="Aeson">"1"</Name>
+<Name part="Forename" sex="M" name="Alfkaell">"2"</Name>
+<Name part="Forename" sex="M" name="Asbjorn">"3"</Name>
+<Name part="Forename" sex="M" name="Arbaal">"4"</Name>
+<Name part="Forename" sex="M" name="Björn">"5"</Name>
+<Name part="Forename" sex="M" name="Braese">"6"</Name>
+<Name part="Forename" sex="M" name="Cormac">"7"</Name>
+<Name part="Forename" sex="M" name="Dargo">"8"</Name>
+<Name part="Forename" sex="M" name="Dreng">"9"</Name>
+<Name part="Forename" sex="M" name="Egill">"10"</Name>
+<Name part="Forename" sex="M" name="Einarr">"11"</Name>
+<Name part="Forename" sex="M" name="Ekil">"12"</Name>
+<Name part="Forename" sex="M" name="Engra">"13"</Name>
+<Name part="Forename" sex="M" name="Eogric">"14"</Name>
+<Name part="Forename" sex="M" name="Erik">"15"</Name>
+<Name part="Forename" sex="M" name="Fálki">"16"</Name>
+<Name part="Forename" sex="M" name="Friðrik">"17"</Name>
+<Name part="Forename" sex="M" name="Garmr">"18"</Name>
+<Name part="Forename" sex="M" name="Gnupa">"19"</Name>
+<Name part="Forename" sex="M" name="Gotric">"20"</Name>
+<Name part="Forename" sex="M" name="Grettir">"21"</Name>
+<Name part="Forename" sex="M" name="Hafdan">"22"</Name>
+<Name part="Forename" sex="M" name="Hákon">"23"</Name>
+<Name part="Forename" sex="M" name="Halfdane">"24"</Name>
+<Name part="Forename" sex="M" name="Hallbjörn">"25"</Name>
+<Name part="Forename" sex="M" name="Halldór">"26"</Name>
+<Name part="Forename" sex="M" name="Hargir">"27"</Name>
+<Name part="Forename" sex="M" name="Hinrik">"28"</Name>
+<Name part="Forename" sex="M" name="Hjörtur">"29"</Name>
+<Name part="Forename" sex="M" name="Hrafn">"30"</Name>
+<Name part="Forename" sex="M" name="Hreðric">"31"</Name>
+<Name part="Forename" sex="M" name="Hroðgar">"32"</Name>
+<Name part="Forename" sex="M" name="Ingvar">"33"</Name>
+<Name part="Forename" sex="M" name="Ivar">"34"</Name>
+<Name part="Forename" sex="M" name="Kar">"35"</Name>
+<Name part="Forename" sex="M" name="Ketil">"36"</Name>
+<Name part="Forename" sex="M" name="Kettri">"37"</Name>
+<Name part="Forename" sex="M" name="Kharan">"38"</Name>
+<Name part="Forename" sex="M" name="Knut">"39"</Name>
+<Name part="Forename" sex="M" name="Kueldulf">"40"</Name>
+<Name part="Forename" sex="M" name="Lief">"41"</Name>
+<Name part="Forename" sex="M" name="Lud">"42"</Name>
+<Name part="Forename" sex="M" name="Morkar">"43"</Name>
+<Name part="Forename" sex="M" name="Oflati">"44"</Name>
+<Name part="Forename" sex="M" name="Orgrim">"45"</Name>
+<Name part="Forename" sex="M" name="Óskar">"46"</Name>
+<Name part="Forename" sex="M" name="Rafn">"47"</Name>
+<Name part="Forename" sex="M" name="Ragnar">"48"</Name>
+<Name part="Forename" sex="M" name="Ranulf">"49"</Name>
+<Name part="Forename" sex="M" name="Raskulf">"50"</Name>
+<Name part="Forename" sex="M" name="Rasmus">"51"</Name>
+<Name part="Forename" sex="M" name="Redwald">"52"</Name>
+<Name part="Forename" sex="M" name="Scyla">"53"</Name>
+<Name part="Forename" sex="M" name="Sigdun">"54"</Name>
+<Name part="Forename" sex="M" name="Sigvald">"55"</Name>
+<Name part="Forename" sex="M" name="Sindri">"56"</Name>
+<Name part="Forename" sex="M" name="Sitric">"57"</Name>
+<Name part="Forename" sex="M" name="Skuld">"58"</Name>
+<Name part="Forename" sex="M" name="Sorkvir">"59"</Name>
+<Name part="Forename" sex="M" name="Spjall">"60"</Name>
+<Name part="Forename" sex="M" name="Storulf">"61"</Name>
+<Name part="Forename" sex="M" name="Sven">"62"</Name>
+<Name part="Forename" sex="M" name="Torgald">"63"</Name>
+<Name part="Forename" sex="M" name="Trygve">"64"</Name>
+<Name part="Forename" sex="M" name="Tulkir">"65"</Name>
+<Name part="Forename" sex="M" name="Ulf">"66"</Name>
+<Name part="Forename" sex="M" name="Urlf">"67"</Name>
+<Name part="Forename" sex="M" name="Valnir">"68"</Name>
+<Name part="Forename" sex="M" name="Viglundr">"69"</Name>
+<Name part="Forename" sex="F" name="Anna">"1"</Name>
+<Name part="Forename" sex="F" name="Aðalbjörg">"2"</Name>
+<Name part="Forename" sex="F" name="Ásdís">"3"</Name>
+<Name part="Forename" sex="F" name="Asta">"4"</Name>
+<Name part="Forename" sex="F" name="Ástrid">"5"</Name>
+<Name part="Forename" sex="F" name="Auðr">"6"</Name>
+<Name part="Forename" sex="F" name="Bera">"7"</Name>
+<Name part="Forename" sex="F" name="Birna">"8"</Name>
+<Name part="Forename" sex="F" name="Bodil">"9"</Name>
+<Name part="Forename" sex="F" name="Brynja">"10"</Name>
+<Name part="Forename" sex="F" name="Dagny">"11"</Name>
+<Name part="Forename" sex="F" name="Drífa">"12"</Name>
+<Name part="Forename" sex="F" name="Emla">"13"</Name>
+<Name part="Forename" sex="F" name="Eríka">"14"</Name>
+<Name part="Forename" sex="F" name="Eydís">"15"</Name>
+<Name part="Forename" sex="F" name="Finna">"16"</Name>
+<Name part="Forename" sex="F" name="Friðr">"17"</Name>
+<Name part="Forename" sex="F" name="Gierdriful">"18"</Name>
+<Name part="Forename" sex="F" name="Göndul">"19"</Name>
+<Name part="Forename" sex="F" name="Gro">"20"</Name>
+<Name part="Forename" sex="F" name="Gunhild">"21"</Name>
+<Name part="Forename" sex="F" name="Gunnr">"22"</Name>
+<Name part="Forename" sex="F" name="Guðlaug">"23"</Name>
+<Name part="Forename" sex="F" name="Guðrún">"24"</Name>
+<Name part="Forename" sex="F" name="Halga">"25"</Name>
+<Name part="Forename" sex="F" name="Hela">"26"</Name>
+<Name part="Forename" sex="F" name="Herja">"27"</Name>
+<Name part="Forename" sex="F" name="Hildr">"28"</Name>
+<Name part="Forename" sex="F" name="Hilga">"29"</Name>
+<Name part="Forename" sex="F" name="Hjördis">"30"</Name>
+<Name part="Forename" sex="F" name="Hygd">"31"</Name>
+<Name part="Forename" sex="F" name="Inga">"32"</Name>
+<Name part="Forename" sex="F" name="Kára">"33"</Name>
+<Name part="Forename" sex="F" name="Kindra">"34"</Name>
+<Name part="Forename" sex="F" name="Lilja">"35"</Name>
+<Name part="Forename" sex="F" name="Liv">"36"</Name>
+<Name part="Forename" sex="F" name="Mist">"37"</Name>
+<Name part="Forename" sex="F" name="Neigla">"38"</Name>
+<Name part="Forename" sex="F" name="Pála">"39"</Name>
+<Name part="Forename" sex="F" name="Prima">"40"</Name>
+<Name part="Forename" sex="F" name="Ragnhildur">"41"</Name>
+<Name part="Forename" sex="F" name="Randgrid">"42"</Name>
+<Name part="Forename" sex="F" name="Randi">"43"</Name>
+<Name part="Forename" sex="F" name="Reginleif">"44"</Name>
+<Name part="Forename" sex="F" name="Revna">"45"</Name>
+<Name part="Forename" sex="F" name="Róta">"46"</Name>
+<Name part="Forename" sex="F" name="Shaarna">"47"</Name>
+<Name part="Forename" sex="F" name="Sif">"48"</Name>
+<Name part="Forename" sex="F" name="Signe">"49"</Name>
+<Name part="Forename" sex="F" name="Sigrid">"50"</Name>
+<Name part="Forename" sex="F" name="Sigrdrífa">"51"</Name>
+<Name part="Forename" sex="F" name="Sigrún">"52"</Name>
+<Name part="Forename" sex="F" name="Skögul">"53"</Name>
+<Name part="Forename" sex="F" name="Solveig">"54"</Name>
+<Name part="Forename" sex="F" name="Svanhildur">"55"</Name>
+<Name part="Forename" sex="F" name="Svipul">"56"</Name>
+<Name part="Forename" sex="F" name="Tora">"57"</Name>
+<Name part="Forename" sex="F" name="Tove">"58"</Name>
+<Name part="Forename" sex="F" name="Valdís">"59"</Name>
+<Name part="Forename" sex="F" name="Valkia">"60"</Name>
+<Name part="Forename" sex="F" name="Vigdís">"61"</Name>
+<Name part="Forename" sex="F" name="Tuula">"62"</Name>
+<Name part="Forename" sex="F" name="Urda">"63"</Name>
+<Name part="Forename" sex="F" name="Ulfhild">"64"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMPSOINANI"</Skill>
+  <Skill>"RULES-COMPRESALC"</Skill>
+  <Skill>"RULES-COMPRAGOT"</Skill>
+  <Skill>"RULES-COMPLANG_REIK"</Skill>
+  <Skill>"RULES-COMPLANG_GOSPO"</Skill>
+  <Skill>"RULES-COMPSAVOIR_NORSCA"</Skill>
+  <Skill>"RULES-COMPCOMB_BASE"</Skill>
+  <Skill>"RULES-COMPCHEV_*"</Skill>
+  <Skill>"RULES-COMPRAMER"</Skill>
+  <Skill>"RULES-COMPVOILE_*"</Skill>
+  <Skill>"RULES-COMPNATA"</Skill>
+  <Skill>"RULES-COMPMETIER_*"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T0024/RULES-T0085"</Talent>
+  <Talent>"RULES-T0129_CHAOS"</Talent>
+  <Talent>"RULES-T0019/RULES-T0119"</Talent>
+  <Talent>"RULES-T*"</Talent>
+<Talent>"RULES-T*"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-WORK45">"2"</Career>
+  <Career name="RULES-WORK23">"2"</Career>
+  <Career name="RULES-WORK01">"3"</Career>
+  <Career name="RULES-WORK03">"3"</Career>
+  <Career name="RULES-WORK37">"2"</Career>
+  <Career name="RULES-WORK52">"1"</Career>
+  <Career name="RULES-WORK34">"2"</Career>
+  <Career name="RULES-WORK15">"3"</Career>
+  <Career name="RULES-WORK04">"1"</Career>
+  <Career name="RULES-WORK44">"1"</Career>
+  <Career name="RULES-WORK56">"7"</Career>
+  <Career name="RULES-WORK29">"3"</Career>
+  <Career name="RULES-WORK10">"4"</Career>
+  <Career name="RULES-WORK41">"3"</Career>
+  <Career name="RULES-WORK19">"3"</Career>
+  <Career name="RULES-WORK63">"6"</Career>
+  <Career name="RULES-WORK55">"2"</Career>
+  <Career name="RULES-WORK38">"1"</Career>
+  <Career name="RULES-WORK14">"3"</Career>
+  <Career name="RULES-WORK09">"2"</Career>
+  <Career name="RULES-WORK30">"3"</Career>
+  <Career name="RULES-WORK64">"4"</Career>
+  <Career name="RULES-WORK60">"3"</Career>
+  <Career name="SEAOF-WORK109">"2"</Career>
+  <Career name="SEAOF-WORK111">"3"</Career>
+  <Career name="SEAOF-WORK113">"8"</Career>
+  <Career name="SEAOF-WORK116">"5"</Career>
+  <Career name="RULES-WORK08">"3"</Career>
+  <Career name="RULES-WORK28">"4"</Career>
+  <Career name="RULES-WORK61">"3"</Career>
+  <Career name="RULES-WORK57">"8"</Career>
+  </SUBCHAPTER_CAREER>
+<Page>69</Page>
+</Specie>
+<Specie id="SEAOF-RACE_HSKAE">
+<Description language="ENGLISH">"Humans (Skaeling Norse)"</Description>
+  <Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<Nationality>"SEAOF-NATION_NORS"</Nationality>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_I">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fate">"2"</Attribut>
+<Attribut name="RULES-ATTR_Resil">"1"</Attribut>
+<Attribut name="RULES-ATTR_Wound">"1xBATTR_S+2xBATTR_T+1xBATTR_WP"</Attribut>
+<Attribut name="RULES-ATTR_Supp">"3"</Attribut>
+<Attribut name="RULES-ATTR_Move">"4"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename Forename:M+'sson'"</NamePattern>
+<NamePattern sex="F">"Forename Forename:M+'sdottir'"</NamePattern>
+<Name part="Forename" sex="M" name="Aeson">"1"</Name>
+<Name part="Forename" sex="M" name="Alfkaell">"2"</Name>
+<Name part="Forename" sex="M" name="Asbjorn">"3"</Name>
+<Name part="Forename" sex="M" name="Arbaal">"4"</Name>
+<Name part="Forename" sex="M" name="Björn">"5"</Name>
+<Name part="Forename" sex="M" name="Braese">"6"</Name>
+<Name part="Forename" sex="M" name="Cormac">"7"</Name>
+<Name part="Forename" sex="M" name="Dargo">"8"</Name>
+<Name part="Forename" sex="M" name="Dreng">"9"</Name>
+<Name part="Forename" sex="M" name="Egill">"10"</Name>
+<Name part="Forename" sex="M" name="Einarr">"11"</Name>
+<Name part="Forename" sex="M" name="Ekil">"12"</Name>
+<Name part="Forename" sex="M" name="Engra">"13"</Name>
+<Name part="Forename" sex="M" name="Eogric">"14"</Name>
+<Name part="Forename" sex="M" name="Erik">"15"</Name>
+<Name part="Forename" sex="M" name="Fálki">"16"</Name>
+<Name part="Forename" sex="M" name="Friðrik">"17"</Name>
+<Name part="Forename" sex="M" name="Garmr">"18"</Name>
+<Name part="Forename" sex="M" name="Gnupa">"19"</Name>
+<Name part="Forename" sex="M" name="Gotric">"20"</Name>
+<Name part="Forename" sex="M" name="Grettir">"21"</Name>
+<Name part="Forename" sex="M" name="Hafdan">"22"</Name>
+<Name part="Forename" sex="M" name="Hákon">"23"</Name>
+<Name part="Forename" sex="M" name="Halfdane">"24"</Name>
+<Name part="Forename" sex="M" name="Hallbjörn">"25"</Name>
+<Name part="Forename" sex="M" name="Halldór">"26"</Name>
+<Name part="Forename" sex="M" name="Hargir">"27"</Name>
+<Name part="Forename" sex="M" name="Hinrik">"28"</Name>
+<Name part="Forename" sex="M" name="Hjörtur">"29"</Name>
+<Name part="Forename" sex="M" name="Hrafn">"30"</Name>
+<Name part="Forename" sex="M" name="Hreðric">"31"</Name>
+<Name part="Forename" sex="M" name="Hroðgar">"32"</Name>
+<Name part="Forename" sex="M" name="Ingvar">"33"</Name>
+<Name part="Forename" sex="M" name="Ivar">"34"</Name>
+<Name part="Forename" sex="M" name="Kar">"35"</Name>
+<Name part="Forename" sex="M" name="Ketil">"36"</Name>
+<Name part="Forename" sex="M" name="Kettri">"37"</Name>
+<Name part="Forename" sex="M" name="Kharan">"38"</Name>
+<Name part="Forename" sex="M" name="Knut">"39"</Name>
+<Name part="Forename" sex="M" name="Kueldulf">"40"</Name>
+<Name part="Forename" sex="M" name="Lief">"41"</Name>
+<Name part="Forename" sex="M" name="Lud">"42"</Name>
+<Name part="Forename" sex="M" name="Morkar">"43"</Name>
+<Name part="Forename" sex="M" name="Oflati">"44"</Name>
+<Name part="Forename" sex="M" name="Orgrim">"45"</Name>
+<Name part="Forename" sex="M" name="Óskar">"46"</Name>
+<Name part="Forename" sex="M" name="Rafn">"47"</Name>
+<Name part="Forename" sex="M" name="Ragnar">"48"</Name>
+<Name part="Forename" sex="M" name="Ranulf">"49"</Name>
+<Name part="Forename" sex="M" name="Raskulf">"50"</Name>
+<Name part="Forename" sex="M" name="Rasmus">"51"</Name>
+<Name part="Forename" sex="M" name="Redwald">"52"</Name>
+<Name part="Forename" sex="M" name="Scyla">"53"</Name>
+<Name part="Forename" sex="M" name="Sigdun">"54"</Name>
+<Name part="Forename" sex="M" name="Sigvald">"55"</Name>
+<Name part="Forename" sex="M" name="Sindri">"56"</Name>
+<Name part="Forename" sex="M" name="Sitric">"57"</Name>
+<Name part="Forename" sex="M" name="Skuld">"58"</Name>
+<Name part="Forename" sex="M" name="Sorkvir">"59"</Name>
+<Name part="Forename" sex="M" name="Spjall">"60"</Name>
+<Name part="Forename" sex="M" name="Storulf">"61"</Name>
+<Name part="Forename" sex="M" name="Sven">"62"</Name>
+<Name part="Forename" sex="M" name="Torgald">"63"</Name>
+<Name part="Forename" sex="M" name="Trygve">"64"</Name>
+<Name part="Forename" sex="M" name="Tulkir">"65"</Name>
+<Name part="Forename" sex="M" name="Ulf">"66"</Name>
+<Name part="Forename" sex="M" name="Urlf">"67"</Name>
+<Name part="Forename" sex="M" name="Valnir">"68"</Name>
+<Name part="Forename" sex="M" name="Viglundr">"69"</Name>
+<Name part="Forename" sex="F" name="Anna">"1"</Name>
+<Name part="Forename" sex="F" name="Aðalbjörg">"2"</Name>
+<Name part="Forename" sex="F" name="Ásdís">"3"</Name>
+<Name part="Forename" sex="F" name="Asta">"4"</Name>
+<Name part="Forename" sex="F" name="Ástrid">"5"</Name>
+<Name part="Forename" sex="F" name="Auðr">"6"</Name>
+<Name part="Forename" sex="F" name="Bera">"7"</Name>
+<Name part="Forename" sex="F" name="Birna">"8"</Name>
+<Name part="Forename" sex="F" name="Bodil">"9"</Name>
+<Name part="Forename" sex="F" name="Brynja">"10"</Name>
+<Name part="Forename" sex="F" name="Dagny">"11"</Name>
+<Name part="Forename" sex="F" name="Drífa">"12"</Name>
+<Name part="Forename" sex="F" name="Emla">"13"</Name>
+<Name part="Forename" sex="F" name="Eríka">"14"</Name>
+<Name part="Forename" sex="F" name="Eydís">"15"</Name>
+<Name part="Forename" sex="F" name="Finna">"16"</Name>
+<Name part="Forename" sex="F" name="Friðr">"17"</Name>
+<Name part="Forename" sex="F" name="Gierdriful">"18"</Name>
+<Name part="Forename" sex="F" name="Göndul">"19"</Name>
+<Name part="Forename" sex="F" name="Gro">"20"</Name>
+<Name part="Forename" sex="F" name="Gunhild">"21"</Name>
+<Name part="Forename" sex="F" name="Gunnr">"22"</Name>
+<Name part="Forename" sex="F" name="Guðlaug">"23"</Name>
+<Name part="Forename" sex="F" name="Guðrún">"24"</Name>
+<Name part="Forename" sex="F" name="Halga">"25"</Name>
+<Name part="Forename" sex="F" name="Hela">"26"</Name>
+<Name part="Forename" sex="F" name="Herja">"27"</Name>
+<Name part="Forename" sex="F" name="Hildr">"28"</Name>
+<Name part="Forename" sex="F" name="Hilga">"29"</Name>
+<Name part="Forename" sex="F" name="Hjördis">"30"</Name>
+<Name part="Forename" sex="F" name="Hygd">"31"</Name>
+<Name part="Forename" sex="F" name="Inga">"32"</Name>
+<Name part="Forename" sex="F" name="Kára">"33"</Name>
+<Name part="Forename" sex="F" name="Kindra">"34"</Name>
+<Name part="Forename" sex="F" name="Lilja">"35"</Name>
+<Name part="Forename" sex="F" name="Liv">"36"</Name>
+<Name part="Forename" sex="F" name="Mist">"37"</Name>
+<Name part="Forename" sex="F" name="Neigla">"38"</Name>
+<Name part="Forename" sex="F" name="Pála">"39"</Name>
+<Name part="Forename" sex="F" name="Prima">"40"</Name>
+<Name part="Forename" sex="F" name="Ragnhildur">"41"</Name>
+<Name part="Forename" sex="F" name="Randgrid">"42"</Name>
+<Name part="Forename" sex="F" name="Randi">"43"</Name>
+<Name part="Forename" sex="F" name="Reginleif">"44"</Name>
+<Name part="Forename" sex="F" name="Revna">"45"</Name>
+<Name part="Forename" sex="F" name="Róta">"46"</Name>
+<Name part="Forename" sex="F" name="Shaarna">"47"</Name>
+<Name part="Forename" sex="F" name="Sif">"48"</Name>
+<Name part="Forename" sex="F" name="Signe">"49"</Name>
+<Name part="Forename" sex="F" name="Sigrid">"50"</Name>
+<Name part="Forename" sex="F" name="Sigrdrífa">"51"</Name>
+<Name part="Forename" sex="F" name="Sigrún">"52"</Name>
+<Name part="Forename" sex="F" name="Skögul">"53"</Name>
+<Name part="Forename" sex="F" name="Solveig">"54"</Name>
+<Name part="Forename" sex="F" name="Svanhildur">"55"</Name>
+<Name part="Forename" sex="F" name="Svipul">"56"</Name>
+<Name part="Forename" sex="F" name="Tora">"57"</Name>
+<Name part="Forename" sex="F" name="Tove">"58"</Name>
+<Name part="Forename" sex="F" name="Valdís">"59"</Name>
+<Name part="Forename" sex="F" name="Valkia">"60"</Name>
+<Name part="Forename" sex="F" name="Vigdís">"61"</Name>
+<Name part="Forename" sex="F" name="Tuula">"62"</Name>
+<Name part="Forename" sex="F" name="Urda">"63"</Name>
+<Name part="Forename" sex="F" name="Ulfhild">"64"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMPRESALC"</Skill>
+  <Skill>"RULES-COMPCALM"</Skill>
+  <Skill>"RULES-COMPRESIST"</Skill>
+  <Skill>"RULES-COMPDIVERT_NARRA"</Skill>
+  <Skill>"RULES-COMPLANG_REIK"</Skill>
+  <Skill>"RULES-COMPLANG_WEST"</Skill>
+  <Skill>"RULES-COMPSAVOIR_KHORNE"</Skill>
+  <Skill>"RULES-COMPCOMB_BASE"</Skill>
+  <Skill>"RULES-COMPCOMB_2M"</Skill>
+  <Skill>"RULES-COMPRAMER"</Skill>
+  <Skill>"RULES-COMPVOILE_*"</Skill>
+  <Skill>"RULES-COMPNATA"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T0078/RULES-T0041"</Talent>
+  <Talent>"RULES-T0021/RULES-T0064"</Talent>
+  <Talent>"RULES-T0129_CHAOS"</Talent>
+  <Talent>"RULES-T*"</Talent>
+<Talent>"RULES-T*"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-WORK45">"2"</Career>
+  <Career name="RULES-WORK23">"2"</Career>
+  <Career name="RULES-WORK01">"3"</Career>
+  <Career name="RULES-WORK03">"3"</Career>
+  <Career name="RULES-WORK37">"2"</Career>
+  <Career name="RULES-WORK52">"1"</Career>
+  <Career name="RULES-WORK34">"2"</Career>
+  <Career name="RULES-WORK15">"3"</Career>
+  <Career name="RULES-WORK04">"1"</Career>
+  <Career name="RULES-WORK44">"1"</Career>
+  <Career name="RULES-WORK56">"7"</Career>
+  <Career name="RULES-WORK29">"3"</Career>
+  <Career name="RULES-WORK10">"4"</Career>
+  <Career name="RULES-WORK41">"3"</Career>
+  <Career name="RULES-WORK19">"3"</Career>
+  <Career name="RULES-WORK63">"6"</Career>
+  <Career name="RULES-WORK55">"2"</Career>
+  <Career name="RULES-WORK38">"1"</Career>
+  <Career name="RULES-WORK14">"3"</Career>
+  <Career name="RULES-WORK09">"2"</Career>
+  <Career name="RULES-WORK30">"3"</Career>
+  <Career name="RULES-WORK64">"4"</Career>
+  <Career name="RULES-WORK60">"3"</Career>
+  <Career name="SEAOF-WORK109">"2"</Career>
+  <Career name="SEAOF-WORK111">"3"</Career>
+  <Career name="SEAOF-WORK113">"8"</Career>
+  <Career name="SEAOF-WORK116">"5"</Career>
+  <Career name="RULES-WORK08">"3"</Career>
+  <Career name="RULES-WORK28">"4"</Career>
+  <Career name="RULES-WORK61">"3"</Career>
+  <Career name="RULES-WORK57">"8"</Career>
+  </SUBCHAPTER_CAREER>
+<Page>56</Page>
+</Specie>
+<Specie id="SEAOF-RACE_DNORSE">
+<Description language="ENGLISH">"Dwarfs (Norse)"</Description>
+  <Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_DWARF"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_I">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+40"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_Fate">"0"</Attribut>
+<Attribut name="RULES-ATTR_Resil">"2"</Attribut>
+<Attribut name="RULES-ATTR_Wound">"1xBATTR_S+2xBATTR_T+1xBATTR_WP"</Attribut>
+<Attribut name="RULES-ATTR_Supp">"2"</Attribut>
+<Attribut name="RULES-ATTR_Move">"3"</Attribut>
+  </SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMPESCAL"</Skill>
+  <Skill>"RULES-COMPRESALC"</Skill>
+  <Skill>"RULES-COMPCALM"</Skill>
+  <Skill>"RULES-COMPRESIST"</Skill>
+  <Skill>"RULES-COMPDIVERT_NARRA"</Skill>
+  <Skill>"RULES-COMPEVAL"</Skill>
+  <Skill>"RULES-COMPLANG_KHAZ"</Skill>
+  <Skill>"RULES-COMPLANG_NORSE"</Skill>
+  <Skill>"RULES-COMPSAVOIR_NAIN"</Skill>
+  <Skill>"RULES-COMPCOMB_BASE"</Skill>
+  <Skill>"RULES-COMPVOILE_*"</Skill>
+  <Skill>"RULES-COMPMETIER_*"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T0104/RULES-T0107"</Talent>
+  <Talent>"RULES-T0169"</Talent>
+  <Talent>"RULES-T0164"</Talent>
+  <Talent>"RULES-T0084/RULES-T0075"</Talent>
+  <Talent>"RULES-T0035"</Talent>
+  </SUBCHAPTER_TALENT>
+  <Page>41</Page>
+</Specie>
+</DATA_SPECIE>
+<DATA_TALENT>
+<Talent id="SEAOF-T0182">
+<Description language="ENGLISH">"Chanty"</Description>
+<Short language="ENGLISH">""</Short>
+<Explanation language="ENGLISH">""</Explanation>
+<Max>"(BATTR_Int)"</Max>
+<PDF>""</PDF>
+<Test language="ENGLISH">"Entertain (Singing)"</Test>
+<Page>63</Page>
+</Talent>
+<Talent id="SEAOF-T0184">
+<Description language="ENGLISH">"Master and Commander"</Description>
+<Short language="ENGLISH">""</Short>
+<Explanation language="ENGLISH">""</Explanation>
+<Max>"(BATTR_Fel)"</Max>
+<PDF>""</PDF>
+<Test language="ENGLISH">"Leadership"</Test>
+<Page>63</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_CAREER>
+<Career id="SEAOF-WORK109">
+<Description language="ENGLISH">"Beachcomber"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPPRECEP"</Skill>
+<Class>"SEAOF-CLASS_SEAF"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Scavenger"</Description>
+<Salary>"TIERS_BRASS 1"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Beachcomber"</Description>
+<Salary>"TIERS_BRASS 3"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Drifter"</Description>
+<Salary>"TIERS_BRASS 5"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Master of the Beach"</Description>
+<Salary>"TIERS_SILVER 2"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"1"</Attribut>
+<Attribut name="RULES-ATTR_BS">"0"</Attribut>
+<Attribut name="RULES-ATTR_S">"0"</Attribut>
+<Attribut name="RULES-ATTR_T">"4"</Attribut>
+<Attribut name="RULES-ATTR_I">"1"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"0"</Attribut>
+<Attribut name="RULES-ATTR_Int">"1"</Attribut>
+<Attribut name="RULES-ATTR_WP">"3"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"0"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPESCAL">"1"</Skill>
+  <Skill name="RULES-COMPESQU">"1"</Skill>
+  <Skill name="RULES-COMPRAGOT">"1"</Skill>
+  <Skill name="RULES-COMPMARCH">"1"</Skill>
+  <Skill name="RULES-COMPSAVOIR_COASTTIDES">"1"</Skill>
+  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
+  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
+  <Skill name="RULES-COMPPRECEP">"1"</Skill>
+  <Skill name="RULES-COMPRAMER">"1"</Skill>
+  <Skill name="RULES-COMPDISC_RURAL">"1"</Skill>
+  <Skill name="RULES-COMPRESALC">"2"</Skill>
+  <Skill name="RULES-COMPRESIST">"2"</Skill>
+  <Skill name="RULES-COMPSAVOIR_*">"2"</Skill>
+  <Skill name="RULES-COMPPROJ_FROND">"2"</Skill>
+  <Skill name="RULES-COMPPIEG">"2"</Skill>
+  <Skill name="RULES-COMPNATA">"2"</Skill>
+  <Skill name="RULES-COMPCHARM">"3"</Skill>
+  <Skill name="RULES-COMPEVAL">"3"</Skill>
+  <Skill name="RULES-COMPPARI">"3"</Skill>
+  <Skill name="RULES-COMPVOILE_*">"3"</Skill>
+  <Skill name="RULES-COMPCOMM">"4"</Skill>
+  <Skill name="RULES-COMPMETIER_BATEA">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0113">"1"</Talent>
+  <Talent name="RULES-T0140">"1"</Talent>
+  <Talent name="RULES-T0013_COASTAL">"1"</Talent>
+  <Talent name="RULES-T0100">"1"</Talent>
+  <Talent name="RULES-T0074">"2"</Talent>
+  <Talent name="RULES-T0064">"2"</Talent>
+  <Talent name="RULES-T0105">"2"</Talent>
+  <Talent name="RULES-T0016">"2"</Talent>
+  <Talent name="RULES-T0085">"3"</Talent>
+  <Talent name="RULES-T0134_COASTAL">"3"</Talent>
+  <Talent name="RULES-T0119">"3"</Talent>
+  <Talent name="RULES-T0015">"3"</Talent>
+  <Talent name="RULES-T0102">"4"</Talent>
+  <Talent name="RULES-T0068">"4"</Talent>
+  <Talent name="RULES-T0168">"4"</Talent>
+  <Talent name="RULES-T0116">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="Fishing Net">"1"</Item>
+<Item name="String Bag">"1"</Item>
+<Item name="RULES-TRAP_015">"2"</Item>
+<Item name="RULES-ARMO_03">"2"</Item>
+<Item name="Rain Hat">"2"</Item>
+<Item name="Boat">"3"</Item>
+<Item name="Hut">"3"</Item>
+<Item name="RULES-TRAP_142">"3"</Item>
+<Item name="Wreck Dwelling">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>64</Page>
+</Career>
+<Career id="SEAOF-WORK110">
+<Description language="ENGLISH">"Chantyman"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPDIVERT_CHANT"</Skill>
+<Class>"SEAOF-CLASS_SEAF"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Chanter"</Description>
+<Salary>"TIERS_SILVER 1"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Chantyman"</Description>
+<Salary>"TIERS_SILVER 3"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Chanty Captain"</Description>
+<Salary>"TIERS_SILVER 5"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Chanty Master"</Description>
+<Salary>"TIERS_GOLD 1"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"0"</Attribut>
+<Attribut name="RULES-ATTR_BS">"0"</Attribut>
+<Attribut name="RULES-ATTR_S">"0"</Attribut>
+<Attribut name="RULES-ATTR_T">"0"</Attribut>
+<Attribut name="RULES-ATTR_I">"4"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"1"</Attribut>
+<Attribut name="RULES-ATTR_Int">"1"</Attribut>
+<Attribut name="RULES-ATTR_WP">"3"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"1"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPCHARM">"1"</Skill>
+  <Skill name="RULES-COMPRESALC">"1"</Skill>
+  <Skill name="RULES-COMPESQU">"1"</Skill>
+  <Skill name="RULES-COMPDIVERT_CHANT">"1"</Skill>
+  <Skill name="RULES-COMPRAGOT">"1"</Skill>
+  <Skill name="RULES-COMPCOMB_BAGAR">"1"</Skill>
+  <Skill name="RULES-COMPMUSIC_FIDDLE/RULES-COMPMUSIC_SQUEEZE/RULES-COMPMUSIC_PENNYW">"1"</Skill>
+  <Skill name="RULES-COMPRAMER">"1"</Skill>
+  <Skill name="RULES-COMPVOILE_*">"1"</Skill>
+  <Skill name="RULES-COMPNATA">"1"</Skill>
+  <Skill name="RULES-COMPATHL">"2"</Skill>
+  <Skill name="RULES-COMPESCAL">"2"</Skill>
+  <Skill name="RULES-COMPRESIST">"2"</Skill>
+  <Skill name="RULES-COMPPARI">"2"</Skill>
+  <Skill name="RULES-COMPCOMB_BASE">"2"</Skill>
+  <Skill name="RULES-COMPREPRES_*">"2"</Skill>
+  <Skill name="RULES-COMPCALM">"3"</Skill>
+  <Skill name="RULES-COMPLANG_*">"3"</Skill>
+  <Skill name="RULES-COMPCOMM">"3"</Skill>
+  <Skill name="RULES-COMPPRECEP">"3"</Skill>
+  <Skill name="RULES-COMPSAVOIR_OCEAN">"4"</Skill>
+  <Skill name="RULES-COMPORIENT">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0136_CREW">"1"</Talent>
+  <Talent name="RULES-T0110">"1"</Talent>
+  <Talent name="RULES-T0119">"1"</Talent>
+  <Talent name="RULES-T0013_COASTAL">"1"</Talent>
+  <Talent name="SEAOF-T0182">"2"</Talent>
+  <Talent name="RULES-T0133">"2"</Talent>
+  <Talent name="RULES-T0168">"2"</Talent>
+  <Talent name="RULES-T0100">"2"</Talent>
+  <Talent name="RULES-T0104">"3"</Talent>
+  <Talent name="RULES-T0113">"3"</Talent>
+  <Talent name="RULES-T0085">"3"</Talent>
+  <Talent name="RULES-T0109">"3"</Talent>
+  <Talent name="RULES-T0116">"4"</Talent>
+  <Talent name="RULES-T0090">"4"</Talent>
+  <Talent name="RULES-T0140">"4"</Talent>
+  <Talent name="RULES-T0084">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_139">"1"</Item>
+<Item name="Rain Hat">"1"</Item>
+<Item name="Sealskin Coat">"2"</Item>
+<Item name="RULES-TRAP_139 (Q)">"3"</Item>
+<Item name="RULES-TRAP_023 (Q)">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>66</Page>
+</Career>
+<Career id="SEAOF-WORK111">
+<Description language="ENGLISH">"Huffer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPORIENT"</Skill>
+<Class>"SEAOF-CLASS_SEAF"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Portguide"</Description>
+<Salary>"TIERS_BRASS 4"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Huffer"</Description>
+<Salary>"TIERS_SILVER 1"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Pilot"</Description>
+<Salary>"TIERS_SILVER 3"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Master Pilot"</Description>
+<Salary>"TIERS_SILVER 5"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"1"</Attribut>
+<Attribut name="RULES-ATTR_BS">"0"</Attribut>
+<Attribut name="RULES-ATTR_S">"0"</Attribut>
+<Attribut name="RULES-ATTR_T">"1"</Attribut>
+<Attribut name="RULES-ATTR_I">"1"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"0"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"0"</Attribut>
+<Attribut name="RULES-ATTR_Int">"3"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"4"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPRESALC">"1"</Skill>
+  <Skill name="RULES-COMPRAGOT">"1"</Skill>
+  <Skill name="RULES-COMPINTUI">"1"</Skill>
+  <Skill name="RULES-COMPSAVOIR_LOCAL">"1"</Skill>
+  <Skill name="RULES-COMPSAVOIR_OCEAN">"1"</Skill>
+  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
+  <Skill name="RULES-COMPORIENT">"1"</Skill>
+  <Skill name="RULES-COMPPRECEP">"1"</Skill>
+  <Skill name="RULES-COMPRAMER">"1"</Skill>
+  <Skill name="RULES-COMPNATA">"1"</Skill>
+  <Skill name="RULES-COMPATHL">"2"</Skill>
+  <Skill name="RULES-COMPCHARM">"2"</Skill>
+  <Skill name="RULES-COMPESCAL">"2"</Skill>
+  <Skill name="RULES-COMPCALM">"2"</Skill>
+  <Skill name="RULES-COMPDIVERT_NARRA">"2"</Skill>
+  <Skill name="RULES-COMPLANG_*">"2"</Skill>
+  <Skill name="RULES-COMPMARCH">"3"</Skill>
+  <Skill name="RULES-COMPINTIM">"3"</Skill>
+  <Skill name="RULES-COMPSAVOIR_LOCAL">"3"</Skill>
+  <Skill name="RULES-COMPSAVOIR_EPAVE">"3"</Skill>
+  <Skill name="RULES-COMPCOMM">"4"</Skill>
+  <Skill name="RULES-COMPVOILE_*">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0113">"1"</Talent>
+  <Talent name="RULES-T0164">"1"</Talent>
+  <Talent name="RULES-T0140">"1"</Talent>
+  <Talent name="RULES-T0097">"1"</Talent>
+  <Talent name="RULES-T0102">"2"</Talent>
+  <Talent name="RULES-T0136_GUILD">"2"</Talent>
+  <Talent name="RULES-T0058">"2"</Talent>
+  <Talent name="RULES-T0085">"2"</Talent>
+  <Talent name="RULES-T0139_VUE">"3"</Talent>
+  <Talent name="RULES-T0120">"3"</Talent>
+  <Talent name="RULES-T0119">"3"</Talent>
+  <Talent name="RULES-T0158">"3"</Talent>
+  <Talent name="RULES-T0166">"4"</Talent>
+  <Talent name="RULES-T0141">"4"</Talent>
+  <Talent name="RULES-T0100">"4"</Talent>
+  <Talent name="RULES-T0116">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="UPINA-COMB_BAGAR_04">"1"</Item>
+<Item name="RULES-TRAP_142+RULES-TRAP_140">"1"</Item>
+<Item name="RULES-ARMO_03">"2"</Item>
+<Item name="RULES-TRAP_150">"2"</Item>
+<Item name="RULES-TRAP_118">"2"</Item>
+<Item name="Pole">"3"</Item>
+<Item name="RULES-TRAP_142+RULES-TRAP_140">"3"</Item>
+<Item name="Boathand">"4"</Item>
+<Item name="Small Boat">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>68</Page>
+</Career>
+<Career id="SEAOF-WORK112">
+<Description language="ENGLISH">"Officer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPCOMM"</Skill>
+<Class>"SEAOF-CLASS_SEAF"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Midshipman"</Description>
+<Salary>"TIERS_SILVER 1"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Officer"</Description>
+<Salary>"TIERS_SILVER 5"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Captain"</Description>
+<Salary>"TIERS_GOLD 2"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Admiral"</Description>
+<Salary>"TIERS_GOLD 5"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"1"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2"</Attribut>
+<Attribut name="RULES-ATTR_S">"0"</Attribut>
+<Attribut name="RULES-ATTR_T">"3"</Attribut>
+<Attribut name="RULES-ATTR_I">"0"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"0"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"0"</Attribut>
+<Attribut name="RULES-ATTR_Int">"1"</Attribut>
+<Attribut name="RULES-ATTR_WP">"4"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"1"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPATHL">"1"</Skill>
+  <Skill name="RULES-COMPESCAL">"1"</Skill>
+  <Skill name="RULES-COMPRAGOT">"1"</Skill>
+  <Skill name="RULES-COMPCOMM">"1"</Skill>
+  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
+  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
+  <Skill name="RULES-COMPPRECEP">"1"</Skill>
+  <Skill name="RULES-COMPRAMER">"1"</Skill>
+  <Skill name="RULES-COMPVOILE_*">"1"</Skill>
+  <Skill name="RULES-COMPNATA">"1"</Skill>
+  <Skill name="RULES-COMPCALM">"2"</Skill>
+  <Skill name="RULES-COMPRESIST">"2"</Skill>
+  <Skill name="RULES-COMPINTIM">"2"</Skill>
+  <Skill name="RULES-COMPSAVOIR_OCEAN">"2"</Skill>
+  <Skill name="RULES-COMPORIENT">"2"</Skill>
+  <Skill name="RULES-COMPPROJ_POUDRE">"2"</Skill>
+  <Skill name="RULES-COMPART_CARTO">"3"</Skill>
+  <Skill name="RULES-COMPCHARM">"3"</Skill>
+  <Skill name="RULES-COMPESQU">"3"</Skill>
+  <Skill name="RULES-COMPINTUI">"3"</Skill>
+  <Skill name="RULES-COMPLANG_*">"4"</Skill>
+  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0136_CREW">"1"</Talent>
+  <Talent name="RULES-T0140">"1"</Talent>
+  <Talent name="RULES-T0084">"1"</Talent>
+  <Talent name="RULES-T0119">"1"</Talent>
+  <Talent name="RULES-T0074">"2"</Talent>
+  <Talent name="RULES-T0085">"2"</Talent>
+  <Talent name="SEAOF-T0184">"2"</Talent>
+  <Talent name="RULES-T0120">"2"</Talent>
+  <Talent name="RULES-T0053">"3"</Talent>
+  <Talent name="RULES-T0168">"3"</Talent>
+  <Talent name="RULES-T0138">"3"</Talent>
+  <Talent name="RULES-T0002">"3"</Talent>
+  <Talent name="RULES-T0122">"4"</Talent>
+  <Talent name="RULES-T0167">"4"</Talent>
+  <Talent name="RULES-T0109">"4"</Talent>
+  <Talent name="RULES-T0025">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-COMB_BASE_*">"1"</Item>
+<Item name="RULES-TRAP_034">"1"</Item>
+<Item name="RULES-TRAP_034 (Q)">"2"</Item>
+<Item name="Ship’s Chest">"2"</Item>
+<Item name="Big Hat">"3"</Item>
+<Item name="Boat to Command">"3"</Item>
+<Item name="Captain’s Log">"3"</Item>
+<Item name="A Fleet">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>70</Page>
+</Career>
+<Career id="SEAOF-WORK113">
+<Description language="ENGLISH">"Sailor"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPVOILE_*"</Skill>
+<Class>"SEAOF-CLASS_SEAF"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Landsman"</Description>
+<Salary>"TIERS_SILVER 1"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Sailor"</Description>
+<Salary>"TIERS_SILVER 3"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Boatswain"</Description>
+<Salary>"TIERS_SILVER 5"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Ship’s Master"</Description>
+<Salary>"TIERS_GOLD 2"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2"</Attribut>
+<Attribut name="RULES-ATTR_BS">"0"</Attribut>
+<Attribut name="RULES-ATTR_S">"0"</Attribut>
+<Attribut name="RULES-ATTR_T">"0"</Attribut>
+<Attribut name="RULES-ATTR_I">"3"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"1"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"1"</Attribut>
+<Attribut name="RULES-ATTR_Int">"4"</Attribut>
+<Attribut name="RULES-ATTR_WP">"0"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"1"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPESCAL">"1"</Skill>
+  <Skill name="RULES-COMPRESALC">"1"</Skill>
+  <Skill name="RULES-COMPPARI">"1"</Skill>
+  <Skill name="RULES-COMPRAGOT">"1"</Skill>
+  <Skill name="RULES-COMPSAVOIR_OCEAN">"1"</Skill>
+  <Skill name="RULES-COMPCOMB_BAGAR">"1"</Skill>
+  <Skill name="RULES-COMPMUSIC_PENNYW">"1"</Skill>
+  <Skill name="RULES-COMPRAMER">"1"</Skill>
+  <Skill name="RULES-COMPVOILE_*">"1"</Skill>
+  <Skill name="RULES-COMPNATA">"1"</Skill>
+  <Skill name="RULES-COMPATHL">"2"</Skill>
+  <Skill name="RULES-COMPESQU">"2"</Skill>
+  <Skill name="RULES-COMPRESIST">"2"</Skill>
+  <Skill name="RULES-COMPDIVERT_CHANT">"2"</Skill>
+  <Skill name="RULES-COMPLANG_*">"2"</Skill>
+  <Skill name="RULES-COMPCOMB_BASE">"2"</Skill>
+  <Skill name="RULES-COMPCALM">"3"</Skill>
+  <Skill name="RULES-COMPCOMM">"3"</Skill>
+  <Skill name="RULES-COMPPRECEP">"3"</Skill>
+  <Skill name="RULES-COMPMETIER_CHARP">"3"</Skill>
+  <Skill name="RULES-COMPCHARM">"4"</Skill>
+  <Skill name="RULES-COMPORIENT">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0113">"1"</Talent>
+  <Talent name="RULES-T0013_COASTAL">"1"</Talent>
+  <Talent name="RULES-T0077">"1"</Talent>
+  <Talent name="RULES-T0100">"1"</Talent>
+  <Talent name="RULES-T0144">"2"</Talent>
+  <Talent name="RULES-T0119">"2"</Talent>
+  <Talent name="RULES-T0168">"2"</Talent>
+  <Talent name="RULES-T0014">"2"</Talent>
+  <Talent name="RULES-T0085">"3"</Talent>
+  <Talent name="RULES-T0037">"3"</Talent>
+  <Talent name="RULES-T0116">"3"</Talent>
+  <Talent name="RULES-T0158">"3"</Talent>
+  <Talent name="RULES-T0140">"4"</Talent>
+  <Talent name="RULES-T0120">"4"</Talent>
+  <Talent name="RULES-T0109">"4"</Talent>
+  <Talent name="RULES-T0117">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="Brush">"1"</Item>
+<Item name="RULES-TRAP_053">"1"</Item>
+<Item name="RULES-TRAP_070">"1"</Item>
+<Item name="UPINA-COMB_BAGAR_04">"2"</Item>
+<Item name="RULES-ARMO_03">"2"</Item>
+<Item name="RULES-TRAP_101">"3"</Item>
+<Item name="Sailing Ship and Crew">"4"</Item>
+<Item name="Sextant">"4"</Item>
+<Item name="Shipping Charts">"4"</Item>
+<Item name="Spyglass">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>72</Page>
+</Career>
+<Career id="SEAOF-WORK114">
+<Description language="ENGLISH">"Sailor-Priest of Manann"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPPRIERE"</Skill>
+<Class>"SEAOF-CLASS_SEAF"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Initiate"</Description>
+<Salary>"TIERS_BRASS 2"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Sailor-Priest"</Description>
+<Salary>"TIERS_SILVER 1"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Priest-Captain"</Description>
+<Salary>"TIERS_GOLD 1"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Wave Lord"</Description>
+<Salary>"TIERS_GOLD 2"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"0"</Attribut>
+<Attribut name="RULES-ATTR_BS">"0"</Attribut>
+<Attribut name="RULES-ATTR_S">"0"</Attribut>
+<Attribut name="RULES-ATTR_T">"1"</Attribut>
+<Attribut name="RULES-ATTR_I">"3"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"1"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"0"</Attribut>
+<Attribut name="RULES-ATTR_Int">"4"</Attribut>
+<Attribut name="RULES-ATTR_WP">"1"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPATHL">"1"</Skill>
+  <Skill name="RULES-COMPRESALC">"1"</Skill>
+  <Skill name="RULES-COMPCALM">"1"</Skill>
+  <Skill name="RULES-COMPRESIST">"1"</Skill>
+  <Skill name="RULES-COMPLANG_CLASS">"1"</Skill>
+  <Skill name="RULES-COMPSAVOIR_MANANN">"1"</Skill>
+  <Skill name="RULES-COMPPRIERE">"1"</Skill>
+  <Skill name="RULES-COMPRAMER">"1"</Skill>
+  <Skill name="RULES-COMPVOILE_*">"1"</Skill>
+  <Skill name="RULES-COMPNATA">"1"</Skill>
+  <Skill name="RULES-COMPINTUI">"2"</Skill>
+  <Skill name="RULES-COMPDIVERT_CHANT">"2"</Skill>
+  <Skill name="RULES-COMPPARI">"2"</Skill>
+  <Skill name="RULES-COMPINTIM">"2"</Skill>
+  <Skill name="RULES-COMPCOMB_HAST">"2"</Skill>
+  <Skill name="RULES-COMPORIENT">"2"</Skill>
+  <Skill name="RULES-COMPCHARM">"3"</Skill>
+  <Skill name="RULES-COMPCOMM">"3"</Skill>
+  <Skill name="RULES-COMPSAVOIR_OCEAN">"3"</Skill>
+  <Skill name="RULES-COMPPROJ_POUDRE">"3"</Skill>
+  <Skill name="RULES-COMPLANG_*">"4"</Skill>
+  <Skill name="RULES-COMPSAVOIR_POLIT">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0012_MANANN">"1"</Talent>
+  <Talent name="RULES-T0165">"1"</Talent>
+  <Talent name="RULES-T0119">"1"</Talent>
+  <Talent name="RULES-T0158">"1"</Talent>
+  <Talent name="RULES-T0080_MANANN">"2"</Talent>
+  <Talent name="RULES-T0109">"2"</Talent>
+  <Talent name="RULES-T0084">"2"</Talent>
+  <Talent name="RULES-T0077">"2"</Talent>
+  <Talent name="RULES-T0069_STROMFELS">"3"</Talent>
+  <Talent name="RULES-T0085">"3"</Talent>
+  <Talent name="RULES-T0120">"3"</Talent>
+  <Talent name="RULES-T0100">"3"</Talent>
+  <Talent name="SEAOF-T0182">"4"</Talent>
+  <Talent name="RULES-T0053">"4"</Talent>
+  <Talent name="RULES-T0005">"4"</Talent>
+  <Talent name="RULES-T0168">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="Blue Robes/Green Robes/Turquoise Robes">"1"</Item>
+<Item name="RULES-COMB_BASE_10">"1"</Item>
+<Item name="RULES-TRAP_028">"1"</Item>
+<Item name="Holy Book of Manann">"2"</Item>
+<Item name="RULES-COMB_HAST_03">"2"</Item>
+<Item name="Ceremonial Boat">"3"</Item>
+<Item name="Subordinate Priests">"3"</Item>
+<Item name="Temple">"3"</Item>
+<Item name="Flotilla of Ships">"4"</Item>
+<Item name="Holy Relic">"4"</Item>
+<Item name="Subordinate High Priests">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>74</Page>
+</Career>
+<Career id="SEAOF-WORK115">
+<Description language="ENGLISH">"Ship’s Gunner"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPPROJ_POUDRE"</Skill>
+<Class>"SEAOF-CLASS_SEAF"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Powder Monkey"</Description>
+<Salary>"TIERS_BRASS 3"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Ship’s Gunner"</Description>
+<Salary>"TIERS_SILVER 3"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Gunnery Captain"</Description>
+<Salary>"TIERS_SILVER 5"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Master Gunner"</Description>
+<Salary>"TIERS_GOLD 1"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"0"</Attribut>
+<Attribut name="RULES-ATTR_BS">"1"</Attribut>
+<Attribut name="RULES-ATTR_S">"0"</Attribut>
+<Attribut name="RULES-ATTR_T">"3"</Attribut>
+<Attribut name="RULES-ATTR_I">"2"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"1"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"0"</Attribut>
+<Attribut name="RULES-ATTR_Int">"1"</Attribut>
+<Attribut name="RULES-ATTR_WP">"4"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"0"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPATHL">"1"</Skill>
+  <Skill name="RULES-COMPESCAL">"1"</Skill>
+  <Skill name="RULES-COMPESQU">"1"</Skill>
+  <Skill name="RULES-COMPRESIST">"1"</Skill>
+  <Skill name="RULES-COMPLANG_BATAIL">"1"</Skill>
+  <Skill name="RULES-COMPCOMB_BAGAR">"1"</Skill>
+  <Skill name="RULES-COMPPRECEP">"1"</Skill>
+  <Skill name="RULES-COMPPROJ_POUDRE">"1"</Skill>
+  <Skill name="RULES-COMPRAMER">"1"</Skill>
+  <Skill name="RULES-COMPNATA">"1"</Skill>
+  <Skill name="RULES-COMPRESALC">"2"</Skill>
+  <Skill name="RULES-COMPCALM">"2"</Skill>
+  <Skill name="RULES-COMPPARI">"2"</Skill>
+  <Skill name="RULES-COMPRAGOT">"2"</Skill>
+  <Skill name="RULES-COMPCOMB_BASE">"2"</Skill>
+  <Skill name="RULES-COMPVOILE_*">"2"</Skill>
+  <Skill name="RULES-COMPCOMM">"3"</Skill>
+  <Skill name="RULES-COMPSAVOIR_ARTILLERY">"3"</Skill>
+  <Skill name="RULES-COMPORIENT">"3"</Skill>
+  <Skill name="RULES-COMPMETIER_ARMU">"3"</Skill>
+  <Skill name="RULES-COMPCHARM">"4"</Skill>
+  <Skill name="RULES-COMPSAVOIR_OCEAN">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0085">"1"</Talent>
+  <Talent name="RULES-T0125">"1"</Talent>
+  <Talent name="RULES-T0119">"1"</Talent>
+  <Talent name="RULES-T0077">"1"</Talent>
+  <Talent name="RULES-T0136_CREW">"2"</Talent>
+  <Talent name="RULES-T0006">"2"</Talent>
+  <Talent name="RULES-T0153">"2"</Talent>
+  <Talent name="RULES-T0154">"2"</Talent>
+  <Talent name="RULES-T0163">"3"</Talent>
+  <Talent name="UPINA-T0173">"3"</Talent>
+  <Talent name="RULES-T0140">"3"</Talent>
+  <Talent name="RULES-T0084">"3"</Talent>
+  <Talent name="RULES-T0149">"4"</Talent>
+  <Talent name="RULES-T0053">"4"</Talent>
+  <Talent name="RULES-T0168">"4"</Talent>
+  <Talent name="RULES-T0025">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_053">"1"</Item>
+<Item name="Hammock">"1"</Item>
+<Item name="RULES-TRAP_023">"2"</Item>
+<Item name="Sea Chest">"2"</Item>
+<Item name="Tools">"2"</Item>
+<Item name="Crew">"3"</Item>
+<Item name="RULES-TRAP_085">"3"</Item>
+<Item name="Cabin">"4"</Item>
+<Item name="RULES-TRAP_034 (Q)">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>76</Page>
+</Career>
+<Career id="SEAOF-WORK116">
+<Description language="ENGLISH">"Wrecker"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Class>"SEAOF-CLASS_SEAF"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Cargo Scavenger"</Description>
+<Salary>"TIERS_BRASS 2"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Wrecker"</Description>
+<Salary>"TIERS_BRASS 3"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Pirate"</Description>
+<Salary>"TIERS_BRASS 5"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Pirate Captain"</Description>
+<Salary>"TIERS_SILVER 2"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"1"</Attribut>
+<Attribut name="RULES-ATTR_BS">"3"</Attribut>
+<Attribut name="RULES-ATTR_S">"1"</Attribut>
+<Attribut name="RULES-ATTR_T">"0"</Attribut>
+<Attribut name="RULES-ATTR_I">"1"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"0"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"0"</Attribut>
+<Attribut name="RULES-ATTR_Int">"0"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"4"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPESCAL">"1"</Skill>
+  <Skill name="RULES-COMPRESALC">"1"</Skill>
+  <Skill name="RULES-COMPESQU">"1"</Skill>
+  <Skill name="RULES-COMPRESIST">"1"</Skill>
+  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
+  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
+  <Skill name="RULES-COMPPROJ_FROND">"1"</Skill>
+  <Skill name="RULES-COMPRAMER">"1"</Skill>
+  <Skill name="RULES-COMPVOILE_*">"1"</Skill>
+  <Skill name="RULES-COMPNATA">"1"</Skill>
+  <Skill name="RULES-COMPSUBOR">"2"</Skill>
+  <Skill name="RULES-COMPCALM">"2"</Skill>
+  <Skill name="RULES-COMPINTUI">"2"</Skill>
+  <Skill name="RULES-COMPORIENT">"2"</Skill>
+  <Skill name="RULES-COMPPRECEP">"2"</Skill>
+  <Skill name="RULES-COMPPIEG">"2"</Skill>
+  <Skill name="RULES-COMPRAGOT">"3"</Skill>
+  <Skill name="RULES-COMPINTIM">"3"</Skill>
+  <Skill name="RULES-COMPPROJ_ARB">"3"</Skill>
+  <Skill name="RULES-COMPDISC_RURAL">"3"</Skill>
+  <Skill name="RULES-COMPCOMM">"4"</Skill>
+  <Skill name="RULES-COMPSAVOIR_OCEAN">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0048">"1"</Talent>
+  <Talent name="RULES-T0038">"1"</Talent>
+  <Talent name="RULES-T0113">"1"</Talent>
+  <Talent name="RULES-T0077">"1"</Talent>
+  <Talent name="RULES-T0064">"2"</Talent>
+  <Talent name="RULES-T0105">"2"</Talent>
+  <Talent name="RULES-T0100">"2"</Talent>
+  <Talent name="RULES-T0156">"2"</Talent>
+  <Talent name="RULES-T0026">"3"</Talent>
+  <Talent name="RULES-T0136_CRIM">"3"</Talent>
+  <Talent name="RULES-T0098">"3"</Talent>
+  <Talent name="RULES-T0097">"3"</Talent>
+  <Talent name="RULES-T0008">"4"</Talent>
+  <Talent name="RULES-T0029">"4"</Talent>
+  <Talent name="SEAOF-T0184">"4"</Talent>
+  <Talent name="RULES-T0067">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_056">"1"</Item>
+<Item name="RULES-TRAP_009">"1"</Item>
+<Item name="RULES-TRAP_022">"1"</Item>
+<Item name="UPINA-COMB_BAGAR_04">"2"</Item>
+<Item name="RULES-ARMO_03">"2"</Item>
+<Item name="RULES-TRAP_142+RULES-TRAP_140">"2"</Item>
+<Item name="RULES-PROJ_ARB_01">"3"</Item>
+<Item name="RULES-MUNI_01">"3"</Item>
+  <Item name="RULES-TRAP_138">"3"</Item>
+<Item name="RULES-TRAP_150">"3"</Item>
+<Item name="Riverboat">"3"</Item>
+<Item name="Fleet of Riverboats and Wrecker Crew">"4"</Item>
+<Item name="RULES-TRAP_037">"4"</Item>
+<Item name="RULES-TRAP_069">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>78</Page>
+</Career>
+<Career id="SEAOF-WORK118">
+<Description language="ENGLISH">"Priest of Stromfels"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Class>"SEAOF-CLASS_SEAF"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Initiate"</Description>
+<Salary>"TIERS_SILVER 2"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Priest of Stromfels"</Description>
+<Salary>"TIERS_SILVER 3"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Pirate Priest"</Description>
+<Salary>"TIERS_SILVER 4"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Priest Captain"</Description>
+<Salary>"TIERS_SILVER 5"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"1"</Attribut>
+<Attribut name="RULES-ATTR_BS">"4"</Attribut>
+<Attribut name="RULES-ATTR_S">"1"</Attribut>
+<Attribut name="RULES-ATTR_T">"0"</Attribut>
+<Attribut name="RULES-ATTR_I">"1"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"3"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"0"</Attribut>
+<Attribut name="RULES-ATTR_Int">"0"</Attribut>
+<Attribut name="RULES-ATTR_WP">"0"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPESCAL">"1"</Skill>
+  <Skill name="RULES-COMPRESALC">"1"</Skill>
+  <Skill name="RULES-COMPRESIST">"1"</Skill>
+  <Skill name="RULES-COMPINTIM">"1"</Skill>
+  <Skill name="RULES-COMPINTUI">"1"</Skill>
+  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
+  <Skill name="RULES-COMPPRIERE">"1"</Skill>
+  <Skill name="RULES-COMPRAMER">"1"</Skill>
+  <Skill name="RULES-COMPVOILE_*">"1"</Skill>
+  <Skill name="RULES-COMPNATA">"1"</Skill>
+  <Skill name="RULES-COMPCALM">"2"</Skill>
+  <Skill name="RULES-COMPDIVERT_CHANT">"2"</Skill>
+  <Skill name="RULES-COMPSAVOIR_STROMFELS">"2"</Skill>
+  <Skill name="RULES-COMPORIENT">"2"</Skill>
+  <Skill name="RULES-COMPPRECEP">"2"</Skill>
+  <Skill name="RULES-COMPPIST">"2"</Skill>
+  <Skill name="RULES-COMPRAGOT">"3"</Skill>
+  <Skill name="RULES-COMPCOMM">"3"</Skill>
+  <Skill name="RULES-COMPSAVOIR_OCEAN">"3"</Skill>
+  <Skill name="RULES-COMPPIEG">"3"</Skill>
+  <Skill name="RULES-COMPCOMB_*">"4"</Skill>
+  <Skill name="RULES-COMPPROJ_POUDRE">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0012_STROMFELS">"1"</Talent>
+  <Talent name="RULES-T0038">"1"</Talent>
+  <Talent name="RULES-T0165">"1"</Talent>
+  <Talent name="RULES-T0100">"1"</Talent>
+  <Talent name="RULES-T0132_*">"2"</Talent>
+  <Talent name="RULES-T0064">"2"</Talent>
+  <Talent name="RULES-T0080_STROMFELS">"2"</Talent>
+  <Talent name="RULES-T0098">"2"</Talent>
+  <Talent name="RULES-T0069_MANANN/RULES-T0069_CHAOS">"3"</Talent>
+  <Talent name="RULES-T0056">"3"</Talent>
+  <Talent name="RULES-T0065">"3"</Talent>
+  <Talent name="RULES-T0105">"3"</Talent>
+  <Talent name="RULES-T0008">"4"</Talent>
+  <Talent name="RULES-T0029">"4"</Talent>
+  <Talent name="RULES-T0120">"4"</Talent>
+  <Talent name="RULES-T0067">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_056">"1"</Item>
+<Item name="RULES-COMB_BASE_*">"1"</Item>
+<Item name="RULES-TRAP_009">"1"</Item>
+<Item name="RULES-ARMO_03">"1"</Item>
+<Item name="RULES-TRAP_022">"1"</Item>
+<Item name="RULES-ARMO_04">"2"</Item>
+<Item name="RULES-TRAP_142+RULES-TRAP_140">"2"</Item>
+<Item name="RULES-TRAP_138+RULES-TRAP_150">"3"</Item>
+<Item name="Religious Relic">"3"</Item>
+<Item name="Riverboat">"3"</Item>
+<Item name="Group of Cultists">"4"</Item>
+<Item name="RULES-PROJ_POUDRE_04">"4"</Item>
+<Item name="RULES-MUNI_06">"4"</Item>
+  </SUBCHAPTER_ITEM>
+<Page>90</Page>
+</Career>
+</DATA_CAREER>
+<DATA_WEAPON>
+<Weapon id="SEAOF-PROJ_ARB_01">
+<Description language="ENGLISH">"Ballista"</Description>
+<Skill>"RULES-COMPPROJ_ARB"</Skill>
+<Damage>"+12"</Damage>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Reach>"100"</Reach>
+<Price>"30CO"</Price>
+<Encumbrance>"20"</Encumbrance>
+<Quality>"RULES-WEAPB16,UPINA-WEAPB35 2,RULES-WEAPB23 3"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>100</Page>
+</Weapon>
+<Weapon id="SEAOF-PROJ_POUDRE_01">
+<Description language="ENGLISH">"Cannon (small)"</Description>
+<Skill>"RULES-COMPPROJ_POUDRE"</Skill>
+<Damage>"+10"</Damage>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Reach>"50"</Reach>
+<Price>"40CO"</Price>
+<Encumbrance>"30"</Encumbrance>
+<Quality>"UPINA-WEAPB35 2,RULES-WEAPB24,RULES-WEAPB23 4"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>101</Page>
+</Weapon>
+<Weapon id="SEAOF-PROJ_POUDRE_02">
+<Description language="ENGLISH">"Cannon (medium)"</Description>
+<Skill>"RULES-COMPPROJ_POUDRE"</Skill>
+<Damage>"+14"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"75"</Reach>
+<Price>"100CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>"UPINA-WEAPB35 3,RULES-WEAPB24,RULES-WEAPB23 6"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>101</Page>
+</Weapon>
+<Weapon id="SEAOF-PROJ_POUDRE_03">
+<Description language="ENGLISH">"Cannon (large)"</Description>
+<Skill>"RULES-COMPPROJ_POUDRE"</Skill>
+<Damage>"+16"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"150"</Reach>
+<Price>"250CO"</Price>
+<Encumbrance>"75"</Encumbrance>
+<Quality>"UPINA-WEAPB35 4,RULES-WEAPB24,RULES-WEAPB23 8"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>101</Page>
+</Weapon>
+<Weapon id="SEAOF-PROJ_POUDRE_04">
+<Description language="ENGLISH">"Mortar"</Description>
+<Skill>"RULES-COMPPROJ_POUDRE"</Skill>
+<Damage>"-"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"100"</Reach>
+<Price>"50CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>"UPINA-WEAPB35 3,RULES-WEAPB23 4"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>100</Page>
+</Weapon>
+<Weapon id="SEAOF-PROJ_POUDRE_05">
+<Description language="ENGLISH">"Swivel Gun"</Description>
+<Skill>"RULES-COMPPROJ_POUDRE"</Skill>
+<Damage>"+14"</Damage>
+<Availability>"RULES-DISPO_RARE"</Availability>
+<Reach>"30"</Reach>
+<Price>"20CO"</Price>
+<Encumbrance>"5"</Encumbrance>
+<Quality>"RULES-WEAPB24,RULES-WEAPB23 4"</Quality>
+<Hand>"2"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>100</Page>
+</Weapon>
+<Weapon id="SEAOF-MUNI_01">
+<Description language="ENGLISH">"Ballista Bolt"</Description>
+<Skill>"RULES-COMPPROJ_ARB"</Skill>
+<Damage>"-"</Damage>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Reach>"+0"</Reach>
+<Price>"4PA"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"RULES-WEAPB12,RULES-WEAPB22"</Quality>
+<Hand>"0"</Hand>
+<Ammunition>"1"</Ammunition>
+<Page>101</Page>
+</Weapon>
+<Weapon id="SEAOF-MUNI_02">
+<Description language="ENGLISH">"Ball and Powder"</Description>
+<Skill>"RULES-COMPPROJ_POUDRE"</Skill>
+<Damage>"-"</Damage>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Reach>"+0"</Reach>
+<Price>"8PA"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"RULES-WEAPB15 2"</Quality>
+<Hand>"0"</Hand>
+<Ammunition>"1"</Ammunition>
+<Page>101</Page>
+</Weapon>
+<Weapon id="SEAOF-MUNI_03">
+<Description language="ENGLISH">"Grapeshot and Powder"</Description>
+<Skill>"RULES-COMPPROJ_POUDRE"</Skill>
+<Damage>"-5"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"/4"</Reach>
+<Price>"6PA 6SB"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"UPINA-WEAPB33 5"</Quality>
+<Hand>"0"</Hand>
+<Ammunition>"1"</Ammunition>
+<Page>101</Page>
+</Weapon>
+<Weapon id="SEAOF-MUNI_04">
+<Description language="ENGLISH">"Mortar Bomb"</Description>
+<Skill>"RULES-COMPPROJ_POUDRE"</Skill>
+<Damage>"+12"</Damage>
+<Availability>"RULES-DISPO_RARE"</Availability>
+<Reach>"+0"</Reach>
+<Price>"3CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"RULES-WEAPB15 5,RULES-WEAPB24,RULES-WEAPB21"</Quality>
+<Hand>"0"</Hand>
+<Ammunition>"1"</Ammunition>
+<Page>101</Page>
+</Weapon>
+<Weapon id="SEAOF-MUNI_05">
+<Description language="ENGLISH">"Mortar Incendiary"</Description>
+<Skill>"RULES-COMPPROJ_POUDRE"</Skill>
+<Damage>"-"</Damage>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Reach>"/2"</Reach>
+<Price>"1CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"RULES-WEAPB15 4,RULES-WEAPB24"</Quality>
+<Hand>"0"</Hand>
+<Ammunition>"1"</Ammunition>
+<Page>101</Page>
+</Weapon>
+<Weapon id="SEAOF-MUNI_06">
+<Description language="ENGLISH">"Swivel Gun Bullets and Powder"</Description>
+<Skill>"RULES-COMPPROJ_POUDRE"</Skill>
+<Damage>"+1"</Damage>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Reach>"+0"</Reach>
+<Price>"2PA 2SB"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"RULES-WEAPB12,RULES-WEAPB22,UPINA-WEAPB33 3"</Quality>
+<Hand>"0"</Hand>
+<Ammunition>"1"</Ammunition>
+<Page>101</Page>
+</Weapon>
+<Weapon id="SEAOF-MUNI_07">
+<Description language="ENGLISH">"Swivel Gun Small Shot and Powder"</Description>
+<Skill>"RULES-COMPPROJ_POUDRE"</Skill>
+<Damage>"-"</Damage>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Reach>"+0"</Reach>
+<Price>"2PA 2SB"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"UPINA-WEAPB33 6"</Quality>
+<Hand>"0"</Hand>
+<Ammunition>"1"</Ammunition>
+<Page>101</Page>
+</Weapon>
+</DATA_WEAPON>
+<DATA_SPELL>
+<Sort id="SEAOF-MIRAC_MANAMM_07">
+<Description language="ENGLISH">"Blessed Voyage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1 ship"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0080_MANANN"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>87</Page>
+</Sort>
+<Sort id="SEAOF-MIRAC_MANAMM_13">
+<Description language="ENGLISH">"Blessing of the Albatross"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1 ship"</Target>
+<Duration>"(BATTR_WP) days"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0080_MANANN"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+  <Page>87</Page>
+</Sort>
+<Sort id="SEAOF-MIRAC_MANAMM_14">
+<Description language="ENGLISH">"Blessing of the Mariner"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"1 day"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0080_MANANN"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+  <Page>87</Page>
+</Sort>
+<Sort id="SEAOF-MIRAC_MANAMM_08">
+<Description language="ENGLISH">"Breathe Water"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"(BATTR_Fel) minutes"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0080_MANANN"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>87</Page>
+</Sort>
+<Sort id="SEAOF-MIRAC_MANAMM_09">
+<Description language="ENGLISH">"Quell Waters"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1 strait or whirlpool"</Target>
+<Duration>"(BATTR_Fel) Rounds"</Duration>
+<Range>"(ATTR_Fel) yards × 10"</Range>
+<Talent>"RULES-T0080_MANANN"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>87</Page>
+</Sort>
+<Sort id="SEAOF-MIRAC_MANAMM_10">
+<Description language="ENGLISH">"Sea Curse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1 ship"</Target>
+<Duration>"(BATTR_Fel) Rounds"</Duration>
+<Range>"(ATTR_Fel) yards × 10"</Range>
+<Talent>"RULES-T0080_MANANN"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>87</Page>
+</Sort>
+<Sort id="SEAOF-MIRAC_MANAMM_11">
+<Description language="ENGLISH">"Repel Sea Beast"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1 creature with the Aquatic or the Marine Trait"</Target>
+<Duration>"(BATTR_Fel) Rounds"</Duration>
+<Range>"(ATTR_Fel) yards × 10"</Range>
+<Talent>"RULES-T0080_MANANN"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>87</Page>
+</Sort>
+<Sort id="SEAOF-MIRAC_MANAMM_12">
+<Description language="ENGLISH">"Rip Tides"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1 ship"</Target>
+<Duration>"(BATTR_Fel) Rounds"</Duration>
+<Range>"(ATTR_Fel) yards × 10"</Range>
+<Talent>"RULES-T0080_MANANN"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>87</Page>
+</Sort>
+<Sort id="SEAOF-MIRAC_STROMFELS_01">
+<Description language="ENGLISH">"Blood Trail"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"1 hour"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0080_STROMFELS"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>91</Page>
+</Sort>
+<Sort id="SEAOF-MIRAC_STROMFELS_02">
+<Description language="ENGLISH">"Curse of the Harsh Mistress"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"(BATTR_S) days"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0080_STROMFELS"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>91</Page>
+</Sort>
+<Sort id="SEAOF-MIRAC_STROMFELS_03">
+<Description language="ENGLISH">"Manann’s Mood Made Meaningless"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"See text"</Target>
+<Duration>"(BATTR_S) days"</Duration>
+<Range>"See text"</Range>
+<Talent>"RULES-T0080_STROMFELS"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>91</Page>
+</Sort>
+<Sort id="SEAOF-MIRAC_STROMFELS_04">
+<Description language="ENGLISH">"Raging Seas"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"See text"</Target>
+<Duration>"Instant"</Duration>
+<Range>"(ATTR_S) yards × 10"</Range>
+<Talent>"RULES-T0080_STROMFELS"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>91</Page>
+</Sort>
+<Sort id="SEAOF-MIRAC_STROMFELS_05">
+<Description language="ENGLISH">"Seasickness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Strength Bonus hours"</Duration>
+<Range>"(ATTR_S) yards × 10"</Range>
+<Talent>"RULES-T0080_STROMFELS"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>91</Page>
+</Sort>
+<Sort id="SEAOF-MIRAC_STROMFELS_06">
+<Description language="ENGLISH">"Send ‘em to Stromfels"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1 ship with a Holed Rating"</Target>
+<Duration>"Instant"</Duration>
+<Range>"(ATTR_S) yards × 10"</Range>
+<Talent>"RULES-T0080_STROMFELS"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>91</Page>
+</Sort>
+<Sort id="SEAOF-MIRAC_STROMFELS_07">
+<Description language="ENGLISH">"Storm Winds"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1 ship"</Target>
+<Duration>"(ATTR_S) minutes"</Duration>
+<Range>"(ATTR_S) yards × 10"</Range>
+<Talent>"RULES-T0080_STROMFELS"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>91</Page>
+</Sort>
+<Sort id="SEAOF-COLOR_284">
+<Description language="ENGLISH">"Living Mire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"One ship"</Target>
+<Duration>"Willpower Bonus minutes"</Duration>
+<Range>"Willpower yards x 10"</Range>
+<Talent>"RULES-T0088_VIE"</Talent>
+<Level>"8"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>15</Page>
+</Sort>
+<Sort id="SEAOF-COLOR_285">
+<Description language="ENGLISH">"Water Water Everywhere"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"One ship"</Target>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_VIE"</Talent>
+<Level>"6"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>15</Page>
+</Sort>
+<Sort id="SEAOF-COLOR_286">
+<Description language="ENGLISH">"Whirlpool"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (Willpower yards)"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"Willpower yards x 10"</Range>
+<Talent>"RULES-T0088_VIE"</Talent>
+<Level>"6"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>15</Page>
+</Sort>
+<Sort id="SEAOF-COLOR_287">
+<Description language="ENGLISH">"Blessings of Bel Shanaar"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"Self"</Target>
+<Duration>"1 day"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_CIEUX"</Talent>
+<Level>"2"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>15</Page>
+</Sort>
+<Sort id="SEAOF-COLOR_288">
+<Description language="ENGLISH">"Niezlib's Optimal Firing Solution"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"One ship"</Target>
+<Duration>"One Round"</Duration>
+<Range>"Willpower Bonus yards"</Range>
+<Talent>"RULES-T0088_CIEUX"</Talent>
+<Level>"6"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>15</Page>
+</Sort>
+<Sort id="SEAOF-COLOR_289">
+<Description language="ENGLISH">"Sea of Glass"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (Willpower Bonus miles)"</Target>
+<Duration>"Willpower Bonus minutes"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_CIEUX"</Talent>
+<Level>"10"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>15</Page>
+</Sort>
+</DATA_SPELL>
+<DATA_TRAPPING>
+<Trapping id="SEAOF-TRAP_001">
+<Description language="ENGLISH">"Barrel of Fresh Water"</Description>
+<Theme>"RULES-LAB_192"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"8PA 6SB"</Price>
+<Encumbrance>"9"</Encumbrance>
+<Page>126</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_002">
+<Description language="ENGLISH">"Barrel of Small Beer"</Description>
+<Theme>"RULES-LAB_192"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"11PA"</Price>
+<Encumbrance>"9"</Encumbrance>
+<Page>126</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_003">
+<Description language="ENGLISH">"Day's Ration of Hard Tack"</Description>
+<Theme>"RULES-LAB_192"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"1PA"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>126</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_004">
+<Description language="ENGLISH">"Day's Ration of Preserves"</Description>
+<Theme>"RULES-LAB_192"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"2PA"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>126</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_005">
+<Description language="ENGLISH">"Day's Ration of Fermented Cabbage Broth"</Description>
+<Theme>"RULES-LAB_192"</Theme>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Price>"3SB"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>126</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_006">
+<Description language="ENGLISH">"Compass"</Description>
+<Theme>"RULES-LAB_193"</Theme>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Price>"10PA"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>126</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_007">
+<Description language="ENGLISH">"Sealskin"</Description>
+<Theme>"RULES-LAB_191"</Theme>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Price>"1CO 10PA"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Page>126</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_008">
+<Description language="ENGLISH">"Ship Parts"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"10PA"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Page>126</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_009">
+<Description language="ENGLISH">"Coracle"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Price>"2CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"5"</Carries>
+<BoatProfile>"1;-;3 (1);-;3;25;10"</BoatProfile>
+<Page>93</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_010">
+<Description language="ENGLISH">"Rowboat"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Price>"6CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"60"</Carries>
+<BoatProfile>"2;-;3 (1);+2 SL;10;35;10"</BoatProfile>
+<Page>93</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_011">
+<Description language="ENGLISH">"Skiff"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Price>"45CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"120"</Carries>
+<BoatProfile>"3;3 (2);3 (2);+1 SL;15;40;20"</BoatProfile>
+<Page>93</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_012">
+<Description language="ENGLISH">"Barge"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Price>"225CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"300"</Carries>
+<BoatProfile>"4;3 (3);3 (4);-;20;45;60"</BoatProfile>
+<Page>93</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_013">
+<Description language="ENGLISH">"Large Barge"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Price>"445CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"500"</Carries>
+<BoatProfile>"4;3 (3);3 (4);-;30;45;90"</BoatProfile>
+<Page>93</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_014">
+<Description language="ENGLISH">"Patrol Boat"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Price>"655CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"80"</Carries>
+<BoatProfile>"15;4 (4);4 (12);-;25;60;120"</BoatProfile>
+<AnimalTraits>"Armoured 2, Ram, Sturdy 2"</AnimalTraits>
+<Page>93</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_015">
+<Description language="ENGLISH">"Knarr"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Price>"60CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"150"</Carries>
+<BoatProfile>"4;4 (2);3 (4);-1 SL;15;40;30"</BoatProfile>
+<AnimalTraits>"Unwieldy, Shallow Draught, Detachable Rudder"</AnimalTraits>
+<Page>93</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_016">
+<Description language="ENGLISH">"Longship"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Price>"250CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"100"</Carries>
+<BoatProfile>"32;4 (4);6 (30);-;25;50;60"</BoatProfile>
+<AnimalTraits>"Shallow Draught, Detachable Rudder"</AnimalTraits>
+<Page>93</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_017">
+<Description language="ENGLISH">"Cog"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Price>"300CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"300"</Carries>
+<BoatProfile>"15;5 (8);-;-1 SL;25;45;50"</BoatProfile>
+<AnimalTraits>"Unwieldy, Rugged"</AnimalTraits>
+<Page>93</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_018">
+<Description language="ENGLISH">"Carrack"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Price>"550CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"600"</Carries>
+<BoatProfile>"20;5 (10);-;-;35;55;90"</BoatProfile>
+<AnimalTraits>"Rugged, Slow"</AnimalTraits>
+<Page>93</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_019">
+<Description language="ENGLISH">"Wargalley"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Price>"600CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"150"</Carries>
+<BoatProfile>"35;6 (16);4 (30);-;35;65;100"</BoatProfile>
+<AnimalTraits>"Ram, Sturdy, Armoured"</AnimalTraits>
+<Page>93</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_020">
+<Description language="ENGLISH">"Wolfship"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Price>"1200CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"500"</Carries>
+<BoatProfile>"50;7 (30);4 (40);-;55;75;180"</BoatProfile>
+<AnimalTraits>"Ram, Sturdy, Armoured"</AnimalTraits>
+<Page>93</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_021">
+<Description language="ENGLISH">"Greatship"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Price>"3500CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"1400"</Carries>
+<BoatProfile>"90;8 (80);-;-;60;75;275"</BoatProfile>
+<AnimalTraits>"Sturdy, Armoured"</AnimalTraits>
+<Page>93</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_022">
+<Description language="ENGLISH">"Bretonnian Galleon"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Price>"2500CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"600"</Carries>
+<BoatProfile>"90;8 (60);-;-;60;75;220"</BoatProfile>
+<AnimalTraits>"Sturdy, Armoured"</AnimalTraits>
+<Page>154</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_023">
+<Description language="ENGLISH">"Tilean Caravel"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Price>"550CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"650"</Carries>
+<BoatProfile>"20;7 (12);-;-;40;55;100"</BoatProfile>
+<AnimalTraits>"Rugged"</AnimalTraits>
+<Page>93</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_024">
+<Description language="ENGLISH">"Arabyan Xebec"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Price>"500CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"400"</Carries>
+<BoatProfile>"35;7 (15);4 (30);-;40;60;80"</BoatProfile>
+<AnimalTraits>"Sturdy"</AnimalTraits>
+<Page>93</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_025">
+<Description language="ENGLISH">"Indic Dhow"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Price>"400CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"300"</Carries>
+<BoatProfile>"15;5 (8);-;-;25;45;60"</BoatProfile>
+<Page>93</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_026">
+<Description language="ENGLISH">"Cathayan Gem Ship"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Price>"10000CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"4000"</Carries>
+<BoatProfile>"220;9 (200);-;-;130;50;400"</BoatProfile>
+<Page>93</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_027">
+<Description language="ENGLISH">"Grund A Dum"</Description>
+<Theme>"RULES-LAB_261"</Theme>
+<Encumbrance>"0"</Encumbrance>
+<Carries>"500"</Carries>
+<BoatProfile>"50;10 (25);6 (10);-;50;65;200"</BoatProfile>
+<AnimalTraits>"Ram, Sturdy"</AnimalTraits>
+<Page>46</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_028">
+<Description language="ENGLISH">"Anchor (Small to Average Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"10CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Page>97</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_029">
+<Description language="ENGLISH">"Anchor (Larger Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"20CO"</Price>
+<Encumbrance>"75"</Encumbrance>
+<Page>97</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_030">
+<Description language="ENGLISH">"Armour Plating, Bronze (Small to Average Ships, per 5 yards of Size)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"250CO / 5 yards"</Price>
+<Encumbrance>"175"</Encumbrance>
+<Page>97</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_031">
+<Description language="ENGLISH">"Armour Plating, Iron (Small to Average Ships, per 5 yards of Size)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"330CO / 5 yards"</Price>
+<Encumbrance>"160"</Encumbrance>
+<Page>97</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_032">
+<Description language="ENGLISH">"Armour Plating, Bronze (Larger Ships, per 5 yards of Size)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"500CO / 5 yards"</Price>
+<Encumbrance>"175"</Encumbrance>
+<Page>97</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_033">
+<Description language="ENGLISH">"Armour Plating, Iron (Larger Ships, per 5 yards of Size)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"560CO / 5 yards"</Price>
+<Encumbrance>"160"</Encumbrance>
+<Page>97</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_034">
+<Description language="ENGLISH">"Crow's Nest (Small to Average Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"5CO"</Price>
+<Encumbrance>"5"</Encumbrance>
+<Page>98</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_035">
+<Description language="ENGLISH">"Crow's Nest (Large to Monstrous Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"20CO"</Price>
+<Encumbrance>"20"</Encumbrance>
+<Page>98</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_036">
+<Description language="ENGLISH">"Figurehead"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"2CO"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Page>98</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_037">
+<Description language="ENGLISH">"Flying Jib (Tiny Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"5CO"</Price>
+<Encumbrance>"5"</Encumbrance>
+<Page>98</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_038">
+<Description language="ENGLISH">"Flying Jib (Little Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"20CO"</Price>
+<Encumbrance>"25"</Encumbrance>
+<Page>98</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_039">
+<Description language="ENGLISH">"Flying Jib (Small Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"40CO"</Price>
+<Encumbrance>"45"</Encumbrance>
+<Page>98</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_040">
+<Description language="ENGLISH">"Flying Jib (Average Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"80CO"</Price>
+<Encumbrance>"70"</Encumbrance>
+<Page>98</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_041">
+<Description language="ENGLISH">"Flying Jib (Large Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"160CO"</Price>
+<Encumbrance>"135"</Encumbrance>
+<Page>98</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_042">
+<Description language="ENGLISH">"Flying Jib (Enormous Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"320CO"</Price>
+<Encumbrance>"240"</Encumbrance>
+<Page>98</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_043">
+<Description language="ENGLISH">"Flying Jib (Monstrous Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"600CO"</Price>
+<Encumbrance>"430"</Encumbrance>
+<Page>98</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_044">
+<Description language="ENGLISH">"Gun Ports (Tiny to Average Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"15CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>98</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_045">
+<Description language="ENGLISH">"Gun Ports (Larger Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"85CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>98</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_046">
+<Description language="ENGLISH">"Luxury Cabins (per cabin)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"155CO"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Page>98</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_047">
+<Description language="ENGLISH">"Ram (Tiny and Little Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"15CO"</Price>
+<Encumbrance>"30"</Encumbrance>
+<Page>99</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_048">
+<Description language="ENGLISH">"Ram (Small and Average Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"30CO"</Price>
+<Encumbrance>"60"</Encumbrance>
+<Page>99</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_049">
+<Description language="ENGLISH">"Ram (Large Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"60CO"</Price>
+<Encumbrance>"120"</Encumbrance>
+<Page>99</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_050">
+<Description language="ENGLISH">"Ram (Enormous Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"120CO"</Price>
+<Encumbrance>"240"</Encumbrance>
+<Page>99</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_051">
+<Description language="ENGLISH">"Ram (Monstrous Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"240CO"</Price>
+<Encumbrance>"480"</Encumbrance>
+<Page>99</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_052">
+<Description language="ENGLISH">"Smoothing (Tiny to Average Ships, per 5 yards of Size)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"66CO / 5 yards"</Price>
+<Encumbrance>"0"</Encumbrance>
+<ModifBoat name="M">1</ModifBoat>
+<Page>99</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_053">
+<Description language="ENGLISH">"Smoothing (Larger Ships, per 5 yards of Size)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"132CO / 5 yards"</Price>
+<Encumbrance>"0"</Encumbrance>
+<ModifBoat name="M">1</ModifBoat>
+<Page>99</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_054">
+<Description language="ENGLISH">"Water Brakes (Tiny Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"10CO"</Price>
+<Encumbrance>"15"</Encumbrance>
+<Page>99</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_055">
+<Description language="ENGLISH">"Water Brakes (Little Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"45CO"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Page>99</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_056">
+<Description language="ENGLISH">"Water Brakes (Small Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"75CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Page>99</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_057">
+<Description language="ENGLISH">"Water Brakes (Average Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"140CO"</Price>
+<Encumbrance>"110"</Encumbrance>
+<Page>99</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_058">
+<Description language="ENGLISH">"Water Brakes (Large Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"200CO"</Price>
+<Encumbrance>"150"</Encumbrance>
+<Page>99</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_059">
+<Description language="ENGLISH">"Water Brakes (Enormous Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"350CO"</Price>
+<Encumbrance>"300"</Encumbrance>
+<Page>99</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_060">
+<Description language="ENGLISH">"Water Brakes (Monstrous Boats)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"500CO"</Price>
+<Encumbrance>"550"</Encumbrance>
+<Page>99</Page>
+</Trapping>
+<Trapping id="SEAOF-TRAP_061">
+<Description language="ENGLISH">"Steam Engine"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Price>"500CO"</Price>
+<Encumbrance>"200"</Encumbrance>
+<Page>99</Page>
+</Trapping>
+</DATA_TRAPPING>
+</DATA_BOOK>

@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SCHEMA_WFRP4.xsd
+  Schema de validation strict pour DATABASE/WFRP4/*.Xml.
+  Genere le 28/09/2026 a partir de l'audit du corpus (31 livres) + relecture manuelle
+  cible sur les blocs sensibles (voir GABARIT_LIVRE_XML.md). Politique : xs:sequence avec
+  ordre/obligation reels observes, pas de xs:all/xs:any permissif, sauf ou note autrement
+  ci-dessous pour les blocs a structure interne tres variable (1 seul echantillon riche).
+
+  Usage : xmllint (no-out flag) (schema flag) SCHEMA_WFRP4.xsd "DATABASE/WFRP4/BOOK_XXX.Xml"
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <xs:include schemaLocation="SCHEMA_COMMON.xsd"/>
+
+  <!-- ===================== Blocs WFRP4-seulement ===================== -->
+
+  <!--
+    DATA_CAREER_ADAPTATION (1 echantillon, BOOK_HIGH_ELVES_IN_THE_OLD_WORLD.Xml ou
+    equivalent) : structure interne du Level tres variable (Order puis un choix libre parmi
+    Talent{Remove}, Add, Trapping, Skill{Remove}, Standing...). Un seul echantillon au
+    28/09/2026 : structure approximee de facon permissive sur le contenu du Level,
+    a revalider/durcir si un futur livre diverge.
+  -->
+  <xs:complexType name="AdaptationLevelType">
+    <xs:sequence>
+      <xs:element name="Order" type="PlainString"/>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Talent" type="xs:anyType"/>
+        <xs:element name="Skill" type="xs:anyType"/>
+        <xs:element name="Add" type="PlainString"/>
+        <xs:element name="Remove" type="PlainString"/>
+        <xs:element name="Trapping" type="xs:anyType"/>
+        <xs:element name="Standing" type="PlainString"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="AdaptationType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Career" type="PlainString"/>
+      <xs:element name="Specie" type="PlainString"/>
+      <xs:element name="Optional" type="PlainString" minOccurs="0"/>
+      <xs:element name="Standing" type="PlainString" minOccurs="0"/>
+      <xs:element name="Level" type="AdaptationLevelType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataCareerAdaptationType">
+      <xs:annotation>
+        <xs:documentation xml:lang="fr">SUBSTITUTIONS PAR ETHNIE dans une carriere existante (ex. High Elf Player's Guide p.60-62 : un Pit Fighter elfe remplace Dirty Fighting par Feint). Une Adaptation = une carriere (Career, code d'un autre livre) x une liste d'ethnies (Specie, codes separes par /). Optional=1 : le livre dit "may choose" (le joueur peut refuser) ; absent = substitution imposee. Chaque Level cible le niveau de carriere par Order ; il contient des groupes Talent/Skill/Trapping, chacun avec &lt;Remove&gt; (ce qui disparait) et &lt;Add&gt; (ce qui le remplace). Exemple : &lt;Level id="1"&gt;&lt;Order&gt;"1"&lt;/Order&gt;&lt;Talent&gt;&lt;Remove&gt;"RULES-T0026"&lt;/Remove&gt;&lt;Add&gt;"RULES-T0055"&lt;/Add&gt;&lt;/Talent&gt;&lt;/Level&gt;. Les elements internes sont volontairement permissifs (xs:anyType) : un seul livre les utilise.</xs:documentation>
+      </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Adaptation" type="AdaptationType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!--
+    DATA_CAREER_BONUS (1 echantillon) : Level porte un id propre (ex: "..._1"), contenu
+    variable (Order + choix libre parmi SkillChoice/SpecialRule/ModifySkill/ModifyCarac/
+    Skill/ModifyWeapon). Meme note de prudence que DATA_CAREER_ADAPTATION.
+  -->
+  <xs:complexType name="CareerBonusLevelType">
+    <xs:sequence>
+      <xs:element name="Order" type="PlainString"/>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SkillChoice" type="SkillChoiceType"/>
+        <xs:element name="SpecialRule" type="OptionallyNamedString"/>
+        <xs:element name="ModifySkill" type="xs:anyType"/>
+        <xs:group ref="ModificateursEffets"/>
+        <xs:element name="Skill" type="xs:anyType"/>
+        <xs:element name="Talent" type="xs:anyType"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <!-- <SkillChoice Count="3" Value="5"/> (element vide, attributs seulement). -->
+  <xs:complexType name="SkillChoiceType">
+    <xs:attribute name="Count" type="xs:string" use="optional"/>
+    <xs:attribute name="Value" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <!-- <ModifyWeapon name="..." skill="...">+10</ModifyWeapon> : skill= optionnel, precise
+       la competence quand l'arme visee en a plusieurs. -->
+  <xs:complexType name="ModifyWeaponType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="skill" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="CareerBonusType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Career" type="PlainString"/>
+      <xs:element name="Specie" type="PlainString"/>
+      <xs:element name="Talent" type="PlainString" minOccurs="0"/>
+      <xs:element name="Level" type="CareerBonusLevelType" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataCareerBonusType">
+      <xs:annotation>
+        <xs:documentation xml:lang="fr">GREFFON DE DONNEES SUR UNE CARRIERE, selon l'appartenance du personnage (ex. regiments de l'Empire, Nations of Mankind p.6-7 : "treated as if added to their career"). Conditions : Specie (l'ethnie, ex. une province) ET Career (la carriere du Rulebook, ex. Soldier) ; quand elles sont reunies, chaque Level ajoute des competences/talents au niveau Order de la carriere. Dans un Level, &lt;Skill&gt;/&lt;Talent&gt; vides ("") = rien a ce palier ; "A/B" = un choix entre deux ; Level id = &lt;id du bonus&gt;_&lt;numero&gt;. Voir CONTEXT.md 2.44. Un commentaire XML est tolere entre deux CareerBonus mais pas a l'interieur d'une entree.</xs:documentation>
+      </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CareerBonus" type="CareerBonusType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_CAREER_ROLL : Entry repete, pas d'id sur le wrapper (confirme le 28/09/2026). -->
+  <xs:complexType name="CareerRollEntryType">
+    <xs:sequence>
+      <xs:element name="Rule" type="PlainString"/>
+      <xs:element name="Specie" type="PlainString"/>
+      <xs:element name="Career" type="NamedString"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DataCareerRollType">
+      <xs:annotation>
+        <xs:documentation xml:lang="fr">TABLE DE TIRAGE D100 DES CARRIERES POUR UNE REGLE (pas pour une ethnie). Une Entry = une carriere dans la colonne d'une ethnie ou race : Rule = code d'une regle (DATA_RULE) qui REMPLACE la table de base, Specie = ethnie OU race (une race vaut pour toutes ses ethnies), Career name = carriere ; la valeur est une CHANCE : un entier = poids (nombre de valeurs de d100 occupees, les bornes 01-03 etc. se deduisent en classant les carrieres par classe puis par libelle), "X" = eligible mais hors tirage. Pas d'id sur le wrapper. Les fourchettes ne se saisissent jamais : voir ChargeTirageMetier.pas. Commentaire XML entre deux Entry : tolere.</xs:documentation>
+      </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Entry" type="CareerRollEntryType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_CAREER_SUBCHOICE : Choice repete, Career + Alternative[name]. -->
+  <xs:complexType name="CareerSubchoiceType">
+    <xs:sequence>
+      <xs:element name="Career" type="PlainString"/>
+      <xs:element name="Alternative" type="NamedString"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DataCareerSubchoiceType">
+      <xs:annotation>
+        <xs:documentation xml:lang="fr">SOUS-TIRAGE : une carriere tiree est remplacee par une variante selon un jet d100. Un Choice = Career (carriere tiree) + Alternative (name = carriere qui la remplace, valeur = fourchette "01-75"). Pour un metier a deux issues, deux Choice : un avec la carriere elle-meme en alternative (01-75), un avec la variante (76-100). Les fourchettes d'un meme Career couvrent 01-100.</xs:documentation>
+      </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Choice" type="CareerSubchoiceType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_CLASS_ITEM : Class[name] contenant un SUBCHAPTER_ITEM (ajouts) et, facultatif, des
+       Remove (retire un objet) / Replace[from] (remplace un objet, quantite facultative). -->
+  <xs:complexType name="ClassItemType">
+    <xs:sequence>
+      <xs:element name="SUBCHAPTER_ITEM" type="SubchapterItem" minOccurs="0"/>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Remove" type="xs:string"/>
+        <xs:element name="Replace" type="ClassItemReplaceType"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="ClassItemReplaceType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="from" type="xs:string" use="required"/>
+        <xs:attribute name="quantite" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="DataClassItemType">
+      <xs:annotation>
+        <xs:documentation xml:lang="fr">EQUIPEMENT DE DEPART PAR CLASSE sociale (Academic, Burgher, Courtier, Peasant, Ranger...), ajoute a celui de la carriere. Class name = code de classe (RULES-CLASS_xxx). SUBCHAPTER_ITEM : Item name = code d'objet (RULES-TRAP_xxx) ou texte libre ("Lunch"), valeur = niveau qui l'accorde ; repeter la ligne = plusieurs exemplaires. Remove = objet retire de l'equipement ; Replace from=ancien objet, contenu = nouvel objet.</xs:documentation>
+      </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Class" type="ClassItemType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!--
+    DATA_SPECIE_TRAIT (1 echantillon) : SpecieTrait[id] > Description + Option[id]* repetes,
+    chaque Option a sa propre Description + Talent(s). Structure approximee en xs:choice
+    permissif pour le contenu de chaque Option (liste de Talent variable), a revalider si
+    un futur livre diverge.
+  -->
+  <xs:complexType name="SpecieTraitOptionType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Talent" type="PlainString" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="SpecieTraitType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Option" type="SpecieTraitOptionType" maxOccurs="unbounded"/>
+          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataSpecieTraitType">
+      <xs:annotation>
+        <xs:documentation xml:lang="fr">CHOIX PARMI N GROUPES DE TALENTS fourni a une ethnie (les "Trait (Any)" de Nations of Mankind : Provincial Trait, City State Trait...). Bloc de LIVRE cite depuis le SUBCHAPTER_TALENT d'une ethnie, car une meme liste sert plusieurs ethnies. SpecieTrait = le trait (Description = libelle fidele au livre) ; chaque Option = une issue (Description + UNE balise Talent contenant une liste separee par des virgules, ou chaque element peut etre "A/B" pour un choix et RULES-T* pour un talent tire au hasard). Exemple : &lt;Talent&gt;"RULES-T0085/RULES-T0119,RULES-T*"&lt;/Talent&gt; = Old Salt ou Sea Legs, plus un talent aleatoire. Voir CONTEXT.md 2.41.</xs:documentation>
+      </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SpecieTrait" type="SpecieTraitType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_CAREER_SPECIE : Entry repete, pas d'id sur le wrapper. -->
+  <xs:complexType name="CareerSpecieEntryType">
+    <xs:sequence>
+      <xs:element name="Specie" type="PlainString"/>
+      <xs:element name="Career" type="NamedString"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DataCareerSpecieType">
+      <xs:annotation>
+        <xs:documentation xml:lang="fr">ACCES D'UNE RACE A DES CARRIERES d'un livre ajoute. Une Entry = Specie (une RACE : toutes ses ethnies en heritent) + Career name, valeur "X" = carriere eligible mais hors tirage d100 (le joueur peut la choisir, le hasard ne la donne pas). Sert quand un supplement ajoute des carrieres a une race du Rulebook sans redeclarer la race ; sans ceci, le joueur n'ayant pas le livre les verrait quand meme.</xs:documentation>
+      </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Entry" type="CareerSpecieEntryType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_SPECIE_CAREER_CHOICE : Choice > Specie, Career, Alternative. -->
+  <xs:complexType name="SpecieCareerChoiceType">
+    <xs:sequence>
+      <xs:element name="Specie" type="PlainString"/>
+      <xs:element name="Career" type="PlainString"/>
+      <xs:element name="Alternative" type="PlainString"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DataSpecieCareerChoiceType">
+      <xs:annotation>
+        <xs:documentation xml:lang="fr">REMPLACEMENT D'UNE CARRIERE POUR UNE RACE : quand le tirage donne Career pour la race Specie, la carriere Alternative (d'un livre ajoute) est proposee/prise a sa place. Un Choice = Specie + Career + Alternative, trois codes. Pas d'id.</xs:documentation>
+      </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Choice" type="SpecieCareerChoiceType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_STARSIGN (1 echantillon) : structure riche mais stable, gardee strictement. -->
+  <xs:complexType name="StarSignType">
+    <xs:sequence>
+      <xs:element name="Range" type="PlainString"/>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Title" type="LangString"/>
+      <xs:element name="Classical" type="PlainString"/>
+      <xs:element name="Ascendant" type="PlainString"/>
+      <xs:element name="Dates" type="PlainString"/>
+      <xs:element name="God" type="PlainString"/>
+      <xs:element name="Appearance" type="LangString"/>
+      <xs:element name="Personality" type="LangString"/>
+      <xs:element name="Variant" type="StarSignVariantType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Modifier" type="NamedString"/>
+        <xs:element name="Talent" type="PlainString"/>
+      </xs:choice>
+          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <!-- <Variant range="1-3"><Talent>...</Talent><Modifier name="...">...</Modifier></Variant> -->
+  <xs:complexType name="StarSignVariantType">
+    <xs:sequence>
+      <xs:element name="Talent" type="PlainString" minOccurs="0"/>
+      <xs:element name="Modifier" type="NamedString" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="range" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataStarsignType">
+    <xs:sequence>
+      <xs:element name="StarSign" type="StarSignType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_AFFLICTION (1 echantillon, BOOK UNOFFICIAL GRIMOIRE.Xml, 12 entrees) :
+       Affliction[name] > Description, Explanation, puis au plus UNE des deux balises
+       ModifyCaracAleatoire[name] / ModifySkillAttribut[name] en option (jamais les deux
+       ensemble dans l'echantillon). -->
+  <xs:complexType name="AfflictionEntryType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Explanation" type="LangString"/>
+      <xs:group ref="ModificateursEffets" minOccurs="0"/>
+          <!-- Page du livre source (12/10/2026). -->
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataAfflictionType">
+    <xs:sequence>
+      <xs:element name="Affliction" type="AfflictionEntryType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_DISEASE : Disease[name], pas d'id (confirme sur BOOK_RULESBOOK.Xml). -->
+  <xs:complexType name="DiseaseType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Contraction" type="LangString"/>
+      <xs:element name="Incubation" type="LangString"/>
+      <xs:element name="Duration" type="LangString"/>
+      <xs:element name="Symptoms" type="LangString" minOccurs="0"/>
+      <!-- Modificateurs numeriques permanents (SourceModifMaladie, 04/10/2026). -->
+      <xs:group ref="ModificateursEffets" minOccurs="0" maxOccurs="unbounded"/>
+          <!-- Page du livre source (12/10/2026). -->
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataDiseaseType">
+    <xs:sequence>
+      <xs:element name="Disease" type="DiseaseType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_CORRUPTION_MENTAL / DATA_CORRUPTION_PHYSICAL : table par race, Specie[name]. -->
+  <xs:complexType name="DataCorruptionMentalType">
+    <xs:sequence>
+      <xs:element name="Specie" type="NamedString" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DataCorruptionPhysicalType">
+    <xs:sequence>
+      <xs:element name="Specie" type="NamedString" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_CORRUPTION_MENTAL_CHANCE / DATA_CORRUPTION_PHYSICAL_CHANCE : Chance[name]. -->
+  <xs:complexType name="DataCorruptionMentalChanceType">
+    <xs:sequence>
+      <xs:element name="Chance" type="NamedString" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DataCorruptionPhysicalChanceType">
+    <xs:sequence>
+      <xs:element name="Chance" type="NamedString" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_CORRUPTION_TABLE_MENTAL : Corruption[name] > Description, Explanation, ModifyCarac*. -->
+  <xs:complexType name="CorruptionTableMentalEntryType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Explanation" type="LangString"/>
+      <xs:element name="ModifyCarac" type="NamedString" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataCorruptionTableMentalType">
+    <xs:sequence>
+      <xs:element name="Corruption" type="CorruptionTableMentalEntryType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_CORRUPTION_TABLE_PHYSICAL : Corruption[name] > Description, Explanation, puis un
+       melange variable et repetable de ModifyCarac[name]/ModifArmour[name] (souvent 1 par
+       localisation, donc plusieurs)/ModifySkill[name]/ModifySkillAttribut[name]/Weapon,
+       verifie sur BOOK_RULESBOOK.Xml (CORPHY_012, CORPHY_016 : 4x ModifArmour). -->
+  <xs:complexType name="CorruptionTablePhysicalEntryType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Explanation" type="LangString"/>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="ModificateursEffets"/>
+        <xs:element name="Weapon" type="PlainString"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataCorruptionTablePhysicalType">
+    <xs:sequence>
+      <xs:element name="Corruption" type="CorruptionTablePhysicalEntryType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_OPTION_RULE -->
+  <xs:complexType name="OptionRuleType">
+    <xs:sequence>
+      <xs:element name="Code" type="PlainString"/>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Explanation" type="LangString"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataOptionRuleType">
+    <xs:sequence>
+      <xs:element name="OptionRule" type="OptionRuleType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_RULE -->
+  <xs:complexType name="RuleType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <!-- Classe de base remplacee par une regle PARTIELLE (Seafarer) ; absente = regle totale -->
+      <xs:element name="Class" type="xs:string" minOccurs="0"/>
+          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataRuleType">
+    <xs:sequence>
+      <xs:element name="Rule" type="RuleType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ===================== DATA_BOOK (racine) ===================== -->
+  <!--
+    DISCLAIMER : minOccurs="0" car 2/31 livres WFRP4 en sont depourvus (dette connue,
+    documentee dans GABARIT_LIVRE_XML.md). A REMETTRE minOccurs="1" une fois cette dette
+    resorbee (voir A FAIRE.txt).
+    Contenu : n'importe quelle combinaison des blocs DATA_* listes, 0 ou plusieurs fois
+    chacun (xs:choice maxOccurs="unbounded"), comme observe dans le corpus reel (chaque
+    livre n'a qu'un sous-ensemble, dans un ordre libre).
+  -->
+  <xs:element name="DATA_BOOK">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CODE_BOOK" type="PlainString"/>
+        <xs:element name="BOOK" type="PlainString"/>
+        <xs:element name="language" type="PlainString"/>
+        <xs:element name="VERSION" type="PlainString"/>
+        <xs:element name="OFFICIAL" type="PlainString"/>
+        <xs:element name="COMPLETE" type="PlainString"/>
+        <xs:element name="REVISION" type="PlainString" minOccurs="0"/>
+        <xs:element name="REVISION_LABEL" type="PlainString" minOccurs="0"/>
+        <xs:element name="DISCLAIMER" type="PlainString" minOccurs="0"/>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="DATA_LABEL" type="DataLabelType"/>
+          <xs:element name="DATA_TALENT" type="DataTalentType"/>
+          <xs:element name="DATA_TALENT_SPECIALIZATION" type="DataTalentSpecializationType"/>
+          <xs:element name="DATA_SPELL" type="DataSpellType"/>
+          <xs:element name="DATA_SPELL_TALENT" type="DataSpellTalentType"/>
+          <xs:element name="DATA_CONDITION" type="DataConditionType"/>
+          <xs:element name="DATA_CAREER" type="DataCareerType"/>
+          <xs:element name="DATA_CAREER_ADAPTATION" type="DataCareerAdaptationType"/>
+          <xs:element name="DATA_CAREER_BONUS" type="DataCareerBonusType"/>
+          <xs:element name="DATA_CAREER_ROLL" type="DataCareerRollType"/>
+          <xs:element name="DATA_CAREER_SUBCHOICE" type="DataCareerSubchoiceType"/>
+          <xs:element name="DATA_CLASS_ITEM" type="DataClassItemType"/>
+          <xs:element name="DATA_ARMOR" type="DataArmorType"/>
+          <xs:element name="DATA_ARMOR_SIMP" type="DataArmorSimpType"/>
+          <xs:element name="DATA_ARMOR_BONUS" type="DataArmorBonusType"/>
+          <xs:element name="DATA_WEAPON" type="DataWeaponType"/>
+          <xs:element name="DATA_WEAPON_BONUS" type="DataWeaponBonusType"/>
+          <xs:element name="DATA_CRAFTMANSHIP" type="DataCraftmanshipType"/>
+          <xs:element name="DATA_SKILL" type="DataSkillType"/>
+          <xs:element name="DATA_SKILL_SPECIALIZATION" type="DataSkillSpecializationType"/>
+          <xs:element name="DATA_SKILL_COST" type="DataCostType"/>
+          <xs:element name="DATA_ATTRIBUT_COST" type="DataCostType"/>
+          <xs:element name="DATA_ATTRIBUT" type="DataAttributType"/>
+          <xs:element name="DATA_SPECIE" type="DataSpecieType"/>
+          <xs:element name="DATA_RACE" type="DataRaceType"/>
+          <xs:element name="DATA_SPECIE_TRAIT" type="DataSpecieTraitType"/>
+          <xs:element name="DATA_CAREER_SPECIE" type="DataCareerSpecieType"/>
+          <xs:element name="DATA_SPECIE_CAREER_CHOICE" type="DataSpecieCareerChoiceType"/>
+          <xs:element name="DATA_RANDOM_SPECIE" type="DataRandomSpecieType"/>
+          <xs:element name="DATA_RANDOM_TALENT" type="DataRandomTalentType"/>
+          <xs:element name="DATA_NATION" type="DataNationType"/>
+          <xs:element name="DATA_OPTION_RULE" type="DataOptionRuleType"/>
+          <xs:element name="DATA_RULE" type="DataRuleType"/>
+          <xs:element name="DATA_TRAPPING" type="DataTrappingType"/>
+          <xs:element name="DATA_STARSIGN" type="DataStarsignType"/>
+          <xs:element name="DATA_AFFLICTION" type="DataAfflictionType"/>
+          <xs:element name="DATA_DISEASE" type="DataDiseaseType"/>
+          <xs:element name="DATA_CORRUPTION_MENTAL" type="DataCorruptionMentalType"/>
+          <xs:element name="DATA_CORRUPTION_PHYSICAL" type="DataCorruptionPhysicalType"/>
+          <xs:element name="DATA_CORRUPTION_MENTAL_CHANCE" type="DataCorruptionMentalChanceType"/>
+          <xs:element name="DATA_CORRUPTION_PHYSICAL_CHANCE" type="DataCorruptionPhysicalChanceType"/>
+          <xs:element name="DATA_CORRUPTION_TABLE_MENTAL" type="DataCorruptionTableMentalType"/>
+          <xs:element name="DATA_CORRUPTION_TABLE_PHYSICAL" type="DataCorruptionTablePhysicalType"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

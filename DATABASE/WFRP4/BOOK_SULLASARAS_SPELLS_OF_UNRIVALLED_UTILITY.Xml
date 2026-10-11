@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"SULLA"</CODE_BOOK>
+<BOOK>"BOOK SULLASARAS SPELLS OF UNRIVALLED UTILITY"</BOOK>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP4"</VERSION>
+<OFFICIAL>"1"</OFFICIAL>
+<COMPLETE>"1"</COMPLETE>
+<DISCLAIMER>"No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form by any means, electronic, mechanical, photocopying, recording or otherwise without the prior permission of the publishers. Warhammer Fantasy Roleplay 4th Edition (c) Copyright Games Workshop Limited 2021. Warhammer Fantasy Roleplay 4th Edition, the Warhammer Fantasy Roleplay 4th Edition logo, GW, Games Workshop, Warhammer, The Game of Fantasy Battles, the twin-tailed comet logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likeness thereof, are either (R) or TM, and/or (c) Games Workshop Limited, variably registered around the world, and used under licence. Cubicle 7 Entertainment and the Cubicle 7 Entertainment logo are trademarks of Cubicle 7 Entertainment Limited. All rights reserved."</DISCLAIMER>
+<DATA_LABEL>
+<Label language="ENGLISH">
+<Text name="SULLA-BOOK SULLASARAS SPELLS OF UNRIVALLED UTILITY">"Sullasara's Spells of Unrivalled Utility"</Text>
+</Label>
+<Label language="FRANCAIS">
+<Text name="SULLA-BOOK SULLASARAS SPELLS OF UNRIVALLED UTILITY">"Sullasara's Spells of Unrivalled Utility"</Text>
+</Label>
+</DATA_LABEL>
+<DATA_SPELL>
+<Sort id="SULLA-BETE_01">
+<Description language="ENGLISH">"Beast Made Well"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_BETE"</Talent>
+<Level>"3"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>12</Page>
+</Sort>
+<Sort id="SULLA-BETE_02">
+<Description language="ENGLISH">"Cruelty's Deserts"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"(ATTR_WP) days"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_BETE"</Talent>
+<Level>"2"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>12</Page>
+</Sort>
+<Sort id="SULLA-BETE_03">
+<Description language="ENGLISH">"Wyssan's Ally"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"(BATTR_WP) Rounds"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_BETE"</Talent>
+<Level>"4"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>12</Page>
+</Sort>
+<Sort id="SULLA-BETE_04">
+<Description language="ENGLISH">"Wildercall"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (ATTR_WP) miles"</Target>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_BETE"</Talent>
+<Level>"2"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>12</Page>
+</Sort>
+<Sort id="SULLA-MORT_01">
+<Description language="ENGLISH">"Stay Death's Hand"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"(BATTR_WP) Rounds"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_MORT"</Talent>
+<Level>"3"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>14</Page>
+</Sort>
+<Sort id="SULLA-MORT_02">
+<Description language="ENGLISH">"Deathsight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"(BATTR_WP) Rounds"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_MORT"</Talent>
+<Level>"2"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>14</Page>
+</Sort>
+<Sort id="SULLA-MORT_03">
+<Description language="ENGLISH">"Preservation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"(ATTR_WP) days"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_MORT"</Talent>
+<Level>"5"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>14</Page>
+</Sort>
+<Sort id="SULLA-FEU_01">
+<Description language="ENGLISH">"Flashcook"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_FEU"</Talent>
+<Level>"2"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>14</Page>
+</Sort>
+<Sort id="SULLA-FEU_02">
+<Description language="ENGLISH">"Comfort"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (BATTR_WP)m"</Target>
+<Duration>"(BATTR_WP) hours"</Duration>
+<Range>"(ATTR_WP)m"</Range>
+<Talent>"RULES-T0088_FEU"</Talent>
+<Level>"3"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>16</Page>
+</Sort>
+<Sort id="SULLA-FEU_03">
+<Description language="ENGLISH">"Ceaseless Flame"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"(BATTR_WP) hours"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_FEU"</Talent>
+<Level>"2"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>16</Page>
+</Sort>
+<Sort id="SULLA-CIEUX_01">
+<Description language="ENGLISH">"Birdspeech"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"(BATTR_WP) minutes"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_CIEUX"</Talent>
+<Level>"4"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>16</Page>
+</Sort>
+<Sort id="SULLA-CIEUX_02">
+<Description language="ENGLISH">"Weathervane"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_CIEUX"</Talent>
+<Level>"2"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>16</Page>
+</Sort>
+<Sort id="SULLA-CIEUX_03">
+<Description language="ENGLISH">"Gale"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (BATTR_WP)m"</Target>
+<Duration>"Special (BATTR_WP) Rounds/hours"</Duration>
+<Range>"(ATTR_WP)m"</Range>
+<Talent>"RULES-T0088_CIEUX"</Talent>
+<Level>"5"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>18</Page>
+</Sort>
+<Sort id="SULLA-METAL_01">
+<Description language="ENGLISH">"Tale of Metal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_METAL"</Talent>
+<Level>"3"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>18</Page>
+</Sort>
+<Sort id="SULLA-METAL_02">
+<Description language="ENGLISH">"Rigor of Steel"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"(BATTR_WP) minutes"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_METAL"</Talent>
+<Level>"3"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>18</Page>
+</Sort>
+<Sort id="SULLA-METAL_03">
+<Description language="ENGLISH">"Sense Metal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"(BATTR_WP) Rounds"</Duration>
+<Range>"(ATTR_WP)m"</Range>
+<Talent>"RULES-T0088_METAL"</Talent>
+<Level>"1"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>18</Page>
+</Sort>
+<Sort id="SULLA-VIE_01">
+<Description language="ENGLISH">"Ferment"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_VIE"</Talent>
+<Level>"3"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>20</Page>
+</Sort>
+<Sort id="SULLA-VIE_02">
+<Description language="ENGLISH">"Timbervault"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_VIE"</Talent>
+<Level>"4"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>20</Page>
+</Sort>
+<Sort id="SULLA-VIE_03">
+<Description language="ENGLISH">"Track's Tale Told"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Special"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_VIE"</Talent>
+<Level>"3"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>20</Page>
+</Sort>
+<Sort id="SULLA-LUMIERE_01">
+<Description language="ENGLISH">"Cleansing Glow"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Level>"3"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>20</Page>
+</Sort>
+<Sort id="SULLA-LUMIERE_02">
+<Description language="ENGLISH">"Disgust"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"(BATTR_WP) hours"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Level>"5"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>22</Page>
+</Sort>
+<Sort id="SULLA-LUMIERE_03">
+<Description language="ENGLISH">"Illuminate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"(BATTR_WP) Rounds"</Duration>
+<Range>"(ATTR_WP)m"</Range>
+<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Level>"3"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>22</Page>
+</Sort>
+<Sort id="SULLA-OMBRE_01">
+<Description language="ENGLISH">"Shadows of Splendour"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"(BATTR_WP) minutes"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_OMBRE"</Talent>
+<Level>"4"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>22</Page>
+</Sort>
+<Sort id="SULLA-OMBRE_02">
+<Description language="ENGLISH">"Cloak Activity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"(BATTR_WP) minutes"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_OMBRE"</Talent>
+<Level>"6"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>22</Page>
+</Sort>
+<Sort id="SULLA-OMBRE_03">
+<Description language="ENGLISH">"Pall of Darkness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE (BATTR_WP)m"</Target>
+<Duration>"(BATTR_WP) Rounds"</Duration>
+<Range>"(ATTR_WP)m"</Range>
+<Talent>"RULES-T0088_OMBRE"</Talent>
+<Level>"5"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>24</Page>
+</Sort>
+</DATA_SPELL>
+</DATA_BOOK>

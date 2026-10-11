@@ -1,0 +1,958 @@
+unit WinRaces;
+
+// fenêtre des races
+
+{$mode ObjFPC}{$H+}
+
+interface
+
+uses
+  PdfUtils,
+  Classes, SysUtils, Generics.Collections, Forms, Controls, Graphics, Dialogs, Grids, ComCtrls,
+  StdCtrls, ExtCtrls, BCButton, ChargeRace, ChargeEspece, ChargeRaceAttribut, ChargeAttribut,
+  ChargeConstantes, ChargeRaceCompetence, ChargeCompetence, UnitCalcul,
+  ChargeRaceTalent, ChargeTalent, ChargeMetier, ChargeRaceMetier, ChargeTirageMetier, ChargeMetierNiveau,
+  GlobalFonts, ChargeTexte, ChargeMetierSousMetier, ChargeMetierRaceChoixMetier,
+  ChargeRaceCorruptionCreation, WinFiltre, ChargeTalentCreation, PdfRace,
+  ChargeRaceOpinion, AncrageProportionnel, BCLabelContour;
+
+type
+  TMyNodeData = class
+    AdditionalData: string;
+  end;
+
+  { TWinRace }
+
+  TWinRace = class(TForm)
+    AffAttribut: TEdit;
+    AffCode: TEdit;
+    AffDescription: TMemo;
+    AffLibelle: TEdit;
+    AffLivre: TEdit;
+    AffRace: TEdit;
+    AffType: TEdit;
+    ButtonFiltre: TBCButton;
+    ButtonPdf: TBCButton;
+    Image1: TImage;
+    Image2: TImage;
+    Image3: TImage;
+    ImageWar: TImage;
+    LabAttribut: TLabelContour;
+    LabCode: TLabelContour;
+    LabDescription: TLabelContour;
+    LabLib: TLabelContour;
+    LabLivre: TLabelContour;
+    PanelDescription: TPanel;
+    PanelHautGauche: TPanel;
+    TabAttribut: TStringGrid;
+    TabRace: TStringGrid;
+    TreeViewRace: TTreeView;
+    procedure ButtonFiltreClick({%H-}Sender: TObject);
+    procedure ButtonPdfClick({%H-}Sender: TObject);
+    procedure FormClose({%H-}Sender: TObject; var CloseAction: TCloseAction);
+    procedure FormCloseQuery({%H-}Sender: TObject; var {%H-}CanClose: Boolean);
+    procedure FormCreate({%H-}Sender: TObject);
+    procedure FormKeyPress({%H-}Sender: TObject; var Key: char);
+    procedure FormResize({%H-}Sender: TObject);
+    procedure TabRaceDblClick({%H-}Sender: TObject);
+    procedure TabRaceSelection({%H-}Sender: TObject; {%H-}aCol, aRow: Integer);
+    procedure TreeViewRaceAdvancedCustomDrawItem(Sender: TCustomTreeView;
+      Node: TTreeNode; {%H-}State: TCustomDrawState; {%H-}Stage: TCustomDrawStage;
+      var {%H-}PaintImages, DefaultDraw: Boolean);
+    procedure TreeViewRaceChange({%H-}Sender: TObject; Node: TTreeNode);
+    Procedure WinVider();
+    Procedure WinCharger();
+    Procedure ChargeRaceAttribut();
+  private
+    Ancrage: TAncrageProportionnel;
+
+  public
+
+  end;
+
+var
+  WinRace:        TWinRace;
+  RaceEnCours:    String;
+  RaceLivre:      String;
+  Node:           TTreeNode;
+  NodeBranche:    TTreeNode;
+  NodeFeuille:    TTreeNode;
+  NodeSBranche:   TTreeNode;
+  NodeSFeuille:   TTreeNode;
+  NbNiv:          Integer;
+  picture:        TPicture;
+  ListImage:      TImageList;
+  Bitmap:         TBitmap;
+  Path:           String;
+  ColorLoc:       TColor;
+  ColorList:      array of TColor;
+  canvas:         TCanvas;
+  TailleCh:       Integer;
+  TailleSp:       Integer;
+  strings:        TStringList;
+  NodeRect:       TRect;
+  FrameRect:      TRect;
+  TextWidth:      Integer;
+  Jaune:          TColor;
+  Nv:             Integer;
+  FenFiltre:      TWinFiltre;
+  FiltreLivre:    String;
+  LigAttCode:     Integer = 1;
+  ColAttLib:      Integer = 1;
+  ColAttCC:       Integer = 2;
+  ColAttCT:       Integer = 3;
+  ColAttF:        Integer = 4;
+  ColAttE:        Integer = 5;
+  ColAttI:        Integer = 6;
+  ColAttAgi:      Integer = 7;
+  ColAttDex:      Integer = 8;
+  ColAttInt:      Integer = 9;
+  ColAttFM:       Integer =10;
+
+implementation
+
+uses XmlExportImport;
+
+{$R *.lfm}
+
+var
+  ZoneImagesRace: TZoneImagesRace;
+
+{ TWinRace }
+
+
+// Images
+procedure ChargeImage(Niveau: Integer);
+begin
+    Picture  := TPicture.Create;
+    Bitmap   := TBitmap.Create;
+    try
+      // Le chemin depend desormais de l'ethnie affichee : une ethnie peut designer son
+      // propre dossier d'icones via <PictureLevel>. CheminNiveauImage retombe toute seule
+      // sur \PICTURES\NIV\ si l'ethnie n'en a pas, ou si l'icone y manque.
+      Path   := CheminNiveauImage(RaceEnCours, Niveau);
+      // Icone absente pour ce niveau : on ajoute QUAND MEME une image, neutre, sinon les
+      // index de ListImage se decalent d'un cran et chaque niveau afficherait l'icone du
+      // suivant. Le cas se produit des qu'un livre amene un niveau plus haut que ce que
+      // PICTURES\NIV\ contient.
+      if FileExists(Path) then
+        begin
+          Picture.LoadFromFile(Path);
+          Bitmap.Assign(Picture.graphic);
+          ColorLoc := CouleurFondIcone(Bitmap);
+        end
+      else
+        begin
+          Bitmap.SetSize(8, 8);
+          Bitmap.Canvas.Brush.Color := CouleurGrisFonce;
+          Bitmap.Canvas.FillRect(0, 0, 8, 8);
+          ColorLoc := CouleurGrisFonce;
+        end;
+      ListImage.Add(Bitmap, nil); // Ajout de l'image au TImageList
+      ColorList[Niveau] := ColorLoc;
+    finally
+      Picture.Free;
+      Bitmap.Free;
+    end;
+end;
+
+// Recharge les icones et les couleurs de niveau pour l'ethnie couramment selectionnee.
+// Appelee a l'ouverture de la fenetre, RaceEnCours etant alors vide - donc dossier
+// generique - puis a chaque changement d'ethnie dans la liste.
+procedure ChargeImagesNiveau();
+  var
+    IndNiv: Integer;
+    MaxNiv: Integer;
+  begin
+    if not Assigned(ListImage) then
+      ListImage := TImageList.Create(nil);
+    ListImage.Clear;
+    SetLength(ColorList, 0);
+    // Dimensionne sur la donnee et non sur une constante : un livre qui apporte une
+    // carriere a cinq niveaux fait grandir la liste tout seul. Voir MaxNiveauMetier.
+    // Pas MaxNiveauMetier : le dossier NIV contient aussi des pastilles de couleur
+    // rangees apres le dernier niveau. Voir MaxIndiceIconeNiveau.
+    MaxNiv := MaxIndiceIconeNiveau();
+    SetLength(ColorList, MaxNiv + 1);
+    For IndNiv := 0 to MaxNiv Do
+      ChargeImage(IndNiv);
+  end;
+
+procedure TWinRace.FormCreate(Sender: TObject);
+  begin
+    FiltreLivre := SelectWinLivre;
+    WinCharger();
+    // Ancrage proportionnel (voir AncrageProportionnel) : le tableau prend la moitie de
+    // l'elargissement, les elements du milieu se decalent de la moitie, la zone de texte
+    // de droite se decale de la moitie et s'elargit de la moitie. Reference prise apres
+    // WinCharger, qui ajuste la taille de la grille sur son contenu.
+    Ancrage := TAncrageProportionnel.Create(Self);
+    Ancrage.Ajouter(TabRace,         0,   0.5);
+    Ancrage.Ajouter(ButtonFiltre,    0,   0.5);
+    Ancrage.Ajouter(ImageWar,        0.25, 0);   // reste centree au-dessus du tableau
+    Ancrage.Ajouter(TreeViewRace,    0.5, 0);
+    Ancrage.Ajouter(TabAttribut,     0.5, 0);
+    Ancrage.Ajouter(Image1,          0.5, 0);
+    Ancrage.Ajouter(Image2,          0.5, 0);
+    Ancrage.Ajouter(Image3,          0.5, 0);
+    Ancrage.Ajouter(PanelHautGauche, 0.5, 0);
+    Ancrage.Ajouter(AffRace,         0.5, 0.5);
+    Ancrage.Ajouter(PanelDescription, 0.5, 0.5);
+    Ancrage.Fixer;
+  end;
+
+procedure TWinRace.FormResize(Sender: TObject);
+  begin
+    if Ancrage <> nil then
+      Ancrage.Appliquer;
+  end;
+
+
+Procedure TWinRace.WinCharger();
+Var
+  PRace:   StructureRace;
+  PAttribut:StructureAttribut;
+  IndTab:  Integer;
+  Accord:  Boolean;
+  OldSp:   String = '';
+  Nb:      Integer= 0;
+begin
+    // Appeler la procédure SetGlobalFonts au démarrage du formulaire
+    MiseEnFormeDesChamp(self);
+    SelectionGrilleWarhammer(TabRace);
+    // Attributs de la race : affichage seul, la cellule courante n est pas mise en evidence
+    SansSelectionGrille(TabAttribut);
+
+    //  TabRace.Items.Clear;
+    TabRace.RowCount := 2;
+    IndTab           := 0;
+
+    // on met toutes les données dans la table pour les afficher directement dans les champs
+    if TabRace.ColCount < 2 then
+      begin
+        TabRace.ColCount     := 1;
+        GridAjouteColonne(TabRace, GetTexteLibelle('RULES-LAB_001'),40);
+        GridAjouteColonne(TabRace, GetTexteLibelle('RULES-LAB_001'));
+        GridAjouteColonne(TabRace, GetTexteLibelle('RULES-LAB_002'),155);
+        GridAjouteColonne(TabRace, GetTexteLibelle('RULES-LAB_001'));
+        GridAjouteColonne(TabRace, GetTexteLibelle('RULES-LAB_128'),110);
+        GridAjouteColonne(TabRace, GetTexteLibelle('RULES-LAB_001'));
+        GridAjouteColonne(TabRace, GetTexteLibelle('RULES-LAB_001'));
+      end;
+    TabRace.ColWidths[0] := 20;
+
+    for PRace in ListRace do
+      begin
+        if ((SelectWinRace <> '') and (SelectWinRace <> ConstSelectionne) and (PRace.CodeRace <> SelectWinRace)) or not VerifieFiltre(PRace.Livre, FiltreLivre) then
+          Accord := false
+        else
+           Accord := true;
+        if Accord = true then
+          begin
+            Inc(IndTab);
+            if TabRace.RowCount <= IndTab then
+              TabRace.RowCount := TabRace.RowCount + 1;
+            TabRace.Cells[1, IndTab] := ChercheEspece(PRace.Espece).Libelle;
+            TabRace.Cells[2, IndTab] := PRace.CodeRace;
+            TabRace.Cells[3, IndTab] := PRace.Libelle;
+            TabRace.Cells[4, IndTab] := TexteOuPage(PRace.Description, ConstXmlDataSpecie, PRace.Livre, PRace.CodeRace);
+            TabRace.Cells[5, IndTab] := GetTExteLibelle(PRace.Livre,'','',true);
+            TabRace.Cells[6, IndTab] := ChercheEspece(PRace.Espece).Libelle + PRace.Libelle;
+            TabRace.Cells[7, IndTab] := ChercheEspece(PRace.Espece).Libelle;
+          end
+    end;
+    TabRace.SortColRow(true,6);
+
+    for indTab := 1 to TabRace.RowCount - 1 do
+      begin
+        if TabRace.Cells[1, IndTab] = OldSp then
+          TabRace.Cells[1, IndTab] := '';
+        OldSp := TabRace.Cells[7, IndTab];
+      end;
+
+    // Mise en forme du tableau des attributs
+    if TabAttribut.ColCount < 2 then
+      begin
+        TabAttribut.Clear;
+        TabAttribut.Options          := TabAttribut.Options + [goEditing, goAlwaysShowEditor];
+        TabAttribut.ColCount         := 1;
+        TabAttribut.RowCount         := 3;
+        TabAttribut.ColWidths[0]     := 0;
+    //    TabAttribut.Columns.Add;
+        For PAttribut in ListeAttribut do
+          begin
+            If Nb < 10 then
+              begin
+                TabAttribut.Columns.Add;
+                TabAttribut.Columns[Nb].Alignment       := taCenter;
+                TabAttribut.Columns[Nb].Title.Caption   := PAttribut.Resume;
+                TabAttribut.Cells[nb+1,2]               := PAttribut.CodeAttribut;
+              end;
+            TabAttribut.ColWidths[Nb+1]               := 40;
+            Inc(Nb);
+          end;
+        TabAttribut.RowHeights[2]    := 1;
+      end;
+
+    // charges les images des niveaux pour l'arbre
+    ChargeImagesNiveau();
+    TreeViewRace.Images := ListImage;
+    if FileExists(CheminImage(GetCurrentDir+ConstCheminLogo1)) then
+     ImageWar.Picture.LoadFromFile(CheminImage(GetCurrentDir+ConstCheminLogo1));
+
+    Self.Caption              := GetTexteLibelle('RULES-LAB_042');
+    Labcode.Caption           := GetTexteLibelle('RULES-LAB_001');
+    LabLib.Caption            := GetTexteLibelle('RULES-LAB_002');
+    LabAttribut.Caption       := GetTexteLibelle('RULES-LAB_008');
+    LabLivre.Caption          := GetTexteLibelle('RULES-LAB_128');
+    ButtonFiltre.Caption      := GetTexteLibelle('RULES-LAB_133');
+
+    AdjustGridColumnsWidth(TabRace, self.Height, true, true);
+
+    // Liste vide possible : la ligne 1 n'existe pas.
+    if TabRace.RowCount > 1 then
+      TabRace.Row := 1;
+
+    if (SelectWinRace <> '') and (SelectWinRace <> ConstSelectionne) then
+      begin
+        TabRace.Visible := false;
+        TabRaceSelection(self, 1,1);
+      end;
+
+    KeyPreview := true;
+End;
+
+procedure TWinRace.FormKeyPress(Sender: TObject; var Key: char);
+begin
+  if Key = #27 then close;
+end;
+
+procedure TWinRace.TabRaceDblClick(Sender: TObject);
+  begin
+    if SelectWinRace <> '' then
+     begin
+       ChoixWinRace := TabRace.Cells[2, TabRace.Row];
+       Close;
+     end;
+  end;
+
+Procedure TWinRace.WinVider();
+  begin
+      TabRace.Clear;
+      TabRace.RowCount:= 1;
+      AffDescription.Clear;
+      SetLength(ColorList, 0);
+      DeleteData(TreeViewRace,TreeViewRace.Items.GetFirstNode);
+  end;
+
+procedure TWinRace.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+Begin
+  WinVider();
+  CloseAction := caFree
+end;
+
+procedure TWinRace.ButtonFiltreClick(Sender: TObject);
+  begin
+    SelectWinLivre      := FiltreLivre;
+    WinFiltreAppelant   := ConstXmlRace;
+    FenFiltre           := TWinFiltre.Create(Application);
+    FenFiltre.Position  := poOwnerFormCenter;
+    FenFiltre.ShowModal;
+    if (ChoixWinLivre <> FiltreLivre) then
+     Begin
+       FiltreLivre := ChoixWinLivre;
+       WinVider();
+       WinCharger();
+       TabRaceSelection(TabRace, 1,1);
+     end;
+  end;
+
+procedure TWinRace.ButtonPdfClick(Sender: TObject);
+begin
+  PdfRaceCreation(RaceEnCours);
+end;
+
+procedure TWinRace.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+  begin
+    TabRace.Clear;
+    AffDescription.Clear;
+    SetLength(ColorList, 0);
+  end;
+
+// Niveau 1 : charger les attributs
+procedure TWinRace.ChargeRaceAttribut();
+var
+  PRaceAttribut: StructureRaceAttribut;
+  PAttribut:     StructureAttribut;
+  NodeData:      TMyNodeData;
+  I:             Integer;
+Begin
+    NodeBranche            := TreeViewRace.Items.AddChild(Node, ConstArbreAttribut);
+    NodeBranche.ImageIndex := 0;
+
+    // le canvas permet de défini la taille d'une chaine
+        // au début on veut la taille d'un espace
+    canvas                 := TCanvas.Create;
+    canvas.Handle          := TreeViewRace.Canvas.Handle;
+    canvas.Font            := TreeViewRace.Canvas.Font;
+    canvas.Font.Name       := ConstPoliceNom;
+    canvas.Font.Size       := ConstPoliceTaille;
+    canvas.Font.Bold       := false;
+    TailleSp               := canvas.TextWidth('.');
+
+    for I := 1 to TabAttribut.Colcount - 1 do
+      TabAttribut.Cells[I, 1] := '';
+
+    For PRaceAttribut in ListRaceAttribut do
+      if PRaceAttribut.CodeRace = RaceEnCours then
+        Begin
+            PAttribut               := ChercheAttribut(PRaceAttribut.CodeAttribut);
+            // on calcul la taille de la chaine à afficher en seconde partie de treeview
+            TailleCh                := canvas.TextWidth(PAttribut.Libelle+' ');
+            // on défini une taille à partir de laquelle on veut placer la seconde partie du texte
+               // on la soustrait à la taille de la première chaine et on divise le tout par la taille d'un espace
+            NodeFeuille             := TreeViewRace.Items.AddChild(NodeBranche, PAttribut.Libelle + ' ' +
+                                          StringOfChar('.', round((160 - taillech) / TailleSp))+' '+ PRaceAttribut.CalculRace);
+            NodeFeuille.ImageIndex  := 0;
+            NodeData                := TMyNodeData.Create;
+            NodeData.AdditionalData := PAttribut.CodeAttribut;
+            NodeFeuille.Data        := NodeData;
+
+            for I := 1 to TabAttribut.Colcount do
+              if TabAttribut.Cells[I-1, 2] = PAttribut.CodeAttribut then
+                TabAttribut.Cells[I-1, 1] := '+'+ExtractStringAfter(PRaceAttribut.CalculRace,'+');
+
+        end;
+    AdjustGridColumnsWidth(TabAttribut,0,false,false,false,0,0,ssnone);
+end;
+
+// Niveau 1 : charger les Competences
+procedure ChargeRaceCompetence(TreeViewRace: TTreeView);
+var
+    PCompetence:        StructureCompetence;
+    PRaceCompetence:    StructureRaceCompetence;
+    NodeData:           TMyNodeData;
+    IndTab:             Integer;
+  Begin
+    NodeBranche            := TreeViewRace.Items.AddChild(Node, ConstArbreCompetence);
+    NodeBranche.ImageIndex := 0;
+
+    // le canvas permet de défini la taille d'une chaine
+        // au début on veut la taille d'un espace
+    for PRaceCompetence in ListRaceCompetence do
+      if PRaceCompetence.CodeRace = RaceEnCours then
+        Begin
+          // CHOIX MULTIPLE "A ou B" (Ride (Camel or Horse), Language (Norse or
+          // Wastelander)...). Sans ce cas, ChercheCompetence ne rend rien sur un code
+          // porteur d'un '/' et l'arbre affichait une PUCE VIDE - signale par Nono le
+          // 04/09/2026 sur les ethnies de Nations of Mankind. Le defaut est ANTERIEUR :
+          // le Skink de Lustria porte deja un tel code. On reprend ici la forme deja
+          // employee par les talents (ChargeRaceTalent) : une sous-branche "Au choix"
+          // avec une feuille par competence.
+          if pos(SeparateurMulti, PRaceCompetence.CodeCompetence) > 0 then
+            begin
+              strings                 := TStringList.Create;
+              NodeSBranche            := TreeViewRace.Items.AddChild(NodeBranche, ConstArbreAuChoix);
+              NodeSBranche.ImageIndex := 0;
+              ExtractStrings([SeparateurMulti], [], PChar(PRaceCompetence.CodeCompetence), strings);
+              For IndTab := 0 to strings.Count-1 do
+                Begin
+                  PCompetence              := ChercheCompetence(strings[IndTab]);
+                  NodeSFeuille             := TreeViewRace.Items.AddChild(NodeSBranche, PCompetence.Libelle);
+                  NodeSFeuille.ImageIndex  := 0;
+                  if Pos('_', PCompetence.CodeCompetence) > 0 then
+                     PCompetence           := ChercheCompetence(Copy(strings[IndTab], 1, Pos('_', PCompetence.CodeCompetence) - 1)+'_*');
+                  NodeData                 := TMyNodeData.Create;
+                  NodeData.AdditionalData  := PCompetence.CodeCompetence;
+                  NodeSFeuille.Data        := NodeData;
+                end;
+              strings.Free;
+            end
+          else
+            begin
+              PCompetence             := ChercheCompetence(PRaceCompetence.CodeCompetence);
+              NodeSFeuille := TreeViewRace.Items.AddChild(NodeBranche, PCompetence.Libelle);
+              NodeSFeuille.ImageIndex := 0;
+              if Pos('_', PCompetence.CodeCompetence) > 0 then
+                 PCompetence          := ChercheCompetence(Copy(PRaceCompetence.CodeCompetence, 1, Pos('_', PCompetence.CodeCompetence) - 1)+'_*');
+              NodeData                := TMyNodeData.Create;
+              NodeData.AdditionalData := PCompetence.CodeCompetence;
+              NodeSFeuille.Data       := NodeData;
+            end;
+        end;
+end;
+
+// Texte affiche a droite pour UNE option de trait ("Northern Kislev") : la liste des
+// talents qu'elle accorde, un par ligne. Un talent aleatoire y deroule sa table de D100,
+// exactement comme le fait DescriptionTalent sur une ligne RULES-T* - demande de Nono du
+// 03/09/2026. CONTEXT.md 2.41.
+Function TexteOptionTrait(CodeOption: String): String;
+  var
+    ListTal: TStringList;
+    IndTal:  Integer;
+  begin
+    Result  := '';
+    ListTal := TStringList.Create;
+    try
+      ExtractStrings([','], [' '], PChar(ChercheTraitOption(CodeOption).ListeTalent), ListTal);
+      for IndTal := 0 to ListTal.Count - 1 do
+        begin
+          Result := Result + SeparateurRetourLigne + ' - ' + LibelleTalent(ListTal[IndTal]);
+          // Le talent aleatoire apporte sa propre table, comme ailleurs dans cette fenetre.
+          if CompareRechercheValeur(ListTal[IndTal], TalentGenerique) then
+            Result := Result + SeparateurRetourLigne + DescriptionTalentOuPage(ListTal[IndTal], RaceEnCours);
+        end;
+    finally
+      ListTal.Free;
+    end;
+  end;
+
+// Texte affiche a droite pour la branche du trait elle-meme : ses options, chacune suivie
+// des talents qu'elle accorde.
+Function TexteTrait(CodeTrait: String): String;
+  var
+    ListOpt: TStringList;
+    IndOpt:  Integer;
+  begin
+    Result  := '';
+    ListOpt := OptionsDuTrait(CodeTrait);
+    try
+      for IndOpt := 0 to ListOpt.Count - 1 do
+        Result := Result + SeparateurRetourLigne + ChercheTraitOption(ListOpt[IndOpt]).Libelle
+                         + TexteOptionTrait(ListOpt[IndOpt]);
+    finally
+      ListOpt.Free;
+    end;
+  end;
+
+// Niveau 1 : charger les Talents
+procedure ChargeRaceTalent(TreeViewRace: TTreeView);
+Var
+    PTalent:     StructureTalent;
+    PRaceTalent: StructureRaceTalent;
+    IndTab:      Integer;
+    NodeData:    TMyNodeData;
+Begin
+    NodeBranche            := TreeViewRace.Items.AddChild(Node, ConstArbreTalent);
+    NodeBranche.ImageIndex := 0;
+
+    For PRaceTalent in ListRaceTalent do
+      if PRaceTalent.CodeRace = RaceEnCours then
+        Begin
+            // TRAIT D'ETHNIE (bloc DATA_SPECIE_TRAIT, CONTEXT.md 2.41). Teste EN PREMIER :
+            // un code de trait ne contient pas de '/', il tombait donc dans le "choix
+            // unique" ci-dessous, ou ChercheTalent ne rend rien - d'ou une puce VIDE dans
+            // l'arbre, signalee par Nono le 03/09/2026. Le trait devient une sous-branche
+            // portant son libelle, avec une feuille par option.
+            if ChercheTrait(PRaceTalent.CodeTalent).CodeTrait <> '' then
+            begin
+               strings                 := OptionsDuTrait(PRaceTalent.CodeTalent);
+               NodeSBranche            := TreeViewRace.Items.AddChild(NodeBranche,
+                                            ChercheTrait(PRaceTalent.CodeTalent).Libelle);
+               NodeSBranche.ImageIndex := 0;
+               // La branche porte le code du TRAIT : le clic est intercepte avant le
+               // traitement par Node.Parent.Text (voir TreeViewRaceClick), et affiche
+               // les options du trait avec leurs talents.
+               NodeData                := TMyNodeData.Create;
+               NodeData.AdditionalData := PRaceTalent.CodeTalent;
+               NodeSBranche.Data       := NodeData;
+               For IndTab := 0 to strings.Count-1 do
+               Begin
+                 NodeSFeuille             := TreeViewRace.Items.AddChild(NodeSBranche,
+                                               ChercheTraitOption(strings[IndTab]).Libelle);
+                 NodeSFeuille.ImageIndex  := 0;
+                 NodeData                 := TMyNodeData.Create;
+                 NodeData.AdditionalData  := strings[IndTab];
+                 NodeSFeuille.Data        := NodeData;
+               end;
+               strings.Free;
+            end
+            else if pos(SeparateurMulti, PRaceTalent.CodeTalent) > 0 then
+            begin
+              // choix mutiple
+               strings                 := TStringList.Create;
+               NodeSBranche            := TreeViewRace.Items.AddChild(NodeBranche, ConstArbreAuChoix);
+               NodeSBranche.ImageIndex := 0;
+               ExtractStrings([SeparateurMulti], [], PChar(PRaceTalent.CodeTalent), strings);
+               For IndTab := 0 to strings.Count-1 do
+               Begin
+                 PTalent                  := ChercheTalent(strings[indTab]);
+                 NodeSFeuille             := TreeViewRace.Items.AddChild(NodeSBranche, PTalent.Libelle);
+                 NodeSFeuille.ImageIndex  := 0;
+                 if Pos('_', PTalent.CodeTalent) > 0 then
+                    // recherche du talent générique pour récupérer les explications
+                    PTalent               := ChercheTalent(Copy(PRaceTalent.CodeTalent, 1, Pos('_', PTalent.CodeTalent) - 1)+'_*');
+                 NodeData                 := TMyNodeData.Create;
+                 NodeData.AdditionalData  := PTalent.codeTalent;
+                 NodeSFeuille.Data        := NodeData;
+               end;
+               strings.Free;
+            end
+            else
+              begin
+                // choix unique
+                PTalent                  := ChercheTalent(PRaceTalent.CodeTalent);
+                NodeFeuille              := TreeViewRace.Items.AddChild(NodeBranche, PTalent.Libelle);
+                NodeFeuille.ImageIndex   := 0;
+                if Pos('_', PTalent.CodeTalent) > 0 then
+                    // recherche du talent générique pour récupérer les explications
+                    PTalent              := ChercheTalent(Copy(PRaceTalent.CodeTalent, 1, Pos('_', PTalent.CodeTalent) - 1)+'_*');
+                NodeData                 := TMyNodeData.Create;
+                NodeData.AdditionalData  := PTalent.codeTalent;
+                NodeFeuille.Data         := NodeData;
+              end
+        end;
+end;
+
+// Niveau 1 : charger les races
+procedure ChargeRaceMetier(TreeViewRace: TTreeView);
+Var
+    PMetier:     StructureMetier;
+    PRaceMetier: StructureRaceMetier;
+    NodeData:    TMyNodeData;
+    Tirage:      TListTirageMetier;
+    Ordonnes:    specialize TList<StructureRaceMetier>;
+    Ligne:       StructureTirageMetier;
+Begin
+    NodeBranche            := TreeViewRace.Items.AddChild(Node, ConstArbreMetierPossible);
+    NodeBranche.ImageIndex := 0;
+    // le canvas permet de défini la taille d'une chaine
+        // au début on veut la taille d'un espace
+    canvas                 := TCanvas.Create;
+    canvas.Handle          := TreeViewRace.Canvas.Handle;
+    canvas.Font            := TreeViewRace.Canvas.Font;
+    canvas.Font.Name       := ConstPoliceNom;
+    canvas.Font.Size       := ConstPoliceTaille;
+    canvas.Font.Bold       := false;
+    TailleSp               := canvas.TextWidth('.');
+
+    // la table de tirage se calcule UNE fois pour la race, pas une fois par ligne
+    Tirage := TListTirageMetier.Create;
+    CalculeTirageMetier(RaceEnCours, '', Tirage);
+    // ordre d'affichage : par tranche du d100 (donc selon la langue), puis les métiers sans tranche (X, -)
+    Ordonnes := specialize TList<StructureRaceMetier>.Create;
+    For Ligne in Tirage do
+      For PRaceMetier in ListRaceMetier do
+        if (PRaceMetier.CodeRace = RaceEnCours) and (PRaceMetier.Chance <> '–') and CompareRechercheValeur(Ligne.CodeMetier, PRaceMetier.CodeMetier) then
+          Ordonnes.Add(PRaceMetier);
+    For PRaceMetier in ListRaceMetier do
+      if (PRaceMetier.CodeRace = RaceEnCours) and (PRaceMetier.Chance <> '–') and (StrToIntDef(PRaceMetier.Chance, 0) <= 0) then
+        Ordonnes.Add(PRaceMetier);
+    For PRaceMetier in Ordonnes do
+          Begin
+              PMetier  := ChercheMetier(PRaceMetier.CodeMetier);
+
+              // on calcul la taille de la chaine à afficher en seconde partie de treeview
+              TailleCh               := canvas.TextWidth(PMetier.Libelle+' ');
+              // on défini une taille à partir de laquelle on veut placer la seconde partie du texte
+                 // on la soustrait à la taille de la première chaine et on divise le tout par la taille d'un espace
+              NodeFeuille            := TreeViewRace.Items.AddChild(NodeBranche, PMetier.Libelle + ' ' + StringOfChar('.', round((220 - taillech) / TailleSp))+' '+ ChanceLigneTirage(Tirage, PRaceMetier.CodeMetier, PRaceMetier.Chance));
+              NodeFeuille.ImageIndex := 0;
+              NodeData               := TMyNodeData.Create;
+              NodeData.AdditionalData:= PMetier.CodeMetier;
+              NodeFeuille.Data       := NodeData;
+          end;
+    Ordonnes.Free;
+    Tirage.Free;
+end;
+
+// Niveau 1 : charger les Corruption
+procedure ChargeRaceCorruptionCreation(TreeViewRace: TTreeView);
+var
+    PRaceCorruptionCreation:    StructureRaceCorruptionCreation;
+    NodeData:                   TMyNodeData;
+    BrancheAjoutee:             boolean = False;
+  Begin
+
+    // le canvas permet de défini la taille d'une chaine
+        // au début on veut la taille d'un espace
+    for PRaceCorruptionCreation in ListRaceCorruptionCreation do
+      if PRaceCorruptionCreation.CodeRace = RaceEnCours then
+        Begin
+          if not BrancheAjoutee then
+            begin
+              NodeBranche            := TreeViewRace.Items.AddChild(Node, ConstArbreCorruption);
+              NodeBranche.ImageIndex := 0;
+              BrancheAjoutee         := true;
+            end;
+          TailleCh                := canvas.TextWidth(GetTexteLibelle(PRaceCorruptionCreation.TypeCorruption)+' ');
+          NodeFeuille             := TreeViewRace.Items.AddChild(NodeBranche, GetTexteLibelle(PRaceCorruptionCreation.TypeCorruption) + ' ' + StringOfChar('.', round((220 - taillech) / TailleSp))+' '+ PRaceCorruptionCreation.Chance);
+          NodeSFeuille.ImageIndex := 0;
+          NodeData                := TMyNodeData.Create;
+          NodeData.AdditionalData := PRaceCorruptionCreation.TypeCorruption;
+          NodeSFeuille.Data       := NodeData;
+        end;
+end;
+
+// ========== AFFICHER LES OPINIONS D'UNE RACE ==========
+function AfficherOpinionsRace(CodeRace: String): String;
+var
+  i: Integer;
+  PRaceOpinion: StructureRaceOpinion;
+  PEspeceTarget: StructureEspece;
+  TargetLibelle: String;
+  Citation: String;
+  Texte: String;
+begin
+  Texte := '';
+  // Version sans licence (DEFAULTLICENSELESS=1) : les citations des opinions sont du texte du livre.
+  if ImagesDefautSeul then
+    Exit('');
+  
+  for i := 0 to ListRaceOpinion.Count - 1 do
+    begin
+      PRaceOpinion := ListRaceOpinion[i];
+      
+      if PRaceOpinion.CodeRace = CodeRace then
+        begin
+          Texte := Texte + #13#10 + #13#10;
+          
+          // ✨ Chercher le libellé direct dans ListRace
+          PEspeceTarget := ChercheEspece(PRaceOpinion.TargetRace);  // la cible est une RACE
+          
+          // Vérifier que on a un libellé valide (pas vide, pas "(F)")
+          if (PEspeceTarget.CodeEspece <> '') and (PEspeceTarget.Libelle <> '') and 
+             (PEspeceTarget.Libelle <> '(F)') then
+            TargetLibelle := Trim(PEspeceTarget.Libelle)
+          else
+            TargetLibelle := PRaceOpinion.TargetRace;  // Fallback au code
+          
+          Texte := Texte + ' [' + TargetLibelle + '] [' + PRaceOpinion.Source + ']' + #13#10;
+          
+          // ✨ Supprimer les guillemets de la citation
+          Citation := PRaceOpinion.Citation;
+          if (Length(Citation) > 0) and (Citation[1] = '"') then
+            Citation := Copy(Citation, 2, Length(Citation) - 2);
+          
+          Texte := Texte + Citation;
+        end;
+    end;
+  
+  Result := Texte;
+end;
+
+procedure TWinRace.TabRaceSelection(Sender: TObject; aCol, aRow: Integer);
+begin
+  DeleteData(TreeViewRace,TreeViewRace.Items.GetFirstNode);
+  TreeViewRace.Items.Clear;
+
+  // ajouter la racine
+  RaceEnCours     := TabRace.Cells[2,aRow];
+
+  // Les icones de niveau peuvent etre propres a l'ethnie : on les recharge AVANT de
+  // construire l'arbre, pour que les couleurs de cadre soient celles de cette ethnie.
+  ChargeImagesNiveau();
+
+  Node            := TreeViewRace.Items.Add(nil, TabRace.Cells[3,aRow]);
+  Node.ImageIndex := 0;
+  AffRace.Text    := TabRace.Cells[3,aRow];
+
+  // charger les éléments
+  ChargeRaceAttribut();
+  ChargeRaceCompetence(TreeViewRace);
+  ChargeRaceTalent(TreeViewRace);
+  ChargeRaceMetier(TreeViewRace);
+  ChargeRaceCorruptionCreation(TreeViewRace);
+
+  // mise en forme
+  TreeViewRace.FullExpand;
+  TreeViewRace.Selected := TreeViewRace.Items.GetFirstNode;
+end;
+
+procedure TWinRace.TreeViewRaceAdvancedCustomDrawItem(Sender: TCustomTreeView;
+  Node: TTreeNode; State: TCustomDrawState; Stage: TCustomDrawStage;
+  var PaintImages, DefaultDraw: Boolean);
+begin
+  // mettre en forme l'arbre
+  if (Node.Level in [1,2]) then
+    begin
+       // le premier niveau est en gras
+       if (Node.Level = 1) then
+             Sender.Font.Style := Sender.Font.Style + [fsBold]
+       else
+             Sender.Font.Style := Sender.Font.Style - [fsBold];
+
+        // Dessiner le cadre à droite de la feuille de la feuille
+        if Node.Level = 1 then
+          begin
+            NodeRect := Node.DisplayRect(False);
+            TextWidth := Sender.Canvas.TextWidth(Node.Text);  // Largeur du texte de la feuille
+            FrameRect := NodeRect;
+            FrameRect.Left := FrameRect.Left + TextWidth + ((Node.Level + 1) * 29) + 5;  // Ajuster la position du cadre ici
+            // Le numero de niveau se lit AVANT le point, et non sur le premier
+            // caractere : "10.Archmage" commence par '1'. Les bornes viennent du
+            // tableau lui-meme, donc elles suivent MaxNiveauMetier sans le rappeler.
+            Nv := StrToIntDef(ExtractStringBefore(Node.Text, '.'), 0);
+            if (Nv >= 1) and (Nv <= High(ColorList)) then
+              ColorLoc := ColorList[Nv]
+            else
+              ColorLoc := CouleurGrisFonce;  // Couleur du cadre
+            Sender.Canvas.brush.Color := colorloc;  // Couleur du cadre
+            Sender.Canvas.Pen.Width := 1;  // Épaisseur du cadre
+            Sender.Canvas.Rectangle(FrameRect);
+          end
+    end
+  else
+      begin
+        Sender.Font.Style := Sender.Font.Style - [fsBold];
+      end;
+  DefaultDraw := True;  // Permettre le dessin par défaut
+
+end;
+
+procedure TWinRace.TreeViewRaceChange(Sender: TObject; Node: TTreeNode);
+var
+ PCompetence:        StructureCompetence;
+ PAttribut:          StructureAttribut;
+ PTalent:            StructureTalent;
+ PMetier:            StructureMetier;
+ CheminImage1:       String;
+ CheminImage2:       String;
+ CheminImage3:       String;
+ NodeData:      TMyNodeData;
+Begin
+   NodeData               := TMyNodeData.Create;
+ if Assigned(Node) then
+    begin
+      // sélection d'une ligne de l'arbre
+      CheminImage1         := '';
+      CheminImage2         := '';
+      CheminImage3         := '';
+      AffCode.Text         := '';
+      AffAttribut.Text     := '';
+      AffDescription.Text  := TabRace.Cells[4, TabRace.Row];
+      AffDescription.Text  := AffDescription.Text + AfficherOpinionsRace(ChercheRace(RaceEnCours).Espece);  // opinions de la RACE de l'ethnie
+      // Obtenez le texte du nœud sélectionné
+      if Node <> TreeViewRace.Items.GetFirstNode then
+        begin
+            CheminImage2   := '';
+            AffType.text   := Node.Parent.Text;
+            // TRAIT D'ETHNIE : intercepte AVANT le routage par Node.Parent.Text, parce que
+            // ni la branche du trait ni ses options ne sont des talents - le parent d'une
+            // option est le libelle du trait, qui n'est aucune des branches connues, et la
+            // branche du trait serait traitee comme un talent introuvable. On se repere
+            // donc sur la DONNEE du noeud et non sur le texte de son parent.
+            // CONTEXT.md 2.41.
+            if (Node.Data <> nil)
+               and (ChercheTrait(TMyNodeData(Node.Data).AdditionalData).CodeTrait <> '') then
+              begin
+                NodeData           := TMyNodeData(Node.Data);
+                AffCode.Text       := ChercheTrait(NodeData.AdditionalData).CodeTrait;
+                AffLibelle.Text    := ChercheTrait(NodeData.AdditionalData).Libelle;
+                AffLivre.Text      := getTexteLibelle(ChercheTrait(NodeData.AdditionalData).Livre,'','',true);
+                AffDescription.Text:= TexteTrait(NodeData.AdditionalData);
+              end
+            else if (Node.Data <> nil)
+               and (ChercheTraitOption(TMyNodeData(Node.Data).AdditionalData).CodeOption <> '') then
+              begin
+                NodeData           := TMyNodeData(Node.Data);
+                AffCode.Text       := ChercheTraitOption(NodeData.AdditionalData).CodeOption;
+                AffLibelle.Text    := ChercheTraitOption(NodeData.AdditionalData).Libelle;
+                AffLivre.Text      := getTexteLibelle(ChercheTraitOption(NodeData.AdditionalData).Livre,'','',true);
+                AffDescription.Text:= TexteOptionTrait(NodeData.AdditionalData);
+              end
+            // récupération du pointeur sur la donnée suivant le type du parent
+            else if Node.Parent.Text = ConstArbreMetierPossible then
+              begin
+                NodeData           := TMyNodeData(Node.Data);
+                PMetier            := ChercheMetier(NodeData.AdditionalData);
+                AffCode.Text       := PMetier.CodeMetier;
+                AffLibelle.Text    := PMetier.Libelle;
+                AffLivre.Text      := getTexteLibelle(PMetier.Livre,'','',true);
+                CheminImage3       := CheminMetierImage(PMetier.CodeMetier);
+                AffDescription.Text:= TexteOuPage(PMetier.Description, ConstXmlDataCareer, PMetier.Livre, PMetier.CodeMetier);
+                AffDescription.Text:= AffDescription.Text + TexteMetierSousMetier(PMetier.CodeMetier, '') + TexteMetierRaceChoixMetier(PMetier.CodeMetier, RaceEnCours, '');
+              end
+            else if Node.Parent.Text = ConstArbreAttribut then
+              begin
+                NodeData           := TMyNodeData(Node.Data);
+                PAttribut          := ChercheAttribut(NodeData.AdditionalData);
+                AffCode.Text       := PAttribut.CodeAttribut;
+                AffLibelle.Text    := PAttribut.Libelle;
+                AffLivre.Text      := getTexteLibelle(PAttribut.Livre,'','',true);
+                AffDescription.Text:= TexteOuPage(PAttribut.Description, ConstXmlDataAttribut, PAttribut.Livre, PAttribut.CodeAttribut);
+              end
+            // Une competence "A ou B" vit sous une sous-branche "Au choix" : son parent
+            // n'est plus ConstArbreCompetence mais ConstArbreAuChoix, qui route vers les
+            // TALENTS plus bas. On teste donc aussi le grand-parent, et AVANT le cas
+            // talent. Meme piege que le 03/09/2026 : un aiguillage sur Node.Parent.Text
+            // ne survit pas a l'ajout d'un niveau dans l'arbre.
+            else if (Node.Parent.Text = ConstArbreCompetence)
+                 or ((Node.Parent.Text = ConstArbreAuChoix)
+                 and (Node.Parent.Parent <> nil)
+                 and (Node.Parent.Parent.Text = ConstArbreCompetence)) then
+              Begin
+                // La sous-branche "Au choix" est elle-meme un noeud, SANS Data, et son
+                // parent est bien ConstArbreCompetence : sans ce garde, cliquer la
+                // pastille de choix dereférence nil. Meme garde que la branche talent
+                // ci-dessous. Signale par Nono le 04/09/2026 (access violation l.831).
+                if Node.Text <> ConstArbreAuChoix then
+                begin
+                  NodeData           := TMyNodeData(Node.Data);
+                  PCompetence        := ChercheCompetence(NodeData.AdditionalData);
+                  AffCode.Text       := PCompetence.CodeCompetence;
+                  AffLibelle.Text    := PCompetence.Libelle;
+                  AffLivre.Text      := getTexteLibelle(PCompetence.Livre,'','',true);
+                  AffAttribut.Text   := GetAllTexteLibelle(PCompetence.CodeAttribut);
+                  AffDescription.Text:= TexteOuPage(PCompetence.Description, ConstXmlDataSkill, PCompetence.Livre, PCompetence.CodeCompetence);
+                end
+              end
+            else if Node.Parent.Text = ConstArbreTalent then
+              Begin
+                if Node.text <> ConstArbreAuchoix then
+                begin
+                  NodeData           := TMyNodeData(Node.Data);
+                  PTalent            := ChercheTalent(Nodedata.AdditionalData);
+                  AffCode.Text       := PTalent.CodeTalent;
+                  AffLibelle.Text    := PTalent.Libelle;
+                  AffDescription.Text:= DescriptionTalentOuPage(PTalent.CodeTalent, RaceEnCours);
+                end
+              end
+            else if Node.Parent.Text = ConstArbreAuchoix then
+              Begin
+                NodeData           := TMyNodeData(Node.Data);
+                PTalent            := ChercheTalent(Nodedata.AdditionalData);
+                AffCode.Text       := PTalent.CodeTalent;
+                AffLibelle.Text    := PTalent.Libelle;
+                AffLivre.Text      := getTexteLibelle(PTalent.Livre,'','',true);
+                AffDescription.Text:= DescriptionTalentOuPage(PTalent.CodeTalent, RaceEnCours);
+              end;
+       end;
+      // chargement des images
+      if CheminImage3 = '' then
+        begin
+         CheminImage1       := CheminRaceImage(RaceEnCours,'2');
+         CheminImage2       := CheminRaceImage(RaceEnCours,'1');
+         end;
+      if FileExists(CheminImage1) then
+         Image1.Picture.LoadFromFile(CheminImage1)
+      else
+         Image1.Picture := nil;
+      if FileExists(CheminImage2) then
+         Image2.Picture.LoadFromFile(CheminImage2)
+      else
+         Image2.Picture := nil;
+      if FileExists(CheminImage3) then
+         Image3.Picture.LoadFromFile(CheminImage3)
+      else
+         Image3.Picture := nil;
+      // ethnie sans illustration : l'icone de sa race de base, avec le nom de la race
+      if (CheminImage3 = '') and not FileExists(CheminImage1) and not FileExists(CheminImage2) then
+        AfficheIconeEspece(Image1, ChercheRace(RaceEnCours).Espece,
+                           ChercheEspece(ChercheRace(RaceEnCours).Espece).Libelle);
+      // une seule illustration (ou l'icone de race) : elle prend la place des deux
+      PlaceImagesRace(Image1, Image2, ZoneImagesRace,
+                      (Image1.Picture.Graphic <> nil) and not Image1.Picture.Graphic.Empty,
+                      (Image2.Picture.Graphic <> nil) and not Image2.Picture.Graphic.Empty);
+      Image1.BringToFront;
+
+      // géer les champs à afficher ou cacher
+      PanelHautGauche.visible := (AffCode.Text <> '');
+      PanelDescription.visible:= (AffDescription.Text <> '');
+      AffAttribut.visible     := (AffAttribut.Text <> '');
+      LabAttribut.visible     := (AffAttribut.Text <> '');
+ end;
+end;
+
+end.
+

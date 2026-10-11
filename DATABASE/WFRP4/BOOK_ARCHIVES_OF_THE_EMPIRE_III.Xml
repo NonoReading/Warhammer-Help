@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"ARCH3"</CODE_BOOK>
+<BOOK>"BOOK ARCHIVES OF THE EMPIRE III"</BOOK>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP4"</VERSION>
+<OFFICIAL>"1"</OFFICIAL>
+<COMPLETE>"1"</COMPLETE>
+<DISCLAIMER>"No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form by any means, electronic, mechanical, photocopying, recording, or otherwise, without the prior permission of the publishers. Warhammer Fantasy Roleplay 4th Edition (c) Copyright Games Workshop Limited 2023. Warhammer Fantasy Roleplay 4th Edition, the Warhammer Fantasy Roleplay 4th Edition logo, GW, Games Workshop, Warhammer, The Game of Fantasy Battles, the twin-tailed comet logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likeness thereof, are either (R) or TM, and/or (c) Games Workshop Limited, variably registered around the world, and used under licence. Cubicle 7 Entertainment and the Cubicle 7 Entertainment logo are trademarks of Cubicle 7 Entertainment Limited. All rights reserved."</DISCLAIMER>
+<DATA_LABEL>
+<Label language="ENGLISH">
+<Text name="ARCH3-BOOK ARCHIVES OF THE EMPIRE III">"Archives of the Empire III"</Text>
+</Label>
+<Label language="FRANCAIS">
+<Text name="ARCH3-BOOK ARCHIVES OF THE EMPIRE III">"Archives of the Empire III"</Text>
+</Label>
+</DATA_LABEL>
+<DATA_TALENT>
+<Talent id="ARCH3-T0186">
+<Description language="ENGLISH">"Animal Assistant"</Description>
+<Short language="ENGLISH">""</Short>
+<Explanation language="ENGLISH">""</Explanation>
+<Max>"1"</Max>
+<PDF>""</PDF>
+<Test language="ENGLISH">""</Test>
+  <Page>81</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_CAREER>
+<Career id="ARCH3-WORK99">
+<Description language="ENGLISH">"Priest of Handrich"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPMARCH"</Skill>
+<Class>"RULES-CLASS_ACAD"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Clerk"</Description>
+<Salary>"TIERS_BRASS 5"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Circuit Trader"</Description>
+<Salary>"TIERS_SILVER 4"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Officiant"</Description>
+<Salary>"TIERS_GOLD 2"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Profit"</Description>
+<Salary>"TIERS_GOLD 4"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"0"</Attribut>
+<Attribut name="RULES-ATTR_BS">"0"</Attribut>
+<Attribut name="RULES-ATTR_S">"0"</Attribut>
+<Attribut name="RULES-ATTR_T">"1"</Attribut>
+<Attribut name="RULES-ATTR_I">"3"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"0"</Attribut>
+<Attribut name="RULES-ATTR_Int">"1"</Attribut>
+<Attribut name="RULES-ATTR_WP">"4"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"1"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPSUBOR">"1"</Skill>
+  <Skill name="RULES-COMPCHARM">"1"</Skill>
+  <Skill name="RULES-COMPRESALC">"1"</Skill>
+  <Skill name="RULES-COMPEVAL">"1"</Skill>
+  <Skill name="RULES-COMPPARI">"1"</Skill>
+  <Skill name="RULES-COMPRAGOT">"1"</Skill>
+  <Skill name="RULES-COMPMARCH">"1"</Skill>
+  <Skill name="RULES-COMPSAVOIR_THEO">"1"</Skill>
+  <Skill name="RULES-COMPPRIERE">"1"</Skill>
+  <Skill name="RULES-COMPRECH">"1"</Skill>
+  <Skill name="RULES-COMPDRESS_*">"2"</Skill>
+  <Skill name="RULES-COMPCALM">"2"</Skill>
+  <Skill name="RULES-COMPINTUI">"2"</Skill>
+  <Skill name="RULES-COMPLANG_*">"2"</Skill>
+  <Skill name="RULES-COMPSAVOIR_POLIT">"2"</Skill>
+  <Skill name="RULES-COMPPRECEP">"2"</Skill>
+  <Skill name="RULES-COMPINTIM">"3"</Skill>
+  <Skill name="RULES-COMPCOMM">"3"</Skill>
+  <Skill name="RULES-COMPSAVOIR_*">"3"</Skill>
+  <Skill name="RULES-COMPSIGNES_GUILD">"3"</Skill>
+  <Skill name="RULES-COMPDIVERT_DISC">"4"</Skill>
+  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0012_HANDRICH">"1"</Talent>
+  <Talent name="RULES-T0052">"1"</Talent>
+  <Talent name="RULES-T0106">"1"</Talent>
+  <Talent name="RULES-T0084">"1"</Talent>
+  <Talent name="RULES-T0147">"2"</Talent>
+  <Talent name="RULES-T0104">"2"</Talent>
+  <Talent name="RULES-T0102">"2"</Talent>
+  <Talent name="RULES-T0080_HANDRICH">"2"</Talent>
+  <Talent name="RULES-T0146">"3"</Talent>
+  <Talent name="RULES-T0099">"3"</Talent>
+  <Talent name="RULES-T0131">"3"</Talent>
+  <Talent name="RULES-T0046">"3"</Talent>
+  <Talent name="RULES-T0109">"4"</Talent>
+  <Talent name="RULES-T0079">"4"</Talent>
+  <Talent name="RULES-T0107">"4"</Talent>
+  <Talent name="RULES-T0101">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="Abacus and Slate">"1"</Item>
+<Item name="Handrichan Icon">"1"</Item>
+<Item name="RULES-TRAP_029">"1"</Item>
+<Item name="Gazetteer">"2"</Item>
+<Item name="Lock Box">"2"</Item>
+<Item name="Well-tailored Robes">"2"</Item>
+<Item name="Handrich-touched Coin">"3"</Item>
+<Item name="Subordinate Clerks">"3"</Item>
+<Item name="Temple">"3"</Item>
+<Item name="Subordinate Officiants">"4"</Item>
+<Item name="Warehouse">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>46</Page>
+</Career>
+<Career id="ARCH3-WORK100">
+<Description language="ENGLISH">"Priest of Solkan"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPPRIERE"</Skill>
+<Class>"RULES-CLASS_ACAD"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Acolyte"</Description>
+<Salary>"TIERS_BRASS 2"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Priest"</Description>
+<Salary>"TIERS_SILVER 1"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Inquisitor"</Description>
+<Salary>"TIERS_SILVER 3"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Grand Inquisitor"</Description>
+<Salary>"TIERS_SILVER 5"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2"</Attribut>
+<Attribut name="RULES-ATTR_BS">"0"</Attribut>
+<Attribut name="RULES-ATTR_S">"0"</Attribut>
+<Attribut name="RULES-ATTR_T">"1"</Attribut>
+<Attribut name="RULES-ATTR_I">"1"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"0"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"0"</Attribut>
+<Attribut name="RULES-ATTR_Int">"4"</Attribut>
+<Attribut name="RULES-ATTR_WP">"1"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPATHL">"1"</Skill>
+  <Skill name="RULES-COMPCALM">"1"</Skill>
+  <Skill name="RULES-COMPRESIST">"1"</Skill>
+  <Skill name="RULES-COMPINTIM">"1"</Skill>
+  <Skill name="RULES-COMPINTUI">"1"</Skill>
+  <Skill name="RULES-COMPSAVOIR_THEO">"1"</Skill>
+  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
+  <Skill name="RULES-COMPPRECEP">"1"</Skill>
+  <Skill name="RULES-COMPPRIERE">"1"</Skill>
+  <Skill name="RULES-COMPRECH">"1"</Skill>
+  <Skill name="RULES-COMPART_ECR">"2"</Skill>
+  <Skill name="RULES-COMPRAGOT">"2"</Skill>
+  <Skill name="RULES-COMPLANG_CLASS">"2"</Skill>
+  <Skill name="RULES-COMPCOMM">"2"</Skill>
+  <Skill name="RULES-COMPSAVOIR_POLIT">"2"</Skill>
+  <Skill name="RULES-COMPCOMB_BASE">"2"</Skill>
+  <Skill name="RULES-COMPLANG_ESTA/RULES-COMPLANG_TILE">"3"</Skill>
+  <Skill name="RULES-COMPSAVOIR_CHAOS">"3"</Skill>
+  <Skill name="RULES-COMPSAVOIR_TORTU">"3"</Skill>
+  <Skill name="RULES-COMPCHEV_CHEVAL">"3"</Skill>
+  <Skill name="RULES-COMPCHARM">"4"</Skill>
+  <Skill name="RULES-COMPDIVERT_DISC">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0012_SOLKAN">"1"</Talent>
+  <Talent name="RULES-T0165">"1"</Talent>
+  <Talent name="RULES-T0084">"1"</Talent>
+  <Talent name="RULES-T0107">"1"</Talent>
+  <Talent name="RULES-T0136_CULTIST">"2"</Talent>
+  <Talent name="RULES-T0069_CHAOS">"2"</Talent>
+  <Talent name="RULES-T0056">"2"</Talent>
+  <Talent name="RULES-T0080_SOLKAN">"2"</Talent>
+  <Talent name="RULES-T0139_*">"3"</Talent>
+  <Talent name="RULES-T0070">"3"</Talent>
+  <Talent name="RULES-T0098">"3"</Talent>
+  <Talent name="RULES-T0107">"3"</Talent>
+  <Talent name="RULES-T0132_MAGICUSER">"4"</Talent>
+  <Talent name="RULES-T0167">"4"</Talent>
+  <Talent name="RULES-T0005">"4"</Talent>
+  <Talent name="RULES-T0129_*">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-COMB_BASE_*">"1"</Item>
+<Item name="RULES-TRAP_028">"1"</Item>
+<Item name="Wooden Mask">"1"</Item>
+<Item name="Ceremonial Robes">"2"</Item>
+<Item name="Gold-plated Mask">"2"</Item>
+<Item name="Staff of Law or Sundial">"2"</Item>
+<Item name="Black Inqusitor’s Attire">"3"</Item>
+<Item name="Entourage of Acolytes">"3"</Item>
+<Item name="Instruments of Torture">"3"</Item>
+<Item name="RULES-TRAP_116">"3"</Item>
+<Item name="RULES-TRAP_029 (Q)">"4"</Item>
+<Item name="Replical of Solkan’s Amulet">"4"</Item>
+<Item name="Temple">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>54</Page>
+</Career>
+<Career id="ARCH3-WORK101">
+<Description language="ENGLISH">"Priestess of Rhya"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPPRIERE"</Skill>
+<Class>"RULES-CLASS_ACAD"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Initiate"</Description>
+<Salary>"TIERS_BRASS 2"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Priestess"</Description>
+<Salary>"TIERS_SILVER 1"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"High Priestess"</Description>
+<Salary>"TIERS_SILVER 3"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Green Watcher"</Description>
+<Salary>"TIERS_SILVER 5"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"0"</Attribut>
+<Attribut name="RULES-ATTR_BS">"0"</Attribut>
+<Attribut name="RULES-ATTR_S">"0"</Attribut>
+<Attribut name="RULES-ATTR_T">"1"</Attribut>
+<Attribut name="RULES-ATTR_I">"4"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"0"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"3"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2"</Attribut>
+<Attribut name="RULES-ATTR_WP">"1"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"1"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPSOINANI">"1"</Skill>
+  <Skill name="RULES-COMPANIM">"1"</Skill>
+  <Skill name="RULES-COMPRESIST">"1"</Skill>
+  <Skill name="RULES-COMPRAGOT">"1"</Skill>
+  <Skill name="RULES-COMPINTUI">"1"</Skill>
+  <Skill name="RULES-COMPSAVOIR_LOCAL">"1"</Skill>
+  <Skill name="RULES-COMPSAVOIR_THEO">"1"</Skill>
+  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
+  <Skill name="RULES-COMPPRECEP">"1"</Skill>
+  <Skill name="RULES-COMPPRIERE">"1"</Skill>
+  <Skill name="RULES-COMPCHARM">"2"</Skill>
+  <Skill name="RULES-COMPCALM">"2"</Skill>
+  <Skill name="RULES-COMPDIVERT_CHANT">"2"</Skill>
+  <Skill name="RULES-COMPGUERI">"2"</Skill>
+  <Skill name="RULES-COMPINTIM">"2"</Skill>
+  <Skill name="RULES-COMPSAVOIR_HERB">"2"</Skill>
+  <Skill name="RULES-COMPDIVERT_NARRA">"3"</Skill>
+  <Skill name="RULES-COMPCOMM">"3"</Skill>
+  <Skill name="RULES-COMPSAVOIR_ESPR">"3"</Skill>
+  <Skill name="RULES-COMPDISC_RURAL">"3"</Skill>
+  <Skill name="RULES-COMPSAVOIR_MEDICINE">"4"</Skill>
+  <Skill name="RULES-COMPORIENT">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0012_RHYA">"1"</Talent>
+  <Talent name="RULES-T0165">"1"</Talent>
+  <Talent name="RULES-T0140">"1"</Talent>
+  <Talent name="RULES-T0002">"1"</Talent>
+  <Talent name="RULES-T0136_CULTIST">"2"</Talent>
+  <Talent name="RULES-T0142">"2"</Talent>
+  <Talent name="RULES-T0080_RHYA">"2"</Talent>
+  <Talent name="RULES-T0084">"2"</Talent>
+  <Talent name="RULES-T0074">"3"</Talent>
+  <Talent name="RULES-T0056">"3"</Talent>
+  <Talent name="RULES-T0005">"3"</Talent>
+  <Talent name="RULES-T0107">"3"</Talent>
+  <Talent name="RULES-T0122">"4"</Talent>
+  <Talent name="RULES-T0111">"4"</Talent>
+  <Talent name="RULES-T0109">"4"</Talent>
+  <Talent name="RULES-T0116">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="Practical Tunic and Robes">"1"</Item>
+<Item name="Symbol of Rhya (wheatsheaf or spiral)">"1"</Item>
+<Item name="Carved Staff">"2"</Item>
+<Item name="RULES-TRAP_165">"2"</Item>
+<Item name="RULES-TRAP_101">"2"</Item>
+<Item name="Entourage of Priestesses and/or Initiates">"3"</Item>
+<Item name="RULES-TRAP_029 (Q)">"3"</Item>
+<Item name="Sacred Site">"3"</Item>
+<Item name="Entourage of Nuns and Priestesses">"4"</Item>
+<Item name="RULES-TRAP_116">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>72</Page>
+</Career>
+</DATA_CAREER>
+<DATA_ARMOR>
+<Armor id="ARCH3-ARMO_16">
+<Description language="ENGLISH">"Soft Kit"</Description>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Price>"18PA"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"RULES-ARMOB_08"</Quality>
+<Location>"RULES-ARMOL_ARM,RULES-ARMOL_BODY,RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"0"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTKITS"</Type>
+  <Page>37</Page>
+</Armor>
+<Armor id="ARCH3-ARMO_17">
+<Description language="ENGLISH">"Reinforced Soft Kit"</Description>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Price>"2CO"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"RULES-ARMOB_03,ARCH3-ARMOB_09,RULES-ARMOB_08"</Quality>
+<Location>"RULES-ARMOL_ARM,RULES-ARMOL_BODY,RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTKITS"</Type>
+  <Page>35</Page>
+</Armor>
+<Armor id="ARCH3-ARMO_18">
+<Description language="ENGLISH">"Leather Jack (A3)"</Description>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"12PA"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"RULES-ARMOB_08"</Quality>
+<Location>"RULES-ARMOL_ARM,RULES-ARMOL_BODY"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_BOILLEDLEATHER"</Type>
+<Page>37</Page>
+</Armor>
+<Armor id="ARCH3-ARMO_19">
+<Description language="ENGLISH">"Leather Jerkin (A3)"</Description>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"10PA"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"RULES-ARMOB_08"</Quality>
+<Location>"RULES-ARMOL_BODY"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_BOILLEDLEATHER"</Type>
+<Page>37</Page>
+</Armor>
+<Armor id="ARCH3-ARMO_20">
+<Description language="ENGLISH">"Leather Leggings (A3)"</Description>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"14PA"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"RULES-ARMOB_08"</Quality>
+<Location>"RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_BOILLEDLEATHER"</Type>
+<Page>37</Page>
+</Armor>
+<Armor id="ARCH3-ARMO_21">
+<Description language="ENGLISH">"Leather Skullcap (A3)"</Description>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"8PA"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"RULES-ARMOB_08"</Quality>
+<Location>"RULES-ARMOL_HEAD"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_BOILLEDLEATHER"</Type>
+<Page>37</Page>
+</Armor>
+<Armor id="ARCH3-ARMO_22">
+<Description language="ENGLISH">"Chainmail Chausses (A3)"</Description>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Price>"2CO"</Price>
+<Encumbrance>"3"</Encumbrance>
+<Quality>"RULES-ARMOB_01"</Quality>
+<Location>"RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>37</Page>
+</Armor>
+<Armor id="ARCH3-ARMO_23">
+<Description language="ENGLISH">"Chainmail Coat (A3)"</Description>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"3CO"</Price>
+<Encumbrance>"4"</Encumbrance>
+<Quality>"RULES-ARMOB_01"</Quality>
+<Location>"RULES-ARMOL_ARM,RULES-ARMOL_BODY"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>35</Page>
+</Armor>
+<Armor id="ARCH3-ARMO_24">
+<Description language="ENGLISH">"Chainmail Coif (A3)"</Description>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Price>"1CO"</Price>
+<Encumbrance>"2"</Encumbrance>
+<Quality>"RULES-ARMOB_03,RULES-ARMOB_06,RULES-ARMOB_01"</Quality>
+<Location>"RULES-ARMOL_HEAD"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>35</Page>
+</Armor>
+<Armor id="ARCH3-ARMO_25">
+<Description language="ENGLISH">"Chainmail Shirt (A3)"</Description>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Price>"2CO"</Price>
+<Encumbrance>"3"</Encumbrance>
+<Quality>"RULES-ARMOB_01"</Quality>
+<Location>"RULES-ARMOL_BODY"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>35</Page>
+</Armor>
+<Armor id="ARCH3-ARMO_26">
+<Description language="ENGLISH">"Brigandine Jack"</Description>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Price>"3CO"</Price>
+<Encumbrance>"3"</Encumbrance>
+<Quality>"ARCH3-ARMOB_10"</Quality>
+<Location>"RULES-ARMOL_ARM,RULES-ARMOL_BODY"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_BRIGANDINE"</Type>
+<Page>35</Page>
+</Armor>
+<Armor id="ARCH3-ARMO_27">
+<Description language="ENGLISH">"Brigandine Jerkin"</Description>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Price>"2CO"</Price>
+<Encumbrance>"2"</Encumbrance>
+<Quality>"ARCH3-ARMOB_10"</Quality>
+<Location>"RULES-ARMOL_BODY"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_BRIGANDINE"</Type>
+<Page>35</Page>
+</Armor>
+<Armor id="ARCH3-ARMO_28">
+<Description language="ENGLISH">"Bracers (A3)"</Description>
+<Availability>"RULES-DISPO_RARE"</Availability>
+<Price>"8CO"</Price>
+<Encumbrance>"3"</Encumbrance>
+<Quality>"RULES-ARMOB_02,ARCH3-ARMOB_12,RULES-ARMOB_04"</Quality>
+<Location>"RULES-ARMOL_ARM"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>37</Page>
+</Armor>
+<Armor id="ARCH3-ARMO_29">
+<Description language="ENGLISH">"Breastplate (A3)"</Description>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Price>"10CO"</Price>
+<Encumbrance>"3"</Encumbrance>
+<Quality>"RULES-ARMOB_02,ARCH3-ARMOB_10,RULES-ARMOB_04"</Quality>
+<Location>"RULES-ARMOL_BODY"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>37</Page>
+</Armor>
+<Armor id="ARCH3-ARMO_30">
+<Description language="ENGLISH">"Open Helm (A3)"</Description>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"2CO"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"RULES-ARMOB_03,RULES-ARMOB_06"</Quality>
+<Location>"RULES-ARMOL_HEAD"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>37</Page>
+</Armor>
+<Armor id="ARCH3-ARMO_31">
+<Description language="ENGLISH">"Plate Leggings (A3)"</Description>
+<Availability>"RULES-DISPO_RARE"</Availability>
+<Price>"10CO"</Price>
+<Encumbrance>"3"</Encumbrance>
+<Quality>"RULES-ARMOB_02,ARCH3-ARMOB_12,RULES-ARMOB_04"</Quality>
+<Location>"RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>37</Page>
+</Armor>
+<Armor id="ARCH3-ARMO_32">
+<Description language="ENGLISH">"Great Helm"</Description>
+<Availability>"RULES-DISPO_RARE"</Availability>
+<Price>"2CO"</Price>
+<Encumbrance>"2"</Encumbrance>
+<Quality>"RULES-ARMOB_02,RULES-ARMOB_04,RULES-ARMOB_07"</Quality>
+<Location>"RULES-ARMOL_HEAD"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>37</Page>
+</Armor>
+<Armor id="ARCH3-ARMO_33">
+<Description language="ENGLISH">"Bascinet"</Description>
+<Availability>"RULES-DISPO_RARE"</Availability>
+<Price>"3CO"</Price>
+<Encumbrance>"2"</Encumbrance>
+<Quality>"RULES-ARMOB_02,ARCH3-ARMOB_11,RULES-ARMOB_04,RULES-ARMOB_07"</Quality>
+<Location>"RULES-ARMOL_HEAD"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>37</Page>
+</Armor>
+<Armor id="ARCH3-ARMO_34">
+<Description language="ENGLISH">"Armet"</Description>
+<Availability>"RULES-DISPO_RARE"</Availability>
+<Price>"3CO"</Price>
+<Encumbrance>"2"</Encumbrance>
+<Quality>"RULES-ARMOB_02,ARCH3-ARMOB_11,RULES-ARMOB_04,RULES-ARMOB_07"</Quality>
+<Location>"RULES-ARMOL_HEAD"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>37</Page>
+</Armor>
+<Armor id="ARCH3-ARMO_35">
+<Description language="ENGLISH">"Sallet"</Description>
+<Availability>"RULES-DISPO_RARE"</Availability>
+<Price>"4CO"</Price>
+<Encumbrance>"2"</Encumbrance>
+<Quality>"RULES-ARMOB_02,ARCH3-ARMOB_11,RULES-ARMOB_04,RULES-ARMOB_07"</Quality>
+<Location>"RULES-ARMOL_HEAD"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>37</Page>
+</Armor>
+</DATA_ARMOR>
+<DATA_ARMOR_BONUS>
+<BonusMalus id="ARCH3-ARMOB_09">
+<Description language="ENGLISH">"Reinforced"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Modifier>""</Modifier>
+<Page>36</Page>
+</BonusMalus>
+<BonusMalus id="ARCH3-ARMOB_10">
+<Description language="ENGLISH">"Overcoat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Modifier>""</Modifier>
+<Page>36</Page>
+</BonusMalus>
+<BonusMalus id="ARCH3-ARMOB_11">
+<Description language="ENGLISH">"Visor"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Modifier>""</Modifier>
+<Page>36</Page>
+</BonusMalus>
+<BonusMalus id="ARCH3-ARMOB_12">
+<Description language="ENGLISH">"Requires Kit"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Modifier>""</Modifier>
+<Page>36</Page>
+</BonusMalus>
+</DATA_ARMOR_BONUS>
+<DATA_SPECIE_CAREER_CHOICE>
+<Choice>
+<Specie>"RULES-RACE_HUM"</Specie>
+<Career>"RULES-WORK49"</Career>
+<Alternative>"ARCH3-WORK99"</Alternative>
+</Choice>
+<Choice>
+<Specie>"RULES-RACE_HUM"</Specie>
+<Career>"RULES-WORK49"</Career>
+<Alternative>"ARCH3-WORK100"</Alternative>
+</Choice>
+<Choice>
+<Specie>"RULES-RACE_HUM"</Specie>
+<Career>"RULES-WORK49"</Career>
+<Alternative>"ARCH3-WORK101"</Alternative>
+</Choice>
+<Choice>
+<Specie>"UPINA-RACE_HTIL"</Specie>
+<Career>"RULES-WORK49"</Career>
+<Alternative>"ARCH3-WORK99"</Alternative>
+</Choice>
+<Choice>
+<Specie>"UPINA-RACE_HTIL"</Specie>
+<Career>"RULES-WORK49"</Career>
+<Alternative>"ARCH3-WORK100"</Alternative>
+</Choice>
+<Choice>
+<Specie>"UPINA-RACE_HTIL"</Specie>
+<Career>"RULES-WORK49"</Career>
+<Alternative>"ARCH3-WORK101"</Alternative>
+</Choice>
+</DATA_SPECIE_CAREER_CHOICE>
+<DATA_CAREER_SPECIE>
+  <Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="ARCH3-WORK99">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="ARCH3-WORK101">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="ARCH3-WORK100">"X"</Career>
+  </Entry>
+</DATA_CAREER_SPECIE>
+<DATA_SPELL>
+<Sort id="ARCH3-MIRAC_HANDRICH_01">
+<Description language="ENGLISH">"Supply and Demand"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"One batch of trade goods in line of sight"</Target>
+<Duration>"1 hour"</Duration>
+<Range>"Fellowship yards"</Range>
+<Talent>"RULES-T0080_HANDRICH"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>47</Page>
+</Sort>
+<Sort id="ARCH3-MIRAC_HANDRICH_02">
+<Description language="ENGLISH">"Trickle Down"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"Fellowship Bonus people"</Target>
+<Duration>"Fellowship Bonus Rounds"</Duration>
+<Range>"Fellowship yards"</Range>
+<Talent>"RULES-T0080_HANDRICH"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>47</Page>
+</Sort>
+<Sort id="ARCH3-MIRAC_HANDRICH_03">
+<Description language="ENGLISH">"A Deal's a Deal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0080_HANDRICH"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>47</Page>
+</Sort>
+<Sort id="ARCH3-MIRAC_HANDRICH_04">
+<Description language="ENGLISH">"Twist of Fortune"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Fellowship yards"</Range>
+<Talent>"RULES-T0080_HANDRICH"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>47</Page>
+</Sort>
+<Sort id="ARCH3-MIRAC_HANDRICH_05">
+<Description language="ENGLISH">"Carry My Burdens"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"One non-monstrous creature (as determined by the GM)"</Target>
+<Duration>"Until the journey's completion"</Duration>
+<Range>"1 yard"</Range>
+<Talent>"RULES-T0080_HANDRICH"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>47</Page>
+</Sort>
+<Sort id="ARCH3-MIRAC_HANDRICH_06">
+<Description language="ENGLISH">"Shake On It"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Fellowship Bonus Rounds"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0080_HANDRICH"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>47</Page>
+</Sort>
+<Sort id="ARCH3-MIRAC_SOLKAN_01">
+<Description language="ENGLISH">"Light of Stasis"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"3"</Target>
+<Duration>"Fellowship Bonus Rounds"</Duration>
+<Range>"4 yards"</Range>
+<Talent>"RULES-T0080_SOLKAN"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>55</Page>
+</Sort>
+<Sort id="ARCH3-MIRAC_SOLKAN_02">
+<Description language="ENGLISH">"Still the Winds"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"Area of Effect (Fellowship Bonus yards)"</Target>
+<Duration>"Fellowship Bonus Rounds"</Duration>
+<Range>"Fellowship Bonus yards"</Range>
+<Talent>"RULES-T0080_SOLKAN"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>55</Page>
+</Sort>
+<Sort id="ARCH3-MIRAC_SOLKAN_03">
+<Description language="ENGLISH">"Absolute Purity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"Area of Effect (Fellowship Bonus yards)"</Target>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0080_SOLKAN"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>55</Page>
+</Sort>
+<Sort id="ARCH3-MIRAC_SOLKAN_04">
+<Description language="ENGLISH">"Fist of Vengeance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Fellowship Bonus yards"</Range>
+<Talent>"RULES-T0080_SOLKAN"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>55</Page>
+</Sort>
+<Sort id="ARCH3-MIRAC_SOLKAN_05">
+<Description language="ENGLISH">"Flaming Blade"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"Fellowship Bonus Rounds"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0080_SOLKAN"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>55</Page>
+</Sort>
+<Sort id="ARCH3-MIRAC_SOLKAN_06">
+<Description language="ENGLISH">"Fury of the Righteous Sun"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"Area of Effect (Fellowship Bonus yards)"</Target>
+<Duration>"Instant"</Duration>
+<Range>"Fellowship Bonus yards"</Range>
+<Talent>"RULES-T0080_SOLKAN"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>55</Page>
+</Sort>
+<Sort id="ARCH3-MIRAC_RHYA_07">
+<Description language="ENGLISH">"Rhya's Dominion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Until sunrise or sunset, whichever comes sooner"</Duration>
+<Range>"4 yards"</Range>
+<Talent>"RULES-T0080_RHYA"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>74</Page>
+</Sort>
+<Sort id="ARCH3-MIRAC_RHYA_08">
+<Description language="ENGLISH">"Rhya's Flock"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"Special"</Target>
+<Duration>"Fellowship Bonus Rounds"</Duration>
+<Range>"Fellowship yards"</Range>
+<Talent>"RULES-T0080_RHYA"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>74</Page>
+</Sort>
+<Sort id="ARCH3-MIRAC_RHYA_09">
+<Description language="ENGLISH">"Rhya's Abundance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"1 Round"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0080_RHYA"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>74</Page>
+</Sort>
+<Sort id="ARCH3-MIRAC_RHYA_10">
+<Description language="ENGLISH">"Rhya's Demand"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"Area of Effect"</Target>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0080_RHYA"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>74</Page>
+</Sort>
+<Sort id="ARCH3-MIRAC_RHYA_11">
+<Description language="ENGLISH">"Rhya's Taming"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Until the next sunset"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0080_RHYA"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>74</Page>
+</Sort>
+<Sort id="ARCH3-MIRAC_RHYA_12">
+<Description language="ENGLISH">"Rhya's Rage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"Fellowship Bonus Rounds"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0080_RHYA"</Talent>
+<Level>""</Level>
+<TypSpell>"Miracle"</TypSpell>
+<Page>74</Page>
+</Sort>
+  <Sort id="ARCH3-COLOR_290">
+<Description language="ENGLISH">"Dagger of the Art"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_MAGIE"</Talent>
+<Level>"4"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>62</Page>
+</Sort>
+<Sort id="ARCH3-COLOR_291">
+<Description language="ENGLISH">"Fellstave"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"See text"</Target>
+<Duration>"1 month"</Duration>
+<Range>"See text"</Range>
+<Talent>"RULES-T0088_MAGIE"</Talent>
+<Level>"9"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>62</Page>
+</Sort>
+<Sort id="ARCH3-COLOR_292">
+<Description language="ENGLISH">"Invigorate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Willpower Bonus Rounds"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_MAGIE"</Talent>
+<Level>"2"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>63</Page>
+</Sort>
+<Sort id="ARCH3-COLOR_293">
+<Description language="ENGLISH">"Lovelock"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"See text"</Target>
+<Duration>"Until midnight"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_MAGIE"</Talent>
+<Level>"10"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>63</Page>
+</Sort>
+<Sort id="ARCH3-COLOR_294">
+<Description language="ENGLISH">"Protection Pouch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"See text"</Target>
+<Duration>"1 week + 1 week per SL"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_MAGIE"</Talent>
+<Level>"5"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>63</Page>
+</Sort>
+<Sort id="ARCH3-COLOR_295">
+<Description language="ENGLISH">"Sightstep"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"Willpower Bonus minutes"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_MAGIE"</Talent>
+<Level>"7"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>64</Page>
+</Sort>
+<Sort id="ARCH3-COLOR_296">
+<Description language="ENGLISH">"Silvertide"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"1d10 hours"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_MAGIE"</Talent>
+<Level>"4"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>64</Page>
+</Sort>
+<Sort id="ARCH3-COLOR_297">
+<Description language="ENGLISH">"The Ousting"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"1d10 years"</Duration>
+<Range>"Willpower Bonus yards"</Range>
+<Talent>"RULES-T0088_MAGIE"</Talent>
+<Level>"8"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>64</Page>
+</Sort>
+<Sort id="ARCH3-COLOR_298">
+<Description language="ENGLISH">"Wyrd Ward"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Willpower Bonus hours"</Duration>
+<Range>"Touch"</Range>
+<Talent>"RULES-T0088_MAGIE"</Talent>
+<Level>"4"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>64</Page>
+</Sort>
+</DATA_SPELL>
+</DATA_BOOK>

@@ -1,0 +1,1905 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"ARCH2"</CODE_BOOK>
+<BOOK>"BOOK ARCHIVES OF THE EMPIRE II"</BOOK>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP4"</VERSION>
+<OFFICIAL>"1"</OFFICIAL>
+<COMPLETE>"1"</COMPLETE>
+<DISCLAIMER>"No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form by any means, electronic, mechanical, photocopying, recording, or otherwise without the prior permission of the publishers. Warhammer Fantasy Roleplay 4th Edition (c) Copyright Games Workshop Limited 2021. Warhammer Fantasy Roleplay 4th Edition, the Warhammer Fantasy Roleplay 4th Edition logo, GW, Games Workshop, Warhammer, The Game of Fantasy Battles, the twin-tailed comet logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likeness thereof, are either (R) or TM, and/or (c) Games Workshop Limited, variably registered around the world, and used under licence. Cubicle 7 Entertainment and the Cubicle 7 Entertainment logo are trademarks of Cubicle 7 Entertainment Limited. All rights reserved."</DISCLAIMER>
+<DATA_LABEL>
+<Label language="ENGLISH">
+<Text name="ARCH2-BOOK ARCHIVES OF THE EMPIRE II">"Archives of the Empire II"</Text>
+</Label>
+<Label language="FRANCAIS">
+<Text name="ARCH2-BOOK ARCHIVES OF THE EMPIRE II">"Archives of the Empire II"</Text>
+</Label>
+</DATA_LABEL>
+<DATA_TALENT>
+<Talent id="ARCH2-T0174">
+<Description language="ENGLISH">"Large"</Description>
+<Short language="ENGLISH">""</Short>
+<Explanation language="ENGLISH">""</Explanation>
+<Max>"1"</Max>
+<PDF>""</PDF>
+<Test language="ENGLISH">""</Test>
+<Page>20</Page>
+</Talent>
+<Talent id="ARCH2-T0175_*">
+<Description language="ENGLISH">"Vice (Any)"</Description>
+<Short language="ENGLISH">""</Short>
+<Explanation language="ENGLISH">""</Explanation>
+<Max>"(BATTR_WP)"</Max>
+<PDF>""</PDF>
+<Test language="ENGLISH">"Willpower (Resist Target)"</Test>
+<Page>20</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="ARCH2-T0175_FOOD">
+<Description language="ENGLISH">"Vice (Food)"</Description>
+<Generique>"ARCH2-T0175_*"</Generique>
+<Page>20</Page>
+</Talent>
+<Talent id="ARCH2-T0175_ALCOHOL">
+<Description language="ENGLISH">"Vice (Alcohol)"</Description>
+<Generique>"ARCH2-T0175_*"</Generique>
+<Page>20</Page>
+</Talent>
+<Talent id="ARCH2-T0175_NARCO">
+<Description language="ENGLISH">"Vice (Narcotics)"</Description>
+<Generique>"ARCH2-T0175_*"</Generique>
+<Page>20</Page>
+</Talent>
+<Talent id="ARCH2-T0175_PLEASURE">
+<Description language="ENGLISH">"Vice (Pleasure)"</Description>
+<Generique>"ARCH2-T0175_*"</Generique>
+<Page>20</Page>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+<DATA_RACE>
+<Race id="ARCH2-SPECIE_OGRE">
+<Description language="ENGLISH">"Ogre"</Description>
+<SUBCHAPTER_PHYSICAL>
+<Age>"5d10+15"</Age>
+<Height>"91+d10"</Height>
+<Eye name="Grey">"2"</Eye>
+<Eye name="Green">"3"</Eye>
+<Eye name="Amber">"4"</Eye>
+<Eye name="Hazel">"5-7"</Eye>
+<Eye name="Brown">"8-11"</Eye>
+<Eye name="Dark Brown">"12-14"</Eye>
+<Eye name="Sienna">"15-17"</Eye>
+<Eye name="Black">"18"</Eye>
+<Eye name="Purple Black">"19"</Eye>
+<Eye name="Blue Black">"20"</Eye>
+<Hair name="Brown">"2"</Hair>
+<Hair name="Red Brown">"3"</Hair>
+<Hair name="Terracotta">"4"</Hair>
+<Hair name="Sienna">"5-7"</Hair>
+<Hair name="Burgundy">"8-11"</Hair>
+<Hair name="Dark Brown">"12-14"</Hair>
+<Hair name="Black">"15-17"</Hair>
+<Hair name="Charcoal">"18"</Hair>
+<Hair name="Jet Black">"19"</Hair>
+<Hair name="Blue Black">"20"</Hair>
+</SUBCHAPTER_PHYSICAL>
+<Page>18</Page>
+</Race>
+</DATA_RACE>
+<DATA_SPECIE>
+<Specie id="ARCH2-RACE_OGRE">
+<Description language="ENGLISH">"Ogre"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"ARCH2-SPECIE_OGRE"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+35"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+35"</Attribut>
+<Attribut name="RULES-ATTR_I">"2d10+0"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_Fate">"0"</Attribut>
+<Attribut name="RULES-ATTR_Resil">"3"</Attribut>
+<Attribut name="RULES-ATTR_Wound">"2xBATTR_S+4xBATTR_T+2xBATTR_WP"</Attribut>
+<Attribut name="RULES-ATTR_Supp">"1"</Attribut>
+<Attribut name="RULES-ATTR_Move">"6"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMPATHL"</Skill>
+  <Skill>"RULES-COMPRESALC"</Skill>
+  <Skill>"RULES-COMPRESIST"</Skill>
+  <Skill>"RULES-COMPDIVERT_NARRA"</Skill>
+  <Skill>"RULES-COMPINTIM"</Skill>
+  <Skill>"RULES-COMPLANG_GRUMBARTH"</Skill>
+  <Skill>"RULES-COMPSAVOIR_OGRE"</Skill>
+  <Skill>"RULES-COMPCOMB_BASE"</Skill>
+  <Skill>"RULES-COMPCOMB_BAGAR"</Skill>
+  <Skill>"RULES-COMPORIENT"</Skill>
+  <Skill>"RULES-COMPSURVEXT"</Skill>
+  <Skill>"RULES-COMPPIST"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T0026"</Talent>
+  <Talent>"ARCH2-T0174"</Talent>
+  <Talent>"RULES-T0164"</Talent>
+  <Talent>"RULES-T0129_INGESTED"</Talent>
+  <Talent>"RULES-T0159/RULES-T0158"</Talent>
+  <Talent>"ARCH2-T0175_FOOD"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="ARCH2-WORK94">"1"</Career>
+  <Career name="RULES-WORK03">"1"</Career>
+  <Career name="RULES-WORK37">"3"</Career>
+  <Career name="RULES-WORK52">"1"</Career>
+  <Career name="RULES-WORK39">"6"</Career>
+  <Career name="RULES-WORK56">"1"</Career>
+  <Career name="RULES-WORK05">"1"</Career>
+  <Career name="RULES-WORK10">"7"</Career>
+  <Career name="RULES-WORK40">"2"</Career>
+  <Career name="ARCH2-WORK93">"3"</Career>
+  <Career name="RULES-WORK11">"3"</Career>
+  <Career name="RULES-WORK55">"3"</Career>
+  <Career name="RULES-WORK14">"7"</Career>
+  <Career name="RULES-WORK35">"1"</Career>
+  <Career name="RULES-WORK17">"3"</Career>
+  <Career name="RULES-WORK48">"4"</Career>
+  <Career name="RULES-WORK30">"9"</Career>
+  <Career name="RULES-WORK51">"5"</Career>
+  <Career name="RULES-WORK27">"7"</Career>
+  <Career name="ARCH2-WORK92">"7"</Career>
+  <Career name="RULES-WORK28">"11"</Career>
+  <Career name="RULES-WORK61">"5"</Career>
+  <Career name="RULES-WORK57">"9"</Career>
+  </SUBCHAPTER_CAREER>
+<Page>15</Page>
+</Specie>
+</DATA_SPECIE>
+<DATA_RANDOM_SPECIE>
+<Specie name="RULES-RACE_HUM">"01-89"</Specie>
+<Specie name="RULES-RACE_HALF">"90-93"</Specie>
+<Specie name="RULES-RACE_DWAR">"94-97"</Specie>
+<Specie name="ARCH2-RACE_OGRE">"98"</Specie>
+<Specie name="RULES-RACE_HELF">"99"</Specie>
+<Specie name="RULES-RACE_WELF">"100"</Specie>
+</DATA_RANDOM_SPECIE>
+<DATA_CAREER>
+<Career id="ARCH2-WORK92">
+<Description language="ENGLISH">"Maneater"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Class>"RULES-CLASS_WARR"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Fresh Meat"</Description>
+<Salary>"TIERS_BRASS 3"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Maneater"</Description>
+<Salary>"TIERS_SILVER 1"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Maneater Crusher"</Description>
+<Salary>"TIERS_SILVER 3"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Maneater Captain"</Description>
+<Salary>"TIERS_SILVER 5"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"1"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2"</Attribut>
+<Attribut name="RULES-ATTR_S">"1"</Attribut>
+<Attribut name="RULES-ATTR_T">"1"</Attribut>
+<Attribut name="RULES-ATTR_I">"0"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"0"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"0"</Attribut>
+<Attribut name="RULES-ATTR_Int">"0"</Attribut>
+<Attribut name="RULES-ATTR_WP">"3"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"4"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPATHL">"1"</Skill>
+  <Skill name="RULES-COMPRESALC">"1"</Skill>
+  <Skill name="RULES-COMPCALM">"1"</Skill>
+  <Skill name="RULES-COMPESQU">"1"</Skill>
+  <Skill name="RULES-COMPRESIST">"1"</Skill>
+  <Skill name="RULES-COMPPARI">"1"</Skill>
+  <Skill name="RULES-COMPINTIM">"1"</Skill>
+  <Skill name="RULES-COMPLANG_BATAIL">"1"</Skill>
+  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
+  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
+  <Skill name="RULES-COMPDIVERT_BELLOW">"2"</Skill>
+  <Skill name="RULES-COMPRAGOT">"2"</Skill>
+  <Skill name="RULES-COMPSAVOIR_LOCAL">"2"</Skill>
+  <Skill name="RULES-COMPCOMB_2M">"2"</Skill>
+  <Skill name="RULES-COMPPROJ_POUDRE">"2"</Skill>
+  <Skill name="RULES-COMPCOMB_*">"3"</Skill>
+  <Skill name="RULES-COMPINTUI">"3"</Skill>
+  <Skill name="RULES-COMPCOMM">"3"</Skill>
+  <Skill name="RULES-COMPPROJ_*">"4"</Skill>
+  <Skill name="RULES-COMPLANG_*">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0026">"1"</Talent>
+  <Talent name="RULES-T0098">"1"</Talent>
+  <Talent name="RULES-T0035">"1"</Talent>
+  <Talent name="RULES-T0077">"1"</Talent>
+  <Talent name="RULES-T0037">"2"</Talent>
+  <Talent name="RULES-T0136_SLIMS">"2"</Talent>
+  <Talent name="RULES-T0168">"2"</Talent>
+  <Talent name="RULES-T0125">"2"</Talent>
+  <Talent name="RULES-T0149">"3"</Talent>
+  <Talent name="RULES-T0028">"3"</Talent>
+  <Talent name="RULES-T0047">"3"</Talent>
+  <Talent name="RULES-T0049">"3"</Talent>
+  <Talent name="RULES-T0095">"4"</Talent>
+  <Talent name="RULES-T0008">"4"</Talent>
+  <Talent name="RULES-T0138">"4"</Talent>
+  <Talent name="RULES-T0062">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-COMB_BASE_*">"1"</Item>
+<Item name="Hunk of Meat">"1"</Item>
+<Item name="Wanderlust">"1"</Item>
+<Item name="Local Clothing">"2"</Item>
+<Item name="ARCH2-ARMO_15">"2"</Item>
+<Item name="RULES-COMB_2M_*/ARCH2-PROJ_POUDRE_19">"2"</Item>
+<Item name="Unit of Mercenaries">"3"</Item>
+<Item name="Respect">"3"</Item>
+<Item name="Mercenary Contract">"4"</Item>
+<Item name="ARCH2-ARMO_15">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>35</Page>
+</Career>
+<Career id="ARCH2-WORK93">
+<Description language="ENGLISH">"Rhinox Herder"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPPROJ_ENTRAV"</Skill>
+<Class>"RULES-CLASS_PEAS"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Rhinox Rustler"</Description>
+<Salary>"TIERS_SILVER 1"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Rhinox Herder"</Description>
+<Salary>"TIERS_SILVER 3"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Rhinox Breaker"</Description>
+<Salary>"TIERS_SILVER 5"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Rhinox Master"</Description>
+<Salary>"TIERS_GOLD 1"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"3"</Attribut>
+<Attribut name="RULES-ATTR_BS">"1"</Attribut>
+<Attribut name="RULES-ATTR_S">"1"</Attribut>
+<Attribut name="RULES-ATTR_T">"1"</Attribut>
+<Attribut name="RULES-ATTR_I">"0"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"4"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"0"</Attribut>
+<Attribut name="RULES-ATTR_Int">"0"</Attribut>
+<Attribut name="RULES-ATTR_WP">"0"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPATHL">"1"</Skill>
+  <Skill name="RULES-COMPSUBOR">"1"</Skill>
+  <Skill name="RULES-COMPRESALC">"1"</Skill>
+  <Skill name="RULES-COMPESQU">"1"</Skill>
+  <Skill name="RULES-COMPRESIST">"1"</Skill>
+  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
+  <Skill name="RULES-COMPPRECEP">"1"</Skill>
+  <Skill name="RULES-COMPPROJ_ENTRAV">"1"</Skill>
+  <Skill name="RULES-COMPPIEG">"1"</Skill>
+  <Skill name="RULES-COMPDISC_RURAL">"1"</Skill>
+  <Skill name="RULES-COMPSOINANI">"2"</Skill>
+  <Skill name="RULES-COMPDRESS_RHINOX">"2"</Skill>
+  <Skill name="RULES-COMPANIM">"2"</Skill>
+  <Skill name="RULES-COMPSAVOIR_RHINOX">"2"</Skill>
+  <Skill name="RULES-COMPRESIST">"2"</Skill>
+  <Skill name="RULES-COMPPROJ_LANC">"2"</Skill>
+  <Skill name="RULES-COMPCALM">"3"</Skill>
+  <Skill name="RULES-COMPINTIM">"3"</Skill>
+  <Skill name="RULES-COMPSURVEXT">"3"</Skill>
+  <Skill name="RULES-COMPCHEV_RHINOX">"3"</Skill>
+  <Skill name="RULES-COMPINTUI">"4"</Skill>
+  <Skill name="RULES-COMPCOMM">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0064">"1"</Talent>
+  <Talent name="RULES-T0153">"1"</Talent>
+  <Talent name="RULES-T0105">"1"</Talent>
+  <Talent name="RULES-T0013_MOUNTAINS">"1"</Talent>
+  <Talent name="RULES-T0132_LARGEBEAST">"2"</Talent>
+  <Talent name="RULES-T0025">"2"</Talent>
+  <Talent name="RULES-T0035">"2"</Talent>
+  <Talent name="RULES-T0019">"2"</Talent>
+  <Talent name="RULES-T0044">"3"</Talent>
+  <Talent name="RULES-T0041">"3"</Talent>
+  <Talent name="RULES-T0168">"3"</Talent>
+  <Talent name="RULES-T0001">"3"</Talent>
+  <Talent name="RULES-T0104">"4"</Talent>
+  <Talent name="RULES-T0049">"4"</Talent>
+  <Talent name="RULES-T0053">"4"</Talent>
+  <Talent name="RULES-T0060">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_001">"1"</Item>
+<Item name="RULES-COMB_BASE_*">"1"</Item>
+<Item name="RULES-ARMO_04">"1"</Item>
+<Item name="RULES-COMB_ENTRA_02">"1"</Item>
+<Item name="ARCH2-COMB_ENTRA_03/ARCH2-PROJ_LANC_08">"2"</Item>
+<Item name="Rhinox Furs">"2"</Item>
+<Item name="Rhinox">"3"</Item>
+<Item name="ARCH2-ARMO_15">"3"</Item>
+<Item name="RULES-TRAP_010">"3"</Item>
+<Item name="Herd of Rhinox or Other Large Beasts">"4"</Item>
+<Item name="Farmstead or Grazing Rights on a Large Estate">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>36</Page>
+</Career>
+<Career id="ARCH2-WORK94">
+<Description language="ENGLISH">"Ogre Butcher"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPART_BUTCHER"</Skill>
+<Class>"RULES-CLASS_ACAD"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Slopscooper"</Description>
+<Salary>"TIERS_BRASS 3"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Butcher"</Description>
+<Salary>"TIERS_SILVER 1"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Mawsage"</Description>
+<Salary>"TIERS_SILVER 3"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Slaughtermaster"</Description>
+<Salary>"TIERS_SILVER 4"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"1"</Attribut>
+<Attribut name="RULES-ATTR_BS">"0"</Attribut>
+<Attribut name="RULES-ATTR_S">"2"</Attribut>
+<Attribut name="RULES-ATTR_T">"1"</Attribut>
+<Attribut name="RULES-ATTR_I">"4"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"0"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"0"</Attribut>
+<Attribut name="RULES-ATTR_Int">"0"</Attribut>
+<Attribut name="RULES-ATTR_WP">"1"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPESCAL">"1"</Skill>
+  <Skill name="RULES-COMPRESALC">"1"</Skill>
+  <Skill name="RULES-COMPRESIST">"1"</Skill>
+  <Skill name="RULES-COMPRAGOT">"1"</Skill>
+  <Skill name="RULES-COMPINTIM">"1"</Skill>
+  <Skill name="RULES-COMPLANG_MAG">"1"</Skill>
+  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
+  <Skill name="RULES-COMPPRIERE">"1"</Skill>
+  <Skill name="RULES-COMPMETIER_BUTCHER">"1"</Skill>
+  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
+  <Skill name="RULES-COMPART_BUTCHER">"2"</Skill>
+  <Skill name="RULES-COMPFOCAL_MAW">"2"</Skill>
+  <Skill name="RULES-COMPINTIM">"2"</Skill>
+  <Skill name="RULES-COMPPROJ_LANC">"2"</Skill>
+  <Skill name="RULES-COMPSAVOIR_MAW">"2"</Skill>
+  <Skill name="RULES-COMPSIGNES_MAW">"2"</Skill>
+  <Skill name="RULES-COMPDIVERT_DISC">"3"</Skill>
+  <Skill name="RULES-COMPGUERI">"3"</Skill>
+  <Skill name="RULES-COMPINTUI">"3"</Skill>
+  <Skill name="RULES-COMPPRECEP">"3"</Skill>
+  <Skill name="RULES-COMPSAVOIR_MAGIE">"4"</Skill>
+  <Skill name="RULES-COMPLANG_*">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0050">"1"</Talent>
+  <Talent name="RULES-T0089">"1"</Talent>
+  <Talent name="RULES-T0141">"1"</Talent>
+  <Talent name="RULES-T0077">"1"</Talent>
+  <Talent name="RULES-T0139_GOUT">"2"</Talent>
+  <Talent name="RULES-T0088_MAW">"2"</Talent>
+  <Talent name="RULES-T0071">"2"</Talent>
+  <Talent name="RULES-T0165">"2"</Talent>
+  <Talent name="RULES-T0049">"3"</Talent>
+  <Talent name="RULES-T0137">"3"</Talent>
+  <Talent name="RULES-T0037">"3"</Talent>
+  <Talent name="RULES-T0087">"3"</Talent>
+  <Talent name="RULES-T0040">"4"</Talent>
+  <Talent name="RULES-T0056">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="Butchers Apron">"1"</Item>
+<Item name="ARCH2-COMB_BASE_30/ARCH2-COMB_BASE_31">"1"</Item>
+<Item name="Carved Animal Bones (Grimoire)">"2"</Item>
+<Item name="RULES-TRAP_101">"2"</Item>
+<Item name="Apprentice Butcher">"3"</Item>
+<Item name="Bloody sack of 10 Esoteric Ingredients">"3"</Item>
+<Item name="Collection of Skulls">"3"</Item>
+<Item name="Cave or Other Lair">"4"</Item>
+<Item name="Loyal Cultists of the Maw">"4"</Item>
+<Item name="Bottomless Hunger">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>37</Page>
+</Career>
+</DATA_CAREER>
+<DATA_WEAPON>
+<Weapon id="ARCH2-COMB_BASE_32">
+<Description language="ENGLISH">"Ogre Club"</Description>
+<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Damage>"+(BATTR_S)+4"</Damage>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Reach>"RULES-WEAPR_MID"</Reach>
+<Price>"1CO"</Price>
+<Encumbrance>"2"</Encumbrance>
+<Quality>"-"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>29</Page>
+</Weapon>
+<Weapon id="ARCH2-COMB_BASE_33">
+<Description language="ENGLISH">"Ironfist"</Description>
+<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Damage>"+(BATTR_S)+3"</Damage>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Reach>"RULES-WEAPR_SHORT"</Reach>
+<Price>"4CO"</Price>
+<Encumbrance>"2"</Encumbrance>
+<Quality>"RULES-WEAPB18 1,RULES-WEAPB08"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>29</Page>
+</Weapon>
+<Weapon id="ARCH2-COMB_2M_14">
+<Description language="ENGLISH">"Big Ogre Club"</Description>
+<Skill>"RULES-COMPCOMB_2M"</Skill>
+<Damage>"+(BATTR_S)+6"</Damage>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Reach>"RULES-WEAPR_LONG"</Reach>
+<Price>"5CO"</Price>
+<Encumbrance>"6"</Encumbrance>
+<Quality>"RULES-WEAPB10"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>29</Page>
+</Weapon>
+<Weapon id="ARCH2-PROJ_LANC_08">
+<Description language="ENGLISH">"Great Throwing Spear"</Description>
+<Skill>"RULES-COMPPROJ_LANC"</Skill>
+<Damage>"+(BATTR_S)+4"</Damage>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Reach>"(BATTR_S)x3"</Reach>
+<Price>"6PA"</Price>
+<Encumbrance>"2"</Encumbrance>
+<Quality>"RULES-WEAPB12"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>29</Page>
+</Weapon>
+<Weapon id="ARCH2-PROJ_POUDRE_18">
+<Description language="ENGLISH">"Leadbelcher Gun"</Description>
+<Skill>"RULES-COMPPROJ_POUDRE"</Skill>
+<Damage>"+10"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"50"</Reach>
+<Price>"14CO"</Price>
+<Encumbrance>"8"</Encumbrance>
+<Quality>"RULES-WEAPB24,RULES-WEAPB23 5"</Quality>
+<Hand>"0"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>29</Page>
+</Weapon>
+<Weapon id="ARCH2-PROJ_POUDRE_19">
+<Description language="ENGLISH">"Ogre Pistol"</Description>
+<Skill>"RULES-COMPPROJ_POUDRE"</Skill>
+<Damage>"+8"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"20"</Reach>
+<Price>"9CO"</Price>
+<Encumbrance>"3"</Encumbrance>
+<Quality>"RULES-WEAPB13,RULES-WEAPB23 1"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>29</Page>
+</Weapon>
+<Weapon id="ARCH2-COMB_ENTRA_03">
+<Description language="ENGLISH">"Harpoon Launcher"</Description>
+<Skill>"RULES-COMPPROJ_ENTRAV"</Skill>
+<Damage>"+10"</Damage>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Reach>"20"</Reach>
+<Price>"8CO"</Price>
+<Encumbrance>"3"</Encumbrance>
+<Quality>"RULES-WEAPB17,RULES-WEAPB23 2"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>29</Page>
+</Weapon>
+<Weapon id="ARCH2-COMB_ENTRA_04">
+<Description language="ENGLISH">"Chain Trap"</Description>
+<Skill>"RULES-COMPPROJ_ENTRAV"</Skill>
+<Damage>"+7"</Damage>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Reach>"(BATTR_S)x2"</Reach>
+<Price>"1CO"</Price>
+<Encumbrance>"2"</Encumbrance>
+<Quality>"RULES-WEAPB17"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>29</Page>
+</Weapon>
+<Weapon id="ARCH2-COMB_BASE_30">
+<Description language="ENGLISH">"Cleaver"</Description>
+<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Damage>"+(BATTR_S)+4"</Damage>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Reach>"RULES-WEAPR_MID"</Reach>
+<Price>"1CO"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"-"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>37</Page>
+</Weapon>
+<Weapon id="ARCH2-COMB_BASE_31">
+<Description language="ENGLISH">"Mallet"</Description>
+<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Damage>"+(BATTR_S)+4"</Damage>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Reach>"RULES-WEAPR_MID"</Reach>
+<Price>"1CO"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"-"</Quality>
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Page>37</Page>
+</Weapon>
+</DATA_WEAPON>
+<DATA_ARMOR>
+<Armor id="ARCH2-ARMO_15">
+<Description language="ENGLISH">"Ogre Gutplate"</Description>
+<Availability>"RULES-DISPO_RARE"</Availability>
+<Price>"20CO"</Price>
+<Encumbrance>"4"</Encumbrance>
+<Quality>"RULES-ARMOB_02"</Quality>
+<Location>"RULES-ARMOL_BODY"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>29</Page>
+</Armor>
+</DATA_ARMOR>
+<DATA_TRAPPING>
+<Trapping id="ARCH2-TRAP_01">
+<Description language="ENGLISH">"Spell Ring"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_01 1"</InherentCraftsmanship>
+<Page>66</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_02">
+<Description language="ENGLISH">"Striking Ring"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_02 1"</InherentCraftsmanship>
+<Page>66</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_03">
+<Description language="ENGLISH">"Ruby Ring of Ruin"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_03 1"</InherentCraftsmanship>
+<Page>66</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_04">
+<Description language="ENGLISH">"Protection Ring"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_04 1"</InherentCraftsmanship>
+<Page>66</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_05">
+<Description language="ENGLISH">"Obsidian Lodestone"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_05 1"</InherentCraftsmanship>
+<Page>66</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_06">
+<Description language="ENGLISH">"Dawnstone"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_06 1"</InherentCraftsmanship>
+<Page>66</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_07">
+<Description language="ENGLISH">"Opal Amulet"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_07 1"</InherentCraftsmanship>
+<Page>66</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_08">
+<Description language="ENGLISH">"Seed of Rebirth"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_08 1"</InherentCraftsmanship>
+<Page>66</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_09">
+<Description language="ENGLISH">"Amulet of Thrice-Blessed Copper"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_09 1"</InherentCraftsmanship>
+<Page>66</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_10">
+<Description language="ENGLISH">"Amulet of Righteous Silver"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_10 1"</InherentCraftsmanship>
+<Page>66</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_11">
+<Description language="ENGLISH">"Wanderer's Charm"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_11 1"</InherentCraftsmanship>
+<Page>66</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_12">
+<Description language="ENGLISH">"Self-Cleaning Commode"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_12 1"</InherentCraftsmanship>
+<Page>67</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_13">
+<Description language="ENGLISH">"Illusory Weapon"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_13 1"</InherentCraftsmanship>
+<Page>67</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_14">
+<Description language="ENGLISH">"Self-Tuning Lute"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_14 1"</InherentCraftsmanship>
+<Page>67</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_15">
+<Description language="ENGLISH">"Sand of Flinging"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_15 1"</InherentCraftsmanship>
+<Page>67</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_16">
+<Description language="ENGLISH">"Writ of the Fifth Lore"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_16 1"</InherentCraftsmanship>
+<Page>67</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_17">
+<Description language="ENGLISH">"Dazh's Flint"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_17 1"</InherentCraftsmanship>
+<Page>67</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_18">
+<Description language="ENGLISH">"Screaming Stone"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_18 1"</InherentCraftsmanship>
+<Page>67</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_19">
+<Description language="ENGLISH">"Trackless Boots"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_19 1"</InherentCraftsmanship>
+<Page>67</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_20">
+<Description language="ENGLISH">"All-Seeing Mirror"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_20 1"</InherentCraftsmanship>
+<Page>67</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_21">
+<Description language="ENGLISH">"Bellicose Cup"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_21 1"</InherentCraftsmanship>
+<Page>67</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_22">
+<Description language="ENGLISH">"Elven Cloak"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_22 1"</InherentCraftsmanship>
+<Page>67</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_23">
+<Description language="ENGLISH">"Crown of Command"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_23 1"</InherentCraftsmanship>
+<Page>67</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_24">
+<Description language="ENGLISH">"Wizard's Staff"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_24 1"</InherentCraftsmanship>
+<Page>65</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_25">
+<Description language="ENGLISH">"Wand of Jade"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_25 1"</InherentCraftsmanship>
+<Page>65</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_26">
+<Description language="ENGLISH">"Wand of Jet"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_26 1"</InherentCraftsmanship>
+<Page>65</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_27">
+<Description language="ENGLISH">"Earthing Rod"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_27 1"</InherentCraftsmanship>
+<Page>65</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_28">
+<Description language="ENGLISH">"Wand of the Winds"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_28 1"</InherentCraftsmanship>
+<Page>65</Page>
+</Trapping>
+<Trapping id="ARCH2-TRAP_29">
+<Description language="ENGLISH">"Forbidden Rod"</Description>
+<Theme>"RULES-LAB_313"</Theme>
+<Availability>"RULES-DISPO_EXOTIC"</Availability>
+<Price>"0CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<InherentCraftsmanship>"ARCH2-MAGIC_29 1"</InherentCraftsmanship>
+<Page>65</Page>
+</Trapping>
+</DATA_TRAPPING>
+<DATA_CRAFTMANSHIP>
+  <Craftsmanship id="ARCH2-WEAPB_01">
+<Description language="ENGLISH">"Touched by the Winds"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"no particular ability beyond damaging creatures immune to non-magical attacks"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>58</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_02">
+<Description language="ENGLISH">"Wreathed in Shadow"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"target gets no benefit from non-magical armour"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>58</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_03">
+<Description language="ENGLISH">"Alight with Flame"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"flammable target hit: one Ablaze Condition"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>58</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_04">
+<Description language="ENGLISH">"Dolorous"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"wielder causes Fear (1)"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>58</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_05A">
+<Description language="ENGLISH">"Of Leaping Silver Wroth (Melee)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"melee: add the Fast Quality (RULES-WEAPB20) on the weapon"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>58</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_05B">
+<Description language="ENGLISH">"Of Leaping Silver Wroth (Ranged)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"ranged: wielder +10 Initiative"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<ModifyCarac name="RULES-ATTR_I">+10</ModifyCarac>
+<Modifier>""</Modifier>
+<Page>58</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_06">
+<Description language="ENGLISH">"Carved of Rage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"wielder subject to Frenzy once drawn"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Talent>"RULES-T0063"</Talent>
+<Modifier>""</Modifier>
+<Page>58</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_07">
+<Description language="ENGLISH">"Envigoured"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">""</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>58</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_08">
+<Description language="ENGLISH">"Entwined with Fate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"start of each round: wielder gains one Advantage"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>58</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_09A">
+<Description language="ENGLISH">"Of Rigor Wroth (Melee)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"melee: wielder gains Strike Mighty Blow, Strike to Injure, Strike to Stun"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Talent>"RULES-T0037"</Talent>
+<Talent>"RULES-T0060"</Talent>
+<Talent>"RULES-T0059"</Talent>
+<Modifier>""</Modifier>
+<Page>58</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_09B">
+<Description language="ENGLISH">"Of Rigor Wroth (Ranged)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"ranged: wielder gains Fast Shot, Sharpshooter, Sniper"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Talent>"RULES-T0150"</Talent>
+<Talent>"RULES-T0152"</Talent>
+<Talent>"RULES-T0154"</Talent>
+<Modifier>""</Modifier>
+<Page>58</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_10">
+<Description language="ENGLISH">"Of Stalwart Sorcery"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"add the Precise Quality (RULES-WEAPB14) on the weapon"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>58</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_11">
+<Description language="ENGLISH">"Bewildering"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"wounded target gains the Surprised Condition"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>58</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_12">
+<Description language="ENGLISH">"Of Bold Brass"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"bearer immune to Fear, +2 SL to resist Terror"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>58</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_13">
+<Description language="ENGLISH">"Of the Wolf's Wide Jaws"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"add the Damaging Quality (RULES-WEAPB10) on the weapon"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>59</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_14A">
+<Description language="ENGLISH">"Of Deft and Cunning (Melee)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"melee: wielder +20 WS"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<ModifyCarac name="RULES-ATTR_WS">+20</ModifyCarac>
+<Modifier>""</Modifier>
+<Page>59</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_14B">
+<Description language="ENGLISH">"Of Deft and Cunning (Ranged)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"ranged: wielder +20 BS"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<ModifyCarac name="RULES-ATTR_BS">+20</ModifyCarac>
+<Modifier>""</Modifier>
+<Page>59</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_15">
+<Description language="ENGLISH">"Of Salt and Brine"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">""</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>59</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_16">
+<Description language="ENGLISH">"Of Grisly Wounds"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"add the Damaging Quality (RULES-WEAPB10) on the weapon"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>59</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_17">
+<Description language="ENGLISH">"Of Tooth and Claw"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Bestial creatures: Difficult (-10) Willpower Test before attacking the wielder"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>59</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_18">
+<Description language="ENGLISH">"Of Deepest Banishing"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"vs Daemons/Ethereal Undead: wielder +3 Advantage for the Unstable Trait"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>59</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_19">
+<Description language="ENGLISH">"Of Undue Substance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"add the Pummel (RULES-WEAPB04) and Hack (RULES-WEAPB30) Qualities on the weapon"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>59</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_20">
+<Description language="ENGLISH">"Of Languishing Death"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"all Wounds inflicted are Festering Wounds"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>59</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_21">
+<Description language="ENGLISH">"Of Keenest Edge"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">""</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>59</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_22">
+<Description language="ENGLISH">"Of Bane"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"vs chosen creature type: double Wounds inflicted"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>59</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_23">
+<Description language="ENGLISH">"Of Ceaseless Cleaving"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"hit dealing Damage: +2 additional Wounds"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>59</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_24">
+<Description language="ENGLISH">"Of Leaping Gold"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">""</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>59</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_25">
+<Description language="ENGLISH">"Of Grievous Injury"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Critical Injuries roll: wielder may reverse the digits, keep the worst result"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>59</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_26">
+<Description language="ENGLISH">"Of Form Mercurial"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"each round: wielder chooses one of Fast/Hack/Impale/Penetrating/Precise"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>59</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_27">
+<Description language="ENGLISH">"Hoarfrost Blade"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"hit dealing Damage: double Wounds inflicted, plus four additional Wounds"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>59</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_28">
+<Description language="ENGLISH">"Magical Shield"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"no further ability beyond protecting against attacks that ignore non-magical armour"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>64</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_29">
+<Description language="ENGLISH">"Shield of Ptolos"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"+2 to the Shield Quality when defending against a missile weapon"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>64</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_30">
+<Description language="ENGLISH">"Spell Shield"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"bearer may dispel a magic missile spell targeting them, Language (Magick) 30"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>64</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-WEAPB_31">
+<Description language="ENGLISH">"Charmed Shield"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"bearer +3 SL to Melee Tests opposing incoming attacks"</Short>
+<Max>"1"</Max>
+<Applies>Weapon</Applies>
+<Modifier>""</Modifier>
+<Page>64</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-ARMOB_01">
+<Description language="ENGLISH">"Magical Armour"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"no unusual ability beyond the universal magical armour benefits"</Short>
+<Max>"1"</Max>
+<Applies>Armour</Applies>
+<Modifier>""</Modifier>
+<Page>63</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-ARMOB_02">
+<Description language="ENGLISH">"Alleviating Armour"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"wearer suffers a Critical Wound: attacker rolls twice, applies the lower result"</Short>
+<Max>"1"</Max>
+<Applies>Armour</Applies>
+<Modifier>""</Modifier>
+<Page>63</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-ARMOB_03">
+<Description language="ENGLISH">"Seamless Armour"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">""</Short>
+<Max>"1"</Max>
+<Applies>Armour</Applies>
+<Modifier>""</Modifier>
+<Page>63</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-ARMOB_04">
+<Description language="ENGLISH">"Dragon Scale Armour"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">""</Short>
+<Max>"1"</Max>
+<Applies>Armour</Applies>
+<Modifier>""</Modifier>
+<Page>63</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-ARMOB_05">
+<Description language="ENGLISH">"Armour of Glittering Silver"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">""</Short>
+<Max>"1"</Max>
+<Applies>Armour</Applies>
+<Modifier>""</Modifier>
+<Page>63</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-ARMOB_06">
+<Description language="ENGLISH">"Trickster's Armour"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"protected hit: roll 1d10, on a 10 the wearer ignores the hit"</Short>
+<Max>"1"</Max>
+<Applies>Armour</Applies>
+<Modifier>""</Modifier>
+<Page>63</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-ARMOB_07">
+<Description language="ENGLISH">"Armour of Resilience"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"wearer +5 Toughness - full suit required"</Short>
+<Max>"1"</Max>
+<Applies>Armour</Applies>
+<ModifyCarac name="RULES-ATTR_T">+5</ModifyCarac>
+<Modifier>""</Modifier>
+<Page>63</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-ARMOB_08">
+<Description language="ENGLISH">"Armour of Fortune"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"protected hit: roll 1d10, on a 9 or 10 the wearer ignores the hit"</Short>
+<Max>"1"</Max>
+<Applies>Armour</Applies>
+<Modifier>""</Modifier>
+<Page>63</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_01">
+<Description language="ENGLISH">"Spell Ring"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Casts one spell, once per 24 hours"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>66</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_02">
+<Description language="ENGLISH">"Striking Ring"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"One Strike talent per 24 hours"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>66</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_03">
+<Description language="ENGLISH">"Ruby Ring of Ruin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Casts Great Fires of U'Zhul 3 times per 24 hours"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>66</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_04">
+<Description language="ENGLISH">"Protection Ring"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Halves Wounds from one type of Creature"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>66</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_05">
+<Description language="ENGLISH">"Obsidian Lodestone"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Dispel attempt against spells targeting the wearer"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>66</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_06">
+<Description language="ENGLISH">"Dawnstone"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Ignores damage to an armour piece once"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>66</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_07">
+<Description language="ENGLISH">"Opal Amulet"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Removes 1d10 Wounds from the first attack, once per 24 hours"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>66</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_08">
+<Description language="ENGLISH">"Seed of Rebirth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Wearer counts as having Regenerate"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Talent>"RULES-T0REG"</Talent>
+<Modifier>""</Modifier>
+<Page>66</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_09">
+<Description language="ENGLISH">"Amulet of Thrice-Blessed Copper"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"-1 Damage from all attacks, +30 Endurance vs Poison"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<ModifyDamageReceived name="*">-1</ModifyDamageReceived>
+<Modifier>""</Modifier>
+<Page>66</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_10">
+<Description language="ENGLISH">"Amulet of Righteous Silver"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"No Fear, +2 SL vs Terror"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>66</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_11">
+<Description language="ENGLISH">"Wanderer's Charm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Ignores the first Fatigued Condition each day"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>66</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_12">
+<Description language="ENGLISH">"Self-Cleaning Commode"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"+10 Endurance vs disease"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>67</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_13">
+<Description language="ENGLISH">"Illusory Weapon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Looks real but inflicts no damage"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>67</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_14">
+<Description language="ENGLISH">"Self-Tuning Lute"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"+10 Play (Lute)"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<ModifySkill name="RULES-COMPMUSIC_LUTH">10</ModifySkill>
+<Modifier>""</Modifier>
+<Page>67</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_15">
+<Description language="ENGLISH">"Sand of Flinging"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Thrown like a dart, Blinded on a head hit"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>67</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_16">
+<Description language="ENGLISH">"Writ of the Fifth Lore"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Passes as a licence or letter (Very Difficult Perception)"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>67</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_17">
+<Description language="ENGLISH">"Dazh's Flint"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Sets a flammable source on fire"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>67</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_18">
+<Description language="ENGLISH">"Screaming Stone"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Screams when a living creature is in view"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>67</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_19">
+<Description language="ENGLISH">"Trackless Boots"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"-20 to Track Tests made against the wearer"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>67</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_20">
+<Description language="ENGLISH">"All-Seeing Mirror"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Shows what its sister mirror sees"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>67</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_21">
+<Description language="ENGLISH">"Bellicose Cup"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Once a day: ignore Bleeding, or a Critical Wound, or gain 100 XP"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>67</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_22">
+<Description language="ENGLISH">"Elven Cloak"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"-20 to sight-based Perception or BS Tests against the wearer"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>67</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_23">
+<Description language="ENGLISH">"Crown of Command"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"+20 Leadership"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<ModifySkill name="RULES-COMPCOMM">20</ModifySkill>
+<Modifier>""</Modifier>
+<Page>67</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_24">
+<Description language="ENGLISH">"Wizard's Staff"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"-1 CN to spells of the associated Lore"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<ModifyCN name="RULES-LORE_*">-1</ModifyCN>
+<Modifier>""</Modifier>
+<Page>65</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_25">
+<Description language="ENGLISH">"Wand of Jade"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Doubles the range of spells cast"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>65</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_26">
+<Description language="ENGLISH">"Wand of Jet"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Doubles the duration of spells cast"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>65</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_27">
+<Description language="ENGLISH">"Earthing Rod"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Ignores one Minor Miscast per 24 hours"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>65</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_28">
+<Description language="ENGLISH">"Wand of the Winds"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Ignores Swirling Winds penalties for 1d10 Rounds, once per 24 hours"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>65</Page>
+</Craftsmanship>
+<Craftsmanship id="ARCH2-MAGIC_29">
+<Description language="ENGLISH">"Forbidden Rod"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Lose up to 3 Wounds for +1 SL each on a failed Cast, once per 24 hours"</Short>
+<Max>"1"</Max>
+<Applies>Misc</Applies>
+<Modifier>""</Modifier>
+<Page>65</Page>
+</Craftsmanship>
+</DATA_CRAFTMANSHIP>
+<DATA_SPELL>
+<Sort id="ARCH2-COLOR_277">
+<Description language="ENGLISH">"Bonecrusher"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Instant"</Duration>
+<Range>"(ATTR_WP) yards"</Range>
+<Talent>"RULES-T0088_MAW"</Talent>
+<Level>"5"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>32</Page>
+</Sort>
+<Sort id="ARCH2-COLOR_278">
+<Description language="ENGLISH">"Bullgorger"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"(BATTR_WP) Rounds"</Duration>
+<Range>"(BATTR_WP) yards"</Range>
+<Talent>"RULES-T0088_MAW"</Talent>
+<Level>"5"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>32</Page>
+</Sort>
+<Sort id="ARCH2-COLOR_279">
+<Description language="ENGLISH">"Braingobbler"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"(BATTR_WP) Rounds"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_MAW"</Talent>
+<Level>"5"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>32</Page>
+</Sort>
+<Sort id="ARCH2-COLOR_280">
+<Description language="ENGLISH">"Taste Death"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"You"</Target>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_MAW"</Talent>
+<Level>"2"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>33</Page>
+</Sort>
+<Sort id="ARCH2-COLOR_281">
+<Description language="ENGLISH">"Trollguts"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"1"</Target>
+<Duration>"Toughness Bonus Rounds"</Duration>
+<Range>"Toughness Bonus yards"</Range>
+<Talent>"RULES-T0088_MAW"</Talent>
+<Level>"6"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>33</Page>
+</Sort>
+<Sort id="ARCH2-COLOR_282">
+<Description language="ENGLISH">"The Maw"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"AoE ((BATTR_WP) yards)"</Target>
+<Duration>"(BATTR_WP) Rounds"</Duration>
+<Range>"(ATTR_WP) yards"</Range>
+<Talent>"RULES-T0088_MAW"</Talent>
+<Level>"11"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>33</Page>
+</Sort>
+<Sort id="ARCH2-COLOR_283">
+<Description language="ENGLISH">"Feast of the Fallen"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Target>"Special"</Target>
+<Duration>"(BATTR_WP) Rounds"</Duration>
+<Range>"You"</Range>
+<Talent>"RULES-T0088_MAW"</Talent>
+<Level>"9"</Level>
+<TypSpell>"Domain Magic"</TypSpell>
+<Page>33</Page>
+</Sort>
+</DATA_SPELL>
+<DATA_CORRUPTION_PHYSICAL>
+<Specie name="ARCH2-RACE_OGRE">"01-10"</Specie>
+</DATA_CORRUPTION_PHYSICAL>
+<DATA_CORRUPTION_MENTAL>
+<Specie name="ARCH2-RACE_OGRE">"11-100"</Specie>
+</DATA_CORRUPTION_MENTAL>
+<DATA_STARSIGN>
+<StarSign id="ARCH2-STAR01">
+<Range>"01-05"</Range>
+<Description language="ENGLISH">"Wymund the Anchorite"</Description>
+<Title language="ENGLISH">"Sign of Enduring"</Title>
+<Classical>"Wymenos"</Classical>
+<Ascendant>"Midwinter"</Ascendant>
+<Dates>"Vorhexen 12th - Vorhexen 27th"</Dates>
+<God>"Manaan"</God>
+<Appearance language="ENGLISH">"A stern face"</Appearance>
+<Personality language="ENGLISH">""</Personality>
+<Modifier name="RULES-ATTR_Fel">"2"</Modifier>
+<Modifier name="RULES-ATTR_I">"2"</Modifier>
+<Modifier name="RULES-ATTR_Int">"-3"</Modifier>
+<Page>39</Page>
+</StarSign>
+<StarSign id="ARCH2-STAR02">
+<Range>"06-10"</Range>
+<Description language="ENGLISH">"The Big Cross"</Description>
+<Title language="ENGLISH">"Sign of Clarity"</Title>
+<Classical>"Azurios"</Classical>
+<Ascendant>"Midwinter"</Ascendant>
+<Dates>"Vorhexen 28th - Nachhexen 8th"</Dates>
+<God>"Ulric"</God>
+<Appearance language="ENGLISH">"An X"</Appearance>
+<Personality language="ENGLISH">""</Personality>
+<Modifier name="RULES-ATTR_S">"2"</Modifier>
+<Modifier name="RULES-ATTR_WP">"2"</Modifier>
+<Modifier name="RULES-ATTR_I">"-3"</Modifier>
+<Page>39</Page>
+</StarSign>
+<StarSign id="ARCH2-STAR03">
+<Range>"11-15"</Range>
+<Description language="ENGLISH">"The Limner's Line"</Description>
+<Title language="ENGLISH">"Sign of Precision"</Title>
+<Classical>"Verros"</Classical>
+<Ascendant>"Late Winter/Early Spring"</Ascendant>
+<Dates>"Nachhexen 9th - Nachhexen 28th"</Dates>
+<God>"Vallich (Smithing and Ship Building (Nordland))"</God>
+<Appearance language="ENGLISH">"An archer with a drawn bow"</Appearance>
+<Personality language="ENGLISH">""</Personality>
+<Modifier name="RULES-ATTR_BS">"2"</Modifier>
+<Modifier name="RULES-ATTR_Ag">"2"</Modifier>
+<Modifier name="RULES-ATTR_WS">"-3"</Modifier>
+<Page>39</Page>
+</StarSign>
+<StarSign id="ARCH2-STAR04">
+<Range>"16-20"</Range>
+<Description language="ENGLISH">"Gnuthus the Ox"</Description>
+<Title language="ENGLISH">"Sign of Dutiful Service"</Title>
+<Classical>"Nuthlos"</Classical>
+<Ascendant>"Early Spring"</Ascendant>
+<Dates>"Nachhexen 29th - Jahrdrung 16th"</Dates>
+<God>"Guvaur (Bulls (Ostland))"</God>
+<Appearance language="ENGLISH">"An ox"</Appearance>
+<Personality language="ENGLISH">""</Personality>
+<Modifier name="RULES-ATTR_T">"2"</Modifier>
+<Modifier name="RULES-ATTR_WP">"2"</Modifier>
+<Modifier name="RULES-ATTR_Int">"-3"</Modifier>
+<Page>39</Page>
+</StarSign>
+<StarSign id="ARCH2-STAR05">
+<Range>"21-25"</Range>
+<Description language="ENGLISH">"Dragomas the Drake"</Description>
+<Title language="ENGLISH">"Sign of Courage"</Title>
+<Classical>"Drakonos"</Classical>
+<Ascendant>"Spring"</Ascendant>
+<Dates>"Jahrdrung 17th - Pflugzeit 7th"</Dates>
+<God>"Khaine"</God>
+<Appearance language="ENGLISH">"A rearing dragon"</Appearance>
+<Personality language="ENGLISH">""</Personality>
+<Modifier name="RULES-ATTR_WP">"2"</Modifier>
+<Modifier name="RULES-ATTR_Fel">"2"</Modifier>
+<Modifier name="RULES-ATTR_Dex">"-3"</Modifier>
+<Page>39</Page>
+</StarSign>
+<StarSign id="ARCH2-STAR06">
+<Range>"26-30"</Range>
+<Description language="ENGLISH">"The Gloaming"</Description>
+<Title language="ENGLISH">"Sign of Illusion and Mystery"</Title>
+<Classical>"Tartotes"</Classical>
+<Ascendant>"Spring"</Ascendant>
+<Dates>"Pflugzeit 8th - Pflugzeit 31st"</Dates>
+<God>"Morr"</God>
+<Appearance language="ENGLISH">"A collection of red and blue stars that appears only at twilight"</Appearance>
+<Personality language="ENGLISH">""</Personality>
+<Modifier name="RULES-ATTR_Int">"2"</Modifier>
+<Modifier name="RULES-ATTR_I">"2"</Modifier>
+<Modifier name="RULES-ATTR_WP">"-3"</Modifier>
+<Page>39</Page>
+</StarSign>
+<StarSign id="ARCH2-STAR07">
+<Range>"31-35"</Range>
+<Description language="ENGLISH">"Grungni's Baldric"</Description>
+<Title language="ENGLISH">"Sign of Martial Pursuits"</Title>
+<Classical>"Gileon"</Classical>
+<Ascendant>"Late Spring/Early Summer"</Ascendant>
+<Dates>"Pflugzeit 32nd - Sigmarzeit 22nd"</Dates>
+<God>"Grungni (Dwarfs, the Forge (Stirland)), Margileo (Honour (Averland))"</God>
+<Appearance language="ENGLISH">"A dwarf with a baldric"</Appearance>
+<Personality language="ENGLISH">""</Personality>
+<Modifier name="RULES-ATTR_WS">"2"</Modifier>
+<Modifier name="RULES-ATTR_WP">"2"</Modifier>
+<Modifier name="RULES-ATTR_Fel">"-3"</Modifier>
+<Page>42</Page>
+</StarSign>
+<StarSign id="ARCH2-STAR08">
+<Range>"36-40"</Range>
+<Description language="ENGLISH">"Mammit the Wise"</Description>
+<Title language="ENGLISH">"Sign of Wisdom"</Title>
+<Classical>"Mammius"</Classical>
+<Ascendant>"Early Summer"</Ascendant>
+<Dates>"Sigmarzeit 23rd - Sommerzeit 11th"</Dates>
+<God>"Verena"</God>
+<Appearance language="ENGLISH">"An owl"</Appearance>
+<Personality language="ENGLISH">""</Personality>
+<Modifier name="RULES-ATTR_I">"2"</Modifier>
+<Modifier name="RULES-ATTR_Int">"2"</Modifier>
+<Modifier name="RULES-ATTR_Fel">"-3"</Modifier>
+<Page>39</Page>
+</StarSign>
+<StarSign id="ARCH2-STAR09">
+<Range>"41-45"</Range>
+<Description language="ENGLISH">"Mummit the Fool"</Description>
+<Title language="ENGLISH">"Sign of the Indistinct"</Title>
+<Classical>"The Fool"</Classical>
+<Ascendant>"Summer"</Ascendant>
+<Dates>"Sommerzeit 12th - Sommerzeit 29th"</Dates>
+<God>"Ranald"</God>
+<Appearance language="ENGLISH">"A smiling face"</Appearance>
+<Personality language="ENGLISH">""</Personality>
+<Modifier name="RULES-ATTR_WP">"-3"</Modifier>
+<Talent>"RULES-T0020"</Talent>
+<Page>39</Page>
+</StarSign>
+<StarSign id="ARCH2-STAR10">
+<Range>"46-50"</Range>
+<Description language="ENGLISH">"The Two Bullocks"</Description>
+<Title language="ENGLISH">"Sign of Fertility and Craftsmanship"</Title>
+<Classical>"Hashoor"</Classical>
+<Ascendant>"Midsummer"</Ascendant>
+<Dates>"Sommerzeit 30th - Vorgeheim 13th"</Dates>
+<God>"Ahalt (Hunting, Fertility, and Sacrifice (Wissenland))"</God>
+<Appearance language="ENGLISH">"Two oxen"</Appearance>
+<Personality language="ENGLISH">""</Personality>
+<Modifier name="RULES-ATTR_Int">"-3"</Modifier>
+<Talent>"RULES-T0092_*"</Talent>
+<Page>39</Page>
+</StarSign>
+<StarSign id="ARCH2-STAR11">
+<Range>"51-55"</Range>
+<Description language="ENGLISH">"The Dancer"</Description>
+<Title language="ENGLISH">"Sign of Love and Attraction"</Title>
+<Classical>"Adamnos"</Classical>
+<Ascendant>"Late Summer"</Ascendant>
+<Dates>"Vorgeheim 14th - Nachgeheim 2nd"</Dates>
+<God>"Millavog (Dancing (Wissenland))"</God>
+<Appearance language="ENGLISH">"A whirling dancer"</Appearance>
+<Personality language="ENGLISH">""</Personality>
+<Modifier name="RULES-ATTR_I">"-3"</Modifier>
+<Talent>"RULES-T0056"</Talent>
+<Page>39</Page>
+</StarSign>
+<StarSign id="ARCH2-STAR12">
+<Range>"56-60"</Range>
+<Description language="ENGLISH">"The Drummer"</Description>
+<Title language="ENGLISH">"Sign of Excess and Hedonism"</Title>
+<Classical>"Lupios"</Classical>
+<Ascendant>"Late Summer/Early Autumn"</Ascendant>
+<Dates>"Nachgeheim 3rd - Nachgeheim 24th"</Dates>
+<God>"Lupos (Predators (Hochland))"</God>
+<Appearance language="ENGLISH">"A drum"</Appearance>
+<Personality language="ENGLISH">""</Personality>
+<Modifier name="RULES-ATTR_WP">"-3"</Modifier>
+<Talent>"RULES-T0104"</Talent>
+<Page>39</Page>
+</StarSign>
+<StarSign id="ARCH2-STAR13">
+<Range>"61-65"</Range>
+<Description language="ENGLISH">"The Piper"</Description>
+<Title language="ENGLISH">"Sign of the Trickster"</Title>
+<Classical>"Sangist"</Classical>
+<Ascendant>"Autumn"</Ascendant>
+<Dates>"Nachgeheim 25th - Erntezeit 16th"</Dates>
+<God>"Ranald, Katya (Disarming Beauty (Reikland))"</God>
+<Appearance language="ENGLISH">"A capering piper"</Appearance>
+<Personality language="ENGLISH">""</Personality>
+<Modifier name="RULES-ATTR_Fel">"2"</Modifier>
+<Modifier name="RULES-ATTR_Dex">"2"</Modifier>
+<Modifier name="RULES-ATTR_WS">"-3"</Modifier>
+<Page>39</Page>
+</StarSign>
+<StarSign id="ARCH2-STAR14">
+<Range>"66-70"</Range>
+<Description language="ENGLISH">"Vobist the Faint"</Description>
+<Title language="ENGLISH">"Sign of Darkness and Uncertainty"</Title>
+<Classical>"Vobist"</Classical>
+<Ascendant>"Autumn"</Ascendant>
+<Dates>"Erntezeit 17th - Brauzeit 6th"</Dates>
+<God>"Ranald"</God>
+<Appearance language="ENGLISH">"No stars"</Appearance>
+<Personality language="ENGLISH">""</Personality>
+<Modifier name="RULES-ATTR_I">"-3"</Modifier>
+<Talent>"RULES-T0141"</Talent>
+<Page>39</Page>
+</StarSign>
+<StarSign id="ARCH2-STAR15">
+<Range>"71-75"</Range>
+<Description language="ENGLISH">"The Broken Cart"</Description>
+<Title language="ENGLISH">"Sign of Pride"</Title>
+<Classical>"Kharnos"</Classical>
+<Ascendant>"Autumn"</Ascendant>
+<Dates>"Brauzeit 7th - Brauzeit 27th"</Dates>
+<God>"Nurgle"</God>
+<Appearance language="ENGLISH">"A cart with a broken wheel"</Appearance>
+<Personality language="ENGLISH">""</Personality>
+<Modifier name="RULES-ATTR_WP">"-3"</Modifier>
+<Talent>"RULES-T0129_MALA"</Talent>
+<Page>39</Page>
+</StarSign>
+<StarSign id="ARCH2-STAR16">
+<Range>"76-80"</Range>
+<Description language="ENGLISH">"The Greased Goat"</Description>
+<Title language="ENGLISH">"Sign of Denied Passions"</Title>
+<Classical>"Talios"</Classical>
+<Ascendant>"Late Autumn"</Ascendant>
+<Dates>"Brauzeit 28th - Kaldezeit 17th"</Dates>
+<God>"Taal"</God>
+<Appearance language="ENGLISH">"A goat"</Appearance>
+<Personality language="ENGLISH">""</Personality>
+<Modifier name="RULES-ATTR_T">"-3"</Modifier>
+<Talent>"RULES-T0003"</Talent>
+<Page>39</Page>
+</StarSign>
+<StarSign id="ARCH2-STAR17">
+<Range>"81-85"</Range>
+<Description language="ENGLISH">"Rhya's Cauldron"</Description>
+<Title language="ENGLISH">"Sign of Mercy, Death, and Creation"</Title>
+<Classical>"Rionyes"</Classical>
+<Ascendant>"Early Winter"</Ascendant>
+<Dates>"Kaldezeit 18th - Kaldezeit 33rd"</Dates>
+<God>"Rhya"</God>
+<Appearance language="ENGLISH">"A cauldron"</Appearance>
+<Personality language="ENGLISH">""</Personality>
+<Modifier name="RULES-ATTR_Ag">"-3"</Modifier>
+<Talent>"RULES-T0167"</Talent>
+<Page>39</Page>
+</StarSign>
+<StarSign id="ARCH2-STAR18">
+<Range>"86-90"</Range>
+<Description language="ENGLISH">"Cackelfax the Cockerel"</Description>
+<Title language="ENGLISH">"Sign of Money and Merchants"</Title>
+<Classical>"Kakeros"</Classical>
+<Ascendant>"Winter"</Ascendant>
+<Dates>"Ulriczeit 1st - Ulriczeit 16th"</Dates>
+<God>"Kakarol (Horses (Ostland))"</God>
+<Appearance language="ENGLISH">"Two coins"</Appearance>
+<Personality language="ENGLISH">""</Personality>
+<Modifier name="RULES-ATTR_Fel">"-3"</Modifier>
+<Talent>"RULES-T0102"</Talent>
+<Page>39</Page>
+</StarSign>
+<StarSign id="ARCH2-STAR19">
+<Range>"91-95"</Range>
+<Description language="ENGLISH">"The Bonesaw"</Description>
+<Title language="ENGLISH">"Sign of Skill and Learning"</Title>
+<Classical>"Alyoi"</Classical>
+<Ascendant>"Winter"</Ascendant>
+<Dates>"Ulriczeit 17th - Ulriczeit 31st"</Dates>
+<God>"Shallya"</God>
+<Appearance language="ENGLISH">"A knife"</Appearance>
+<Personality language="ENGLISH">""</Personality>
+<Modifier name="RULES-ATTR_Int">"2"</Modifier>
+<Modifier name="RULES-ATTR_Fel">"2"</Modifier>
+<Modifier name="RULES-ATTR_WS">"-3"</Modifier>
+<Page>39</Page>
+</StarSign>
+<StarSign id="ARCH2-STAR20">
+<Range>"96-00"</Range>
+<Description language="ENGLISH">"The Witchling Star"</Description>
+<Title language="ENGLISH">"Sign of Magic"</Title>
+<Classical>"Solkios"</Classical>
+<Ascendant>"Winter"</Ascendant>
+<Dates>"Ulriczeit 32nd - Vorhexen 11th"</Dates>
+<God>"Soll"</God>
+<Appearance language="ENGLISH">"A single bright star"</Appearance>
+<Personality language="ENGLISH">""</Personality>
+<Variant range="1-3">
+<Talent>"RULES-T0141"</Talent>
+<Modifier name="RULES-ATTR_S">"-3"</Modifier>
+</Variant>
+<Variant range="4-6">
+<Talent>"RULES-T0137"</Talent>
+<Modifier name="RULES-ATTR_S">"-3"</Modifier>
+</Variant>
+<Variant range="7-9">
+<Talent>"RULES-T0089"</Talent>
+<Modifier name="RULES-ATTR_S">"-3"</Modifier>
+</Variant>
+<Variant range="10">
+<Talent>"RULES-T0143"</Talent>
+<Modifier name="RULES-ATTR_S">"-5"</Modifier>
+</Variant>
+<Page>39</Page>
+</StarSign>
+</DATA_STARSIGN>
+<DATA_OPTION_RULE>
+<OptionRule id="ARCH2-OPTR_01">
+<Code>"STARSIGN"</Code>
+<Description language="ENGLISH">"Star Signs"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+</OptionRule>
+</DATA_OPTION_RULE>
+</DATA_BOOK>

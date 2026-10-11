@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"SALZE"</CODE_BOOK>
+<BOOK>"BOOK SALZENMUND CITY OF SALT AND SILVER"</BOOK>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP4"</VERSION>
+<OFFICIAL>"1"</OFFICIAL>
+<COMPLETE>"1"</COMPLETE>
+<DISCLAIMER>"No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form by any means, electronic, mechanical, photocopying, recording or otherwise without the prior permission of the publishers. Warhammer Fantasy Roleplay 4th Edition (c) Copyright Games Workshop Limited 2022. Warhammer Fantasy Roleplay 4th Edition, the Warhammer Fantasy Roleplay 4th Edition logo, GW, Games Workshop, Warhammer, The Game of Fantasy Battles, the twin-tailed comet logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likeness thereof, are either (R) or TM, and/or (c) Games Workshop Limited, variably registered around the world, and used under licence. Cubicle 7 Entertainment and the Cubicle 7 Entertainment logo are trademarks of Cubicle 7 Entertainment Limited. All rights reserved."</DISCLAIMER>
+<DATA_LABEL>
+<Label language="ENGLISH">
+<Text name="SALZE-BOOK SALZENMUND CITY OF SALT AND SILVER">"Salzenmund - City Of Salt &amp; Silver"</Text>
+</Label>
+<Label language="FRANCAIS">
+<Text name="SALZE-BOOK SALZENMUND CITY OF SALT AND SILVER">"Salzenmund - City Of Salt &amp; Silver"</Text>
+</Label>
+</DATA_LABEL>
+<DATA_CAREER>
+<Career id="SALZE-WORK108">
+<Description language="ENGLISH">"Owler"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Skill>"RULES-COMPSUBOR"</Skill>
+<Class>"RULES-CLASS_RIVE"</Class>
+<SUBCHAPTER_LEVEL>
+<Level id="1">
+<Description language="ENGLISH">"Legger"</Description>
+<Salary>"TIERS_BRASS 2"</Salary>
+</Level>
+<Level id="2">
+<Description language="ENGLISH">"Owler"</Description>
+<Salary>"TIERS_BRASS 3"</Salary>
+</Level>
+<Level id="3">
+<Description language="ENGLISH">"Master Owler"</Description>
+<Salary>"TIERS_BRASS 5"</Salary>
+</Level>
+<Level id="4">
+<Description language="ENGLISH">"Owler King"</Description>
+<Salary>"TIERS_SILVER 2"</Salary>
+</Level>
+</SUBCHAPTER_LEVEL>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2"</Attribut>
+<Attribut name="RULES-ATTR_BS">"0"</Attribut>
+<Attribut name="RULES-ATTR_S">"0"</Attribut>
+<Attribut name="RULES-ATTR_T">"1"</Attribut>
+<Attribut name="RULES-ATTR_I">"3"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"1"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"0"</Attribut>
+<Attribut name="RULES-ATTR_Int">"4"</Attribut>
+<Attribut name="RULES-ATTR_WP">"1"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"0"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMPSOINANI">"1"</Skill>
+  <Skill name="RULES-COMPSUBOR">"1"</Skill>
+  <Skill name="RULES-COMPRESALC">"1"</Skill>
+  <Skill name="RULES-COMPRESIST">"1"</Skill>
+  <Skill name="RULES-COMPEVAL">"1"</Skill>
+  <Skill name="RULES-COMPMARCH">"1"</Skill>
+  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
+  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
+  <Skill name="RULES-COMPCHEV_CHEVAL">"1"</Skill>
+  <Skill name="RULES-COMPDISC_RURAL/RULES-COMPDISC_URB">"1"</Skill>
+  <Skill name="RULES-COMPATHL">"2"</Skill>
+  <Skill name="RULES-COMPCHARM">"2"</Skill>
+  <Skill name="RULES-COMPRAGOT">"2"</Skill>
+  <Skill name="RULES-COMPSAVOIR_LOCAL">"2"</Skill>
+  <Skill name="RULES-COMPPRECEP">"2"</Skill>
+  <Skill name="RULES-COMPSIGNES_CONTREB">"2"</Skill>
+  <Skill name="RULES-COMPINTIM">"3"</Skill>
+  <Skill name="RULES-COMPINTUI">"3"</Skill>
+  <Skill name="RULES-COMPSAVOIR_LOI">"3"</Skill>
+  <Skill name="RULES-COMPSAVOIR_ROADWAY">"3"</Skill>
+  <Skill name="RULES-COMPLANG_*">"4"</Skill>
+  <Skill name="RULES-COMPCOMM">"4"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T0038">"1"</Talent>
+  <Talent name="RULES-T0108">"1"</Talent>
+  <Talent name="RULES-T0013_FORESTS">"1"</Talent>
+  <Talent name="RULES-T0077">"1"</Talent>
+  <Talent name="RULES-T0102">"2"</Talent>
+  <Talent name="RULES-T0136_CRIM">"2"</Talent>
+  <Talent name="RULES-T0140">"2"</Talent>
+  <Talent name="RULES-T0158">"2"</Talent>
+  <Talent name="RULES-T0147">"3"</Talent>
+  <Talent name="RULES-T0132_ROADWARDENS">"3"</Talent>
+  <Talent name="RULES-T0168">"3"</Talent>
+  <Talent name="RULES-T0014">"3"</Talent>
+  <Talent name="RULES-T0017">"4"</Talent>
+  <Talent name="RULES-T0117">"4"</Talent>
+  <Talent name="RULES-T0013_MOUNTAINS">"4"</Talent>
+  <Talent name="RULES-T0035">"4"</Talent>
+  </SUBCHAPTER_TALENT>
+<SUBCHAPTER_ITEM>
+<Item name="Cranky Mule">"1"</Item>
+<Item name="RULES-TRAP_009">"1"</Item>
+<Item name="RULES-TRAP_024">"1"</Item>
+<Item name="RULES-TRAP_152">"1"</Item>
+<Item name="RULES-TRAP_002">"2"</Item>
+<Item name="RULES-COMB_BASE_*">"2"</Item>
+<Item name="RULES-ARMO_04">"2"</Item>
+<Item name="RULES-TRAP_103">"2"</Item>
+<Item name="RULES-TRAP_109">"3"</Item>
+<Item name="Wagon with false floor">"3"</Item>
+<Item name="RULES-TRAP_058">"4"</Item>
+<Item name="Network of subordinate Owlers">"4"</Item>
+</SUBCHAPTER_ITEM>
+<Page>141</Page>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_SPECIE>
+  <Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="SALZE-WORK108">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="SALZE-WORK108">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="SALZE-WORK108">"X"</Career>
+  </Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HELF"</Specie>
+<Career name="SALZE-WORK108">"X"</Career>
+  </Entry>
+</DATA_CAREER_SPECIE>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMPMETIER_SILVERSMITH">
+<Description language="ENGLISH">"Trade (Silversmith)"</Description>
+<Generique>"RULES-COMPMETIER_*"</Generique>
+<Page>128</Page>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+<DATA_SPECIE>
+<Specie id="SALZE-RACE_HSALZ">
+<Description language="ENGLISH">"Humans (Salzenmunder)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_I">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fate">"2"</Attribut>
+<Attribut name="RULES-ATTR_Resil">"1"</Attribut>
+<Attribut name="RULES-ATTR_Wound">"1xBATTR_S+2xBATTR_T+1xBATTR_WP"</Attribut>
+<Attribut name="RULES-ATTR_Supp">"3"</Attribut>
+<Attribut name="RULES-ATTR_Move">"4"</Attribut>
+  </SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMPCHARM"</Skill>
+  <Skill>"RULES-COMPCALM"</Skill>
+  <Skill>"RULES-COMPDIVERT_NARRA"</Skill>
+  <Skill>"RULES-COMPEVAL"</Skill>
+  <Skill>"RULES-COMPRAGOT"</Skill>
+  <Skill>"RULES-COMPMARCH"</Skill>
+  <Skill>"RULES-COMPLANG_NORSE"</Skill>
+  <Skill>"RULES-COMPCOMM"</Skill>
+  <Skill>"RULES-COMPSAVOIR_NORDLAND"</Skill>
+  <Skill>"RULES-COMPCOMB_BASE"</Skill>
+  <Skill>"RULES-COMPPROJ_ARC"</Skill>
+  <Skill>"RULES-COMPMETIER_*"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T0171"</Talent>
+  <Talent>"RULES-T0002/RULES-T0117"</Talent>
+  <Talent>"RULES-T*"</Talent>
+  <Talent>"RULES-T*"</Talent>
+  <Talent>"RULES-T*"</Talent>
+  </SUBCHAPTER_TALENT>
+<Page>142</Page>
+</Specie>
+<Specie id="SALZE-RACE_DCRAG">
+<Description language="ENGLISH">"Dwarfs (Cragforge Clan)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_DWARF"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_I">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+40"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_Fate">"0"</Attribut>
+<Attribut name="RULES-ATTR_Resil">"2"</Attribut>
+<Attribut name="RULES-ATTR_Wound">"1xBATTR_S+2xBATTR_T+1xBATTR_WP"</Attribut>
+<Attribut name="RULES-ATTR_Supp">"2"</Attribut>
+<Attribut name="RULES-ATTR_Move">"3"</Attribut>
+  </SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMPRESALC"</Skill>
+  <Skill>"RULES-COMPCALM"</Skill>
+  <Skill>"RULES-COMPRESIST"</Skill>
+  <Skill>"RULES-COMPDIVERT_NARRA"</Skill>
+  <Skill>"RULES-COMPEVAL"</Skill>
+  <Skill>"RULES-COMPINTIM"</Skill>
+  <Skill>"RULES-COMPLANG_KHAZ"</Skill>
+  <Skill>"RULES-COMPSAVOIR_NAIN"</Skill>
+  <Skill>"RULES-COMPSAVOIR_GEOL"</Skill>
+  <Skill>"RULES-COMPSAVOIR_METAL"</Skill>
+  <Skill>"RULES-COMPCOMB_BASE"</Skill>
+  <Skill>"RULES-COMPMETIER_SILVERSMITH"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T0169"</Talent>
+  <Talent>"RULES-T0164"</Talent>
+  <Talent>"RULES-T0084/RULES-T0075"</Talent>
+  <Talent>"RULES-T0041/RULES-T0107"</Talent>
+  <Talent>"RULES-T0035"</Talent>
+  </SUBCHAPTER_TALENT>
+<Page>142</Page>
+</Specie>
+<Specie id="SALZE-RACE_DGRUM">
+<Description language="ENGLISH">"Dwarfs (Grumsson Clan)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_DWARF"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_I">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+40"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_Fate">"0"</Attribut>
+<Attribut name="RULES-ATTR_Resil">"2"</Attribut>
+<Attribut name="RULES-ATTR_Wound">"1xBATTR_S+2xBATTR_T+1xBATTR_WP"</Attribut>
+<Attribut name="RULES-ATTR_Supp">"2"</Attribut>
+<Attribut name="RULES-ATTR_Move">"3"</Attribut>
+  </SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMPRESALC"</Skill>
+  <Skill>"RULES-COMPCALM"</Skill>
+  <Skill>"RULES-COMPRESIST"</Skill>
+  <Skill>"RULES-COMPDIVERT_NARRA"</Skill>
+  <Skill>"RULES-COMPEVAL"</Skill>
+  <Skill>"RULES-COMPINTIM"</Skill>
+  <Skill>"RULES-COMPLANG_NORSE"</Skill>
+  <Skill>"RULES-COMPLANG_KHAZ"</Skill>
+  <Skill>"RULES-COMPSAVOIR_NAIN"</Skill>
+  <Skill>"RULES-COMPCOMB_BASE"</Skill>
+  <Skill>"RULES-COMPVOILE_*"</Skill>
+  <Skill>"RULES-COMPMETIER_*"</Skill>
+  </SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T0169"</Talent>
+  <Talent>"RULES-T0164"</Talent>
+  <Talent>"RULES-T0075/RULES-T0107"</Talent>
+  <Talent>"RULES-T0035"</Talent>
+  <Talent>"RULES-T*"</Talent>
+  </SUBCHAPTER_TALENT>
+<Page>142</Page>
+</Specie>
+</DATA_SPECIE>
+</DATA_BOOK>
