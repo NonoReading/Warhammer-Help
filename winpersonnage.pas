@@ -1591,7 +1591,7 @@ procedure TWinPersonnages.TabMutationClick(Sender: TObject);
     if (TabMutation.Row < 1) then Exit;
 
     PCorruptionTable       := ChercheCorruptionTable(TabMutation.Cells[3, TabMutation.Row]);
-    MemoMutationEffet.Text := PCorruptionTable.Effet;
+    MemoMutationEffet.Text := TexteOuPageMutation(PCorruptionTable.Effet, PCorruptionTable.Livre, PCorruptionTable.Code);
   end;
 
 // Retrait d'une mutation - premiere fois que Personnage.Mutations peut se retrecir. Ce qu'elle
@@ -1677,9 +1677,9 @@ procedure TWinPersonnages.TabPathologieClick(Sender: TObject);
 
     PersonnagePathologie := Personnage.Pathologies[TabPathologie.Row - 1];
     if PersonnagePathologie.TypeChapitre = ConstXmlChapitreAffliction then
-      MemoPathologieEffet.Text := ChercheAffliction(PersonnagePathologie.Code).Effet
+      MemoPathologieEffet.Text := TexteOuPage(ChercheAffliction(PersonnagePathologie.Code).Effet, ConstXmlDataAffliction, ChercheAffliction(PersonnagePathologie.Code).Livre, PersonnagePathologie.Code)
     else
-      MemoPathologieEffet.Text := ChercheDisease(PersonnagePathologie.Code).Symptoms;
+      MemoPathologieEffet.Text := TexteOuPage(ChercheDisease(PersonnagePathologie.Code).Symptoms, ConstXmlDataDisease, ChercheDisease(PersonnagePathologie.Code).Livre, PersonnagePathologie.Code);
   end;
 
 // Retrait, meme principe que TabMutationDblClick - Personnage.Pathologies peut se retrecir,
@@ -5136,6 +5136,21 @@ procedure TWinPersonnages.NiveauMetierTalentMax();
   // possede : on teste chaque branche, avec les deux regles habituelles (meme code, ou meme
   // radical a la specialisation pres). Sans cela un Mark of the Eagle n'etait jamais compte
   // dans l'avancement. 20/09/2026.
+  // Radical d'un talent a specialisation : le code AVEC son livre, coupe au premier '_'
+  // (RULES-T0012_ANIMAL -> RULES-T0012). Garder le livre est necessaire : T0012 existe aussi dans
+  // DWARF et NATIO (21 radicaux partages), et les cinq premiers caracteres du code sans livre
+  // confondaient ces talents. Un code sans '_' (RULES-T*) est son propre radical.
+  function RadicalTalent(Code: String): String;
+    var
+      P: Integer;
+    begin
+      P := Pos('_', Code);
+      if P > 0 then
+        Result := Copy(Code, 1, P - 1)
+      else
+        Result := Code;
+    end;
+
   function TalentCarriereCorrespond(CodeCarriere, CodeLigne: String): Boolean;
     var
       Branches: TStringList;
@@ -5149,7 +5164,7 @@ procedure TWinPersonnages.NiveauMetierTalentMax();
         Branches.DelimitedText   := CodeCarriere;
         for IndBr := 0 to Branches.Count - 1 do
           if CompareRechercheValeur(Branches[IndBr], CodeLigne)
-             or (copy(CodeSansLivre(Branches[IndBr]), 1, 5) = copy(CodeSansLivre(CodeLigne), 1, 5)) then
+             or (RadicalTalent(Branches[IndBr]) = RadicalTalent(CodeLigne)) then
             begin
               Result := True;
               Break;
@@ -6061,11 +6076,6 @@ procedure TWinPersonnages.AjustePositionTables();
     ImageSheetXp.Left         := ToggleBoxDroite.Left;
     ImageSheetXp.Width        := Self.Width - ToggleBoxDroite.Left;
     ImageSheetXp.Height       := Self.Height;
-    // Meme correctif que plus haut (MaxHeight fixe au lieu de 0/Form.Height, ScaleDpi=false) -
-    // ce second appel, deja en doublon connu (A FAIRE.txt), retomberait sinon sur la meme cause
-    // du decalage au fil du redimensionnement pour le PROCHAIN appel de AjustePositionTables.
-    AdjustGridColumnsWidth(TabCompetence, 9999, false, false, true, 0, 0, ssautoboth, false);
-
   end;
 
 procedure TWinPersonnages.EditHeightKeyPress(Sender: TObject; var Key: char);

@@ -6,7 +6,7 @@ interface
 
 uses
   BCLabelContour, Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Spin, Grids,
-  BCButton, ChargeConstantes, ChargeTexte, GlobalFonts, ChargeCorruptionTable, UnitCalcul;
+  BCButton, ChargeConstantes, ChargeTexte, GlobalFonts, ChargeCorruptionTable, UnitCalcul, XmlExportImport;
 
 type
 
@@ -321,7 +321,7 @@ procedure TWinMutations.AfficheEntreeResolue(Entree: StructureCorruptionTable);
       begin
         EntreeResolue           := Entree;
         LabelEntreeLibelle.Text := EntreeResolue.Libelle;
-        MemoEntreeEffet.Text    := EntreeResolue.Effet;
+        MemoEntreeEffet.Text    := TexteOuPageMutation(EntreeResolue.Effet, EntreeResolue.Livre, EntreeResolue.Code);
         Valider.Enabled         := True;
         UpdateSheetMutationEntree();
       end;
@@ -379,7 +379,7 @@ procedure TWinMutations.TabMutationChoixDblClick(Sender: TObject);
 
     EntreeResolue           := Entree;
     LabelEntreeLibelle.Text := EntreeResolue.Libelle;
-    MemoEntreeEffet.Text    := EntreeResolue.Effet;
+    MemoEntreeEffet.Text    := TexteOuPageMutation(EntreeResolue.Effet, EntreeResolue.Livre, EntreeResolue.Code);
     Valider.Enabled         := True;
     UpdateSheetMutationEntree();
   end;

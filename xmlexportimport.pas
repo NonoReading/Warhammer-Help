@@ -36,6 +36,8 @@ Procedure PageFicheDefinit(Const Bloc, Id, Page: String);
 // quand elle est vide ou quand DEFAULTLICENSELESS=1 la masque. Affichage seulement : rien n'est
 // ecrit dans les structures ni dans l'export. Livre = libelle du livre de la fiche, Code = code.
 Function TexteOuPage(Const Description, Bloc, Livre, Code: String): String;
+// Idem pour une mutation : la page est portee par la table physique OU mentale selon la fiche.
+Function TexteOuPageMutation(Const Description, Livre, Code: String): String;
 Function DescriptionTalentOuPage(Const CodeTalent, CodeRace: String): String;
 // Lecteur commun des modificateurs numeriques (CONTEXT.md 2.105, e2a) : lit un noeud XML, au
 // format historique (<ModifyCarac name="Cible">N</ModifyCarac>, filtre par if= ou skill=) ou
@@ -392,12 +394,22 @@ Function TexteOuPage(Const Description, Bloc, Livre, Code: String): String;
     if Page <> '' then
       begin
         if (Pos('-', Page) > 0) or (Pos(',', Page) > 0) then
-          Result := 'Pages ' + Page
+          Result := GetTexteLibelle('RULES-LAB_700') + ' ' + Page
         else
-          Result := 'Page ' + Page;
+          Result := GetTexteLibelle('RULES-LAB_699') + ' ' + Page;
       end
     else if ImagesDefautSeul then
       Result := '';
+  end;
+
+Function TexteOuPageMutation(Const Description, Livre, Code: String): String;
+  var
+    Bloc: String;
+  begin
+    Bloc := ConstXmlDataCorruptionTablePhys;
+    if (PageFiche(Bloc, XmlCreeCodeLivre(Livre, Code)) = '') and (PageFiche(Bloc, Code) = '') then
+      Bloc := ConstXmlDataCorruptionTableMent;
+    Result := TexteOuPage(Description, Bloc, Livre, Code);
   end;
 
 // DescriptionTalent (avec sa table de tirage) ou "Page N" : meme regle que TexteOuPage.

@@ -804,6 +804,7 @@
       <xs:element name="Explanation" type="LangString"/>
       <xs:element name="Short" type="LangString"/>
       <xs:element name="Order" type="PlainString"/>
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required"/>
   </xs:complexType>

@@ -364,6 +364,7 @@
       <xs:element name="Description" type="LangString"/>
       <xs:element name="Explanation" type="LangString"/>
       <xs:element name="ModifyCarac" type="NamedString" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="name" type="xs:string" use="required"/>
   </xs:complexType>
@@ -386,6 +387,7 @@
         <xs:group ref="ModificateursEffets"/>
         <xs:element name="Weapon" type="PlainString"/>
       </xs:choice>
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="name" type="xs:string" use="required"/>
   </xs:complexType>
@@ -402,6 +404,8 @@
       <xs:element name="Code" type="PlainString"/>
       <xs:element name="Description" type="LangString"/>
       <xs:element name="Explanation" type="LangString"/>
+      <!-- Page du livre source (12/10/2026). -->
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required"/>
   </xs:complexType>

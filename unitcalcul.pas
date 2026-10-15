@@ -482,6 +482,32 @@ Function CodeSansLivre(Code: String): String;
       Result := Code;
   end;
 
+Function VerifieRecherche():Boolean;
+// Durci une premiere fois le 06/09/2026 (CONTEXT.md §2.49 etape 4), puis REVERTE le jour
+// meme : le durcissement cassait tous les GetTexteLibelle('PDF_XXX'/'LAB_XXX'/'MESS_XXX'/
+// 'SHORTATTR_XXX'/'CORRUPTION_XXX') ecrits en dur sans prefixe RULES- (plusieurs centaines
+// d'occurrences au total, PDF normal ET Feldo2P) - perimetre bien plus large que ce que
+// mesurait le mouchard TraceNu*, qui ne voyait que les validations faites au chargement des
+// livres, pas les appels faits pendant la generation d'un PDF.
+// Redurci le 06/09/2026 (encore la meme nuit) une fois TOUTES ces occurrences prefixees
+// (223 PDF_, 22 LAB_, 57 MESS_, 11 SHORTATTR_, 2 CORRUPTION_ - CONTEXT.md §2.49 etape 4),
+// verifie fichier par fichier par diff, et apres tour d'ecran de Nono sans affichage errone.
+// RE-REVERTE le 06/09/2026 (meme nuit, encore plus tard) : Nono a signale les Basic Skills
+// entierement a 0/vides sur les deux PDF. Cause : ChercheCompetence (chargecompetence.pas)
+// suit la MEME convention que GetTexteLibelle - CompareRechercheValeur(code prefixe en 1er,
+// code court en 2nd) - mais avec des codes courts ecrits en dur eux aussi, jamais vus par
+// l'audit precedent qui ne portait que sur les appels a GetTexteLibelle. Trouve :
+// PdfPersonnageCompetenceTri (pdfpersonnage.pas l.417-442), 26 codes nus type 'COMPESQU',
+// tous des competences de base RULEBOOK (confirme par Nono), prefixes RULES-COMPXXX.
+// Redurci une 3e fois le 06/09/2026 (encore plus tard) une fois ces 26 codes prefixes.
+// Decision de Nono (06/09) : corriger au fil de l'eau plutot qu'auditer tout le projet -
+// si un autre ecran affiche 0/vide apres ce changement, meme cause probable (code litteral
+// nu passe a une fonction Cherche*), chercher le meme motif (ListXxx.Add('CODE') sans
+// prefixe RULES- juste avant l'appel a ChercheXxx) plutot que d'incriminer autre chose.
+begin
+  result := (LivreRecherche = LivreValeur) and (CodeRecherche = CodeValeur);
+  end;
+
 Function CompareRechercheValeur(ValRecherche:String; ValTrouve:String):boolean;
 var
   Trouve: Boolean = false;

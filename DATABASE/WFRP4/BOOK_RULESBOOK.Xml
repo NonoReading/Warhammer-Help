@@ -13,90 +13,105 @@
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"WS"</Short>
 <Order>"1"</Order>
+<Page>33</Page>
 </Attribut>
 <Attribut id="RULES-ATTR_BS">
 <Description language="ENGLISH">"Ballistic Skill"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"BS"</Short>
 <Order>"2"</Order>
+<Page>34</Page>
 </Attribut>
 <Attribut id="RULES-ATTR_S">
 <Description language="ENGLISH">"Strength"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"S"</Short>
 <Order>"3"</Order>
+<Page>34</Page>
 </Attribut>
 <Attribut id="RULES-ATTR_T">
 <Description language="ENGLISH">"Toughness"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"T"</Short>
 <Order>"4"</Order>
+<Page>34</Page>
 </Attribut>
 <Attribut id="RULES-ATTR_I">
 <Description language="ENGLISH">"Initiative"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"I"</Short>
 <Order>"5"</Order>
+<Page>34</Page>
 </Attribut>
 <Attribut id="RULES-ATTR_Ag">
 <Description language="ENGLISH">"Agility"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Ag"</Short>
 <Order>"6"</Order>
+<Page>34</Page>
 </Attribut>
 <Attribut id="RULES-ATTR_Dex">
 <Description language="ENGLISH">"Dexterity"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Dex"</Short>
 <Order>"7"</Order>
+<Page>34</Page>
 </Attribut>
 <Attribut id="RULES-ATTR_Int">
 <Description language="ENGLISH">"Intelligence"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Int"</Short>
 <Order>"8"</Order>
+<Page>34</Page>
 </Attribut>
 <Attribut id="RULES-ATTR_WP">
 <Description language="ENGLISH">"Willpower"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"WP"</Short>
 <Order>"9"</Order>
+<Page>34</Page>
 </Attribut>
 <Attribut id="RULES-ATTR_Fel">
 <Description language="ENGLISH">"Fellowship"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Fel"</Short>
 <Order>"10"</Order>
+<Page>34</Page>
 </Attribut>
 <Attribut id="RULES-ATTR_Wound">
 <Description language="ENGLISH">"Wounds"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Wound"</Short>
 <Order>"11"</Order>
+<Page>34</Page>
 </Attribut>
 <Attribut id="RULES-ATTR_Fate">
 <Description language="ENGLISH">"Fate"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Fate"</Short>
 <Order>"12"</Order>
+<Page>34</Page>
 </Attribut>
 <Attribut id="RULES-ATTR_Resil">
 <Description language="ENGLISH">"Resilience"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Resil"</Short>
 <Order>"13"</Order>
+<Page>34</Page>
 </Attribut>
 <Attribut id="RULES-ATTR_Supp">
 <Description language="ENGLISH">"Extra points"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Supp"</Short>
 <Order>"14"</Order>
+<Page>34</Page>
 </Attribut>
 <Attribut id="RULES-ATTR_Move">
 <Description language="ENGLISH">"Movement"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Move"</Short>
 <Order>"15"</Order>
+<Page>35</Page>
 </Attribut>
 </DATA_ATTRIBUT>
 <DATA_ATTRIBUT_COST>
@@ -14073,6 +14088,7 @@
 <Code>"QUICKARMOUR"</Code>
 <Description language="ENGLISH">"Quick Armour"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Page>301</Page>
 </OptionRule>
 </DATA_OPTION_RULE>
 <DATA_ARMOR_BONUS>
@@ -18088,6 +18104,7 @@
 <Description language="ENGLISH">"Animalistic Legs"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCarac name="RULES-ATTR_Move">+1</ModifyCarac>
+<Page>184</Page>
 </Corruption>
 <Corruption name="RULES-CORPHY_002">
 <Description language="ENGLISH">"Corpulent"</Description>
@@ -18095,49 +18112,59 @@
 <ModifyCarac name="RULES-ATTR_Move">-1</ModifyCarac>
 <ModifyCarac name="RULES-ATTR_S">+5</ModifyCarac>
 <ModifyCarac name="RULES-ATTR_T">+5</ModifyCarac>
+<Page>184</Page>
 </Corruption>
 <Corruption name="RULES-CORPHY_003">
 <Description language="ENGLISH">"Distended Digits"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCarac name="RULES-ATTR_Dex">+10</ModifyCarac>
+<Page>184</Page>
 </Corruption>
 <Corruption name="RULES-CORPHY_004">
 <Description language="ENGLISH">"Emaciated"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCarac name="RULES-ATTR_S">-10</ModifyCarac>
 <ModifyCarac name="RULES-ATTR_Ag">+5</ModifyCarac>
+<Page>184</Page>
 </Corruption>
 <Corruption name="RULES-CORPHY_005">
 <Description language="ENGLISH">"Enormous Eye"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Page>184</Page>
 </Corruption>
 <Corruption name="RULES-CORPHY_006">
 <Description language="ENGLISH">"Extra Leg Joints"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCarac name="RULES-ATTR_Ag">+5</ModifyCarac>
+<Page>184</Page>
 </Corruption>
 <Corruption name="RULES-CORPHY_007">
 <Description language="ENGLISH">"Extra Mouth"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Page>184</Page>
 </Corruption>
 <Corruption name="RULES-CORPHY_008">
 <Description language="ENGLISH">"Fleshy Tentacle"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Weapon>"PERSO-COMB_TENTACLE"</Weapon>
+<Page>184</Page>
 </Corruption>
 <Corruption name="RULES-CORPHY_009">
 <Description language="ENGLISH">"Glowing Skin"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Page>184</Page>
 </Corruption>
 <Corruption name="RULES-CORPHY_010">
 <Description language="ENGLISH">"Inhuman Beauty"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCarac name="RULES-ATTR_Fel">+10</ModifyCarac>
+<Page>184</Page>
 </Corruption>
 <Corruption name="RULES-CORPHY_011">
 <Description language="ENGLISH">"Inverted Face"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifySkillAttribut name="RULES-ATTR_Fel">-20</ModifySkillAttribut>
+<Page>184</Page>
 </Corruption>
 <Corruption name="RULES-CORPHY_012">
 <Description language="ENGLISH">"Iron Skin"</Description>
@@ -18147,20 +18174,24 @@
 <ModifArmour name="RULES-ARMOL_ARM">2</ModifArmour>
 <ModifArmour name="RULES-ARMOL_BODY">2</ModifArmour>
 <ModifArmour name="RULES-ARMOL_LEG">2</ModifArmour>
+<Page>184</Page>
 </Corruption>
 <Corruption name="RULES-CORPHY_013">
 <Description language="ENGLISH">"Lolling Tongue"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifySkill name="RULES-COMPLANG_*">-10</ModifySkill>
+<Page>184</Page>
 </Corruption>
 <Corruption name="RULES-CORPHY_014">
 <Description language="ENGLISH">"Patchy Feathers"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Page>184</Page>
 </Corruption>
 <Corruption name="RULES-CORPHY_015">
 <Description language="ENGLISH">"Short Legs"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCarac name="RULES-ATTR_Move">-1</ModifyCarac>
+<Page>184</Page>
 </Corruption>
 <Corruption name="RULES-CORPHY_016">
 <Description language="ENGLISH">"Thorny Scales"</Description>
@@ -18169,24 +18200,29 @@
 <ModifArmour name="RULES-ARMOL_ARM">1</ModifArmour>
 <ModifArmour name="RULES-ARMOL_BODY">1</ModifArmour>
 <ModifArmour name="RULES-ARMOL_LEG">1</ModifArmour>
+<Page>184</Page>
 </Corruption>
 <Corruption name="RULES-CORPHY_017">
 <Description language="ENGLISH">"Uneven Horns"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifArmour name="RULES-ARMOL_HEAD">1</ModifArmour>
+<Page>184</Page>
 </Corruption>
 <Corruption name="RULES-CORPHY_018">
 <Description language="ENGLISH">"Weeping Pus"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Page>184</Page>
 </Corruption>
 <Corruption name="RULES-CORPHY_019">
 <Description language="ENGLISH">"Whiskered Snout"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifySkill name="RULES-COMPPIST">+10</ModifySkill>
+<Page>184</Page>
 </Corruption>
 <Corruption name="RULES-CORPHY_020">
 <Description language="ENGLISH">"GM’s Choice"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Page>184</Page>
 </Corruption>
 </DATA_CORRUPTION_TABLE_PHYSICAL>
 <DATA_CORRUPTION_TABLE_MENTAL>
@@ -18195,6 +18231,7 @@
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCarac name="RULES-ATTR_Fel">-5</ModifyCarac>
 <ModifyCarac name="RULES-ATTR_WP">-5</ModifyCarac>
+<Page>185</Page>
 </Corruption>
 <Corruption name="RULES-CORMEN_002">
 <Description language="ENGLISH">"Beast Within"</Description>
@@ -18202,99 +18239,118 @@
 <ModifyCarac name="RULES-ATTR_WP">+10</ModifyCarac>
 <ModifyCarac name="RULES-ATTR_Fel">-5</ModifyCarac>
 <ModifyCarac name="RULES-ATTR_Int">-5</ModifyCarac>
+<Page>185</Page>
 </Corruption>
 <Corruption name="RULES-CORMEN_003">
 <Description language="ENGLISH">"Chaotic Dreams"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Page>185</Page>
 </Corruption>
 <Corruption name="RULES-CORMEN_004">
 <Description language="ENGLISH">"Crawling Skin"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCarac name="RULES-ATTR_I">-5</ModifyCarac>
 <ModifyCarac name="RULES-ATTR_Dex">-5</ModifyCarac>
+<Page>185</Page>
 </Corruption>
 <Corruption name="RULES-CORMEN_005">
 <Description language="ENGLISH">"Erratic Fantasist"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCarac name="RULES-ATTR_I">-5</ModifyCarac>
 <ModifyCarac name="RULES-ATTR_WP">-5</ModifyCarac>
+<Page>185</Page>
 </Corruption>
 <Corruption name="RULES-CORMEN_006">
 <Description language="ENGLISH">"Fearful Concern"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCarac name="RULES-ATTR_WP">-10</ModifyCarac>
+<Page>185</Page>
 </Corruption>
 <Corruption name="RULES-CORMEN_007">
 <Description language="ENGLISH">"Hateful Impulses"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Page>185</Page>
 </Corruption>
 <Corruption name="RULES-CORMEN_008">
 <Description language="ENGLISH">"Hollow Heart"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCarac name="RULES-ATTR_WP">+10</ModifyCarac>
 <ModifyCarac name="RULES-ATTR_Fel">-10</ModifyCarac>
+<Page>185</Page>
 </Corruption>
 <Corruption name="RULES-CORMEN_009">
 <Description language="ENGLISH">"Jealous Thoughts"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCarac name="RULES-ATTR_Fel">-10</ModifyCarac>
+<Page>185</Page>
 </Corruption>
 <Corruption name="RULES-CORMEN_010">
 <Description language="ENGLISH">"Lonely Spirit"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Page>185</Page>
 </Corruption>
 <Corruption name="RULES-CORMEN_011">
 <Description language="ENGLISH">"Mental Blocks"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCarac name="RULES-ATTR_Int">-10</ModifyCarac>
+<Page>185</Page>
 </Corruption>
 <Corruption name="RULES-CORMEN_012">
 <Description language="ENGLISH">"Profane Urgency"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCarac name="RULES-ATTR_WP">-10</ModifyCarac>
 <ModifyCarac name="RULES-ATTR_Ag">+10</ModifyCarac>
+<Page>185</Page>
 </Corruption>
 <Corruption name="RULES-CORMEN_013">
 <Description language="ENGLISH">"Shaky Morale"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Page>185</Page>
 </Corruption>
 <Corruption name="RULES-CORMEN_014">
 <Description language="ENGLISH">"Suspicious Mind"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCarac name="RULES-ATTR_I">-5</ModifyCarac>
 <ModifyCarac name="RULES-ATTR_Int">-5</ModifyCarac>
+<Page>185</Page>
 </Corruption>
 <Corruption name="RULES-CORMEN_015">
 <Description language="ENGLISH">"Thrill Hunter"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCarac name="RULES-ATTR_WP">+10</ModifyCarac>
 <ModifyCarac name="RULES-ATTR_I">-10</ModifyCarac>
+<Page>185</Page>
 </Corruption>
 <Corruption name="RULES-CORMEN_016">
 <Description language="ENGLISH">"Tortured Visions"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCarac name="RULES-ATTR_I">-10</ModifyCarac>
+<Page>185</Page>
 </Corruption>
 <Corruption name="RULES-CORMEN_017">
 <Description language="ENGLISH">"Totally Unhinged"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCarac name="RULES-ATTR_Fel">-20</ModifyCarac>
 <ModifyCarac name="RULES-ATTR_WP">+10</ModifyCarac>
+<Page>185</Page>
 </Corruption>
 <Corruption name="RULES-CORMEN_018">
 <Description language="ENGLISH">"Unending Malice"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Page>185</Page>
 </Corruption>
 <Corruption name="RULES-CORMEN_019">
 <Description language="ENGLISH">"Unholy Rage"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCarac name="RULES-ATTR_WS">+10</ModifyCarac>
+<Page>185</Page>
 </Corruption>
 <Corruption name="RULES-CORMEN_020">
 <Description language="ENGLISH">"Worried Jitters"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCarac name="RULES-ATTR_Ag">+5</ModifyCarac>
 <ModifyCarac name="RULES-ATTR_Fel">-5</ModifyCarac>
+<Page>185</Page>
 </Corruption>
 </DATA_CORRUPTION_TABLE_MENTAL>
 <DATA_CORRUPTION_PHYSICAL_CHANCE>

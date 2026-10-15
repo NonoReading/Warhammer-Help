@@ -5141,7 +5141,7 @@ Function DessinerTableau(PdfPage: TPDFPage; const Tableau: TPdfTableau; const Do
                       Fendue := True;
                     end;
                   if Fendue then
-                    PdfTaillePolice(PdfPage, PdfFontBack, ConstPoliceArial, 5)
+                    PdfTaillePolice(PdfPage, PdfFontBack, ConstPoliceArial, 4)
                   else if LignesAnnotation.Count = 1 then
                     PdfTaillePolice(PdfPage, PdfFontBack, ConstPoliceArial, 6)
                   else
@@ -5151,8 +5151,8 @@ Function DessinerTableau(PdfPage: TPDFPage; const Tableau: TPdfTableau; const Do
                   if Fendue then
                     begin
                       // Deux lignes tenant dans la hauteur de la case (4,6 mm) : delta en haut, astérisque en bas.
-                      PdfEcrit(PdfPage, XCol + (Tableau.LargeurEntree * 0.5) + 1.5, XCol + Tableau.LargeurEntree + 1.5, YHautLigne + 1.4, LignesAnnotation[0], 4);
-                      PdfEcrit(PdfPage, XCol + (Tableau.LargeurEntree * 0.5) + 1.5, XCol + Tableau.LargeurEntree + 1.5, YHautLigne + 0.1, LignesAnnotation[1], 4);
+                      PdfEcrit(PdfPage, XCol + (Tableau.LargeurEntree * 0.5) + 2.0, XCol + Tableau.LargeurEntree + 2.0, YHautLigne + 1.9, LignesAnnotation[0], 4);
+                      PdfEcrit(PdfPage, XCol + (Tableau.LargeurEntree * 0.5) + 2.0, XCol + Tableau.LargeurEntree + 2.0, YHautLigne - 0.1, LignesAnnotation[1], 4);
                     end
                   else
                   case LignesAnnotation.Count of

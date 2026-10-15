@@ -67,7 +67,7 @@ procedure TWinMutationCatalogue.Remplir();
         TabMutation.Cells[0, Ind] := GetTexteLibelle(P.TypeCorruption);
         TabMutation.Cells[1, Ind] := P.Code;
         TabMutation.Cells[2, Ind] := P.Libelle;
-        TabMutation.Cells[3, Ind] := TexteOuPage(P.Effet, ConstXmlDataCorruptionTablePhys, P.Livre, P.Code);
+        TabMutation.Cells[3, Ind] := TexteOuPageMutation(P.Effet, P.Livre, P.Code);
         TabMutation.Cells[4, Ind] := GetTexteLibelle(P.Livre, '', '', true);
       end;
     TabMutation.ColWidths[0] := 90;
