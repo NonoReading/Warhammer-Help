@@ -6,7 +6,7 @@ unit WinMetier;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, IntfGraphics, Dialogs, ComCtrls, Grids,
+  Classes, SysUtils, Forms, Controls, Graphics, IntfGraphics, Dialogs, MessageTest, ComCtrls, Grids,
   ChargeMetier, ChargeConstantes, FPImage, LCLType, ExtCtrls, StdCtrls,
   BCButton, PReport, ChargeRaceMetier, ChargeRace, ChargeEspece, ChargeMetierNiveau,
   ChargeMetierAttribut, ChargeAttribut, ChargeMetierCompetence,
@@ -64,11 +64,13 @@ type
     procedure TabAttributSelectEditor({%H-}Sender: TObject; {%H-}aCol, {%H-}aRow: Integer;
       var Editor: TWinControl);
     procedure TabMetierDblClick({%H-}Sender: TObject);
+    procedure TabMetierCompareCells({%H-}Sender: TObject; ACol, ARow, BCol, BRow: Integer; var Result: integer);
     procedure TabMetierSelection({%H-}Sender: TObject; {%H-}aCol, aRow: Integer);
     procedure TreeViewMetier1AdvancedCustomDrawItem(Sender: TCustomTreeView;
       Node: TTreeNode; {%H-}State: TCustomDrawState; {%H-}Stage: TCustomDrawStage;
       var {%H-}PaintImages, DefaultDraw: Boolean);
     procedure TreeViewMetier1Change({%H-}Sender: TObject; Node: TTreeNode);
+    procedure TreeViewMetier1DblClick({%H-}Sender: TObject);
     Procedure WinVider();
     Procedure WinCharger();
     Function MetierFiltre(PMEtier: StructureMetier):Boolean;
@@ -76,6 +78,8 @@ type
     procedure ChargeAdaptationMetier();
     procedure ChargeMetierAttribut(Niveau: Integer; NodeBase: TTreeNode);
     procedure ChargeMetierNiveau();
+    procedure ChargeEnchainementMetier();
+    procedure ChargeMetiersArtisan();
     procedure ChargeMetierCompetence(Niveau: Integer; NodeBase: TTreeNode);
     procedure ChargeMetierTalent(Niveau: Integer; NodeBase: TTreeNode);
     procedure ChargeMetierEquipement(Niveau: Integer; NodeBase: TTreeNode);
@@ -121,6 +125,7 @@ var
   FiltreGroupe:     String;
   FiltreTalent:     String;
   FiltreAttribut:   String;
+  FiltreBase:       Boolean = False;   // V1 / V2 : carrieres de base seulement
   CheminClass:      String;
   ForceClose:       Boolean = false;
 implementation
@@ -128,6 +133,10 @@ implementation
 uses XmlExportImport;
 
 {$R *.lfm}
+
+const
+  NbColBase = 8;    // colonnes de TabMetier avant les statistiques (code ... groupe)
+  NbColStat = 10;   // caracteristiques affichees, comme TabAttribut
 
 { TWinMetiers }
 
@@ -211,6 +220,9 @@ begin
   if not VerifieFiltre(Pmetier.LibelleGroupe, filtreGroupe) then
     ResGroupe:= false;
 
+  if FiltreBase and not EstMetierDeBase(PMetier.CodeMetier) then
+    ResGroupe:= false;
+
   if FiltreRace <> '' then
     begin
       ResRace := false;
@@ -291,6 +303,29 @@ var
   Accord:     Boolean;
   LocSel:     String;
   Nb:         Integer = 0;
+  CodeStat:   array[0..NbColStat - 1] of String;
+  NbStat:     Integer = 0;
+  LignesCode: TStringList;
+  PAvStat:    StructureMetierAvance;
+  PMAttStat:  StructureMetierAttribut;
+  SuffStat:   String;
+  Col:        Integer;
+  Vide:       Boolean;
+  Lig:        Integer;
+
+  // Pose Texte dans la colonne de la caracteristique CodeAtt, ligne de la carriere CodeMet.
+  procedure PoseStat(CodeMet, CodeAtt, Texte: String);
+  var
+    IndL: Integer;
+    IndC: Integer;
+  begin
+    if not LignesCode.Find(CodeMet, IndL) then
+      Exit;
+    for IndC := 0 to NbStat - 1 do
+      if CodeStat[IndC] = CodeAtt then
+        TabMetier.Cells[NbColBase + 1 + IndC, PtrInt(LignesCode.Objects[IndL])] := Texte;
+  end;
+
 begin
     // Appeler la procédure SetGlobalFonts au démarrage du formulaire
     MiseEnFormeDesChamp(self);
@@ -311,8 +346,25 @@ begin
         GridAjouteColonne(TabMetier, GetTexteLibelle('RULES-LAB_001'),100);
         GridAjouteColonne(TabMetier, GetTexteLibelle('RULES-LAB_001'));
         GridAjouteColonne(TabMetier, GetTexteLibelle('RULES-LAB_001'));
+        // une colonne par caracteristique, meme liste (10 premieres de la version) que TabAttribut
+        for PAttribut in ListeAttribut do
+          if Nb < NbColStat then
+            begin
+              GridAjouteColonne(TabMetier, PAttribut.Resume, 40, taCenter);
+              Inc(Nb);
+            end;
       end;
     TabMetier.ColWidths[0] := 20;
+
+    Nb := 0;
+    for PAttribut in ListeAttribut do
+      if Nb < NbColStat then
+        begin
+          CodeStat[Nb] := PAttribut.CodeAttribut;
+          Inc(Nb);
+        end;
+    NbStat := Nb;
+    Nb     := 0;
 
     LocSel := SeparateurMulti + SelectWinMetier + SeparateurMulti;
 
@@ -341,6 +393,45 @@ begin
             TabMetier.Cells[8, IndTab] := PMetier.LibelleGroupe;
           end;
       end;
+    // Statistiques : V2 = plafond d'avance du schema (+10, +20%), V4 / V5 = niveau ou la
+    // caracteristique apparait. Une colonne sans aucune valeur est cachee (largeur 0).
+    LignesCode := TStringList.Create;
+    try
+      LignesCode.Sorted     := true;
+      LignesCode.Duplicates := dupIgnore;
+      for Lig := 1 to TabMetier.RowCount - 1 do
+        LignesCode.Objects[LignesCode.Add(TabMetier.Cells[1, Lig])] := TObject(PtrInt(Lig));
+
+      if ValVersion = 'WFRP2' then
+        begin
+          for PAvStat in ListMetierAvance do
+            begin
+              if PasAvanceV2(PAvStat.CodeAttribut) = 5 then SuffStat := '%' else SuffStat := '';
+              PoseStat(PAvStat.CodeMetier, PAvStat.CodeAttribut, '+' + IntToStr(PAvStat.Plafond) + SuffStat);
+            end;
+        end
+      else
+        for PMAttStat in ListMetierAttribut do
+          if PMAttStat.NiveauMetier > 0 then
+            PoseStat(PMAttStat.CodeMetier, PMAttStat.CodeAttribut, IntToStr(PMAttStat.NiveauMetier));
+    finally
+      LignesCode.Free;
+    end;
+    for Col := NbColBase + 1 to NbColBase + NbColStat do
+      begin
+        Vide := true;
+        for Lig := 1 to TabMetier.RowCount - 1 do
+          if TabMetier.Cells[Col, Lig] <> '' then
+            begin
+              Vide := false;
+              Break;
+            end;
+        if Vide then
+          TabMetier.ColWidths[Col] := 0
+        else
+          TabMetier.ColWidths[Col] := 40;
+      end;
+
     TabMetier.SortColRow(true,2);
 
     if IndTab = 0 then
@@ -356,6 +447,7 @@ begin
         FiltreGroupe     := '';
         FiltreTalent     := '';
         FiltreAttribut   := '';
+        FiltreBase       := False;
         ForceClose         := true;
         Close;
       end
@@ -384,6 +476,17 @@ begin
           end;
         TabAttribut.RowHeights[1]    := 40;
         TabAttribut.RowHeights[2]    := 1;
+        // V2 : les cases portent un plafond d'avance ("+10%") et non un niveau : colonnes plus larges,
+        // la grille s'etend vers la gauche (son bord droit ne bouge pas)
+        if ValVersion = 'WFRP2' then
+          begin
+            for Nb := 1 to TabAttribut.ColCount - 1 do
+              TabAttribut.ColWidths[Nb] := 46;
+            TabAttribut.Left  := TabAttribut.Left - (46 - 40) * (TabAttribut.ColCount - 1);
+            TabAttribut.Width := TabAttribut.Width + (46 - 40) * (TabAttribut.ColCount - 1);
+            // le logo cede la place a la grille elargie
+            ImageWar.Width := TabAttribut.Left - ImageWar.Left - 12;
+          end;
 
         // charges les images des niveaux pour l'arbre
         ChargeImagesNiveau('');
@@ -422,6 +525,8 @@ end;
 procedure TWinMetiers.FormCreate(Sender: TObject);
 begin
     FiltreLivre := SelectWinLivre;
+    TreeViewMetier1.OnDblClick := @TreeViewMetier1DblClick;
+    TabMetier.OnCompareCells   := @TabMetierCompareCells;
     WinCharger();
     // Ancrage proportionnel, meme regle que WinRace (voir AncrageProportionnel).
     Ancrage := TAncrageProportionnel.Create(Self);
@@ -470,7 +575,12 @@ begin
   else
   begin
     // Récupérer la valeur de la cellule correspondante (colonne 2)
-    ImageIndex := StrToIntDef(Grid.Cells[aCol, aRow], -1);
+    // Un plafond V2 (+1, +2, +15%) est du texte, pas un numero d'icone de niveau : sans ce
+    // test, '+2' valait 2 et la colonne W affichait un de (16/10/2026).
+    if Pos('+', Grid.Cells[aCol, aRow]) > 0 then
+      ImageIndex := -1
+    else
+      ImageIndex := StrToIntDef(Grid.Cells[aCol, aRow], -1);
 
     // Vérifier que la valeur est valide et se situe dans la plage d'index d'image
     if (ImageIndex >= 0) and (ImageIndex < ListImage.Count) then
@@ -529,8 +639,16 @@ begin
       end;
     end
     else
-      // Dessiner du texte par défaut si la valeur de l'index d'image est invalide
-      Grid.DefaultDrawCell(aCol, aRow, aRect, aState);
+      // Dessiner du texte par défaut si la valeur de l'index d'image est invalide.
+      // Dessin direct, sans passer par DefaultDrawCell : il recalcule lui-meme la cellule
+      // courante (WS, ligne 1) et la peignait en jaune quel que soit aState (16/10/2026).
+      begin
+        Grid.Canvas.Brush.Color := Grid.Color;
+        Grid.Canvas.FillRect(aRect);
+        Grid.Canvas.Font.Assign(Grid.Font);
+        Grid.Canvas.Font.Color := clBlack;
+        Grid.Canvas.TextRect(aRect, aRect.Left + 4, aRect.Top + 2, Grid.Cells[aCol, aRow]);
+      end;
   end;
 end;
 
@@ -538,6 +656,29 @@ procedure TWinMetiers.TabAttributSelectEditor(Sender: TObject; aCol,
   aRow: Integer; var Editor: TWinControl);
 begin
   Editor := nil;
+end;
+
+// Tri au clic sur un titre : colonnes de statistiques comparees en nombres ("+5" avant "+10%"),
+// les autres en texte comme le tri par defaut.
+procedure TWinMetiers.TabMetierCompareCells(Sender: TObject; ACol, ARow, BCol, BRow: Integer; var Result: integer);
+var
+  VA: Integer;
+  VB: Integer;
+begin
+  if ACol > NbColBase then
+    begin
+      // pas extractnumbers : sa boucle (i < length) ignore le dernier caractere, "+1" donnerait vide
+      VA     := StrToIntDef(StringReplace(StringReplace(TabMetier.Cells[ACol, ARow], '+', '', []), '%', '', []), -1);
+      VB     := StrToIntDef(StringReplace(StringReplace(TabMetier.Cells[BCol, BRow], '+', '', []), '%', '', []), -1);
+      if VA < VB then
+        Result := -1
+      else if VA > VB then
+        Result := 1
+      else
+        Result := 0;
+    end
+  else
+    Result := AnsiCompareText(TabMetier.Cells[ACol, ARow], TabMetier.Cells[BCol, BRow]);
 end;
 
 procedure TWinMetiers.TabMetierDblClick(Sender: TObject);
@@ -570,11 +711,13 @@ begin
   SelectWinGroupe     := FiltreGroupe;
   SelectWinTalent     := FiltreTalent;
   SelectWinAttribut   := FiltreAttribut;
+  SelectWinBase       := FiltreBase;
   WinFiltreAppelant   := ConstXmlWork;
   FenFiltre           := TWinFiltre.Create(Application);
   FenFiltre.Position  := poOwnerFormCenter;
   FenFiltre.ShowModal;
-  if (ChoixWinLivre <> FiltreLivre)
+  if (ChoixWinBase <> FiltreBase)
+     or (ChoixWinLivre <> FiltreLivre)
      or (ChoixWinRace <> FiltreRace)
      or (ChoixWinGroupe <> FiltreGroupe)
      or (ChoixWinTalent <> FiltreTalent)
@@ -585,6 +728,7 @@ begin
      FiltreGroupe     := ChoixWinGroupe;
      FiltreTalent     := ChoixWinTalent;
      FiltreAttribut   := ChoixWinAttribut;
+     FiltreBase       := ChoixWinBase;
      WinVider();
      WinCharger();
      if not ForceClose then
@@ -635,7 +779,7 @@ Begin
     NodeBranche            := TreeViewMetier1.Items.AddChild(Node, ConstArbreRacePossible);
     NodeBranche.ImageIndex := 0;
     For PRaceMetier in ListRaceMetier do
-      if PRaceMetier.CodeMetier = MetierEnCours then
+      if (PRaceMetier.CodeMetier = MetierEnCours) and (PRaceMetier.Chance <> SeparateurChance) then
         Begin
           PRace      := ChercheRace(PRaceMetier.CodeRace);
           CodeEspece := Trim(PRace.Espece);
@@ -660,6 +804,9 @@ Begin
           NodeData.AdditionalData   := PRace.CodeRace;
           NodeFeuille.Data          := NodeData;
         end;
+    // aucune race declaree (carrieres du Compendium V2) : pas de branche vide
+    if not Assigned(NodeBranche.GetFirstChild) then
+      TreeViewMetier1.Items.Delete(NodeBranche);
 end;
 
 // Adapting Careers : une branche par adaptation applicable a la carriere, avec le detail de
@@ -745,6 +892,7 @@ end;
 procedure TWinMetiers.ChargeMetierCompetence(Niveau: Integer; NodeBase: TTreeNode);
 var
     PCompetence:        StructureCompetence;
+    PGenerique:         StructureCompetence;
     PMetierCompetence:  StructureMetierCompetence;
     NodeData:           TMyNodeData;
     LibComp:            String;
@@ -781,8 +929,13 @@ Begin
               LibComp               := LibComp + '*';
             NodeSFeuille := TreeViewMetier1.Items.AddChild(NodeSBrance, LibComp);
             NodeSFeuille.ImageIndex := 0;
-            if Pos('_', PCompetence.CodeCompetence) > 0 then
-               PCompetence     := ChercheCompetence(Copy(PMetierCompetence.CodeCompetence, 1, Pos('_', PCompetence.CodeCompetence) - 1)+'_*');
+            // specialisation -> sa fiche generique, seulement si elle existe (ids V2 "RULES-COMP_X" : pas de generique commun)
+            if Pos(SeparateurSpecialisationTalent, PCompetence.CodeCompetence) > 0 then
+              begin
+                PGenerique := ChercheCompetence(CodeGeneriqueDeduit(PMetierCompetence.CodeCompetence));
+                if PGenerique.CodeCompetence <> '' then
+                  PCompetence := PGenerique;
+              end;
             NodeData.AdditionalData := PCompetence.CodeCompetence;
             NodeSFeuille.Data       := NodeData;
           end;
@@ -792,6 +945,7 @@ end;
 procedure TWinMetiers.ChargeMetierTalent(Niveau: Integer; NodeBase: TTreeNode);
 var
   PTalent:        StructureTalent;
+  PGenTalent:     StructureTalent;
   PMetierTalent:  StructureMetierTalent;
   NodeData:       TMyNodeData;
   ListOpt:        TStringList;
@@ -825,8 +979,10 @@ Begin
               PTalent      := ChercheTalent(PMetierTalent.CodeTalent);
               NodeSFeuille := TreeViewMetier1.Items.AddChild(NodeSBrance, PTalent.Libelle);
               NodeSFeuille.ImageIndex := 0;
-              if Pos('_', PTalent.CodeTalent) > 0 then
-                 PTalent   := ChercheTalent(Copy(PMetierTalent.CodeTalent, 1, Pos('_', PTalent.CodeTalent) - 1)+'_*');
+              // specialisation -> sa fiche generique, seulement si elle existe (ids V2 : pas de generique commun)
+              PGenTalent := ChercheTalent(CodeTalentGenerique(PTalent));
+              if PGenTalent.CodeTalent <> '' then
+                PTalent  := PGenTalent;
               NodeData.AdditionalData := PTalent.CodeTalent;
               NodeSFeuille.Data       := NodeData;
           end;
@@ -1044,13 +1200,20 @@ procedure TWinMetiers.ChargeMetierNiveau();
 var
   PMetierNiveau:   StructureMetierNiveau;
   I:               Integer;
+  NiveauTrouve:    Boolean;
+  PAvance:         StructureMetierAvance;
+  PAttributAv:     StructureAttribut;
+  NodeDataAv:      TMyNodeData;
+  SuffixeAv:       String;
 Begin
+    NiveauTrouve := False;
     for I := 1 to TabAttribut.Colcount - 1 do
        TabAttribut.Cells[I, 1] := '';
 
     for PMetierNiveau in ListMetierNiveau do
       if PMetierNiveau.CodeMetier = MetierEnCours then
         Begin
+            NiveauTrouve := True;
             // Prefixe RULES- ajoute le 12/09/2026 - meme correctif que pdfpersonnage.pas, voir
             // son commentaire (CONTEXT.md 2.49/2.61).
             NodeBranche := TreeViewMetier1.Items.AddChild(Node, IntToStr(PMetierNiveau.NiveauMetier)+'.'+PMetierNiveau.Libelle+' - '+GetTexteLibelle('RULES-' + PMetierNiveau.SalaireMetier, '', ' '));
@@ -1061,6 +1224,179 @@ Begin
             ChargeMetierEquipement(PMetierNiveau.NiveauMetier,NodeBranche);
         end;
 
+    // V2 : une carriere n'a pas de niveaux en donnees ; l'arbre montre ses competences, talents et materiel de depart (niveau 1)
+    // V1 : meme arbre (Advance Scheme, competences de depart), sans talents
+    if (not NiveauTrouve) and ((ValVersion = 'WFRP2') or (ValVersion = 'WFRP1')) then
+      begin
+        // schema d'avances de la carriere (<Advances>) : plafond par caracteristique
+        NodeSBrance            := TreeViewMetier1.Items.AddChild(Node, ConstArbreAttribut);
+        NodeSBrance.ImageIndex := 1;
+        for PAvance in ListMetierAvance do
+          if CompareRechercheValeur(PAvance.CodeMetier, MetierEnCours) then
+            begin
+              PAttributAv := ChercheAttribut(PAvance.CodeAttribut);
+              if ValVersion = 'WFRP1' then
+                begin
+                  // V1 : M, S, T, W et A sont des points, le reste des pourcentages
+                  if Pos(CodeSansLivre(PAvance.CodeAttribut), 'ATTR_M ATTR_S ATTR_T ATTR_W ATTR_A') > 0 then
+                    SuffixeAv := ''
+                  else
+                    SuffixeAv := '%';
+                end
+              else if PasAvanceV2(PAvance.CodeAttribut) = 5 then SuffixeAv := '%' else SuffixeAv := '';
+              NodeSFeuille            := TreeViewMetier1.Items.AddChild(NodeSBrance, PAttributAv.Libelle + ' +' + IntToStr(PAvance.Plafond) + SuffixeAv);
+              NodeSFeuille.ImageIndex := 0;
+              NodeDataAv              := TMyNodeData.Create;
+              NodeDataAv.AdditionalData := PAttributAv.CodeAttribut;
+              NodeSFeuille.Data       := NodeDataAv;
+              for I := 1 to TabAttribut.Colcount do
+                if TabAttribut.Cells[I-1, 2] = PAttributAv.CodeAttribut then
+                  TabAttribut.Cells[I-1, 1] := '+' + IntToStr(PAvance.Plafond) + SuffixeAv;
+            end;
+        ChargeMetierCompetence(1, Node);
+        // V1 : ni talents (leurs effets sont dans les competences) ni branche vide
+        if ValVersion <> 'WFRP1' then
+          ChargeMetierTalent(1, Node);
+        ChargeMetierEquipement(1, Node);
+      end;
+
+end;
+
+// Chainage des carrieres (V2, <ExitCodes>) : branche des carrieres dont celle-ci est la sortie
+// ("Career entries", calcul inverse) et branche de ses propres sorties ("Career exits").
+procedure TWinMetiers.ChargeEnchainementMetier();
+  procedure Branche(Titre: String; Entrees: Boolean);
+    var
+      PSortie:  StructureMetierSortie;
+      Code:     String;
+      Lib:      String;
+      I:        Integer;
+      Present:  TStringList;
+      NodeData: TMyNodeData;
+    begin
+      NodeBranche := nil;
+      Present     := TStringList.Create;
+      try
+        for PSortie in ListMetierSortie do
+          begin
+            if Entrees then
+              begin
+                if PSortie.CodeSortie <> MetierEnCours then Continue;
+                Code := PSortie.CodeMetier;
+              end
+            else
+              begin
+                if PSortie.CodeMetier <> MetierEnCours then Continue;
+                Code := PSortie.CodeSortie;
+              end;
+            if Present.IndexOf(Code) >= 0 then Continue;
+            Present.Add(Code);
+            if NodeBranche = nil then
+              begin
+                NodeBranche            := TreeViewMetier1.Items.AddChild(Node, Titre);
+                NodeBranche.ImageIndex := 0;
+              end;
+            NodeData                  := TMyNodeData.Create;
+            NodeData.AdditionalData   := Code;
+            Lib := ChercheMetier(Code).Libelle;
+            // Carriere citee mais sans fiche (V1 : sorties vers les carrieres avancees pas encore
+            // saisies) : le nom est deduit du code, RULES-WORK_PIT_FIGHTER -> Pit Fighter.
+            if Lib = GetTexteLibelle('RULES-LAB_138') then
+              begin
+                Lib := LowerCase(StringReplace(CodeSansLivre(Code), '_', ' ', [rfReplaceAll]));
+                if Pos(' ', Lib) > 0 then
+                  Lib := Copy(Lib, Pos(' ', Lib) + 1, MaxInt);
+                for I := 1 to Length(Lib) do
+                  if (I = 1) or (Lib[I - 1] = ' ') then
+                    Lib[I] := UpCase(Lib[I]);
+              end;
+            NodeFeuille               := TreeViewMetier1.Items.AddChild(NodeBranche, Lib);
+            NodeFeuille.ImageIndex    := 0;
+            NodeFeuille.Data          := NodeData;
+          end;
+      finally
+        Present.Free;
+      end;
+    end;
+begin
+  Branche(GetTexteLibelle('RULES-LAB_703'), True);
+  Branche(GetTexteLibelle('RULES-LAB_704'), False);
+end;
+
+// V1 : l'Artisan et son apprenti tirent un metier (DATA_TRADE_V1) : une branche "Metiers", un metier
+// par ligne (tirage d100), avec ses competences et ses sorties propres.
+procedure TWinMetiers.ChargeMetiersArtisan();
+var
+  PArtisan:   StructureArtisanMetier;
+  Liste:      TStringList;
+  NodeTitre:  TTreeNode;
+  NodeMetier: TTreeNode;
+  NodeSous:   TTreeNode;
+  Lib:        String;
+  I:          Integer;
+begin
+  if ValVersion <> 'WFRP1' then Exit;
+  if (CodeSansLivre(MetierEnCours) <> 'WORK_ARTISAN') and
+     (CodeSansLivre(MetierEnCours) <> 'WORK_ARTISANS_APPRENTICE') then Exit;
+  if ListArtisanMetier.Count = 0 then Exit;
+
+  NodeTitre            := TreeViewMetier1.Items.AddChild(Node, GetTexteLibelle('RULES-LAB_812'));
+  NodeTitre.ImageIndex := 0;
+  Liste := TStringList.Create;
+  try
+    for PArtisan in ListArtisanMetier do
+      begin
+        NodeMetier            := TreeViewMetier1.Items.AddChild(NodeTitre, PArtisan.Tirage + ' ' + PArtisan.Libelle);
+        NodeMetier.ImageIndex := 0;
+
+        Liste.Clear;
+        ExtractStrings([','], [' '], PChar(PArtisan.Competences), Liste);
+        for I := 0 to Liste.Count - 1 do
+          begin
+            NodeSous            := TreeViewMetier1.Items.AddChild(NodeMetier, ChercheCompetence(Liste[I]).Libelle);
+            NodeSous.ImageIndex := 0;
+          end;
+
+        Liste.Clear;
+        ExtractStrings([','], [' '], PChar(PArtisan.Sorties), Liste);
+        for I := 0 to Liste.Count - 1 do
+          begin
+            Lib := ChercheMetier(Liste[I]).Libelle;
+            // Carriere sans fiche : nom deduit du code, comme dans ChargeEnchainementMetier
+            if Lib = GetTexteLibelle('RULES-LAB_138') then
+              Lib := LowerCase(StringReplace(Copy(CodeSansLivre(Liste[I]), 6, MaxInt), '_', ' ', [rfReplaceAll]));
+            NodeSous            := TreeViewMetier1.Items.AddChild(NodeMetier, GetTexteLibelle('RULES-LAB_704') + ' : ' + Lib);
+            NodeSous.ImageIndex := 0;
+          end;
+
+        if PArtisan.Note <> '' then
+          begin
+            NodeSous            := TreeViewMetier1.Items.AddChild(NodeMetier, PArtisan.Note);
+            NodeSous.ImageIndex := 0;
+          end;
+      end;
+  finally
+    Liste.Free;
+  end;
+end;
+
+// Double clic sur une carriere d'entree ou de sortie : la selectionne dans la liste
+// (sans effet si le filtre l'en a retiree).
+procedure TWinMetiers.TreeViewMetier1DblClick(Sender: TObject);
+var
+  Sel:  TTreeNode;
+  Ind:  Integer;
+begin
+  Sel := TreeViewMetier1.Selected;
+  if (Sel = nil) or (Sel.Parent = nil) or (Sel.Data = nil) then Exit;
+  if (Sel.Parent.Text <> GetTexteLibelle('RULES-LAB_703'))
+     and (Sel.Parent.Text <> GetTexteLibelle('RULES-LAB_704')) then Exit;
+  for Ind := 1 to TabMetier.RowCount - 1 do
+    if TabMetier.Cells[1, Ind] = TMyNodeData(Sel.Data).AdditionalData then
+      begin
+        TabMetier.Row := Ind;
+        Exit;
+      end;
 end;
 
 // sélectionner un métier
@@ -1091,6 +1427,8 @@ procedure TWinMetiers.TabMetierSelection(Sender: TObject; aCol, aRow: Integer);
       ChargeRaceMetier();
       ChargeAdaptationMetier();
       ChargeMetierNiveau();
+      ChargeEnchainementMetier();
+      ChargeMetiersArtisan();
       TreeViewMetier1.FullExpand;
 
       // Les ethnies (sous chaque espece de la branche "races possibles") restent
@@ -1118,7 +1456,9 @@ procedure TWinMetiers.TreeViewMetier1AdvancedCustomDrawItem(
 begin
     if (Node.Level in [1,2]) then
       begin
-         if (Node.Parent.Text <> ConstArbreRacepossible) then
+         if (Node.Parent.Text <> ConstArbreRacepossible)
+            and (Node.Parent.Text <> GetTexteLibelle('RULES-LAB_703'))
+            and (Node.Parent.Text <> GetTexteLibelle('RULES-LAB_704')) then
                Sender.Font.Style := Sender.Font.Style + [fsBold]
          else
                Sender.Font.Style := Sender.Font.Style - [fsBold];
@@ -1161,6 +1501,7 @@ Var
   PArme:        StructureArme;
   PArmure:      StructureArmure;
   PTrapping:    StructureTrapping;
+  PMetierLie:   StructureMetier;
   CheminImage1: String;
   CheminImage2: String;
   CheminImage3: String;
@@ -1203,7 +1544,17 @@ Begin
                   CheminImage2       := CheminRaceImage(PRace.CodeRace,'1');
                   AffDescription.Text:= TexteOuPage(PRace.Description, ConstXmlDataSpecie, PRace.Livre, PRace.CodeRace);
                 end
-            else if AffType.text = ConstArbreAttribut then
+            else if ((AffType.text = GetTexteLibelle('RULES-LAB_703')) or (AffType.text = GetTexteLibelle('RULES-LAB_704')))
+                    and (Node.Data <> nil) then
+                begin
+                  // carriere d'entree ou de sortie : sa fiche
+                  PMetierLie         := ChercheMetier(NodeData.AdditionalData);
+                  AffCode.Text       := PMetierLie.CodeMetier;
+                  AffLib.Text        := PMetierLie.Libelle;
+                  AffLivre.Text      := getTexteLibelle(PMetierLie.Livre,'','',true);
+                  AffDescription.Text:= PMetierLie.Description;
+                end
+            else if (AffType.text = ConstArbreAttribut) and (Node.Data <> nil) then
                 begin
                   PAttribut          := ChercheAttribut(NodeData.AdditionalData);
                   AffCode.Text       := PAttribut.CodeAttribut;
@@ -1277,10 +1628,8 @@ Begin
                       AffLivre.Text      := getTexteLibelle(PCompetence.Livre,'','',true);
                       AffAttribut.Text   := GetTexteLibelle(PCompetence.CodeAttribut);
                       if (PCompetence.Description = '')
-                         and (Pos(ValeurSousCompetence, PCompetence.CodeCompetence) > 0) then
-                        PCompetence      := ChercheCompetence(Copy(PCompetence.CodeCompetence, 1,
-                                            Pos(ValeurSousCompetence, PCompetence.CodeCompetence) - 1)
-                                            + ValeurGenerique);
+                         and (Pos(SeparateurSpecialisationTalent, PCompetence.CodeCompetence) > 0) then
+                        PCompetence      := ChercheCompetence(CodeGeneriqueDeduit(PCompetence.CodeCompetence));
                       AffDescription.Text:= TexteOuPage(PCompetence.Description, ConstXmlDataSkill, PCompetence.Livre, PCompetence.CodeCompetence);                    end
                   else
                   begin

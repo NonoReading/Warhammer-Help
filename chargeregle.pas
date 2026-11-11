@@ -25,7 +25,7 @@ interface
 // Humaines d'un coup.
 
 uses
-  Classes, SysUtils, Generics.Collections, UnitCalcul, ChargeRace;
+  Classes, SysUtils, Generics.Collections, UnitCalcul, ChargeRace, ChargeRaceTalent, ChargeRaceCompetence;
 
 Type
   StructureRegle	= Record
@@ -34,6 +34,10 @@ Type
 	Livre:		String;
 	// Classe de base remplacee par une regle PARTIELLE (vide = regle totale), voir ChargeTirageMetier
 	ClasseRemplacee: String;
+	// Chance (pour cent) de commencer avec une mutation ; vide = aucune (balise StartingMutation de la regle)
+	MutationDepart:  String;
+	// Ce que la regle implique pour la creation (balise Explanation), montre dans la fenetre des regles optionnelles
+	Explication:     String;
   End;
 
   StructureRegleMetier	= Record
@@ -44,10 +48,57 @@ Type
 	Livre:		String;
   End;
 
+  // Competence ('S') ou talent ('T') qu'une regle donne a une ethnie en REMPLACEMENT des
+  // siens (DATA_RULE_SPECIE, 19/10/2026) : une regle qui porte au moins une entree d'un genre
+  // pour l'ethnie remplace tout le bloc competences (ou talents) de cette ethnie.
+  StructureRegleEthnie	= Record
+	CodeRegle:	String;
+	CodeRace:	String;
+	Genre:		String;
+	Code:		String;
+	Livre:		String;
+  End;
+
+  // Ligne de la table qui tire le BACKGROUND d'une ethnie (DATA_RULE_BACKGROUND, 19/10/2026) :
+  // CodeRegle = regle de background obtenue, Chance = poids dans le d100 (somme 100 par ethnie).
+  StructureRegleFond	= Record
+	CodeRace:	String;
+	CodeRegle:	String;
+	Chance:		String;
+	Livre:		String;
+  End;
+
+  // Ligne des tables de competences ('S') et de talents ('T') d'un background (DATA_RULE_SKILL_ROLL / _TALENT_ROLL)
+  StructureFondTirage	= Record
+	CodeRegle:	String;
+	Genre:		String;
+	Code:		String;
+	Chance:		String;
+	Livre:		String;
+  End;
+
+  // Table du d10 qui donne le nombre de competences et de talents (DATA_RULE_BACKGROUND_COUNT) ;
+  // Second = pas de nombres : il faut un second background (resultat 10).
+  StructureFondCompte	= Record
+	Poids:		Integer;
+	NbCompetence:	Integer;
+	NbTalent:	Integer;
+	Second:		Boolean;
+	Livre:		String;
+  End;
+
+  TListFondTirage  = Specialize TList<StructureFondTirage>;
+  TListFondCompte  = Specialize TList<StructureFondCompte>;
+  TListRegleFond   = Specialize TList<StructureRegleFond>;
   TListRegle       = Specialize TList<StructureRegle>;
   TListRegleMetier = Specialize TList<StructureRegleMetier>;
+  TListRegleEthnie = Specialize TList<StructureRegleEthnie>;
 
 var
+  ListFondTirage:   TListFondTirage;
+  ListFondCompte:   TListFondCompte;
+  ListRegleFond:    TListRegleFond;
+  ListRegleEthnie:  TListRegleEthnie;
   ListRegle:        TListRegle;
   // Toutes les regles DECLAREES, meme celles que le toggle .INI empeche de charger : pour l'export
   ListRegleSource:  TListRegle;
@@ -59,8 +110,222 @@ Function ChercheRegle(CodeRegle :String): StructureRegle;
 Function RegleCibleEthnie(CodeRegle: String; CodeRace: String): Boolean;
 Function RegleMetierApplicable(PRegleMetier: StructureRegleMetier; CodeRegle: String; CodeRace: String; EthnieSeule: Boolean): Boolean;
 Function RegleCouvreRace(CodeRegle: String; CodeRace: String): Boolean;
+Function RegleConcerneRace(CodeRegle: String; CodeRace: String): Boolean;
+// La regle remplace-t-elle les competences ('S') ou les talents ('T') de cette ethnie ?
+Function RegleRemplaceGenre(CodeRegle: String; CodeRace: String; Genre: String): Boolean;
+// Codes de remplacement ('S' ou 'T') ; liste toujours creee, a liberer par l'appelant.
+Function RegleCodesGenre(CodeRegle: String; CodeRace: String; Genre: String): TStringList;
+
+// Competences ('S') ou talents ('T') EFFECTIFS d'une ethnie a la creation : ceux de l'ethnie, sauf si
+// la regle choisie (CodeRegle, '' = aucune) les remplace. Liste toujours creee, a liberer par l'appelant.
+Function CodesRaceEffectifs(Genre: String; CodeRegle: String; CodeRace: String): TStringList;
+
+// Un livre declare-t-il une table de tirage du background pour cette ethnie (ou sa race) ?
+Function RegleFondDisponible(CodeRace: String): Boolean;
+// Regle de background (code) pour un d100 (1..100) ; '' si aucune table. Poids cumules dans l'ordre du livre.
+Function RegleFondTirage(CodeRace: String; Jet: Integer): String;
+
+// Le background a-t-il une table de competences ('S') ou de talents ('T') ?
+Function FondATable(CodeRegle, Genre: String): Boolean;
+// Tire un code ('S' ou 'T') sur la table du background ; Jet = equivalent d100 (1..100) ; '' si pas de table.
+Function FondTire(CodeRegle, Genre: String; out Jet: Integer): String;
+// d10 du nombre de competences / talents ; Second = resultat 10 (pas de nombres). Jet = 1..10. Faux si pas de table.
+Function FondTireCompte(out Jet, NbCompetence, NbTalent: Integer; out Second: Boolean): Boolean;
 
 implementation
+
+Function FondATable(CodeRegle, Genre: String): Boolean;
+Var
+  P: StructureFondTirage;
+Begin
+  Result := False;
+  For P in ListFondTirage do
+    if (P.Genre = Genre) and CompareRechercheValeur(P.CodeRegle, CodeRegle) then
+      begin
+        Result := True;
+        Exit;
+      end;
+End;
+
+Function FondTire(CodeRegle, Genre: String; out Jet: Integer): String;
+Var
+  P:          StructureFondTirage;
+  Total, R, Cum: Integer;
+Begin
+  Result := '';
+  Jet    := 0;
+  Total  := 0;
+  For P in ListFondTirage do
+    if (P.Genre = Genre) and CompareRechercheValeur(P.CodeRegle, CodeRegle) then
+      Total := Total + StrToIntDef(P.Chance, 0);
+  if Total <= 0 then Exit;
+  R   := Random(Total);
+  Cum := 0;
+  For P in ListFondTirage do
+    if (P.Genre = Genre) and CompareRechercheValeur(P.CodeRegle, CodeRegle) then
+      begin
+        Cum := Cum + StrToIntDef(P.Chance, 0);
+        if R < Cum then
+          begin
+            Result := P.Code;
+            Jet    := (R * 100) div Total + 1;
+            Exit;
+          end;
+      end;
+End;
+
+Function FondTireCompte(out Jet, NbCompetence, NbTalent: Integer; out Second: Boolean): Boolean;
+Var
+  P:          StructureFondCompte;
+  Total, R, Cum: Integer;
+Begin
+  Result := False;
+  Jet := 0; NbCompetence := 0; NbTalent := 0; Second := False;
+  Total := 0;
+  For P in ListFondCompte do
+    Total := Total + P.Poids;
+  if Total <= 0 then Exit;
+  R   := Random(Total);
+  Cum := 0;
+  Jet := R + 1;
+  For P in ListFondCompte do
+    begin
+      Cum := Cum + P.Poids;
+      if R < Cum then
+        begin
+          NbCompetence := P.NbCompetence;
+          NbTalent     := P.NbTalent;
+          Second       := P.Second;
+          Result       := True;
+          Exit;
+        end;
+    end;
+End;
+
+// Entrees de la table pour cette ethnie, sinon pour sa race : l'ethnie prime.
+Function EntreesFond(CodeRace: String): TStringList;
+Var
+  PFond:      StructureRegleFond;
+  Espece:     String;
+  EthnieSeule: Boolean = False;
+Begin
+  Result := TStringList.Create;
+  if CodeRace = '' then Exit;
+  For PFond in ListRegleFond do
+    if CompareRechercheValeur(PFond.CodeRace, CodeRace) then
+      EthnieSeule := True;
+  Espece := ChercheRace(CodeRace).Espece;
+  For PFond in ListRegleFond do
+    if CompareRechercheValeur(PFond.CodeRace, CodeRace)
+       or (not EthnieSeule and (Espece <> '') and CompareRechercheValeur(PFond.CodeRace, Espece)) then
+      Result.Add(PFond.CodeRegle + '=' + PFond.Chance);
+End;
+
+Function RegleFondDisponible(CodeRace: String): Boolean;
+Var
+  L: TStringList;
+Begin
+  L := EntreesFond(CodeRace);
+  try
+    Result := L.Count > 0;
+  finally
+    L.Free;
+  end;
+End;
+
+Function RegleFondTirage(CodeRace: String; Jet: Integer): String;
+Var
+  L:      TStringList;
+  I, Cum: Integer;
+Begin
+  Result := '';
+  L := EntreesFond(CodeRace);
+  try
+    Cum := 0;
+    For I := 0 to L.Count - 1 do
+      begin
+        Cum := Cum + StrToIntDef(L.ValueFromIndex[I], 0);
+        if Jet <= Cum then
+          begin
+            Result := L.Names[I];
+            Exit;
+          end;
+      end;
+  finally
+    L.Free;
+  end;
+End;
+
+Function CodesRaceEffectifs(Genre: String; CodeRegle: String; CodeRace: String): TStringList;
+Var
+  PTalent:      StructureRaceTalent;
+  PCompetence:  StructureRaceCompetence;
+Begin
+  if RegleRemplaceGenre(CodeRegle, CodeRace, Genre) then
+    begin
+      Result := RegleCodesGenre(CodeRegle, CodeRace, Genre);
+      Exit;
+    end;
+  Result := TStringList.Create;
+  if Genre = 'T' then
+    begin
+      For PTalent in ListRaceTalent do
+        if CompareRechercheValeur(PTalent.CodeRace, CodeRace) then
+          Result.Add(PTalent.CodeTalent);
+    end
+  else
+    For PCompetence in ListRaceCompetence do
+      if CompareRechercheValeur(PCompetence.CodeRace, CodeRace) then
+        Result.Add(PCompetence.CodeCompetence);
+End;
+
+// Meme ciblage que RegleMetierApplicable : l'ethnie, ou la race dont elle fait partie ;
+// l'ethnie prime sur la race (EthnieSeule).
+Function EntreeEthnieApplicable(PEntree: StructureRegleEthnie; CodeRegle, CodeRace, Genre: String; EthnieSeule: Boolean): Boolean;
+Var
+  Espece: String;
+Begin
+  Result := False;
+  if (PEntree.Genre = Genre) and CompareRechercheValeur(PEntree.CodeRegle, CodeRegle) then
+    begin
+      if CompareRechercheValeur(PEntree.CodeRace, CodeRace) then
+        Result := True
+      else if not EthnieSeule then
+        begin
+          Espece := ChercheRace(CodeRace).Espece;
+          if (Espece <> '') and CompareRechercheValeur(PEntree.CodeRace, Espece) then
+            Result := True;
+        end;
+    end;
+End;
+
+Function RegleCodesGenre(CodeRegle: String; CodeRace: String; Genre: String): TStringList;
+Var
+  PEntree:      StructureRegleEthnie;
+  EthnieSeule:  Boolean = False;
+Begin
+  Result := TStringList.Create;
+  if (CodeRegle = '') or (CodeRace = '') then Exit;
+  For PEntree in ListRegleEthnie do
+    if (PEntree.Genre = Genre) and CompareRechercheValeur(PEntree.CodeRegle, CodeRegle)
+       and CompareRechercheValeur(PEntree.CodeRace, CodeRace) then
+      EthnieSeule := True;
+  For PEntree in ListRegleEthnie do
+    if EntreeEthnieApplicable(PEntree, CodeRegle, CodeRace, Genre, EthnieSeule) then
+      Result.Add(PEntree.Code);
+End;
+
+Function RegleRemplaceGenre(CodeRegle: String; CodeRace: String; Genre: String): Boolean;
+Var
+  Codes: TStringList;
+Begin
+  Codes := RegleCodesGenre(CodeRegle, CodeRace, Genre);
+  try
+    Result := Codes.Count > 0;
+  finally
+    Codes.Free;
+  end;
+End;
 
 Function ChercheRegle(CodeRegle :String): StructureRegle;
 Var
@@ -146,6 +411,16 @@ Begin
           break;
         end;
   Result := Res;
+End;
+
+// La regle a-t-elle un effet sur cette ethnie (table de carrieres, competences ou talents) ?
+// Sert a la liste du combo des regles ; NE PAS l'utiliser pour choisir la table de tirage :
+// une regle qui ne remplace que des competences n'a pas de table de carrieres.
+Function RegleConcerneRace(CodeRegle: String; CodeRace: String): Boolean;
+Begin
+  Result := RegleCouvreRace(CodeRegle, CodeRace)
+         or RegleRemplaceGenre(CodeRegle, CodeRace, 'S')
+         or RegleRemplaceGenre(CodeRegle, CodeRace, 'T');
 End;
 
 end.

@@ -47,6 +47,10 @@ Var
   NbSigneAstral:      Integer;
   NbSigneEffet:       Integer;
 
+function CleSigneAstralCreation(Livre: String): String;
+function SigneAstralPermis(Indice: Integer): Boolean;
+function SigneAstralLivreActif(Livre: String): Boolean;
+function NbSigneAstralPermis(): Integer;
 function ChercheSigneAstral(CodeSigne: String): StructureSigneAstral;
 function SigneAstralPlageContient(Plage: String; Jet: Integer): Boolean;
 function TireSigneAstral(out Jet: Integer): String;
@@ -95,6 +99,34 @@ function SigneAstralPlageContient(Plage: String; Jet: Integer): Boolean;
     Result := (Bas > 0) and (Jet >= Bas) and (Jet <= Haut);
   end;
 
+// Cle du choix « signes astraux de ce livre » dans ReglesDesactiveesCreation (case de l'etape Livre).
+function CleSigneAstralCreation(Livre: String): String;
+  begin
+    Result := ConstOptionStarSign + '-' + Livre;
+  end;
+
+// Le signe d'indice Indice de ListSigneAstral est-il autorise pour la creation en cours ? (case du livre cochee)
+function SigneAstralPermis(Indice: Integer): Boolean;
+  begin
+    Result := SigneAstralLivreActif(ListSigneAstral[Indice].Livre);
+  end;
+
+// Etat d'un livre : reglage global de l'INI (option STARSIGN), inverse par la case de la creation en cours.
+function SigneAstralLivreActif(Livre: String): Boolean;
+  begin
+    Result := OptionDesactivee(Livre, ConstOptionStarSign) = BasculeCreationActive(CleSigneAstralCreation(Livre));
+  end;
+
+function NbSigneAstralPermis(): Integer;
+  var
+    Ind: Integer;
+  begin
+    Result := 0;
+    for Ind := 0 to ListSigneAstral.Count - 1 do
+      if SigneAstralPermis(Ind) then
+        Inc(Result);
+  end;
+
 function ChercheSigneAstral(CodeSigne: String): StructureSigneAstral;
   var
     PSigne: StructureSigneAstral;
@@ -118,7 +150,7 @@ function TireSigneAstral(out Jet: Integer): String;
     // Le DERNIER livre charge gagne sur une plage commune (decision Nono 10/10/2026) : un signe
     // d'un livre de fan reprend la plage d'un signe plus ancien ; le reste de ce signe reste tirable.
     for Ind := ListSigneAstral.Count - 1 downto 0 do
-      if SigneAstralPlageContient(ListSigneAstral[Ind].Plage, Jet) then
+      if SigneAstralPermis(Ind) and SigneAstralPlageContient(ListSigneAstral[Ind].Plage, Jet) then
         begin
           Result := ListSigneAstral[Ind].CodeSigne;
           Exit;

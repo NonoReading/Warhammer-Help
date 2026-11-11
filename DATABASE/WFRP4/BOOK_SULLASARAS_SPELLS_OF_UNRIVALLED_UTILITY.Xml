@@ -2,6 +2,7 @@
 <DATA_BOOK>
 <CODE_BOOK>"SULLA"</CODE_BOOK>
 <BOOK>"BOOK SULLASARAS SPELLS OF UNRIVALLED UTILITY"</BOOK>
+<BOOKNAME>"SULLASARAS SPELLS OF UNRIVALLED UTILITY"</BOOKNAME>
 <language>"ENGLISH"</language>
 <VERSION>"WFRP4"</VERSION>
 <OFFICIAL>"1"</OFFICIAL>
@@ -16,277 +17,277 @@
 </Label>
 </DATA_LABEL>
 <DATA_SPELL>
-<Sort id="SULLA-BETE_01">
+<Sort id="SULLA-BETE_BEAST_MADE_WELL">
 <Description language="ENGLISH">"Beast Made Well"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>12</Page>
 </Sort>
-<Sort id="SULLA-BETE_02">
+<Sort id="SULLA-BETE_CRUELTY_S_DESERTS">
 <Description language="ENGLISH">"Cruelty's Deserts"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(ATTR_WP) days"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>12</Page>
 </Sort>
-<Sort id="SULLA-BETE_03">
+<Sort id="SULLA-BETE_WYSSAN_S_ALLY">
 <Description language="ENGLISH">"Wyssan's Ally"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>12</Page>
 </Sort>
-<Sort id="SULLA-BETE_04">
+<Sort id="SULLA-BETE_WILDERCALL">
 <Description language="ENGLISH">"Wildercall"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (ATTR_WP) miles"</Target>
 <Duration>"Instant"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>12</Page>
 </Sort>
-<Sort id="SULLA-MORT_01">
+<Sort id="SULLA-MORT_STAY_DEATH_S_HAND">
 <Description language="ENGLISH">"Stay Death's Hand"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>14</Page>
 </Sort>
-<Sort id="SULLA-MORT_02">
+<Sort id="SULLA-MORT_DEATHSIGHT">
 <Description language="ENGLISH">"Deathsight"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>14</Page>
 </Sort>
-<Sort id="SULLA-MORT_03">
+<Sort id="SULLA-MORT_PRESERVATION">
 <Description language="ENGLISH">"Preservation"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(ATTR_WP) days"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>14</Page>
 </Sort>
-<Sort id="SULLA-FEU_01">
+<Sort id="SULLA-FEU_FLASHCOOK">
 <Description language="ENGLISH">"Flashcook"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>14</Page>
 </Sort>
-<Sort id="SULLA-FEU_02">
+<Sort id="SULLA-FEU_COMFORT">
 <Description language="ENGLISH">"Comfort"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>16</Page>
 </Sort>
-<Sort id="SULLA-FEU_03">
+<Sort id="SULLA-FEU_CEASELESS_FLAME">
 <Description language="ENGLISH">"Ceaseless Flame"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>16</Page>
 </Sort>
-<Sort id="SULLA-CIEUX_01">
+<Sort id="SULLA-CIEUX_BIRDSPEECH">
 <Description language="ENGLISH">"Birdspeech"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_CIEUX"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>16</Page>
 </Sort>
-<Sort id="SULLA-CIEUX_02">
+<Sort id="SULLA-CIEUX_WEATHERVANE">
 <Description language="ENGLISH">"Weathervane"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"Instant"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_CIEUX"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>16</Page>
 </Sort>
-<Sort id="SULLA-CIEUX_03">
+<Sort id="SULLA-CIEUX_GALE">
 <Description language="ENGLISH">"Gale"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (BATTR_WP)m"</Target>
 <Duration>"Special (BATTR_WP) Rounds/hours"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_CIEUX"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>18</Page>
 </Sort>
-<Sort id="SULLA-METAL_01">
+<Sort id="SULLA-METAL_TALE_OF_METAL">
 <Description language="ENGLISH">"Tale of Metal"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>18</Page>
 </Sort>
-<Sort id="SULLA-METAL_02">
+<Sort id="SULLA-METAL_RIGOR_OF_STEEL">
 <Description language="ENGLISH">"Rigor of Steel"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>18</Page>
 </Sort>
-<Sort id="SULLA-METAL_03">
+<Sort id="SULLA-METAL_SENSE_METAL">
 <Description language="ENGLISH">"Sense Metal"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"1"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>18</Page>
 </Sort>
-<Sort id="SULLA-VIE_01">
+<Sort id="SULLA-VIE_FERMENT">
 <Description language="ENGLISH">"Ferment"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_VIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>20</Page>
 </Sort>
-<Sort id="SULLA-VIE_02">
+<Sort id="SULLA-VIE_TIMBERVAULT">
 <Description language="ENGLISH">"Timbervault"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_VIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>20</Page>
 </Sort>
-<Sort id="SULLA-VIE_03">
+<Sort id="SULLA-VIE_TRACK_S_TALE_TOLD">
 <Description language="ENGLISH">"Track's Tale Told"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Special"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_VIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>20</Page>
 </Sort>
-<Sort id="SULLA-LUMIERE_01">
+<Sort id="SULLA-LUMIERE_CLEANSING_GLOW">
 <Description language="ENGLISH">"Cleansing Glow"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>20</Page>
 </Sort>
-<Sort id="SULLA-LUMIERE_02">
+<Sort id="SULLA-LUMIERE_DISGUST">
 <Description language="ENGLISH">"Disgust"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>22</Page>
 </Sort>
-<Sort id="SULLA-LUMIERE_03">
+<Sort id="SULLA-LUMIERE_ILLUMINATE">
 <Description language="ENGLISH">"Illuminate"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>22</Page>
 </Sort>
-<Sort id="SULLA-OMBRE_01">
+<Sort id="SULLA-OMBRE_SHADOWS_OF_SPLENDOUR">
 <Description language="ENGLISH">"Shadows of Splendour"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>22</Page>
 </Sort>
-<Sort id="SULLA-OMBRE_02">
+<Sort id="SULLA-OMBRE_CLOAK_ACTIVITY">
 <Description language="ENGLISH">"Cloak Activity"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>22</Page>
 </Sort>
-<Sort id="SULLA-OMBRE_03">
+<Sort id="SULLA-OMBRE_PALL_OF_DARKNESS">
 <Description language="ENGLISH">"Pall of Darkness"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>24</Page>

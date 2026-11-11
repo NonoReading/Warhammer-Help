@@ -155,6 +155,16 @@
         <UnitName Value="WinPhysique"/>
       </Unit>
       <Unit>
+        <Filename Value="fenetreapprentissagev1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FenetreApprentissageV1"/>
+      </Unit>
+      <Unit>
+        <Filename Value="creationv1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CreationV1"/>
+      </Unit>
+      <Unit>
         <Filename Value="chargeraceattribut.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="ChargeRaceAttribut"/>
@@ -462,7 +472,7 @@
     </Linking>
     <Other>
       <CompilerMessages>
-        <IgnoredMessages idx6058="True" idx5091="True" idx5071="True" idx4105="True" idx4104="True" idx3124="True" idx3123="True"/>
+        <IgnoredMessages idx6058="True" idx5091="True" idx5024="True" idx5071="True" idx4105="True" idx4104="True" idx3124="True" idx3123="True"/>
       </CompilerMessages>
       <CompilerPath Value="C:\lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe"/>
       <ExecuteAfter>

@@ -1,0 +1,3415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"LEOP"</CODE_BOOK>
+<BOOK>"BOOK LEOPOI"</BOOK>
+<BOOKNAME>"LEOPOI (SIMON SULLIVAN)"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"This document is completely unofficial and in no way endorsed by Games Workshop Limited. Chaos, the Chaos device, the Chaos logo, Citadel, Citadel Device, Darkblade, the Double- Headed/Imperial Eagle device, 'Eavy Metal, Forge World, Games Workshop, Games Workshop logo, Golden Demon, Great Unclean One, GW, the Hammer of Sigmar logo, Horned Rat logo, Keeper of Secrets, Khemri, Khorne, the Khorne logo, Lord of Change, Nurgle, the Nurgle logo, Skaven, the Skaven symbol devices, Slaanesh, the Slaanesh logo, Tomb Kings, Trio of Warriors, Twin Tailed Comet Logo, Tzeentch, the Tzeentch logo, Warhammer, Warhammer Online, Warhammer World logo, White Dwarf, the White Dwarf logo, and all associated marks, names, races, race insignia, characters, vehicles, locations, units, illustrations and images from the"</DISCLAIMER>
+<DATA_SPECIE>
+<Specie id="LEOP-RACE_ELF_DARK">
+<Description language="ENGLISH">"Elf (Dark)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_ELF"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"5"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 9; 4-6: 10; 7-9: 11; 10: 12"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 1; 5-7: 2; 8-10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ELVES"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ELTHARIN"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_COOLHEADED/RULES-T_WARRIOR_BORN"</Talent>
+<Talent>"RULES-T_EXCELLENT_VISION"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"UTOC-T_RANCOUR_OF_THE_DRUCHII"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"2"</Page>
+</Specie>
+<Specie id="LEOP-RACE_HALF_ORC">
+<Description language="ENGLISH">"Half-Orc"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 11; 4-6: 12; 7-9: 13; 10: 14"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-3: 1; 4-6: 2; 7-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GOBLINOIDS/RULES-COMP_CONSUME_ALCOHOL"</Skill>
+<Skill>"RULES-COMP_INTIMIDATE/RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_MENACING/RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_STREET_FIGHTING"</Talent>
+<Talent>"RULES-T_VERY_RESILIENT/RULES-T_VERY_STRONG"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"2"</Page>
+</Specie>
+</DATA_SPECIE>
+<DATA_CAREER>
+<Career id="LEOP-CARE_CLERIC">
+<Description language="ENGLISH">"Cleric"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, T +10%, Ag +5%, Int +15%, WP +25%, Fel +15%"</MainProfile>
+<SecondaryProfile>"W +3, Mag +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_Mag">"1"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (any one), Academic Knowledge (Theology), Channelling, Charm, Common Knowledge (any one), Gossip, Heal, Magic Sense, Perception, Read/Write, Speak Arcane Language (Magick), Speak Language (Classical), Speak Language (any one), Trade (Apothecary or Calligraphy)"</Skills>
+<Talents>"Divine Lore (any one), Meditation or Master Orator, Petty Magic (Divine)"</Talents>
+<Trappings>"Prayer book, Trade Tools (Apothecary or Calligraphy), Religious Robes, Religious Symbol, Writing Kit"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_CLASSICAL">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_APOTHECARY/RULES-COMP_TRADE_CALLIGRAPHY">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_DIVINE_LORE__*">"1"</Talent>
+<Talent name="RULES-T_MEDITATION/RULES-T_MASTER_ORATOR">"1"</Talent>
+<Talent name="RULES-T_PETTY_MAGIC__DIVINE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"LEOP 2"</Source>
+</Career>
+<Career id="LEOP-CARE_CONSECRATED_CLERIC">
+<Description language="ENGLISH">"Consecrated Cleric"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, T +10%, Ag +10%, Int +25%, WP +35%, Fel +20%"</MainProfile>
+<SecondaryProfile>"W +4, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"25"</Advance>
+<Advance name="RULES-ATTR_WP">"35"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (any two), Academic Knowledge (Theology), Channelling, Charm, Common Knowledge (any one), Gossip, Heal, Magic Sense, Perception, Read/Write, Speak Arcane Language (Magick), Speak Language (Classical), Speak Language (any one), Trade (Apothecary or Calligraphy)"</Skills>
+<Talents>"Aethyric Attunement or Fast Hands, Armoured Caster or Cool Headed, Etiquette, Lesser Magic (any two), Meditation or Master Orator"</Talents>
+<Trappings>"Aspergilla (OWA), Prayer book, Good Craftsmanship Religious Robes"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_CLASSICAL">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_APOTHECARY/RULES-COMP_TRADE_CALLIGRAPHY">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_FAST_HANDS">"1"</Talent>
+<Talent name="RULES-T_ARMOURED_CASTING/RULES-T_COOLHEADED">"1"</Talent>
+<Talent name="RULES-T_ETIQUETTE">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_MEDITATION/RULES-T_MASTER_ORATOR">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"LEOP 2"</Source>
+</Career>
+<Career id="LEOP-CARE_EXALTED_CLERIC">
+<Description language="ENGLISH">"Exalted Cleric"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +15%, S +5%, T +15%, Ag +15%, Int +30%, WP +40%, Fel +25%"</MainProfile>
+<SecondaryProfile>"W +5, Mag +3"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"40"</Advance>
+<Advance name="RULES-ATTR_Fel">"25"</Advance>
+<Advance name="RULES-ATTR_W">"5"</Advance>
+<Advance name="RULES-ATTR_Mag">"3"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (any three), Academic Knowledge (Theology), Channelling, Charm, Command, Common Knowledge (any two), Gossip, Heal, Magic Sense, Perception, Read/Write, Speak Arcane Language (Magick), Speak Language (Classical), Speak Language (any two), Trade (Apothecary or Calligraphy)"</Skills>
+<Talents>"Aethyric Attunement or Armoured Caster, Cool Headed or Strong-minded, Etiquette, Lesser Magic (any two)"</Talents>
+<Trappings>"Best Craftsmanship Religious Robes, Religious Relic"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_CLASSICAL">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_APOTHECARY/RULES-COMP_TRADE_CALLIGRAPHY">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_ARMOURED_CASTING">"1"</Talent>
+<Talent name="RULES-T_COOLHEADED/RULES-T_STRONG_MINDED">"1"</Talent>
+<Talent name="RULES-T_ETIQUETTE">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"LEOP 3"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="LEOP-CARE_CLERIC">"LEOP-CARE_CONSECRATED_CLERIC"</Link>
+<Link name="LEOP-CARE_CLERIC">"RULES-CARE_SCHOLAR"</Link>
+<Link name="LEOP-CARE_CLERIC">"RULES-CARE_STEWARD"</Link>
+<Link name="LEOP-CARE_CLERIC">"RULES-CARE_ZEALOT"</Link>
+<Link name="RULES-CARE_FRIAR">"LEOP-CARE_CLERIC"</Link>
+<Link name="RULES-CARE_INITIATE">"LEOP-CARE_CLERIC"</Link>
+<Link name="LEOP-CARE_CONSECRATED_CLERIC">"RULES-CARE_ANOINTED_PRIEST"</Link>
+<Link name="LEOP-CARE_CONSECRATED_CLERIC">"RULES-CARE_DEMAGOGUE"</Link>
+<Link name="LEOP-CARE_CONSECRATED_CLERIC">"LEOP-CARE_EXALTED_CLERIC"</Link>
+<Link name="LEOP-CARE_CONSECRATED_CLERIC">"RULES-CARE_FLAGELLANT"</Link>
+<Link name="LEOP-CARE_CONSECRATED_CLERIC">"UTOC-CARE_LAWYER"</Link>
+<Link name="LEOP-CARE_CONSECRATED_CLERIC">"RULES-CARE_SCHOLAR"</Link>
+<Link name="LEOP-CARE_CONSECRATED_CLERIC">"RULES-CARE_STEWARD"</Link>
+<Link name="RULES-CARE_ANOINTED_PRIEST">"LEOP-CARE_CONSECRATED_CLERIC"</Link>
+<Link name="LEOP-CARE_EXALTED_CLERIC">"CCOMP-CARE_AMBASSADOR"</Link>
+<Link name="LEOP-CARE_EXALTED_CLERIC">"RULES-CARE_HIGH_PRIEST"</Link>
+<Link name="LEOP-CARE_EXALTED_CLERIC">"RULES-CARE_POLITICIAN"</Link>
+<Link name="LEOP-CARE_EXALTED_CLERIC">"RULES-CARE_SCHOLAR"</Link>
+<Link name="LEOP-CARE_EXALTED_CLERIC">"RULES-CARE_WITCH_HUNTER"</Link>
+<Link name="RULES-CARE_HIGH_PRIEST">"LEOP-CARE_EXALTED_CLERIC"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_SPELL_V2>
+<SpellV2 id="LEOP-SPEL_LOCATE_CORPSE">
+<Description language="ENGLISH">"Locate Corpse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A finger bone (+1)"</Ingredient>
+<Page>"2"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_EMBALM">
+<Description language="ENGLISH">"Embalm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A vial of embalming fluid (+1)"</Ingredient>
+<Page>"2"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_TOMB_ROT">
+<Description language="ENGLISH">"Tomb Rot"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bandages from a mummy (+2)"</Ingredient>
+<Page>"2"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_WIGHT_BLADE">
+<Description language="ENGLISH">"Wight Blade"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A long bone of a humanoid (leg or arm) (+1)"</Ingredient>
+<Page>"2"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_BLOOD_BRIDGE">
+<Description language="ENGLISH">"Blood Bridge"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A blood soaked cloth (+2)"</Ingredient>
+<Page>"2"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_RIGOR_MORTIS">
+<Description language="ENGLISH">"Rigor Mortis"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Shackles from a prisoner that has died while incarcerated (+2)"</Ingredient>
+<Page>"2"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_EXTEND_CONTROL">
+<Description language="ENGLISH">"Extend Control"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"The brain of a magician (+2)"</Ingredient>
+<Page>"2"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SPIRIT_FORM">
+<Description language="ENGLISH">"Spirit Form"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Two full actions"</CastingTime>
+<Ingredient>"A piece of gossamer (+2)"</Ingredient>
+<Page>"2"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_FEIGN_DEATH">
+<Description language="ENGLISH">"Feign Death"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A vial of poison (+2)"</Ingredient>
+<Page>"3"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SKELETON_GUARDIAN">
+<Description language="ENGLISH">"Skeleton Guardian"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"19"</CastingNumber>
+<CastingTime>"A full and a half action"</CastingTime>
+<Ingredient>"A weapon or piece of armour from a dead hero (+2)"</Ingredient>
+<Page>"3"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MAINTAIN_CONTROL">
+<Description language="ENGLISH">"Maintain Control"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Essences of a vampire (+3)"</Ingredient>
+<Page>"3"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SPIRIT_SPEAK">
+<Description language="ENGLISH">"Spirit Speak"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"21"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A stick of incense (+3)"</Ingredient>
+<Page>"3"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_WAIL_OF_THE_BANSHEE">
+<Description language="ENGLISH">"Wail Of The Banshee"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"The tongue of an orphan (+3)"</Ingredient>
+<Page>"3"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_CURSE_OF_UNDEATH">
+<Description language="ENGLISH">"Curse Of Undeath"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"26"</CastingNumber>
+<CastingTime>"Two full actions"</CastingTime>
+<Ingredient>"The hand of a liche, mummy or vampire (+3)"</Ingredient>
+<Page>"4"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_POSSESSION">
+<Description language="ENGLISH">"Possession"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"variable as above"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"4"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_ARMY_OF_THE_DEAD">
+<Description language="ENGLISH">"Army Of The Dead"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"25"</CastingNumber>
+<CastingTime>"One hour"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"4"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"4"</MagicMin>
+<XPCost>"400"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SWORDMASTER_OF_HOETH">
+<Description language="ENGLISH">"Swordmaster of Hoeth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hoeth"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Miniature silver sword (+1)"</Ingredient>
+<Page>"4"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_APOTHEOSIS">
+<Description language="ENGLISH">"Apotheosis"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hoeth"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A crystal (+1)"</Ingredient>
+<Page>"4"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HAND_OF_GLORY">
+<Description language="ENGLISH">"Hand of Glory"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hoeth"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A silver ring (+1)"</Ingredient>
+<Page>"4"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_FIERY_CONVOCATION">
+<Description language="ENGLISH">"Fiery Convocation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hoeth"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full and Half Action"</CastingTime>
+<Ingredient>"A piece of volcanic rock (+2)"</Ingredient>
+<Page>"4"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_BANISHMENT">
+<Description language="ENGLISH">"Banishment"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hoeth"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A hand of a necromancer or chaos magician (+2)"</Ingredient>
+<Page>"4"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_GLAMOUR_OF_TECLIS">
+<Description language="ENGLISH">"Glamour of Teclis"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hoeth"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A prism that refracts light (+2)"</Ingredient>
+<Page>"5"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_CURSE_OF_ARROW_ATTRACTION">
+<Description language="ENGLISH">"Curse of Arrow Attraction"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hoeth"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A warped arrow (+2)"</Ingredient>
+<Page>"5"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_INSIGHT_OF_HOETH">
+<Description language="ENGLISH">"Insight of Hoeth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hoeth"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"Miniature magnifying glass (+2)"</Ingredient>
+<Page>"5"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_DRAIN_MAGIC">
+<Description language="ENGLISH">"Drain Magic"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hoeth"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A broken lens (+2)"</Ingredient>
+<Page>"5"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_WALK_BETWEEN_WORLDS">
+<Description language="ENGLISH">"Walk Between Worlds"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hoeth"</Lore>
+<CastingNumber>"19"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A strip of cloth from the cloak of a Wraith (+2)"</Ingredient>
+<Page>"5"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_AURA_OF_NULLIFICATION">
+<Description language="ENGLISH">"Aura of Nullification"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hoeth"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A silver symbol of Hoeth (+2)"</Ingredient>
+<Page>"6"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_CORUSCATION_OF_FINREIRE">
+<Description language="ENGLISH">"Coruscation of Finreire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hoeth"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A feather from a Great Eagle (+3)"</Ingredient>
+<Page>"6"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_GORK_LL_FIX_IT">
+<Description language="ENGLISH">"Gork'll fix it"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Gork"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A symbol of Gork (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_OI_WOT_YOU_LOOKIN_AT">
+<Description language="ENGLISH">"Oi, wot you lookin' at!"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Gork"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Black Orc Tooth (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_EADBUTT">
+<Description language="ENGLISH">"'Eadbutt"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Gork"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A metal helmet (+2)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_BASH_EM_LADZ">
+<Description language="ENGLISH">"Bash 'em ladz"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Gork"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Blood of a Savage Orc (+2)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LOOK_ERE_BOYZ_I_Z_A_BOAR">
+<Description language="ENGLISH">"Look 'ere Boyz, I'z a Boar!"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Gork"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Two Full Actions"</CastingTime>
+<Ingredient>"Boar tusks (+2)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_FOOT_OF_GORK">
+<Description language="ENGLISH">"Foot of Gork"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Gork"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A goblinoid foot (+2)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_I_FINK_I_GOT_IT">
+<Description language="ENGLISH">"I fink I got it"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Mork"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A symbol of Mork (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_UNLOCK">
+<Description language="ENGLISH">"Unlock"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Mork"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Fingers of a snotlings (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_STOP_YER_COMPLAININ">
+<Description language="ENGLISH">"Stop yer complainin'"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Mork"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Blood of a Troll (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_DIE_YER_GIT">
+<Description language="ENGLISH">"Die yer Git"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Mork"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A handful of charcoal (+2)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_YOU_EAR_THAT">
+<Description language="ENGLISH">"You 'ear that?"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Mork"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Ears of a hobgoblin (+2)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_WAAAGH">
+<Description language="ENGLISH">"Waaagh!!!"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Mork"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The brain of a magic user (+2)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SHADOWING">
+<Description language="ENGLISH">"Shadowing"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khakkekk"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Eyes from a creature made blind (+1)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_BLOOD_RAGE">
+<Description language="ENGLISH">"Blood Rage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khakkekk"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Poison (+1)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_DRAW_FORTH_THE_BLOOD">
+<Description language="ENGLISH">"Draw forth the Blood"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khakkekk"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A dagger (+2)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SUMMON_DEMON">
+<Description language="ENGLISH">"Summon Demon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khakkekk"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Two Full Actions"</CastingTime>
+<Ingredient>"A pint of blood (+2)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_WAKE_UNDEAD">
+<Description language="ENGLISH">"Wake Undead"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khakkekk"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full and half Action"</CastingTime>
+<Ingredient>"The hand of a necromancer or liche (+2)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_CURSE_OF_KHAKKEKK">
+<Description language="ENGLISH">"Curse of Khakkekk"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khakkekk"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"The spleen of a mutant (+2)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_DEDUCTION_OF_FORM">
+<Description language="ENGLISH">"Deduction Of Form"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grungni"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Two full actions"</CastingTime>
+<Ingredient>"An artisan's tool (+1)"</Ingredient>
+<Page>"6"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SOFTEN_STONE">
+<Description language="ENGLISH">"Soften Stone"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grungni"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A handful of mud (+1)"</Ingredient>
+<Page>"6"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_BODY_OF_EARTH">
+<Description language="ENGLISH">"Body Of Earth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grungni"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A piece of slate (+1)"</Ingredient>
+<Page>"6"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_ENCUMBER">
+<Description language="ENGLISH">"Encumber"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grungni"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A chain mail link of lead (+2)"</Ingredient>
+<Page>"6"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_CAVERN_DARKNESS">
+<Description language="ENGLISH">"Cavern Darkness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grungni"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A lump of coal (+2)"</Ingredient>
+<Page>"6"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_FORGE">
+<Description language="ENGLISH">"Forge"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grungni"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"a smithy's hammer (+2)"</Ingredient>
+<Page>"6"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_PURIFY">
+<Description language="ENGLISH">"Purify"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Esmeralda"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A sprig of mint (+1)"</Ingredient>
+<Page>"7"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_ENTHUSE">
+<Description language="ENGLISH">"Enthuse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Esmeralda"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A miniature cast iron heart (+1)"</Ingredient>
+<Page>"7"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_INTOXICATE">
+<Description language="ENGLISH">"Intoxicate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Esmeralda"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A tankard of ale (+2)"</Ingredient>
+<Page>"7"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HERO_S_FEAST">
+<Description language="ENGLISH">"Hero's Feast"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Esmeralda"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full and half action"</CastingTime>
+<Ingredient>"A silver spoon (+2)"</Ingredient>
+<Page>"7"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_CURE">
+<Description language="ENGLISH">"Cure"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Esmeralda"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"2 minutes"</CastingTime>
+<Ingredient>"Any herbal remedy (+2)"</Ingredient>
+<Page>"7"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_STATUS">
+<Description language="ENGLISH">"Status"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Esmeralda"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A tea cake (+1)"</Ingredient>
+<Page>"7"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_KISS_OF_THE_ADDER">
+<Description language="ENGLISH">"Kiss Of The Adder"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khaine"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A snake's fang (+1)"</Ingredient>
+<Page>"7"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_ENFEEBLE">
+<Description language="ENGLISH">"Enfeeble"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khaine"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A drop of mouse blood (+2)"</Ingredient>
+<Page>"7"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_DOOMBOLT">
+<Description language="ENGLISH">"Doombolt"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khaine"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A knife of solid jet (+2)"</Ingredient>
+<Page>"8"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_DOMINION">
+<Description language="ENGLISH">"Dominion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khaine"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A hallucinogen (+2)"</Ingredient>
+<Page>"8"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LEECH_LIFE">
+<Description language="ENGLISH">"Leech Life"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khaine"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A leech (+2)"</Ingredient>
+<Page>"8"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_CHILL_WIND">
+<Description language="ENGLISH">"Chill Wind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khaine"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A subterranean rock (+2)"</Ingredient>
+<Page>"8"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MERRIMENT">
+<Description language="ENGLISH">"Merriment"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Liadriel"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A drop of water from a pure spring (+1)"</Ingredient>
+<Page>"8"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_PURIFY_FOOD_DRINK">
+<Description language="ENGLISH">"Purify Food &amp; Drink"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Liadriel"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A tankard of fresh water (+1)"</Ingredient>
+<Page>"8"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_DETECT_SNARES_PITS">
+<Description language="ENGLISH">"Detect Snares &amp; Pits"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Liadriel"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A broken snare (+1)"</Ingredient>
+<Page>"8"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_NATURE_S_STEP">
+<Description language="ENGLISH">"Nature's Step"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Liadriel"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"The fur from a squirrel (+2)"</Ingredient>
+<Page>"8"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_NATURE_S_GUARDIAN">
+<Description language="ENGLISH">"Nature's Guardian"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Liadriel"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"An oak leaf (+1)"</Ingredient>
+<Page>"8"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_NATURE_S_TRANSMUTATION">
+<Description language="ENGLISH">"Nature's Transmutation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Liadriel"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"An oak branch (+2)"</Ingredient>
+<Page>"8"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HEDGE_DIVINE">
+<Description language="ENGLISH">"Divine"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hedge"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"5 minutes"</CastingTime>
+<Ingredient>"A crystal (+1)"</Ingredient>
+<Page>"3"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HEDGE_RAVEN_FORM">
+<Description language="ENGLISH">"Raven Form"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hedge"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A raven feather (+1)"</Ingredient>
+<Page>"3"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HEDGE_MIMIC">
+<Description language="ENGLISH">"Mimic"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hedge"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Toenail, hair etc. from the creature to be mimicked (+2)"</Ingredient>
+<Page>"4"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HEDGE_LIFE_BLOOD">
+<Description language="ENGLISH">"Life Blood"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hedge"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Blood of a freshly slaughtered animal (+2)"</Ingredient>
+<Page>"4"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HEDGE_CURSE">
+<Description language="ENGLISH">"Curse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hedge"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Hair, fingernail, etc from the victim (+2)"</Ingredient>
+<Page>"4"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HEDGE_COMMUNE">
+<Description language="ENGLISH">"Commune"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hedge"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"10 minutes"</CastingTime>
+<Ingredient>"An intimate item of the dead person to contact (+2)"</Ingredient>
+<Page>"4"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HEDGE_BLIGHT">
+<Description language="ENGLISH">"Blight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hedge"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"2 Full Actions"</CastingTime>
+<Ingredient>"A piece of ogre dung (+2)"</Ingredient>
+<Page>"4"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HEDGE_PROSPER">
+<Description language="ENGLISH">"Prosper"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hedge"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"10 minutes"</CastingTime>
+<Ingredient>"A handful of natural fertilizer (+2)"</Ingredient>
+<Page>"5"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HEDGE_NIGHTMARE">
+<Description language="ENGLISH">"Nightmare"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hedge"</Lore>
+<CastingNumber>"19"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A dried part of a dead animal (+2)"</Ingredient>
+<Page>"5"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HEDGE_WITHERING_WIND">
+<Description language="ENGLISH">"Withering Wind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hedge"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Powdered remains from a corpse that has died from disease (+3)"</Ingredient>
+<Page>"5"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_GRUNGNI_MAGIC_LIGHT">
+<Description language="ENGLISH">"Magic Light"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grungni"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A magnesium strip (+1)"</Ingredient>
+<Page>"7"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_GRUNGNI_DETECT_METAL">
+<Description language="ENGLISH">"Detect Metal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grungni"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"An iron nail (+1)"</Ingredient>
+<Page>"7"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_GRUNGNI_ASSAULT_OF_STONES">
+<Description language="ENGLISH">"Assault of Stones"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grungni"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Small stones or pebbles (+1) in the casters hand"</Ingredient>
+<Page>"7"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_GRUNGNI_BODY_OF_EARTH">
+<Description language="ENGLISH">"Body of Earth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grungni"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A pouch or handful of dirt (+1)"</Ingredient>
+<Page>"8"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_GRUNGNI_CRUMBLE_STONE">
+<Description language="ENGLISH">"Crumble Stone"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grungni"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"The jawbone of a troll (+2)"</Ingredient>
+<Page>"8"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_GRUNGNI_FORGE_STONE">
+<Description language="ENGLISH">"Forge Stone"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grungni"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The stomach of a Troll (+2)"</Ingredient>
+<Page>"8"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_GRIMNIR_AXE_OF_GRIMNIR">
+<Description language="ENGLISH">"Axe of Grimnir"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grimnir"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A whetstone (+1)"</Ingredient>
+<Page>"8"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_GRIMNIR_FRENZY_OF_BATTLE">
+<Description language="ENGLISH">"Frenzy of Battle"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grimnir"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Blood of a goblinoid (+1)"</Ingredient>
+<Page>"8"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_GRIMNIR_INSPIRATION_OF_GRIMNIR">
+<Description language="ENGLISH">"Inspiration of Grimnir"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grimnir"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A plait of hair from a Dwarf beard (+1)"</Ingredient>
+<Page>"9"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_GRIMNIR_SLAYER">
+<Description language="ENGLISH">"Slayer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grimnir"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A miniature axe (+2)"</Ingredient>
+<Page>"9"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_GRIMNIR_AURA_OF_FEAR">
+<Description language="ENGLISH">"Aura of Fear"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grimnir"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"The skull of any creature over 10 feet tall (+2)"</Ingredient>
+<Page>"9"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_GRIMNIR_DURABILITY_OF_BODY">
+<Description language="ENGLISH">"Durability of Body"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grimnir"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"2 Full actions"</CastingTime>
+<Ingredient>"A dragon scale (+3)"</Ingredient>
+<Page>"9"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_ESMERALDA_ZONE_OF_WARMTH">
+<Description language="ENGLISH">"Zone of Warmth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Esmeralda"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A piece of animal fur (+1)"</Ingredient>
+<Page>"10"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_ESMERALDA_HEALING_HEARTH">
+<Description language="ENGLISH">"Healing Hearth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Esmeralda"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A fruit pie (+1)"</Ingredient>
+<Page>"11"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_ESMERALDA_RESTFUL_SLEEP">
+<Description language="ENGLISH">"Restful Sleep"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Esmeralda"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A mug of alcohol (+1)"</Ingredient>
+<Page>"11"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_ESMERALDA_ABUNDANCE">
+<Description language="ENGLISH">"Abundance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Esmeralda"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"Grain seeds (+1)"</Ingredient>
+<Page>"11"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_ESMERALDA_PACIFY">
+<Description language="ENGLISH">"Pacify"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Esmeralda"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A strip of black cloth (+2)"</Ingredient>
+<Page>"11"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_ESMERALDA_HEARTH_AND_HOME">
+<Description language="ENGLISH">"Hearth and Home"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Esmeralda"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Two full actions"</CastingTime>
+<Ingredient>"A normal meal (+2)"</Ingredient>
+<Page>"11"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_KHAINE_SHADOWMELD">
+<Description language="ENGLISH">"Shadowmeld"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khaine"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A strip of black cloth (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_KHAINE_MURDER">
+<Description language="ENGLISH">"Murder"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khaine"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A small knife (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_KHAINE_BLIND_ENEMY">
+<Description language="ENGLISH">"Blind Enemy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khaine"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A pinch of pepper (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_KHAINE_SOUL_BIND">
+<Description language="ENGLISH">"Soul Bind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khaine"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A piece of shroud from a freshly buried corpse (+2)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_KHAINE_SHROUD_OF_SHADOWS">
+<Description language="ENGLISH">"Shroud of Shadows"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khaine"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A ball of pitch (+2)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_KHAINE_SOUL_STEAL">
+<Description language="ENGLISH">"Soul Steal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khaine"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Two Actions"</CastingTime>
+<Ingredient>"A piece of wood from a used coffin (+2)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LIADRIEL_ANIMAL_MASTERY">
+<Description language="ENGLISH">"Animal Mastery"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Liadriel"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A lock of animal fur (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LIADRIEL_GRACE">
+<Description language="ENGLISH">"Grace"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Liadriel"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A freshly cut flower (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LIADRIEL_TANGLETHORN">
+<Description language="ENGLISH">"Tanglethorn"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Liadriel"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full and half action"</CastingTime>
+<Ingredient>"Briars or brambles (+1)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LIADRIEL_HEAL_VEGETATION">
+<Description language="ENGLISH">"Heal Vegetation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Liadriel"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Two Full actions"</CastingTime>
+<Ingredient>"An Oak leaf (+2)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LIADRIEL_LIADRIEL_S_COMMUNICATION">
+<Description language="ENGLISH">"Liadriel's Communication"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Liadriel"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"5 minutes"</CastingTime>
+<Ingredient>"A cup of spiced wine (+2)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LIADRIEL_ILLUSION">
+<Description language="ENGLISH">"Illusion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Liadriel"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"2 Full actions"</CastingTime>
+<Ingredient>"A small model of the illusion (+2)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_RITUALS_SUMMON_GUARDIAN">
+<Description language="ENGLISH">"Summon Guardian"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"1 hour"</CastingTime>
+<Ingredient>"A humanoid heart, from a victim sacrificed during the ritual."</Ingredient>
+<Page>"20"</Page>
+<RitualType>"RULES-V2RITUAL_DIVINE"</RitualType>
+<ArcaneLanguage>"Demonic"</ArcaneLanguage>
+<MagicMin>"1"</MagicMin>
+<XPCost>"100"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_RITUALS_SUMMON_GREAT_POWER">
+<Description language="ENGLISH">"Summon Great Power"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Half an hour"</CastingTime>
+<Ingredient>"A heart of a lesser demon"</Ingredient>
+<Page>"21"</Page>
+<RitualType>"RULES-V2RITUAL_DIVINE"</RitualType>
+<ArcaneLanguage>"Demonic"</ArcaneLanguage>
+<MagicMin>"2"</MagicMin>
+<XPCost>"200"</XPCost>
+<Conditions>"The ritual must be performed at a shrine or temple dedicated to the casters chaos god."</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_RITUALS_SUMMON_DEMON_HORDE">
+<Description language="ENGLISH">"Summon Demon Horde"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"25"</CastingNumber>
+<CastingTime>"2 hours"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"21"</Page>
+<RitualType>"RULES-V2RITUAL_DIVINE"</RitualType>
+<ArcaneLanguage>"Demonic"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_RITUALS_SUMMON_GREATER_DEMON">
+<Description language="ENGLISH">"Summon Greater Demon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"35"</CastingNumber>
+<CastingTime>"4 hours"</CastingTime>
+<Ingredient>"The pure heart of a good priest, slain in ritual sacrifice"</Ingredient>
+<Page>"22"</Page>
+<RitualType>"RULES-V2RITUAL_DIVINE"</RitualType>
+<ArcaneLanguage>"Demonic"</ArcaneLanguage>
+<MagicMin>"4"</MagicMin>
+<XPCost>"400"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_NURGLE_STENCH_OF_NURGLE">
+<Description language="ENGLISH">"Stench of Nurgle"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nurgle"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A strip of rotten meat (+1)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_NURGLE_WRITHING_CLOAK">
+<Description language="ENGLISH">"Writhing Cloak"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nurgle"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Live maggots (+1)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_NURGLE_INFESTATION">
+<Description language="ENGLISH">"Infestation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nurgle"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A boring beetle (+1)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_NURGLE_REGENERATE">
+<Description language="ENGLISH">"Regenerate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nurgle"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"The blood of a troll (+2)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_NURGLE_STREAM_OF_CORRUPTION">
+<Description language="ENGLISH">"Stream of Corruption"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nurgle"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A vial of infected blood or pus (+2)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_NURGLE_HAND_OF_DECAY">
+<Description language="ENGLISH">"Hand of Decay"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nurgle"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"The spleen of a toad (+2)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_NURGLE_PLAGUE_WIND">
+<Description language="ENGLISH">"Plague Wind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nurgle"</Lore>
+<CastingNumber>"21"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Powdered skin of a Plaguebearer (+3)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SLAANESH_ACQUIESCENCE">
+<Description language="ENGLISH">"Acquiescence"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Slaanesh"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Powdered makeup (+1)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SLAANESH_DISILLUSIONMENT">
+<Description language="ENGLISH">"Disillusionment"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Slaanesh"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A snail soaked in spirits (+1)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SLAANESH_ALTER_ALLEGIANCE">
+<Description language="ENGLISH">"Alter Allegiance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Slaanesh"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Concentrated Musk (+2)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SLAANESH_TERROR">
+<Description language="ENGLISH">"Terror"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Slaanesh"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Daemonette Blood (+2)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SLAANESH_CHARM">
+<Description language="ENGLISH">"Charm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Slaanesh"</Lore>
+<CastingNumber>"21"</CastingNumber>
+<CastingTime>"One and a Half actions"</CastingTime>
+<Ingredient>"An item of jewellery worth at least 150 gc (+3)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SLAANESH_FLESHY_CURSE">
+<Description language="ENGLISH">"Fleshy Curse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Slaanesh"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"The heart of a mutant (+3)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_TZEENTCH_PINK_FIRE_OF_TZEENTCH">
+<Description language="ENGLISH">"Pink Fire of Tzeentch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Tzeentch"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A shot of gunpowder (+1)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_TZEENTCH_FAVOUR_OF_TZEENTCH">
+<Description language="ENGLISH">"Favour of Tzeentch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Tzeentch"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Religious symbol of Tzeentch (+1)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_TZEENTCH_TZEENTCH_S_SHROUD">
+<Description language="ENGLISH">"Tzeentch's Shroud"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Tzeentch"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Powdered ruby (+2)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_TZEENTCH_DISMISS">
+<Description language="ENGLISH">"Dismiss"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Tzeentch"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Religious symbol of Tzeentch (+2)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_TZEENTCH_TRANSFORMATION_OF_TZEENTCH">
+<Description language="ENGLISH">"Transformation of Tzeentch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Tzeentch"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Powdered Warpstone (+2)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_TZEENTCH_BOON_OF_FLIGHT">
+<Description language="ENGLISH">"Boon of Flight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Tzeentch"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Two actions"</CastingTime>
+<Ingredient>"A feather from a Great Eagle (+2)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_TZEENTCH_BOLT_OF_CHANGE">
+<Description language="ENGLISH">"Bolt of Change"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Tzeentch"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Two actions"</CastingTime>
+<Ingredient>"Blood of a Demon of Tzeentch (+2)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_TZEENTCH_HERALD_OF_CHANGE">
+<Description language="ENGLISH">"Herald of Change"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Tzeentch"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Two actions"</CastingTime>
+<Ingredient>"A humanoid heart, soaked in a solution of Warpstone (+2)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_TZEENTCH_TZEENTCH_S_FIRE_STORM">
+<Description language="ENGLISH">"Tzeentch's Fire Storm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Tzeentch"</Lore>
+<CastingNumber>"25"</CastingNumber>
+<CastingTime>"Two actions"</CastingTime>
+<Ingredient>"The tongue of a fire breathing creature (+3)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HORNED_RAT_ASSUME_RAT_FORM">
+<Description language="ENGLISH">"Assume Rat Form"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Horned Rat"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Teeth from a rat (+1)"</Ingredient>
+<Page>"27"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HORNED_RAT_AGILITY_OF_THE_RAT">
+<Description language="ENGLISH">"Agility of the Rat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Horned Rat"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Tail from a rat (+1)"</Ingredient>
+<Page>"28"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HORNED_RAT_MUSK_OF_COURAGE">
+<Description language="ENGLISH">"Musk of Courage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Horned Rat"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Dried heart of a dwarf (+1)"</Ingredient>
+<Page>"28"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HORNED_RAT_RESILIENCE_OF_THE_RAT">
+<Description language="ENGLISH">"Resilience of the Rat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Horned Rat"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A rat pelt (+1)"</Ingredient>
+<Page>"28"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HORNED_RAT_CLOAK_NATURE">
+<Description language="ENGLISH">"Cloak Nature"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Horned Rat"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"The eyes of the humanoid to resemble (+2)"</Ingredient>
+<Page>"28"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HORNED_RAT_WITHER">
+<Description language="ENGLISH">"Wither"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Horned Rat"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Dried skin of a human (+2)"</Ingredient>
+<Page>"28"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HORNED_RAT_PESTILENT_BREATH">
+<Description language="ENGLISH">"Pestilent Breath"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Horned Rat"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Half actions"</CastingTime>
+<Ingredient>"A rotting tongue (+2)"</Ingredient>
+<Page>"28"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HORNED_RAT_WARP_LIGHTNING">
+<Description language="ENGLISH">"Warp Lightning"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Horned Rat"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half actions"</CastingTime>
+<Ingredient>"A copper wire twisted into the symbol of the Horned Rat (+2)"</Ingredient>
+<Page>"29"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HORNED_RAT_EXCAVATE">
+<Description language="ENGLISH">"Excavate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Horned Rat"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A vial of acid (+2)"</Ingredient>
+<Page>"29"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HORNED_RAT_ENSHROUDING_MIST">
+<Description language="ENGLISH">"Enshrouding Mist"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Horned Rat"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"The knotted short intestine of a grave digger (+2)"</Ingredient>
+<Page>"29"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HORNED_RAT_PLAGUE">
+<Description language="ENGLISH">"Plague"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Horned Rat"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Diseased organ from a humanoid (+2)"</Ingredient>
+<Page>"29"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HORNED_RAT_DISSENT">
+<Description language="ENGLISH">"Dissent"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Horned Rat"</Lore>
+<CastingNumber>"19"</CastingNumber>
+<CastingTime>"Full and half actions"</CastingTime>
+<Ingredient>"A damaged religious symbol (+2)"</Ingredient>
+<Page>"29"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_HORNED_RAT_BURNING_WITHIN">
+<Description language="ENGLISH">"Burning Within"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Horned Rat"</Lore>
+<CastingNumber>"21"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Copper coiled around a small piece of Warpstone (+2)"</Ingredient>
+<Page>"30"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SOLKAN_VIGILANCE">
+<Description language="ENGLISH">"Vigilance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Solkan"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A black steel gauntlet (+1)"</Ingredient>
+<Page>"31"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SOLKAN_SWORD_OF_CLEANSING_FLAME">
+<Description language="ENGLISH">"Sword of Cleansing Flame"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Solkan"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A live flame, e.g. a torch (+1)"</Ingredient>
+<Page>"31"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SOLKAN_BANISH_DEMON">
+<Description language="ENGLISH">"Banish Demon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Solkan"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A symbol of Solkan (+2)"</Ingredient>
+<Page>"31"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SOLKAN_PROTECTION_FROM_CHAOS_TAINT">
+<Description language="ENGLISH">"Protection from Chaos Taint"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Solkan"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"The heart of a dwarf (+2)"</Ingredient>
+<Page>"31"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SOLKAN_SACRED_CIRCLE">
+<Description language="ENGLISH">"Sacred Circle"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Solkan"</Lore>
+<CastingNumber>"19"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A bottle of blessed water (+2)"</Ingredient>
+<Page>"32"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SOLKAN_DIVINE_INQUISITION">
+<Description language="ENGLISH">"Divine Inquisition"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Solkan"</Lore>
+<CastingNumber>"21"</CastingNumber>
+<CastingTime>"Full and half action"</CastingTime>
+<Ingredient>"A symbol of Solkan made from crystal (+2)"</Ingredient>
+<Page>"32"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_RITUALS_POOL_POWER">
+<Description language="ENGLISH">"Pool Power"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Ten minutes"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"7"</Page>
+<RitualType>"RULES-V2RITUAL_DIVINE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"2"</MagicMin>
+<XPCost>"200"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_RITUALS_PURIFICATION_RITE">
+<Description language="ENGLISH">"Purification Rite"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"One hour"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"7"</Page>
+<RitualType>"RULES-V2RITUAL_DIVINE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"2"</MagicMin>
+<XPCost>"200"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_RITUALS_CURSE_OF_THE_SPECTRE">
+<Description language="ENGLISH">"Curse of the Spectre"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Four hours followed by an additional 20 minutes per Purification Rite to be dispelled (see description)"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"8"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_RITUALS_RANALD_S_FORTUNE">
+<Description language="ENGLISH">"Ranald's Fortune"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"One hour"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"9"</Page>
+<RitualType>"RULES-V2RITUAL_DIVINE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_RITUALS_TAP_EARTHPOWER">
+<Description language="ENGLISH">"Tap Earthpower"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"30 minutes"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"9"</Page>
+<RitualType>"RULES-V2RITUAL_DIVINE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MANANN_PURIFY_WATER">
+<Description language="ENGLISH">"Purify Water"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"5 minutes"</CastingTime>
+<Ingredient>"A leaf from a freshwater water plant (+1)"</Ingredient>
+<Page>"10"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MANANN_SAFE_PASSAGE">
+<Description language="ENGLISH">"Safe Passage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A written sea shanty (+1)"</Ingredient>
+<Page>"10"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MANANN_CURRENTS_OF_WHIM">
+<Description language="ENGLISH">"Currents of Whim"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A bottle of rotgut spirits (+1)"</Ingredient>
+<Page>"10"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MANANN_SHARK_BITE">
+<Description language="ENGLISH">"Shark Bite"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Tooth of a shark (+2)"</Ingredient>
+<Page>"10"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MANANN_CONTROL_TIDES">
+<Description language="ENGLISH">"Control Tides"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Two full actions"</CastingTime>
+<Ingredient>"A small wooden paddle (+2)"</Ingredient>
+<Page>"10"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MANANN_SPLIT_THE_HEAVENS">
+<Description language="ENGLISH">"Split the Heavens"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A moonstone worth at least 10 gc (+2)"</Ingredient>
+<Page>"11"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MANANN_ANIMATE_WATER">
+<Description language="ENGLISH">"Animate Water"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Two full actions"</CastingTime>
+<Ingredient>"A jellyfish (+2)"</Ingredient>
+<Page>"11"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MANANN_RIPTIDE">
+<Description language="ENGLISH">"Riptide"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full and half action"</CastingTime>
+<Ingredient>"A piece of wood from a shipwreck (+2)"</Ingredient>
+<Page>"11"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MORR_HINDSIGHT">
+<Description language="ENGLISH">"Hindsight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Shoes from a corpse (+1)"</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MORR_FUNERAL_RITE">
+<Description language="ENGLISH">"Funeral Rite"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"20 minutes"</CastingTime>
+<Ingredient>"The name of the deceased written on parchment (+1)"</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MORR_INVISIBILITY_TO_UNDEAD">
+<Description language="ENGLISH">"Invisibility to Undead"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Cobwebs from a tomb (+1)"</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MORR_PROTECTION_OF_M_RR">
+<Description language="ENGLISH">"Protection of Mórr"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Infusion of graveroot (+1)"</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MORR_DEATH_WATCH">
+<Description language="ENGLISH">"Death Watch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"One dried and one fresh leaf (+1)"</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MORR_REVEAL_ETHEREAL_UNDEAD">
+<Description language="ENGLISH">"Reveal Ethereal Undead"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Blessed water (+2)"</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MORR_DIVINE_RAVENS">
+<Description language="ENGLISH">"Divine Ravens"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A silver mask (+2)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MORR_OPEN_M_RR_S_GATES">
+<Description language="ENGLISH">"Open Mórr's Gates"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Full and half Action"</CastingTime>
+<Ingredient>"Silver symbol of Mórr (+2)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MYRMIDIA_MAINTAIN_EQUIPMENT">
+<Description language="ENGLISH">"Maintain Equipment"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Two full actions"</CastingTime>
+<Ingredient>"Blacksmith's tongs or hammer (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MYRMIDIA_THE_BEST_DEFENCE">
+<Description language="ENGLISH">"The Best Defence"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A melee weapon (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MYRMIDIA_SUSTAIN_SIEGE">
+<Description language="ENGLISH">"Sustain Siege"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Two full actions"</CastingTime>
+<Ingredient>"Iron door wedge (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MYRMIDIA_DEFENCE_OF_MYRMIDIA">
+<Description language="ENGLISH">"Defence of Myrmidia"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A miniature shield and spear (+2)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MYRMIDIA_AGAINST_ALL_ODDS">
+<Description language="ENGLISH">"Against All Odds"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A miniature soldier (+2)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MYRMIDIA_SHIELD_ALLY">
+<Description language="ENGLISH">"Shield Ally"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Two miniature shields joined by string (+2)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MYRMIDIA_ANIMATE_SPEAR">
+<Description language="ENGLISH">"Animate Spear"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Two eagle feathers tied together by a puppet's string (+2)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_MYRMIDIA_SHIELD_OF_ARROW_RESISTANCE">
+<Description language="ENGLISH">"Shield of Arrow Resistance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"A full action"</CastingTime>
+<Ingredient>"A shield (+2)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_RANALD_SUBDUE">
+<Description language="ENGLISH">"Subdue"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A leather sap (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_RANALD_SWINDLE">
+<Description language="ENGLISH">"Swindle"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Any coin (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_RANALD_REVEAL_SECRETS">
+<Description language="ENGLISH">"Reveal Secrets"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Magnifying glass (+1)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_RANALD_THE_DEALER">
+<Description language="ENGLISH">"The Dealer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A signed contract (+1)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_RANALD_RETURN">
+<Description language="ENGLISH">"Return"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A pigeon's feather (+1)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_RANALD_FALSE_RECOLLECTION">
+<Description language="ENGLISH">"False Recollection"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A mask or disguise (+2)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_RANALD_SPIDER_WALK">
+<Description language="ENGLISH">"Spider Walk"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Legs of a spider (+2)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_RANALD_AETHYRIC_APPRAISAL">
+<Description language="ENGLISH">"Aethyric Appraisal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"2 Full actions"</CastingTime>
+<Ingredient>"A jeweller's monocle (+2)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SHALLYA_EASE_BIRTH">
+<Description language="ENGLISH">"Ease Birth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"2 minutes"</CastingTime>
+<Ingredient>"A bucket of hot water (+1)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SHALLYA_CALM">
+<Description language="ENGLISH">"Calm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A peppermint leaf (+1)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SHALLYA_FORTIFY_BODY">
+<Description language="ENGLISH">"Fortify Body"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A piece of tanned leather (+1)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SHALLYA_TEARS_OF_SHALLYA">
+<Description language="ENGLISH">"Tears Of Shallya"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A finger from a troll (+2)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SHALLYA_MEND">
+<Description language="ENGLISH">"Mend"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"10 minutes"</CastingTime>
+<Ingredient>"A healing draught (+2)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SHALLYA_VERMIN_WARD">
+<Description language="ENGLISH">"Vermin Ward"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Two full actions"</CastingTime>
+<Ingredient>"A pinch of pepper (+2)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SHALLYA_MERCY_OF_SHALLYA">
+<Description language="ENGLISH">"Mercy Of Shallya"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A feather from a white dove (+2)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SHALLYA_REGENERATE">
+<Description language="ENGLISH">"Regenerate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<CastingNumber>"26"</CastingNumber>
+<CastingTime>"2 hours"</CastingTime>
+<Ingredient>"A vial of water from a spring at Couronne (+2)"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SIGMAR_STRENGTH_OF_UNITY">
+<Description language="ENGLISH">"Strength of Unity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A handful of Imperial soil (+1)"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SIGMAR_HUNT_CHAOS">
+<Description language="ENGLISH">"Hunt Chaos"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Two full actions"</CastingTime>
+<Ingredient>"A piece of broken mirror (+1)"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SIGMAR_TERROR_OF_GHAL_MARAZ">
+<Description language="ENGLISH">"Terror Of Ghal Maraz"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Shrunken goblinoid testicles (+2)"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SIGMAR_DESTROY_AURA">
+<Description language="ENGLISH">"Destroy Aura"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"The skull of a chaos warrior (+2)"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SIGMAR_VIRTUE_OF_SIGMAR">
+<Description language="ENGLISH">"Virtue Of Sigmar"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"One full and one half action"</CastingTime>
+<Ingredient>"A single drop of Daemon blood (+2)"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SIGMAR_RESIST_FOUL_TEMPTATION">
+<Description language="ENGLISH">"Resist Foul Temptation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Silver symbol of Sigmar (+2)"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SIGMAR_SCOURGE_OF_CHAOS">
+<Description language="ENGLISH">"Scourge Of Chaos"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<CastingNumber>"19"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A miniature silver war hammer (+2)"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_SIGMAR_CHAOS_OVERCOME">
+<Description language="ENGLISH">"Chaos Overcome"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A golden ring (+2)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_TAAL_AND_RHYA_IDENTIFY_NATURE">
+<Description language="ENGLISH">"Identify Nature"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal And Rhya"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A sprig of a natural herb (+1)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_TAAL_AND_RHYA_PROTECTION_FROM_ELEMENTS">
+<Description language="ENGLISH">"Protection From Elements"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal And Rhya"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A strip of canvas (+1)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_TAAL_AND_RHYA_HEAL_ANIMAL">
+<Description language="ENGLISH">"Heal Animal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal And Rhya"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A sprig of mistletoe (+1)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_TAAL_AND_RHYA_MYSTIC_MIST">
+<Description language="ENGLISH">"Mystic Mist"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal And Rhya"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Two full actions"</CastingTime>
+<Ingredient>"A ball of cotton wool (+2)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_TAAL_AND_RHYA_WHIRL_WIND">
+<Description language="ENGLISH">"Whirl Wind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal And Rhya"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A wind chime (+2)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_TAAL_AND_RHYA_STAMPEDE">
+<Description language="ENGLISH">"Stampede"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal And Rhya"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"The jawbone of a snake (+2)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_TAAL_AND_RHYA_SHAPE_CHANGE">
+<Description language="ENGLISH">"Shape Change"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal And Rhya"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"The skin of the animal to be changed in to (+2)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_TAAL_AND_RHYA_SUMMON_SWARM">
+<Description language="ENGLISH">"Summon Swarm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal And Rhya"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full action and a half action"</CastingTime>
+<Ingredient>"A preserved part of the creature to be summoned (+2)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_ULRIC_SPEAK_WITH_WOLVES">
+<Description language="ENGLISH">"Speak With Wolves"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Tongue of a wolf that the caster has killed himself (+1)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_ULRIC_RESIST_CHILL">
+<Description language="ENGLISH">"Resist Chill"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A pinch of wolf fur (+1)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_ULRIC_DANCES_WITH_WOLVES">
+<Description language="ENGLISH">"Dances With Wolves"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"The leg bone or paw of a wolf (+1)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_ULRIC_ICICLE">
+<Description language="ENGLISH">"Icicle"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A thorn from an alpine tree (+1)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_ULRIC_FEARFUL_FLIGHT">
+<Description language="ENGLISH">"Fearful Flight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"The jawbone of a wolf (+2)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_ULRIC_HONOUR_IN_COMBAT">
+<Description language="ENGLISH">"Honour In Combat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A broken crossbow bolt (+2)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_ULRIC_CALL_WOLVES">
+<Description language="ENGLISH">"Call Wolves"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Full action but see below"</CastingTime>
+<Ingredient>"A handful of wolf fur (+2)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_ULRIC_CHILD_OF_ULRIC">
+<Description language="ENGLISH">"Child Of Ulric"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<CastingNumber>"21"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"The skinned hide of a wolf (+2)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_VERENA_UNEARTH_EVIDENCE">
+<Description language="ENGLISH">"Unearth Evidence"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A handful of dog fur (+1)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_VERENA_OWL_S_WISDOM">
+<Description language="ENGLISH">"Owl's Wisdom"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"An owl feather (+1)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_VERENA_NOT_FEAR_NOR_FAVOUR">
+<Description language="ENGLISH">"Not Fear Nor Favour"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Miniature scales (+1)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_VERENA_MEMORY_OF_DETAIL">
+<Description language="ENGLISH">"Memory Of Detail"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"5 minutes"</CastingTime>
+<Ingredient>"A vial of fish oil (+2)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_VERENA_ZONE_OF_TRUTH">
+<Description language="ENGLISH">"Zone Of Truth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A gavel (+2)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_VERENA_PLEAD_INSANITY">
+<Description language="ENGLISH">"Plead Insanity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"The brain of a lunatic (+2)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_VERENA_BANISH_FALSEHOOD">
+<Description language="ENGLISH">"Banish Falsehood"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A lit torch (+2)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_VERENA_WEIGHT_OF_JUSTICE">
+<Description language="ENGLISH">"Weight Of Justice"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"10 minutes"</CastingTime>
+<Ingredient>"A judges wig (+2)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LESSER_MAGIC_AMPLIFY">
+<Description language="ENGLISH">"Amplify"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"An ear horn (+1)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LESSER_MAGIC_DEAFEN">
+<Description language="ENGLISH">"Deafen"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A small drum (+1)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LESSER_MAGIC_DETECT_MAGIC">
+<Description language="ENGLISH">"Detect Magic"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Two full actions"</CastingTime>
+<Ingredient>"A monocle (+1)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LESSER_MAGIC_SUMMON_SMALL_ANIMAL">
+<Description language="ENGLISH">"Summon Small Animal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"One full action and one half action"</CastingTime>
+<Ingredient>"A piece of feather or fur etc. from the type of creature to be summoned (+1)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LESSER_MAGIC_IGNITE_MISSILES">
+<Description language="ENGLISH">"Ignite Missiles"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A match (+1)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LESSER_MAGIC_CONFUSE_COLOURS">
+<Description language="ENGLISH">"Confuse Colours"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A broken crystal prism (+2)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LESSER_MAGIC_PHYSICAL_ECHO">
+<Description language="ENGLISH">"Physical Echo"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"An iron needle (+2)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LESSER_MAGIC_MAGE_S_ARMOUR">
+<Description language="ENGLISH">"Mage's Armour"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A sheet of silk (+2)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LESSER_MAGIC_STEAL_MAGICAL_POWER">
+<Description language="ENGLISH">"Steal Magical Power"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"One full and one half action"</CastingTime>
+<Ingredient>"Any magical item or potion (+2)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LESSER_MAGIC_AETHYRIC_SNARE">
+<Description language="ENGLISH">"Aethyric Snare"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A spider's web (+2)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LESSER_MAGIC_MAGIC_TRAP">
+<Description language="ENGLISH">"Magic Trap"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A firework (+2)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LESSER_MAGIC_AETHYRIC_RAM">
+<Description language="ENGLISH">"Aethyric Ram"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"The horn of a bull (+2)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LESSER_MAGIC_AETHYRIC_ASSAULT">
+<Description language="ENGLISH">"Aethyric Assault"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A silver dagger (+2)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LESSER_MAGIC_SUPPRESS_AETHYR">
+<Description language="ENGLISH">"Suppress Aethyr"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"21"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A small magnet and a bone from a dead spell caster (+3)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LESSER_MAGIC_ACCELERATE_TIME">
+<Description language="ENGLISH">"Accelerate Time"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A minute glass filled with diamond dust with value at least 100 gc (+3)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="LEOP-SPEL_LESSER_MAGIC_TELEPORTATION">
+<Description language="ENGLISH">"Teleportation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"24 or 36 (see description)"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"The hand of any daemon (+3)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="LEOP-EQUI_CREATURES_CAMEL">
+<Description language="ENGLISH">"Camel"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"23;0;39;43;25;14;10;10;0;13;3;4;7;0;0;0"</Profile>
+<Skills>"Perception, Swim"</Skills>
+<Talents>"Acute Hearing, Keen Senses"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"3"</Page>
+</EquipmentV2>
+<EquipmentV2 id="LEOP-EQUI_CREATURES_ELEPHANT">
+<Description language="ENGLISH">"Elephant"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"33;0;68;61;20;18;29;10;4;48;6;6;4;0;0;0"</Profile>
+<Skills>"Perception, Swim"</Skills>
+<Talents>"Natural Weapons, Strike Mighty Blow, Terrifying, Unstoppable Blows"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"4"</Page>
+</EquipmentV2>
+<EquipmentV2 id="LEOP-EQUI_CREATURES_GIANT_SCORPION">
+<Description language="ENGLISH">"Giant Scorpion"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"35;0;41;42;40;15;35;5;2;25;4;4;6;0;0;0"</Profile>
+<Skills>"Concealment, Perception +10%, Silent Move"</Skills>
+<Talents>"Frightening, Keen Senses, Natural Weapons, Night Vision"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"4"</Page>
+</EquipmentV2>
+<EquipmentV2 id="LEOP-EQUI_CREATURES_TIGER">
+<Description language="ENGLISH">"Tiger"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"45;0;50;44;35;14;40;0;3;17;5;4;8;0;0;0"</Profile>
+<Skills>"Concealment +10%, Follow Trail, Perception +10%, Silent Move +10%, Swim +10%"</Skills>
+<Talents>"Keen Senses, Natural Weapons, Night Vision"</Talents>
+<Note>""</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="LEOP-EQUI_CREATURES_TEMPLE_DOG">
+<Description language="ENGLISH">"Temple Dog"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"45;0;54;51;30;32;34;10;3;26;5;5;5;0;0;0"</Profile>
+<Skills>"Perception"</Skills>
+<Talents>"Daemonic Aura, Frightening, Keen Senses, Natural Weapons, Night Vision, Resistant to Magic, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="LEOP-EQUI_CREATURES_SKELETON_GUARDIAN">
+<Description language="ENGLISH">"Skeleton Guardian"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"45;30;45;40;40;0;0;0;2;14;4;4;4;0;0;0"</Profile>
+<Note>""</Note>
+<Page>"3"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_GOBLINOIDS">
+<Description language="ENGLISH">"Common Knowledge (Goblinoids)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE">
+<Description language="ENGLISH">"Speak Language (Goblin Tongue)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="LEOP-T_EXTRA_SPELL__LOCATE_CORPSE">
+<Description language="ENGLISH">"Extra Spell (Locate Corpse)"</Description>
+<Generique>"TOC-T_EXTRA_SPELL__*"</Generique>
+<Page>"2"</Page>
+</Talent>
+<Talent id="LEOP-T_EXTRA_SPELL__EMBALM">
+<Description language="ENGLISH">"Extra Spell (Embalm)"</Description>
+<Generique>"TOC-T_EXTRA_SPELL__*"</Generique>
+<Page>"2"</Page>
+</Talent>
+<Talent id="LEOP-T_EXTRA_SPELL__TOMB_ROT">
+<Description language="ENGLISH">"Extra Spell (Tomb Rot)"</Description>
+<Generique>"TOC-T_EXTRA_SPELL__*"</Generique>
+<Page>"2"</Page>
+</Talent>
+<Talent id="LEOP-T_EXTRA_SPELL__WIGHT_BLADE">
+<Description language="ENGLISH">"Extra Spell (Wight Blade)"</Description>
+<Generique>"TOC-T_EXTRA_SPELL__*"</Generique>
+<Page>"2"</Page>
+</Talent>
+<Talent id="LEOP-T_EXTRA_SPELL__BLOOD_BRIDGE">
+<Description language="ENGLISH">"Extra Spell (Blood Bridge)"</Description>
+<Generique>"TOC-T_EXTRA_SPELL__*"</Generique>
+<Page>"2"</Page>
+</Talent>
+<Talent id="LEOP-T_EXTRA_SPELL__RIGOR_MORTIS">
+<Description language="ENGLISH">"Extra Spell (Rigor Mortis)"</Description>
+<Generique>"TOC-T_EXTRA_SPELL__*"</Generique>
+<Page>"2"</Page>
+</Talent>
+<Talent id="LEOP-T_EXTRA_SPELL__EXTEND_CONTROL">
+<Description language="ENGLISH">"Extra Spell (Extend Control)"</Description>
+<Generique>"TOC-T_EXTRA_SPELL__*"</Generique>
+<Page>"2"</Page>
+</Talent>
+<Talent id="LEOP-T_EXTRA_SPELL__SPIRIT_FORM">
+<Description language="ENGLISH">"Extra Spell (Spirit Form)"</Description>
+<Generique>"TOC-T_EXTRA_SPELL__*"</Generique>
+<Page>"2"</Page>
+</Talent>
+<Talent id="LEOP-T_EXTRA_SPELL__FEIGN_DEATH">
+<Description language="ENGLISH">"Extra Spell (Feign Death)"</Description>
+<Generique>"TOC-T_EXTRA_SPELL__*"</Generique>
+<Page>"3"</Page>
+</Talent>
+<Talent id="LEOP-T_EXTRA_SPELL__SKELETON_GUARDIAN">
+<Description language="ENGLISH">"Extra Spell (Skeleton Guardian)"</Description>
+<Generique>"TOC-T_EXTRA_SPELL__*"</Generique>
+<Page>"3"</Page>
+</Talent>
+<Talent id="LEOP-T_EXTRA_SPELL__MAINTAIN_CONTROL">
+<Description language="ENGLISH">"Extra Spell (Maintain Control)"</Description>
+<Generique>"TOC-T_EXTRA_SPELL__*"</Generique>
+<Page>"3"</Page>
+</Talent>
+<Talent id="LEOP-T_EXTRA_SPELL__SPIRIT_SPEAK">
+<Description language="ENGLISH">"Extra Spell (Spirit Speak)"</Description>
+<Generique>"TOC-T_EXTRA_SPELL__*"</Generique>
+<Page>"3"</Page>
+</Talent>
+<Talent id="LEOP-T_EXTRA_SPELL__WAIL_OF_THE_BANSHEE">
+<Description language="ENGLISH">"Extra Spell (Wail Of The Banshee)"</Description>
+<Generique>"TOC-T_EXTRA_SPELL__*"</Generique>
+<Page>"3"</Page>
+</Talent>
+<Talent id="LEOP-T_EXTRA_SPELL__CURSE_OF_UNDEATH">
+<Description language="ENGLISH">"Extra Spell (Curse Of Undeath)"</Description>
+<Generique>"TOC-T_EXTRA_SPELL__*"</Generique>
+<Page>"4"</Page>
+</Talent>
+<Talent id="LEOP-T_DIVINE_LORE__HOETH">
+<Description language="ENGLISH">"Divine Lore (Hoeth)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"3"</Page>
+</Talent>
+<Talent id="LEOP-T_DIVINE_LORE__GORK">
+<Description language="ENGLISH">"Divine Lore (Gork)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"13"</Page>
+</Talent>
+<Talent id="LEOP-T_DIVINE_LORE__MORK">
+<Description language="ENGLISH">"Divine Lore (Mork)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"13"</Page>
+</Talent>
+<Talent id="LEOP-T_DIVINE_LORE__KHAKKEKK">
+<Description language="ENGLISH">"Divine Lore (Khakkekk)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"13"</Page>
+</Talent>
+<Talent id="LEOP-T_DIVINE_LORE__GRUNGNI">
+<Description language="ENGLISH">"Divine Lore (Grungni)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"6"</Page>
+</Talent>
+<Talent id="LEOP-T_DIVINE_LORE__ESMERALDA">
+<Description language="ENGLISH">"Divine Lore (Esmeralda)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"7"</Page>
+</Talent>
+<Talent id="LEOP-T_DIVINE_LORE__LIADRIEL">
+<Description language="ENGLISH">"Divine Lore (Liadriel)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"8"</Page>
+</Talent>
+<Talent id="LEOP-T_DARK_LORE__HEDGE">
+<Description language="ENGLISH">"Dark Lore (Hedge)"</Description>
+<Generique>"RULES-T_DARK_LORE__*"</Generique>
+<Page>"3"</Page>
+</Talent>
+<Talent id="LEOP-T_DIVINE_LORE__GRIMNIR">
+<Description language="ENGLISH">"Divine Lore (Grimnir)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"8"</Page>
+</Talent>
+<Talent id="LEOP-T_DIVINE_LORE__NURGLE">
+<Description language="ENGLISH">"Divine Lore (Nurgle)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"22"</Page>
+</Talent>
+<Talent id="LEOP-T_DIVINE_LORE__SLAANESH">
+<Description language="ENGLISH">"Divine Lore (Slaanesh)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"23"</Page>
+</Talent>
+<Talent id="LEOP-T_DIVINE_LORE__TZEENTCH">
+<Description language="ENGLISH">"Divine Lore (Tzeentch)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"24"</Page>
+</Talent>
+<Talent id="LEOP-T_DIVINE_LORE__HORNED_RAT">
+<Description language="ENGLISH">"Divine Lore (Horned Rat)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"27"</Page>
+</Talent>
+<Talent id="LEOP-T_DIVINE_LORE__SOLKAN">
+<Description language="ENGLISH">"Divine Lore (Solkan)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"31"</Page>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+<DATA_SPELL_TALENT>
+<Sort id="LEOP-SPEL_SWORDMASTER_OF_HOETH">
+<Talent>"LEOP-T_DIVINE_LORE__HOETH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_APOTHEOSIS">
+<Talent>"LEOP-T_DIVINE_LORE__HOETH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HAND_OF_GLORY">
+<Talent>"LEOP-T_DIVINE_LORE__HOETH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_FIERY_CONVOCATION">
+<Talent>"LEOP-T_DIVINE_LORE__HOETH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_BANISHMENT">
+<Talent>"LEOP-T_DIVINE_LORE__HOETH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_GLAMOUR_OF_TECLIS">
+<Talent>"LEOP-T_DIVINE_LORE__HOETH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_CURSE_OF_ARROW_ATTRACTION">
+<Talent>"LEOP-T_DIVINE_LORE__HOETH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_INSIGHT_OF_HOETH">
+<Talent>"LEOP-T_DIVINE_LORE__HOETH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_DRAIN_MAGIC">
+<Talent>"LEOP-T_DIVINE_LORE__HOETH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_WALK_BETWEEN_WORLDS">
+<Talent>"LEOP-T_DIVINE_LORE__HOETH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_AURA_OF_NULLIFICATION">
+<Talent>"LEOP-T_DIVINE_LORE__HOETH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_CORUSCATION_OF_FINREIRE">
+<Talent>"LEOP-T_DIVINE_LORE__HOETH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_GORK_LL_FIX_IT">
+<Talent>"LEOP-T_DIVINE_LORE__GORK"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_OI_WOT_YOU_LOOKIN_AT">
+<Talent>"LEOP-T_DIVINE_LORE__GORK"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_EADBUTT">
+<Talent>"LEOP-T_DIVINE_LORE__GORK"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_BASH_EM_LADZ">
+<Talent>"LEOP-T_DIVINE_LORE__GORK"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_LOOK_ERE_BOYZ_I_Z_A_BOAR">
+<Talent>"LEOP-T_DIVINE_LORE__GORK"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_FOOT_OF_GORK">
+<Talent>"LEOP-T_DIVINE_LORE__GORK"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_I_FINK_I_GOT_IT">
+<Talent>"LEOP-T_DIVINE_LORE__MORK"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_UNLOCK">
+<Talent>"LEOP-T_DIVINE_LORE__MORK"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_STOP_YER_COMPLAININ">
+<Talent>"LEOP-T_DIVINE_LORE__MORK"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_DIE_YER_GIT">
+<Talent>"LEOP-T_DIVINE_LORE__MORK"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_YOU_EAR_THAT">
+<Talent>"LEOP-T_DIVINE_LORE__MORK"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_WAAAGH">
+<Talent>"LEOP-T_DIVINE_LORE__MORK"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SHADOWING">
+<Talent>"LEOP-T_DIVINE_LORE__KHAKKEKK"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_BLOOD_RAGE">
+<Talent>"LEOP-T_DIVINE_LORE__KHAKKEKK"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_DRAW_FORTH_THE_BLOOD">
+<Talent>"LEOP-T_DIVINE_LORE__KHAKKEKK"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SUMMON_DEMON">
+<Talent>"LEOP-T_DIVINE_LORE__KHAKKEKK"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_WAKE_UNDEAD">
+<Talent>"LEOP-T_DIVINE_LORE__KHAKKEKK"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_CURSE_OF_KHAKKEKK">
+<Talent>"LEOP-T_DIVINE_LORE__KHAKKEKK"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_DEDUCTION_OF_FORM">
+<Talent>"LEOP-T_DIVINE_LORE__GRUNGNI"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SOFTEN_STONE">
+<Talent>"LEOP-T_DIVINE_LORE__GRUNGNI"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_BODY_OF_EARTH">
+<Talent>"LEOP-T_DIVINE_LORE__GRUNGNI"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_ENCUMBER">
+<Talent>"LEOP-T_DIVINE_LORE__GRUNGNI"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_CAVERN_DARKNESS">
+<Talent>"LEOP-T_DIVINE_LORE__GRUNGNI"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_FORGE">
+<Talent>"LEOP-T_DIVINE_LORE__GRUNGNI"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_PURIFY">
+<Talent>"LEOP-T_DIVINE_LORE__ESMERALDA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_ENTHUSE">
+<Talent>"LEOP-T_DIVINE_LORE__ESMERALDA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_INTOXICATE">
+<Talent>"LEOP-T_DIVINE_LORE__ESMERALDA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HERO_S_FEAST">
+<Talent>"LEOP-T_DIVINE_LORE__ESMERALDA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_CURE">
+<Talent>"LEOP-T_DIVINE_LORE__ESMERALDA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_STATUS">
+<Talent>"LEOP-T_DIVINE_LORE__ESMERALDA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_KISS_OF_THE_ADDER">
+<Talent>"RULES-T_DIVINE_LORE__KHAINE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_ENFEEBLE">
+<Talent>"RULES-T_DIVINE_LORE__KHAINE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_DOOMBOLT">
+<Talent>"RULES-T_DIVINE_LORE__KHAINE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_DOMINION">
+<Talent>"RULES-T_DIVINE_LORE__KHAINE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_LEECH_LIFE">
+<Talent>"RULES-T_DIVINE_LORE__KHAINE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_CHILL_WIND">
+<Talent>"RULES-T_DIVINE_LORE__KHAINE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MERRIMENT">
+<Talent>"LEOP-T_DIVINE_LORE__LIADRIEL"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_PURIFY_FOOD_DRINK">
+<Talent>"LEOP-T_DIVINE_LORE__LIADRIEL"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_DETECT_SNARES_PITS">
+<Talent>"LEOP-T_DIVINE_LORE__LIADRIEL"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_NATURE_S_STEP">
+<Talent>"LEOP-T_DIVINE_LORE__LIADRIEL"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_NATURE_S_GUARDIAN">
+<Talent>"LEOP-T_DIVINE_LORE__LIADRIEL"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_NATURE_S_TRANSMUTATION">
+<Talent>"LEOP-T_DIVINE_LORE__LIADRIEL"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HEDGE_DIVINE">
+<Talent>"LEOP-T_DARK_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HEDGE_RAVEN_FORM">
+<Talent>"LEOP-T_DARK_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HEDGE_MIMIC">
+<Talent>"LEOP-T_DARK_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HEDGE_LIFE_BLOOD">
+<Talent>"LEOP-T_DARK_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HEDGE_CURSE">
+<Talent>"LEOP-T_DARK_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HEDGE_COMMUNE">
+<Talent>"LEOP-T_DARK_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HEDGE_BLIGHT">
+<Talent>"LEOP-T_DARK_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HEDGE_PROSPER">
+<Talent>"LEOP-T_DARK_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HEDGE_NIGHTMARE">
+<Talent>"LEOP-T_DARK_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HEDGE_WITHERING_WIND">
+<Talent>"LEOP-T_DARK_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_GRUNGNI_MAGIC_LIGHT">
+<Talent>"LEOP-T_DIVINE_LORE__GRUNGNI"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_GRUNGNI_DETECT_METAL">
+<Talent>"LEOP-T_DIVINE_LORE__GRUNGNI"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_GRUNGNI_ASSAULT_OF_STONES">
+<Talent>"LEOP-T_DIVINE_LORE__GRUNGNI"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_GRUNGNI_BODY_OF_EARTH">
+<Talent>"LEOP-T_DIVINE_LORE__GRUNGNI"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_GRUNGNI_CRUMBLE_STONE">
+<Talent>"LEOP-T_DIVINE_LORE__GRUNGNI"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_GRUNGNI_FORGE_STONE">
+<Talent>"LEOP-T_DIVINE_LORE__GRUNGNI"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_GRIMNIR_AXE_OF_GRIMNIR">
+<Talent>"LEOP-T_DIVINE_LORE__GRIMNIR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_GRIMNIR_FRENZY_OF_BATTLE">
+<Talent>"LEOP-T_DIVINE_LORE__GRIMNIR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_GRIMNIR_INSPIRATION_OF_GRIMNIR">
+<Talent>"LEOP-T_DIVINE_LORE__GRIMNIR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_GRIMNIR_SLAYER">
+<Talent>"LEOP-T_DIVINE_LORE__GRIMNIR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_GRIMNIR_AURA_OF_FEAR">
+<Talent>"LEOP-T_DIVINE_LORE__GRIMNIR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_GRIMNIR_DURABILITY_OF_BODY">
+<Talent>"LEOP-T_DIVINE_LORE__GRIMNIR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_ESMERALDA_ZONE_OF_WARMTH">
+<Talent>"LEOP-T_DIVINE_LORE__ESMERALDA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_ESMERALDA_HEALING_HEARTH">
+<Talent>"LEOP-T_DIVINE_LORE__ESMERALDA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_ESMERALDA_RESTFUL_SLEEP">
+<Talent>"LEOP-T_DIVINE_LORE__ESMERALDA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_ESMERALDA_ABUNDANCE">
+<Talent>"LEOP-T_DIVINE_LORE__ESMERALDA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_ESMERALDA_PACIFY">
+<Talent>"LEOP-T_DIVINE_LORE__ESMERALDA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_ESMERALDA_HEARTH_AND_HOME">
+<Talent>"LEOP-T_DIVINE_LORE__ESMERALDA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_KHAINE_SHADOWMELD">
+<Talent>"RULES-T_DIVINE_LORE__KHAINE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_KHAINE_MURDER">
+<Talent>"RULES-T_DIVINE_LORE__KHAINE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_KHAINE_BLIND_ENEMY">
+<Talent>"RULES-T_DIVINE_LORE__KHAINE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_KHAINE_SOUL_BIND">
+<Talent>"RULES-T_DIVINE_LORE__KHAINE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_KHAINE_SHROUD_OF_SHADOWS">
+<Talent>"RULES-T_DIVINE_LORE__KHAINE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_KHAINE_SOUL_STEAL">
+<Talent>"RULES-T_DIVINE_LORE__KHAINE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_LIADRIEL_ANIMAL_MASTERY">
+<Talent>"LEOP-T_DIVINE_LORE__LIADRIEL"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_LIADRIEL_GRACE">
+<Talent>"LEOP-T_DIVINE_LORE__LIADRIEL"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_LIADRIEL_TANGLETHORN">
+<Talent>"LEOP-T_DIVINE_LORE__LIADRIEL"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_LIADRIEL_HEAL_VEGETATION">
+<Talent>"LEOP-T_DIVINE_LORE__LIADRIEL"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_LIADRIEL_LIADRIEL_S_COMMUNICATION">
+<Talent>"LEOP-T_DIVINE_LORE__LIADRIEL"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_LIADRIEL_ILLUSION">
+<Talent>"LEOP-T_DIVINE_LORE__LIADRIEL"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_NURGLE_STENCH_OF_NURGLE">
+<Talent>"LEOP-T_DIVINE_LORE__NURGLE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_NURGLE_WRITHING_CLOAK">
+<Talent>"LEOP-T_DIVINE_LORE__NURGLE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_NURGLE_INFESTATION">
+<Talent>"LEOP-T_DIVINE_LORE__NURGLE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_NURGLE_REGENERATE">
+<Talent>"LEOP-T_DIVINE_LORE__NURGLE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_NURGLE_STREAM_OF_CORRUPTION">
+<Talent>"LEOP-T_DIVINE_LORE__NURGLE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_NURGLE_HAND_OF_DECAY">
+<Talent>"LEOP-T_DIVINE_LORE__NURGLE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_NURGLE_PLAGUE_WIND">
+<Talent>"LEOP-T_DIVINE_LORE__NURGLE"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SLAANESH_ACQUIESCENCE">
+<Talent>"LEOP-T_DIVINE_LORE__SLAANESH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SLAANESH_DISILLUSIONMENT">
+<Talent>"LEOP-T_DIVINE_LORE__SLAANESH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SLAANESH_ALTER_ALLEGIANCE">
+<Talent>"LEOP-T_DIVINE_LORE__SLAANESH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SLAANESH_TERROR">
+<Talent>"LEOP-T_DIVINE_LORE__SLAANESH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SLAANESH_CHARM">
+<Talent>"LEOP-T_DIVINE_LORE__SLAANESH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SLAANESH_FLESHY_CURSE">
+<Talent>"LEOP-T_DIVINE_LORE__SLAANESH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_TZEENTCH_PINK_FIRE_OF_TZEENTCH">
+<Talent>"LEOP-T_DIVINE_LORE__TZEENTCH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_TZEENTCH_FAVOUR_OF_TZEENTCH">
+<Talent>"LEOP-T_DIVINE_LORE__TZEENTCH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_TZEENTCH_TZEENTCH_S_SHROUD">
+<Talent>"LEOP-T_DIVINE_LORE__TZEENTCH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_TZEENTCH_DISMISS">
+<Talent>"LEOP-T_DIVINE_LORE__TZEENTCH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_TZEENTCH_TRANSFORMATION_OF_TZEENTCH">
+<Talent>"LEOP-T_DIVINE_LORE__TZEENTCH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_TZEENTCH_BOON_OF_FLIGHT">
+<Talent>"LEOP-T_DIVINE_LORE__TZEENTCH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_TZEENTCH_BOLT_OF_CHANGE">
+<Talent>"LEOP-T_DIVINE_LORE__TZEENTCH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_TZEENTCH_HERALD_OF_CHANGE">
+<Talent>"LEOP-T_DIVINE_LORE__TZEENTCH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_TZEENTCH_TZEENTCH_S_FIRE_STORM">
+<Talent>"LEOP-T_DIVINE_LORE__TZEENTCH"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HORNED_RAT_ASSUME_RAT_FORM">
+<Talent>"LEOP-T_DIVINE_LORE__HORNED_RAT"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HORNED_RAT_AGILITY_OF_THE_RAT">
+<Talent>"LEOP-T_DIVINE_LORE__HORNED_RAT"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HORNED_RAT_MUSK_OF_COURAGE">
+<Talent>"LEOP-T_DIVINE_LORE__HORNED_RAT"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HORNED_RAT_RESILIENCE_OF_THE_RAT">
+<Talent>"LEOP-T_DIVINE_LORE__HORNED_RAT"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HORNED_RAT_CLOAK_NATURE">
+<Talent>"LEOP-T_DIVINE_LORE__HORNED_RAT"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HORNED_RAT_WITHER">
+<Talent>"LEOP-T_DIVINE_LORE__HORNED_RAT"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HORNED_RAT_PESTILENT_BREATH">
+<Talent>"LEOP-T_DIVINE_LORE__HORNED_RAT"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HORNED_RAT_WARP_LIGHTNING">
+<Talent>"LEOP-T_DIVINE_LORE__HORNED_RAT"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HORNED_RAT_EXCAVATE">
+<Talent>"LEOP-T_DIVINE_LORE__HORNED_RAT"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HORNED_RAT_ENSHROUDING_MIST">
+<Talent>"LEOP-T_DIVINE_LORE__HORNED_RAT"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HORNED_RAT_PLAGUE">
+<Talent>"LEOP-T_DIVINE_LORE__HORNED_RAT"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HORNED_RAT_DISSENT">
+<Talent>"LEOP-T_DIVINE_LORE__HORNED_RAT"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_HORNED_RAT_BURNING_WITHIN">
+<Talent>"LEOP-T_DIVINE_LORE__HORNED_RAT"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SOLKAN_VIGILANCE">
+<Talent>"LEOP-T_DIVINE_LORE__SOLKAN"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SOLKAN_SWORD_OF_CLEANSING_FLAME">
+<Talent>"LEOP-T_DIVINE_LORE__SOLKAN"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SOLKAN_BANISH_DEMON">
+<Talent>"LEOP-T_DIVINE_LORE__SOLKAN"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SOLKAN_PROTECTION_FROM_CHAOS_TAINT">
+<Talent>"LEOP-T_DIVINE_LORE__SOLKAN"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SOLKAN_SACRED_CIRCLE">
+<Talent>"LEOP-T_DIVINE_LORE__SOLKAN"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SOLKAN_DIVINE_INQUISITION">
+<Talent>"LEOP-T_DIVINE_LORE__SOLKAN"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_LOCATE_CORPSE">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_EMBALM">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_TOMB_ROT">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_WIGHT_BLADE">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_BLOOD_BRIDGE">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_RIGOR_MORTIS">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_EXTEND_CONTROL">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SPIRIT_FORM">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_FEIGN_DEATH">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SKELETON_GUARDIAN">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MAINTAIN_CONTROL">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SPIRIT_SPEAK">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_WAIL_OF_THE_BANSHEE">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_CURSE_OF_UNDEATH">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MANANN_PURIFY_WATER">
+<Talent>"RULES-T_DIVINE_LORE__MANANN"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MANANN_SAFE_PASSAGE">
+<Talent>"RULES-T_DIVINE_LORE__MANANN"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MANANN_CURRENTS_OF_WHIM">
+<Talent>"RULES-T_DIVINE_LORE__MANANN"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MANANN_SHARK_BITE">
+<Talent>"RULES-T_DIVINE_LORE__MANANN"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MANANN_CONTROL_TIDES">
+<Talent>"RULES-T_DIVINE_LORE__MANANN"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MANANN_SPLIT_THE_HEAVENS">
+<Talent>"RULES-T_DIVINE_LORE__MANANN"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MANANN_ANIMATE_WATER">
+<Talent>"RULES-T_DIVINE_LORE__MANANN"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MANANN_RIPTIDE">
+<Talent>"RULES-T_DIVINE_LORE__MANANN"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MORR_HINDSIGHT">
+<Talent>"RULES-T_DIVINE_LORE__MORR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MORR_FUNERAL_RITE">
+<Talent>"RULES-T_DIVINE_LORE__MORR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MORR_INVISIBILITY_TO_UNDEAD">
+<Talent>"RULES-T_DIVINE_LORE__MORR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MORR_PROTECTION_OF_M_RR">
+<Talent>"RULES-T_DIVINE_LORE__MORR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MORR_DEATH_WATCH">
+<Talent>"RULES-T_DIVINE_LORE__MORR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MORR_REVEAL_ETHEREAL_UNDEAD">
+<Talent>"RULES-T_DIVINE_LORE__MORR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MORR_DIVINE_RAVENS">
+<Talent>"RULES-T_DIVINE_LORE__MORR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MORR_OPEN_M_RR_S_GATES">
+<Talent>"RULES-T_DIVINE_LORE__MORR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MYRMIDIA_MAINTAIN_EQUIPMENT">
+<Talent>"RULES-T_DIVINE_LORE__MYRMIDIA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MYRMIDIA_THE_BEST_DEFENCE">
+<Talent>"RULES-T_DIVINE_LORE__MYRMIDIA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MYRMIDIA_SUSTAIN_SIEGE">
+<Talent>"RULES-T_DIVINE_LORE__MYRMIDIA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MYRMIDIA_DEFENCE_OF_MYRMIDIA">
+<Talent>"RULES-T_DIVINE_LORE__MYRMIDIA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MYRMIDIA_AGAINST_ALL_ODDS">
+<Talent>"RULES-T_DIVINE_LORE__MYRMIDIA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MYRMIDIA_SHIELD_ALLY">
+<Talent>"RULES-T_DIVINE_LORE__MYRMIDIA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MYRMIDIA_ANIMATE_SPEAR">
+<Talent>"RULES-T_DIVINE_LORE__MYRMIDIA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_MYRMIDIA_SHIELD_OF_ARROW_RESISTANCE">
+<Talent>"RULES-T_DIVINE_LORE__MYRMIDIA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_RANALD_SUBDUE">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_RANALD_SWINDLE">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_RANALD_REVEAL_SECRETS">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_RANALD_THE_DEALER">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_RANALD_RETURN">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_RANALD_FALSE_RECOLLECTION">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_RANALD_SPIDER_WALK">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_RANALD_AETHYRIC_APPRAISAL">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SHALLYA_EASE_BIRTH">
+<Talent>"RULES-T_DIVINE_LORE__SHALLYA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SHALLYA_CALM">
+<Talent>"RULES-T_DIVINE_LORE__SHALLYA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SHALLYA_FORTIFY_BODY">
+<Talent>"RULES-T_DIVINE_LORE__SHALLYA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SHALLYA_TEARS_OF_SHALLYA">
+<Talent>"RULES-T_DIVINE_LORE__SHALLYA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SHALLYA_MEND">
+<Talent>"RULES-T_DIVINE_LORE__SHALLYA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SHALLYA_VERMIN_WARD">
+<Talent>"RULES-T_DIVINE_LORE__SHALLYA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SHALLYA_MERCY_OF_SHALLYA">
+<Talent>"RULES-T_DIVINE_LORE__SHALLYA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SHALLYA_REGENERATE">
+<Talent>"RULES-T_DIVINE_LORE__SHALLYA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SIGMAR_STRENGTH_OF_UNITY">
+<Talent>"RULES-T_DIVINE_LORE__SIGMAR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SIGMAR_HUNT_CHAOS">
+<Talent>"RULES-T_DIVINE_LORE__SIGMAR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SIGMAR_TERROR_OF_GHAL_MARAZ">
+<Talent>"RULES-T_DIVINE_LORE__SIGMAR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SIGMAR_DESTROY_AURA">
+<Talent>"RULES-T_DIVINE_LORE__SIGMAR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SIGMAR_VIRTUE_OF_SIGMAR">
+<Talent>"RULES-T_DIVINE_LORE__SIGMAR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SIGMAR_RESIST_FOUL_TEMPTATION">
+<Talent>"RULES-T_DIVINE_LORE__SIGMAR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SIGMAR_SCOURGE_OF_CHAOS">
+<Talent>"RULES-T_DIVINE_LORE__SIGMAR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_SIGMAR_CHAOS_OVERCOME">
+<Talent>"RULES-T_DIVINE_LORE__SIGMAR"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_TAAL_AND_RHYA_IDENTIFY_NATURE">
+<Talent>"RULES-T_DIVINE_LORE__TAAL_RHYA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_TAAL_AND_RHYA_PROTECTION_FROM_ELEMENTS">
+<Talent>"RULES-T_DIVINE_LORE__TAAL_RHYA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_TAAL_AND_RHYA_HEAL_ANIMAL">
+<Talent>"RULES-T_DIVINE_LORE__TAAL_RHYA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_TAAL_AND_RHYA_MYSTIC_MIST">
+<Talent>"RULES-T_DIVINE_LORE__TAAL_RHYA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_TAAL_AND_RHYA_WHIRL_WIND">
+<Talent>"RULES-T_DIVINE_LORE__TAAL_RHYA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_TAAL_AND_RHYA_STAMPEDE">
+<Talent>"RULES-T_DIVINE_LORE__TAAL_RHYA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_TAAL_AND_RHYA_SHAPE_CHANGE">
+<Talent>"RULES-T_DIVINE_LORE__TAAL_RHYA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_TAAL_AND_RHYA_SUMMON_SWARM">
+<Talent>"RULES-T_DIVINE_LORE__TAAL_RHYA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_ULRIC_SPEAK_WITH_WOLVES">
+<Talent>"RULES-T_DIVINE_LORE__ULRIC"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_ULRIC_RESIST_CHILL">
+<Talent>"RULES-T_DIVINE_LORE__ULRIC"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_ULRIC_DANCES_WITH_WOLVES">
+<Talent>"RULES-T_DIVINE_LORE__ULRIC"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_ULRIC_ICICLE">
+<Talent>"RULES-T_DIVINE_LORE__ULRIC"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_ULRIC_FEARFUL_FLIGHT">
+<Talent>"RULES-T_DIVINE_LORE__ULRIC"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_ULRIC_HONOUR_IN_COMBAT">
+<Talent>"RULES-T_DIVINE_LORE__ULRIC"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_ULRIC_CALL_WOLVES">
+<Talent>"RULES-T_DIVINE_LORE__ULRIC"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_ULRIC_CHILD_OF_ULRIC">
+<Talent>"RULES-T_DIVINE_LORE__ULRIC"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_VERENA_UNEARTH_EVIDENCE">
+<Talent>"RULES-T_DIVINE_LORE__VERENA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_VERENA_OWL_S_WISDOM">
+<Talent>"RULES-T_DIVINE_LORE__VERENA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_VERENA_NOT_FEAR_NOR_FAVOUR">
+<Talent>"RULES-T_DIVINE_LORE__VERENA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_VERENA_MEMORY_OF_DETAIL">
+<Talent>"RULES-T_DIVINE_LORE__VERENA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_VERENA_ZONE_OF_TRUTH">
+<Talent>"RULES-T_DIVINE_LORE__VERENA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_VERENA_PLEAD_INSANITY">
+<Talent>"RULES-T_DIVINE_LORE__VERENA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_VERENA_BANISH_FALSEHOOD">
+<Talent>"RULES-T_DIVINE_LORE__VERENA"</Talent>
+</Sort>
+<Sort id="LEOP-SPEL_VERENA_WEIGHT_OF_JUSTICE">
+<Talent>"RULES-T_DIVINE_LORE__VERENA"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+</DATA_BOOK>

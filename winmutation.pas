@@ -5,7 +5,7 @@ unit WinMutation;
 interface
 
 uses
-  BCLabelContour, Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Spin, Grids,
+  BCLabelContour, Classes, SysUtils, Forms, Controls, Graphics, Dialogs, MessageTest, StdCtrls, Spin, Grids,
   BCButton, ChargeConstantes, ChargeTexte, GlobalFonts, ChargeCorruptionTable, UnitCalcul, XmlExportImport;
 
 type
@@ -63,17 +63,23 @@ type
     // Vrai une fois "accepter une mutation" cliqué - déverrouille le tirage Type (Résilience
     // reste possible avant, CONTEXT.md §2.7 étape 4).
     MutationAcceptee: Boolean;
+    // Jet 93-00 d'une table de dieu : la prochaine saisie est un D1000 sur la Table 3-1.
+    Retour31: Boolean;
     procedure UpdateSheetMutationType();
     procedure UpdateSheetMutationEntree();
     procedure AfficheTypeResolu(Jet: Integer);
     procedure AfficheEntreeResolue(Entree: StructureCorruptionTable);
     procedure RemplitTabMutationChoix();
+    function JetChaosSansFiche(Jet: Integer): Boolean;
+    procedure TireChaos(Jet: Integer; Hasard: Boolean);
   public
 
   end;
 
 var
   WinMutations: TWinMutations;
+
+function TexteEntreeMutation(const Entree: StructureCorruptionTable): String;
 
 implementation
 
@@ -164,6 +170,47 @@ procedure TWinMutations.FormCreate(Sender: TObject);
     ButtonMutationResilience.Enabled := MutationResilienceDisponible;
     ButtonMutationAccepter.Enabled   := True;
     Valider.Enabled                  := False;
+
+    // Marque divine (Marques des Dieux, WFRP2) : le type est deja connu (CorruptionDivine, table du dieu
+    // MutationLoreDivin), pas de Resilience ni de choix Physical/Mental - il ne reste que le tirage de la marque.
+    if MutationLoreDivin <> '' then
+      begin
+        TypeCorruptionResolu := CorruptionDivine;
+        MutationAcceptee     := True;
+        if Pos('Witch Lore', MutationLoreDivin) = 1 then
+          Self.Caption       := GetTexteLibelle('RULES-LAB_799')
+        else
+          Self.Caption       := GetTexteLibelle('RULES-LAB_780');
+        Self.Caption         := Self.Caption + ' : '
+                                + GetTexteLibelle('RULES-SPELLV2_' + UpperCase(StringReplace(StringReplace(StringReplace(
+                                    MutationLoreDivin, ' ', '_', [rfReplaceAll]), '(', '', [rfReplaceAll]), ')', '', [rfReplaceAll])));
+        ButtonMutationResilience.Visible := False;
+        ButtonMutationAccepter.Visible   := False;
+        GroupBoxMutationType.Visible     := False;
+      end;
+    // Mutation du Chaos (Tome of Corruption, WFRP2) : une seule table, tirage D1000 (Table 3-1). Meme mise
+    // en forme que la marque divine : pas de Resilience ni de choix Physical/Mental.
+    if MutationDuChaos then
+      begin
+        TypeCorruptionResolu := CorruptionMutation;
+        MutationAcceptee     := True;
+        Self.Caption         := GetTexteLibelle('RULES-LAB_782');
+        if MutationDieuChaos <> '' then Self.Caption := Self.Caption + ' : ' + MutationDieuChaos;
+        ButtonMutationResilience.Visible := False;
+        ButtonMutationAccepter.Visible   := False;
+        GroupBoxMutationType.Visible     := False;
+        if MutationDieuChaos <> '' then EditMutationEntreeResultat.MaxValue := 100
+        else EditMutationEntreeResultat.MaxValue := 1000;
+        // 173 mutations : la liste de choix prend la place du bloc Type (inutile ici), en haut a droite.
+        ButtonTypeHasard.Visible            := False;
+        LabelTypeResultat.Visible           := False;
+        EditMutationTypeResultat.Visible    := False;
+        ButtonMutationTypeValider.Visible   := False;
+        ButtonMutationTypePhysical.Visible  := False;
+        ButtonMutationTypeMental.Visible    := False;
+        TabMutationChoix.SetBounds(656, 24, 560, 330);
+        TabMutationChoix.ColWidths[2]       := 520;
+      end;
     UpdateSheetMutationType();
     UpdateSheetMutationEntree();
   end;
@@ -304,6 +351,17 @@ procedure TWinMutations.RadioButtonMutationEntreeClick(Sender: TObject);
     UpdateSheetMutationEntree();
   end;
 
+// Texte du memo : effet, precede pour une mutation du Chaos de ses points de peur et de son type (Single / Multiple N).
+function TexteEntreeMutation(const Entree: StructureCorruptionTable): String;
+  begin
+    Result := TexteOuPageMutation(Entree.Effet, Entree.Livre, Entree.Code);
+    if Entree.Variations <> '' then
+      Result := Result + LineEnding + LineEnding + Entree.Variations;
+    if Entree.Peur <> '' then
+      Result := GetTexteLibelle('RULES-LAB_783') + ' : ' + Entree.Peur
+                + '  (' + Entree.TypeMutation + ')' + LineEnding + Result;
+  end;
+
 // Résolution du tirage Entrée à partir d'une entrée déjà déterminée (Hasard ou Résultat via
 // CorruptionTableResultat) - PAS appelée depuis le double-clic de TabMutationChoix, qui est un
 // choix volontaire (voir TabMutationChoixDblClick). Redirige vers le mode Choix si le tirage
@@ -311,7 +369,8 @@ procedure TWinMutations.RadioButtonMutationEntreeClick(Sender: TObject);
 // encore désigner l'entrée réelle (CONTEXT.md §2.7, discuté avec Nono le 17/08/2026).
 procedure TWinMutations.AfficheEntreeResolue(Entree: StructureCorruptionTable);
   begin
-    if CompareRechercheValeur(Entree.Code, CorruptionChoixMJ) then
+    // CorruptionChoixMJ est sans livre (CORPHY_GM_S_CHOICE) : CompareRechercheValeur exige le meme livre des deux cotes
+    if CodeSansLivre(Entree.Code) = CorruptionChoixMJ then
       begin
         ShowMessage(GetTexteLibelle('RULES-MESS_054'));
         RadioButtonMutationEntreeChoix.Checked := True;
@@ -321,23 +380,81 @@ procedure TWinMutations.AfficheEntreeResolue(Entree: StructureCorruptionTable);
       begin
         EntreeResolue           := Entree;
         LabelEntreeLibelle.Text := EntreeResolue.Libelle;
-        MemoEntreeEffet.Text    := TexteOuPageMutation(EntreeResolue.Effet, EntreeResolue.Livre, EntreeResolue.Code);
+        MemoEntreeEffet.Text    := TexteEntreeMutation(EntreeResolue);
         Valider.Enabled         := True;
         UpdateSheetMutationEntree();
       end;
   end;
 
-procedure TWinMutations.ButtonEntreeHasardClick(Sender: TObject);
+// Table 3-1 : 986-995 = Roll Twice / Roll Three Times, 996-000 = Invent Your Own. Ces lignes n'ont pas
+// de fiche : on explique la regle et on passe en mode Choix. Renvoie True si le jet est l'un d'eux.
+function TWinMutations.JetChaosSansFiche(Jet: Integer): Boolean;
   begin
-    AfficheEntreeResolue(CorruptionTableResultat(TypeCorruptionResolu, Random(100) + 1));
+    Result := Jet >= 986;
+    if not Result then Exit;
+    if Jet <= 990 then ShowMessage(GetTexteLibelle('RULES-MESS_073'))
+    else if Jet <= 995 then ShowMessage(GetTexteLibelle('RULES-MESS_074'))
+    else ShowMessage(GetTexteLibelle('RULES-MESS_075'));
+    RadioButtonMutationEntreeChoix.Checked := True;
+    UpdateSheetMutationEntree();
+  end;
+
+// Tirage de la mutation du Chaos. Table d'un dieu (3-2 a 3-5, d100) : les jets 93-00 ne sont pas stockes,
+// le livre renvoie a la Table 3-1 (D1000), tiree alors au hasard. Sans dieu : Table 3-1 directement.
+procedure TWinMutations.TireChaos(Jet: Integer; Hasard: Boolean);
+  var
+    PCorruptionTable: StructureCorruptionTable;
+  begin
+    if (MutationDieuChaos <> '') and not Retour31 then
+      begin
+        PCorruptionTable := CorruptionTableResultat(TypeCorruptionResolu, Jet, MutationDieuChaos);
+        if PCorruptionTable.Code <> '' then
+          begin
+            AfficheEntreeResolue(PCorruptionTable);
+            Exit;
+          end;
+        ShowMessage(GetTexteLibelle('RULES-MESS_084'));
+        if not Hasard then
+          begin
+            // le joueur saisit lui-meme son D1000 (meme zone de saisie, plage 1-1000)
+            Retour31 := True;
+            EditMutationEntreeResultat.MaxValue := 1000;
+            EditMutationEntreeResultat.Value    := 0;
+            Exit;
+          end;
+        Jet := Random(1000) + 1;
+      end;
+    if Retour31 then
+      begin
+        Retour31 := False;
+        EditMutationEntreeResultat.MaxValue := 100;
+      end;
+    if not JetChaosSansFiche(Jet) then
+      AfficheEntreeResolue(CorruptionTableResultat(TypeCorruptionResolu, Jet));
+  end;
+
+procedure TWinMutations.ButtonEntreeHasardClick(Sender: TObject);
+  var
+    Jet: Integer;
+  begin
+    if MutationDuChaos then
+      begin
+        if (MutationDieuChaos <> '') and not Retour31 then Jet := Random(100) + 1
+        else Jet := Random(1000) + 1;
+        TireChaos(Jet, True);
+      end
+    else
+      AfficheEntreeResolue(CorruptionTableResultat(TypeCorruptionResolu, Random(100) + 1, MutationLoreDivin));
   end;
 
 procedure TWinMutations.ButtonMutationEntreeValiderClick(Sender: TObject);
   begin
     if (EditMutationEntreeResultat.Value = 0) then
       ShowMessage(GetTexteLibelle('RULES-MESS_019'))
+    else if MutationDuChaos then
+      TireChaos(EditMutationEntreeResultat.Value, False)
     else
-      AfficheEntreeResolue(CorruptionTableResultat(TypeCorruptionResolu, EditMutationEntreeResultat.Value));
+      AfficheEntreeResolue(CorruptionTableResultat(TypeCorruptionResolu, EditMutationEntreeResultat.Value, MutationLoreDivin));
   end;
 
 // Liste de la table déjà résolue (Physical ou Mental) pour le mode Choix - colonne 0 réservée
@@ -351,7 +468,7 @@ procedure TWinMutations.RemplitTabMutationChoix();
     TabMutationChoix.RowCount := 1;
     IndLig := 0;
     for PCorruptionTable in ListCorruptionTable do
-      if PCorruptionTable.TypeCorruption = TypeCorruptionResolu then
+      if (PCorruptionTable.TypeCorruption = TypeCorruptionResolu) and (PCorruptionTable.Lore = MutationLoreDivin) then
         begin
           IndLig := IndLig + 1;
           TabMutationChoix.RowCount            := IndLig + 1;
@@ -379,7 +496,7 @@ procedure TWinMutations.TabMutationChoixDblClick(Sender: TObject);
 
     EntreeResolue           := Entree;
     LabelEntreeLibelle.Text := EntreeResolue.Libelle;
-    MemoEntreeEffet.Text    := TexteOuPageMutation(EntreeResolue.Effet, EntreeResolue.Livre, EntreeResolue.Code);
+    MemoEntreeEffet.Text    := TexteEntreeMutation(EntreeResolue);
     Valider.Enabled         := True;
     UpdateSheetMutationEntree();
   end;

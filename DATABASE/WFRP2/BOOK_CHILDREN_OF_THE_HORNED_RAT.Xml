@@ -1,0 +1,2538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"CHR"</CODE_BOOK>
+<BOOK>"BOOK CHILDREN OF THE HORNED RAT"</BOOK>
+<BOOKNAME>"CHILDREN OF THE HORNED RAT"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"1"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_TALENT>
+<Talent id="CHR-T_ART_OF_SILENT_DEATH">
+<Description language="ENGLISH">"Art of Silent Death"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"103"</Page>
+</Talent>
+<Talent id="CHR-T_BLACK_HUNGER">
+<Description language="ENGLISH">"Black Hunger"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"103"</Page>
+</Talent>
+<Talent id="CHR-T_BREW_CONTAGION">
+<Description language="ENGLISH">"Brew Contagion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"103"</Page>
+</Talent>
+<Talent id="CHR-T_MASTER_OF_THE_LASH">
+<Description language="ENGLISH">"Master of the Lash"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"103"</Page>
+</Talent>
+<Talent id="CHR-T_MOULD_FLESH">
+<Description language="ENGLISH">"Mould Flesh"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"103"</Page>
+</Talent>
+<Talent id="CHR-T_SKAVEN_CONSTRUCT">
+<Description language="ENGLISH">"Skaven Construct"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"103"</Page>
+</Talent>
+<Talent id="CHR-T_TAIL_FIGHTING">
+<Description language="ENGLISH">"Tail Fighting"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"103"</Page>
+</Talent>
+<Talent id="CHR-T_UNRELIABLE_CONSTRUCT">
+<Description language="ENGLISH">"Unreliable Construct"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"103"</Page>
+</Talent>
+<Talent id="CHR-T_WALL_RUNNER">
+<Description language="ENGLISH">"Wall Runner"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"104"</Page>
+</Talent>
+<Talent id="CHR-T_WARLOCK_ENGINEERING">
+<Description language="ENGLISH">"Warlock Engineering"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"104"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="RULES-T_PETTY_MAGIC__WARP">
+<Description language="ENGLISH">"Petty Magic (Warp)"</Description>
+<Generique>"RULES-T_PETTY_MAGIC__*"</Generique>
+</Talent>
+<Talent id="RULES-T_DARK_LORE__PLAGUE">
+<Description language="ENGLISH">"Dark Lore (Plague)"</Description>
+<Generique>"RULES-T_DARK_LORE__*"</Generique>
+</Talent>
+<Talent id="RULES-T_DARK_LORE__STEALTH">
+<Description language="ENGLISH">"Dark Lore (Stealth)"</Description>
+<Generique>"RULES-T_DARK_LORE__*"</Generique>
+</Talent>
+<Talent id="RULES-T_DARK_LORE__WARP">
+<Description language="ENGLISH">"Dark Lore (Warp)"</Description>
+<Generique>"RULES-T_DARK_LORE__*"</Generique>
+</Talent>
+<Talent id="RULES-T_SPECIALIST_WEAPON_GROUP__BLOWGUN">
+<Description language="ENGLISH">"Specialist Weapon Group (Blowgun)"</Description>
+<Generique>"RULES-T_SPECIALIST_WEAPON_GROUP__*"</Generique>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+<DATA_CAREER>
+<Career id="CHR-CARE_APPRENTICE_GREY_SEER">
+<Description language="ENGLISH">"Apprentice Grey Seer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, Ag +10%, Int +10%, WP +15%, Fel +5%"</MainProfile>
+<SecondaryProfile>"W +3, Mag +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_Mag">"1"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Magic), Channelling, Common Knowledge (Skaven), Magical Sense, Perception, Read/Write, Search, Speak Arcane Language (Magick), Speak Language (any one)"</Skills>
+<Talents>"Fast Hands, Lesser Magic (any two), Public Speaking, Savvy or Suave"</Talents>
+<Trappings>"Grey Robes, Quarter Staff, 2 Warpstone Tokens"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Grey Robes">"1"</Item>
+<Item name="RULES-COMB_V2_QUARTER_STAFF">"1"</Item>
+<Item name="Warpstone Tokens" quantite="2">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_SKAVEN">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_FAST_HANDS">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+<Talent name="RULES-T_SAVVY/RULES-T_SUAVE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"CHR 94"</Source>
+</Career>
+<Career id="CHR-CARE_BLACK_SKAVEN">
+<Description language="ENGLISH">"Black Skaven"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, S +5%, T +5%, Ag +10%, WP +5%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Dodge Blow, Intimidate"</Skills>
+<Talents>"Hardy, Lightning Reflexes or Very Resilient, Specialist Weapon Group (Two-handed), Street Fighting, Strike Mighty Blow"</Talents>
+<Trappings>"Great Weapon, Light Armour (Leather Jack and Leather Skullcap)"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-COMB_V2_GREAT_WEAPON">"1"</Item>
+<Item name="RULES-ARMO_V2_LEATHER_LEATHER_JACK">"1"</Item>
+<Item name="RULES-ARMO_V2_LEATHER_LEATHER_SKULLCAP">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_HARDY">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_REFLEXES/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED">"1"</Talent>
+<Talent name="RULES-T_STREET_FIGHTING">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"CHR 94"</Source>
+</Career>
+<Career id="CHR-CARE_CLANRAT">
+<Description language="ENGLISH">"Clanrat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, Ag +5%, WP +5%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Common Knowledge (Skaven), Concealment, Outdoor Survival, Scale Sheer Surface, Silent Move"</Skills>
+<Talents>"Specialist Weapon Group (Sling), Tunnel Rat"</Talents>
+<Trappings>"Light Armour (Leather Jack and Leather Skullcap), Hand Weapon, Dagger or Sling, Shield"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-ARMO_V2_LEATHER_LEATHER_JACK">"1"</Item>
+<Item name="RULES-ARMO_V2_LEATHER_LEATHER_SKULLCAP">"1"</Item>
+<Item name="RULES-COMB_V2_HAND_WEAPON_SWORD_ETC">"1"</Item>
+<Item name="RULES-COMB_V2_DAGGER/RULES-PROJ_V2_SLING">"1"</Item>
+<Item name="RULES-COMB_V2_SHIELD">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_SKAVEN">"1"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__SLING">"1"</Talent>
+<Talent name="RULES-T_TUNNEL_RAT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"CHR 95"</Source>
+</Career>
+<Career id="CHR-CARE_NIGHT_RUNNER">
+<Description language="ENGLISH">"Night Runner"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, T +5%, Ag +10%, WP +5%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Common Knowledge (Skaven), Concealment, Dodge Blow, Navigation, Outdoor Survival, Perception, Scale Sheer Surface, Silent Move"</Skills>
+<Talents>"Fleet-Footed, Orientation, Rover, Specialist Weapon Group (Sling) or Specialist Weapon Group (Throwing), Tunnel Rat"</Talents>
+<Trappings>"Light Armour (Leather Jerkin), 2 Hand Weapons, Sling or 4 Throwing Stars"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-ARMO_V2_LEATHER_LEATHER_JERKIN">"1"</Item>
+<Item name="RULES-COMB_V2_HAND_WEAPON_SWORD_ETC" quantite="2">"1"</Item>
+<Item name="RULES-PROJ_V2_SLING/Throwing Stars" quantite="1/4">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_SKAVEN">"1"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_FLEET_FOOTED">"1"</Talent>
+<Talent name="RULES-T_ORIENTATION">"1"</Talent>
+<Talent name="RULES-T_ROVER">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__SLING/RULES-T_SPECIALIST_WEAPON_GROUP__THROWING">"1"</Talent>
+<Talent name="RULES-T_TUNNEL_RAT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"CHR 96"</Source>
+</Career>
+<Career id="CHR-CARE_PACKMASTER">
+<Description language="ENGLISH">"Packmaster"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, S +5%, T +5%, Ag +5%, Int +5%, WP +10%, Fel +5%"</MainProfile>
+<SecondaryProfile>"W +3"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+</Advances>
+<Skills>"Animal Training, Command, Common Knowledge (Skaven), Concealment, Outdoor Survival, Perception, Scale Sheer Surface, Silent Move"</Skills>
+<Talents>"Master of the Lash, Specialist Weapon Group (Entangling), Specialist Weapon Group (Two-handed), Tunnel Rat"</Talents>
+<Trappings>"Light Armour (Leather Jack and Leather Skullcap), Hand Weapon, Whip, Thing-Catcher, 1 Giant Rat"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-ARMO_V2_LEATHER_LEATHER_JACK">"1"</Item>
+<Item name="RULES-ARMO_V2_LEATHER_LEATHER_SKULLCAP">"1"</Item>
+<Item name="RULES-COMB_V2_HAND_WEAPON_SWORD_ETC">"1"</Item>
+<Item name="RULES-PROJ_V2_WHIP">"1"</Item>
+<Item name="Thing-Catcher">"1"</Item>
+<Item name="Giant Rat">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_SKAVEN">"1"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="CHR-T_MASTER_OF_THE_LASH">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__ENTANGLING">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED">"1"</Talent>
+<Talent name="RULES-T_TUNNEL_RAT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"CHR 96"</Source>
+</Career>
+<Career id="CHR-CARE_PLAGUE_MONK">
+<Description language="ENGLISH">"Plague Monk"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, S +5%, T +10%, Ag +5%, WP +10%, Fel +5%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Theology), Common Knowledge (Skaven), Concealment, Dodge Blow, Outdoor Survival, Scale Sheer Surface, Silent Move"</Skills>
+<Talents>"Fearless, Frenzy, Resistance to Disease, Tunnel Rat"</Talents>
+<Trappings>"2 Hand Weapons, Disease (GM’s choice), Maggots, 3d10 Flies"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-COMB_V2_HAND_WEAPON_SWORD_ETC" quantite="2">"1"</Item>
+<Item name="Disease (GM’s choice)">"1"</Item>
+<Item name="Maggots">"1"</Item>
+<Item name="3d10 Flies">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_SKAVEN">"1"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_FEARLESS">"1"</Talent>
+<Talent name="RULES-T_FRENZY">"1"</Talent>
+<Talent name="RULES-T_RESISTANCE_TO_DISEASE">"1"</Talent>
+<Talent name="RULES-T_TUNNEL_RAT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"CHR 96"</Source>
+</Career>
+<Career id="CHR-CARE_SKIRMISHER">
+<Description language="ENGLISH">"Skirmisher"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +10%, Ag +10%, Int +10%, WP +5%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Engineering), Common Knowledge (Skaven), Concealment, Outdoor Survival, Scale Sheer Surface, Silent Move"</Skills>
+<Talents>"Master Gunner, Rapid Reload, Specialist Weapon Group (Gunpowder), Tunnel Rat"</Talents>
+<Trappings>"Light Armour (Leather Jerkin), Hand Weapon, Warplock Jezzail or 2 Warplock Pistols or 2 Poison Wind Globes"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-ARMO_V2_LEATHER_LEATHER_JERKIN">"1"</Item>
+<Item name="RULES-COMB_V2_HAND_WEAPON_SWORD_ETC">"1"</Item>
+<Item name="Warplock Jezzail/Warplock Pistols/Poison Wind Globes" quantite="1/2/2">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ENGINEERING">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_SKAVEN">"1"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_MASTER_GUNNER">"1"</Talent>
+<Talent name="RULES-T_RAPID_RELOAD">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__GUNPOWDER">"1"</Talent>
+<Talent name="RULES-T_TUNNEL_RAT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"CHR 97"</Source>
+</Career>
+<Career id="CHR-CARE_SLAVE">
+<Description language="ENGLISH">"Slave"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, S +5%, T +5%, Ag +10%, WP +5%"</MainProfile>
+<SecondaryProfile>"W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Blather, Common Knowledge (Skaven), Concealment, Perception, Search, Speak Language (Queekish)"</Skills>
+<Talents>"Acute Hearing or Excellent Vision, Flee! or Hardy"</Talents>
+<Trappings>"None"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="None">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_BLATHER">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_SKAVEN">"1"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_QUEEKISH">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ACUTE_HEARING/RULES-T_EXCELLENT_VISION">"1"</Talent>
+<Talent name="RULES-T_FLEE/RULES-T_HARDY">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"CHR 97"</Source>
+</Career>
+<Career id="CHR-CARE_CENSER_BEARER">
+<Description language="ENGLISH">"Censer Bearer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +25%, S +25%, T +20%, Ag +10%, WP +25%"</MainProfile>
+<SecondaryProfile>"A +1, W +6"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"25"</Advance>
+<Advance name="RULES-ATTR_S">"25"</Advance>
+<Advance name="RULES-ATTR_T">"20"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+</Advances>
+<Skills>"Dodge Blow, Intimidate, Outdoor Survival, Perception"</Skills>
+<Talents>"Black Hunger, Fearless, Frenzy, Hardy, Menacing, Resistance to Disease, Specialist Weapon Group (Flail), Strike Mighty Blow, Warrior Born"</Talents>
+<Trappings>"2 Hand Weapons, Plague Censer, 2 Warpstone Tokens"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-COMB_V2_HAND_WEAPON_SWORD_ETC" quantite="2">"1"</Item>
+<Item name="Plague Censer">"1"</Item>
+<Item name="Warpstone Tokens" quantite="2">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="CHR-T_BLACK_HUNGER">"1"</Talent>
+<Talent name="RULES-T_FEARLESS">"1"</Talent>
+<Talent name="RULES-T_FRENZY">"1"</Talent>
+<Talent name="RULES-T_HARDY">"1"</Talent>
+<Talent name="RULES-T_MENACING">"1"</Talent>
+<Talent name="RULES-T_RESISTANCE_TO_DISEASE">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__FLAIL">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_WARRIOR_BORN">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CHR 98"</Source>
+</Career>
+<Career id="CHR-CARE_CLAN_CHIEFTAIN">
+<Description language="ENGLISH">"Clan Chieftain"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +40%, BS +30%, S +30%, T +30%, Ag +40%, Int +30%, WP +20%, Fel +25%"</MainProfile>
+<SecondaryProfile>"A +2, W +6"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"40"</Advance>
+<Advance name="RULES-ATTR_BS">"30"</Advance>
+<Advance name="RULES-ATTR_S">"30"</Advance>
+<Advance name="RULES-ATTR_T">"30"</Advance>
+<Advance name="RULES-ATTR_Ag">"40"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"25"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (History or Strategy/Tactics), Blather, Charm, Command, Common Knowledge (any three), Dodge Blow, Evaluate, Gossip, Intimidate, Outdoor Survival, Perception, Read/Write, Scale Sheer Surface, Speak Language (any three)"</Skills>
+<Talents>"Disarm or Quick Draw, Lightning Parry, Master Orator, Menacing, Public Speaking, Sixth Sense or Very Resilient, Specialist Weapon Group (any two), Strike Mighty Blow, Strike to Stun"</Talents>
+<Trappings>"Medium Armour (Full Mail Armour), Shield, 12 Warpstone Tokens, 3d10 Clanrats and 5d10 Slaves"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-ARMO_V2_CHAIN_FULL_MAIL_ARMOUR">"1"</Item>
+<Item name="RULES-COMB_V2_SHIELD">"1"</Item>
+<Item name="Warpstone Tokens" quantite="12">"1"</Item>
+<Item name="3d10 Clanrats and 5d10 Slaves">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_HISTORY/RULES-COMP_ACADEMIC_KNOWLEDGE_STRATEGY/RULES-COMP_ACADEMIC_KNOWLEDGE_TACTICS">"1"</Skill>
+<Skill name="RULES-COMP_BLATHER">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_DISARM/RULES-T_QUICK_DRAW">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_PARRY">"1"</Talent>
+<Talent name="RULES-T_MASTER_ORATOR">"1"</Talent>
+<Talent name="RULES-T_MENACING">"1"</Talent>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+<Talent name="RULES-T_SIXTH_SENSE/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__*">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__*">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_STUN">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CHR 98"</Source>
+</Career>
+<Career id="CHR-CARE_CLAWLEADER">
+<Description language="ENGLISH">"Clawleader"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +10%, S +5%, T +5%, Ag +10%, Int +5%, WP +10%, Fel +5%"</MainProfile>
+<SecondaryProfile>"A +1, W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Strategy/Tactics), Command, Common Knowledge (any two), Concealment, Dodge Blow, Intimidate, Outdoor Survival, Perception, Scale Sheer Surface, Silent Move, Speak Language (any one), Swim"</Skills>
+<Talents>"Keen Senses, Menacing, Schemer, Seasoned Traveller, Street Fighting or Wrestling, Strike Mighty Blow, Strike to Injure"</Talents>
+<Trappings>"Light Armour (Full Leather Armour), Hand Weapon, Shield, 4 Warpstone Tokens, 1d10 Clanrats, Night Runners, Slaves, or Stormvermin"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-ARMO_V2_LEATHER_FULL_LEATHER_ARMOUR">"1"</Item>
+<Item name="RULES-COMB_V2_HAND_WEAPON_SWORD_ETC">"1"</Item>
+<Item name="RULES-COMB_V2_SHIELD">"1"</Item>
+<Item name="Warpstone Tokens" quantite="4">"1"</Item>
+<Item name="1d10 Clanrats">"1"</Item>
+<Item name="Night Runners">"1"</Item>
+<Item name="Slaves">"1"</Item>
+<Item name="Or Stormvermin">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_STRATEGY/RULES-COMP_ACADEMIC_KNOWLEDGE_TACTICS">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SWIM">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_KEEN_SENSES">"1"</Talent>
+<Talent name="RULES-T_MENACING">"1"</Talent>
+<Talent name="RULES-T_SCHEMER">"1"</Talent>
+<Talent name="RULES-T_SEASONED_TRAVELLER">"1"</Talent>
+<Talent name="RULES-T_STREET_FIGHTING/RULES-T_WRESTLING">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CHR 98"</Source>
+</Career>
+<Career id="CHR-CARE_GREY_SEER">
+<Description language="ENGLISH">"Grey Seer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, S +5%, T +10%, Ag +20%, Int +20%, WP +25%, Fel +15%"</MainProfile>
+<SecondaryProfile>"W +5, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_W">"5"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Magic), Academic Knowledge (Theology), Academic Knowledge (any one), Channelling, Command, Common Knowledge (any two), Intimidate, Magical Sense, Read/Write, Speak Arcane Language (Daemonic or Magick), Speak Language (any two)"</Skills>
+<Talents>"Dark Lore (Warp), Dark Magic or Strong-minded, Fast Hands or Very Resilient, Lesser Magic (any two), Master Orator, Meditation or Mighty Missile"</Talents>
+<Trappings>"Grey Robes, Quarter Staff, 8 Warpstone Tokens, 1 Skaven Magic Item"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Grey Robes">"1"</Item>
+<Item name="RULES-COMB_V2_QUARTER_STAFF">"1"</Item>
+<Item name="Warpstone Tokens" quantite="8">"1"</Item>
+<Item name="Skaven Magic Item">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_DAEMONIC/RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_DARK_LORE__WARP">"1"</Talent>
+<Talent name="RULES-T_DARK_MAGIC/RULES-T_STRONG_MINDED">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_MASTER_ORATOR">"1"</Talent>
+<Talent name="RULES-T_MEDITATION/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CHR 99"</Source>
+</Career>
+<Career id="CHR-CARE_GUTTER_RUNNER">
+<Description language="ENGLISH">"Gutter Runner"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +15%, S +5%, T +10%, Ag +20%, Int +5%, WP +10%, Fel +5%"</MainProfile>
+<SecondaryProfile>"A +1, W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Common Knowledge (Skaven), Concealment, Disguise, Dodge Blow, Evaluate, Lip Reading, Outdoor Survival, Perception, Pick Lock, Scale Sheer Surface, Search, Silent Move, Sleight of Hand, Swim"</Skills>
+<Talents>"Fleet-Footed, Orientation, Rover, Specialist Weapon Group (Crossbow), Specialist Weapon Group (Throwing), Trapfinder"</Talents>
+<Trappings>"Light Armour (Leather Jack, Leather Skullcap), Hand Weapon, Punching Dagger, Crossbow Pistol with 10 bolts, 4 Throwing Stars, Best Craftsmanship Rope (10 Yards)"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-ARMO_V2_LEATHER_LEATHER_JACK">"1"</Item>
+<Item name="RULES-ARMO_V2_LEATHER_LEATHER_SKULLCAP">"1"</Item>
+<Item name="RULES-COMB_V2_HAND_WEAPON_SWORD_ETC">"1"</Item>
+<Item name="Punching Dagger">"1"</Item>
+<Item name="RULES-PROJ_V2_CROSSBOW_PISTOL">"1"</Item>
+<Item name="Bolts" quantite="10">"1"</Item>
+<Item name="Throwing Stars" quantite="4">"1"</Item>
+<Item name="Best Craftsmanship Rope (10 Yards)">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_SKAVEN">"1"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_DISGUISE">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_LIP_READING">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_PICK_LOCK">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+<Skill name="RULES-COMP_SLEIGHT_OF_HAND">"1"</Skill>
+<Skill name="RULES-COMP_SWIM">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_FLEET_FOOTED">"1"</Talent>
+<Talent name="RULES-T_ORIENTATION">"1"</Talent>
+<Talent name="RULES-T_ROVER">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__CROSSBOW">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__THROWING">"1"</Talent>
+<Talent name="RULES-T_TRAPFINDER">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CHR 99"</Source>
+</Career>
+<Career id="CHR-CARE_MASTER_ASSASSIN">
+<Description language="ENGLISH">"Master Assassin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +25%, BS +25%, S +10%, T +15%, Ag +30%, Int +15%, WP +20%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +2, W +6"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"25"</Advance>
+<Advance name="RULES-ATTR_BS">"25"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"30"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+</Advances>
+<Skills>"Common Knowledge (Cathay), Concealment, Disguise, Dodge Blow, Evaluate, Lip Reading, Perception, Pick Lock, Prepare Poison, Read/Write, Scale Sheer Surface, Search, Set Trap, Shadowing, Silent Move, Sleight of Hand, Swim"</Skills>
+<Talents>"Alley Cat, Art of Silent Death, Lightning Parry, Quick Draw, Specialist Weapon Group (Entangling), Specialist Weapon Group (Throwing), Specialist Weapon Group (any one), Tail Fighting, Wall Runner"</Talents>
+<Trappings>"Light Armour (Leather Jack and Leather Skullcap), Hand Weapon, 2 Punching Daggers, 2 Rat Claws, 4 Throwing Stars, Net, Blowgun with 10 Darts, 3 Doses of any Poison"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-ARMO_V2_LEATHER_LEATHER_JACK">"1"</Item>
+<Item name="RULES-ARMO_V2_LEATHER_LEATHER_SKULLCAP">"1"</Item>
+<Item name="RULES-COMB_V2_HAND_WEAPON_SWORD_ETC">"1"</Item>
+<Item name="Punching Daggers" quantite="2">"1"</Item>
+<Item name="Rat Claws" quantite="2">"1"</Item>
+<Item name="Throwing Stars" quantite="4">"1"</Item>
+<Item name="RULES-PROJ_V2_NET">"1"</Item>
+<Item name="Blowgun with 10 Darts">"1"</Item>
+<Item name="Doses of any Poison" quantite="3">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_CATHAY">"1"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_DISGUISE">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_LIP_READING">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_PICK_LOCK">"1"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISON">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SET_TRAP">"1"</Skill>
+<Skill name="RULES-COMP_SHADOWING">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+<Skill name="RULES-COMP_SLEIGHT_OF_HAND">"1"</Skill>
+<Skill name="RULES-COMP_SWIM">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ALLEY_CAT">"1"</Talent>
+<Talent name="CHR-T_ART_OF_SILENT_DEATH">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_PARRY">"1"</Talent>
+<Talent name="RULES-T_QUICK_DRAW">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__ENTANGLING">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__THROWING">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__*">"1"</Talent>
+<Talent name="CHR-T_TAIL_FIGHTING">"1"</Talent>
+<Talent name="CHR-T_WALL_RUNNER">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CHR 100"</Source>
+</Career>
+<Career id="CHR-CARE_MASTER_MOULDER">
+<Description language="ENGLISH">"Master Moulder"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, S +10%, T +15%, Ag +10%, Int +15%, WP +15%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +5"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"5"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Science), Academic Knowledge (any one), Animal Care, Animal Training, Command, Common Knowledge (any two), Evaluate, Heal, Intimidate, Perception, Search, Torture, Trade (any one)"</Skills>
+<Talents>"Dealmaker, Master of the Lash, Mould Flesh, Schemer, Surgery, Unsettling"</Talents>
+<Trappings>"Light Armour (Full Leather Armour), Cloak, Hand Weapon, Whip, 3 sets of Manacles, 10 Warpstone Tokens, 1d10 Giant Rats or a Rat Ogre"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-ARMO_V2_LEATHER_FULL_LEATHER_ARMOUR">"1"</Item>
+<Item name="Cloak">"1"</Item>
+<Item name="RULES-COMB_V2_HAND_WEAPON_SWORD_ETC">"1"</Item>
+<Item name="RULES-PROJ_V2_WHIP">"1"</Item>
+<Item name="Manacles (set)" quantite="3">"1"</Item>
+<Item name="Warpstone Tokens" quantite="10">"1"</Item>
+<Item name="1d10 Giant Rats/A Rat Ogre">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_SCIENCE">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_TORTURE">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_DEALMAKER">"1"</Talent>
+<Talent name="CHR-T_MASTER_OF_THE_LASH">"1"</Talent>
+<Talent name="CHR-T_MOULD_FLESH">"1"</Talent>
+<Talent name="RULES-T_SCHEMER">"1"</Talent>
+<Talent name="RULES-T_SURGERY">"1"</Talent>
+<Talent name="RULES-T_UNSETTLING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CHR 100"</Source>
+</Career>
+<Career id="CHR-CARE_MASTER_MUTATOR">
+<Description language="ENGLISH">"Master Mutator"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +30%, BS +10%, S +20%, T +30%, Ag +20%, Int +30%, WP +25%, Fel +15%"</MainProfile>
+<SecondaryProfile>"A +2, W +7"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"30"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"20"</Advance>
+<Advance name="RULES-ATTR_T">"30"</Advance>
+<Advance name="RULES-ATTR_Ag">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"7"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (any three), Animal Care, Animal Training, Charm Animal, Command, Common Knowledge (any three), Concealment, Dodge Blow, Evaluate, Follow Trail, Haggle, Intimidate, Navigation, Outdoor Survival, Perception, Prepare Poison, Search, Set Trap, Shadowing, Silent Move, Swim, Torture, Trade (any two)"</Skills>
+<Talents>"Acute Hearing or Excellent Vision, Coolheaded, Dealmaker, Fearless, Keen Senses, Master of the Lash, Schemer, Surgery, Unsettling"</Talents>
+<Trappings>"Medium Armour (Full Mail Armour), Best Craftsmanship Hand Weapon, Best Craftsmanship Whip, 3 sets of Manacles, 20 Warpstone Tokens, 1d10/2 Packmasters, 1 Master Moulder, 2d10 Giant Rats, Rat Ogre"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-ARMO_V2_CHAIN_FULL_MAIL_ARMOUR">"1"</Item>
+<Item name="Best Craftsmanship Hand Weapon">"1"</Item>
+<Item name="Best Craftsmanship Whip">"1"</Item>
+<Item name="Manacles (set)" quantite="3">"1"</Item>
+<Item name="Warpstone Tokens" quantite="20">"1"</Item>
+<Item name="1d10 divided by 2 Packmasters">"1"</Item>
+<Item name="Master Moulder">"1"</Item>
+<Item name="2d10 Giant Rats">"1"</Item>
+<Item name="Rat Ogre">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM_ANIMAL">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISON">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SET_TRAP">"1"</Skill>
+<Skill name="RULES-COMP_SHADOWING">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+<Skill name="RULES-COMP_SWIM">"1"</Skill>
+<Skill name="RULES-COMP_TORTURE">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ACUTE_HEARING/RULES-T_EXCELLENT_VISION">"1"</Talent>
+<Talent name="RULES-T_COOLHEADED">"1"</Talent>
+<Talent name="RULES-T_DEALMAKER">"1"</Talent>
+<Talent name="RULES-T_FEARLESS">"1"</Talent>
+<Talent name="RULES-T_KEEN_SENSES">"1"</Talent>
+<Talent name="CHR-T_MASTER_OF_THE_LASH">"1"</Talent>
+<Talent name="RULES-T_SCHEMER">"1"</Talent>
+<Talent name="RULES-T_SURGERY">"1"</Talent>
+<Talent name="RULES-T_UNSETTLING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CHR 100"</Source>
+</Career>
+<Career id="CHR-CARE_PLAGUE_DEACON">
+<Description language="ENGLISH">"Plague Deacon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +5%, S +10%, T +15%, Ag +10%, Int +5%, WP +15%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +4, Mag +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_Mag">"1"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (any one), Academic Knowledge (Theology), Channelling, Common Knowledge (any two), Magical Sense, Perception, Read/Write, Speak Arcane Language (Magick), Swim"</Skills>
+<Talents>"Dark Magic, Petty Magic (Warp), Public Speaking, Strike to Injure, Strike to Stun"</Talents>
+<Trappings>"Flail, 4 Warpstone Tokens"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-COMB_V2_FLAIL">"1"</Item>
+<Item name="Warpstone Tokens" quantite="4">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SWIM">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_DARK_MAGIC">"1"</Talent>
+<Talent name="RULES-T_PETTY_MAGIC__WARP">"1"</Talent>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_STUN">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CHR 101"</Source>
+</Career>
+<Career id="CHR-CARE_PLAGUE_PRIEST">
+<Description language="ENGLISH">"Plague Priest"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, BS +10%, S +15%, T +25%, Ag +20%, Int +10%, WP +25%, Fel +15%"</MainProfile>
+<SecondaryProfile>"A +1, W +6, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"15"</Advance>
+<Advance name="RULES-ATTR_T">"25"</Advance>
+<Advance name="RULES-ATTR_Ag">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (any one), Academic Knowledge (Theology), Trade (Brewer), Channelling, Common Knowledge (any two), Heal, Magical Sense, Perception, Speak Language (any two), Swim"</Skills>
+<Talents>"Brew Contagion, Dark Lore (Plague), Public Speaking"</Talents>
+<Trappings>"Cauldron, 6 Warpstone Tokens, 1d10 Plague Rats, 1d10/2 Diseases, 1d10 Plague Monks"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Cauldron">"1"</Item>
+<Item name="Warpstone Tokens" quantite="6">"1"</Item>
+<Item name="1d10 Plague Rats">"1"</Item>
+<Item name="1d10 divided by 2 Diseases">"1"</Item>
+<Item name="1d10 Plague Monks">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_BREWER">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SWIM">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="CHR-T_BREW_CONTAGION">"1"</Talent>
+<Talent name="RULES-T_DARK_LORE__PLAGUE">"1"</Talent>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CHR 101"</Source>
+</Career>
+<Career id="CHR-CARE_SEER_LORD">
+<Description language="ENGLISH">"Seer Lord"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, BS +20%, S +15%, T +15%, Ag +40%, Int +40%, WP +35%, Fel +35%"</MainProfile>
+<SecondaryProfile>"A +1, W +9, Mag +3"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"15"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"40"</Advance>
+<Advance name="RULES-ATTR_Int">"40"</Advance>
+<Advance name="RULES-ATTR_WP">"35"</Advance>
+<Advance name="RULES-ATTR_Fel">"35"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"9"</Advance>
+<Advance name="RULES-ATTR_Mag">"3"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (any three), Channelling, Command, Common Knowledge (any three), Intimidate, Magical Sense, Read/Write, Speak Arcane Language (any three), Speak Language (any four)"</Skills>
+<Talents>"Aethyric Attunement, Dark Lore (Warp), Dark Magic or Strong-minded, Fast Hands or Very Resilient, Lesser Magic (any two), Master Orator, Meditation, Mighty Missile"</Talents>
+<Trappings>"Grey Robes, Quarter Staff, 12 Warpstone Tokens, 2 Skaven Magic Items"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Grey Robes">"1"</Item>
+<Item name="RULES-COMB_V2_QUARTER_STAFF">"1"</Item>
+<Item name="Warpstone Tokens" quantite="12">"1"</Item>
+<Item name="Skaven Magic Items" quantite="2">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"1"</Talent>
+<Talent name="RULES-T_DARK_LORE__WARP">"1"</Talent>
+<Talent name="RULES-T_DARK_MAGIC/RULES-T_STRONG_MINDED">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_MASTER_ORATOR">"1"</Talent>
+<Talent name="RULES-T_MEDITATION">"1"</Talent>
+<Talent name="RULES-T_MIGHTY_MISSILE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CHR 101"</Source>
+</Career>
+<Career id="CHR-CARE_SORCERER">
+<Description language="ENGLISH">"Sorcerer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +15%, T +20%, Ag +25%, Int +20%, WP +25%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +5, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"15"</Advance>
+<Advance name="RULES-ATTR_T">"20"</Advance>
+<Advance name="RULES-ATTR_Ag">"25"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"5"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Magic), Academic Knowledge (any one), Channelling, Common Knowledge (any two), Intimidate, Magical Sense, Read/Write, Speak Arcane Language (Magick), Speak Language (any two)"</Skills>
+<Talents>"Aethyric Attunement, Armoured Casting, Dark Lore (Stealth), Dark Magic or Strong-minded, Fast Hands or Very Resilient, Lesser Magic (any two), Meditation or Mighty Missile, Specialist Weapon Group (Throwing)"</Talents>
+<Trappings>"Hand Weapon, 3 Throwing Stars, 3 Smoke Bombs, Cloak, Sack, 4 Warpstone Tokens"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-COMB_V2_HAND_WEAPON_SWORD_ETC">"1"</Item>
+<Item name="Throwing Stars" quantite="3">"1"</Item>
+<Item name="Smoke Bombs" quantite="3">"1"</Item>
+<Item name="Cloak">"1"</Item>
+<Item name="Sack">"1"</Item>
+<Item name="Warpstone Tokens" quantite="4">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"1"</Talent>
+<Talent name="RULES-T_ARMOURED_CASTING">"1"</Talent>
+<Talent name="RULES-T_DARK_LORE__STEALTH">"1"</Talent>
+<Talent name="RULES-T_DARK_MAGIC/RULES-T_STRONG_MINDED">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_MEDITATION/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__THROWING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CHR 102"</Source>
+</Career>
+<Career id="CHR-CARE_STORMVERMIN">
+<Description language="ENGLISH">"Stormvermin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +5%, S +10%, T +10%, Ag +15%, WP +10%, Fel +5%"</MainProfile>
+<SecondaryProfile>"A +1, W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Command or Evaluate, Dodge Blow, Intimidate, Perception, Search"</Skills>
+<Talents>"Menacing, Specialist Weapon Group (Flail), Strike to Injure, Stout-hearted, Sturdy, Tunnel Rat, Very Strong or Very Resilient, Warrior Born"</Talents>
+<Trappings>"Medium Armour (Mail Shirt, Leather Jack, and Leather Skullcap), Flail or Great Weapon"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-ARMO_V2_CHAIN_MAIL_SHIRT">"1"</Item>
+<Item name="RULES-ARMO_V2_LEATHER_LEATHER_JACK">"1"</Item>
+<Item name="RULES-ARMO_V2_LEATHER_LEATHER_SKULLCAP">"1"</Item>
+<Item name="RULES-COMB_V2_FLAIL/RULES-COMB_V2_GREAT_WEAPON">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_COMMAND/RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_MENACING">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__FLAIL">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE">"1"</Talent>
+<Talent name="RULES-T_STOUT_HEARTED">"1"</Talent>
+<Talent name="RULES-T_STURDY">"1"</Talent>
+<Talent name="RULES-T_TUNNEL_RAT">"1"</Talent>
+<Talent name="RULES-T_VERY_STRONG/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="RULES-T_WARRIOR_BORN">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CHR 102"</Source>
+</Career>
+<Career id="CHR-CARE_WARLOCK_ENGINEER">
+<Description language="ENGLISH">"Warlock Engineer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +20%, S +10%, T +10%, Ag +30%, Int +30%, WP +15%, Fel +5%"</MainProfile>
+<SecondaryProfile>"A +1, W +7"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"30"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"7"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Engineering), Academic Knowledge (Science), Common Knowledge (any one), Drive or Ride, Perception, Read/Write, Speak Language (any two), Trade (Gunsmith), Trade (Smith)"</Skills>
+<Talents>"Marksman, Master Gunner, Sharpshooter, Specialist Weapon Group (Engineer or Gunpowder), Sure Shot, Warlock Engineering"</Talents>
+<Trappings>"Light Armour (Leather Jack), Engineer’s Kit, Warplock Jezzail with Ammunition for 10 Shots or 4 Poison Wind Globes, Warp Blade, Supercharged Warp-Power Accumulator, 3 pounds of Warpstone"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-ARMO_V2_LEATHER_LEATHER_JACK">"1"</Item>
+<Item name="Engineer’s Kit">"1"</Item>
+<Item name="Warplock Jezzail with Ammunition for 10 Shots/Poison Wind Globes" quantite="1/4">"1"</Item>
+<Item name="Warp Blade">"1"</Item>
+<Item name="Supercharged Warp-Power Accumulator">"1"</Item>
+<Item name="Pounds of Warpstone" quantite="3">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ENGINEERING">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_SCIENCE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_DRIVE/RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_GUNSMITH">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_SMITH">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_MARKSMAN">"1"</Talent>
+<Talent name="RULES-T_MASTER_GUNNER">"1"</Talent>
+<Talent name="RULES-T_SHARPSHOOTER">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__ENGINEER/RULES-T_SPECIALIST_WEAPON_GROUP__GUNPOWDER">"1"</Talent>
+<Talent name="RULES-T_SURE_SHOT">"1"</Talent>
+<Talent name="CHR-T_WARLOCK_ENGINEERING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CHR 102"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="CHR-CARE_APPRENTICE_GREY_SEER">"CHR-CARE_GREY_SEER"</Link>
+<Link name="CHR-CARE_APPRENTICE_GREY_SEER">"RULES-CARE_SCRIBE"</Link>
+<Link name="CHR-CARE_BLACK_SKAVEN">"RULES-CARE_MERCENARY"</Link>
+<Link name="CHR-CARE_BLACK_SKAVEN">"RULES-CARE_OUTLAW"</Link>
+<Link name="CHR-CARE_BLACK_SKAVEN">"RULES-CARE_PIT_FIGHTER"</Link>
+<Link name="CHR-CARE_BLACK_SKAVEN">"CHR-CARE_STORMVERMIN"</Link>
+<Link name="CHR-CARE_CLANRAT">"RULES-CARE_BARBER_SURGEON"</Link>
+<Link name="CHR-CARE_CLANRAT">"RULES-CARE_BODYGUARD"</Link>
+<Link name="CHR-CARE_CLANRAT">"RULES-CARE_BONE_PICKER"</Link>
+<Link name="CHR-CARE_CLANRAT">"RULES-CARE_BOUNTY_HUNTER"</Link>
+<Link name="CHR-CARE_CLANRAT">"CHR-CARE_CENSER_BEARER"</Link>
+<Link name="CHR-CARE_CLANRAT">"CHR-CARE_CLAWLEADER"</Link>
+<Link name="CHR-CARE_CLANRAT">"RULES-CARE_GRAVE_ROBBER"</Link>
+<Link name="CHR-CARE_CLANRAT">"RULES-CARE_JAILER"</Link>
+<Link name="CHR-CARE_CLANRAT">"RULES-CARE_MERCENARY"</Link>
+<Link name="CHR-CARE_CLANRAT">"CHR-CARE_NIGHT_RUNNER"</Link>
+<Link name="CHR-CARE_CLANRAT">"RULES-CARE_OUTLAW"</Link>
+<Link name="CHR-CARE_CLANRAT">"CHR-CARE_PACKMASTER"</Link>
+<Link name="CHR-CARE_CLANRAT">"CHR-CARE_PLAGUE_MONK"</Link>
+<Link name="CHR-CARE_CLANRAT">"CHR-CARE_SKIRMISHER"</Link>
+<Link name="CHR-CARE_CLANRAT">"CCOMP-CARE_SLAVE"</Link>
+<Link name="CHR-CARE_CLANRAT">"RULES-CARE_THIEF"</Link>
+<Link name="CHR-CARE_CLANRAT">"RULES-CARE_THUG"</Link>
+<Link name="CHR-CARE_CLANRAT">"RULES-CARE_TOMB_ROBBER"</Link>
+<Link name="CHR-CARE_CLANRAT">"RULES-CARE_TRADESMAN"</Link>
+<Link name="CHR-CARE_CLANRAT">"RULES-CARE_VAGABOND"</Link>
+<Link name="CHR-CARE_CLANRAT">"RULES-CARE_ZEALOT"</Link>
+<Link name="RULES-CARE_AGITATOR">"CHR-CARE_CLANRAT"</Link>
+<Link name="RULES-CARE_BOATMAN">"CHR-CARE_CLANRAT"</Link>
+<Link name="RULES-CARE_JAILER">"CHR-CARE_CLANRAT"</Link>
+<Link name="RULES-CARE_MESSENGER">"CHR-CARE_CLANRAT"</Link>
+<Link name="RULES-CARE_MINER">"CHR-CARE_CLANRAT"</Link>
+<Link name="CHR-CARE_SLAVE">"CHR-CARE_CLANRAT"</Link>
+<Link name="RULES-CARE_THIEF">"CHR-CARE_CLANRAT"</Link>
+<Link name="RULES-CARE_THUG">"CHR-CARE_CLANRAT"</Link>
+<Link name="RULES-CARE_TRADESMAN">"CHR-CARE_CLANRAT"</Link>
+<Link name="RULES-CARE_VAGABOND">"CHR-CARE_CLANRAT"</Link>
+<Link name="RULES-CARE_WATCHMAN">"CHR-CARE_CLANRAT"</Link>
+<Link name="CHR-CARE_NIGHT_RUNNER">"RULES-CARE_BODYGUARD"</Link>
+<Link name="CHR-CARE_NIGHT_RUNNER">"RULES-CARE_BOUNTY_HUNTER"</Link>
+<Link name="CHR-CARE_NIGHT_RUNNER">"CHR-CARE_CLAWLEADER"</Link>
+<Link name="CHR-CARE_NIGHT_RUNNER">"CHR-CARE_GUTTER_RUNNER"</Link>
+<Link name="CHR-CARE_NIGHT_RUNNER">"RULES-CARE_MERCENARY"</Link>
+<Link name="CHR-CARE_NIGHT_RUNNER">"RULES-CARE_OUTLAW"</Link>
+<Link name="CHR-CARE_NIGHT_RUNNER">"CCOMP-CARE_SLAVE"</Link>
+<Link name="CHR-CARE_NIGHT_RUNNER">"RULES-CARE_SMUGGLER"</Link>
+<Link name="CHR-CARE_NIGHT_RUNNER">"CHR-CARE_SORCERER"</Link>
+<Link name="CHR-CARE_NIGHT_RUNNER">"RULES-CARE_THIEF"</Link>
+<Link name="CHR-CARE_NIGHT_RUNNER">"RULES-CARE_VAGABOND"</Link>
+<Link name="RULES-CARE_MERCENARY">"CHR-CARE_NIGHT_RUNNER"</Link>
+<Link name="RULES-CARE_THIEF">"CHR-CARE_NIGHT_RUNNER"</Link>
+<Link name="RULES-CARE_THUG">"CHR-CARE_NIGHT_RUNNER"</Link>
+<Link name="CHR-CARE_PACKMASTER">"RULES-CARE_BOUNTY_HUNTER"</Link>
+<Link name="CHR-CARE_PACKMASTER">"CHR-CARE_CLAWLEADER"</Link>
+<Link name="CHR-CARE_PACKMASTER">"CHR-CARE_MASTER_MOULDER"</Link>
+<Link name="CHR-CARE_PACKMASTER">"RULES-CARE_MERCENARY"</Link>
+<Link name="CHR-CARE_PACKMASTER">"CCOMP-CARE_SLAVE"</Link>
+<Link name="CHR-CARE_PACKMASTER">"RULES-CARE_THUG"</Link>
+<Link name="CHR-CARE_PACKMASTER">"RULES-CARE_VAGABOND"</Link>
+<Link name="RULES-CARE_BOUNTY_HUNTER">"CHR-CARE_PACKMASTER"</Link>
+<Link name="RULES-CARE_HUNTER">"CHR-CARE_PACKMASTER"</Link>
+<Link name="CHR-CARE_PLAGUE_MONK">"CHR-CARE_CENSER_BEARER"</Link>
+<Link name="CHR-CARE_PLAGUE_MONK">"CHR-CARE_CLAWLEADER"</Link>
+<Link name="CHR-CARE_PLAGUE_MONK">"RULES-CARE_INTERROGATOR"</Link>
+<Link name="CHR-CARE_PLAGUE_MONK">"CHR-CARE_PLAGUE_DEACON"</Link>
+<Link name="CHR-CARE_PLAGUE_MONK">"CCOMP-CARE_SLAVE"</Link>
+<Link name="CHR-CARE_PLAGUE_MONK">"RULES-CARE_ZEALOT"</Link>
+<Link name="CHR-CARE_SKIRMISHER">"RULES-CARE_BODYGUARD"</Link>
+<Link name="CHR-CARE_SKIRMISHER">"CHR-CARE_CLAWLEADER"</Link>
+<Link name="CHR-CARE_SKIRMISHER">"RULES-CARE_ENGINEER"</Link>
+<Link name="CHR-CARE_SKIRMISHER">"RULES-CARE_MERCENARY"</Link>
+<Link name="CHR-CARE_SKIRMISHER">"RULES-CARE_PISTOLIER"</Link>
+<Link name="CHR-CARE_SKIRMISHER">"RULES-CARE_TRADESMAN"</Link>
+<Link name="RULES-CARE_TRADESMAN">"CHR-CARE_SKIRMISHER"</Link>
+<Link name="RULES-CARE_WATCHMAN">"CHR-CARE_SKIRMISHER"</Link>
+<Link name="CHR-CARE_SLAVE">"CHR-CARE_CLAWLEADER"</Link>
+<Link name="CHR-CARE_PLAGUE_DEACON">"CHR-CARE_CENSER_BEARER"</Link>
+<Link name="RULES-CARE_ZEALOT">"CHR-CARE_CENSER_BEARER"</Link>
+<Link name="CHR-CARE_CLAN_CHIEFTAIN">"CHR-CARE_MASTER_MUTATOR"</Link>
+<Link name="CHR-CARE_CLAN_CHIEFTAIN">"CCOMP-CARE_SLAVE"</Link>
+<Link name="CHR-CARE_CLAWLEADER">"CHR-CARE_CLAN_CHIEFTAIN"</Link>
+<Link name="CHR-CARE_GUTTER_RUNNER">"CHR-CARE_CLAN_CHIEFTAIN"</Link>
+<Link name="CHR-CARE_MASTER_MUTATOR">"CHR-CARE_CLAN_CHIEFTAIN"</Link>
+<Link name="CHR-CARE_MASTER_MOULDER">"CHR-CARE_CLAN_CHIEFTAIN"</Link>
+<Link name="CHR-CARE_PLAGUE_PRIEST">"CHR-CARE_CLAN_CHIEFTAIN"</Link>
+<Link name="CHR-CARE_WARLOCK_ENGINEER">"CHR-CARE_CLAN_CHIEFTAIN"</Link>
+<Link name="CHR-CARE_CLAWLEADER">"CHR-CARE_GUTTER_RUNNER"</Link>
+<Link name="CHR-CARE_CLAWLEADER">"RULES-CARE_INTERROGATOR"</Link>
+<Link name="CHR-CARE_CLAWLEADER">"CHR-CARE_MASTER_MOULDER"</Link>
+<Link name="CHR-CARE_CLAWLEADER">"CCOMP-CARE_SLAVE"</Link>
+<Link name="CHR-CARE_CLAWLEADER">"RULES-CARE_VETERAN"</Link>
+<Link name="CHR-CARE_STORMVERMIN">"CHR-CARE_CLAWLEADER"</Link>
+<Link name="CHR-CARE_GREY_SEER">"RULES-CARE_SCHOLAR"</Link>
+<Link name="CHR-CARE_GREY_SEER">"CHR-CARE_SEER_LORD"</Link>
+<Link name="CHR-CARE_GUTTER_RUNNER">"RULES-CARE_BODYGUARD"</Link>
+<Link name="CHR-CARE_GUTTER_RUNNER">"RULES-CARE_BOUNTY_HUNTER"</Link>
+<Link name="CHR-CARE_GUTTER_RUNNER">"RULES-CARE_HUNTER"</Link>
+<Link name="CHR-CARE_GUTTER_RUNNER">"CHR-CARE_MASTER_ASSASSIN"</Link>
+<Link name="CHR-CARE_GUTTER_RUNNER">"RULES-CARE_MERCENARY"</Link>
+<Link name="CHR-CARE_GUTTER_RUNNER">"CCOMP-CARE_SLAVE"</Link>
+<Link name="CHR-CARE_GUTTER_RUNNER">"RULES-CARE_SCOUT"</Link>
+<Link name="CHR-CARE_GUTTER_RUNNER">"CHR-CARE_SORCERER"</Link>
+<Link name="CHR-CARE_GUTTER_RUNNER">"RULES-CARE_SPY"</Link>
+<Link name="CHR-CARE_GUTTER_RUNNER">"RULES-CARE_VETERAN"</Link>
+<Link name="CHR-CARE_MASTER_ASSASSIN">"CHR-CARE_CLAN_CHIEFTAIN"</Link>
+<Link name="CHR-CARE_MASTER_ASSASSIN">"RULES-CARE_MASTER_THIEF"</Link>
+<Link name="CHR-CARE_MASTER_ASSASSIN">"CCOMP-CARE_SLAVE"</Link>
+<Link name="CHR-CARE_MASTER_ASSASSIN">"RULES-CARE_SPY"</Link>
+<Link name="CHR-CARE_MASTER_MOULDER">"CHR-CARE_MASTER_MUTATOR"</Link>
+<Link name="CHR-CARE_MASTER_MOULDER">"RULES-CARE_PHYSICIAN"</Link>
+<Link name="CHR-CARE_MASTER_MOULDER">"CCOMP-CARE_SLAVE"</Link>
+<Link name="CHR-CARE_MASTER_MOULDER">"RULES-CARE_VETERAN"</Link>
+<Link name="CHR-CARE_PLAGUE_DEACON">"CHR-CARE_PLAGUE_PRIEST"</Link>
+<Link name="CHR-CARE_PLAGUE_DEACON">"CCOMP-CARE_SLAVE"</Link>
+<Link name="CHR-CARE_PLAGUE_PRIEST">"CCOMP-CARE_SLAVE"</Link>
+<Link name="CHR-CARE_SORCERER">"CHR-CARE_GUTTER_RUNNER"</Link>
+<Link name="CHR-CARE_SORCERER">"RULES-CARE_MASTER_WIZARD"</Link>
+<Link name="CHR-CARE_SORCERER">"CCOMP-CARE_SLAVE"</Link>
+<Link name="CHR-CARE_STORMVERMIN">"RULES-CARE_BODYGUARD"</Link>
+<Link name="CHR-CARE_STORMVERMIN">"RULES-CARE_MERCENARY"</Link>
+<Link name="CHR-CARE_STORMVERMIN">"RULES-CARE_VETERAN"</Link>
+<Link name="CHR-CARE_STORMVERMIN">"RULES-CARE_ZEALOT"</Link>
+<Link name="CHR-CARE_WARLOCK_ENGINEER">"RULES-CARE_INTERROGATOR"</Link>
+<Link name="CHR-CARE_WARLOCK_ENGINEER">"RULES-CARE_MERCENARY"</Link>
+<Link name="CHR-CARE_WARLOCK_ENGINEER">"CCOMP-CARE_SLAVE"</Link>
+<Link name="CHR-CARE_WARLOCK_ENGINEER">"RULES-CARE_VETERAN"</Link>
+<Link name="CHR-CARE_CLAWLEADER">"CHR-CARE_WARLOCK_ENGINEER"</Link>
+<Link name="RULES-CARE_ENGINEER">"CHR-CARE_WARLOCK_ENGINEER"</Link>
+<Link name="RULES-CARE_PISTOLIER">"CHR-CARE_WARLOCK_ENGINEER"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_SPELL_V2>
+<SpellV2 id="CHR-SPEL_FAVOUR">
+<Description language="ENGLISH">"Favour"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Warp)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A bit of Human flesh (+1)"</Ingredient>
+<Page>"76"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_GHOSTLY_FLAME">
+<Description language="ENGLISH">"Ghostly Flame"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Warp)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A pinch of Warpstone powder (+1)"</Ingredient>
+<Page>"76"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_MARK_OF_THE_HORNED_RAT">
+<Description language="ENGLISH">"Mark of the Horned Rat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Warp)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A rotten tooth (+1)"</Ingredient>
+<Page>"76"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_RAT_THRALL">
+<Description language="ENGLISH">"Rat Thrall"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Warp)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A bit of mouldy cheese (+1)"</Ingredient>
+<Page>"76"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_VECTOR">
+<Description language="ENGLISH">"Vector"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Warp)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A wad of dung (+1)"</Ingredient>
+<Page>"77"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_WRACK">
+<Description language="ENGLISH">"Wrack"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Warp)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A tear from a Human child (+1)"</Ingredient>
+<Page>"77"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_MANTLE_OF_CONTAGION">
+<Description language="ENGLISH">"Mantle of Contagion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Plague"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A swatch of flesh cut from the back of a plague victim (+1)"</Ingredient>
+<Page>"79"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_MUSK_OF_TERROR">
+<Description language="ENGLISH">"Musk of Terror"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Plague"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"An iron token carved with the Horned Rat’s symbol (+3)"</Ingredient>
+<Page>"79"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_PESTILENT_BREATH">
+<Description language="ENGLISH">"Pestilent Breath"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Plague"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A stick of Warpstone incense lit at both ends (+2)"</Ingredient>
+<Page>"80"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_PLAGUE">
+<Description language="ENGLISH">"Plague"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Plague"</Lore>
+<CastingNumber>"26"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A sprinkling of several dead fleas (+3)"</Ingredient>
+<Page>"80"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_POISONOUS_PUSTULE">
+<Description language="ENGLISH">"Poisonous Pustule"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Plague"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A rusting healer’s lance (+2)"</Ingredient>
+<Page>"80"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_PUTREFY">
+<Description language="ENGLISH">"Putrefy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Plague"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A handful of rotten grain (+1)"</Ingredient>
+<Page>"80"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_TOXIC_RAIN">
+<Description language="ENGLISH">"Toxic Rain"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Plague"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A baby cave viper (+3)"</Ingredient>
+<Page>"80"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_VEIL_OF_FLIES">
+<Description language="ENGLISH">"Veil of Flies"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Plague"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A piece of Nurgling dung (+2)"</Ingredient>
+<Page>"81"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_VERMINTIDE">
+<Description language="ENGLISH">"Vermintide"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Plague"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A wheel of Good cheese (+2)"</Ingredient>
+<Page>"81"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_WEEPING_WOUNDS">
+<Description language="ENGLISH">"Weeping Wounds"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Plague"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A goblin claw covered in filth (+2)"</Ingredient>
+<Page>"81"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_BLACK_WHIRLWIND">
+<Description language="ENGLISH">"Black Whirlwind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Stealth"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A glass vial filled with ash (+3)"</Ingredient>
+<Page>"78"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_BUOYANT_PASSAGE">
+<Description language="ENGLISH">"Buoyant Passage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Stealth"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A piece of cork (+1)"</Ingredient>
+<Page>"78"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_DEATH_FRENZY">
+<Description language="ENGLISH">"Death Frenzy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Stealth"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Two drops of blood from a rabid animal (+2)"</Ingredient>
+<Page>"79"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_PELT_OF_THE_ASSASSIN">
+<Description language="ENGLISH">"Pelt of the Assassin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Stealth"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A chameleon scale (+2)"</Ingredient>
+<Page>"80"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_POISONOUS_PUSTULE_2">
+<Description language="ENGLISH">"Poisonous Pustule"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Stealth"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A rusting healer’s lance (+2)"</Ingredient>
+<Page>"80"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_SKITTERLEAP">
+<Description language="ENGLISH">"Skitterleap"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Stealth"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"The hind leg of a rat (+1)"</Ingredient>
+<Page>"80"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_STICKYPAWS">
+<Description language="ENGLISH">"Stickypaws"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Stealth"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A drop of glue or honey (+2)"</Ingredient>
+<Page>"80"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_SWIFTSCAMPER">
+<Description language="ENGLISH">"Swiftscamper"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Stealth"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"An Elf’s scalp (+2)"</Ingredient>
+<Page>"80"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_TRACELESS_DEMISE">
+<Description language="ENGLISH">"Traceless Demise"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Stealth"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"One hour"</CastingTime>
+<Ingredient>"An ounce of Warpstone, consumed by the target(s) (+3)"</Ingredient>
+<Page>"80"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_WARP_STARS">
+<Description language="ENGLISH">"Warp Stars"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Stealth"</Lore>
+<CastingNumber>"26"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A silver shuriken carved with runes of chaos (+3)"</Ingredient>
+<Page>"81"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_ARMOUR_OF_DARKNESS">
+<Description language="ENGLISH">"Armour of Darkness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Warp"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A piece of blackened leather (+2)"</Ingredient>
+<Page>"78"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_CRACKLING_DOOM">
+<Description language="ENGLISH">"Crackling Doom"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Warp"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A coil of copper wire (+1)"</Ingredient>
+<Page>"79"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_DEATH_FRENZY_2">
+<Description language="ENGLISH">"Death Frenzy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Warp"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Two drops of blood from a rabid animal (+2)"</Ingredient>
+<Page>"79"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_FLENSING_RUIN">
+<Description language="ENGLISH">"Flensing Ruin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Warp"</Lore>
+<CastingNumber>"25"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A piece of tanned skin from a Human, Elf, or Dwarf (+3)"</Ingredient>
+<Page>"79"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_PESTILENT_BREATH_2">
+<Description language="ENGLISH">"Pestilent Breath"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Warp"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A stick of Warpstone incense lit at both ends (+2)"</Ingredient>
+<Page>"80"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_PLAGUE_2">
+<Description language="ENGLISH">"Plague"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Warp"</Lore>
+<CastingNumber>"26"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A sprinkling of several dead fleas (+3)"</Ingredient>
+<Page>"80"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_SKITTERLEAP_2">
+<Description language="ENGLISH">"Skitterleap"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Warp"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"The hind leg of a rat (+1)"</Ingredient>
+<Page>"80"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_VERMINTIDE_2">
+<Description language="ENGLISH">"Vermintide"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Warp"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A wheel of Good cheese (+2)"</Ingredient>
+<Page>"81"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_WARP_LIGHTNING">
+<Description language="ENGLISH">"Warp Lightning"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Warp"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A slender copper rod (+2)"</Ingredient>
+<Page>"81"</Page>
+</SpellV2>
+<SpellV2 id="CHR-SPEL_WARP_STORM">
+<Description language="ENGLISH">"Warp Storm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Warp"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"The likeness of the Horned Rat carved from copper (+2)"</Ingredient>
+<Page>"81"</Page>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SPELL_TALENT>
+<Sort id="CHR-SPEL_MANTLE_OF_CONTAGION">
+<Talent>"RULES-T_DARK_LORE__PLAGUE"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_MUSK_OF_TERROR">
+<Talent>"RULES-T_DARK_LORE__PLAGUE"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_PESTILENT_BREATH">
+<Talent>"RULES-T_DARK_LORE__PLAGUE"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_PLAGUE">
+<Talent>"RULES-T_DARK_LORE__PLAGUE"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_POISONOUS_PUSTULE">
+<Talent>"RULES-T_DARK_LORE__PLAGUE"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_PUTREFY">
+<Talent>"RULES-T_DARK_LORE__PLAGUE"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_TOXIC_RAIN">
+<Talent>"RULES-T_DARK_LORE__PLAGUE"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_VEIL_OF_FLIES">
+<Talent>"RULES-T_DARK_LORE__PLAGUE"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_VERMINTIDE">
+<Talent>"RULES-T_DARK_LORE__PLAGUE"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_WEEPING_WOUNDS">
+<Talent>"RULES-T_DARK_LORE__PLAGUE"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_BLACK_WHIRLWIND">
+<Talent>"RULES-T_DARK_LORE__STEALTH"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_BUOYANT_PASSAGE">
+<Talent>"RULES-T_DARK_LORE__STEALTH"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_DEATH_FRENZY">
+<Talent>"RULES-T_DARK_LORE__STEALTH"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_PELT_OF_THE_ASSASSIN">
+<Talent>"RULES-T_DARK_LORE__STEALTH"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_POISONOUS_PUSTULE_2">
+<Talent>"RULES-T_DARK_LORE__STEALTH"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_SKITTERLEAP">
+<Talent>"RULES-T_DARK_LORE__STEALTH"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_STICKYPAWS">
+<Talent>"RULES-T_DARK_LORE__STEALTH"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_SWIFTSCAMPER">
+<Talent>"RULES-T_DARK_LORE__STEALTH"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_TRACELESS_DEMISE">
+<Talent>"RULES-T_DARK_LORE__STEALTH"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_WARP_STARS">
+<Talent>"RULES-T_DARK_LORE__STEALTH"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_ARMOUR_OF_DARKNESS">
+<Talent>"RULES-T_DARK_LORE__WARP"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_CRACKLING_DOOM">
+<Talent>"RULES-T_DARK_LORE__WARP"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_DEATH_FRENZY_2">
+<Talent>"RULES-T_DARK_LORE__WARP"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_FLENSING_RUIN">
+<Talent>"RULES-T_DARK_LORE__WARP"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_PESTILENT_BREATH_2">
+<Talent>"RULES-T_DARK_LORE__WARP"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_PLAGUE_2">
+<Talent>"RULES-T_DARK_LORE__WARP"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_SKITTERLEAP_2">
+<Talent>"RULES-T_DARK_LORE__WARP"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_VERMINTIDE_2">
+<Talent>"RULES-T_DARK_LORE__WARP"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_WARP_LIGHTNING">
+<Talent>"RULES-T_DARK_LORE__WARP"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_WARP_STORM">
+<Talent>"RULES-T_DARK_LORE__WARP"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_FAVOUR">
+<Talent>"RULES-T_PETTY_MAGIC__WARP"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_GHOSTLY_FLAME">
+<Talent>"RULES-T_PETTY_MAGIC__WARP"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_MARK_OF_THE_HORNED_RAT">
+<Talent>"RULES-T_PETTY_MAGIC__WARP"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_RAT_THRALL">
+<Talent>"RULES-T_PETTY_MAGIC__WARP"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_VECTOR">
+<Talent>"RULES-T_PETTY_MAGIC__WARP"</Talent>
+</Sort>
+<Sort id="CHR-SPEL_WRACK">
+<Talent>"RULES-T_PETTY_MAGIC__WARP"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="CHR-EQUI_TABLES_7_6">
+<Description language="ENGLISH">"Table 7–6: Warpstone and Improvement"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"105"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_TABLES_7_7">
+<Description language="ENGLISH">"Table 7–7: Improvements"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"105"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MELEE_WEAPONS_PLAGUE_CENSER">
+<Description language="ENGLISH">"Plague Censer"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"10 Warpstone Tokens"</Cost>
+<Encumbrance>"85"</Encumbrance>
+<Group>"RULES-WTYPE2_FLAIL"</Group>
+<Damage>"SB+1"</Damage>
+<Qualities>"Impact, Special, Tiring"</Qualities>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Note>""</Note>
+<Page>"72"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MELEE_WEAPONS_PUNCH_DAGGER">
+<Description language="ENGLISH">"Punch Dagger"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"1 Warpstone Tokens"</Cost>
+<Encumbrance>"15"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB-1"</Damage>
+<Qualities>"Balanced, Defensive"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Note>"Clan Eshin blade held perpendicular to the fist, often used in pairs."</Note>
+<Page>"74"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MELEE_WEAPONS_RAT_CLAWS">
+<Description language="ENGLISH">"Rat Claws"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"2 Warpstone Tokens"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB-3"</Damage>
+<Qualities>"Special"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Note>""</Note>
+<Page>"74"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MELEE_WEAPONS_TAIL_BLADE">
+<Description language="ENGLISH">"Tail Blade"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"2 Warpstone Tokens"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB-2"</Damage>
+<Qualities>"Fast, Special"</Qualities>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Note>""</Note>
+<Page>"74"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MELEE_WEAPONS_THINGS_CATCHER">
+<Description language="ENGLISH">"Things-Catcher"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"13 Warpstone Tokens"</Cost>
+<Encumbrance>"170"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB+1"</Damage>
+<Qualities>"Snare"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Note>""</Note>
+<Page>"74"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MISSILE_WEAPONS_BLOWGUN">
+<Description language="ENGLISH">"Blowgun"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"2 Warpstone Tokens"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Group>"RULES-WTYPE2_BLOWGUN"</Group>
+<Damage>"0"</Damage>
+<Range>"8/16"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"None"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"72"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MISSILE_WEAPONS_POISONED_WIND_GLOBE">
+<Description language="ENGLISH">"Poisoned Wind Globe"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"6 Warpstone Tokens"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Group>"RULES-WTYPE2_THROWING"</Group>
+<Damage>"Special"</Damage>
+<Range>"4/20"</Range>
+<Reload>"Full"</Reload>
+<Qualities>"Special"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Note>""</Note>
+<Page>"73"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MISSILE_WEAPONS_RATLING_GUN">
+<Description language="ENGLISH">"Ratling Gun"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"8 Warpstone Tokens"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Group>"RULES-WTYPE2_ENGINEER"</Group>
+<Damage>"3"</Damage>
+<Range>"10/30"</Range>
+<Reload>"10 Full"</Reload>
+<Qualities>"Experimental, Shrapnel"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"74"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MISSILE_WEAPONS_SMOKE_BOMB">
+<Description language="ENGLISH">"Smoke Bomb"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"3 Warpstone Tokens"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Group>"RULES-WTYPE2_THROWING"</Group>
+<Damage>"-"</Damage>
+<Range>"4/20"</Range>
+<Reload>"Full"</Reload>
+<Qualities>"Special"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Note>""</Note>
+<Page>"74"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MISSILE_WEAPONS_WARPFIRE_THROWER">
+<Description language="ENGLISH">"Warpfire Thrower"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"10 Warpstone Tokens"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Group>"RULES-WTYPE2_ENGINEER"</Group>
+<Damage>"4"</Damage>
+<Range>"Special"</Range>
+<Reload>"10 Full"</Reload>
+<Qualities>"Experimental, Special"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"74"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MISSILE_WEAPONS_WARPLOCK_JEZZAIL">
+<Description language="ENGLISH">"Warplock Jezzail"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"12 Warpstone Tokens"</Cost>
+<Encumbrance>"60"</Encumbrance>
+<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
+<Damage>"5"</Damage>
+<Range>"48/96"</Range>
+<Reload>"2 Full"</Reload>
+<Qualities>"Armour Piercing, Unreliable"</Qualities>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Note>""</Note>
+<Page>"75"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MISSILE_WEAPONS_WARPLOCK_PISTOL">
+<Description language="ENGLISH">"Warplock Pistol"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"10 Warpstone Tokens"</Cost>
+<Encumbrance>"25"</Encumbrance>
+<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
+<Damage>"5"</Damage>
+<Range>"10/20"</Range>
+<Reload>"2 Full"</Reload>
+<Qualities>"Armour Piercing, Unreliable"</Qualities>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Note>"Used by higher-ranking Skaven. With ordinary gunpowder: Range 8/16 and Damage 4."</Note>
+<Page>"75"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MAGIC_ITEMS_CLAN_SKRYRE_GAS_MASK">
+<Description language="ENGLISH">"Clan Skryre Gas Mask"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Mask and back-mounted bellows worn by Globadiers of Clan Skryre, made for Skaven only."</Note>
+<Page>"75"</Page>
+<Powers>"+20% to Toughness Tests to resist inhaled poisons and gases."</Powers>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MAGIC_ITEMS_SUPERCHARGED_WARP_POWER_ACCUMULATOR">
+<Description language="ENGLISH">"Supercharged Warp-Power Accumulator"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Warlock Engineer's device that boosts Warp Lightning."</Note>
+<Page>"75"</Page>
+<Powers>""</Powers>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MAGIC_ITEMS_UPGRADED_WARP_ENERGY_CONDENSER">
+<Description language="ENGLISH">"Upgraded Warp Energy Condenser"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Focuses warp energy into a Warlock Engineer's warp-blades."</Note>
+<Page>"75"</Page>
+<Powers>""</Powers>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MAGIC_ITEMS_WARP_BLADES">
+<Description language="ENGLISH">"Warp-Blades"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"76"</Page>
+<Powers>""</Powers>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MAGIC_ITEMS_PAIN_PAIN_SNAIL">
+<Description language="ENGLISH">"Pain-Pain Snail"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Lustrian creature cultivated by Skaven Interrogators; it exudes an acid that eats flesh."</Note>
+<Page>"74"</Page>
+<Powers>""</Powers>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MAGIC_ITEMS_WARPSTONE_TOKENS">
+<Description language="ENGLISH">"Warpstone Tokens"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"82"</Page>
+<Powers>""</Powers>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MAGIC_ITEMS_WARPSTONE_DUST">
+<Description language="ENGLISH">"Warpstone Dust"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Warpstone ground to a fine white powder; one dose is one ounce."</Note>
+<Page>"82"</Page>
+<Powers>""</Powers>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MAGIC_ITEMS_UNREFINED_WARPSTONE">
+<Description language="ENGLISH">"Unrefined Warpstone"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"82"</Page>
+<Powers>""</Powers>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MAGIC_ITEMS_WARPSTONE_ADDICTION">
+<Description language="ENGLISH">"Warpstone Addiction"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Disorder from eating Warpstone Tokens."</Note>
+<Page>"77"</Page>
+<Powers>""</Powers>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MAGIC_ITEMS_AMULET_OF_THE_HORNED_ONE">
+<Description language="ENGLISH">"Amulet of the Horned One"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Skaven artefact."</Note>
+<Page>"82"</Page>
+<AcademicKnowledge>"Magic"</AcademicKnowledge>
+<Powers>"While worn (for an hour at a time), the wearer regains 1 Wound each hour."</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MAGIC_ITEMS_BLADE_OF_CORRUPTION">
+<Description language="ENGLISH">"Blade of Corruption"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Skaven artefact, a hand weapon from the days of Clan Pestilens in Lustria."</Note>
+<Page>"83"</Page>
+<AcademicKnowledge>"Magic"</AcademicKnowledge>
+<Powers>""</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MAGIC_ITEMS_CLOAK_OF_SHADOWS">
+<Description language="ENGLISH">"Cloak of Shadows"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Skaven artefact, a long black cloak woven from the hair of Clan Eshin victims."</Note>
+<Page>"83"</Page>
+<AcademicKnowledge>"Magic"</AcademicKnowledge>
+<Powers>""</Powers>
+<History>"Ancient; repairs itself and is said to grow with each kill of an Assassin Adept."</History>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MAGIC_ITEMS_DWARF_SLAYER">
+<Description language="ENGLISH">"Dwarf-Slayer"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Skaven artefact, a curved hand weapon etched with curses against Dwarfs."</Note>
+<Page>"83"</Page>
+<AcademicKnowledge>"History"</AcademicKnowledge>
+<Powers>""</Powers>
+<History>"Forged by the Skaven in their wars with the Dwarfs for the World's Edge Mountains."</History>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MAGIC_ITEMS_FELLBLADE">
+<Description language="ENGLISH">"Fellblade"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Skaven artefact, a sword forged from Gromril and Warpstone."</Note>
+<Page>"83"</Page>
+<AcademicKnowledge>"History"</AcademicKnowledge>
+<Powers>""</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MAGIC_ITEMS_THE_FOUL_PENDANT">
+<Description language="ENGLISH">"The Foul Pendant"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Rat skull on an iron chain, given by the Council of Thirteen to dedicated followers."</Note>
+<Page>"83"</Page>
+<AcademicKnowledge>"Magic"</AcademicKnowledge>
+<Powers>"Grants 2 Armour Points to all locations, overlapping any armour worn."</Powers>
+<History>"Often changes hands soon after being awarded."</History>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_MAGIC_ITEMS_STAFF_OF_THE_HORNED_ONE">
+<Description language="ENGLISH">"Staff of the Horned One"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Long staff of blackened wood capped with a Warpstone symbol of the Horned Rat."</Note>
+<Page>"83"</Page>
+<AcademicKnowledge>"Magic"</AcademicKnowledge>
+<Powers>""</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_TABLES_6_6">
+<Description language="ENGLISH">"Table 6-6: Characteristic Functions"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"85"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_TABLES_6_7">
+<Description language="ENGLISH">"Table 6-7: Skill Functions"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"85"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_TABLES_6_8">
+<Description language="ENGLISH">"Table 6-8: Talent Functions"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"86"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_TABLES_6_9">
+<Description language="ENGLISH">"Table 6-9: Warp Functions"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"86"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_TABLES_6_10">
+<Description language="ENGLISH">"Table 6-10: Weapon Functions"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"87"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_TABLES_6_11">
+<Description language="ENGLISH">"Table 6-11: Malfunctions"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"88"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_TABLES_TECHNOMANCY">
+<Description language="ENGLISH">"Technomancy: building Skaven devices"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"84-88"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_CREATURES_BONECHEWER">
+<Description language="ENGLISH">"Bonechewer"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"32;0;40;32;36;18;41;10;1;10;4;3;4;0;0;0"</Profile>
+<Skills>"Concealment +10%, Follow Trail, Perception +20%, Silent Move"</Skills>
+<Talents>"Keen Senses, Natural Weapons, Stout-Hearted"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"112"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_CREATURES_CAVE_VIPER">
+<Description language="ENGLISH">"Cave Viper"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"45;0;15;21;35;6;16;0;1;6;1;2;3;0;0;0"</Profile>
+<Skills>"Concealment +10%, Follow Trail +20%, Perception +20%"</Skills>
+<Talents>"Natural Weapons"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"112"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_CREATURES_CAVERN_CORAL">
+<Description language="ENGLISH">"Cavern Coral"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"45;0;35;55;45;–;–;–;2;15;3;5;0;0;0;0"</Profile>
+<Skills>"None"</Skills>
+<Talents>"Fearless, Natural Weapons"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"112"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_CREATURES_GECKAMAND">
+<Description language="ENGLISH">"Geckamand"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"28;36;34;32;45;12;34;12;1;8;3;3;6;0;0;0"</Profile>
+<Skills>"Concealment, Perception +10%, Scale Sheer Surface, Silent Move"</Skills>
+<Talents>"Natural Weapons, Night Vision, Tunnel Rat"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"113"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_CREATURES_LANTERN_WORM">
+<Description language="ENGLISH">"Lantern Worm"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"44;0;38;38;60;24;31;5;4;18;3;3;7;0;0;0"</Profile>
+<Skills>"Concealment, Perception"</Skills>
+<Talents>"Contortionist, Flee!, Frightening, Keen Senses, Natural Weapons, Night Vision"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"114"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_CREATURES_PLAGUE_RAT">
+<Description language="ENGLISH">"Plague Rat"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"28;0;36;30;48;18;21;12;1;9;3;3;6;0;0;0"</Profile>
+<Skills>"Concealment, Perception +10%, Silent Move +10%, Swim +10%"</Skills>
+<Talents>"Keen Senses, Natural Weapons, Night Vision"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"114"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_CREATURES_RAT_MOTHER">
+<Description language="ENGLISH">"Rat Mother"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"24;0;41;63;12;6;57;5;1;26;4;6;2;0;0;0"</Profile>
+<Skills>"Perception +10%"</Skills>
+<Talents>"Acute Hearing, Black Hunger, Natural Weapons, Resistance to Disease, Sixth Sense, Terrifying"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"114"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_CREATURES_RAT_SWARM">
+<Description language="ENGLISH">"Rat Swarm"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"32;0;48;36;48;6;12;5;1;16;4;3;6;0;0;0"</Profile>
+<Skills>"Concealment, Dodge Blow, Perception +20%, Silent Move, Swim +10%"</Skills>
+<Talents>"Keen Senses, Frenzy, Frightening, Natural Weapons, Night Vision"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"115"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_CREATURES_RAT_WOLF">
+<Description language="ENGLISH">"Rat-Wolf"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"32;0;34;32;44;18;25;8;1;10;3;3;6;0;0;0"</Profile>
+<Skills>"Follow Trail +10%, Outdoor Survival, Perception +10%, Silent Move +10%, Swim"</Skills>
+<Talents>"Keen Senses, Natural Weapons, Night Vision, Tunnel Rat"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"116"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_CREATURES_TREGARA">
+<Description language="ENGLISH">"Tregara"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"38;0;40;35;38;18;32;10;2;25;4;3;6;0;0;0"</Profile>
+<Skills>"Concealment +10%, Scale Sheer Surface +10%"</Skills>
+<Talents>"Natural Weapons, Tunnel Rat, Wrestling"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"116"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_CREATURES_TUNNEL_RUSHER">
+<Description language="ENGLISH">"Tunnel Rusher"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;0;55;47;25;5;20;0;1;20;5;4;9;0;0;0"</Profile>
+<Skills>"Perception"</Skills>
+<Talents>"Keen Senses, Natural Weapons, Night Vision, Strike Mighty Blow, Strike to Stun"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"116"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_CREATURES_WARP_BAT">
+<Description language="ENGLISH">"Warp Bat"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"37;0;24;20;48;12;16;10;1;8;2;2;6;0;0;0"</Profile>
+<Skills>"Concealment, Perception +10%, Scale Sheer Surface, Silent Move"</Skills>
+<Talents>"Acute Hearing, Natural Weapons, Resistance to Chaos, Tunnel Rat"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"117"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CHR-EQUI_CREATURES_WARPSLIME">
+<Description language="ENGLISH">"Warpslime"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"33;0;41;10;5;–;–;–;3;36;4;1;1;0;0;0"</Profile>
+<Skills>"None"</Skills>
+<Talents>"None"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"117"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_SKAVEN">
+<Description language="ENGLISH">"Common Knowledge (Skaven)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_QUEEKISH">
+<Description language="ENGLISH">"Speak Language (Queekish)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_CATHAY">
+<Description language="ENGLISH">"Common Knowledge (Cathay)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_TRADE_BREWER">
+<Description language="ENGLISH">"Trade (Brewer)"</Description>
+<Generique>"RULES-COMP_TRADE_*"</Generique>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+<DATA_WEAPON>
+<Weapon id="CHR-COMB_V2_PLAGUE_CENSER">
+<Description language="ENGLISH">"Plague Censer"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Encumbrance>"85"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_SPECIAL,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FLAIL"</Type>
+<Page>"72"</Page>
+</Weapon>
+<Weapon id="CHR-COMB_V2_PUNCH_DAGGER">
+<Description language="ENGLISH">"Punch Dagger"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Encumbrance>"15"</Encumbrance>
+<Quality>"RULES-WEAPQ_BALANCED,RULES-WEAPQ_DEFENSIVE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Page>"74"</Page>
+</Weapon>
+<Weapon id="CHR-COMB_V2_RAT_CLAWS">
+<Description language="ENGLISH">"Rat Claws"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Encumbrance>"10"</Encumbrance>
+<Quality>"RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Page>"74"</Page>
+</Weapon>
+<Weapon id="CHR-COMB_V2_TAIL_BLADE">
+<Description language="ENGLISH">"Tail Blade"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Encumbrance>"5"</Encumbrance>
+<Quality>"RULES-WEAPQ_FAST,RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Page>"74"</Page>
+</Weapon>
+<Weapon id="CHR-COMB_V2_THINGS_CATCHER">
+<Description language="ENGLISH">"Things-Catcher"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Encumbrance>"170"</Encumbrance>
+<Quality>"RULES-WEAPQ_SNARE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Page>"74"</Page>
+</Weapon>
+<Weapon id="CHR-PROJ_V2_BLOWGUN">
+<Description language="ENGLISH">"Blowgun"</Description>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"8/16"</Reach>
+<Encumbrance>"10"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_BLOWGUN"</Type>
+<Page>"72"</Page>
+</Weapon>
+<Weapon id="CHR-PROJ_V2_POISONED_WIND_GLOBE">
+<Description language="ENGLISH">"Poisoned Wind Globe"</Description>
+<Skill>"-"</Skill>
+<Damage>"-"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Reach>"4/20"</Reach>
+<Encumbrance>"5"</Encumbrance>
+<Quality>"RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
+<Page>"73"</Page>
+</Weapon>
+<Weapon id="CHR-PROJ_V2_RATLING_GUN">
+<Description language="ENGLISH">"Ratling Gun"</Description>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"10/30"</Reach>
+<Encumbrance>"10"</Encumbrance>
+<Quality>"RULES-WEAPQ_EXPERIMENTAL,RULES-WEAPQ_SHRAPNEL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENGINEER"</Type>
+<Page>"74"</Page>
+</Weapon>
+<Weapon id="CHR-PROJ_V2_SMOKE_BOMB">
+<Description language="ENGLISH">"Smoke Bomb"</Description>
+<Skill>"-"</Skill>
+<Damage>"-"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Reach>"4/20"</Reach>
+<Encumbrance>"5"</Encumbrance>
+<Quality>"RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
+<Page>"74"</Page>
+</Weapon>
+<Weapon id="CHR-PROJ_V2_WARPFIRE_THROWER">
+<Description language="ENGLISH">"Warpfire Thrower"</Description>
+<Skill>"-"</Skill>
+<Damage>"+4"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"Special"</Reach>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"RULES-WEAPQ_EXPERIMENTAL,RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENGINEER"</Type>
+<Page>"74"</Page>
+</Weapon>
+<Weapon id="CHR-PROJ_V2_WARPLOCK_JEZZAIL">
+<Description language="ENGLISH">"Warplock Jezzail"</Description>
+<Skill>"-"</Skill>
+<Damage>"+5"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Reach>"48/96"</Reach>
+<Encumbrance>"60"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_GUNPOWDER"</Type>
+<Page>"75"</Page>
+</Weapon>
+<Weapon id="CHR-PROJ_V2_WARPLOCK_PISTOL">
+<Description language="ENGLISH">"Warplock Pistol"</Description>
+<Skill>"-"</Skill>
+<Damage>"+5"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Reach>"10/20"</Reach>
+<Encumbrance>"25"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_GUNPOWDER"</Type>
+<Page>"75"</Page>
+</Weapon>
+</DATA_WEAPON>
+<DATA_SPECIE>
+<Specie id="CHR-RACE_SKAVEN_CHOSEN">
+<Description language="ENGLISH">"Skaven (Chosen)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CHR-SPECIE_SKAVEN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+25"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+25"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+25"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"1"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 9; 4-6: 10; 7-9: 11; 10: 12"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 1; 5-7: 2; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_SKAVEN"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_QUEEKISH"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_AETHYRIC_ATTUNEMENT"</Talent>
+<Talent>"RULES-T_COOLHEADED"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC__WARP"</Talent>
+<Talent>"RULES-T_SAVVY"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="CHR-CARE_APPRENTICE_GREY_SEER">"100"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"92"</Page>
+</Specie>
+<Specie id="CHR-RACE_SKAVEN_MIGHTY">
+<Description language="ENGLISH">"Skaven (Mighty)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CHR-SPECIE_SKAVEN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"5"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 11; 4-6: 12; 7-9: 13; 10: 14"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 0; 5-7: 1; 8-10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_SKAVEN"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_QUEEKISH"</Skill>
+<Skill>"RULES-COMP_SWIM"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_COOLHEADED"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_STURDY"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="CHR-CARE_BLACK_SKAVEN">"100"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"93"</Page>
+</Specie>
+<Specie id="CHR-RACE_SKAVEN_COMMON">
+<Description language="ENGLISH">"Skaven (Common)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CHR-SPECIE_SKAVEN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+25"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+25"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"5"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 8; 4-6: 9; 7-9: 10; 10: 11"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 0; 5-7: 0; 8-10: 1"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_SKAVEN"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_QUEEKISH"</Skill>
+<Skill>"RULES-COMP_SWIM"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"1"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"1"</Career>
+<Career name="RULES-CARE_BOATMAN">"1"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"1"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"1"</Career>
+<Career name="CHR-CARE_CLANRAT">"43"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"1"</Career>
+<Career name="RULES-CARE_HUNTER">"1"</Career>
+<Career name="RULES-CARE_JAILER">"1"</Career>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+<Career name="RULES-CARE_MESSENGER">"2"</Career>
+<Career name="RULES-CARE_MINER">"3"</Career>
+<Career name="CHR-CARE_NIGHT_RUNNER">"5"</Career>
+<Career name="RULES-CARE_OUTLAW">"1"</Career>
+<Career name="CHR-CARE_PACKMASTER">"5"</Career>
+<Career name="CHR-CARE_PLAGUE_MONK">"5"</Career>
+<Career name="RULES-CARE_SERVANT">"1"</Career>
+<Career name="CHR-CARE_SKIRMISHER">"3"</Career>
+<Career name="CCOMP-CARE_SLAVE">"5"</Career>
+<Career name="RULES-CARE_SMUGGLER">"1"</Career>
+<Career name="RULES-CARE_THIEF">"2"</Career>
+<Career name="RULES-CARE_THUG">"2"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"3"</Career>
+<Career name="RULES-CARE_VAGABOND">"1"</Career>
+<Career name="RULES-CARE_WATCHMAN">"4"</Career>
+<Career name="RULES-CARE_ZEALOT">"1"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"93"</Page>
+</Specie>
+</DATA_SPECIE>
+<DATA_RACE>
+<Race id="CHR-SPECIE_SKAVEN">
+<Description language="ENGLISH">"Skaven"</Description>
+<SUBCHAPTER_PHYSICAL>
+<Birthplace name="Clan Eshin (Concealment, Silent Move, Hand Weapon, Warpstone tokens: 1d10/5 + 1)">"01-05"</Birthplace>
+<BirthplaceEffect name="Clan Eshin (Concealment, Silent Move, Hand Weapon, Warpstone tokens: 1d10/5 + 1)">"Skill:RULES-COMP_CONCEALMENT;Skill:RULES-COMP_SILENT_MOVE;Item:RULES-COMB_V2_HAND_WEAPON_SWORD_ETC"</BirthplaceEffect>
+<Birthplace name="Clan Moulder (Animal Training, Command, Hand Weapon, Leather Jerkin, Warpstone tokens: 1d10/5 + 1)">"06-10"</Birthplace>
+<BirthplaceEffect name="Clan Moulder (Animal Training, Command, Hand Weapon, Leather Jerkin, Warpstone tokens: 1d10/5 + 1)">"Skill:RULES-COMP_ANIMAL_TRAINING;Skill:RULES-COMP_COMMAND;Item:RULES-COMB_V2_HAND_WEAPON_SWORD_ETC;Item:RULES-ARMO_V2_LEATHER_LEATHER_JERKIN"</BirthplaceEffect>
+<Birthplace name="Clan Pestilens (Academic Knowledge (Theology), Dodge Blow, Hand Weapon, Maggots, Warpstone tokens: 1d10/5)">"11-15"</Birthplace>
+<BirthplaceEffect name="Clan Pestilens (Academic Knowledge (Theology), Dodge Blow, Hand Weapon, Maggots, Warpstone tokens: 1d10/5)">"Skill:RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY;Skill:RULES-COMP_DODGE_BLOW;Item:RULES-COMB_V2_HAND_WEAPON_SWORD_ETC"</BirthplaceEffect>
+<Birthplace name="Clan Skryre (Scale Sheer Surface, Silent Move, Hand Weapon, Warpstone tokens: 1d10+2/4)">"16-20"</Birthplace>
+<BirthplaceEffect name="Clan Skryre (Scale Sheer Surface, Silent Move, Hand Weapon, Warpstone tokens: 1d10+2/4)">"Skill:RULES-COMP_SCALE_SHEER_SURFACE;Skill:RULES-COMP_SILENT_MOVE;Item:RULES-COMB_V2_HAND_WEAPON_SWORD_ETC"</BirthplaceEffect>
+<Birthplace name="Clan Flem (Concealment, Hand Weapon)">"21-30"</Birthplace>
+<BirthplaceEffect name="Clan Flem (Concealment, Hand Weapon)">"Skill:RULES-COMP_CONCEALMENT;Item:RULES-COMB_V2_HAND_WEAPON_SWORD_ETC"</BirthplaceEffect>
+<Birthplace name="Clan Mors (Command, Prepare Poison, Hand Weapon)">"31-40"</Birthplace>
+<BirthplaceEffect name="Clan Mors (Command, Prepare Poison, Hand Weapon)">"Skill:RULES-COMP_COMMAND;Skill:RULES-COMP_PREPARE_POISON;Item:RULES-COMB_V2_HAND_WEAPON_SWORD_ETC"</BirthplaceEffect>
+<Birthplace name="Clan Skab (Hardy, Hand Weapon)">"41-50"</Birthplace>
+<BirthplaceEffect name="Clan Skab (Hardy, Hand Weapon)">"Talent:RULES-T_HARDY;Item:RULES-COMB_V2_HAND_WEAPON_SWORD_ETC"</BirthplaceEffect>
+<Birthplace name="Clan Skaar (Trade (Miner), Hand Weapon)">"51-60"</Birthplace>
+<BirthplaceEffect name="Clan Skaar (Trade (Miner), Hand Weapon)">"Skill:RULES-COMP_TRADE_MINER;Item:RULES-COMB_V2_HAND_WEAPON_SWORD_ETC"</BirthplaceEffect>
+<Birthplace name="Clan Skaul (Resistance to Poison, Hand Weapon)">"61-70"</Birthplace>
+<BirthplaceEffect name="Clan Skaul (Resistance to Poison, Hand Weapon)">"Talent:RULES-T_RESISTANCE_TO_POISON;Item:RULES-COMB_V2_HAND_WEAPON_SWORD_ETC"</BirthplaceEffect>
+<Birthplace name="Clan Sleekit (Navigation, Hand Weapon)">"71-80"</Birthplace>
+<BirthplaceEffect name="Clan Sleekit (Navigation, Hand Weapon)">"Skill:RULES-COMP_NAVIGATION;Item:RULES-COMB_V2_HAND_WEAPON_SWORD_ETC"</BirthplaceEffect>
+<Birthplace name="Clan Verms (Outdoor Survival, Hand Weapon)">"81-90"</Birthplace>
+<BirthplaceEffect name="Clan Verms (Outdoor Survival, Hand Weapon)">"Skill:RULES-COMP_OUTDOOR_SURVIVAL;Item:RULES-COMB_V2_HAND_WEAPON_SWORD_ETC"</BirthplaceEffect>
+<Birthplace name="Minor Clan (Hand Weapon)">"91-00"</Birthplace>
+<BirthplaceEffect name="Minor Clan (Hand Weapon)">"Item:RULES-COMB_V2_HAND_WEAPON_SWORD_ETC"</BirthplaceEffect>
+</SUBCHAPTER_PHYSICAL>
+<Page>"92"</Page>
+</Race>
+</DATA_RACE>
+</DATA_BOOK>

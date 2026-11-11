@@ -2,6 +2,7 @@
 <DATA_BOOK>
 <CODE_BOOK>"DEATH"</CODE_BOOK>
 <BOOK>"BOOK DEATH ON THE REIK COMPANION"</BOOK>
+<BOOKNAME>"DEATH ON THE REIK COMPANION"</BOOKNAME>
 <language>"ENGLISH"</language>
 <VERSION>"WFRP4"</VERSION>
 <OFFICIAL>"1"</OFFICIAL>
@@ -16,7 +17,7 @@
 </Label>
 </DATA_LABEL>
 <DATA_TALENT>
-<Talent id="DEATH-T0178">
+<Talent id="DEATH-T_WILFUL_CORRUPTION">
 <Description language="ENGLISH">"Wilful Corruption"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -27,10 +28,10 @@
 </Talent>
 </DATA_TALENT>
 <DATA_CAREER>
-<Career id="DEATH-WORK105">
+<Career id="DEATH-WORK_WARRIOR_OF_TZEENTCH">
 <Description language="ENGLISH">"Warrior of Tzeentch"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Skill>"RULES-COMP_MELEE__BASIC"</Skill>
 <Class>"RULES-CLASS_WARR"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -63,56 +64,56 @@
 <Attribut name="RULES-ATTR_Fel">"0"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPATHL">"1"</Skill>
-  <Skill name="RULES-COMPCHARM">"1"</Skill>
-  <Skill name="RULES-COMPRAGOT">"1"</Skill>
-  <Skill name="RULES-COMPRESALC">"1"</Skill>
-  <Skill name="RULES-COMPLANG_MAG">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPDISC_RURAL">"1"</Skill>
-  <Skill name="RULES-COMPSUBOR">"2"</Skill>
-  <Skill name="RULES-COMPESQU">"2"</Skill>
-  <Skill name="RULES-COMPRESIST">"2"</Skill>
-  <Skill name="RULES-COMPINTIM">"2"</Skill>
-  <Skill name="RULES-COMPINTUI">"2"</Skill>
-  <Skill name="RULES-COMPLANG_DARKTOUNGE">"2"</Skill>
-  <Skill name="RULES-COMPFOCAL_*">"3"</Skill>
-  <Skill name="RULES-COMPCOMM">"3"</Skill>
-  <Skill name="RULES-COMPCOMB_*">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"3"</Skill>
-  <Skill name="RULES-COMPCALM">"4"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
+<Skill name="RULES-COMP_ATHLETICS">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM">"1"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+  <Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__MAGICK">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_STEALTH__RURAL">"1"</Skill>
+  <Skill name="RULES-COMP_BRIBERY">"2"</Skill>
+  <Skill name="RULES-COMP_DODGE">"2"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"2"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"2"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"2"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__DARK_TONGUE">"2"</Skill>
+  <Skill name="RULES-COMP_CHANNELLING__*">"3"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"3"</Skill>
+  <Skill name="RULES-COMP_MELEE__*">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"3"</Skill>
+  <Skill name="RULES-COMP_COOL">"4"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0096/RULES-T0121">"1"</Talent>
-  <Talent name="RULES-T0037">"1"</Talent>
-  <Talent name="RULES-T0136_BEASTMEN">"1"</Talent>
-  <Talent name="DEATH-T0178">"1"</Talent>
-  <Talent name="RULES-T0098">"2"</Talent>
-  <Talent name="RULES-T0089">"2"</Talent>
-  <Talent name="RULES-T0079">"2"</Talent>
-  <Talent name="RULES-T0128">"2"</Talent>
-  <Talent name="RULES-T0088_TZEENTCH">"3"</Talent>
-  <Talent name="RULES-T0008">"3"</Talent>
-  <Talent name="RULES-T0060">"3"</Talent>
-  <Talent name="RULES-T0087">"3"</Talent>
-  <Talent name="RULES-T0099">"4"</Talent>
-  <Talent name="RULES-T0042">"4"</Talent>
-  <Talent name="RULES-T0161">"4"</Talent>
-  <Talent name="RULES-T0138">"4"</Talent>
+<Talent name="RULES-T_DUAL_WIELDER/RULES-T_SHIELDSMAN">"1"</Talent>
+  <Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+  <Talent name="RULES-T_ETIQUETTE__BEASTMEN">"1"</Talent>
+  <Talent name="DEATH-T_WILFUL_CORRUPTION">"1"</Talent>
+  <Talent name="RULES-T_MENACING">"2"</Talent>
+  <Talent name="RULES-T_PETTY_MAGIC">"2"</Talent>
+  <Talent name="RULES-T_SCHEMER">"2"</Talent>
+  <Talent name="RULES-T_REVERSAL">"2"</Talent>
+  <Talent name="RULES-T_ARCANE_MAGIC__TZEENTCH">"3"</Talent>
+  <Talent name="RULES-T_FURIOUS_ASSAULT">"3"</Talent>
+  <Talent name="RULES-T_STRIKE_TO_INJURE">"3"</Talent>
+  <Talent name="RULES-T_WAR_WIZARD">"3"</Talent>
+  <Talent name="RULES-T_CAT_TONGUED">"4"</Talent>
+  <Talent name="RULES-T_INSTINCTIVE_DICTION">"4"</Talent>
+  <Talent name="RULES-T_SLAYER">"4"</Talent>
+  <Talent name="RULES-T_WAR_LEADER">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="RULES-COMB_BASE_*">"1"</Item>
-<Item name="RULES-ARMO_04">"1"</Item>
+<Item name="RULES-COMP_MELEE__BASIC">"1"</Item>
+<Item name="RULES-ARMO_LEATHER_JACK">"1"</Item>
 <Item name="Religious Symbol (Talisman of Tzeentch)">"1"</Item>
-<Item name="RULES-ARMO_07">"2"</Item>
+<Item name="RULES-ARMO_MAIL_SHIRT">"2"</Item>
 <Item name="Tome of Forbidden Knowledge">"2"</Item>
 <Item name="Grimoire of Dark Magicks">"3"</Item>
-<Item name="RULES-ARMO_14">"3"</Item>
-<Item name="RULES-ARMO_11">"3"</Item>
-  <Item name="RULES-ARMO_10">"3"</Item>
-  <Item name="RULES-ARMO_13">"3"</Item>
+<Item name="RULES-ARMO_BREASTPLATE_PLATE">"3"</Item>
+<Item name="RULES-ARMO_HELM">"3"</Item>
+  <Item name="RULES-ARMO_BRACERS">"3"</Item>
+  <Item name="RULES-ARMO_PLATE_LEGGINGS">"3"</Item>
   <Item name="Spell ingredients for 5 spells">"3"</Item>
 <Item name="Cohort of Chaos Warriors">"4"</Item>
 <Item name="Daemon-bound Weapon">"4"</Item>
@@ -123,247 +124,247 @@
 </Career>
 </DATA_CAREER>
 <DATA_SPELL>
-<Sort id="DEATH-PETTY_01">
+<Sort id="DEATH-PETTY_BEAST_TONGUE">
 <Description language="ENGLISH">"Beast Tongue"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(ATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>98</Page>
 </Sort>
-<Sort id="DEATH-PETTY_02">
+<Sort id="DEATH-PETTY_EYES_OF_THE_BEAST">
 <Description language="ENGLISH">"Eyes of the Beast"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>98</Page>
 </Sort>
-<Sort id="DEATH-PETTY_03">
+<Sort id="DEATH-PETTY_SIGN_OF_THE_BEAST">
 <Description language="ENGLISH">"Sign of the Beast"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>98</Page>
 </Sort>
-<Sort id="DEATH-TZEEN_01">
+<Sort id="DEATH-TZEEN_BENSION_OF_TZEENTCH">
 <Description language="ENGLISH">"Bension of Tzeentch"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_TZEENTCH"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__TZEENTCH"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>98</Page>
 </Sort>
-<Sort id="DEATH-TZEEN_02">
+<Sort id="DEATH-TZEEN_BESTIAL_RAGE">
 <Description language="ENGLISH">"Bestial Rage"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_TZEENTCH"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__TZEENTCH"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>98</Page>
 </Sort>
-<Sort id="DEATH-TZEEN_03">
+<Sort id="DEATH-TZEEN_CLIMB">
 <Description language="ENGLISH">"Climb"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_TZEENTCH"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__TZEENTCH"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>98</Page>
 </Sort>
-<Sort id="DEATH-TZEEN_04">
+<Sort id="DEATH-TZEEN_ENRAGE_BEAST">
 <Description language="ENGLISH">"Enrage Beast"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_TZEENTCH"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__TZEENTCH"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>99</Page>
 </Sort>
-<Sort id="DEATH-TZEEN_05">
+<Sort id="DEATH-TZEEN_GIFT_OF_THE_BEAST">
 <Description language="ENGLISH">"Gift of the Beast"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_TZEENTCH"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__TZEENTCH"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>99</Page>
 </Sort>
-<Sort id="DEATH-TZEEN_06">
+<Sort id="DEATH-TZEEN_SLAVE_TO_CHAOS">
 <Description language="ENGLISH">"Slave to Chaos"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_TZEENTCH"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__TZEENTCH"</Talent>
 <Level>"18"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>99</Page>
 </Sort>
-<Sort id="DEATH-TZEEN_07">
+<Sort id="DEATH-TZEEN_SUBVERT_STRENGTH">
 <Description language="ENGLISH">"Subvert Strength"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0088_TZEENTCH"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__TZEENTCH"</Talent>
 <Level>"11"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>99</Page>
 </Sort>
-<Sort id="DEATH-TZEEN_08">
+<Sort id="DEATH-TZEEN_TRANSFORMATION_OF_THE_BEAST">
 <Description language="ENGLISH">"Transformation of the Beast"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_TZEENTCH"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__TZEENTCH"</Talent>
 <Level>"12"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>100</Page>
 </Sort>
-<Sort id="DEATH-TZEEN_09">
+<Sort id="DEATH-TZEEN_TREMOR">
 <Description language="ENGLISH">"Tremor"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (BATTR_WP)m"</Target>
 <Duration>"Instant"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_TZEENTCH"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__TZEENTCH"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>100</Page>
 </Sort>
 </DATA_SPELL>
 <DATA_WEAPON>
-<Weapon id="DEATH-PROJ_ING_01">
+<Weapon id="DEATH-PROJ_BALLISTA">
 <Description language="ENGLISH">"Ballista"</Description>
-<Skill>"RULES-COMPPROJ_ING"</Skill>
+<Skill>"RULES-COMP_RANGED__ENGINEERING"</Skill>
 <Damage>"+12"</Damage>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
 <Reach>"100"</Reach>
 <Price>"30CO"</Price>
 <Encumbrance>"20"</Encumbrance>
-<Quality>"RULES-WEAPB16,RULES-WEAPB12,RULES-WEAPB22,RULES-WEAPB23 3"</Quality>
+<Quality>"RULES-WEAPB_ACCURATE,RULES-WEAPB_IMPALE,RULES-WEAPB_PENETRATING,RULES-WEAPB_RELOAD 3"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>68</Page>
 </Weapon>
-<Weapon id="DEATH-PROJ_ING_02">
+<Weapon id="DEATH-PROJ_CANNON_SMALL">
 <Description language="ENGLISH">"Cannon (small)"</Description>
-<Skill>"RULES-COMPPROJ_ING"</Skill>
+<Skill>"RULES-COMP_RANGED__ENGINEERING"</Skill>
 <Damage>"+10"</Damage>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
 <Reach>"50"</Reach>
 <Price>"40CO"</Price>
 <Encumbrance>"30"</Encumbrance>
-<Quality>"RULES-WEAPB15 2,RULES-WEAPB10,RULES-WEAPB24,RULES-WEAPB23 4,RULES-WEAPB02"</Quality>
+<Quality>"RULES-WEAPB_BLAST 2,RULES-WEAPB_DAMAGING,RULES-WEAPB_DANGEROUS,RULES-WEAPB_RELOAD 4,RULES-WEAPB_BLACKPOWDER"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>67</Page>
 </Weapon>
-<Weapon id="DEATH-PROJ_ING_03">
+<Weapon id="DEATH-PROJ_CANNON_MEDIUM">
 <Description language="ENGLISH">"Cannon (medium)"</Description>
-<Skill>"RULES-COMPPROJ_ING"</Skill>
+<Skill>"RULES-COMP_RANGED__ENGINEERING"</Skill>
 <Damage>"+14"</Damage>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Reach>"75"</Reach>
 <Price>"100CO"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Quality>"RULES-WEAPB15 3,RULES-WEAPB10,RULES-WEAPB24,RULES-WEAPB23 6,RULES-WEAPB02"</Quality>
+<Quality>"RULES-WEAPB_BLAST 3,RULES-WEAPB_DAMAGING,RULES-WEAPB_DANGEROUS,RULES-WEAPB_RELOAD 6,RULES-WEAPB_BLACKPOWDER"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>67</Page>
 </Weapon>
-<Weapon id="DEATH-PROJ_ING_04">
+<Weapon id="DEATH-PROJ_CATAPULT_SMALL">
 <Description language="ENGLISH">"Catapult (small)"</Description>
-<Skill>"RULES-COMPPROJ_ING"</Skill>
+<Skill>"RULES-COMP_RANGED__ENGINEERING"</Skill>
 <Damage>"+10"</Damage>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
 <Reach>"50"</Reach>
 <Price>"20CO"</Price>
 <Encumbrance>"25"</Encumbrance>
-<Quality>"RULES-WEAPB10,RULES-WEAPB21,RULES-WEAPB26,RULES-WEAPB23 3"</Quality>
+<Quality>"RULES-WEAPB_DAMAGING,RULES-WEAPB_IMPACT,RULES-WEAPB_IMPRECISE,RULES-WEAPB_RELOAD 3"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>68</Page>
 </Weapon>
-<Weapon id="DEATH-PROJ_ING_05">
+<Weapon id="DEATH-PROJ_CATAPULT_MEDIUM">
 <Description language="ENGLISH">"Catapult (medium)"</Description>
-<Skill>"RULES-COMPPROJ_ING"</Skill>
+<Skill>"RULES-COMP_RANGED__ENGINEERING"</Skill>
 <Damage>"+15"</Damage>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
 <Reach>"75"</Reach>
 <Price>"40CO"</Price>
 <Encumbrance>"40"</Encumbrance>
-<Quality>"RULES-WEAPB10,RULES-WEAPB21,RULES-WEAPB26,RULES-WEAPB23 3"</Quality>
+<Quality>"RULES-WEAPB_DAMAGING,RULES-WEAPB_IMPACT,RULES-WEAPB_IMPRECISE,RULES-WEAPB_RELOAD 3"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>68</Page>
 </Weapon>
-<Weapon id="DEATH-PROJ_ING_06">
+<Weapon id="DEATH-PROJ_MORTAR">
 <Description language="ENGLISH">"Mortar"</Description>
-<Skill>"RULES-COMPPROJ_ING"</Skill>
+<Skill>"RULES-COMP_RANGED__ENGINEERING"</Skill>
 <Damage>"+20"</Damage>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Reach>"30"</Reach>
 <Price>"50CO"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Quality>"RULES-WEAPB15 5,RULES-WEAPB10,RULES-WEAPB21,RULES-WEAPB24,RULES-WEAPB23 4,RULES-WEAPB02"</Quality>
+<Quality>"RULES-WEAPB_BLAST 5,RULES-WEAPB_DAMAGING,RULES-WEAPB_IMPACT,RULES-WEAPB_DANGEROUS,RULES-WEAPB_RELOAD 4,RULES-WEAPB_BLACKPOWDER"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>68</Page>
 </Weapon>
-<Weapon id="DEATH-PROJ_ING_07">
+<Weapon id="DEATH-PROJ_SWIVEL_GUN">
 <Description language="ENGLISH">"Swivel Gun"</Description>
-<Skill>"RULES-COMPPROJ_ING"</Skill>
+<Skill>"RULES-COMP_RANGED__ENGINEERING"</Skill>
 <Damage>"+15"</Damage>
 <Availability>"RULES-DISPO_RARE"</Availability>
 <Reach>"30"</Reach>
 <Price>"20CO"</Price>
 <Encumbrance>"5"</Encumbrance>
-<Quality>"RULES-WEAPB15 2,RULES-WEAPB24,RULES-WEAPB23 4,RULES-WEAPB02"</Quality>
+<Quality>"RULES-WEAPB_BLAST 2,RULES-WEAPB_DANGEROUS,RULES-WEAPB_RELOAD 4,RULES-WEAPB_BLACKPOWDER"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>68</Page>
 </Weapon>
-<Weapon id="DEATH-PROJ_ING_08">
+<Weapon id="DEATH-PROJ_VOLLEY_GUN">
 <Description language="ENGLISH">"Volley Gun"</Description>
-<Skill>"RULES-COMPPROJ_ING"</Skill>
+<Skill>"RULES-COMP_RANGED__ENGINEERING"</Skill>
 <Damage>"+9"</Damage>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Reach>"50"</Reach>
 <Price>"10CO"</Price>
 <Encumbrance>"5"</Encumbrance>
-<Quality>"RULES-WEAPB15 2,RULES-WEAPB24,RULES-WEAPB23 7,RULES-WEAPB02"</Quality>
+<Quality>"RULES-WEAPB_BLAST 2,RULES-WEAPB_DANGEROUS,RULES-WEAPB_RELOAD 7,RULES-WEAPB_BLACKPOWDER"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>68</Page>
 </Weapon>
 </DATA_WEAPON>
 <DATA_TRAPPING>
-<Trapping id="DEATH-TRAP_01">
+<Trapping id="DEATH-TRAP_AGURK">
 <Description language="ENGLISH">"Agurk"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_RARE"</Availability>
@@ -373,7 +374,7 @@
 <Season>"RULES-LAB_227"</Season>
 <Page>121</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_02">
+<Trapping id="DEATH-TRAP_ALFUNAS">
 <Description language="ENGLISH">"Alfunas"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
@@ -383,7 +384,7 @@
 <Season>"RULES-LAB_226,RULES-LAB_227"</Season>
 <Page>121</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_03">
+<Trapping id="DEATH-TRAP_GESUNDHEIT">
 <Description language="ENGLISH">"Gesundheit"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
@@ -393,7 +394,7 @@
 <Season>"RULES-LAB_228,RULES-LAB_225"</Season>
 <Page>121</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_04">
+<Trapping id="DEATH-TRAP_GRAVEROOT">
 <Description language="ENGLISH">"Graveroot"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_RARE"</Availability>
@@ -403,7 +404,7 @@
 <Season>"RULES-LAB_227,RULES-LAB_228"</Season>
 <Page>121</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_05">
+<Trapping id="DEATH-TRAP_JUCK">
 <Description language="ENGLISH">"Juck"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
@@ -413,7 +414,7 @@
 <Season>"RULES-LAB_225"</Season>
 <Page>12</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_06">
+<Trapping id="DEATH-TRAP_MAGE_LEAF">
 <Description language="ENGLISH">"Mage-Leaf"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -423,7 +424,7 @@
 <Season>"RULES-LAB_225"</Season>
 <Page>121</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_07">
+<Trapping id="DEATH-TRAP_SCHLAFENKRAUT">
 <Description language="ENGLISH">"Schlafenkraut"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_RARE"</Availability>
@@ -433,7 +434,7 @@
 <Season>"RULES-LAB_225"</Season>
 <Page>13</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_08">
+<Trapping id="DEATH-TRAP_SIGMAFOIL">
 <Description language="ENGLISH">"Sigmafoil"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_COMMON"</Availability>
@@ -443,7 +444,7 @@
 <Season>"RULES-LAB_226"</Season>
 <Page>9</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_09">
+<Trapping id="DEATH-TRAP_SLOWMIND">
 <Description language="ENGLISH">"Slowmind"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_RARE"</Availability>
@@ -453,7 +454,7 @@
 <Season>"RULES-LAB_227"</Season>
 <Page>13</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_10">
+<Trapping id="DEATH-TRAP_SPECKLED_RUSTWORT">
 <Description language="ENGLISH">"Speckled Rustwort"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_RARE"</Availability>
@@ -463,7 +464,7 @@
 <Season>"RULES-LAB_225"</Season>
 <Page>14</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_11">
+<Trapping id="DEATH-TRAP_SPELLWORT">
 <Description language="ENGLISH">"Spellwort"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -473,7 +474,7 @@
 <Season>"RULES-LAB_226"</Season>
 <Page>14</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_12">
+<Trapping id="DEATH-TRAP_SPIDERLEAF">
 <Description language="ENGLISH">"Spiderleaf"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_COMMON"</Availability>
@@ -483,7 +484,7 @@
 <Season>"RULES-LAB_227"</Season>
 <Page>15</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_13">
+<Trapping id="DEATH-TRAP_TARRABETH">
 <Description language="ENGLISH">"Tarrabeth"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_COMMON"</Availability>
@@ -493,7 +494,7 @@
 <Season>"RULES-LAB_226"</Season>
 <Page>15</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_14">
+<Trapping id="DEATH-TRAP_TRINKWORT">
 <Description language="ENGLISH">"Trinkwort"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -503,7 +504,7 @@
 <Season>"RULES-LAB_227"</Season>
 <Page>15</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_15">
+<Trapping id="DEATH-TRAP_VALERIAN">
 <Description language="ENGLISH">"Valerian"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_COMMON"</Availability>
@@ -513,7 +514,7 @@
 <Season>"RULES-LAB_225"</Season>
 <Page>16</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_16">
+<Trapping id="DEATH-TRAP_VANERA">
 <Description language="ENGLISH">"Vanera"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
@@ -523,7 +524,7 @@
 <Season>"RULES-LAB_225"</Season>
 <Page>16</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_17">
+<Trapping id="DEATH-TRAP_VIGWORT">
 <Description language="ENGLISH">"Vigwort"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
@@ -533,7 +534,7 @@
 <Season>"RULES-LAB_226"</Season>
 <Page>16</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_18">
+<Trapping id="DEATH-TRAP_EARTH_ROOT">
 <Description language="ENGLISH">"Earth Root"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
@@ -543,7 +544,7 @@
 <Season>"RULES-LAB_226"</Season>
 <Page>9</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_19">
+<Trapping id="DEATH-TRAP_FAXTORYLL">
 <Description language="ENGLISH">"Faxtoryll"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -553,7 +554,7 @@
 <Season>"RULES-LAB_225"</Season>
 <Page>9</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_20">
+<Trapping id="DEATH-TRAP_NIGHTSHADE">
 <Description language="ENGLISH">"Nightshade"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_RARE"</Availability>
@@ -563,7 +564,7 @@
 <Season>"RULES-LAB_227"</Season>
 <Page>9</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_21">
+<Trapping id="DEATH-TRAP_SALWORT">
 <Description language="ENGLISH">"Salwort"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_COMMON"</Availability>
@@ -573,35 +574,35 @@
 <Season>"RULES-LAB_227,RULES-LAB_228"</Season>
 <Page>9</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_22">
+<Trapping id="DEATH-TRAP_BROAD_RUDDER_ROW_BOAT">
 <Description language="ENGLISH">"Broad Rudder (Row Boat)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"5CO"</Price>
 <Encumbrance>"5"</Encumbrance>
 <Page>65</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_23">
+<Trapping id="DEATH-TRAP_BROAD_RUDDER_FISHING_SKIFF">
 <Description language="ENGLISH">"Broad Rudder (Fishing Skiff)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"25CO"</Price>
 <Encumbrance>"20"</Encumbrance>
 <Page>65</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_24">
+<Trapping id="DEATH-TRAP_BROAD_RUDDER_TYPICAL_BARGE_OR_PATROL_BOAT">
 <Description language="ENGLISH">"Broad Rudder (Typical Barge or Patrol Boat)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"50CO"</Price>
 <Encumbrance>"40"</Encumbrance>
 <Page>65</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_25">
+<Trapping id="DEATH-TRAP_BROAD_RUDDER_LARGE_BARGE">
 <Description language="ENGLISH">"Broad Rudder (Large Barge)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"120CO"</Price>
 <Encumbrance>"80"</Encumbrance>
 <Page>65</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_26">
+<Trapping id="DEATH-TRAP_FORE_AND_AFT_RUDDER_ROW_BOAT">
 <Description language="ENGLISH">"Fore-and-Aft Rudder (Row Boat)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"8CO"</Price>
@@ -609,7 +610,7 @@
 <ModifBoat name="M">-1</ModifBoat>
 <Page>65</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_27">
+<Trapping id="DEATH-TRAP_FORE_AND_AFT_RUDDER_FISHING_SKIFF">
 <Description language="ENGLISH">"Fore-and-Aft Rudder (Fishing Skiff)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"30CO"</Price>
@@ -617,7 +618,7 @@
 <ModifBoat name="M">-1</ModifBoat>
 <Page>65</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_28">
+<Trapping id="DEATH-TRAP_FORE_AND_AFT_RUDDER_TYPICAL_BARGE_OR_PATROL_BOAT">
 <Description language="ENGLISH">"Fore-and-Aft Rudder (Typical Barge or Patrol Boat)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"60CO"</Price>
@@ -625,7 +626,7 @@
 <ModifBoat name="M">-1</ModifBoat>
 <Page>65</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_29">
+<Trapping id="DEATH-TRAP_FORE_AND_AFT_RUDDER_LARGE_BARGE">
 <Description language="ENGLISH">"Fore-and-Aft Rudder (Large Barge)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"120CO"</Price>
@@ -633,238 +634,238 @@
 <ModifBoat name="M">-1</ModifBoat>
 <Page>65</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_30">
+<Trapping id="DEATH-TRAP_WATER_BRAKES_ROW_BOAT">
 <Description language="ENGLISH">"Water Brakes (Row Boat)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"10CO"</Price>
 <Encumbrance>"15"</Encumbrance>
 <Page>65</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_31">
+<Trapping id="DEATH-TRAP_WATER_BRAKES_FISHING_SKIFF">
 <Description language="ENGLISH">"Water Brakes (Fishing Skiff)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"45CO"</Price>
 <Encumbrance>"40"</Encumbrance>
 <Page>65</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_32">
+<Trapping id="DEATH-TRAP_WATER_BRAKES_TYPICAL_BARGE_OR_PATROL_BOAT">
 <Description language="ENGLISH">"Water Brakes (Typical Barge or Patrol Boat)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"75CO"</Price>
 <Encumbrance>"50"</Encumbrance>
 <Page>65</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_33">
+<Trapping id="DEATH-TRAP_WATER_BRAKES_LARGE_BARGE">
 <Description language="ENGLISH">"Water Brakes (Large Barge)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"140CO"</Price>
 <Encumbrance>"110"</Encumbrance>
 <Page>65</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_34">
+<Trapping id="DEATH-TRAP_ARMOURED_WALLS_ROW_BOAT">
 <Description language="ENGLISH">"Armoured Walls (Row Boat)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"15CO"</Price>
 <Encumbrance>"15"</Encumbrance>
 <Page>65</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_35">
+<Trapping id="DEATH-TRAP_ARMOURED_WALLS_FISHING_SKIFF">
 <Description language="ENGLISH">"Armoured Walls (Fishing Skiff)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"60CO"</Price>
 <Encumbrance>"40"</Encumbrance>
 <Page>65</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_36">
+<Trapping id="DEATH-TRAP_ARMOURED_WALLS_TYPICAL_BARGE_OR_PATROL_BOAT">
 <Description language="ENGLISH">"Armoured Walls (Typical Barge or Patrol Boat)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"120CO"</Price>
 <Encumbrance>"80"</Encumbrance>
 <Page>65</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_37">
+<Trapping id="DEATH-TRAP_ARMOURED_WALLS_LARGE_BARGE">
 <Description language="ENGLISH">"Armoured Walls (Large Barge)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"300CO"</Price>
 <Encumbrance>"160"</Encumbrance>
 <Page>65</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_38">
+<Trapping id="DEATH-TRAP_GUN_PORTS_SMALL">
 <Description language="ENGLISH">"Gun Ports (Small)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"15CO"</Price>
 <Encumbrance>"0"</Encumbrance>
 <Page>66</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_39">
+<Trapping id="DEATH-TRAP_GUN_PORTS_LARGE">
 <Description language="ENGLISH">"Gun Ports (Large)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"85CO"</Price>
 <Encumbrance>"0"</Encumbrance>
 <Page>66</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_40">
+<Trapping id="DEATH-TRAP_LUXURY_CABINS_PER_CABIN">
 <Description language="ENGLISH">"Luxury Cabins (per cabin)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"155CO"</Price>
 <Encumbrance>"40"</Encumbrance>
 <Page>66</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_41">
+<Trapping id="DEATH-TRAP_RAISED_GUNWALES_ROW_BOAT">
 <Description language="ENGLISH">"Raised Gunwales (Row Boat)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"5CO"</Price>
 <Encumbrance>"5"</Encumbrance>
 <Page>66</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_42">
+<Trapping id="DEATH-TRAP_RAISED_GUNWALES_FISHING_SKIFF">
 <Description language="ENGLISH">"Raised Gunwales (Fishing Skiff)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"15CO"</Price>
 <Encumbrance>"20"</Encumbrance>
 <Page>66</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_43">
+<Trapping id="DEATH-TRAP_RAISED_GUNWALES_TYPICAL_BARGE_OR_PATROL_BOAT">
 <Description language="ENGLISH">"Raised Gunwales (Typical Barge or Patrol Boat)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"30CO"</Price>
 <Encumbrance>"35"</Encumbrance>
 <Page>66</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_44">
+<Trapping id="DEATH-TRAP_RAISED_GUNWALES_LARGE_BARGE">
 <Description language="ENGLISH">"Raised Gunwales (Large Barge)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"45CO"</Price>
 <Encumbrance>"60"</Encumbrance>
 <Page>66</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_45">
+<Trapping id="DEATH-TRAP_STRIPPED_ROW_BOAT">
 <Description language="ENGLISH">"Stripped (Row Boat)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"20CO"</Price>
 <Encumbrance>"-10"</Encumbrance>
 <Page>66</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_46">
+<Trapping id="DEATH-TRAP_STRIPPED_FISHING_SKIFF">
 <Description language="ENGLISH">"Stripped (Fishing Skiff)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"50CO"</Price>
 <Encumbrance>"-15"</Encumbrance>
 <Page>66</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_47">
+<Trapping id="DEATH-TRAP_STRIPPED_TYPICAL_BARGE_OR_PATROL_BOAT">
 <Description language="ENGLISH">"Stripped (Typical Barge or Patrol Boat)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"150CO"</Price>
 <Encumbrance>"-45"</Encumbrance>
 <Page>66</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_48">
+<Trapping id="DEATH-TRAP_STRIPPED_LARGE_BARGE">
 <Description language="ENGLISH">"Stripped (Large Barge)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"250CO"</Price>
 <Encumbrance>"-80"</Encumbrance>
 <Page>66</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_49">
+<Trapping id="DEATH-TRAP_FLYING_JIB_ROW_BOAT">
 <Description language="ENGLISH">"Flying Jib (Row Boat)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"5CO"</Price>
 <Encumbrance>"5"</Encumbrance>
 <Page>66</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_50">
+<Trapping id="DEATH-TRAP_FLYING_JIB_FISHING_SKIFF">
 <Description language="ENGLISH">"Flying Jib (Fishing Skiff)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"20CO"</Price>
 <Encumbrance>"25"</Encumbrance>
 <Page>66</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_51">
+<Trapping id="DEATH-TRAP_FLYING_JIB_TYPICAL_BARGE_OR_PATROL_BOAT">
 <Description language="ENGLISH">"Flying Jib (Typical Barge or Patrol Boat)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"40CO"</Price>
 <Encumbrance>"45"</Encumbrance>
 <Page>66</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_52">
+<Trapping id="DEATH-TRAP_FLYING_JIB_LARGE_BARGE">
 <Description language="ENGLISH">"Flying Jib (Large Barge)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"80CO"</Price>
 <Encumbrance>"70"</Encumbrance>
 <Page>66</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_53">
+<Trapping id="DEATH-TRAP_RACING_RIG_ROW_BOAT">
 <Description language="ENGLISH">"Racing Rig (Row Boat)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"8CO"</Price>
 <Encumbrance>"5"</Encumbrance>
 <Page>66</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_54">
+<Trapping id="DEATH-TRAP_RACING_RIG_FISHING_SKIFF">
 <Description language="ENGLISH">"Racing Rig (Fishing Skiff)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"30CO"</Price>
 <Encumbrance>"15"</Encumbrance>
 <Page>66</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_55">
+<Trapping id="DEATH-TRAP_RACING_RIG_TYPICAL_BARGE_OR_PATROL_BOAT">
 <Description language="ENGLISH">"Racing Rig (Typical Barge or Patrol Boat)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"60CO"</Price>
 <Encumbrance>"25"</Encumbrance>
 <Page>66</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_56">
+<Trapping id="DEATH-TRAP_RACING_RIG_LARGE_BARGE">
 <Description language="ENGLISH">"Racing Rig (Large Barge)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"120CO"</Price>
 <Encumbrance>"50"</Encumbrance>
 <Page>66</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_57">
+<Trapping id="DEATH-TRAP_CLOSED_ROWLOCKS_EACH">
 <Description language="ENGLISH">"Closed Rowlocks (each)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"5CO"</Price>
 <Encumbrance>"5"</Encumbrance>
 <Page>67</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_58">
+<Trapping id="DEATH-TRAP_SPOONS_EACH">
 <Description language="ENGLISH">"Spoons (each)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"5CO"</Price>
 <Encumbrance>"0"</Encumbrance>
 <Page>67</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_59">
+<Trapping id="DEATH-TRAP_MUSKET_RESTS_EACH">
 <Description language="ENGLISH">"Musket Rests (each)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"1CO"</Price>
 <Encumbrance>"1"</Encumbrance>
 <Page>68</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_60">
+<Trapping id="DEATH-TRAP_RAM_SMALL_RIVER_BOAT">
 <Description language="ENGLISH">"Ram (Small River Boat)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"15CO"</Price>
 <Encumbrance>"30"</Encumbrance>
 <Page>68</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_61">
+<Trapping id="DEATH-TRAP_RAM_MEDIUM_RIVER_BOAT">
 <Description language="ENGLISH">"Ram (Medium River Boat)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"30CO"</Price>
 <Encumbrance>"60"</Encumbrance>
 <Page>68</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_62">
+<Trapping id="DEATH-TRAP_RAM_LARGE_RIVER_BOAT">
 <Description language="ENGLISH">"Ram (Large River Boat)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"60CO"</Price>
 <Encumbrance>"120"</Encumbrance>
 <Page>68</Page>
 </Trapping>
-<Trapping id="DEATH-TRAP_63">
+<Trapping id="DEATH-TRAP_STEAM">
 <Description language="ENGLISH">"Steam"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"500CO"</Price>
@@ -875,7 +876,7 @@
 <DATA_CAREER_SPECIE>
   <Entry>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="DEATH-WORK105">"X"</Career>
+<Career name="DEATH-WORK_WARRIOR_OF_TZEENTCH">"X"</Career>
   </Entry>
 </DATA_CAREER_SPECIE>
 </DATA_BOOK>

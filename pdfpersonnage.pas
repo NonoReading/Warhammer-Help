@@ -14,7 +14,7 @@ uses
   ChargeCorruptionTable,
   ChargeModificateur, ChargeCorruptionCompetenceModif,
   ChargeTalentEffet, ChargeAffliction, ChargeDisease, ChargeGroupe,
-  Dialogs, UnitCalcul, Math, LCLIntf, LazUTF8, StrUtils;
+  Dialogs, MessageTest, UnitCalcul, Math, LCLIntf, LazUTF8, StrUtils;
 
 Type
   StructureDonnee  = record
@@ -156,6 +156,8 @@ Var
 
 Procedure PdfPersonnageCreation(Personnage: StructurePersonnage; BackGround: Boolean; DessineTexteLigne: Boolean = True);
 Procedure PdfPersonnageCreationFeldo2P(Personnage: StructurePersonnage);
+Procedure PdfPersonnageV2(Personnage: StructurePersonnage);
+Procedure PdfPersonnageV1(Personnage: StructurePersonnage);
 Function PdfPersonnageCompetence(Personnage: StructurePersonnage; Competence: String; out NivMetier: Integer): StructureDonnee;
 Function PdfPersonnageTalent(Personnage: StructurePersonnage; Talent: String; out NivMetier: Integer): StructureDonnee;
 Function PdfPersonnageRemplaceBonus(Personnage: StructurePersonnage; ChW: String): String;
@@ -556,20 +558,20 @@ Function PdfPersonnageTalent(Personnage: StructurePersonnage; Talent: String; ou
     Res.Base         := 0;
     Res.Augmentation := 0;
     for PersonnageTalent in Personnage.CreationTalent do
-      if CompareRechercheValeur(Talent, PersonnageTalent.CodeTalent) then
+      if MemeTalent(Talent, PersonnageTalent.CodeTalent) then
         Res.Augmentation := Res.Augmentation + PersonnageTalent.Valeur;
     For PersonnageTalent in Personnage.AugmentationTalent do
-      if CompareRechercheValeur(Talent, PersonnageTalent.CodeTalent) then
+      if MemeTalent(Talent, PersonnageTalent.CodeTalent) then
         Res.Augmentation := Res.Augmentation + PersonnageTalent.Valeur;
     For PMetierTalent in ListMetierTalent do
       if CompareRechercheValeur(PMetierTalent.CodeMetier, Personnage.MetierEnCours.CodeMetier) then
-        if CompareRechercheValeur(PMetierTalent.CodeTalent, Talent) then
+        if MemeTalent(PMetierTalent.CodeTalent, Talent) then
           begin
             NivMetier := PMetierTalent.NiveauMetier;
             break;
           end
        else if Pos(ValeurGenerique, PMetierTalent.CodeTalent) > 0 then
-         if Copy(PMetierTalent.CodeTalent,1,Pos(ValeurGenerique, PMetierTalent.CodeTalent)-1) = Copy(Talent,1,Pos(ValeurSousCompetence, Talent)-1) then
+         if RadicalTalent(PMetierTalent.CodeTalent) = RadicalTalent(Talent) then
            begin
              NivMetier := PMetierTalent.NiveauMetier;
              break;
@@ -593,11 +595,16 @@ Function PdfPersonnageCompetence(Personnage: StructurePersonnage; Competence: St
     CodeCompetence:       String;
     Bonus:                String;
     UniqueCompetence: Integer;
+    PrisesV2:         Integer;
+    AttributPropre:   String;
   begin
     Res.Base         := 0;
     Res.Augmentation := 0;
     NivMetier        := 0;
     PCompetence      := ChercheCompetence(Competence);
+    // Attribut de la specialisation elle-meme (ex. Trade (Cook) = Int, la mere Trade (Various)
+    // n'en a pas) : prioritaire sur celui de la mere.
+    AttributPropre   := PCompetence.CodeAttribut;
     if PCompetence.SousCompetence then
       begin
         // Lien explicite (CONTEXT.md 2.67) prioritaire sur la deduction par radical - seul
@@ -605,23 +612,36 @@ Function PdfPersonnageCompetence(Personnage: StructurePersonnage; Competence: St
         if PCompetence.CodeGenerique <> '' then
           CodeCompetence := PCompetence.CodeGenerique
         else
-          CodeCompetence := ExtractStringBefore(PCompetence.CodeCompetence, ValeurSousCompetence) + ValeurGenerique;
+          CodeCompetence := CodeGeneriqueDeduit(PCompetence.CodeCompetence);
         PCompetence    := ChercheCompetence(CodeCompetence);
       end;
-    DonneeAttribut := PdfPersonnageAttribut(Personnage, PCompetence.CodeAttribut, Bonus);
+    if AttributPropre = '' then
+      AttributPropre := PCompetence.CodeAttribut;
+    DonneeAttribut := PdfPersonnageAttribut(Personnage, AttributPropre, Bonus);
     Res.Base       := DonneeAttribut.Total;
+    // V2 : les valeurs de creation sont un nombre de PRISES (1 = acquise, 2 = +10 %) ; la
+    // carriere compte la prise de la race (2 = race + carriere) : on garde la plus grande.
+    PrisesV2 := 0;
     for PersonnageCompetence in Personnage.CreationCompetence35 do
       if CompareRechercheValeur(Competence, PersonnageCompetence.CodeCompetence) then
         begin
-          Res.Augmentation := Res.Augmentation + PersonnageCompetence.Valeur;
+          if ValVersion = 'WFRP2' then
+            PrisesV2 := Max(PrisesV2, PersonnageCompetence.Valeur)
+          else
+            Res.Augmentation := Res.Augmentation + PersonnageCompetence.Valeur;
           break;
         end;
     for PersonnageCompetence in Personnage.CreationCompetence40 do
       if CompareRechercheValeur(Competence, PersonnageCompetence.CodeCompetence) then
         begin
-          Res.Augmentation := Res.Augmentation + PersonnageCompetence.Valeur;
+          if ValVersion = 'WFRP2' then
+            PrisesV2 := Max(PrisesV2, PersonnageCompetence.Valeur)
+          else
+            Res.Augmentation := Res.Augmentation + PersonnageCompetence.Valeur;
           break;
         end;
+    if PrisesV2 > 1 then
+      Res.Augmentation := Res.Augmentation + 10 * (PrisesV2 - 1);
     For PersonnageCompetence in Personnage.AugmentationCompetence do
       if CompareRechercheValeur(Competence, PersonnageCompetence.CodeCompetence) then
         begin
@@ -658,13 +678,20 @@ Function PdfPersonnageAttribut(Personnage: StructurePersonnage; Attribut: String
     Res.Augmentation := 0;
 
     PRaceAttribut := ChercheRaceAttribut(Personnage.Race, Attribut);
-    Res.Base      := StrToIntDef(ExtractStringAfter(PRaceAttribut.CalculRace,'+'),0);
+    // V1 : la valeur enregistree a la creation contient deja la base de la race
+    if ValVersion <> 'WFRP1' then
+      Res.Base    := StrToIntDef(ExtractStringAfter(PRaceAttribut.CalculRace,'+'),0);
 
     Bonus := '';
     for PersonnageAttribut in Personnage.CreationAttribut do
       if CompareRechercheValeur(PersonnageAttribut.CodeAttribut, Attribut) then
         begin
-          Res.Base := Res.Base + PersonnageAttribut.Valeur;
+          // V2 : Blessures et Destin sont stockes en jet de d10 ; la table de la race
+          // ("1-3: 11; 4-6: 12...") donne la valeur (meme regle que WinPersonnage).
+          if Pos(':', PRaceAttribut.CalculRace) > 0 then
+            Res.Base := Res.Base + ValeurTableD10(PRaceAttribut.CalculRace, PersonnageAttribut.Valeur)
+          else
+            Res.Base := Res.Base + PersonnageAttribut.Valeur;
           if PersonnageAttribut.Bonus <> '' then
             Bonus := PdfBonusAttributFiltrer(Personnage, PersonnageAttribut.Bonus);
           break;
@@ -681,6 +708,8 @@ Function PdfPersonnageAttribut(Personnage: StructurePersonnage; Attribut: String
     For PersonnageAttribut in Personnage.AugmentationAttribut do
       if CompareRechercheValeur(PersonnageAttribut.CodeAttribut, Attribut) then
         Res.Augmentation := Res.Augmentation + PersonnageAttribut.Valeur;
+    // V2 : avance gratuite de creation (liste dediee, voir chargepersonnage.pas)
+    Res.Augmentation := Res.Augmentation + PersonnageAvanceGratuite(Personnage, Attribut);
 
     // Toutes les sources possedees (talent, mutation, affliction, maladie, appartenance, arme,
     // armure, fabrication) viennent du collecteur unique.
@@ -849,13 +878,13 @@ Procedure PdfNormalEntete(PdfPage: TPDFPage; Personnage: StructurePersonnage; Mi
     PMetierNiveau  := ChercheMetierNiveau(Personnage.MetierEnCours.CodeMetier, Personnage.MetierEnCours.NiveauMetier);
 
     PdfPage.WriteText( 50, 246, Personnage.NomPersonnage);                               // Nom
-    PdfPage.WriteText(118, 246, PRace.Libelle);                                      // Race
+    PdfPage.WriteText(118, 246, PersonnageRaceLibelle(Personnage, PRace.Libelle));                                      // Race
     PdfPage.WriteText(165, 246, GetTexteLibelle(PMetier.LibelleGroupe));                 // Classe
     if Trim(Personnage.Appartenance) <> '' then
       PdfPage.WriteText( 50, 241, PMetier.Libelle + ' (' + LibelleAppartenances(Personnage.Appartenance) + ')')
     else
       PdfPage.WriteText( 50, 241, PMetier.Libelle);                                // Métier
-    PdfPage.WriteText(135, 241, IntToStr(Personnage.MetierEnCours.NiveauMetier)+' - '+ PMetierNiveau.Libelle);     // Niveau
+    PdfPage.WriteText(135, 241, IntToStr(Personnage.MetierEnCours.NiveauMetier)+' - '+ LibelleNiveauSelonSexe(PMetierNiveau, Personnage.SexeV2));     // Niveau
     PdfPage.WriteText( 50, 236, LocData);     // Schéma
     // Prefixe RULES- ajoute le 12/09/2026 : SalaireMetier ('TIERS_BRASS 2', etc.) est stocke
     // NU dans le Xml (xmlexportimport.pas), sans prefixe de livre, alors que le libelle
@@ -1394,7 +1423,7 @@ begin
         //    PdfTaillePolice(PdfPage, PdfFontValue, ConstPoliceArial, 9);
         //  end;
         if PTalent.SousTalent then
-          PTalent := ChercheTalent(Copy(PTalent.CodeTalent, 1, Pos('_', PTalent.CodeTalent) - 1)+'_*');
+          PTalent := ChercheTalent(CodeTalentGenerique(PTalent));
         if PTalent.Resume <> '' then
           begin
             PdfTaillePolice(PdfPage, PdfFontValue, ConstPoliceArial, 7);
@@ -1455,7 +1484,7 @@ begin
       PdfEcrit(PdfPage, 16, 49, 92-(NbLigne*3.5), PTalent.Libelle,MinPolice);
       PdfTaillePolice(PdfPage, PdfFontValue, ConstPoliceArial, 9);
       if PTalent.SousTalent then
-        PTalent := ChercheTalent(Copy(PTalent.CodeTalent, 1, Pos('_', PTalent.CodeTalent) - 1)+'_*');
+        PTalent := ChercheTalent(CodeTalentGenerique(PTalent));
       if PTalent.Resume <> '' then
         begin
           PdfTaillePolice(PdfPage, PdfFontValue, ConstPoliceArial, 7);
@@ -1477,7 +1506,7 @@ begin
       PdfEcrit(PdfPage, 16, 49, 92-(NbLigne*3.5), PTalent.Libelle,MinPolice);
       PdfTaillePolice(PdfPage, PdfFontValue, ConstPoliceArial, 9);
       if PTalent.SousTalent then
-        PTalent := ChercheTalent(Copy(PTalent.CodeTalent, 1, Pos('_', PTalent.CodeTalent) - 1)+'_*');
+        PTalent := ChercheTalent(CodeTalentGenerique(PTalent));
       if PTalent.Resume <> '' then
         begin
           PdfTaillePolice(PdfPage, PdfFontValue, ConstPoliceArial, 7);
@@ -1556,13 +1585,7 @@ begin
       PorteMoyenne := PorteMoyenne + FabricationPortee(PersonnageEquipement.QualiteEquipement);
       Portee       := IntToStr(PorteMoyenne);
     end;
-  if FabricationQualitesArme(PersonnageEquipement.QualiteEquipement) <> '' then
-    begin
-      if (PArme.ListeBonus <> '') and (PArme.ListeBonus <> '-') then
-        PArme.ListeBonus := PArme.ListeBonus + ',';
-      if PArme.ListeBonus = '-' then PArme.ListeBonus := '';
-      PArme.ListeBonus := PArme.ListeBonus + FabricationQualitesArme(PersonnageEquipement.QualiteEquipement);
-    end;
+  ArmeAjouteQualites(PArme.ListeBonus, FabricationQualitesArme(PersonnageEquipement.QualiteEquipement));
   Enc        := PArme.Encombrement + FabricationEncombrement(PersonnageEquipement.QualiteEquipement, Quality);
   // Ligne alternative d'un accessoire (Bayonet = Spear) : pas d'encombrement propre, l'accessoire pese 0.
   if EquipementAlternatifFabrication(PersonnageEquipement) <> '' then
@@ -1863,7 +1886,7 @@ begin
   Inc(NbSort);
   PSort := ChercheSort(PersonnageEquipement.CodeEquipement);
   PdfEcrit (PdfPage, 18   , 59.5,71.5-(NbSort*5), PSort.Libelle, MinPolice);
-  PdfCentre(PdfPage, 59.5 , 73  ,71.5-(NbSort*5), PSort.Niveau);
+  PdfCentre(PdfPage, 59.5 , 73  ,71.5-(NbSort*5), LibelleValeurLivre(PSort.Niveau));
   PdfCentre(PdfPage, 73   , 85.5,71.5-(NbSort*5), PdfPersonnageRemplaceBonus(Personnage, PSort.Portee));
   PdfCentre(PdfPage, 85.5 ,100  ,71.5-(NbSort*5), PdfPersonnageRemplaceBonus(Personnage, PSort.Cible));
   PdfCentre(PdfPage,101   ,117  ,71.5-(NbSort*5), PdfPersonnageRemplaceBonus(Personnage, PSort.Duree));
@@ -2048,8 +2071,8 @@ Procedure PdfPersonnageCreation(Personnage: StructurePersonnage; BackGround: Boo
 
       // Entête
       PMetier        := ChercheMetier(Personnage.MetierEnCours.CodeMetier);
-      PRaceAttribut  := ChercheRaceAttribut(Personnage.Race, ConstCaracMouvement);
-      Mouv           := StrToInt(PRaceAttribut.CalculRace);
+      PRaceAttribut  := ChercheRaceAttribut(Personnage.Race, IfThen(ValVersion = 'WFRP2', 'RULES-ATTR_M', ConstCaracMouvement));
+      Mouv           := StrToIntDef(PRaceAttribut.CalculRace, 0);
       // Modificateurs de toutes les sources possedees (collecteur unique, CONTEXT.md 2.105 etape c)
       Mouv           := Mouv + PersonnageModificateurUnique(Personnage, ConstXmlModifieAttribut, ConstCaracMouvement)
                               + SigneAstralAttributModif(Personnage.SigneAstral, Personnage.SigneAstralVariante, ConstCaracMouvement);
@@ -2232,6 +2255,25 @@ Procedure PdfPersonnageCreation(Personnage: StructurePersonnage; BackGround: Boo
     end;
 
   begin
+    // V1 / V2 : le PDF est ecrit sur l'image de la feuille officielle (non livree, hors licence).
+    // Sans elle (PICTURES absent ou DEFAULTLICENSELESS=1), on previent au lieu de sortir une page de
+    // valeurs sans libelles.
+    if ((ValVersion = 'WFRP2') or (ValVersion = 'WFRP1')) and
+       not FileExists(CheminImage(GetCurrentDir + '\PICTURES\' + ValVersion + '\PDF\FRONT.png')) then
+      begin
+        ShowMessage(GetTexteLibelle('RULES-MESS_122') + LineEnding + 'PICTURES\' + ValVersion + '\PDF\');
+        Exit;
+      end;
+    if ValVersion = 'WFRP2' then
+      begin
+        PdfPersonnageV2(Personnage);
+        Exit;
+      end;
+    if ValVersion = 'WFRP1' then
+      begin
+        PdfPersonnageV1(Personnage);
+        Exit;
+      end;
     Personnage := PersonnageSansMunitions(Personnage);
     PdfChemin        := GetCurrentDir+ConstCheminPersonnage+Personnage.NomPersonnage+'\'+Personnage.NomPersonnage+' '+FormatDateTime('yyyymmdd-hhnnss', Now)+'.PDF';
 
@@ -2256,6 +2298,1067 @@ Procedure PdfPersonnageCreation(Personnage: StructurePersonnage; BackGround: Boo
 
     PDFDoc.SaveToFile(PdfChemin);
     PDFDoc.Free;
+    PdfPurgeAnciens(PdfChemin);
+
+    if not PdfSansOuverture then
+      OpenDocument(PdfChemin);
+  end;
+
+// PDF officiel de la V2 : recto et verso de la feuille du Rulebook V2 (Letter), fonds
+// PICTURES\WFRP2\PDF\FRONT.png et BACK.png rendus a 200 dpi. Coordonnees en pixels de ces images
+// (carte des zones : CONTEXT.md 2.123c), converties en mm. Procedure separee des gabarits V4/V5.
+Procedure PdfPersonnageV2(Personnage: StructurePersonnage);
+  const
+    Px = 25.4 / 200;          // 1 pixel du fond = 0,127 mm
+    HauteurPage = 279.4;      // Letter, mm
+  var
+    PDFDoc:      TPDFDocument;
+    PdfSection:  TPDFSection;
+    PdfPage:     TPDFPage;
+    PdfChemin:   String;
+    PdfImage:    Integer;
+    MinPolice:   Integer = 5;
+
+  function MX(Pix: Single): Single;
+    begin
+      Result := Pix * Px;
+    end;
+
+  function MY(Pix: Single): Single;
+    begin
+      Result := HauteurPage - (Pix + 12) * Px;   // +12 : fpPDF ecrit la ligne de base plus haut que Y
+    end;
+
+  // Texte dans une zone [X0, X1] (pixels), ligne de base a Y (pixels), reduit si trop long.
+  procedure Champ(X0, X1, Y: Single; Texte: String);
+    begin
+      if Trim(Texte) = '' then
+        Exit;
+      PdfEcrit(PdfPage, MX(X0), MX(X1), MY(Y), Texte, MinPolice);
+    end;
+
+  // Texte centre sur XCentre (pixels).
+  procedure Centre(XCentre, Y: Single; Texte: String);
+    begin
+      // TailleTexte surestime la largeur d'environ 30 % (mesure du 20/09/2026) : 0,77 la ramene au reel
+      PdfTraceTexte(MX(XCentre), MY(Y), Texte);
+      PdfPage.WriteText(MX(XCentre) - 0.77 * TailleTexte(Texte, PdfFontTaille) / 2, MY(Y), Texte);
+    end;
+
+  procedure NouvellePage(const CheminFond: String);
+    begin
+      PdfPage := PDFDoc.Pages.AddPage;
+      PdfSection.AddPage(PdfPage);
+      PdfPage.PaperType := ptLetter;
+      PdfPage.UnitOfMeasure := uomMillimeters;
+      PdfImage := PdfDoc.Images.AddFromFile(CheminImagePdf(GetCurrentDir+StringReplace(CheminFond, ConstLangue, ValLangue, [rfReplaceAll])), false);
+      PdfPage.DrawImage(0, 0, 215.9, 279.4, PdfImage);
+      PdfTaillePolice(PdfPage, PdfFontValue, ConstPoliceArial, 10);
+    end;
+
+  procedure Page1;
+    const
+      CodePrincipal: array[0..7] of String = ('RULES-ATTR_WS', 'RULES-ATTR_BS', 'RULES-ATTR_S', 'RULES-ATTR_T',
+                                              'RULES-ATTR_Ag', 'RULES-ATTR_Int', 'RULES-ATTR_WP', 'RULES-ATTR_Fel');
+      CodeSecondaire: array[0..7] of String = ('RULES-ATTR_A', 'RULES-ATTR_W', 'RULES-ATTR_SB', 'RULES-ATTR_TB',
+                                               'RULES-ATTR_M', 'RULES-ATTR_Mag', 'RULES-ATTR_IP', 'RULES-ATTR_FP');
+    var
+      PRace:    StructureRace;
+      PMetier:  StructureMetier;
+      Donnee:   StructureDonnee;
+      Bonus:    String;
+      Mouv:     Integer;
+
+    // Armes : 6 lignes de 48 px a partir de y = 1247 (Name, Enc, Group, Damage, Range, Qualities).
+    procedure LignesArmes;
+      var
+        Equip:   StructurePersonnageEquipement;
+        PArme:   StructureArme;
+        NbArme:  Integer = 0;
+        Y:       Single;
+        Degat:   String;
+        Qualite: String;
+        I:       Integer;
+        Code:    String;
+        CibleDegat: String;
+        BonusDegat: Integer;
+      begin
+        for Equip in Personnage.Equipement do
+          if (Equip.TypeEquipement = TypeEquipWe) and (NbArme < 6) then
+            begin
+              PArme := ChercheArme(Equip.CodeEquipement);
+              Y     := 1283 + 48 * NbArme;
+              Degat := StringReplace(PArme.CalculDegat, '(BATTR_S)', 'SB', [rfReplaceAll]);
+              if (Degat <> '') and (Degat[1] = '+') then
+                Delete(Degat, 1, 1);
+              // ModifyDamage des qualites de l'arme (catalogue ou ajoutees a l'objet) : +N sur la formule
+              if Pos(EquipementCT, PArme.CodeArme) > 0 then
+                CibleDegat := ConstCibleModifieDegatCT
+              else
+                CibleDegat := ConstCibleModifieDegatCC;
+              BonusDegat := FabricationModificateurQualite(PArme.ListeBonus, ConstXmlModifieDegat, CibleDegat)
+                            + FabricationModificateurQualite(Equip.QualiteEquipement, ConstXmlModifieDegat, CibleDegat);
+              if BonusDegat <> 0 then
+                Degat := Degat + IfThen(BonusDegat > 0, '+', '') + IntToStr(BonusDegat);
+              Champ(170, 340, Y, PArme.Libelle);
+              if PArme.Encombrement <> 0 then
+                Centre(382, Y, IntToStr(PArme.Encombrement));
+              // Qualites : libelle de chaque code (valeur eventuelle conservee), petite police
+              Qualite := '';
+              // accessoires et qualites d'arme qui en accordent d'autres (Parry = Balanced + Defensive)
+              ArmeAjouteQualites(PArme.ListeBonus, FabricationQualitesArme(Equip.QualiteEquipement));
+              if (PArme.ListeBonus <> '') and (PArme.ListeBonus <> '-') then
+                for I := 1 to CountOccurrences(PArme.ListeBonus, ',') + 1 do
+                  begin
+                    Code := ExtractChaine(',', PArme.ListeBonus, I);
+                    if Qualite <> '' then
+                      Qualite := Qualite + ', ';
+                    if Pos(' ', Code) > 0 then
+                      Qualite := Qualite + ChercheArmeBonus(Copy(Code, 1, Pos(' ', Code) - 1)).Libelle + Copy(Code, Pos(' ', Code), Length(Code))
+                    else
+                      Qualite := Qualite + ChercheArmeBonus(Code).Libelle;
+                  end;
+              PdfTaillePolice(PdfPage, PdfFontValue, ConstPoliceArial, 6);
+              // Groupe : ecrit tel quel (WriteText), PdfEcrit couperait un mot long comme Gunpowder en lignes
+              PdfTaillePolice(PdfPage, PdfFontValue, ConstPoliceArial, 5);
+              PdfPage.WriteText(MX(426), MY(Y), GetAllTexteLibelle(PArme.TypeArme));
+              PdfTaillePolice(PdfPage, PdfFontValue, ConstPoliceArial, 6);
+              Champ(508, 558, Y, Degat);
+              if (PArme.Portee <> '') and (PArme.Portee <> '-') then
+                Champ(572, 630, Y, PArme.Portee);
+              Champ(716, 848, Y, Qualite);
+              PdfTaillePolice(PdfPage, PdfFontValue, ConstPoliceArial, 10);
+              Inc(NbArme);
+            end;
+      end;
+
+    // Armures detaillees : 6 lignes de 48 px a partir de y = 1774 (Type, Enc, Locations, AP) ;
+    // les points d'armure par zone ne comptent que les pieces portees.
+    procedure LignesArmures;
+      var
+        Equip:    StructurePersonnageEquipement;
+        PArmure:  StructureArmure;
+        NbArm:    Integer = 0;
+        Y:        Single;
+        Loc:      String;
+        I:        Integer;
+        Tete, Corps, Bras, Jambes: Integer;
+      begin
+        Tete := 0; Corps := 0; Bras := 0; Jambes := 0;
+        for Equip in Personnage.Equipement do
+          if Equip.TypeEquipement = TypeEquipAR then
+            begin
+              PArmure := ChercheArmure(Equip.CodeEquipement);
+              if NbArm < 6 then
+                begin
+                  Y := 1810 + 48 * NbArm;
+                  Champ(170, 364, Y, PArmure.Libelle);
+                  if PArmure.Encombrement <> 0 then
+                    Centre(405, Y, IntToStr(PArmure.Encombrement));
+                  Champ(458, 770, Y, StringReplace(GetAllTexteLibelle(PArmure.Emplacement), ',', ', ', [rfReplaceAll]));
+                  Centre(812, Y, IntToStr(PArmure.Protection));
+                  Inc(NbArm);
+                end;
+              if Equip.Porte then
+                for I := 1 to CountOccurrences(PArmure.Emplacement, ',') + 1 do
+                  begin
+                    Loc := ExtractChaine(',', PArmure.Emplacement, I);
+                    if CompareRechercheValeur(Loc, BonusTete) then
+                      Tete := Tete + PArmure.Protection
+                    else if CompareRechercheValeur(Loc, BonusCorps) then
+                      Corps := Corps + PArmure.Protection
+                    else if CompareRechercheValeur(Loc, BonusBras) then
+                      Bras := Bras + PArmure.Protection
+                    else if CompareRechercheValeur(Loc, BonusJambes) then
+                      Jambes := Jambes + PArmure.Protection;
+                  end;
+            end;
+        // Points d'armure donnes par les sources possedees (qualite d'arme portee, talent, mutation...), comme le gabarit V4
+        Tete   := Tete   + PdfPersonnageArmureModif(Personnage, BonusTete);
+        Corps  := Corps  + PdfPersonnageArmureModif(Personnage, BonusCorps);
+        Bras   := Bras   + PdfPersonnageArmureModif(Personnage, BonusBras);
+        Jambes := Jambes + PdfPersonnageArmureModif(Personnage, BonusJambes);
+        // Armour Points : une case par zone du tirage d100 (tete, corps, deux bras, deux jambes)
+        Centre( 979,  850, IntToStr(Tete));
+        Centre(1506,  850, IntToStr(Corps));
+        Centre( 979, 1186, IntToStr(Bras));
+        Centre(1506, 1186, IntToStr(Bras));
+        Centre( 979, 1546, IntToStr(Jambes));
+        Centre(1506, 1546, IntToStr(Jambes));
+      end;
+
+    // Starting (valeur de depart), Advance (avances), Current (total) : trois lignes de 48 px.
+    procedure LigneProfil(const Codes: array of String; YDepart: Single);
+      var
+        I:       Integer;
+        XCentre: Single;
+      begin
+        for I := 0 to 7 do
+          begin
+            // SB et TB ne sont pas stockes : dizaine de F et de E (comme WinPersonnage).
+            if Codes[I] = 'RULES-ATTR_SB' then
+              Donnee := PdfPersonnageAttribut(Personnage, 'RULES-ATTR_S', Bonus)
+            else if Codes[I] = 'RULES-ATTR_TB' then
+              Donnee := PdfPersonnageAttribut(Personnage, 'RULES-ATTR_T', Bonus)
+            else
+              Donnee := PdfPersonnageAttribut(Personnage, Codes[I], Bonus);
+            if (Codes[I] = 'RULES-ATTR_SB') or (Codes[I] = 'RULES-ATTR_TB') then
+              begin
+                Donnee.Augmentation := Donnee.Total div 10 - Donnee.Base div 10;
+                Donnee.Base         := Donnee.Base div 10;
+                Donnee.Total        := Donnee.Base + Donnee.Augmentation;
+              end;
+            XCentre := 272 + 72 * I + 36;
+            Centre(XCentre, YDepart,      IntToStr(Donnee.Base));
+            if Donnee.Augmentation <> 0 then
+              Centre(XCentre, YDepart + 48, IntToStr(Donnee.Augmentation));
+            Centre(XCentre, YDepart + 96, IntToStr(Donnee.Total));
+          end;
+      end;
+
+    begin
+      NouvellePage(ConstCheminPdfFront);
+
+      PRace   := ChercheRace(Personnage.Race);
+      PMetier := ChercheMetier(Personnage.MetierEnCours.CodeMetier);
+
+      // Character
+      Champ(215, 840, 143, Personnage.NomPersonnage);
+      Champ(215, 840, 191, PersonnageRaceLibelle(Personnage, PRace.Libelle));
+      Champ(310, 840, 239, PMetier.Libelle);
+      Champ(315, 840, 287, PdfFeldoMetiersAnciens(Personnage));
+
+      // Personal Details (valeur sous le libelle)
+      if Personnage.Age > 0 then
+        Champ(165, 490, 419, IntToStr(Personnage.Age));
+      if Personnage.SexeV2 <> '' then
+        Champ(512, 840, 419, GetTexteLibelle(IfThen(Personnage.SexeV2 = 'F', 'RULES-LAB_743', 'RULES-LAB_744')));
+      Champ(165, 490, 467, Personnage.EyeColors);
+      Champ(165, 490, 515, Personnage.HairColors);
+      Champ(165, 490, 563, Personnage.AstreV2);
+      Champ(165, 840, 611, Personnage.NaissanceV2);
+      Champ(165, 840, 659, Personnage.SigneDistinctifV2);
+      if Personnage.PoidsV2 > 0 then
+        Champ(512, 840, 467, IntToStr(Personnage.PoidsV2));
+      if Personnage.Height > 0 then
+        Champ(512, 840, 515, FormateTaille(Personnage.Height, Personnage.HeightUnit));
+      Champ(512, 840, 563, Personnage.FratrieV2);
+
+      // Experience Points
+      Champ(915, 1105, 540, IntToStr(Personnage.XpActuel));
+      Champ(1138, 1585, 540, IntToStr(Personnage.XpTotal));
+
+      // Combat Movement : Move/Disengage = M, Charge = 2 M, Run = 3 M
+      Donnee := PdfPersonnageAttribut(Personnage, 'RULES-ATTR_M', Bonus);
+      Mouv   := Donnee.Total;
+      Champ(925, 1105, 657, IntToStr(Mouv));
+      Champ(1140, 1345, 657, IntToStr(Mouv * 2));
+      Champ(1380, 1585, 657, IntToStr(Mouv * 3));
+
+      // Character Profile : Main puis Secondary (Starting / Advance / Current)
+      LigneProfil(CodePrincipal, 826);
+      LigneProfil(CodeSecondaire, 1018);
+
+      LignesArmes;
+      LignesArmures;
+    end;
+
+  procedure Page2;
+    const
+      // Les 20 competences de base imprimees sur le verso, dans l'ordre de la feuille.
+      CodeBase: array[0..19] of String = (
+        'ANIMAL_CARE', 'CHARM', 'COMMAND', 'CONCEALMENT', 'CONSUME_ALCOHOL', 'DISGUISE', 'DRIVE',
+        'EVALUATE', 'GAMBLE', 'GOSSIP', 'HAGGLE', 'INTIMIDATE', 'OUTDOOR_SURVIVAL', 'PERCEPTION',
+        'RIDE', 'ROW', 'SCALE_SHEER_SURFACE', 'SEARCH', 'SILENT_MOVE', 'SWIM');
+      Pas       = 48.5;     // hauteur d'une ligne du verso (px)
+      XTaken    = 445;      // centres des trois cases Taken / +10 / +20
+      XPlus10   = 517;
+      XPlus20   = 590;
+    var
+      Possedees:  TStringList;
+      Code:       String;
+      Comp:       StructureCompetence;
+      Donnee:     StructureDonnee;
+      Ind, Bidon: Integer;
+      Bonus:      String;
+      Ligne:      Integer;
+      PerComp:    StructurePersonnageCompetence;
+      PerTal:     StructurePersonnageTalent;
+      Equip:      StructurePersonnageEquipement;
+      Talents:    TStringList;
+      Attr:       String;
+
+    // Pourcentage total, a gauche de la colonne Related Talents.
+    procedure Pourcent(YCentre: Single; Valeur: Integer);
+      begin
+        PdfPage.WriteText(MX(648), MY(YCentre - 2), IntToStr(Valeur) + ' %');
+      end;
+
+    // Croix dans une case (centre XC, YC en pixels) ; le X italique est decale de 6 px pour paraitre centre.
+    procedure Croix(XC, YC: Single);
+      begin
+        PdfPage.WriteText(MX(XC - 7), MY(YC + 9), 'X');
+      end;
+
+    // Croix dans les cases d'une competence : Taken si possedee, +10 / +20 selon les avances.
+    procedure Cases(YCentre: Single; Code: String; DeBase: Boolean);
+      begin
+        Donnee := PdfPersonnageCompetence(Personnage, Code, Bidon);
+        if Possedees.IndexOf(Code) < 0 then
+          begin
+            // Rulebook V2 p.91 : competence de base non acquise = moitie de la caracteristique
+            // (arrondie au superieur) ; une competence avancee non acquise ne s'utilise pas.
+            if DeBase then
+              Pourcent(YCentre, (Donnee.Base + 1) div 2);
+            Exit;
+          end;
+        Pourcent(YCentre, Donnee.Total);
+        Croix(XTaken, YCentre);
+        if Donnee.Augmentation >= 10 then
+          Croix(XPlus10, YCentre);
+        if Donnee.Augmentation >= 20 then
+          Croix(XPlus20, YCentre);
+      end;
+
+    procedure AjoutePossedee(const CodeComp: String);
+      begin
+        // une competence a choisir (A/B non tranche) ou a specialiser n'est pas imprimee
+        if (Pos('/', CodeComp) = 0) and (Pos('*', CodeComp) = 0) and (Possedees.IndexOf(CodeComp) < 0) then
+          Possedees.Add(CodeComp);
+      end;
+
+    begin
+      NouvellePage(ConstCheminPdfBack);
+
+      Possedees := TStringList.Create;
+      Talents   := TStringList.Create;
+      try
+        for PerComp in Personnage.CreationCompetence35 do
+          AjoutePossedee(PerComp.CodeCompetence);
+        for PerComp in Personnage.CreationCompetence40 do
+          AjoutePossedee(PerComp.CodeCompetence);
+        for PerComp in Personnage.AugmentationCompetence do
+          AjoutePossedee(PerComp.CodeCompetence);
+
+        // Competences de base : cases a cocher
+        for Ind := 0 to High(CodeBase) do
+          Cases(216 + Pas * Ind, 'RULES-COMP_' + CodeBase[Ind], True);
+
+        // Competences avancees (toutes les autres, jusqu'a 17 lignes)
+        Ligne := 0;
+        for Code in Possedees do
+          begin
+            Comp := ChercheCompetence(Code);
+            if Comp.DeBase then
+              Continue;
+            if Ligne > 16 then
+              Break;
+            Attr := Comp.CodeAttribut;
+            if SameText(Copy(Attr, 1, 10), 'RULES-ATTR') then
+              Attr := Copy(Attr, 12, Length(Attr));
+            Champ(115, 325, 1282 + Pas * Ligne - 4, Comp.Libelle);
+            Centre(363, 1282 + Pas * Ligne + 4, Attr);
+            Cases(1282 + Pas * Ligne, Code, False);
+            Inc(Ligne);
+          end;
+
+        // Talents : creation, carriere et achats, hors choix non tranches
+        for PerTal in Personnage.CreationTalent do
+          if (Pos('/', PerTal.CodeTalent) = 0) and (Talents.IndexOf(PerTal.CodeTalent) < 0) then
+            Talents.Add(PerTal.CodeTalent);
+        for PerTal in Personnage.MetierTalent do
+          if (Pos('/', PerTal.CodeTalent) = 0) and (Talents.IndexOf(PerTal.CodeTalent) < 0) then
+            Talents.Add(PerTal.CodeTalent);
+        for PerTal in Personnage.AugmentationTalent do
+          if (Pos('/', PerTal.CodeTalent) = 0) and (Talents.IndexOf(PerTal.CodeTalent) < 0) then
+            Talents.Add(PerTal.CodeTalent);
+        // Talents accordes par une mutation ou une qualite d'objet porte (Howling -> Frightening),
+        // calcules a la volee comme dans la feuille V4 (PdfNormalTalents).
+        for PerTal in PersonnageMutationTalent(Personnage) do
+          if Talents.IndexOf(PerTal.CodeTalent) < 0 then
+            Talents.Add(PerTal.CodeTalent);
+        for PerTal in PersonnageArmureBonusTalent(Personnage) do
+          if Talents.IndexOf(PerTal.CodeTalent) < 0 then
+            Talents.Add(PerTal.CodeTalent);
+        for PerTal in PersonnageArmeBonusTalent(Personnage) do
+          if Talents.IndexOf(PerTal.CodeTalent) < 0 then
+            Talents.Add(PerTal.CodeTalent);
+        for Ind := 0 to Min(Talents.Count, 16) - 1 do
+          begin
+            Champ(872, 1114, 211 + Pas * Ind, ChercheTalent(Talents[Ind]).Libelle);
+          end;
+
+        // Trappings : objets divers, jusqu'a 15 lignes
+        Ligne := 0;
+        for Equip in Personnage.Equipement do
+          if (Equip.TypeEquipement = TypeEquipDI) and (Ligne < 15) then
+            begin
+              Champ(872, 1095, 1134 + Pas * Ligne, PdfDiversLibelle(Equip));
+              if PdfDiversEncombrement(Equip) <> 0 then
+                Centre(1121, 1139 + Pas * Ligne, IntToStr(PdfDiversEncombrement(Equip)));
+              Inc(Ligne);
+            end;
+
+        // Money
+        if Personnage.MonnaieCO <> 0 then
+          Champ(1062, 1540, 1962, IntToStr(Personnage.MonnaieCO));
+        if Personnage.MonnaiePA <> 0 then
+          Champ(1062, 1540, 2010, IntToStr(Personnage.MonnaiePA));
+        if Personnage.MonnaieSB <> 0 then
+          Champ(1062, 1540, 2058, IntToStr(Personnage.MonnaieSB));
+      finally
+        Possedees.Free;
+        Talents.Free;
+      end;
+    end;
+
+  // La feuille V2 officielle n'a pas de zone Sorts : page 3 sans fond, creee seulement si le
+  // personnage a des sorts (nom, niveau de lancement, temps d'incantation et ingredient).
+  procedure Page3;
+    const
+      Pas     = 50;
+      MaxLig  = 44;
+    var
+      Equip:  StructurePersonnageEquipement;
+      PSort:  StructureSort;
+      Ligne:  Integer = 0;
+      Y:      Single;
+      Detail: String;
+    begin
+      for Equip in Personnage.Equipement do
+        if Equip.TypeEquipement = TypeEquipSp then
+          begin
+            if Ligne = 0 then
+              begin
+                PdfPage := PDFDoc.Pages.AddPage;
+                PdfSection.AddPage(PdfPage);
+                PdfPage.PaperType := ptLetter;
+                PdfPage.UnitOfMeasure := uomMillimeters;
+                PdfTaillePolice(PdfPage, PdfFontValue, ConstPoliceArial, 10);
+                Champ(100, 1600, 150, GetTexteLibelle('RULES-LAB_083'));
+                Champ(100, 700, 230, GetTexteLibelle('RULES-LAB_014'));
+                Champ(720, 920, 230, GetTexteLibelle('RULES-LAB_335'));
+              end;
+            if Ligne >= MaxLig then
+              Break;
+            PSort  := ChercheSort(Equip.CodeEquipement);
+            Y      := 290 + Pas * Ligne;
+            Detail := Trim(PSort.TempsIncantation);
+            if Trim(PSort.Ingredient) <> '' then
+              Detail := Trim(Detail + ' - ' + PSort.Ingredient);
+            Champ(100, 700, Y, PSort.Libelle);
+            Champ(720, 920, Y, LibelleValeurLivre(PSort.Niveau));
+            Champ(940, 1600, Y, Detail);
+            Inc(Ligne);
+          end;
+    end;
+
+  begin
+    // Mode lot (--pdf) : les fonds ne sont pas encore suivis par la version, on les fixe ici.
+    PdfCheminsSelonVersion(ValVersion);
+    Personnage := PersonnageSansMunitions(Personnage);
+    PdfChemin  := GetCurrentDir+ConstCheminPersonnage+Personnage.NomPersonnage+'\'+Personnage.NomPersonnage+' '+FormatDateTime('yyyymmdd-hhnnss', Now)+'.PDF';
+    if FileExists(PdfChemin) then
+      if not DeleteFile(PdfChemin) then
+        begin
+          ShowMessage(GetTexteLibelle('RULES-MESS_038'));
+          Exit;
+        end;
+
+    PDFDoc          := TPDFDocument.Create(nil);
+    PDFDoc.Options  := [poUseImageTransparency, poCompressImages, poCompressFonts, poCompressText];
+    PDFDoc.StartDocument;
+    PdfSection      := PDFDoc.Sections.AddSection;
+    PdfPolicesDeRepli;
+    PdfFontBack     := PdfDoc.AddFont(PdfCheminPolice('CaslonAntique-Bold.ttf'), ConstPoliceCarlson+ConstPoliceGras);
+    PdfFontValue    := PdfDoc.AddFont(PdfCheminPolice('ariali.ttf'), ConstPoliceArial);
+    PdfFontBold     := PdfDoc.AddFont(PdfCheminPolice('arialbd.ttf'), ConstPoliceArial+ConstPoliceGras);
+
+    Page1;
+    Page2;
+    Page3;
+
+    PDFDoc.SaveToFile(PdfChemin);
+    PDFDoc.Free;
+    PdfPurgeAnciens(PdfChemin);
+
+    if not PdfSansOuverture then
+      OpenDocument(PdfChemin);
+  end;
+
+// PDF officiel de la V1 : recto et verso de la feuille du Core V1 (Letter), fonds
+// PICTURES\WFRP1\PDF\FRONT.png et BACK.png (pages 382 et 383 du PDF, rendues a 200 dpi).
+// Coordonnees en pixels de ces images (carte des zones : CONTEXT.md), converties en mm.
+Procedure PdfPersonnageV1(Personnage: StructurePersonnage);
+  const
+    Px = 25.4 / 200;          // 1 pixel du fond = 0,127 mm
+    HauteurPage = 279.4;      // Letter, mm
+    // centres des 14 colonnes du profil (M, WS, BS, S, T, W, I, A, Dex, Ld, Int, Cl, WP, Fel)
+    XProfil: array[0..13] of Integer = (479, 558, 633, 710, 788, 867, 944, 1021, 1097, 1175, 1249, 1326, 1403, 1482);
+    CodeProfil: array[0..13] of String = ('RULES-ATTR_M', 'RULES-ATTR_WS', 'RULES-ATTR_BS', 'RULES-ATTR_S',
+                                          'RULES-ATTR_T', 'RULES-ATTR_W', 'RULES-ATTR_I', 'RULES-ATTR_A',
+                                          'RULES-ATTR_Dex', 'RULES-ATTR_Ld', 'RULES-ATTR_Int', 'RULES-ATTR_Cl',
+                                          'RULES-ATTR_WP', 'RULES-ATTR_Fel');
+  var
+    PDFDoc:      TPDFDocument;
+    PdfSection:  TPDFSection;
+    PdfPage:     TPDFPage;
+    PdfChemin:   String;
+    PdfImage:    Integer;
+    MinPolice:   Integer = 6;
+
+  function MX(Pix: Single): Single;
+    begin
+      Result := Pix * Px;
+    end;
+
+  function MY(Pix: Single): Single;
+    begin
+      Result := HauteurPage - (Pix + 12) * Px;   // +12 : fpPDF ecrit la ligne de base plus haut que Y
+    end;
+
+  procedure Champ(X0, X1, Y: Single; Texte: String);
+    begin
+      if Trim(Texte) = '' then
+        Exit;
+      PdfEcrit(PdfPage, MX(X0), MX(X1), MY(Y), Texte, MinPolice);
+    end;
+
+  procedure Centre(XCentre, Y: Single; Texte: String);
+    begin
+      PdfTraceTexte(MX(XCentre), MY(Y), Texte);
+      PdfPage.WriteText(MX(XCentre) - 0.77 * TailleTexte(Texte, PdfFontTaille) / 2, MY(Y), Texte);
+    end;
+
+  procedure NouvellePage(const CheminFond: String);
+    begin
+      PdfPage := PDFDoc.Pages.AddPage;
+      PdfSection.AddPage(PdfPage);
+      PdfPage.PaperType := ptLetter;
+      PdfPage.UnitOfMeasure := uomMillimeters;
+      PdfImage := PdfDoc.Images.AddFromFile(CheminImagePdf(GetCurrentDir+StringReplace(CheminFond, ConstLangue, ValLangue, [rfReplaceAll])), false);
+      PdfPage.DrawImage(0, 0, 215.9, 279.4, PdfImage);
+      PdfTaillePolice(PdfPage, PdfFontValue, ConstPoliceArial, 10);
+    end;
+
+  // Langues du perso : toute competence dont le code contient LANGUAGE__ (Old Worlder, Eltharin,
+  // Secret Language, Arcane Language...). Elles vont dans le cadre Languages, pas dans les competences.
+  function EstLangueV1(const CodeComp: String): Boolean;
+    begin
+      Result := Pos('LANGUAGE__', CodeComp) > 0;
+    end;
+
+  procedure ListeLangues(Langues: TStringList);
+    var
+      PerComp: StructurePersonnageCompetence;
+
+    procedure Ajoute(const CodeComp: String);
+      begin
+        if EstLangueV1(CodeComp) and (Langues.IndexOf(CodeComp) < 0) then
+          Langues.Add(CodeComp);
+      end;
+
+    begin
+      for PerComp in Personnage.CreationCompetence35 do
+        Ajoute(PerComp.CodeCompetence);
+      for PerComp in Personnage.CreationCompetence40 do
+        Ajoute(PerComp.CodeCompetence);
+      for PerComp in Personnage.MetierCompetence do
+        Ajoute(PerComp.CodeCompetence);
+      for PerComp in Personnage.AugmentationCompetence do
+        Ajoute(PerComp.CodeCompetence);
+    end;
+
+  procedure Page1;
+    var
+      PRace:   StructureRace;
+      PMetier: StructureMetier;
+      Donnee:  StructureDonnee;
+      Bonus:   String;
+
+    // Sorties listees de la carriere en cours (libelles, separes par des virgules)
+    function SortiesCarriereV1: String;
+      var
+        PSortie: StructureMetierSortie;
+      begin
+        Result := '';
+        for PSortie in ListMetierSortie do
+          if CompareRechercheValeur(PSortie.CodeMetier, Personnage.MetierEnCours.CodeMetier) then
+            Result := Result + IfThen(Result = '', '', ', ') + ChercheMetier(PSortie.CodeSortie).Libelle;
+      end;
+
+    // Armes de melee (7 lignes) et de tir (6 lignes) : nom et degats seulement, les modificateurs
+    // du livre (I, WS, D, PY / S, L, E, ES, Load) ne sont pas portes par StructureArme.
+    procedure LignesArmes;
+      var
+        Equip:  StructurePersonnageEquipement;
+        PArme:  StructureArme;
+        NbCC:   Integer = 0;
+        NbCT:   Integer = 0;
+        Degat:  String;
+        PObjet: StructureObjetV1;
+        Y:      Single;
+
+      // valeur d'un modificateur (« RULES-V1MOD_PARRY -1; RULES-V1MOD_DAMAGE +2 ») : '' s'il n'y en a pas
+      function ModifCombatV1(const Combat, Stat: String): String;
+        var
+          I:    Integer;
+          Elem: String;
+        begin
+          Result := '';
+          for I := 1 to CountOccurrences(Combat, ';') + 1 do
+            begin
+              Elem := Trim(ExtractChaine(';', Combat, I));
+              if Pos('V1MOD_' + Stat + ' ', Elem) > 0 then
+                Exit(Trim(Copy(Elem, Pos(' ', Elem) + 1, Length(Elem))));
+            end;
+        end;
+
+      begin
+        for Equip in Personnage.Equipement do
+          if Equip.TypeEquipement = TypeEquipWe then
+            begin
+              PArme := ChercheArme(Equip.CodeEquipement);
+              Degat := StringReplace(PArme.CalculDegat, '(BATTR_S)', 'SB', [rfReplaceAll]);
+              if (Degat <> '') and (Degat[1] = '+') then
+                Delete(Degat, 1, 1);
+              if (Pos(EquipementCT, PArme.CodeArme) > 0) or (Pos('PROJ', PArme.CodeArme) > 0) then
+                begin
+                  if NbCT < 6 then
+                    begin
+                      Champ(198, 425, 1364 + 46 * NbCT, PArme.Libelle);
+                      if (PArme.Portee <> '') and (PArme.Portee <> '-') then
+                        Champ(440, 700, 1364 + 46 * NbCT, PArme.Portee);
+                      Inc(NbCT);
+                    end;
+                end
+              else if NbCC < 7 then
+                begin
+                  Champ(198, 500, 1000 + 44 * NbCC, PArme.Libelle);
+                  Champ(644, 713, 1000 + 44 * NbCC, Degat);
+                  Inc(NbCC);
+                end;
+            end
+          else if TrimRight(Equip.TypeEquipement) = TrimRight(TypeEquipDi) then
+            begin
+              // objet de la liste de prix (code EquipmentV1) : si c'est une arme, valeurs du livre recopiees
+              PObjet := ChercheObjetV1(Equip.CodeEquipement);
+              if (PObjet.Code <> '') and ValeurLivreEgale(PObjet.Categorie, 'WEAPON') then
+                begin
+                  if ValeurLivreEgale(PObjet.SousCategorie, 'MELEE') then
+                    begin
+                      if NbCC < 7 then
+                        begin
+                          Y := 1000 + 44 * NbCC;
+                          Champ(198, 500, Y, PObjet.Libelle);
+                          Champ(506, 568, Y, ModifCombatV1(PObjet.Combat, 'INITIATIVE'));
+                          Champ(574, 640, Y, ModifCombatV1(PObjet.Combat, 'TOHIT'));
+                          Champ(646, 713, Y, ModifCombatV1(PObjet.Combat, 'DAMAGE'));
+                          Champ(719, 781, Y, ModifCombatV1(PObjet.Combat, 'PARRY'));
+                          Inc(NbCC);
+                        end;
+                    end
+                  else if NbCT < 6 then
+                    begin
+                      Y := 1364 + 46 * NbCT;
+                      Champ(198, 425, Y, PObjet.Libelle);
+                      Champ(432, 498, Y, PObjet.PorteeCourte);
+                      Champ(504, 570, Y, PObjet.PorteeLongue);
+                      Champ(576, 642, Y, PObjet.PorteeExtreme);
+                      Champ(648, 713, Y, PObjet.ForceTir);
+                      Champ(719, 781, Y, PObjet.Rechargement);
+                      Inc(NbCT);
+                    end;
+                end;
+            end;
+      end;
+
+    // Armures : 7 lignes (nom, zones, encombrement) et points d'armure par zone sur le schema.
+    procedure LignesArmures;
+      var
+        Equip:   StructurePersonnageEquipement;
+        PArmure: StructureArmure;
+        NbArm:   Integer = 0;
+        Loc:     String;
+        J:       Integer;
+        Tete, Corps, Bras, Jambes: Integer;
+        // V1 : points variables « 0/1 » (cuir : -1 aux coups de 3 degats ou moins, rien au-dela) ; on cumule le bas et le haut
+        // par zone (0 tete, 1 corps, 2 bras, 3 jambes) et on ecrit « a/b » si les deux different
+        VarBas, VarHaut: array[0..3] of Integer;
+        PObjV1: StructureObjetV1;
+        Zone, Pts, Lieu: String;
+        Bas, Haut, Z: Integer;
+
+        function TexteZone(N, Fixe: Integer): String;
+          begin
+            if VarBas[N] = VarHaut[N] then
+              Result := IntToStr(Fixe + VarBas[N])
+            else
+              Result := IntToStr(Fixe + VarBas[N]) + '/' + IntToStr(Fixe + VarHaut[N]);
+          end;
+
+        procedure AjouteV1(N: Integer);
+          begin
+            VarBas[N] := VarBas[N] + Bas;
+            VarHaut[N] := VarHaut[N] + Haut;
+          end;
+
+      begin
+        Tete := 0; Corps := 0; Bras := 0; Jambes := 0;
+        for Z := 0 to 3 do
+          begin
+            VarBas[Z] := 0;
+            VarHaut[Z] := 0;
+          end;
+        for Equip in Personnage.Equipement do
+          if TrimRight(Equip.TypeEquipement) = TrimRight(TypeEquipDi) then
+            begin
+              // armure V1 (objet de la liste de prix, code EquipmentV1)
+              PObjV1 := ChercheObjetV1(Equip.CodeEquipement);
+              if (PObjV1.Code <> '') and ValeurLivreEgale(PObjV1.Categorie, 'ARMOUR') then
+                begin
+                  Zone := PObjV1.Zones;
+                  Lieu := '';
+                  for J := 1 to CountOccurrences(Zone, '/') + 1 do
+                    begin
+                      if Lieu <> '' then Lieu := Lieu + ',';
+                      Lieu := Lieu + ExtractChaine('/', Zone, J);
+                    end;
+                  if NbArm < 7 then
+                    begin
+                      Champ(198, 500, 1740 + 46 * NbArm, PObjV1.Libelle);
+                      Champ(504, 710, 1740 + 46 * NbArm, StringReplace(GetAllTexteLibelle(Lieu), ',', ', ', [rfReplaceAll]));
+                      if PObjV1.Encombrement <> '' then
+                        Centre(748, 1740 + 46 * NbArm, PObjV1.Encombrement);
+                      Inc(NbArm);
+                    end;
+                  if Equip.Porte then
+                    begin
+                      Pts := PObjV1.PointsArmure;
+                      if Pos('/', Pts) > 0 then
+                        begin
+                          Bas := StrToIntDef(Trim(ExtractChaine('/', Pts, 1)), 0);
+                          Haut := StrToIntDef(Trim(ExtractChaine('/', Pts, 2)), 0);
+                        end
+                      else
+                        begin
+                          Bas := StrToIntDef(Trim(Pts), 0);
+                          Haut := Bas;
+                        end;
+                      for J := 1 to CountOccurrences(Zone, '/') + 1 do
+                        begin
+                          Pts := ExtractChaine('/', Zone, J);
+                          if ValeurLivreEgale(Pts, 'HEAD') or ValeurLivreEgale(Pts, 'ALL') then AjouteV1(0);
+                          if ValeurLivreEgale(Pts, 'BODY') or ValeurLivreEgale(Pts, 'ALL') then AjouteV1(1);
+                          if ValeurLivreEgale(Pts, 'ARMS') or ValeurLivreEgale(Pts, 'ALL') then AjouteV1(2);
+                          if ValeurLivreEgale(Pts, 'LEGS') or ValeurLivreEgale(Pts, 'ALL') then AjouteV1(3);
+                        end;
+                    end;
+                end;
+            end
+          else if Equip.TypeEquipement = TypeEquipAR then
+            begin
+              PArmure := ChercheArmure(Equip.CodeEquipement);
+              if NbArm < 7 then
+                begin
+                  Champ(198, 500, 1740 + 46 * NbArm, PArmure.Libelle);
+                  Champ(504, 710, 1740 + 46 * NbArm, StringReplace(GetAllTexteLibelle(PArmure.Emplacement), ',', ', ', [rfReplaceAll]));
+                  if PArmure.Encombrement <> 0 then
+                    Centre(748, 1740 + 46 * NbArm, IntToStr(PArmure.Encombrement));
+                  Inc(NbArm);
+                end;
+              if Equip.Porte then
+                for J := 1 to CountOccurrences(PArmure.Emplacement, ',') + 1 do
+                  begin
+                    Loc := ExtractChaine(',', PArmure.Emplacement, J);
+                    if CompareRechercheValeur(Loc, BonusTete) then
+                      Tete := Tete + PArmure.Protection
+                    else if CompareRechercheValeur(Loc, BonusCorps) then
+                      Corps := Corps + PArmure.Protection
+                    else if CompareRechercheValeur(Loc, BonusBras) then
+                      Bras := Bras + PArmure.Protection
+                    else if CompareRechercheValeur(Loc, BonusJambes) then
+                      Jambes := Jambes + PArmure.Protection;
+                  end;
+            end;
+        Centre( 871, 1594, TexteZone(0, Tete));
+        Centre(1119, 1682, TexteZone(2, Bras));
+        Centre( 825, 1746, TexteZone(2, Bras));
+        Centre(1122, 1828, TexteZone(1, Corps));
+        Centre( 827, 1928, TexteZone(3, Jambes));
+        Centre(1122, 1966, TexteZone(3, Jambes));
+      end;
+
+    // Competences : deux colonnes (10 puis 23 lignes), codes a choisir (A/B) ou a specialiser ignores.
+    procedure LignesCompetences;
+      var
+        Vues:  TStringList;
+        PerComp: StructurePersonnageCompetence;
+        Rang:  Integer = 0;
+        Reste: String;
+
+      procedure Ajoute(const CodeComp: String);
+        var
+          Y: Single;
+          X0, X1: Single;
+        begin
+          if (Pos('/', CodeComp) > 0) or (Pos('*', CodeComp) > 0) or (Vues.IndexOf(CodeComp) >= 0) or EstLangueV1(CodeComp) then
+            Exit;
+          Vues.Add(CodeComp);
+          if Rang < 10 then
+            begin
+              X0 := 800; X1 := 1050; Y := 1010 + 44 * Rang;
+            end
+          else if Rang < 33 then
+            begin
+              X0 := 1170; X1 := 1410; Y := 1010 + 44 * (Rang - 10);
+            end
+          else
+            Exit;
+          Champ(X0, X1, Y, ChercheCompetence(CodeComp).Libelle);
+          Inc(Rang);
+        end;
+
+      begin
+        Vues := TStringList.Create;
+        try
+          for PerComp in Personnage.CreationCompetence35 do
+            Ajoute(PerComp.CodeCompetence);
+          for PerComp in Personnage.CreationCompetence40 do
+            Ajoute(PerComp.CodeCompetence);
+          for PerComp in Personnage.MetierCompetence do
+            Ajoute(PerComp.CodeCompetence);
+          for PerComp in Personnage.AugmentationCompetence do
+            Ajoute(PerComp.CodeCompetence);
+          // competences gratuites du familier du Druidic Priest
+          Reste := CompetencesFamilierV1(Personnage);
+          while Reste <> '' do
+            Ajoute(ElementSuivantV1(Reste));
+        finally
+          Vues.Free;
+        end;
+      end;
+
+    // Starter (valeur de depart), Advance Scheme (avances), Current (total) : trois lignes.
+    procedure LigneProfil;
+      var
+        I: Integer;
+      begin
+        for I := 0 to High(CodeProfil) do
+          begin
+            Donnee := PdfPersonnageAttribut(Personnage, CodeProfil[I], Bonus);
+            Centre(XProfil[I], 742, IntToStr(Donnee.Base));
+            if Donnee.Augmentation <> 0 then
+              Centre(XProfil[I], 819, IntToStr(Donnee.Augmentation));
+            Centre(XProfil[I], 896, IntToStr(Donnee.Total));
+          end;
+      end;
+
+    begin
+      NouvellePage(ConstCheminPdfFront);
+
+      PRace   := ChercheRace(Personnage.Race);
+      PMetier := ChercheMetier(Personnage.MetierEnCours.CodeMetier);
+
+      Champ(205, 645, 363, Personnage.NomPersonnage);
+      Champ(665, 805, 363, PersonnageRaceLibelle(Personnage, PRace.Libelle));
+      if Personnage.SexeV2 <> '' then
+        Champ(818, 958, 363, GetTexteLibelle(IfThen(Personnage.SexeV2 = 'F', 'RULES-LAB_743', 'RULES-LAB_744')));
+      Champ(973, 1295, 363, GetTexteLibelle(PMetier.LibelleGroupe));
+      Champ(1320, 1510, 363, GetTexteLibelle(PersonnageAlignementV1(Personnage)));
+      if Personnage.Age > 0 then
+        Champ(205, 340, 478, IntToStr(Personnage.Age));
+      if Personnage.Height > 0 then
+        Champ(355, 497, 478, FormateTaille(Personnage.Height, Personnage.HeightUnit));
+      if Personnage.PoidsV2 > 0 then
+        Champ(510, 655, 478, IntToStr(Personnage.PoidsV2));
+      Champ(670, 805, 478, Personnage.HairColors);
+      Champ(818, 965, 478, Personnage.EyeColors);
+      Champ(978, 1510, 478, Personnage.SigneDistinctifV2);
+      Champ(205, 508, 583, PMetier.Libelle);
+      Champ(527, 1008, 583, PdfFeldoMetiersAnciens(Personnage));
+      Champ(1030, 1515, 583, SortiesCarriereV1);
+
+      LigneProfil;
+      LignesArmes;
+      LignesArmures;
+      LignesCompetences;
+    end;
+
+  procedure Page2;
+    var
+      Equip:  StructurePersonnageEquipement;
+      PSort:  StructureSort;
+      Donnee: StructureDonnee;
+      Bonus:  String;
+      Ligne:  Integer = 0;
+      Mouv:   Integer;
+      Enc:    Integer = 0;
+      Y:      Single;
+      Reste:  String;
+      Item:   String;
+      Phrase: String;
+      Hand:   StructureHandicapV1;
+      Familier: StructureFamilierV1;
+      Mots:   TStringList;
+      I:      Integer;
+      Stade:  Integer;
+    begin
+      NouvellePage(ConstCheminPdfBack);
+
+      // Sorts : 9 lignes (nom, niveau, ingredient)
+      for Equip in Personnage.Equipement do
+        if (Equip.TypeEquipement = TypeEquipSp) and (Ligne < 9) then
+          begin
+            PSort := ChercheSort(Equip.CodeEquipement);
+            Y     := 232 + 46 * Ligne;
+            Champ(198, 472, Y, PSort.Libelle);
+            Centre(515, Y, LibelleValeurLivre(PSort.Niveau));
+            Champ(548, 610, Y, PSort.CoutMagieV1);
+            Champ(618, 680, Y, PSort.Portee);
+            Champ(686, 752, Y, PSort.Duree);
+            Champ(760, 1010, Y, PSort.Ingredient);
+            Champ(1018, 1296, Y, PSort.Description);
+            Inc(Ligne);
+          end;
+
+      // Handicaps des magiciens : cadre Psychology & Health, un titre puis le texte du stade, a la ligne
+      Reste := Personnage.HandicapsV1;
+      Y     := 950;
+      while Reste <> '' do
+        begin
+          Item  := ElementSuivantV1(Reste);
+          Stade := StrToIntDef(Copy(Item, Pos('=', Item) + 1, 3), 0);
+          Hand  := ChercheHandicapV1(Copy(Item, 1, Pos('=', Item) - 1));
+          if (Hand.Libelle = '') or (Stade < 1) or (Stade > 3) then
+            Continue;
+          if Y <= 1125 then
+            Champ(712, 1135, Y, Hand.Libelle + ' (' + IntToStr(Stade) + ')');
+          Y     := Y + 32;
+          Mots  := TStringList.Create;
+          try
+            ExtractStrings([' '], [], PChar(Hand.Texte[Stade]), Mots);
+            Phrase := '';
+            for I := 0 to Mots.Count - 1 do
+              begin
+                if (Phrase <> '') and (TailleTexte(Phrase + ' ' + Mots[I], PdfFontTaille) > (MX(1135) - MX(712)) * 1.15) then
+                  begin
+                    if Y <= 1125 then
+                      Champ(712, 1135, Y, Phrase);
+                    Y      := Y + 32;
+                    Phrase := Mots[I];
+                  end
+                else if Phrase = '' then
+                  Phrase := Mots[I]
+                else
+                  Phrase := Phrase + ' ' + Mots[I];
+              end;
+            if (Phrase <> '') and (Y <= 1125) then
+              Champ(712, 1135, Y, Phrase);
+            if Phrase <> '' then
+              Y := Y + 32;
+          finally
+            Mots.Free;
+          end;
+        end;
+
+      // Familier du Druidic Priest : espece, armure / bouclier permis, lieux de ressourcement
+      if Personnage.FamilierV1 <> '' then
+        begin
+          Familier := ChercheFamilierV1(Personnage.FamilierV1);
+          if Y <= 1125 then
+            Champ(712, 1135, Y, Familier.Animal + ' : ' + Familier.Armure + IfThen(Familier.Bouclier, ' + shield', '') + ' (' + Familier.Lieux + ')');
+          Y := Y + 32;
+          // strictures du familier : armes interdites et regime
+          if Y <= 1125 then
+            Champ(712, 1135, Y, GetTexteLibelle('RULES-FAMDIET_FORBIDDEN') + ' : ' + Familier.ArmesInterdites + ' ; ' +
+                  GetTexteLibelle('RULES-FAMDIET_DIET') + ' : ' + GetTexteLibelle('RULES-FAMDIET_' + Familier.Regime));
+          Y := Y + 32;
+        end;
+
+      // Langues : une par ligne, 6 maxi
+      Mots := TStringList.Create;
+      try
+        ListeLangues(Mots);
+        for I := 0 to Mots.Count - 1 do
+          if I < 6 then
+            Champ(1105, 1295, 705 + 30 * I, ChercheCompetence(Mots[I]).Libelle);
+      finally
+        Mots.Free;
+      end;
+
+      // Destin, XP
+      Donnee := PdfPersonnageAttribut(Personnage, ConstCaracDestin, Bonus);
+      Centre(1413, 236, IntToStr(Donnee.Total));
+      if Personnage.PointsMagie > 0 then
+        Centre(1413, 350, IntToStr(Personnage.PointsMagie));
+      if Personnage.FolieV1 > 0 then
+        Centre(1224, 1010, IntToStr(Personnage.FolieV1));
+      // Background : texte libre apres chaque etiquette imprimee de la feuille
+      Champ(890, 1290, 1218, Personnage.NaissanceV1);
+      Champ(955, 1290, 1255, Personnage.ParentsV1);
+      Champ(915, 1290, 1294, Personnage.FamilleV1);
+      Champ(1311, 1516, 580, IntToStr(Personnage.XpActuel) + ' / ' + IntToStr(Personnage.XpTotal));
+
+      // Mouvement : cadence de la feuille = 2 M, 4 M, 16 M verges par round, 12 M, 24 M, 96 M par tour
+      Donnee := PdfPersonnageAttribut(Personnage, 'RULES-ATTR_M', Bonus);
+      Mouv   := Donnee.Total;
+      Centre(911, 728, IntToStr(Mouv * 2));
+      Centre(979, 728, IntToStr(Mouv * 12));
+      Centre(911, 789, IntToStr(Mouv * 4));
+      Centre(979, 789, IntToStr(Mouv * 24));
+      Centre(911, 857, IntToStr(Mouv * 16));
+      Centre(979, 857, IntToStr(Mouv * 96));
+
+      // Equipement : 16 lignes
+      Ligne := 0;
+      for Equip in Personnage.Equipement do
+        if (Equip.TypeEquipement = TypeEquipDI) and (Ligne < 16) then
+          begin
+            Champ(198, 545, 700 + 46 * Ligne, PdfDiversLibelle(Equip));
+            if PdfDiversEncombrement(Equip) <> 0 then
+              Centre(649, 700 + 46 * Ligne, IntToStr(PdfDiversEncombrement(Equip)));
+            Enc := Enc + PdfDiversEncombrement(Equip);
+            Inc(Ligne);
+          end;
+      if Enc <> 0 then
+        Centre(649, 1500, IntToStr(Enc));
+
+      // Argent
+      if Personnage.MonnaieCO <> 0 then
+        Champ(198, 545, 1600, IntToStr(Personnage.MonnaieCO) + ' GC');
+      if Personnage.MonnaiePA <> 0 then
+        Champ(198, 545, 1646, IntToStr(Personnage.MonnaiePA) + ' s');
+      if Personnage.MonnaieSB <> 0 then
+        Champ(198, 545, 1692, IntToStr(Personnage.MonnaieSB) + ' p');
+    end;
+
+  begin
+    PdfCheminsSelonVersion(ValVersion);
+    Personnage := PersonnageSansMunitions(Personnage);
+    PdfChemin  := GetCurrentDir+ConstCheminPersonnage+Personnage.NomPersonnage+'\'+Personnage.NomPersonnage+' '+FormatDateTime('yyyymmdd-hhnnss', Now)+'.PDF';
+    if FileExists(PdfChemin) then
+      if not DeleteFile(PdfChemin) then
+        begin
+          ShowMessage(GetTexteLibelle('RULES-MESS_038'));
+          Exit;
+        end;
+
+    PDFDoc          := TPDFDocument.Create(nil);
+    PDFDoc.Options  := [poUseImageTransparency, poCompressImages, poCompressFonts, poCompressText];
+    PDFDoc.StartDocument;
+    PdfSection      := PDFDoc.Sections.AddSection;
+    PdfPolicesDeRepli;
+    PdfFontBack     := PdfDoc.AddFont(PdfCheminPolice('CaslonAntique-Bold.ttf'), ConstPoliceCarlson+ConstPoliceGras);
+    PdfFontValue    := PdfDoc.AddFont(PdfCheminPolice('ariali.ttf'), ConstPoliceArial);
+    PdfFontBold     := PdfDoc.AddFont(PdfCheminPolice('arialbd.ttf'), ConstPoliceArial+ConstPoliceGras);
+
+    Page1;
+    Page2;
+
+    PDFDoc.SaveToFile(PdfChemin);
+    PDFDoc.Free;
+    PdfPurgeAnciens(PdfChemin);
 
     if not PdfSansOuverture then
       OpenDocument(PdfChemin);
@@ -2339,12 +3442,12 @@ begin
   // appel qui en avait une - signale par Nono le 11/09/2026.
   Bonus := '';
   For Indice := 0 to high(Personnage.CreationTalent) do
-    if CompareRechercheValeur(Personnage.CreationTalent[Indice].CodeTalent, CodeTalent) then
+    if MemeTalent(Personnage.CreationTalent[Indice].CodeTalent, CodeTalent) then
       if Personnage.CreationTalent[Indice].Asterisque <> 0 then
         Bonus := '(' + IntToStr(Personnage.CreationTalent[Indice].Asterisque) + ')';
 
   For Indice := 0 to high(Personnage.AugmentationTalent) do
-    if CompareRechercheValeur(Personnage.AugmentationTalent[Indice].CodeTalent, CodeTalent) then
+    if MemeTalent(Personnage.AugmentationTalent[Indice].CodeTalent, CodeTalent) then
       if Personnage.AugmentationTalent[Indice].Asterisque <> 0 then
         Bonus := '(' + IntToStr(Personnage.AugmentationTalent[Indice].Asterisque) + ')';
 
@@ -2632,7 +3735,7 @@ Function PdfPersonnageMutationAsterisques(Personnage: StructurePersonnage; Aster
                     if PCompetence.CodeGenerique <> '' then
                       CodeGenerique := PCompetence.CodeGenerique
                     else
-                      CodeGenerique := ExtractStringBefore(PCompetence.CodeCompetence, ValeurSousCompetence) + ValeurGenerique;
+                      CodeGenerique := CodeGeneriqueDeduit(PCompetence.CodeCompetence);
                   end;
                 if CompareRechercheValeur(PCompetence.CodeCompetence, PCorruptionModificateur.Cible)
                    or ((CodeGenerique <> '') and CompareRechercheValeur(CodeGenerique, PCorruptionModificateur.Cible)) then
@@ -2900,7 +4003,7 @@ Function PdfBlocEntete(PdfPage: TPDFPage; Personnage: StructurePersonnage; PRace
     PdfValeurGras(PdfPage, True);
     PdfEcrit(PdfPage, XVal1,       XSep2 - 1, Y - (HauteurLigne * 1) + 1, Personnage.NomPersonnage, MinPolice);
     PdfValeurGras(PdfPage, False);
-    PdfEcrit(PdfPage, XValEspece,  XSep3 - 1, Y - (HauteurLigne * 1) + 1, PRace.Libelle, MinPolice);
+    PdfEcrit(PdfPage, XValEspece,  XSep3 - 1, Y - (HauteurLigne * 1) + 1, PersonnageRaceLibelle(Personnage, PRace.Libelle), MinPolice);
     PdfEcrit(PdfPage, XValClasse,  XDroite,   Y - (HauteurLigne * 1) + 1, GetTexteLibelle(PMetier.LibelleGroupe), MinPolice);
     PdfValeurGras(PdfPage, True);
     if Trim(Personnage.Appartenance) <> '' then
@@ -2908,7 +4011,7 @@ Function PdfBlocEntete(PdfPage: TPDFPage; Personnage: StructurePersonnage; PRace
     else
       PdfEcrit(PdfPage, XVal1, XSep2 - 1, Y - (HauteurLigne * 2) + 1, PMetier.Libelle, MinPolice);
     PdfValeurGras(PdfPage, False);
-    PdfEcrit(PdfPage, XValNiveau,  XDroite,   Y - (HauteurLigne * 2) + 1, IntToStr(Personnage.MetierEnCours.NiveauMetier)+' - '+ PMetierNiveau.Libelle, MinPolice);
+    PdfEcrit(PdfPage, XValNiveau,  XDroite,   Y - (HauteurLigne * 2) + 1, IntToStr(Personnage.MetierEnCours.NiveauMetier)+' - '+ LibelleNiveauSelonSexe(PMetierNiveau, Personnage.SexeV2), MinPolice);
     // Zone Career Path : jusqu'a la separation Status, pas jusqu'a XDroite.
     PdfEcrit(PdfPage, XValChemin,  XSep3 - 1, Y - (HauteurLigne * 3) + 1, LocData, MinPolice);
     // Prefixe RULES- ajoute le 12/09/2026 - meme correctif que le gabarit normal, voir son
@@ -3333,7 +4436,7 @@ Function PdfBlocTalents(PdfPage: TPDFPage; Personnage: StructurePersonnage; XGau
               end;
             PdfCentre(PdfPage, XGauche + 47, XGauche + 53, Y - ((NbLigne + 2) * HauteurLigne) + 1, IntToStr(TalentDonnee.Total));
             if PTalent.SousTalent then
-              PTalent := ChercheTalent(Copy(PTalent.CodeTalent, 1, Pos('_', PTalent.CodeTalent) - 1)+'_*');
+              PTalent := ChercheTalent(CodeTalentGenerique(PTalent));
             if PTalent.Resume <> '' then
               begin
                 if Length(PTalent.Resume) > 20 then
@@ -3380,7 +4483,7 @@ Function PdfBlocTalents(PdfPage: TPDFPage; Personnage: StructurePersonnage; XGau
         if NbLigne > LimiteLigne then Continue;
         PdfEcrit(PdfPage, XGauche + 2, XGauche + 41, Y - ((NbLigne + 2) * HauteurLigne) + 1, PTalent.Libelle, MinPolice);
         if PTalent.SousTalent then
-          PTalent := ChercheTalent(Copy(PTalent.CodeTalent, 1, Pos('_', PTalent.CodeTalent) - 1)+'_*');
+          PTalent := ChercheTalent(CodeTalentGenerique(PTalent));
         if PTalent.Resume <> '' then
           begin
             if Length(PTalent.Resume) > 20 then
@@ -3401,7 +4504,7 @@ Function PdfBlocTalents(PdfPage: TPDFPage; Personnage: StructurePersonnage; XGau
         if NbLigne > LimiteLigne then Continue;
         PdfEcrit(PdfPage, XGauche + 2, XGauche + 41, Y - ((NbLigne + 2) * HauteurLigne) + 1, PTalent.Libelle, MinPolice);
         if PTalent.SousTalent then
-          PTalent := ChercheTalent(Copy(PTalent.CodeTalent, 1, Pos('_', PTalent.CodeTalent) - 1)+'_*');
+          PTalent := ChercheTalent(CodeTalentGenerique(PTalent));
         if PTalent.Resume <> '' then
           begin
             if Length(PTalent.Resume) > 20 then
@@ -3455,7 +4558,7 @@ Function PdfBlocTalents(PdfPage: TPDFPage; Personnage: StructurePersonnage; XGau
               PdfEcrit(PdfPage, XGauche +  2, XGauche + 41, Y - ((NbLigne + 3) * HauteurLigne) + 1, LibelleChoix, MinPolice);
               PdfEcrit(PdfPage, XGauche + 43, XGauche + 47, Y - ((NbLigne + 3) * HauteurLigne) + 1, InttoStr(PMetierTalent.NiveauMetier), MinPolice);
               if PTalent.SousTalent then
-                PTalent := ChercheTalent(Copy(PTalent.CodeTalent, 1, Pos('_', PTalent.CodeTalent) - 1)+'_*');
+                PTalent := ChercheTalent(CodeTalentGenerique(PTalent));
               if PTalent.Resume <> '' then
                 begin
                   if Length(PTalent.Resume) > 20 then
@@ -3640,7 +4743,7 @@ Procedure PdfBlocSortsDonnees(PdfPage: TPDFPage; Personnage: StructurePersonnage
           Inc(NbSort);
           PSort := ChercheSort(PersonnageEquipement.CodeEquipement);
           PdfEcrit (PdfPage, XGauche +  1, XGauche + 38, Y - ((NbSort + 2) * HauteurLigne) + 0.6, PSort.Libelle, MinPolice);
-          PdfCentre(PdfPage, XGauche + 38, XGauche + 51, Y - ((NbSort + 2) * HauteurLigne) + 0.6, PSort.Niveau);
+          PdfCentre(PdfPage, XGauche + 38, XGauche + 51, Y - ((NbSort + 2) * HauteurLigne) + 0.6, LibelleValeurLivre(PSort.Niveau));
           PdfCentre(PdfPage, XGauche + 51, XGauche + 66, Y - ((NbSort + 2) * HauteurLigne) + 0.6, PdfPersonnageRemplaceBonus(Personnage, PSort.Portee));
           PdfCentre(PdfPage, XGauche + 66, XGauche + 82, Y - ((NbSort + 2) * HauteurLigne) + 0.6, PdfPersonnageRemplaceBonus(Personnage, PSort.Cible));
           PdfCentre(PdfPage, XGauche + 82, XGauche + 98, Y - ((NbSort + 2) * HauteurLigne) + 0.6, PdfPersonnageRemplaceBonus(Personnage, PSort.Duree));
@@ -3894,13 +4997,7 @@ Procedure PdfBlocArmesDonnees(PdfPage: TPDFPage; Personnage: StructurePersonnage
             PorteMoyenne := PorteMoyenne + FabricationPortee(PersonnageEquipement.QualiteEquipement);
             Portee       := IntToStr(PorteMoyenne);
           end;
-        if FabricationQualitesArme(PersonnageEquipement.QualiteEquipement) <> '' then
-          begin
-            if (PArme.ListeBonus <> '') and (PArme.ListeBonus <> '-') then
-              PArme.ListeBonus := PArme.ListeBonus + ',';
-            if PArme.ListeBonus = '-' then PArme.ListeBonus := '';
-            PArme.ListeBonus := PArme.ListeBonus + FabricationQualitesArme(PersonnageEquipement.QualiteEquipement);
-          end;
+        ArmeAjouteQualites(PArme.ListeBonus, FabricationQualitesArme(PersonnageEquipement.QualiteEquipement));
         Enc        := PArme.Encombrement + FabricationEncombrement(PersonnageEquipement.QualiteEquipement, Quality);
         // Ligne alternative d'un accessoire (Bayonet = Spear) : pas d'encombrement propre, l'accessoire pese 0.
         if EquipementAlternatifFabrication(PersonnageEquipement) <> '' then
@@ -6426,8 +7523,8 @@ Procedure PdfPersonnageCreationFeldo2P(Personnage: StructurePersonnage);
     LocData        := PdfFeldoMetiersAnciens(Personnage);
     PMetier        := ChercheMetier(Personnage.MetierEnCours.CodeMetier);
     PMetierNiveau  := ChercheMetierNiveau(Personnage.MetierEnCours.CodeMetier, Personnage.MetierEnCours.NiveauMetier);
-    PRaceAttribut  := ChercheRaceAttribut(Personnage.Race, ConstCaracMouvement);
-    Mouv           := StrToInt(PRaceAttribut.CalculRace);
+    PRaceAttribut  := ChercheRaceAttribut(Personnage.Race, IfThen(ValVersion = 'WFRP2', 'RULES-ATTR_M', ConstCaracMouvement));
+    Mouv           := StrToIntDef(PRaceAttribut.CalculRace, 0);
     // Modificateurs de toutes les sources possedees (collecteur unique, CONTEXT.md 2.105 etape c)
     Mouv           := Mouv + PersonnageModificateurUnique(Personnage, ConstXmlModifieAttribut, ConstCaracMouvement)
                             + SigneAstralAttributModif(Personnage.SigneAstral, Personnage.SigneAstralVariante, ConstCaracMouvement);
@@ -6749,6 +7846,7 @@ Procedure PdfPersonnageCreationFeldo2P(Personnage: StructurePersonnage);
     PdfPage2;
     PDFDoc.SaveToFile(PdfChemin);
     PDFDoc.Free;
+    PdfPurgeAnciens(PdfChemin);
     PdfStyle   := False;
     PdfEconomie := False;
     PdfCouleur := True;

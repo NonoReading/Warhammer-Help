@@ -110,7 +110,7 @@ Type
   end;
 
 Const
-  NbTypesEffet = 18;
+  NbTypesEffet = 19;
   // L'ordre est celui de la liste deroulante de WinLivre ; ModifyCarac..Modificateur gardent
   // les libelles RULES-LAB_443 a 449 deja utilises par la grille des bonus de talent.
   TypesEffet: array[0..NbTypesEffet - 1] of StructureTypeEffet = (
@@ -131,7 +131,8 @@ Const
     (Balise: ConstXmlModifieRechargementMin;    CodeLibelle: 'RULES-LAB_467'; Nature: ncFixe;       AccepteFiltre: False; CibleFixe: ConstCibleModifieRechargement; ValeurNonNulle: True),
     (Balise: ConstXmlModifieMains;              CodeLibelle: 'RULES-LAB_053'; Nature: ncFixe;       AccepteFiltre: False; CibleFixe: ConstCibleModifieMains; ValeurNonNulle: True),
     (Balise: ConstXmlModifieCompetenceEquip;    CodeLibelle: 'RULES-LAB_474'; Nature: ncCompetence; AccepteFiltre: False; CibleFixe: ''; ValeurNonNulle: True),
-    (Balise: ConstXmlModifieCompetenceCarriere; CodeLibelle: 'RULES-LAB_486'; Nature: ncCompetence; AccepteFiltre: False; CibleFixe: ''; ValeurNonNulle: True)
+    (Balise: ConstXmlModifieCompetenceCarriere; CodeLibelle: 'RULES-LAB_486'; Nature: ncCompetence; AccepteFiltre: False; CibleFixe: ''; ValeurNonNulle: True),
+    (Balise: ConstXmlModifieLutte;              CodeLibelle: 'RULES-LAB_794'; Nature: ncFixe;       AccepteFiltre: False; CibleFixe: ConstCibleModifieLutte; ValeurNonNulle: True)
   );
 
 Var

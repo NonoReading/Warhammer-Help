@@ -37,7 +37,8 @@ function TexteMetierRaceChoixMetier(CodeMetier: String; CodeRace: String; ListeL
   begin
     if AvecRaceChoixMetier = true then
       For PMetierRaceChoixMetier in ListMetierRaceChoixMetier do
-        if CompareRechercheValeur(PMetierRaceChoixMetier.CodeMetier, CodeMetier) and ( CompareRechercheValeur(PMetierRaceChoixMetier.CodeRace, CodeRace) or (CodeRace = '') ) and VerifieFiltre(PMetierRaceChoixMetier.Livre, ListeLivre) then
+        if CompareRechercheValeur(PMetierRaceChoixMetier.CodeMetier, CodeMetier) and ( CompareRechercheValeur(PMetierRaceChoixMetier.CodeRace, CodeRace) or (CodeRace = '') ) and VerifieFiltre(PMetierRaceChoixMetier.Livre, ListeLivre)
+           and not BasculeCreationActive(ConstCleChoixMetier + PMetierRaceChoixMetier.Livre) then
           begin
             if PMetierRaceChoixMetier.CodeRace <> RaceEnCours then
               begin
@@ -59,7 +60,8 @@ function ResultMetierRaceChoixMetier(CodeMetier: String; CodeRace: String; Liste
     CodeRes := CodeMetier;
     if AvecRaceChoixMetier = true then
       For PMetierRaceChoixMetier in ListMetierRaceChoixMetier do
-        if CompareRechercheValeur(PMetierRaceChoixMetier.CodeMetier, CodeMetier) and CompareRechercheValeur(PMetierRaceChoixMetier.CodeRace, CodeRace) and VerifieFiltre(PMetierRaceChoixMetier.Livre, ListeLivre) then
+        if CompareRechercheValeur(PMetierRaceChoixMetier.CodeMetier, CodeMetier) and CompareRechercheValeur(PMetierRaceChoixMetier.CodeRace, CodeRace) and VerifieFiltre(PMetierRaceChoixMetier.Livre, ListeLivre)
+           and not BasculeCreationActive(ConstCleChoixMetier + PMetierRaceChoixMetier.Livre) then
             CodeRes := CodeRes + SeparateurMulti + PMetierRaceChoixMetier.CodeSousMetier;
     Result   := CodeRes;
   end;

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Player&#x27;s guide — 2. Changing a character</title><style>
+body{font-family:Segoe UI,Arial,sans-serif;max-width:50rem;margin:2rem auto;padding:0 1rem;
+line-height:1.55;color:#222;background:#fbf7ee}
+h1{color:#7a1212;border-bottom:3px solid #7a1212}
+h2{color:#7a1212;margin-top:2rem}
+table{border-collapse:collapse;margin:1rem 0}
+th,td{border:1px solid #b9a98a;padding:.35rem .6rem;text-align:left;vertical-align:top}
+th{background:#eadfc6}
+code{background:#eee4cd;padding:0 .25rem}
+img{max-width:100%;height:auto;border:1px solid #b9a98a}
+hr{border:0;border-top:1px solid #b9a98a;margin:1.5rem 0}
+em{color:#555}
+:target{background:#fff1b8}
+</style></head><body>
+<h1 id="player-s-guide-2-changing-a-character">Player's guide — 2. Changing a character</h1>
+<p><em>WFRP4 rules. French version: <code>GUIDE_JOUEUR_2_MODIFICATION_FR.md</code>.</em></p>
+<p>Who it is for: a player whose character is already created and who wants to make it evolve, or a regular looking for one specific point (per-question sheets are in phase 3).</p>
+<p>Tip: on almost every button and tick box, <strong>F1</strong> shows a short explanation of what it does.</p>
+<hr>
+<h2 id="opening-a-character">Opening a character</h2>
+<p>Open the character from the main menu. The sheet is split in two: the <strong>sheet tables</strong> (characteristics, skills, talents, spells, equipment) and, on the side, a list of <strong>pages</strong> for everything that evolves: Attribute, Skill, Talent, Total experience (the Xp), Advancement, History, Book, GM XP, Corruption, Mutations, Afflictions/Diseases, Ambitions, Group, Fate / Resilience, Money and PDF. Depending on the rules version, some pages do not appear.</p>
+<p><img src="../IMAGES/modif_01_fenetre.png" alt="The character window with the list of pages"></p>
+<p>Two rules to keep in mind:</p>
+<ul>
+<li><strong>Nothing is final until you click Save file.</strong> Changes live on screen; <strong>Save file</strong> writes the file and closes the window. If saving fails, the window stays open.
+</li>
+<li>The books the character was created with stay attached to it. To use something from another book (for example the Momentum talents) that book must be among the character's books.
+</li>
+</ul>
+<hr>
+<a id="xp"></a>
+<h2 id="experience-xp">Experience (Xp)</h2>
+<p>On the <strong>Total experience</strong> page:</p>
+<ul>
+<li><strong>Total Xp</strong>: enter the total Xp earned by the character, in raw units, as written on the sheet. The spent and remaining Xp are computed for you.
+</li>
+<li><strong>Opt : XP/25</strong>: tick it if you count Xp in the new unit (total divided by 25, rounded down). Spent and remaining follow the same unit.
+</li>
+<li><strong>Show Xp</strong> (cost columns) and <strong>calculation detail</strong> can be shown or hidden in the sheet tables; this changes the display only.
+</li>
+</ul>
+<p><img src="../IMAGES/modif_02_xp.png" alt="The Total experience page"></p>
+<hr>
+<a id="advance"></a>
+<h2 id="spending-xp-advancing">Spending Xp: advancing</h2>
+<p>On the <strong>Advancement</strong> page you decide what the character does with their Xp:</p>
+<ol>
+<li>In the sheet tables, enter the <strong>advances</strong> you want (characteristics, skills, talents). The cost is computed from the career and the advances already bought.
+</li>
+<li>Choose what happens to the career:
+<ul>
+<li><strong>Continue like that</strong>: same level, same career.
+</li>
+<li><strong>Next level</strong>: the character moves to the next level of their career (or to the next career).
+</li>
+<li><strong>Change career</strong>: pick the new career from the list (<strong>Select</strong> button).
+</li>
+</ul>
+</li>
+<li>Click <strong>Update sheet</strong>: the advances and the career change are applied and the Xp spent are deducted.
+</li>
+</ol>
+<p>Good to know:</p>
+<ul>
+<li>A career whose first level is above 1 (an advanced career, for example the Storm Weaver) cannot be started directly: you reach it by climbing from its parent career. The program refuses it with a message.
+</li>
+<li>Changing career is only offered among the careers of the character's species and books.
+</li>
+<li><strong>History</strong> keeps a line for each update: select a line and click the <strong>See</strong> button to show the sheet in that state (read-only view: equipment buttons are hidden). It is only for looking: you cannot go back to that state.
+</li>
+</ul>
+<p><img src="../IMAGES/modif_03_avancement.png" alt="The Advancement page, with the three choices"></p>
+<hr>
+<h2 id="specialisations">Specialisations</h2>
+<p>A skill or a talent with a specialisation ("Lore (Any)", "Melee (Any)") must be specified. Select the line, then click <strong>+ Specialisation</strong> to add one of the character's own. The line then follows the usual cost rules.</p>
+<hr>
+<a id="equipment"></a>
+<h2 id="equipment">Equipment</h2>
+<p>The buttons under the equipment table add what the character carries. Each button only appears in the categories where it is useful: <strong>+Weapon</strong> in Weapon, <strong>+Armor</strong> in Armor, <strong>+Spell</strong> in Spell, <strong>+Text item</strong> in Various, <strong>+Equipment</strong> in Various and Mounts, <strong>+Familiar</strong> in Mounts.</p>
+<table><thead><tr><th>Button</th><th>Adds</th></tr></thead><tbody>
+<tr><td><strong>+Weapon</strong></td><td>a weapon</td></tr>
+<tr><td><strong>+Armor</strong></td><td>a piece of armour (tick <em>Quick Armor</em> to get simplified choices)</td></tr>
+<tr><td><strong>+Spell</strong></td><td>a spell to the list</td></tr>
+<tr><td><strong>+Equipment</strong></td><td>an item from the books</td></tr>
+<tr><td><strong>+Text item</strong></td><td>a free-text line</td></tr>
+<tr><td><strong>+Item</strong></td><td>an item found in no book (Weapon, Armor and Various categories)</td></tr>
+<tr><td><strong>+Familiar</strong></td><td>a familiar or a mount</td></tr>
+<tr><td><strong>+Crafting</strong></td><td>a crafting quality on the selected item (weapon, armour or other)</td></tr>
+<tr><td><strong>-Remove</strong></td><td>removes the selected item (with confirmation)</td></tr>
+</tbody></table>
+<ul>
+<li>Tick <strong>Ammunition</strong> if you want ammunition managed and offered in the equipment.
+</li>
+<li>The <strong>-Remove</strong> button is not shown in the Spells category: a spell cannot be removed in WFRP4 (some other rule sets allow it). Deleting an animal gives its carried items back to the character.
+</li>
+<li>With WFRP1 rules, a spell is learned with <strong>Learn a spell</strong> (Spells category).
+</li>
+</ul>
+<p><img src="../IMAGES/modif_04_equipement.png" alt="The equipment buttons"></p>
+<hr>
+<a id="corruption"></a>
+<h2 id="corruption-and-mutations">Corruption and mutations</h2>
+<p>On the <strong>Corruption</strong> page:</p>
+<ul>
+<li><strong>Add</strong> a line each time the character gains corruption points; <strong>Delete</strong> removes the selected line (with confirmation). The counter shows the points left before the next test.
+</li>
+<li>After a failed Corruption test, the <strong>Mutation</strong> button opens the list of mutations. One of the choices lets the character <strong>spend Resilience</strong> instead of suffering the mutation, when Resilience is available.
+</li>
+<li>The talents a corruption gives or removes are tracked by the program.
+</li>
+</ul>
+<p>The <strong>Mutations</strong> page lists those already suffered (in WFRP1 the page is named differently).</p>
+<p><img src="../IMAGES/modif_05_corruption.png" alt="The Corruption page"></p>
+<hr>
+<a id="afflictions"></a>
+<h2 id="afflictions-and-diseases">Afflictions and diseases</h2>
+<p>On the <strong>Afflictions / Diseases</strong> page:</p>
+<ul>
+<li><strong>Add an Affliction</strong> opens the catalogue. Some Afflictions fix their penalty with a dice roll (for example "−1d10 Toughness"): the program shows the roll and <strong>you confirm or correct it</strong>; it never rolls silently. Cancelling the window cancels the addition.
+</li>
+<li><strong>Add a Disease</strong> opens the catalogue of diseases.
+</li>
+</ul>
+<hr>
+<a id="ambitions"></a>
+<h2 id="ambitions-and-group">Ambitions and group</h2>
+<ul>
+<li><strong>Ambitions</strong>: short-term and long-term ambitions, free text. Double-click the table to edit.
+</li>
+<li><strong>Group</strong>: the shared goods of the party. A group is <strong>one shared file</strong> (<code>GROUPE_&lt;name&gt;.xml</code>, at the root of the characters folder). Each character only remembers the group's name, so all its members see the same shared goods and the same group ambitions (edited in the group window, read-only on the character's Ambitions page). Double-click the Group page to open the group window. A member cannot leave the group while one of their items is carried by a group good.
+</li>
+</ul>
+<hr>
+<h2 id="the-gm-and-the-rules">The GM and the rules</h2>
+<ul>
+<li><strong>GM XP</strong> page: the Xp the game master hands out; you can follow the amounts there.
+</li>
+<li><strong>Everything is editable outside an official book</strong>: when a character or a sheet does not come from an official book, nothing is locked. Phase 3 explains how to use this for house rules.
+</li>
+</ul>
+<hr>
+<a id="pdf"></a>
+<h2 id="the-pdf-sheet">The PDF sheet</h2>
+<p>The <strong>PDF</strong> button creates the character sheet with the values shown on screen. Options (tick boxes under the button):</p>
+<table><thead><tr><th>Option</th><th>Effect</th></tr></thead><tbody>
+<tr><td><strong>Two-page PDF (Feldo)</strong></td><td>the two-page sheet instead of the usual one</td></tr>
+<tr><td><strong>Without asterisks</strong></td><td>hides the marks pointing to notes</td></tr>
+<tr><td><strong>Without amount</strong></td><td>keeps the asterisks but hides their amounts</td></tr>
+<tr><td><strong>Warhammer style</strong></td><td>red banners and parchment lines (Feldo PDF)</td></tr>
+<tr><td><strong>Colour</strong></td><td>colour PDF; unticked = greyscale</td></tr>
+<tr><td><strong>Ink saving</strong></td><td>outlines only, no solid fills</td></tr>
+</tbody></table>
+<p><strong>Physical details</strong> (age, height…): a button opens the window with a roll from the Rulebook or free entry; the result is copied to the sheet.</p>
+<p><img src="../IMAGES/modif_06_pdf.png" alt="The PDF options"></p>
+<hr>
+<h2 id="momentum-option-wfrp4-wfrp5">Momentum option (WFRP4 ↔ WFRP5)</h2>
+<p>A tick box on the Total experience page replaces the Rulebook (WFRP4) talents by their Momentum (WFRP5) versions. The Momentum book must be among the character's books, otherwise a message tells you so. Details in the phase 3 sheet.</p>
+<hr>
+<h2 id="if-you-are-stuck">If you are stuck</h2>
+<table><thead><tr><th>You cannot…</th><th>What to do</th></tr></thead><tbody>
+<tr><td>change career</td><td>the career is advanced (level above 1): climb from its parent career</td></tr>
+<tr><td>use a Momentum talent</td><td>add the Momentum book to the character's books</td></tr>
+<tr><td>find your Xp in the right unit</td><td>tick or untick <strong>Opt : XP/25</strong></td></tr>
+<tr><td>go back to an earlier state</td><td>History page, select the line, <strong>See</strong></td></tr>
+<tr><td>leave a window without losing work</td><td>click <strong>Save file</strong>: closing otherwise loses unsaved changes (the code asks for no confirmation on closing)</td></tr>
+</tbody></table>
+<hr>
+<h2 id="differences-by-version">Differences by version</h2>
+<ul>
+<li><strong>WFRP4:</strong> this guide.
+</li>
+<li><strong>WFRP2 / WFRP1:</strong> same logic (Xp, advances, career change). Written from the code, <strong>[to check on screen]</strong>; what differs:
+<ul>
+<li><strong>Careers (both):</strong> no career level table and, in WFRP2, no "membership" line. Leaving a career counts the requirements of the characteristics and skills (and talents in WFRP2) against the Xp needed; a message tells you what is missing or what Xp is short.
+</li>
+<li><strong>WFRP2:</strong> skill advances move by steps of <strong>10</strong> (instead of 5 in WFRP1); the Mutations page offers the <strong>Marks of the Gods</strong> (one entry per divine lore) and the <strong>Chaos mutation</strong> (d1000 roll, from Tome of Corruption).
+</li>
+<li><strong>WFRP1:</strong>
+<ul>
+<li>There is <strong>no Talents</strong> page and no talents table: skills replace them (the list of pages is shorter), and the Resilience and Resolve panels are not shown.
+</li>
+<li>A spell is learned with <strong>Learn a spell</strong>. Moving up to the next level of a spellcaster career is refused while the spells required are missing.
+</li>
+<li><strong>Priests</strong> (Realm of Divine Magic): moving to the next rank requires all the prayers required at the current rank, costs 100 Xp × the rank aimed at for the Cleric Advance Table roll, and the deity judges the advance (d100). Gifts can follow (Xp, a Fate point, a blessing). An <strong>Initiate</strong> chooses a cult and receives the four starting Petty prayers; a <strong>Druidic Priest</strong> of level 1 receives a familiar (d100).
+</li>
+<li>Entering a magical career level gives <strong>magic points</strong> (dice roll from the book).
+</li>
+<li>The Mutations page lists the <em>handicaps</em> one per line, with a "Wicked wizard" tick box.
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</body></html>

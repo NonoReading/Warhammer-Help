@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"ZOAT"</CODE_BOOK>
+<BOOK>"BOOK ZOATS"</BOOK>
+<BOOKNAME>"ZOATS - WFRP2"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_TALENT>
+<Talent id="ZOAT-T_NATURAL_LORE_OF_THE_WILDS">
+<Description language="ENGLISH">"Natural Lore of the Wilds"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"8"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_CAREER>
+<Career id="ZOAT-CARE_SOJOURNER">
+<Description language="ENGLISH">"Sojourner"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, S +10%, T +10%, Ag +5%, Int +5%, WP +10%, Fel +5%"</MainProfile>
+<SecondaryProfile>"A +1, W +3, M +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_M">"1"</Advance>
+</Advances>
+<Skills>"Common Knowledge (Zoat), Common Knowledge (Home Forest), Common Knowledge (Lizardmen and Goblinoid), Hardy, Intimidate or Follow Trail, Magical Sense, Navigation, Outdoor Survival, Perception, Speak Language (Zoatarr), Speak Language (Elven), Speak Language (Reikspiel), Strike Mighty Blow, Sturdy, Trade (Herbalist)"</Skills>
+<Talents>"Cool-Headed or Rover, Petty Magic (Arcane or Hedge), Orientation, Very Strong or Very Resilient, Warrior Born"</Talents>
+<Trappings>"Sky Stave"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ZOAT">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_HOME_FOREST">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_LIZARDMEN_AND_GOBLINOID">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE/RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ZOATARR">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ELVEN">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_HERBALIST">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_COOLHEADED/RULES-T_ROVER">"1"</Talent>
+<Talent name="RULES-T_PETTY_MAGIC__ARCANE/RULES-T_PETTY_MAGIC__HEDGE">"1"</Talent>
+<Talent name="RULES-T_ORIENTATION">"1"</Talent>
+<Talent name="RULES-T_VERY_STRONG/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="RULES-T_WARRIOR_BORN">"1"</Talent>
+<Talent name="RULES-T_HARDY">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_STURDY">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"ZOAT 7"</Source>
+</Career>
+<Career id="ZOAT-CARE_WILDSMAGE">
+<Description language="ENGLISH">"Wildsmage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, T +5%, Ag +5%, Int +10%, WP +15%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +2, M +1, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_M">"1"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (History), Academic Knowledge (Runes), Academic Knowledge (Theology/Religion), Command or Dodge Blow, Common Knowledge (Empire or Nordland or Border Princes), Common Knowledge (Goblinoids or Lizardmen), Magical Sense, Navigation, Speak Language (Reikspiel), Speak Language (Goblinoid), Speak Language (Lizardman), Speak Arcane Language"</Skills>
+<Talents>"Aethyric Attunement, Natural Lore of the Wilds, Coolheaded or Meditation, Petty Magic (Standard or Hedge), Lesser Magic or Linguistics"</Talents>
+<Trappings>"Sky Stave (runed)"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_HISTORY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_RUNES">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY/RULES-COMP_ACADEMIC_KNOWLEDGE_RELIGION">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND/RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_EMPIRE/RULES-COMP_COMMON_KNOWLEDGE_NORDLAND/RULES-COMP_COMMON_KNOWLEDGE_BORDER_PRINCES">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_GOBLINOIDS/RULES-COMP_COMMON_KNOWLEDGE_LIZARDMEN">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_GOBLINOID">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_LIZARDMAN">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"1"</Talent>
+<Talent name="ZOAT-T_NATURAL_LORE_OF_THE_WILDS">"1"</Talent>
+<Talent name="RULES-T_COOLHEADED/RULES-T_MEDITATION">"1"</Talent>
+<Talent name="RULES-T_PETTY_MAGIC__STANDARD/RULES-T_PETTY_MAGIC__HEDGE">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*/RULES-T_LINGUISTICS">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ZOAT 8"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="ZOAT-CARE_SOJOURNER">"ZOAT-CARE_WILDSMAGE"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_SPELL_V2>
+<SpellV2 id="ZOAT-SPEL_BLESSING_OF_THE_TAAL">
+<Description language="ENGLISH">"Blessing of the Taal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine, Taal)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"10"</Page>
+</SpellV2>
+<SpellV2 id="ZOAT-SPEL_BLESSING_OF_THE_HUNTER">
+<Description language="ENGLISH">"Blessing of the Hunter"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine, Taal)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"10"</Page>
+</SpellV2>
+<SpellV2 id="ZOAT-SPEL_TALE_OF_NATURE">
+<Description language="ENGLISH">"Tale of Nature"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Wilds"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"2 Actions"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"10"</Page>
+</SpellV2>
+<SpellV2 id="ZOAT-SPEL_SHAPING_THE_RUNE">
+<Description language="ENGLISH">"Shaping the Rune"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"8 hours -1 hour per Channeling DoS"</CastingTime>
+<Ingredient>"sky stave stone/object to be inscribed"</Ingredient>
+<Page>"12"</Page>
+<RitualType>"RULES-V2RITUAL_NATURAL"</RitualType>
+<ArcaneLanguage>"Arcane Zoat"</ArcaneLanguage>
+<MagicMin>"1+"</MagicMin>
+<XPCost>"200"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>"may not attempt again for a year"</Consequences>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="ZOAT-EQUI_CREATURES_STANDARD_ADULT_ZOAT">
+<Description language="ENGLISH">"Standard Adult Zoat"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"49;25;50;50;46;89;89;33;2;20;5;5;7;1;0;0"</Profile>
+<Skills>"Academic Knowledge (Runes), Common Knowledge (Zoat), Common Knowledge (Home Forest), Common Knowledge (Lizardmen and Goblinoid), Follow Trail, Intimidate +10%, Perception, Speak Language (Zoatarr), Speak Language (Elven), Speak Language (Lizardman), Speak Language (Goblin), Outdoor Survival +20%, Magical Sense, Navigation, Trade (Herbalist)"</Skills>
+<Talents>"Aethyric Attunement, Arcane Lore of Life, Divine Lore of Taal, Hardy, Petty Magic (Arcane, Divine and Hedge), Fearless, Cool-Headed, Fleet Footed, Specialist Weapon Group (Sky Stave)"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"6"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_ZOAT">
+<Description language="ENGLISH">"Common Knowledge (Zoat)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_HOME_FOREST">
+<Description language="ENGLISH">"Common Knowledge (Home Forest)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_LIZARDMEN_AND_GOBLINOID">
+<Description language="ENGLISH">"Common Knowledge (Lizardmen and Goblinoid)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_ZOATARR">
+<Description language="ENGLISH">"Speak Language (Zoatarr)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_ELVEN">
+<Description language="ENGLISH">"Speak Language (Elven)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_NORDLAND">
+<Description language="ENGLISH">"Common Knowledge (Nordland)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_BORDER_PRINCES">
+<Description language="ENGLISH">"Common Knowledge (Border Princes)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_GOBLINOIDS">
+<Description language="ENGLISH">"Common Knowledge (Goblinoids)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_LIZARDMEN">
+<Description language="ENGLISH">"Common Knowledge (Lizardmen)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_GOBLINOID">
+<Description language="ENGLISH">"Speak Language (Goblinoid)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_LIZARDMAN">
+<Description language="ENGLISH">"Speak Language (Lizardman)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="RULES-T_PETTY_MAGIC__STANDARD">
+<Description language="ENGLISH">"Petty Magic (Standard)"</Description>
+<Generique>"RULES-T_PETTY_MAGIC__*"</Generique>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+</DATA_BOOK>

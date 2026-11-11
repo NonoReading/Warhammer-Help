@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"GAFX"</CODE_BOOK>
+<BOOK>"BOOK GOTREK AND FELIX"</BOOK>
+<BOOKNAME>"GOTREK AND FELIX"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"This document is completely unofficial and in no way endorsed by Games Workshop Limited. Warhammer Fantasy Roleplay, the Warhammer Fantasy Roleplay logo, WFRP, Chaos, the Chaos device, the Chaos logo, Citadel, Citadel Device, Darkblade, 'Eavy Metal, Forge World, Games Workshop, Games Workshop logo, Golden Demon, Great Unclean One, GW, the Hammer of Sigmar logo, Horned Rat logo, Keeper of Secrets, Khemri, Khorne, the Khorne logo, Lord of Change, Nurgle, the Nurgle logo, Skaven, the Skaven symbol device, Slaanesh, the Slaanesh logo, Tomb Kings, Tzeentch, the Tzeentch logo, Warhammer, Warhammer World logo, White Dwarf, the White Dwarf logo, and all associated marks, names, races, race insignia, characters, vehicles, locations, units, artefacts, illustrations and images from the Warhammer world are either ®, TM and/or © Copyright Games Workshop Ltd 2000-2016, variably registered in the UK and other countries around the world. Used without"</DISCLAIMER>
+<DATA_TALENT>
+<Talent id="GAFX-T_BIGGER_THEY_ARE">
+<Description language="ENGLISH">"Bigger They Are"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"23"</Page>
+</Talent>
+<Talent id="GAFX-T_DEATHWISH">
+<Description language="ENGLISH">"Deathwish"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"23"</Page>
+</Talent>
+<Talent id="GAFX-T_FINAL_STRIKE">
+<Description language="ENGLISH">"Final Strike"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"23"</Page>
+</Talent>
+<Talent id="GAFX-T_STRIKE_MIGHTIER_BLOW">
+<Description language="ENGLISH">"Strike Mightier Blow"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"23"</Page>
+</Talent>
+<Talent id="GAFX-T_WEAPONMASTER_S_STRIKE">
+<Description language="ENGLISH">"Weaponmaster's Strike"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"24"</Page>
+</Talent>
+<Talent id="GAFX-T_WHIRLWIND_OF_DEVASTATION">
+<Description language="ENGLISH">"Whirlwind of Devastation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"24"</Page>
+</Talent>
+<Talent id="GAFX-T_WILL_OF_IRON">
+<Description language="ENGLISH">"Will of Iron"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"24"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_CAREER>
+<Career id="GAFX-CARE_LEGENDARY_SLAYER">
+<Description language="ENGLISH">"Legendary Slayer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +45%, S +35%, T +35%, Ag +25%, WP +35%"</MainProfile>
+<SecondaryProfile>"A +2, W +10"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"45"</Advance>
+<Advance name="RULES-ATTR_S">"35"</Advance>
+<Advance name="RULES-ATTR_T">"35"</Advance>
+<Advance name="RULES-ATTR_Ag">"25"</Advance>
+<Advance name="RULES-ATTR_WP">"35"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"10"</Advance>
+</Advances>
+<Skills>"Common Knowledge (Any two), Follow Trail, Outdoor Survival, Scale Sheer Surfaces, Speak Language (Any one)"</Skills>
+<Talents>"Bigger They Are, Deathwish, Final Strike, Strike Mightier Blow, Weaponmaster's Strike, Whirlwind of Devastation, Will of Iron"</Talents>
+<Trappings>"Great Weapon"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="GAFX-T_BIGGER_THEY_ARE">"1"</Talent>
+<Talent name="GAFX-T_DEATHWISH">"1"</Talent>
+<Talent name="GAFX-T_FINAL_STRIKE">"1"</Talent>
+<Talent name="GAFX-T_STRIKE_MIGHTIER_BLOW">"1"</Talent>
+<Talent name="GAFX-T_WEAPONMASTER_S_STRIKE">"1"</Talent>
+<Talent name="GAFX-T_WHIRLWIND_OF_DEVASTATION">"1"</Talent>
+<Talent name="GAFX-T_WILL_OF_IRON">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"GAFX 23"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="RULES-CARE_DAEMON_SLAYER">"GAFX-CARE_LEGENDARY_SLAYER"</Link>
+</DATA_CAREER_LINK_V2>
+</DATA_BOOK>

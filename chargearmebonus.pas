@@ -15,6 +15,7 @@ Type
     Resume:           String;
     PlusMoins:        String;
     NeedsValue:       String;
+    QualitesAccordees: String;  // codes de qualites d'arme que celle-ci accorde (virgules), ex. Parry = Balanced + Defensive
     Livre:            String;
   end;
 

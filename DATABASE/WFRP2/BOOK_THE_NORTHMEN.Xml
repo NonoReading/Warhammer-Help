@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"NMEN"</CODE_BOOK>
+<BOOK>"BOOK THE NORTHMEN"</BOOK>
+<BOOKNAME>"THE NORTHMEN"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"This document is completely unofficial and in no way endorsed by Games Workshop Limited. Warhammer Fantasy Roleplay, the Warhammer Fantasy Roleplay logo, WFRP, Chaos, the Chaos device, the Chaos logo, Citadel, Citadel Device, Darkblade, 'Eavy Metal, Forge World, Games Workshop, Games Workshop logo, Golden Demon, Great Unclean One, GW, the Hammer of Sigmar logo, Horned Rat logo, Keeper of Secrets, Khemri, Khorne, the Khorne logo, Lord of Change, Nurgle, the Nurgle logo, Skaven, the Skaven symbol device, Slaanesh, the Slaanesh logo, Tomb Kings, Tzeentch, the Tzeentch logo, Warhammer, Warhammer World logo, White Dwarf, the White Dwarf logo, and all associated marks, names, races, r ace insignia, characters, vehicles, locations, units, artefacts, illustrations and images from the Warhammer world are either ®, TM and/or © Copyright Games Workshop Ltd 2000-2012, variably registered in the UK and other countries around the world. Used without"</DISCLAIMER>
+<DATA_CAREER>
+<Career id="NMEN-CARE_WASTES_SHAMAN">
+<Description language="ENGLISH">"Wastes Shaman"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, T +5%, Ag +5%, Int +5%, WP +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +1, Mag +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"1"</Advance>
+<Advance name="RULES-ATTR_Mag">"1"</Advance>
+</Advances>
+<Skills>"Blather or Speak Arcane Language (Daemonic or Magick), Channelling, Charm Animal or Heal, Magical Sense or Perception"</Skills>
+<Talents>"Hedge Magic or Keen Senses, Petty Magic (Chaos or Petty), Public Speaking"</Talents>
+<Trappings>"Instruments of Divination (dice, cards, a chicken...)"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_BLATHER/RULES-COMP_SPEAK_ARCANE_LANGUAGE_DAEMONIC/RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM_ANIMAL/RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE/RULES-COMP_PERCEPTION">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_HEDGE_MAGIC/RULES-T_KEEN_SENSES">"1"</Talent>
+<Talent name="RULES-T_PETTY_MAGIC__CHAOS/RULES-T_PETTY_MAGIC__PETTY">"1"</Talent>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"NMEN 25"</Source>
+</Career>
+<Career id="NMEN-CARE_WASTES_WARLOCK">
+<Description language="ENGLISH">"Wastes Warlock"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +10%, S +10%, T +15%, Ag +15%, Int +15%, WP +20%, Fel +20%"</MainProfile>
+<SecondaryProfile>"A +1, W +4, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Animal Training, Channelling, Command, Heal, Hypnotism, Intimidate, Magical Sense, Outdoor Survival, Performer (Storyteller), Prepare Poison, Speak Arcane Language (Daemonic), Speak Language (Dark Tongue)"</Skills>
+<Talents>"Dark Magic, Lesser Magic (any two), Meditation, Menacing, Strong-Minded, Witchcraft"</Talents>
+<Trappings>"Dagger, Filthy Hides, A Bag of Entrails"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_HYPNOTISM">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_STORYTELLER">"1"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISON">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_DAEMONIC">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_DARK_TONGUE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_DARK_MAGIC">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_MEDITATION">"1"</Talent>
+<Talent name="RULES-T_MENACING">"1"</Talent>
+<Talent name="RULES-T_STRONG_MINDED">"1"</Talent>
+<Talent name="ROS-T_WITCHCRAFT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"NMEN 25"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="NMEN-CARE_WASTES_SHAMAN">"RULES-CARE_AGITATOR"</Link>
+<Link name="NMEN-CARE_WASTES_SHAMAN">"RULES-CARE_CHARLATAN"</Link>
+<Link name="NMEN-CARE_WASTES_SHAMAN">"RULES-CARE_VAGABOND"</Link>
+<Link name="NMEN-CARE_WASTES_SHAMAN">"NMEN-CARE_WASTES_WARLOCK"</Link>
+<Link name="NMEN-CARE_WASTES_SHAMAN">"CCOMP-CARE_WITCH"</Link>
+<Link name="RULES-CARE_HEDGE_WIZARD">"NMEN-CARE_WASTES_SHAMAN"</Link>
+<Link name="CCOMP-CARE_SKALD">"NMEN-CARE_WASTES_SHAMAN"</Link>
+<Link name="NMEN-CARE_WASTES_WARLOCK">"CCOMP-CARE_WARLOCK"</Link>
+<Link name="CCOMP-CARE_WITCH">"NMEN-CARE_WASTES_WARLOCK"</Link>
+<Link name="TOC-CARE_CULT_ACOLYTE_OF_KHORNE">"NMEN-CARE_WASTES_SHAMAN"</Link>
+<Link name="TOC-CARE_CULT_ACOLYTE_OF_NURGLE">"NMEN-CARE_WASTES_SHAMAN"</Link>
+<Link name="TOC-CARE_CULT_ACOLYTE_OF_SLAANESH">"NMEN-CARE_WASTES_SHAMAN"</Link>
+<Link name="TOC-CARE_CULT_ACOLYTE_OF_TZEENTCH">"NMEN-CARE_WASTES_SHAMAN"</Link>
+<Link name="TOC-CARE_CULT_MAGUS_OF_KHORNE">"NMEN-CARE_WASTES_WARLOCK"</Link>
+<Link name="TOC-CARE_CULT_MAGUS_OF_NURGLE">"NMEN-CARE_WASTES_WARLOCK"</Link>
+<Link name="TOC-CARE_CULT_MAGUS_OF_SLAANESH">"NMEN-CARE_WASTES_WARLOCK"</Link>
+<Link name="TOC-CARE_CULT_MAGUS_OF_TZEENTCH">"NMEN-CARE_WASTES_WARLOCK"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="RULES-T_PETTY_MAGIC__PETTY">
+<Description language="ENGLISH">"Petty Magic (Petty)"</Description>
+<Generique>"RULES-T_PETTY_MAGIC__*"</Generique>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+</DATA_BOOK>

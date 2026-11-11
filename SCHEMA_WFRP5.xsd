@@ -29,6 +29,7 @@
       <xs:sequence>
         <xs:element name="CODE_BOOK" type="PlainString"/>
         <xs:element name="BOOK" type="PlainString"/>
+        <xs:element name="BOOKNAME" type="PlainString" minOccurs="0"/>
         <xs:element name="language" type="PlainString"/>
         <xs:element name="VERSION" type="PlainString"/>
         <xs:element name="OFFICIAL" type="PlainString"/>

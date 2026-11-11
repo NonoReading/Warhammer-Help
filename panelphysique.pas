@@ -12,7 +12,7 @@ unit PanelPhysique;
 interface
 
 uses
-  BCLabelContour, Classes, SysUtils, Controls, StdCtrls, ExtCtrls, Grids, Dialogs, DOM, BCButton,
+  BCLabelContour, Classes, SysUtils, Controls, StdCtrls, ExtCtrls, Grids, Dialogs, MessageTest, DOM, BCButton,
   ChargeTexte, GlobalFonts, PanelModificateurs, PanelFiche;
 
 type
@@ -372,7 +372,14 @@ begin
   end;
   if not Contenu then Exit;
   Bloc := Doc.CreateElement('SUBCHAPTER_PHYSICAL');
-  Element.AppendChild(Bloc);
+  // le schema place Page en dernier : le bloc se range avant elle
+  Suivant := Element.FirstChild;
+  while (Suivant <> nil) and not ((Suivant.NodeType = ELEMENT_NODE) and (Suivant.NodeName = 'Page')) do
+    Suivant := Suivant.NextSibling;
+  if Suivant <> nil then
+    Element.InsertBefore(Bloc, Suivant)
+  else
+    Element.AppendChild(Bloc);
   Ajoute('Age', Trim(FEditAge.Text));
   Ajoute('Height', Trim(FEditTaille.Text));
   if FCaseExplose.Checked then Ajoute('HeightExplode', '1');

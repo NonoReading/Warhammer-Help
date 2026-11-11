@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"ACAH"</CODE_BOOK>
+<BOOK>"BOOK ACADEMICS HANDBOOK"</BOOK>
+<BOOKNAME>"THE ACADEMIC'S HANDBOOK"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_SPELL_V2>
+<SpellV2 id="ACAH-SPEL_SLOW_DOWN">
+<Description language="ENGLISH">"Slow Down"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Tar (+1)"</Ingredient>
+<Page>"52"</Page>
+</SpellV2>
+<SpellV2 id="ACAH-SPEL_MINOR_DISPEL">
+<Description language="ENGLISH">"Minor Dispel"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"an ebony wand (+1)"</Ingredient>
+<Page>"52"</Page>
+</SpellV2>
+<SpellV2 id="ACAH-SPEL_COMMON_DISPEL">
+<Description language="ENGLISH">"Common Dispel"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"an ebony wand, topped with a jewel linked to the targeted spell's colour (+2)"</Ingredient>
+<Page>"52"</Page>
+</SpellV2>
+<SpellV2 id="ACAH-SPEL_MAJOR_DISPEL">
+<Description language="ENGLISH">"Major Dispel"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A silver wand with a jewel linked to the targeted spell's colour (+3)"</Ingredient>
+<Page>"52"</Page>
+</SpellV2>
+<SpellV2 id="ACAH-SPEL_MINOR_DRAIN">
+<Description language="ENGLISH">"Minor Drain"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A gnat (a live one) (+1)"</Ingredient>
+<Page>"52"</Page>
+</SpellV2>
+<SpellV2 id="ACAH-SPEL_DRAIN">
+<Description language="ENGLISH">"Drain"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A jar of leeches (+2)"</Ingredient>
+<Page>"52"</Page>
+</SpellV2>
+<SpellV2 id="ACAH-SPEL_MAJOR_DRAIN">
+<Description language="ENGLISH">"Major Drain"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"30"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A vampire's tooth (+3)"</Ingredient>
+<Page>"52"</Page>
+</SpellV2>
+<SpellV2 id="ACAH-SPEL_REFLECTION">
+<Description language="ENGLISH">"Reflection"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"Half that of the target spell, rounded up"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A hand mirror (+CN/10, rounded up)"</Ingredient>
+<Page>"53"</Page>
+</SpellV2>
+<SpellV2 id="ACAH-SPEL_DEFLECTION">
+<Description language="ENGLISH">"Deflection"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A shield (+1)"</Ingredient>
+<Page>"53"</Page>
+</SpellV2>
+<SpellV2 id="ACAH-SPEL_REDIRECTION">
+<Description language="ENGLISH">"Redirection"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"Half that of the target spell, rounded up"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A bent arrow (+CN/10, rounded up)"</Ingredient>
+<Page>"53"</Page>
+</SpellV2>
+<SpellV2 id="ACAH-SPEL_HINDER">
+<Description language="ENGLISH">"Hinder"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A short stick"</Ingredient>
+<Page>"53"</Page>
+</SpellV2>
+<SpellV2 id="ACAH-SPEL_SHARING_TZEENTCH_S_FAVOUR">
+<Description language="ENGLISH">"Sharing Tzeentch's Favour"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Tzeentch"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A symbol of Tzeentch (+2)"</Ingredient>
+<Page>"53"</Page>
+</SpellV2>
+<SpellV2 id="ACAH-SPEL_DRAWING_TZEENTCH_S_CURSE">
+<Description language="ENGLISH">"Drawing Tzeentch's Curse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Tzeentch"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A symbol of Tzeentch (+2)"</Ingredient>
+<Page>"53"</Page>
+</SpellV2>
+<SpellV2 id="ACAH-SPEL_CURSE_OF_FLIES">
+<Description language="ENGLISH">"Curse of Flies"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nurgle"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A symbol of Nurgle (+1)"</Ingredient>
+<Page>"53"</Page>
+</SpellV2>
+<SpellV2 id="ACAH-SPEL_ECSTATIC_INTERRUPTION">
+<Description language="ENGLISH">"Ecstatic Interruption"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Slaanesh"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A symbol of Slaanesh (+2)"</Ingredient>
+<Page>"53"</Page>
+</SpellV2>
+<SpellV2 id="ACAH-SPEL_RITUAL_OF_TRANSMUTATION">
+<Description language="ENGLISH">"Ritual of Transmutation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"4 hours"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"48"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"2"</MagicMin>
+<XPCost>"100"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="ACAH-SPEL_THE_PERPETUAL_CORROSIVE">
+<Description language="ENGLISH">"The Perpetual Corrosive"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"4 hours"</CastingTime>
+<Ingredient>"A vial of Alkahest made by the Alchemist"</Ingredient>
+<Page>"51"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"100"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="ACAH-SPEL_YOUTH_S_STRENGTH_RETURNED">
+<Description language="ENGLISH">"Youth's Strength Returned"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"28"</CastingNumber>
+<CastingTime>"24 hours of fasting and chanting"</CastingTime>
+<Ingredient>"A vial of Elixir Vitae created by the Alchemist."</Ingredient>
+<Page>"51"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"4"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SPELL_TALENT>
+<Sort id="ACAH-SPEL_SHARING_TZEENTCH_S_FAVOUR">
+<Talent>"RULES-T_DARK_LORE__TZEENTCH"</Talent>
+</Sort>
+<Sort id="ACAH-SPEL_DRAWING_TZEENTCH_S_CURSE">
+<Talent>"RULES-T_DARK_LORE__TZEENTCH"</Talent>
+</Sort>
+<Sort id="ACAH-SPEL_CURSE_OF_FLIES">
+<Talent>"RULES-T_DARK_LORE__NURGLE"</Talent>
+</Sort>
+<Sort id="ACAH-SPEL_ECSTATIC_INTERRUPTION">
+<Talent>"RULES-T_DARK_LORE__SLAANESH"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+</DATA_BOOK>

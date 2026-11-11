@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"COMP"</CODE_BOOK>
+<BOOK>"BOOK THE WFRP COMPANION"</BOOK>
+<BOOKNAME>"THE WFRP COMPANION"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"1"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_WEAPON>
+<Weapon id="COMP-PROJ_V2_SWIVEL_GUN_ROUND_SHOT">
+<Description language="ENGLISH">"Swivel Gun (Round Shot)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+6"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"36/108"</Reach>
+<Price>"725CO"</Price>
+<Encumbrance>"500"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_GUNPOWDER"</Type>
+<Page>"43"</Page>
+</Weapon>
+<Weapon id="COMP-PROJ_V2_SWIVEL_GUN_GRAPESHOT">
+<Description language="ENGLISH">"Swivel Gun (Grapeshot)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+5"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"24/-"</Reach>
+<Price>"725CO"</Price>
+<Encumbrance>"500"</Encumbrance>
+<Quality>"RULES-WEAPQ_SHRAPNEL,RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_GUNPOWDER"</Type>
+<Page>"43"</Page>
+</Weapon>
+</DATA_WEAPON>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="COMP-EQUI_CREATURES_AMOEBA">
+<Description language="ENGLISH">"Amoeba"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"29;0;34;47;22;-;-;-;3;11;3;4;3;0;0;0"</Profile>
+<Skills>"Silent Move +10%, Swim"</Skills>
+<Talents>"None"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_CREATURES_BEHEMOTH">
+<Description language="ENGLISH">"Behemoth"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"79;0;90;68;28;33;44;1;3;45;9;6;10;0;0;0"</Profile>
+<Skills>"Navigation, Perception, Swim +10%"</Skills>
+<Talents>"Natural Weapons, Strike Mighty Blow, Terrifying, Unstoppable Blows, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_CREATURES_BLOODSEDGE">
+<Description language="ENGLISH">"Bloodsedge"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"33;0;33;33;58;–;–;–;1;10;3;3;0;0;0;0"</Profile>
+<Skills>"None"</Skills>
+<Talents>"Natural Weapons"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_CREATURES_BOG_OCTOPI">
+<Description language="ENGLISH">"Bog Octopi"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"35;0;74;76;54;2;56;0;8;24;7;7;3;0;0;0"</Profile>
+<Skills>"Concealment, Swim +10%"</Skills>
+<Talents>"Frightening, Intimidate, Unstoppable Blows, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_CREATURES_CHAMELEOLEECH">
+<Description language="ENGLISH">"Chameleoleech"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"28;0;21;23;28;–;–;–;1;6;2;2;3;0;0;0"</Profile>
+<Skills>"None"</Skills>
+<Talents>"Mindless"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_CREATURES_DOPPELGANGER">
+<Description language="ENGLISH">"Doppelganger"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"41;33;42;33;33;29;29;10;2;14;4;3;4;0;0;0"</Profile>
+<Skills>"A Doppelganger has all the Skills of the person it is impersonating; however, it tests on Advanced skills with half the usual level of success."</Skills>
+<Talents>"As per the victim. In its natural form, a Doppelganger has the Frightening Talent."</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_CREATURES_MERMAID">
+<Description language="ENGLISH">"Mermaid"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"33;25;49;33;49;19;52;31;1;12;4;3;2;0;0;0"</Profile>
+<Skills>"Concealment, Navigation, Perception, Performer (Sing), Speak Language (Tribal), Swim +20%"</Skills>
+<Talents>"Contortionist, Keen Senses, Natural Weapons, Scales (1)"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_CREATURES_NAIAD">
+<Description language="ENGLISH">"Naiad"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"45;29;39;36;67;58;42;61;2;15;3;3;5;0;0;0"</Profile>
+<Skills>"Charm, Concealment +10%, Dodge Blow +10%, Heal +10%, Intimidate, Navigation +10%, Outdoor Survival, Perception +10%, Sail, Secret Language (Ranger Tongue), Silent Move (+10%), Speak Language (Eltharin, Reikspiel), Swim +20%"</Skills>
+<Talents>"Ambidextrous, Amphibious, Natural Weapons, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_CREATURES_PATCHWORK_MAN">
+<Description language="ENGLISH">"Patchwork Man"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"30;12;55;55;15;10;10;–;2;24;5;5;4;0;0;0"</Profile>
+<Skills>"Intimidate, Perception +10%"</Skills>
+<Talents>"Frightening, Menacing, Natural Weapons, Street Fighting, Strike Mighty Blow, Wrestling, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"124"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_CREATURES_PROMETHEAN">
+<Description language="ENGLISH">"Promethean"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"59;0;60;68;14;10;44;1;2;34;6;6;4;0;0;0"</Profile>
+<Skills>"Navigation, Perception, Swim +10%"</Skills>
+<Talents>"Frightening, Natural Weapons, Strike Mighty Blow, Unstoppable Blows"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"124"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_CREATURES_REIK_EEL">
+<Description language="ENGLISH">"Reik Eel"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"31;0;34;38;62;6;43;0;1;13;3;3;1;0;0;0"</Profile>
+<Skills>"Perception +10%, Swim +10%"</Skills>
+<Talents>"Natural Weapons"</Talents>
+<SpecialRules>"Aquatic: Reik Eels can breathe underwater. They also have a Movement of 6 in water."</SpecialRules>
+<Note>""</Note>
+<Page>"124"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_CREATURES_SPITE">
+<Description language="ENGLISH">"Spite"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"48;72;19;10;66;23;35;41;1;6;1;1;2 (8);0;0;0"</Profile>
+<Skills>"Blather, Common Knowledge (Elves), Concealment +20%, Dodge Blow, Magical Sense, Performer (Musician, Singer), Outdoor Survival +20%, Perception +20%, Ride, Scale Sheer Surface, Secret Language (Ranger Tongue), Shadowing, Silent Move, Speak Language (Eltharin, Malla-room-ba-larin)"</Skills>
+<Talents>"Ambidextrous, Contortionist, Flee!, Hoverer, Keen Senses, Mimic, Natural Weapons, Night Vision, Rover"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"125"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_CREATURES_STIRPIKE">
+<Description language="ENGLISH">"Stirpike"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"55;0;53;52;38;9;51;0;2;18;5;5;1;0;0;0"</Profile>
+<Skills>"Perception +20%, Swim +20%"</Skills>
+<Talents>"Keen Senses, Frightening, Natural Weapons, Strike to Injure, Strike Mighty Blow, Will of Iron"</Talents>
+<SpecialRules>"Aquatic: Stirpikes can breathe underwater. They also have a Movement of 8 in water."</SpecialRules>
+<Note>""</Note>
+<Page>"125"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_CREATURES_FUNGUS_ZOMBIE">
+<Description language="ENGLISH">"Fungus Zombie"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;0;35;35;10;–;–;–;2;12;3;3;4;0;0;0"</Profile>
+<Skills>"None"</Skills>
+<Talents>"Frightening, Natural Weapons, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"126"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_CREATURES_TREE_KIN">
+<Description language="ENGLISH">"Tree Kin"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"50;23;50;55;43;66;65;18;2;24;5;5;5;0;0;0"</Profile>
+<Skills>"Common Knowledge (Elves), Concealment +20%, Follow Trail +20%, Intimidate, Magical Sense, Navigation, Outdoor Survival +20%, Perception +20%, Search, Secret Language (Ranger Tongue), Speak Language (Malla-room-ba-larin)"</Skills>
+<Talents>"Ambidextrous, Frightening, Natural Weapons, Night Vision, Rover, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"126"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_CREATURES_TRITON">
+<Description language="ENGLISH">"Triton"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"63;45;79;69;53;29;44;34;5;56;7;6 (8);10;0;0;0"</Profile>
+<Skills>"Charm Animal, Common Knowledge (Elves, The Seas), Intimidate, Navigation +20%, Perception, Speak Language (Eltharin), Swim +20%"</Skills>
+<Talents>"Daemonic Aura, Orientation, Scales (2), Strike Mighty Blow, Terrifying, Unstoppable Blows, Will of Iron"</Talents>
+<Note>""</Note>
+<Page>"126"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_VEHICLE_UPGRADES_ARMOURED_PLATING">
+<Description language="ENGLISH">"Armoured plating"</Description>
+<Category>"RULES-EQCAT2_VEHICLE_UPGRADES"</Category>
+<Cost>"+50% to vehicle"</Cost>
+<Encumbrance>"50% of total"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Note>""</Note>
+<Page>"43"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_VEHICLE_UPGRADES_BOLT_THROWER_PINTLE">
+<Description language="ENGLISH">"Bolt thrower pintle"</Description>
+<Category>"RULES-EQCAT2_VEHICLE_UPGRADES"</Category>
+<Cost>"30 gc"</Cost>
+<Encumbrance>"300"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Note>""</Note>
+<Page>"43"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_VEHICLE_UPGRADES_BOLT_THROWER_PINTLE_OXYBELES">
+<Description language="ENGLISH">"Bolt thrower pintle: Oxybeles"</Description>
+<Category>"RULES-EQCAT2_VEHICLE_UPGRADES"</Category>
+<Cost>"550 gc"</Cost>
+<Encumbrance>"1,500"</Encumbrance>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Bolt thrower fixed on a pintle (see Bolt thrower pintle)."</Note>
+<Page>"43"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_VEHICLE_UPGRADES_BOLT_THROWER_PINTLE_SCORPION">
+<Description language="ENGLISH">"Bolt thrower pintle: Scorpion"</Description>
+<Category>"RULES-EQCAT2_VEHICLE_UPGRADES"</Category>
+<Cost>"375 gc"</Cost>
+<Encumbrance>"1,000"</Encumbrance>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Note>"Bolt thrower fixed on a pintle (see Bolt thrower pintle)."</Note>
+<Page>"43"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_VEHICLE_UPGRADES_CARGO_SCALES">
+<Description language="ENGLISH">"Cargo scales"</Description>
+<Category>"RULES-EQCAT2_VEHICLE_UPGRADES"</Category>
+<Cost>"250 gc"</Cost>
+<Encumbrance>"4,500"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Note>""</Note>
+<Page>"43"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_VEHICLE_UPGRADES_CRANE_AND_PULLEY">
+<Description language="ENGLISH">"Crane and pulley"</Description>
+<Category>"RULES-EQCAT2_VEHICLE_UPGRADES"</Category>
+<Cost>"60 gc"</Cost>
+<Encumbrance>"3,000"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Note>""</Note>
+<Page>"43"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_VEHICLE_UPGRADES_HIDDEN_COMPARTMENT">
+<Description language="ENGLISH">"Hidden compartment"</Description>
+<Category>"RULES-EQCAT2_VEHICLE_UPGRADES"</Category>
+<Cost>"40 gc"</Cost>
+<Encumbrance>"600"</Encumbrance>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Note>""</Note>
+<Page>"43"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_VEHICLE_UPGRADES_PASSENGER_CABIN">
+<Description language="ENGLISH">"Passenger cabin"</Description>
+<Category>"RULES-EQCAT2_VEHICLE_UPGRADES"</Category>
+<Cost>"90 gc"</Cost>
+<Encumbrance>"4,000"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Note>""</Note>
+<Page>"43"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_VEHICLE_UPGRADES_LUXURY_CABIN">
+<Description language="ENGLISH">"Luxury cabin"</Description>
+<Category>"RULES-EQCAT2_VEHICLE_UPGRADES"</Category>
+<Cost>"210 gc"</Cost>
+<Encumbrance>"8,000"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Note>""</Note>
+<Page>"43"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_MISSILE_WEAPONS_SWIVEL_GUN_ROUND_SHOT">
+<Description language="ENGLISH">"Swivel Gun (Round Shot)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"725 gc"</Cost>
+<Encumbrance>"500"</Encumbrance>
+<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
+<Damage>"6"</Damage>
+<Range>"36/108"</Range>
+<Reload>"3 Full"</Reload>
+<Qualities>"Impact, Unreliable"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"43"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_MISSILE_WEAPONS_SWIVEL_GUN_GRAPESHOT">
+<Description language="ENGLISH">"Swivel Gun (Grapeshot)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"725 gc"</Cost>
+<Encumbrance>"500"</Encumbrance>
+<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
+<Damage>"5"</Damage>
+<Range>"24/-"</Range>
+<Reload>"4 Full"</Reload>
+<Qualities>"Shrapnel, Unreliable"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"43"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLES_3_1">
+<Description language="ENGLISH">"Table 3–1: Financial Clerk Wages by Skill"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"31"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLES_3_2">
+<Description language="ENGLISH">"Table 3–2: Trading Centres of the Empire"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"34"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLES_3_3">
+<Description language="ENGLISH">"Table 3–3: Supply"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"36"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLES_3_4">
+<Description language="ENGLISH">"Table 3–4: Demand"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"36"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLES_3_5">
+<Description language="ENGLISH">"Table 3–5: Values"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"36"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLES_3_6">
+<Description language="ENGLISH">"Table 3–6: Bartering"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"36"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLES_3_7">
+<Description language="ENGLISH">"Table 3–7: Random Traits"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"38"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLES_3_8">
+<Description language="ENGLISH">"Table 3–8: Trade Hazard Modifiers by Season"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"38"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLES_3_9">
+<Description language="ENGLISH">"Table 3–9: Trade Hazards"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"39"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLES_MATRIX">
+<Description language="ENGLISH">"Availability Matrix - Mercantile Goods"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"40"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLES_3_10">
+<Description language="ENGLISH">"Table 3–10: Trade Goods"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"41"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLES_CONTAINERS">
+<Description language="ENGLISH">"Container Capacities"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"42"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLES_TAXES">
+<Description language="ENGLISH">"Merchants’ Taxes, Tariffs, Fees, and Fines"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"44"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLES_3_11">
+<Description language="ENGLISH">"Table 3–11: Illegal Goods"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"44"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLES_3_12">
+<Description language="ENGLISH">"Table 3–12: Illegal Goods Price List"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"44"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLES_3_13">
+<Description language="ENGLISH">"Local Enterprise: Base Weekly Income"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"45"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLES_3_14">
+<Description language="ENGLISH">"Table 3–14: Weekly Income—Local Trader"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"45"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLES_3_15">
+<Description language="ENGLISH">"Table 3–15: Trade Test Modifiers"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"45"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_2_1">
+<Description language="ENGLISH">"Table 2–1: Barge Costs"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"26"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_2_BARGES">
+<Description language="ENGLISH">"Barges and River Vessels"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"21"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_2_STRIGANY">
+<Description language="ENGLISH">"River Strigany (optional racial features)"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"25"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_2_2">
+<Description language="ENGLISH">"Table 2–2: Example Swimming Difficulties"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"27"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_2_SWIM">
+<Description language="ENGLISH">"Swimming, Drowning and Current"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"27"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_2_DISEASE">
+<Description language="ENGLISH">"Waterborne Diseases and Reikworms"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"28"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_5_1">
+<Description language="ENGLISH">"Table 5–1: Doctor Types"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"57"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_5_2">
+<Description language="ENGLISH">"Table 5–2: Avoiding Wound Infections"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"58"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_5_3">
+<Description language="ENGLISH">"Table 5–3: Avoiding Surgical Infections"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"58"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_5_4">
+<Description language="ENGLISH">"Table 5–4: Quack Medicine Remedies"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"60"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_5_FIELD">
+<Description language="ENGLISH">"Field Cleaning, Surgery and Replacements"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"58"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_5_DISEASE">
+<Description language="ENGLISH">"Treating Disease, Sickness and Insanity"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"59"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_6_1">
+<Description language="ENGLISH">"Table 6–1: Disposition Ratings"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"62"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_6_FELLOWSHIP">
+<Description language="ENGLISH">"Expanded Fellowship Skills"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"62"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_6_2">
+<Description language="ENGLISH">"Table 6–2: Expanded Charm"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"64"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_6_3">
+<Description language="ENGLISH">"Table 6–3: Expanded Gossip"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"65"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_6_4">
+<Description language="ENGLISH">"Table 6–4: Expanded Intimidate"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"65"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_6_ACTIONS">
+<Description language="ENGLISH">"Social Actions"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"63"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_6_5">
+<Description language="ENGLISH">"Table 6–5: Bribery &amp; Blackmail"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"67"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_6_6A">
+<Description language="ENGLISH">"Table 6–6: Trial Process (Phases 1 and 2)"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"68"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_6_6B">
+<Description language="ENGLISH">"Table 6–6: Trial Process (Phases 2A and 2B)"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"68"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_6_6C">
+<Description language="ENGLISH">"Table 6–6: Trial Process (Phases 2C and 3)"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"69"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_6_6D">
+<Description language="ENGLISH">"Opposed Phase Contest Modifiers"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"69"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_6_6E">
+<Description language="ENGLISH">"Table 6–6: Trial Process (Phase 4, Sentencing)"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"70"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_TABLE_6_7">
+<Description language="ENGLISH">"Table 6–7: Sentencing Modifiers"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"70"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COMP-EQUI_CREATURES_THICK_WILHELM">
+<Description language="ENGLISH">"Thick Wilhelm, Army Surgeon"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"38;46;36;42;40;40;31;42;2;13;3;4;4;0;0;2"</Profile>
+<Skills>"Academic Knowledge (Science), Academic Knowledge (Strategy/Tactics), Common Knowledge (the Empire), Consume Alcohol, Dodge Blow, Gamble, Gossip, Haggle, Heal +20%, Intimidate, Perception, Read/Write, Ride, Speak Language (Classical), Speak Language (Reikspiel), Trade (Apothecary)"</Skills>
+<Talents>"Disarm, Linguistics, Mighty Shot, Rapid Reload, Resistance to Disease, Seasoned Traveller, Specialist Weapon Group (Gunpowder), Strike Mighty Blow, Suave, Surgery, Very Resilient, Very Strong"</Talents>
+<Note>""</Note>
+<Page>"60"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+</DATA_BOOK>

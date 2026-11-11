@@ -2,6 +2,7 @@
 <DATA_BOOK>
 <CODE_BOOK>"PERSO"</CODE_BOOK>
 <BOOK>"BOOK PERSO"</BOOK>
+<BOOKNAME>"PERSO"</BOOKNAME>
 <language>"ENGLISH"</language>
 <VERSION>"WFRP4"</VERSION>
 <OFFICIAL>"2"</OFFICIAL>
@@ -22,22 +23,22 @@
 </Condition>
 </DATA_CONDITION>
 <DATA_ARMOR>
-<Armor id="PERSO-ARMO_01">
+<Armor id="PERSO-ARMO_COIFFE_DE_MAILLE">
 <Description language="ENGLISH">"Coiffe de maille"</Description>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
 <Price>"1CO"</Price>
 <Encumbrance>"1"</Encumbrance>
-<Quality>"RULES-ARMOB_01,RULES-ARMOB_03,RULES-ARMOB_06"</Quality>
+<Quality>"RULES-ARMOB_FLEXIBLE,RULES-ARMOB_PARTIAL,RULES-ARMOB_NARROW_THE_VIEW"</Quality>
 <Location>"RULES-ARMOL_HEAD"</Location>
 <ArmorPoint>"2"</ArmorPoint>
 <Type>"RULES-ARMOT_MAIL"</Type>
 </Armor>
-<Armor id="PERSO-ARMO_02">
+<Armor id="PERSO-ARMO_COTTE_DE_MAILLE">
 <Description language="ENGLISH">"Cotte de maille"</Description>
 <Availability>"RULES-DISPO_COMMON"</Availability>
 <Price>"3CO"</Price>
 <Encumbrance>"2"</Encumbrance>
-<Quality>"RULES-ARMOB_01,RULES-ARMOB_05"</Quality>
+<Quality>"RULES-ARMOB_FLEXIBLE,RULES-ARMOB_NOT_DISCREET"</Quality>
 <Location>"RULES-ARMOL_ARM,RULES-ARMOL_BODY,RULES-ARMOL_LEG"</Location>
 <ArmorPoint>"2"</ArmorPoint>
 <Type>"RULES-ARMOT_MAIL"</Type>
@@ -65,18 +66,18 @@
 <DATA_WEAPON>
 <Weapon id="PERSO-COMB_TENTACLE">
 <Description language="ENGLISH">"Tentacle"</Description>
-<Skill>"RULES-COMPCOMB_BAGAR"</Skill>
+<Skill>"RULES-COMP_MELEE__BRAWLING"</Skill>
 <Damage>"+(BATTR_S)+0"</Damage>
 <Availability>"RULES-DISPO_COMMON"</Availability>
 <Reach>"RULES-WEAPR_PERSO"</Reach>
 <Encumbrance>"0"</Encumbrance>
-<Quality>"RULES-WEAPB17"</Quality>
+<Quality>"RULES-WEAPB_ENTANGLE"</Quality>
 <Hand>"1"</Hand>
 <Ammunition>"0"</Ammunition>
 </Weapon>
 <Weapon id="PERSO-COMB_TEST">
 <Description language="ENGLISH">"Test weapon"</Description>
-<Skill>"RULES-COMPCOMB_BAGAR"</Skill>
+<Skill>"RULES-COMP_MELEE__BRAWLING"</Skill>
 <Damage>"+(BATTR_S)+0"</Damage>
 <Availability>"RULES-DISPO_COMMON"</Availability>
 <Reach>"RULES-WEAPR_PERSO"</Reach>
@@ -87,7 +88,7 @@
 </Weapon>
 <Weapon id="PERSO-COMB_TEST_MODIF">
 <Description language="ENGLISH">"Test weapon with modifiers"</Description>
-<Skill>"RULES-COMPCOMB_BAGAR"</Skill>
+<Skill>"RULES-COMP_MELEE__BRAWLING"</Skill>
 <Damage>"+(BATTR_S)+0"</Damage>
 <Availability>"RULES-DISPO_COMMON"</Availability>
 <Reach>"RULES-WEAPR_PERSO"</Reach>
@@ -109,8 +110,8 @@
 </BonusMalus>
 </DATA_WEAPON_BONUS>
 <DATA_TALENT>
-<Talent id="PERSO-T0001">
-<Modificateur Type="ModifySkill" Cible="RULES-COMPCOMB_BASE" Facteur="10"/>
+<Talent id="PERSO-T_KNIGHT_OF_THE_ORDER_OF_THE_HAMMER">
+<Modificateur Type="ModifySkill" Cible="RULES-COMP_MELEE__BASIC" Facteur="10"/>
 <Description language="ENGLISH">"Knight of the Order of the Hammer"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">"Your training in the Order of the Hammer has honed your skill with basic weapons, granting +10% to Melee (Basic)."</Explanation>

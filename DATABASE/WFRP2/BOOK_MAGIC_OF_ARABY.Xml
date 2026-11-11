@@ -1,0 +1,1101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"MARA"</CODE_BOOK>
+<BOOK>"BOOK MAGIC OF ARABY"</BOOK>
+<BOOKNAME>"THE MAGIC OF ARABY"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"This document is completely unofficial and in no way endorsed by Games Workshop Limited. Warhammer Fantasy Roleplay, the Warhammer Fantasy Roleplay logo, WFRP, Chaos, the Chaos device, the Chaos logo, Citadel, Citadel Device, Darkblade, 'Eavy Metal, Forge World, Games Workshop, Games Workshop logo, Golden Demon, Great Unclean One, GW, the Hammer of Sigmar logo, Horned Rat logo, Keeper of Secrets, Khemri, Khorne, the Khorne logo, Lord of Change, Nurgle, the Nurgle logo, Skaven, the Skaven symbol device, Slaanesh, the Slaanesh logo, Tomb Kings, Tzeentch, the Tzeentch logo, Warhammer, Warhammer World logo, White Dwarf, the White Dwarf logo, and all associated marks, names, races, race insignia, characters, vehicles, locations, units, artefacts, illustrations and images"</DISCLAIMER>
+<DATA_TALENT>
+<Talent id="MARA-T_ELEMENTAL_ATTUNEMENT">
+<Description language="ENGLISH">"Elemental Attunement"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"5"</Page>
+</Talent>
+<Talent id="MARA-T_ELEMENTAL_AURA">
+<Description language="ENGLISH">"Elemental Aura"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"8"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_CAREER>
+<Career id="MARA-CARE_SIFR">
+<Description language="ENGLISH">"Sifr"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"Ag +5%, Int +10%, WP +15%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +2, Mag +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_Mag">"1"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Djinn), Academic Knowledge (Magic), Channeling, Common Knowledge (Araby), Magical Sense, Read/Write, Speak Arcane Language (Magick), Speak Language (Arabyan), Speak Language (Djinn), Trade (Jeweler or Tinker)"</Skills>
+<Talents>"Elemental Attunement or Dealmaker, Petty Magic (Djinn), Schemer or Suave"</Talents>
+<Trappings>"Trade Tools (Jeweler or Tinker)"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_DJINN">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ARABY">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ARABYAN">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_DJINN">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_JEWELER/RULES-COMP_TRADE_TINKER">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="MARA-T_ELEMENTAL_ATTUNEMENT/RULES-T_DEALMAKER">"1"</Talent>
+<Talent name="RULES-T_PETTY_MAGIC__DJINN">"1"</Talent>
+<Talent name="RULES-T_SCHEMER/RULES-T_SUAVE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"MARA 4"</Source>
+</Career>
+<Career id="MARA-CARE_MAJI">
+<Description language="ENGLISH">"Maji"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, T +5%, Ag +10%, Int +20%, WP +25%, Fel +20%"</MainProfile>
+<SecondaryProfile>"W +3, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Djinn), Academic Knowledge (Magic), Channeling, Charm or Intimidate, Common Knowledge (any two), Gossip or Heal, Magical Sense, Outdoor Survival or Search, Perception or Trade (Jeweler or Tinker), Read/Write, Ride or Swim, Speak Arcane Language (Magick), Speak Language (any two), Speak Language (Djinn)"</Skills>
+<Talents>"Elemental Attunement or Keen Senses, Arcane Lore (Ifrit) or Arcane Lore (Jann) or Arcane Lore (Marid), Fast Hands or Very Resilient, Lesser Magic (Bind Djinn), Mighty Missile or Orientation"</Talents>
+<Trappings>"Artifact of Binding"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_DJINN">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP/RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL/RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION/RULES-COMP_TRADE_JEWELER/RULES-COMP_TRADE_TINKER">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_RIDE/RULES-COMP_SWIM">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_DJINN">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="MARA-T_ELEMENTAL_ATTUNEMENT/RULES-T_KEEN_SENSES">"1"</Talent>
+<Talent name="RULES-T_ARCANE_LORE__IFRIT/RULES-T_ARCANE_LORE__JANN/RULES-T_ARCANE_LORE__MARID">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__BIND_DJINN">"1"</Talent>
+<Talent name="RULES-T_MIGHTY_MISSILE/RULES-T_ORIENTATION">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"MARA 4"</Source>
+</Career>
+<Career id="MARA-CARE_MAJUS">
+<Description language="ENGLISH">"Majus"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +5%, T +10%, Ag +15%, Int +30%, WP +35%, Fel +30%"</MainProfile>
+<SecondaryProfile>"W +4, Mag +3"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"35"</Advance>
+<Advance name="RULES-ATTR_Fel">"30"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_Mag">"3"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (any two), Academic Knowledge (Djinn), Academic Knowledge (Magic), Channeling, Charm or Command, Common Knowledge (any two), Gossip or Intimidate, Heal or Outdoor Survival, Magical Sense, Read/Write, Search or Trade (Jeweler or Tinker), Speak Arcane Language (any), Speak Arcane Language (Magick), Speak Language (any three)"</Skills>
+<Talents>"Elemental Attunement or Fast Hands, Etiquette or Very Resilient, Heal or Mighty Missile, Lesser Magic (any two), Meditation or Orientation"</Talents>
+<Trappings>"Bound Genie with 7 advances"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_DJINN">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_HEAL/RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH/RULES-COMP_TRADE_JEWELER/RULES-COMP_TRADE_TINKER">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="MARA-T_ELEMENTAL_ATTUNEMENT/RULES-T_FAST_HANDS">"1"</Talent>
+<Talent name="RULES-T_ETIQUETTE/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="Heal/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_MEDITATION/RULES-T_ORIENTATION">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"MARA 5"</Source>
+</Career>
+<Career id="MARA-CARE_WISE_ONE">
+<Description language="ENGLISH">"Wise One"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, S +5%, T +15%, Ag +20%, Int +35%, WP +40%, Fel +35%"</MainProfile>
+<SecondaryProfile>"W +5, Mag +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"35"</Advance>
+<Advance name="RULES-ATTR_WP">"40"</Advance>
+<Advance name="RULES-ATTR_Fel">"35"</Advance>
+<Advance name="RULES-ATTR_W">"5"</Advance>
+<Advance name="RULES-ATTR_Mag">"4"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (any three), Academic Knowledge (Djinn), Academic Knowledge (Magic), Channeling, Charm or Command, Common Knowledge (any three), Gossip or Intimidate, Heal or Search, Magical Sense, Read/Write, Speak Arcane Language (any two), Speak Language (any four), Trade (Jeweler or Tinker)"</Skills>
+<Talents>"Elemental Attunement or Coolheaded, Etiquette or Mighty Missile, Fast Hands or Hardy, Lesser Magic (any two), Meditation or Menacing"</Talents>
+<Trappings>"Best Quality Robes, Bound Genie with 15 advances"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_DJINN">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_HEAL/RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_JEWELER/RULES-COMP_TRADE_TINKER">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="MARA-T_ELEMENTAL_ATTUNEMENT/RULES-T_COOLHEADED">"1"</Talent>
+<Talent name="RULES-T_ETIQUETTE/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_HARDY">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_MEDITATION/RULES-T_MENACING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"MARA 5"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="MARA-CARE_SIFR">"RULES-CARE_APPRENTICE_WIZARD"</Link>
+<Link name="MARA-CARE_SIFR">"RULES-CARE_ARTISAN"</Link>
+<Link name="MARA-CARE_SIFR">"MARA-CARE_MAJI"</Link>
+<Link name="MARA-CARE_SIFR">"RULES-CARE_SCHOLAR"</Link>
+<Link name="RULES-CARE_ARTISAN">"MARA-CARE_SIFR"</Link>
+<Link name="RULES-CARE_SCRIBE">"MARA-CARE_SIFR"</Link>
+<Link name="RULES-CARE_STUDENT">"MARA-CARE_SIFR"</Link>
+<Link name="MARA-CARE_MAJI">"RULES-CARE_EXPLORER"</Link>
+<Link name="MARA-CARE_MAJI">"MARA-CARE_MAJUS"</Link>
+<Link name="MARA-CARE_MAJI">"RULES-CARE_SCHOLAR"</Link>
+<Link name="MARA-CARE_MAJUS">"MARA-CARE_WISE_ONE"</Link>
+<Link name="MARA-CARE_MAJUS">"RULES-CARE_POLITICIAN"</Link>
+<Link name="MARA-CARE_MAJUS">"RULES-CARE_SCHOLAR"</Link>
+<Link name="MARA-CARE_WISE_ONE">"RULES-CARE_SCHOLAR"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_SPELL_V2>
+<SpellV2 id="MARA-SPEL_PURIFY_MATERIALS">
+<Description language="ENGLISH">"Purify Materials"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Djinn)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A drop of chlorine (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_SENSE_PRESENCE">
+<Description language="ENGLISH">"Sense Presence"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Djinn)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"The eye of a cat (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_ENCHANT_ARTEFACT">
+<Description language="ENGLISH">"Enchant Artefact"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Djinn)"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"5 minutes"</CastingTime>
+<Ingredient>"1 ounce of gold dust (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_SKILL_OF_THE_MASTER">
+<Description language="ENGLISH">"Skill of the Master"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Djinn)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full turn action"</CastingTime>
+<Ingredient>"A magnifying glass (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_BIND_DJINN">
+<Description language="ENGLISH">"Bind Djinn"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"The tongue of a lawyer (+2)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_BITTER_HEART">
+<Description language="ENGLISH">"Bitter Heart"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Ifrit"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Ifrit"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_BURNING_BLADES">
+<Description language="ENGLISH">"Burning Blades"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Ifrit"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bound Ifrit"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_BLAZING_AURA">
+<Description language="ENGLISH">"Blazing Aura"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Ifrit"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bound Ifrit"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_CONSUMING_WRATH">
+<Description language="ENGLISH">"Consuming Wrath"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Ifrit"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bound Ifrit"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_EXPLODING_FIRES">
+<Description language="ENGLISH">"Exploding Fires"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Ifrit"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Ifrit"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_FIERY_BLAST">
+<Description language="ENGLISH">"Fiery Blast"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Ifrit"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bound Ifrit"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_FIRE_BALL">
+<Description language="ENGLISH">"Fire Ball"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Ifrit"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Ifrit"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_FIRELIGHT">
+<Description language="ENGLISH">"Firelight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Ifrit"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Ifrit"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_FIREWALKER">
+<Description language="ENGLISH">"Firewalker"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Ifrit"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Ifrit"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_FLAMES_OF_PASSION">
+<Description language="ENGLISH">"Flames of Passion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Ifrit"</Lore>
+<CastingNumber>"32"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"Bound Ifrit"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_FRIGHTFUL_PRESENCE">
+<Description language="ENGLISH">"Frightful Presence"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Ifrit"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Ifrit"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_HEALING_FIRE">
+<Description language="ENGLISH">"Healing Fire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Ifrit"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"1 minute (6 rounds)"</CastingTime>
+<Ingredient>"Bound Ifrit"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_IFRIT_S_SPARK">
+<Description language="ENGLISH">"Ifrit's Spark"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Ifrit"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Ifrit"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_IGNITE_FRENZY">
+<Description language="ENGLISH">"Ignite Frenzy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Ifrit"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bound Ifrit"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_INCINERATING_TOUCH">
+<Description language="ENGLISH">"Incinerating Touch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Ifrit"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"Bound Ifrit"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_INCITE_RIOT">
+<Description language="ENGLISH">"Incite Riot"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Ifrit"</Lore>
+<CastingNumber>"28"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"Bound Ifrit"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_MAGIC_CARPET">
+<Description language="ENGLISH">"Magic Carpet"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Ifrit"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"Bound Ifrit"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_MELTING_FEAR">
+<Description language="ENGLISH">"Melting Fear"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Ifrit"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Ifrit"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_RING_OF_FIRE">
+<Description language="ENGLISH">"Ring of Fire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Ifrit"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Ifrit"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_WRATH_OF_THE_IFRIT">
+<Description language="ENGLISH">"Wrath of the Ifrit"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Ifrit"</Lore>
+<CastingNumber>"31"</CastingNumber>
+<CastingTime>"1 full action and 1 half action"</CastingTime>
+<Ingredient>"Bound Ifrit"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_COVERING_WINDS">
+<Description language="ENGLISH">"Covering Winds"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Jann"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bound Jann"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_BLADESTORM">
+<Description language="ENGLISH">"Bladestorm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Jann"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Jann"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_DESERT_RELIEF">
+<Description language="ENGLISH">"Desert Relief"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Jann"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bound Jann"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_DEVASTATING_STRIKE">
+<Description language="ENGLISH">"Devastating Strike"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Jann"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Jann"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_EASE_BURDEN">
+<Description language="ENGLISH">"Ease Burden"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Jann"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Jann"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_GAZE_OF_THE_BASILISK">
+<Description language="ENGLISH">"Gaze of the Basilisk"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Jann"</Lore>
+<CastingNumber>"32"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bound Jann"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_FIND_OASIS">
+<Description language="ENGLISH">"Find Oasis"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Jann"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Jann"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_HEATSTROKE">
+<Description language="ENGLISH">"Heatstroke"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Jann"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Jann"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_MIRAGE">
+<Description language="ENGLISH">"Mirage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Jann"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"1 full action and 1 half action"</CastingTime>
+<Ingredient>"Bound Jann"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_SAND_GATE">
+<Description language="ENGLISH">"Sand Gate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Jann"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bound Jann"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_SANDS_OF_TIME">
+<Description language="ENGLISH">"Sands of Time"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Jann"</Lore>
+<CastingNumber>"34"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bound Jann"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_SANDSTORM">
+<Description language="ENGLISH">"Sandstorm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Jann"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bound Jann"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_SANDTRAP">
+<Description language="ENGLISH">"Sandtrap"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Jann"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Jann"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_SCORPION_S_STING">
+<Description language="ENGLISH">"Scorpion's Sting"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Jann"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Bound Jann"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_SNAKE_CHARMER">
+<Description language="ENGLISH">"Snake Charmer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Jann"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bound Jann"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_SWIFT_JOURNEY">
+<Description language="ENGLISH">"Swift Journey"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Jann"</Lore>
+<CastingNumber>"21"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Bound Jann"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_SUMMON_SAND_DEVIL">
+<Description language="ENGLISH">"Summon Sand Devil"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Jann"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"Bound Jann"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_TOOLS_OF_SAND">
+<Description language="ENGLISH">"Tools of Sand"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Jann"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bound Jann"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_WAY_OF_THE_JANN">
+<Description language="ENGLISH">"Way of the Jann"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Jann"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Jann"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_WHIRLWIND">
+<Description language="ENGLISH">"Whirlwind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Jann"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Jann"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_ANIMATE_WATER">
+<Description language="ENGLISH">"Animate Water"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Marid"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"Bound Marid"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_CALL_OF_THE_SIREN">
+<Description language="ENGLISH">"Call of the Siren"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Marid"</Lore>
+<CastingNumber>"25"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bound Marid"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_CONFUSION">
+<Description language="ENGLISH">"Confusion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Marid"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Marid"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_CURSE_OF_THE_MARID">
+<Description language="ENGLISH">"Curse of the Marid"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Marid"</Lore>
+<CastingNumber>"30"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bound Marid"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_DEHYDRATION">
+<Description language="ENGLISH">"Dehydration"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Marid"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Marid"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_DIRECT_CURRENT">
+<Description language="ENGLISH">"Direct Current"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Marid"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bound Marid"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_ENSNARE_MIND">
+<Description language="ENGLISH">"Ensnare Mind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Marid"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Marid"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_FRIEND_OF_THE_SEA">
+<Description language="ENGLISH">"Friend of the Sea"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Marid"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Marid"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_FOG_BANK">
+<Description language="ENGLISH">"Fog Bank"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Marid"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"Bound Marid"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_HEALING_WATERS">
+<Description language="ENGLISH">"Healing Waters"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Marid"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bound Marid"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_MASS_CONFUSION">
+<Description language="ENGLISH">"Mass Confusion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Marid"</Lore>
+<CastingNumber>"27"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Marid"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_PURIFY_LIQUID">
+<Description language="ENGLISH">"Purify Liquid"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Marid"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bound Marid"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_SATISFY_THIRST">
+<Description language="ENGLISH">"Satisfy Thirst"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Marid"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bound Marid"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_SEABREATH">
+<Description language="ENGLISH">"Seabreath"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Marid"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bound Marid"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_SHIPWRECK">
+<Description language="ENGLISH">"Shipwreck"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Marid"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"Bound Marid"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_SPIRIT_OF_THE_MARID">
+<Description language="ENGLISH">"Spirit of the Marid"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Marid"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bound Marid"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_TELLING_WATERS">
+<Description language="ENGLISH">"Telling Waters"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Marid"</Lore>
+<CastingNumber>"28"</CastingNumber>
+<CastingTime>"1 minute (6 rounds)"</CastingTime>
+<Ingredient>"Bound Marid"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_UNDERTOW">
+<Description language="ENGLISH">"Undertow"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Marid"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Marid"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_WATER_BLAST">
+<Description language="ENGLISH">"Water Blast"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Marid"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bound Marid"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="MARA-SPEL_WATER_FORM">
+<Description language="ENGLISH">"Water Form"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Marid"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"Bound Marid"</Ingredient>
+<Page>"26"</Page>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SPELL_TALENT>
+<Sort id="MARA-SPEL_PURIFY_MATERIALS">
+<Talent>"RULES-T_PETTY_MAGIC__DJINN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_SENSE_PRESENCE">
+<Talent>"RULES-T_PETTY_MAGIC__DJINN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_ENCHANT_ARTEFACT">
+<Talent>"RULES-T_PETTY_MAGIC__DJINN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_SKILL_OF_THE_MASTER">
+<Talent>"RULES-T_PETTY_MAGIC__DJINN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_BIND_DJINN">
+<Talent>"RULES-T_LESSER_MAGIC__BIND_DJINN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_BITTER_HEART">
+<Talent>"RULES-T_ARCANE_LORE__IFRIT"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_BURNING_BLADES">
+<Talent>"RULES-T_ARCANE_LORE__IFRIT"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_BLAZING_AURA">
+<Talent>"RULES-T_ARCANE_LORE__IFRIT"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_CONSUMING_WRATH">
+<Talent>"RULES-T_ARCANE_LORE__IFRIT"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_EXPLODING_FIRES">
+<Talent>"RULES-T_ARCANE_LORE__IFRIT"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_FIERY_BLAST">
+<Talent>"RULES-T_ARCANE_LORE__IFRIT"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_FIRE_BALL">
+<Talent>"RULES-T_ARCANE_LORE__IFRIT"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_FIRELIGHT">
+<Talent>"RULES-T_ARCANE_LORE__IFRIT"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_FIREWALKER">
+<Talent>"RULES-T_ARCANE_LORE__IFRIT"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_FLAMES_OF_PASSION">
+<Talent>"RULES-T_ARCANE_LORE__IFRIT"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_FRIGHTFUL_PRESENCE">
+<Talent>"RULES-T_ARCANE_LORE__IFRIT"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_HEALING_FIRE">
+<Talent>"RULES-T_ARCANE_LORE__IFRIT"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_IFRIT_S_SPARK">
+<Talent>"RULES-T_ARCANE_LORE__IFRIT"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_IGNITE_FRENZY">
+<Talent>"RULES-T_ARCANE_LORE__IFRIT"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_INCINERATING_TOUCH">
+<Talent>"RULES-T_ARCANE_LORE__IFRIT"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_INCITE_RIOT">
+<Talent>"RULES-T_ARCANE_LORE__IFRIT"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_MAGIC_CARPET">
+<Talent>"RULES-T_ARCANE_LORE__IFRIT"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_MELTING_FEAR">
+<Talent>"RULES-T_ARCANE_LORE__IFRIT"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_RING_OF_FIRE">
+<Talent>"RULES-T_ARCANE_LORE__IFRIT"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_WRATH_OF_THE_IFRIT">
+<Talent>"RULES-T_ARCANE_LORE__IFRIT"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_COVERING_WINDS">
+<Talent>"RULES-T_ARCANE_LORE__JANN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_BLADESTORM">
+<Talent>"RULES-T_ARCANE_LORE__JANN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_DESERT_RELIEF">
+<Talent>"RULES-T_ARCANE_LORE__JANN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_DEVASTATING_STRIKE">
+<Talent>"RULES-T_ARCANE_LORE__JANN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_EASE_BURDEN">
+<Talent>"RULES-T_ARCANE_LORE__JANN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_GAZE_OF_THE_BASILISK">
+<Talent>"RULES-T_ARCANE_LORE__JANN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_FIND_OASIS">
+<Talent>"RULES-T_ARCANE_LORE__JANN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_HEATSTROKE">
+<Talent>"RULES-T_ARCANE_LORE__JANN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_MIRAGE">
+<Talent>"RULES-T_ARCANE_LORE__JANN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_SAND_GATE">
+<Talent>"RULES-T_ARCANE_LORE__JANN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_SANDS_OF_TIME">
+<Talent>"RULES-T_ARCANE_LORE__JANN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_SANDSTORM">
+<Talent>"RULES-T_ARCANE_LORE__JANN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_SANDTRAP">
+<Talent>"RULES-T_ARCANE_LORE__JANN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_SCORPION_S_STING">
+<Talent>"RULES-T_ARCANE_LORE__JANN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_SNAKE_CHARMER">
+<Talent>"RULES-T_ARCANE_LORE__JANN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_SWIFT_JOURNEY">
+<Talent>"RULES-T_ARCANE_LORE__JANN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_SUMMON_SAND_DEVIL">
+<Talent>"RULES-T_ARCANE_LORE__JANN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_TOOLS_OF_SAND">
+<Talent>"RULES-T_ARCANE_LORE__JANN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_WAY_OF_THE_JANN">
+<Talent>"RULES-T_ARCANE_LORE__JANN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_WHIRLWIND">
+<Talent>"RULES-T_ARCANE_LORE__JANN"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_ANIMATE_WATER">
+<Talent>"RULES-T_ARCANE_LORE__MARID"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_CALL_OF_THE_SIREN">
+<Talent>"RULES-T_ARCANE_LORE__MARID"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_CONFUSION">
+<Talent>"RULES-T_ARCANE_LORE__MARID"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_CURSE_OF_THE_MARID">
+<Talent>"RULES-T_ARCANE_LORE__MARID"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_DEHYDRATION">
+<Talent>"RULES-T_ARCANE_LORE__MARID"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_DIRECT_CURRENT">
+<Talent>"RULES-T_ARCANE_LORE__MARID"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_ENSNARE_MIND">
+<Talent>"RULES-T_ARCANE_LORE__MARID"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_FRIEND_OF_THE_SEA">
+<Talent>"RULES-T_ARCANE_LORE__MARID"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_FOG_BANK">
+<Talent>"RULES-T_ARCANE_LORE__MARID"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_HEALING_WATERS">
+<Talent>"RULES-T_ARCANE_LORE__MARID"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_MASS_CONFUSION">
+<Talent>"RULES-T_ARCANE_LORE__MARID"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_PURIFY_LIQUID">
+<Talent>"RULES-T_ARCANE_LORE__MARID"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_SATISFY_THIRST">
+<Talent>"RULES-T_ARCANE_LORE__MARID"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_SEABREATH">
+<Talent>"RULES-T_ARCANE_LORE__MARID"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_SHIPWRECK">
+<Talent>"RULES-T_ARCANE_LORE__MARID"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_SPIRIT_OF_THE_MARID">
+<Talent>"RULES-T_ARCANE_LORE__MARID"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_TELLING_WATERS">
+<Talent>"RULES-T_ARCANE_LORE__MARID"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_UNDERTOW">
+<Talent>"RULES-T_ARCANE_LORE__MARID"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_WATER_BLAST">
+<Talent>"RULES-T_ARCANE_LORE__MARID"</Talent>
+</Sort>
+<Sort id="MARA-SPEL_WATER_FORM">
+<Talent>"RULES-T_ARCANE_LORE__MARID"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMP_ACADEMIC_KNOWLEDGE_DJINN">
+<Description language="ENGLISH">"Academic Knowledge (Djinn)"</Description>
+<Generique>"RULES-COMP_ACADEMIC_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_ARABYAN">
+<Description language="ENGLISH">"Speak Language (Arabyan)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_DJINN">
+<Description language="ENGLISH">"Speak Language (Djinn)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_TRADE_JEWELER">
+<Description language="ENGLISH">"Trade (Jeweler)"</Description>
+<Generique>"RULES-COMP_TRADE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_TRADE_TINKER">
+<Description language="ENGLISH">"Trade (Tinker)"</Description>
+<Generique>"RULES-COMP_TRADE_*"</Generique>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="RULES-T_PETTY_MAGIC__DJINN">
+<Description language="ENGLISH">"Petty Magic (Djinn)"</Description>
+<Generique>"RULES-T_PETTY_MAGIC__*"</Generique>
+</Talent>
+<Talent id="RULES-T_ARCANE_LORE__IFRIT">
+<Description language="ENGLISH">"Arcane Lore (Ifrit)"</Description>
+<Generique>"RULES-T_ARCANE_LORE__*"</Generique>
+</Talent>
+<Talent id="RULES-T_ARCANE_LORE__JANN">
+<Description language="ENGLISH">"Arcane Lore (Jann)"</Description>
+<Generique>"RULES-T_ARCANE_LORE__*"</Generique>
+</Talent>
+<Talent id="RULES-T_ARCANE_LORE__MARID">
+<Description language="ENGLISH">"Arcane Lore (Marid)"</Description>
+<Generique>"RULES-T_ARCANE_LORE__*"</Generique>
+</Talent>
+<Talent id="RULES-T_LESSER_MAGIC__BIND_DJINN">
+<Description language="ENGLISH">"Lesser Magic (Bind Djinn)"</Description>
+<Generique>"RULES-T_LESSER_MAGIC__*"</Generique>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="MARA-EQUI_CREATURES_IFRIT">
+<Description language="ENGLISH">"Ifrit"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"30;20;35;30;30;30;30;25;1;14;3;3;6;4;0;0"</Profile>
+<Skills>"Common Knowledge (Araby), Dodge Blow, Intimidate, Magical Sense, Perception, Speak Arcane Language (Djinn), Speak Language (Arabyan), Speak Language (Djinn)"</Skills>
+<Talents>"Elemental Attunement, Elemental Aura, Hoverer, Frenzy, Menacing, Night Vision, Specialist Weapon Group (Great Weapon)"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"8"</Page>
+</EquipmentV2>
+<EquipmentV2 id="MARA-EQUI_CREATURES_JANN">
+<Description language="ENGLISH">"Jann"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"35;25;35;30;35;30;30;35;1;14;3;3;5;4;0;0"</Profile>
+<Skills>"Common Knowledge (Araby), Disguise, Dodge Blow, Magical Sense, Navigation, Outdoor Survival, Perception, Speak Arcane Language (Djinn), Speak Language (Arabyan), Speak Language (Djinn)"</Skills>
+<Talents>"Elemental Attunement, Ambidextrous, Elemental Aura, Night Vision, Orientation, Specialist Weapon Group (Scimitar)"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="MARA-EQUI_CREATURES_MARID">
+<Description language="ENGLISH">"Marid"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;20;20;30;35;35;40;35;1;12;2;3;4;4;0;0"</Profile>
+<Skills>"Academic Knowledge (Magic), Channeling, Charm, Common Knowledge (Araby), Magical Sense, Perception, Speak Arcane Language (Djinn), Speak Language (Arabyan), Speak Language (Djinn), Swim"</Skills>
+<Talents>"Elemental Attunement, Coolheaded, Elemental Aura, Fast Hands, Night Vision"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"11"</Page>
+</EquipmentV2>
+<EquipmentV2 id="MARA-EQUI_CREATURES_SAND_DEVIL">
+<Description language="ENGLISH">"Sand Devil"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"45;0;50;60;20;0;0;0;2;16;5;6;4;0;0;0"</Profile>
+<Talents>"Frightening, Natural Weapons, Unstoppable Blows"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"21"</Page>
+</EquipmentV2>
+<EquipmentV2 id="MARA-EQUI_CREATURES_ANIMATED_WATER">
+<Description language="ENGLISH">"Animated Water"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"30;0;30;30;25;0;0;0;2;16;3;3;4;0;0;0"</Profile>
+<Talents>"Ambidextrous, Frightening, Natural Weapons"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"22"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+</DATA_BOOK>

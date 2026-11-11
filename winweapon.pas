@@ -230,7 +230,15 @@ begin
     if TabWeapon.RowCount > 1 then
       begin
         TabWeapon.Row := 1;
-        TabWeaponAfterSelection(TabWeapon, 1, 1);
+        // arme demandee par le double-clic de WinPersonnage : on se place dessus
+        if VoirWinArme <> '' then
+          for IndTab := 1 to TabWeapon.RowCount - 1 do
+            if TabWeapon.Cells[1, IndTab] = VoirWinArme then
+              begin
+                TabWeapon.Row := IndTab;
+                Break;
+              end;
+        TabWeaponAfterSelection(TabWeapon, 1, TabWeapon.Row);
       end;
 
     KeyPreview := true;

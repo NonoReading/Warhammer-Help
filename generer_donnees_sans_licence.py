@@ -20,7 +20,7 @@ from collections import Counter
 from pathlib import Path
 
 RACINE = Path(__file__).resolve().parent
-VERSIONS = ["WFRP4", "WFRP5"]
+VERSIONS = ["WFRP1", "WFRP2", "WFRP4", "WFRP5"]
 PROSE = ["Explanation", "Personality", "Contraction", "Symptoms", "SpecialRule",
          "Incubation", "Treatment", "Cure", "Effect", "Special", "Rules"]
 SEUIL_RESTE = 90  # caracteres : au-dela, un texte non vide est signale
@@ -28,7 +28,13 @@ PROSE_LONGUE = ["Text", "Short", "Target", "Test"]  # videes seulement au-dela d
 
 RE_PROSE = re.compile(r"<(%s)((?:\s[^>]*)?)>(.*?)</\1>" % "|".join(PROSE), re.S)
 RE_LONG = re.compile(r"<(%s)((?:\s[^>]*)?)>(.*?)</\1>" % "|".join(PROSE_LONGUE), re.S)
-RE_COMMENT = re.compile(r"<!--.*?-->[ \t]*\r?\n?", re.S)
+# V1 / V2 : autres balises de prose (videes au-dela du seuil seulement ; les listes Skills / Talents /
+# Trappings sont des noms de donnees de jeu et restent).
+PROSE_LONGUE_V12 = ["Note", "SpecialRules", "Conditions", "Consequences", "Powers", "PermanentEffect",
+                    "TemporaryEffect", "History", "Ingredient", "Ingredients", "Trials", "Strictures",
+                    "Rule", "Blessings", "Variations", "SideEffects"]
+RE_LONG_V12 = re.compile(r"<(%s)((?:\s[^>]*)?)>(.*?)</\1>" % "|".join(PROSE_LONGUE_V12), re.S)
+RE_COMMENT =re.compile(r"<!--.*?-->[ \t]*\r?\n?", re.S)
 RE_FICHE = re.compile(r"<(\w+)\s+id=\"[^\"]*\"[^>]*>.*?</\1>", re.S)
 RE_TEXTE = re.compile(r"<(\w+)(?:\s[^>]*)?>\"([^<\"]{%d,})\"</\1>" % SEUIL_RESTE)
 GARDER = {"DISCLAIMER", "Description", "Name"}
@@ -42,7 +48,7 @@ def est_livre_complet(nom):
     return nom.lower() in {n.lower() for n in LIVRES_COMPLETS}
 
 
-def vide_prose(texte, compteur):
+def vide_prose(texte, compteur, v12=False):
     def rempl(m):
         if m.group(3).strip() in ("", '""'):
             return m.group(0)
@@ -55,7 +61,8 @@ def vide_prose(texte, compteur):
         compteur[m.group(1)] += 1
         return "<%s%s>\"\"</%s>" % (m.group(1), m.group(2), m.group(1))
     texte = RE_PROSE.sub(rempl, texte)
-    return RE_LONG.sub(rempl_long, texte)
+    texte = RE_LONG.sub(rempl_long, texte)
+    return RE_LONG_V12.sub(rempl_long, texte) if v12 else texte
 
 
 def sans_page(avant, apres):
@@ -91,7 +98,7 @@ def main():
                 continue
             compteur = Counter()
             manque = sans_page(texte, None)
-            texte2 = vide_prose(texte, compteur)
+            texte2 = vide_prose(texte, compteur, version in ("WFRP1", "WFRP2"))
             texte2 = RE_COMMENT.sub("", texte2)
             (dest / f.name).write_text(texte2, encoding="utf-8", newline="")
             reste = [(t, len(v)) for t, v in RE_TEXTE.findall(texte2) if t not in GARDER]

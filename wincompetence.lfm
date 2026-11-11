@@ -275,6 +275,28 @@ object WinCompetence: TWinCompetence
     ParentColor = False
     ParentFont = False
   end
+  object LabBonus: TLabelContour
+    Left = 1112
+    Height = 20
+    Top = 480
+    Width = 45
+    Caption = 'Bonus'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object TabBonus: TStringGrid
+    Left = 1112
+    Height = 343
+    Top = 512
+    Width = 258
+    Anchors = [akTop, akLeft]
+    ColCount = 1
+    TabOrder = 9
+  end
   object LabLivre: TLabelContour
     Left = 1112
     Height = 20

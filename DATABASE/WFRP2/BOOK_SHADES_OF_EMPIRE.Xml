@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"SOE"</CODE_BOOK>
+<BOOK>"BOOK SHADES OF EMPIRE"</BOOK>
+<BOOKNAME>"SHADES OF EMPIRE"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"1"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_SPELL_V2>
+<SpellV2 id="SOE-SPEL_DAGGER_OF_THE_ART">
+<Description language="ENGLISH">"Dagger of the Art"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hedge)"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A thorn cut when Mannslieb is new (+1)"</Ingredient>
+<Page>"63"</Page>
+<SpellLists>"Craftsman"</SpellLists>
+<Duration>"1 minute (6 rounds)+"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="SOE-SPEL_FELLSTAVE">
+<Description language="ENGLISH">"Fellstave"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hedge)"</Lore>
+<CastingNumber>"21"</CastingNumber>
+<CastingTime>"3 full actions"</CastingTime>
+<Ingredient>"A cup of blood drawn when Morrslieb was full (+3)"</Ingredient>
+<Page>"63"</Page>
+<SpellLists>"Cunning Man, Craftsman, Hedge Walker"</SpellLists>
+<Duration>"1 month/magic"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="SOE-SPEL_HALETHA_S_JOY">
+<Description language="ENGLISH">"Halétha’s Joy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hedge)"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A rod of poplar polished with beeswax on Sonnstill (+2)"</Ingredient>
+<Page>"64"</Page>
+<SpellLists>"Cunning Man, Craftsman, Hedge Walker"</SpellLists>
+<Duration>"1 day/Magic"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="SOE-SPEL_HEDGE_WALK">
+<Description language="ENGLISH">"Hedge Walk"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hedge)"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"3 full action"</CastingTime>
+<Ingredient>"A bone that has been buried beneath a hedgerow for 1 month (+3)"</Ingredient>
+<Page>"64"</Page>
+<SpellLists>"Hedge Walker"</SpellLists>
+<Duration>"1 hour/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="SOE-SPEL_INVIGORATE">
+<Description language="ENGLISH">"Invigorate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hedge)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A live snail (+1)"</Ingredient>
+<Page>"64"</Page>
+<SpellLists>"Cunning Man"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="SOE-SPEL_LOVELOCK">
+<Description language="ENGLISH">"Lovelock"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hedge)"</Lore>
+<CastingNumber>"23"</CastingNumber>
+<CastingTime>"3 full actions"</CastingTime>
+<Ingredient>"A lock of hair from the target (+3)"</Ingredient>
+<Page>"64"</Page>
+<SpellLists>"Cunning Man, Craftsman, Hedge Walker"</SpellLists>
+<Duration>"Special: until midnight"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="SOE-SPEL_MYRKRIDE">
+<Description language="ENGLISH">"Myrkride"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hedge)"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"2 full action"</CastingTime>
+<Ingredient>"The freshly boiled heart of a mouse (+3)"</Ingredient>
+<Page>"64"</Page>
+<SpellLists>"Hedge Walker"</SpellLists>
+<Duration>"1 round/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="SOE-SPEL_NEPENTHE">
+<Description language="ENGLISH">"Nepenthe"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hedge)"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"3 full actions"</CastingTime>
+<Ingredient>"A fingernail from the individual the target wishes to forget (+2)"</Ingredient>
+<Page>"64"</Page>
+<SpellLists>"Craftsman"</SpellLists>
+<Duration>"Permanent"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="SOE-SPEL_NOSTRUM">
+<Description language="ENGLISH">"Nostrum"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hedge)"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"3 full actions"</CastingTime>
+<Ingredient>"A toe or finger from the target (+3)"</Ingredient>
+<Page>"65"</Page>
+<SpellLists>"Cunning Man, Craftsman, Hedge Walker"</SpellLists>
+<Duration>"Permanent"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="SOE-SPEL_PART_THE_BRANCHES">
+<Description language="ENGLISH">"Part the Branches"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hedge)"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"The ash of a hawthorn branch that has been burnt at noon (+1)"</Ingredient>
+<Page>"65"</Page>
+<SpellLists>"Hedge Walker"</SpellLists>
+<Duration>"1 hour/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="SOE-SPEL_PROTECTION_POUCH">
+<Description language="ENGLISH">"Protection Pouch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hedge)"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"3 full actions"</CastingTime>
+<Ingredient>"A small leather pouch made from the flesh of a bat (+2)"</Ingredient>
+<Page>"65"</Page>
+<SpellLists>"Craftsman"</SpellLists>
+<Duration>"1 week/Magic"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="SOE-SPEL_PURIFY">
+<Description language="ENGLISH">"Purify"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hedge)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A reed filled with fresh toad spit (+1)"</Ingredient>
+<Page>"65"</Page>
+<SpellLists>"Craftsman"</SpellLists>
+<Duration>"Permanent"</Duration>
+<Range>"2 yards/1 square"</Range>
+</SpellV2>
+<SpellV2 id="SOE-SPEL_SIGHTSTEP">
+<Description language="ENGLISH">"Sightstep"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hedge)"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"3 full actions"</CastingTime>
+<Ingredient>"The wings of a dragonflythat has been killed with a silver pin (+2)"</Ingredient>
+<Page>"65"</Page>
+<SpellLists>"Cunning Man"</SpellLists>
+<Duration>"Special"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="SOE-SPEL_SILVERTIDE">
+<Description language="ENGLISH">"Silvertide"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hedge)"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A lodestone dipped in honey (+2)"</Ingredient>
+<Page>"66"</Page>
+<SpellLists>"Cunning Man"</SpellLists>
+<Duration>"6 hours"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="SOE-SPEL_THE_OUSTING">
+<Description language="ENGLISH">"The Ousting"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hedge)"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A spherical stone buried for a month within a fresh stream (+2)"</Ingredient>
+<Page>"66"</Page>
+<SpellLists>"Hedge Walker"</SpellLists>
+<Duration>"1d10 years/Magic"</Duration>
+<Range>"6 yards (3 squares)"</Range>
+</SpellV2>
+<SpellV2 id="SOE-SPEL_WYRD_WARD">
+<Description language="ENGLISH">"Wyrd Ward"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hedge)"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"4 full actions"</CastingTime>
+<Ingredient>"A hair from the warded witch (+2)"</Ingredient>
+<Page>"66"</Page>
+<SpellLists>"Cunning Man"</SpellLists>
+<Duration>"1 hour/Magic"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="SOE-SPEL_DECEIVING_DREAM">
+<Description language="ENGLISH">"Deceiving Dream"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A stick of incense (+2)"</Ingredient>
+<Page>"37"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Five miles"</Range>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SPELL_TALENT>
+<Sort id="SOE-SPEL_DECEIVING_DREAM">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="SOE-SPEL_DAGGER_OF_THE_ART">
+<Talent>"SOE-T_WITCH_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="SOE-SPEL_FELLSTAVE">
+<Talent>"SOE-T_WITCH_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="SOE-SPEL_HALETHA_S_JOY">
+<Talent>"SOE-T_WITCH_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="SOE-SPEL_HEDGE_WALK">
+<Talent>"SOE-T_WITCH_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="SOE-SPEL_INVIGORATE">
+<Talent>"SOE-T_WITCH_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="SOE-SPEL_LOVELOCK">
+<Talent>"SOE-T_WITCH_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="SOE-SPEL_MYRKRIDE">
+<Talent>"SOE-T_WITCH_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="SOE-SPEL_NEPENTHE">
+<Talent>"SOE-T_WITCH_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="SOE-SPEL_NOSTRUM">
+<Talent>"SOE-T_WITCH_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="SOE-SPEL_PART_THE_BRANCHES">
+<Talent>"SOE-T_WITCH_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="SOE-SPEL_PROTECTION_POUCH">
+<Talent>"SOE-T_WITCH_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="SOE-SPEL_PURIFY">
+<Talent>"SOE-T_WITCH_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="SOE-SPEL_SIGHTSTEP">
+<Talent>"SOE-T_WITCH_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="SOE-SPEL_SILVERTIDE">
+<Talent>"SOE-T_WITCH_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="SOE-SPEL_THE_OUSTING">
+<Talent>"SOE-T_WITCH_LORE__HEDGE"</Talent>
+</Sort>
+<Sort id="SOE-SPEL_WYRD_WARD">
+<Talent>"SOE-T_WITCH_LORE__HEDGE"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+<DATA_TALENT>
+<Talent id="SOE-T_WITCH_LORE__*">
+<SpellMode>"AUTO"</SpellMode>
+<Description language="ENGLISH">"Witch Lore (Various)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"60"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="SOE-T_WITCH_LORE__HEDGE">
+<Description language="ENGLISH">"Witch Lore (Hedge)"</Description>
+<Generique>"SOE-T_WITCH_LORE__*"</Generique>
+</Talent>
+<Talent id="SOE-T_EXTRA_SPELL__GUIDING_DREAM">
+<Description language="ENGLISH">"Extra Spell (Guiding Dream)"</Description>
+<Generique>"TOC-T_EXTRA_SPELL__*"</Generique>
+<Page>"34"</Page>
+</Talent>
+<Talent id="SOE-T_EXTRA_SPELL__DECEIVING_DREAM">
+<Description language="ENGLISH">"Extra Spell (Deceiving Dream)"</Description>
+<Generique>"TOC-T_EXTRA_SPELL__*"</Generique>
+<Page>"37"</Page>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+</DATA_BOOK>

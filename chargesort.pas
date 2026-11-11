@@ -5,7 +5,7 @@ unit ChargeSort;
 interface
 
 uses
-  Classes, SysUtils, ChargeConstantes, UnitCalcul, Dialogs, Generics.Collections;
+  Classes, SysUtils, ChargeConstantes, UnitCalcul, ChargeTalent, Dialogs, Generics.Collections;
 
 Type
   StructureSort       = Record
@@ -21,6 +21,23 @@ Type
         Livre:            String;
         // Cout fixe en XP (rituels de Winds of Magic) : vide = le cout vient du talent.
         XpFixe:           String;
+        // Sorts WFRP2 (DATA_SPELL_V2) : ingredient et temps d'incantation, que la grille de WinSorts
+        // n'a pas en colonne (ils sont ajoutes a la description, voir TWinSpells.WinCharger). Vides en V4.
+        Ingredient:       String;
+        TempsIncantation: String;
+        // Sorts WFRP1 (DATA_SPELL_V1) : cout en points de magie (colonne MP de la feuille).
+        CoutMagieV1:      String;
+        // Realms of Sorcery : listes du Lore auxquelles appartient le sort ("Elemental, Mystical").
+        ListesSorts:      String;
+        // Tome of Salvation : culte dont le sort est la priere propre (vide = tous les pretres).
+        Culte:            String;
+        // Rituels de Realms of Sorcery (Lore "Rituals") : champs propres a la fiche d'un rituel.
+        TypeRituel:       String;
+        LangueArcanique:  String;
+        MagieMin:         String;
+        CoutXP:           String;
+        ConditionsRituel: String;
+        ConsequencesRituel: String;
 end;
 
   // Bloc DATA_SPELL_TALENT, ajoute le 03/09/2026 : une ligne = "ce talent donne acces a
@@ -115,7 +132,7 @@ Function CheminSortImage(CodeTalent: String): String;
     if pos(ValeurGenerique, CodeTalent) = 0 then
       Cod := CodeTalent
     else
-      Cod := ExtractStringBefore(CodeTalent,'_');
+      Cod := RadicalTalent(CodeTalent);
     // Code COMPLET, prefixe de livre inclus : voir CheminMetierImage dans ChargeMetier.
     //
     // LA BOUCLE SUR ListBook A DISPARU, et elle ne servait deja plus a rien : elle etait

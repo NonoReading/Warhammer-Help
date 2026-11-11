@@ -5,7 +5,7 @@ unit PdfRace;
 interface
 
 uses
-  Classes, SysUtils, fpPDF, Dialogs, PicsLib, Graphics, LCLIntf,
+  Classes, SysUtils, fpPDF, Dialogs, MessageTest, PicsLib, Graphics, LCLIntf,
   ChargeRace, ChargeEspece, ChargeConstantes, ChargeAttribut, ChargeRaceAttribut,
   ChargeRaceCompetence, ChargeCompetence, ChargeRaceTalent, ChargeTalent,
   ChargeRaceMetier, ChargeTirageMetier, ChargeMetier, PdfPersonnage,

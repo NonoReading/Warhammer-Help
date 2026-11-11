@@ -26,6 +26,9 @@ Type
         // dit. Les deux vont ensemble - un parent sans niveau minimum n'aurait aucun effet,
         // un niveau minimum sans parent rendrait le metier definitivement inatteignable.
         MetierParent:   String;
+        // V1 : cout en EP pour entrer dans ce niveau d'une carriere magique (balise EntryCost),
+        // 0 = pas de cout propre (le cout de sortie habituel s'applique).
+        CoutEntree:     Integer;
   End;
 
   TListMetier = specialize TList<StructureMetier>;
@@ -139,6 +142,7 @@ var
 
 function chercheMetier(CodeMetier :String): StructureMetier;
 Function CheminMetierImage(CodeMetier: String): String;
+Function CoutEntreeMetier(CodeMetier: String): Integer;
 Function DossierNiveauMetier(CodeMetier: String): String;
 Function CheminNiveauImageMetier(CodeMetier: String; Niveau: Integer): String;
 Function CheminNiveauImageMetierRace(CodeMetier: String; CodeRace: String; Niveau: Integer): String;
@@ -494,7 +498,8 @@ Function CheminMetierImage(CodeMetier: String): String;
             ResTrans := ExtractFilePath(ResNormal)+PMetier.CodeMetier+ConstTransparent+'.PNG';
           if not FileExists(ResTrans) then
             if FileExists(ResNormal) then
-              if (Not TestPixelZeroZero(ResNormal)) then
+              // V2 : fond de parchemin non detourable par la couleur du coin (16/10/2026)
+              if (ValVersion <> 'WFRP2') and (ValVersion <> 'WFRP1') and (Not TestPixelZeroZero(ResNormal)) then
                 RemplacerPixelParTransparent(ResNormal,ResTrans);
 
           if FileExists(ResTrans) then
@@ -508,6 +513,20 @@ Function CheminMetierImage(CodeMetier: String): String;
   end;
 
 // Dossier declare par un METIER, chaine vide s'il n'en declare pas.
+// V1 : cout d'entree en EP d'un niveau de carriere magique, 0 si la fiche n'en declare pas.
+Function CoutEntreeMetier(CodeMetier: String): Integer;
+  var
+    PMetier:  StructureMetier;
+  begin
+    Result := 0;
+    for PMetier in ListMetier do
+      if CompareRechercheValeur(PMetier.CodeMetier, CodeMetier) then
+        begin
+          Result := PMetier.CoutEntree;
+          break;
+        end;
+  end;
+
 Function DossierNiveauMetier(CodeMetier: String): String;
   var
     PMetier:  StructureMetier;

@@ -1,0 +1,2773 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"CGRK"</CODE_BOOK>
+<BOOK>"BOOK CODEX GREENSKINS"</BOOK>
+<BOOKNAME>"CODEX GREENSKINS - WFRP2 RULES - JACKDAYS"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"This document is completely unofficial and in no way endorsed by Games Workshop Limited. Warhammer Fantasy Roleplay, the Warhammer Fantasy Roleplay logo, WFRP, Chaos, the Chaos device, the Chaos logo, Citadel, Citadel Device, Darkblade, 'Eavy Metal, Forge World, Games Workshop, Games Workshop logo, Golden Demon, Great Unclean One, GW, the Hammer of Sigmar logo, Horned Rat logo, Keeper of Secrets, Khemri, Khorne, the Khorne logo, Lord of Change, Nurgle, the Nurgle logo, Skaven, the Skaven symbol device, Slaanesh, the Slaanesh logo, Tomb Kings, Tzeentch, the Tzeentch logo, Warhammer, Warhammer World logo, White Dwarf, the White Dwarf logo, and all associated marks, names, races, race insignia, characters, vehicles, locations, units, artefacts, illustrations and images from the Warhammer World are either ®, TM and/or © Copyright Games Workshop Ltd 2000-2014, variably registered in the UK and other countries around the World. Used"</DISCLAIMER>
+<DATA_TALENT>
+<Talent id="CGRK-T_ANIMOSITY">
+<Description language="ENGLISH">"Animosity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"35"</Page>
+</Talent>
+<Talent id="CGRK-T_AMPHIBIOUS">
+<Description language="ENGLISH">"Amphibious"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"35"</Page>
+</Talent>
+<Talent id="CGRK-T_BIG_UNS_SIZE_MATTERS">
+<Description language="ENGLISH">"Big 'Uns - Size Matters"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"35"</Page>
+</Talent>
+<Talent id="CGRK-T_DWARFEN_HATRED">
+<Description language="ENGLISH">"Dwarfen Hatred"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"35"</Page>
+</Talent>
+<Talent id="CGRK-T_ELVESES_IS_SCARY">
+<Description language="ENGLISH">"Elveses is Scary"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"35"</Page>
+</Talent>
+<Talent id="CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS">
+<Description language="ENGLISH">"Greenskin Resistance to Chaos"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"36"</Page>
+</Talent>
+<Talent id="CGRK-T_HATE_SUN">
+<Description language="ENGLISH">"Hate Sun"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"36"</Page>
+</Talent>
+<Talent id="CGRK-T_IRON_SKIN">
+<Description language="ENGLISH">"Iron Skin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"36"</Page>
+</Talent>
+<Talent id="CGRK-T_QUELL_ANIMOSITY">
+<Description language="ENGLISH">"Quell Animosity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"36"</Page>
+</Talent>
+<Talent id="CGRK-T_RESISTANCE_TO_COLD">
+<Description language="ENGLISH">"Resistance to Cold"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"36"</Page>
+</Talent>
+<Talent id="CGRK-T_RESISTANCE_TO_FIRE">
+<Description language="ENGLISH">"Resistance to Fire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"36"</Page>
+</Talent>
+<Talent id="CGRK-T_SPIT_FIRE">
+<Description language="ENGLISH">"Spit Fire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"36"</Page>
+</Talent>
+<Talent id="CGRK-T_SWIMMER">
+<Description language="ENGLISH">"Swimmer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"36"</Page>
+</Talent>
+<Talent id="CGRK-T_WAAAGH">
+<Description language="ENGLISH">"Waaagh!"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"36"</Page>
+</Talent>
+<Talent id="CGRK-T_WATERBIRTH">
+<Description language="ENGLISH">"Waterbirth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"37"</Page>
+</Talent>
+<Talent id="CGRK-T_VERY_SMALL_ATTACK">
+<Description language="ENGLISH">"Very Small Attack"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"37"</Page>
+</Talent>
+<Talent id="CGRK-T_DA_BOSS">
+<Description language="ENGLISH">"Da Boss"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"56"</Page>
+</Talent>
+<Talent id="CGRK-T_DA_ENEMY">
+<Description language="ENGLISH">"Da Enemy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"56"</Page>
+</Talent>
+<Talent id="CGRK-T_DEADLY_WHIRLWIND">
+<Description language="ENGLISH">"Deadly Whirlwind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"56"</Page>
+</Talent>
+<Talent id="CGRK-T_GREEN_SPARK">
+<Description language="ENGLISH">"Green Spark"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"56"</Page>
+</Talent>
+<Talent id="CGRK-T_GREENSKIN_DAREDEVIL">
+<Description language="ENGLISH">"Greenskin Daredevil"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"56"</Page>
+</Talent>
+<Talent id="CGRK-T_GREENSKIN_SURGERY">
+<Description language="ENGLISH">"Greenskin Surgery"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"56"</Page>
+</Talent>
+<Talent id="CGRK-T_WAAAGH_LORE__*">
+<SpellMode>"AUTO"</SpellMode>
+<Description language="ENGLISH">"Waaagh! Lore"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"14"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_SPECIE>
+<Specie id="CGRK-RACE_SNOTLINGS">
+<Description language="ENGLISH">"Snotlings"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CGRK-SPECIE_SNOTLING"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+5"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+0"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+0"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+5"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+0"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+0"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+0"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"3"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 3; 4-6: 4; 7-9: 5; 10: 6"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 0; 5-7: 1; 8-9: 2; 10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS"</Skill>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_SWIM"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SILENT_MOVE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE/RULES-COMP_SPEAK_LANGUAGE_SNOTGOB"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_FLEE"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_ROVER/RULES-T_TUNNEL_RAT"</Talent>
+<Talent>"CGRK-T_ANIMOSITY"</Talent>
+<Talent>"CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"RULES-T_FEARLESS"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"CGRK-T_WAAAGH"</Talent>
+<Talent>"CGRK-T_VERY_SMALL_ATTACK"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"10"</Page>
+</Specie>
+<Specie id="CGRK-RACE_BLOOD_GNOBLAR">
+<Description language="ENGLISH">"Blood-Gnoblar"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CGRK-SPECIE_GNOBLAR"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+5"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+5"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 5; 4-6: 6; 7-9: 7; 10: 8"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 0; 5-9: 1; 10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS"</Skill>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+<Skill>"RULES-COMP_FOLLOW_TRAIL"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_RIDE"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SET_TRAP"</Skill>
+<Skill>"RULES-COMP_SILENT_MOVE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE/RULES-COMP_SPEAK_LANGUAGE_GHAZKAH"</Skill>
+<Skill>"RULES-COMP_TORTURE"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_ACUTE_HEARING"</Talent>
+<Talent>"RULES-T_LIGHTNING_REFLEXES"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"CGRK-T_ANIMOSITY"</Talent>
+<Talent>"CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"CGRK-T_WAAAGH"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"9"</Page>
+</Specie>
+<Specie id="CGRK-RACE_BOGLARS">
+<Description language="ENGLISH">"Boglars"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CGRK-SPECIE_GNOBLAR"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+5"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+5"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 5; 4-6: 6; 7-9: 7; 10: 8"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 0; 5-9: 1; 10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS"</Skill>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SILENT_MOVE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE/RULES-COMP_SPEAK_LANGUAGE_GHAZKAH"</Skill>
+<Skill>"RULES-COMP_SWIM"</Skill>
+<Skill>"RULES-COMP_TORTURE"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_FLEE"</Talent>
+<Talent>"RULES-T_LIGHTNING_REFLEXES"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_ROVER"</Talent>
+<Talent>"CGRK-T_AMPHIBIOUS"</Talent>
+<Talent>"CGRK-T_ANIMOSITY"</Talent>
+<Talent>"CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"CGRK-T_HATE_SUN"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"CGRK-T_SWIMMER"</Talent>
+<Talent>"CGRK-T_WAAAGH"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"9"</Page>
+</Specie>
+<Specie id="CGRK-RACE_GNOBLAR">
+<Description language="ENGLISH">"Gnoblar"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CGRK-SPECIE_GNOBLAR"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+5"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+5"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 5; 4-6: 6; 7-9: 7; 10: 8"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 0; 5-9: 1; 10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS"</Skill>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+<Skill>"RULES-COMP_FOLLOW_TRAIL"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_RIDE/RULES-COMP_SWIM"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SILENT_MOVE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE/RULES-COMP_SPEAK_LANGUAGE_GHAZKAH"</Skill>
+<Skill>"RULES-COMP_TORTURE"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_FLEE"</Talent>
+<Talent>"RULES-T_LIGHTNING_REFLEXES"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_ROVER"</Talent>
+<Talent>"CGRK-T_ANIMOSITY"</Talent>
+<Talent>"CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"CGRK-T_WAAAGH"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"9"</Page>
+</Specie>
+<Specie id="CGRK-RACE_TOAD_GNOBLARS">
+<Description language="ENGLISH">"Toad-Gnoblars"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CGRK-SPECIE_GNOBLAR"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+5"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+5"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 5; 4-6: 6; 7-9: 7; 10: 8"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 0; 5-9: 1; 10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS"</Skill>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SILENT_MOVE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE/RULES-COMP_SPEAK_LANGUAGE_GHAZKAH"</Skill>
+<Skill>"RULES-COMP_SWIM"</Skill>
+<Skill>"RULES-COMP_TORTURE"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_FLEE"</Talent>
+<Talent>"RULES-T_LIGHTNING_REFLEXES"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"CGRK-T_AMPHIBIOUS"</Talent>
+<Talent>"CGRK-T_ANIMOSITY"</Talent>
+<Talent>"CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"CGRK-T_HATE_SUN"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"CGRK-T_SWIMMER"</Talent>
+<Talent>"CGRK-T_WAAAGH"</Talent>
+<Talent>"CGRK-T_WATERBIRTH"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"10"</Page>
+</Specie>
+<Specie id="CGRK-RACE_FIRE_KOBOLDS">
+<Description language="ENGLISH">"Fire Kobolds"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CGRK-SPECIE_GOBLIN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 7; 4-6: 8; 7-9: 9; 10: 10"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-7: 0; 8-9: 1; 10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS"</Skill>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SILENT_MOVE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE/RULES-COMP_SPEAK_LANGUAGE_GHAZKAH"</Skill>
+<Skill>"RULES-COMP_SWIM"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_FRENZY"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_VERY_STRONG"</Talent>
+<Talent>"CGRK-T_ANIMOSITY"</Talent>
+<Talent>"CGRK-T_ELVESES_IS_SCARY"</Talent>
+<Talent>"CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"CGRK-T_RESISTANCE_TO_FIRE"</Talent>
+<Talent>"CGRK-T_SPIT_FIRE"</Talent>
+<Talent>"CGRK-T_WAAAGH"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"6"</Page>
+</Specie>
+<Specie id="CGRK-RACE_FOREST_GOBLINS">
+<Description language="ENGLISH">"Forest Goblins"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CGRK-SPECIE_GOBLIN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 7; 4-6: 8; 7-9: 9; 10: 10"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-7: 0; 8-9: 1; 10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS"</Skill>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_PREPARE_POISON"</Skill>
+<Skill>"RULES-COMP_RIDE"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SILENT_MOVE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE/RULES-COMP_SPEAK_LANGUAGE_GHAZKAH"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_FRENZY"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_ROVER"</Talent>
+<Talent>"CGRK-T_ANIMOSITY"</Talent>
+<Talent>"CGRK-T_ELVESES_IS_SCARY"</Talent>
+<Talent>"CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_POISON"</Talent>
+<Talent>"CGRK-T_WAAAGH"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"6"</Page>
+</Specie>
+<Specie id="CGRK-RACE_FROST_GOBLINS">
+<Description language="ENGLISH">"Frost Goblins"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CGRK-SPECIE_GOBLIN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 7; 4-6: 8; 7-9: 9; 10: 10"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-7: 0; 8-9: 1; 10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS"</Skill>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_RIDE"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SILENT_MOVE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE/RULES-COMP_SPEAK_LANGUAGE_GHAZKAH"</Skill>
+<Skill>"RULES-COMP_SWIM"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_COOLHEADED"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_ROVER/RULES-T_TUNNEL_RAT"</Talent>
+<Talent>"CGRK-T_ANIMOSITY"</Talent>
+<Talent>"CGRK-T_ELVESES_IS_SCARY"</Talent>
+<Talent>"CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"CGRK-T_RESISTANCE_TO_COLD"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"CGRK-T_WAAAGH"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"6"</Page>
+</Specie>
+<Specie id="CGRK-RACE_GOBLINS">
+<Description language="ENGLISH">"Goblins"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CGRK-SPECIE_GOBLIN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 7; 4-6: 8; 7-9: 9; 10: 10"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-7: 0; 8-9: 1; 10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS"</Skill>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_RIDE"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SILENT_MOVE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE/RULES-COMP_SPEAK_LANGUAGE_GHAZKAH"</Skill>
+<Skill>"RULES-COMP_SWIM"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_COOLHEADED"</Talent>
+<Talent>"RULES-T_FLEE"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_ROVER/RULES-T_TUNNEL_RAT"</Talent>
+<Talent>"CGRK-T_ANIMOSITY"</Talent>
+<Talent>"CGRK-T_ELVESES_IS_SCARY"</Talent>
+<Talent>"CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"CGRK-T_WAAAGH"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"7"</Page>
+</Specie>
+<Specie id="CGRK-RACE_HILL_GOBLINS">
+<Description language="ENGLISH">"Hill Goblins"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CGRK-SPECIE_GOBLIN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 7; 4-6: 8; 7-9: 9; 10: 10"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-7: 0; 8-9: 1; 10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS"</Skill>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_RIDE/RULES-COMP_SWIM"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SILENT_MOVE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE/RULES-COMP_SPEAK_LANGUAGE_GHAZKAH"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_COOLHEADED"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_STREET_FIGHTING"</Talent>
+<Talent>"RULES-T_VERY_RESILIENT"</Talent>
+<Talent>"RULES-T_WRESTLING"</Talent>
+<Talent>"CGRK-T_ANIMOSITY"</Talent>
+<Talent>"CGRK-T_ELVESES_IS_SCARY"</Talent>
+<Talent>"CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"CGRK-T_WAAAGH"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"7"</Page>
+</Specie>
+<Specie id="CGRK-RACE_HOBGOBLINS">
+<Description language="ENGLISH">"Hobgoblins"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CGRK-SPECIE_GOBLIN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 7; 4-6: 8; 7-9: 9; 10: 10"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-7: 0; 8-9: 1; 10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS"</Skill>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_PREPARE_POISON"</Skill>
+<Skill>"RULES-COMP_RIDE"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE/RULES-COMP_SPEAK_LANGUAGE_HARGHAZHAKH"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_HARDY"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_VERY_STRONG"</Talent>
+<Talent>"RULES-T_WARRIOR_BORN"</Talent>
+<Talent>"CGRK-T_ANIMOSITY"</Talent>
+<Talent>"CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"CGRK-T_WAAAGH"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"7"</Page>
+</Specie>
+<Specie id="CGRK-RACE_JUNGLE_KOBOLDS">
+<Description language="ENGLISH">"Jungle Kobolds"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CGRK-SPECIE_GOBLIN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 7; 4-6: 8; 7-9: 9; 10: 10"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-7: 0; 8-9: 1; 10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS"</Skill>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SILENT_MOVE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE/RULES-COMP_SPEAK_LANGUAGE_GHAZKAH"</Skill>
+<Skill>"RULES-COMP_SWIM"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"TOC-T_EXPERT_CLIMBER"</Talent>
+<Talent>"RULES-T_FRENZY"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_ROVER"</Talent>
+<Talent>"RULES-T_VERY_STRONG"</Talent>
+<Talent>"CGRK-T_ANIMOSITY"</Talent>
+<Talent>"CGRK-T_ELVESES_IS_SCARY"</Talent>
+<Talent>"CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"CGRK-T_WAAAGH"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"8"</Page>
+</Specie>
+<Specie id="CGRK-RACE_KOBOLDS">
+<Description language="ENGLISH">"Kobolds"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CGRK-SPECIE_GOBLIN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 7; 4-6: 8; 7-9: 9; 10: 10"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-7: 0; 8-9: 1; 10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS"</Skill>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SILENT_MOVE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE/RULES-COMP_SPEAK_LANGUAGE_GHAZKAH"</Skill>
+<Skill>"RULES-COMP_SWIM"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_FRENZY"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_ROVER/RULES-T_TUNNEL_RAT"</Talent>
+<Talent>"RULES-T_VERY_RESILIENT"</Talent>
+<Talent>"RULES-T_VERY_STRONG"</Talent>
+<Talent>"CGRK-T_ANIMOSITY"</Talent>
+<Talent>"CGRK-T_ELVESES_IS_SCARY"</Talent>
+<Talent>"CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"CGRK-T_WAAAGH"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"8"</Page>
+</Specie>
+<Specie id="CGRK-RACE_NIGHT_GOBLINS">
+<Description language="ENGLISH">"Night Goblins"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CGRK-SPECIE_GOBLIN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 7; 4-6: 8; 7-9: 9; 10: 10"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-7: 0; 8-9: 1; 10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS"</Skill>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_RIDE"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SILENT_MOVE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE/RULES-COMP_SPEAK_LANGUAGE_GHAZKAH"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_LIGHTNING_REFLEXES"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_SPECIALIST_WEAPON_GROUP__ENTANGLING"</Talent>
+<Talent>"RULES-T_TUNNEL_RAT"</Talent>
+<Talent>"CGRK-T_ANIMOSITY"</Talent>
+<Talent>"CGRK-T_DWARFEN_HATRED"</Talent>
+<Talent>"CGRK-T_ELVESES_IS_SCARY"</Talent>
+<Talent>"CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"CGRK-T_HATE_SUN"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"CGRK-T_WAAAGH"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"8"</Page>
+</Specie>
+<Specie id="CGRK-RACE_TROGLAGOB">
+<Description language="ENGLISH">"Troglagob"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CGRK-SPECIE_GOBLIN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 7; 4-6: 8; 7-9: 9; 10: 10"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-7: 0; 8-9: 1; 10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS"</Skill>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SILENT_MOVE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE/RULES-COMP_SPEAK_LANGUAGE_GHAZKAH"</Skill>
+<Skill>"RULES-COMP_SWIM"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_COOLHEADED"</Talent>
+<Talent>"RULES-T_FLEE"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_ROVER"</Talent>
+<Talent>"CGRK-T_AMPHIBIOUS"</Talent>
+<Talent>"CGRK-T_ANIMOSITY"</Talent>
+<Talent>"CGRK-T_ELVESES_IS_SCARY"</Talent>
+<Talent>"CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"CGRK-T_SWIMMER"</Talent>
+<Talent>"CGRK-T_WAAAGH"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"9"</Page>
+</Specie>
+<Specie id="CGRK-RACE_COMMON_ORCS">
+<Description language="ENGLISH">"Common Orcs"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CGRK-SPECIE_ORC"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 11; 4-6: 12; 7-9: 13; 10: 14"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-9: 0; 10: 1"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS"</Skill>
+<Skill>"RULES-COMP_INTIMIDATE"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_RIDE/RULES-COMP_SWIM"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE/RULES-COMP_SPEAK_LANGUAGE_ORRAKH"</Skill>
+<Skill>"RULES-COMP_TORTURE"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_MENACING"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_SPECIALIST_WEAPON_GROUP__CHOPPA"</Talent>
+<Talent>"RULES-T_STOUT_HEARTED"</Talent>
+<Talent>"RULES-T_STREET_FIGHTING"</Talent>
+<Talent>"RULES-T_STRIKE_MIGHTY_BLOW"</Talent>
+<Talent>"RULES-T_WRESTLING"</Talent>
+<Talent>"CGRK-T_ANIMOSITY"</Talent>
+<Talent>"CGRK-T_BIG_UNS_SIZE_MATTERS"</Talent>
+<Talent>"CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"CGRK-T_WAAAGH"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"4"</Page>
+</Specie>
+<Specie id="CGRK-RACE_SAVAGE_ORCS">
+<Description language="ENGLISH">"Savage Orcs"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CGRK-SPECIE_ORC"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 11; 4-6: 12; 7-9: 13; 10: 14"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-9: 0; 10: 1"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS"</Skill>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+<Skill>"RULES-COMP_INTIMIDATE"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_RIDE/RULES-COMP_SWIM"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE/RULES-COMP_SPEAK_LANGUAGE_ORRAKH_PRIMITIVE_VERSION"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_FRENZY"</Talent>
+<Talent>"RULES-T_MENACING"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_ROVER"</Talent>
+<Talent>"RULES-T_SPECIALIST_WEAPON_GROUP__CHOPPA"</Talent>
+<Talent>"RULES-T_STOUT_HEARTED"</Talent>
+<Talent>"RULES-T_STRIKE_MIGHTY_BLOW"</Talent>
+<Talent>"CGRK-T_ANIMOSITY"</Talent>
+<Talent>"CGRK-T_BIG_UNS_SIZE_MATTERS"</Talent>
+<Talent>"CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"CGRK-T_WAAAGH"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"4"</Page>
+</Specie>
+<Specie id="CGRK-RACE_SWAMP_ORCS">
+<Description language="ENGLISH">"Swamp Orcs"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CGRK-SPECIE_ORC"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 11; 4-6: 12; 7-9: 13; 10: 14"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-9: 0; 10: 1"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS"</Skill>
+<Skill>"RULES-COMP_INTIMIDATE"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_ROW"</Skill>
+<Skill>"RULES-COMP_SWIM"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE/RULES-COMP_SPEAK_LANGUAGE_ORRAKH"</Skill>
+<Skill>"RULES-COMP_TORTURE"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_FRENZY"</Talent>
+<Talent>"RULES-T_MENACING"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_SPECIALIST_WEAPON_GROUP__CHOPPA"</Talent>
+<Talent>"RULES-T_STOUT_HEARTED"</Talent>
+<Talent>"RULES-T_STREET_FIGHTING"</Talent>
+<Talent>"RULES-T_STRIKE_MIGHTY_BLOW"</Talent>
+<Talent>"CGRK-T_ANIMOSITY"</Talent>
+<Talent>"CGRK-T_BIG_UNS_SIZE_MATTERS"</Talent>
+<Talent>"CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"CGRK-T_WAAAGH"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"5"</Page>
+</Specie>
+<Specie id="CGRK-RACE_WHITE_ORCS">
+<Description language="ENGLISH">"White Orcs"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CGRK-SPECIE_ORC"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 11; 4-6: 12; 7-9: 13; 10: 14"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-9: 0; 10: 1"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS"</Skill>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+<Skill>"RULES-COMP_INTIMIDATE"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_RIDE"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE/RULES-COMP_SPEAK_LANGUAGE_ORRAKH_PRIMITIVE_VERSION"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_FRENZY"</Talent>
+<Talent>"RULES-T_MENACING"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_ROVER"</Talent>
+<Talent>"RULES-T_SPECIALIST_WEAPON_GROUP__CHOPPA"</Talent>
+<Talent>"RULES-T_STOUT_HEARTED"</Talent>
+<Talent>"CGRK-T_ANIMOSITY"</Talent>
+<Talent>"CGRK-T_BIG_UNS_SIZE_MATTERS"</Talent>
+<Talent>"CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"CGRK-T_RESISTANCE_TO_COLD"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"CGRK-T_WAAAGH"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"5"</Page>
+</Specie>
+<Specie id="CGRK-RACE_BLACK_ORCS">
+<Description language="ENGLISH">"Black Orcs"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CGRK-SPECIE_BLACK_ORC"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+35"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+35"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+35"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 12; 4-6: 13; 7-9: 14; 10: 15"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-10: 0"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS"</Skill>
+<Skill>"RULES-COMP_INTIMIDATE"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_RIDE/RULES-COMP_SWIM"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE/RULES-COMP_SPEAK_LANGUAGE_ORRAKH"</Skill>
+<Skill>"RULES-COMP_TORTURE"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_MENACING"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_SPECIALIST_WEAPON_GROUP__CHOPPA"</Talent>
+<Talent>"RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED"</Talent>
+<Talent>"RULES-T_STOUT_HEARTED"</Talent>
+<Talent>"RULES-T_STREET_FIGHTING"</Talent>
+<Talent>"RULES-T_STRIKE_MIGHTY_BLOW"</Talent>
+<Talent>"RULES-T_STRIKE_TO_INJURE"</Talent>
+<Talent>"RULES-T_STRIKE_TO_STUN"</Talent>
+<Talent>"RULES-T_WRESTLING"</Talent>
+<Talent>"CGRK-T_BIG_UNS_SIZE_MATTERS"</Talent>
+<Talent>"CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"CGRK-T_QUELL_ANIMOSITY"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"CGRK-T_WAAAGH"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"3"</Page>
+</Specie>
+<Specie id="CGRK-RACE_IRON_ORCS">
+<Description language="ENGLISH">"Iron Orcs"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"CGRK-SPECIE_BLACK_ORC"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+35"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+35"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+35"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 12; 4-6: 13; 7-9: 14; 10: 15"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-10: 0"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS"</Skill>
+<Skill>"RULES-COMP_INTIMIDATE"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GOBLIN_TONGUE/RULES-COMP_SPEAK_LANGUAGE_ORRAKH"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_FRENZY"</Talent>
+<Talent>"RULES-T_LIGHTNING_REFLEXES"</Talent>
+<Talent>"RULES-T_MENACING"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_SPECIALIST_WEAPON_GROUP__CHOPPA"</Talent>
+<Talent>"RULES-T_STOUT_HEARTED"</Talent>
+<Talent>"RULES-T_STREET_FIGHTING"</Talent>
+<Talent>"RULES-T_STRIKE_MIGHTY_BLOW"</Talent>
+<Talent>"RULES-T_STURDY"</Talent>
+<Talent>"CGRK-T_BIG_UNS_SIZE_MATTERS"</Talent>
+<Talent>"CGRK-T_GREENSKIN_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"CGRK-T_IRON_SKIN"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"CGRK-T_QUELL_ANIMOSITY"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"CGRK-T_WAAAGH"</Talent>
+</SUBCHAPTER_TALENT>
+<Page>"3"</Page>
+</Specie>
+</DATA_SPECIE>
+<DATA_RACE>
+<Race id="CGRK-SPECIE_SNOTLING">
+<Description language="ENGLISH">"Snotling"</Description>
+<Page>"10"</Page>
+</Race>
+<Race id="CGRK-SPECIE_GNOBLAR">
+<Description language="ENGLISH">"Gnoblar"</Description>
+<Page>"9"</Page>
+</Race>
+<Race id="CGRK-SPECIE_GOBLIN">
+<Description language="ENGLISH">"Goblin"</Description>
+<Page>"6"</Page>
+</Race>
+<Race id="CGRK-SPECIE_ORC">
+<Description language="ENGLISH">"Orc"</Description>
+<Page>"4"</Page>
+</Race>
+<Race id="CGRK-SPECIE_BLACK_ORC">
+<Description language="ENGLISH">"Black Orc"</Description>
+<Page>"3"</Page>
+</Race>
+</DATA_RACE>
+<DATA_CAREER>
+<Career id="CGRK-CARE_ARRER_BOY">
+<Description language="ENGLISH">"Arrer Boy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +15%, S +10%, T +5%, Ag +10%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Dodge Blow, Intimidate, Perception, Trade (Bowyer), Trade (Fletcher)"</Skills>
+<Talents>"Hardy, Mighty Shot, Rapid Reload, Specialist Weapon Group (Throwing), Specialist Weapon Group (choose one: Blowpipe, Entangling or Sling)"</Talents>
+<Trappings>"Medium Armour (one piece of mail, two pieces of leather), hand weapon, Javelin, Bow with 10 Arrows (or more Javelins or Blowpipe or Sling with stones)"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_BOWYER">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_FLETCHER">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_HARDY">"1"</Talent>
+<Talent name="RULES-T_MIGHTY_SHOT">"1"</Talent>
+<Talent name="RULES-T_RAPID_RELOAD">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__THROWING">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__CHOOSE_ONE_BLOWPIPE/RULES-T_SPECIALIST_WEAPON_GROUP__ENTANGLING/RULES-T_SPECIALIST_WEAPON_GROUP__SLING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"CGRK 38"</Source>
+</Career>
+<Career id="CGRK-CARE_BOATBOY">
+<Description language="ENGLISH">"Boatboy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +5%, S +10%, Ag +10%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Common Knowledge (any one), Consume Alcohol, Dodge Blow, Navigation, Outdoor Survival, Perception, Row, Sail, Scale Sheer Surfaces, Swim"</Skills>
+<Talents>"Seasoned Traveller"</Talents>
+<Trappings>"Light Armour (Leather Jerkin), hand weapon, Bottle of some-Greenskin-brew"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_ROW">"1"</Skill>
+<Skill name="RULES-COMP_SAIL">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SWIM">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SEASONED_TRAVELLER">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"CGRK 39"</Source>
+</Career>
+<Career id="CGRK-CARE_BREWBOY">
+<Description language="ENGLISH">"Brewboy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, S +5%, T +10%, Ag +5%, Int +5%, WP +5%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Consume Alcohol, Outdoor Survival, Perception, Prepare Poison, Search, Trade (Apothecary) or Trade (Brewer), Trade (Cook), Trade (Herbalist)"</Skills>
+<Talents>"Hardy, Resistance to Poison"</Talents>
+<Trappings>"Leather apron, crudely made pots and pans, hand weapon (meat cleaver), devices for brewing"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISON">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_APOTHECARY/RULES-COMP_TRADE_BREWER">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_COOK">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_HERBALIST">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_HARDY">"1"</Talent>
+<Talent name="RULES-T_RESISTANCE_TO_POISON">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"CGRK 40"</Source>
+</Career>
+<Career id="CGRK-CARE_CRAFFTER">
+<Description language="ENGLISH">"Craffter"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, S +10%, T +5%, Ag +10%, Int +5%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Drive, Evaluate, Perception, Search, Set Trap, Trade (Carpenter), Trade (Smith), Trade (any one)"</Skills>
+<Talents>"Hardy, Savvy"</Talents>
+<Trappings>"Medium Armour (one piece of mail, two pieces of leather), hand weapon, Javelin, Bow with 10 Arrows (or more Javelins or Blowpipe or Sling with stones)"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_DRIVE">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SET_TRAP">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_CARPENTER">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_SMITH">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_HARDY">"1"</Talent>
+<Talent name="RULES-T_SAVVY">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"CGRK 41"</Source>
+</Career>
+<Career id="CGRK-CARE_DRIVA_AN_RIDA">
+<Description language="ENGLISH">"Driva an Rida"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +10%, S +5%, Ag +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Animal Care, Animal Training, Charm Animal, Dodge Blow, Drive or Ride, Outdoor Survival, Silent Move"</Skills>
+<Talents>"Combat Driver or Greenskin Daredevil, Specialist Weapon Group (Throwing), Specialist Weapon Group (choose one: Entangling, Flail, Sling, Two-handed)"</Talents>
+<Trappings>"Medium Armour (one piece of mail, two pieces of leather), Spear, Javelin, Bow with 10 Arrows (or more Javelins or Blowpipe or Sling with stones)"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM_ANIMAL">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_DRIVE/RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="JCE-T_COMBAT_DRIVER/CGRK-T_GREENSKIN_DAREDEVIL">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__THROWING">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__CHOOSE_ONE_ENTANGLING/RULES-T_SPECIALIST_WEAPON_GROUP__FLAIL/RULES-T_SPECIALIST_WEAPON_GROUP__SLING/RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"CGRK 42"</Source>
+</Career>
+<Career id="CGRK-CARE_DOK">
+<Description language="ENGLISH">"Dok"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, T +10%, Ag +5%, Int +10%, WP +10%, Fel +5%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Common Knowledge (Greenskins), Consume Alcohol, Heal, Perception, Search, Torture, Trade (Apothecary)"</Skills>
+<Talents>"Greenskin Surgery, Savvy"</Talents>
+<Trappings>"Leather apron, basic medical instruments (blades), herbs, pestle and mortar"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS">"1"</Skill>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_TORTURE">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_APOTHECARY">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="CGRK-T_GREENSKIN_SURGERY">"1"</Talent>
+<Talent name="RULES-T_SAVVY">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"CGRK 44"</Source>
+</Career>
+<Career id="CGRK-CARE_FANATIC">
+<Description language="ENGLISH">"Fanatic"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +5%, S +10%, T +5%, Ag +10%, WP +5%"</MainProfile>
+<SecondaryProfile>"W +2, M +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_M">"1"</Advance>
+</Advances>
+<Skills>"Consume Alcohol, Dodge Blow, Intimidate"</Skills>
+<Talents>"Deadly Whirlwind, Frenzy, Hardy, Specialist Weapon Group (Flail or Two-handed), Stout-hearted"</Talents>
+<Trappings>"Light Armour (one piece of leather), Flail or Two-handed weapon, narcotics or fungusbrew"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="CGRK-T_DEADLY_WHIRLWIND">"1"</Talent>
+<Talent name="RULES-T_FRENZY">"1"</Talent>
+<Talent name="RULES-T_HARDY">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__FLAIL/RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED">"1"</Talent>
+<Talent name="RULES-T_STOUT_HEARTED">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"CGRK 44"</Source>
+</Career>
+<Career id="CGRK-CARE_GREENSKIN_BRUTE">
+<Description language="ENGLISH">"Greenskin Brute"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +5%, S +10%, T +10%, Ag +5%"</MainProfile>
+<SecondaryProfile>"A +1, W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Consume Alcohol, Dodge Blow, Intimidate"</Skills>
+<Talents>"Hardy, Street Fighting, Strike Mighty Blow, Strike to Injure, Specialist Weapon Group (Flail or Two-handed)"</Talents>
+<Trappings>"Medium Armour (one piece of mail, two pieces of leather), hand weapon or Choppa, Shield or Flail or Two-handed weapon"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_HARDY">"1"</Talent>
+<Talent name="RULES-T_STREET_FIGHTING">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__FLAIL/RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"CGRK 45"</Source>
+</Career>
+<Career id="CGRK-CARE_GREENSKIN_SHAMAN">
+<Description language="ENGLISH">"Greenskin Shaman"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"T +5%, Ag +5%, Int +10%, WP +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +2, Mag +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_Mag">"1"</Advance>
+</Advances>
+<Skills>"Channelling, Charm, Common Knowledge (Greenskins), Heal, Magical Sense, Performer (Dancer), Speak Language (any one), Trade (Herbalist)"</Skills>
+<Talents>"Petty Magic (Waaagh!), Public Speaking"</Talents>
+<Trappings>"Simply robes, Staff, symbols"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_DANCER">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_HERBALIST">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_PETTY_MAGIC__WAAAGH">"1"</Talent>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"CGRK 46"</Source>
+</Career>
+<Career id="CGRK-CARE_GREENSKIN_SNEAK">
+<Description language="ENGLISH">"Greenskin Sneak"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, T +5%, Ag +5%, Int +5%, WP +5%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Concealment, Follow Trail, Navigation, Outdoor Survival, Perception, Pick Locks or Sleight of Hand, Scale Sheer Surfaces, Set Trap, Shadowing or Swim, Silent Move, Search or Gamble"</Skills>
+<Talents>"Specialist Weapon Group (choose one: Entangling, Sling, Throwing)"</Talents>
+<Trappings>"Light Armour (one piece of leather), hand weapon, Javelin, Bow with 10 Arrows (or more Javelins or Web or Sling with stones)"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_PICK_LOCK/RULES-COMP_SLEIGHT_OF_HAND">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SET_TRAP">"1"</Skill>
+<Skill name="RULES-COMP_SHADOWING/RULES-COMP_SWIM">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH/RULES-COMP_GAMBLE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__CHOOSE_ONE_ENTANGLING/RULES-T_SPECIALIST_WEAPON_GROUP__SLING/RULES-T_SPECIALIST_WEAPON_GROUP__THROWING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"CGRK 47"</Source>
+</Career>
+<Career id="CGRK-CARE_GREENSKIN_TUNNEL_RUNNER">
+<Description language="ENGLISH">"Greenskin Tunnel Runner"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, T +10%, Ag +5%, Int +5%, WP +5%"</MainProfile>
+<SecondaryProfile>"W +2, M +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_M">"1"</Advance>
+</Advances>
+<Skills>"Concealment, Dodge Blow, Navigation, Outdoor Survival, Perception, Silent Move, Secret Language (Drumming Code), Swim"</Skills>
+<Talents>"Flee!, Orientation"</Talents>
+<Trappings>"Light Armour (one piece of leather), hand weapon, Lucky charm, "Pretty" good boots"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_DRUMMING_CODE">"1"</Skill>
+<Skill name="RULES-COMP_SWIM">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_FLEE">"1"</Talent>
+<Talent name="RULES-T_ORIENTATION">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"CGRK 47"</Source>
+</Career>
+<Career id="CGRK-CARE_WALL_DRUMMER">
+<Description language="ENGLISH">"Wall Drummer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, T +5%, Ag +5%, Int +5%, WP +5%, Fel +5%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Concealment, Consume Alcohol, Follow Trail, Navigation, Outdoor Survival, Perception, Performer (Musician), Performer (any one) or Search, Secret Language (Drumming Code)"</Skills>
+<Talents>"Acute Hearing"</Talents>
+<Trappings>"Light Armour (one piece of leather), hand weapon, Javelin, Bow with 10 Arrows (or more Javelins or Web or Sling with stones)"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_MUSICIAN">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_*/RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_DRUMMING_CODE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ACUTE_HEARING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"CGRK 48"</Source>
+</Career>
+<Career id="CGRK-CARE_ARRER_BOY_BOSS">
+<Description language="ENGLISH">"Arrer Boy Boss"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +30%, S +15%, T +15%, Ag +20%, Int +5%, WP +10%, Fel +5%"</MainProfile>
+<SecondaryProfile>"A +1, W +5"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"30"</Advance>
+<Advance name="RULES-ATTR_S">"15"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"5"</Advance>
+</Advances>
+<Skills>"Dodge Blow, Intimidate, Outdoor Survival, Perception, Search, Speak Language (any one), Trade (Bowyer), Trade (Fletcher)"</Skills>
+<Talents>"Menacing, Sharpshooter, Sure Shot"</Talents>
+<Trappings>"Medium Armour (Full Mail Armour), hand weapon, Javelin, Bow with 10 Arrows (or more Javelins or Blowpipe or Sling with stones)"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_BOWYER">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_FLETCHER">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_MENACING">"1"</Talent>
+<Talent name="RULES-T_SHARPSHOOTER">"1"</Talent>
+<Talent name="RULES-T_SURE_SHOT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CGRK 49"</Source>
+</Career>
+<Career id="CGRK-CARE_BEAST_ERDER">
+<Description language="ENGLISH">"Beast' Erder"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +15%, S +15%, T +15%, Ag +15%, Int +10%, WP +15%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"15"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Animal Care, Animal Training, Charm Animal, Command, Dodge Blow, Drive or Ride, Follow Trail, Outdoor Survival, Perception, Scale Sheer Surfaces, Set Trap, Silent Move"</Skills>
+<Talents>"Beastmaster"</Talents>
+<Trappings>"Huge robes, mangless, trained beast"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM_ANIMAL">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_DRIVE/RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SET_TRAP">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="JCE-T_BEASTMASTER">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CGRK 49"</Source>
+</Career>
+<Career id="CGRK-CARE_BOARDIN_BOY">
+<Description language="ENGLISH">"Boardin' Boy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, BS +20%, S +20%, T +20%, Ag +15%, Int +5%, WP +10%, Fel +5%"</MainProfile>
+<SecondaryProfile>"A +1, W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"20"</Advance>
+<Advance name="RULES-ATTR_T">"20"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Common Knowledge (any one), Consume Alcohol, Dodge Blow, Navigation, Outdoor Survival, Perception, Row, Sail, Scale Sheer Surfaces, Speak Language (any one), Swim"</Skills>
+<Talents>"Menacing, Street Fighting, Strike Mighty Blow, Strike to Injure, Strike to Stun, Specialist Weapon Group (Throwing)"</Talents>
+<Trappings>"Light Armour (Leather Jerkin), hand weapon, Bottle of grog, Harpoon ('Arpoonz), "fancy" clothing"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_ROW">"1"</Skill>
+<Skill name="RULES-COMP_SAIL">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SWIM">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_MENACING">"1"</Talent>
+<Talent name="RULES-T_STREET_FIGHTING">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_STUN">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__THROWING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CGRK 50"</Source>
+</Career>
+<Career id="CGRK-CARE_ENDJINEER">
+<Description language="ENGLISH">"Endjineer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +15%, S +20%, T +15%, Ag +20%, Int +20%, WP +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"20"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Command, Common Knowledge (any one), Evaluate, Gamble, Perception, Search, Set Trap, Speak Language (any one), Trade (Carpenter), Trade (Smith), Trade (any one)"</Skills>
+<Talents>"Very Resilient"</Talents>
+<Trappings>"Artisans Tools, Crew"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_GAMBLE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SET_TRAP">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_CARPENTER">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_SMITH">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_VERY_RESILIENT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CGRK 50"</Source>
+</Career>
+<Career id="CGRK-CARE_GREENSKIN_GREAT_SHAMAN">
+<Description language="ENGLISH">"Greenskin Great Shaman"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, S +5%, T +10%, Ag +10%, Int +15%, WP +20%, Fel +15%"</MainProfile>
+<SecondaryProfile>"W +4, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Channelling, Charm, Command, Common Knowledge (Greenskins), Heal, Intimidate, Magical Sense, Outdoor Survival, Perception, Performer (Dancer), Performer (Storyteller), Ride or Swim, Speak Language (any one), Trade (Herbalism)"</Skills>
+<Talents>"Master Orator, Waaagh! Lore (The Little Waaagh!) or Waaagh! Lore (The Big Waaagh!)"</Talents>
+<Trappings>"Better robes, Staff, symbols"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_DANCER">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_STORYTELLER">"1"</Skill>
+<Skill name="RULES-COMP_RIDE/RULES-COMP_SWIM">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_HERBALISM">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_MASTER_ORATOR">"1"</Talent>
+<Talent name="CGRK-T_WAAAGH_LORE__THE_LITTLE_WAAAGH/CGRK-T_WAAAGH_LORE__THE_BIG_WAAAGH">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CGRK 51"</Source>
+</Career>
+<Career id="CGRK-CARE_KAPTIN">
+<Description language="ENGLISH">"Kaptin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +25%, BS +20%, S +25%, T +25%, Ag +10%, Int +5%, WP +10%, Fel +15%"</MainProfile>
+<SecondaryProfile>"A +1, W +5"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"25"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"25"</Advance>
+<Advance name="RULES-ATTR_T">"25"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"5"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Strategy/Tactics), Charm, Command, Common Knowledge (any one), Consume Alcohol, Dodge Blow, Navigation, Outdoor Survival, Perception, Row, Sail, Scale Sheer Surfaces, Speak Language (any one), Swim"</Skills>
+<Talents>"Menacing, Public Speaking, Street Fighting, Strike Mighty Blow, Strike to Injure, Strike to Stun, Specialist Weapon Group (Throwing)"</Talents>
+<Trappings>"Medium Armour (Full Mail Armour), hand weapon or Choppa, Ship &amp; crew, "fancy" clothing"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_STRATEGY/RULES-COMP_ACADEMIC_KNOWLEDGE_TACTICS">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_ROW">"1"</Skill>
+<Skill name="RULES-COMP_SAIL">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SWIM">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_MENACING">"1"</Talent>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+<Talent name="RULES-T_STREET_FIGHTING">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_STUN">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__THROWING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CGRK 51"</Source>
+</Career>
+<Career id="CGRK-CARE_KOOK">
+<Description language="ENGLISH">"Kook"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, S +15%, T +20%, Ag +15%, Int +15%, WP +15%, Fel +5%"</MainProfile>
+<SecondaryProfile>"W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"15"</Advance>
+<Advance name="RULES-ATTR_T">"20"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Evaluate, Command, Common Knowledge (any one), Consume Alcohol, Gamble, Outdoor Survival, Perception, Prepare Poison, Search, Trade (Apothecary) or Trade (Brewer), Trade (Cook), Trade (Herbalist)"</Skills>
+<Talents>"Very Resilient"</Talents>
+<Trappings>"Ready products (poisons, herbs)"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+<Skill name="RULES-COMP_GAMBLE">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISON">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_APOTHECARY/RULES-COMP_TRADE_BREWER">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_COOK">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_HERBALIST">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_VERY_RESILIENT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CGRK 52"</Source>
+</Career>
+<Career id="CGRK-CARE_MAD_DOK">
+<Description language="ENGLISH">"Mad Dok"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, S +10%, T +20%, Ag +15%, Int +25%, WP +20%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"20"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"25"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Evaluate, Command, Common Knowledge (Greenskins), Common Knowledge (any one), Consume Alcohol, Heal, Perception, Search, Speak Language (any one), Torture, Trade (Apothecary)"</Skills>
+<Talents>"Strike to Stun, Very Resilient"</Talents>
+<Trappings>"Torture equipment &amp; racks, healing herbs"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TORTURE">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_APOTHECARY">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_STRIKE_TO_STUN">"1"</Talent>
+<Talent name="RULES-T_VERY_RESILIENT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CGRK 52"</Source>
+</Career>
+<Career id="CGRK-CARE_NOB">
+<Description language="ENGLISH">"Nob"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +25%, BS +10%, S +25%, T +25%, Ag +15%, WP +15%, Fel +5%"</MainProfile>
+<SecondaryProfile>"A +1, W +5"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"25"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"25"</Advance>
+<Advance name="RULES-ATTR_T">"25"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"5"</Advance>
+</Advances>
+<Skills>"Consume Alcohol, Dodge Blow, Intimidate, Perception, Speak Language (any one)"</Skills>
+<Talents>"Menacing, Street Fighting, Strike Mighty Blow, Strike to Injure, Strike to Stun, Specialist Weapon Group (Flail or Two-handed), Wrestling"</Talents>
+<Trappings>"Medium Armour (Full Mail Armour), hand weapon or Choppa, Shield or Flail or Two-handed weapon"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_MENACING">"1"</Talent>
+<Talent name="RULES-T_STREET_FIGHTING">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_STUN">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__FLAIL/RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED">"1"</Talent>
+<Talent name="RULES-T_WRESTLING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CGRK 53"</Source>
+</Career>
+<Career id="CGRK-CARE_WARBOSS">
+<Description language="ENGLISH">"Warboss"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +30%, BS +10%, S +30%, T +30%, Ag +10%, Int +5%, WP +10%, Fel +15%"</MainProfile>
+<SecondaryProfile>"A +1, W +6"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"30"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"30"</Advance>
+<Advance name="RULES-ATTR_T">"30"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Strategy/Tactics), Command, Consume Alcohol, Dodge Blow, Intimidate, Perception, Secret Language (Drumming Code), Speak Language (any one)"</Skills>
+<Talents>"Menacing, Street Fighting, Strike Mighty Blow, Strike to Injure, Specialist Weapon Group (Flail or Two-handed), Wrestling"</Talents>
+<Trappings>"Medium Armour (Full Mail Armour), hand weapon or Choppa, Shield or Flail or Two-handed weapon, horde"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_STRATEGY/RULES-COMP_ACADEMIC_KNOWLEDGE_TACTICS">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_DRUMMING_CODE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_MENACING">"1"</Talent>
+<Talent name="RULES-T_STREET_FIGHTING">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__FLAIL/RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED">"1"</Talent>
+<Talent name="RULES-T_WRESTLING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CGRK 53"</Source>
+</Career>
+<Career id="CGRK-CARE_BIG_BOSS">
+<Description language="ENGLISH">"Big Boss"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +40%, BS +20%, S +40%, T +35%, Ag +20%, Int +15%, WP +20%, Fel +25%"</MainProfile>
+<SecondaryProfile>"A +2, W +9"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"40"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"40"</Advance>
+<Advance name="RULES-ATTR_T">"35"</Advance>
+<Advance name="RULES-ATTR_Ag">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"25"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"9"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Strategy/Tactics), Command, Consume Alcohol, Dodge Blow, Intimidate, Perception, Speak Language (any one)"</Skills>
+<Talents>"Da Boss, Lightning Parry, Lightning Reflexes, Quick Draw"</Talents>
+<Trappings>"Mighty horde"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_STRATEGY/RULES-COMP_ACADEMIC_KNOWLEDGE_TACTICS">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="CGRK-T_DA_BOSS">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_PARRY">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_REFLEXES">"1"</Talent>
+<Talent name="RULES-T_QUICK_DRAW">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CGRK 54"</Source>
+</Career>
+<Career id="CGRK-CARE_GREENSKIN_SHAMAN_LORD">
+<Description language="ENGLISH">"Greenskin Shaman Lord"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +15%, S +10%, T +15%, Ag +15%, Int +20%, WP +25%, Fel +20%"</MainProfile>
+<SecondaryProfile>"A +1, W +6, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Channelling, Charm, Command, Common Knowledge (Greenskins), Heal, Intimidate, Magical Sense, Outdoor Survival, Perception, Performer (Dancer), Performer (Storyteller), Ride or Swim, Speak Language (any two), Trade (Herbalism)"</Skills>
+<Talents>"Fearless, Green Spark, Mighty Missile"</Talents>
+<Trappings>"Even fancier robes, Magical item"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_GREENSKINS">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_DANCER">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_STORYTELLER">"1"</Skill>
+<Skill name="RULES-COMP_RIDE/RULES-COMP_SWIM">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_HERBALISM">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_FEARLESS">"1"</Talent>
+<Talent name="CGRK-T_GREEN_SPARK">"1"</Talent>
+<Talent name="RULES-T_MIGHTY_MISSILE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CGRK 54"</Source>
+</Career>
+<Career id="CGRK-CARE_SLAYUR">
+<Description language="ENGLISH">"Slayur"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +35%, BS +20%, S +35%, T +35%, Ag +25%, Int +5%, WP +20%, Fel +5%"</MainProfile>
+<SecondaryProfile>"A +2, W +8"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"35"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"35"</Advance>
+<Advance name="RULES-ATTR_T">"35"</Advance>
+<Advance name="RULES-ATTR_Ag">"25"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"8"</Advance>
+</Advances>
+<Skills>"Consume Alcohol, Dodge Blow, Intimidate, Perception, Scale Sheer Surfaces, Speak Language (any one)"</Skills>
+<Talents>"Da Enemy (any one), Lightning Parry, Lightning Reflexes, Quick Draw"</Talents>
+<Trappings>"Heavy Armour (Full Heavy Armour)"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="CGRK-T_DA_ENEMY__*">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_PARRY">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_REFLEXES">"1"</Talent>
+<Talent name="RULES-T_QUICK_DRAW">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CGRK 55"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="CGRK-CARE_ARRER_BOY">"CGRK-CARE_ARRER_BOY_BOSS"</Link>
+<Link name="CGRK-CARE_ARRER_BOY">"CGRK-CARE_BOATBOY"</Link>
+<Link name="CGRK-CARE_ARRER_BOY">"CGRK-CARE_BREWBOY"</Link>
+<Link name="CGRK-CARE_ARRER_BOY">"CGRK-CARE_CRAFFTER"</Link>
+<Link name="CGRK-CARE_ARRER_BOY">"CGRK-CARE_GREENSKIN_BRUTE"</Link>
+<Link name="CGRK-CARE_ARRER_BOY">"CGRK-CARE_DRIVA_AN_RIDA"</Link>
+<Link name="CGRK-CARE_ARRER_BOY">"CGRK-CARE_FANATIC"</Link>
+<Link name="CGRK-CARE_ARRER_BOY">"CGRK-CARE_GREENSKIN_SNEAK"</Link>
+<Link name="CGRK-CARE_ARRER_BOY">"CGRK-CARE_WARBOSS"</Link>
+<Link name="CGRK-CARE_BOATBOY">"CGRK-CARE_ARRER_BOY"</Link>
+<Link name="CGRK-CARE_BREWBOY">"CGRK-CARE_ARRER_BOY"</Link>
+<Link name="CGRK-CARE_CRAFFTER">"CGRK-CARE_ARRER_BOY"</Link>
+<Link name="CGRK-CARE_GREENSKIN_BRUTE">"CGRK-CARE_ARRER_BOY"</Link>
+<Link name="CGRK-CARE_DRIVA_AN_RIDA">"CGRK-CARE_ARRER_BOY"</Link>
+<Link name="CGRK-CARE_GREENSKIN_SNEAK">"CGRK-CARE_ARRER_BOY"</Link>
+<Link name="CGRK-CARE_BOATBOY">"CGRK-CARE_BOARDIN_BOY"</Link>
+<Link name="CGRK-CARE_BOATBOY">"CGRK-CARE_BREWBOY"</Link>
+<Link name="CGRK-CARE_BOATBOY">"CGRK-CARE_CRAFFTER"</Link>
+<Link name="CGRK-CARE_BOATBOY">"CGRK-CARE_GREENSKIN_BRUTE"</Link>
+<Link name="CGRK-CARE_BOATBOY">"CGRK-CARE_FANATIC"</Link>
+<Link name="CGRK-CARE_BOATBOY">"CGRK-CARE_GREENSKIN_SNEAK"</Link>
+<Link name="CGRK-CARE_BOATBOY">"CGRK-CARE_KAPTIN"</Link>
+<Link name="CGRK-CARE_BREWBOY">"CGRK-CARE_BOATBOY"</Link>
+<Link name="CGRK-CARE_CRAFFTER">"CGRK-CARE_BOATBOY"</Link>
+<Link name="CGRK-CARE_GREENSKIN_BRUTE">"CGRK-CARE_BOATBOY"</Link>
+<Link name="CGRK-CARE_GREENSKIN_SNEAK">"CGRK-CARE_BOATBOY"</Link>
+<Link name="CGRK-CARE_BREWBOY">"CGRK-CARE_CRAFFTER"</Link>
+<Link name="CGRK-CARE_BREWBOY">"CGRK-CARE_GREENSKIN_BRUTE"</Link>
+<Link name="CGRK-CARE_BREWBOY">"CGRK-CARE_DOK"</Link>
+<Link name="CGRK-CARE_BREWBOY">"CGRK-CARE_DRIVA_AN_RIDA"</Link>
+<Link name="CGRK-CARE_BREWBOY">"CGRK-CARE_FANATIC"</Link>
+<Link name="CGRK-CARE_BREWBOY">"CGRK-CARE_GREENSKIN_SHAMAN"</Link>
+<Link name="CGRK-CARE_BREWBOY">"CGRK-CARE_GREENSKIN_SNEAK"</Link>
+<Link name="CGRK-CARE_BREWBOY">"CGRK-CARE_KOOK"</Link>
+<Link name="CGRK-CARE_CRAFFTER">"CGRK-CARE_BREWBOY"</Link>
+<Link name="CGRK-CARE_DOK">"CGRK-CARE_BREWBOY"</Link>
+<Link name="CGRK-CARE_DRIVA_AN_RIDA">"CGRK-CARE_BREWBOY"</Link>
+<Link name="CGRK-CARE_GREENSKIN_SNEAK">"CGRK-CARE_BREWBOY"</Link>
+<Link name="CGRK-CARE_WALL_DRUMMER">"CGRK-CARE_BREWBOY"</Link>
+<Link name="CGRK-CARE_CRAFFTER">"CGRK-CARE_GREENSKIN_BRUTE"</Link>
+<Link name="CGRK-CARE_CRAFFTER">"CGRK-CARE_DOK"</Link>
+<Link name="CGRK-CARE_CRAFFTER">"CGRK-CARE_DRIVA_AN_RIDA"</Link>
+<Link name="CGRK-CARE_CRAFFTER">"CGRK-CARE_FANATIC"</Link>
+<Link name="CGRK-CARE_CRAFFTER">"CGRK-CARE_ENDJINEER"</Link>
+<Link name="CGRK-CARE_CRAFFTER">"CGRK-CARE_GREENSKIN_SHAMAN"</Link>
+<Link name="CGRK-CARE_CRAFFTER">"CGRK-CARE_GREENSKIN_SNEAK"</Link>
+<Link name="CGRK-CARE_DOK">"CGRK-CARE_CRAFFTER"</Link>
+<Link name="CGRK-CARE_DRIVA_AN_RIDA">"CGRK-CARE_CRAFFTER"</Link>
+<Link name="CGRK-CARE_GREENSKIN_SNEAK">"CGRK-CARE_CRAFFTER"</Link>
+<Link name="CGRK-CARE_DRIVA_AN_RIDA">"CGRK-CARE_BEAST_ERDER"</Link>
+<Link name="CGRK-CARE_DRIVA_AN_RIDA">"CGRK-CARE_GREENSKIN_BRUTE"</Link>
+<Link name="CGRK-CARE_DRIVA_AN_RIDA">"CGRK-CARE_FANATIC"</Link>
+<Link name="CGRK-CARE_DRIVA_AN_RIDA">"CGRK-CARE_GREENSKIN_SNEAK"</Link>
+<Link name="CGRK-CARE_DRIVA_AN_RIDA">"CGRK-CARE_GREENSKIN_TUNNEL_RUNNER"</Link>
+<Link name="CGRK-CARE_DRIVA_AN_RIDA">"CGRK-CARE_WARBOSS"</Link>
+<Link name="CGRK-CARE_GREENSKIN_BRUTE">"CGRK-CARE_DRIVA_AN_RIDA"</Link>
+<Link name="CGRK-CARE_GREENSKIN_SNEAK">"CGRK-CARE_DRIVA_AN_RIDA"</Link>
+<Link name="CGRK-CARE_GREENSKIN_TUNNEL_RUNNER">"CGRK-CARE_DRIVA_AN_RIDA"</Link>
+<Link name="CGRK-CARE_WALL_DRUMMER">"CGRK-CARE_DRIVA_AN_RIDA"</Link>
+<Link name="CGRK-CARE_DOK">"CGRK-CARE_GREENSKIN_BRUTE"</Link>
+<Link name="CGRK-CARE_DOK">"CGRK-CARE_DRIVA_AN_RIDA"</Link>
+<Link name="CGRK-CARE_DOK">"CGRK-CARE_FANATIC"</Link>
+<Link name="CGRK-CARE_DOK">"CGRK-CARE_GREENSKIN_SHAMAN"</Link>
+<Link name="CGRK-CARE_DOK">"CGRK-CARE_GREENSKIN_SNEAK"</Link>
+<Link name="CGRK-CARE_DOK">"CGRK-CARE_MAD_DOK"</Link>
+<Link name="CGRK-CARE_FANATIC">"CGRK-CARE_DRIVA_AN_RIDA"</Link>
+<Link name="CGRK-CARE_FANATIC">"CGRK-CARE_NOB"</Link>
+<Link name="CGRK-CARE_FANATIC">"CGRK-CARE_WARBOSS"</Link>
+<Link name="CGRK-CARE_GREENSKIN_BRUTE">"CGRK-CARE_FANATIC"</Link>
+<Link name="CGRK-CARE_GREENSKIN_SNEAK">"CGRK-CARE_FANATIC"</Link>
+<Link name="CGRK-CARE_GREENSKIN_TUNNEL_RUNNER">"CGRK-CARE_FANATIC"</Link>
+<Link name="CGRK-CARE_WALL_DRUMMER">"CGRK-CARE_FANATIC"</Link>
+<Link name="CGRK-CARE_GREENSKIN_BRUTE">"CGRK-CARE_GREENSKIN_SNEAK"</Link>
+<Link name="CGRK-CARE_GREENSKIN_BRUTE">"CGRK-CARE_NOB"</Link>
+<Link name="CGRK-CARE_GREENSKIN_BRUTE">"CGRK-CARE_WARBOSS"</Link>
+<Link name="CGRK-CARE_GREENSKIN_SNEAK">"CGRK-CARE_GREENSKIN_BRUTE"</Link>
+<Link name="CGRK-CARE_GREENSKIN_TUNNEL_RUNNER">"CGRK-CARE_GREENSKIN_BRUTE"</Link>
+<Link name="CGRK-CARE_GREENSKIN_SHAMAN">"CGRK-CARE_GREENSKIN_GREAT_SHAMAN"</Link>
+<Link name="CGRK-CARE_GREENSKIN_SNEAK">"CGRK-CARE_BEAST_ERDER"</Link>
+<Link name="CGRK-CARE_GREENSKIN_SNEAK">"CGRK-CARE_GREENSKIN_TUNNEL_RUNNER"</Link>
+<Link name="CGRK-CARE_GREENSKIN_SNEAK">"CGRK-CARE_WALL_DRUMMER"</Link>
+<Link name="CGRK-CARE_GREENSKIN_SNEAK">"CGRK-CARE_WARBOSS"</Link>
+<Link name="CGRK-CARE_GREENSKIN_TUNNEL_RUNNER">"CGRK-CARE_GREENSKIN_SNEAK"</Link>
+<Link name="CGRK-CARE_WALL_DRUMMER">"CGRK-CARE_GREENSKIN_SNEAK"</Link>
+<Link name="CGRK-CARE_GREENSKIN_TUNNEL_RUNNER">"CGRK-CARE_WALL_DRUMMER"</Link>
+<Link name="CGRK-CARE_WALL_DRUMMER">"CGRK-CARE_GREENSKIN_TUNNEL_RUNNER"</Link>
+<Link name="CGRK-CARE_ARRER_BOY_BOSS">"CGRK-CARE_NOB"</Link>
+<Link name="CGRK-CARE_ARRER_BOY_BOSS">"CGRK-CARE_WARBOSS"</Link>
+<Link name="CGRK-CARE_BEAST_ERDER">"CGRK-CARE_NOB"</Link>
+<Link name="CGRK-CARE_BEAST_ERDER">"CGRK-CARE_WARBOSS"</Link>
+<Link name="CGRK-CARE_BOARDIN_BOY">"CGRK-CARE_NOB"</Link>
+<Link name="CGRK-CARE_BOARDIN_BOY">"CGRK-CARE_KAPTIN"</Link>
+<Link name="CGRK-CARE_ENDJINEER">"CGRK-CARE_WARBOSS"</Link>
+<Link name="CGRK-CARE_GREENSKIN_GREAT_SHAMAN">"CGRK-CARE_GREENSKIN_SHAMAN_LORD"</Link>
+<Link name="CGRK-CARE_KAPTIN">"CGRK-CARE_BIG_BOSS"</Link>
+<Link name="CGRK-CARE_KOOK">"CGRK-CARE_WARBOSS"</Link>
+<Link name="CGRK-CARE_MAD_DOK">"CGRK-CARE_WARBOSS"</Link>
+<Link name="CGRK-CARE_NOB">"CGRK-CARE_SLAYUR"</Link>
+<Link name="CGRK-CARE_NOB">"CGRK-CARE_WARBOSS"</Link>
+<Link name="CGRK-CARE_WARBOSS">"CGRK-CARE_BIG_BOSS"</Link>
+<Link name="CGRK-CARE_SLAYUR">"CGRK-CARE_WARBOSS"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="CGRK-EQUI_SPECIAL_EQUIPMENT_DRAUGHTS_BLACK_SPOT_MUSHROOM_BERSERK_SPEED">
+<Description language="ENGLISH">"Black Spot Mushroom (Berserk Speed)"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_DRAUGHTS"</SubCategory>
+<Cost>"10s (Greenskins), 40gc (Everywhere else)"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"Average (Greenskins), Very Rare (Everywhere else)"</Availability>
+<Note>""</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGRK-EQUI_SPECIAL_EQUIPMENT_DRAUGHTS_BLOODFANG_MUSHROOM">
+<Description language="ENGLISH">"Bloodfang Mushroom"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_DRAUGHTS"</SubCategory>
+<Cost>"3s (Greenskins mountain/underground areas), 10gc (Dwarfs), 20gc (Everywhere else)"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"Common (Greenskins), Scarce (Dwarfs), Very Rare (Everywhere else)"</Availability>
+<Note>""</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGRK-EQUI_SPECIAL_EQUIPMENT_DRAUGHTS_FIRE_CAP_MUSHROOM">
+<Description language="ENGLISH">"Fire Cap Mushroom"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_DRAUGHTS"</SubCategory>
+<Cost>"1s (Greenskins), 10s (Everywhere else)"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"Plentiful (Greenskins), Scarce (Everywhere else)"</Availability>
+<Note>""</Note>
+<Page>"18"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGRK-EQUI_SPECIAL_EQUIPMENT_DRAUGHTS_GREEN_OOZE_MUSHROOM">
+<Description language="ENGLISH">"Green Ooze Mushroom"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_DRAUGHTS"</SubCategory>
+<Cost>"5s (Greenskins mountain/underground areas), 5gc (Dwarfs), 10gc (Everywhere else)"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"Common (Greenskins), Scarce (Dwarfs), Very Rare (Everywhere else)"</Availability>
+<Note>""</Note>
+<Page>"18"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGRK-EQUI_SPECIAL_EQUIPMENT_DRAUGHTS_MAD_CAP_MUSHROOM">
+<Description language="ENGLISH">"Mad Cap Mushroom"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_DRAUGHTS"</SubCategory>
+<Cost>"3s (Greenskins in the mountain/underground areas), 3gc (Dwarfs), 30gc (Everywhere else)"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"Common (Greenskins), Average (Dwarfs), Very Rare (Everywhere else)"</Availability>
+<Note>""</Note>
+<Page>"18"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGRK-EQUI_SPECIAL_EQUIPMENT_DRAUGHTS_SPIKESPORE_MUSHROOM">
+<Description language="ENGLISH">"Spikespore Mushroom"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_DRAUGHTS"</SubCategory>
+<Cost>"1s (Greenskins mountain/underground areas), 3s (Dwarfs), 10s (Everywhere else)"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"Abundant (Greenskins), Common (Dwarfs), Scarce (Everywhere else)"</Availability>
+<Note>""</Note>
+<Page>"18"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGRK-EQUI_SPECIAL_EQUIPMENT_DRAUGHTS_YELLOW_SPOT_MUSHROOM">
+<Description language="ENGLISH">"Yellow Spot Mushroom"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_DRAUGHTS"</SubCategory>
+<Cost>"1s (Greenskins mountain/underground areas), 1gc (Dwarfs), 10gc (Everywhere else)"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"Abundant (Greenskins), Average (Dwarfs), Rare (Everywhere else)"</Availability>
+<Note>""</Note>
+<Page>"18"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGRK-EQUI_SPECIAL_EQUIPMENT_POISONS_HOBGOBLIN_POISON_KERVALT">
+<Description language="ENGLISH">"Hobgoblin Poison (Kervalt)"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_POISONS"</SubCategory>
+<Cost>"-"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"37"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGRK-EQUI_SPECIAL_EQUIPMENT_POISONS_TROGLAGOB_POISON">
+<Description language="ENGLISH">"Troglagob Poison"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_POISONS"</SubCategory>
+<Cost>"-"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"37"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGRK-EQUI_MELEE_WEAPONS_CHOPPA">
+<Description language="ENGLISH">"Choppa"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"-"</Cost>
+<Encumbrance>"150"</Encumbrance>
+<Group>"RULES-WTYPE2_CHOPPA"</Group>
+<Damage>"SB (SB+1)"</Damage>
+<Qualities>"Special"</Qualities>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Note>""</Note>
+<Page>"37"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGRK-EQUI_MELEE_WEAPONS_BIG_CHOPPA">
+<Description language="ENGLISH">"Big Choppa"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"-"</Cost>
+<Encumbrance>"250"</Encumbrance>
+<Group>"RULES-WTYPE2_CHOPPA"</Group>
+<Damage>"SB+1 (SB+2)"</Damage>
+<Qualities>"Special"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"37"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+<DATA_SPELL_V2>
+<SpellV2 id="CGRK-SPEL_BUNCH_O_WAAAGH">
+<Description language="ENGLISH">"Bunch O’Waaagh"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Waaagh!)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"21"</Page>
+<Duration>"Instant"</Duration>
+<Range>"16 yards (8 squares)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_GEDUP">
+<Description language="ENGLISH">"Gedup"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Waaagh!)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"21"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_GREEN_LIGHT">
+<Description language="ENGLISH">"Green Light"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Waaagh!)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"21"</Page>
+<Duration>"1 hour"</Duration>
+<Range>"30 yards (15 squares)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_MINOR_WAAAGH_PRAYER">
+<Description language="ENGLISH">"Minor Waaagh! Prayer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Waaagh!)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"21"</Page>
+<Duration>"Instant"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_MORK_S_MIGHT">
+<Description language="ENGLISH">"Mork’s Might"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Waaagh!)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"21"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_YOU_WEREN_T_USING_DAT">
+<Description language="ENGLISH">"You Weren’t Using Dat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Waaagh!)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"22"</Page>
+<Duration>"Instant"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_AWAY">
+<Description language="ENGLISH">"Away!"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"22"</Page>
+<Duration>"Instant up to 2 rounds"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_DON_FEEL_NUTHIN">
+<Description language="ENGLISH">"Don’ Feel Nuthin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"22"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch (you)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_GORK_S_WEAPON">
+<Description language="ENGLISH">"Gork’s Weapon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"22"</Page>
+<Duration>"1 hour"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_MAJOR_WAAAGH_PRAYER">
+<Description language="ENGLISH">"Major Waaagh! Prayer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"22"</Page>
+<Duration>"Instant"</Duration>
+<Range>"36 yards (18 squares)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_MORK_FLIGHT">
+<Description language="ENGLISH">"Mork Flight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"22"</Page>
+<Duration>"Rounds/Magic"</Duration>
+<Range>"Touch (you)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_STEAL_YER_THUNDER">
+<Description language="ENGLISH">"Steal Yer Thunder"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"22"</Page>
+<Duration>"Instant"</Duration>
+<Range>"12 yards (6 square)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_STUFF_SAFE_HERE">
+<Description language="ENGLISH">"Stuff, Safe, Here"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"22"</Page>
+<Duration>"1 week"</Duration>
+<Range>"2 yards (1 square)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_SWALLOW_TONGUE">
+<Description language="ENGLISH">"Swallow Tongue"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"22"</Page>
+<Duration>"Rounds/Magic"</Duration>
+<Range>"24 yards (12 square)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_U_GOES_THERE">
+<Description language="ENGLISH">"‘U goes there"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"22"</Page>
+<Duration>"Triggered"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_GAZE_OF_GORK">
+<Description language="ENGLISH">"Gaze of Gork"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Waaagh! Lore (The Little Waaagh!)"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"23"</Page>
+<Duration>"Instant"</Duration>
+<Range>"18 yards (9 squares)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_BRAIN_BURSTA">
+<Description language="ENGLISH">"Brain Bursta"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Waaagh! Lore (The Little Waaagh!)"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"23"</Page>
+<Duration>"Instant"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_ERE_WE_GO">
+<Description language="ENGLISH">"‘Ere We Go!"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Waaagh! Lore (The Little Waaagh!)"</Lore>
+<CastingNumber>"X"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"23"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"18 yards (9 squares)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_GORK_LL_FIX_IT">
+<Description language="ENGLISH">"Gork’ll Fix It"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Waaagh! Lore (The Little Waaagh!)"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"23"</Page>
+<Duration>"1 round/Magic Characteristic"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_EY_QUIT_BLEEDIN">
+<Description language="ENGLISH">"‘Ey, Quit Bleedin’"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Waaagh! Lore (The Little Waaagh!)"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"23"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_SQUIG_POWER">
+<Description language="ENGLISH">"Squig Power"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Waaagh! Lore (The Little Waaagh!)"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"24"</Page>
+<Duration>"1 hour"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_THE_FOOT_OF_GORK_DA_KRUNCH">
+<Description language="ENGLISH">"The Foot of Gork (Da Krunch)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Waaagh! Lore (The Little Waaagh!)"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"24"</Page>
+<Duration>"Instant"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_THE_HAND_OF_GORK">
+<Description language="ENGLISH">"The Hand of Gork"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Waaagh! Lore (The Little Waaagh!)"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"24"</Page>
+<Duration>"Instant"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_MORK_WANTS_YA">
+<Description language="ENGLISH">"Mork Wants Ya!"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Waaagh! Lore (The Little Waaagh!)"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"24"</Page>
+<Duration>"Instant"</Duration>
+<Range>"18 yards (9 squares)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_GAZE_OF_MORK">
+<Description language="ENGLISH">"Gaze of Mork"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Waaagh! Lore (The Big Waaagh!)"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"25"</Page>
+<Duration>"Instant"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_EADBUTT">
+<Description language="ENGLISH">"‘Eadbutt"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Waaagh! Lore (The Big Waaagh!)"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"25"</Page>
+<Duration>"1 round"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_BASH_EM_LADZ">
+<Description language="ENGLISH">"Bash ‘Em Ladz"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Waaagh! Lore (The Big Waaagh!)"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"25"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"18 yards (9 squares)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_BREATH_OF_MORK">
+<Description language="ENGLISH">"Breath of Mork"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Waaagh! Lore (The Big Waaagh!)"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"25"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_ARD_AS_NAILS">
+<Description language="ENGLISH">"‘Ard As Nails"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Waaagh! Lore (The Big Waaagh!)"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"26"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_YER_A_WEAKLIN">
+<Description language="ENGLISH">"Yer A Weaklin’"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Waaagh! Lore (The Big Waaagh!)"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"26"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_LEAKY_BRAINZ">
+<Description language="ENGLISH">"Leaky Brainz"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Waaagh! Lore (The Big Waaagh!)"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"26"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"18 yards (9 squares)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_FISTS_OF_GORK">
+<Description language="ENGLISH">"Fists of Gork"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Waaagh! Lore (The Big Waaagh!)"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"26"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_GORK_S_WARPATH">
+<Description language="ENGLISH">"Gork’s Warpath"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Waaagh! Lore (The Big Waaagh!)"</Lore>
+<CastingNumber>"25"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"26"</Page>
+<Duration>"1 round to unlimited rounds"</Duration>
+<Range>"36 yards (18 squares)"</Range>
+</SpellV2>
+<SpellV2 id="CGRK-SPEL_WAAAGH">
+<Description language="ENGLISH">"Waaagh!"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Waaagh! Lore (The Big Waaagh!)"</Lore>
+<CastingNumber>"31"</CastingNumber>
+<CastingTime>"Two actions"</CastingTime>
+<Ingredient>"Waaagh! Energy (see the universal ingredients of the chapter)"</Ingredient>
+<Page>"27"</Page>
+<Duration>"1 hour"</Duration>
+<Range>"50 yards (25 squares)"</Range>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SPELL_TALENT>
+<Sort id="CGRK-SPEL_BUNCH_O_WAAAGH">
+<Talent>"RULES-T_PETTY_MAGIC__WAAAGH"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_GEDUP">
+<Talent>"RULES-T_PETTY_MAGIC__WAAAGH"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_GREEN_LIGHT">
+<Talent>"RULES-T_PETTY_MAGIC__WAAAGH"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_MINOR_WAAAGH_PRAYER">
+<Talent>"RULES-T_PETTY_MAGIC__WAAAGH"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_MORK_S_MIGHT">
+<Talent>"RULES-T_PETTY_MAGIC__WAAAGH"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_YOU_WEREN_T_USING_DAT">
+<Talent>"RULES-T_PETTY_MAGIC__WAAAGH"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_GAZE_OF_GORK">
+<Talent>"CGRK-T_WAAAGH_LORE__LITTLE"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_BRAIN_BURSTA">
+<Talent>"CGRK-T_WAAAGH_LORE__LITTLE"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_ERE_WE_GO">
+<Talent>"CGRK-T_WAAAGH_LORE__LITTLE"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_GORK_LL_FIX_IT">
+<Talent>"CGRK-T_WAAAGH_LORE__LITTLE"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_EY_QUIT_BLEEDIN">
+<Talent>"CGRK-T_WAAAGH_LORE__LITTLE"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_SQUIG_POWER">
+<Talent>"CGRK-T_WAAAGH_LORE__LITTLE"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_THE_FOOT_OF_GORK_DA_KRUNCH">
+<Talent>"CGRK-T_WAAAGH_LORE__LITTLE"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_THE_HAND_OF_GORK">
+<Talent>"CGRK-T_WAAAGH_LORE__LITTLE"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_MORK_WANTS_YA">
+<Talent>"CGRK-T_WAAAGH_LORE__LITTLE"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_GAZE_OF_MORK">
+<Talent>"CGRK-T_WAAAGH_LORE__BIG"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_EADBUTT">
+<Talent>"CGRK-T_WAAAGH_LORE__BIG"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_BASH_EM_LADZ">
+<Talent>"CGRK-T_WAAAGH_LORE__BIG"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_BREATH_OF_MORK">
+<Talent>"CGRK-T_WAAAGH_LORE__BIG"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_ARD_AS_NAILS">
+<Talent>"CGRK-T_WAAAGH_LORE__BIG"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_YER_A_WEAKLIN">
+<Talent>"CGRK-T_WAAAGH_LORE__BIG"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_LEAKY_BRAINZ">
+<Talent>"CGRK-T_WAAAGH_LORE__BIG"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_FISTS_OF_GORK">
+<Talent>"CGRK-T_WAAAGH_LORE__BIG"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_GORK_S_WARPATH">
+<Talent>"CGRK-T_WAAAGH_LORE__BIG"</Talent>
+</Sort>
+<Sort id="CGRK-SPEL_WAAAGH">
+<Talent>"CGRK-T_WAAAGH_LORE__BIG"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_SNOTGOB">
+<Description language="ENGLISH">"Speak Language (Snotgob)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_GHAZKAH">
+<Description language="ENGLISH">"Speak Language (Ghazkah)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_HARGHAZHAKH">
+<Description language="ENGLISH">"Speak Language (Harghazhakh)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_ORRAKH">
+<Description language="ENGLISH">"Speak Language (Orrakh)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_ORRAKH_PRIMITIVE_VERSION">
+<Description language="ENGLISH">"Speak Language (Orrakh Primitive Version)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SECRET_LANGUAGE_DRUMMING_CODE">
+<Description language="ENGLISH">"Secret Language (Drumming Code)"</Description>
+<Generique>"RULES-COMP_SECRET_LANGUAGE_*"</Generique>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="CGRK-T_WAAAGH_LORE__LITTLE">
+<Description language="ENGLISH">"Waaagh! Lore (The Little Waaagh!)"</Description>
+<Generique>"CGRK-T_WAAAGH_LORE__*"</Generique>
+</Talent>
+<Talent id="CGRK-T_WAAAGH_LORE__BIG">
+<Description language="ENGLISH">"Waaagh! Lore (The Big Waaagh!)"</Description>
+<Generique>"CGRK-T_WAAAGH_LORE__*"</Generique>
+</Talent>
+<Talent id="RULES-T_PETTY_MAGIC__WAAAGH">
+<Description language="ENGLISH">"Petty Magic (Waaagh!)"</Description>
+<Generique>"RULES-T_PETTY_MAGIC__*"</Generique>
+</Talent>
+<Talent id="RULES-T_SPECIALIST_WEAPON_GROUP__CHOPPA">
+<Description language="ENGLISH">"Specialist Weapon Group (Choppa)"</Description>
+<Generique>"RULES-T_SPECIALIST_WEAPON_GROUP__*"</Generique>
+</Talent>
+<Talent id="RULES-T_SPECIALIST_WEAPON_GROUP__CHOOSE_ONE_BLOWPIPE">
+<Description language="ENGLISH">"Specialist Weapon Group (choose one: Blowpipe)"</Description>
+<Generique>"RULES-T_SPECIALIST_WEAPON_GROUP__*"</Generique>
+</Talent>
+<Talent id="RULES-T_SPECIALIST_WEAPON_GROUP__CHOOSE_ONE_ENTANGLING">
+<Description language="ENGLISH">"Specialist Weapon Group (choose one: Entangling)"</Description>
+<Generique>"RULES-T_SPECIALIST_WEAPON_GROUP__*"</Generique>
+</Talent>
+<Talent id="CGRK-T_WAAAGH_LORE__THE_LITTLE_WAAAGH">
+<Description language="ENGLISH">"Waaagh! Lore (The Little Waaagh!)"</Description>
+<Generique>"CGRK-T_WAAAGH_LORE__*"</Generique>
+</Talent>
+<Talent id="CGRK-T_WAAAGH_LORE__THE_BIG_WAAAGH">
+<Description language="ENGLISH">"Waaagh! Lore (The Big Waaagh!)"</Description>
+<Generique>"CGRK-T_WAAAGH_LORE__*"</Generique>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+</DATA_BOOK>

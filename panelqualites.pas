@@ -14,7 +14,7 @@ unit PanelQualites;
 interface
 
 uses
-  BCLabelContour, Classes, SysUtils, Controls, StdCtrls, ExtCtrls, Grids, Dialogs, BCButton, ChargeTexte, GlobalFonts;
+  BCLabelContour, Classes, SysUtils, Controls, StdCtrls, ExtCtrls, Grids, Dialogs, MessageTest, BCButton, ChargeTexte, GlobalFonts;
 
 type
   TPanelQualitesLiees = class(TPanel)

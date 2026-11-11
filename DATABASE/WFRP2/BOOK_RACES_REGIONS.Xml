@@ -1,0 +1,4576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"JRR"</CODE_BOOK>
+<BOOK>"BOOK RACES REGIONS"</BOOK>
+<BOOKNAME>"RACES AND REGIONAL OPTIONS"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"This document is completely unofficial and in no way endorsed by Games Workshop Limited. Warhammer Fantasy Roleplay, the Warhammer Fantasy Roleplay logo, WFRP, Chaos, the Chaos device, the Chaos logo, Citadel, Citadel Device, Darkblade, 'Eavy Metal, Forge World, Games Workshop, Games Workshop logo, Golden Demon, Great Unclean One, GW, the Hammer of Sigmar logo, Horned Rat logo, Keeper of Secrets, Khemri, Khorne, the Khorne logo, Lord of Change, Nurgle, the Nurgle logo, Skaven, the Skaven symbol device, Slaanesh, the Slaanesh logo, Tomb Kings, Tzeentch, the Tzeentch logo, Warhammer, Warhammer World logo, White Dwarf, the White Dwarf logo, and all associated marks, names, races, race insignia, characters, vehicles, locations, units, artefacts, illustrations and images from the Warhammer world are either ®, TM and/or © Copyright Games Workshop Ltd 2000-2016, variably registered in the UK and other countries around the world. Used without"</DISCLAIMER>
+<DATA_TALENT>
+<Talent id="JRR-T_ATTITUDE">
+<Description language="ENGLISH">"Attitude"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"8"</Page>
+</Talent>
+<Talent id="JRR-T_BIG_FAT_AND_STUPID">
+<Description language="ENGLISH">"Big-Fat-and-Stupid!"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"8"</Page>
+</Talent>
+<Talent id="JRR-T_BIG_AND_TOUGH">
+<Description language="ENGLISH">"Big and Tough"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"8"</Page>
+</Talent>
+<Talent id="JRR-T_BORN_MOUNTAINEER">
+<Description language="ENGLISH">"Born Mountaineer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"8"</Page>
+</Talent>
+<Talent id="JRR-T_CHILDREN_OF_THE_GODS">
+<Description language="ENGLISH">"Children of the Gods"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"8"</Page>
+</Talent>
+<Talent id="JRR-T_CLUMSY">
+<Description language="ENGLISH">"Clumsy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"8"</Page>
+</Talent>
+<Talent id="JRR-T_CONTEMPT">
+<Description language="ENGLISH">"Contempt"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"9"</Page>
+</Talent>
+<Talent id="JRR-T_CRIPPLED">
+<Description language="ENGLISH">"Crippled"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"9"</Page>
+</Talent>
+<Talent id="JRR-T_DESERT_SURVIVOR">
+<Description language="ENGLISH">"Desert Survivor"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"9"</Page>
+</Talent>
+<Talent id="JRR-T_DWARFISM">
+<Description language="ENGLISH">"Dwarfism"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"9"</Page>
+</Talent>
+<Talent id="JRR-T_ETERNAL_GRUDGE">
+<Description language="ENGLISH">"Eternal Grudge"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"9"</Page>
+</Talent>
+<Talent id="JRR-T_EUNUCH">
+<Description language="ENGLISH">"Eunuch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"10"</Page>
+</Talent>
+<Talent id="JRR-T_FAT">
+<Description language="ENGLISH">"Fat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"10"</Page>
+</Talent>
+<Talent id="JRR-T_THE_GIFTED">
+<Description language="ENGLISH">"The Gifted"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"10"</Page>
+</Talent>
+<Talent id="JRR-T_GIGANTISM">
+<Description language="ENGLISH">"Gigantism"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"10"</Page>
+</Talent>
+<Talent id="JRR-T_THE_GREAT_MAW">
+<Description language="ENGLISH">"The Great Maw"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"11"</Page>
+</Talent>
+<Talent id="JRR-T_HANDSOME_BEAUTIFUL">
+<Description language="ENGLISH">"Handsome/Beautiful"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"11"</Page>
+</Talent>
+<Talent id="JRR-T_HOME_ENVIRONMENT__*">
+<Description language="ENGLISH">"Home Environment (Various)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"11"</Page>
+</Talent>
+<Talent id="JRR-T_HONOUR_DUTY">
+<Description language="ENGLISH">"Honour &amp; Duty"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"12"</Page>
+</Talent>
+<Talent id="JRR-T_IMPAIRED_SENSE">
+<Description language="ENGLISH">"Impaired Sense"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"12"</Page>
+</Talent>
+<Talent id="JRR-T_INURED_TO_CHAOS">
+<Description language="ENGLISH">"Inured to Chaos"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"12"</Page>
+</Talent>
+<Talent id="JRR-T_MAIMED">
+<Description language="ENGLISH">"Maimed"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"12"</Page>
+</Talent>
+<Talent id="JRR-T_MASTER_OF_DWARFCRAFT">
+<Description language="ENGLISH">"Master of Dwarfcraft"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"12"</Page>
+</Talent>
+<Talent id="JRR-T_MUTE">
+<Description language="ENGLISH">"Mute"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"12"</Page>
+</Talent>
+<Talent id="JRR-T_MY_PRECIOUS">
+<Description language="ENGLISH">"My Precious"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"12"</Page>
+</Talent>
+<Talent id="JRR-T_NATURAL_ENGINEERS">
+<Description language="ENGLISH">"Natural Engineers"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="JRR-T_POOR_HEALTH">
+<Description language="ENGLISH">"Poor Health"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__*">
+<Description language="ENGLISH">"Provincial Expertise (Various)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="JRR-T_SKINNY">
+<Description language="ENGLISH">"Skinny"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="JRR-T_UGLY">
+<Description language="ENGLISH">"Ugly"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="JRR-T_VERY_FAT">
+<Description language="ENGLISH">"Very Fat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="JRR-T_ACUTE_SENSE_OF_SMELL">
+<Description language="ENGLISH">"Acute Sense of Smell"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"3"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_RULE>
+<Rule id="JRR-RULE_ALBIONESE_TRIBESMAN">""</Rule>
+<Rule id="JRR-RULE_ALBIONESE_CIVILIZED">""</Rule>
+<Rule id="JRR-RULE_AMAZONS">""</Rule>
+<Rule id="JRR-RULE_ARABY_URBAN">""</Rule>
+<Rule id="JRR-RULE_ARABY_NOMAD">""</Rule>
+<Rule id="JRR-RULE_THE_BORDER_PRINCES_BADLANDER">""</Rule>
+<Rule id="JRR-RULE_BRETONNIAN">""</Rule>
+<Rule id="JRR-RULE_CATHAYAN">""</Rule>
+<Rule id="JRR-RULE_THE_DARK_LANDER">""</Rule>
+<Rule id="JRR-RULE_THE_EMPIRE_AVERLANDER">""</Rule>
+<Rule id="JRR-RULE_THE_EMPIRE_HOCKLANDER">""</Rule>
+<Rule id="JRR-RULE_THE_EMPIRE_MIDDENLANDER">""</Rule>
+<Rule id="JRR-RULE_THE_EMPIRE_NORDLANDER">""</Rule>
+<Rule id="JRR-RULE_THE_EMPIRE_OSTERMARKER">""</Rule>
+<Rule id="JRR-RULE_THE_EMPIRE_OSTLANDER">""</Rule>
+<Rule id="JRR-RULE_THE_EMPIRE_REIKLANDER">""</Rule>
+<Rule id="JRR-RULE_THE_EMPIRE_STIRLANDER">""</Rule>
+<Rule id="JRR-RULE_THE_EMPIRE_SYLVANIA">""</Rule>
+<Rule id="JRR-RULE_THE_EMPIRE_TALABECLANDER">""</Rule>
+<Rule id="JRR-RULE_THE_EMPIRE_WISSENLANDER">""</Rule>
+<Rule id="JRR-RULE_ESTALIAN">""</Rule>
+<Rule id="JRR-RULE_IND">""</Rule>
+<Rule id="JRR-RULE_NEW_WORLD_IKADIANS_ISLAND_PEOPLE">""</Rule>
+<Rule id="JRR-RULE_NEW_WORLD_IKADIANS_PLAIN_PEOPLE">""</Rule>
+<Rule id="JRR-RULE_KHURESH_PYGMY">""</Rule>
+<Rule id="JRR-RULE_KHURESH_TRIBESMAN">""</Rule>
+<Rule id="JRR-RULE_KISLEV_GOSPODAR">""</Rule>
+<Rule id="JRR-RULE_KISLEV_UNGOL">""</Rule>
+<Rule id="JRR-RULE_KISLEV_WHEATLAND_COLONIAL">""</Rule>
+<Rule id="JRR-RULE_NIPPONISE">""</Rule>
+<Rule id="JRR-RULE_NORTHMAN_HUNG">""</Rule>
+<Rule id="JRR-RULE_NORTHMAN_KURGAN">""</Rule>
+<Rule id="JRR-RULE_NORTHMAN_NORSE">""</Rule>
+<Rule id="JRR-RULE_NORTHMAN_SKEGGI_NORSE">""</Rule>
+<Rule id="JRR-RULE_SOUTHLANDS_OLD_WORLD_COLONIES">""</Rule>
+<Rule id="JRR-RULE_SOUTHLANDS_EBONIAN_IVORY_KINGDOMS">""</Rule>
+<Rule id="JRR-RULE_SOUTHLANDS_EBONIAN_TRIBESMAN">""</Rule>
+<Rule id="JRR-RULE_TILEAN">""</Rule>
+<Rule id="JRR-RULE_WASTELANDER_MARIENBURGER">""</Rule>
+<Rule id="JRR-RULE_WASTELANDER_RURAL">""</Rule>
+<Rule id="JRR-RULE_BARAK_VARR">""</Rule>
+<Rule id="JRR-RULE_BLACK_DWARFS_VAULT_DWARFS">""</Rule>
+<Rule id="JRR-RULE_EXPATRIATE_DWARFS">""</Rule>
+<Rule id="JRR-RULE_GREY_DWARFS">""</Rule>
+<Rule id="JRR-RULE_KARAZ_A_KARAK">""</Rule>
+<Rule id="JRR-RULE_KARAK_KADRIN">""</Rule>
+<Rule id="JRR-RULE_NORSE_DWARFS">""</Rule>
+<Rule id="JRR-RULE_SOUTHERN_DWARFS">""</Rule>
+<Rule id="JRR-RULE_ZHUFBAR">""</Rule>
+<Rule id="JRR-RULE_CHAOS_DWARFS">""</Rule>
+<Rule id="JRR-RULE_BILOKO">""</Rule>
+<Rule id="JRR-RULE_MOOTLINGS">""</Rule>
+<Rule id="JRR-RULE_EXPATRIATE_HALFLINGS">""</Rule>
+<Rule id="JRR-RULE_WAYARHUI">""</Rule>
+<Rule id="JRR-RULE_DARK_ELVES">""</Rule>
+<Rule id="JRR-RULE_HIGH_ELVES">""</Rule>
+<Rule id="JRR-RULE_SEA_ELVES_COLONIES">""</Rule>
+<Rule id="JRR-RULE_SEA_ELVES_MARIENBURG">""</Rule>
+<Rule id="JRR-RULE_WOOD_ELVES">""</Rule>
+</DATA_RULE>
+<DATA_RULE_SPECIE>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ALBION"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ALBION"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_FOLLOW_TRAIL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_FOLLOW_TRAIL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ALBIONESE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ALBIONESE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_HARDY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"RULES-T_HARDY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_VERY_RESILIENT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"RULES-T_VERY_RESILIENT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_CIVILIZED"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ALBION"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_CIVILIZED"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_CIVILIZED"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ALBIONESE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_CIVILIZED"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_HARDY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_CIVILIZED"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_CIVILIZED"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ALBIONESE_CIVILIZED"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_AMAZONS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NEW_WORLD"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_AMAZONS"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NEW_WORLD"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_AMAZONS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_AMAZONS"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_AMAZONS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_AMAZONS"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_AMAZONS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_AMAZONS"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_AMAZONS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_NORSE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_AMAZONS"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_NORSE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_AMAZONS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_BIG_AND_TOUGH"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_AMAZONS"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_BIG_AND_TOUGH"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_AMAZONS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TROPICAL"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_AMAZONS"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TROPICAL"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_AMAZONS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__AMAZONS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_AMAZONS"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__AMAZONS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_DEALMAKER/RULES-T_SCHEMER"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TROPICAL"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_DESERT_SURVIVOR/RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_NOMAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_NOMAD"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_NOMAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_NAVIGATION"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_NOMAD"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_NAVIGATION"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_NOMAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_NOMAD"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_NOMAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_RIDE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_NOMAD"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_RIDE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_NOMAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_NOMAD"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_NOMAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_DESERT_SURVIVOR"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_NOMAD"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_DESERT_SURVIVOR"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_NOMAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TROPICAL"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_NOMAD"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TROPICAL"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_NOMAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ARABY_NOMAD"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_BORDER_PRINCES_BADLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_THE_BORDER_PRINCES"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_BORDER_PRINCES_BADLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_BORDER_PRINCES_BADLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_BORDER_PRINCES_BADLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_BRETONNIAN/RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL/RULES-COMP_SPEAK_LANGUAGE_TILEAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_BORDER_PRINCES_BADLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__SOUTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_BORDER_PRINCES_BADLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_BORDER_PRINCES_BADLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BRETONNIAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_BRETONNIA"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BRETONNIAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BRETONNIAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_BRETON"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BRETONNIAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BRETONNIAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BRETONNIAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_COOLHEADED/RULES-T_STOUT_HEARTED/RULES-T_STRONG_MINDED"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BRETONNIAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_CATHAYAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GRAND_CATHAY"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_CATHAYAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_CATHAYAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_CATHAYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_CATHAYAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__SOUTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_CATHAYAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HONOUR_DUTY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_CATHAYAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_CATHAYAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_STREET_FIGHTING/RULES-T_WRESTLING"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_DARK_LANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_DARK_LANDS"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_DARK_LANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_DARK_LANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_*"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_DARK_LANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_*"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_DARK_LANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__SOUTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_DARK_LANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_DARK_LANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_DESERT_SURVIVOR/RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_AVERLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_ANIMAL_CARE/RULES-COMP_TRADE_MINER"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_AVERLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_THE_EMPIRE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_AVERLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_GOSSIP/RULES-COMP_RIDE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_AVERLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_AVERLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_AVERLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__AVERLAND"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_AVERLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_HOCKLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_THE_EMPIRE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_HOCKLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_CONCEALMENT/RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_HOCKLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_HOCKLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_HOCKLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_MARKSMAN/RULES-T_ROVER"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_HOCKLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__HOCKLAND"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_HOCKLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_MIDDENLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_THE_EMPIRE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_MIDDENLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_GOSSIP/RULES-COMP_INTIMIDATE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_MIDDENLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_MIDDENLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_MIDDENLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_MENACING/RULES-T_WARRIOR_BORN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_MIDDENLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__MIDDENLAND"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_MIDDENLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_NORDLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_THE_EMPIRE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_NORDLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_CONSUME_ALCOHOL/RULES-COMP_SPEAK_LANGUAGE_NORSE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_NORDLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_NORDLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_NORDLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__NORDLAND"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_NORDLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_STOUT_HEARTED/RULES-T_VERY_RESILIENT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_NORDLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_OSTERMARKER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_THE_EMPIRE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_OSTERMARKER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_GOSSIP/RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_OSTERMARKER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_OSTERMARKER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_COOLHEADED/RULES-T_VERY_RESILIENT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_OSTERMARKER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_OSTERMARKER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__OSTERMARK"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_OSTERMARKER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_OSTLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_THE_EMPIRE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_OSTLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_CONSUME_ALCOHOL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_OSTLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_GOSSIP/RULES-COMP_SPEAK_LANGUAGE_KISLEVARIN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_OSTLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_OSTLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_OSTLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__OSTLAND"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_OSTLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_REIKLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMAND/RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_REIKLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_THE_EMPIRE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_REIKLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_REIKLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_REIKLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__REIKLAND"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_REIKLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_SAVVY/RULES-T_SUAVE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_REIKLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_STIRLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_ANIMAL_CARE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_STIRLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_ANIMAL_TRAINING/RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_STIRLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_THE_EMPIRE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_STIRLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_STIRLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_STIRLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__STIRLAND"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_STIRLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_SYLVANIA"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_THE_EMPIRE/RULES-COMP_COMMON_KNOWLEDGE_SYLVANIA"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_SYLVANIA"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_GOSSIP/RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_SYLVANIA"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL/RULES-COMP_SPEAK_LANGUAGE_SYLVANIA"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_SYLVANIA"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_SYLVANIA"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__SYLVANIA"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_SYLVANIA"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_SYLVANIA"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_TALABECLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_THE_EMPIRE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_TALABECLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_FOLLOW_TRAIL/RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_TALABECLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_TALABECLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_TALABECLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_TALABECLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__TALABECLAND"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_TALABECLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_WISSENLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_THE_EMPIRE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_WISSENLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_WISSENLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_TRADE_FARMER/RULES-COMP_TRADE_MINER"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_WISSENLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_COOLHEADED/RULES-T_HARDY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_WISSENLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_WISSENLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__WISSENLAND"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_THE_EMPIRE_WISSENLANDER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ESTALIAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ESTALIA"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ESTALIAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_GOSSIP/RULES-COMP_ACADEMIC_KNOWLEDGE_GENEALOGY_AND_HERALDRY"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ESTALIAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ESTALIAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ESTALIAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__SOUTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ESTALIAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ESTALIAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_SPECIALIST_WEAPON_GROUP__FENCING/RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ESTALIAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_IND"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_ACADEMIC_KNOWLEDGE_RELIGION/RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_IND"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_KINGDOMS_OF_IND"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_IND"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_INDHYA"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_IND"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_COOLHEADED"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_IND"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TROPICAL"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_IND"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_IND"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_ISLAND_PEOPLE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NEW_WORLD"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_ISLAND_PEOPLE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NEW_WORLD"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_ISLAND_PEOPLE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_ISLAND_PEOPLE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_ISLAND_PEOPLE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_ROW"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_ISLAND_PEOPLE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_ROW"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_ISLAND_PEOPLE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_IKAJO"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_ISLAND_PEOPLE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_IKAJO"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_ISLAND_PEOPLE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SWIM"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_ISLAND_PEOPLE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_SWIM"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_ISLAND_PEOPLE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__SOUTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_ISLAND_PEOPLE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__SOUTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_ISLAND_PEOPLE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_ISLAND_PEOPLE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_ISLAND_PEOPLE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_VERY_RESILIENT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_ISLAND_PEOPLE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"RULES-T_VERY_RESILIENT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_PLAIN_PEOPLE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_ANIMAL_CARE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_PLAIN_PEOPLE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_ANIMAL_CARE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_PLAIN_PEOPLE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NEW_WORLD"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_PLAIN_PEOPLE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NEW_WORLD"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_PLAIN_PEOPLE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_PLAIN_PEOPLE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_PLAIN_PEOPLE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_RIDE/RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_PLAIN_PEOPLE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_RIDE/RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_PLAIN_PEOPLE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_IKAJO"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_PLAIN_PEOPLE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_IKAJO"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_PLAIN_PEOPLE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__SOUTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_PLAIN_PEOPLE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__SOUTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_PLAIN_PEOPLE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_PLAIN_PEOPLE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_PLAIN_PEOPLE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_WARRIOR_BORN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NEW_WORLD_IKADIANS_PLAIN_PEOPLE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"RULES-T_WARRIOR_BORN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_PYGMY"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_KHURESH"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_PYGMY"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_KHURESH"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_PYGMY"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_PYGMY"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_PYGMY"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_PYGMY"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_PYGMY"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SILENT_MOVE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_PYGMY"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_SILENT_MOVE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_PYGMY"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KHURESIAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_PYGMY"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KHURESIAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_PYGMY"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_DWARFISM"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_PYGMY"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_DWARFISM"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_PYGMY"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TROPICAL"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_PYGMY"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TROPICAL"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_PYGMY"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_PYGMY"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_PYGMY"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_ROVER"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_PYGMY"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"RULES-T_ROVER"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_KHURESH"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_KHURESH"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_FOLLOW_TRAIL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_FOLLOW_TRAIL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KHURESIAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KHURESIAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_COOLHEADED"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"RULES-T_COOLHEADED"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TROPICAL"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TROPICAL"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KHURESH_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KISLEV_GOSPODAR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMAND/RULES-COMP_INTIMIDATE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KISLEV_GOSPODAR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_KISLEV"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KISLEV_GOSPODAR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_CONSUME_ALCOHOL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KISLEV_GOSPODAR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KISLEVARIN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KISLEV_GOSPODAR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__NORTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KISLEV_GOSPODAR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KISLEV_GOSPODAR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KISLEV_UNGOL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_ANIMAL_CARE/RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KISLEV_UNGOL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_KISLEV"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KISLEV_UNGOL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_RIDE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KISLEV_UNGOL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KISLEVARIN/RULES-COMP_SPEAK_LANGUAGE_UNGOL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KISLEV_UNGOL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__NORTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KISLEV_UNGOL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KISLEV_UNGOL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_VERY_RESILIENT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KISLEV_WHEATLAND_COLONIAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_DARK_LANDS"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KISLEV_WHEATLAND_COLONIAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_KISLEV"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KISLEV_WHEATLAND_COLONIAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KISLEV_WHEATLAND_COLONIAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KISLEVARIN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KISLEV_WHEATLAND_COLONIAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__NORTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KISLEV_WHEATLAND_COLONIAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__WHEATLANDS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KISLEV_WHEATLAND_COLONIAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NIPPONISE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NIPPON"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NIPPONISE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NIPPONISE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_NIPPONISE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NIPPONISE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_COOLHEADED"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NIPPONISE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TROPICAL"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NIPPONISE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HONOUR_DUTY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NIPPONISE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_HUNG"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_CHAOS_WASTES/RULES-COMP_COMMON_KNOWLEDGE_EASTERN_STEPPES"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_HUNG"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_CHAOS_WASTES/RULES-COMP_COMMON_KNOWLEDGE_EASTERN_STEPPES"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_HUNG"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_HUNG"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_HUNG"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_RIDE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_HUNG"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_RIDE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_HUNG"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_HUNG"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_HUNG"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_HUNG"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_HUNG"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__NORTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_HUNG"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__NORTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_HUNG"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"TOC-T_INURED_TO_CHAOS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_HUNG"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"TOC-T_INURED_TO_CHAOS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_HUNG"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_HUNG"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_HUNG"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_ROVER"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_HUNG"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"RULES-T_ROVER"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_HUNG"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_STOUT_HEARTED"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_HUNG"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"RULES-T_STOUT_HEARTED"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_KURGAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_CHAOS_WASTES/RULES-COMP_COMMON_KNOWLEDGE_EASTERN_STEPPES"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_KURGAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_CHAOS_WASTES/RULES-COMP_COMMON_KNOWLEDGE_EASTERN_STEPPES"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_KURGAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_KURGAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_KURGAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_RIDE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_KURGAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_RIDE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_KURGAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KURGAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_KURGAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KURGAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_KURGAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_BIG_AND_TOUGH"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_KURGAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_BIG_AND_TOUGH"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_KURGAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__NORTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_KURGAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__NORTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_KURGAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"TOC-T_INURED_TO_CHAOS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_KURGAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"TOC-T_INURED_TO_CHAOS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_KURGAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_KURGAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_KURGAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_WARRIOR_BORN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_KURGAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"RULES-T_WARRIOR_BORN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_NORSE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NORSCA"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_NORSE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NORSCA"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_NORSE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_CONSUME_ALCOHOL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_NORSE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_CONSUME_ALCOHOL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_NORSE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_NORSE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_NORSE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SAIL/RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_NORSE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_SAIL/RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_NORSE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_NORSE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_NORSE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_NORSE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_NORSE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_BIG_AND_TOUGH"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_NORSE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_BIG_AND_TOUGH"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_NORSE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__NORTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_NORSE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__NORTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_NORSE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"TOC-T_INURED_TO_CHAOS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_NORSE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"TOC-T_INURED_TO_CHAOS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_NORSE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_NORSE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_SKEGGI_NORSE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NEW_WORLD"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_SKEGGI_NORSE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NEW_WORLD"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_SKEGGI_NORSE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_SKEGGI_NORSE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_SKEGGI_NORSE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SAIL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_SKEGGI_NORSE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_SAIL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_SKEGGI_NORSE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_SKEGGI_NORSE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_SKEGGI_NORSE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_NORSE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_SKEGGI_NORSE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_NORSE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_SKEGGI_NORSE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_BIG_AND_TOUGH"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_SKEGGI_NORSE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_BIG_AND_TOUGH"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_SKEGGI_NORSE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TROPICAL"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_SKEGGI_NORSE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TROPICAL"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_SKEGGI_NORSE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"TOC-T_INURED_TO_CHAOS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_SKEGGI_NORSE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"TOC-T_INURED_TO_CHAOS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_SKEGGI_NORSE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__SKEGGI"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORTHMAN_SKEGGI_NORSE"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__SKEGGI"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_OLD_WORLD_COLONIES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_SOUTHLANDS"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_OLD_WORLD_COLONIES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_OLD_WORLD_COLONIES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_*"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_OLD_WORLD_COLONIES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_EBONIAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_OLD_WORLD_COLONIES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TROPICAL"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_OLD_WORLD_COLONIES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_OLD_WORLD_COLONIES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_IVORY_KINGDOMS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_SOUTHLANDS"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_IVORY_KINGDOMS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_IVORY_KINGDOMS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_EBONIAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_IVORY_KINGDOMS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_HARDY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_IVORY_KINGDOMS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TROPICAL"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_IVORY_KINGDOMS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_IVORY_KINGDOMS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_SOUTHLANDS"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_SOUTHLANDS"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_EBONIAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_EBONIAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_FLEET_FOOTED/RULES-T_HARDY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"RULES-T_FLEET_FOOTED/RULES-T_HARDY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TROPICAL"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TROPICAL"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_TRIBESMAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_ROVER"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHLANDS_EBONIAN_TRIBESMAN"</Rule>
+<Specie>"JRR-RACE_HUMAN_BARBARIAN"</Specie>
+<Talent>"RULES-T_ROVER"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_TILEAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_TILEA"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_TILEAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_TILEAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_TILEAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_TILEAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_ATTITUDE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_TILEAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__SOUTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_TILEAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_TILEAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WASTELANDER_MARIENBURGER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_GOSSIP/RULES-COMP_HAGGLE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WASTELANDER_MARIENBURGER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_WASTELAND"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WASTELANDER_MARIENBURGER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WASTELANDER_MARIENBURGER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_*"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WASTELANDER_MARIENBURGER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WASTELANDER_MARIENBURGER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__MARIENBURG"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WASTELANDER_MARIENBURGER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WASTELANDER_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_WASTELAND"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WASTELANDER_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_ROW"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WASTELANDER_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WASTELANDER_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SWIM"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WASTELANDER_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WASTELANDER_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__WASTELAND"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WASTELANDER_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BARAK_VARR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_DWARFS"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BARAK_VARR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BARAK_VARR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_HAGGLE/RULES-COMP_EVALUATE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BARAK_VARR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KHAZALID"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BARAK_VARR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABY/RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL/RULES-COMP_SPEAK_LANGUAGE_BRETON/RULES-COMP_SPEAK_LANGUAGE_ESTALIA/RULES-COMP_SPEAK_LANGUAGE_TILEA"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BARAK_VARR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_DWARFCRAFT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BARAK_VARR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_GRUDGE_BORN_FURY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BARAK_VARR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__SOUTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BARAK_VARR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BARAK_VARR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__BARAK_VARR"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BARAK_VARR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_RESISTANCE_TO_MAGIC"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BARAK_VARR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_STOUT_HEARTED"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BARAK_VARR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_STURDY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BARAK_VARR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_DEALMAKER"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BLACK_DWARFS_VAULT_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_DWARFS"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BLACK_DWARFS_VAULT_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BLACK_DWARFS_VAULT_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KHAZALID"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BLACK_DWARFS_VAULT_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL/RULES-COMP_SPEAK_LANGUAGE_TILEA"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BLACK_DWARFS_VAULT_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_TRADE_MINER/RULES-COMP_TRADE_SMITH/RULES-COMP_TRADE_STONEWORKER"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BLACK_DWARFS_VAULT_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_DWARFCRAFT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BLACK_DWARFS_VAULT_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_GRUDGE_BORN_FURY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BLACK_DWARFS_VAULT_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BLACK_DWARFS_VAULT_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BLACK_DWARFS_VAULT_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BLACK_DWARFS_VAULT_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_RESISTANCE_TO_MAGIC"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BLACK_DWARFS_VAULT_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_STOUT_HEARTED"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BLACK_DWARFS_VAULT_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_STURDY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BLACK_DWARFS_VAULT_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_MY_PRECIOUS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_DWARFS"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_HOMELAND"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KHAZALID"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_HOMELAND"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_TRADE_MINER/RULES-COMP_TRADE_SMITH/RULES-COMP_TRADE_STONEWORKER"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_DWARFCRAFT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_GRUDGE_BORN_FURY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_RESISTANCE_TO_MAGIC"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_STOUT_HEARTED"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_STURDY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_MASTER_OF_DWARFCRAFT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_GREY_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_DWARFS"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_GREY_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_GREY_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KHAZALID"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_GREY_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_BRETONNIA/RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_GREY_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_TRADE_MINER/RULES-COMP_TRADE_SMITH/RULES-COMP_TRADE_STONEWORKER"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_GREY_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_DWARFCRAFT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_GREY_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_GRUDGE_BORN_FURY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_GREY_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_GREY_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_GREY_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_GREY_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_RESISTANCE_TO_MAGIC"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_GREY_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_STOUT_HEARTED"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_GREY_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_STURDY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_GREY_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_MASTER_OF_DWARFCRAFT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAZ_A_KARAK"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_DWARFS"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAZ_A_KARAK"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KHAZALID"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAZ_A_KARAK"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAZ_A_KARAK"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAZ_A_KARAK"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_TRADE_MINER/RULES-COMP_TRADE_SMITH/RULES-COMP_TRADE_STONEWORKER"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAZ_A_KARAK"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_DWARFCRAFT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAZ_A_KARAK"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_GRUDGE_BORN_FURY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAZ_A_KARAK"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAZ_A_KARAK"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAZ_A_KARAK"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__KARAZ_A_KARAK"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAZ_A_KARAK"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_RESISTANCE_TO_MAGIC"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAZ_A_KARAK"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_STOUT_HEARTED"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAZ_A_KARAK"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_STURDY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAZ_A_KARAK"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_ETERNAL_GRUDGE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAK_KADRIN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_DWARFS"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAK_KADRIN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_INTIMIDATE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAK_KADRIN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KHAZALID"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAK_KADRIN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAK_KADRIN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_TRADE_MINER/RULES-COMP_TRADE_SMITH/RULES-COMP_TRADE_STONEWORKER"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAK_KADRIN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_DWARFCRAFT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAK_KADRIN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_GRUDGE_BORN_FURY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAK_KADRIN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAK_KADRIN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAK_KADRIN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__KARAK_KADRIN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAK_KADRIN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_RESISTANCE_TO_MAGIC"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAK_KADRIN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_STOUT_HEARTED"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAK_KADRIN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_STURDY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_KARAK_KADRIN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_WARRIOR_BORN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORSE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NORSCA"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORSE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_CONSUME_ALCOHOL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORSE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KHAZALID"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORSE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_NORSCAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORSE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_TRADE_MINER/RULES-COMP_TRADE_SMITH/RULES-COMP_TRADE_STONEWORKER"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORSE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_DWARFCRAFT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORSE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_GRUDGE_BORN_FURY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORSE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__NORTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORSE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"TOC-T_INURED_TO_CHAOS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORSE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORSE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORSE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_RESISTANCE_TO_MAGIC"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORSE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_STOUT_HEARTED"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORSE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_STURDY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_NORSE_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_BORN_MOUNTAINEER"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHERN_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_DWARFS"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHERN_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KHAZALID"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHERN_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_*"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHERN_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_TRADE_MINER/RULES-COMP_TRADE_SMITH/RULES-COMP_TRADE_STONEWORKER"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHERN_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_DWARFCRAFT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHERN_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_GRUDGE_BORN_FURY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHERN_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__SOUTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHERN_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHERN_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHERN_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_RESISTANCE_TO_MAGIC"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHERN_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_STOUT_HEARTED"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHERN_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_STURDY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHERN_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_VERY_RESILIENT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SOUTHERN_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_MASTER_OF_DWARFCRAFT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ZHUFBAR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_ACADEMIC_KNOWLEDGE_ENGINEERING"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ZHUFBAR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_DWARFS"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ZHUFBAR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ZHUFBAR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KHAZALID"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ZHUFBAR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ZHUFBAR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_DWARFCRAFT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ZHUFBAR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_GRUDGE_BORN_FURY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ZHUFBAR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ZHUFBAR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ZHUFBAR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__ZHUFBAR"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ZHUFBAR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_RESISTANCE_TO_MAGIC"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ZHUFBAR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_STOUT_HEARTED"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ZHUFBAR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_STURDY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_ZHUFBAR"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_NATURAL_ENGINEERS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_CHAOS_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_DARK_LANDS"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_CHAOS_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_DWARFS"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_CHAOS_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_INTIMIDATE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_CHAOS_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_SEARCH"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_CHAOS_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KHAZALID"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_CHAOS_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Skill>"RULES-COMP_TRADE_GUNSMITH"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_CHAOS_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_CONTEMPT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_CHAOS_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_DWARFCRAFT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_CHAOS_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_CHAOS_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_CHAOS_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_CHAOS_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_STOUT_HEARTED"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_CHAOS_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_STURDY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_CHAOS_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Talent>"RULES-T_STRONG_MINDED/RULES-T_MENACING"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_SOUTHLANDS"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_SOUTHLANDS"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_BILOKO"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_BILOKO"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_SILENT_MOVE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Skill>"RULES-COMP_SILENT_MOVE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_EBONIAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_EBONIAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TROPICAL"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TROPICAL"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"RULES-T_RESISTANCE_TO_CHAOS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Talent>"RULES-T_RESISTANCE_TO_CHAOS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"RULES-T_RESISTANCE_TO_POISON"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Talent>"RULES-T_RESISTANCE_TO_POISON"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"RULES-T_ROVER"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Talent>"RULES-T_ROVER"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"RULES-T_SPECIALIST_WEAPON_GROUP__BLOWPIPE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_BILOKO"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Talent>"RULES-T_SPECIALIST_WEAPON_GROUP__BLOWPIPE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_MOOTLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_ACADEMIC_KNOWLEDGE_GENEALOGY/RULES-COMP_ACADEMIC_KNOWLEDGE_HERALDRY"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_MOOTLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_THE_EMPIRE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_MOOTLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_HALFLING"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_MOOTLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_MOOTLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_HALFLING"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_MOOTLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_MOOTLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_TRADE_COOK/RULES-COMP_TRADE_FARMER"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_MOOTLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_MOOTLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_MOOTLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__MOOTLAND"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_MOOTLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"RULES-T_RESISTANCE_TO_CHAOS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_MOOTLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"RULES-T_SPECIALIST_WEAPON_GROUP__SLING"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_MOOTLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_HALFLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_HOMELAND"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_HALFLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_HALFLING"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_HALFLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_HALFLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_HALFLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_HALFLING"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_HALFLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL/RULES-COMP_SPEAK_LANGUAGE_KISLEVARIN/RULES-COMP_SPEAK_LANGUAGE_BRETON/RULES-COMP_SPEAK_LANGUAGE_ESTALIA/RULES-COMP_SPEAK_LANGUAGE_TILEA"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_HALFLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_TRADE_COOK/RULES-COMP_TRADE_FARMER"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_HALFLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_HALFLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_HALFLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"RULES-T_RESISTANCE_TO_CHAOS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_HALFLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"RULES-T_SPECIALIST_WEAPON_GROUP__SLING"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_EXPATRIATE_HALFLINGS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_LUSTRIA"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_LUSTRIA"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_WAYARHUI"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_WAYARHUI"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_WAYAR"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_WAYAR"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TROPICAL"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TROPICAL"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"RULES-T_RESISTANCE_TO_CHAOS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Talent>"RULES-T_RESISTANCE_TO_CHAOS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"RULES-T_ROVER"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Talent>"RULES-T_ROVER"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Talent>"RULES-T_SPECIALIST_WEAPON_GROUP__BLOWPIPE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WAYARHUI"</Rule>
+<Specie>"JRR-RACE_HALFLING_SAVAGE"</Specie>
+<Talent>"RULES-T_SPECIALIST_WEAPON_GROUP__BLOWPIPE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_DARK_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ELVES"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_DARK_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_READ_WRITE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_DARK_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_DRUHIR/RULES-COMP_SPEAK_LANGUAGE_BLACK_ELVEN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_DARK_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_*"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_DARK_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_SPECIALIST_WEAPON_GROUP__LONGBOW"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_DARK_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"JRR-T_CHILDREN_OF_THE_GODS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_DARK_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_COOLHEADED/JRR-T_CONTEMPT"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_DARK_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_EXCELLENT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_DARK_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_DARK_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_DARK_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_DARK_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_STRONG_MINDED"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_DARK_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_WARRIOR_BORN/RULES-T_SCHEMER"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_HIGH_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_ACADEMIC_KNOWLEDGE_*/RULES-COMP_PERFORMER_DANCER/RULES-COMP_PERFORMER_MUSICIAN/RULES-COMP_PERFORMER_SINGER"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_HIGH_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_CHARM"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_HIGH_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ELVES"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_HIGH_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_READ_WRITE"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_HIGH_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_TAR_ELTHARIN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_HIGH_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_*"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_HIGH_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_SPECIALIST_WEAPON_GROUP__LONGBOW"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_HIGH_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"JRR-T_CHILDREN_OF_THE_GODS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_HIGH_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_COOLHEADED/RULES-T_SAVVY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_HIGH_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_EXCELLENT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_HIGH_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__SOUTHERN"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_HIGH_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_HIGH_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_COLONIES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ELVES"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_COLONIES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_LAND/RULES-COMP_COMMON_KNOWLEDGE_REGION"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_COLONIES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_SAIL/RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_COLONIES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_TAR_ELTHARIN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_COLONIES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_*"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_COLONIES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_SWIM"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_COLONIES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_SPECIALIST_WEAPON_GROUP__LONGBOW"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_COLONIES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"JRR-T_CHILDREN_OF_THE_GODS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_COLONIES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_EXCELLENT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_COLONIES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_COLONIES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_COLONIES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_SEASONED_TRAVELLER"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_MARIENBURG"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ELVES"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_MARIENBURG"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_THE_WASTELAND"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_MARIENBURG"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_SAIL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_MARIENBURG"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_TAR_ELTHARIN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_MARIENBURG"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_MARIENBURG"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_SWIM"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_MARIENBURG"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_SPECIALIST_WEAPON_GROUP__LONGBOW"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_MARIENBURG"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"JRR-T_CHILDREN_OF_THE_GODS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_MARIENBURG"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_EXCELLENT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_MARIENBURG"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_MARIENBURG"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_MARIENBURG"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__THE_WASTELAND"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_SEA_ELVES_MARIENBURG"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_SEASONED_TRAVELLER/RULES-T_SCHEMER"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WOOD_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_CHARM_ANIMAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WOOD_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ELVES"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WOOD_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WOOD_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_PERFORMER_DANCER/RULES-COMP_PERFORMER_MUSICIAN/RULES-COMP_PERFORMER_SINGER/RULES-COMP_TRADE_BOWYER/RULES-COMP_TRADE_FLETCHER"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WOOD_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_FAN_ELTHARIN"</Skill>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WOOD_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_SPECIALIST_WEAPON_GROUP__LONGBOW"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WOOD_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"JRR-T_CHILDREN_OF_THE_GODS"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WOOD_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_COOLHEADED/RULES-T_SAVVY"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WOOD_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_EXCELLENT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WOOD_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"JRR-T_HOME_ENVIRONMENT__TEMPERATE"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WOOD_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WOOD_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+</Entry>
+<Entry>
+<Rule>"JRR-RULE_WOOD_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Talent>"RULES-T_ROVER"</Talent>
+</Entry>
+</DATA_RULE_SPECIE>
+<DATA_CAREER>
+<Career id="JRR-CARE_RAVAGER">
+<Description language="ENGLISH">"Ravager"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, S +10%, T +10%, WP +10%"</MainProfile>
+<SecondaryProfile>"W +3"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+</Advances>
+<Skills>"Common Knowledge (Badlands), Concealment, Intimidate, Outdoor Survival"</Skills>
+<Talents>"Fearless, Frenzy, Strike Mighty Blow, Strike to Injure"</Talents>
+<Trappings>"Medium Armour (Leather jerkin, Gut plate (AP 2 to Body)), Hand Weapon, Hunk of Raw Meat"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_BADLANDS">"1"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_FEARLESS">"1"</Talent>
+<Talent name="RULES-T_FRENZY">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"JRR 3"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="JRR-CARE_RAVAGER">"RULES-CARE_HUNTER"</Link>
+<Link name="JRR-CARE_RAVAGER">"RULES-CARE_MERCENARY"</Link>
+<Link name="JRR-CARE_RAVAGER">"RULES-CARE_OUTRIDER"</Link>
+<Link name="JRR-CARE_RAVAGER">"RULES-CARE_THUG"</Link>
+<Link name="JRR-CARE_RAVAGER">"RULES-CARE_VETERAN"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_SPECIE>
+<Specie id="JRR-RACE_HUMAN_BARBARIAN">
+<Description language="ENGLISH">"Human (Barbarian)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+25"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+25"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 11; 4-6: 12; 7-9: 13; 10: 14"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 1; 5-10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename"</NamePattern>
+<NamePattern sex="F">"Forename"</NamePattern>
+<Name part="Forename" sex="F" name="Alexa">"1-5"</Name>
+<Name part="Forename" sex="F" name="Alfrida">"6-10"</Name>
+<Name part="Forename" sex="F" name="Beatrix">"11-15"</Name>
+<Name part="Forename" sex="F" name="Bianka">"16-20"</Name>
+<Name part="Forename" sex="F" name="Carlott">"21-25"</Name>
+<Name part="Forename" sex="F" name="Elfrida">"26-30"</Name>
+<Name part="Forename" sex="F" name="Elise">"31-35"</Name>
+<Name part="Forename" sex="F" name="Gabrielle">"36-40"</Name>
+<Name part="Forename" sex="F" name="Gretchen">"41-45"</Name>
+<Name part="Forename" sex="F" name="Hanna">"46-50"</Name>
+<Name part="Forename" sex="F" name="Ilsa">"51-55"</Name>
+<Name part="Forename" sex="F" name="Klara">"56-60"</Name>
+<Name part="Forename" sex="F" name="Jarla">"61-65"</Name>
+<Name part="Forename" sex="F" name="Ludmilla">"66-70"</Name>
+<Name part="Forename" sex="F" name="Mathilde">"71-75"</Name>
+<Name part="Forename" sex="F" name="Regina">"76-80"</Name>
+<Name part="Forename" sex="F" name="Solveig">"81-85"</Name>
+<Name part="Forename" sex="F" name="Theodora">"86-90"</Name>
+<Name part="Forename" sex="F" name="Ulrike">"91-95"</Name>
+<Name part="Forename" sex="F" name="Wertha">"96-100"</Name>
+<Name part="Forename" sex="M" name="Adelbert">"1-5"</Name>
+<Name part="Forename" sex="M" name="Albrecht">"6-10"</Name>
+<Name part="Forename" sex="M" name="Berthold">"11-15"</Name>
+<Name part="Forename" sex="M" name="Dieter">"16-20"</Name>
+<Name part="Forename" sex="M" name="Eckhardt">"21-25"</Name>
+<Name part="Forename" sex="M" name="Felix">"26-30"</Name>
+<Name part="Forename" sex="M" name="Gottfried">"31-35"</Name>
+<Name part="Forename" sex="M" name="Gustav">"36-40"</Name>
+<Name part="Forename" sex="M" name="Heinz">"41-45"</Name>
+<Name part="Forename" sex="M" name="Johann">"46-50"</Name>
+<Name part="Forename" sex="M" name="Konrad">"51-55"</Name>
+<Name part="Forename" sex="M" name="Leopold">"56-60"</Name>
+<Name part="Forename" sex="M" name="Magnus">"61-65"</Name>
+<Name part="Forename" sex="M" name="Otto">"66-70"</Name>
+<Name part="Forename" sex="M" name="Pieter">"71-75"</Name>
+<Name part="Forename" sex="M" name="Rudiger">"76-80"</Name>
+<Name part="Forename" sex="M" name="Siegfried">"81-85"</Name>
+<Name part="Forename" sex="M" name="Ulrich">"86-90"</Name>
+<Name part="Forename" sex="M" name="Waldemar">"91-95"</Name>
+<Name part="Forename" sex="M" name="Wolfgang">"96-100"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_THE_EMPIRE"</Skill>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T*"</Talent>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"2"</Career>
+<Career name="RULES-CARE_APPRENTICE_WIZARD">"2"</Career>
+<Career name="RULES-CARE_BAILIFF">"1"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"1"</Career>
+<Career name="RULES-CARE_BOATMAN">"2"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"2"</Career>
+<Career name="RULES-CARE_BURGHER">"2"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"2"</Career>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"2"</Career>
+<Career name="RULES-CARE_COACHMAN">"2"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+<Career name="RULES-CARE_ESTALIAN_DIESTRO">"1"</Career>
+<Career name="RULES-CARE_FERRYMAN">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"2"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"2"</Career>
+<Career name="RULES-CARE_HEDGE_WIZARD">"1"</Career>
+<Career name="RULES-CARE_HUNTER">"2"</Career>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+<Career name="RULES-CARE_JAILER">"1"</Career>
+<Career name="RULES-CARE_KISLEVITE_KOSSAR">"1"</Career>
+<Career name="RULES-CARE_MARINE">"2"</Career>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+<Career name="RULES-CARE_MESSENGER">"2"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"2"</Career>
+<Career name="RULES-CARE_MINER">"2"</Career>
+<Career name="RULES-CARE_NOBLE">"2"</Career>
+<Career name="RULES-CARE_NORSE_BERSERKER">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"2"</Career>
+<Career name="RULES-CARE_OUTRIDER">"2"</Career>
+<Career name="RULES-CARE_PEASANT">"2"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"2"</Career>
+<Career name="RULES-CARE_PROTAGONIST">"2"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"2"</Career>
+<Career name="RULES-CARE_ROADWARDEN">"2"</Career>
+<Career name="RULES-CARE_ROGUE">"2"</Career>
+<Career name="RULES-CARE_SCRIBE">"2"</Career>
+<Career name="RULES-CARE_SEAMAN">"2"</Career>
+<Career name="RULES-CARE_SERVANT">"2"</Career>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+<Career name="RULES-CARE_SOLDIER">"2"</Career>
+<Career name="RULES-CARE_SQUIRE">"2"</Career>
+<Career name="RULES-CARE_STUDENT">"2"</Career>
+<Career name="RULES-CARE_THIEF">"2"</Career>
+<Career name="RULES-CARE_THUG">"2"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"2"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"2"</Career>
+<Career name="RULES-CARE_TRADESMAN">"2"</Career>
+<Career name="RULES-CARE_VAGABOND">"2"</Career>
+<Career name="RULES-CARE_VALET">"2"</Career>
+<Career name="RULES-CARE_WATCHMAN">"2"</Career>
+<Career name="RULES-CARE_WOODSMAN">"2"</Career>
+<Career name="RULES-CARE_ZEALOT">"2"</Career>
+<Career name="RULES-CARE_DAEMON_SLAYER">"-"</Career>
+<Career name="RULES-CARE_GIANT_SLAYER">"-"</Career>
+<Career name="RULES-CARE_RUNEBEARER">"-"</Career>
+<Career name="RULES-CARE_TROLL_SLAYER">"-"</Career>
+<Career name="CCOMP-CARE_APPRENTICE_RUNESMITH">"-"</Career>
+<Career name="CCOMP-CARE_JOURNEYMAN_RUNESMITH">"-"</Career>
+<Career name="CCOMP-CARE_MASTER_RUNESMITH">"-"</Career>
+<Career name="CCOMP-CARE_RUNELORD">"-"</Career>
+<Career name="RULES-CARE_ENVOY">"-"</Career>
+<Career name="RULES-CARE_GHOST_STRIDER">"-"</Career>
+<Career name="RULES-CARE_KITHBAND_WARRIOR">"-"</Career>
+<Career name="RULES-CARE_FIELDWARDEN">"-"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"4"</Page>
+</Specie>
+<Specie id="JRR-RACE_HALFLING_SAVAGE">
+<Description language="ENGLISH">"Halfling (Savage)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HALFLING"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+25"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 8; 4-6: 9; 7-9: 10; 10: 11"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-7: 2; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename"</NamePattern>
+<NamePattern sex="F">"Forename"</NamePattern>
+<Name part="Forename" sex="F" name="Agnes">"1-5"</Name>
+<Name part="Forename" sex="F" name="Alice">"6-10"</Name>
+<Name part="Forename" sex="F" name="Elena">"11-15"</Name>
+<Name part="Forename" sex="F" name="Eva">"16-20"</Name>
+<Name part="Forename" sex="F" name="Frida">"21-25"</Name>
+<Name part="Forename" sex="F" name="Greta">"26-30"</Name>
+<Name part="Forename" sex="F" name="Hanna">"31-35"</Name>
+<Name part="Forename" sex="F" name="Heidi">"36-40"</Name>
+<Name part="Forename" sex="F" name="Hilda">"41-45"</Name>
+<Name part="Forename" sex="F" name="Janna">"46-50"</Name>
+<Name part="Forename" sex="F" name="Karin">"51-55"</Name>
+<Name part="Forename" sex="F" name="Leni">"56-60"</Name>
+<Name part="Forename" sex="F" name="Marie">"61-65"</Name>
+<Name part="Forename" sex="F" name="Petra">"66-70"</Name>
+<Name part="Forename" sex="F" name="Silma">"71-75"</Name>
+<Name part="Forename" sex="F" name="Sophia">"76-80"</Name>
+<Name part="Forename" sex="F" name="Susi">"81-85"</Name>
+<Name part="Forename" sex="F" name="Theda">"86-90"</Name>
+<Name part="Forename" sex="F" name="Ulla">"91-95"</Name>
+<Name part="Forename" sex="F" name="Wanda">"96-100"</Name>
+<Name part="Forename" sex="M" name="Adam">"1-5"</Name>
+<Name part="Forename" sex="M" name="Albert">"6-10"</Name>
+<Name part="Forename" sex="M" name="Alfred">"11-15"</Name>
+<Name part="Forename" sex="M" name="Axel">"16-20"</Name>
+<Name part="Forename" sex="M" name="Carl">"21-25"</Name>
+<Name part="Forename" sex="M" name="Edgar">"26-30"</Name>
+<Name part="Forename" sex="M" name="Hugo">"31-35"</Name>
+<Name part="Forename" sex="M" name="Jakob">"36-40"</Name>
+<Name part="Forename" sex="M" name="Ludo">"41-45"</Name>
+<Name part="Forename" sex="M" name="Max">"46-50"</Name>
+<Name part="Forename" sex="M" name="Niklaus">"51-55"</Name>
+<Name part="Forename" sex="M" name="Oskar">"56-60"</Name>
+<Name part="Forename" sex="M" name="Paul">"61-65"</Name>
+<Name part="Forename" sex="M" name="Ralf">"66-70"</Name>
+<Name part="Forename" sex="M" name="Rudi">"71-75"</Name>
+<Name part="Forename" sex="M" name="Theo">"76-80"</Name>
+<Name part="Forename" sex="M" name="Thomas">"81-85"</Name>
+<Name part="Forename" sex="M" name="Udo">"86-90"</Name>
+<Name part="Forename" sex="M" name="Viktor">"91-95"</Name>
+<Name part="Forename" sex="M" name="Walter">"96-100"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_ACADEMIC_KNOWLEDGE_GENEALOGY/RULES-COMP_ACADEMIC_KNOWLEDGE_HERALDRY"</Skill>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_HALFLINGS"</Skill>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_HALFLING"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+<Skill>"RULES-COMP_TRADE_COOK/RULES-COMP_TRADE_FARMER"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_CHAOS"</Talent>
+<Talent>"RULES-T_SPECIALIST_WEAPON_GROUP__SLING"</Talent>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"3"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"1"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"1"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"2"</Career>
+<Career name="RULES-CARE_BURGHER">"2"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"2"</Career>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"3"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"3"</Career>
+<Career name="RULES-CARE_FERRYMAN">"1"</Career>
+<Career name="RULES-CARE_FIELDWARDEN">"4"</Career>
+<Career name="RULES-CARE_FISHERMAN">"1"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"3"</Career>
+<Career name="RULES-CARE_HUNTER">"5"</Career>
+<Career name="RULES-CARE_MERCENARY">"4"</Career>
+<Career name="RULES-CARE_MESSENGER">"5"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"5"</Career>
+<Career name="RULES-CARE_OUTLAW">"3"</Career>
+<Career name="RULES-CARE_PEASANT">"6"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"1"</Career>
+<Career name="RULES-CARE_ROGUE">"5"</Career>
+<Career name="RULES-CARE_SERVANT">"5"</Career>
+<Career name="RULES-CARE_SMUGGLER">"3"</Career>
+<Career name="RULES-CARE_SOLDIER">"2"</Career>
+<Career name="RULES-CARE_STUDENT">"2"</Career>
+<Career name="RULES-CARE_THIEF">"6"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"2"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"5"</Career>
+<Career name="RULES-CARE_TRADESMAN">"5"</Career>
+<Career name="RULES-CARE_VAGABOND">"4"</Career>
+<Career name="RULES-CARE_VALET">"2"</Career>
+<Career name="RULES-CARE_WATCHMAN">"4"</Career>
+<Career name="RULES-CARE_DAEMON_SLAYER">"-"</Career>
+<Career name="RULES-CARE_GIANT_SLAYER">"-"</Career>
+<Career name="RULES-CARE_RUNEBEARER">"-"</Career>
+<Career name="RULES-CARE_TROLL_SLAYER">"-"</Career>
+<Career name="CCOMP-CARE_APPRENTICE_RUNESMITH">"-"</Career>
+<Career name="CCOMP-CARE_JOURNEYMAN_RUNESMITH">"-"</Career>
+<Career name="CCOMP-CARE_MASTER_RUNESMITH">"-"</Career>
+<Career name="CCOMP-CARE_RUNELORD">"-"</Career>
+<Career name="RULES-CARE_ENVOY">"-"</Career>
+<Career name="RULES-CARE_GHOST_STRIDER">"-"</Career>
+<Career name="RULES-CARE_KITHBAND_WARRIOR">"-"</Career>
+<Career name="RULES-CARE_APPRENTICE_WIZARD">"-"</Career>
+<Career name="RULES-CARE_HEDGE_WIZARD">"-"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"4"</Page>
+</Specie>
+<Specie id="JRR-RACE_GNOME">
+<Description language="ENGLISH">"Gnome"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"JRR-SPECIE_GNOME"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 9; 4-6: 10; 7-9: 11; 10: 12"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_PERFORMER_JESTER/RULES-COMP_COMMON_KNOWLEDGE_HOMELAND"</Skill>
+<Skill>"RULES-COMP_CONCEALMENT/RULES-COMP_TRADE_BLACKSMITH"</Skill>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_GNOMES"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GNOMISH"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_*"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_TUNNEL_RAT"</Talent>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"1"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"1"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"1"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"1"</Career>
+<Career name="RULES-CARE_BURGHER">"1"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"1"</Career>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"1"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"1"</Career>
+<Career name="RULES-CARE_FERRYMAN">"1"</Career>
+<Career name="RULES-CARE_FIELDWARDEN">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"1"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"1"</Career>
+<Career name="RULES-CARE_HUNTER">"1"</Career>
+<Career name="RULES-CARE_MERCENARY">"1"</Career>
+<Career name="RULES-CARE_MESSENGER">"1"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"1"</Career>
+<Career name="RULES-CARE_PEASANT">"1"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"1"</Career>
+<Career name="RULES-CARE_ROGUE">"1"</Career>
+<Career name="RULES-CARE_SERVANT">"1"</Career>
+<Career name="RULES-CARE_SMUGGLER">"1"</Career>
+<Career name="RULES-CARE_SOLDIER">"1"</Career>
+<Career name="RULES-CARE_STUDENT">"1"</Career>
+<Career name="RULES-CARE_THIEF">"1"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"1"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"1"</Career>
+<Career name="RULES-CARE_VAGABOND">"1"</Career>
+<Career name="RULES-CARE_VALET">"1"</Career>
+<Career name="RULES-CARE_WATCHMAN">"1"</Career>
+<Career name="RULES-CARE_DAEMON_SLAYER">"-"</Career>
+<Career name="RULES-CARE_GIANT_SLAYER">"-"</Career>
+<Career name="RULES-CARE_RUNEBEARER">"-"</Career>
+<Career name="RULES-CARE_TROLL_SLAYER">"-"</Career>
+<Career name="CCOMP-CARE_APPRENTICE_RUNESMITH">"-"</Career>
+<Career name="CCOMP-CARE_JOURNEYMAN_RUNESMITH">"-"</Career>
+<Career name="CCOMP-CARE_MASTER_RUNESMITH">"-"</Career>
+<Career name="CCOMP-CARE_RUNELORD">"-"</Career>
+<Career name="RULES-CARE_ENVOY">"-"</Career>
+<Career name="RULES-CARE_GHOST_STRIDER">"-"</Career>
+<Career name="RULES-CARE_KITHBAND_WARRIOR">"-"</Career>
+<Career name="RULES-CARE_APPRENTICE_WIZARD">"-"</Career>
+<Career name="RULES-CARE_HEDGE_WIZARD">"-"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"36"</Page>
+</Specie>
+<Specie id="JRR-RACE_OGRE_KINGDOMS">
+<Description language="ENGLISH">"Ogre (Ogre Kingdoms)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"JRR-SPECIE_OGRE"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+40"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+40"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"5"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 13; 4-6: 14; 7-9: 15; 10: 16"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-7: 1; 8-10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_OGRES"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GRUMBARTH"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"JRR-T_ACUTE_SENSE_OF_SMELL"</Talent>
+<Talent>"RULES-T_MENACING"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_STOUT_HEARTED"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_BOATMAN">"2"</Career>
+<Career name="RULES-CARE_BODYGUARD">"7"</Career>
+<Career name="RULES-CARE_HUNTER">"5"</Career>
+<Career name="RULES-CARE_JAILER">"8"</Career>
+<Career name="RULES-CARE_MARINE">"4"</Career>
+<Career name="RULES-CARE_MERCENARY">"14"</Career>
+<Career name="RULES-CARE_MESSENGER">"2"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"1"</Career>
+<Career name="RULES-CARE_MINER">"2"</Career>
+<Career name="RULES-CARE_OUTLAW">"2"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"12"</Career>
+<Career name="RULES-CARE_PROTAGONIST">"5"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"1"</Career>
+<Career name="JRR-CARE_RAVAGER">"14"</Career>
+<Career name="RULES-CARE_SEAMAN">"2"</Career>
+<Career name="RULES-CARE_SERVANT">"2"</Career>
+<Career name="RULES-CARE_THIEF">"1"</Career>
+<Career name="RULES-CARE_THUG">"14"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"2"</Career>
+</SUBCHAPTER_CAREER>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="F">"Forename"</NamePattern>
+<NamePattern sex="M">"Forename"</NamePattern>
+<Name part="Forename" sex="F" name="Aggrun">"1-5"</Name>
+<Name part="Forename" sex="F" name="Brecca">"6-10"</Name>
+<Name part="Forename" sex="F" name="Corla">"11-15"</Name>
+<Name part="Forename" sex="F" name="Fessun">"16-20"</Name>
+<Name part="Forename" sex="F" name="Groha">"21-25"</Name>
+<Name part="Forename" sex="F" name="Gressa">"26-30"</Name>
+<Name part="Forename" sex="F" name="Gurda">"31-35"</Name>
+<Name part="Forename" sex="F" name="Halka">"36-40"</Name>
+<Name part="Forename" sex="F" name="Hunga">"41-45"</Name>
+<Name part="Forename" sex="F" name="Kalla">"46-50"</Name>
+<Name part="Forename" sex="F" name="Luska">"51-55"</Name>
+<Name part="Forename" sex="F" name="Magrun">"56-60"</Name>
+<Name part="Forename" sex="F" name="Mika">"61-65"</Name>
+<Name part="Forename" sex="F" name="Morga">"66-70"</Name>
+<Name part="Forename" sex="F" name="Olna">"71-75"</Name>
+<Name part="Forename" sex="F" name="Riska">"76-80"</Name>
+<Name part="Forename" sex="F" name="Tagha">"81-85"</Name>
+<Name part="Forename" sex="F" name="Ulka">"86-90"</Name>
+<Name part="Forename" sex="F" name="Ulsa">"91-95"</Name>
+<Name part="Forename" sex="F" name="Wolna">"96-100"</Name>
+<Name part="Forename" sex="M" name="Agrak">"1-5"</Name>
+<Name part="Forename" sex="M" name="Brakh">"6-10"</Name>
+<Name part="Forename" sex="M" name="Carac">"11-15"</Name>
+<Name part="Forename" sex="M" name="Dakar">"16-20"</Name>
+<Name part="Forename" sex="M" name="Davog">"21-25"</Name>
+<Name part="Forename" sex="M" name="Dokk">"26-30"</Name>
+<Name part="Forename" sex="M" name="Kallik">"31-35"</Name>
+<Name part="Forename" sex="M" name="Kavok">"36-40"</Name>
+<Name part="Forename" sex="M" name="Lorgh">"41-45"</Name>
+<Name part="Forename" sex="M" name="Lurg">"46-50"</Name>
+<Name part="Forename" sex="M" name="Pardagh">"51-55"</Name>
+<Name part="Forename" sex="M" name="Praksh">"56-60"</Name>
+<Name part="Forename" sex="M" name="Sallak">"61-65"</Name>
+<Name part="Forename" sex="M" name="Skoar">"66-70"</Name>
+<Name part="Forename" sex="M" name="Svorg">"71-75"</Name>
+<Name part="Forename" sex="M" name="Targar">"76-80"</Name>
+<Name part="Forename" sex="M" name="Torrug">"81-85"</Name>
+<Name part="Forename" sex="M" name="Thrarg">"86-90"</Name>
+<Name part="Forename" sex="M" name="Varg">"91-95"</Name>
+<Name part="Forename" sex="M" name="Vorg">"96-100"</Name>
+</SUBCHAPTER_NAMES>
+<Page>"35"</Page>
+</Specie>
+<Specie id="JRR-RACE_OGRE_WANDERER">
+<Description language="ENGLISH">"Ogre (Wanderer)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"JRR-SPECIE_OGRE"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"3"</Attribut>
+<Attribut name="RULES-ATTR_M">"6"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1: 19; 2: 20; 3: 21; 4: 22; 5: 23; 6: 24; 7: 25; 8: 26; 9: 27; 10: 28"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-7: 1; 8-10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_OGRES"</Skill>
+<Skill>"RULES-COMP_CONSUME_ALCOHOL"</Skill>
+<Skill>"RULES-COMP_INTIMIDATE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_GRUMBARTH"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_*"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"JRR-T_BIG_FAT_AND_STUPID"</Talent>
+<Talent>"RULES-T_DISARM"</Talent>
+<Talent>"RULES-T_FEARLESS"</Talent>
+<Talent>"RULES-T_MENACING"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED"</Talent>
+<Talent>"RULES-T_STREET_FIGHTING/RULES-T_WRESTLING"</Talent>
+<Talent>"RULES-T_STRIKE_MIGHTY_BLOW"</Talent>
+<Talent>"JRR-T_THE_GREAT_MAW"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_BODYGUARD">"7"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"3"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"3"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"2"</Career>
+<Career name="RULES-CARE_HUNTER">"7"</Career>
+<Career name="RULES-CARE_JAILER">"5"</Career>
+<Career name="RULES-CARE_MARINE">"2"</Career>
+<Career name="RULES-CARE_MERCENARY">"11"</Career>
+<Career name="RULES-CARE_MINER">"5"</Career>
+<Career name="RULES-CARE_OUTLAW">"10"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"15"</Career>
+<Career name="RULES-CARE_PROTAGONIST">"5"</Career>
+<Career name="RULES-CARE_SEAMAN">"1"</Career>
+<Career name="RULES-CARE_SOLDIER">"8"</Career>
+<Career name="RULES-CARE_THUG">"6"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"2"</Career>
+<Career name="RULES-CARE_TRADESMAN">"1"</Career>
+<Career name="RULES-CARE_VAGABOND">"7"</Career>
+</SUBCHAPTER_CAREER>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="F">"Forename"</NamePattern>
+<NamePattern sex="M">"Forename"</NamePattern>
+<Name part="Forename" sex="F" name="Aggrun">"1-5"</Name>
+<Name part="Forename" sex="F" name="Brecca">"6-10"</Name>
+<Name part="Forename" sex="F" name="Corla">"11-15"</Name>
+<Name part="Forename" sex="F" name="Fessun">"16-20"</Name>
+<Name part="Forename" sex="F" name="Groha">"21-25"</Name>
+<Name part="Forename" sex="F" name="Gressa">"26-30"</Name>
+<Name part="Forename" sex="F" name="Gurda">"31-35"</Name>
+<Name part="Forename" sex="F" name="Halka">"36-40"</Name>
+<Name part="Forename" sex="F" name="Hunga">"41-45"</Name>
+<Name part="Forename" sex="F" name="Kalla">"46-50"</Name>
+<Name part="Forename" sex="F" name="Luska">"51-55"</Name>
+<Name part="Forename" sex="F" name="Magrun">"56-60"</Name>
+<Name part="Forename" sex="F" name="Mika">"61-65"</Name>
+<Name part="Forename" sex="F" name="Morga">"66-70"</Name>
+<Name part="Forename" sex="F" name="Olna">"71-75"</Name>
+<Name part="Forename" sex="F" name="Riska">"76-80"</Name>
+<Name part="Forename" sex="F" name="Tagha">"81-85"</Name>
+<Name part="Forename" sex="F" name="Ulka">"86-90"</Name>
+<Name part="Forename" sex="F" name="Ulsa">"91-95"</Name>
+<Name part="Forename" sex="F" name="Wolna">"96-100"</Name>
+<Name part="Forename" sex="M" name="Agrak">"1-5"</Name>
+<Name part="Forename" sex="M" name="Brakh">"6-10"</Name>
+<Name part="Forename" sex="M" name="Carac">"11-15"</Name>
+<Name part="Forename" sex="M" name="Dakar">"16-20"</Name>
+<Name part="Forename" sex="M" name="Davog">"21-25"</Name>
+<Name part="Forename" sex="M" name="Dokk">"26-30"</Name>
+<Name part="Forename" sex="M" name="Kallik">"31-35"</Name>
+<Name part="Forename" sex="M" name="Kavok">"36-40"</Name>
+<Name part="Forename" sex="M" name="Lorgh">"41-45"</Name>
+<Name part="Forename" sex="M" name="Lurg">"46-50"</Name>
+<Name part="Forename" sex="M" name="Pardagh">"51-55"</Name>
+<Name part="Forename" sex="M" name="Praksh">"56-60"</Name>
+<Name part="Forename" sex="M" name="Sallak">"61-65"</Name>
+<Name part="Forename" sex="M" name="Skoar">"66-70"</Name>
+<Name part="Forename" sex="M" name="Svorg">"71-75"</Name>
+<Name part="Forename" sex="M" name="Targar">"76-80"</Name>
+<Name part="Forename" sex="M" name="Torrug">"81-85"</Name>
+<Name part="Forename" sex="M" name="Thrarg">"86-90"</Name>
+<Name part="Forename" sex="M" name="Varg">"91-95"</Name>
+<Name part="Forename" sex="M" name="Vorg">"96-100"</Name>
+</SUBCHAPTER_NAMES>
+<Page>"35"</Page>
+</Specie>
+</DATA_SPECIE>
+<DATA_RACE>
+<Race id="JRR-SPECIE_OGRE">
+<Description language="ENGLISH">"Ogre"</Description>
+<SUBCHAPTER_PHYSICAL>
+<HeightFemale>"114+2d10"</HeightFemale>
+<HeightMale>"114+3d10"</HeightMale>
+<Hair name="Brown">"1"</Hair>
+<Hair name="Red Brown">"2"</Hair>
+<Hair name="Dark Brown">"3"</Hair>
+<Hair name="Sienna">"4-5"</Hair>
+<Hair name="Black">"6-8"</Hair>
+<Hair name="Jet Black">"9"</Hair>
+<Hair name="Blue Black">"10"</Hair>
+<Eye name="Grey">"1"</Eye>
+<Eye name="Green">"2"</Eye>
+<Eye name="Amber">"3"</Eye>
+<Eye name="Hazel">"4"</Eye>
+<Eye name="Brown">"5"</Eye>
+<Eye name="Dark Brown">"6"</Eye>
+<Eye name="Sienna">"7"</Eye>
+<Eye name="Black">"8"</Eye>
+<Eye name="Purple Black">"9"</Eye>
+<Eye name="Blue Black">"10"</Eye>
+<Weight name="600">"01"</Weight>
+<Weight name="610">"02-03"</Weight>
+<Weight name="620">"04-05"</Weight>
+<Weight name="630">"06-08"</Weight>
+<Weight name="640">"09-12"</Weight>
+<Weight name="650">"13-17"</Weight>
+<Weight name="660">"18-22"</Weight>
+<Weight name="670">"23-29"</Weight>
+<Weight name="680">"30-37"</Weight>
+<Weight name="690">"38-49"</Weight>
+<Weight name="700">"50-64"</Weight>
+<Weight name="710">"65-71"</Weight>
+<Weight name="720">"72-78"</Weight>
+<Weight name="730">"79-83"</Weight>
+<Weight name="740">"84-88"</Weight>
+<Weight name="760">"89-92"</Weight>
+<Weight name="770">"93-95"</Weight>
+<Weight name="780">"96-97"</Weight>
+<Weight name="790">"98-99"</Weight>
+<Weight name="800">"00"</Weight>
+<AgeRoll name="20">"01-05"</AgeRoll>
+<AgeRoll name="22">"06-10"</AgeRoll>
+<AgeRoll name="24">"11-15"</AgeRoll>
+<AgeRoll name="26">"16-20"</AgeRoll>
+<AgeRoll name="28">"21-25"</AgeRoll>
+<AgeRoll name="30">"26-30"</AgeRoll>
+<AgeRoll name="32">"31-35"</AgeRoll>
+<AgeRoll name="34">"36-40"</AgeRoll>
+<AgeRoll name="36">"41-45"</AgeRoll>
+<AgeRoll name="38">"46-50"</AgeRoll>
+<AgeRoll name="40">"51-55"</AgeRoll>
+<AgeRoll name="42">"56-60"</AgeRoll>
+<AgeRoll name="44">"61-65"</AgeRoll>
+<AgeRoll name="46">"66-70"</AgeRoll>
+<AgeRoll name="50">"71-75"</AgeRoll>
+<AgeRoll name="52">"76-80"</AgeRoll>
+<AgeRoll name="54">"81-85"</AgeRoll>
+<AgeRoll name="56">"86-90"</AgeRoll>
+<AgeRoll name="58">"91-95"</AgeRoll>
+<AgeRoll name="60">"96-00"</AgeRoll>
+<Siblings name="0">"1-4"</Siblings>
+<Siblings name="1">"5"</Siblings>
+<Siblings name="2">"6"</Siblings>
+<Siblings name="3">"7"</Siblings>
+<Siblings name="4">"8"</Siblings>
+<Siblings name="5">"9"</Siblings>
+<Siblings name="6">"10"</Siblings>
+<Birthplace name="World's Edge Mountains (South of Black Fire Pass)">"01-30"</Birthplace>
+<Birthplace name="Dragonback Mountains">"31-60"</Birthplace>
+<Birthplace name="Black Mountains">"61-80"</Birthplace>
+<Birthplace name="The Badlands">"81-95"</Birthplace>
+<Birthplace name="World's Edge Mountains (North of Black Fire Pass)">"96-99"</Birthplace>
+<Birthplace name="The Darklands">"00"</Birthplace>
+</SUBCHAPTER_PHYSICAL>
+<Page>"35"</Page>
+</Race>
+<Race id="JRR-SPECIE_GNOME">
+<Description language="ENGLISH">"Gnome"</Description>
+<SUBCHAPTER_PHYSICAL>
+<HeightFemale>"39+1d10"</HeightFemale>
+<HeightMale>"41+1d10"</HeightMale>
+</SUBCHAPTER_PHYSICAL>
+<Page>"36"</Page>
+</Race>
+</DATA_RACE>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_ALBIONESE">
+<Description language="ENGLISH">"Speak Language (Albionese)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_NEW_WORLD">
+<Description language="ENGLISH">"Common Knowledge (New World)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_BRETONNIAN">
+<Description language="ENGLISH">"Speak Language (Bretonnian)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_GRAND_CATHAY">
+<Description language="ENGLISH">"Common Knowledge (Grand Cathay)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_DARK_LANDS">
+<Description language="ENGLISH">"Common Knowledge (Dark Lands)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_SYLVANIA">
+<Description language="ENGLISH">"Common Knowledge (Sylvania)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_SYLVANIA">
+<Description language="ENGLISH">"Speak Language (Sylvania)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_ACADEMIC_KNOWLEDGE_GENEALOGY_AND_HERALDRY">
+<Description language="ENGLISH">"Academic Knowledge (Genealogy and Heraldry)"</Description>
+<Generique>"RULES-COMP_ACADEMIC_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_KINGDOMS_OF_IND">
+<Description language="ENGLISH">"Common Knowledge (Kingdoms of Ind)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_INDHYA">
+<Description language="ENGLISH">"Speak Language (Indhya)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_IKAJO">
+<Description language="ENGLISH">"Speak Language (Ikajo)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_KHURESH">
+<Description language="ENGLISH">"Common Knowledge (Khuresh)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_KHURESIAN">
+<Description language="ENGLISH">"Speak Language (Khuresian)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_UNGOL">
+<Description language="ENGLISH">"Speak Language (Ungol)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_NIPPONISE">
+<Description language="ENGLISH">"Speak Language (Nipponise)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_EASTERN_STEPPES">
+<Description language="ENGLISH">"Common Knowledge (Eastern Steppes)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_EBONIAN">
+<Description language="ENGLISH">"Speak Language (Ebonian)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_ARABY">
+<Description language="ENGLISH">"Speak Language (Araby)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_ESTALIA">
+<Description language="ENGLISH">"Speak Language (Estalia)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_TILEA">
+<Description language="ENGLISH">"Speak Language (Tilea)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_HOMELAND">
+<Description language="ENGLISH">"Common Knowledge (homeland)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_HOMELAND">
+<Description language="ENGLISH">"Speak Language (homeland)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_BRETONNIA">
+<Description language="ENGLISH">"Speak Language (Bretonnia)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_BILOKO">
+<Description language="ENGLISH">"Common Knowledge (Biloko)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_HALFLING">
+<Description language="ENGLISH">"Common Knowledge (Halfling)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_WAYARHUI">
+<Description language="ENGLISH">"Common Knowledge (Wayarhui)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_WAYAR">
+<Description language="ENGLISH">"Speak Language (Wayar)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_DRUHIR">
+<Description language="ENGLISH">"Speak Language (Druhir)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_BLACK_ELVEN">
+<Description language="ENGLISH">"Speak Language (Black Elven)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_TAR_ELTHARIN">
+<Description language="ENGLISH">"Speak Language (Tar-Eltharin)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_LAND">
+<Description language="ENGLISH">"Common Knowledge (Land)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_REGION">
+<Description language="ENGLISH">"Common Knowledge (Region)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_FAN_ELTHARIN">
+<Description language="ENGLISH">"Speak Language (Fan-Eltharin)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_BADLANDS">
+<Description language="ENGLISH">"Common Knowledge (Badlands)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_TRADE_BLACKSMITH">
+<Description language="ENGLISH">"Trade (Blacksmith)"</Description>
+<Generique>"RULES-COMP_TRADE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_GNOMES">
+<Description language="ENGLISH">"Common Knowledge (Gnomes)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_GNOMISH">
+<Description language="ENGLISH">"Speak Language (Gnomish)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_OGRES">
+<Description language="ENGLISH">"Common Knowledge (Ogres)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_GRUMBARTH">
+<Description language="ENGLISH">"Speak Language (Grumbarth)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="JRR-T_HOME_ENVIRONMENT__TEMPERATE">
+<Description language="ENGLISH">"Home Environment (Temperate)"</Description>
+<Generique>"JRR-T_HOME_ENVIRONMENT__*"</Generique>
+</Talent>
+<Talent id="JRR-T_HOME_ENVIRONMENT__TROPICAL">
+<Description language="ENGLISH">"Home Environment (Tropical)"</Description>
+<Generique>"JRR-T_HOME_ENVIRONMENT__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__AMAZONS">
+<Description language="ENGLISH">"Provincial Expertise (Amazons)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="JRR-T_HOME_ENVIRONMENT__SOUTHERN">
+<Description language="ENGLISH">"Home Environment (Southern)"</Description>
+<Generique>"JRR-T_HOME_ENVIRONMENT__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__AVERLAND">
+<Description language="ENGLISH">"Provincial Expertise (Averland)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__HOCKLAND">
+<Description language="ENGLISH">"Provincial Expertise (Hockland)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__MIDDENLAND">
+<Description language="ENGLISH">"Provincial Expertise (Middenland)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__NORDLAND">
+<Description language="ENGLISH">"Provincial Expertise (Nordland)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__OSTERMARK">
+<Description language="ENGLISH">"Provincial Expertise (Ostermark)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__OSTLAND">
+<Description language="ENGLISH">"Provincial Expertise (Ostland)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__REIKLAND">
+<Description language="ENGLISH">"Provincial Expertise (Reikland)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__STIRLAND">
+<Description language="ENGLISH">"Provincial Expertise (Stirland)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__SYLVANIA">
+<Description language="ENGLISH">"Provincial Expertise (Sylvania)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__TALABECLAND">
+<Description language="ENGLISH">"Provincial Expertise (Talabecland)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__WISSENLAND">
+<Description language="ENGLISH">"Provincial Expertise (Wissenland)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="JRR-T_HOME_ENVIRONMENT__NORTHERN">
+<Description language="ENGLISH">"Home Environment (Northern)"</Description>
+<Generique>"JRR-T_HOME_ENVIRONMENT__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__WHEATLANDS">
+<Description language="ENGLISH">"Provincial Expertise (Wheatlands)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__SKEGGI">
+<Description language="ENGLISH">"Provincial Expertise (Skeggi)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__MARIENBURG">
+<Description language="ENGLISH">"Provincial Expertise (Marienburg)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__WASTELAND">
+<Description language="ENGLISH">"Provincial Expertise (Wasteland)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__BARAK_VARR">
+<Description language="ENGLISH">"Provincial Expertise (Barak Varr)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__KARAZ_A_KARAK">
+<Description language="ENGLISH">"Provincial Expertise (Karaz-a-Karak)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__KARAK_KADRIN">
+<Description language="ENGLISH">"Provincial Expertise (Karak Kadrin)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__ZHUFBAR">
+<Description language="ENGLISH">"Provincial Expertise (Zhufbar)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__MOOTLAND">
+<Description language="ENGLISH">"Provincial Expertise (Mootland)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="JRR-T_PROVINCIAL_EXPERTISE__THE_WASTELAND">
+<Description language="ENGLISH">"Provincial Expertise (the Wasteland)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+</DATA_BOOK>

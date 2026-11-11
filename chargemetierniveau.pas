@@ -12,6 +12,9 @@ Type
   	CodeMetier:	String;
   	NiveauMetier:	Integer;
   	Libelle:	String;
+        // Forme feminine du nom de niveau (optionnelle). Vide = on garde Libelle, qui sert de
+        // forme masculine et de repli (aucun niveau existant n'a a etre ressaisi).
+        LibelleFeminin: String;
         SalaireMetier:  String;
         Livre:          String;
   End;
@@ -27,8 +30,18 @@ function ChercheMaxMetierNiveau(CodeMetier :String): Integer;
 function ChercheMinMetierNiveau(CodeMetier :String): Integer;
 function MaxNiveauMetier(): Integer;
 function MaxIndiceIconeNiveau(): Integer;
+// Nom du niveau selon le sexe du personnage ('F' = feminin si la forme existe, sinon Libelle).
+function LibelleNiveauSelonSexe(const PMetierNiveau: StructureMetierNiveau; const Sexe: String): String;
 
 implementation
+
+function LibelleNiveauSelonSexe(const PMetierNiveau: StructureMetierNiveau; const Sexe: String): String;
+begin
+  if (Sexe = 'F') and (PMetierNiveau.LibelleFeminin <> '') then
+    Result := PMetierNiveau.LibelleFeminin
+  else
+    Result := PMetierNiveau.Libelle;
+end;
 
 function ChercheMetierNiveau(CodeMetier :String; NiveauMetier: Integer): StructureMetierNiveau;
 var

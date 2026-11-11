@@ -2,6 +2,7 @@
 <DATA_BOOK>
 <CODE_BOOK>"TEMPLE"</CODE_BOOK>
 <BOOK>"BOOK TEMPLE OF SPITE"</BOOK>
+<BOOKNAME>"TEMPLE OF SPITE"</BOOKNAME>
 <language>"ENGLISH"</language>
 <VERSION>"WFRP5"</VERSION>
 <OFFICIAL>"1"</OFFICIAL>
@@ -16,250 +17,250 @@
 </Label>
 </DATA_LABEL>
   <DATA_TALENT_SPECIALIZATION>
-<Talent id="TEMPLE-T0001_DARK">
+<Talent id="TEMPLE-T_ARCANE_MAGIC__DARK">
 <Description language="ENGLISH">"Arcane Magic (Dark Magic)"</Description>
-<Generique>"RULES-T0007_*"</Generique>
+<Generique>"RULES-T_ARCANE_MAGIC__*"</Generique>
 <Page>115</Page>
 </Talent>
 </DATA_TALENT_SPECIALIZATION>
 <DATA_SPELL>
-<Sort id="TEMPLE-DARK_01">
+<Sort id="TEMPLE-DARK_ARNZIPAL_S_DIMENSIONAL_DOOR">
 <Description language="ENGLISH">"Arnzipal's Dimensional Door"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (WPB yards)"</Target>
 <Duration>"WPB Rounds"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"10"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_02">
+<Sort id="TEMPLE-DARK_ARNZIPAL_S_BLACK_HORROR">
 <Description language="ENGLISH">"Arnzipal's Black Horror"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Willpower Bonus yards)"</Target>
 <Duration>"Willpower Bonus Rounds"</Duration>
 <Range>"Willpower yards (or Random Vortex)"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"13"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_03">
+<Sort id="TEMPLE-DARK_BLADEWIND">
 <Description language="ENGLISH">"Bladewind"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Fellowship Bonus yards)"</Target>
 <Duration>"Instant"</Duration>
 <Range>"FelB x 2 yards"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_04">
+<Sort id="TEMPLE-DARK_CHILLWIND">
 <Description language="ENGLISH">"Chillwind"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Fellowship Bonus yards)"</Target>
 <Duration>"Willpower Bonus Rounds"</Duration>
 <Range>"Fellowship yards"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"10"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_05">
+<Sort id="TEMPLE-DARK_DARK_HAND_OF_DESTRUCTION">
 <Description language="ENGLISH">"Dark Hand of Destruction"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 (Max)"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_06">
+<Sort id="TEMPLE-DARK_DARKSTAR_CLOAK">
 <Description language="ENGLISH">"Darkstar Cloak"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"WPB Rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_07">
+<Sort id="TEMPLE-DARK_DEATH_SPASM">
 <Description language="ENGLISH">"Death Spasm"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_08">
+<Sort id="TEMPLE-DARK_DISTURBING_VOICES">
 <Description language="ENGLISH">"Disturbing Voices"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"1d10 hours"</Duration>
 <Range>"WPB yards"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_09">
+<Sort id="TEMPLE-DARK_DOMINION">
 <Description language="ENGLISH">"Dominion"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (WPB Yards)"</Target>
 <Duration>"FelB Rounds"</Duration>
 <Range>"Fel yards"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"10"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_10">
+<Sort id="TEMPLE-DARK_DOOMBOLT">
 <Description language="ENGLISH">"Doombolt"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_11">
+<Sort id="TEMPLE-DARK_GRASPING_DARKNESS">
 <Description language="ENGLISH">"Grasping Darkness"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Special"</Duration>
 <Range>"Intelligence yards"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_12">
+<Sort id="TEMPLE-DARK_MEMORY_LEECH">
 <Description language="ENGLISH">"Memory Leech"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Permanent"</Duration>
 <Range>"Touch"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"10"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_13">
+<Sort id="TEMPLE-DARK_PARALYSING_NIGHTMARES">
 <Description language="ENGLISH">"Paralysing Nightmares"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"1d10 nights"</Duration>
 <Range>"Touch"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_14">
+<Sort id="TEMPLE-DARK_POISONED_WHISPERS">
 <Description language="ENGLISH">"Poisoned Whispers"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Special"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_15">
+<Sort id="TEMPLE-DARK_POWER_OF_DARKNESS">
 <Description language="ENGLISH">"Power of Darkness"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Willpower Bonus yards)"</Target>
 <Duration>"Willpower Bonus Rounds"</Duration>
 <Range>"Willpower Bonus yards"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_16">
+<Sort id="TEMPLE-DARK_SHROUD_OF_DESPAIR">
 <Description language="ENGLISH">"Shroud of Despair"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Willpower Bonus yards)"</Target>
 <Duration>"Willpower Bonus Rounds"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_17">
+<Sort id="TEMPLE-DARK_SKIES_MADE_SUBSERVIENT">
 <Description language="ENGLISH">"Skies Made Subservient"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Willpower Bonus hours"</Duration>
 <Range>"Special"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"10"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_18">
+<Sort id="TEMPLE-DARK_SOUL_STEALER">
 <Description language="ENGLISH">"Soul Stealer"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"10"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_19">
+<Sort id="TEMPLE-DARK_STRICKEN_VOICES">
 <Description language="ENGLISH">"Stricken Voices"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Willpower Bonus Rounds"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_20">
+<Sort id="TEMPLE-DARK_STOLEN_ASPECT">
 <Description language="ENGLISH">"Stolen Aspect"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 (Maximum)"</Target>
 <Duration>"WPB Rounds"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_21">
+<Sort id="TEMPLE-DARK_UNRAVELLING_WILL">
 <Description language="ENGLISH">"Unravelling Will"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"1d10 minutes"</Duration>
 <Range>"Touch"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_22">
+<Sort id="TEMPLE-DARK_WITCH_FLIGHT">
 <Description language="ENGLISH">"Witch Flight"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_23">
+<Sort id="TEMPLE-DARK_WITHERING_PRESENCE">
 <Description language="ENGLISH">"Withering Presence"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"1d10 hours"</Duration>
 <Range>"Touch"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>
-<Sort id="TEMPLE-DARK_24">
+<Sort id="TEMPLE-DARK_WORD_OF_PAIN">
 <Description language="ENGLISH">"Word of Pain"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Willpower Bonus yards)"</Target>
 <Duration>"Willpower Bonus Rounds"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"TEMPLE-T0001_DARK"</Talent>
+<Talent>"TEMPLE-T_ARCANE_MAGIC__DARK"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 </Sort>

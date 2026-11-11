@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"LTD"</CODE_BOOK>
+<BOOK>"BOOK REALM OF CHAOS LOST AND DAMNED"</BOOK>
+<BOOKNAME>"REALM OF CHAOS - THE LOST AND THE DAMNED"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP1"</VERSION>
+<OFFICIAL>"0"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"Warhammer Fantasy Roleplay (c) Copyright Games Workshop Limited 2020. Warhammer Fantasy Roleplay, the Warhammer Fantasy Roleplay logo, GW, Games Workshop, Warhammer, the twin-tailed comet logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likeness thereof, are either (R) or TM, and/or (c) Games Workshop Limited, variably registered around the world, and used under licence. Cubicle 7 Entertainment and the Cubicle 7 Entertainment logo are trademarks of Cubicle 7 Entertainment Limited. All rights reserved."</DISCLAIMER>
+<DATA_SPELL_V1>
+<SpellV1 id="LTD-SPELL_NURGLE_STENCH_OF_NURGLE">
+<Description language="ENGLISH">"Stench of Nurgle"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Nurgle"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"2"</MagicPoints>
+<Range>"Hand-to-hand combat"</Range>
+<Duration>"Not given"</Duration>
+<Ingredients>"Not given"</Ingredients>
+<MagicTest>"RULES-V1YESNO_OUI"</MagicTest>
+<Page>"22"</Page>
+</SpellV1>
+<SpellV1 id="LTD-SPELL_NURGLE_MIASMA_OF_PESTILENCE">
+<Description language="ENGLISH">"Miasma of Pestilence"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Nurgle"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"3"</MagicPoints>
+<Range>"12 yards (radius, around the caster)"</Range>
+<Duration>"Until the caster is wounded"</Duration>
+<Ingredients>"Not given"</Ingredients>
+<Page>"22"</Page>
+</SpellV1>
+<SpellV1 id="LTD-SPELL_NURGLE_STREAM_OF_CORRUPTION">
+<Description language="ENGLISH">"Stream of Corruption"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Nurgle"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"7"</MagicPoints>
+<Range>"16 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"Not given"</Ingredients>
+<Page>"23"</Page>
+</SpellV1>
+<SpellV1 id="LTD-SPELL_NURGLE_PLAGUE_WIND">
+<Description language="ENGLISH">"Plague Wind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Nurgle"</SpellList>
+<SpellLevel>"4"</SpellLevel>
+<MagicPoints>"15"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"Not given"</Ingredients>
+<Page>"23"</Page>
+</SpellV1>
+<SpellV1 id="LTD-SPELL_TZEENTCH_BOON_OF_TZEENTCH">
+<Description language="ENGLISH">"Boon of Tzeentch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Tzeentch"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"D3"</MagicPoints>
+<Range>"Personal"</Range>
+<Duration>"Not given"</Duration>
+<Ingredients>"Not given"</Ingredients>
+<Page>"41"</Page>
+</SpellV1>
+<SpellV1 id="LTD-SPELL_TZEENTCH_PINK_FIRE_OF_TZEENTCH">
+<Description language="ENGLISH">"Pink Fire of Tzeentch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Tzeentch"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"D3+1"</MagicPoints>
+<Range>"12 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"Not given"</Ingredients>
+<Page>"41"</Page>
+</SpellV1>
+<SpellV1 id="LTD-SPELL_TZEENTCH_TRANSFORMATION_OF_TZEENTCH">
+<Description language="ENGLISH">"Transformation of Tzeentch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Tzeentch"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"D4+2"</MagicPoints>
+<Range>"24 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"Not given"</Ingredients>
+<MagicTest>"RULES-V1YESNO_OUI"</MagicTest>
+<Page>"41"</Page>
+</SpellV1>
+<SpellV1 id="LTD-SPELL_TZEENTCH_TZEENTCHS_FIRE_STORM">
+<Description language="ENGLISH">"Tzeentch's Fire Storm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Tzeentch"</SpellList>
+<SpellLevel>"4"</SpellLevel>
+<MagicPoints>"2D6+6"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"Not given"</Ingredients>
+<MagicTest>"RULES-V1YESNO_OUI"</MagicTest>
+<Page>"41"</Page>
+</SpellV1>
+</DATA_SPELL_V1>
+</DATA_BOOK>

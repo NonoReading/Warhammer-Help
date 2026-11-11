@@ -2,6 +2,7 @@
 <DATA_BOOK>
 <CODE_BOOK>"COTHI"</CODE_BOOK>
 <BOOK>"BOOK SEA WARDENS OF COTHIQUE"</BOOK>
+<BOOKNAME>"SEA WARDENS OF COTHIQUE"</BOOKNAME>
 <language>"ENGLISH"</language>
 <VERSION>"WFRP4"</VERSION>
 <OFFICIAL>"1"</OFFICIAL>
@@ -16,59 +17,59 @@
 </Label>
 </DATA_LABEL>
 <DATA_WEAPON>
-<Weapon id="COTHI-PROJ_LANC_01">
+<Weapon id="COTHI-PROJ_RENDING_STARS">
 <Description language="ENGLISH">"Rending Stars"</Description>
-<Skill>"RULES-COMPPROJ_LANC"</Skill>
+<Skill>"RULES-COMP_RANGED__THROWING"</Skill>
 <Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Reach>"(BATTR_S)X4"</Reach>
 <Price>"15PA"</Price>
 <Encumbrance>"0"</Encumbrance>
-<Quality>"RULES-WEAPB27"</Quality>
+<Quality>"RULES-WEAPB_UNDAMAGING"</Quality>
 <Hand>"1"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>75</Page>
 </Weapon>
-<Weapon id="COTHI-COMB_HAST_01">
+<Weapon id="COTHI-COMB_INCANDESCENT_SPEAR">
 <Description language="ENGLISH">"Incandescent Spear"</Description>
-<Skill>"RULES-COMPCOMB_HAST"</Skill>
+<Skill>"RULES-COMP_MELEE__POLEARM"</Skill>
 <Damage>"+(BATTR_S)+5"</Damage>
 <Availability>"RULES-DISPO_UNIQUE"</Availability>
 <Reach>"RULES-WEAPR_BIG"</Reach>
 <Encumbrance>"2"</Encumbrance>
-<Quality>"RULES-WEAPB12"</Quality>
+<Quality>"RULES-WEAPB_IMPALE"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Type>"RULES-WTYPE_SPEAR"</Type>
 <Page>39</Page>
 </Weapon>
-<Weapon id="COTHI-COMB_ESCR_01">
+<Weapon id="COTHI-COMB_BLADE_OF_DARTING_STEEL">
 <Description language="ENGLISH">"Blade of Darting Steel"</Description>
-<Skill>"RULES-COMPCOMB_ESCR"</Skill>
+<Skill>"RULES-COMP_MELEE__FENCING"</Skill>
 <Damage>"+(BATTR_S)+4"</Damage>
 <Availability>"RULES-DISPO_UNIQUE"</Availability>
 <Reach>"RULES-WEAPR_MID"</Reach>
 <Encumbrance>"1"</Encumbrance>
-<Quality>"RULES-WEAPB20,RULES-WEAPB14"</Quality>
+<Quality>"RULES-WEAPB_FAST,RULES-WEAPB_PRECISE"</Quality>
 <Hand>"1"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>45</Page>
 </Weapon>
-<Weapon id="COTHI-PROJ_ARC_01">
+<Weapon id="COTHI-PROJ_BOW_OF_ANIRAIN">
 <Description language="ENGLISH">"Bow of Anirain"</Description>
-<Skill>"RULES-COMPPROJ_ARC"</Skill>
+<Skill>"RULES-COMP_RANGED__BOW"</Skill>
 <Damage>"+(BATTR_S)+5"</Damage>
 <Availability>"RULES-DISPO_UNIQUE"</Availability>
 <Reach>"150"</Reach>
 <Encumbrance>"1"</Encumbrance>
-<Quality>"RULES-WEAPB10,RULES-WEAPB14"</Quality>
+<Quality>"RULES-WEAPB_DAMAGING,RULES-WEAPB_PRECISE"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>45</Page>
 </Weapon>
 </DATA_WEAPON>
 <DATA_TRAPPING>
-<Trapping id="COTHI-TRAP_01">
+<Trapping id="COTHI-TRAP_LIGHT_CHARIOT">
 <Description language="ENGLISH">"Light Chariot"</Description>
 <Theme>"RULES-LAB_262"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -78,7 +79,7 @@
 <VehicleProfile>"2 A;35;10;M/2"</VehicleProfile>
 <Page>76</Page>
 </Trapping>
-<Trapping id="COTHI-TRAP_02">
+<Trapping id="COTHI-TRAP_MEDIUM_CHARIOT">
 <Description language="ENGLISH">"Medium Chariot"</Description>
 <Theme>"RULES-LAB_262"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -88,7 +89,7 @@
 <VehicleProfile>"2-4 A;50;20;M"</VehicleProfile>
 <Page>76</Page>
 </Trapping>
-<Trapping id="COTHI-TRAP_03">
+<Trapping id="COTHI-TRAP_TIRANOC_CHARIOT">
 <Description language="ENGLISH">"Tiranoc Chariot"</Description>
 <Theme>"RULES-LAB_262"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -98,7 +99,7 @@
 <VehicleProfile>"2 A;50;20;M+1"</VehicleProfile>
 <Page>76</Page>
 </Trapping>
-<Trapping id="COTHI-TRAP_04">
+<Trapping id="COTHI-TRAP_WHITE_LION_CHARIOT">
 <Description language="ENGLISH">"White Lion Chariot"</Description>
 <Theme>"RULES-LAB_262"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -108,7 +109,7 @@
 <VehicleProfile>"2 A;50;20;M+1"</VehicleProfile>
 <Page>76</Page>
 </Trapping>
-<Trapping id="COTHI-TRAP_05">
+<Trapping id="COTHI-TRAP_HEAVY_CHARIOT">
 <Description language="ENGLISH">"Heavy Chariot"</Description>
 <Theme>"RULES-LAB_262"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -118,7 +119,7 @@
 <VehicleProfile>"4 A;50;30;M"</VehicleProfile>
 <Page>76</Page>
 </Trapping>
-<Trapping id="COTHI-TRAP_06">
+<Trapping id="COTHI-TRAP_WHITE_LION">
 <Description language="ENGLISH">"White Lion"</Description>
 <Theme>"RULES-LAB_260"</Theme>
 <AnimalProfile>"8 55 0 52 48 38 42 0 15 50 0 36"</AnimalProfile>
@@ -126,7 +127,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Page>81</Page>
 </Trapping>
-<Trapping id="COTHI-TRAP_07">
+<Trapping id="COTHI-TRAP_GREAT_EAGLE">
 <Description language="ENGLISH">"Great Eagle"</Description>
 <Theme>"RULES-LAB_260"</Theme>
 <AnimalProfile>"3 65 0 44 43 55 52 0 38 43 25 32"</AnimalProfile>
@@ -134,7 +135,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Page>82</Page>
 </Trapping>
-<Trapping id="COTHI-TRAP_08">
+<Trapping id="COTHI-TRAP_KRAKEN">
 <Description language="ENGLISH">"Kraken"</Description>
 <Theme>"RULES-LAB_260"</Theme>
 <AnimalProfile>"6 45 0 80 75 35 55 35 10 65 0 224"</AnimalProfile>
@@ -142,7 +143,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Page>82</Page>
 </Trapping>
-<Trapping id="COTHI-TRAP_09">
+<Trapping id="COTHI-TRAP_FLAMESPYRE_PHOENIX">
 <Description language="ENGLISH">"Flamespyre Phoenix"</Description>
 <Theme>"RULES-LAB_260"</Theme>
 <AnimalProfile>"3 70 0 54 53 55 52 0 40 50 25 40"</AnimalProfile>
@@ -150,7 +151,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Page>83</Page>
 </Trapping>
-<Trapping id="COTHI-TRAP_10">
+<Trapping id="COTHI-TRAP_FROSTHEART_PHOENIX">
 <Description language="ENGLISH">"Frostheart Phoenix"</Description>
 <Theme>"RULES-LAB_260"</Theme>
 <AnimalProfile>"2 75 0 60 60 40 52 0 40 60 25 48"</AnimalProfile>
@@ -158,7 +159,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Page>84</Page>
 </Trapping>
-<Trapping id="COTHI-TRAP_11">
+<Trapping id="COTHI-TRAP_SWIFTFEATHER_ROC">
 <Description language="ENGLISH">"Swiftfeather Roc"</Description>
 <Theme>"RULES-LAB_260"</Theme>
 <AnimalProfile>"3 45 0 40 40 50 55 0 15 35 0 32"</AnimalProfile>
@@ -166,7 +167,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Page>47</Page>
 </Trapping>
-<Trapping id="COTHI-TRAP_12">
+<Trapping id="COTHI-TRAP_SKYCUTTER">
 <Description language="ENGLISH">"Skycutter"</Description>
 <Theme>"RULES-LAB_262"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -176,7 +177,7 @@
 <VehicleProfile>"2 A;35;10;M/2"</VehicleProfile>
 <Page>79</Page>
 </Trapping>
-<Trapping id="COTHI-TRAP_13">
+<Trapping id="COTHI-TRAP_TIDECUTTER">
 <Description language="ENGLISH">"Tidecutter"</Description>
 <Theme>"RULES-LAB_262"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -186,54 +187,54 @@
 <VehicleProfile>"2 A;35;10;M/2"</VehicleProfile>
 <Page>49</Page>
 </Trapping>
-<Trapping id="COTHI-TRAP_14">
+<Trapping id="COTHI-TRAP_ELVEN_SAILS_TINY_TO_AVERAGE_BOATS">
 <Description language="ENGLISH">"Elven Sails (Tiny to Average boats)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"20CO"</Price>
 <Encumbrance>"10"</Encumbrance>
 <Page>58</Page>
 </Trapping>
-<Trapping id="COTHI-TRAP_15">
+<Trapping id="COTHI-TRAP_ELVEN_SAILS_BIGGER_BOATS">
 <Description language="ENGLISH">"Elven Sails (bigger boats)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"120CO"</Price>
 <Encumbrance>"60"</Encumbrance>
 <Page>58</Page>
 </Trapping>
-<Trapping id="COTHI-TRAP_16">
+<Trapping id="COTHI-TRAP_OUTRIGGER_TINY_TO_LITTLE_BOATS">
 <Description language="ENGLISH">"Outrigger (Tiny to Little boats)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"2CO"</Price>
 <Encumbrance>"15"</Encumbrance>
 <Page>58</Page>
 </Trapping>
-<Trapping id="COTHI-TRAP_17">
+<Trapping id="COTHI-TRAP_OUTRIGGER_AVERAGE_TO_LARGE_BOATS">
 <Description language="ENGLISH">"Outrigger (Average to Large boats)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"200CO"</Price>
 <Encumbrance>"150"</Encumbrance>
 <Page>58</Page>
 </Trapping>
-<Trapping id="COTHI-TRAP_18">
+<Trapping id="COTHI-TRAP_OUTRIGGER_ENORMOUS_TO_MONSTROUS_BOATS">
 <Description language="ENGLISH">"Outrigger (Enormous to Monstrous boats)"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Price>"600CO"</Price>
 <Encumbrance>"350"</Encumbrance>
 <Page>58</Page>
 </Trapping>
-<Trapping id="COTHI-TRAP_19">
+<Trapping id="COTHI-TRAP_POTION_OF_DIABOLIC_STRENGTH">
 <Description language="ENGLISH">"Potion of Diabolic Strength"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Encumbrance>"0"</Encumbrance>
 <Page>75</Page>
 </Trapping>
-<Trapping id="COTHI-TRAP_20">
+<Trapping id="COTHI-TRAP_DARK_VENOM">
 <Description language="ENGLISH">"Dark Venom"</Description>
 <Theme>"RULES-LAB_197"</Theme>
 <Encumbrance>"0"</Encumbrance>
 <Page>75</Page>
 </Trapping>
-<Trapping id="COTHI-TRAP_21">
+<Trapping id="COTHI-TRAP_HEART_OF_WOE">
 <Description language="ENGLISH">"Heart of Woe"</Description>
 <Theme>"RULES-LAB_199"</Theme>
 <Availability>"RULES-DISPO_UNIQUE"</Availability>

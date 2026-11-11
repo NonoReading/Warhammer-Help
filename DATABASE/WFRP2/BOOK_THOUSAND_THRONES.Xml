@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"TTHR"</CODE_BOOK>
+<BOOK>"BOOK THOUSAND THRONES"</BOOK>
+<BOOKNAME>"THE THOUSAND THRONES"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"1"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_RULE>
+<Rule id="TTHR-RULE_ROLE_ACADEMICS">""</Rule>
+<Rule id="TTHR-RULE_ROLE_COMMONERS">""</Rule>
+<Rule id="TTHR-RULE_ROLE_CRIMINALS">""</Rule>
+<Rule id="TTHR-RULE_ROLE_RANGERS">""</Rule>
+<Rule id="TTHR-RULE_ROLE_WARRIORS">""</Rule>
+</DATA_RULE>
+<DATA_CAREER_ROLL>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_ACADEMICS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_APPRENTICE_WIZARD">"28"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_ACADEMICS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_APPRENTICE_WIZARD">"18"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_ACADEMICS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"33"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_ACADEMICS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_ACADEMICS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_ENVOY">"28"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_ACADEMICS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_INITIATE">"18"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_ACADEMICS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_NOBLE">"33"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_ACADEMICS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_NOBLE">"19"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_ACADEMICS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SCRIBE">"33"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_ACADEMICS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SCRIBE">"24"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_ACADEMICS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SCRIBE">"18"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_ACADEMICS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_STUDENT">"34"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_ACADEMICS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_STUDENT">"20"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_ACADEMICS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_STUDENT">"67"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_ACADEMICS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_STUDENT">"18"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BAILIFF">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BURGHER">"15"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BURGHER">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BURGHER">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"40"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_FERRYMAN">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_FERRYMAN">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_FISHERMAN">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_FISHERMAN">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_HEDGE_WIZARD">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_JAILER">"15"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_JAILER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MINER">"21"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MINER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_PEASANT">"21"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_PEASANT">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_RAT_CATCHER">"15"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_RAT_CATCHER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_RAT_CATCHER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SERVANT">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SERVANT">"17"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SERVANT">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_TRADESMAN">"15"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_TRADESMAN">"60"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_TRADESMAN">"18"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_TRADESMAN">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_VALET">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_COMMONERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_VALET">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_AGITATOR">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_AGITATOR">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_AGITATOR">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_GRAVE_ROBBER">"10"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_GRAVE_ROBBER">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_OUTLAW">"16"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_OUTLAW">"33"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_OUTLAW">"10"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_OUTLAW">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_PROTAGONIST">"23"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_PROTAGONIST">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_ROGUE">"33"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_ROGUE">"19"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_ROGUE">"12"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"17"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"10"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_THIEF">"17"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_THIEF">"34"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_THIEF">"22"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_THIEF">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_THUG">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"16"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"18"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_CRIMINALS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BOATMAN">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"13"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_COACHMAN">"24"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_COACHMAN">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_FIELDWARDEN">"13"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_HUNTER">"15"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_HUNTER">"20"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_HUNTER">"21"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_HUNTER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_KITHBAND_WARRIOR">"17"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MESSENGER">"15"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MESSENGER">"22"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MESSENGER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_OUTRIDER">"15"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_OUTRIDER">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_ROADWARDEN">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_RUNEBEARER">"32"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SEAMAN">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SEAMAN">"15"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SEAMAN">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SQUIRE">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_TOLL_KEEPER">"20"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_TOLL_KEEPER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_TOLL_KEEPER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_VAGABOND">"18"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_VAGABOND">"15"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_VAGABOND">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_RANGERS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_WOODSMAN">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BODYGUARD">"13"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BODYGUARD">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_ESTALIAN_DIESTRO">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_KISLEVITE_KOSSAR">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MARINE">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MARINE">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MERCENARY">"18"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MERCENARY">"100"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MERCENARY">"25"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MERCENARY">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MILITIAMAN">"12"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MILITIAMAN">"25"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MILITIAMAN">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_NORSE_BERSERKER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_PIT_FIGHTER">"16"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_PIT_FIGHTER">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SHIELDBREAKER">"12"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SOLDIER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SOLDIER">"25"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SOLDIER">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_TROLL_SLAYER">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"25"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"TTHR-RULE_ROLE_WARRIORS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_ZEALOT">"11"</Career>
+  </Entry>
+</DATA_CAREER_ROLL>
+</DATA_BOOK>

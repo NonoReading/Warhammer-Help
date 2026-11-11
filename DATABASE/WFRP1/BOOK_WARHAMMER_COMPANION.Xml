@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"WCOMP"</CODE_BOOK>
+<BOOK>"BOOK WARHAMMER COMPANION"</BOOK>
+<BOOKNAME>"WARHAMMER COMPANION"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP1"</VERSION>
+<OFFICIAL>"0"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"Warhammer Fantasy Roleplay (c) Copyright Games Workshop Limited 2020. Warhammer Fantasy Roleplay, the Warhammer Fantasy Roleplay logo, GW, Games Workshop, Warhammer, the twin-tailed comet logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likeness thereof, are either (R) or TM, and/or (c) Games Workshop Limited, variably registered around the world, and used under licence. Cubicle 7 Entertainment and the Cubicle 7 Entertainment logo are trademarks of Cubicle 7 Entertainment Limited. All rights reserved."</DISCLAIMER>
+<DATA_SKILL_V1>
+<Skill id="WCOMP-COMP_CALL_ANIMAL">
+<Description language="ENGLISH">"Call Animal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"19"</Page>
+</Skill>
+<Skill id="WCOMP-COMP_SCHOLARSHIP">
+<Description language="ENGLISH">"Scholarship"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"51"</Page>
+</Skill>
+</DATA_SKILL_V1>
+<DATA_CAREER_V1>
+<Career id="WCOMP-WORK_BEASTFRIEND_BEAR">
+<Description language="ENGLISH">"Beastfriend - Bear"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"2"</Advance>
+<Advance name="RULES-ATTR_T">"2"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Animal Care, Animal Training, Call Animal, Charm Animal, Follow Trail, Orientation, Sixth Sense, Specialist Weapon - Fist Weapons, Street Fighter, Strike Mighty Blow"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"100"</Skill>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"100"</Skill>
+<Skill name="WCOMP-COMP_CALL_ANIMAL">"100"</Skill>
+<Skill name="RULES-COMP_CHARM_ANIMAL">"100"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"100"</Skill>
+<Skill name="RULES-COMP_ORIENTATION">"100"</Skill>
+<Skill name="RULES-COMP_SIXTH_SENSE">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__FIST_WEAPONS">"100"</Skill>
+<Skill name="RULES-COMP_STREET_FIGHTER">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_MIGHTY_BLOW">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Aucun en particulier ; les Caraidh Bruinn utilisent des poings americains a griffes"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Aucun en particulier">"1"</Item>
+<Item name="les Caraidh Bruinn utilisent des poings americains a griffes">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"19"</Page>
+</Career>
+<Career id="WCOMP-WORK_BEASTFRIEND_BOAR">
+<Description language="ENGLISH">"Beastfriend - Boar"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Animal Care, Animal Training, Call Animal, Charm Animal, Follow Trail, Orientation, Sixth Sense, Frenzied Attack, Street Fighter, Strike to Injure"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"100"</Skill>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"100"</Skill>
+<Skill name="WCOMP-COMP_CALL_ANIMAL">"100"</Skill>
+<Skill name="RULES-COMP_CHARM_ANIMAL">"100"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"100"</Skill>
+<Skill name="RULES-COMP_ORIENTATION">"100"</Skill>
+<Skill name="RULES-COMP_SIXTH_SENSE">"100"</Skill>
+<Skill name="RULES-COMP_FRENZIED_ATTACK">"100"</Skill>
+<Skill name="RULES-COMP_STREET_FIGHTER">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_TO_INJURE">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Aucun en particulier ; les Caraidh Much portent des dagues courbes en forme de defense"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Aucun en particulier">"1"</Item>
+<Item name="les Caraidh Much portent des dagues courbes en forme de defense">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"19"</Page>
+</Career>
+<Career id="WCOMP-WORK_BEASTFRIEND_HAWK">
+<Description language="ENGLISH">"Beastfriend - Hawk"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_M">"1"</Advance>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"1"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Animal Care, Animal Training, Call Animal, Charm Animal, Follow Trail, Orientation, Sixth Sense, Dodge Blow, Flee!, Strike to Injure"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"100"</Skill>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"100"</Skill>
+<Skill name="WCOMP-COMP_CALL_ANIMAL">"100"</Skill>
+<Skill name="RULES-COMP_CHARM_ANIMAL">"100"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"100"</Skill>
+<Skill name="RULES-COMP_ORIENTATION">"100"</Skill>
+<Skill name="RULES-COMP_SIXTH_SENSE">"100"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"100"</Skill>
+<Skill name="RULES-COMP_FLEE">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_TO_INJURE">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Aucun en particulier"</Trappings>
+<Page>"19"</Page>
+</Career>
+<Career id="WCOMP-WORK_BEASTFRIEND_HORSE">
+<Description language="ENGLISH">"Beastfriend - Horse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_M">"1"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_T">"2"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Animal Care, Animal Training, Call Animal, Charm Animal, Follow Trail, Orientation, Sixth Sense, Acute Hearing, Flee!, Ride"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"100"</Skill>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"100"</Skill>
+<Skill name="WCOMP-COMP_CALL_ANIMAL">"100"</Skill>
+<Skill name="RULES-COMP_CHARM_ANIMAL">"100"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"100"</Skill>
+<Skill name="RULES-COMP_ORIENTATION">"100"</Skill>
+<Skill name="RULES-COMP_SIXTH_SENSE">"100"</Skill>
+<Skill name="RULES-COMP_ACUTE_HEARING">"100"</Skill>
+<Skill name="RULES-COMP_FLEE">"100"</Skill>
+<Skill name="RULES-COMP_RIDE">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Aucun en particulier"</Trappings>
+<Page>"19"</Page>
+</Career>
+<Career id="WCOMP-WORK_BEASTFRIEND_HOUND">
+<Description language="ENGLISH">"Beastfriend - Hound"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_M">"1"</Advance>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Animal Care, Animal Training, Call Animal, Charm Animal, Follow Trail, Orientation, Sixth Sense, Acute Hearing, Frenzied Attack, Street Fighter"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"100"</Skill>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"100"</Skill>
+<Skill name="WCOMP-COMP_CALL_ANIMAL">"100"</Skill>
+<Skill name="RULES-COMP_CHARM_ANIMAL">"100"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"100"</Skill>
+<Skill name="RULES-COMP_ORIENTATION">"100"</Skill>
+<Skill name="RULES-COMP_SIXTH_SENSE">"100"</Skill>
+<Skill name="RULES-COMP_ACUTE_HEARING">"100"</Skill>
+<Skill name="RULES-COMP_FRENZIED_ATTACK">"100"</Skill>
+<Skill name="RULES-COMP_STREET_FIGHTER">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Aucun en particulier"</Trappings>
+<Page>"19"</Page>
+</Career>
+<Career id="WCOMP-WORK_BEASTFRIEND_WILD_CAT">
+<Description language="ENGLISH">"Beastfriend - Wild Cat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_M">"1"</Advance>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_W">"1"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Animal Care, Animal Training, Call Animal, Charm Animal, Follow Trail, Orientation, Sixth Sense, Concealment Rural, Silent Move Rural, Specialist Weapon - Fist Weapons"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"100"</Skill>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"100"</Skill>
+<Skill name="WCOMP-COMP_CALL_ANIMAL">"100"</Skill>
+<Skill name="RULES-COMP_CHARM_ANIMAL">"100"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"100"</Skill>
+<Skill name="RULES-COMP_ORIENTATION">"100"</Skill>
+<Skill name="RULES-COMP_SIXTH_SENSE">"100"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT_RURAL">"100"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE_RURAL">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__FIST_WEAPONS">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Aucun en particulier ; les Caraidh Cadhmorr utilisent des poings americains a griffes"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Aucun en particulier">"1"</Item>
+<Item name="les Caraidh Cadhmorr utilisent des poings americains a griffes">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"19"</Page>
+</Career>
+<Career id="WCOMP-WORK_DWARF_LOREMASTER">
+<Description language="ENGLISH">"Dwarf Loremaster"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"2"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+<Advance name="RULES-ATTR_I">"40"</Advance>
+<Advance name="RULES-ATTR_Dex">"30"</Advance>
+<Advance name="RULES-ATTR_Ld">"30"</Advance>
+<Advance name="RULES-ATTR_Int">"40"</Advance>
+<Advance name="RULES-ATTR_Cl">"40"</Advance>
+<Advance name="RULES-ATTR_WP">"40"</Advance>
+</AdvanceScheme>
+<Skills>"Arcane Language - Arcane Dwarf, Arcane Language - Magick, Art, Astronomy, Chemistry, Cryptography, Daemon Lore, Divining, Engineer, Evaluate, Heraldry, Herb Lore, History, Identify Magical Artefact, Identify Undead, Law, Linguistics, Magical Awareness, Magical Sense, Numismatics, Orientation (underground only), Palmistry, Rune Lore, Scholarship, Scroll Lore, Speak Additional Language, Spot Traps, Super Numerate, Theology"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ARCANE_LANGUAGE__ARCANE_DWARF">"100"</Skill>
+<Skill name="RULES-COMP_ARCANE_LANGUAGE__MAGICK">"100"</Skill>
+<Skill name="RULES-COMP_ART">"100"</Skill>
+<Skill name="RULES-COMP_ASTRONOMY">"100"</Skill>
+<Skill name="RULES-COMP_CHEMISTRY">"100"</Skill>
+<Skill name="RULES-COMP_CRYPTOGRAPHY">"100"</Skill>
+<Skill name="RULES-COMP_DEMON_LORE">"100"</Skill>
+<Skill name="RULES-COMP_DIVINING">"100"</Skill>
+<Skill name="RULES-COMP_ENGINEER">"100"</Skill>
+<Skill name="RULES-COMP_EVALUATE">"100"</Skill>
+<Skill name="RULES-COMP_HERALDRY">"100"</Skill>
+<Skill name="RULES-COMP_HERB_LORE">"100"</Skill>
+<Skill name="RULES-COMP_HISTORY">"100"</Skill>
+<Skill name="RULES-COMP_IDENTIFY_MAGICAL_ARTIFACT">"100"</Skill>
+<Skill name="RULES-COMP_IDENTIFY_UNDEAD">"100"</Skill>
+<Skill name="RULES-COMP_LAW">"100"</Skill>
+<Skill name="RULES-COMP_LINGUISTICS">"100"</Skill>
+<Skill name="RULES-COMP_MAGICAL_AWARENESS">"100"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"100"</Skill>
+<Skill name="RULES-COMP_NUMISMATICS">"100"</Skill>
+<Skill name="RULES-COMP_ORIENTATION">"100"</Skill>
+<Skill name="RULES-COMP_PALMISTRY">"100"</Skill>
+<Skill name="RULES-COMP_RUNE_LORE">"100"</Skill>
+<Skill name="WCOMP-COMP_SCHOLARSHIP">"100"</Skill>
+<Skill name="RULES-COMP_SCROLL_LORE">"100"</Skill>
+<Skill name="RULES-COMP_SPEAK_ADDITIONAL_LANGUAGE">"100"</Skill>
+<Skill name="RULES-COMP_SPOT_TRAPS">"100"</Skill>
+<Skill name="RULES-COMP_SUPER_NUMERATE">"100"</Skill>
+<Skill name="RULES-COMP_THEOLOGY">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Aucun en propre ; garde les equipements de ses carrieres precedentes"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Aucun en propre">"1"</Item>
+<Item name="garde les equipements de ses carrieres precedentes">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"51"</Page>
+</Career>
+</DATA_CAREER_V1>
+<DATA_CAREER_LINK_V1>
+<Link name="WCOMP-WORK_BEASTFRIEND_BEAR">"RULES-WORK_SCOUT"</Link>
+<Link name="WCOMP-WORK_BEASTFRIEND_BOAR">"RULES-WORK_SCOUT"</Link>
+<Link name="WCOMP-WORK_BEASTFRIEND_HAWK">"RULES-WORK_SCOUT"</Link>
+<Link name="WCOMP-WORK_BEASTFRIEND_HORSE">"RULES-WORK_SCOUT"</Link>
+<Link name="WCOMP-WORK_BEASTFRIEND_HOUND">"RULES-WORK_SCOUT"</Link>
+<Link name="WCOMP-WORK_BEASTFRIEND_WILD_CAT">"RULES-WORK_SCOUT"</Link>
+<Link name="WCOMP-WORK_DWARF_LOREMASTER">"RULES-WORK_CLERIC_1"</Link>
+<Link name="WCOMP-WORK_DWARF_LOREMASTER">"RULES-WORK_WIZARD_1"</Link>
+<Link name="WCOMP-WORK_DWARF_LOREMASTER">"RULES-WORK_SCHOLAR"</Link>
+<Link name="WCOMP-WORK_DWARF_LOREMASTER">"RULES-WORK_ARTISAN"</Link>
+<Link name="RULES-WORK_SCHOLAR">"WCOMP-WORK_DWARF_LOREMASTER"</Link>
+<Link name="RULES-WORK_ALCHEMIST_4">"WCOMP-WORK_DWARF_LOREMASTER"</Link>
+<Link name="RULES-WORK_CLERIC_4">"WCOMP-WORK_DWARF_LOREMASTER"</Link>
+<Link name="RULES-WORK_WIZARD_4">"WCOMP-WORK_DWARF_LOREMASTER"</Link>
+</DATA_CAREER_LINK_V1>
+<DATA_SPELL_V1>
+<SpellV1 id="WCOMP-SPELL_PETTY_KNOCK_DOWN">
+<Description language="ENGLISH">"Knock Down"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Petty"</SpellList>
+<SpellLevel>"RULES-V1LEVEL_P"</SpellLevel>
+<MagicPoints>"2"</MagicPoints>
+<Range>"12 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"A small ebony stick ending in a carved fist"</Ingredients>
+<Page>"69"</Page>
+</SpellV1>
+<SpellV1 id="WCOMP-SPELL_BATTLE_FLEETFOOT">
+<Description language="ENGLISH">"Fleetfoot"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"2"</MagicPoints>
+<Range>"Touch"</Range>
+<Duration>"1 turn"</Duration>
+<Ingredients>"2 seeds of Vigwort and the sinews of a horse's leg"</Ingredients>
+<Page>"69"</Page>
+</SpellV1>
+<SpellV1 id="WCOMP-SPELL_BATTLE_LEG_BREAKING">
+<Description language="ENGLISH">"Leg Breaking"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"3"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"Leg bone of any humanoid species, broken as the spell is cast"</Ingredients>
+<MagicTest>"RULES-V1YESNO_OUI"</MagicTest>
+<Page>"69"</Page>
+</SpellV1>
+<SpellV1 id="WCOMP-SPELL_BATTLE_SLIPPERY_GROUND">
+<Description language="ENGLISH">"Slippery Ground"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"2"</MagicPoints>
+<Range>"6 yards"</Range>
+<Duration>"D6 turns"</Duration>
+<Ingredients>"A drop of oil"</Ingredients>
+<Page>"70"</Page>
+</SpellV1>
+<SpellV1 id="WCOMP-SPELL_BATTLE_SLOWFOOT">
+<Description language="ENGLISH">"Slowfoot"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"2"</MagicPoints>
+<Range>"Touch"</Range>
+<Duration>"1 turn"</Duration>
+<Ingredients>"An infusion of Schlafenkraut and a fragment of tortoise shell"</Ingredients>
+<Page>"70"</Page>
+</SpellV1>
+<SpellV1 id="WCOMP-SPELL_BATTLE_WILT_WEAPON">
+<Description language="ENGLISH">"Wilt Weapon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"2"</MagicPoints>
+<Range>"Line of sight"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"A small clay model of the weapon and a vial of pure, clean water"</Ingredients>
+<Page>"70"</Page>
+</SpellV1>
+<SpellV1 id="WCOMP-SPELL_BATTLE_BREAK_WEAPON">
+<Description language="ENGLISH">"Break Weapon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"4"</MagicPoints>
+<Range>"Line of sight"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"A small wooden model of the weapon, broken when the spell is cast"</Ingredients>
+<Page>"70"</Page>
+</SpellV1>
+<SpellV1 id="WCOMP-SPELL_BATTLE_FLAME_CURSE">
+<Description language="ENGLISH">"Flame Curse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"4"</MagicPoints>
+<Range>"24 yards"</Range>
+<Duration>"D6 turns"</Duration>
+<Ingredients>"The tonsils of a Dragon"</Ingredients>
+<Page>"70"</Page>
+</SpellV1>
+<SpellV1 id="WCOMP-SPELL_BATTLE_REPROOF_OF_COWARDICE">
+<Description language="ENGLISH">"Reproof of Cowardice"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"4"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"A small wooden shield, snapped in two when the spell is cast"</Ingredients>
+<Page>"71"</Page>
+</SpellV1>
+<SpellV1 id="WCOMP-SPELL_BATTLE_STAMPEDE">
+<Description language="ENGLISH">"Stampede"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"4"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"See description"</Duration>
+<Ingredients>"The jaws of a snake"</Ingredients>
+<MagicTest>"RULES-V1YESNO_OUI"</MagicTest>
+<Page>"71"</Page>
+</SpellV1>
+<SpellV1 id="WCOMP-SPELL_BATTLE_ARROW_STORM">
+<Description language="ENGLISH">"Arrow Storm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"6"</MagicPoints>
+<Range>"Touch"</Range>
+<Duration>"See description"</Duration>
+<Ingredients>"A quiver of up to 12 arrows"</Ingredients>
+<Page>"71"</Page>
+</SpellV1>
+<SpellV1 id="WCOMP-SPELL_BATTLE_SHARPEN_WEAPON">
+<Description language="ENGLISH">"Sharpen Weapon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"8"</MagicPoints>
+<Range>"Touch"</Range>
+<Duration>"Until next sunrise"</Duration>
+<Ingredients>"Any edged or pointed hand-to-hand weapon"</Ingredients>
+<Page>"71"</Page>
+</SpellV1>
+<SpellV1 id="WCOMP-SPELL_BATTLE_SUBVERT_WEAPON">
+<Description language="ENGLISH">"Subvert Weapon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"6"</MagicPoints>
+<Range>"Line of sight"</Range>
+<Duration>"1 round"</Duration>
+<Ingredients>"A small silver sword"</Ingredients>
+<Page>"71"</Page>
+</SpellV1>
+<SpellV1 id="WCOMP-SPELL_BATTLE_ENTANGLEMENT">
+<Description language="ENGLISH">"Entanglement"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"4"</SpellLevel>
+<MagicPoints>"8"</MagicPoints>
+<Range>"100 yards"</Range>
+<Duration>"D6+1 turns"</Duration>
+<Ingredients>"A pinch of dung and a sprig of Bloodsedge"</Ingredients>
+<Page>"72"</Page>
+</SpellV1>
+<SpellV1 id="WCOMP-SPELL_BATTLE_REVERSE_SPELL">
+<Description language="ENGLISH">"Reverse Spell"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"4"</SpellLevel>
+<MagicPoints>"8"</MagicPoints>
+<Range>"Special"</Range>
+<Duration>"Special"</Duration>
+<Ingredients>"A mithril mirror"</Ingredients>
+<Page>"72"</Page>
+</SpellV1>
+<SpellV1 id="WCOMP-SPELL_BATTLE_WALL_OF_FIRE">
+<Description language="ENGLISH">"Wall of Fire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"4"</SpellLevel>
+<MagicPoints>"8 per turn"</MagicPoints>
+<Range>"12 yards"</Range>
+<Duration>"1 turn if not renewed"</Duration>
+<Ingredients>"A pinch of sulphur and the tooth of a Dragon"</Ingredients>
+<Page>"72"</Page>
+</SpellV1>
+<SpellV1 id="WCOMP-SPELL_ELEMENTAL_WARD_OF_ARROWS">
+<Description language="ENGLISH">"Ward of Arrows"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Elemental"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"2"</MagicPoints>
+<Range>"12 yards"</Range>
+<Duration>"See description"</Duration>
+<Ingredients>"A turtle or tortoise shell"</Ingredients>
+<MagicTest>"RULES-V1YESNO_NON"</MagicTest>
+<Page>"72"</Page>
+</SpellV1>
+<SpellV1 id="WCOMP-SPELL_ELEMENTAL_PLAGUE_OF_LICE">
+<Description language="ENGLISH">"Plague of Lice"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Elemental"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"2 (individual) or 4 (group)"</MagicPoints>
+<Range>"24 yards"</Range>
+<Duration>"D3 turns"</Duration>
+<Ingredients>"A vial of blood with dry skin stirred in"</Ingredients>
+<MagicTest>"RULES-V1YESNO_OUI"</MagicTest>
+<Page>"73"</Page>
+</SpellV1>
+<SpellV1 id="WCOMP-SPELL_CHAOS_VORTEX_OF_CHAOS">
+<Description language="ENGLISH">"Vortex of Chaos"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Chaos"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"4"</MagicPoints>
+<Range>"Personal / 4D6 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"The dried brain of one Chaos sorcerer"</Ingredients>
+<Page>"73"</Page>
+</SpellV1>
+<SpellV1 id="WCOMP-SPELL_CHAOS_VORPAL_HURRICANE_OF_CHAOS">
+<Description language="ENGLISH">"Vorpal Hurricane of Chaos"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Chaos"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"7"</MagicPoints>
+<Range>"Personal / 4D6 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"The dried brain of a Level 3 or 4 Chaos Sorcerer"</Ingredients>
+<Page>"73"</Page>
+</SpellV1>
+</DATA_SPELL_V1>
+<DATA_EQUIPMENT_V1>
+<EquipmentV1 id="WCOMP-EQUIP_WEAPON_FIREARM_ARQUEBUS">
+<Description language="ENGLISH">"Arquebus"</Description>
+<Category>"RULES-V1CAT_WEAPON"</Category>
+<SubCategory>"RULES-V1SUBCAT_FIREARM"</SubCategory>
+<Cost>"100GC"</Cost>
+<Encumbrance>"75"</Encumbrance>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<RangeBands>
+<RangeBand>
+<Band>"RULES-V1RANGE_POINTBLANK"</Band>
+<Distance>"3"</Distance>
+<Strength>"4"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_SHORT"</Band>
+<Distance>"30"</Distance>
+<Strength>"4"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_LONG"</Band>
+<Distance>"60"</Distance>
+<Strength>"4"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_EXTREME"</Band>
+<Distance>"300"</Distance>
+<Strength>"3"</Strength>
+</RangeBand>
+</RangeBands>
+<Reload>"2 rounds to load, 1 round to fire"</Reload>
+<Note>""</Note>
+<Page>"13"</Page>
+</EquipmentV1>
+<EquipmentV1 id="WCOMP-EQUIP_WEAPON_FIREARM_DUCK_FOOT_4_BARREL">
+<Description language="ENGLISH">"Duck-Foot (4 barrels)"</Description>
+<Category>"RULES-V1CAT_WEAPON"</Category>
+<SubCategory>"RULES-V1SUBCAT_FIREARM"</SubCategory>
+<Cost>"175GC (+25% per additional barrel)"</Cost>
+<Encumbrance>"30"</Encumbrance>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<RangeBands>
+<RangeBand>
+<Band>"RULES-V1RANGE_POINTBLANK"</Band>
+<Distance>"3"</Distance>
+<Strength>"4"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_SHORT"</Band>
+<Distance>"8"</Distance>
+<Strength>"3"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_LONG"</Band>
+<Distance>"16"</Distance>
+<Strength>"3"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_EXTREME"</Band>
+<Distance>"50"</Distance>
+<Strength>"2"</Strength>
+</RangeBand>
+</RangeBands>
+<Reload>"2 rounds per barrel to load, 1 round to fire"</Reload>
+<Note>""</Note>
+<Page>"13"</Page>
+</EquipmentV1>
+<EquipmentV1 id="WCOMP-EQUIP_WEAPON_FIREARM_DUELLING_PISTOL">
+<Description language="ENGLISH">"Duelling Pistol"</Description>
+<Category>"RULES-V1CAT_WEAPON"</Category>
+<SubCategory>"RULES-V1SUBCAT_FIREARM"</SubCategory>
+<Cost>"500GC"</Cost>
+<Encumbrance>"25"</Encumbrance>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<RangeBands>
+<RangeBand>
+<Band>"RULES-V1RANGE_POINTBLANK"</Band>
+<Distance>"3"</Distance>
+<Strength>"4"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_SHORT"</Band>
+<Distance>"8"</Distance>
+<Strength>"3"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_LONG"</Band>
+<Distance>"16"</Distance>
+<Strength>"3"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_EXTREME"</Band>
+<Distance>"50"</Distance>
+<Strength>"2"</Strength>
+</RangeBand>
+</RangeBands>
+<Reload>"2 rounds to load, 1 round to fire"</Reload>
+<Note>""</Note>
+<Page>"13"</Page>
+</EquipmentV1>
+<EquipmentV1 id="WCOMP-EQUIP_WEAPON_FIREARM_HENRICUS_SALUS">
+<Description language="ENGLISH">"Henricus Salus"</Description>
+<Category>"RULES-V1CAT_WEAPON"</Category>
+<SubCategory>"RULES-V1SUBCAT_FIREARM"</SubCategory>
+<Cost>"175GC"</Cost>
+<Encumbrance>"30"</Encumbrance>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<RangeBands>
+<RangeBand>
+<Band>"RULES-V1RANGE_POINTBLANK"</Band>
+<Distance>"3"</Distance>
+<Strength>"4"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_SHORT"</Band>
+<Distance>"8"</Distance>
+<Strength>"4"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_LONG"</Band>
+<Distance>"16"</Distance>
+<Strength>"4"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_EXTREME"</Band>
+<Distance>"50"</Distance>
+<Strength>"3"</Strength>
+</RangeBand>
+</RangeBands>
+<Reload>"2 rounds to load, 1 round to fire"</Reload>
+<Note>""</Note>
+<Page>"13"</Page>
+</EquipmentV1>
+<EquipmentV1 id="WCOMP-EQUIP_WEAPON_FIREARM_JEZAIL">
+<Description language="ENGLISH">"Jezail"</Description>
+<Category>"RULES-V1CAT_WEAPON"</Category>
+<SubCategory>"RULES-V1SUBCAT_FIREARM"</SubCategory>
+<Encumbrance>"60"</Encumbrance>
+<Availability>"RULES-DISPO2_ALMOST_UNKNOWN"</Availability>
+<RangeBands>
+<RangeBand>
+<Band>"RULES-V1RANGE_POINTBLANK"</Band>
+<Distance>"3"</Distance>
+<Strength>"4"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_SHORT"</Band>
+<Distance>"36"</Distance>
+<Strength>"3"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_LONG"</Band>
+<Distance>"72"</Distance>
+<Strength>"3"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_EXTREME"</Band>
+<Distance>"400"</Distance>
+<Strength>"2"</Strength>
+</RangeBand>
+</RangeBands>
+<Reload>"3 rounds to load, 1 round to fire"</Reload>
+<Note>""</Note>
+<Page>"13"</Page>
+</EquipmentV1>
+<EquipmentV1 id="WCOMP-EQUIP_WEAPON_FIREARM_PIKE_GUN">
+<Description language="ENGLISH">"Pike Gun"</Description>
+<Category>"RULES-V1CAT_WEAPON"</Category>
+<SubCategory>"RULES-V1SUBCAT_FIREARM"</SubCategory>
+<Cost>"125GC"</Cost>
+<Encumbrance>"150"</Encumbrance>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<RangeBands>
+<RangeBand>
+<Band>"RULES-V1RANGE_POINTBLANK"</Band>
+<Distance>"3"</Distance>
+<Strength>"4"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_SHORT"</Band>
+<Distance>"12"</Distance>
+<Strength>"3"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_LONG"</Band>
+<Distance>"24"</Distance>
+<Strength>"3"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_EXTREME"</Band>
+<Distance>"50"</Distance>
+<Strength>"2"</Strength>
+</RangeBand>
+</RangeBands>
+<Reload>"2 rounds to load, 1 round to fire"</Reload>
+<Note>""</Note>
+<Page>"13"</Page>
+</EquipmentV1>
+<EquipmentV1 id="WCOMP-EQUIP_WEAPON_FIREARM_SWIVEL_GUN">
+<Description language="ENGLISH">"Swivel Gun"</Description>
+<Category>"RULES-V1CAT_WEAPON"</Category>
+<SubCategory>"RULES-V1SUBCAT_FIREARM"</SubCategory>
+<Cost>"200GC"</Cost>
+<Encumbrance>"150"</Encumbrance>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<RangeBands>
+<RangeBand>
+<Band>"RULES-V1RANGE_POINTBLANK"</Band>
+<Distance>"3"</Distance>
+<Strength>"6"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_SHORT"</Band>
+<Distance>"24"</Distance>
+<Strength>"4"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_LONG"</Band>
+<Distance>"48"</Distance>
+<Strength>"3"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_EXTREME"</Band>
+<Distance>"100"</Distance>
+<Strength>"2"</Strength>
+</RangeBand>
+</RangeBands>
+<Reload>"4 rounds to load, 1 round to fire"</Reload>
+<Note>""</Note>
+<Page>"13"</Page>
+</EquipmentV1>
+<EquipmentV1 id="WCOMP-EQUIP_WEAPON_FIREARM_VOLLEY_GUN_6_BARREL">
+<Description language="ENGLISH">"Volley Gun (6 barrels)"</Description>
+<Category>"RULES-V1CAT_WEAPON"</Category>
+<SubCategory>"RULES-V1SUBCAT_FIREARM"</SubCategory>
+<Cost>"300GC (+25% per additional barrel)"</Cost>
+<Encumbrance>"400"</Encumbrance>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<RangeBands>
+<RangeBand>
+<Band>"RULES-V1RANGE_POINTBLANK"</Band>
+<Distance>"3"</Distance>
+<Strength>"4"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_SHORT"</Band>
+<Distance>"12"</Distance>
+<Strength>"3"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_LONG"</Band>
+<Distance>"24"</Distance>
+<Strength>"3"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_EXTREME"</Band>
+<Distance>"50"</Distance>
+<Strength>"3"</Strength>
+</RangeBand>
+</RangeBands>
+<Reload>"2 rounds per barrel to load, 1 round to fire"</Reload>
+<Note>""</Note>
+<Page>"13"</Page>
+</EquipmentV1>
+</DATA_EQUIPMENT_V1>
+</DATA_BOOK>

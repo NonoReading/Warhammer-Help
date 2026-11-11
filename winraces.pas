@@ -11,7 +11,7 @@ uses
   Classes, SysUtils, Generics.Collections, Forms, Controls, Graphics, Dialogs, Grids, ComCtrls,
   StdCtrls, ExtCtrls, BCButton, ChargeRace, ChargeEspece, ChargeRaceAttribut, ChargeAttribut,
   ChargeConstantes, ChargeRaceCompetence, ChargeCompetence, UnitCalcul,
-  ChargeRaceTalent, ChargeTalent, ChargeMetier, ChargeRaceMetier, ChargeTirageMetier, ChargeMetierNiveau,
+  ChargeMetierAttribut, ChargeRaceTalent, ChargeTalent, ChargeMetier, ChargeRaceMetier, ChargeTirageMetier, ChargeMetierNiveau,
   GlobalFonts, ChargeTexte, ChargeMetierSousMetier, ChargeMetierRaceChoixMetier,
   ChargeRaceCorruptionCreation, WinFiltre, ChargeTalentCreation, PdfRace,
   ChargeRaceOpinion, AncrageProportionnel, BCLabelContour;
@@ -208,6 +208,17 @@ procedure TWinRace.FormResize(Sender: TObject);
   end;
 
 
+// Vrai si au moins une race tire cette caracteristique au de ("2d10+20").
+Function AttributTireAuDe(CodeAttribut: String): Boolean;
+Var
+  PRaceAttribut: StructureRaceAttribut;
+Begin
+  Result := False;
+  For PRaceAttribut in ListRaceAttribut do
+    If (PRaceAttribut.CodeAttribut = CodeAttribut) and (Pos('d10', LowerCase(PRaceAttribut.CalculRace)) > 0) Then
+      Exit(True);
+End;
+
 Procedure TWinRace.WinCharger();
 Var
   PRace:   StructureRace;
@@ -279,18 +290,18 @@ begin
         TabAttribut.RowCount         := 3;
         TabAttribut.ColWidths[0]     := 0;
     //    TabAttribut.Columns.Add;
+        // Seules les caracteristiques tirees au de (2d10+20, ...) ont une colonne : pas les valeurs fixes
+        // (Mouvement, Attaques, Magie, Folie...), quelle que soit la version.
         For PAttribut in ListeAttribut do
-          begin
-            If Nb < 10 then
-              begin
-                TabAttribut.Columns.Add;
-                TabAttribut.Columns[Nb].Alignment       := taCenter;
-                TabAttribut.Columns[Nb].Title.Caption   := PAttribut.Resume;
-                TabAttribut.Cells[nb+1,2]               := PAttribut.CodeAttribut;
-              end;
-            TabAttribut.ColWidths[Nb+1]               := 40;
-            Inc(Nb);
-          end;
+          If (Nb < 10) and AttributTireAuDe(PAttribut.CodeAttribut) then
+            begin
+              TabAttribut.Columns.Add;
+              TabAttribut.Columns[Nb].Alignment       := taCenter;
+              TabAttribut.Columns[Nb].Title.Caption   := PAttribut.Resume;
+              TabAttribut.Cells[nb+1,2]               := PAttribut.CodeAttribut;
+              TabAttribut.ColWidths[Nb+1]             := 40;
+              Inc(Nb);
+            end;
         TabAttribut.RowHeights[2]    := 1;
       end;
 
@@ -317,7 +328,10 @@ begin
       begin
         TabRace.Visible := false;
         TabRaceSelection(self, 1,1);
-      end;
+      end
+    else if TabRace.RowCount > 1 then
+      // Ouverture libre : la premiere race est deja selectionnee, son arbre est affiche
+      TabRaceSelection(self, 1, 1);
 
     KeyPreview := true;
 End;
@@ -460,8 +474,8 @@ var
                   PCompetence              := ChercheCompetence(strings[IndTab]);
                   NodeSFeuille             := TreeViewRace.Items.AddChild(NodeSBranche, PCompetence.Libelle);
                   NodeSFeuille.ImageIndex  := 0;
-                  if Pos('_', PCompetence.CodeCompetence) > 0 then
-                     PCompetence           := ChercheCompetence(Copy(strings[IndTab], 1, Pos('_', PCompetence.CodeCompetence) - 1)+'_*');
+                  if PCompetence.SousCompetence then
+                     PCompetence           := ChercheCompetence(CodeGeneriqueDe(PCompetence));
                   NodeData                 := TMyNodeData.Create;
                   NodeData.AdditionalData  := PCompetence.CodeCompetence;
                   NodeSFeuille.Data        := NodeData;
@@ -473,8 +487,8 @@ var
               PCompetence             := ChercheCompetence(PRaceCompetence.CodeCompetence);
               NodeSFeuille := TreeViewRace.Items.AddChild(NodeBranche, PCompetence.Libelle);
               NodeSFeuille.ImageIndex := 0;
-              if Pos('_', PCompetence.CodeCompetence) > 0 then
-                 PCompetence          := ChercheCompetence(Copy(PRaceCompetence.CodeCompetence, 1, Pos('_', PCompetence.CodeCompetence) - 1)+'_*');
+              if PCompetence.SousCompetence then
+                 PCompetence          := ChercheCompetence(CodeGeneriqueDe(PCompetence));
               NodeData                := TMyNodeData.Create;
               NodeData.AdditionalData := PCompetence.CodeCompetence;
               NodeSFeuille.Data       := NodeData;
@@ -579,9 +593,8 @@ Begin
                  PTalent                  := ChercheTalent(strings[indTab]);
                  NodeSFeuille             := TreeViewRace.Items.AddChild(NodeSBranche, PTalent.Libelle);
                  NodeSFeuille.ImageIndex  := 0;
-                 if Pos('_', PTalent.CodeTalent) > 0 then
-                    // recherche du talent générique pour récupérer les explications
-                    PTalent               := ChercheTalent(Copy(PRaceTalent.CodeTalent, 1, Pos('_', PTalent.CodeTalent) - 1)+'_*');
+                 // recherche du talent générique pour récupérer les explications
+                 PTalent                  := ChercheTalent(CodeTalentGenerique(PTalent));
                  NodeData                 := TMyNodeData.Create;
                  NodeData.AdditionalData  := PTalent.codeTalent;
                  NodeSFeuille.Data        := NodeData;
@@ -594,9 +607,8 @@ Begin
                 PTalent                  := ChercheTalent(PRaceTalent.CodeTalent);
                 NodeFeuille              := TreeViewRace.Items.AddChild(NodeBranche, PTalent.Libelle);
                 NodeFeuille.ImageIndex   := 0;
-                if Pos('_', PTalent.CodeTalent) > 0 then
-                    // recherche du talent générique pour récupérer les explications
-                    PTalent              := ChercheTalent(Copy(PRaceTalent.CodeTalent, 1, Pos('_', PTalent.CodeTalent) - 1)+'_*');
+                // recherche du talent générique pour récupérer les explications
+                PTalent                  := ChercheTalent(CodeTalentGenerique(PTalent));
                 NodeData                 := TMyNodeData.Create;
                 NodeData.AdditionalData  := PTalent.codeTalent;
                 NodeFeuille.Data         := NodeData;
@@ -613,6 +625,9 @@ Var
     Tirage:      TListTirageMetier;
     Ordonnes:    specialize TList<StructureRaceMetier>;
     Ligne:       StructureTirageMetier;
+    PClasse:     StructureClasseV1;
+    Vues:        TStringList;
+    Des:         Integer;
 Begin
     NodeBranche            := TreeViewRace.Items.AddChild(Node, ConstArbreMetierPossible);
     NodeBranche.ImageIndex := 0;
@@ -626,6 +641,38 @@ Begin
     canvas.Font.Bold       := false;
     TailleSp               := canvas.TextWidth('.');
 
+    // V1 : le tirage se fait par classe (RULES-RULE_CAREER_CHART_<CLASSE>) ; une ligne par carriere avec sa tranche et sa classe
+    if ValVersion = 'WFRP1' then
+      begin
+        Tirage := TListTirageMetier.Create;
+        Vues   := TStringList.Create;
+        try
+          for PClasse in ListClasseV1 do
+            begin
+              CalculeTirageMetier(RaceEnCours, StringReplace(PClasse.CodeClasse, 'CLASS_', 'RULE_CAREER_CHART_', []), Tirage);
+              Des := DesDuTirage(Tirage);
+              for Ligne in Tirage do
+                if Vues.IndexOf(Ligne.CodeMetier) < 0 then
+                  begin
+                    Vues.Add(Ligne.CodeMetier);
+                    PMetier                := ChercheMetier(Ligne.CodeMetier);
+                    TailleCh               := canvas.TextWidth(PMetier.Libelle + ' ');
+                    NodeFeuille            := TreeViewRace.Items.AddChild(NodeBranche, PMetier.Libelle + ' '
+                                              + StringOfChar('.', round((220 - TailleCh) / TailleSp)) + ' '
+                                              + FormateTranche(Ligne.Debut, Ligne.Fin, Des) + ' (' + PClasse.Libelle + ')');
+                    NodeFeuille.ImageIndex := 0;
+                    NodeData               := TMyNodeData.Create;
+                    NodeData.AdditionalData:= PMetier.CodeMetier;
+                    NodeFeuille.Data       := NodeData;
+                  end;
+            end;
+        finally
+          Vues.Free;
+          Tirage.Free;
+        end;
+        Exit;
+      end;
+
     // la table de tirage se calcule UNE fois pour la race, pas une fois par ligne
     Tirage := TListTirageMetier.Create;
     CalculeTirageMetier(RaceEnCours, '', Tirage);
@@ -633,10 +680,10 @@ Begin
     Ordonnes := specialize TList<StructureRaceMetier>.Create;
     For Ligne in Tirage do
       For PRaceMetier in ListRaceMetier do
-        if (PRaceMetier.CodeRace = RaceEnCours) and (PRaceMetier.Chance <> '–') and CompareRechercheValeur(Ligne.CodeMetier, PRaceMetier.CodeMetier) then
+        if (PRaceMetier.CodeRace = RaceEnCours) and (PRaceMetier.Chance <> '–') and (PRaceMetier.Chance <> SeparateurChance) and CompareRechercheValeur(Ligne.CodeMetier, PRaceMetier.CodeMetier) then
           Ordonnes.Add(PRaceMetier);
     For PRaceMetier in ListRaceMetier do
-      if (PRaceMetier.CodeRace = RaceEnCours) and (PRaceMetier.Chance <> '–') and (StrToIntDef(PRaceMetier.Chance, 0) <= 0) then
+      if (PRaceMetier.CodeRace = RaceEnCours) and (PRaceMetier.Chance <> '–') and (PRaceMetier.Chance <> SeparateurChance) and (StrToIntDef(PRaceMetier.Chance, 0) <= 0) then
         Ordonnes.Add(PRaceMetier);
     For PRaceMetier in Ordonnes do
           Begin
@@ -750,7 +797,9 @@ begin
   // charger les éléments
   ChargeRaceAttribut();
   ChargeRaceCompetence(TreeViewRace);
-  ChargeRaceTalent(TreeViewRace);
+  // V1 : pas de talents (ils viennent de la V2)
+  if ValVersion <> 'WFRP1' then
+    ChargeRaceTalent(TreeViewRace);
   ChargeRaceMetier(TreeViewRace);
   ChargeRaceCorruptionCreation(TreeViewRace);
 

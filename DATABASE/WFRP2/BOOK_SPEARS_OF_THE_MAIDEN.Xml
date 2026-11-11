@@ -1,0 +1,1155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"SOTM"</CODE_BOOK>
+<BOOK>"BOOK SPEARS OF THE MAIDEN"</BOOK>
+<BOOKNAME>"SPEARS OF THE MAIDEN"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_TALENT>
+<Talent id="SOTM-T_HEDGE_LORE">
+<Description language="ENGLISH">"Hedge Lore"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"26"</Page>
+</Talent>
+<Talent id="SOTM-T_ORNITHOPTRIST">
+<Description language="ENGLISH">"Ornithoptrist"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"59"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_CAREER>
+<Career id="SOTM-CARE_CABRIOLET_DRIVER">
+<Description language="ENGLISH">"Cabriolet Driver"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, Ag +10%, Int +5%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Genealogy/Heraldry), Academic Knowledge (History), Animal Care, Charm, Common Knowledge (any 1), Drive, Gossip, Haggle, Navigation, Speak Language (any 1), Speak Language (Tilean)"</Skills>
+<Talents>"Dealmaker or Etiquette, Savvy or Suave, Orientation"</Talents>
+<Trappings>"Good Craftsmanship Clothing, Cabriolet-cart, Horse, Smart Cap, Humble Opinions"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_GENEALOGY/RULES-COMP_ACADEMIC_KNOWLEDGE_HERALDRY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_HISTORY">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ANY_1">"1"</Skill>
+<Skill name="RULES-COMP_DRIVE">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ANY_1">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_TILEAN">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_DEALMAKER/RULES-T_ETIQUETTE">"1"</Talent>
+<Talent name="RULES-T_SAVVY/RULES-T_SUAVE">"1"</Talent>
+<Talent name="RULES-T_ORIENTATION">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"SOTM 58"</Source>
+</Career>
+<Career id="SOTM-CARE_PIKEMAN">
+<Description language="ENGLISH">"Pikeman"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, S +10%, T +5%, Ag +5%, WP +5%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Animal Care or Gamble, Common Knowledge (Tilea), Dodge Blow, Gossip or Haggle, Ride or Drive, Perception or Search, Secret Language (Battle Tongue), Speak Language (Tilean)"</Skills>
+<Talents>"Disarm or Quick Draw, Specialist Weapon Group (Two-handed), Strike Mighty Blow, Strike to Injure, Strike to Stun"</Talents>
+<Trappings>"Light Armour (Plate Helmet and Leather Jack), Tilean Pike, Shield"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE/RULES-COMP_GAMBLE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_TILEA">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP/RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_RIDE/RULES-COMP_DRIVE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION/RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_BATTLE_TONGUE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_TILEAN">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_DISARM/RULES-T_QUICK_DRAW">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_STUN">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"SOTM 58"</Source>
+</Career>
+<Career id="SOTM-CARE_BANKER">
+<Description language="ENGLISH">"Banker"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +10%, S +10%, T +10%, Ag +15%, Int +35%, WP +25%, Fel +35%"</MainProfile>
+<SecondaryProfile>"W +6"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"35"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_Fel">"35"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Law), Charm, Common Knowledge (any 2), Evaluate, Gamble, Gossip, Haggle, Intimidate, Read/Write, Secret Language (Guild Tongue), Speak Language (any 2), Speak Language (Tilean), Trade (Merchant)"</Skills>
+<Talents>"Dealmaker, Etiquette or Streetwise, Public Speaking or Schemer, Super Numerate"</Talents>
+<Trappings>"Best Craftsmanship Clothing, Total of 5, 000 gc in coin and owed debt, Writing Kit, Bodyguard, Guild Symbol, Personal Seal"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_LAW">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ANY_2">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_GAMBLE">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_GUILD_TONGUE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ANY_2">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_TILEAN">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_MERCHANT">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_DEALMAKER">"1"</Talent>
+<Talent name="RULES-T_ETIQUETTE/RULES-T_STREETWISE">"1"</Talent>
+<Talent name="RULES-T_PUBLIC_SPEAKING/RULES-T_SCHEMER">"1"</Talent>
+<Talent name="RULES-T_SUPER_NUMERATE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"SOTM 59"</Source>
+</Career>
+<Career id="SOTM-CARE_CATRAZZAN_BIRDMAN">
+<Description language="ENGLISH">"Catrazzan Birdman"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +25%, S +5%, T +5%, Ag +20%, Int +15%, WP +10%, Fel +15%"</MainProfile>
+<SecondaryProfile>"W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"25"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Engineering or Science), Blather or Navigation, Dodge Blow, Perception, Read/Write, Secret Language (Battle Tongue), Speak Language (Classical), Trade (Carpenter)"</Skills>
+<Talents>"Ornithoptrist, Quick Draw, Rapid Reload, Sharpshooter, Sure Shot"</Talents>
+<Trappings>"Crossbow with 20 Bolts, Light Armour (Leather Jerkin), Mask, Trade Tools (Engineer), Ornithopter, The Right Stuff"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ENGINEERING/RULES-COMP_ACADEMIC_KNOWLEDGE_SCIENCE">"1"</Skill>
+<Skill name="RULES-COMP_BLATHER/RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_BATTLE_TONGUE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_CLASSICAL">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_CARPENTER">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="SOTM-T_ORNITHOPTRIST">"1"</Talent>
+<Talent name="RULES-T_QUICK_DRAW">"1"</Talent>
+<Talent name="RULES-T_RAPID_RELOAD">"1"</Talent>
+<Talent name="RULES-T_SHARPSHOOTER">"1"</Talent>
+<Talent name="RULES-T_SURE_SHOT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"SOTM 59"</Source>
+</Career>
+<Career id="SOTM-CARE_REPUBLICAN_GUARD">
+<Description language="ENGLISH">"Republican Guard"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +25%, S +20%, T +15%, Ag +15%, WP +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"25"</Advance>
+<Advance name="RULES-ATTR_S">"20"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Strategy/Tactics), Charm, Dodge Blow, Gamble or Search, Perception, Secret Language (Battle Tongue), Speak Language (any 1), Speak Language (Tilean)"</Skills>
+<Talents>"Disarm, Hardy, Quick Draw, Specialist Weapon Group (Two-handed), Strike Mighty Blow, Strike to Injure, Wrestling"</Talents>
+<Trappings>"Best Craftsmanship Tilean Pike, Best Craftsmanship Heavy Armour (Full Plate Armour), Jewelry worth 200 gc"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_STRATEGY/RULES-COMP_ACADEMIC_KNOWLEDGE_TACTICS">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_GAMBLE/RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_BATTLE_TONGUE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ANY_1">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_TILEAN">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_DISARM">"1"</Talent>
+<Talent name="RULES-T_HARDY">"1"</Talent>
+<Talent name="RULES-T_QUICK_DRAW">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE">"1"</Talent>
+<Talent name="RULES-T_WRESTLING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"SOTM 60"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="SOTM-CARE_CABRIOLET_DRIVER">"RULES-CARE_CHARLATAN"</Link>
+<Link name="SOTM-CARE_CABRIOLET_DRIVER">"RULES-CARE_FENCE"</Link>
+<Link name="SOTM-CARE_CABRIOLET_DRIVER">"RULES-CARE_FERRYMAN"</Link>
+<Link name="SOTM-CARE_CABRIOLET_DRIVER">"RULES-CARE_OUTLAW"</Link>
+<Link name="SOTM-CARE_CABRIOLET_DRIVER">"RULES-CARE_ROADWARDEN"</Link>
+<Link name="SOTM-CARE_CABRIOLET_DRIVER">"RULES-CARE_SPY"</Link>
+<Link name="RULES-CARE_COACHMAN">"SOTM-CARE_CABRIOLET_DRIVER"</Link>
+<Link name="RULES-CARE_MESSENGER">"SOTM-CARE_CABRIOLET_DRIVER"</Link>
+<Link name="RULES-CARE_OUTRIDER">"SOTM-CARE_CABRIOLET_DRIVER"</Link>
+<Link name="RULES-CARE_PEASANT">"SOTM-CARE_CABRIOLET_DRIVER"</Link>
+<Link name="RULES-CARE_TRADESMAN">"SOTM-CARE_CABRIOLET_DRIVER"</Link>
+<Link name="RULES-CARE_VAGABOND">"SOTM-CARE_CABRIOLET_DRIVER"</Link>
+<Link name="RULES-CARE_VALET">"SOTM-CARE_CABRIOLET_DRIVER"</Link>
+<Link name="SOTM-CARE_PIKEMAN">"RULES-CARE_BODYGUARD"</Link>
+<Link name="SOTM-CARE_PIKEMAN">"RULES-CARE_BOUNTY_HUNTER"</Link>
+<Link name="SOTM-CARE_PIKEMAN">"RULES-CARE_OUTLAW"</Link>
+<Link name="SOTM-CARE_PIKEMAN">"SOTM-CARE_REPUBLICAN_GUARD"</Link>
+<Link name="SOTM-CARE_PIKEMAN">"RULES-CARE_SERGEANT"</Link>
+<Link name="SOTM-CARE_PIKEMAN">"RULES-CARE_VETERAN"</Link>
+<Link name="SOTM-CARE_PIKEMAN">"RULES-CARE_JUDICIAL_CHAMPION"</Link>
+<Link name="RULES-CARE_MERCENARY">"SOTM-CARE_PIKEMAN"</Link>
+<Link name="RULES-CARE_PROTAGONIST">"SOTM-CARE_PIKEMAN"</Link>
+<Link name="RULES-CARE_THUG">"SOTM-CARE_PIKEMAN"</Link>
+<Link name="RULES-CARE_SOLDIER">"SOTM-CARE_PIKEMAN"</Link>
+<Link name="RULES-CARE_WATCHMAN">"SOTM-CARE_PIKEMAN"</Link>
+<Link name="SOTM-CARE_BANKER">"RULES-CARE_CRIME_LORD"</Link>
+<Link name="SOTM-CARE_BANKER">"RULES-CARE_POLITICIAN"</Link>
+<Link name="SOTM-CARE_BANKER">"RULES-CARE_STEWARD"</Link>
+<Link name="RULES-CARE_FENCE">"SOTM-CARE_BANKER"</Link>
+<Link name="RULES-CARE_GUILD_MASTER">"SOTM-CARE_BANKER"</Link>
+<Link name="RULES-CARE_MERCHANT">"SOTM-CARE_BANKER"</Link>
+<Link name="SOTM-CARE_CATRAZZAN_BIRDMAN">"RULES-CARE_ARTISAN"</Link>
+<Link name="SOTM-CARE_CATRAZZAN_BIRDMAN">"RULES-CARE_BOUNTY_HUNTER"</Link>
+<Link name="SOTM-CARE_CATRAZZAN_BIRDMAN">"RULES-CARE_ENGINEER"</Link>
+<Link name="SOTM-CARE_CATRAZZAN_BIRDMAN">"RULES-CARE_OUTLAW"</Link>
+<Link name="SOTM-CARE_CATRAZZAN_BIRDMAN">"RULES-CARE_SCHOLAR"</Link>
+<Link name="SOTM-CARE_CATRAZZAN_BIRDMAN">"RULES-CARE_SERGEANT"</Link>
+<Link name="SOTM-CARE_CATRAZZAN_BIRDMAN">"RULES-CARE_TARGETEER"</Link>
+<Link name="SOTM-CARE_CATRAZZAN_BIRDMAN">"RULES-CARE_VETERAN"</Link>
+<Link name="RULES-CARE_ENGINEER">"SOTM-CARE_CATRAZZAN_BIRDMAN"</Link>
+<Link name="RULES-CARE_MERCENARY">"SOTM-CARE_CATRAZZAN_BIRDMAN"</Link>
+<Link name="RULES-CARE_TARGETEER">"SOTM-CARE_CATRAZZAN_BIRDMAN"</Link>
+<Link name="RULES-CARE_WATCHMAN">"SOTM-CARE_CATRAZZAN_BIRDMAN"</Link>
+<Link name="SOTM-CARE_REPUBLICAN_GUARD">"RULES-CARE_CAPTAIN"</Link>
+<Link name="SOTM-CARE_REPUBLICAN_GUARD">"RULES-CARE_DUELLIST"</Link>
+<Link name="SOTM-CARE_REPUBLICAN_GUARD">"RULES-CARE_JUDICIAL_CHAMPION"</Link>
+<Link name="SOTM-CARE_REPUBLICAN_GUARD">"RULES-CARE_KNIGHT"</Link>
+<Link name="SOTM-CARE_REPUBLICAN_GUARD">"RULES-CARE_MERCENARY"</Link>
+<Link name="SOTM-CARE_REPUBLICAN_GUARD">"RULES-CARE_MERCHANT"</Link>
+<Link name="SOTM-CARE_REPUBLICAN_GUARD">"RULES-CARE_RACKETEER"</Link>
+<Link name="RULES-CARE_DUELLIST">"SOTM-CARE_REPUBLICAN_GUARD"</Link>
+<Link name="RULES-CARE_MERCENARY">"SOTM-CARE_REPUBLICAN_GUARD"</Link>
+<Link name="RULES-CARE_SERGEANT">"SOTM-CARE_REPUBLICAN_GUARD"</Link>
+<Link name="RULES-CARE_SOLDIER">"SOTM-CARE_REPUBLICAN_GUARD"</Link>
+<Link name="RULES-CARE_VETERAN">"SOTM-CARE_REPUBLICAN_GUARD"</Link>
+<Link name="RULES-CARE_WATCHMAN">"SOTM-CARE_REPUBLICAN_GUARD"</Link>
+<Link name="RULES-CARE_RAT_CATCHER">"SOTM-CARE_REPUBLICAN_GUARD"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="SOTM-EQUI_VEHICLES_ORNITHOPTER">
+<Description language="ENGLISH">"Ornithopter"</Description>
+<Category>"RULES-EQCAT2_VEHICLES"</Category>
+<Cost>"280 gc"</Cost>
+<Encumbrance>"100 when worn or carried, none when flying"</Encumbrance>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"60"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+<DATA_SPECIE>
+<Specie id="SOTM-RACE_HTIL">
+<Description language="ENGLISH">"Human (Tilean)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename Surname"</NamePattern>
+<NamePattern sex="F">"Forename Surname"</NamePattern>
+<Name part="Forename" sex="M" name="Adalberto">"1"</Name>
+<Name part="Forename" sex="M" name="Agrippa">"2"</Name>
+<Name part="Forename" sex="M" name="Alfredo">"3"</Name>
+<Name part="Forename" sex="M" name="Antonello">"4"</Name>
+<Name part="Forename" sex="M" name="Basilio">"5"</Name>
+<Name part="Forename" sex="M" name="Benito">"6"</Name>
+<Name part="Forename" sex="M" name="Bino">"7"</Name>
+<Name part="Forename" sex="M" name="Bruno">"8"</Name>
+<Name part="Forename" sex="M" name="Caio">"9"</Name>
+<Name part="Forename" sex="M" name="Celso">"10"</Name>
+<Name part="Forename" sex="M" name="Ciro">"11"</Name>
+<Name part="Forename" sex="M" name="Constante">"12"</Name>
+<Name part="Forename" sex="M" name="Danilo">"13"</Name>
+<Name part="Forename" sex="M" name="Demetrio">"14"</Name>
+<Name part="Forename" sex="M" name="Dino">"15"</Name>
+<Name part="Forename" sex="M" name="Domini">"16"</Name>
+<Name part="Forename" sex="M" name="Edimondo">"17"</Name>
+<Name part="Forename" sex="M" name="Edoardo">"18"</Name>
+<Name part="Forename" sex="M" name="Ennio">"19"</Name>
+<Name part="Forename" sex="M" name="Enzo">"20"</Name>
+<Name part="Forename" sex="M" name="Fabiano">"21"</Name>
+<Name part="Forename" sex="M" name="Fabrizio">"22"</Name>
+<Name part="Forename" sex="M" name="Ferdinando">"23"</Name>
+<Name part="Forename" sex="M" name="Francesco">"24"</Name>
+<Name part="Forename" sex="M" name="Gaspare">"25"</Name>
+<Name part="Forename" sex="M" name="Gianno">"26"</Name>
+<Name part="Forename" sex="M" name="Gilberto">"27"</Name>
+<Name part="Forename" sex="M" name="Giuliano">"28"</Name>
+<Name part="Forename" sex="M" name="Haroldo">"29"</Name>
+<Name part="Forename" sex="M" name="Hector">"30"</Name>
+<Name part="Forename" sex="M" name="Homero">"31"</Name>
+<Name part="Forename" sex="M" name="Hugo">"32"</Name>
+<Name part="Forename" sex="M" name="Icaro">"33"</Name>
+<Name part="Forename" sex="M" name="Igor">"34"</Name>
+<Name part="Forename" sex="M" name="Ignacio">"35"</Name>
+<Name part="Forename" sex="M" name="Ippolito">"36"</Name>
+<Name part="Forename" sex="M" name="Jober">"37"</Name>
+<Name part="Forename" sex="M" name="Julius">"38"</Name>
+<Name part="Forename" sex="M" name="Jonas">"39"</Name>
+<Name part="Forename" sex="M" name="Juliano">"40"</Name>
+<Name part="Forename" sex="M" name="Lauro">"41"</Name>
+<Name part="Forename" sex="M" name="Lazzaro">"42"</Name>
+<Name part="Forename" sex="M" name="Leandro">"43"</Name>
+<Name part="Forename" sex="M" name="Luigi">"44"</Name>
+<Name part="Forename" sex="M" name="Manfredo">"45"</Name>
+<Name part="Forename" sex="M" name="Magno">"46"</Name>
+<Name part="Forename" sex="M" name="Mario">"47"</Name>
+<Name part="Forename" sex="M" name="Michele">"48"</Name>
+<Name part="Forename" sex="M" name="Narciso">"49"</Name>
+<Name part="Forename" sex="M" name="Nero">"50"</Name>
+<Name part="Forename" sex="M" name="Nestor">"51"</Name>
+<Name part="Forename" sex="M" name="Nicco">"52"</Name>
+<Name part="Forename" sex="M" name="Olimpio">"53"</Name>
+<Name part="Forename" sex="M" name="Omar">"54"</Name>
+<Name part="Forename" sex="M" name="Oscar">"55"</Name>
+<Name part="Forename" sex="M" name="Octavio">"56"</Name>
+<Name part="Forename" sex="M" name="Paolo">"57"</Name>
+<Name part="Forename" sex="M" name="Patrizio">"58"</Name>
+<Name part="Forename" sex="M" name="Pietro">"59"</Name>
+<Name part="Forename" sex="M" name="Primo">"60"</Name>
+<Name part="Forename" sex="M" name="Quarto">"61"</Name>
+<Name part="Forename" sex="M" name="Quasimodo">"62"</Name>
+<Name part="Forename" sex="M" name="Quintino">"63"</Name>
+<Name part="Forename" sex="M" name="Quinzio">"64"</Name>
+<Name part="Forename" sex="M" name="Remo">"65"</Name>
+<Name part="Forename" sex="M" name="Roberto">"66"</Name>
+<Name part="Forename" sex="M" name="Rocco">"67"</Name>
+<Name part="Forename" sex="M" name="Romero">"68"</Name>
+<Name part="Forename" sex="M" name="Romulo">"69"</Name>
+<Name part="Forename" sex="M" name="Rosario">"70"</Name>
+<Name part="Forename" sex="M" name="Ricardo">"71"</Name>
+<Name part="Forename" sex="M" name="Sabino">"72"</Name>
+<Name part="Forename" sex="M" name="Sandro">"73"</Name>
+<Name part="Forename" sex="M" name="Saulo">"74"</Name>
+<Name part="Forename" sex="M" name="Sergio">"75"</Name>
+<Name part="Forename" sex="M" name="Severino">"76"</Name>
+<Name part="Forename" sex="M" name="Silvio">"77"</Name>
+<Name part="Forename" sex="M" name="Socrate">"78"</Name>
+<Name part="Forename" sex="M" name="Stefano">"79"</Name>
+<Name part="Forename" sex="M" name="Severo">"80"</Name>
+<Name part="Forename" sex="M" name="Tommi">"81"</Name>
+<Name part="Forename" sex="M" name="Tonni">"82"</Name>
+<Name part="Forename" sex="M" name="Tito">"83"</Name>
+<Name part="Forename" sex="M" name="Tullio">"84"</Name>
+<Name part="Forename" sex="M" name="Taddeo">"85"</Name>
+<Name part="Forename" sex="M" name="Tarso">"86"</Name>
+<Name part="Forename" sex="M" name="Teodoro">"87"</Name>
+<Name part="Forename" sex="M" name="Telmo">"88"</Name>
+<Name part="Forename" sex="M" name="Uberto">"89"</Name>
+<Name part="Forename" sex="M" name="Ugo">"90"</Name>
+<Name part="Forename" sex="M" name="Ultimo">"91"</Name>
+<Name part="Forename" sex="M" name="Ursino">"92"</Name>
+<Name part="Forename" sex="M" name="Valente">"93"</Name>
+<Name part="Forename" sex="M" name="Valerio">"94"</Name>
+<Name part="Forename" sex="M" name="Vasco">"95"</Name>
+<Name part="Forename" sex="M" name="Virgilio">"96"</Name>
+<Name part="Forename" sex="M" name="Vito">"97"</Name>
+<Name part="Forename" sex="M" name="Zefiro">"98"</Name>
+<Name part="Forename" sex="M" name="Zeno">"99"</Name>
+<Name part="Forename" sex="M" name="Zetico">"100"</Name>
+<Name part="Forename" sex="F" name="Adriana">"1"</Name>
+<Name part="Forename" sex="F" name="Alice">"2"</Name>
+<Name part="Forename" sex="F" name="Amelia">"3"</Name>
+<Name part="Forename" sex="F" name="Annabella">"4"</Name>
+<Name part="Forename" sex="F" name="Barbara">"5"</Name>
+<Name part="Forename" sex="F" name="Beatrice">"6"</Name>
+<Name part="Forename" sex="F" name="Bianca">"7"</Name>
+<Name part="Forename" sex="F" name="Bruna">"8"</Name>
+<Name part="Forename" sex="F" name="Camila">"9"</Name>
+<Name part="Forename" sex="F" name="Carla">"10"</Name>
+<Name part="Forename" sex="F" name="Claudia">"11"</Name>
+<Name part="Forename" sex="F" name="Cristina">"12"</Name>
+<Name part="Forename" sex="F" name="Dalila">"13"</Name>
+<Name part="Forename" sex="F" name="Debora">"14"</Name>
+<Name part="Forename" sex="F" name="Diana">"15"</Name>
+<Name part="Forename" sex="F" name="Dora">"16"</Name>
+<Name part="Forename" sex="F" name="Eliana">"17"</Name>
+<Name part="Forename" sex="F" name="Elisa">"18"</Name>
+<Name part="Forename" sex="F" name="Emanuelle">"19"</Name>
+<Name part="Forename" sex="F" name="Estella">"20"</Name>
+<Name part="Forename" sex="F" name="Fabiola">"21"</Name>
+<Name part="Forename" sex="F" name="Fatima">"22"</Name>
+<Name part="Forename" sex="F" name="Felicia">"23"</Name>
+<Name part="Forename" sex="F" name="Franca">"24"</Name>
+<Name part="Forename" sex="F" name="Gabriella">"25"</Name>
+<Name part="Forename" sex="F" name="Gilda">"26"</Name>
+<Name part="Forename" sex="F" name="Graziella">"27"</Name>
+<Name part="Forename" sex="F" name="Greta">"28"</Name>
+<Name part="Forename" sex="F" name="Haline">"29"</Name>
+<Name part="Forename" sex="F" name="Heglia">"30"</Name>
+<Name part="Forename" sex="F" name="Hitta">"31"</Name>
+<Name part="Forename" sex="F" name="Homellia">"32"</Name>
+<Name part="Forename" sex="F" name="Iolanda">"33"</Name>
+<Name part="Forename" sex="F" name="Iris">"34"</Name>
+<Name part="Forename" sex="F" name="Irene">"35"</Name>
+<Name part="Forename" sex="F" name="Isabella">"36"</Name>
+<Name part="Forename" sex="F" name="Janis">"37"</Name>
+<Name part="Forename" sex="F" name="Joanna">"38"</Name>
+<Name part="Forename" sex="F" name="Julia">"39"</Name>
+<Name part="Forename" sex="F" name="Juliana">"40"</Name>
+<Name part="Forename" sex="F" name="Laura">"41"</Name>
+<Name part="Forename" sex="F" name="Lia">"42"</Name>
+<Name part="Forename" sex="F" name="Linda">"43"</Name>
+<Name part="Forename" sex="F" name="Luisa">"44"</Name>
+<Name part="Forename" sex="F" name="Magdalena">"45"</Name>
+<Name part="Forename" sex="F" name="Manuella">"46"</Name>
+<Name part="Forename" sex="F" name="Marianna">"47"</Name>
+<Name part="Forename" sex="F" name="Monica">"48"</Name>
+<Name part="Forename" sex="F" name="Natalia">"49"</Name>
+<Name part="Forename" sex="F" name="Nicoletta">"50"</Name>
+<Name part="Forename" sex="F" name="Norma">"51"</Name>
+<Name part="Forename" sex="F" name="Nina">"52"</Name>
+<Name part="Forename" sex="F" name="Ofelia">"53"</Name>
+<Name part="Forename" sex="F" name="Odette">"54"</Name>
+<Name part="Forename" sex="F" name="Olga">"55"</Name>
+<Name part="Forename" sex="F" name="Otillia">"56"</Name>
+<Name part="Forename" sex="F" name="Pamela">"57"</Name>
+<Name part="Forename" sex="F" name="Paola">"58"</Name>
+<Name part="Forename" sex="F" name="Penelope">"59"</Name>
+<Name part="Forename" sex="F" name="Priscilla">"60"</Name>
+<Name part="Forename" sex="F" name="Quartilla">"61"</Name>
+<Name part="Forename" sex="F" name="Quieta">"62"</Name>
+<Name part="Forename" sex="F" name="Quel">"63"</Name>
+<Name part="Forename" sex="F" name="Quiteria">"64"</Name>
+<Name part="Forename" sex="F" name="Rachelle">"65"</Name>
+<Name part="Forename" sex="F" name="Rebecca">"66"</Name>
+<Name part="Forename" sex="F" name="Regina">"67"</Name>
+<Name part="Forename" sex="F" name="Renata">"68"</Name>
+<Name part="Forename" sex="F" name="Rosa">"69"</Name>
+<Name part="Forename" sex="F" name="Rosalinda">"70"</Name>
+<Name part="Forename" sex="F" name="Rosana">"71"</Name>
+<Name part="Forename" sex="F" name="Sabrina">"72"</Name>
+<Name part="Forename" sex="F" name="Samanta">"73"</Name>
+<Name part="Forename" sex="F" name="Sandra">"74"</Name>
+<Name part="Forename" sex="F" name="Selene">"75"</Name>
+<Name part="Forename" sex="F" name="Serena">"76"</Name>
+<Name part="Forename" sex="F" name="Silvia">"77"</Name>
+<Name part="Forename" sex="F" name="Simone">"78"</Name>
+<Name part="Forename" sex="F" name="Sofia">"79"</Name>
+<Name part="Forename" sex="F" name="Stella">"80"</Name>
+<Name part="Forename" sex="F" name="Tabita">"81"</Name>
+<Name part="Forename" sex="F" name="Tamara">"82"</Name>
+<Name part="Forename" sex="F" name="Tarsilla">"83"</Name>
+<Name part="Forename" sex="F" name="Tea">"84"</Name>
+<Name part="Forename" sex="F" name="Telica">"85"</Name>
+<Name part="Forename" sex="F" name="Teodora">"86"</Name>
+<Name part="Forename" sex="F" name="Teresa">"87"</Name>
+<Name part="Forename" sex="F" name="Tullia">"88"</Name>
+<Name part="Forename" sex="F" name="Ugolina">"89"</Name>
+<Name part="Forename" sex="F" name="Ulfa">"90"</Name>
+<Name part="Forename" sex="F" name="Uliva">"91"</Name>
+<Name part="Forename" sex="F" name="Unna">"92"</Name>
+<Name part="Forename" sex="F" name="Valentina">"93"</Name>
+<Name part="Forename" sex="F" name="Valeria">"94"</Name>
+<Name part="Forename" sex="F" name="Vanda">"95"</Name>
+<Name part="Forename" sex="F" name="Vanessa">"96"</Name>
+<Name part="Forename" sex="F" name="Vittoria">"97"</Name>
+<Name part="Forename" sex="F" name="Zabina">"98"</Name>
+<Name part="Forename" sex="F" name="Zelinda">"99"</Name>
+<Name part="Forename" sex="F" name="Zoe">"100"</Name>
+<Name part="Surname" name="Adorno">"1"</Name>
+<Name part="Surname" name="Armani">"2"</Name>
+<Name part="Surname" name="Andretti">"3"</Name>
+<Name part="Surname" name="Bagio">"4"</Name>
+<Name part="Surname" name="Barzinni">"5"</Name>
+<Name part="Surname" name="Baglioni">"6"</Name>
+<Name part="Surname" name="Bonello">"7"</Name>
+<Name part="Surname" name="Brancaleone">"8"</Name>
+<Name part="Surname" name="Camilleri">"9"</Name>
+<Name part="Surname" name="Cauchi">"10"</Name>
+<Name part="Surname" name="Chetcuti">"11"</Name>
+<Name part="Surname" name="Corleone">"12"</Name>
+<Name part="Surname" name="Castello">"13"</Name>
+<Name part="Surname" name="Caprio">"14"</Name>
+<Name part="Surname" name="Coppola">"15"</Name>
+<Name part="Surname" name="Costa">"16"</Name>
+<Name part="Surname" name="Cotomaccio">"17"</Name>
+<Name part="Surname" name="Defendi">"18"</Name>
+<Name part="Surname" name="Donato">"19"</Name>
+<Name part="Surname" name="Danilo">"20"</Name>
+<Name part="Surname" name="Davide">"21"</Name>
+<Name part="Surname" name="Endizzi">"22"</Name>
+<Name part="Surname" name="Eppolito">"23"</Name>
+<Name part="Surname" name="Esposito">"24"</Name>
+<Name part="Surname" name="Evangelisti">"25"</Name>
+<Name part="Surname" name="Enzo">"26"</Name>
+<Name part="Surname" name="Endo">"27"</Name>
+<Name part="Surname" name="Ferrari">"28"</Name>
+<Name part="Surname" name="Finetti">"29"</Name>
+<Name part="Surname" name="Fiorentino">"30"</Name>
+<Name part="Surname" name="Fortunato">"31"</Name>
+<Name part="Surname" name="Galilei">"32"</Name>
+<Name part="Surname" name="Gasparini">"33"</Name>
+<Name part="Surname" name="Genovese">"34"</Name>
+<Name part="Surname" name="Gentili">"35"</Name>
+<Name part="Surname" name="Giordani">"36"</Name>
+<Name part="Surname" name="Ghirlandaio">"37"</Name>
+<Name part="Surname" name="Garibaldi">"38"</Name>
+<Name part="Surname" name="Lazzari">"39"</Name>
+<Name part="Surname" name="Leoni">"40"</Name>
+<Name part="Surname" name="Lombardo">"41"</Name>
+<Name part="Surname" name="Leonidas">"42"</Name>
+<Name part="Surname" name="Leonardo">"43"</Name>
+<Name part="Surname" name="Lobato">"44"</Name>
+<Name part="Surname" name="Luccini">"45"</Name>
+<Name part="Surname" name="Luca">"46"</Name>
+<Name part="Surname" name="Macari">"47"</Name>
+<Name part="Surname" name="Manccini">"48"</Name>
+<Name part="Surname" name="Marcello">"49"</Name>
+<Name part="Surname" name="Marchesi">"50"</Name>
+<Name part="Surname" name="Matarazzo">"51"</Name>
+<Name part="Surname" name="Martini">"52"</Name>
+<Name part="Surname" name="Medaglia">"53"</Name>
+<Name part="Surname" name="Muzzeti">"54"</Name>
+<Name part="Surname" name="Mancini">"55"</Name>
+<Name part="Surname" name="Napolitano">"56"</Name>
+<Name part="Surname" name="Negri">"57"</Name>
+<Name part="Surname" name="Neri">"58"</Name>
+<Name part="Surname" name="Nero">"59"</Name>
+<Name part="Surname" name="Ongaro">"60"</Name>
+<Name part="Surname" name="Otto">"61"</Name>
+<Name part="Surname" name="Orsini">"62"</Name>
+<Name part="Surname" name="Pacetti">"63"</Name>
+<Name part="Surname" name="Paladino">"64"</Name>
+<Name part="Surname" name="Pancamo">"65"</Name>
+<Name part="Surname" name="Pellegrini">"66"</Name>
+<Name part="Surname" name="Petrelli">"67"</Name>
+<Name part="Surname" name="Poletti">"68"</Name>
+<Name part="Surname" name="Quintieri">"69"</Name>
+<Name part="Surname" name="Ramacciotti">"70"</Name>
+<Name part="Surname" name="Rao">"71"</Name>
+<Name part="Surname" name="Rizzo">"72"</Name>
+<Name part="Surname" name="Rosetti">"73"</Name>
+<Name part="Surname" name="Rosso">"74"</Name>
+<Name part="Surname" name="Rota">"75"</Name>
+<Name part="Surname" name="Sabattini">"76"</Name>
+<Name part="Surname" name="Santini">"77"</Name>
+<Name part="Surname" name="Santoro">"78"</Name>
+<Name part="Surname" name="Spinelli">"79"</Name>
+<Name part="Surname" name="Salvatore">"80"</Name>
+<Name part="Surname" name="Steffano">"81"</Name>
+<Name part="Surname" name="Strozzi">"82"</Name>
+<Name part="Surname" name="Teobaldi">"83"</Name>
+<Name part="Surname" name="Testori">"84"</Name>
+<Name part="Surname" name="Tozzi">"85"</Name>
+<Name part="Surname" name="Tremontti">"86"</Name>
+<Name part="Surname" name="Tamontina">"87"</Name>
+<Name part="Surname" name="Torelli">"88"</Name>
+<Name part="Surname" name="Tucci">"89"</Name>
+<Name part="Surname" name="Ungaro">"90"</Name>
+<Name part="Surname" name="Umberto">"91"</Name>
+<Name part="Surname" name="Utimo">"92"</Name>
+<Name part="Surname" name="Valente">"93"</Name>
+<Name part="Surname" name="Vavoso">"94"</Name>
+<Name part="Surname" name="Venturini">"95"</Name>
+<Name part="Surname" name="Verdicchio">"96"</Name>
+<Name part="Surname" name="Vieri">"97"</Name>
+<Name part="Surname" name="Vitali">"98"</Name>
+<Name part="Surname" name="Vitorio">"99"</Name>
+<Name part="Surname" name="Zucchi">"100"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_TILEA"</Skill>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_TILEAN"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T*"</Talent>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"2"</Career>
+<Career name="RULES-CARE_APPRENTICE_WIZARD">"2"</Career>
+<Career name="RULES-CARE_BAILIFF">"1"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"1"</Career>
+<Career name="RULES-CARE_BOATMAN">"2"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"2"</Career>
+<Career name="RULES-CARE_BURGHER">"2"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"2"</Career>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"2"</Career>
+<Career name="RULES-CARE_COACHMAN">"2"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+<Career name="RULES-CARE_ESTALIAN_DIESTRO">"1"</Career>
+<Career name="RULES-CARE_FERRYMAN">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"2"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"2"</Career>
+<Career name="RULES-CARE_HEDGE_WIZARD">"1"</Career>
+<Career name="RULES-CARE_HUNTER">"2"</Career>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+<Career name="RULES-CARE_JAILER">"1"</Career>
+<Career name="RULES-CARE_KISLEVITE_KOSSAR">"1"</Career>
+<Career name="RULES-CARE_MARINE">"2"</Career>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+<Career name="RULES-CARE_MESSENGER">"2"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"2"</Career>
+<Career name="RULES-CARE_MINER">"2"</Career>
+<Career name="RULES-CARE_NOBLE">"2"</Career>
+<Career name="RULES-CARE_NORSE_BERSERKER">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"2"</Career>
+<Career name="RULES-CARE_OUTRIDER">"2"</Career>
+<Career name="RULES-CARE_PEASANT">"2"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"2"</Career>
+<Career name="RULES-CARE_PROTAGONIST">"2"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"2"</Career>
+<Career name="RULES-CARE_ROADWARDEN">"2"</Career>
+<Career name="RULES-CARE_ROGUE">"2"</Career>
+<Career name="RULES-CARE_SCRIBE">"2"</Career>
+<Career name="RULES-CARE_SEAMAN">"2"</Career>
+<Career name="RULES-CARE_SERVANT">"2"</Career>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+<Career name="RULES-CARE_SOLDIER">"2"</Career>
+<Career name="RULES-CARE_SQUIRE">"2"</Career>
+<Career name="RULES-CARE_STUDENT">"2"</Career>
+<Career name="RULES-CARE_THIEF">"2"</Career>
+<Career name="RULES-CARE_THUG">"2"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"2"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"2"</Career>
+<Career name="RULES-CARE_TRADESMAN">"2"</Career>
+<Career name="RULES-CARE_VAGABOND">"2"</Career>
+<Career name="RULES-CARE_VALET">"2"</Career>
+<Career name="RULES-CARE_WATCHMAN">"2"</Career>
+<Career name="RULES-CARE_WOODSMAN">"2"</Career>
+<Career name="RULES-CARE_ZEALOT">"2"</Career>
+<Career name="RULES-CARE_DAEMON_SLAYER">"-"</Career>
+<Career name="RULES-CARE_GIANT_SLAYER">"-"</Career>
+<Career name="RULES-CARE_RUNEBEARER">"-"</Career>
+<Career name="RULES-CARE_TROLL_SLAYER">"-"</Career>
+<Career name="CCOMP-CARE_APPRENTICE_RUNESMITH">"-"</Career>
+<Career name="CCOMP-CARE_JOURNEYMAN_RUNESMITH">"-"</Career>
+<Career name="CCOMP-CARE_MASTER_RUNESMITH">"-"</Career>
+<Career name="CCOMP-CARE_RUNELORD">"-"</Career>
+<Career name="RULES-CARE_ENVOY">"-"</Career>
+<Career name="RULES-CARE_GHOST_STRIDER">"-"</Career>
+<Career name="RULES-CARE_KITHBAND_WARRIOR">"-"</Career>
+<Career name="RULES-CARE_FIELDWARDEN">"-"</Career>
+</SUBCHAPTER_CAREER>
+</Specie>
+</DATA_SPECIE>
+<DATA_RACE>
+<Race id="SOTM-RACE_HTIL">
+<Description language="ENGLISH">"Human (Tilean)"</Description>
+<SUBCHAPTER_PHYSICAL>
+<Eye name="Pale Grey">"1"</Eye>
+<Eye name="Grey Blue">"2"</Eye>
+<Eye name="Blue">"3"</Eye>
+<Eye name="Green">"4"</Eye>
+<Eye name="Copper">"5"</Eye>
+<Eye name="Light Brown">"6"</Eye>
+<Eye name="Brown">"7"</Eye>
+<Eye name="Dark Brown">"8"</Eye>
+<Eye name="Purple">"9"</Eye>
+<Eye name="Black">"10"</Eye>
+<Hair name="Ash Blond">"1"</Hair>
+<Hair name="Corn">"2"</Hair>
+<Hair name="Yellow">"3"</Hair>
+<Hair name="Copper">"4"</Hair>
+<Hair name="Red">"5"</Hair>
+<Hair name="Light Brown">"6"</Hair>
+<Hair name="Brown">"7-8"</Hair>
+<Hair name="Dark Brown">"9"</Hair>
+<Hair name="Black">"10"</Hair>
+<HeightFemale>"61+1d10"</HeightFemale>
+<HeightMale>"64+1d10"</HeightMale>
+<Weight name="105">"01"</Weight>
+<Weight name="110">"02-03"</Weight>
+<Weight name="115">"04-05"</Weight>
+<Weight name="120">"06-08"</Weight>
+<Weight name="125">"09-12"</Weight>
+<Weight name="130">"13-17"</Weight>
+<Weight name="135">"18-22"</Weight>
+<Weight name="140">"23-29"</Weight>
+<Weight name="145">"30-37"</Weight>
+<Weight name="150">"38-49"</Weight>
+<Weight name="155">"50-64"</Weight>
+<Weight name="160">"65-71"</Weight>
+<Weight name="165">"72-78"</Weight>
+<Weight name="170">"79-83"</Weight>
+<Weight name="175">"84-88"</Weight>
+<Weight name="180">"89-92"</Weight>
+<Weight name="190">"93-95"</Weight>
+<Weight name="200">"96-97"</Weight>
+<Weight name="210">"98-99"</Weight>
+<Weight name="220">"00"</Weight>
+<AgeRoll name="16">"01-05"</AgeRoll>
+<AgeRoll name="17">"06-10"</AgeRoll>
+<AgeRoll name="18">"11-15"</AgeRoll>
+<AgeRoll name="19">"16-20"</AgeRoll>
+<AgeRoll name="20">"21-25"</AgeRoll>
+<AgeRoll name="21">"26-30"</AgeRoll>
+<AgeRoll name="22">"31-35"</AgeRoll>
+<AgeRoll name="23">"36-40"</AgeRoll>
+<AgeRoll name="24">"41-45"</AgeRoll>
+<AgeRoll name="25">"46-50"</AgeRoll>
+<AgeRoll name="26">"51-55"</AgeRoll>
+<AgeRoll name="27">"56-60"</AgeRoll>
+<AgeRoll name="28">"61-65"</AgeRoll>
+<AgeRoll name="29">"66-70"</AgeRoll>
+<AgeRoll name="30">"71-75"</AgeRoll>
+<AgeRoll name="31">"76-80"</AgeRoll>
+<AgeRoll name="32">"81-85"</AgeRoll>
+<AgeRoll name="33">"86-90"</AgeRoll>
+<AgeRoll name="34">"91-95"</AgeRoll>
+<AgeRoll name="35">"96-00"</AgeRoll>
+<Siblings name="0">"1"</Siblings>
+<Siblings name="1">"2-3"</Siblings>
+<Siblings name="2">"4-5"</Siblings>
+<Siblings name="3">"6-7"</Siblings>
+<Siblings name="4">"8-9"</Siblings>
+<Siblings name="5">"10"</Siblings>
+<Birthplace name="Tobaro">"1"</Birthplace>
+<Birthplace name="Trantio">"2"</Birthplace>
+<Birthplace name="Pavona">"3"</Birthplace>
+<Birthplace name="Remas">"4-5"</Birthplace>
+<Birthplace name="Luccini">"6-7"</Birthplace>
+<Birthplace name="Verezzo">"8"</Birthplace>
+<Birthplace name="Miragliano">"9"</Birthplace>
+<Birthplace name="Sartosa">"10"</Birthplace>
+<BirthplaceSettlement name="City-State">"1-2"</BirthplaceSettlement>
+<BirthplaceSettlement name="Prosperous Town">"3"</BirthplaceSettlement>
+<BirthplaceSettlement name="Market Town">"4"</BirthplaceSettlement>
+<BirthplaceSettlement name="Farming Village">"5"</BirthplaceSettlement>
+<BirthplaceSettlement name="Poor Village">"6"</BirthplaceSettlement>
+<BirthplaceSettlement name="Small Settlement (Hamlet, Coaching Inn)">"7"</BirthplaceSettlement>
+<BirthplaceSettlement name="Farm">"8"</BirthplaceSettlement>
+<BirthplaceSettlement name="Castle/Mercenary Camp">"9-10"</BirthplaceSettlement>
+</SUBCHAPTER_PHYSICAL>
+<Page>"70"</Page>
+</Race>
+</DATA_RACE>
+<DATA_SPELL_V2>
+<SpellV2 id="SOTM-SPEL_HIGHER_UNDERSTANDING">
+<Description language="ENGLISH">"Higher Understanding"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Astral Magic"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A pinch of pure phosphorus(+2)"</Ingredient>
+<Page>"72"</Page>
+<Duration>"Once per 24 hours"</Duration>
+<Range>"The caster"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_ADVERSE_FATE">
+<Description language="ENGLISH">"Adverse Fate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Astral Magic"</Lore>
+<CastingNumber>"21"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A pinch of stardust (+3)"</Ingredient>
+<Page>"72"</Page>
+<Duration>"Once per 24 hours"</Duration>
+<Range>"Within 1 kilometer"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_AETHIRIC_INSTABILITY">
+<Description language="ENGLISH">"Aethiric Instability"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Astral Magic"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A meteorite fragment (+2)"</Ingredient>
+<Page>"72"</Page>
+<Duration>"1 round per Magic Characteristic"</Duration>
+<Range>"Within 48 meters"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_ASTRAL_LIGHT">
+<Description language="ENGLISH">"Astral Light"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Astral Magic"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A stellar map (+2)"</Ingredient>
+<Page>"72"</Page>
+<Duration>"1 round per Magic Characteristic"</Duration>
+<Range>"within 48 meters, large template"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_METEORITES">
+<Description language="ENGLISH">"Meteorites"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Astral Magic"</Lore>
+<CastingNumber>"19"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Fragment of meteoric iron (+2)"</Ingredient>
+<Page>"72"</Page>
+<Duration>"Instantaneous"</Duration>
+<Range>"Within 24 meters, small template"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_UNFAVORABLE_PREDICTION">
+<Description language="ENGLISH">"Unfavorable Prediction"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Astral Magic"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A fragment of a broken astronomical lens (+2)"</Ingredient>
+<Page>"72"</Page>
+<Duration>"2 turns per Magic Characteristic"</Duration>
+<Range>"within 24 meters"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_ACCURATE_VISION">
+<Description language="ENGLISH">"Accurate Vision"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Astral Magic"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A lens which has never been used (+1)"</Ingredient>
+<Page>"72"</Page>
+<Duration>"1 minute per Magic Characteristic"</Duration>
+<Range>"The caster"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_ASTRAL_FLIGHT">
+<Description language="ENGLISH">"Astral Flight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Astral Magic"</Lore>
+<CastingNumber>"19"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A Griffon's feather (+2)"</Ingredient>
+<Page>"72"</Page>
+<Duration>"1 minute per Magic Characteristic"</Duration>
+<Range>"The caster, 100 meters"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_FORMA_AQUILAE">
+<Description language="ENGLISH">"Forma Aquilae"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Body"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"an eagle's feather (+2)"</Ingredient>
+<Page>"73"</Page>
+<Duration>"1 hour per Magic Characteristic"</Duration>
+<Range>"The caster"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_ARTUS_FERINUM">
+<Description language="ENGLISH">"Artus Ferinum"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Body"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A feline's claw (+1)"</Ingredient>
+<Page>"73"</Page>
+<Duration>"1 minute per Magic Characteristic"</Duration>
+<Range>"The caster"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_BRACHII_FLEXIBILIS">
+<Description language="ENGLISH">"Brachii Flexibilis"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Body"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A rubber band (+1)"</Ingredient>
+<Page>"73"</Page>
+<Duration>"1 minute per Magic Characteristic"</Duration>
+<Range>"The caster"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_CENTAURUS">
+<Description language="ENGLISH">"Centaurus"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Body"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A piece of hide from a Centigor or Bull Centaur (+2)"</Ingredient>
+<Page>"73"</Page>
+<Duration>"1 hour per Magic Characteristic"</Duration>
+<Range>"The caster"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_CUTIS_CORIUM">
+<Description language="ENGLISH">"Cutis Corium"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Body"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A piece of leather (+1)"</Ingredient>
+<Page>"73"</Page>
+<Duration>"1 minute per Magic Characteristic"</Duration>
+<Range>"One subject (even the caster), contact"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_CORPORE_SANO">
+<Description language="ENGLISH">"Corpore Sano"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Body"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A piece of gauze (+1)"</Ingredient>
+<Page>"73"</Page>
+<Duration>"Permanent"</Duration>
+<Range>"One subject (even the caster), contact"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_EXCAECARE">
+<Description language="ENGLISH">"Excaecare"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Body"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A fragment of smoked glass (+2)"</Ingredient>
+<Page>"73"</Page>
+<Duration>"2 rounds per Magic Characteristic"</Duration>
+<Range>"Single subject, contact"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_FIGURA_ANGELICA">
+<Description language="ENGLISH">"Figura Angelica"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Body"</Lore>
+<CastingNumber>"26"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A hippogriff's feather (+3)"</Ingredient>
+<Page>"73"</Page>
+<Duration>"1 hour"</Duration>
+<Range>"The caster"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_LIQUEFACIO_ARTICULUS">
+<Description language="ENGLISH">"Liquefacio Articulus"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Body"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A shard of bone from an arthritic (+2)"</Ingredient>
+<Page>"73"</Page>
+<Duration>"2 rounds per Magic Characteristic"</Duration>
+<Range>"Single subject, contact"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_MORS_SIMULATA">
+<Description language="ENGLISH">"Mors Simulata"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Body"</Lore>
+<CastingNumber>"21"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A piece of cloth from a wraith (+3)"</Ingredient>
+<Page>"74"</Page>
+<Duration>"1 day per Magic Characteristic"</Duration>
+<Range>"One subject (even the caster), contact"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_PERMUTATIO">
+<Description language="ENGLISH">"Permutatio"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Body"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"Mandrake root (+1)"</Ingredient>
+<Page>"74"</Page>
+<Duration>"10 minutes per Magic Characteristic"</Duration>
+<Range>"The caster"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_RECUPERO_SANITATEM">
+<Description language="ENGLISH">"Recupero Sanitatem"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Body"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A piece of willow bark (+1)"</Ingredient>
+<Page>"74"</Page>
+<Duration>"1 minute per Magic Characteristic"</Duration>
+<Range>"One subject (even the caster), contact"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_VIS_CORPORIS">
+<Description language="ENGLISH">"Vis Corporis"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Body"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Iron filings (+1)"</Ingredient>
+<Page>"74"</Page>
+<Duration>"1 minute per Magic Characteristic"</Duration>
+<Range>"One subject (even the caster), contact"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_ABSENTIA_MENTIS">
+<Description language="ENGLISH">"Absentia Mentis"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Mind"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A piece of a madman's brain (+2)"</Ingredient>
+<Page>"74"</Page>
+<Duration>"1 round per Magic Characteristic"</Duration>
+<Range>"Single subject, contact"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_FASCINATIONIS">
+<Description language="ENGLISH">"Fascinationis"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Mind"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A drop of a madman's cerebral liquid (+2)"</Ingredient>
+<Page>"74"</Page>
+<Duration>"Until caster out of sight (see description), up to 5 minutes per Magic Characteristic"</Duration>
+<Range>"Single subject, within 24 meters"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_FORTITUDO_MENTALIS">
+<Description language="ENGLISH">"Fortitudo Mentalis"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Mind"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Iron powder (+1)"</Ingredient>
+<Page>"74"</Page>
+<Duration>"1 round per Magic Characteristic"</Duration>
+<Range>"Single subject, even the caster, contact"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_INTERIORIS_SANATIO">
+<Description language="ENGLISH">"Interioris Sanatio"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Mind"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"1 minute (minimum, see description)"</CastingTime>
+<Ingredient>"A unicorn's horn (+2)"</Ingredient>
+<Page>"74"</Page>
+<Duration>"Permanent"</Duration>
+<Range>"One subject (even the caster), contact"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_PERTURBATIO">
+<Description language="ENGLISH">"Perturbatio"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Mind"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Aluminium powder (+1)"</Ingredient>
+<Page>"74"</Page>
+<Duration>"1 round per Magic Characteristic"</Duration>
+<Range>"Single subject on sight"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_PENSIERO_TELEPATICO">
+<Description language="ENGLISH">"Pensiero Telepatico"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Mind"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A wire of pure copper (+2)"</Ingredient>
+<Page>"75"</Page>
+<Duration>"Instantaneous"</Duration>
+<Range>"Single subject, 10 kilometers"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_PERCEPITIO_DISTORTAM">
+<Description language="ENGLISH">"Percepitio Distortam"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Mind"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A dark grey piece of cloth (+2)"</Ingredient>
+<Page>"75"</Page>
+<Duration>"1 round per Magic Characteristic"</Duration>
+<Range>"Within 24 meters, large template"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_RIVISITATIO_TEMPORI">
+<Description language="ENGLISH">"Rivisitatio Tempori"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Mind"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A grain of pure salt (+1)"</Ingredient>
+<Page>"75"</Page>
+<Duration>"1 hour"</Duration>
+<Range>"The caster"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_SALUS_INFIRMORUM">
+<Description language="ENGLISH">"Salus Infirmorum"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Mind"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Healing potion (+2)"</Ingredient>
+<Page>"75"</Page>
+<Duration>"Instantaneous"</Duration>
+<Range>"The caster"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_SCUTUM_AETHIRICUS">
+<Description language="ENGLISH">"Scutum Aethiricus"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Mind"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A perfect crystal sphere (+2)"</Ingredient>
+<Page>"75"</Page>
+<Duration>"1 round, extendable"</Duration>
+<Range>"Large template centred on the caster"</Range>
+</SpellV2>
+<SpellV2 id="SOTM-SPEL_TRASPORTIUM_AETHIRICUS">
+<Description language="ENGLISH">"Trasportium Aethiricus"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Way of the Mind"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bird feather (+1)"</Ingredient>
+<Page>"75"</Page>
+<Duration>"1 Round"</Duration>
+<Range>"Single object within sight"</Range>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_ANY_1">
+<Description language="ENGLISH">"Common Knowledge (any 1)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_ANY_1">
+<Description language="ENGLISH">"Speak Language (any 1)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_ANY_2">
+<Description language="ENGLISH">"Common Knowledge (any 2)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_ANY_2">
+<Description language="ENGLISH">"Speak Language (any 2)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+</DATA_BOOK>

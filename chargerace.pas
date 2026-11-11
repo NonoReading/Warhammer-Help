@@ -23,6 +23,9 @@ Type
         // FACULTATIF : vide pour la plupart des ethnies (Nains, Elfes, Norses...).
         // CONTEXT.md 2.51.
         Nation:         String;
+        // FACULTATIF : "Oui" si l'ethnie recoit une mutation de depart tiree sur la table des
+        // mutations (Mutant, Tome of Corruption p.25). Declenche la phase 2.2 de WinCreation.
+        MutationDepart: String;
         Point3:         Integer;
         Point5:         Integer;
         // NOMBRE de competences a choisir dans chaque colonne, a ne pas confondre avec
@@ -34,6 +37,9 @@ Type
         // Dossier d'icones de niveau propre a cette ethnie, sous \PICTURES\ (ex :
         // 'NIV_HELF'). Vide = dossier generique NIV. Voir CheminNiveauImage.
         DossierNiveau:  String;
+        // WFRP1 : formule du Destin ("1d3+1", "1d3-1 (minimum 1)") et regles de la race (texte du livre)
+        DestinV1:       String;
+        RegleV1:        String;
   End;
 
   TListRace = Specialize TList<StructureRace>;
@@ -168,7 +174,9 @@ Function CheminRaceImageSeule(PRace: StructureRace; Indice: String): String;
       ResTrans := ExtractFilePath(ResNormal)+PRace.CodeRace+Indice+ConstTransparent+'.PNG';
     if not FileExists(ResTrans) then
       if FileExists(ResNormal) then
-        if Not TestPixelZeroZero(ResNormal) then
+        // V2 : illustrations du livre sur fond de parchemin, non detourables par la couleur du
+        // coin (16/10/2026) : on les garde opaques.
+        if (ValVersion <> 'WFRP2') and (ValVersion <> 'WFRP1') and (Not TestPixelZeroZero(ResNormal)) then
           RemplacerPixelParTransparent(ResNormal,ResTrans);
 
     if FileExists(ResTrans) then

@@ -6,17 +6,17 @@ unit WarhammerSource;
 interface
 
 uses
-  Classes, SysUtils, Forms, Graphics, ExtCtrls, StdCtrls, Grids, Dialogs,
-  Controls, Buttons, BGRABitmap, BGRABitmapTypes, TraductionTexte, DOM, XMLRead, WinCompetence,
+  Classes, SysUtils, Forms, Graphics, ExtCtrls, StdCtrls, Grids, Dialogs, MessageTest,
+  Controls, Buttons, IndicateurChargement, BGRABitmap, BGRABitmapTypes, TraductionTexte, DOM, XMLRead, WinCompetence,
   ChargeCompetence, ChargeConstantes, ChargeAttribut, ChargeTalent, WinTalent,
-  ChargeMetier, ChargeMetierNiveau, ChargeMetierAttribut,
+  ChargeMetier, ChargeMetierNiveau, ChargeMetierAttribut, ChargeCoutXp,
   ChargeMetierCompetence, ChargeMetierTalent, WinMetier, ChargeRaceMetier,
   ChargeRace, ChargeEspece, ChargeNation, ChargeRegle, WinRaces, ChargeRaceAttribut, ChargeRacePhysique, ChargeSigneAstral, ChargeRaceCompetence,
   ChargeRaceTalent, GlobalFonts, WinCreation, ChargeTalentCreation,
   WinPersonnage, ChargeAttributAugmentation, ChargeCompetenceAugmentation,
   ChargeArme, WinWeapon, WinEquipement, ChargeArmeBonus, ChargeMetierEquipement, ChargeArmure,
   ChargeArmureBonus, ChargeArmureBonusTalent, ChargeArmeBonusTalent, WinArmor, ChargeTrapping, ChargeSort, WinSpell, ChargeTexte,
-  ChargeFabrication, WinMutationCatalogue, ChargeDisease, WinDiseaseCatalogue, ChargeAffliction, WinAfflictionCatalogue, ChargeClassEquipement, Unitcalcul, ChargeMetierSousMetier,
+  ChargeFabrication, WinMutationCatalogue, ChargeDisease, WinDiseaseCatalogue, ChargeAffliction, WinAfflictionCatalogue, ChargeClassEquipement, Unitcalcul, ChargeMetierSousMetier, ChargeTirageMetier,
   ChargeMetierRaceChoixMetier, ChargePersonnage, ChargeRaceCreation,
   ChargeTraduction, ChargeArmureSimplifie, ChargeOptionRegle, WinOptionRegle, ChargeLivre,
   ChargeTalentEffet, ChargeTalentCompetenceModif,
@@ -28,7 +28,7 @@ uses
   ChargeArmeModificateur, ChargeArmureBonusModificateur, ChargeCorruptionModificateur,
   ChargeAfflictionCompetenceModif,
   CustomDrawn_Common, BCButton, BCLabel, fpTTF,
-  PdfPersonnage, PdfMetier, PdfRace, XmlExportImport, fppdf, WinLivre, Process, BCLabelContour;
+  PdfPersonnage, PdfUtils, PdfMetier, PdfRace, XmlExportImport, fppdf, WinLivre, Process, BCLabelContour;
 
 type
 
@@ -76,6 +76,7 @@ type
     TabPersonnage: TStringGrid;
     ButtonOptionRegle: TBCButton;
     ButtonMAJLivres: TBCButton;
+    ButtonTestsAuto: TBCButton;
     procedure BoutonCompetenceClick({%H-}Sender: TObject);
     procedure BoutonTalentClick({%H-}Sender: TObject);
     procedure ButtonArmureClick({%H-}Sender: TObject);
@@ -108,12 +109,22 @@ type
     procedure TabLivreDblClick({%H-}Sender: TObject);
     procedure TabBibliothequeDblClick({%H-}Sender: TObject);
     procedure RemplirTabBibliotheque();
+    procedure MasqueElementsV1();
     procedure TabLivreMouseMove({%H-}Sender: TObject; {%H-}Shift: TShiftState; X, Y: Integer);
     procedure SauveIni();
     function XmlPersonnageFichierActuel(const Directory: string): string;
     procedure LotPdfPersonnages();
     procedure LotPdfMetiersRaces();
+    procedure LotNaissance();
+    procedure LotFamilier();
+    procedure LotCreer();
+    procedure LotTestCreation();
+    procedure TesterCasCreation(const FichierCas: String; Sortie: TStringList; var NbCas, NbEchec: Integer);
+    procedure ButtonTestsAutoClick(Sender: TObject);
+    procedure PoserBoutonTestsAuto();
     procedure LotDumpPersonnages();
+    procedure LotDumpEcran();
+    procedure LotDumpPdf();
     procedure LotReecritPersonnages();
     procedure LotRetraitLivre();
     procedure LancerWinLivre(const Chemin: String);
@@ -123,6 +134,7 @@ type
     procedure ChargerListeVersions();
     procedure ChargerListeLanguesInterface();
     procedure PeuplerTabLivre();
+    procedure LibelleLivreLigne(Ind: Integer);
     procedure MajTauxTraduction();
     procedure AjustePositionFenetre();
     procedure ButtonOptionRegleClick(Sender: TObject);
@@ -184,29 +196,103 @@ implementation
 
 {$R *.lfm}
 
+function LibelleVersion(const Code: String): String;
+  // Code d'édition (WFRP4) -> libellé de la liste déroulante avec l'année de sortie du
+  // jeu (Nono, 31/10/2026). La 3e édition n'est pas gérée par le projet.
+  begin
+    if Code = 'WFRP1' then Result := Code + ' (1986)'
+    else if Code = 'WFRP2' then Result := Code + ' (2005)'
+    else if Code = 'WFRP4' then Result := Code + ' (2018)'
+    else if Code = 'WFRP5' then Result := Code + ' (2026)'
+    else Result := Code;
+  end;
+
+procedure ReimporterAttributs();
+  // Attributs et coûts d'augmentation sont des données "primaires", lues une seule fois au
+  // démarrage pour l'édition active : ChargerLivre ne les relit pas. Au changement de
+  // version (V2 -> V1 : titres I / Dex / Ld / Cl vides) on les remplace par ceux du
+  // dossier de la nouvelle édition (Nono, 31/10/2026).
+  var
+    Recherche: TSearchRec;
+    Fichiers:  TStringList;
+    Ind:       Integer;
+  begin
+    ListeAttribut.Clear;
+    ListeAttributAugmentation.Clear;
+    ListeCompetenceAugmentation.Clear;
+    NbAttribut               := 0;
+    NbAttributAugmentation   := 0;
+    NbCompetenceAugmentation := 0;
+    Fichiers := TStringList.Create;
+    try
+      if FindFirst(GetCurrentDir + ConstCheminLivre + '*.xml', faAnyFile, Recherche) = 0 then
+        begin
+          repeat
+            Fichiers.Add(ExtractStringBefore(Recherche.Name, '.'));
+          until FindNext(Recherche) <> 0;
+          FindClose(Recherche);
+        end;
+      ImportAttributsSeuls := true;
+      try
+        for Ind := 0 to Fichiers.Count - 1 do
+          XmlImport(Fichiers[Ind], true);
+      finally
+        ImportAttributsSeuls := false;
+      end;
+    finally
+      Fichiers.Free;
+    end;
+  end;
+
+function CodeVersion(const Libelle: String): String;
+  // Inverse de LibelleVersion : le code est le premier mot du libellé.
+  var
+    P: Integer;
+  begin
+    P := Pos(' ', Libelle);
+    if P > 0 then Result := Copy(Libelle, 1, P - 1)
+    else Result := Libelle;
+  end;
+
 { TMenu }
 
 
 procedure TMenu.ChargerImage();
   var
     Bmp: TBGRABitmap;
+
+  // Image du menu : \PICTURES\<Version>\MENU\<meme nom de fichier> d'abord (logo et bandeaux
+  // propres a l'edition, repli PICTURES_DEFAULT de CheminImage), sinon celle de \PICTURES\BACK\.
+  function CheminMenu(const CheminBack: String): String;
+    begin
+      Result := GetCurrentDir + '\PICTURES\' + ValVersion + '\MENU\' + ExtractFileName(CheminBack);
+      Result := CheminImage(Result);
+      if not FileExists(Result) then
+        Result := CheminImage(GetCurrentDir + CheminBack);
+    end;
+
+  procedure ChargerBandeau(Image: TImage; const CheminBack: String);
+    var
+      Chemin: String;
+    begin
+      Chemin := CheminMenu(CheminBack);
+      if FileExists(Chemin) then
+        Image.Picture.LoadFromFile(Chemin);
+    end;
+
   begin
     // récupérer les images de fond
-    if FileExists(CheminImage(GetCurrentDir+ConstCheminLogo1)) then
-         Logo1.Picture.LoadFromFile(CheminImage(GetCurrentDir+ConstCheminLogo1));
-    if FileExists(CheminImage(GetCurrentDir+ConstCheminLogo2)) then
-         Logo2.Picture.LoadFromFile(CheminImage(GetCurrentDir+ConstCheminLogo2));
-    if FileExists(CheminImage(GetCurrentDir+ConstCheminBoutonRace)) then
-         BoutonRace.Picture.LoadFromFile(CheminImage(GetCurrentDir+ConstCheminBoutonRace));
-    if FileExists(CheminImage(GetCurrentDir+ConstCheminBoutonMetier)) then
-         BoutonMetier.Picture.LoadFromFile(CheminImage(GetCurrentDir+ConstCheminBoutonMetier));
-    if FileExists(CheminImage(GetCurrentDir+ConstCheminBoutonCompetence)) then
-         BoutonCompetence.Picture.LoadFromFile(CheminImage(GetCurrentDir+ConstCheminBoutonCompetence));
-    if FileExists(CheminImage(GetCurrentDir+ConstCheminBoutonTalent)) then
-         BoutonTalent.Picture.LoadFromFile(CheminImage(GetCurrentDir+ConstCheminBoutonTalent));
-    if FileExists(CheminImage(GetCurrentDir+ConstCheminBack)) then
+    ChargerBandeau(Logo1, ConstCheminLogo1);
+    ChargerBandeau(Logo2, ConstCheminLogo2);
+    ChargerBandeau(BoutonRace, ConstCheminBoutonRace);
+    ChargerBandeau(BoutonMetier, ConstCheminBoutonMetier);
+    ChargerBandeau(BoutonCompetence, ConstCheminBoutonCompetence);
+    ChargerBandeau(BoutonTalent, ConstCheminBoutonTalent);
+    // Fond : une seule fois (ChargerImage est rappelee au changement de version ; le
+    // reappliquer cumulerait la transparence et le grainerait).
+    if ImageFond.Picture.Bitmap.Empty and FileExists(CheminImage(GetCurrentDir+ConstCheminBack)) then
        begin
-         Bmp := TBGRABitmap.Create(CheminImage(GetCurrentDir+ConstCheminBack));
+         Bmp :=TBGRABitmap.Create(CheminImage(GetCurrentDir+ConstCheminBack));
          Bmp.ApplyGlobalOpacity(100);
          ImageFond.Picture.Bitmap.Assign(Bmp);
          Bmp.Free;
@@ -232,7 +318,7 @@ begin
   // Écriture dans le fichier
   Writeln(MyFile, ConstIniLangue + comboboxlangue.items[ComboBoxLangue.Itemindex]);
   if ComboBoxVersion.Itemindex <> -1 then
-    Writeln(MyFile, ConstIniVersion + ComboBoxVersion.items[ComboBoxVersion.Itemindex]);
+    Writeln(MyFile, ConstIniVersion + CodeVersion(ComboBoxVersion.items[ComboBoxVersion.Itemindex]));
   if ComboBoxLangueInterface.Itemindex <> -1 then
     Writeln(MyFile, ConstIniLangueInterface + ComboBoxLangueInterface.items[ComboBoxLangueInterface.Itemindex]);
   Writeln(MyFile, ConstIniUniteTaille + UniteTaille);
@@ -248,7 +334,7 @@ begin
       for Ind := 1 to TabLivre.RowCount -1 do
           if TabLivre.Cells[ColLivreSel, Ind] = ConstSelectionne then
             Liste := Liste + AjouteAccolade(TabLivre.Cells[ColLivreCod, Ind]);
-      ListeLivreParVersion.Values[ComboBoxVersion.items[ComboBoxVersion.Itemindex]] := Liste;
+      ListeLivreParVersion.Values[CodeVersion(ComboBoxVersion.items[ComboBoxVersion.Itemindex])] := Liste;
     end;
   for Ind := 0 to ListeLivreParVersion.Count - 1 do
     // Nom vide : reliquat de l'ancien format .INI à une seule ligne 'BOOK=...' (sans
@@ -308,7 +394,8 @@ procedure TMenu.ComboBoxLangueSelect(Sender: TObject);
           begin
             BloqueLangue := false;
             for Ind := 0 to Screen.FormCount - 1 do
-              if (Screen.Forms[Ind] is TWinPersonnages) or (Screen.Forms[Ind] is TWinCreations) then
+              if ((Screen.Forms[Ind] is TWinPersonnages) or (Screen.Forms[Ind] is TWinCreations))
+                 and Screen.Forms[Ind].Visible then
                 BloqueLangue := true;
 
             if BloqueLangue then
@@ -440,7 +527,7 @@ procedure TMenu.ComboBoxVersionSelect(Sender: TObject);
   // Chemins d'images races/métiers/sorts/niveaux recalculés depuis la version ici aussi
   // (Nono, 14/09/2026, CONTEXT.md §2.70) - même correctif qu'au démarrage (FormCreate) : plus
   // figés sur WFRP4\. Reste hors périmètre (pas demandé) : images du PDF de personnage
-  // (ConstCheminPdf*), toujours sous WFRP4\.
+  // (ConstCheminPdf*), desormais suivies par PdfCheminsSelonVersion (repli WFRP4\).
   var
     Version:           String;
     Ind:               Integer;
@@ -456,12 +543,14 @@ procedure TMenu.ComboBoxVersionSelect(Sender: TObject);
   begin
     if ComboBoxVersion.ItemIndex <> -1 then
       begin
-        Version := ComboBoxVersion.Items[ComboBoxVersion.ItemIndex];
+        Version := CodeVersion(ComboBoxVersion.Items[ComboBoxVersion.ItemIndex]);
         if Version <> ValVersion then
           begin
             BloqueVersion := false;
             for Ind := 0 to Screen.FormCount - 1 do
-              if (Screen.Forms[Ind] is TWinPersonnages) or (Screen.Forms[Ind] is TWinCreations) then
+              // Visible : une fenetre fermee reste en vie (caHide par defaut), cachee
+              if ((Screen.Forms[Ind] is TWinPersonnages) or (Screen.Forms[Ind] is TWinCreations))
+                 and Screen.Forms[Ind].Visible then
                 BloqueVersion := true;
 
             if BloqueVersion then
@@ -529,6 +618,9 @@ procedure TMenu.ComboBoxVersionSelect(Sender: TObject);
                   ConstCheminImageSort   := '\DATABASE\' + ValVersion + '\PICTURES\SPELL\';
                   ConstCheminImageNiveau       := '\PICTURES\' + ValVersion + '\NIV\';
                   ConstCheminImageNiveauRacine := '\PICTURES\' + ValVersion + '\';
+       PdfCheminsSelonVersion(ValVersion);
+                  PdfCheminsSelonVersion(ValVersion);
+                  ChargerImage();
                   // Sélection de livres cochés de la NOUVELLE édition (CONTEXT.md §2.70) -
                   // sans ce recalcul, PeuplerTabLivre() rescannait bien les livres de la
                   // nouvelle édition mais gardait la sélection de l'ancienne (ListeLivre non
@@ -541,6 +633,7 @@ procedure TMenu.ComboBoxVersionSelect(Sender: TObject);
                   // importer - sans ce rescan, TabLivre resterait affichée avec les livres
                   // de l'édition précédente (symptôme relevé par Nono en testant WFRP5).
                   PeuplerTabLivre();
+                  ReimporterAttributs();
                   ChargerLivre(true, '');
                   // ChargerLivre vient d'appliquer Traduit(ValLangue,'') à TOUS les livres, y
                   // compris INTERFACE - la langue d'interface doit rester décorrélée de la
@@ -645,9 +738,9 @@ procedure TMenu.ChargerListeVersions();
                   FindClose(SearchFile);
                 end;
 
-              if (Version <> '') and (ComboBoxVersion.Items.IndexOf(Version) = -1) then
+              if (Version <> '') and (ComboBoxVersion.Items.IndexOf(LibelleVersion(Version)) = -1) then
                 begin
-                  ComboBoxVersion.Items.Add(Version);
+                  ComboBoxVersion.Items.Add(LibelleVersion(Version));
                   if Version = ValIni then
                     begin
                       ComboBoxVersion.ItemIndex := ComboBoxVersion.Items.Count - 1;
@@ -663,7 +756,7 @@ procedure TMenu.ChargerListeVersions();
     if (ValVersion = '') and (ComboBoxVersion.Items.Count > 0) then
       begin
         ComboBoxVersion.ItemIndex := 0;
-        ValVersion                := ComboBoxVersion.Items[0];
+        ValVersion                := CodeVersion(ComboBoxVersion.Items[0]);
       end;
   end;
 
@@ -771,6 +864,26 @@ procedure TMenu.ChargerListeLanguesInterface();
       end;
   end;
 
+procedure TMenu.LibelleLivreLigne(Ind: Integer);
+  // Libelle d'un livre dans TabLivre : texte traduit s'il existe, sinon nom d'affichage du
+  // livre (<BOOKNAME>) plutot que le code "BOOK ...". Un seul endroit pour le remplissage
+  // initial et les deux rafraichissements (langue, traduction).
+  var
+    Nom:     String;
+    Libelle: String;
+    Affiche: String;
+  begin
+    Nom     := TabLivre.Cells[ColLivreCod, Ind];
+    Libelle := GetTexteLibelle(Nom,'','',true);
+    if SameText(Libelle, Nom) then
+      begin
+        Affiche := XmlNomAffichageLivre(GetCurrentDir + ConstCheminLivre + TabLivre.Cells[ColLivreChe, Ind]);
+        if Affiche <> '' then
+          Libelle := Affiche;
+      end;
+    TabLivre.Cells[ColLivreLib, Ind] := Libelle;
+  end;
+
 procedure TMenu.PeuplerTabLivre();
   // Peuple TabLivre (grille "Livres" du menu) et ComboBoxLangue en scannant ConstCheminLivre
   // (Var depuis le 13/09/2026, CONTEXT.md §2.70) - extrait de FormCreate (mécanique
@@ -816,15 +929,28 @@ procedure TMenu.PeuplerTabLivre();
               LivresCharges        := LivresCharges + AjouteAccolade(Nom);
             end;
           LivresLivres                       := LivresLivres + AjouteAccolade(Nom);
-          TabLivre.Cells[ColLivreLib, I]     := GetTexteLibelle(Nom,'','',true);
           TabLivre.Cells[ColLivreCod, I]     := Nom;
-          PLivre                             := ChercheLivreLibelle(Nom);
-          Ordre                              := IntToStr(PLivre.Officiel);
+          TabLivre.Cells[ColLivreChe, I]     := SearchResult.Name;
+          LibelleLivreLigne(I);
+          // Lu dans le XML du livre, pas dans ListLivre : au changement de version ListLivre est
+          // vide ou garde les livres de l'ancienne edition (livre non trouve = Officiel 0 = tout « O »).
+          Ordre                              := XmlLivreBalise(DirectoryPath + SearchResult.Name, ConstXmlOfficielLivre);
+          if Ordre = '' then
+            begin
+              PLivre                         := ChercheLivreLibelle(Nom);
+              Ordre                          := IntToStr(PLivre.Officiel);
+            end;
           if Ordre = '2' then
             TabLivre.Cells[ColLivreO_F, I]   := ConstLivreFacultatif
           else
             TabLivre.Cells[ColLivreO_F, I]   := ConstLivreOfficiel;
-          TabLivre.Cells[ColLivreOrd, I]     := Ordre+Nom;
+          // Le Rulebook passe toujours en tete : certains livres (WFRP1) portent OFFICIAL=0 comme lui.
+          if Nom = ConstRulesBook then
+            TabLivre.Cells[ColLivreOrd, I]   := '0'+Nom
+          else if Ordre = '0' then
+            TabLivre.Cells[ColLivreOrd, I]   := '1'+Nom
+          else
+            TabLivre.Cells[ColLivreOrd, I]   := Ordre+Nom;
             TabLivre.Cells[ColLivreChe, I]   := SearchResult.Name;
           ListBook                 += [Nom];
         end;
@@ -967,7 +1093,7 @@ Procedure TMenu.RafraichirLibellesMenu();
     // l'en-tête de colonne) - même appel que FormCreate (ligne ~620).
     for Ind := 1 to TabLivre.RowCount - 1 do
       if TabLivre.Cells[ColLivreCod, Ind] <> '' then
-        TabLivre.Cells[ColLivreLib, Ind] := GetTexteLibelle(TabLivre.Cells[ColLivreCod, Ind],'','',true);
+        LibelleLivreLigne(Ind);
     TabLivre.Columns[ColLivreTrd - 1].Title.Caption := GetTexteLibelle('RULES-LAB_679');
     MajTauxTraduction();
 
@@ -1002,6 +1128,7 @@ Procedure TMenu.RafraichirLibellesMenu();
     Label4.Caption              := GetTexteLibelle('RULES-LAB_183');
     Label5.Caption              := GetTexteLibelle('RULES-LAB_184');
     ButtonOptionRegle.Caption   := GetTexteLibelle('RULES-LAB_277');
+    PoserBoutonTestsAuto();
 
     // Remettre les colonnes auto-dimensionnées à leur largeur de départ (celle donnée à
     // GridAjouteColonne dans FormCreate) avant de rappeler AdjustGridColumnsWidth : sa
@@ -1180,6 +1307,18 @@ procedure TMenu.ChargerLivre(ForceMaJ: Boolean; ForceLivre: String);
           end;
 
       begin
+        ChargementAvance(NomLivre);
+        // Rechargement complet : les textes des livres ont ete vides plus haut, la passe « vrai »
+        // (libelles seuls) les remet ; sans elle les libelles propres a un livre restent en code.
+        if ForceMaj then
+          begin
+            ImportLibellesSeuls := true;
+            try
+              XmlImport(FileName, true);
+            finally
+              ImportLibellesSeuls := false;
+            end;
+          end;
         XmlImport(FileName, false);
         for J := 1 to TabLivre.RowCount - 1 do
           if TabLivre.Cells[ColLivreCod, J] = NomLivre then
@@ -1271,18 +1410,42 @@ procedure TMenu.ChargerLivre(ForceMaJ: Boolean; ForceLivre: String);
         ListRegle.Clear;
         ListRegleSource.Clear;
         ListRegleMetier.Clear;
+        ListRegleEthnie.Clear;
+        ListRegleFond.Clear;
+        ListFondTirage.Clear;
+        ListFondCompte.Clear;
         ListTalent.Clear;
+        OublieFamillesTalent;
         ListCompetence.Clear;
         ListMetierCompetence.Clear;
         ListMetier.Clear;
         ListMetierNiveau.Clear;
         ListMetierAttribut.Clear;
+        ListMetierAvance.Clear;
+        ListMetierArgent.Clear;
+        ListMetierSortie.Clear;
+        ListArtisanMetier.Clear;
+        ListClasseV1.Clear;
+        ListTirageCompV1.Clear;
+        ListAgeCompV1.Clear;
+        ListGainMagieV1.Clear;
+        ListApprentissageSortV1.Clear;
+        ListHandicapV1.Clear;
+        ListTirageHandicapV1.Clear;
+        ListAvancementPretreV1.Clear;
+        ListFamilierV1.Clear;
+        ListCulteV1.Clear;
+        ListPriereCulteV1.Clear;
+        ListObjetV1.Clear;
+        ListMetierBase.Clear;
         ListMetierTalent.Clear;
         ListRaceMetier.Clear;
         ListRaceMetierSource.Clear;
         ListRaceAttribut.Clear;
         ListRacePhysique.Clear;
         ListRaceCouleur.Clear;
+        ListRaceDetailV2.Clear;
+        ListTablePersonnelle.Clear;
         ListRaceNom.Clear;
         ListRaceNomModele.Clear;
         ListRaceNomRegle.Clear;
@@ -1339,6 +1502,22 @@ procedure TMenu.ChargerLivre(ForceMaJ: Boolean; ForceLivre: String);
         // ListArmureSimplifiee/ListArmeBonus le 21/08/2026.
         ListModificateur.Clear;
         ListConditionDonnee.Clear;
+        // Textes et traductions : jamais vides jusqu'au 08/11/2026, donc un rechargement complet (changement
+        // de Version, de langue des livres, de selection) empilait les anciens par-dessus les nouveaux et les
+        // recherches rendaient le PREMIER trouve, celui de l'edition precedente. On retire tout sauf ceux de
+        // l'interface (lue une seule fois, hors dossier de version) ; les livres charges les remettent.
+        for I := ListTexte.Count - 1 downto 0 do
+          if ListTexte[I].Livre <> ConstInterfaceBook then
+            begin
+              ListTexte.Delete(I);
+              Dec(NbTexte);
+            end;
+        for I := ListTraduction.Count - 1 downto 0 do
+          if ListTraduction[I].Livre <> ConstInterfaceBook then
+            begin
+              ListTraduction.Delete(I);
+        // (NbTraduction est deja remis a 0 plus haut)
+            end;
       end;
 
     // chercher les livres
@@ -1380,6 +1559,7 @@ procedure TMenu.ChargerLivre(ForceMaJ: Boolean; ForceLivre: String);
             break;
           end;
 
+      ChargementDebut(GetTexteLibelle('RULES-MESS_119'), ListeNomsACharger.Count);
       if RulesBookIndex >= 0 then
         begin
           ImporterUnLivre(ListeFichiersACharger[RulesBookIndex], ListeNomsACharger[RulesBookIndex]);
@@ -1390,6 +1570,7 @@ procedure TMenu.ChargerLivre(ForceMaJ: Boolean; ForceLivre: String);
       for Idx := 0 to ListeFichiersACharger.Count - 1 do
         ImporterUnLivre(ListeFichiersACharger[Idx], ListeNomsACharger[Idx]);
     finally
+      ChargementFin;
       ListeFichiersACharger.Free;
       ListeNomsACharger.Free;
     end;
@@ -1446,6 +1627,7 @@ end;
 procedure TMenu.RemplirTabBibliotheque();
   var
     PTrapping:  StructureTrapping;
+    PObjetV1:   StructureObjetV1;
     NbVehicule: Integer;
     LargLib:    Integer;
     LargTot:    Integer;
@@ -1460,20 +1642,39 @@ procedure TMenu.RemplirTabBibliotheque();
       TabBibliotheque.Cells[1, Ind] := IntToStr(Nb);
     end;
 begin
+  MasqueElementsV1();
   if TabBibliotheque = nil then
     exit;
   TabBibliotheque.RowCount := 9;
   TabBibliotheque.Cells[0, 0] := GetTexteLibelle('RULES-LAB_014');
   TabBibliotheque.Cells[1, 0] := GetTexteLibelle('RULES-LAB_021');
-  Ligne(1, GetTexteLibelle('RULES-LAB_063'), NbArme);
-  Ligne(2, GetTexteLibelle('RULES-LAB_065'), NbArmure);
-  // Animaux, montures, vehicules et bateaux (theme RULES-LAB_195) : ligne a part
-  NbVehicule := 0;
-  for PTrapping in ListTrapping do
-    if EstThemeAnimauxVehicules(PTrapping.Theme) then
-      Inc(NbVehicule);
-  Ligne(3, GetTexteLibelle('RULES-LAB_202'), NbTrapping - NbVehicule);
-  Ligne(4, GetTexteLibelle(ThemeAnimauxVehicules), NbVehicule);
+  if ValVersion = 'WFRP1' then
+    begin
+      // V1 : objets de ListObjetV1 comptes par Categorie (WEAPON, ARMOUR, TRANSPORT, le reste = equipement)
+      NbVehicule := 0;
+      Ind        := 0;
+      LargLib    := 0;
+      for PObjetV1 in ListObjetV1 do
+        if ValeurLivreEgale(PObjetV1.Categorie, 'WEAPON') then Inc(LargLib)
+        else if ValeurLivreEgale(PObjetV1.Categorie, 'ARMOUR') then Inc(Ind)
+        else if ValeurLivreEgale(PObjetV1.Categorie, 'TRANSPORT') then Inc(NbVehicule);
+      Ligne(1, GetTexteLibelle('RULES-LAB_063'), LargLib);
+      Ligne(2, GetTexteLibelle('RULES-LAB_065'), Ind);
+      Ligne(3, GetTexteLibelle('RULES-LAB_202'), ListObjetV1.Count - LargLib - Ind - NbVehicule);
+      Ligne(4, GetTexteLibelle(ThemeAnimauxVehicules), NbVehicule);
+    end
+  else
+    begin
+      Ligne(1, GetTexteLibelle('RULES-LAB_063'), NbArme);
+      Ligne(2, GetTexteLibelle('RULES-LAB_065'), NbArmure);
+      // Animaux, montures, vehicules et bateaux (theme RULES-LAB_195) : ligne a part
+      NbVehicule := 0;
+      for PTrapping in ListTrapping do
+        if EstThemeAnimauxVehicules(PTrapping.Theme) then
+          Inc(NbVehicule);
+      Ligne(3, GetTexteLibelle('RULES-LAB_202'), NbTrapping - NbVehicule);
+      Ligne(4, GetTexteLibelle(ThemeAnimauxVehicules), NbVehicule);
+    end;
   Ligne(5, GetTexteLibelle('RULES-LAB_083'), NbSort);
   Ligne(6, GetTexteLibelle('RULES-LAB_172'), ListCorruptionTable.Count);
   Ligne(7, GetTexteLibelle('RULES-LAB_281'), ListDisease.Count);
@@ -1497,8 +1698,88 @@ begin
   TabBibliotheque.Width        := TabBibliotheque.ColWidths[0] + TabBibliotheque.ColWidths[1] + 4;
 end;
 
+// V1 : pas de talents (leurs effets sont dans les competences) ; le PDF n'existe pas encore
+// pour la V1 et planterait a l'ouverture : a retirer d'ici au fur et a mesure. La bibliotheque (armes, armures...) n'est PAS masquee : une ligne a 0 ne s'ouvre pas.
+procedure TMenu.MasqueElementsV1();
+var
+  Visible1: Boolean;
+begin
+  Visible1 := ValVersion <> 'WFRP1';
+  ButtonTalent.Visible        := Visible1;
+  BoutonTalent.Visible        := Visible1;
+  TotLivreTalent.Visible      := Visible1;
+  // V1 : la creation existe (WinCreation avec CreationV1)
+  ButtonCreation.Visible      := True;
+  // V1 : WinPersonnage ouvre une fiche V1 (liste des personnages et Modification rendues)
+  ButtonModification.Visible  := True;
+  // V1 : la feuille officielle du Core V1 (PdfPersonnageV1)
+  ButtonPdf.Visible           := True;
+  TabPersonnage.Visible       := True;
+end;
+
+// V1 : fenetre-catalogue simple des objets de ListObjetV1 d'un groupe (1 arme, 2 armure,
+// 3 equipement, 4 transport) ; creee en code, sans fiche .lfm
+procedure OuvreCatalogueObjetsV1(Groupe: Integer; const Titre: String);
+var
+  Fen:  TForm;
+  Grid: TStringGrid;
+  PObj: StructureObjetV1;
+  Ligne, Gr: Integer;
+begin
+  Fen := TForm.Create(Application);
+  Fen.Caption  := Titre;
+  Fen.Position := poOwnerFormCenter;
+  Fen.Width    := 760;
+  Fen.Height   := 520;
+  Grid := TStringGrid.Create(Fen);
+  Grid.Parent  := Fen;
+  Grid.Align   := alClient;
+  Grid.Options := Grid.Options - [goEditing] + [goRowSelect];
+  Grid.ColCount := 6;
+  Grid.RowCount := 1;
+  Grid.FixedCols := 0;
+  Grid.Cells[0, 0] := GetTexteLibelle('RULES-LAB_014');
+  Grid.Cells[1, 0] := 'Cat.';
+  Grid.Cells[2, 0] := 'Prix';
+  Grid.Cells[3, 0] := 'Enc.';
+  Grid.Cells[4, 0] := 'Dispo.';
+  Grid.Cells[5, 0] := 'Combat / PA';
+  Grid.ColWidths[0] := 230;
+  for Ligne := 1 to 5 do Grid.ColWidths[Ligne] := 100;
+  for PObj in ListObjetV1 do
+    begin
+      if ValeurLivreEgale(PObj.Categorie, 'WEAPON') then Gr := 1
+      else if ValeurLivreEgale(PObj.Categorie, 'ARMOUR') then Gr := 2
+      else if ValeurLivreEgale(PObj.Categorie, 'TRANSPORT') then Gr := 4
+      else Gr := 3;
+      if Gr <> Groupe then Continue;
+      Grid.RowCount := Grid.RowCount + 1;
+      Ligne := Grid.RowCount - 1;
+      Grid.Cells[0, Ligne] := PObj.Libelle;
+      Grid.Cells[1, Ligne] := PObj.Categorie;
+      Grid.Cells[2, Ligne] := PObj.Cout;
+      Grid.Cells[3, Ligne] := PObj.Encombrement;
+      Grid.Cells[4, Ligne] := PObj.Disponibilite;
+      if PObj.PointsArmure <> '' then
+        Grid.Cells[5, Ligne] := PObj.PointsArmure
+      else
+        Grid.Cells[5, Ligne] := LibelleModifsCombatV1(PObj.Combat);
+    end;
+  Fen.ShowModal;
+  Fen.Free;
+end;
+
 procedure TMenu.TabBibliothequeDblClick(Sender: TObject);
 begin
+  // Categorie sans aucune fiche (V1 : pas encore saisie) : rien a ouvrir, la fenetre planterait
+  // sur une grille vide.
+  if StrToIntDef(TabBibliotheque.Cells[1, TabBibliotheque.Row], 0) = 0 then
+    Exit;
+  if (ValVersion = 'WFRP1') and (TabBibliotheque.Row in [1..4]) then
+    begin
+      OuvreCatalogueObjetsV1(TabBibliotheque.Row, TabBibliotheque.Cells[0, TabBibliotheque.Row]);
+      Exit;
+    end;
   case TabBibliotheque.Row of
     1: ButtonArmeClick(Sender);
     2: ButtonArmureClick(Sender);
@@ -1633,12 +1914,33 @@ procedure TMenu.FormCreate(Sender: TObject);
       ListRegle                    := TListRegle.Create;
       ListRegleSource              := TListRegle.Create;
       ListRegleMetier              := TListRegleMetier.Create;
+      ListRegleEthnie              := TListRegleEthnie.Create;
+      ListRegleFond                := TListRegleFond.Create;
+      ListFondTirage               := TListFondTirage.Create;
+      ListFondCompte               := TListFondCompte.Create;
       ListTalent                   := TListTalent.Create;
       ListCompetence               := TListCompetence.Create;
       ListMetierCompetence         := TListMetierCompetence.Create;
       ListMetier                   := TListMetier.Create;
       ListMetierNiveau             := TListMetierNiveau.Create;
       ListMetierAttribut           := TListMetierAttribut.Create;
+      ListMetierAvance             := TListMetierAvance.Create;
+      ListMetierArgent             := TListMetierArgent.Create;
+      ListMetierSortie             := TListMetierSortie.Create;
+      ListArtisanMetier            := TListArtisanMetier.Create;
+      ListClasseV1                 := TListClasseV1.Create;
+      ListTirageCompV1             := TListTirageCompV1.Create;
+      ListAgeCompV1                := TListAgeCompV1.Create;
+      ListGainMagieV1              := TListGainMagieV1.Create;
+      ListApprentissageSortV1      := TListApprentissageSortV1.Create;
+      ListHandicapV1               := TListHandicapV1.Create;
+      ListTirageHandicapV1         := TListTirageHandicapV1.Create;
+      ListAvancementPretreV1       := TListAvancementPretreV1.Create;
+      ListFamilierV1               := TListFamilierV1.Create;
+      ListCulteV1                  := TListCulteV1.Create;
+      ListPriereCulteV1            := TListPriereCulteV1.Create;
+      ListObjetV1                  := TListObjetV1.Create;
+      ListMetierBase               := TListMetierBase.Create;
       ListMetierTalent             := TListMetierTalent.Create;
       ListeAttribut                := TListeAttribut.Create;
       ListRaceMetier               := TListRaceMetier.Create;
@@ -1646,6 +1948,8 @@ procedure TMenu.FormCreate(Sender: TObject);
       ListRaceAttribut             := TListRaceAttribut.Create;
       ListRacePhysique             := TListRacePhysique.Create;
       ListRaceCouleur              := TListRaceCouleur.Create;
+      ListRaceDetailV2             := TListRaceDetailV2.Create;
+      ListTablePersonnelle         := TListTablePersonnelle.Create;
       ListRaceNom                  := TListRaceNom.Create;
       ListRaceNomModele            := TListRaceNomModele.Create;
       ListRaceNomRegle             := TListRaceNomRegle.Create;
@@ -1814,6 +2118,7 @@ procedure TMenu.FormCreate(Sender: TObject);
       SelectionGrilleWarhammer(TabLivre);
       SelectionGrilleWarhammer(TabPersonnage);
       SelectionGrilleWarhammer(TabBibliotheque);
+      MasqueElementsV1();
       ColLivreSel := GridAjouteColonne(TabLivre, 'S', 20, taCenter);
       ColLivreLib := GridAjouteColonne(TabLivre, GetTexteLibelle('RULES-LAB_014'), 230);
       ColLivreCod := GridAjouteColonne(TabLivre, '');
@@ -1877,6 +2182,7 @@ procedure TMenu.FormCreate(Sender: TObject);
       Label4.Caption              := GetTexteLibelle('RULES-LAB_183');
       Label5.Caption              := GetTexteLibelle('RULES-LAB_184');
       ButtonOptionRegle.Caption   := GetTexteLibelle('RULES-LAB_277');
+      PoserBoutonTestsAuto();
     end;
 
   // Largeurs de colonnes, largeurs minimales et references d ancrage de la fenetre.
@@ -1966,6 +2272,48 @@ procedure TMenu.FormCreate(Sender: TObject);
          LotDumpPersonnages();
          Halt(0);
        end;
+     // WarhammerHelp.exe --dumpecran <dossier sortie> <perso>... : contenu de WinPersonnage (fenetre
+     // creee sans etre affichee) dans <sortie>\<perso>.ecran.txt, a comparer au --dump et au PDF.
+     if (ParamCount >= 3) and (ParamStr(1) = '--dumpecran') then
+       begin
+         LotDumpEcran();
+         Halt(0);
+       end;
+     // WarhammerHelp.exe --dumppdf <dossier sortie> <perso>... : textes ecrits dans le PDF (avec leur
+     // position) dans <sortie>\<perso>.pdf.txt, a comparer au --dump et au --dumpecran.
+     if (ParamCount >= 3) and (ParamStr(1) = '--dumppdf') then
+       begin
+         LotDumpPdf();
+         Halt(0);
+       end;
+     // WarhammerHelp.exe --naissance <code ethnie> [nombre] : tire les details V2 (naissance, signe, astre)
+     // de l ethnie et ecrit les resultats dans NAISSANCE.txt. Sert a verifier une table Birthplace.
+     if (ParamCount >= 2) and (ParamStr(1) = '--naissance') then
+       begin
+         LotNaissance();
+         Halt(0);
+       end;
+     // WarhammerHelp.exe --familier <code ethnie> [nombre] : tire la forme et les particularites d un familier
+     // cree (tables 7-1, 7-3, 7-2) et ecrit FAMILIER.txt, une ligne par tirage avec les effets appliques.
+     if (ParamCount >= 2) and (ParamStr(1) = '--familier') then
+       begin
+         LotFamilier();
+         Halt(0);
+       end;
+     // WarhammerHelp.exe --creer <code ethnie> <code carriere> <nom> : cree un personnage avec WinCreation
+     // (fenetre non affichee, boutons Hasard), l'enregistre sous <nom> et ecrit le deroulement dans CREER.txt.
+     if (ParamCount >= 4) and (ParamStr(1) = '--creer') then
+       begin
+         LotCreer();
+         Halt(0);
+       end;
+     // WarhammerHelp.exe --testcreation <cas.txt> <sortie.txt> : executes sans fenetre les cas de test des
+     // regles de WinCreation (une ligne = un cas) et ecrit OK / ECHEC par cas. Voir TRAVAIL\tester_creation.py.
+     if (ParamCount >= 3) and (ParamStr(1) = '--testcreation') then
+       begin
+         LotTestCreation();
+         Halt(0);
+       end;
      // WarhammerHelp.exe --retrait <code livre> : retire le livre des listes, le reimporte, puis
      // exporte tous les livres (a comparer a un --export simple). Trace dans LOT_RETRAIT.txt.
      if (ParamCount >= 2) and (ParamStr(1) = '--retrait') then
@@ -1979,6 +2327,43 @@ procedure TMenu.FormCreate(Sender: TObject);
      if (ParamCount >= 1) and (ParamStr(1) = '--export') then
        begin
          ButtonXmlClick(nil);
+         Halt(0);
+       end;
+     // WarhammerHelp.exe --winlivretest <livre> <sortie.xml> <arbre.txt> : charge le livre dans WinLivre,
+     // valide chaque fiche suivie, ecrit le XML issu de la fenetre et la liste des noeuds, puis quitte.
+     if (ParamCount >= 4) and (ParamStr(1) = '--winlivretest') then
+       begin
+         try
+           FenLivre := TWinLivres.Create(Application);
+           FenLivre.ChargerXMLFile(ParamStr(2));
+           // 5e parametre « edit » : test d'edition (Page saisie a 999 dans chaque fiche, controlee dans le XML ecrit)
+           FenLivre.TesterAllerRetour(ParamStr(3), ParamStr(4), (ParamCount >= 5) and (ParamStr(5) = 'edit'));
+         except
+           on E: Exception do
+           begin
+             // en test, une exception va dans error.log (avec la pile d appels) au lieu d ouvrir une boite
+             JournaliserException(E);
+             Halt(2);
+           end;
+         end;
+         Halt(0);
+       end;
+     // WarhammerHelp.exe --dumpwinlivre <livre> <sortie.txt> [N] : charge le livre dans WinLivre, selectionne N noeuds
+     // par type (0 ou absent = tous) et ecrit en texte ce que chaque fiche afficherait a l ecran, puis quitte.
+     if (ParamCount >= 3) and (ParamStr(1) = '--dumpwinlivre') then
+       begin
+         try
+           FenLivre := TWinLivres.Create(Application);
+           FenLivre.ChargerXMLFile(ParamStr(2));
+           if ParamCount >= 4 then FenLivre.DumpEcran(ParamStr(3), StrToIntDef(ParamStr(4), 0))
+           else FenLivre.DumpEcran(ParamStr(3), 0);
+         except
+           on E: Exception do
+           begin
+             JournaliserException(E);
+             Halt(2);
+           end;
+         end;
          Halt(0);
        end;
      // WarhammerHelp.exe --winlivre [chemin du livre] : second processus ou WinLivre est seul
@@ -1995,6 +2380,9 @@ procedure TMenu.FormCreate(Sender: TObject);
 
   begin
        Randomize;
+       // Tests de non-regression (--creer) : WH_GRAINE fixe le hasard pour que deux executions donnent le meme personnage
+       if GetEnvironmentVariable('WH_GRAINE') <> '' then
+         RandSeed := StrToIntDef(GetEnvironmentVariable('WH_GRAINE'), 1);
 
        // ButtonOptionRegle (regles optionnelles, A FAIRE.txt "TOGGLE .INI PAR LIVRE",
        // CONTEXT.md 2.89, 22/09/2026) et ButtonMAJLivres (26/09/2026) sont désormais posés
@@ -2041,6 +2429,8 @@ procedure TMenu.FormCreate(Sender: TObject);
        // WFRP5 ajoutées par Nono sous PICTURES\WFRP5\NIV\.
        ConstCheminImageNiveau       := '\PICTURES\' + ValVersion + '\NIV\';
        ConstCheminImageNiveauRacine := '\PICTURES\' + ValVersion + '\';
+       // Logo et bandeaux selon la version resolue (premier ChargerImage : version pas encore connue)
+       ChargerImage();
        // Sélection de livres cochés de CETTE édition (résolue depuis ListeLivreParVersion,
        // peuplée par ChargeIni - CONTEXT.md §2.70) - lue par PeuplerTabLivre plus bas.
        ListeLivre             := ListeLivreParVersion.Values[ValVersion];
@@ -2077,7 +2467,7 @@ procedure TMenu.FormCreate(Sender: TObject);
        // ce rafraîchissement, le Rulebook s'affichait "Rules Book" au démarrage en français.
        for Idx := 1 to TabLivre.RowCount - 1 do
          if TabLivre.Cells[ColLivreCod, Idx] <> '' then
-           TabLivre.Cells[ColLivreLib, Idx] := GetTexteLibelle(TabLivre.Cells[ColLivreCod, Idx],'','',true);
+           LibelleLivreLigne(Idx);
 
        // chargesr les personnages
        ChargerPersonnages();
@@ -2448,7 +2838,7 @@ end;
 procedure TMenu.ButtonCreationClick(Sender: TObject);
   begin
     // créer un personnage
-    FenCreation          := TWinCreations.Create(Application);
+    FenCreation         := TWinCreations.Create(Application);
     FenCreation.Position := poOwnerFormCenter;
     FenCreation.Show;
   end;
@@ -2496,6 +2886,113 @@ begin
   FenArmure.Position := poOwnerFormCenter;
   FenArmure.Show;
 end;
+
+// Libelle du bouton « Tests automatiques » (le bouton est dans warhammersource.lfm, meme style que les autres).
+procedure TMenu.PoserBoutonTestsAuto();
+  begin
+    ButtonTestsAuto.Caption := GetTexteLibelle('RULES-LAB_1005');
+  end;
+
+// Lance les cas de test de creation de la version affichee (TRAVAIL\CAS_CREATION_<version>*.txt, comme
+// --testcreation) et affiche un resume par fichier puis le detail des echecs.
+procedure TMenu.ButtonTestsAutoClick(Sender: TObject);
+  Var
+    Dossier, NomFichier, SortiePersos: String;
+    Fichiers, Echecs, Rapport, SortieFichier: TStringList;
+    Recherche: TSearchRec;
+    Ind, NbCas, NbEchec, TotalCas, TotalEchec: Integer;
+    Fenetre: TForm;
+    Memo: TMemo;
+  begin
+    if MessageDlg(GetTexteLibelle('RULES-LAB_1005'), GetTexteLibelle('RULES-MESS_125'), mtConfirmation, [mbYes, mbNo], 0) <> mrYes then
+      Exit;
+    Dossier := GetCurrentDir + '\TRAVAIL\';
+    Fichiers      := TStringList.Create;
+    Echecs        := TStringList.Create;
+    Rapport       := TStringList.Create;
+    SortieFichier := TStringList.Create;
+    try
+      Fichiers.Sorted := True;
+      if FindFirst(Dossier + 'CAS_CREATION_' + ValVersion + '*.txt', faAnyFile, Recherche) = 0 then
+        begin
+          repeat
+            Fichiers.Add(Recherche.Name);
+          until FindNext(Recherche) <> 0;
+          FindClose(Recherche);
+        end;
+      if Fichiers.Count = 0 then
+        begin
+          ShowMessage(GetTexteLibelle('RULES-MESS_124') + LineEnding + Dossier + 'CAS_CREATION_' + ValVersion + '*.txt');
+          Exit;
+        end;
+      Screen.Cursor := crHourGlass;
+      try
+        TotalCas   := 0;
+        TotalEchec := 0;
+        for Ind := 0 to Fichiers.Count - 1 do
+          begin
+            NomFichier := Fichiers[Ind];
+            SortieFichier.Clear;
+            NbCas   := 0;
+            NbEchec := 0;
+            TesterCasCreation(Dossier + NomFichier, SortieFichier, NbCas, NbEchec);
+            Rapport.Add(Format('%s : %d %s, %d %s', [NomFichier, NbCas, GetTexteLibelle('RULES-LAB_1006'),
+              NbEchec, GetTexteLibelle('RULES-LAB_1007')]));
+            Inc(TotalCas, NbCas);
+            Inc(TotalEchec, NbEchec);
+            for NomFichier in SortieFichier do
+              if Copy(NomFichier, 1, 5) = 'ECHEC' then
+                Echecs.Add(NomFichier);
+          end;
+      finally
+        Screen.Cursor := crDefault;
+      end;
+      Rapport.Insert(0, '');
+      Rapport.Insert(0, Format('%s : %d %s, %d %s', [ValVersion, TotalCas, GetTexteLibelle('RULES-LAB_1006'),
+        TotalEchec, GetTexteLibelle('RULES-LAB_1007')]));
+      if Echecs.Count > 0 then
+        begin
+          Rapport.Add('');
+          Rapport.AddStrings(Echecs);
+        end;
+      // non-regression de WinPersonnage : TRAVAIL\tester_persos.py (lance le programme dans un dossier isole)
+      if FileExists(Dossier + 'tester_persos.py') then
+        begin
+          Screen.Cursor := crHourGlass;
+          try
+            SortiePersos := '';
+            Rapport.Add('');
+            if RunCommandInDir(GetCurrentDir, 'python', ['TRAVAIL\tester_persos.py', '--versions', ValVersion], SortiePersos) then
+              Rapport.Add('tester_persos.py : ' + Trim(SortiePersos))
+            else
+              Rapport.Add('tester_persos.py : ECHEC ' + Trim(SortiePersos));
+          finally
+            Screen.Cursor := crDefault;
+          end;
+        end;
+      Fenetre := TForm.CreateNew(Application);
+      try
+        Fenetre.Caption  := GetTexteLibelle('RULES-LAB_1005');
+        Fenetre.Position := poOwnerFormCenter;
+        Fenetre.Width    := 900;
+        Fenetre.Height   := 500;
+        Memo             := TMemo.Create(Fenetre);
+        Memo.Parent      := Fenetre;
+        Memo.Align       := alClient;
+        Memo.ReadOnly    := True;
+        Memo.ScrollBars  := ssBoth;
+        Memo.Lines.Assign(Rapport);
+        Fenetre.ShowModal;
+      finally
+        Fenetre.Free;
+      end;
+    finally
+      SortieFichier.Free;
+      Rapport.Free;
+      Echecs.Free;
+      Fichiers.Free;
+    end;
+  end;
 
 procedure TMenu.ButtonOptionRegleClick(Sender: TObject);
 begin
@@ -2611,6 +3108,385 @@ procedure TMenu.LotReecritPersonnages();
     end;
   end;
 
+procedure TMenu.LotNaissance();
+  // --naissance <code ethnie> [nombre] : NAISSANCE.txt, une ligne par tirage des details V2.
+  Var
+    Ind, Nb:  Integer;
+    Details:  StructureDetailsV2;
+    Sortie:   TStringList;
+  begin
+    Nb := 20;
+    if ParamCount >= 3 then
+      Nb := StrToIntDef(ParamStr(3), 20);
+    Sortie := TStringList.Create;
+    try
+      for Ind := 1 to Nb do
+        if TireDetailsV2(ParamStr(2), Random(2) = 0, Details) then
+          Sortie.Add(Format('Age=%d Taille=%d Poids=%d Fratrie=%d Signe=%s | Astre=%s | Naissance=%s | Effets=%s',
+            [Details.Age, Details.Taille, Details.Poids, Details.Fratrie, Details.Signe, Details.SigneAstral, Details.Naissance,
+             EffetsNaissanceRace(ParamStr(2), Details.Naissance)]))
+        else
+          Sortie.Add('Aucune table V2 pour ' + ParamStr(2));
+    finally
+      Sortie.SaveToFile(GetCurrentDir + '\NAISSANCE.txt');
+      Sortie.Free;
+    end;
+  end;
+
+procedure TMenu.LotFamilier();
+  // --familier <code ethnie> [nombre] : FAMILIER.txt, une ligne par tirage.
+  Var
+    Ind, Nb:  Integer;
+    Formes, Particularites, Sortie: TStringList;
+    Effets:   String;
+  begin
+    Nb := 20;
+    if ParamCount >= 3 then
+      Nb := StrToIntDef(ParamStr(3), 20);
+    Formes         := TStringList.Create;
+    Particularites := TStringList.Create;
+    Sortie         := TStringList.Create;
+    try
+      Formes.Delimiter := ',';
+      Particularites.Delimiter := ',';
+      for Ind := 1 to Nb do
+        begin
+          TireFamilierV2(ParamStr(2), Formes, Particularites, Effets);
+          if Formes.Count = 0 then
+            Sortie.Add('Aucune table de familier pour ' + ParamStr(2))
+          else
+            Sortie.Add(Format('Formes=%s | Particularites=%s | Effets=%s',
+              [Formes.DelimitedText, Particularites.DelimitedText, Effets]));
+        end;
+    finally
+      Sortie.SaveToFile(GetCurrentDir + '\FAMILIER.txt');
+      Sortie.Free;
+      Particularites.Free;
+      Formes.Free;
+    end;
+  end;
+
+procedure TMenu.LotTestCreation();
+  // --testcreation <cas.txt> <sortie.txt> : voir TesterCasCreation pour le format des cas.
+  Var
+    Sortie: TStringList;
+    NbCas, NbEchec: Integer;
+  begin
+    Sortie  := TStringList.Create;
+    NbCas   := 0;
+    NbEchec := 0;
+    try
+      TesterCasCreation(ParamStr(2), Sortie, NbCas, NbEchec);
+      Sortie.Add(Format('TOTAL %d cas, %d echec', [NbCas, NbEchec]));
+    finally
+      Sortie.SaveToFile(ParamStr(3));
+      Sortie.Free;
+    end;
+  end;
+
+procedure TMenu.TesterCasCreation(const FichierCas: String; Sortie: TStringList; var NbCas, NbEchec: Integer);
+  // Lance les cas d'un fichier (cumule dans NbCas / NbEchec, ajoute une ligne OK / ECHEC par cas a Sortie).
+  // Un cas par ligne, 7 champs separes par « | » :
+  //   id | fonction | arg1 | arg2 | arg3 | attendu | source      (# = commentaire)
+  // fonctions : metier (ethnie, regle, jet d100)        -> code du metier tire
+  //             codes  (genre S/T, regle, ethnie)       -> codes effectifs, tries, separes par des virgules
+  //             couvre (regle, ethnie)                  -> 1 / 0 (RegleCouvreRace)
+  //             remplace (regle, ethnie, genre S/T)     -> 1 / 0 (RegleRemplaceGenre)
+  //             fond   (ethnie, -, jet d100)            -> regle de background (RegleFondTirage)
+  //             sousmetier (metier, -, 2e jet d100)     -> metier du second jet (ResultMetierSousMetier)
+  //             choixmetier (ethnie, metier)            -> metier/alternative/... (ResultMetierRaceChoixMetier)
+  //             niveaubonus (appartenance, palier 1-4)  -> « competences;talents » du palier (NiveauxDuCareerBonus)
+  //             memetirage (ethnie, regle)              -> 1 si la regle donne la table de base pour cette ethnie
+  //             appartenances (metier, ethnie)          -> regiments / ordres proposes, tries
+  //             competencev1 (classe, espece, jet d100) -> competence de depart V1 (DATA_SKILL_ROLL_V1, chances cumulees)
+  //             blessures (formule, F/E/FM)             -> Blessures de depart (CalculBlessure, bonus = dizaine)
+  //             cout (type C/S/T, de/vers, code)        -> XP d'une avance (CoutXpBase), version = celle du programme
+  //             suite (type C/S/T, « a>b>c », code)     -> somme des couts de chaque achat successif
+  // L'attendu vient du livre (champ source), jamais d'une copie du resultat du programme.
+  Var
+    Cas, Champs, Liste: TStringList;
+    Ind, Jet, Etape, SommeEtapes: Integer;
+    Ligne, Fonction, Obtenu, Attendu, TypeCout: String;
+    Tirage: TListTirageMetier;
+    Tranche: StructureTirageMetier;
+    Niveaux: TListCareerBonusNiveau;
+    NivBonus: StructureCareerBonusNiveau;
+    TirageComp: StructureTirageCompV1;
+    CumulComp:  Integer;
+  begin
+    Cas     := TStringList.Create;
+    Champs  := TStringList.Create;
+    Tirage  := TListTirageMetier.Create;
+    try
+      Champs.StrictDelimiter := True;
+      Champs.Delimiter       := '|';
+      Champs.QuoteChar       := #1;
+      Cas.LoadFromFile(FichierCas);
+      for Ind := 0 to Cas.Count - 1 do
+        begin
+          Ligne := Trim(Cas[Ind]);
+          if (Ligne = '') or (Ligne[1] = '#') then
+            continue;
+          Champs.DelimitedText := Ligne;
+          while Champs.Count < 7 do
+            Champs.Add('');
+          for Jet := 0 to Champs.Count - 1 do
+            Champs[Jet] := Trim(Champs[Jet]);
+          Fonction := LowerCase(Champs[1]);
+          Attendu  := Champs[5];
+          Obtenu   := '?fonction inconnue';
+          if Fonction = 'metier' then
+            begin
+              Obtenu := '';
+              Jet    := StrToIntDef(Champs[4], 0);
+              CalculeTirageMetier(Champs[2], Champs[3], Tirage);
+              for Tranche in Tirage do
+                if (Jet >= Tranche.Debut) and (Jet <= Tranche.Fin) then
+                  Obtenu := Tranche.CodeMetier;
+            end
+          else if Fonction = 'codes' then
+            begin
+              Liste := CodesRaceEffectifs(Champs[2], Champs[3], Champs[4]);
+              try
+                Liste.Sorted := True;
+                Liste.Delimiter := ',';
+                Liste.StrictDelimiter := True;
+                Liste.QuoteChar := #1;
+                Obtenu := Liste.DelimitedText;
+              finally
+                Liste.Free;
+              end;
+            end
+          else if Fonction = 'couvre' then
+            Obtenu := IntToStr(Ord(RegleCouvreRace(Champs[2], Champs[3])))
+          else if Fonction = 'remplace' then
+            Obtenu := IntToStr(Ord(RegleRemplaceGenre(Champs[2], Champs[3], Champs[4])))
+          else if Fonction = 'fond' then
+            Obtenu := RegleFondTirage(Champs[2], StrToIntDef(Champs[4], 0))
+          else if Fonction = 'competencev1' then
+            begin
+              // chances cumulees dans l'ordre des donnees, comme TCreationV1.TirerCompClick
+              Obtenu   := '';
+              CumulComp := 0;
+              Jet      := StrToIntDef(Champs[4], 0);
+              for TirageComp in ListTirageCompV1 do
+                if (TirageComp.CodeClasse = Champs[2]) and CompareRechercheValeur(TirageComp.Espece, Champs[3]) then
+                  begin
+                    CumulComp := CumulComp + TirageComp.Chance;
+                    if (Obtenu = '') and (Jet <= CumulComp) then
+                      Obtenu := TirageComp.CodeCompetence;
+                  end;
+            end
+          else if Fonction = 'blessures' then
+            // Blessures de depart : formule d ethnie (ex. 1xBATTR_S+2xBATTR_T+1xBATTR_WP), valeurs « F/E/FM » (carac. totales)
+            begin
+              Liste := TStringList.Create;
+              try
+                ExtractStrings(['/'], [], PChar(Champs[3]), Liste);
+                if Liste.Count = 3 then
+                  Obtenu := IntToStr(CalculBlessure(Champs[2], StrToIntDef(Liste[0], 0), StrToIntDef(Liste[1], 0), StrToIntDef(Liste[2], 0)))
+                else
+                  Obtenu := '?valeurs F/E/FM attendues';
+              finally
+                Liste.Free;
+              end;
+            end
+          else if Fonction = 'sousmetier' then
+            // second d100 apres le metier tire (DATA_CAREER_SUBCHOICE) : '' = pas de sous-metier
+            Obtenu := StringReplace(ResultMetierSousMetier(Champs[2], StrToIntDef(Champs[4], 0), ''), SeparateurMulti, '/', [rfReplaceAll])
+          else if Fonction = 'memetirage' then
+            // la regle donne-t-elle exactement la table de base pour cette ethnie (non couverte) ? 1 / 0
+            begin
+              Liste := TStringList.Create;
+              try
+                CalculeTirageMetier(Champs[2], '', Tirage);
+                for Tranche in Tirage do
+                  Liste.Add(Format('%s:%d-%d', [Tranche.CodeMetier, Tranche.Debut, Tranche.Fin]));
+                Obtenu := Liste.Text;
+                Liste.Clear;
+                CalculeTirageMetier(Champs[2], Champs[3], Tirage);
+                for Tranche in Tirage do
+                  Liste.Add(Format('%s:%d-%d', [Tranche.CodeMetier, Tranche.Debut, Tranche.Fin]));
+                Obtenu := IntToStr(Ord((Liste.Text = Obtenu) and (Liste.Count > 0)));
+              finally
+                Liste.Free;
+              end;
+            end
+          else if Fonction = 'niveaubonus' then
+            // competences et talents donnes par un palier d une appartenance (regiment) : « competences | talents »
+            begin
+              Obtenu := '(palier absent)';
+              Niveaux := NiveauxDuCareerBonus(Champs[2]);
+              try
+                for NivBonus in Niveaux do
+                  if NivBonus.Niveau = StrToIntDef(Champs[3], 0) then
+                    Obtenu := NivBonus.ListeCompetence + ';' + NivBonus.ListeTalent;
+              finally
+                Niveaux.Free;
+              end;
+            end
+          else if Fonction = 'appartenances' then
+            // regiments / ordres proposes pour (metier, ethnie) : codes tries (AppartenancesCandidates)
+            begin
+              Liste := TStringList.Create;
+              try
+                ExtractStrings([','], [], PChar(AppartenancesCandidates(Champs[2], Champs[3], '')), Liste);
+                Liste.Sorted := True;
+                Liste.Delimiter := ',';
+                Liste.StrictDelimiter := True;
+                Liste.QuoteChar := #1;
+                Obtenu := Liste.DelimitedText;
+              finally
+                Liste.Free;
+              end;
+            end
+          else if Fonction = 'cout' then
+            // cout en XP d'une avance, hors surcout MJ et option XP / 25 : type C / S / T (caracteristique,
+            // competence, talent), « de/vers » (valeur de depart / valeur visee), code d'attribut (V1 / V2, facultatif)
+            begin
+              Liste := TStringList.Create;
+              try
+                ExtractStrings(['/'], [], PChar(Champs[3]), Liste);
+                if Liste.Count = 2 then
+                  begin
+                    if Champs[2] = 'C' then
+                      TypeCout := ConstXmlCarac
+                    else if Champs[2] = 'S' then
+                      TypeCout := ConstXmlCompetence
+                    else
+                      TypeCout := ConstXmlTalent;
+                    Obtenu := IntToStr(CoutXpBase(TypeCout, StrToIntDef(Liste[0], 0), StrToIntDef(Liste[1], 0), Champs[4]));
+                  end
+                else
+                  Obtenu := '?de/vers attendu';
+              finally
+                Liste.Free;
+              end;
+            end
+          else if Fonction = 'suite' then
+            // suite d'achats : type C / S / T, valeurs successives « 0>3>8>13 » ; Obtenu = somme des couts de chaque
+            // etape (CoutXpBase de l'une a la suivante), a comparer au cout d'un seul achat du depart a l'arrivee
+            begin
+              Liste := TStringList.Create;
+              try
+                ExtractStrings(['>'], [], PChar(Champs[3]), Liste);
+                if Champs[2] = 'C' then
+                  TypeCout := ConstXmlCarac
+                else if Champs[2] = 'S' then
+                  TypeCout := ConstXmlCompetence
+                else
+                  TypeCout := ConstXmlTalent;
+                SommeEtapes := 0;
+                for Etape := 1 to Liste.Count - 1 do
+                  SommeEtapes := SommeEtapes +
+                    CoutXpBase(TypeCout, StrToIntDef(Liste[Etape - 1], 0), StrToIntDef(Liste[Etape], 0), Champs[4]);
+                Obtenu := IntToStr(SommeEtapes);
+              finally
+                Liste.Free;
+              end;
+            end
+          else if Fonction = 'coutreel' then
+            // cout reel d'un talent (CoutReelTalent) : arg2 = cout de base, arg3 = « hors » (hors carriere)
+            // et / ou « mj » (ajoute par le MJ), separes par une barre, ou vide
+            Obtenu := IntToStr(CoutReelTalent(StrToIntDef(Champs[2], 0), Pos('hors', Champs[3]) > 0, Pos('mj', Champs[3]) > 0))
+          else if Fonction = 'choixmetier' then
+            // metier de remplacement propose pour le metier tire (DATA_SPECIE_CAREER_CHOICE) : metier/alternative/...
+            Obtenu := StringReplace(ResultMetierRaceChoixMetier(Champs[3], Champs[2], ''), SeparateurMulti, '/', [rfReplaceAll]);
+          Inc(NbCas);
+          if Obtenu = Attendu then
+            Sortie.Add('OK ' + Champs[0])
+          else
+            begin
+              Inc(NbEchec);
+              Sortie.Add(Format('ECHEC %s | %s(%s, %s, %s) | attendu=%s obtenu=%s | %s',
+                [Champs[0], Fonction, Champs[2], Champs[3], Champs[4], Attendu, Obtenu, Champs[6]]));
+            end;
+        end;
+    finally
+      Tirage.Free;
+      Champs.Free;
+      Cas.Free;
+    end;
+  end;
+
+procedure TMenu.LotCreer();
+  // --creer <ethnie> <carriere> <nom> : CREER.txt. La fenetre n'est pas liberee (Close la met en file,
+  // le programme s'arrete juste apres).
+  Var
+    Fenetre: TWinCreations;
+    Rapport: TStringList;
+  begin
+    Rapport := TStringList.Create;
+    try
+      Fenetre := TWinCreations.Create(Application);
+      // 5e parametre facultatif : code d'une regle optionnelle (DATA_RULE) a choisir dans le combo
+      if ((ParamCount >= 5) and Fenetre.CreationAuto(ParamStr(2), ParamStr(3), ParamStr(4), Rapport, ParamStr(5)))
+         or ((ParamCount < 5) and Fenetre.CreationAuto(ParamStr(2), ParamStr(3), ParamStr(4), Rapport)) then
+        Rapport.Add('OK : ' + ParamStr(4) + ' enregistre')
+      else
+        Rapport.Add('ECHEC');
+      Rapport.SaveToFile(GetCurrentDir + '\CREER.txt');
+    finally
+      Rapport.Free;
+    end;
+  end;
+
+procedure TMenu.LotDumpPdf();
+  // Meme chemin que LotPdfPersonnages, mais PdfTrace recueille chaque texte ecrit dans le PDF :
+  // <sortie>\<perso>.pdf.txt, une ligne "y= x= texte" (mm), triee de haut en bas puis de gauche a droite.
+  // Le PDF est aussi ecrit (dossier du perso), comme --pdf.
+  Var
+    Ind:        Integer;
+    Chemin:     String;
+    Personnage: StructurePersonnage;
+  begin
+    ForceDirectories(ParamStr(2));
+    PdfSansOuverture := True;
+    for Ind := 3 to ParamCount do
+      begin
+        Chemin := XmlPersonnageFichierActuel(GetCurrentDir+ConstCheminPersonnage+ParamStr(Ind));
+        if Chemin = '' then
+          Continue;
+        Personnage := PersonnageXmlChargement(Chemin);
+        PdfTrace   := TStringList.Create;
+        try
+          if Pos(AjouteAccolade(ConstXmlOptionFeldo2P), Personnage.Options) > 0 then
+            PdfPersonnageCreationFeldo2P(Personnage)
+          else
+            PdfPersonnageCreation(Personnage, true);
+          PdfTrace.Sort;
+          PdfTrace.SaveToFile(IncludeTrailingPathDelimiter(ParamStr(2)) + ParamStr(Ind) + '.pdf.txt');
+        finally
+          FreeAndNil(PdfTrace);
+        end;
+      end;
+  end;
+
+procedure TMenu.LotDumpEcran();
+  Var
+    Ind:     Integer;
+    Sortie:  TStringList;
+    Fenetre: TWinPersonnages;
+  begin
+    ForceDirectories(ParamStr(2));
+    for Ind := 3 to ParamCount do
+      begin
+        NomPersonnage := ParamStr(Ind);
+        Sortie        := TStringList.Create;
+        try
+          Fenetre := TWinPersonnages.Create(Application);
+          try
+            Fenetre.DumpEcran(Sortie);
+          finally
+            Fenetre.Free;
+          end;
+          Sortie.SaveToFile(IncludeTrailingPathDelimiter(ParamStr(2)) + ParamStr(Ind) + '.ecran.txt');
+        finally
+          Sortie.Free;
+        end;
+      end;
+  end;
+
 procedure TMenu.LotDumpPersonnages();
   // Valeurs calculees d un personnage (memes fonctions que l ecran WinPersonnage et le PDF),
   // une ligne par valeur non nulle, dans <sortie>\<dossier personnage>.txt : sert a comparer
@@ -2658,6 +3534,39 @@ procedure TMenu.LotDumpPersonnages();
             end;
           Personnage := PersonnageXmlChargement(Chemin);
           Sortie.Add('PERSONNAGE ' + Personnage.NomPersonnage);
+          // Valeurs STOCKEES dans la fiche (pas de calcul) : identite, naissance, attributs,
+          // competences, equipement. Permet de verifier une creation sans passer par le PDF.
+          Sortie.Add('IDENTITE race=' + Personnage.Race + ' metier=' + Personnage.MetierEnCours.CodeMetier
+            + ' niveau=' + IntToStr(Personnage.MetierEnCours.NiveauMetier) + ' sexe=' + Personnage.SexeV2
+            + ' age=' + IntToStr(Personnage.Age) + ' taille=' + IntToStr(Personnage.Height)
+            + ' poids=' + IntToStr(Personnage.PoidsV2) + ' fratrie=' + Personnage.FratrieV2);
+          Sortie.Add('NAISSANCE ' + Personnage.NaissanceV2 + ' | astre=' + Personnage.AstreV2
+            + ' | signe=' + Personnage.SigneDistinctifV2);
+          for IndA := 0 to High(Personnage.CreationAttribut) do
+            Sortie.Add('STOCK-ATTR-CREATION ' + Personnage.CreationAttribut[IndA].CodeAttribut + ' valeur='
+              + IntToStr(Personnage.CreationAttribut[IndA].Valeur) + ' bonus=' + Personnage.CreationAttribut[IndA].Bonus);
+          for IndA := 0 to High(Personnage.AvanceGratuiteAttribut) do
+            Sortie.Add('STOCK-ATTR-GRATUITE ' + Personnage.AvanceGratuiteAttribut[IndA].CodeAttribut + ' valeur='
+              + IntToStr(Personnage.AvanceGratuiteAttribut[IndA].Valeur));
+          for IndA := 0 to High(Personnage.AugmentationAttribut) do
+            Sortie.Add('STOCK-ATTR-AUGMENTATION ' + Personnage.AugmentationAttribut[IndA].CodeAttribut + ' valeur='
+              + IntToStr(Personnage.AugmentationAttribut[IndA].Valeur));
+          for IndA := 0 to High(Personnage.CreationCompetence35) do
+            Sortie.Add('STOCK-COMP-CREATION35 ' + Personnage.CreationCompetence35[IndA].CodeCompetence + ' valeur='
+              + IntToStr(Personnage.CreationCompetence35[IndA].Valeur));
+          for IndA := 0 to High(Personnage.CreationCompetence40) do
+            Sortie.Add('STOCK-COMP-CREATION40 ' + Personnage.CreationCompetence40[IndA].CodeCompetence + ' valeur='
+              + IntToStr(Personnage.CreationCompetence40[IndA].Valeur));
+          for IndA := 0 to High(Personnage.MetierCompetence) do
+            Sortie.Add('STOCK-COMP-METIER ' + Personnage.MetierCompetence[IndA].CodeCompetence + ' valeur='
+              + IntToStr(Personnage.MetierCompetence[IndA].Valeur));
+          for IndA := 0 to High(Personnage.AugmentationCompetence) do
+            Sortie.Add('STOCK-COMP-AUGMENTATION ' + Personnage.AugmentationCompetence[IndA].CodeCompetence + ' valeur='
+              + IntToStr(Personnage.AugmentationCompetence[IndA].Valeur));
+          for IndA := 0 to High(Personnage.Equipement) do
+            Sortie.Add('STOCK-EQUIPEMENT ' + Personnage.Equipement[IndA].TypeEquipement + ' '
+              + Personnage.Equipement[IndA].CodeEquipement + ' porte=' + BoolToStr(Personnage.Equipement[IndA].Porte, True)
+              + ' source=' + Personnage.Equipement[IndA].Source);
           for IndA := 0 to ListeAttribut.Count - 1 do
             begin
               Code := ListeAttribut[IndA].CodeAttribut;
@@ -2691,6 +3600,25 @@ procedure TMenu.LotDumpPersonnages();
               Ligne('TALENT-AUGMENTATION', PersoTalent.CodeTalent,
                 'asterisque=' + IntToStr(PersonnageTalentAsterisque(Copie, PersoTalent.CodeTalent)) + ' ');
             end;
+          // Niveau de carriere de chaque talent possede (colonne niveau de WinPersonnage).
+          for PersoTalent in Personnage.CreationTalent do
+            Ligne('TALENT-NIVEAU', PersoTalent.CodeTalent,
+              'niveau=' + IntToStr(PersonnageTalentNiveauMetier(Personnage, PersoTalent.CodeTalent)) + ' ');
+          for PersoTalent in Personnage.AugmentationTalent do
+            Ligne('TALENT-NIVEAU', PersoTalent.CodeTalent,
+              'niveau=' + IntToStr(PersonnageTalentNiveauMetier(Personnage, PersoTalent.CodeTalent)) + ' ');
+          // Effets de talent (<Effet Cible=...>) et bonus de degats a distance (<Modificateur>),
+          // memes fonctions que le PDF : Sturdy, Sprinter, Pure Soul, Accurate Shot.
+          Ligne('EFFET', ConstCibleEffetDurACuire, Val('valeur', PersonnageTalentEffet(Personnage, ConstCibleEffetDurACuire)));
+          Ligne('EFFET', ConstCibleEffetBonusEncomb, Val('valeur', PersonnageTalentEffet(Personnage, ConstCibleEffetBonusEncomb)));
+          Ligne('EFFET', ConstCibleEffetBonusSprint, Val('valeur', PersonnageTalentEffet(Personnage, ConstCibleEffetBonusSprint)));
+          Ligne('EFFET', ConstCibleEffetAmePure, Val('valeur', PersonnageTalentEffet(Personnage, ConstCibleEffetAmePure)));
+          for IndA := 0 to ListTalentEffet.Count - 1 do
+            Ligne('EFFET-DEFINI', ListTalentEffet[IndA].CodeTalent, ListTalentEffet[IndA].Cible + ' '
+              + ListTalentEffet[IndA].Forme + ' ' + IntToStr(ListTalentEffet[IndA].Facteur) + ' ');
+          Ligne('CORRUPTION-TOTAL', '-', Val('max', PersonnageCorruptionTotal(Personnage)));
+          Ligne('DEGAT-CT', '-', Val('bonus', PersonnageModificateurUnique(Personnage,
+                                    ConstXmlModifieDegat, ConstCibleModifieDegatCT, '', True)));
           for Mutation in Personnage.Mutations do
             Ligne('MUTATION', Mutation.Code, '[' + PersonnageMutationEffetTexte(Mutation) + ']');
           for Pathologie in Personnage.Pathologies do
@@ -2746,6 +3674,14 @@ var
 begin
 //  For Ind := 1 to TabLivre.RowCount - 1 do
 //  XmlExportBook(TabLivre.Cells[ColLivreCod, Ind], ConstAnglais);
+    // L'export reecrit les livres depuis les listes en memoire, au format V4/V5 : les donnees V2
+    // (sorts, equipement, carrieres...) y sortiraient sous une forme fausse. Rien n'est ecrit en WFRP2.
+    if ValVersion = 'WFRP2' then
+      begin
+        if Sender <> nil then
+          ShowMessage(GetTexteLibelle('RULES-MESS_072'));
+        exit;
+      end;
     if ValLangue = ConstAnglais then
       For PLivreTraduit in ListLivreTraduit do
         begin
@@ -2772,6 +3708,7 @@ procedure TMenu.ChargerPersonnages();
     Ind:           Integer;
     j:             Integer;
     LivreTrouve:   Boolean;
+    NbDossiers:    Integer;
   begin
     // Remise à zéro avant rescan (13/09/2026, CONTEXT.md §2.70) : sans elle, TabPersonnage
     // ne fait qu'ajouter/écraser des lignes au fil des appels - au changement de version,
@@ -2781,11 +3718,27 @@ procedure TMenu.ChargerPersonnages();
     TabPersonnage.RowCount := 1;
     directoryPath := GetCurrentDir + ConstCheminPersonnage;
 
+    // Lecture du XML de chaque personnage = lente : compte d'abord les dossiers pour la
+    // barre de chargement, et fige le dessin de la grille pendant le remplissage (elle se
+    // redessinait a chaque ligne, d'ou une barre « finie » avant le tableau complet).
+    NbDossiers := 0;
+    if FindFirst(directoryPath + DirectorySeparator + '*', faDirectory, searchResult) = 0 then
+      begin
+        repeat
+          if ((searchResult.Attr and faDirectory) = faDirectory) and (searchResult.Name <> '.') and (searchResult.Name <> '..') then
+            Inc(NbDossiers);
+        until FindNext(searchResult) <> 0;
+        FindClose(searchResult);
+      end;
+    ChargementDebut(GetTexteLibelle('RULES-MESS_120'), NbDossiers);
+    TabPersonnage.BeginUpdate;
+    try
     if FindFirst(directoryPath + DirectorySeparator + '*', faDirectory, searchResult) = 0 then
     begin
       repeat
         if ((searchResult.Attr and faDirectory) = faDirectory) and (searchResult.Name <> '.') and (searchResult.Name <> '..') then
         begin
+          ChargementAvance(searchResult.Name);
           i                         := i + 1;
           TabPersonnage.RowCount    := i + 1;
           TabPersonnage.Cells[ColPersoNom, I] := searchResult.Name;
@@ -2802,7 +3755,8 @@ procedure TMenu.ChargerPersonnages();
               TabPersonnage.RowCount := i + 1;
               Continue;
             end;
-          Personnage := PersonnageXmlChargement(Chemin);
+          if not PersonnageResumeFichier(Chemin, Personnage) then
+            Personnage := PersonnageXmlChargement(Chemin);
           PMetier    := chercheMetier(Personnage.MetierEnCours.CodeMetier);
           PRace      := chercheRace(Personnage.Race);
           TabPersonnage.Cells[ColPersoWor, I] := PMetier.Libelle;
@@ -2835,6 +3789,10 @@ procedure TMenu.ChargerPersonnages();
         end;
       until FindNext(searchResult) <> 0;
       FindClose(searchResult);
+    end;
+    finally
+      TabPersonnage.EndUpdate;
+      ChargementFin;
     end;
     AdjustGridColumnsWidth(TabPersonnage, Self.Height, true, true, True, 0, 0);
 

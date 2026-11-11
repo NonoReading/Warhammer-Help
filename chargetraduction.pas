@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, StrUtils, ChargeConstantes, Generics.Collections, LazUTF8,
   ChargeAttribut, ChargeTexte, ChargeCompetence, ChargeTalent, ChargeRace, ChargeEspece, ChargeRegle,
-  ChargeMetier, ChargeArme, ChargeArmeBonus, ChargeArmure, ChargeTrapping, ChargeArmureBonus,
+  ChargeMetier, ChargeMetierNiveau, ChargeArme, ChargeArmeBonus, ChargeArmure, ChargeTrapping, ChargeArmureBonus,
   ChargeSort, ChargeFabrication, ChargeCorruptionTable, ChargeRacePhysique, ChargeDisease, ChargeNation, ChargeArmureSimplifie, ChargeSigneAstral, ChargeAffliction, UnitCalcul;
 
 Type
@@ -26,6 +26,8 @@ Type
     Duration:    string;
     // Champs propres aux signes astraux (ConstPSigneAstral) - Libelle porte Description.
     Titre:        string;
+    // Forme feminine d'un nom de niveau de carriere (ConstPMetierNiveau).
+    Feminin:      string;
     Apparence:    string;
     Personnalite: string;
   end;
@@ -55,6 +57,29 @@ var
 
 implementation
 
+// Meme resultat que CompareRechercheValeur (code et livre egaux apres decoupe au premier
+// separateur), sans allocation ni mise a jour des variables globales de decoupe : Traduit
+// compare chaque traduction a chaque element de liste (millions de comparaisons au
+// demarrage). Deux chaines differentes ne peuvent avoir la meme decoupe que si l'une a un
+// separateur en toute premiere position (livre vide) et l'autre aucun.
+function CodesEgaux(const A, B: String): Boolean;
+  var
+    PA, PB: Integer;
+  begin
+    if A = B then
+      Exit(True);
+    PA := Pos(SeparateurLivre, A);
+    PB := Pos(SeparateurLivre, B);
+    if (PA > 0) = (PB > 0) then
+      Exit(False);
+    if PA = 1 then
+      Result := Copy(A, 1 + Length(SeparateurLivre), MaxInt) = B
+    else if PB = 1 then
+      Result := Copy(B, 1 + Length(SeparateurLivre), MaxInt) = A
+    else
+      Result := False;
+  end;
+
 Function InitTrad(TypeDonnee: String; Code: String; Code2: String; Livre: String): StructureTraduction;
   Var
     PTraduction: StructureTraduction;
@@ -73,6 +98,7 @@ Function InitTrad(TypeDonnee: String; Code: String; Code2: String; Livre: String
     PTraduction.Incubation   := '';
     PTraduction.Duration     := '';
     PTraduction.Titre        := '';
+    PTraduction.Feminin      := '';
     PTraduction.Apparence    := '';
     PTraduction.Personnalite := '';
 
@@ -253,7 +279,7 @@ procedure TraduitAttribut(const PTraduction: StructureTraduction);
     PAttribut: StructureAttribut;
   begin
   for Ind :=0 to ListeAttribut.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListeAttribut[Ind].CodeAttribut) then
+    if CodesEgaux(PTraduction.Code, ListeAttribut[Ind].CodeAttribut) then
       begin
         PAttribut             := ListeAttribut[Ind];
         PAttribut.Description := PTraduction.Description;
@@ -269,7 +295,7 @@ procedure TraduitTexte(const PTraduction: StructureTraduction);
     PTexte: StructureTexte;
   begin
   for Ind :=0 to ListTexte.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListTexte[Ind].Code) then
+    if CodesEgaux(PTraduction.Code, ListTexte[Ind].Code) then
       begin
         PTexte             := ListTexte[Ind];
         PTexte.Libelle     := PTraduction.Libelle;
@@ -283,7 +309,7 @@ procedure TraduitCompetence(const PTraduction: StructureTraduction);
     PCompetence: StructureCompetence;
   begin
   for Ind :=0 to ListCompetence.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListCompetence[Ind].CodeCompetence) then
+    if CodesEgaux(PTraduction.Code, ListCompetence[Ind].CodeCompetence) then
       begin
         PCompetence             := ListCompetence[Ind];
         PCompetence.Description := PTraduction.Description;
@@ -298,7 +324,7 @@ procedure TraduitTalent(const PTraduction: StructureTraduction);
     PTalent: StructureTalent;
   begin
   for Ind :=0 to ListTalent.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListTalent[Ind].CodeTalent) then
+    if CodesEgaux(PTraduction.Code, ListTalent[Ind].CodeTalent) then
       begin
         PTalent             := ListTalent[Ind];
         PTalent.Description := PTraduction.Description;
@@ -315,7 +341,7 @@ procedure TraduitRace(const PTraduction: StructureTraduction);
     PRace: StructureRace;
   begin
   for Ind :=0 to ListRace.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListRace[Ind].CodeRace) then
+    if CodesEgaux(PTraduction.Code, ListRace[Ind].CodeRace) then
       begin
         PRace             := ListRace[Ind];
         PRace.Description := PTraduction.Description;
@@ -330,7 +356,7 @@ procedure TraduitEspece(const PTraduction: StructureTraduction);
     PEspece: StructureEspece;
   begin
   for Ind :=0 to ListEspece.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListEspece[Ind].CodeEspece) then
+    if CodesEgaux(PTraduction.Code, ListEspece[Ind].CodeEspece) then
       begin
         PEspece            := ListEspece[Ind];
         PEspece.Libelle    := PTraduction.Libelle;
@@ -344,10 +370,12 @@ procedure TraduitRegle(const PTraduction: StructureTraduction);
     PRegle: StructureRegle;
   begin
   for Ind :=0 to ListRegle.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListRegle[Ind].CodeRegle) then
+    if CodesEgaux(PTraduction.Code, ListRegle[Ind].CodeRegle) then
       begin
         PRegle             := ListRegle[Ind];
         PRegle.Libelle     := PTraduction.Libelle;
+        if PTraduction.Description <> '' then
+          PRegle.Explication := PTraduction.Description;
         ListRegle[Ind]     := PRegle;
       end;
   end;
@@ -358,12 +386,29 @@ procedure TraduitMetier(const PTraduction: StructureTraduction);
     PMetier: StructureMetier;
   begin
   for Ind :=0 to ListMetier.Count - 1 do
-    if CompareRechercheValeur(ListMetier[Ind].CodeMetier, PTraduction.Code) then
+    if CodesEgaux(ListMetier[Ind].CodeMetier, PTraduction.Code) then
       begin
         PMetier             := ListMetier[Ind];
         PMetier.Description := PTraduction.Description;
         PMetier.Libelle     := PTraduction.Libelle;
         ListMetier[Ind]     := PMetier;
+      end;
+  end;
+
+// Nom d'un niveau de carriere (Code = "CodeMetier Niveau", voir InitTrad au chargement du
+// metier). Libelle = forme masculine / de repli, Feminin = forme feminine ('' = aucune).
+procedure TraduitMetierNiveau(const PTraduction: StructureTraduction);
+  var
+    Ind: Integer;
+    PMetierNiveau: StructureMetierNiveau;
+  begin
+  for Ind := 0 to ListMetierNiveau.Count - 1 do
+    if CodesEgaux(ListMetierNiveau[Ind].CodeMetier + ' ' + IntToStr(ListMetierNiveau[Ind].NiveauMetier), PTraduction.Code) then
+      begin
+        PMetierNiveau                := ListMetierNiveau[Ind];
+        PMetierNiveau.Libelle        := PTraduction.Libelle;
+        PMetierNiveau.LibelleFeminin := PTraduction.Feminin;
+        ListMetierNiveau[Ind]        := PMetierNiveau;
       end;
   end;
 
@@ -373,7 +418,7 @@ procedure TraduitArme(const PTraduction: StructureTraduction);
     PArme: StructureArme;
   begin
   for Ind :=0 to ListArme.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListArme[Ind].CodeArme) then
+    if CodesEgaux(PTraduction.Code, ListArme[Ind].CodeArme) then
       begin
         PArme             := ListArme[Ind];
         PArme.Libelle     := PTraduction.Libelle;
@@ -387,7 +432,7 @@ procedure TraduitArmeBonus(const PTraduction: StructureTraduction);
     PArmeBonus: StructureArmeBonus;
   begin
   for Ind :=0 to ListArmeBonus.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListArmeBonus[Ind].CodeArmeBonus) then
+    if CodesEgaux(PTraduction.Code, ListArmeBonus[Ind].CodeArmeBonus) then
       begin
         PArmeBonus             := ListArmeBonus[Ind];
         PArmeBonus.Description := PTraduction.Description;
@@ -403,7 +448,7 @@ procedure TraduitArmure(const PTraduction: StructureTraduction);
     PArmure: StructureArmure;
   begin
   for Ind :=0 to ListArmure.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListArmure[Ind].CodeArmure) then
+    if CodesEgaux(PTraduction.Code, ListArmure[Ind].CodeArmure) then
       begin
         PArmure             := ListArmure[Ind];
         PArmure.Libelle     := PTraduction.Libelle;
@@ -417,7 +462,7 @@ procedure TraduitTrapping(const PTraduction: StructureTraduction);
     PTrapping: StructureTrapping;
   begin
   for Ind :=0 to ListTrapping.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListTrapping[Ind].CodeTrapping) then
+    if CodesEgaux(PTraduction.Code, ListTrapping[Ind].CodeTrapping) then
       begin
         PTrapping             := ListTrapping[Ind];
         PTrapping.Libelle     := PTraduction.Libelle;
@@ -431,7 +476,7 @@ procedure TraduitArmureBonus(const PTraduction: StructureTraduction);
     PArmureBonus: StructureArmureBonus;
   begin
   for Ind :=0 to ListArmureBonus.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListArmureBonus[Ind].CodeArmureBonus) then
+    if CodesEgaux(PTraduction.Code, ListArmureBonus[Ind].CodeArmureBonus) then
       begin
         PArmureBonus             := ListArmureBonus[Ind];
         PArmureBonus.Description := PTraduction.Description;
@@ -446,7 +491,7 @@ procedure TraduitSort(const PTraduction: StructureTraduction);
     PSort: StructureSort;
   begin
   for Ind :=0 to ListSort.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListSort[Ind].CodeSort) then
+    if CodesEgaux(PTraduction.Code, ListSort[Ind].CodeSort) then
       begin
         PSort             := ListSort[Ind];
         PSort.Description := PTraduction.Description;
@@ -461,7 +506,7 @@ procedure TraduitFabrication(const PTraduction: StructureTraduction);
     PFabrication: StructureFabrication;
   begin
   for Ind :=0 to ListFabrication.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListFabrication[Ind].CodeFabrication) then
+    if CodesEgaux(PTraduction.Code, ListFabrication[Ind].CodeFabrication) then
       begin
         PFabrication             := ListFabrication[Ind];
         PFabrication.Description := PTraduction.Description;
@@ -481,7 +526,7 @@ procedure TraduitCorruptionTable(const PTraduction: StructureTraduction);
   // catalogues (Talents, Races, ...). Avant ce pivot, Code était une clé composée
   // TypeCorruption+Chance (plage D100), incompatible avec CompareRechercheValeur.
   for Ind :=0 to ListCorruptionTable.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListCorruptionTable[Ind].Code) then
+    if CodesEgaux(PTraduction.Code, ListCorruptionTable[Ind].Code) then
       begin
         PCorruptionTable         := ListCorruptionTable[Ind];
         PCorruptionTable.Libelle := PTraduction.Libelle;
@@ -496,7 +541,7 @@ procedure TraduitDisease(const PTraduction: StructureTraduction);
     PDisease: StructureDisease;
   begin
   for Ind :=0 to ListDisease.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListDisease[Ind].Code) then
+    if CodesEgaux(PTraduction.Code, ListDisease[Ind].Code) then
       begin
         PDisease             := ListDisease[Ind];
         PDisease.Libelle     := PTraduction.Libelle;
@@ -514,7 +559,7 @@ procedure TraduitNation(const PTraduction: StructureTraduction);
     PNation: StructureNation;
   begin
   for Ind :=0 to ListNation.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListNation[Ind].CodeNation) then
+    if CodesEgaux(PTraduction.Code, ListNation[Ind].CodeNation) then
       begin
         PNation         := ListNation[Ind];
         PNation.Libelle := PTraduction.Libelle;
@@ -528,7 +573,7 @@ procedure TraduitArmureSimplifiee(const PTraduction: StructureTraduction);
     PArmureSimp: StructureArmureSimplifiee;
   begin
   for Ind :=0 to ListArmureSimplifiee.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListArmureSimplifiee[Ind].CodeArmure) then
+    if CodesEgaux(PTraduction.Code, ListArmureSimplifiee[Ind].CodeArmure) then
       begin
         PArmureSimp         := ListArmureSimplifiee[Ind];
         PArmureSimp.Libelle := PTraduction.Libelle;
@@ -542,7 +587,7 @@ procedure TraduitTrait(const PTraduction: StructureTraduction);
     PTrait: StructureTrait;
   begin
   for Ind :=0 to ListTrait.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListTrait[Ind].CodeTrait) then
+    if CodesEgaux(PTraduction.Code, ListTrait[Ind].CodeTrait) then
       begin
         PTrait         := ListTrait[Ind];
         PTrait.Libelle := PTraduction.Libelle;
@@ -556,7 +601,7 @@ procedure TraduitTraitOption(const PTraduction: StructureTraduction);
     PTraitOption: StructureTraitOption;
   begin
   for Ind :=0 to ListTraitOption.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListTraitOption[Ind].CodeOption) then
+    if CodesEgaux(PTraduction.Code, ListTraitOption[Ind].CodeOption) then
       begin
         PTraitOption         := ListTraitOption[Ind];
         PTraitOption.Libelle := PTraduction.Libelle;
@@ -570,7 +615,7 @@ procedure TraduitCareerBonus(const PTraduction: StructureTraduction);
     PCareerBonus: StructureCareerBonus;
   begin
   for Ind :=0 to ListCareerBonus.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListCareerBonus[Ind].CodeBonus) then
+    if CodesEgaux(PTraduction.Code, ListCareerBonus[Ind].CodeBonus) then
       begin
         PCareerBonus         := ListCareerBonus[Ind];
         PCareerBonus.Libelle := PTraduction.Libelle;
@@ -584,7 +629,7 @@ procedure TraduitAdaptation(const PTraduction: StructureTraduction);
     PAdaptation: StructureCareerAdaptation;
   begin
   for Ind :=0 to ListCareerAdaptation.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListCareerAdaptation[Ind].CodeAdaptation) then
+    if CodesEgaux(PTraduction.Code, ListCareerAdaptation[Ind].CodeAdaptation) then
       begin
         PAdaptation         := ListCareerAdaptation[Ind];
         PAdaptation.Libelle := PTraduction.Libelle;
@@ -598,7 +643,7 @@ procedure TraduitSigneAstral(const PTraduction: StructureTraduction);
     PSigne: StructureSigneAstral;
   begin
   for Ind :=0 to ListSigneAstral.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListSigneAstral[Ind].CodeSigne) then
+    if CodesEgaux(PTraduction.Code, ListSigneAstral[Ind].CodeSigne) then
       begin
         PSigne              := ListSigneAstral[Ind];
         PSigne.Libelle      := PTraduction.Libelle;
@@ -615,7 +660,7 @@ procedure TraduitAffliction(const PTraduction: StructureTraduction);
     PAffliction: StructureAffliction;
   begin
   for Ind :=0 to ListAffliction.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code, ListAffliction[Ind].Code) then
+    if CodesEgaux(PTraduction.Code, ListAffliction[Ind].Code) then
       begin
         PAffliction         := ListAffliction[Ind];
         PAffliction.Libelle := PTraduction.Libelle;
@@ -632,7 +677,7 @@ procedure TraduitRaceCouleur(const PTraduction: StructureTraduction);
   // Code = "CodeRace Y|H Plage" (Y = yeux, H = cheveux) : la couleur n'a pas de code
   // propre, la plage de la table 2d10 l'identifie dans son ethnie.
   for Ind :=0 to ListRaceCouleur.Count - 1 do
-    if CompareRechercheValeur(PTraduction.Code,
+    if CodesEgaux(PTraduction.Code,
          ListRaceCouleur[Ind].CodeRace + ' ' + IfThen(ListRaceCouleur[Ind].EstYeux, 'Y', 'H')
          + '|' + ListRaceCouleur[Ind].Plage) then
       begin
@@ -665,6 +710,7 @@ Procedure Traduit(Langue: String; Livre: String);
               ConstPEspece: TraduitEspece(PTraduction);
               ConstPRegle: TraduitRegle(PTraduction);
               ConstPMetier: TraduitMetier(PTraduction);
+              ConstPMetierNiveau: TraduitMetierNiveau(PTraduction);
               ConstPArme: TraduitArme(PTraduction);
               ConstPArmeBonus: TraduitArmeBonus(PTraduction);
               ConstPArmure: TraduitArmure(PTraduction);
@@ -684,7 +730,6 @@ Procedure Traduit(Langue: String; Livre: String);
               ConstPAffliction: TraduitAffliction(PTraduction);
               ConstPRaceCouleur: TraduitRaceCouleur(PTraduction);
             end;
-
   end;
 
 end.

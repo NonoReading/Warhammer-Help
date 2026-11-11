@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"RUNX"</CODE_BOOK>
+<BOOK>"BOOK RUNE EXPANSION"</BOOK>
+<BOOKNAME>"RUNE EXPANSION - WFRP2"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"This document is completely unofficial and in no way endorsed by Games Workshop Limited. Warhammer Fantasy Roleplay, the Warhammer Fantasy Roleplay logo, WFRP, Chaos, the Chaos device, the Chaos logo, Citadel, Citadel Device, Darkblade, 'Eavy Metal, Forge World, Games Workshop, Games Workshop logo, Golden Demon, Great Unclean One, GW, the Hammer of Sigmar logo, Horned Rat logo, Keeper of Secrets, Khemri, Khorne, the Khorne logo, Lord of Change, Nurgle, the Nurgle logo, Skaven, the Skaven symbol device, Slaanesh, the Slaanesh logo, Tomb Kings, Tzeentch, the Tzeentch logo, Warhammer, Warhammer World logo, White Dwarf, the White Dwarf logo, and all associated marks, names, races, race insignia, characters, vehicles, locations, units, artefacts, illustrations and images from the Warhammer world are either ®, TM and/or © Copyright Games Workshop Ltd 2000-2016, variably registered in the UK and other countries around the world. Used without"</DISCLAIMER>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="RUNX-EQUI_RUNES_MASTER_RUNE_OF_DRAGONBANE">
+<Description language="ENGLISH">"Master Rune of Dragonbane"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_WEAPON_RUNES"</SubCategory>
+<Page>"9"</Page>
+<RuneType>"RULES-V2RUNE_WEAPON"</RuneType>
+<InscriptionNumber>"35"</InscriptionNumber>
+<Empowerment>"12"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>""</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="RUNX-EQUI_RUNES_MASTER_RUNE_OF_ELEMENTALISM">
+<Description language="ENGLISH">"Master Rune of Elementalism"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_CONSTRUCT_RUNES"</SubCategory>
+<Page>"9"</Page>
+<RuneType>"RULES-V2RUNE_CONSTRUCT"</RuneType>
+<InscriptionNumber>"30"</InscriptionNumber>
+<Empowerment>"10"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"As permanent, but the elemental is summoned only once and then the rune is useless."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="RUNX-EQUI_RUNES_MASTER_RUNE_OF_MECHANICAL_HAND">
+<Description language="ENGLISH">"Master Rune of Mechanical Hand"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_TOOL_RUNES"</SubCategory>
+<Page>"10"</Page>
+<RuneType>"RULES-V2RUNE_TOOL"</RuneType>
+<InscriptionNumber>"25"</InscriptionNumber>
+<Empowerment>"6"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>""</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="RUNX-EQUI_RUNES_MASTER_RUNE_OF_SLAYING">
+<Description language="ENGLISH">"Master Rune of Slaying"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_WEAPON_RUNES"</SubCategory>
+<Page>"11"</Page>
+<RuneType>"RULES-V2RUNE_WEAPON"</RuneType>
+<InscriptionNumber>"30"</InscriptionNumber>
+<Empowerment>"9"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>""</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="RUNX-EQUI_RUNES_MASTER_RUNE_OF_UNBINDING">
+<Description language="ENGLISH">"Master Rune of Unbinding"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_WEAPON_RUNES"</SubCategory>
+<Page>"11"</Page>
+<RuneType>"RULES-V2RUNE_WEAPON"</RuneType>
+<InscriptionNumber>"30"</InscriptionNumber>
+<Empowerment>"9"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"-"</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="RUNX-EQUI_RUNES_MASTER_RUNE_OF_WAKING">
+<Description language="ENGLISH">"Master Rune of Waking"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_CONSTRUCT_RUNES"</SubCategory>
+<Page>"12"</Page>
+<RuneType>"RULES-V2RUNE_CONSTRUCT"</RuneType>
+<InscriptionNumber>"30"</InscriptionNumber>
+<Empowerment>"10"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>""</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="RUNX-EQUI_RUNES_MASTER_RUNE_OF_WARDING">
+<Description language="ENGLISH">"Master Rune of Warding"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_CONSTRUCT_RUNES"</SubCategory>
+<Page>"12"</Page>
+<RuneType>"RULES-V2RUNE_CONSTRUCT"</RuneType>
+<InscriptionNumber>"25"</InscriptionNumber>
+<Empowerment>"8"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>""</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="RUNX-EQUI_RUNES_RUNE_OF_BANE">
+<Description language="ENGLISH">"Rune of Bane"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_WEAPON_RUNES"</SubCategory>
+<Page>"13"</Page>
+<RuneType>"RULES-V2RUNE_WEAPON"</RuneType>
+<InscriptionNumber>"14"</InscriptionNumber>
+<Empowerment>"4"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>""</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="RUNX-EQUI_RUNES_RUNE_OF_BRAVERY">
+<Description language="ENGLISH">"Rune of Bravery"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_ARMOUR_RUNES"</SubCategory>
+<Page>"13"</Page>
+<RuneType>"RULES-V2RUNE_ARMOUR"</RuneType>
+<InscriptionNumber>"20"</InscriptionNumber>
+<Empowerment>"5"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>""</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="RUNX-EQUI_RUNES_RUNE_OF_COURAGE">
+<Description language="ENGLISH">"Rune of Courage"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_PROTECTION_RUNES"</SubCategory>
+<Page>"14"</Page>
+<RuneType>"RULES-V2RUNE_PROTECTION"</RuneType>
+<InscriptionNumber>"20"</InscriptionNumber>
+<Empowerment>"5"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>""</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="RUNX-EQUI_RUNES_RUNE_OF_CHAOS_WARDING">
+<Description language="ENGLISH">"Rune of Chaos-Warding"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_TALISMANIC_RUNES"</SubCategory>
+<Page>"14"</Page>
+<RuneType>"RULES-V2RUNE_TALISMANIC"</RuneType>
+<InscriptionNumber>"15"</InscriptionNumber>
+<Empowerment>"4"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>""</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="RUNX-EQUI_RUNES_RUNE_OF_DRAGON_PROTECTION">
+<Description language="ENGLISH">"Rune of Dragon Protection"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_TALISMANIC_RUNES"</SubCategory>
+<Page>"15"</Page>
+<RuneType>"RULES-V2RUNE_TALISMANIC"</RuneType>
+<InscriptionNumber>"20"</InscriptionNumber>
+<Empowerment>"8"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>""</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="RUNX-EQUI_RUNES_RUNE_OF_ELEMENTALISM">
+<Description language="ENGLISH">"Rune of Elementalism"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_CONSTRUCT_RUNES"</SubCategory>
+<Page>"15"</Page>
+<RuneType>"RULES-V2RUNE_CONSTRUCT"</RuneType>
+<InscriptionNumber>"20"</InscriptionNumber>
+<Empowerment>"8"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"As permanent, but the elemental is summoned only once and then the rune is useless."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="RUNX-EQUI_RUNES_RUNE_OF_FIRE_REVISED">
+<Description language="ENGLISH">"Rune of Fire (revised)"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_WEAPON_RUNES"</SubCategory>
+<Page>"16"</Page>
+<RuneType>"RULES-V2RUNE_WEAPON"</RuneType>
+<InscriptionNumber>"17"</InscriptionNumber>
+<Empowerment>"5"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>""</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="RUNX-EQUI_RUNES_RUNE_OF_FIRE_PROTECTION">
+<Description language="ENGLISH">"Rune of Fire-Protection"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_ARMOUR_RUNES"</SubCategory>
+<Page>"16"</Page>
+<RuneType>"RULES-V2RUNE_ARMOUR"</RuneType>
+<InscriptionNumber>"17"</InscriptionNumber>
+<Empowerment>"8"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>""</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="RUNX-EQUI_RUNES_RUNE_OF_STAMINA">
+<Description language="ENGLISH">"Rune of Stamina"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_WEAPON_RUNES"</SubCategory>
+<Page>"17"</Page>
+<RuneType>"RULES-V2RUNE_WEAPON"</RuneType>
+<InscriptionNumber>"20"</InscriptionNumber>
+<Empowerment>"7"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>""</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="RUNX-EQUI_RUNES_RUNE_OF_UNBINDING">
+<Description language="ENGLISH">"Rune of Unbinding"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_WEAPON_RUNES"</SubCategory>
+<Page>"17"</Page>
+<RuneType>"RULES-V2RUNE_WEAPON"</RuneType>
+<InscriptionNumber>"15"</InscriptionNumber>
+<Empowerment>"5"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>""</TemporaryEffect>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+</DATA_BOOK>

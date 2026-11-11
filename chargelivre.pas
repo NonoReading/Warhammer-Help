@@ -15,6 +15,9 @@ Type
     Officiel:           Integer;
     Complet:            Integer;
     Disclaimer:         String;
+    // <BOOKNAME> de l'en-tete (nom d'affichage sans "BOOK "), vide si absent ; sert de repli a
+    // GetTexteLibelle quand le livre n'a pas de libelle traduit.
+    NomAffichage:       String;
 end;
 
   TListLivre = specialize TList<StructureLivre>;

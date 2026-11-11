@@ -1,0 +1,1798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"COTO"</CODE_BOOK>
+<BOOK>"BOOK CHILDREN OF THE OLD ONES"</BOOK>
+<BOOKNAME>"CHILDREN OF THE OLD ONES - LIZARDMAN RULES FOR WFRP"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"Copyright © Games Workshop Ltd 2007. Games Workshop, the Games Workshop Logo, Black Industries, and their respective logos, Warhammer and all associated marks, logos, places, names, creatures, races, and race insignias / devices / logos / symbols, locations, weapons, units, characters, products, illustrations and images from Warhammer are either ®, TM and/or © Games Workshop Ltd 2000-2007, variably registered in the UK and other countries around the world. All Rights Reserved."</DISCLAIMER>
+<DATA_TALENT>
+<Talent id="COTO-T_INTUITIVE_CASTING">
+<Description language="ENGLISH">"Intuitive Casting"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"5"</Page>
+</Talent>
+<Talent id="COTO-T_HIGH_MAGIC">
+<Description language="ENGLISH">"High Magic"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"5"</Page>
+</Talent>
+<Talent id="COTO-T_THE_DARK_HAS_NO_POWER">
+<Description language="ENGLISH">"The Dark Has No Power"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"6"</Page>
+</Talent>
+<Talent id="COTO-T_TRUE_MAGIC">
+<Description language="ENGLISH">"True Magic"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"6"</Page>
+</Talent>
+<Talent id="COTO-T_DISEMBODIED">
+<Description language="ENGLISH">"Disembodied"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"7"</Page>
+</Talent>
+<Talent id="COTO-T_POSSESSION">
+<Description language="ENGLISH">"Possession"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"7"</Page>
+</Talent>
+<Talent id="COTO-T_WITCHCRAFT_COTO">
+<Description language="ENGLISH">"Witchcraft"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"17"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_CAREER>
+<Career id="COTO-CARE_SLANN_OF_THE_FIFTH_SPAWNING">
+<Description language="ENGLISH">"Slann of the Fifth Spawning"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, S +5%, T +5%, Int +10%, WP +5%"</MainProfile>
+<SecondaryProfile>"W +2, Mag +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_Mag">"1"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Astronomy), Academic Knowledge (Magick), Academic Knowledge (Theology), Academic Knowledge (Any Two), Channelling, Command, Common Knowledge (Lustria or The Southlands), Common Knowledge (Any Three), Intimidate, Magical Sense, Perception, Read/Write, Speak Arcane Language (Daemonic or Arcane Elf), Speak Arcane Language (Magick)"</Skills>
+<Talents>"Aethyric Attunement, Fast Hands or Mighty Missile, Intuitive Casting, Luck, Meditation, Stout Hearted, Strong Minded"</Talents>
+<Trappings>"Obsinite Best Craftsmanship Mace, 2 Magic Items, 1000 crowns jewellery"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ASTRONOMY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_LUSTRIA/RULES-COMP_COMMON_KNOWLEDGE_THE_SOUTHLANDS">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_DAEMONIC/RULES-COMP_SPEAK_ARCANE_LANGUAGE_ARCANE_ELF">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="JCE-T_INTUITIVE_CASTING">"1"</Talent>
+<Talent name="RULES-T_LUCK">"1"</Talent>
+<Talent name="RULES-T_MEDITATION">"1"</Talent>
+<Talent name="RULES-T_STOUT_HEARTED">"1"</Talent>
+<Talent name="RULES-T_STRONG_MINDED">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 4"</Source>
+</Career>
+<Career id="COTO-CARE_SLANN_OF_THE_FOURTH_SPAWNING">
+<Description language="ENGLISH">"Slann of the Fourth Spawning"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, S +10%, T +5%, Int +20%, WP +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +4, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Astronomy or Theology), Academic Knowledge (Magick), Academic Knowledge (Any Four), Channelling, Charm or Intimidate, Command, Common Knowledge (Lustria or The Southlands), Common Knowledge (Any Four), Magical Sense, Perception, Speak Arcane Language (Arcane Elf), Speak Arcane Language (Daemonic), Speak Arcane Language (Magick), Speak Language (Any Two)"</Skills>
+<Talents>"Arcane Lore (High), Etiquette or Menacing, Fast Hands or Hardy, Fearless, High Magic, Savvy or Mighty Missile, Sixth Sense"</Talents>
+<Trappings>"3 Magic Items"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ASTRONOMY/RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_LUSTRIA/RULES-COMP_COMMON_KNOWLEDGE_THE_SOUTHLANDS">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ARCANE_ELF">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_DAEMONIC">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ARCANE_LORE__HIGH">"1"</Talent>
+<Talent name="RULES-T_ETIQUETTE/RULES-T_MENACING">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_HARDY">"1"</Talent>
+<Talent name="RULES-T_FEARLESS">"1"</Talent>
+<Talent name="JCE-T_HIGH_MAGIC">"1"</Talent>
+<Talent name="RULES-T_SAVVY/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="RULES-T_SIXTH_SENSE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 5"</Source>
+</Career>
+<Career id="COTO-CARE_SLANN_OF_THE_THIRD_SPAWNING">
+<Description language="ENGLISH">"Slann of the Third Spawning"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +5%, S +15%, T +10%, Ag +5%, Int +30%, WP +15%"</MainProfile>
+<SecondaryProfile>"A +1, W +6, Mag +3"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"15"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+<Advance name="RULES-ATTR_Mag">"3"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Any Five), Channelling, Charm or Intimidate, Common Knowledge (Any Six), Speak Arcane Language (Any Two), Speak Language (Any Four)"</Skills>
+<Talents>"Acute Hearing or Excellent Vision, Etiquette or Public Speaking, Hardy or Suave, Menacing or Unsettling, Resistance to Chaos, The Dark Has No Power, Will of Iron"</Talents>
+<Trappings>"4 Magic Items"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ACUTE_HEARING/RULES-T_EXCELLENT_VISION">"1"</Talent>
+<Talent name="RULES-T_ETIQUETTE/RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+<Talent name="RULES-T_HARDY/RULES-T_SUAVE">"1"</Talent>
+<Talent name="RULES-T_MENACING/RULES-T_UNSETTLING">"1"</Talent>
+<Talent name="RULES-T_RESISTANCE_TO_CHAOS">"1"</Talent>
+<Talent name="JCE-T_THE_DARK_HAS_NO_POWER">"1"</Talent>
+<Talent name="OWB-T_WILL_OF_IRON">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 5"</Source>
+</Career>
+<Career id="COTO-CARE_SLANN_OF_THE_SECOND_SPAWNING">
+<Description language="ENGLISH">"Slann of the Second Spawning"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, BS +10%, S +20%, T +15%, Ag +10%, Int +40%, WP +25%"</MainProfile>
+<SecondaryProfile>"A +2, W +8, Mag +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"20"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"40"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"8"</Advance>
+<Advance name="RULES-ATTR_Mag">"4"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Any Six), Common Knowledge (Any Eight), Speak Arcane Language (Any Two), Speak Language (Any Six)"</Skills>
+<Talents>"Acute Hearing, Excellent Vision, Lightning Parry, True Magic"</Talents>
+<Trappings>"5 Magic Items"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ACUTE_HEARING">"1"</Talent>
+<Talent name="RULES-T_EXCELLENT_VISION">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_PARRY">"1"</Talent>
+<Talent name="COTO-T_TRUE_MAGIC">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 6"</Source>
+</Career>
+<Career id="COTO-CARE_VENERABLE_LORD">
+<Description language="ENGLISH">"Venerable Lord"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"T +10%, Int +10%, WP +10%"</MainProfile>
+<SecondaryProfile>"W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>""</Skills>
+<Talents>"Disembodied, Possession, Terrifying, Undead"</Talents>
+<Trappings>"Ceremonial Death Mask, 5000 crowns jewellery"</Trappings>
+<SUBCHAPTER_SKILL>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="COTO-T_DISEMBODIED">"1"</Talent>
+<Talent name="COTO-T_POSSESSION">"1"</Talent>
+<Talent name="RULES-T_TERRIFYING">"1"</Talent>
+<Talent name="RULES-T_UNDEAD">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 6"</Source>
+</Career>
+<Career id="COTO-CARE_LEGIONNAIRE">
+<Description language="ENGLISH">"Legionnaire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, S +5%, T +5%, Ag +5%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Dodge Blow, Perception or Search"</Skills>
+<Talents>"Disarm or Quick Draw, Strike Mighty Blow, Strike to Stun"</Talents>
+<Trappings>"Bronze Shield, Bronze Spear or Obsinite Handweapon"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION/RULES-COMP_SEARCH">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_DISARM/RULES-T_QUICK_DRAW">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_STUN">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"COTO 11"</Source>
+</Career>
+<Career id="COTO-CARE_COLD_ONE_RIDER">
+<Description language="ENGLISH">"Cold One Rider"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, S +10%, T +10%, Ag +15%, Int +5%, WP +15%"</MainProfile>
+<SecondaryProfile>"W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Animal Care, Animal Training, Follow Trail, Navigation, Perception, Ride"</Skills>
+<Talents>"Coolheaded or Very Strong, Specialist Weapon Group (Cavalry)"</Talents>
+<Trappings>"Bronze Shield, Cold One with Saddle and Harness, Obsinite Spear or Lance"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_COOLHEADED/RULES-T_VERY_STRONG">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__CAVALRY">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 11"</Source>
+</Career>
+<Career id="COTO-CARE_OLDBLOOD">
+<Description language="ENGLISH">"Oldblood"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +40%, S +25%, T +25%, Ag +25%, Int +20%, WP +20%, Fel +20%"</MainProfile>
+<SecondaryProfile>"A +2, W +8"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"40"</Advance>
+<Advance name="RULES-ATTR_S">"25"</Advance>
+<Advance name="RULES-ATTR_T">"25"</Advance>
+<Advance name="RULES-ATTR_Ag">"25"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"8"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Strategy/Tactics), Command, Dodge Blow, Intimidate, Perception, Ride, Secret Signs (Slann Hieroglyphs), Torture"</Skills>
+<Talents>"Ambidextrous or Swashbuckler, Fleet Footed or Lightening Reflexes, Hardy or Very Resilient, Luck or Sixth Sense, Resistance to Chaos, Specialist Weapon Group (Cavalry) or Specialist Weapon Group (Flail), Specialist Weapon Group (Two Handed), Wrestling"</Talents>
+<Trappings>"Bone Helmet, Full Bronze Plate, Best Craftmanship Obsinite Handweapon"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_STRATEGY/RULES-COMP_ACADEMIC_KNOWLEDGE_TACTICS">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_SIGNS_SLANN_HIEROGLYPHS">"1"</Skill>
+<Skill name="RULES-COMP_TORTURE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AMBIDEXTROUS/RULES-T_SWASHBUCKLER">"1"</Talent>
+<Talent name="RULES-T_FLEET_FOOTED/RULES-T_LIGHTNING_REFLEXES">"1"</Talent>
+<Talent name="RULES-T_HARDY/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="RULES-T_LUCK/RULES-T_SIXTH_SENSE">"1"</Talent>
+<Talent name="RULES-T_RESISTANCE_TO_CHAOS">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__CAVALRY/RULES-T_SPECIALIST_WEAPON_GROUP__FLAIL">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED">"1"</Talent>
+<Talent name="RULES-T_WRESTLING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 12"</Source>
+</Career>
+<Career id="COTO-CARE_REVERED_GUARDIAN">
+<Description language="ENGLISH">"Revered Guardian"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, S +20%, T +20%, Ag +20%, Int +15%, WP +15%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +2, W +6"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"20"</Advance>
+<Advance name="RULES-ATTR_T">"20"</Advance>
+<Advance name="RULES-ATTR_Ag">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Theology), Academic Knowledge (Astrology or Strategy/Tactics), Command, Dodge Blow, Intimidate, Perception, Secret Signs (Slann Hieroglyphs), Torture"</Skills>
+<Talents>"Fearless, Frenzy, Lightening Reflexes or Warrior Born, Luck, Specialist Weapon Group (Flail), Street Fighting or Wrestling, Very Strong"</Talents>
+<Trappings>"Full Bone Armour"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ASTROLOGY/RULES-COMP_ACADEMIC_KNOWLEDGE_STRATEGY/RULES-COMP_ACADEMIC_KNOWLEDGE_TACTICS">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_SIGNS_SLANN_HIEROGLYPHS">"1"</Skill>
+<Skill name="RULES-COMP_TORTURE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_FEARLESS">"1"</Talent>
+<Talent name="RULES-T_FRENZY">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_REFLEXES/RULES-T_WARRIOR_BORN">"1"</Talent>
+<Talent name="RULES-T_LUCK">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__FLAIL">"1"</Talent>
+<Talent name="RULES-T_STREET_FIGHTING/RULES-T_WRESTLING">"1"</Talent>
+<Talent name="RULES-T_VERY_STRONG">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 12"</Source>
+</Career>
+<Career id="COTO-CARE_SCAR_VETERAN">
+<Description language="ENGLISH">"Scar-Veteran"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +30%, S +20%, T +20%, Ag +10%, Int +15%, WP +15%, Fel +15%"</MainProfile>
+<SecondaryProfile>"A +2, W +6"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"30"</Advance>
+<Advance name="RULES-ATTR_S">"20"</Advance>
+<Advance name="RULES-ATTR_T">"20"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+</Advances>
+<Skills>"Command, Dodge Blow, Intimidate, Perception, Ride or Scale Sheer Surface, Secret Language (Battle Tongue) or Speak Language (Skinkian)"</Skills>
+<Talents>"Disarm or Quick Draw, Lightening Parry, Specialist Weapon Group (Flail) or Specialist Weapon Group (Two Handed), Strike to Injure"</Talents>
+<Trappings>"Full Bronze Mail, Bronze Helmet, Bronze Breastplate, Obsinite Flail or Greatweapon"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_RIDE/RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_BATTLE_TONGUE/RULES-COMP_SPEAK_LANGUAGE_SKINKIAN">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_DISARM/RULES-T_QUICK_DRAW">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_PARRY">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__FLAIL/RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 12"</Source>
+</Career>
+<Career id="COTO-CARE_SPAWNING_CHAMPION">
+<Description language="ENGLISH">"Spawning Champion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, S +10%, T +10%, Ag +10%, Int +10%, WP +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Strategy/Tactics), Command, Dodge Blow, Heal, Intimidate, Perception or Search, Secret Language (Battle Tongue)"</Skills>
+<Talents>"Acute Hearing or Excellent Vision, Seasoned Traveller, Street Fighting or Wrestling"</Talents>
+<Trappings>"Bronze Shield, Full Bronze Mail, Obsinite Handweapon"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_STRATEGY/RULES-COMP_ACADEMIC_KNOWLEDGE_TACTICS">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION/RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_BATTLE_TONGUE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ACUTE_HEARING/RULES-T_EXCELLENT_VISION">"1"</Talent>
+<Talent name="RULES-T_SEASONED_TRAVELLER">"1"</Talent>
+<Talent name="RULES-T_STREET_FIGHTING/RULES-T_WRESTLING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 13"</Source>
+</Career>
+<Career id="COTO-CARE_TEMPLE_GUARD">
+<Description language="ENGLISH">"Temple Guard"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, S +15%, T +15%, Ag +10%, Int +5%, WP +10%, Fel +5%"</MainProfile>
+<SecondaryProfile>"A +1, W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"15"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Theology or Astrology), Dodge Blow, Perception, Secret Signs (Slann Hieroglyphs), Speak Language (Skinkian) or Speak Language (Battle Tongue), Torture"</Skills>
+<Talents>"Specialist Weapon Group (Two Handed), Street Fighting or Wrestling, Strike to Injure, Strong Minded"</Talents>
+<Trappings>"Bone Helm, Bone Breastplate, Obsinite Halberd or Great Weapon"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY/RULES-COMP_ACADEMIC_KNOWLEDGE_ASTROLOGY">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_SIGNS_SLANN_HIEROGLYPHS">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_SKINKIAN/RULES-COMP_SPEAK_LANGUAGE_BATTLE_TONGUE">"1"</Skill>
+<Skill name="RULES-COMP_TORTURE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED">"1"</Talent>
+<Talent name="RULES-T_STREET_FIGHTING/RULES-T_WRESTLING">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE">"1"</Talent>
+<Talent name="RULES-T_STRONG_MINDED">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 13"</Source>
+</Career>
+<Career id="COTO-CARE_ERRAND_RUNNER">
+<Description language="ENGLISH">"Errand Runner"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"S +5%, T +5%, Ag +5%, Int +10%, WP +5%, Fel +5%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Evaluate or Haggle, Gossip, Perception, Read/Write, Sleight of Hand, Speak Language (Skinkian or Saurial)"</Skills>
+<Talents>"Acute Hearing or Flee!, Lightening Reflexes or Very Resilient"</Talents>
+<Trappings>"Stone Plaque and Chisel"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_EVALUATE/RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SLEIGHT_OF_HAND">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_SKINKIAN/RULES-COMP_SPEAK_LANGUAGE_SAURIAL">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ACUTE_HEARING/RULES-T_FLEE">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_REFLEXES/RULES-T_VERY_RESILIENT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"COTO 13"</Source>
+</Career>
+<Career id="COTO-CARE_HANDLER">
+<Description language="ENGLISH">"Handler"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, S +10%, T +10%, Int +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Animal Care, Animal Training, Charm Animal, Dodge Blow, Drive, Heal, Perception"</Skills>
+<Talents>"Flee!, Hardy or Very Resilient, Specialist Weapon Group (Entangling) or Specialist Weapon Group (Two Handed), Strike to Injure"</Talents>
+<Trappings>"Leather Jack, Bronze Pike or Net"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM_ANIMAL">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_DRIVE">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_FLEE">"1"</Talent>
+<Talent name="RULES-T_HARDY/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__ENTANGLING/RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"COTO 14"</Source>
+</Career>
+<Career id="COTO-CARE_HORNED_ONE_RIDER">
+<Description language="ENGLISH">"Horned One Rider"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, S +10%, T +10%, Ag +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Animal Care, Animal Training, Follow Trail, Navigation, Outdoor Survival, Ride"</Skills>
+<Talents>"Coolheaded or Very Strong, Seasoned Traveller, Specialist Weapon Group (Cavalry)"</Talents>
+<Trappings>"Bronze Shield, Horned One with Saddle and Harness, Bronze Spear or Demilance"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_COOLHEADED/RULES-T_VERY_STRONG">"1"</Talent>
+<Talent name="RULES-T_SEASONED_TRAVELLER">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__CAVALRY">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"COTO 14"</Source>
+</Career>
+<Career id="COTO-CARE_SKIRMISHER">
+<Description language="ENGLISH">"Skirmisher"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +10%, S +5%, T +5%, Ag +5%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Concealment, Dodge Blow, Perception, Swim, Silent Move"</Skills>
+<Talents>"Quick Draw, Rapid Reload, Sharpshooter"</Talents>
+<Trappings>"Bronze Handweapon, Bow and 20 Arrows or Bronze Shield and 3 Javelins"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SWIM">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_QUICK_DRAW">"1"</Talent>
+<Talent name="RULES-T_RAPID_RELOAD">"1"</Talent>
+<Talent name="RULES-T_SHARPSHOOTER">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"COTO 15"</Source>
+</Career>
+<Career id="COTO-CARE_ATTENDANT">
+<Description language="ENGLISH">"Attendant"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"Ag +10%, Int +10%, WP +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +3"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Any One), Charm, Common Knowledge (Lustria or Southlands) or Gossip, Perception, Read/Write, Secret Signs (Slann Hieroglyphs), Speak Language (Skinkian or Saurial or Old Slann), Trade (Calligrapher)"</Skills>
+<Talents>"Linguistics"</Talents>
+<Trappings>"Stone Plaque and Chisel, Pair of Candles"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_LUSTRIA/RULES-COMP_COMMON_KNOWLEDGE_SOUTHLANDS/RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_SIGNS_SLANN_HIEROGLYPHS">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_SKINKIAN/RULES-COMP_SPEAK_LANGUAGE_SAURIAL/RULES-COMP_SPEAK_LANGUAGE_OLD_SLANN">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_CALLIGRAPHER">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_LINGUISTICS">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 15"</Source>
+</Career>
+<Career id="COTO-CARE_BRAVE">
+<Description language="ENGLISH">"Brave"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +20%, S +10%, T +10%, Ag +10%, Int +10%, WP +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Strategy/Tactics), Command, Dodge Blow, Intimidate, Perception, Speak Language (Saurial) or Speak Language (Battle Tongue)"</Skills>
+<Talents>"Disarm, Strike Mighty Blow or Strike to Stun, Street Fighting"</Talents>
+<Trappings>"Bronze Chain Shirt, Bronze Shield"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_STRATEGY/RULES-COMP_ACADEMIC_KNOWLEDGE_TACTICS">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_SAURIAL/RULES-COMP_SPEAK_LANGUAGE_BATTLE_TONGUE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_DISARM">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW/RULES-T_STRIKE_TO_STUN">"1"</Talent>
+<Talent name="RULES-T_STREET_FIGHTING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 15"</Source>
+</Career>
+<Career id="COTO-CARE_CHIEF">
+<Description language="ENGLISH">"Chief"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +25%, BS +30%, S +20%, T +20%, Ag +20%, Int +15%, WP +15%, Fel +15%"</MainProfile>
+<SecondaryProfile>"A +2, W +6"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"25"</Advance>
+<Advance name="RULES-ATTR_BS">"30"</Advance>
+<Advance name="RULES-ATTR_S">"20"</Advance>
+<Advance name="RULES-ATTR_T">"20"</Advance>
+<Advance name="RULES-ATTR_Ag">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Strategy/Tactics), Command, Dodge Blow, Intimidate, Perception, Ride, Speak Language (Saurial) or Speak Language (Battle Tongue), Torture"</Skills>
+<Talents>"Disarm or Quick Draw, Lightening Parry, Strike Mighty Blow, Strike to Stun or Strike to Injure, Seasoned Traveller"</Talents>
+<Trappings>"Full Bronze Mail Armour, Bronze Helmet, Bronze Breastplate"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_STRATEGY/RULES-COMP_ACADEMIC_KNOWLEDGE_TACTICS">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_SAURIAL/RULES-COMP_SPEAK_LANGUAGE_BATTLE_TONGUE">"1"</Skill>
+<Skill name="RULES-COMP_TORTURE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_DISARM/RULES-T_QUICK_DRAW">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_PARRY">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_STUN/RULES-T_STRIKE_TO_INJURE">"1"</Talent>
+<Talent name="RULES-T_SEASONED_TRAVELLER">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 16"</Source>
+</Career>
+<Career id="COTO-CARE_COUNSEL">
+<Description language="ENGLISH">"Counsel"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, S +5%, T +10%, Ag +10%, Int +35%, WP +25%, Fel +20%"</MainProfile>
+<SecondaryProfile>"W +5"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"35"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+<Advance name="RULES-ATTR_W">"5"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Any Three), Charm or Intimidate, Command, Common Knowledge (Any Three), Gossip, Lip Reading, Perception, Secret Signs (Slann Hieroglyphs), Speak Language (Any Two)"</Skills>
+<Talents>"Acute Hearing, Etiquette, Public Speaking, Sixth Sense"</Talents>
+<Trappings>""</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_LIP_READING">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_SIGNS_SLANN_HIEROGLYPHS">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ACUTE_HEARING">"1"</Talent>
+<Talent name="RULES-T_ETIQUETTE">"1"</Talent>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+<Talent name="RULES-T_SIXTH_SENSE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 16"</Source>
+</Career>
+<Career id="COTO-CARE_EMISSARY">
+<Description language="ENGLISH">"Emissary"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, S +5%, T +5%, Int +20%, WP +15%, Fel +15%"</MainProfile>
+<SecondaryProfile>"W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Charm, Common Knowledge (Lustria or Southlands), Common Knowledge (Any Two), Evaluate or Haggle, Gossip, Lip Reading, Perception, Read/Write, Swim, Speak Language (Any Three)"</Skills>
+<Talents>"Dealmaker, Etiquette, Schemer, Seasoned Traveller, Suave"</Talents>
+<Trappings>"100 crowns Jewellery, Bronze Plaque and Chisel"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_LUSTRIA/RULES-COMP_COMMON_KNOWLEDGE_SOUTHLANDS">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE/RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_LIP_READING">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SWIM">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_DEALMAKER">"1"</Talent>
+<Talent name="RULES-T_ETIQUETTE">"1"</Talent>
+<Talent name="RULES-T_SCHEMER">"1"</Talent>
+<Talent name="RULES-T_SEASONED_TRAVELLER">"1"</Talent>
+<Talent name="RULES-T_SUAVE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 16"</Source>
+</Career>
+<Career id="COTO-CARE_PROPHET">
+<Description language="ENGLISH">"Prophet"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +15%, S +10%, T +15%, Ag +15%, Int +20%, WP +25%, Fel +20%"</MainProfile>
+<SecondaryProfile>"A +1, W +6, Mag +3"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+<Advance name="RULES-ATTR_Mag">"3"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Theology), Academic Knowledge (Any Two), Channelling, Charm, Common Knowledge (Skaven), Common Knowledge (Any Two), Gossip, Heal, Intimidate, Magical Sense, Perception, Read/Write, Ride, Secret Language (Slann Hieroglyphs), Speak Arcane Language (Arcane Elf or Daemonic), Speak Arcane Language (Magick), Speak Language (Old Slann), Speak Language (Any One)"</Skills>
+<Talents>"Aethyric Attunement or Meditation, Fearless, Lesser Magic (Any Three), Master Orator, Mighty Missile, Strong Minded, Witchcraft"</Talents>
+<Trappings>"Magic Item"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_SKAVEN">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_SLANN_HIEROGLYPHS">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ARCANE_ELF/RULES-COMP_SPEAK_ARCANE_LANGUAGE_DAEMONIC">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_OLD_SLANN">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_MEDITATION">"1"</Talent>
+<Talent name="RULES-T_FEARLESS">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_MASTER_ORATOR">"1"</Talent>
+<Talent name="RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="RULES-T_STRONG_MINDED">"1"</Talent>
+<Talent name="COTO-T_WITCHCRAFT_COTO">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 17"</Source>
+</Career>
+<Career id="COTO-CARE_RAIDER">
+<Description language="ENGLISH">"Raider"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +25%, S +15%, T +15%, Ag +20%, Int +15%, WP +10%"</MainProfile>
+<SecondaryProfile>"A +2, W +5"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"25"</Advance>
+<Advance name="RULES-ATTR_S">"15"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"5"</Advance>
+</Advances>
+<Skills>"Concealment, Dodge Blow, Follow Trail, Navigation, Outdoor Survival, Prepare Poison, Scale Sheer Surface, Search or Set Trap, Shadowing, Silent Move"</Skills>
+<Talents>"Mighty Shot, Orientation or Rover, Rapid Reload, Sharpshooter, Specialist Weapon Group (Blowgun), Sure Shot, Trapfinder"</Talents>
+<Trappings>"Bronze Handweapon, Bow and 20 Arrows or Bronze Shield and 3 Javelins, Vial of Black Lotus Poison or Green Scorpion Venom"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISON">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH/RULES-COMP_SET_TRAP">"1"</Skill>
+<Skill name="RULES-COMP_SHADOWING">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_MIGHTY_SHOT">"1"</Talent>
+<Talent name="RULES-T_ORIENTATION/RULES-T_ROVER">"1"</Talent>
+<Talent name="RULES-T_RAPID_RELOAD">"1"</Talent>
+<Talent name="RULES-T_SHARPSHOOTER">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__BLOWGUN">"1"</Talent>
+<Talent name="RULES-T_SURE_SHOT">"1"</Talent>
+<Talent name="RULES-T_TRAPFINDER">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 17"</Source>
+</Career>
+<Career id="COTO-CARE_SAGE">
+<Description language="ENGLISH">"Sage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"S +5%, T +5%, Ag +5%, Int +25%, WP +15%"</MainProfile>
+<SecondaryProfile>"W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"25"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Any Two), Common Knowledge (Any Two), Evaluate or Perception, Read/Write, Secret Signs (Slann Hieroglyphs), Speak Language (Old Slann), Speak Language (Any One)"</Skills>
+<Talents>"Savvy, Super Numerate"</Talents>
+<Trappings>"Writing Kit"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE/RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_SIGNS_SLANN_HIEROGLYPHS">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_OLD_SLANN">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SAVVY">"1"</Talent>
+<Talent name="RULES-T_SUPER_NUMERATE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 17"</Source>
+</Career>
+<Career id="COTO-CARE_SHAMAN_ACOLYTE">
+<Description language="ENGLISH">"Shaman Acolyte"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, T +5%, Ag +5%, Int +10%, WP +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +2, Mag +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_Mag">"1"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Magic or Theology), Channelling, Charm, Common Knowledge (Lustria), Gossip, Heal, Magical Sense, Perception, Read/Write, Ride, Speak Language (Saurial)"</Skills>
+<Talents>"Petty Magic (Divine), Public Speaking, Resistance to Disease, Strike to Injure or Strike to Stun"</Talents>
+<Trappings>"Red Snake Tattoo of Sotek, Quarterstaff"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC/RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_LUSTRIA">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_SAURIAL">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_PETTY_MAGIC__DIVINE">"1"</Talent>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+<Talent name="RULES-T_RESISTANCE_TO_DISEASE">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE/RULES-T_STRIKE_TO_STUN">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 18"</Source>
+</Career>
+<Career id="COTO-CARE_SHAMAN_PRIEST">
+<Description language="ENGLISH">"Shaman Priest"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, S +5%, T +10%, Ag +10%, Int +15%, WP +20%, Fel +15%"</MainProfile>
+<SecondaryProfile>"W +4, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Astrology or Magic), Academic Knowledge (Theology), Academic Knowledge (Any One), Channelling, Charm, Common Knowledge (Any Two), Gossip, Heal, Intimidate, Magical Sense, Perception, Read/Write, Ride, Secret Language (Slann Hieroglyphs), Speak Arcane Language (Arcane Elf or Magick), Speak Language (Saurial or Old Slann)"</Skills>
+<Talents>"Aethyric Attunement or Meditation, Arcane Lore (Heavens), Fast Hands, Lesser Magic (Any Two), Public Speaking"</Talents>
+<Trappings>"100 crowns Jewellery"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ASTROLOGY/RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_SLANN_HIEROGLYPHS">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ARCANE_ELF/RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_SAURIAL/RULES-COMP_SPEAK_LANGUAGE_OLD_SLANN">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_MEDITATION">"1"</Talent>
+<Talent name="RULES-T_ARCANE_LORE__HEAVENS">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 18"</Source>
+</Career>
+<Career id="COTO-CARE_STALKER">
+<Description language="ENGLISH">"Stalker"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +15%, S +10%, T +10%, Ag +10%, Int +10%, WP +5%"</MainProfile>
+<SecondaryProfile>"A +1, W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Concealment, Dodge Blow, Follow Trail, Navigation, Outdoor Survival, Prepare Poison, Shadowing, Silent Move"</Skills>
+<Talents>"Marksman, Mighty Shot or Sure Shot"</Talents>
+<Trappings>"Leather Jack, Bow with 20 Obsinite Arrows, Vial of Poison"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISON">"1"</Skill>
+<Skill name="RULES-COMP_SHADOWING">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_MARKSMAN">"1"</Talent>
+<Talent name="RULES-T_MIGHTY_SHOT/RULES-T_SURE_SHOT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 18"</Source>
+</Career>
+<Career id="COTO-CARE_TERRADON_RIDER">
+<Description language="ENGLISH">"Terradon Rider"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +20%, S +10%, T +10%, Ag +30%, Int +10%, WP +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +5"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"30"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"5"</Advance>
+</Advances>
+<Skills>"Animal Care, Navigation, Perception, Prepare Poison, Ride, Search"</Skills>
+<Talents>"Ambidextrous, Specialist Weapon Group (Entangling), Swashbuckler, Trick Riding"</Talents>
+<Trappings>"Bow with 20 Obsinite Arrows, Terradon with Saddle and Harness, Net"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISON">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AMBIDEXTROUS">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__ENTANGLING">"1"</Talent>
+<Talent name="RULES-T_SWASHBUCKLER">"1"</Talent>
+<Talent name="RULES-T_TRICK_RIDING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 19"</Source>
+</Career>
+<Career id="COTO-CARE_SAVAGE">
+<Description language="ENGLISH">"Savage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, S +5%, T +5%, Ag +5%"</MainProfile>
+<SecondaryProfile>"A +1, W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Intimidate, Perception or Search"</Skills>
+<Talents>"Specialist Weapon Group (Two Handed), Street Fighting, Strike to Injure or Strike to Stun"</Talents>
+<Trappings>"Bronze Greatweapon"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION/RULES-COMP_SEARCH">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED">"1"</Talent>
+<Talent name="RULES-T_STREET_FIGHTING">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE/RULES-T_STRIKE_TO_STUN">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"COTO 19"</Source>
+</Career>
+<Career id="COTO-CARE_ANCIENT">
+<Description language="ENGLISH">"Ancient"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, S +10%, T +10%, Ag +10%, Int +10%, WP +5%, Fel +5%"</MainProfile>
+<SecondaryProfile>"A +1, W +6"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+</Advances>
+<Skills>"Command, Dodge Blow, Intimidate, Perception or Search"</Skills>
+<Talents>"Acute Hearing or Excellent Vision, Coolheaded or Savvy, Disarm, Strike to Injure, Wrestling"</Talents>
+<Trappings>"Bronze Breastplate, Obsinite Greatweapon"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION/RULES-COMP_SEARCH">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ACUTE_HEARING/RULES-T_EXCELLENT_VISION">"1"</Talent>
+<Talent name="RULES-T_COOLHEADED/RULES-T_SAVVY">"1"</Talent>
+<Talent name="RULES-T_DISARM">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE">"1"</Talent>
+<Talent name="RULES-T_WRESTLING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 19"</Source>
+</Career>
+<Career id="COTO-CARE_SACRED">
+<Description language="ENGLISH">"Sacred"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +30%, S +20%, T +20%, Ag +10%, Int +15%, WP +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +2, W +8"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"30"</Advance>
+<Advance name="RULES-ATTR_S">"20"</Advance>
+<Advance name="RULES-ATTR_T">"20"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"8"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Strategy/Tactics), Command, Dodge Blow, Intimidate, Perception"</Skills>
+<Talents>"Acute Hearing, Excellent Vision, Lightening Parry, Luck or Sixth Sense, Specialist Weapon Group (Flail), Unstoppable Blows, Very Resilient or Warrior Born, Will of Iron"</Talents>
+<Trappings>"Gold Head-Dress, Gold Ceremonial Decorations at least 500 crowns value, Obsinite Flail or Greatweapon"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_STRATEGY/RULES-COMP_ACADEMIC_KNOWLEDGE_TACTICS">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ACUTE_HEARING">"1"</Talent>
+<Talent name="RULES-T_EXCELLENT_VISION">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_PARRY">"1"</Talent>
+<Talent name="RULES-T_LUCK/RULES-T_SIXTH_SENSE">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__FLAIL">"1"</Talent>
+<Talent name="ELEM-T_UNSTOPPABLE_BLOWS">"1"</Talent>
+<Talent name="RULES-T_VERY_RESILIENT/RULES-T_WARRIOR_BORN">"1"</Talent>
+<Talent name="ELEM-T_WILL_OF_IRON">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"COTO 20"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="COTO-CARE_SLANN_OF_THE_FIFTH_SPAWNING">"COTO-CARE_SLANN_OF_THE_FOURTH_SPAWNING"</Link>
+<Link name="COTO-CARE_SLANN_OF_THE_FOURTH_SPAWNING">"COTO-CARE_SLANN_OF_THE_THIRD_SPAWNING"</Link>
+<Link name="COTO-CARE_SLANN_OF_THE_THIRD_SPAWNING">"COTO-CARE_SLANN_OF_THE_SECOND_SPAWNING"</Link>
+<Link name="COTO-CARE_LEGIONNAIRE">"COTO-CARE_COLD_ONE_RIDER"</Link>
+<Link name="COTO-CARE_LEGIONNAIRE">"COTO-CARE_SPAWNING_CHAMPION"</Link>
+<Link name="COTO-CARE_LEGIONNAIRE">"COTO-CARE_TEMPLE_GUARD"</Link>
+<Link name="COTO-CARE_COLD_ONE_RIDER">"COTO-CARE_LEGIONNAIRE"</Link>
+<Link name="COTO-CARE_COLD_ONE_RIDER">"COTO-CARE_SPAWNING_CHAMPION"</Link>
+<Link name="COTO-CARE_SPAWNING_CHAMPION">"COTO-CARE_COLD_ONE_RIDER"</Link>
+<Link name="COTO-CARE_SCAR_VETERAN">"COTO-CARE_OLDBLOOD"</Link>
+<Link name="COTO-CARE_REVERED_GUARDIAN">"COTO-CARE_SCAR_VETERAN"</Link>
+<Link name="COTO-CARE_TEMPLE_GUARD">"COTO-CARE_REVERED_GUARDIAN"</Link>
+<Link name="COTO-CARE_SPAWNING_CHAMPION">"COTO-CARE_SCAR_VETERAN"</Link>
+<Link name="COTO-CARE_TEMPLE_GUARD">"COTO-CARE_SCAR_VETERAN"</Link>
+<Link name="COTO-CARE_SPAWNING_CHAMPION">"COTO-CARE_TEMPLE_GUARD"</Link>
+<Link name="COTO-CARE_ERRAND_RUNNER">"COTO-CARE_ATTENDANT"</Link>
+<Link name="COTO-CARE_ERRAND_RUNNER">"COTO-CARE_HANDLER"</Link>
+<Link name="COTO-CARE_ERRAND_RUNNER">"RULES-CARE_PEASANT"</Link>
+<Link name="COTO-CARE_ERRAND_RUNNER">"CHR-CARE_SKIRMISHER"</Link>
+<Link name="COTO-CARE_ERRAND_RUNNER">"RULES-CARE_TRADESMAN"</Link>
+<Link name="RULES-CARE_ARTISAN">"COTO-CARE_ERRAND_RUNNER"</Link>
+<Link name="COTO-CARE_HANDLER">"COTO-CARE_ERRAND_RUNNER"</Link>
+<Link name="RULES-CARE_PEASANT">"COTO-CARE_ERRAND_RUNNER"</Link>
+<Link name="COTO-CARE_HANDLER">"COTO-CARE_HORNED_ONE_RIDER"</Link>
+<Link name="COTO-CARE_HANDLER">"RULES-CARE_PEASANT"</Link>
+<Link name="COTO-CARE_HORNED_ONE_RIDER">"COTO-CARE_HANDLER"</Link>
+<Link name="RULES-CARE_PEASANT">"COTO-CARE_HANDLER"</Link>
+<Link name="COTO-CARE_RAIDER">"COTO-CARE_HANDLER"</Link>
+<Link name="COTO-CARE_SKIRMISHER">"COTO-CARE_HANDLER"</Link>
+<Link name="COTO-CARE_STALKER">"COTO-CARE_HANDLER"</Link>
+<Link name="COTO-CARE_HORNED_ONE_RIDER">"COTO-CARE_BRAVE"</Link>
+<Link name="COTO-CARE_HORNED_ONE_RIDER">"COTO-CARE_TERRADON_RIDER"</Link>
+<Link name="COTO-CARE_BRAVE">"COTO-CARE_HORNED_ONE_RIDER"</Link>
+<Link name="COTO-CARE_RAIDER">"COTO-CARE_HORNED_ONE_RIDER"</Link>
+<Link name="COTO-CARE_SKIRMISHER">"COTO-CARE_HORNED_ONE_RIDER"</Link>
+<Link name="COTO-CARE_STALKER">"COTO-CARE_HORNED_ONE_RIDER"</Link>
+<Link name="COTO-CARE_SKIRMISHER">"COTO-CARE_BRAVE"</Link>
+<Link name="COTO-CARE_SKIRMISHER">"COTO-CARE_EMISSARY"</Link>
+<Link name="COTO-CARE_SKIRMISHER">"COTO-CARE_STALKER"</Link>
+<Link name="COTO-CARE_ERRAND_RUNNER">"COTO-CARE_SKIRMISHER"</Link>
+<Link name="COTO-CARE_ATTENDANT">"COTO-CARE_EMISSARY"</Link>
+<Link name="COTO-CARE_ATTENDANT">"COTO-CARE_SAGE"</Link>
+<Link name="RULES-CARE_ARTISAN">"COTO-CARE_ATTENDANT"</Link>
+<Link name="COTO-CARE_SHAMAN_ACOLYTE">"COTO-CARE_ATTENDANT"</Link>
+<Link name="COTO-CARE_BRAVE">"RULES-CARE_CHIEF"</Link>
+<Link name="COTO-CARE_BRAVE">"COTO-CARE_STALKER"</Link>
+<Link name="RULES-CARE_ASSASSIN">"COTO-CARE_BRAVE"</Link>
+<Link name="COTO-CARE_COUNSEL">"COTO-CARE_BRAVE"</Link>
+<Link name="COTO-CARE_RAIDER">"COTO-CARE_BRAVE"</Link>
+<Link name="COTO-CARE_CHIEF">"COTO-CARE_COUNSEL"</Link>
+<Link name="COTO-CARE_CHIEF">"COTO-CARE_STALKER"</Link>
+<Link name="COTO-CARE_BRAVE">"COTO-CARE_CHIEF"</Link>
+<Link name="COTO-CARE_RAIDER">"COTO-CARE_CHIEF"</Link>
+<Link name="COTO-CARE_TERRADON_RIDER">"COTO-CARE_CHIEF"</Link>
+<Link name="COTO-CARE_COUNSEL">"COTO-CARE_SAGE"</Link>
+<Link name="COTO-CARE_COUNSEL">"COTO-CARE_SHAMAN_ACOLYTE"</Link>
+<Link name="COTO-CARE_EMISSARY">"COTO-CARE_COUNSEL"</Link>
+<Link name="RULES-CARE_EXPLORER">"COTO-CARE_COUNSEL"</Link>
+<Link name="COTO-CARE_PROPHET">"COTO-CARE_COUNSEL"</Link>
+<Link name="COTO-CARE_SAGE">"COTO-CARE_COUNSEL"</Link>
+<Link name="COTO-CARE_EMISSARY">"RULES-CARE_EXPLORER"</Link>
+<Link name="COTO-CARE_EMISSARY">"COTO-CARE_SAGE"</Link>
+<Link name="COTO-CARE_EMISSARY">"RULES-CARE_SPY"</Link>
+<Link name="RULES-CARE_ASSASSIN">"COTO-CARE_EMISSARY"</Link>
+<Link name="RULES-CARE_EXPLORER">"COTO-CARE_EMISSARY"</Link>
+<Link name="COTO-CARE_PROPHET">"COTO-CARE_EMISSARY"</Link>
+<Link name="COTO-CARE_SHAMAN_PRIEST">"COTO-CARE_EMISSARY"</Link>
+<Link name="RULES-CARE_SPY">"COTO-CARE_EMISSARY"</Link>
+<Link name="COTO-CARE_SHAMAN_PRIEST">"COTO-CARE_PROPHET"</Link>
+<Link name="COTO-CARE_RAIDER">"RULES-CARE_ASSASSIN"</Link>
+<Link name="COTO-CARE_RAIDER">"RULES-CARE_CHIEF"</Link>
+<Link name="COTO-CARE_STALKER">"COTO-CARE_RAIDER"</Link>
+<Link name="COTO-CARE_TERRADON_RIDER">"COTO-CARE_RAIDER"</Link>
+<Link name="COTO-CARE_SAGE">"COTO-CARE_ATTENDANT"</Link>
+<Link name="COTO-CARE_SAGE">"COTO-CARE_EMISSARY"</Link>
+<Link name="COTO-CARE_SAGE">"COTO-CARE_SHAMAN_ACOLYTE"</Link>
+<Link name="CCOMP-CARE_AMBASSADOR">"COTO-CARE_SAGE"</Link>
+<Link name="COTO-CARE_ERRAND_RUNNER">"COTO-CARE_SAGE"</Link>
+<Link name="COTO-CARE_SHAMAN_PRIEST">"COTO-CARE_SAGE"</Link>
+<Link name="COTO-CARE_SHAMAN_ACOLYTE">"COTO-CARE_SHAMAN_PRIEST"</Link>
+<Link name="COTO-CARE_STALKER">"COTO-CARE_BRAVE"</Link>
+<Link name="COTO-CARE_STALKER">"RULES-CARE_SPY"</Link>
+<Link name="COTO-CARE_TERRADON_RIDER">"RULES-CARE_CHIEF"</Link>
+<Link name="COTO-CARE_TERRADON_RIDER">"RULES-CARE_EXPLORER"</Link>
+<Link name="RULES-CARE_ASSASSIN">"COTO-CARE_TERRADON_RIDER"</Link>
+<Link name="COTO-CARE_SAVAGE">"COTO-CARE_ANCIENT"</Link>
+<Link name="COTO-CARE_ANCIENT">"COTO-CARE_SACRED"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="COTO-EQUI_SPECIAL_EQUIPMENT_CEREMONIAL_DEATH_MASK">
+<Description language="ENGLISH">"Ceremonial Death Mask"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<Cost>"Priceless"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COTO-EQUI_SPECIAL_EQUIPMENT_OBSINITE_WEAPONRY">
+<Description language="ENGLISH">"Obsinite Weaponry"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<Note>""</Note>
+<Page>"20"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COTO-EQUI_SPECIAL_EQUIPMENT_BONE_ARMOUR">
+<Description language="ENGLISH">"Bone Armour"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<Note>""</Note>
+<Page>"20"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COTO-EQUI_MAGIC_ITEMS_DAGGER_OF_SOTEK">
+<Description language="ENGLISH">"Dagger of Sotek"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Note>""</Note>
+<Page>"21"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COTO-EQUI_MAGIC_ITEMS_BLADE_OF_REALITIES">
+<Description language="ENGLISH">"Blade of Realities"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Note>""</Note>
+<Page>"21"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COTO-EQUI_MAGIC_ITEMS_SACRED_PLAQUES_OF_THE_OLD_ONES">
+<Description language="ENGLISH">"Sacred Plaques of the Old Ones"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Note>""</Note>
+<Page>"21"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COTO-EQUI_MAGIC_ITEMS_CUBE_OF_DARKNESS">
+<Description language="ENGLISH">"Cube of Darkness"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Note>""</Note>
+<Page>"21"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COTO-EQUI_CREATURES_GIANT_LIZARDS">
+<Description language="ENGLISH">"Giant Lizards"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;0;31;30;42;6;18;0;1;7;3;3;4;0;0;0"</Profile>
+<Skills>"Concealment +10%, Perception, Swim +10%"</Skills>
+<Talents>"Keen Senses, Natural Weapons, Night Vision, Resistance to Poison, Scales (1)"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"22"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COTO-EQUI_CREATURES_SERPENTS">
+<Description language="ENGLISH">"Serpents"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"33;0;21;24;30;6;18;0;1;6;2;2;3;0;0;0"</Profile>
+<Skills>"Concealment, Perception, Swim +10%"</Skills>
+<Talents>"Keen Senses, Natural Weapons, Night Vision, Resistance to Poison"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"22"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COTO-EQUI_CREATURES_SERPENT_SWARMS">
+<Description language="ENGLISH">"Serpent Swarms"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"53;0;41;44;30;6;38;0;3;10;4;4;3;0;0;0"</Profile>
+<Skills>"Concealment, Perception, Swim +10%"</Skills>
+<Talents>"Fearless, Keen Senses, Natural Weapons, Night Vision, Resistance to Poison"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"23"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COTO-EQUI_CREATURES_COLD_ONE">
+<Description language="ENGLISH">"Cold One"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"35;0;45;47;25;15;35;0;2;14;4;4;7;0;0;0"</Profile>
+<Skills>"Follow Trail +10%, Perception +10%"</Skills>
+<Talents>"Frenzy, Frightening, Keen Senses, Natural Weapons, Night Vision, Scales (2)"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"23"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COTO-EQUI_CREATURES_HORNED_ONE">
+<Description language="ENGLISH">"Horned One"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"45;0;48;47;36;15;35;0;3;16;4;4;8;0;0;0"</Profile>
+<Skills>"Follow Trail +10%, Perception +10%"</Skills>
+<Talents>"Fearless, Frenzy, Frightening, Keen Senses, Natural Weapons, Night Vision, Scales (2)"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"24"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COTO-EQUI_CREATURES_SALAMANDER">
+<Description language="ENGLISH">"Salamander"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"35;0;52;45;42;15;35;0;2;18;5;4;6;0;0;0"</Profile>
+<Skills>"Perception, Swim +10%"</Skills>
+<Talents>"Frenzy, Frightening, Keen Senses, Natural Weapons, Night Vision, Scales (2)"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"24"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COTO-EQUI_CREATURES_TERRADON">
+<Description language="ENGLISH">"Terradon"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"35;0;44;35;46;30;45;10;2;20;10;4;3;0;0;0"</Profile>
+<Skills>"Dodge Blow, Perception +20%, Navigation +10%"</Skills>
+<Talents>"Excellent Vision, Flier, Frightening, Keen Senses, Natural Weapons, Night Vision"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"25"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COTO-EQUI_CREATURES_STEGADON">
+<Description language="ENGLISH">"Stegadon"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"33;0;58;65;25;15;35;0;5;50;5;6;6;0;0;0"</Profile>
+<Skills>"Perception"</Skills>
+<Talents>"Keen Senses, Natural Weapons, Night Vision, Scales (5), Strike Mighty Blow, Strike to Injure, Terrifying, Unstoppable Blows"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"25"</Page>
+</EquipmentV2>
+<EquipmentV2 id="COTO-EQUI_CREATURES_CARNOSAUR">
+<Description language="ENGLISH">"Carnosaur"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"39;0;65;68;30;15;40;0;6;55;6;6;7;0;0;0"</Profile>
+<Skills>"Perception"</Skills>
+<Talents>"Frenzy, Keen Senses, Natural Weapons, Night Vision, Strike Mighty Blow, Strike to Injure, Scales (5), Terrifying, Unstoppable Blows"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"26"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+<DATA_SPECIE>
+<Specie id="COTO-RACE_SLANN">
+<Description language="ENGLISH">"Slann"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"COTO-SPECIE_LIZARDMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+40"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+50"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+65"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+40"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"2"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"4"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 22; 4-6: 26; 7-9: 30; 10: 34"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 1; 5-7: 2; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC"</Skill>
+<Skill>"RULES-COMP_CHANNELLING"</Skill>
+<Skill>"RULES-COMP_COMMAND"</Skill>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_LUSTRIA/RULES-COMP_COMMON_KNOWLEDGE_SOUTHLANDS"</Skill>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_*"</Skill>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_*"</Skill>
+<Skill>"RULES-COMP_MAGICAL_SENSE"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_SECRET_LANGUAGE_SLANN_HIEROGLYPHS"</Skill>
+<Skill>"RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_OLD_SLANN"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_SKINKIAN"</Skill>
+<Skill>"RULES-COMP_SWIM"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_FRIGHTENING"</Talent>
+<Talent>"RULES-T_KEEN_SENSES"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_MAGIC"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_POISON"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="COTO-CARE_SLANN_OF_THE_FIFTH_SPAWNING">"100"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"4"</Page>
+</Specie>
+<Specie id="COTO-RACE_SAURUS">
+<Description language="ENGLISH">"Saurus"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"COTO-SPECIE_LIZARDMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+5"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+5"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+40"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 11; 4-6: 12; 7-9: 13; 10: 14"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-7: 0; 8-10: 1"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_LUSTRIA/RULES-COMP_COMMON_KNOWLEDGE_SOUTHLANDS"</Skill>
+<Skill>"RULES-COMP_INTIMIDATE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_SAURIAL"</Skill>
+<Skill>"RULES-COMP_SWIM"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_KEEN_SENSES"</Talent>
+<Talent>"RULES-T_MENACING"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_POISON"</Talent>
+<Talent>"RULES-T_STURDY"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="COTO-CARE_LEGIONNAIRE">"100"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"4"</Page>
+</Specie>
+<Specie id="COTO-RACE_SKINK">
+<Description language="ENGLISH">"Skink"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"COTO-SPECIE_LIZARDMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+25"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+40"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"6"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 7; 4-6: 8; 7-9: 9; 10: 10"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 0; 5-7: 1; 8-10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_LUSTRIA/RULES-COMP_COMMON_KNOWLEDGE_SOUTHLANDS"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_SKINKIAN"</Skill>
+<Skill>"RULES-COMP_SWIM"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_KEEN_SENSES"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_POISON"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="COTO-CARE_ERRAND_RUNNER">"24"</Career>
+<Career name="COTO-CARE_HANDLER">"10"</Career>
+<Career name="COTO-CARE_HORNED_ONE_RIDER">"10"</Career>
+<Career name="COTO-CARE_SKIRMISHER">"15"</Career>
+<Career name="RULES-CARE_PEASANT">"22"</Career>
+<Career name="COTO-CARE_SHAMAN_ACOLYTE">"4"</Career>
+<Career name="RULES-CARE_TRADESMAN">"15"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"5"</Page>
+</Specie>
+<Specie id="COTO-RACE_CHAMELEON">
+<Description language="ENGLISH">"Chameleon Skink"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"COTO-SPECIE_LIZARDMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+15"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+25"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+40"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+5"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"6"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 6; 4-6: 7; 7-9: 8; 10: 9"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 0; 5-10: 1"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_LUSTRIA/RULES-COMP_COMMON_KNOWLEDGE_SOUTHLANDS"</Skill>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+<Skill>"RULES-COMP_HYPNOTISM"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_SHADOWING"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_SKINKIAN"</Skill>
+<Skill>"RULES-COMP_SWIM"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_KEEN_SENSES"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_POISON"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="COTO-CARE_ERRAND_RUNNER">"24"</Career>
+<Career name="COTO-CARE_HANDLER">"10"</Career>
+<Career name="COTO-CARE_HORNED_ONE_RIDER">"10"</Career>
+<Career name="COTO-CARE_SKIRMISHER">"15"</Career>
+<Career name="RULES-CARE_PEASANT">"22"</Career>
+<Career name="COTO-CARE_SHAMAN_ACOLYTE">"4"</Career>
+<Career name="RULES-CARE_TRADESMAN">"15"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"5"</Page>
+</Specie>
+<Specie id="COTO-RACE_KROXIGOR">
+<Description language="ENGLISH">"Kroxigor"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"COTO-SPECIE_LIZARDMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+25"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+0"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+45"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+35"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+5"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+40"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+5"</Attribut>
+<Attribut name="RULES-ATTR_A">"3"</Attribut>
+<Attribut name="RULES-ATTR_M">"6"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 20; 4-6: 24; 7-9: 28; 10: 32"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-10: 0"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_LUSTRIA/RULES-COMP_COMMON_KNOWLEDGE_SOUTHLANDS"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_SWIM"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_FEARLESS"</Talent>
+<Talent>"RULES-T_FRIGHTENING"</Talent>
+<Talent>"RULES-T_KEEN_SENSES"</Talent>
+<Talent>"RULES-T_NATURAL_WEAPONS"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_POISON"</Talent>
+<Talent>"RULES-T_STRIKE_MIGHTY_BLOW"</Talent>
+<Talent>"RULES-T_STURDY"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="COTO-CARE_SAVAGE">"100"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"6"</Page>
+</Specie>
+</DATA_SPECIE>
+<DATA_RACE>
+<Race id="COTO-SPECIE_LIZARDMAN">
+<Description language="ENGLISH">"Lizardman"</Description>
+<SUBCHAPTER_PHYSICAL>
+<HeightFemale>"60+1d10"</HeightFemale>
+<HeightMale>"62+1d10"</HeightMale>
+<Hair name="Dark Green">"1"</Hair>
+<Hair name="Green-Brown">"2"</Hair>
+<Hair name="Bright Green">"3"</Hair>
+<Hair name="Chartreuse">"4"</Hair>
+<Hair name="Yellow">"5"</Hair>
+<Hair name="Red">"6"</Hair>
+<Hair name="Pink">"7"</Hair>
+<Hair name="Blue">"8"</Hair>
+<Hair name="Turquoise">"9"</Hair>
+<Hair name="Purple">"10"</Hair>
+<Eye name="Orange">"1-2"</Eye>
+<Eye name="Red">"3-5"</Eye>
+<Eye name="Pink">"6"</Eye>
+<Eye name="Blue">"7-8"</Eye>
+<Eye name="Purple">"9-10"</Eye>
+<Weight name="90">"01"</Weight>
+<Weight name="100">"02-03"</Weight>
+<Weight name="110">"04-05"</Weight>
+<Weight name="120">"06-08"</Weight>
+<Weight name="130">"09-12"</Weight>
+<Weight name="140">"13-17"</Weight>
+<Weight name="150">"18-22"</Weight>
+<Weight name="160">"23-29"</Weight>
+<Weight name="170">"30-37"</Weight>
+<Weight name="180">"38-49"</Weight>
+<Weight name="190">"50-64"</Weight>
+<Weight name="200">"65-71"</Weight>
+<Weight name="210">"72-78"</Weight>
+<Weight name="220">"79-83"</Weight>
+<Weight name="230">"84-88"</Weight>
+<Weight name="240">"89-92"</Weight>
+<Weight name="250">"93-95"</Weight>
+<Weight name="260">"96-97"</Weight>
+<Weight name="270">"98-99"</Weight>
+<Weight name="280">"00"</Weight>
+<AgeRoll name="9">"1"</AgeRoll>
+<AgeRoll name="10">"2"</AgeRoll>
+<AgeRoll name="11">"3"</AgeRoll>
+<AgeRoll name="12">"4"</AgeRoll>
+<AgeRoll name="13">"5"</AgeRoll>
+<AgeRoll name="14">"6"</AgeRoll>
+<AgeRoll name="15">"7"</AgeRoll>
+<AgeRoll name="16">"8"</AgeRoll>
+<AgeRoll name="17">"9"</AgeRoll>
+<AgeRoll name="18">"10"</AgeRoll>
+<Siblings name="30">"1"</Siblings>
+<Siblings name="45">"2-5"</Siblings>
+<Siblings name="60">"6-9"</Siblings>
+<Siblings name="75">"10"</Siblings>
+</SUBCHAPTER_PHYSICAL>
+<Page>"4"</Page>
+</Race>
+</DATA_RACE>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_THE_SOUTHLANDS">
+<Description language="ENGLISH">"Common Knowledge (The Southlands)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SECRET_LANGUAGE_SLANN_HIEROGLYPHS">
+<Description language="ENGLISH">"Secret Language (Slann Hieroglyphs)"</Description>
+<Generique>"RULES-COMP_SECRET_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_OLD_SLANN">
+<Description language="ENGLISH">"Speak Language (Old Slann)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_SKINKIAN">
+<Description language="ENGLISH">"Speak Language (Skinkian)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SECRET_SIGNS_SLANN_HIEROGLYPHS">
+<Description language="ENGLISH">"Secret Signs (Slann Hieroglyphs)"</Description>
+<Generique>"RULES-COMP_SECRET_SIGNS_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_ACADEMIC_KNOWLEDGE_ASTROLOGY">
+<Description language="ENGLISH">"Academic Knowledge (Astrology)"</Description>
+<Generique>"RULES-COMP_ACADEMIC_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_BATTLE_TONGUE">
+<Description language="ENGLISH">"Speak Language (Battle Tongue)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_SAURIAL">
+<Description language="ENGLISH">"Speak Language (Saurial)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="RULES-T_ARCANE_LORE__HIGH">
+<Description language="ENGLISH">"Arcane Lore (High)"</Description>
+<Generique>"RULES-T_ARCANE_LORE__*"</Generique>
+</Talent>
+<Talent id="RULES-T_ARCANE_LORE__HEAVENS">
+<Description language="ENGLISH">"Arcane Lore (Heavens)"</Description>
+<Generique>"RULES-T_ARCANE_LORE__*"</Generique>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+<DATA_ARMOR>
+<Armor id="COTO-ARMO_V2_MAIL_BRONZE_MAIL">
+<Description language="ENGLISH">"Bronze Mail"</Description>
+<Availability>""</Availability>
+<Price>""</Price>
+<Encumbrance>"0"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_ANY"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="COTO-ARMO_V2_PLATE_BRONZE_PLATE">
+<Description language="ENGLISH">"Bronze Plate"</Description>
+<Availability>""</Availability>
+<Price>""</Price>
+<Encumbrance>"0"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_ANY"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>"20"</Page>
+</Armor>
+</DATA_ARMOR>
+</DATA_BOOK>

@@ -6,7 +6,7 @@ unit PdfMetier;
 interface
 
 uses
-  Classes, SysUtils, fpPDF, Dialogs, PicsLib, Graphics, LCLIntf,
+  Classes, SysUtils, fpPDF, Dialogs, MessageTest, PicsLib, Graphics, LCLIntf,
   ChargeRaceMetier, ChargeMetierNiveau, ChargeMetier, ChargeConstantes,
   ChargeMetierAttribut, ChargeAttribut, ChargeMetierCompetence,
   ChargeCompetence, ChargeTalent, ChargeMetierTalent, ChargeMetierEquipement,

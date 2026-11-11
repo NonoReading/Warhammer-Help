@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"DPTH"</CODE_BOOK>
+<BOOK>"BOOK THE DARK PATH"</BOOK>
+<BOOKNAME>"THE DARK PATH"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"This document is completely unofficial and in no way endorsed by Games Workshop Limited. Warhammer Fantasy Roleplay, the Warhammer Fantasy Roleplay logo, WFRP, Chaos, the Chaos device, the Chaos logo, Citadel, Citadel Device, Darkblade, 'Eavy Metal, Forge World, Games Workshop, Games Workshop logo, Golden Demon, Great Unclean One, GW, the Hammer of Sigmar logo, Horned Rat logo, Keeper of Secrets, Khemri, Khorne, the Khorne logo, Lord of Change, Nurgle, the Nurgle logo, Skaven, the Skaven symbol device, Slaanesh, the Slaanesh logo, Tomb Kings, Tzeentch, the Tzeentch logo, Warhammer, Warhammer World logo, White Dwarf, the White Dwarf logo, and all associated marks, names, races, race insignia, characters, vehicles, locations, units, artefacts, illustrations and images"</DISCLAIMER>
+<DATA_CAREER>
+<Career id="DPTH-CARE_DREG">
+<Description language="ENGLISH">"Dreg"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"T +5%, Ag +5%, Int +10%, WP +10%"</MainProfile>
+<SecondaryProfile>"W +2, Mag +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_Mag">"1"</Advance>
+</Advances>
+<Skills>"Channeling, Drive or Trade (Apothecary or Embalmer), Heal or Torture, Intimidate, Magical Sense, Perception or Prepare Poison, Search, Speak Arcane Language (Magick)"</Skills>
+<Talents>"Flee!, Petty Magic (Necromancy), Resistance to Disease or Strong-minded"</Talents>
+<Trappings>"Crude surgical implements, Hand-cart, Ragged Clothing"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_DRIVE/RULES-COMP_TRADE_APOTHECARY/RULES-COMP_TRADE_EMBALMER">"1"</Skill>
+<Skill name="RULES-COMP_HEAL/RULES-COMP_TORTURE">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION/RULES-COMP_PREPARE_POISON">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_FLEE">"1"</Talent>
+<Talent name="RULES-T_PETTY_MAGIC__NECROMANCY">"1"</Talent>
+<Talent name="RULES-T_RESISTANCE_TO_DISEASE/RULES-T_STRONG_MINDED">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"DPTH 4"</Source>
+</Career>
+<Career id="DPTH-CARE_NECROMANCER">
+<Description language="ENGLISH">"Necromancer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, T +10%, Ag +10%, Int +15%, WP +20%, Fel +5%"</MainProfile>
+<SecondaryProfile>"W +3, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Magic), Academic Knowledge (Necromancy), Channeling, Common Knowledge (any 1), Drive or Ride, Gossip or Intimidate, Heal or Torture, Magical Sense, Perception or Prepare Poison, Read/Write, Speak Arcane Language (Magick or High Nehekharan), Trade (Apothecary or Embalmer)"</Skills>
+<Talents>"Aethyric Attunement or Hardy, Dark Lore (Necromancy), Dark Magic, Fast Hands or Very Resilient, Lesser Magic (any 2), Menacing or Surgery"</Talents>
+<Trappings>"Collection of Necromantic lore in a scroll case or book, Trade tools (Apothecary or Embalmer)"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_NECROMANCY">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ANY_1">"1"</Skill>
+<Skill name="RULES-COMP_DRIVE/RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_HEAL/RULES-COMP_TORTURE">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION/RULES-COMP_PREPARE_POISON">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK/RULES-COMP_SPEAK_ARCANE_LANGUAGE_HIGH_NEHEKHARAN">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_APOTHECARY/RULES-COMP_TRADE_EMBALMER">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_HARDY">"1"</Talent>
+<Talent name="RULES-T_DARK_LORE__NECROMANCY">"1"</Talent>
+<Talent name="RULES-T_DARK_MAGIC">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__ANY_2">"1"</Talent>
+<Talent name="RULES-T_MENACING/RULES-T_SURGERY">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"DPTH 4"</Source>
+</Career>
+<Career id="DPTH-CARE_MORTIFACTOR">
+<Description language="ENGLISH">"Mortifactor"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, S +5%, T +15%, Ag +15%, Int +25%, WP +30%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +4, Mag +3"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"25"</Advance>
+<Advance name="RULES-ATTR_WP">"30"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_Mag">"3"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Magic), Academic Knowledge (Necromancy), Academic Knowledge (Theology), Channeling, Common Knowledge (any 2), Gossip or Intimidate, Heal or Torture, Magical Sense, Read/Write, Speak Arcane Language (Magick or High Nehekharan), Speak Arcane Language (Daemonic or Arcane Elf), Speak Language (Classical), Speak Language (any 2)"</Skills>
+<Talents>"Aethyric Attunement or Meditation, Fearless or Mighty Missile, Lesser Magic (any 2), Menacing or Unsettling, Ritual (any 2 Necromantic)"</Talents>
+<Trappings>"4 Grimoires of Necromantic lore, 2 magic items"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_NECROMANCY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ANY_2">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_HEAL/RULES-COMP_TORTURE">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK/RULES-COMP_SPEAK_ARCANE_LANGUAGE_HIGH_NEHEKHARAN">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_DAEMONIC/RULES-COMP_SPEAK_ARCANE_LANGUAGE_ARCANE_ELF">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_CLASSICAL">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ANY_2">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_MEDITATION">"1"</Talent>
+<Talent name="RULES-T_FEARLESS/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__ANY_2">"1"</Talent>
+<Talent name="RULES-T_MENACING/RULES-T_UNSETTLING">"1"</Talent>
+<Talent name="Ritual (any 2 Necromantic)">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"DPTH 5"</Source>
+</Career>
+<Career id="DPTH-CARE_UNDYING_ONE">
+<Description language="ENGLISH">"Undying One"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, S +10%, T +20%, Ag +20%, Int +35%, WP +40%, Fel +15%"</MainProfile>
+<SecondaryProfile>"W +7, Mag +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"20"</Advance>
+<Advance name="RULES-ATTR_Ag">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"35"</Advance>
+<Advance name="RULES-ATTR_WP">"40"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_W">"7"</Advance>
+<Advance name="RULES-ATTR_Mag">"4"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Magic), Academic Knowledge (Necromancy), Academic Knowledge (Theology), Academic Knowledge (any 1), Heal or Intimidate, Common Knowledge (any 3), Read/Write, Speak Arcane Language (Magick or High Nehekharan), Speak Arcane Language (Daemonic or Arcane Elf), Speak Language (Classical), Speak Language (any 3)"</Skills>
+<Talents>"Aethyric Attunement or Fearless, Frightening or Unsettling, Lesser Magic (any 2), Ritual (any 4 Necromantic)"</Talents>
+<Trappings>"13 Grimoires of Necromantic lore, 4 magic items, Isolated lair"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_NECROMANCY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ANY_1">"1"</Skill>
+<Skill name="RULES-COMP_HEAL/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ANY_3">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK/RULES-COMP_SPEAK_ARCANE_LANGUAGE_HIGH_NEHEKHARAN">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_DAEMONIC/RULES-COMP_SPEAK_ARCANE_LANGUAGE_ARCANE_ELF">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_CLASSICAL">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ANY_3">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_FEARLESS">"1"</Talent>
+<Talent name="RULES-T_FRIGHTENING/RULES-T_UNSETTLING">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__ANY_2">"1"</Talent>
+<Talent name="Ritual (any 4 Necromantic)">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"DPTH 5"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="DPTH-CARE_DREG">"RULES-CARE_CHARLATAN"</Link>
+<Link name="DPTH-CARE_DREG">"RULES-CARE_GRAVE_ROBBER"</Link>
+<Link name="DPTH-CARE_DREG">"DPTH-CARE_NECROMANCER"</Link>
+<Link name="DPTH-CARE_DREG">"RULES-CARE_OUTLAW"</Link>
+<Link name="DPTH-CARE_DREG">"RULES-CARE_VAGABOND"</Link>
+<Link name="RULES-CARE_BARBER_SURGEON">"DPTH-CARE_DREG"</Link>
+<Link name="RULES-CARE_BONE_PICKER">"DPTH-CARE_DREG"</Link>
+<Link name="RULES-CARE_GRAVE_ROBBER">"DPTH-CARE_DREG"</Link>
+<Link name="RULES-CARE_HEDGE_WIZARD">"DPTH-CARE_DREG"</Link>
+<Link name="DPTH-CARE_NECROMANCER">"RULES-CARE_GRAVE_ROBBER"</Link>
+<Link name="DPTH-CARE_NECROMANCER">"DPTH-CARE_MORTIFACTOR"</Link>
+<Link name="DPTH-CARE_NECROMANCER">"RULES-CARE_OUTLAW"</Link>
+<Link name="DPTH-CARE_NECROMANCER">"RULES-CARE_SCHOLAR"</Link>
+<Link name="CCOMP-CARE_WARLOCK">"DPTH-CARE_NECROMANCER"</Link>
+<Link name="DPTH-CARE_MORTIFACTOR">"DPTH-CARE_UNDYING_ONE"</Link>
+<Link name="CCOMP-CARE_EMBALMER">"DPTH-CARE_DREG"</Link>
+<Link name="NDM-CARE_EMBALMER">"DPTH-CARE_DREG"</Link>
+<Link name="CCOMP-CARE_STRIGANY_MYSTIC">"DPTH-CARE_DREG"</Link>
+<Link name="NDM-CARE_STRIGANY_MYSTIC">"DPTH-CARE_DREG"</Link>
+<Link name="RULES-CARE_JOURNEYMAN_WIZARD">"DPTH-CARE_NECROMANCER"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_SPELL_V2>
+<SpellV2 id="DPTH-SPEL_EYES_OF_THE_NOCTURNAL">
+<Description language="ENGLISH">"Eyes of the Nocturnal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Necromancy)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"An eye of a rat (+1)"</Ingredient>
+<Page>"10"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_GHOSTLY_APPARATION">
+<Description language="ENGLISH">"Ghostly Apparation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Necromancy)"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Hair from a dead person (+1)"</Ingredient>
+<Page>"10"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_GRAVE_DUST">
+<Description language="ENGLISH">"Grave Dust"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Necromancy)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Dirt from a grave (+1)"</Ingredient>
+<Page>"10"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_HAUNTING_BREEZE">
+<Description language="ENGLISH">"Haunting Breeze"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Necromancy)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A raven's feather (+1)"</Ingredient>
+<Page>"10"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_LOCATE_CORPSE">
+<Description language="ENGLISH">"Locate Corpse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Necromancy)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A finger bone (+1)"</Ingredient>
+<Page>"10"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_SENSE_UNDEAD">
+<Description language="ENGLISH">"Sense Undead"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Necromancy)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A pair of eyes (+1)"</Ingredient>
+<Page>"10"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_PRESERVE">
+<Description language="ENGLISH">"Preserve"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A drop of blood mixed into the wax seal (+1)"</Ingredient>
+<Page>"11"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_DEATHS_REVELATION">
+<Description language="ENGLISH">"Deaths Revelation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A magnifying glass (+1)"</Ingredient>
+<Page>"11"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_EMBALM">
+<Description language="ENGLISH">"Embalm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A vial of embalming fluid (+1)"</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_TOMB_ROT">
+<Description language="ENGLISH">"Tomb Rot"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bandages from a mummy (+2)"</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_WRAITH_TOUCH">
+<Description language="ENGLISH">"Wraith Touch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A severed hand"</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_WAIL_OF_THE_BANSHEE">
+<Description language="ENGLISH">"Wail of the Banshee"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"The tongue of an orphan (+3)"</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_RIGOR_MORTIS">
+<Description language="ENGLISH">"Rigor Mortis"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Shackles from a prisoner who has died while incarcerated (+2)"</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_EXTEND_CONTROL">
+<Description language="ENGLISH">"Extend Control"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"The brain of a magician (+2)"</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_SPIRIT_FORM">
+<Description language="ENGLISH">"Spirit Form"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Two full actions"</CastingTime>
+<Ingredient>"A piece of gossamer (+2)"</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_FEIGN_DEATH">
+<Description language="ENGLISH">"Feign Death"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A vial of poison (+2)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_SPIRIT_SPEAK">
+<Description language="ENGLISH">"Spirit Speak"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"21"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A stick of incense (+3)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_CURSE_OF_UNDEATH">
+<Description language="ENGLISH">"Curse of Undeath"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"28"</CastingNumber>
+<CastingTime>"Two full actions"</CastingTime>
+<Ingredient>"The hand of a lich, mummy or vampire (+3)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_MAINTAIN_CONTROL">
+<Description language="ENGLISH">"Maintain Control"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Essences of a vampire (+3)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_BIND_SPIRIT">
+<Description language="ENGLISH">"Bind Spirit"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Two full action"</CastingTime>
+<Ingredient>"Burial wrappings (+3)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_AMONG">
+<Description language="ENGLISH">"Among"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A burnt holy doctrine (+2)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_BLOOD_BRIDGE">
+<Description language="ENGLISH">"Blood Bridge"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A blood soaked cloth (+2)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_SPELL_OF_AWAKENING_ALTERED_VERSION">
+<Description language="ENGLISH">"Spell of Awakening (Altered Version)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Two full action"</CastingTime>
+<Ingredient>"A circlet of iron quenched in human blood (+3)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_CRIPPLING_STARE">
+<Description language="ENGLISH">"Crippling Stare"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"32"</CastingNumber>
+<CastingTime>"Two full actions"</CastingTime>
+<Ingredient>"The broken bone of a Priest of Shallya (+3)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_RAISE_WIGHT_CAPTAIN">
+<Description language="ENGLISH">"Raise Wight Captain"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Necromancy"</Lore>
+<CastingNumber>"30"</CastingNumber>
+<CastingTime>"Two full actions"</CastingTime>
+<Ingredient>"The blood of a crusader, knight or templar (+3)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_AURA_OF_DECAY">
+<Description language="ENGLISH">"Aura of Decay"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"1 hour"</CastingTime>
+<Ingredient>"A pinch of Necrotic Powder, and the ashes, or slag, of a best quality weapon."</Ingredient>
+<Page>"17"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"2"</MagicMin>
+<XPCost>"200"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_ABU_DALZIM_S_SOUL_TRANSFER">
+<Description language="ENGLISH">"Abu Dalzim's Soul Transfer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"2 hours"</CastingTime>
+<Ingredient>"A black diamond, a pint of your blood, a living mortal of the same race as you."</Ingredient>
+<Page>"17"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_DRAIN_LIFE">
+<Description language="ENGLISH">"Drain Life"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"18 (increases by 1 point every time it is successfully cast)"</CastingNumber>
+<CastingTime>"4 hours"</CastingTime>
+<Ingredient>"A living person of the same race you."</Ingredient>
+<Page>"17"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"2"</MagicMin>
+<XPCost>"200"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>"If you fail the Casting Roll your body ages 10 years."</Consequences>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_GOLEM">
+<Description language="ENGLISH">"Golem"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"4 hours"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"17"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_REQUEST_OF_THE_UNDYING">
+<Description language="ENGLISH">"Request of the Undying"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"19"</CastingNumber>
+<CastingTime>"2 hours"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"18"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"2"</MagicMin>
+<XPCost>"200"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_SPIRITUAL_CURSE">
+<Description language="ENGLISH">"Spiritual Curse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"1 hour"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"18"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"2"</MagicMin>
+<XPCost>"200"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_AWAKENING_OF_THE_ANCIENT_KING">
+<Description language="ENGLISH">"Awakening of the Ancient King"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"4 hours"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"19"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"High Nehekharan"</ArcaneLanguage>
+<MagicMin>"4"</MagicMin>
+<XPCost>"400"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_CALL_OF_THE_LICH_KING">
+<Description language="ENGLISH">"Call of the Lich King"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"30"</CastingNumber>
+<CastingTime>"Two hours"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"19"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"High Nehekharan"</ArcaneLanguage>
+<MagicMin>"5"</MagicMin>
+<XPCost>"500"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_UNLIFE_OF_NAGASH">
+<Description language="ENGLISH">"Unlife of Nagash"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"4 (2 hours to perform the burial rites and another 2 hours to cast the Ritual)."</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"20"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"High Nehekharan"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_ARMY_OF_THE_DEAD">
+<Description language="ENGLISH">"Army of the Dead"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"25"</CastingNumber>
+<CastingTime>"One hour"</CastingTime>
+<Ingredient>"None other than those needed to fulfill the requirements of the Conditions."</Ingredient>
+<Page>"20"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"4"</MagicMin>
+<XPCost>"400"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_SANCTUM">
+<Description language="ENGLISH">"Sanctum"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"21"</CastingNumber>
+<CastingTime>"1 hour for every 4 acres to be outlined in blood, 6 hours to perform the ritual. There is no limit to the amount of help you may enlist in outlining the target location in blood, as long as if they are living beings they are not within the area during the casting period. Outlining the area in blood is considered to be a simple enough task that even mindless undead are capable of doing it if so commanded."</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"20"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_ANCIENT_RENEWAL_OF_NAGASH">
+<Description language="ENGLISH">"Ancient Renewal of Nagash"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"32"</CastingNumber>
+<CastingTime>"From sunset to sunrise"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"21"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"High Nehekharan"</ArcaneLanguage>
+<MagicMin>"5"</MagicMin>
+<XPCost>"500"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_GREAT_SPELL_OF_UNBINDING">
+<Description language="ENGLISH">"Great Spell of Unbinding"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"1 hour"</CastingTime>
+<Ingredient>"The written Nehekharan words of unbinding (the ritual itself)."</Ingredient>
+<Page>"22"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"2"</MagicMin>
+<XPCost>"200"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="DPTH-SPEL_SOULBIND">
+<Description language="ENGLISH">"Soulbind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"30"</CastingNumber>
+<CastingTime>"6 hours"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"22"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"High Nehekharan"</ArcaneLanguage>
+<MagicMin>"4"</MagicMin>
+<XPCost>"400"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>"If the Casting Roll is failed you become a Wraith forever bound to the ritual site."</Consequences>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SPELL_TALENT>
+<Sort id="DPTH-SPEL_EYES_OF_THE_NOCTURNAL">
+<Talent>"RULES-T_PETTY_MAGIC__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_GHOSTLY_APPARATION">
+<Talent>"RULES-T_PETTY_MAGIC__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_GRAVE_DUST">
+<Talent>"RULES-T_PETTY_MAGIC__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_HAUNTING_BREEZE">
+<Talent>"RULES-T_PETTY_MAGIC__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_LOCATE_CORPSE">
+<Talent>"RULES-T_PETTY_MAGIC__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_SENSE_UNDEAD">
+<Talent>"RULES-T_PETTY_MAGIC__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_EMBALM">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_TOMB_ROT">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_WRAITH_TOUCH">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_WAIL_OF_THE_BANSHEE">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_RIGOR_MORTIS">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_EXTEND_CONTROL">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_SPIRIT_FORM">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_FEIGN_DEATH">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_SPIRIT_SPEAK">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_CURSE_OF_UNDEATH">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_MAINTAIN_CONTROL">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_BIND_SPIRIT">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_AMONG">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_BLOOD_BRIDGE">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_SPELL_OF_AWAKENING_ALTERED_VERSION">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_CRIPPLING_STARE">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_RAISE_WIGHT_CAPTAIN">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_ABU_DALZIM_S_SOUL_TRANSFER">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_DRAIN_LIFE">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_SPIRITUAL_CURSE">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_AWAKENING_OF_THE_ANCIENT_KING">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_CALL_OF_THE_LICH_KING">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_UNLIFE_OF_NAGASH">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_ARMY_OF_THE_DEAD">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_SANCTUM">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_ANCIENT_RENEWAL_OF_NAGASH">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+<Sort id="DPTH-SPEL_SOULBIND">
+<Talent>"RULES-T_DARK_LORE__NECROMANCY"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="DPTH-EQUI_CREATURES_WIGHT_CAPTAIN">
+<Description language="ENGLISH">"Wight Captain"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"50;35;45;45;35;35;55;20;2;18;4;4;4;0;0;0"</Profile>
+<Skills>"Academic Knowledge (Strategy/Tactics), Perception, Read/Write, Speak Language (Classical)"</Skills>
+<Talents>"Frightening, Night Vision, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"15"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMP_TRADE_EMBALMER">
+<Description language="ENGLISH">"Trade (Embalmer)"</Description>
+<Generique>"RULES-COMP_TRADE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_ANY_1">
+<Description language="ENGLISH">"Common Knowledge (any 1)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_ARCANE_LANGUAGE_HIGH_NEHEKHARAN">
+<Description language="ENGLISH">"Speak Arcane Language (High Nehekharan)"</Description>
+<Generique>"RULES-COMP_SPEAK_ARCANE_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_ANY_2">
+<Description language="ENGLISH">"Common Knowledge (any 2)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_ANY_2">
+<Description language="ENGLISH">"Speak Language (any 2)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_ACADEMIC_KNOWLEDGE_ANY_1">
+<Description language="ENGLISH">"Academic Knowledge (any 1)"</Description>
+<Generique>"RULES-COMP_ACADEMIC_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_ANY_3">
+<Description language="ENGLISH">"Common Knowledge (any 3)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_ANY_3">
+<Description language="ENGLISH">"Speak Language (any 3)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="RULES-T_PETTY_MAGIC__NECROMANCY">
+<Description language="ENGLISH">"Petty Magic (Necromancy)"</Description>
+<Generique>"RULES-T_PETTY_MAGIC__*"</Generique>
+</Talent>
+<Talent id="RULES-T_DARK_LORE__NECROMANCY">
+<Description language="ENGLISH">"Dark Lore (Necromancy)"</Description>
+<Generique>"RULES-T_DARK_LORE__*"</Generique>
+</Talent>
+<Talent id="RULES-T_LESSER_MAGIC__ANY_2">
+<Description language="ENGLISH">"Lesser Magic (any 2)"</Description>
+<Generique>"RULES-T_LESSER_MAGIC__*"</Generique>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+</DATA_BOOK>

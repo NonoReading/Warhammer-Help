@@ -16,7 +16,7 @@ unit PanelNoms;
 interface
 
 uses
-  BCLabelContour, Classes, SysUtils, Controls, StdCtrls, ExtCtrls, Grids, Dialogs, DOM, BCButton,
+  BCLabelContour, Classes, SysUtils, Controls, StdCtrls, ExtCtrls, Grids, Dialogs, MessageTest, DOM, BCButton,
   ChargeTexte, GlobalFonts, PanelModificateurs, PanelFiche;
 
 type
@@ -54,7 +54,7 @@ implementation
 
 const
   HauteurNoms = 800;
-  YTitre: array[0..2] of Integer = (28, 252, 392);
+  YTitre: array[0..2] of Integer = (28, 252, 424);
   HautGrille: array[0..2] of Integer = (130, 100, 300);
   PartiesCourantes: array[0..9] of String = ('Forename', 'Surname', 'Place', 'Clan', 'Epithet', 'First', 'Second',
     'End', 'Prefix', 'Suffix');
@@ -207,11 +207,17 @@ var
   Sexes: array of String;
   LesParties, Cles: TStringList;
   SansSexe, AvecSexe: array of Boolean;
-  Compte: array of Integer;
+  Compte, PrecPoids, PrecDebut: array of Integer;
+  PrecSexe: array of String;
+  PrecAppairee: array of Boolean;
 begin
   N := FGrilles[2].RowCount;
   SetLength(Sexes, N);
   SetLength(Compte, N + 1);
+  SetLength(PrecPoids, N + 1);
+  SetLength(PrecDebut, N + 1);
+  SetLength(PrecSexe, N + 1);
+  SetLength(PrecAppairee, N + 1);
   SetLength(SansSexe, N + 1);
   SetLength(AvecSexe, N + 1);
   LesParties := TStringList.Create;
@@ -243,12 +249,26 @@ begin
       end;
       Poids := StrToIntDef(FGrilles[2].Cells[4, R], 1);
       if Poids < 1 then Poids := 1;
-      Debut := Compte[I] + 1;
-      Compte[I] := Compte[I] + Poids;
+      // partie melangee : un nom M suivi d'un nom F de meme poids se partagent la meme plage (i / a des Nains)
+      if (Cle = Partie) and (Sexes[R] <> '') and (PrecSexe[I] <> '') and (PrecSexe[I] <> Sexes[R]) and
+        not PrecAppairee[I] and (PrecPoids[I] = Poids) then
+      begin
+        Debut := PrecDebut[I];
+        PrecAppairee[I] := True;
+      end
+      else
+      begin
+        Debut := Compte[I] + 1;
+        Compte[I] := Compte[I] + Poids;
+        PrecAppairee[I] := False;
+      end;
+      PrecSexe[I] := Sexes[R];
+      PrecPoids[I] := Poids;
+      PrecDebut[I] := Debut;
       if Poids = 1 then
         FGrilles[2].Cells[3, R] := IntToStr(Debut)
       else
-        FGrilles[2].Cells[3, R] := IntToStr(Debut) + '-' + IntToStr(Compte[I]);
+        FGrilles[2].Cells[3, R] := IntToStr(Debut) + '-' + IntToStr(Debut + Poids - 1);
     end;
   finally
     LesParties.Free;
@@ -450,7 +470,8 @@ function TPanelNoms.Controler: Boolean;
 var
   R, K, J: Integer;
   PartiesPresentes, ReglesDeclarees, Cites: TStringList;
-  Code: String;
+  Code, PartieAbsente: String;
+  UnModeleComplet: Boolean;
 begin
   Result := True;
   for K := 0 to 2 do FGrilles[K].EditorMode := False;
@@ -501,13 +522,21 @@ begin
       end;
       Cites.Clear;
       PartiesDuModele(FGrilles[0].Cells[1, R], Cites);
+      // une partie sans nom ici peut venir d'un autre livre (prenoms des nains, noms de famille de
+      // l'Empire) : refus seulement si AUCUNE partie du modele n'a de nom dans les tables de l'ethnie
+      PartieAbsente := '';
+      UnModeleComplet := False;
       for J := 0 to Cites.Count - 1 do
-        if PartiesPresentes.IndexOf(Cites[J]) < 0 then
-        begin
-          ShowMessage(Format(GetTexteLibelle('RULES-LAB_634',
-            'Patterns, line %d: the part "%s" has no name in the tables.'), [R, Cites[J]]));
-          Exit(False);
-        end;
+        if PartiesPresentes.IndexOf(Cites[J]) >= 0 then
+          UnModeleComplet := True
+        else if PartieAbsente = '' then
+          PartieAbsente := Cites[J];
+      if (Cites.Count > 0) and not UnModeleComplet then
+      begin
+        ShowMessage(Format(GetTexteLibelle('RULES-LAB_634',
+          'Patterns, line %d: the part "%s" has no name in the tables.'), [R, PartieAbsente]));
+        Exit(False);
+      end;
     end;
   finally
     PartiesPresentes.Free;
@@ -591,7 +620,14 @@ begin
     if Ancien <> nil then Element.RemoveChild(Ancien);
     // rien d'autre que d'eventuels commentaires : pas de bloc
     if (FGrilles[0].RowCount > 1) or (FGrilles[1].RowCount > 1) or (FGrilles[2].RowCount > 1) then
-      Element.AppendChild(Bloc)
+    begin
+      // le schema veut Page en derniere balise : le bloc se place avant elle
+      Suivant := Element.FindNode('Page');
+      if Suivant <> nil then
+        Element.InsertBefore(Bloc, Suivant)
+      else
+        Element.AppendChild(Bloc);
+    end
     else
       Bloc.Free;
   finally

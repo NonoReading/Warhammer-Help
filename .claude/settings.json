@@ -1,0 +1,111 @@
+{
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "mcp__ccd_session_mgmt__archive_session",
+      "Bash(./WarhammerHelp.exe --pdf *)",
+      "Bash(./WarhammerHelp.exe --dump *)",
+      "Bash(./WarhammerHelp.exe --dumpecran *)",
+      "Bash(./WarhammerHelp.exe --dumpwinlivre *)",
+      "Bash(./WarhammerHelp.exe --dumppdf *)",
+      "Bash(./WarhammerHelp.exe --reecrit *)",
+      "Bash(./WarhammerHelp.exe --naissance *)",
+      "Bash(./WarhammerHelp.exe --familier *)",
+      "Bash(./WarhammerHelp.exe --creer *)",
+      "PowerShell(Start-Process -Wait .\\WarhammerHelp.exe -ArgumentList '--pdf'*)",
+      "PowerShell(Start-Process -Wait .\\WarhammerHelp.exe -ArgumentList '--dump'*)",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(Get-Content *)",
+      "PowerShell(python *)",
+      "Edit(./**)",
+      "Write(./**)",
+      "Bash(python -I *)",
+      "Bash(python *)",
+      "Bash(cd *)",
+      "Bash(grep *)",
+      "Bash(sed *)",
+      "Bash(ls *)",
+      "Bash(find *)",
+      "Bash(printf *)",
+      "Bash(lazbuild *)",
+      "Bash(C:/lazarus/lazbuild.exe *)",
+      "Bash(/c/lazarus/lazbuild.exe *)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(rm *)",
+      "Bash(mv *)",
+      "Bash(cp *)",
+      "Bash(mkdir *)",
+      "Bash(cat *)",
+      "Bash(wc *)",
+      "Bash(tasklist)",
+      "Bash(tasklist *)",
+      "PowerShell(tasklist)",
+      "PowerShell(tasklist *)",
+      "PowerShell(Get-Process)",
+      "PowerShell(Get-Process *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "Bash(pdftoppm *)",
+      "Bash(pdfimages *)",
+      "Bash(pdfinfo *)",
+      "Bash(pdftotext *)",
+      "Bash(C:/poppler-26.02.0/**/pdftoppm.exe *)",
+      "Bash(C:/poppler-26.02.0/**/pdfimages.exe *)",
+      "Bash(C:/poppler-26.02.0/**/pdfinfo.exe *)",
+      "Bash(C:/poppler-26.02.0/**/pdftotext.exe *)",
+      "Bash(/c/poppler-26.02.0/**/pdftoppm.exe *)",
+      "Bash(/c/poppler-26.02.0/**/pdfimages.exe *)",
+      "Bash(/c/poppler-26.02.0/**/pdfinfo.exe *)",
+      "Bash(/c/poppler-26.02.0/**/pdftotext.exe *)",
+      "Read(C:/poppler-26.02.0/**)"
+    ]
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell",
+            "args": ["-NoProfile", "-Command", "[console]::beep(1200,300)"]
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell",
+            "args": ["-NoProfile", "-Command", "[console]::beep(600,400)"]
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sed -n 's/.*\"command\"[[:space:]]*:[[:space:]]*\"\\(\\([^\"\\\\]\\|\\\\.\\)*\\)\".*/\\1/p' | grep -qE '&&|\\||;' && echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"Regle de Nono : jamais de commande composee (pipe, point-virgule, &&), meme en PowerShell. Utilise Read/Grep/Glob, ou un script + une commande simple.\"}}'; exit 0"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sed -n 's/.*\"command\"[[:space:]]*:[[:space:]]*\"\\(\\([^\"\\\\]\\|\\\\.\\)*\\)\".*/\\1/p' | grep -qE '&&|\\||;|python -c|[^.]/WarhammerHelp|\\\\\\\\WarhammerHelp' && echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"Regle de Nono : jamais de commande composee (&&, pipe, point-virgule, python -c), et WarhammerHelp.exe se lance seulement en ./WarhammerHelp.exe depuis le dossier du projet (jamais par chemin complet). Utilise Read/Grep/Glob, ou un script + une commande simple.\"}}'; exit 0"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -15,7 +15,7 @@ unit PanelTirage;
 interface
 
 uses
-  BCLabelContour, Classes, SysUtils, Controls, Forms, StdCtrls, ExtCtrls, Grids, Dialogs, Graphics, DOM, BCButton,
+  BCLabelContour, Classes, SysUtils, Controls, Forms, StdCtrls, ExtCtrls, Grids, Dialogs, MessageTest, Graphics, DOM, BCButton,
   ChargeConstantes, ChargeTexte, UnitCalcul, GlobalFonts;
 
 type

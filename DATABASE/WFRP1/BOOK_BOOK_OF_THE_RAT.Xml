@@ -1,0 +1,4493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"BOTR"</CODE_BOOK>
+<BOOK>"BOOK BOOK OF THE RAT"</BOOK>
+<BOOKNAME>"BOOK OF THE RAT"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP1"</VERSION>
+<OFFICIAL>"0"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"Warhammer Fantasy Roleplay (c) Copyright Games Workshop Limited 2019. Warhammer Fantasy Roleplay, the Warhammer Fantasy Roleplay logo, GW, Games Workshop, Warhammer, the twin-tailed comet logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likeness thereof, are either (R) or TM, and/or (c) Games Workshop Limited, variably registered around the world, and used under licence. Cubicle 7 Entertainment and the Cubicle 7 Entertainment logo are trademarks of Cubicle 7 Entertainment Limited. All rights reserved."</DISCLAIMER>
+<DATA_RULE>
+<Rule id="BOTR-RULE_GREATER_INTELLIGENCE">""</Rule>
+</DATA_RULE>
+<DATA_SPECIE>
+<Specie id="BOTR-RACE_SKAVEN">
+<Description language="ENGLISH">"Skaven"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"BOTR-SPECIE_SKAVEN"</Ethnic>
+<Rule>""</Rule>
+<Wounds>"1d3+4"</Wounds>
+<FatePoints>"1d4-2 (minimum 0, au choix du MJ)"</FatePoints>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_M">"1d3+3"</Attribut>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_S">"1d3+1"</Attribut>
+<Attribut name="RULES-ATTR_T">"1d3+1"</Attribut>
+<Attribut name="RULES-ATTR_W">"1d3+4"</Attribut>
+<Attribut name="RULES-ATTR_I">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_Dex">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_Ld">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_Cl">"2d10+5"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"BOTR-COMP_SPEAK_LANGUAGE__QUEEKISH"</Skill>
+<Skill>"BOTR-COMP_ACUTE_SENSES"</Skill>
+<Skill>"RULES-COMP_CONTORTIONIST"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE/RULES-COMP_ORIENTATION"</Skill>
+</SUBCHAPTER_SKILL>
+<Page>"14"</Page>
+</Specie>
+</DATA_SPECIE>
+<DATA_RACE>
+<Race id="BOTR-SPECIE_SKAVEN">
+<Description language="ENGLISH">"Skaven"</Description>
+<SUBCHAPTER_PHYSICAL>
+<Age>"Jeune 2d6 ans, ancien 4d6 ans (4 a 24 ans)."</Age>
+<HeightFemale>"44+4d6"</HeightFemale>
+<HeightMale>"44+4d6"</HeightMale>
+</SUBCHAPTER_PHYSICAL>
+<Page>"14"</Page>
+</Race>
+</DATA_RACE>
+<DATA_SKILL_V1>
+<Skill id="BOTR-COMP_ACUTE_SENSES">
+<Description language="ENGLISH">"Acute Senses"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"20"</Page>
+</Skill>
+<Skill id="BOTR-COMP_TACTICS">
+<Description language="ENGLISH">"Tactics"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"22"</Page>
+</Skill>
+<Skill id="BOTR-COMP_CONCEAL_SUBTERRANEAN">
+<Description language="ENGLISH">"Conceal Subterranean"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"21"</Page>
+</Skill>
+<Skill id="BOTR-COMP_SILENT_MOVE_SUBTERRANEAN">
+<Description language="ENGLISH">"Silent Move Subterranean"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"22"</Page>
+</Skill>
+<Skill id="BOTR-COMP_INTRIGUE">
+<Description language="ENGLISH">"Intrigue"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"26"</Page>
+</Skill>
+<Skill id="BOTR-COMP_BASIC_MARTIAL_ARTS">
+<Description language="ENGLISH">"Basic Martial Arts"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"63"</Page>
+</Skill>
+<Skill id="BOTR-COMP_ADVANCED_MARTIAL_ARTS">
+<Description language="ENGLISH">"Advanced Martial Arts"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"65"</Page>
+</Skill>
+<Skill id="BOTR-COMP_SABOTAGE">
+<Description language="ENGLISH">"Sabotage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"65"</Page>
+</Skill>
+<Skill id="BOTR-COMP_BIOLOGY">
+<Description language="ENGLISH">"Biology"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"78"</Page>
+</Skill>
+<Skill id="BOTR-COMP_BREEDING">
+<Description language="ENGLISH">"Breeding"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"72"</Page>
+</Skill>
+<Skill id="BOTR-COMP_PREPARE_WARPSTONE_COMPOUND">
+<Description language="ENGLISH">"Prepare Warpstone Compound"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"60"</Page>
+</Skill>
+<Skill id="BOTR-COMP_REFINE_WARPSTONE">
+<Description language="ENGLISH">"Refine Warpstone"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"60"</Page>
+</Skill>
+<Skill id="BOTR-COMP_CRAFTSMANSHIP_WEAPONS">
+<Description language="ENGLISH">"Craftsmanship: Weapons"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"20"</Page>
+</Skill>
+<Skill id="BOTR-COMP_OPERATE_WARPLIGHTNING_GENERATOR">
+<Description language="ENGLISH">"Operate Warplightning Generator"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"21"</Page>
+</Skill>
+<Skill id="BOTR-COMP_RIDE_DOOMWHEEL">
+<Description language="ENGLISH">"Ride Doomwheel"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"21"</Page>
+</Skill>
+<Skill id="BOTR-COMP_SIEGECRAFT">
+<Description language="ENGLISH">"Siegecraft"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"21"</Page>
+</Skill>
+<Skill id="BOTR-COMP_MANUFACTURE_WARPSTONE_POTIONS">
+<Description language="ENGLISH">"Manufacture Warpstone Potions"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"21"</Page>
+</Skill>
+<Skill id="BOTR-COMP_MANUFACTURE_WARPSTONE_CONCENTRATE">
+<Description language="ENGLISH">"Manufacture Warpstone Concentrate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"20"</Page>
+</Skill>
+<Skill id="BOTR-COMP_MANUFACTURE_WARPSCROLLS">
+<Description language="ENGLISH">"Manufacture Warpscrolls"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"20"</Page>
+</Skill>
+<Skill id="BOTR-COMP_ADVANCED_WARPSTONE_EXPERIMENTS">
+<Description language="ENGLISH">"Advanced Warpstone Experiments"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"90"</Page>
+</Skill>
+<Skill id="BOTR-COMP_CAST_CLAN_SKRYRE_SPELLS">
+<Description language="ENGLISH">"Cast Clan Skryre Spells"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"89"</Page>
+</Skill>
+<Skill id="BOTR-COMP_CAST_GREY_SEER_SPELLS">
+<Description language="ENGLISH">"Cast Grey Seer Spells"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"113"</Page>
+</Skill>
+<Skill id="BOTR-COMP_ASTROLOGY">
+<Description language="ENGLISH">"Astrology"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"178"</Page>
+</Skill>
+<Skill id="BOTR-COMP_DIVINATION">
+<Description language="ENGLISH">"Divination"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"178"</Page>
+</Skill>
+<Skill id="BOTR-COMP_DIPLOMACY">
+<Description language="ENGLISH">"Diplomacy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"102"</Page>
+</Skill>
+<Skill id="BOTR-COMP_READ_LIPS">
+<Description language="ENGLISH">"Read Lips"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"103"</Page>
+</Skill>
+</DATA_SKILL_V1>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="BOTR-COMP_SPEAK_LANGUAGE__QUEEKISH">
+<Description language="ENGLISH">"Queekish"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE__*"</Generique>
+<Page>"14"</Page>
+</Skill>
+<Skill id="BOTR-COMP_SPEAK_LANGUAGE__ANCIENT_SLANN">
+<Description language="ENGLISH">"Ancient Slann"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE__*"</Generique>
+<Page>"78"</Page>
+</Skill>
+<Skill id="BOTR-COMP_SECRET_SIGNS__CLAN_PESTILENS">
+<Description language="ENGLISH">"Clan Pestilens"</Description>
+<Generique>"RULES-COMP_SECRET_SIGNS__*"</Generique>
+<Page>"80"</Page>
+</Skill>
+<Skill id="BOTR-COMP_SPECIALIST_WEAPON__WHIP">
+<Description language="ENGLISH">"Whip"</Description>
+<Generique>"RULES-COMP_SPECIALIST_WEAPON__*"</Generique>
+<Page>"50"</Page>
+</Skill>
+<Skill id="BOTR-COMP_ARCANE_LANGUAGE__SKAVEN">
+<Description language="ENGLISH">"Skaven"</Description>
+<Generique>"RULES-COMP_ARCANE_LANGUAGE__*"</Generique>
+<Page>"89"</Page>
+</Skill>
+<Skill id="BOTR-COMP_SECRET_LANGUAGE__WARPLOCK">
+<Description language="ENGLISH">"Warplock"</Description>
+<Generique>"RULES-COMP_SECRET_LANGUAGE__*"</Generique>
+<Page>"21"</Page>
+</Skill>
+<Skill id="BOTR-COMP_SECRET_SIGNS__WARPLOCK">
+<Description language="ENGLISH">"Warplock"</Description>
+<Generique>"RULES-COMP_SECRET_SIGNS__*"</Generique>
+<Page>"21"</Page>
+</Skill>
+<Skill id="BOTR-COMP_ART__DRAFTING">
+<Description language="ENGLISH">"Drafting"</Description>
+<Generique>"RULES-COMP_ART__*"</Generique>
+<Page>"89"</Page>
+</Skill>
+<Skill id="BOTR-COMP_SPECIALIST_WEAPON__WARPLOCK_PISTOL">
+<Description language="ENGLISH">"Warplock Pistol"</Description>
+<Generique>"RULES-COMP_SPECIALIST_WEAPON__*"</Generique>
+<Page>"84"</Page>
+</Skill>
+<Skill id="BOTR-COMP_SPECIALIST_WEAPON__POISON_WIND_GLOBE">
+<Description language="ENGLISH">"Poison Wind Globe"</Description>
+<Generique>"RULES-COMP_SPECIALIST_WEAPON__*"</Generique>
+<Page>"86"</Page>
+</Skill>
+<Skill id="BOTR-COMP_SPECIALIST_WEAPON__WARPFIRE_THROWER">
+<Description language="ENGLISH">"Warpfire Thrower"</Description>
+<Generique>"RULES-COMP_SPECIALIST_WEAPON__*"</Generique>
+<Page>"21"</Page>
+</Skill>
+<Skill id="BOTR-COMP_SPECIALIST_WEAPON__WARPLOCK_JEZZAIL">
+<Description language="ENGLISH">"Warplock Jezzail"</Description>
+<Generique>"RULES-COMP_SPECIALIST_WEAPON__*"</Generique>
+<Page>"88"</Page>
+</Skill>
+<Skill id="BOTR-COMP_SECRET_LANGUAGE__CLAN_SKATCHR">
+<Description language="ENGLISH">"Clan Skatchr"</Description>
+<Generique>"RULES-COMP_SECRET_LANGUAGE__*"</Generique>
+<Page>"178"</Page>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+<DATA_SKILL_ROLL_V1>
+<Entry>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_AMBIDEXTROUS">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_BLATHER">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_BRIBERY">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_DODGE_BLOW">"10"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_FLEET_FOOTED">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_FLEE">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_LIGHTNING_REFLEXES">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_LUCK">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_NIGHT_VISION">"3"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_READ_WRITE">"4"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_SILENT_MOVE_RURAL">"8"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_SILENT_MOVE_URBAN">"8"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_SIXTH_SENSE">"6"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE__OLD_WORLDER">"6"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_STREET_FIGHTER">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_VERY_RESILIENT">"10"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_VERY_STRONG">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_AMBIDEXTROUS">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_BLATHER">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_BRIBERY">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_DODGE_BLOW">"10"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_FLEET_FOOTED">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_FLEE">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_LIGHTNING_REFLEXES">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_LUCK">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_NIGHT_VISION">"3"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_READ_WRITE">"4"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_SILENT_MOVE_RURAL">"8"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_SILENT_MOVE_URBAN">"8"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_SIXTH_SENSE">"6"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE__OLD_WORLDER">"6"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_STREET_FIGHTER">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_VERY_RESILIENT">"10"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_VERY_STRONG">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_AMBIDEXTROUS">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_BLATHER">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_BRIBERY">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_DODGE_BLOW">"10"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_FLEET_FOOTED">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_FLEE">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_LIGHTNING_REFLEXES">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_LUCK">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_NIGHT_VISION">"3"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_READ_WRITE">"4"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_SILENT_MOVE_RURAL">"8"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_SILENT_MOVE_URBAN">"8"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_SIXTH_SENSE">"6"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE__OLD_WORLDER">"6"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_STREET_FIGHTER">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_VERY_RESILIENT">"10"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_VERY_STRONG">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_AMBIDEXTROUS">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_BLATHER">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_BRIBERY">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_DODGE_BLOW">"10"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_FLEET_FOOTED">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_FLEE">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_LIGHTNING_REFLEXES">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_LUCK">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_NIGHT_VISION">"3"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_READ_WRITE">"4"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_SILENT_MOVE_RURAL">"8"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_SILENT_MOVE_URBAN">"8"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_SIXTH_SENSE">"6"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE__OLD_WORLDER">"6"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_STREET_FIGHTER">"5"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_VERY_RESILIENT">"10"</Skill>
+</Entry>
+<Entry>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Skill name="RULES-COMP_VERY_STRONG">"5"</Skill>
+</Entry>
+</DATA_SKILL_ROLL_V1>
+<DATA_SKILL_COUNT_AGE_V1>
+<Entry>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<AgeMin>"4"</AgeMin>
+<AgeMax>"8"</AgeMax>
+<Modifier>"+0"</Modifier>
+</Entry>
+<Entry>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<AgeMin>"9"</AgeMin>
+<AgeMax>"14"</AgeMax>
+<Modifier>"+1"</Modifier>
+</Entry>
+<Entry>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<AgeMin>"15"</AgeMin>
+<AgeMax>"18"</AgeMax>
+<Modifier>"+0"</Modifier>
+</Entry>
+<Entry>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<AgeMin>"19"</AgeMin>
+<AgeMax>"99"</AgeMax>
+<Modifier>"-1"</Modifier>
+</Entry>
+</DATA_SKILL_COUNT_AGE_V1>
+<DATA_CAREER_V1>
+<Career id="BOTR-WORK_CLANRAT_WARRIOR">
+<Description language="ENGLISH">"Clanrat Warrior"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Dodge Blow, Scale Sheer Surface, Strike Mighty Blow"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_DODGE_BLOW">"100"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_MIGHTY_BLOW">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Hand weapon or Spear; Leather armor; Long knife; Shield"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SWORD/RULES-EQUIP_WEAPON_MELEE_HAND_AXE/RULES-EQUIP_WEAPON_MELEE_MACE/RULES-EQUIP_WEAPON_MELEE_SPEAR">"1"</Item>
+<Item name="RULES-EQUIP_ARMOUR_LEATHER_JERKIN">"1"</Item>
+<Item name="BOTR-EQUIP_WEAPON_MELEE_LONG_KNIFE">"1"</Item>
+<Item name="RULES-EQUIP_ARMOUR_SHIELD">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"24"</Page>
+</Career>
+<Career id="BOTR-WORK_CLAN_GUARD">
+<Description language="ENGLISH">"Clan Guard"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Disarm, Dodge Blow, Specialist Weapon - Polearms, Strike Mighty Blow, Strike to Injure, Strike to Stun"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_DISARM">"100"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__POLEARM">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_MIGHTY_BLOW">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_TO_INJURE">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_TO_STUN">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Chain Shirt; Dagger; Hand Weapon; Halberd"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_ARMOUR_MAIL_SHIRT">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_DAGGER_KNIFE">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SWORD/RULES-EQUIP_WEAPON_MELEE_HAND_AXE/RULES-EQUIP_WEAPON_MELEE_MACE">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_HALBERD">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"25"</Page>
+</Career>
+<Career id="BOTR-WORK_CLAN_CHIEFTAIN">
+<Description language="ENGLISH">"Clan Chieftain"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Ld">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Intimidate, Intrigue, Heraldry, Specialist Weapon - Two-Handed"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="APOCN-COMP_INTIMIDATE">"100"</Skill>
+<Skill name="BOTR-COMP_INTRIGUE">"100"</Skill>
+<Skill name="RULES-COMP_HERALDRY">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__DOUBLE_HANDED_WEAPONS">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Controle d un clan et de ses terriers (au moins quarante Clanrats); escorte d au moins dix Clan Guards"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Controle d un clan et de ses terriers (au moins quarante Clanrats)">"1"</Item>
+<Item name="escorte d au moins dix Clan Guards">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"26"</Page>
+</Career>
+<Career id="BOTR-WORK_CLAN_WARLORD">
+<Description language="ENGLISH">"Clan Warlord"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"30"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+<Advance name="RULES-ATTR_I">"30"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Ld">"30"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_Cl">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Bribery, Dynastic Knowledge, Intimidate, Strongskaven, Tactics"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_BRIBERY">"100"</Skill>
+<Skill name="APOCN-COMP_DYNASTIC_KNOWLEDGE">"100"</Skill>
+<Skill name="APOCN-COMP_INTIMIDATE">"100"</Skill>
+<Skill name="RULES-COMP_STRONGMAN">"100"</Skill>
+<Skill name="BOTR-COMP_TACTICS">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Au moins un Advisor; garde de vingt Clan Guards au moins; controle d un clan et de ses terriers; controle ou fidelite d au moins un autre clan; regiment d au moins deux cents Clanrat Warriors"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Au moins un Advisor">"1"</Item>
+<Item name="garde de vingt Clan Guards au moins">"1"</Item>
+<Item name="controle d un clan et de ses terriers">"1"</Item>
+<Item name="controle ou fidelite d au moins un autre clan">"1"</Item>
+<Item name="regiment d au moins deux cents Clanrat Warriors">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"27"</Page>
+</Career>
+<Career id="BOTR-WORK_BLOOD_HUNTER">
+<Description language="ENGLISH">"Blood Hunter"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Dodge Blow, Follow Trail, Intimidate, Shadowing, Specialist Weapon - Throwing, Strike Mighty Blow, Strike to Stun"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_DODGE_BLOW">"100"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"100"</Skill>
+<Skill name="APOCN-COMP_INTIMIDATE">"100"</Skill>
+<Skill name="RULES-COMP_SHADOWING">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__THROWING_WEAPONS">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_MIGHTY_BLOW">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_TO_STUN">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Bolas; Concealed Dagger; Hand Weapon; Leather Armor; Manacles"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_WEAPON_MISSILE_BOLAS">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_DAGGER_KNIFE">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SWORD/RULES-EQUIP_WEAPON_MELEE_HAND_AXE/RULES-EQUIP_WEAPON_MELEE_MACE">"1"</Item>
+<Item name="RULES-EQUIP_ARMOUR_LEATHER_JERKIN">"1"</Item>
+<Item name="RULES-EQUIP_MISC_TOOLS_MANACLES_PAIR">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"29"</Page>
+</Career>
+<Career id="BOTR-WORK_MERCENARY">
+<Description language="ENGLISH">"Skaven Mercenary"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Disarm, Dodge Blow, Evaluate, Specialist Weapon - Sling, Specialist Weapon - Throwing, Strike Mighty Blow"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_DISARM">"100"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"100"</Skill>
+<Skill name="RULES-COMP_EVALUATE">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__SLING">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__THROWING_WEAPONS">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_MIGHTY_BLOW">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Backpack; Bedroll (Ratty and Flea Infested); Hand Weapon; Leather Armor; Shield; Sling; Waterskin"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_MISC_CARRYING_BACKPACK_HOLDS_250">"1"</Item>
+<Item name="Bedroll (Ratty and Flea Infested)">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SWORD/RULES-EQUIP_WEAPON_MELEE_HAND_AXE/RULES-EQUIP_WEAPON_MELEE_MACE">"1"</Item>
+<Item name="RULES-EQUIP_ARMOUR_LEATHER_JERKIN">"1"</Item>
+<Item name="RULES-EQUIP_ARMOUR_SHIELD">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MISSILE_SLING">"1"</Item>
+<Item name="RULES-EQUIP_MISC_CARRYING_WATER_SKIN_GALLON">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"30"</Page>
+</Career>
+<Career id="BOTR-WORK_MERCENARY_LEADER">
+<Description language="ENGLISH">"Skaven Mercenary Leader"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Ld">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Intimidate, Haggle, Heraldry, Tactics"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="APOCN-COMP_INTIMIDATE">"100"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"100"</Skill>
+<Skill name="RULES-COMP_HERALDRY">"100"</Skill>
+<Skill name="BOTR-COMP_TACTICS">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Une bande d au moins dix Skavens mercenaires; une Commission of Service"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Une bande d au moins dix Skavens mercenaires">"1"</Item>
+<Item name="une Commission of Service">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"31"</Page>
+</Career>
+<Career id="BOTR-WORK_MESSENGER">
+<Description language="ENGLISH">"Messenger"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_M">"1"</Advance>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Conceal Rural, Flee!, Follow Trail, Orientation, Scale Sheer Surface, Spot Traps, 25% of Contortionist"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CONCEALMENT_RURAL">"100"</Skill>
+<Skill name="RULES-COMP_FLEE">"100"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"100"</Skill>
+<Skill name="RULES-COMP_ORIENTATION">"100"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"100"</Skill>
+<Skill name="RULES-COMP_SPOT_TRAPS">"100"</Skill>
+<Skill name="RULES-COMP_CONTORTIONIST">"25"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Dagger; Long knife"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_WEAPON_MELEE_DAGGER_KNIFE">"1"</Item>
+<Item name="BOTR-EQUIP_WEAPON_MELEE_LONG_KNIFE">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"32"</Page>
+</Career>
+<Career id="BOTR-WORK_NIGHT_CREEPER">
+<Description language="ENGLISH">"Night Creeper"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Shadowing, Silent Move Subterranean, Specialist Weapon - Net, Strike to Stun"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_SHADOWING">"100"</Skill>
+<Skill name="BOTR-COMP_SILENT_MOVE_SUBTERRANEAN">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__NET">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_TO_STUN">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Black Hooded Cloak and Clothing; Cudgel or Club; 50 % de chances d un Net"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Black Hooded Cloak and Clothing">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_WOODEN_CLUB">"1"</Item>
+<Item name="50 % de chances d un Net">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"33"</Page>
+</Career>
+<Career id="BOTR-WORK_RAT_HERDER">
+<Description language="ENGLISH">"Rat Herder"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Animal Care, Charm Animal, Immunity to Disease, Specialist Weapon - Sling, 50% of Very Resilient"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"100"</Skill>
+<Skill name="RULES-COMP_CHARM_ANIMAL">"100"</Skill>
+<Skill name="RULES-COMP_IMMUNITY_TO_DISEASE">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__SLING">"100"</Skill>
+<Skill name="RULES-COMP_VERY_RESILIENT">"50"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Hand Weapon; une horde de rats; Sling"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SWORD/RULES-EQUIP_WEAPON_MELEE_HAND_AXE/RULES-EQUIP_WEAPON_MELEE_MACE">"1"</Item>
+<Item name="une horde de rats">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MISSILE_SLING">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"34"</Page>
+</Career>
+<Career id="BOTR-WORK_RENEGADE">
+<Description language="ENGLISH">"Renegade"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Conceal Rural, Dodge Blow, Set Traps, Silent Move Subterranean, Spot Traps"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CONCEALMENT_RURAL">"100"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"100"</Skill>
+<Skill name="RULES-COMP_SET_TRAP">"100"</Skill>
+<Skill name="BOTR-COMP_SILENT_MOVE_SUBTERRANEAN">"100"</Skill>
+<Skill name="RULES-COMP_SPOT_TRAPS">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Hand Weapon; Leather Armor"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SWORD/RULES-EQUIP_WEAPON_MELEE_HAND_AXE/RULES-EQUIP_WEAPON_MELEE_MACE">"1"</Item>
+<Item name="RULES-EQUIP_ARMOUR_LEATHER_JERKIN">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"35"</Page>
+</Career>
+<Career id="BOTR-WORK_RENEGADE_CHIEFTAIN">
+<Description language="ENGLISH">"Renegade Chieftain"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_T">"2"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Ld">"20"</Advance>
+<Advance name="RULES-ATTR_Cl">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Disarm, Follow Trail, Intimidate, Strike Mighty Blow, Strike to Stun"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_DISARM">"100"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"100"</Skill>
+<Skill name="APOCN-COMP_INTIMIDATE">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_MIGHTY_BLOW">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_TO_STUN">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Une bande d au moins dix Skavens renegats; un terrier cache; une epee ou une autre arme de poing"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Une bande d au moins dix Skavens renegats">"1"</Item>
+<Item name="un terrier cache">"1"</Item>
+<Item name="une epee ou une autre arme de poing">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"36"</Page>
+</Career>
+<Career id="BOTR-WORK_SKAVEN_GUIDE">
+<Description language="ENGLISH">"Skaven Guide"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Conceal Subterranean, Follow Trail, Orientation, Scale Sheer Surface, Secret Sign - Scout, Silent Move Subterranean, Spot Traps"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="BOTR-COMP_CONCEAL_SUBTERRANEAN">"100"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"100"</Skill>
+<Skill name="RULES-COMP_ORIENTATION">"100"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"100"</Skill>
+<Skill name="RULES-COMP_SECRET_SIGNS__SCOUT">"100"</Skill>
+<Skill name="BOTR-COMP_SILENT_MOVE_SUBTERRANEAN">"100"</Skill>
+<Skill name="RULES-COMP_SPOT_TRAPS">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Hand Weapon; Leather Armor; Long knife"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SWORD/RULES-EQUIP_WEAPON_MELEE_HAND_AXE/RULES-EQUIP_WEAPON_MELEE_MACE">"1"</Item>
+<Item name="RULES-EQUIP_ARMOUR_LEATHER_JERKIN">"1"</Item>
+<Item name="BOTR-EQUIP_WEAPON_MELEE_LONG_KNIFE">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"37"</Page>
+</Career>
+<Career id="BOTR-WORK_SKAVEN_SCOUT">
+<Description language="ENGLISH">"Skaven Scout"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"30"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_T">"2"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+<Advance name="RULES-ATTR_I">"30"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_Cl">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Conceal Subterranean, Dowsing, Game Hunting, Identify Plants, Marksmanship, Silent Move Subterranean, Specialist Weapon - Net, Specialist Weapon - Throwing"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="BOTR-COMP_CONCEAL_SUBTERRANEAN">"100"</Skill>
+<Skill name="RULES-COMP_DOWSING">"100"</Skill>
+<Skill name="RULES-COMP_GAME_HUNTING">"100"</Skill>
+<Skill name="RULES-COMP_IDENTIFY_PLANT">"100"</Skill>
+<Skill name="RULES-COMP_MARKSMANSHIP">"100"</Skill>
+<Skill name="BOTR-COMP_SILENT_MOVE_SUBTERRANEAN">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__NET">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__THROWING_WEAPONS">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Black Cloak; Concealed Daggers; Hand Weapon; Leather Armor; Spear; Throwing Daggers"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Black Cloak">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_DAGGER_KNIFE">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SWORD/RULES-EQUIP_WEAPON_MELEE_HAND_AXE/RULES-EQUIP_WEAPON_MELEE_MACE">"1"</Item>
+<Item name="RULES-EQUIP_ARMOUR_LEATHER_JERKIN">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SPEAR">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MISSILE_THROWING_KNIFE">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"38"</Page>
+</Career>
+<Career id="BOTR-WORK_STORMVERMIN">
+<Description language="ENGLISH">"Stormvermin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Disarm, Dodge Blow, Specialist Weapon - Two-Handed, Strike Mighty Blow, Strike to Injure, Strike to Stun, 50% of Very Resilient, 50% of Very Strong"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_DISARM">"100"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__DOUBLE_HANDED_WEAPONS">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_MIGHTY_BLOW">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_TO_INJURE">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_TO_STUN">"100"</Skill>
+<Skill name="RULES-COMP_VERY_RESILIENT">"50"</Skill>
+<Skill name="RULES-COMP_VERY_STRONG">"50"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Chain shirt; Hand weapon; Helmet; Long knife; Shield; Two handed sword"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_ARMOUR_MAIL_SHIRT">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SWORD/RULES-EQUIP_WEAPON_MELEE_HAND_AXE/RULES-EQUIP_WEAPON_MELEE_MACE">"1"</Item>
+<Item name="RULES-EQUIP_ARMOUR_POT_HELMET">"1"</Item>
+<Item name="BOTR-EQUIP_WEAPON_MELEE_LONG_KNIFE">"1"</Item>
+<Item name="RULES-EQUIP_ARMOUR_SHIELD">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_TWO_HANDED_SWORD">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"39"</Page>
+</Career>
+<Career id="BOTR-WORK_WARDEN">
+<Description language="ENGLISH">"Warden"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_Cl">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Ambidextrous, Pick Locks, Prepare Poisons, Set Traps, Smithing, Spot Traps"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_AMBIDEXTROUS">"100"</Skill>
+<Skill name="RULES-COMP_PICK_LOCK">"100"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISONS">"100"</Skill>
+<Skill name="RULES-COMP_SET_TRAP">"100"</Skill>
+<Skill name="RULES-COMP_SMITHING">"100"</Skill>
+<Skill name="RULES-COMP_SPOT_TRAPS">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Un terrier communal prive de Warden; outils; 1d6 pieges (grands)"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Un terrier communal prive de Warden">"1"</Item>
+<Item name="outils">"1"</Item>
+<Item name="1d6 pieges (grands)">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"40"</Page>
+</Career>
+<Career id="BOTR-WORK_ADVISOR">
+<Description language="ENGLISH">"Advisor"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Ld">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_Cl">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"30"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Bribery, Charm, Dynastic Knowledge (Skaven Clans), History, Influence, Intrigue, Public Speaking, Read/Write, Speak Additional Language, Super Numerate"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_BRIBERY">"100"</Skill>
+<Skill name="RULES-COMP_CHARM">"100"</Skill>
+<Skill name="APOCN-COMP_DYNASTIC_KNOWLEDGE">"100"</Skill>
+<Skill name="RULES-COMP_HISTORY">"100"</Skill>
+<Skill name="APOCN-COMP_INFLUENCE">"100"</Skill>
+<Skill name="BOTR-COMP_INTRIGUE">"100"</Skill>
+<Skill name="RULES-COMP_PUBLIC_SPEAKING">"100"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"100"</Skill>
+<Skill name="RULES-COMP_SPEAK_ADDITIONAL_LANGUAGE">"100"</Skill>
+<Skill name="RULES-COMP_SUPER_NUMERATE">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Fine Robes of Station; Paper; Private burrow; Writing Instruments"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Fine Robes of Station">"1"</Item>
+<Item name="Paper">"1"</Item>
+<Item name="Private burrow">"1"</Item>
+<Item name="Writing Instruments">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"42"</Page>
+</Career>
+<Career id="BOTR-WORK_FORAGER">
+<Description language="ENGLISH">"Forager"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Dowsing, Fish, Identify Plant, Set Traps, Specialist Weapon - Sling"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_DOWSING">"100"</Skill>
+<Skill name="RULES-COMP_FISH">"100"</Skill>
+<Skill name="RULES-COMP_IDENTIFY_PLANT">"100"</Skill>
+<Skill name="RULES-COMP_SET_TRAP">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__SLING">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Bag; Fishing rod; Hand Weapon; Rope; Sling; d6 Traps"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Bag">"1"</Item>
+<Item name="Fishing rod">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SWORD/RULES-EQUIP_WEAPON_MELEE_HAND_AXE/RULES-EQUIP_WEAPON_MELEE_MACE">"1"</Item>
+<Item name="RULES-EQUIP_MISC_TOOLS_ROPE_YARD">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MISSILE_SLING">"1"</Item>
+<Item name="d6 Traps">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"43"</Page>
+</Career>
+<Career id="BOTR-WORK_SCAVENGER">
+<Description language="ENGLISH">"Scavenger"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_M">"1"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Conceal Subterranean, Dodge Blow, Flee!, Scale Sheer Surface"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="BOTR-COMP_CONCEAL_SUBTERRANEAN">"100"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"100"</Skill>
+<Skill name="RULES-COMP_FLEE">"100"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Ragged clothing; Concealed nest; Paltry baubles"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Ragged clothing">"1"</Item>
+<Item name="Concealed nest">"1"</Item>
+<Item name="Paltry baubles">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"44"</Page>
+</Career>
+<Career id="BOTR-WORK_ARTISAN_ARMORER">
+<Description language="ENGLISH">"Skaven Artisan (Armorer)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Metallurgy, Smithing"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_METALLURGY">"100"</Skill>
+<Skill name="RULES-COMP_SMITHING">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Access to Communal Tools; An Artisan's Apprentice; Hidey hole with Stolen Tools; Space in the Artisan's Warren; Workspace in the Communal or Artisanal Warren"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Access to Communal Tools">"1"</Item>
+<Item name="An Artisan's Apprentice">"1"</Item>
+<Item name="Hidey hole with Stolen Tools">"1"</Item>
+<Item name="Space in the Artisan's Warren">"1"</Item>
+<Item name="Workspace in the Communal or Artisanal Warren">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"45"</Page>
+</Career>
+<Career id="BOTR-WORK_ARTISAN_BUILDER">
+<Description language="ENGLISH">"Skaven Artisan (Builder)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Carpentry"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CARPENTRY">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Access to Communal Tools; An Artisan's Apprentice; Hidey hole with Stolen Tools; Space in the Artisan's Warren; Workspace in the Communal or Artisanal Warren"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Access to Communal Tools">"1"</Item>
+<Item name="An Artisan's Apprentice">"1"</Item>
+<Item name="Hidey hole with Stolen Tools">"1"</Item>
+<Item name="Space in the Artisan's Warren">"1"</Item>
+<Item name="Workspace in the Communal or Artisanal Warren">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"45"</Page>
+</Career>
+<Career id="BOTR-WORK_ARTISAN_GLASS_MAKER">
+<Description language="ENGLISH">"Skaven Artisan (Glass Maker)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Chemistry"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CHEMISTRY">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Access to Communal Tools; An Artisan's Apprentice; Hidey hole with Stolen Tools; Space in the Artisan's Warren; Workspace in the Communal or Artisanal Warren"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Access to Communal Tools">"1"</Item>
+<Item name="An Artisan's Apprentice">"1"</Item>
+<Item name="Hidey hole with Stolen Tools">"1"</Item>
+<Item name="Space in the Artisan's Warren">"1"</Item>
+<Item name="Workspace in the Communal or Artisanal Warren">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"45"</Page>
+</Career>
+<Career id="BOTR-WORK_ARTISAN_STONE_MASON">
+<Description language="ENGLISH">"Skaven Artisan (Stone Mason)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Stoneworking"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_STONEWORKING">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Access to Communal Tools; An Artisan's Apprentice; Hidey hole with Stolen Tools; Space in the Artisan's Warren; Workspace in the Communal or Artisanal Warren"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Access to Communal Tools">"1"</Item>
+<Item name="An Artisan's Apprentice">"1"</Item>
+<Item name="Hidey hole with Stolen Tools">"1"</Item>
+<Item name="Space in the Artisan's Warren">"1"</Item>
+<Item name="Workspace in the Communal or Artisanal Warren">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"45"</Page>
+</Career>
+<Career id="BOTR-WORK_ARTISAN_TAILOR">
+<Description language="ENGLISH">"Skaven Artisan (Tailor)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Tailor"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_TAILOR">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Access to Communal Tools; An Artisan's Apprentice; Hidey hole with Stolen Tools; Space in the Artisan's Warren; Workspace in the Communal or Artisanal Warren"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Access to Communal Tools">"1"</Item>
+<Item name="An Artisan's Apprentice">"1"</Item>
+<Item name="Hidey hole with Stolen Tools">"1"</Item>
+<Item name="Space in the Artisan's Warren">"1"</Item>
+<Item name="Workspace in the Communal or Artisanal Warren">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"45"</Page>
+</Career>
+<Career id="BOTR-WORK_ARTISAN_TANNER">
+<Description language="ENGLISH">"Skaven Artisan (Tanner)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Chemistry"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CHEMISTRY">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Access to Communal Tools; An Artisan's Apprentice; Hidey hole with Stolen Tools; Space in the Artisan's Warren; Workspace in the Communal or Artisanal Warren"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Access to Communal Tools">"1"</Item>
+<Item name="An Artisan's Apprentice">"1"</Item>
+<Item name="Hidey hole with Stolen Tools">"1"</Item>
+<Item name="Space in the Artisan's Warren">"1"</Item>
+<Item name="Workspace in the Communal or Artisanal Warren">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"45"</Page>
+</Career>
+<Career id="BOTR-WORK_ARTISAN_APPRENTICE">
+<Description language="ENGLISH">"Skaven Artisan's Apprentice"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Beg/Cower, Blather"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_BEGGING">"100"</Skill>
+<Skill name="RULES-COMP_BLATHER">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Tatty Apron"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Tatty Apron">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"46"</Page>
+</Career>
+<Career id="BOTR-WORK_HACK">
+<Description language="ENGLISH">"Skaven Hack"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Cure Disease, Heal Wounds, Manufacture Drugs, Surgery, Torture"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CURE_DISEASE">"100"</Skill>
+<Skill name="RULES-COMP_HEAL_WOUNDS">"100"</Skill>
+<Skill name="RULES-COMP_MANUFACTURE_DRUGS">"100"</Skill>
+<Skill name="RULES-COMP_SURGERY">"100"</Skill>
+<Skill name="RULES-COMP_TORTURE">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Blood Stained Apron; Bone Saw; Dagger; Private Burrow; Scalpels"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Blood Stained Apron">"1"</Item>
+<Item name="Bone Saw">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_DAGGER_KNIFE">"1"</Item>
+<Item name="Private Burrow">"1"</Item>
+<Item name="Scalpels">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"47"</Page>
+</Career>
+<Career id="BOTR-WORK_JAILER">
+<Description language="ENGLISH">"Skaven Jailer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</AdvanceScheme>
+<Skills>"Immune to Disease, Strike to Stun, Wrestling, 50% Very Resilient"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_IMMUNITY_TO_DISEASE">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_TO_STUN">"100"</Skill>
+<Skill name="RULES-COMP_WRESTLING">"100"</Skill>
+<Skill name="RULES-COMP_VERY_RESILIENT">"50"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Club; Ring of Keys"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_WEAPON_MELEE_WOODEN_CLUB">"1"</Item>
+<Item name="Ring of Keys">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"48"</Page>
+</Career>
+<Career id="BOTR-WORK_MINER">
+<Description language="ENGLISH">"Skaven Miner"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Mining, Night vision: additional 2d6 yards, Orientation, Specialist Weapon - Two Handed, 25% chance of Very Resilient, 25% chance of Very Strong"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_MINING">"100"</Skill>
+<Skill name="RULES-COMP_ORIENTATION">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__DOUBLE_HANDED_WEAPONS">"100"</Skill>
+<Skill name="RULES-COMP_VERY_RESILIENT">"25"</Skill>
+<Skill name="RULES-COMP_VERY_STRONG">"25"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Apron; Helmet; Lantern; Pick"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Apron">"1"</Item>
+<Item name="RULES-EQUIP_ARMOUR_POT_HELMET">"1"</Item>
+<Item name="RULES-EQUIP_MISC_ILLUMINATION_LANTERN">"1"</Item>
+<Item name="Pick">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"49"</Page>
+</Career>
+<Career id="BOTR-WORK_MINE_OVERSEER">
+<Description language="ENGLISH">"Skaven Mine Overseer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Ld">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_Cl">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Carpentry, Cartography, Engineering, Intimidate, Mining, SW Whip"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CARPENTRY">"100"</Skill>
+<Skill name="RULES-COMP_CARTOGRAPHY">"100"</Skill>
+<Skill name="RULES-COMP_ENGINEER">"100"</Skill>
+<Skill name="APOCN-COMP_INTIMIDATE">"100"</Skill>
+<Skill name="RULES-COMP_MINING">"100"</Skill>
+<Skill name="BOTR-COMP_SPECIALIST_WEAPON__WHIP">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Apron; Bodyguard of 10 Clanrats to maintain safety and submission of Miners; Fully equipped workstation, with drafting materials; Hand Weapon; Helmet; Lantern; Leather Armor; Whip"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Apron">"1"</Item>
+<Item name="Bodyguard of 10 Clanrats to maintain safety and submission of Miners">"1"</Item>
+<Item name="Fully equipped workstation, with drafting materials">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SWORD/RULES-EQUIP_WEAPON_MELEE_HAND_AXE/RULES-EQUIP_WEAPON_MELEE_MACE">"1"</Item>
+<Item name="RULES-EQUIP_ARMOUR_POT_HELMET">"1"</Item>
+<Item name="RULES-EQUIP_MISC_ILLUMINATION_LANTERN">"1"</Item>
+<Item name="RULES-EQUIP_ARMOUR_LEATHER_JERKIN">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_WHIP">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"50"</Page>
+</Career>
+<Career id="BOTR-WORK_PEDLAR">
+<Description language="ENGLISH">"Skaven Pedlar"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Evaluate, Haggle, Palm Object"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_EVALUATE">"100"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"100"</Skill>
+<Skill name="RULES-COMP_PALM_OBJECT">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Dagger; Bags of Trinkets"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_WEAPON_MELEE_DAGGER_KNIFE">"1"</Item>
+<Item name="Bags of Trinkets">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"51"</Page>
+</Career>
+<Career id="BOTR-WORK_PORTER">
+<Description language="ENGLISH">"Skaven Porter"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Follow Trail, 50% Very Resilient, 50% Very Strong"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"100"</Skill>
+<Skill name="RULES-COMP_VERY_RESILIENT">"50"</Skill>
+<Skill name="RULES-COMP_VERY_STRONG">"50"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Threadbare Clothing"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Threadbare Clothing">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"52"</Page>
+</Career>
+<Career id="BOTR-WORK_SCRIBE">
+<Description language="ENGLISH">"Skaven Scribe"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_W">"1"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Blather, Read/Write, Speak Additional Language"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_BLATHER">"100"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"100"</Skill>
+<Skill name="RULES-COMP_SPEAK_ADDITIONAL_LANGUAGE">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Communal Nest shared with other Scribes; Poorly-manufactured Robe; Writing Utensils"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Communal Nest shared with other Scribes">"1"</Item>
+<Item name="Poorly-manufactured Robe">"1"</Item>
+<Item name="Writing Utensils">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"53"</Page>
+</Career>
+<Career id="BOTR-WORK_SEER">
+<Description language="ENGLISH">"Skaven Seer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_W">"1"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Blather, Charm Animal - Rat, Divination, Magical Sense"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_BLATHER">"100"</Skill>
+<Skill name="RULES-COMP_CHARM_ANIMAL">"100"</Skill>
+<Skill name="RULES-COMP_DIVINING">"100"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Fingerbones for Divination; Intestines and a Bowl for Divination; Threadbare Clothing"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Fingerbones for Divination">"1"</Item>
+<Item name="Intestines and a Bowl for Divination">"1"</Item>
+<Item name="Threadbare Clothing">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"54"</Page>
+</Career>
+<Career id="BOTR-WORK_SLAVE_MASTER">
+<Description language="ENGLISH">"Skaven Slave Master"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Ld">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Evaluate, Haggle, Intimidate, Specialist Weapon - Whip"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_EVALUATE">"100"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"100"</Skill>
+<Skill name="APOCN-COMP_INTIMIDATE">"100"</Skill>
+<Skill name="BOTR-COMP_SPECIALIST_WEAPON__WHIP">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"d10 Clanrat Warriors; d3 Clan Guards; Hand Weapon; Long Knife; Prison Burrow; Whip"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="d10 Clanrat Warriors">"1"</Item>
+<Item name="d3 Clan Guards">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SWORD/RULES-EQUIP_WEAPON_MELEE_HAND_AXE/RULES-EQUIP_WEAPON_MELEE_MACE">"1"</Item>
+<Item name="BOTR-EQUIP_WEAPON_MELEE_LONG_KNIFE">"1"</Item>
+<Item name="Prison Burrow">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_WHIP">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"55"</Page>
+</Career>
+<Career id="BOTR-WORK_SKAVENSLAVE">
+<Description language="ENGLISH">"Skavenslave"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Begging, Blather, Dodge Blow"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_BEGGING">"100"</Skill>
+<Skill name="RULES-COMP_BLATHER">"100"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Ragged clothes"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Ragged clothes">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"56"</Page>
+</Career>
+<Career id="BOTR-WORK_SNEAK">
+<Description language="ENGLISH">"Skaven Sneak"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Conceal Subterranean, Palm Object, Scale Sheer Surface, Silent Move Subterranean"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="BOTR-COMP_CONCEAL_SUBTERRANEAN">"100"</Skill>
+<Skill name="RULES-COMP_PALM_OBJECT">"100"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"100"</Skill>
+<Skill name="BOTR-COMP_SILENT_MOVE_SUBTERRANEAN">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Dagger; Hidey hole; Worthless Baubles"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_WEAPON_MELEE_DAGGER_KNIFE">"1"</Item>
+<Item name="Hidey hole">"1"</Item>
+<Item name="Worthless Baubles">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"57"</Page>
+</Career>
+<Career id="BOTR-WORK_SQUEALER">
+<Description language="ENGLISH">"Skaven Squealer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Blather, Charm, Influence, Public Speaking"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_BLATHER">"100"</Skill>
+<Skill name="RULES-COMP_CHARM">"100"</Skill>
+<Skill name="APOCN-COMP_INFLUENCE">"100"</Skill>
+<Skill name="RULES-COMP_PUBLIC_SPEAKING">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Long knife; Small Private Burrow"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="BOTR-EQUIP_WEAPON_MELEE_LONG_KNIFE">"1"</Item>
+<Item name="Small Private Burrow">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"58"</Page>
+</Career>
+<Career id="BOTR-WORK_TORTURER">
+<Description language="ENGLISH">"Skaven Torturer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"2"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Ld">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Heal Wounds, Specialist Weapon - Whip, Strike to Stun, Torture, Wrestling"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_HEAL_WOUNDS">"100"</Skill>
+<Skill name="BOTR-COMP_SPECIALIST_WEAPON__WHIP">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_TO_STUN">"100"</Skill>
+<Skill name="RULES-COMP_TORTURE">"100"</Skill>
+<Skill name="RULES-COMP_WRESTLING">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Dagger; Long Knife; Manacles; Various Rudimentary Instruments of Torture; Whip"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_WEAPON_MELEE_DAGGER_KNIFE">"1"</Item>
+<Item name="BOTR-EQUIP_WEAPON_MELEE_LONG_KNIFE">"1"</Item>
+<Item name="RULES-EQUIP_MISC_TOOLS_MANACLES_PAIR">"1"</Item>
+<Item name="Various Rudimentary Instruments of Torture">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_WHIP">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"59"</Page>
+</Career>
+<Career id="BOTR-WORK_WARPSTONE_CRAFTER">
+<Description language="ENGLISH">"Warpstone Crafter"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_Dex">"40"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_Cl">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"30"</Advance>
+</AdvanceScheme>
+<Skills>"Chemistry, Prepare Warpstone Compound, Refine Warpstone"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CHEMISTRY">"100"</Skill>
+<Skill name="BOTR-COMP_PREPARE_WARPSTONE_COMPOUND">"100"</Skill>
+<Skill name="BOTR-COMP_REFINE_WARPSTONE">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Apron, Thick, and Reinforced with Lead Plates; Pair of Thick Gloves; Tinted Heavy Goggles; Tools (Hammer, Chisel, etc.); Workbench"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Apron, Thick, and Reinforced with Lead Plates">"1"</Item>
+<Item name="Pair of Thick Gloves">"1"</Item>
+<Item name="Tinted Heavy Goggles">"1"</Item>
+<Item name="Tools (Hammer, Chisel, etc.)">"1"</Item>
+<Item name="Workbench">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"60"</Page>
+</Career>
+<Career id="BOTR-WORK_STRANGLER">
+<Description language="ENGLISH">"Strangler"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Basic Martial Arts, Conceal Subterranean, Scale Sheer Surface, Silent Move Subterranean, Specialist Weapon - Fist"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="BOTR-COMP_BASIC_MARTIAL_ARTS">"100"</Skill>
+<Skill name="BOTR-COMP_CONCEAL_SUBTERRANEAN">"100"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"100"</Skill>
+<Skill name="BOTR-COMP_SILENT_MOVE_SUBTERRANEAN">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__FIST_WEAPONS">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Black Hooded Cloak; Dagger; Garrote"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Black Hooded Cloak">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_DAGGER_KNIFE">"1"</Item>
+<Item name="Garrote">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"63"</Page>
+</Career>
+<Career id="BOTR-WORK_CULLER">
+<Description language="ENGLISH">"Culler"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_Cl">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Conceal Urban, Shadowing, Silent Move Urban, Specialist Weapon - Thrown, Strike Mighty Blow"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CONCEALMENT_URBAN">"100"</Skill>
+<Skill name="RULES-COMP_SHADOWING">"100"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE_URBAN">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__THROWING_WEAPONS">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_MIGHTY_BLOW">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Black Hooded Cloak; Black Strips of Cloth Wrapped about the Forearms; Dagger; Garrote; Long Knife; d6 Shurikens; d6 Throwing Daggers"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Black Hooded Cloak">"1"</Item>
+<Item name="Black Strips of Cloth Wrapped about the Forearms">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_DAGGER_KNIFE">"1"</Item>
+<Item name="Garrote">"1"</Item>
+<Item name="BOTR-EQUIP_WEAPON_MELEE_LONG_KNIFE">"1"</Item>
+<Item name="d6 Shurikens">"1"</Item>
+<Item name="d6 Throwing Daggers">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"64"</Page>
+</Career>
+<Career id="BOTR-WORK_GARROTTER">
+<Description language="ENGLISH">"Garrotter"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"30"</Advance>
+<Advance name="RULES-ATTR_BS">"30"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+<Advance name="RULES-ATTR_I">"30"</Advance>
+<Advance name="RULES-ATTR_A">"3"</Advance>
+<Advance name="RULES-ATTR_Dex">"30"</Advance>
+<Advance name="RULES-ATTR_Ld">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_Cl">"40"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Advanced Martial Arts, Disguise, Marksmanship, Mimic, Prepare Poison, Sabotage, Specialist Weapon - Blowpipe"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="BOTR-COMP_ADVANCED_MARTIAL_ARTS">"100"</Skill>
+<Skill name="RULES-COMP_DISGUISE">"100"</Skill>
+<Skill name="RULES-COMP_MARKSMANSHIP">"100"</Skill>
+<Skill name="RULES-COMP_MIMIC">"100"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISONS">"100"</Skill>
+<Skill name="BOTR-COMP_SABOTAGE">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__BLOWPIPE">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Dagger; Garrote; Length of Silk; Long knife; Poison Ring; d3 Vials of Poison"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_WEAPON_MELEE_DAGGER_KNIFE">"1"</Item>
+<Item name="Garrote">"1"</Item>
+<Item name="Length of Silk">"1"</Item>
+<Item name="BOTR-EQUIP_WEAPON_MELEE_LONG_KNIFE">"1"</Item>
+<Item name="Poison Ring">"1"</Item>
+<Item name="d3 Vials of Poison">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"65"</Page>
+</Career>
+<Career id="BOTR-WORK_GUTTER_RUNNER">
+<Description language="ENGLISH">"Gutter Runner"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_M">"1"</Advance>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Conceal Subterranean, Dodge Blow, Flee!, Orientation, Silent Move Rural, Silent Move Subterranean, Specialist Weapon - Thrown"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="BOTR-COMP_CONCEAL_SUBTERRANEAN">"100"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"100"</Skill>
+<Skill name="RULES-COMP_FLEE">"100"</Skill>
+<Skill name="RULES-COMP_ORIENTATION">"100"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE_RURAL">"100"</Skill>
+<Skill name="BOTR-COMP_SILENT_MOVE_SUBTERRANEAN">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__THROWING_WEAPONS">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Black Cloak; d3 Throwing Daggers; Concealed Dagger; Long Knife"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Black Cloak">"1"</Item>
+<Item name="d3 Throwing Daggers">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_DAGGER_KNIFE">"1"</Item>
+<Item name="BOTR-EQUIP_WEAPON_MELEE_LONG_KNIFE">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"66"</Page>
+</Career>
+<Career id="BOTR-WORK_NIGHT_RUNNER">
+<Description language="ENGLISH">"Night Runner"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Conceal Rural, Conceal Urban, Scale Sheer Surface, Silent Move Urban, Spot Trap, Strike Mighty Blow, Strike to Stun"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CONCEALMENT_RURAL">"100"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT_URBAN">"100"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"100"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE_URBAN">"100"</Skill>
+<Skill name="RULES-COMP_SPOT_TRAPS">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_MIGHTY_BLOW">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_TO_STUN">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Black Cloak; Dagger; Leather Armor; Long Knife; Sword or Spear"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Black Cloak">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_DAGGER_KNIFE">"1"</Item>
+<Item name="RULES-EQUIP_ARMOUR_LEATHER_JERKIN">"1"</Item>
+<Item name="BOTR-EQUIP_WEAPON_MELEE_LONG_KNIFE">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SWORD/RULES-EQUIP_WEAPON_MELEE_SPEAR">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"67"</Page>
+</Career>
+<Career id="BOTR-WORK_SPY">
+<Description language="ENGLISH">"Spy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_I">"30"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_Cl">"40"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Acting, Bribery, Conceal Subterranean, Cryptography, Disguise, Palm Object, Pick Lock, Read/Write, Shadowing, Silent Move Subterranean, Sixth Sense"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACTING">"100"</Skill>
+<Skill name="RULES-COMP_BRIBERY">"100"</Skill>
+<Skill name="BOTR-COMP_CONCEAL_SUBTERRANEAN">"100"</Skill>
+<Skill name="RULES-COMP_CRYPTOGRAPHY">"100"</Skill>
+<Skill name="RULES-COMP_DISGUISE">"100"</Skill>
+<Skill name="RULES-COMP_PALM_OBJECT">"100"</Skill>
+<Skill name="RULES-COMP_PICK_LOCK">"100"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"100"</Skill>
+<Skill name="RULES-COMP_SHADOWING">"100"</Skill>
+<Skill name="BOTR-COMP_SILENT_MOVE_SUBTERRANEAN">"100"</Skill>
+<Skill name="RULES-COMP_SIXTH_SENSE">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Concealed Dagger; Hooded Black Cloak; Vial of Poison; Whatever Else Deemed Necessary for Mission"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_WEAPON_MELEE_DAGGER_KNIFE">"1"</Item>
+<Item name="Hooded Black Cloak">"1"</Item>
+<Item name="Vial of Poison">"1"</Item>
+<Item name="Whatever Else Deemed Necessary for Mission">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"68"</Page>
+</Career>
+<Career id="BOTR-WORK_BEAST_HUNTER">
+<Description language="ENGLISH">"Beast Hunter"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"2"</Advance>
+<Advance name="RULES-ATTR_T">"2"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+<Advance name="RULES-ATTR_I">"30"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Animal Care, Drive Cart, Follow Trail, Game Hunting, Set Traps, Shadowing, Specialist Weapon - Blowpipe, Specialist Weapon - Lasso, Specialist Weapon - Net, Strike to Stun"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"100"</Skill>
+<Skill name="RULES-COMP_DRIVE_CART">"100"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"100"</Skill>
+<Skill name="RULES-COMP_GAME_HUNTING">"100"</Skill>
+<Skill name="RULES-COMP_SET_TRAP">"100"</Skill>
+<Skill name="RULES-COMP_SHADOWING">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__BLOWPIPE">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__LASSO">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__NET">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_TO_STUN">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Blowpipe; Caged Cart Pulled by Team of Giant Rats; Club; Fur-lined Cloak; Long Knife; Mace; Mantrap; 30 Yards of Rope; Vial of Poison"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_WEAPON_MISSILE_BLOW_PIPE">"1"</Item>
+<Item name="Caged Cart Pulled by Team of Giant Rats">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_WOODEN_CLUB">"1"</Item>
+<Item name="Fur-lined Cloak">"1"</Item>
+<Item name="BOTR-EQUIP_WEAPON_MELEE_LONG_KNIFE">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_MACE">"1"</Item>
+<Item name="RULES-EQUIP_MISC_TOOLS_MAN_TRAP">"1"</Item>
+<Item name="RULES-EQUIP_MISC_TOOLS_ROPE_YARD" quantite="30">"1"</Item>
+<Item name="Vial of Poison">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"71"</Page>
+</Career>
+<Career id="BOTR-WORK_BREEDER">
+<Description language="ENGLISH">"Breeder"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_Cl">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Breeding, Brewing, Chemistry, Cooking, Prepare Drugs, Prepare Warpstone Compounds"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="BOTR-COMP_BREEDING">"100"</Skill>
+<Skill name="RULES-COMP_BREWING">"100"</Skill>
+<Skill name="RULES-COMP_CHEMISTRY">"100"</Skill>
+<Skill name="RULES-COMP_COOK">"100"</Skill>
+<Skill name="RULES-COMP_MANUFACTURE_DRUGS">"100"</Skill>
+<Skill name="BOTR-COMP_PREPARE_WARPSTONE_COMPOUND">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Apron; Laboratory Cave; d6 Massive Cages"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Apron">"1"</Item>
+<Item name="Laboratory Cave">"1"</Item>
+<Item name="d6 Massive Cages">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"72"</Page>
+</Career>
+<Career id="BOTR-WORK_PACK_MASTER">
+<Description language="ENGLISH">"Pack Master"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Animal Care, Dodge Blow, Specialist Weapon - Flail, Specialist Weapon - Sling, Specialist Weapon - Whip, Strike to Injure"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"100"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__FLAIL_WEAPONS">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__SLING">"100"</Skill>
+<Skill name="BOTR-COMP_SPECIALIST_WEAPON__WHIP">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_TO_INJURE">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Club; Collar with Leads; Leather Armor; Hand Weapon; Pack (1 ou 2 Rat Ogres, 1-6 Giant Rats, 1-3 Special Rats, ou un Swarm of Rats); Whip; Whistle"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_WEAPON_MELEE_WOODEN_CLUB">"1"</Item>
+<Item name="Collar with Leads">"1"</Item>
+<Item name="RULES-EQUIP_ARMOUR_LEATHER_JERKIN">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SWORD/RULES-EQUIP_WEAPON_MELEE_HAND_AXE/RULES-EQUIP_WEAPON_MELEE_MACE">"1"</Item>
+<Item name="Pack (1 ou 2 Rat Ogres, 1-6 Giant Rats, 1-3 Special Rats, ou un Swarm of Rats)">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_WHIP">"1"</Item>
+<Item name="Whistle">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"73"</Page>
+</Career>
+<Career id="BOTR-WORK_TRAINER">
+<Description language="ENGLISH">"Trainer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_T">"2"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Ld">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_Cl">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Animal Care, Animal Training, Charm Animal, Mimic, Specialist Weapon - Net, Specialist Weapon - Sling, Specialist Weapon - Whip, Strike to Stun"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"100"</Skill>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"100"</Skill>
+<Skill name="RULES-COMP_CHARM_ANIMAL">"100"</Skill>
+<Skill name="RULES-COMP_MIMIC">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__NET">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__SLING">"100"</Skill>
+<Skill name="BOTR-COMP_SPECIALIST_WEAPON__WHIP">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_TO_STUN">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Chain Shirt; Club; Net, One Barbed, One Non-Barbed; Spear; Whip; Whistle"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_ARMOUR_MAIL_SHIRT">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_WOODEN_CLUB">"1"</Item>
+<Item name="Net, One Barbed, One Non-Barbed">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SPEAR">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_WHIP">"1"</Item>
+<Item name="Whistle">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"74"</Page>
+</Career>
+<Career id="BOTR-WORK_PLAGUE_CENSER_BEARER">
+<Description language="ENGLISH">"Plague Censer Bearer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Frenzied Attack, Immunity to Poison, Specialist Weapon - Flail (Plague Censer), Specialist Weapon - Two-Handed, Strike Mighty Blow, 25% chance of Very Resilient, 25% chance of Very Strong"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_FRENZIED_ATTACK">"100"</Skill>
+<Skill name="RULES-COMP_IMMUNITY_TO_POISON">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__FLAIL_WEAPONS">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__DOUBLE_HANDED_WEAPONS">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_MIGHTY_BLOW">"100"</Skill>
+<Skill name="RULES-COMP_VERY_RESILIENT">"25"</Skill>
+<Skill name="RULES-COMP_VERY_STRONG">"25"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Long Knife; Plague Censer; Plague Monk's Robes"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="BOTR-EQUIP_WEAPON_MELEE_LONG_KNIFE">"1"</Item>
+<Item name="BOTR-EQUIP_WEAPON_MELEE_PLAGUE_CENSER">"1"</Item>
+<Item name="Plague Monk's Robes">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"77"</Page>
+</Career>
+<Career id="BOTR-WORK_PLAGUE_LORD">
+<Description language="ENGLISH">"Plague Lord"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_I">"30"</Advance>
+<Advance name="RULES-ATTR_Dex">"40"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_Cl">"40"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Biology, Chemistry, Immune to Disease, Prepare Warpstone Compound, Read/Write, Speak Ancient Slann"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="BOTR-COMP_BIOLOGY">"100"</Skill>
+<Skill name="RULES-COMP_CHEMISTRY">"100"</Skill>
+<Skill name="RULES-COMP_IMMUNITY_TO_DISEASE">"100"</Skill>
+<Skill name="BOTR-COMP_PREPARE_WARPSTONE_COMPOUND">"100"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"100"</Skill>
+<Skill name="BOTR-COMP_SPEAK_LANGUAGE__ANCIENT_SLANN">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Access to Secret Laboratories; Apron; Gloves; Special Tokens for Admittance to Laboratories; White Robes"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Access to Secret Laboratories">"1"</Item>
+<Item name="Apron">"1"</Item>
+<Item name="Gloves">"1"</Item>
+<Item name="Special Tokens for Admittance to Laboratories">"1"</Item>
+<Item name="White Robes">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"78"</Page>
+</Career>
+<Career id="BOTR-WORK_PLAGUE_MONK">
+<Description language="ENGLISH">"Plague Monk"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"1"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Cult Lore, Frenzied Attack, Strike Mighty Blow"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="WRDM-COMP_CULT_LORE">"100"</Skill>
+<Skill name="RULES-COMP_FRENZIED_ATTACK">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_MIGHTY_BLOW">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Hand Weapon; Long Knife; Plague Monk's Robes; Talisman of Clan Pestilens"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SWORD/RULES-EQUIP_WEAPON_MELEE_HAND_AXE/RULES-EQUIP_WEAPON_MELEE_MACE">"1"</Item>
+<Item name="BOTR-EQUIP_WEAPON_MELEE_LONG_KNIFE">"1"</Item>
+<Item name="Plague Monk's Robes">"1"</Item>
+<Item name="Talisman of Clan Pestilens">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"79"</Page>
+</Career>
+<Career id="BOTR-WORK_PLAGUE_PRIEST">
+<Description language="ENGLISH">"Plague Priest"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_I">"30"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Ld">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Cult Doctrine - Priesthood of Pestilence, Manufacture Drugs, Public Speaking, Secret Signs - Clan Pestilens, Torture"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="WRDM-COMP_CULT_DOCTRINE">"100"</Skill>
+<Skill name="RULES-COMP_MANUFACTURE_DRUGS">"100"</Skill>
+<Skill name="RULES-COMP_PUBLIC_SPEAKING">"100"</Skill>
+<Skill name="BOTR-COMP_SECRET_SIGNS__CLAN_PESTILENS">"100"</Skill>
+<Skill name="RULES-COMP_TORTURE">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Book of Litanies; Mace; Robes of the Priesthood; Symbol of the Priesthood"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Book of Litanies">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_MACE">"1"</Item>
+<Item name="Robes of the Priesthood">"1"</Item>
+<Item name="Symbol of the Priesthood">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"80"</Page>
+</Career>
+<Career id="BOTR-WORK_ARTIFICER">
+<Description language="ENGLISH">"Artificer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"30"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Chemistry, Craftsmanship: Weapons, Metallurgy, Smithing"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CHEMISTRY">"100"</Skill>
+<Skill name="BOTR-COMP_CRAFTSMANSHIP_WEAPONS">"100"</Skill>
+<Skill name="RULES-COMP_METALLURGY">"100"</Skill>
+<Skill name="RULES-COMP_SMITHING">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Apron; Forge; Tools and Implements"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Apron">"1"</Item>
+<Item name="Forge">"1"</Item>
+<Item name="Tools and Implements">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"83"</Page>
+</Career>
+<Career id="BOTR-WORK_DOOMWHEEL_DRIVER">
+<Description language="ENGLISH">"Doomwheel Driver"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Animal Care - Giant Rats, Operate Warplightning Generator, Ride Doomwheel, Specialist Weapon - Warplock Pistol"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"100"</Skill>
+<Skill name="BOTR-COMP_OPERATE_WARPLIGHTNING_GENERATOR">"100"</Skill>
+<Skill name="BOTR-COMP_RIDE_DOOMWHEEL">"100"</Skill>
+<Skill name="BOTR-COMP_SPECIALIST_WEAPON__WARPLOCK_PISTOL">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Doomwheel; Giant Rats; Hand Weapon; Helmet; Long Knife; Protective Goggles; Rat Herder Assistant; Warpstone Pistol"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Doomwheel">"1"</Item>
+<Item name="Giant Rats">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SWORD/RULES-EQUIP_WEAPON_MELEE_HAND_AXE/RULES-EQUIP_WEAPON_MELEE_MACE">"1"</Item>
+<Item name="RULES-EQUIP_ARMOUR_POT_HELMET">"1"</Item>
+<Item name="BOTR-EQUIP_WEAPON_MELEE_LONG_KNIFE">"1"</Item>
+<Item name="Protective Goggles">"1"</Item>
+<Item name="Rat Herder Assistant">"1"</Item>
+<Item name="Warpstone Pistol">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"84"</Page>
+</Career>
+<Career id="BOTR-WORK_SKRYRE_ENGINEER">
+<Description language="ENGLISH">"Clan Skryre Engineer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Carpentry, Engineering, Read/Write, Set Traps, Smithing, Spot Traps"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CARPENTRY">"100"</Skill>
+<Skill name="RULES-COMP_ENGINEER">"100"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"100"</Skill>
+<Skill name="RULES-COMP_SET_TRAP">"100"</Skill>
+<Skill name="RULES-COMP_SMITHING">"100"</Skill>
+<Skill name="RULES-COMP_SPOT_TRAPS">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Drafting Tools; Hand Weapon; Leather Jerkin; Leather Helmet; Parchment"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Drafting Tools">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SWORD/RULES-EQUIP_WEAPON_MELEE_HAND_AXE/RULES-EQUIP_WEAPON_MELEE_MACE">"1"</Item>
+<Item name="RULES-EQUIP_ARMOUR_LEATHER_JERKIN">"1"</Item>
+<Item name="RULES-EQUIP_ARMOUR_POT_HELMET">"1"</Item>
+<Item name="Parchment">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"85"</Page>
+</Career>
+<Career id="BOTR-WORK_POISON_WIND_GLOBADIER">
+<Description language="ENGLISH">"Poison Wind Globadier"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Ambidextrous, Immunity to Poison, Marksmanship, Specialist Weapon - Incendiary, Specialist Weapon - Poison Wind Globe, 25% chance of Very Resilient"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_AMBIDEXTROUS">"100"</Skill>
+<Skill name="RULES-COMP_IMMUNITY_TO_POISON">"100"</Skill>
+<Skill name="RULES-COMP_MARKSMANSHIP">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__INCENDIARIES">"100"</Skill>
+<Skill name="BOTR-COMP_SPECIALIST_WEAPON__POISON_WIND_GLOBE">"100"</Skill>
+<Skill name="RULES-COMP_VERY_RESILIENT">"25"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Gas Mask; Hand Weapon; 2d4 Poison Wind Globes; Satchels"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Gas Mask">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SWORD/RULES-EQUIP_WEAPON_MELEE_HAND_AXE/RULES-EQUIP_WEAPON_MELEE_MACE">"1"</Item>
+<Item name="2d4 Poison Wind Globes">"1"</Item>
+<Item name="Satchels">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"86"</Page>
+</Career>
+<Career id="BOTR-WORK_WARPFIRE_THROWER">
+<Description language="ENGLISH">"Warpfire Thrower"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Specialist Weapon - Warpfire Thrower, Very Strong"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="BOTR-COMP_SPECIALIST_WEAPON__WARPFIRE_THROWER">"100"</Skill>
+<Skill name="RULES-COMP_VERY_STRONG">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Dagger; Long Knife; Warpfire Thrower (Warpfire Concentrate Barrel, Hand Pump, and Hose with Nozzle)"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_WEAPON_MELEE_DAGGER_KNIFE">"1"</Item>
+<Item name="BOTR-EQUIP_WEAPON_MELEE_LONG_KNIFE">"1"</Item>
+<Item name="BOTR-EQUIP_WEAPON_FIREARM_WARPFIRE_THROWER">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"87"</Page>
+</Career>
+<Career id="BOTR-WORK_WARPLOCK_JEZZAIL_SHARPSHOOTER">
+<Description language="ENGLISH">"Warplock Jezzail Sharpshooter"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Excellent Vision, Marksmanship, Specialist Weapon - Firearms, Specialist Weapon - Warplock Jezzail"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_EXCELLENT_VISION">"100"</Skill>
+<Skill name="RULES-COMP_MARKSMANSHIP">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__FIREARMS">"100"</Skill>
+<Skill name="BOTR-COMP_SPECIALIST_WEAPON__WARPLOCK_JEZZAIL">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Hand Weapon; Long Knife; Pouch with 20 Warpstone Jezzail Rounds; Pronged Firing Rod; Warplock Jezzail"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SWORD/RULES-EQUIP_WEAPON_MELEE_HAND_AXE/RULES-EQUIP_WEAPON_MELEE_MACE">"1"</Item>
+<Item name="BOTR-EQUIP_WEAPON_MELEE_LONG_KNIFE">"1"</Item>
+<Item name="Pouch with 20 Warpstone Jezzail Rounds">"1"</Item>
+<Item name="Pronged Firing Rod">"1"</Item>
+<Item name="BOTR-EQUIP_WEAPON_FIREARM_WARPLOCK_JEZZAIL">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"88"</Page>
+</Career>
+<Career id="BOTR-WORK_WARPSEER">
+<Description language="ENGLISH">"Warpseer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Arcane Language - Skaven, Art - Drafting, Cast Clan Skryre Spells Level 1, Chemistry, Manufacture Warpstone Potions, Metallurgy, Secret Language - Warplock, Secret Signs - Warplock"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="BOTR-COMP_ARCANE_LANGUAGE__SKAVEN">"100"</Skill>
+<Skill name="BOTR-COMP_ART__DRAFTING">"100"</Skill>
+<Skill name="BOTR-COMP_CAST_CLAN_SKRYRE_SPELLS">"100"</Skill>
+<Skill name="RULES-COMP_CHEMISTRY">"100"</Skill>
+<Skill name="BOTR-COMP_MANUFACTURE_WARPSTONE_POTIONS">"100"</Skill>
+<Skill name="RULES-COMP_METALLURGY">"100"</Skill>
+<Skill name="BOTR-COMP_SECRET_LANGUAGE__WARPLOCK">"100"</Skill>
+<Skill name="BOTR-COMP_SECRET_SIGNS__WARPLOCK">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Clan Skryre Robes; Clan Skryre Talisman of Rank; Drafting Tools; Pouch of Two Measures of Refined Warpstone; Staff of Rank"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Clan Skryre Robes">"1"</Item>
+<Item name="Clan Skryre Talisman of Rank">"1"</Item>
+<Item name="Drafting Tools">"1"</Item>
+<Item name="Pouch of Two Measures of Refined Warpstone">"1"</Item>
+<Item name="Staff of Rank">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"89"</Page>
+</Career>
+<Career id="BOTR-WORK_WARPWEAVER">
+<Description language="ENGLISH">"Warpweaver"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_Cl">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Cast Clan Skryre Spells Level 2, Magic Sense, Prepare Poison, Refine Warpstone, Rune Lore, Scroll Lore"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="BOTR-COMP_CAST_CLAN_SKRYRE_SPELLS">"100"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"100"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISONS">"100"</Skill>
+<Skill name="BOTR-COMP_REFINE_WARPSTONE">"100"</Skill>
+<Skill name="RULES-COMP_RUNE_LORE">"100"</Skill>
+<Skill name="RULES-COMP_SCROLL_LORE">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Clan Skryre Robes of the Warpweaver; Clan Skryre Talisman of Rank; Pouch with Four Measures of Refined Warpstone; Staff of Rank"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Clan Skryre Robes of the Warpweaver">"1"</Item>
+<Item name="Clan Skryre Talisman of Rank">"1"</Item>
+<Item name="Pouch with Four Measures of Refined Warpstone">"1"</Item>
+<Item name="Staff of Rank">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"89"</Page>
+</Career>
+<Career id="BOTR-WORK_WARPSQUEALER">
+<Description language="ENGLISH">"Warpsquealer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_Dex">"30"</Advance>
+<Advance name="RULES-ATTR_Ld">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_Cl">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Cast Clan Skryre Spells Level 3, Identify Undead, Identify Magical Artifacts, Intimidate, Magical Awareness, Manufacture Warpstone Concentrate, Siegecraft"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="BOTR-COMP_CAST_CLAN_SKRYRE_SPELLS">"100"</Skill>
+<Skill name="RULES-COMP_IDENTIFY_UNDEAD">"100"</Skill>
+<Skill name="RULES-COMP_IDENTIFY_MAGICAL_ARTIFACT">"100"</Skill>
+<Skill name="APOCN-COMP_INTIMIDATE">"100"</Skill>
+<Skill name="RULES-COMP_MAGICAL_AWARENESS">"100"</Skill>
+<Skill name="BOTR-COMP_MANUFACTURE_WARPSTONE_CONCENTRATE">"100"</Skill>
+<Skill name="BOTR-COMP_SIEGECRAFT">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Clan Skryre Robes of a Warpsquealer; Clan Skryre Talisman of Rank; Pouch of Four Measures of Refined Warpstone; Staff of Rank; Vial of Warpdust Potion"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Clan Skryre Robes of a Warpsquealer">"1"</Item>
+<Item name="Clan Skryre Talisman of Rank">"1"</Item>
+<Item name="Pouch of Four Measures of Refined Warpstone">"1"</Item>
+<Item name="Staff of Rank">"1"</Item>
+<Item name="Vial of Warpdust Potion">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"90"</Page>
+</Career>
+<Career id="BOTR-WORK_WARPLORD">
+<Description language="ENGLISH">"Warplord"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_I">"30"</Advance>
+<Advance name="RULES-ATTR_Dex">"40"</Advance>
+<Advance name="RULES-ATTR_Ld">"30"</Advance>
+<Advance name="RULES-ATTR_Int">"40"</Advance>
+<Advance name="RULES-ATTR_Cl">"40"</Advance>
+<Advance name="RULES-ATTR_WP">"30"</Advance>
+</AdvanceScheme>
+<Skills>"Advanced Warpstone Experiments, Cast Clan Skryre Spells Level 4, Cryptography, Influence, Manufacture Warpscrolls, Specialist Weapon - Warplock Pistol, Tactics"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="BOTR-COMP_ADVANCED_WARPSTONE_EXPERIMENTS">"100"</Skill>
+<Skill name="BOTR-COMP_CAST_CLAN_SKRYRE_SPELLS">"100"</Skill>
+<Skill name="RULES-COMP_CRYPTOGRAPHY">"100"</Skill>
+<Skill name="APOCN-COMP_INFLUENCE">"100"</Skill>
+<Skill name="BOTR-COMP_MANUFACTURE_WARPSCROLLS">"100"</Skill>
+<Skill name="BOTR-COMP_SPECIALIST_WEAPON__WARPLOCK_PISTOL">"100"</Skill>
+<Skill name="BOTR-COMP_TACTICS">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Clan Skryre Robes of a Warplord; Monocle; Pouch of Four Measures of Refined Warpdust; Seal of Clan Skryre Authority; Staff of Rank; Talisman of Authority; Two Vials of Warpstone Potion; Vial of Warpstone Concentrate; Warplock Pistol (Concealed)"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Clan Skryre Robes of a Warplord">"1"</Item>
+<Item name="Monocle">"1"</Item>
+<Item name="Pouch of Four Measures of Refined Warpdust">"1"</Item>
+<Item name="Seal of Clan Skryre Authority">"1"</Item>
+<Item name="Staff of Rank">"1"</Item>
+<Item name="Talisman of Authority">"1"</Item>
+<Item name="Two Vials of Warpstone Potion">"1"</Item>
+<Item name="Vial of Warpstone Concentrate">"1"</Item>
+<Item name="BOTR-EQUIP_WEAPON_FIREARM_WARPLOCK_PISTOL">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"90"</Page>
+</Career>
+<Career id="BOTR-WORK_GREY_SEER_INITIATE">
+<Description language="ENGLISH">"Grey Seer Initiate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Arcane Language - Skaven, Cast Petty Spells, Read/Write, Scroll Lore, one skill listed under Cult of the Horned Rat"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="BOTR-COMP_ARCANE_LANGUAGE__SKAVEN">"100"</Skill>
+<Skill name="RULES-COMP_CAST_SPELLS">"100"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"100"</Skill>
+<Skill name="RULES-COMP_SCROLL_LORE">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Initiate's Robes"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Initiate's Robes">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"112"</Page>
+</Career>
+<Career id="BOTR-WORK_GREY_SEER_1">
+<Description language="ENGLISH">"Grey Seer, level 1"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Cast Grey Seer Spells Level 1, Cult Lore, Intimidate, Magic Sense, Public Speaking, Refine Warpstone, one skill listed under the Cult section"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="BOTR-COMP_CAST_GREY_SEER_SPELLS">"100"</Skill>
+<Skill name="WRDM-COMP_CULT_LORE">"100"</Skill>
+<Skill name="APOCN-COMP_INTIMIDATE">"100"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"100"</Skill>
+<Skill name="RULES-COMP_PUBLIC_SPEAKING">"100"</Skill>
+<Skill name="BOTR-COMP_REFINE_WARPSTONE">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Grey Seer Robes; Grey Seer Staff; Grey Seer Warpstone Talisman; Talisman of Cult Authority; Pouch with Three Measures of Refined Warpstone"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Grey Seer Robes">"1"</Item>
+<Item name="Grey Seer Staff">"1"</Item>
+<Item name="Grey Seer Warpstone Talisman">"1"</Item>
+<Item name="Talisman of Cult Authority">"1"</Item>
+<Item name="Pouch with Three Measures of Refined Warpstone">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"113"</Page>
+</Career>
+<Career id="BOTR-WORK_GREY_SEER_2">
+<Description language="ENGLISH">"Grey Seer, level 2"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Ld">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_Cl">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Cast Grey Seer Spells Level 2, Cult Doctrine, Identify Undead, Influence, Magical Awareness, Prepare Poison, one skill listed under the Cult section"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="BOTR-COMP_CAST_GREY_SEER_SPELLS">"100"</Skill>
+<Skill name="WRDM-COMP_CULT_DOCTRINE">"100"</Skill>
+<Skill name="RULES-COMP_IDENTIFY_UNDEAD">"100"</Skill>
+<Skill name="APOCN-COMP_INFLUENCE">"100"</Skill>
+<Skill name="RULES-COMP_MAGICAL_AWARENESS">"100"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISONS">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Grey Seer Robes; Grey Seer Staff; Grey Seer Warpstone Talisman; Talisman of Cult Authority; Pouch with Five Measures of Refined Warpstone"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Grey Seer Robes">"1"</Item>
+<Item name="Grey Seer Staff">"1"</Item>
+<Item name="Grey Seer Warpstone Talisman">"1"</Item>
+<Item name="Talisman of Cult Authority">"1"</Item>
+<Item name="Pouch with Five Measures of Refined Warpstone">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"114"</Page>
+</Career>
+<Career id="BOTR-WORK_GREY_SEER_3">
+<Description language="ENGLISH">"Grey Seer, level 3"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_I">"30"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Ld">"30"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_Cl">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"30"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Cast Grey Seer Spells Level 3, Manufacture Potions, Manufacture Scrolls, one skill listed in the Cult section"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="BOTR-COMP_CAST_GREY_SEER_SPELLS">"100"</Skill>
+<Skill name="RULES-COMP_MANUFACTURE_POTIONS">"100"</Skill>
+<Skill name="RULES-COMP_MANUFACTURE_SCROLLS">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Grey Seer Robes; Grey Seer Staff; Grey Seer Warpstone Talisman; Pouch with Five Measures of Refined Warpstone; Seal of the Cult; Talisman of Council Authority; Talisman of Cult Authority; Vial of Warpdust Potion"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Grey Seer Robes">"1"</Item>
+<Item name="Grey Seer Staff">"1"</Item>
+<Item name="Grey Seer Warpstone Talisman">"1"</Item>
+<Item name="Pouch with Five Measures of Refined Warpstone">"1"</Item>
+<Item name="Seal of the Cult">"1"</Item>
+<Item name="Talisman of Council Authority">"1"</Item>
+<Item name="Talisman of Cult Authority">"1"</Item>
+<Item name="Vial of Warpdust Potion">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"115"</Page>
+</Career>
+<Career id="BOTR-WORK_GREY_SEER_4">
+<Description language="ENGLISH">"Grey Seer, level 4"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_T">"2"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+<Advance name="RULES-ATTR_I">"40"</Advance>
+<Advance name="RULES-ATTR_Dex">"30"</Advance>
+<Advance name="RULES-ATTR_Ld">"40"</Advance>
+<Advance name="RULES-ATTR_Int">"40"</Advance>
+<Advance name="RULES-ATTR_Cl">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"30"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Advanced Warpstone Experiments, Arcane Language - Daemonology, Cast Grey Seer Spells Level 4, Charm, Identify Magical Artifact, one skill listed under the Cult section"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="BOTR-COMP_ADVANCED_WARPSTONE_EXPERIMENTS">"100"</Skill>
+<Skill name="RULES-COMP_ARCANE_LANGUAGE__DEMONIC">"100"</Skill>
+<Skill name="BOTR-COMP_CAST_GREY_SEER_SPELLS">"100"</Skill>
+<Skill name="RULES-COMP_CHARM">"100"</Skill>
+<Skill name="RULES-COMP_IDENTIFY_MAGICAL_ARTIFACT">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Grey Seer Robes; Grey Seer Staff; Grey Seer Warpstone Talisman; Pouch with Five Measures of Refined Warpstone; Seal of Cult of the Horned Rat; Seal of the Council of Thirteen; Talisman of Council Authority; Talisman of Cult Authority; Two Vials of Warpdust Potion; Vial of Warpdust Concentrate"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Grey Seer Robes">"1"</Item>
+<Item name="Grey Seer Staff">"1"</Item>
+<Item name="Grey Seer Warpstone Talisman">"1"</Item>
+<Item name="Pouch with Five Measures of Refined Warpstone">"1"</Item>
+<Item name="Seal of Cult of the Horned Rat">"1"</Item>
+<Item name="Seal of the Council of Thirteen">"1"</Item>
+<Item name="Talisman of Council Authority">"1"</Item>
+<Item name="Talisman of Cult Authority">"1"</Item>
+<Item name="Two Vials of Warpdust Potion">"1"</Item>
+<Item name="Vial of Warpdust Concentrate">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"116"</Page>
+</Career>
+<Career id="BOTR-WORK_AGITATOR">
+<Description language="ENGLISH">"Agitator"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_Ld">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_Cl">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Bribery, Charm, History, Hypnotize, Influence, Speak Old Worlder"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_BRIBERY">"100"</Skill>
+<Skill name="RULES-COMP_CHARM">"100"</Skill>
+<Skill name="RULES-COMP_HISTORY">"100"</Skill>
+<Skill name="RULES-COMP_HYPNOTISE">"100"</Skill>
+<Skill name="APOCN-COMP_INFLUENCE">"100"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE__OLD_WORLDER">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Concealed Amulet of Council Authority; Long Knife; Warpstone Poison Capsule (Concealed); Whatever Items Deemed Necessary for Task"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Concealed Amulet of Council Authority">"1"</Item>
+<Item name="BOTR-EQUIP_WEAPON_MELEE_LONG_KNIFE">"1"</Item>
+<Item name="BOTR-EQUIP_MISC_POTION_WARPSTONE_POISON_CAPSULE">"1"</Item>
+<Item name="Whatever Items Deemed Necessary for Task">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"95"</Page>
+</Career>
+<Career id="BOTR-WORK_BLACK_AGENT">
+<Description language="ENGLISH">"Black Agent"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"2"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+<Advance name="RULES-ATTR_I">"30"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Conceal Urban, Scale Sheer Surface, Shadowing, Silent Move Urban, Specialist Weapon - Blowpipe, Specialist Weapon - Net, Spot Traps, Street Fighter, Strike Mighty Blow, Strike to Injure, Strike to Stun"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CONCEALMENT_URBAN">"100"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"100"</Skill>
+<Skill name="RULES-COMP_SHADOWING">"100"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE_URBAN">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__BLOWPIPE">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__NET">"100"</Skill>
+<Skill name="RULES-COMP_SPOT_TRAPS">"100"</Skill>
+<Skill name="RULES-COMP_STREET_FIGHTER">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_MIGHTY_BLOW">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_TO_INJURE">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_TO_STUN">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Barbed Net; Black Robes with Hood; Blowpipe and Darts; Club; Concealed Amulet of Council Authority; Hand Weapon; Rope and Padded Grappling Hook; Warpstone Poison Capsule"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="BOTR-EQUIP_WEAPON_MELEE_BARBED_NET">"1"</Item>
+<Item name="Black Robes with Hood">"1"</Item>
+<Item name="Blowpipe and Darts">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_WOODEN_CLUB">"1"</Item>
+<Item name="Concealed Amulet of Council Authority">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_SWORD/RULES-EQUIP_WEAPON_MELEE_HAND_AXE/RULES-EQUIP_WEAPON_MELEE_MACE">"1"</Item>
+<Item name="Rope and Padded Grappling Hook">"1"</Item>
+<Item name="BOTR-EQUIP_MISC_POTION_WARPSTONE_POISON_CAPSULE">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"96"</Page>
+</Career>
+<Career id="BOTR-WORK_COUNCIL_AGENT">
+<Description language="ENGLISH">"Council Agent"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_Cl">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"30"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Acting, Blather, Cryptography, Disguise, Read/Write, Shadowing"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACTING">"100"</Skill>
+<Skill name="RULES-COMP_BLATHER">"100"</Skill>
+<Skill name="RULES-COMP_CRYPTOGRAPHY">"100"</Skill>
+<Skill name="RULES-COMP_DISGUISE">"100"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"100"</Skill>
+<Skill name="RULES-COMP_SHADOWING">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Concealed Amulet of Council Authority; Warpstone Poison Capsule; Whatever assistance is deemed necessary"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Concealed Amulet of Council Authority">"1"</Item>
+<Item name="BOTR-EQUIP_MISC_POTION_WARPSTONE_POISON_CAPSULE">"1"</Item>
+<Item name="Whatever assistance is deemed necessary">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"97"</Page>
+</Career>
+<Career id="BOTR-WORK_COUNCIL_ASSESSOR">
+<Description language="ENGLISH">"Council Assessor"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Ld">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_Cl">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"30"</Advance>
+</AdvanceScheme>
+<Skills>"Evaluate, Haggle, Intimidate, Numismatics, Read/Write, Super Numerate, Torture"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_EVALUATE">"100"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"100"</Skill>
+<Skill name="APOCN-COMP_INTIMIDATE">"100"</Skill>
+<Skill name="RULES-COMP_NUMISMATICS">"100"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"100"</Skill>
+<Skill name="RULES-COMP_SUPER_NUMERATE">"100"</Skill>
+<Skill name="RULES-COMP_TORTURE">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"d6 Stormvermin Bodyguards; Amulet of Council Authority; Tablet of Council Authority; Council Agent Aide; Council Spy (in place at location)"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="d6 Stormvermin Bodyguards">"1"</Item>
+<Item name="Amulet of Council Authority">"1"</Item>
+<Item name="Tablet of Council Authority">"1"</Item>
+<Item name="Council Agent Aide">"1"</Item>
+<Item name="Council Spy (in place at location)">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"98"</Page>
+</Career>
+<Career id="BOTR-WORK_COUNCIL_HONOR_GUARD">
+<Description language="ENGLISH">"Council Honor Guard"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_WARRIOR"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"30"</Advance>
+<Advance name="RULES-ATTR_S">"2"</Advance>
+<Advance name="RULES-ATTR_T">"2"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+<Advance name="RULES-ATTR_I">"30"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_Ld">"30"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"30"</Advance>
+</AdvanceScheme>
+<Skills>"Disarm, Dodge Blow, Specialist Weapon - Halberd, Specialist Weapon - Two Handed, Street Fighter, Strike Mighty Blow, Strike to Stun, Strike to Injure, Strongskaven"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_DISARM">"100"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__POLEARM">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__DOUBLE_HANDED_WEAPONS">"100"</Skill>
+<Skill name="RULES-COMP_STREET_FIGHTER">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_MIGHTY_BLOW">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_TO_STUN">"100"</Skill>
+<Skill name="RULES-COMP_STRIKE_TO_INJURE">"100"</Skill>
+<Skill name="RULES-COMP_STRONGMAN">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Breastplate; Halberd; Helmet; Sleeved Mail Coat; Two Handed Sword"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_ARMOUR_BREAST_PLATE">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_HALBERD">"1"</Item>
+<Item name="RULES-EQUIP_ARMOUR_POT_HELMET">"1"</Item>
+<Item name="RULES-EQUIP_ARMOUR_SLEEVED_MAIL_COAT">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_TWO_HANDED_SWORD">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"99"</Page>
+</Career>
+<Career id="BOTR-WORK_COUNCIL_INQUISITOR">
+<Description language="ENGLISH">"Council Inquisitor"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_Dex">"30"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_Cl">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Heal Wounds, Herb Lore, Intimidate, Manufacture Potions, Prepare Poisons, Speak Additional Language, Specialist Weapon - Whip, Surgery, Torture"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_HEAL_WOUNDS">"100"</Skill>
+<Skill name="RULES-COMP_HERB_LORE">"100"</Skill>
+<Skill name="APOCN-COMP_INTIMIDATE">"100"</Skill>
+<Skill name="RULES-COMP_MANUFACTURE_POTIONS">"100"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISONS">"100"</Skill>
+<Skill name="RULES-COMP_SPEAK_ADDITIONAL_LANGUAGE">"100"</Skill>
+<Skill name="BOTR-COMP_SPECIALIST_WEAPON__WHIP">"100"</Skill>
+<Skill name="RULES-COMP_SURGERY">"100"</Skill>
+<Skill name="RULES-COMP_TORTURE">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Amulet of Council Authority; Black Peaked Inquisitor Hood; Black Inquisitor Robes; Bone Saw; Daggers; Herbal Truth Serums; Numerous Nightmarish Torture Instruments of Iron and Leather; Scourge and Whips"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Amulet of Council Authority">"1"</Item>
+<Item name="Black Peaked Inquisitor Hood">"1"</Item>
+<Item name="Black Inquisitor Robes">"1"</Item>
+<Item name="Bone Saw">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_DAGGER_KNIFE">"1"</Item>
+<Item name="Herbal Truth Serums">"1"</Item>
+<Item name="Numerous Nightmarish Torture Instruments of Iron and Leather">"1"</Item>
+<Item name="Scourge and Whips">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"100"</Page>
+</Career>
+<Career id="BOTR-WORK_COUNCIL_MEDIATOR">
+<Description language="ENGLISH">"Council Mediator"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"30"</Advance>
+<Advance name="RULES-ATTR_Ld">"30"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_Cl">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"30"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Acting, Blather, Charm, Diplomacy, Dynastic Knowledge (Skaven), Haggle, History, Influence, Intimidate, Law (Skaven), Wit"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACTING">"100"</Skill>
+<Skill name="RULES-COMP_BLATHER">"100"</Skill>
+<Skill name="RULES-COMP_CHARM">"100"</Skill>
+<Skill name="BOTR-COMP_DIPLOMACY">"100"</Skill>
+<Skill name="APOCN-COMP_DYNASTIC_KNOWLEDGE">"100"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"100"</Skill>
+<Skill name="RULES-COMP_HISTORY">"100"</Skill>
+<Skill name="APOCN-COMP_INFLUENCE">"100"</Skill>
+<Skill name="APOCN-COMP_INTIMIDATE">"100"</Skill>
+<Skill name="RULES-COMP_LAW">"100"</Skill>
+<Skill name="RULES-COMP_WIT">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Amulet of Council Authority; Council Robes; d6 Honor Guard; Services of a Council Spy and Council Agent; Skaven Scribe"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Amulet of Council Authority">"1"</Item>
+<Item name="Council Robes">"1"</Item>
+<Item name="d6 Honor Guard">"1"</Item>
+<Item name="Services of a Council Spy and Council Agent">"1"</Item>
+<Item name="Skaven Scribe">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"102"</Page>
+</Career>
+<Career id="BOTR-WORK_COUNCIL_SPY">
+<Description language="ENGLISH">"Council Spy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+<Advance name="RULES-ATTR_I">"40"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_Dex">"40"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_Cl">"40"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+</AdvanceScheme>
+<Skills>"Conceal Urban, Palm Object, Pick Lock, Read Lips, Scale Sheer Surface, Shadowing, Silent Move Urban, Sixth Sense"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CONCEALMENT_URBAN">"100"</Skill>
+<Skill name="RULES-COMP_PALM_OBJECT">"100"</Skill>
+<Skill name="RULES-COMP_PICK_LOCK">"100"</Skill>
+<Skill name="BOTR-COMP_READ_LIPS">"100"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"100"</Skill>
+<Skill name="RULES-COMP_SHADOWING">"100"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE_URBAN">"100"</Skill>
+<Skill name="RULES-COMP_SIXTH_SENSE">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Dagger; Warpstone Poison Capsule; Whatever Assistance or Equipment Deemed Necessary"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_WEAPON_MELEE_DAGGER_KNIFE">"1"</Item>
+<Item name="BOTR-EQUIP_MISC_POTION_WARPSTONE_POISON_CAPSULE">"1"</Item>
+<Item name="Whatever Assistance or Equipment Deemed Necessary">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"103"</Page>
+</Career>
+<Career id="BOTR-WORK_GRISTLE_PILOT">
+<Description language="ENGLISH">"Clan Gristle Pilot"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Haggle, Night Vision, Orientation, River Lore, Specialist Weapon - Lasso, Specialist Weapon - Thrown, Swim"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_HAGGLE">"100"</Skill>
+<Skill name="RULES-COMP_NIGHT_VISION">"100"</Skill>
+<Skill name="RULES-COMP_ORIENTATION">"100"</Skill>
+<Skill name="RULES-COMP_RIVER_LORE">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__LASSO">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__THROWING_WEAPONS">"100"</Skill>
+<Skill name="RULES-COMP_SWIM">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Grappling Hook; Harpoon; Rope; d3 Throwing Daggers; 2 Lanterns; Row boat"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="RULES-EQUIP_MISC_TOOLS_GRAPPLING_HOOK">"1"</Item>
+<Item name="Harpoon">"1"</Item>
+<Item name="RULES-EQUIP_MISC_TOOLS_ROPE_YARD">"1"</Item>
+<Item name="d3 Throwing Daggers">"1"</Item>
+<Item name="RULES-EQUIP_MISC_ILLUMINATION_LANTERN" quantite="2">"1"</Item>
+<Item name="Row boat">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"176"</Page>
+</Career>
+<Career id="BOTR-WORK_RIVER_RAT">
+<Description language="ENGLISH">"River Rat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_RANGER"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Fish, Row, Specialist Weapon - Thrown, Swim"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_FISH">"100"</Skill>
+<Skill name="RULES-COMP_ROW">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__THROWING_WEAPONS">"100"</Skill>
+<Skill name="RULES-COMP_SWIM">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Fishing Rod and Line; Javelin or Spear for fishing; Small Rowboat"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Fishing Rod and Line">"1"</Item>
+<Item name="Javelin or Spear for fishing">"1"</Item>
+<Item name="Small Rowboat">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"177"</Page>
+</Career>
+<Career id="BOTR-WORK_SKATCHR_ASTROLOGER">
+<Description language="ENGLISH">"Clan Skatchr Astrologer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_Cl">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Astronomy, Cartography, Cult Lore - Clan Skatchr, Read/Write, Super Numerate"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ASTRONOMY">"100"</Skill>
+<Skill name="RULES-COMP_CARTOGRAPHY">"100"</Skill>
+<Skill name="WRDM-COMP_CULT_LORE">"100"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"100"</Skill>
+<Skill name="RULES-COMP_SUPER_NUMERATE">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Robes; Rudimentary Telescope; Sacred Token of Cult; Star Charts"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Robes">"1"</Item>
+<Item name="Rudimentary Telescope">"1"</Item>
+<Item name="Sacred Token of Cult">"1"</Item>
+<Item name="Star Charts">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"177"</Page>
+</Career>
+<Career id="BOTR-WORK_SKATCHR_AUGER">
+<Description language="ENGLISH">"Clan Skatchr Auger"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ACADEMIC"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_Dex">"30"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_Cl">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Astrology, Cult Doctrine - Clan Skatchr, Divination, Magical Sense, Public Speaking, Secret Language - Clan Skatchr"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="BOTR-COMP_ASTROLOGY">"100"</Skill>
+<Skill name="WRDM-COMP_CULT_DOCTRINE">"100"</Skill>
+<Skill name="BOTR-COMP_DIVINATION">"100"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"100"</Skill>
+<Skill name="RULES-COMP_PUBLIC_SPEAKING">"100"</Skill>
+<Skill name="BOTR-COMP_SECRET_LANGUAGE__CLAN_SKATCHR">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Complex Star Maps; Book on Stars; Delicate and Sophisticated Telescope; Drafting Tools and Writing Instruments; Journal of Heavenly Events"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Complex Star Maps">"1"</Item>
+<Item name="Book on Stars">"1"</Item>
+<Item name="Delicate and Sophisticated Telescope">"1"</Item>
+<Item name="Drafting Tools and Writing Instruments">"1"</Item>
+<Item name="Journal of Heavenly Events">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"178"</Page>
+</Career>
+<Career id="BOTR-WORK_BLACKFUR_MARKETEER">
+<Description language="ENGLISH">"Clan Blackfur Marketeer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_I">"20"</Advance>
+<Advance name="RULES-ATTR_Dex">"20"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Blather, Bribery, Evaluate, Flee!, Haggle, Palm Object"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_BLATHER">"100"</Skill>
+<Skill name="RULES-COMP_BRIBERY">"100"</Skill>
+<Skill name="RULES-COMP_EVALUATE">"100"</Skill>
+<Skill name="RULES-COMP_FLEE">"100"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"100"</Skill>
+<Skill name="RULES-COMP_PALM_OBJECT">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"Dozen porters; Two mercenary bodyguards"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Dozen porters">"1"</Item>
+<Item name="Two mercenary bodyguards">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"180"</Page>
+</Career>
+<Career id="BOTR-WORK_BLACKFUR_SMUGGLER">
+<Description language="ENGLISH">"Clan Blackfur Smuggler"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Class>"RULES-CLASS_ROGUE"</Class>
+<Basic>"0"</Basic>
+<AdvanceScheme>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_I">"10"</Advance>
+<Advance name="RULES-ATTR_Dex">"10"</Advance>
+<Advance name="RULES-ATTR_Ld">"10"</Advance>
+<Advance name="RULES-ATTR_Cl">"10"</Advance>
+</AdvanceScheme>
+<Skills>"Conceal Subterranean, Palm Object, Row, Silent Move Subterranean, Specialist Weapon - Incendiaries, Specialist Weapon - Whip"</Skills>
+<SUBCHAPTER_SKILL>
+<Skill name="BOTR-COMP_CONCEAL_SUBTERRANEAN">"100"</Skill>
+<Skill name="RULES-COMP_PALM_OBJECT">"100"</Skill>
+<Skill name="RULES-COMP_ROW">"100"</Skill>
+<Skill name="BOTR-COMP_SILENT_MOVE_SUBTERRANEAN">"100"</Skill>
+<Skill name="RULES-COMP_SPECIALIST_WEAPON__INCENDIARIES">"100"</Skill>
+<Skill name="BOTR-COMP_SPECIALIST_WEAPON__WHIP">"100"</Skill>
+</SUBCHAPTER_SKILL>
+<Trappings>"d6 Porters; Incendiary bomb; Whip"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="d6 Porters">"1"</Item>
+<Item name="Incendiary bomb">"1"</Item>
+<Item name="RULES-EQUIP_WEAPON_MELEE_WHIP">"1"</Item>
+</SUBCHAPTER_ITEM>
+<Page>"181"</Page>
+</Career>
+</DATA_CAREER_V1>
+<DATA_CAREER_LINK_V1>
+<Link name="BOTR-WORK_CLANRAT_WARRIOR">"BOTR-WORK_CLAN_GUARD"</Link>
+<Link name="BOTR-WORK_CLANRAT_WARRIOR">"BOTR-WORK_FORAGER"</Link>
+<Link name="BOTR-WORK_CLANRAT_WARRIOR">"BOTR-WORK_MERCENARY"</Link>
+<Link name="BOTR-WORK_CLANRAT_WARRIOR">"BOTR-WORK_SKAVEN_GUIDE"</Link>
+<Link name="BOTR-WORK_CLANRAT_WARRIOR">"BOTR-WORK_HACK"</Link>
+<Link name="BOTR-WORK_CLANRAT_WARRIOR">"BOTR-WORK_JAILER"</Link>
+<Link name="BOTR-WORK_CLANRAT_WARRIOR">"BOTR-WORK_SKAVENSLAVE"</Link>
+<Link name="BOTR-WORK_CLANRAT_WARRIOR">"BOTR-WORK_SQUEALER"</Link>
+<Link name="BOTR-WORK_CLANRAT_WARRIOR">"BOTR-WORK_RENEGADE"</Link>
+<Link name="BOTR-WORK_CLANRAT_WARRIOR">"BOTR-WORK_RAT_HERDER"</Link>
+<Link name="BOTR-WORK_CLAN_GUARD">"BOTR-WORK_BLOOD_HUNTER"</Link>
+<Link name="BOTR-WORK_CLAN_GUARD">"BOTR-WORK_CLAN_CHIEFTAIN"</Link>
+<Link name="BOTR-WORK_CLAN_GUARD">"BOTR-WORK_MERCENARY"</Link>
+<Link name="BOTR-WORK_CLAN_GUARD">"BOTR-WORK_NIGHT_CREEPER"</Link>
+<Link name="BOTR-WORK_CLAN_GUARD">"BOTR-WORK_MINE_OVERSEER"</Link>
+<Link name="BOTR-WORK_CLAN_GUARD">"BOTR-WORK_SLAVE_MASTER"</Link>
+<Link name="BOTR-WORK_CLAN_GUARD">"BOTR-WORK_TORTURER"</Link>
+<Link name="BOTR-WORK_CLAN_GUARD">"BOTR-WORK_WARDEN"</Link>
+<Link name="BOTR-WORK_CLAN_CHIEFTAIN">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_CLAN_CHIEFTAIN">"BOTR-WORK_CLAN_WARLORD"</Link>
+<Link name="BOTR-WORK_CLAN_CHIEFTAIN">"BOTR-WORK_COUNCIL_HONOR_GUARD"</Link>
+<Link name="BOTR-WORK_CLAN_WARLORD">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_CLAN_WARLORD">"BOTR-WORK_COUNCIL_HONOR_GUARD"</Link>
+<Link name="BOTR-WORK_BLOOD_HUNTER">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_BLOOD_HUNTER">"BOTR-WORK_MERCENARY"</Link>
+<Link name="BOTR-WORK_BLOOD_HUNTER">"BOTR-WORK_MINE_OVERSEER"</Link>
+<Link name="BOTR-WORK_BLOOD_HUNTER">"BOTR-WORK_SLAVE_MASTER"</Link>
+<Link name="BOTR-WORK_BLOOD_HUNTER">"BOTR-WORK_TORTURER"</Link>
+<Link name="BOTR-WORK_BLOOD_HUNTER">"BOTR-WORK_WARDEN"</Link>
+<Link name="BOTR-WORK_MERCENARY">"BOTR-WORK_BLOOD_HUNTER"</Link>
+<Link name="BOTR-WORK_MERCENARY">"BOTR-WORK_CLAN_GUARD"</Link>
+<Link name="BOTR-WORK_MERCENARY">"BOTR-WORK_MERCENARY_LEADER"</Link>
+<Link name="BOTR-WORK_MERCENARY">"BOTR-WORK_RENEGADE"</Link>
+<Link name="BOTR-WORK_MERCENARY_LEADER">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_MERCENARY_LEADER">"BOTR-WORK_CLAN_CHIEFTAIN"</Link>
+<Link name="BOTR-WORK_MERCENARY_LEADER">"BOTR-WORK_COUNCIL_HONOR_GUARD"</Link>
+<Link name="BOTR-WORK_MERCENARY_LEADER">"BOTR-WORK_RENEGADE_CHIEFTAIN"</Link>
+<Link name="BOTR-WORK_MERCENARY_LEADER">"BOTR-WORK_SLAVE_MASTER"</Link>
+<Link name="BOTR-WORK_MESSENGER">"BOTR-WORK_CLANRAT_WARRIOR"</Link>
+<Link name="BOTR-WORK_MESSENGER">"BOTR-WORK_FORAGER"</Link>
+<Link name="BOTR-WORK_MESSENGER">"BOTR-WORK_SKAVEN_GUIDE"</Link>
+<Link name="BOTR-WORK_MESSENGER">"BOTR-WORK_SQUEALER"</Link>
+<Link name="BOTR-WORK_NIGHT_CREEPER">"BOTR-WORK_BLOOD_HUNTER"</Link>
+<Link name="BOTR-WORK_NIGHT_CREEPER">"BOTR-WORK_CLAN_GUARD"</Link>
+<Link name="BOTR-WORK_NIGHT_CREEPER">"BOTR-WORK_BLACK_AGENT"</Link>
+<Link name="BOTR-WORK_NIGHT_CREEPER">"BOTR-WORK_SKAVEN_SCOUT"</Link>
+<Link name="BOTR-WORK_RAT_HERDER">"BOTR-WORK_BLOOD_HUNTER"</Link>
+<Link name="BOTR-WORK_RAT_HERDER">"BOTR-WORK_CLAN_GUARD"</Link>
+<Link name="BOTR-WORK_RAT_HERDER">"BOTR-WORK_FORAGER"</Link>
+<Link name="BOTR-WORK_RAT_HERDER">"BOTR-WORK_SKAVEN_GUIDE"</Link>
+<Link name="BOTR-WORK_RENEGADE">"BOTR-WORK_SKAVEN_GUIDE"</Link>
+<Link name="BOTR-WORK_RENEGADE">"BOTR-WORK_MERCENARY"</Link>
+<Link name="BOTR-WORK_RENEGADE">"BOTR-WORK_RENEGADE_CHIEFTAIN"</Link>
+<Link name="BOTR-WORK_RENEGADE_CHIEFTAIN">"BOTR-WORK_CLAN_CHIEFTAIN"</Link>
+<Link name="BOTR-WORK_RENEGADE_CHIEFTAIN">"RULES-WORK_MERCENARY_CAPTAIN"</Link>
+<Link name="BOTR-WORK_SKAVEN_GUIDE">"BOTR-WORK_BLOOD_HUNTER"</Link>
+<Link name="BOTR-WORK_SKAVEN_GUIDE">"BOTR-WORK_CLAN_GUARD"</Link>
+<Link name="BOTR-WORK_SKAVEN_GUIDE">"BOTR-WORK_FORAGER"</Link>
+<Link name="BOTR-WORK_SKAVEN_GUIDE">"BOTR-WORK_PEDLAR"</Link>
+<Link name="BOTR-WORK_SKAVEN_GUIDE">"BOTR-WORK_SKAVEN_SCOUT"</Link>
+<Link name="BOTR-WORK_SKAVEN_SCOUT">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_SKAVEN_SCOUT">"BOTR-WORK_BLOOD_HUNTER"</Link>
+<Link name="BOTR-WORK_SKAVEN_SCOUT">"BOTR-WORK_CLAN_GUARD"</Link>
+<Link name="BOTR-WORK_SKAVEN_SCOUT">"BOTR-WORK_NIGHT_CREEPER"</Link>
+<Link name="BOTR-WORK_SKAVEN_SCOUT">"BOTR-WORK_WARDEN"</Link>
+<Link name="BOTR-WORK_STORMVERMIN">"BOTR-WORK_BLOOD_HUNTER"</Link>
+<Link name="BOTR-WORK_STORMVERMIN">"BOTR-WORK_CLAN_CHIEFTAIN"</Link>
+<Link name="BOTR-WORK_STORMVERMIN">"BOTR-WORK_CLAN_GUARD"</Link>
+<Link name="BOTR-WORK_STORMVERMIN">"BOTR-WORK_RENEGADE"</Link>
+<Link name="BOTR-WORK_STORMVERMIN">"BOTR-WORK_MINE_OVERSEER"</Link>
+<Link name="BOTR-WORK_STORMVERMIN">"BOTR-WORK_SLAVE_MASTER"</Link>
+<Link name="BOTR-WORK_STORMVERMIN">"BOTR-WORK_WARDEN"</Link>
+<Link name="BOTR-WORK_WARDEN">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_WARDEN">"BOTR-WORK_ARTISAN_ARMORER"</Link>
+<Link name="BOTR-WORK_WARDEN">"BOTR-WORK_ARTISAN_BUILDER"</Link>
+<Link name="BOTR-WORK_WARDEN">"BOTR-WORK_ARTISAN_GLASS_MAKER"</Link>
+<Link name="BOTR-WORK_WARDEN">"BOTR-WORK_ARTISAN_STONE_MASON"</Link>
+<Link name="BOTR-WORK_WARDEN">"BOTR-WORK_ARTISAN_TAILOR"</Link>
+<Link name="BOTR-WORK_WARDEN">"BOTR-WORK_ARTISAN_TANNER"</Link>
+<Link name="BOTR-WORK_WARDEN">"BOTR-WORK_CLAN_GUARD"</Link>
+<Link name="BOTR-WORK_WARDEN">"BOTR-WORK_MINE_OVERSEER"</Link>
+<Link name="BOTR-WORK_ADVISOR">"BOTR-WORK_CLAN_CHIEFTAIN"</Link>
+<Link name="BOTR-WORK_ADVISOR">"BOTR-WORK_SEER"</Link>
+<Link name="BOTR-WORK_ADVISOR">"BOTR-WORK_RENEGADE"</Link>
+<Link name="BOTR-WORK_FORAGER">"BOTR-WORK_RAT_HERDER"</Link>
+<Link name="BOTR-WORK_FORAGER">"BOTR-WORK_SKAVEN_GUIDE"</Link>
+<Link name="BOTR-WORK_FORAGER">"BOTR-WORK_PEDLAR"</Link>
+<Link name="BOTR-WORK_FORAGER">"BOTR-WORK_SKAVEN_SCOUT"</Link>
+<Link name="BOTR-WORK_FORAGER">"BOTR-WORK_WARDEN"</Link>
+<Link name="BOTR-WORK_SCAVENGER">"BOTR-WORK_FORAGER"</Link>
+<Link name="BOTR-WORK_SCAVENGER">"BOTR-WORK_SKAVENSLAVE"</Link>
+<Link name="BOTR-WORK_SCAVENGER">"BOTR-WORK_SNEAK"</Link>
+<Link name="BOTR-WORK_ARTISAN_BUILDER">"BOTR-WORK_MINE_OVERSEER"</Link>
+<Link name="BOTR-WORK_ARTISAN_BUILDER">"BOTR-WORK_WARDEN"</Link>
+<Link name="BOTR-WORK_ARTISAN_STONE_MASON">"BOTR-WORK_MINE_OVERSEER"</Link>
+<Link name="BOTR-WORK_ARTISAN_TANNER">"BOTR-WORK_WARPSTONE_CRAFTER"</Link>
+<Link name="BOTR-WORK_ARTISAN_APPRENTICE">"BOTR-WORK_ARTISAN_ARMORER"</Link>
+<Link name="BOTR-WORK_ARTISAN_APPRENTICE">"BOTR-WORK_ARTISAN_BUILDER"</Link>
+<Link name="BOTR-WORK_ARTISAN_APPRENTICE">"BOTR-WORK_ARTISAN_GLASS_MAKER"</Link>
+<Link name="BOTR-WORK_ARTISAN_APPRENTICE">"BOTR-WORK_ARTISAN_STONE_MASON"</Link>
+<Link name="BOTR-WORK_ARTISAN_APPRENTICE">"BOTR-WORK_ARTISAN_TAILOR"</Link>
+<Link name="BOTR-WORK_ARTISAN_APPRENTICE">"BOTR-WORK_ARTISAN_TANNER"</Link>
+<Link name="BOTR-WORK_ARTISAN_APPRENTICE">"BOTR-WORK_RENEGADE"</Link>
+<Link name="BOTR-WORK_ARTISAN_APPRENTICE">"BOTR-WORK_SCAVENGER"</Link>
+<Link name="BOTR-WORK_ARTISAN_APPRENTICE">"BOTR-WORK_SKAVENSLAVE"</Link>
+<Link name="BOTR-WORK_ARTISAN_APPRENTICE">"BOTR-WORK_SNEAK"</Link>
+<Link name="BOTR-WORK_ARTISAN_APPRENTICE">"BOTR-WORK_WARPSTONE_CRAFTER"</Link>
+<Link name="BOTR-WORK_HACK">"BOTR-WORK_JAILER"</Link>
+<Link name="BOTR-WORK_HACK">"BOTR-WORK_TORTURER"</Link>
+<Link name="BOTR-WORK_JAILER">"BOTR-WORK_BLOOD_HUNTER"</Link>
+<Link name="BOTR-WORK_JAILER">"BOTR-WORK_CLANRAT_WARRIOR"</Link>
+<Link name="BOTR-WORK_JAILER">"BOTR-WORK_NIGHT_CREEPER"</Link>
+<Link name="BOTR-WORK_JAILER">"BOTR-WORK_TORTURER"</Link>
+<Link name="BOTR-WORK_MINER">"BOTR-WORK_RENEGADE"</Link>
+<Link name="BOTR-WORK_MINER">"BOTR-WORK_SCAVENGER"</Link>
+<Link name="BOTR-WORK_MINER">"BOTR-WORK_SKAVEN_GUIDE"</Link>
+<Link name="BOTR-WORK_MINER">"BOTR-WORK_MINE_OVERSEER"</Link>
+<Link name="BOTR-WORK_MINER">"BOTR-WORK_SKAVENSLAVE"</Link>
+<Link name="BOTR-WORK_MINER">"BOTR-WORK_SNEAK"</Link>
+<Link name="BOTR-WORK_MINE_OVERSEER">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_MINE_OVERSEER">"BOTR-WORK_SLAVE_MASTER"</Link>
+<Link name="BOTR-WORK_MINE_OVERSEER">"BOTR-WORK_WARDEN"</Link>
+<Link name="BOTR-WORK_PEDLAR">"BOTR-WORK_FORAGER"</Link>
+<Link name="BOTR-WORK_PEDLAR">"BOTR-WORK_RENEGADE"</Link>
+<Link name="BOTR-WORK_PEDLAR">"BOTR-WORK_SKAVEN_GUIDE"</Link>
+<Link name="BOTR-WORK_PEDLAR">"BOTR-WORK_SKAVEN_SCOUT"</Link>
+<Link name="BOTR-WORK_PEDLAR">"BOTR-WORK_SLAVE_MASTER"</Link>
+<Link name="BOTR-WORK_PORTER">"BOTR-WORK_RENEGADE"</Link>
+<Link name="BOTR-WORK_PORTER">"BOTR-WORK_SCAVENGER"</Link>
+<Link name="BOTR-WORK_PORTER">"BOTR-WORK_MINER"</Link>
+<Link name="BOTR-WORK_PORTER">"BOTR-WORK_SKAVENSLAVE"</Link>
+<Link name="BOTR-WORK_PORTER">"BOTR-WORK_SNEAK"</Link>
+<Link name="BOTR-WORK_SCRIBE">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_SCRIBE">"BOTR-WORK_PEDLAR"</Link>
+<Link name="BOTR-WORK_SCRIBE">"BOTR-WORK_SEER"</Link>
+<Link name="BOTR-WORK_SCRIBE">"BOTR-WORK_SQUEALER"</Link>
+<Link name="BOTR-WORK_SEER">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_SEER">"BOTR-WORK_SCAVENGER"</Link>
+<Link name="BOTR-WORK_SEER">"BOTR-WORK_SQUEALER"</Link>
+<Link name="BOTR-WORK_SLAVE_MASTER">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_SLAVE_MASTER">"BOTR-WORK_CLAN_GUARD"</Link>
+<Link name="BOTR-WORK_SLAVE_MASTER">"BOTR-WORK_TORTURER"</Link>
+<Link name="BOTR-WORK_SKAVENSLAVE">"BOTR-WORK_SCAVENGER"</Link>
+<Link name="BOTR-WORK_SKAVENSLAVE">"BOTR-WORK_RENEGADE"</Link>
+<Link name="BOTR-WORK_SKAVENSLAVE">"BOTR-WORK_MINER"</Link>
+<Link name="BOTR-WORK_SNEAK">"BOTR-WORK_RAT_HERDER"</Link>
+<Link name="BOTR-WORK_SNEAK">"BOTR-WORK_SCAVENGER"</Link>
+<Link name="BOTR-WORK_SNEAK">"BOTR-WORK_SKAVEN_GUIDE"</Link>
+<Link name="BOTR-WORK_SNEAK">"BOTR-WORK_PEDLAR"</Link>
+<Link name="BOTR-WORK_SNEAK">"BOTR-WORK_SQUEALER"</Link>
+<Link name="BOTR-WORK_SQUEALER">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_SQUEALER">"BOTR-WORK_JAILER"</Link>
+<Link name="BOTR-WORK_SQUEALER">"BOTR-WORK_SEER"</Link>
+<Link name="BOTR-WORK_SQUEALER">"BOTR-WORK_TORTURER"</Link>
+<Link name="BOTR-WORK_TORTURER">"BOTR-WORK_CLAN_GUARD"</Link>
+<Link name="BOTR-WORK_TORTURER">"BOTR-WORK_HACK"</Link>
+<Link name="BOTR-WORK_TORTURER">"BOTR-WORK_MINE_OVERSEER"</Link>
+<Link name="BOTR-WORK_TORTURER">"BOTR-WORK_SLAVE_MASTER"</Link>
+<Link name="BOTR-WORK_WARPSTONE_CRAFTER">"BOTR-WORK_ARTISAN_ARMORER"</Link>
+<Link name="BOTR-WORK_WARPSTONE_CRAFTER">"BOTR-WORK_ARTISAN_BUILDER"</Link>
+<Link name="BOTR-WORK_WARPSTONE_CRAFTER">"BOTR-WORK_ARTISAN_GLASS_MAKER"</Link>
+<Link name="BOTR-WORK_WARPSTONE_CRAFTER">"BOTR-WORK_ARTISAN_STONE_MASON"</Link>
+<Link name="BOTR-WORK_WARPSTONE_CRAFTER">"BOTR-WORK_ARTISAN_TAILOR"</Link>
+<Link name="BOTR-WORK_WARPSTONE_CRAFTER">"BOTR-WORK_ARTISAN_TANNER"</Link>
+<Link name="BOTR-WORK_WARPSTONE_CRAFTER">"BOTR-WORK_RENEGADE"</Link>
+<Link name="BOTR-WORK_WARPSTONE_CRAFTER">"BOTR-WORK_SKAVENSLAVE"</Link>
+<Link name="BOTR-WORK_STRANGLER">"BOTR-WORK_CULLER"</Link>
+<Link name="BOTR-WORK_CULLER">"BOTR-WORK_GARROTTER"</Link>
+<Link name="BOTR-WORK_CULLER">"BOTR-WORK_SPY"</Link>
+<Link name="BOTR-WORK_GARROTTER">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_GARROTTER">"BOTR-WORK_CLAN_CHIEFTAIN"</Link>
+<Link name="BOTR-WORK_GARROTTER">"BOTR-WORK_SPY"</Link>
+<Link name="BOTR-WORK_GUTTER_RUNNER">"BOTR-WORK_BLOOD_HUNTER"</Link>
+<Link name="BOTR-WORK_GUTTER_RUNNER">"BOTR-WORK_CLAN_GUARD"</Link>
+<Link name="BOTR-WORK_GUTTER_RUNNER">"BOTR-WORK_NIGHT_CREEPER"</Link>
+<Link name="BOTR-WORK_GUTTER_RUNNER">"BOTR-WORK_NIGHT_RUNNER"</Link>
+<Link name="BOTR-WORK_GUTTER_RUNNER">"BOTR-WORK_SKAVEN_GUIDE"</Link>
+<Link name="BOTR-WORK_NIGHT_RUNNER">"BOTR-WORK_BLOOD_HUNTER"</Link>
+<Link name="BOTR-WORK_NIGHT_RUNNER">"BOTR-WORK_CLAN_GUARD"</Link>
+<Link name="BOTR-WORK_NIGHT_RUNNER">"BOTR-WORK_FORAGER"</Link>
+<Link name="BOTR-WORK_NIGHT_RUNNER">"BOTR-WORK_SKAVEN_SCOUT"</Link>
+<Link name="BOTR-WORK_NIGHT_RUNNER">"BOTR-WORK_STRANGLER"</Link>
+<Link name="BOTR-WORK_SPY">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_SPY">"BOTR-WORK_GARROTTER"</Link>
+<Link name="BOTR-WORK_BEAST_HUNTER">"BOTR-WORK_BLOOD_HUNTER"</Link>
+<Link name="BOTR-WORK_BEAST_HUNTER">"BOTR-WORK_CLAN_GUARD"</Link>
+<Link name="BOTR-WORK_BEAST_HUNTER">"BOTR-WORK_NIGHT_CREEPER"</Link>
+<Link name="BOTR-WORK_BEAST_HUNTER">"BOTR-WORK_PACK_MASTER"</Link>
+<Link name="BOTR-WORK_BEAST_HUNTER">"BOTR-WORK_RAT_HERDER"</Link>
+<Link name="BOTR-WORK_BEAST_HUNTER">"BOTR-WORK_WARDEN"</Link>
+<Link name="BOTR-WORK_BREEDER">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_PACK_MASTER">"BOTR-WORK_BEAST_HUNTER"</Link>
+<Link name="BOTR-WORK_PACK_MASTER">"BOTR-WORK_CLAN_GUARD"</Link>
+<Link name="BOTR-WORK_PACK_MASTER">"BOTR-WORK_CLANRAT_WARRIOR"</Link>
+<Link name="BOTR-WORK_PACK_MASTER">"BOTR-WORK_RAT_HERDER"</Link>
+<Link name="BOTR-WORK_PACK_MASTER">"BOTR-WORK_SKAVEN_SCOUT"</Link>
+<Link name="BOTR-WORK_TRAINER">"BOTR-WORK_BREEDER"</Link>
+<Link name="BOTR-WORK_PLAGUE_CENSER_BEARER">"BOTR-WORK_CLAN_GUARD"</Link>
+<Link name="BOTR-WORK_PLAGUE_CENSER_BEARER">"BOTR-WORK_PLAGUE_MONK"</Link>
+<Link name="BOTR-WORK_PLAGUE_LORD">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_PLAGUE_LORD">"BOTR-WORK_SEER"</Link>
+<Link name="BOTR-WORK_PLAGUE_MONK">"BOTR-WORK_PLAGUE_PRIEST"</Link>
+<Link name="BOTR-WORK_PLAGUE_MONK">"BOTR-WORK_PLAGUE_CENSER_BEARER"</Link>
+<Link name="BOTR-WORK_PLAGUE_MONK">"BOTR-WORK_SQUEALER"</Link>
+<Link name="BOTR-WORK_PLAGUE_MONK">"BOTR-WORK_TORTURER"</Link>
+<Link name="BOTR-WORK_PLAGUE_PRIEST">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_PLAGUE_PRIEST">"BOTR-WORK_SEER"</Link>
+<Link name="BOTR-WORK_PLAGUE_PRIEST">"BOTR-WORK_PLAGUE_LORD"</Link>
+<Link name="BOTR-WORK_ARTIFICER">"BOTR-WORK_ARTISAN_ARMORER"</Link>
+<Link name="BOTR-WORK_ARTIFICER">"BOTR-WORK_ARTISAN_BUILDER"</Link>
+<Link name="BOTR-WORK_ARTIFICER">"BOTR-WORK_ARTISAN_GLASS_MAKER"</Link>
+<Link name="BOTR-WORK_ARTIFICER">"BOTR-WORK_ARTISAN_STONE_MASON"</Link>
+<Link name="BOTR-WORK_ARTIFICER">"BOTR-WORK_ARTISAN_TAILOR"</Link>
+<Link name="BOTR-WORK_ARTIFICER">"BOTR-WORK_ARTISAN_TANNER"</Link>
+<Link name="BOTR-WORK_ARTIFICER">"BOTR-WORK_DOOMWHEEL_DRIVER"</Link>
+<Link name="BOTR-WORK_ARTIFICER">"BOTR-WORK_WARDEN"</Link>
+<Link name="BOTR-WORK_DOOMWHEEL_DRIVER">"BOTR-WORK_ARTIFICER"</Link>
+<Link name="BOTR-WORK_DOOMWHEEL_DRIVER">"BOTR-WORK_SKRYRE_ENGINEER"</Link>
+<Link name="BOTR-WORK_DOOMWHEEL_DRIVER">"BOTR-WORK_WARDEN"</Link>
+<Link name="BOTR-WORK_SKRYRE_ENGINEER">"BOTR-WORK_WARPSEER"</Link>
+<Link name="BOTR-WORK_SKRYRE_ENGINEER">"BOTR-WORK_MINE_OVERSEER"</Link>
+<Link name="BOTR-WORK_POISON_WIND_GLOBADIER">"BOTR-WORK_CLAN_GUARD"</Link>
+<Link name="BOTR-WORK_POISON_WIND_GLOBADIER">"BOTR-WORK_WARPFIRE_THROWER"</Link>
+<Link name="BOTR-WORK_POISON_WIND_GLOBADIER">"BOTR-WORK_WARPLOCK_JEZZAIL_SHARPSHOOTER"</Link>
+<Link name="BOTR-WORK_WARPFIRE_THROWER">"BOTR-WORK_CLAN_GUARD"</Link>
+<Link name="BOTR-WORK_WARPLOCK_JEZZAIL_SHARPSHOOTER">"BOTR-WORK_ARTIFICER"</Link>
+<Link name="BOTR-WORK_WARPLOCK_JEZZAIL_SHARPSHOOTER">"BOTR-WORK_CLAN_GUARD"</Link>
+<Link name="BOTR-WORK_WARPLOCK_JEZZAIL_SHARPSHOOTER">"BOTR-WORK_DOOMWHEEL_DRIVER"</Link>
+<Link name="BOTR-WORK_WARPSEER">"BOTR-WORK_SEER"</Link>
+<Link name="BOTR-WORK_WARPSEER">"BOTR-WORK_WARPWEAVER"</Link>
+<Link name="BOTR-WORK_WARPWEAVER">"BOTR-WORK_WARPSQUEALER"</Link>
+<Link name="BOTR-WORK_WARPSQUEALER">"BOTR-WORK_WARPLORD"</Link>
+<Link name="BOTR-WORK_WARPLORD">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_GREY_SEER_INITIATE">"BOTR-WORK_GREY_SEER_1"</Link>
+<Link name="BOTR-WORK_GREY_SEER_INITIATE">"BOTR-WORK_SEER"</Link>
+<Link name="BOTR-WORK_GREY_SEER_1">"BOTR-WORK_GREY_SEER_2"</Link>
+<Link name="BOTR-WORK_GREY_SEER_1">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_GREY_SEER_1">"BOTR-WORK_AGITATOR"</Link>
+<Link name="BOTR-WORK_GREY_SEER_1">"BOTR-WORK_COUNCIL_AGENT"</Link>
+<Link name="BOTR-WORK_GREY_SEER_2">"BOTR-WORK_GREY_SEER_3"</Link>
+<Link name="BOTR-WORK_GREY_SEER_2">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_GREY_SEER_2">"BOTR-WORK_AGITATOR"</Link>
+<Link name="BOTR-WORK_GREY_SEER_2">"BOTR-WORK_COUNCIL_AGENT"</Link>
+<Link name="BOTR-WORK_GREY_SEER_3">"BOTR-WORK_GREY_SEER_4"</Link>
+<Link name="BOTR-WORK_GREY_SEER_3">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_GREY_SEER_3">"BOTR-WORK_AGITATOR"</Link>
+<Link name="BOTR-WORK_GREY_SEER_3">"BOTR-WORK_COUNCIL_AGENT"</Link>
+<Link name="BOTR-WORK_GREY_SEER_4">"BOTR-WORK_AGITATOR"</Link>
+<Link name="BOTR-WORK_GREY_SEER_4">"BOTR-WORK_BLACK_AGENT"</Link>
+<Link name="BOTR-WORK_GREY_SEER_4">"BOTR-WORK_COUNCIL_AGENT"</Link>
+<Link name="BOTR-WORK_GREY_SEER_4">"BOTR-WORK_COUNCIL_ASSESSOR"</Link>
+<Link name="BOTR-WORK_GREY_SEER_4">"BOTR-WORK_COUNCIL_INQUISITOR"</Link>
+<Link name="BOTR-WORK_GREY_SEER_4">"BOTR-WORK_COUNCIL_MEDIATOR"</Link>
+<Link name="BOTR-WORK_GREY_SEER_4">"BOTR-WORK_COUNCIL_SPY"</Link>
+<Link name="BOTR-WORK_AGITATOR">"BOTR-WORK_BLACK_AGENT"</Link>
+<Link name="BOTR-WORK_AGITATOR">"BOTR-WORK_COUNCIL_AGENT"</Link>
+<Link name="BOTR-WORK_AGITATOR">"BOTR-WORK_COUNCIL_MEDIATOR"</Link>
+<Link name="BOTR-WORK_BLACK_AGENT">"BOTR-WORK_AGITATOR"</Link>
+<Link name="BOTR-WORK_BLACK_AGENT">"BOTR-WORK_COUNCIL_AGENT"</Link>
+<Link name="BOTR-WORK_BLACK_AGENT">"BOTR-WORK_COUNCIL_HONOR_GUARD"</Link>
+<Link name="BOTR-WORK_COUNCIL_AGENT">"BOTR-WORK_AGITATOR"</Link>
+<Link name="BOTR-WORK_COUNCIL_AGENT">"BOTR-WORK_BLACK_AGENT"</Link>
+<Link name="BOTR-WORK_COUNCIL_AGENT">"BOTR-WORK_COUNCIL_ASSESSOR"</Link>
+<Link name="BOTR-WORK_COUNCIL_AGENT">"BOTR-WORK_COUNCIL_INQUISITOR"</Link>
+<Link name="BOTR-WORK_COUNCIL_AGENT">"BOTR-WORK_COUNCIL_SPY"</Link>
+<Link name="BOTR-WORK_COUNCIL_ASSESSOR">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_COUNCIL_ASSESSOR">"BOTR-WORK_COUNCIL_INQUISITOR"</Link>
+<Link name="BOTR-WORK_COUNCIL_ASSESSOR">"BOTR-WORK_COUNCIL_MEDIATOR"</Link>
+<Link name="BOTR-WORK_COUNCIL_HONOR_GUARD">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_COUNCIL_HONOR_GUARD">"BOTR-WORK_CLAN_WARLORD"</Link>
+<Link name="BOTR-WORK_COUNCIL_HONOR_GUARD">"BOTR-WORK_COUNCIL_INQUISITOR"</Link>
+<Link name="BOTR-WORK_COUNCIL_INQUISITOR">"BOTR-WORK_COUNCIL_ASSESSOR"</Link>
+<Link name="BOTR-WORK_COUNCIL_INQUISITOR">"BOTR-WORK_COUNCIL_SPY"</Link>
+<Link name="BOTR-WORK_COUNCIL_MEDIATOR">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_COUNCIL_MEDIATOR">"BOTR-WORK_COUNCIL_SPY"</Link>
+<Link name="BOTR-WORK_COUNCIL_SPY">"BOTR-WORK_AGITATOR"</Link>
+<Link name="BOTR-WORK_COUNCIL_SPY">"BOTR-WORK_BLACK_AGENT"</Link>
+<Link name="BOTR-WORK_COUNCIL_SPY">"BOTR-WORK_COUNCIL_ASSESSOR"</Link>
+<Link name="BOTR-WORK_COUNCIL_SPY">"BOTR-WORK_COUNCIL_INQUISITOR"</Link>
+<Link name="BOTR-WORK_COUNCIL_SPY">"BOTR-WORK_COUNCIL_MEDIATOR"</Link>
+<Link name="BOTR-WORK_GRISTLE_PILOT">"BOTR-WORK_SKAVEN_GUIDE"</Link>
+<Link name="BOTR-WORK_GRISTLE_PILOT">"BOTR-WORK_MESSENGER"</Link>
+<Link name="BOTR-WORK_RIVER_RAT">"BOTR-WORK_CLANRAT_WARRIOR"</Link>
+<Link name="BOTR-WORK_RIVER_RAT">"BOTR-WORK_MESSENGER"</Link>
+<Link name="BOTR-WORK_RIVER_RAT">"BOTR-WORK_RENEGADE"</Link>
+<Link name="BOTR-WORK_RIVER_RAT">"BOTR-WORK_GRISTLE_PILOT"</Link>
+<Link name="BOTR-WORK_SKATCHR_ASTROLOGER">"BOTR-WORK_ADVISOR"</Link>
+<Link name="BOTR-WORK_SKATCHR_ASTROLOGER">"BOTR-WORK_SKATCHR_AUGER"</Link>
+<Link name="BOTR-WORK_BLACKFUR_MARKETEER">"BOTR-WORK_BLACKFUR_SMUGGLER"</Link>
+<Link name="BOTR-WORK_BLACKFUR_MARKETEER">"BOTR-WORK_CLAN_GUARD"</Link>
+<Link name="BOTR-WORK_BLACKFUR_MARKETEER">"BOTR-WORK_RENEGADE"</Link>
+<Link name="BOTR-WORK_BLACKFUR_SMUGGLER">"BOTR-WORK_CLAN_GUARD"</Link>
+<Link name="BOTR-WORK_BLACKFUR_SMUGGLER">"BOTR-WORK_SLAVE_MASTER"</Link>
+<Link name="RULES-WORK_ARTISAN">"BOTR-WORK_WARPSTONE_CRAFTER"</Link>
+<Link name="BOTR-WORK_BLOOD_HUNTER">"BOTR-WORK_GUTTER_RUNNER"</Link>
+<Link name="BOTR-WORK_CLANRAT_WARRIOR">"BOTR-WORK_GUTTER_RUNNER"</Link>
+<Link name="BOTR-WORK_NIGHT_CREEPER">"BOTR-WORK_GUTTER_RUNNER"</Link>
+<Link name="BOTR-WORK_SKAVEN_GUIDE">"BOTR-WORK_GUTTER_RUNNER"</Link>
+<Link name="BOTR-WORK_NIGHT_CREEPER">"BOTR-WORK_NIGHT_RUNNER"</Link>
+<Link name="BOTR-WORK_SQUEALER">"BOTR-WORK_SPY"</Link>
+<Link name="BOTR-WORK_CLANRAT_WARRIOR">"BOTR-WORK_BEAST_HUNTER"</Link>
+<Link name="BOTR-WORK_NIGHT_CREEPER">"BOTR-WORK_BEAST_HUNTER"</Link>
+<Link name="BOTR-WORK_SKAVEN_GUIDE">"BOTR-WORK_BEAST_HUNTER"</Link>
+<Link name="BOTR-WORK_SKAVEN_SCOUT">"BOTR-WORK_BEAST_HUNTER"</Link>
+<Link name="BOTR-WORK_CLANRAT_WARRIOR">"BOTR-WORK_PACK_MASTER"</Link>
+<Link name="BOTR-WORK_RAT_HERDER">"BOTR-WORK_PACK_MASTER"</Link>
+<Link name="BOTR-WORK_SKAVEN_GUIDE">"BOTR-WORK_PACK_MASTER"</Link>
+<Link name="BOTR-WORK_BEAST_HUNTER">"BOTR-WORK_TRAINER"</Link>
+<Link name="BOTR-WORK_PACK_MASTER">"BOTR-WORK_TRAINER"</Link>
+<Link name="BOTR-WORK_RAT_HERDER">"BOTR-WORK_TRAINER"</Link>
+<Link name="BOTR-WORK_CLANRAT_WARRIOR">"BOTR-WORK_PLAGUE_CENSER_BEARER"</Link>
+<Link name="BOTR-WORK_CLANRAT_WARRIOR">"BOTR-WORK_PLAGUE_MONK"</Link>
+<Link name="BOTR-WORK_SCRIBE">"BOTR-WORK_PLAGUE_PRIEST"</Link>
+<Link name="RULES-WORK_ARTISAN">"BOTR-WORK_ARTIFICER"</Link>
+<Link name="BOTR-WORK_SKRYRE_ENGINEER">"BOTR-WORK_ARTIFICER"</Link>
+<Link name="BOTR-WORK_WARDEN">"BOTR-WORK_ARTIFICER"</Link>
+<Link name="BOTR-WORK_ARTIFICER">"BOTR-WORK_SKRYRE_ENGINEER"</Link>
+<Link name="RULES-WORK_ARTISAN">"BOTR-WORK_SKRYRE_ENGINEER"</Link>
+<Link name="BOTR-WORK_SCRIBE">"BOTR-WORK_SKRYRE_ENGINEER"</Link>
+<Link name="BOTR-WORK_CLANRAT_WARRIOR">"BOTR-WORK_POISON_WIND_GLOBADIER"</Link>
+<Link name="BOTR-WORK_CLAN_GUARD">"BOTR-WORK_POISON_WIND_GLOBADIER"</Link>
+<Link name="BOTR-WORK_CLAN_GUARD">"BOTR-WORK_WARPFIRE_THROWER"</Link>
+<Link name="BOTR-WORK_CLANRAT_WARRIOR">"BOTR-WORK_WARPFIRE_THROWER"</Link>
+<Link name="BOTR-WORK_CLANRAT_WARRIOR">"BOTR-WORK_WARPLOCK_JEZZAIL_SHARPSHOOTER"</Link>
+<Link name="BOTR-WORK_SQUEALER">"BOTR-WORK_AGITATOR"</Link>
+<Link name="BOTR-WORK_COUNCIL_SPY">"BOTR-WORK_COUNCIL_AGENT"</Link>
+<Link name="BOTR-WORK_TORTURER">"BOTR-WORK_COUNCIL_INQUISITOR"</Link>
+<Link name="BOTR-WORK_BLACK_AGENT">"BOTR-WORK_COUNCIL_SPY"</Link>
+<Link name="BOTR-WORK_COUNCIL_ASSESSOR">"BOTR-WORK_COUNCIL_SPY"</Link>
+<Link name="BOTR-WORK_FORAGER">"BOTR-WORK_RIVER_RAT"</Link>
+<Link name="BOTR-WORK_RENEGADE">"BOTR-WORK_RIVER_RAT"</Link>
+<Link name="BOTR-WORK_SCAVENGER">"BOTR-WORK_RIVER_RAT"</Link>
+<Link name="BOTR-WORK_SEER">"BOTR-WORK_SKATCHR_ASTROLOGER"</Link>
+<Link name="BOTR-WORK_SCRIBE">"BOTR-WORK_SKATCHR_ASTROLOGER"</Link>
+<Link name="BOTR-WORK_BLACKFUR_SMUGGLER">"BOTR-WORK_BLACKFUR_MARKETEER"</Link>
+<Link name="BOTR-WORK_CLANRAT_WARRIOR">"BOTR-WORK_BLACKFUR_MARKETEER"</Link>
+<Link name="RULES-WORK_PEDLAR">"BOTR-WORK_BLACKFUR_MARKETEER"</Link>
+<Link name="BOTR-WORK_RENEGADE">"BOTR-WORK_BLACKFUR_SMUGGLER"</Link>
+<Link name="BOTR-WORK_SKAVEN_GUIDE">"BOTR-WORK_BLACKFUR_SMUGGLER"</Link>
+<Link name="BOTR-WORK_PEDLAR">"BOTR-WORK_BLACKFUR_SMUGGLER"</Link>
+<Link name="BOTR-WORK_SKAVEN_SCOUT">"BOTR-WORK_BLACKFUR_SMUGGLER"</Link>
+<Link name="BOTR-WORK_SNEAK">"BOTR-WORK_BLACKFUR_SMUGGLER"</Link>
+</DATA_CAREER_LINK_V1>
+<DATA_CAREER_ROLL>
+<Entry>
+<Rule>"RULES-RULE_CAREER_CHART_WARRIOR"</Rule>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Career name="BOTR-WORK_CLANRAT_WARRIOR">"3900"</Career>
+</Entry>
+<Entry>
+<Rule>"RULES-RULE_CAREER_CHART_WARRIOR"</Rule>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Career name="BOTR-WORK_BLOOD_HUNTER">"325"</Career>
+</Entry>
+<Entry>
+<Rule>"RULES-RULE_CAREER_CHART_WARRIOR"</Rule>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Career name="BOTR-WORK_MERCENARY">"325"</Career>
+</Entry>
+<Entry>
+<Rule>"RULES-RULE_CAREER_CHART_WARRIOR"</Rule>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Career name="BOTR-WORK_MESSENGER">"325"</Career>
+</Entry>
+<Entry>
+<Rule>"RULES-RULE_CAREER_CHART_WARRIOR"</Rule>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Career name="BOTR-WORK_RAT_HERDER">"325"</Career>
+</Entry>
+<Entry>
+<Rule>"RULES-RULE_CAREER_CHART_WARRIOR"</Rule>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Career name="BOTR-WORK_RENEGADE">"325"</Career>
+</Entry>
+<Entry>
+<Rule>"RULES-RULE_CAREER_CHART_WARRIOR"</Rule>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Career name="BOTR-WORK_SKAVEN_GUIDE">"325"</Career>
+</Entry>
+<Entry>
+<Rule>"RULES-RULE_CAREER_CHART_WARRIOR"</Rule>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Career name="BOTR-WORK_STORMVERMIN">"650"</Career>
+</Entry>
+<Entry>
+<Rule>"RULES-RULE_CAREER_CHART_WARRIOR"</Rule>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Career name="BOTR-WORK_JAILER">"80"</Career>
+</Entry>
+<Entry>
+<Rule>"RULES-RULE_CAREER_CHART_RANGER"</Rule>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Career name="BOTR-WORK_FORAGER">"200"</Career>
+</Entry>
+<Entry>
+<Rule>"RULES-RULE_CAREER_CHART_ROGUE"</Rule>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Career name="BOTR-WORK_SCAVENGER">"200"</Career>
+</Entry>
+<Entry>
+<Rule>"RULES-RULE_CAREER_CHART_ROGUE"</Rule>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Career name="BOTR-WORK_ARTISAN_APPRENTICE">"200"</Career>
+</Entry>
+<Entry>
+<Rule>"RULES-RULE_CAREER_CHART_ACADEMIC"</Rule>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Career name="BOTR-WORK_HACK">"80"</Career>
+</Entry>
+<Entry>
+<Rule>"RULES-RULE_CAREER_CHART_ROGUE"</Rule>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Career name="BOTR-WORK_MINER">"200"</Career>
+</Entry>
+<Entry>
+<Rule>"RULES-RULE_CAREER_CHART_ROGUE"</Rule>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Career name="BOTR-WORK_PEDLAR">"200"</Career>
+</Entry>
+<Entry>
+<Rule>"RULES-RULE_CAREER_CHART_ROGUE"</Rule>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Career name="BOTR-WORK_PORTER">"200"</Career>
+</Entry>
+<Entry>
+<Rule>"RULES-RULE_CAREER_CHART_ACADEMIC"</Rule>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Career name="BOTR-WORK_SCRIBE">"80"</Career>
+</Entry>
+<Entry>
+<Rule>"RULES-RULE_CAREER_CHART_ACADEMIC"</Rule>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Career name="BOTR-WORK_SEER">"80"</Career>
+</Entry>
+<Entry>
+<Rule>"RULES-RULE_CAREER_CHART_ROGUE"</Rule>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Career name="BOTR-WORK_SKAVENSLAVE">"200"</Career>
+</Entry>
+<Entry>
+<Rule>"RULES-RULE_CAREER_CHART_ROGUE"</Rule>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Career name="BOTR-WORK_SNEAK">"200"</Career>
+</Entry>
+<Entry>
+<Rule>"RULES-RULE_CAREER_CHART_ROGUE"</Rule>
+<Specie>"BOTR-SPECIE_SKAVEN"</Specie>
+<Career name="BOTR-WORK_SQUEALER">"80"</Career>
+</Entry>
+</DATA_CAREER_ROLL>
+<DATA_SPELL_V1>
+<SpellV1 id="BOTR-SPELL_AGILITY_OF_THE_RAT">
+<Description language="ENGLISH">"Agility of the Rat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"2 per hour"</MagicPoints>
+<Range>"Touch"</Range>
+<Duration>"1+ hours"</Duration>
+<Ingredients>"Rat tail"</Ingredients>
+<Page>"119"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_ALTER_MUSK">
+<Description language="ENGLISH">"Alter Musk"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"2"</MagicPoints>
+<Range>"Touch"</Range>
+<Duration>"24 hours"</Duration>
+<Ingredients>"Dead rat"</Ingredients>
+<Page>"119"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_FOUL_MISTS">
+<Description language="ENGLISH">"Foul Mists"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"2"</MagicPoints>
+<Range>"Line of sight"</Range>
+<Duration>"2d6 rounds"</Duration>
+<Ingredients>"Handful of Graveweed"</Ingredients>
+<Page>"119"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_FROTHING_BITE">
+<Description language="ENGLISH">"Frothing Bite"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"2"</MagicPoints>
+<Range>"Touch"</Range>
+<Duration>"d6 rounds"</Duration>
+<Ingredients>"Rat tooth"</Ingredients>
+<Page>"119"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_GLEAMING_EYES">
+<Description language="ENGLISH">"Gleaming Eyes"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"2"</MagicPoints>
+<Range>"20 yards"</Range>
+<Duration>"One hour per level of spellcaster"</Duration>
+<Ingredients>"Eyeball of a rat"</Ingredients>
+<Page>"120"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_MUSK_OF_COURAGE">
+<Description language="ENGLISH">"Musk of Courage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"2 per turn"</MagicPoints>
+<Range>"24 yards diameter"</Range>
+<Duration>"1+ turns"</Duration>
+<Ingredients>"Dried heart of a dwarf"</Ingredients>
+<Page>"120"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_SPEAK_WITH_KIN">
+<Description language="ENGLISH">"Speak With Kin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"1"</MagicPoints>
+<Range>"5 yards"</Range>
+<Duration>"1 minute per level"</Duration>
+<Ingredients>"Tongue of a rat and Skaven"</Ingredients>
+<Page>"120"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_STRENGTHEN_WOOD">
+<Description language="ENGLISH">"Strengthen Wood"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"2"</MagicPoints>
+<Range>"Touch"</Range>
+<Duration>"24 hours"</Duration>
+<Ingredients>"Piece of petrified wood"</Ingredients>
+<Page>"121"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_SUMMON_GIANT_RATS">
+<Description language="ENGLISH">"Summon Giant Rats"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"2 per giant rat per hour"</MagicPoints>
+<Range>"12 yards"</Range>
+<Duration>"One hour +"</Duration>
+<Ingredients>"A piece of rotting flesh"</Ingredients>
+<Page>"121"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_WARPLIGHTNING">
+<Description language="ENGLISH">"Warplightning"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"4"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"A copper wire"</Ingredients>
+<Page>"121"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_ASSUME_FORM_OF_THE_RAT">
+<Description language="ENGLISH">"Assume Form of the Rat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"4 +1 per turn"</MagicPoints>
+<Range>"Personal"</Range>
+<Duration>"1+ turns"</Duration>
+<Ingredients>"Stuffed rat"</Ingredients>
+<Page>"122"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_CLEAR_OBSTRUCTION">
+<Description language="ENGLISH">"Clear Obstruction"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"4"</MagicPoints>
+<Range>"Touch"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"Sand from an hourglass"</Ingredients>
+<Page>"122"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_CLOAK_NATURE">
+<Description language="ENGLISH">"Cloak Nature"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"2 per turn"</MagicPoints>
+<Range>"Personal"</Range>
+<Duration>"One or more turns"</Duration>
+<Ingredients>"Bit of brain of creature to resemble"</Ingredients>
+<Page>"122"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_CURSE_OF_LOATHING">
+<Description language="ENGLISH">"Curse of Loathing"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"4"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"Until dispelled"</Duration>
+<Ingredients>"Personal possession of victim, or hair etc."</Ingredients>
+<Page>"123"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_ENSHROUDING_MISTS">
+<Description language="ENGLISH">"Enshrouding Mists"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"6"</MagicPoints>
+<Range>"Personal, extending 10 yard radius"</Range>
+<Duration>"2d6 rounds"</Duration>
+<Ingredients>"Vial of bogwater"</Ingredients>
+<Page>"124"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_HYPNOTIC_GAZE">
+<Description language="ENGLISH">"Hypnotic Gaze"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"4 +2 per turn"</MagicPoints>
+<Range>"5 yards"</Range>
+<Duration>"1+ turns"</Duration>
+<Ingredients>"Eye of a Grey Seer"</Ingredients>
+<Page>"124"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_PESTILENT_BREATH">
+<Description language="ENGLISH">"Pestilent Breath"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"4"</MagicPoints>
+<Range>"From spellcaster extending three yards"</Range>
+<Duration>"Six rounds"</Duration>
+<Ingredients>"Cancerous tongue or throat"</Ingredients>
+<Page>"124"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_PUTREFY">
+<Description language="ENGLISH">"Putrefy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"6"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"Dead combatants in the area"</Ingredients>
+<Page>"124"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_RESILIENCE_OF_THE_RAT">
+<Description language="ENGLISH">"Resilience of the Rat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"2 per hour"</MagicPoints>
+<Range>"Touch"</Range>
+<Duration>"1+ hours"</Duration>
+<Ingredients>"Skinned rat and thyroid of a Skaven"</Ingredients>
+<Page>"125"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_SKITTERLEAP">
+<Description language="ENGLISH">"Skitterleap"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"4"</MagicPoints>
+<Range>"Touch"</Range>
+<Duration>"One round"</Duration>
+<Ingredients>"Leg bones of a rat"</Ingredients>
+<Page>"125"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_SUMMON_DAEMONRUNT">
+<Description language="ENGLISH">"Summon Daemonrunt"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"4"</MagicPoints>
+<Range>"Appears within 3 yards of caster"</Range>
+<Duration>"One hour per level"</Duration>
+<Ingredients>""</Ingredients>
+<Page>"126"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_SUMMON_DAEMONWYRD">
+<Description language="ENGLISH">"Summon Daemonwyrd"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"8"</MagicPoints>
+<Range>"Appears within 3 yards"</Range>
+<Duration>"Permanent"</Duration>
+<Ingredients>""</Ingredients>
+<Page>"126"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_SUMMON_SWARM_OF_RATS">
+<Description language="ENGLISH">"Summon Swarm of Rats"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"8 per hour"</MagicPoints>
+<Range>"24 yards"</Range>
+<Duration>"One hour +"</Duration>
+<Ingredients>"Human baby corpse"</Ingredients>
+<Page>"126"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_WITHER">
+<Description language="ENGLISH">"Wither"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"5 per round"</MagicPoints>
+<Range>"Touch"</Range>
+<Duration>"One or more rounds"</Duration>
+<Ingredients>"Withered skin of a human"</Ingredients>
+<Page>"127"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_AGE_FOE">
+<Description language="ENGLISH">"Age Foe"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"10"</MagicPoints>
+<Range>"24 yards"</Range>
+<Duration>"Permanent"</Duration>
+<Ingredients>"Heart of a Necromancer"</Ingredients>
+<Page>"127"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_ASSUME_FORM_OF_A_GIANT_RAT">
+<Description language="ENGLISH">"Assume Form of a Giant Rat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"6 +2 per turn"</MagicPoints>
+<Range>"Personal"</Range>
+<Duration>"1+ turns"</Duration>
+<Ingredients>"Giant Rat skin"</Ingredients>
+<Page>"127"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_BLACKHUNGER">
+<Description language="ENGLISH">"Blackhunger"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"5"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"One turn"</Duration>
+<Ingredients>"Stomach of a Skaven"</Ingredients>
+<Page>"128"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_CRACKS_IN_THE_MIND">
+<Description language="ENGLISH">"Cracks in the Mind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"10"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"One or more days"</Duration>
+<Ingredients>"Possession or hair, fingernail of victim and brain of a lunatic"</Ingredients>
+<Page>"128"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_DISSENT">
+<Description language="ENGLISH">"Dissent"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"8"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"3d6 rounds"</Duration>
+<Ingredients>"Broken dagger"</Ingredients>
+<Page>"128"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_EXCAVATE">
+<Description language="ENGLISH">"Excavate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"2 per round"</MagicPoints>
+<Range>"Personal"</Range>
+<Duration>"One turn"</Duration>
+<Ingredients>"A vial of acid"</Ingredients>
+<Page>"128"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_MUSK_OF_COWERING_FEAR">
+<Description language="ENGLISH">"Musk of Cowering Fear"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"6"</MagicPoints>
+<Range>"12 yard radius"</Range>
+<Duration>"2 +1d6 rounds"</Duration>
+<Ingredients>"Musk gland soaked in urine"</Ingredients>
+<Page>"128"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_POISONOUS_MISTS">
+<Description language="ENGLISH">"Poisonous Mists"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"8"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"d6 rounds"</Duration>
+<Ingredients>"Knotted short intestine of a grave digger"</Ingredients>
+<Page>"129"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_SANCTUARY_OF_THE_HORNED_RAT">
+<Description language="ENGLISH">"Sanctuary of the Horned Rat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"6"</MagicPoints>
+<Range>"Centered around caster"</Range>
+<Duration>"As long as caster does not move"</Duration>
+<Ingredients>"Blood sprinkled around perimeter"</Ingredients>
+<Page>"129"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_SUMMON_RATFIEND">
+<Description language="ENGLISH">"Summon Ratfiend"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"5 per hour"</MagicPoints>
+<Range>"Appears within 10 yards of caster"</Range>
+<Duration>"One hour per level"</Duration>
+<Ingredients>""</Ingredients>
+<Page>"129"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_SUMMON_VERMINTIDE">
+<Description language="ENGLISH">"Summon Vermintide"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"6 (+2 per hour after the first)"</MagicPoints>
+<Range>"Within 10 yards"</Range>
+<Duration>"One hour per level"</Duration>
+<Ingredients>""</Ingredients>
+<Page>"130"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_TOLLING_OF_THE_BELL">
+<Description language="ENGLISH">"Tolling of the Bell"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"8"</MagicPoints>
+<Range>"20 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"A bronze, copper, or iron bell (no less than 500 enc.)"</Ingredients>
+<Page>"130"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_BURNING_WITHIN">
+<Description language="ENGLISH">"Burning Within"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"4"</SpellLevel>
+<MagicPoints>"12"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"Copper coil dipped in warpdust"</Ingredients>
+<Page>"131"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_CORRUPT_MIND_AND_BODY">
+<Description language="ENGLISH">"Corrupt Mind and Body"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"4"</SpellLevel>
+<MagicPoints>"15"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"Permanent"</Duration>
+<Ingredients>"Brain of a Chaos spawn"</Ingredients>
+<Page>"131"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_CRACKS_CALL">
+<Description language="ENGLISH">"Cracks Call"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"4"</SpellLevel>
+<MagicPoints>"18"</MagicPoints>
+<Range>"36 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"Broken geode"</Ingredients>
+<Page>"131"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_CURSE_OF_THE_HORNED_ONE">
+<Description language="ENGLISH">"Curse of the Horned One"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"4"</SpellLevel>
+<MagicPoints>"25"</MagicPoints>
+<Range>"24 yards"</Range>
+<Duration>"Permanent or until dispelled"</Duration>
+<Ingredients>"Heart of a Grey Seer"</Ingredients>
+<Page>"132"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_DEATH_FRENZY">
+<Description language="ENGLISH">"Death Frenzy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"4"</SpellLevel>
+<MagicPoints>"4 per creature affected"</MagicPoints>
+<Range>"10 yards"</Range>
+<Duration>"One or more rounds"</Duration>
+<Ingredients>"Skull chalice filled with blood"</Ingredients>
+<Page>"132"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_PLAGUE">
+<Description language="ENGLISH">"Plague"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"4"</SpellLevel>
+<MagicPoints>"20"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"Diseased organ from a humanoid"</Ingredients>
+<Page>"133"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_SHADE_OF_THE_HORNED_RAT">
+<Description language="ENGLISH">"Shade of the Horned Rat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"4"</SpellLevel>
+<MagicPoints>"25"</MagicPoints>
+<Range>"24 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"A sacrifice of any humanoid"</Ingredients>
+<Page>"133"</Page>
+</SpellV1>
+<SpellV1 id="BOTR-SPELL_SUMMON_VERMINLORD">
+<Description language="ENGLISH">"Summon Verminlord"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Skaven"</SpellList>
+<SpellLevel>"4"</SpellLevel>
+<MagicPoints>"20"</MagicPoints>
+<Range>"Not applicable"</Range>
+<Duration>"Until task completed or six hours have passed"</Duration>
+<Ingredients>""</Ingredients>
+<Page>"134"</Page>
+</SpellV1>
+</DATA_SPELL_V1>
+<DATA_EQUIPMENT_V1>
+<EquipmentV1 id="BOTR-EQUIP_WEAPON_THROWN_BARBED_BOLA">
+<Description language="ENGLISH">"Barbed Bola"</Description>
+<Category>"RULES-V1CAT_WEAPON"</Category>
+<SubCategory>"RULES-V1SUBCAT_MISSILE"</SubCategory>
+<CombatModifiers>
+<CombatModifier>
+<Stat>"RULES-V1MOD_TOHIT"</Stat>
+<Value>"-10"</Value>
+</CombatModifier>
+</CombatModifiers>
+<RangeBands>
+<RangeBand>
+<Band>"RULES-V1RANGE_SHORT"</Band>
+<Distance>"10"</Distance>
+<Strength>"2"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_LONG"</Band>
+<Distance>"20"</Distance>
+<Strength>"2"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_EXTREME"</Band>
+<Distance>"30"</Distance>
+<Strength>"2"</Strength>
+</RangeBand>
+</RangeBands>
+<Note>""</Note>
+<Page>"142"</Page>
+</EquipmentV1>
+<EquipmentV1 id="BOTR-EQUIP_WEAPON_MELEE_BARBED_NET">
+<Description language="ENGLISH">"Barbed Net"</Description>
+<Category>"RULES-V1CAT_WEAPON"</Category>
+<SubCategory>"RULES-V1SUBCAT_MELEE"</SubCategory>
+<CombatModifiers>
+<CombatModifier>
+<Stat>"RULES-V1MOD_TOHIT"</Stat>
+<Value>"-10"</Value>
+</CombatModifier>
+<CombatModifier>
+<Stat>"RULES-V1MOD_PARRY"</Stat>
+<Value>"-10"</Value>
+</CombatModifier>
+</CombatModifiers>
+<Note>""</Note>
+<Page>"142"</Page>
+</EquipmentV1>
+<EquipmentV1 id="BOTR-EQUIP_WEAPON_MELEE_CLEAVER">
+<Description language="ENGLISH">"Cleaver"</Description>
+<Category>"RULES-V1CAT_WEAPON"</Category>
+<SubCategory>"RULES-V1SUBCAT_MELEE"</SubCategory>
+<CombatModifiers>
+<CombatModifier>
+<Stat>"RULES-V1MOD_PARRY"</Stat>
+<Value>"impossible"</Value>
+</CombatModifier>
+</CombatModifiers>
+<Note>"Meat cleaver or small hatchet, not totally effective but gruesome."</Note>
+<Page>"143"</Page>
+</EquipmentV1>
+<EquipmentV1 id="BOTR-EQUIP_WEAPON_MELEE_LONG_KNIFE">
+<Description language="ENGLISH">"Long Knife"</Description>
+<Category>"RULES-V1CAT_WEAPON"</Category>
+<SubCategory>"RULES-V1SUBCAT_MELEE"</SubCategory>
+<CombatModifiers>
+<CombatModifier>
+<Stat>"RULES-V1MOD_INITIATIVE"</Stat>
+<Value>"+10"</Value>
+</CombatModifier>
+<CombatModifier>
+<Stat>"RULES-V1MOD_DAMAGE"</Stat>
+<Value>"-1"</Value>
+</CombatModifier>
+<CombatModifier>
+<Stat>"RULES-V1MOD_PARRY"</Stat>
+<Value>"-10"</Value>
+</CombatModifier>
+</CombatModifiers>
+<Note>""</Note>
+<Page>"143"</Page>
+</EquipmentV1>
+<EquipmentV1 id="BOTR-EQUIP_WEAPON_FIREARM_WARPLOCK_JEZZAIL">
+<Description language="ENGLISH">"Warplock Jezzail"</Description>
+<Category>"RULES-V1CAT_WEAPON"</Category>
+<SubCategory>"RULES-V1SUBCAT_FIREARM"</SubCategory>
+<RangeBands>
+<RangeBand>
+<Band>"RULES-V1RANGE_POINTBLANK"</Band>
+<Distance>"3"</Distance>
+<Strength>"6"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_SHORT"</Band>
+<Distance>"30"</Distance>
+<Strength>"5"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_LONG"</Band>
+<Distance>"60"</Distance>
+<Strength>"5"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_EXTREME"</Band>
+<Distance>"300"</Distance>
+<Strength>"4"</Strength>
+</RangeBand>
+</RangeBands>
+<Reload>"2 rounds to reload with a second gunner, 3 with one gunner"</Reload>
+<Note>""</Note>
+<Page>"145"</Page>
+</EquipmentV1>
+<EquipmentV1 id="BOTR-EQUIP_WEAPON_FIREARM_WARPLOCK_PISTOL">
+<Description language="ENGLISH">"Warplock Pistol"</Description>
+<Category>"RULES-V1CAT_WEAPON"</Category>
+<SubCategory>"RULES-V1SUBCAT_FIREARM"</SubCategory>
+<RangeBands>
+<RangeBand>
+<Band>"RULES-V1RANGE_POINTBLANK"</Band>
+<Distance>"3"</Distance>
+<Strength>"3"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_SHORT"</Band>
+<Distance>"12"</Distance>
+<Strength>"3"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_LONG"</Band>
+<Distance>"16"</Distance>
+<Strength>"3"</Strength>
+</RangeBand>
+<RangeBand>
+<Band>"RULES-V1RANGE_EXTREME"</Band>
+<Distance>"40"</Distance>
+<Strength>"2"</Strength>
+</RangeBand>
+</RangeBands>
+<Reload>"2 rounds to reload"</Reload>
+<Note>""</Note>
+<Page>"145"</Page>
+</EquipmentV1>
+<EquipmentV1 id="BOTR-EQUIP_WEAPON_THROWN_POISON_WIND_GLOBE">
+<Description language="ENGLISH">"Poison Wind Globe"</Description>
+<Category>"RULES-V1CAT_WEAPON"</Category>
+<SubCategory>"RULES-V1SUBCAT_MISSILE"</SubCategory>
+<Note>""</Note>
+<Page>"144"</Page>
+</EquipmentV1>
+<EquipmentV1 id="BOTR-EQUIP_WEAPON_FIREARM_WARPFIRE_THROWER">
+<Description language="ENGLISH">"Warpfire Thrower"</Description>
+<Category>"RULES-V1CAT_WEAPON"</Category>
+<SubCategory>"RULES-V1SUBCAT_FIREARM"</SubCategory>
+<Note>""</Note>
+<Page>"145"</Page>
+</EquipmentV1>
+<EquipmentV1 id="BOTR-EQUIP_WEAPON_MELEE_PLAGUE_CENSER">
+<Description language="ENGLISH">"Plague Censer"</Description>
+<Category>"RULES-V1CAT_WEAPON"</Category>
+<SubCategory>"RULES-V1SUBCAT_MELEE"</SubCategory>
+<Note>""</Note>
+<Page>"146"</Page>
+</EquipmentV1>
+<EquipmentV1 id="BOTR-EQUIP_WEAPON_MELEE_WEEPING_BLADES">
+<Description language="ENGLISH">"Weeping Blades"</Description>
+<Category>"RULES-V1CAT_WEAPON"</Category>
+<SubCategory>"RULES-V1SUBCAT_MELEE"</SubCategory>
+<Note>""</Note>
+<Page>"147"</Page>
+</EquipmentV1>
+<EquipmentV1 id="BOTR-EQUIP_MISC_POTION_WARPDUST_POTION">
+<Description language="ENGLISH">"Warpdust Potion"</Description>
+<Category>"RULES-V1CAT_MISC"</Category>
+<SubCategory>"RULES-V1SUBCAT_POTION"</SubCategory>
+<Encumbrance>"10"</Encumbrance>
+<Note>""</Note>
+<Page>"138"</Page>
+</EquipmentV1>
+<EquipmentV1 id="BOTR-EQUIP_MISC_POTION_WARPDUST_CONCENTRATE">
+<Description language="ENGLISH">"Warpdust Concentrate"</Description>
+<Category>"RULES-V1CAT_MISC"</Category>
+<SubCategory>"RULES-V1SUBCAT_POTION"</SubCategory>
+<Encumbrance>"15"</Encumbrance>
+<Note>""</Note>
+<Page>"138"</Page>
+</EquipmentV1>
+<EquipmentV1 id="BOTR-EQUIP_MISC_POTION_SKALM">
+<Description language="ENGLISH">"Skalm"</Description>
+<Category>"RULES-V1CAT_MISC"</Category>
+<SubCategory>"RULES-V1SUBCAT_POTION"</SubCategory>
+<Note>""</Note>
+<Page>"138"</Page>
+</EquipmentV1>
+<EquipmentV1 id="BOTR-EQUIP_MISC_POTION_SKAVENBREW">
+<Description language="ENGLISH">"Skavenbrew"</Description>
+<Category>"RULES-V1CAT_MISC"</Category>
+<SubCategory>"RULES-V1SUBCAT_POTION"</SubCategory>
+<Note>""</Note>
+<Page>"138"</Page>
+</EquipmentV1>
+<EquipmentV1 id="BOTR-EQUIP_MISC_POTION_WARPSTONE_POISON_CAPSULE">
+<Description language="ENGLISH">"Warpstone Poison Capsule"</Description>
+<Category>"RULES-V1CAT_MISC"</Category>
+<SubCategory>"RULES-V1SUBCAT_POISON"</SubCategory>
+<Note>""</Note>
+<Page>"139"</Page>
+</EquipmentV1>
+<EquipmentV1 id="BOTR-EQUIP_MISC_CHARM_BLESSED_WARPSTONE_CHARM">
+<Description language="ENGLISH">"Blessed Warpstone Charm"</Description>
+<Category>"RULES-V1CAT_MISC"</Category>
+<SubCategory>"RULES-V1SUBCAT_CHARM"</SubCategory>
+<Note>""</Note>
+<Page>"138"</Page>
+</EquipmentV1>
+<EquipmentV1 id="BOTR-EQUIP_MISC_CHARM_ENDURING_WARPSTONE_CHARM">
+<Description language="ENGLISH">"Enduring Warpstone Charm"</Description>
+<Category>"RULES-V1CAT_MISC"</Category>
+<SubCategory>"RULES-V1SUBCAT_CHARM"</SubCategory>
+<Note>""</Note>
+<Page>"138"</Page>
+</EquipmentV1>
+<EquipmentV1 id="BOTR-EQUIP_MISC_CHARM_LIVING_WARPSTONE_CHARM">
+<Description language="ENGLISH">"Living Warpstone Charm"</Description>
+<Category>"RULES-V1CAT_MISC"</Category>
+<SubCategory>"RULES-V1SUBCAT_CHARM"</SubCategory>
+<Note>""</Note>
+<Page>"138"</Page>
+</EquipmentV1>
+</DATA_EQUIPMENT_V1>
+</DATA_BOOK>

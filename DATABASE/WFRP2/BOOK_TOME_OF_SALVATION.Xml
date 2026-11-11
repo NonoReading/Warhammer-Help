@@ -1,0 +1,3332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"TOS"</CODE_BOOK>
+<BOOK>"BOOK TOME OF SALVATION"</BOOK>
+<BOOKNAME>"TOME OF SALVATION"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"1"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_WEAPON>
+<Weapon id="TOS-COMB_V2_COMET_FLAIL">
+<Description language="ENGLISH">"Comet Flail"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"20CO"</Price>
+<Encumbrance>"95"</Encumbrance>
+<Quality>"RULES-WEAPQ_EXPERIMENTAL,RULES-WEAPQ_IMPACT,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_FLAIL"</Type>
+<Page>"211"</Page>
+</Weapon>
+<Weapon id="TOS-COMB_V2_SHIELD_OF_MYRMIDIA">
+<Description language="ENGLISH">"Shield of Myrmidia"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"20CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>"RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Page>"211"</Page>
+</Weapon>
+</DATA_WEAPON>
+<DATA_ARMOR>
+<Armor id="TOS-ARMO_V2_LEATHER_FUR_MANTLE">
+<Description language="ENGLISH">"Fur Mantle"</Description>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"10CO"</Price>
+<Encumbrance>"20"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY,RULES-ARMOL_HEAD"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTLEATHER"</Type>
+<Page>"211"</Page>
+</Armor>
+<Armor id="TOS-ARMO_V2_PLATE_FULL_OBSIDIAN_ARMOUR">
+<Description language="ENGLISH">"Full Obsidian Armour"</Description>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Price>"500CO"</Price>
+<Encumbrance>"450"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_ANY"</Location>
+<ArmorPoint>"5"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>"211"</Page>
+</Armor>
+</DATA_ARMOR>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="TOS-EQUI_CLOTHING_HERALDIC_TABARD">
+<Description language="ENGLISH">"Heraldic Tabard"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"211"</Page>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_RELIGIOUS_EQUIPMENT_BLACK_TOOTH">
+<Description language="ENGLISH">"Black Tooth"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"1 gc"</Cost>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"248"</Page>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_RELIGIOUS_EQUIPMENT_SACRED_FISH">
+<Description language="ENGLISH">"Sacred Fish"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"12 s"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Note>""</Note>
+<Page>"248"</Page>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_RELIGIOUS_EQUIPMENT_CRAB_LEG">
+<Description language="ENGLISH">"Crab Leg"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"5 p"</Cost>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Note>""</Note>
+<Page>"248"</Page>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_RELIGIOUS_EQUIPMENT_BONE_CHARM">
+<Description language="ENGLISH">"Bone Charm"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"5 gc"</Cost>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Note>""</Note>
+<Page>"248"</Page>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_RELIGIOUS_EQUIPMENT_MERCIFUL_PILLOW">
+<Description language="ENGLISH">"Merciful Pillow"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"1 gc"</Cost>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Note>""</Note>
+<Page>"248"</Page>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_RELIGIOUS_EQUIPMENT_BLESSED_SHIELD">
+<Description language="ENGLISH">"Blessed Shield"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"35 gc"</Cost>
+<Encumbrance>"55"</Encumbrance>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"248"</Page>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_RELIGIOUS_EQUIPMENT_SPRIG_OF_MISTLETOE">
+<Description language="ENGLISH">"Sprig of Mistletoe"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"12 s"</Cost>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Note>""</Note>
+<Page>"248"</Page>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_RELIGIOUS_EQUIPMENT_DICE_TALISMAN">
+<Description language="ENGLISH">"Dice Talisman"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"25 gc"</Cost>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Note>""</Note>
+<Page>"248"</Page>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_RELIGIOUS_EQUIPMENT_DRINKING_RAG">
+<Description language="ENGLISH">"Drinking Rag"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"7 p"</Cost>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Note>""</Note>
+<Page>"248"</Page>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_RELIGIOUS_EQUIPMENT_SEAL_OF_DEVOTION">
+<Description language="ENGLISH">"Seal of Devotion"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"15 gc"</Cost>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Note>""</Note>
+<Page>"248"</Page>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_RELIGIOUS_EQUIPMENT_PRAYER_PARCHMENT">
+<Description language="ENGLISH">"Prayer Parchment"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"10 gc"</Cost>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Note>""</Note>
+<Page>"248"</Page>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_RELIGIOUS_EQUIPMENT_CARVED_HORN">
+<Description language="ENGLISH">"Carved Horn"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Note>""</Note>
+<Page>"248"</Page>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_RELIGIOUS_EQUIPMENT_WOLF_HEAD_CHARM">
+<Description language="ENGLISH">"Wolf-Head Charm"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"10 gc"</Cost>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Note>""</Note>
+<Page>"248"</Page>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_RELIGIOUS_EQUIPMENT_OWL_AMULET">
+<Description language="ENGLISH">"Owl Amulet"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"25 gc"</Cost>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Note>""</Note>
+<Page>"248"</Page>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_MAGIC_ITEMS_ANTLER_OF_THE_BLUE_STAG">
+<Description language="ENGLISH">"Antler of the Blue Stag"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Encumbrance>"1"</Encumbrance>
+<Page>"249"</Page>
+<AcademicKnowledge>"History (Challenging), Theology (Challenging)"</AcademicKnowledge>
+<Powers>""</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_MAGIC_ITEMS_BLACK_POMANDER">
+<Description language="ENGLISH">"Black Pomander"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Encumbrance>"1"</Encumbrance>
+<Page>"249"</Page>
+<AcademicKnowledge>"History (Challenging), Necromancy (Routine), Theology (Hard)"</AcademicKnowledge>
+<Powers>""</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_MAGIC_ITEMS_THE_BOUNTIFUL_NET">
+<Description language="ENGLISH">"The Bountiful Net"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Encumbrance>"100"</Encumbrance>
+<Page>"249"</Page>
+<AcademicKnowledge>"History (Hard), Theology (Average)"</AcademicKnowledge>
+<Powers>""</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_MAGIC_ITEMS_EAGLE_BANNER">
+<Description language="ENGLISH">"Eagle Banner"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Encumbrance>"50"</Encumbrance>
+<Page>"249"</Page>
+<AcademicKnowledge>"History (Challenging), Strategy/Tactics (Challenging)"</AcademicKnowledge>
+<Powers>""</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_MAGIC_ITEMS_GREASE_OF_CACCINO_1_JAR">
+<Description language="ENGLISH">"Grease of Caccino (1 jar)"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Encumbrance>"5"</Encumbrance>
+<Page>"249"</Page>
+<AcademicKnowledge>"History (Hard), Theology (Routine)"</AcademicKnowledge>
+<Powers>"Books rubbed with the grease become waterproof and impervious to decay."</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_MAGIC_ITEMS_THE_GRIEVE">
+<Description language="ENGLISH">"The Grieve"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Encumbrance>"9"</Encumbrance>
+<Note>"Group Ordinary, Damage SB, Qualities Fast, Precise."</Note>
+<Page>"249"</Page>
+<AcademicKnowledge>"History (Challenging), Theology (Hard)"</AcademicKnowledge>
+<Powers>""</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_MAGIC_ITEMS_JADE_AMULET">
+<Description language="ENGLISH">"Jade Amulet"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Encumbrance>"1"</Encumbrance>
+<Page>"249"</Page>
+<AcademicKnowledge>"History (Routine), Theology (Routine)"</AcademicKnowledge>
+<Powers>"Ignore the first point of damage from any hit."</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_MAGIC_ITEMS_JADE_AMULET_IN_BREASTPLATE">
+<Description language="ENGLISH">"Jade Amulet in Breastplate"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Encumbrance>"45"</Encumbrance>
+<Note>"Breastplate: Body, 2 AP."</Note>
+<Page>"249"</Page>
+<AcademicKnowledge>"History (Routine), Theology (Routine)"</AcademicKnowledge>
+<Powers>"Ignore the first point of damage from any hit."</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_MAGIC_ITEMS_THE_PAUPER_S_BOX">
+<Description language="ENGLISH">"The Pauper's Box"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Encumbrance>"5"</Encumbrance>
+<Page>"249"</Page>
+<AcademicKnowledge>"History (Average), Theology (Hard)"</AcademicKnowledge>
+<Powers>"Any business deal overseen by the Pauper's Box eventually fails."</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_MAGIC_ITEMS_RANALD_S_COIN">
+<Description language="ENGLISH">"Ranald's Coin"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Page>"249"</Page>
+<AcademicKnowledge>"History (Hard), Theology (Hard)"</AcademicKnowledge>
+<Powers>""</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_MAGIC_ITEMS_RED_BANDAGES">
+<Description language="ENGLISH">"Red Bandages"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Encumbrance>"1"</Encumbrance>
+<Page>"249"</Page>
+<AcademicKnowledge>"History (Easy), Theology (Very Easy)"</AcademicKnowledge>
+<Powers>""</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="TOS-EQUI_MAGIC_ITEMS_WHITE_WOLF_CLOAK">
+<Description language="ENGLISH">"White Wolf Cloak"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Encumbrance>"80"</Encumbrance>
+<Note>"Body, 1 AP."</Note>
+<Page>"249"</Page>
+<AcademicKnowledge>"History (Average), Theology (Hard)"</AcademicKnowledge>
+<Powers>""</Powers>
+<History>""</History>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+<DATA_CORRUPTION_TABLE_DIVINE>
+<Corruption name="TOS-MARK_MANANN_01">
+<Description language="ENGLISH">"Fishy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<ModifyCarac name="RULES-ATTR_Fel">-5</ModifyCarac>
+<Page>"243"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MANANN_02">
+<Description language="ENGLISH">"Pelagic Yearning"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<Page>"243"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MANANN_03">
+<Description language="ENGLISH">"Seaweed Growth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<Page>"243"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MANANN_04">
+<Description language="ENGLISH">"Tidal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<Page>"243"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MANANN_05">
+<Description language="ENGLISH">"Manann’s Mien"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<ModifyCarac name="RULES-ATTR_S">+5</ModifyCarac>
+<Page>"243"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MANANN_06">
+<Description language="ENGLISH">"Piscine Charisma"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<Page>"243"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MANANN_07">
+<Description language="ENGLISH">"Rip Tides"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<Page>"243"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MANANN_08">
+<Description language="ENGLISH">"Webbed"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<ModifySkill name="RULES-COMP_SWIM">+20</ModifySkill>
+<Page>"243"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MANANN_09">
+<Description language="ENGLISH">"One With the Sea"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<Page>"243"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MANANN_10">
+<Description language="ENGLISH">"Marked by Manann"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<Page>"243"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MORR_01">
+<Description language="ENGLISH">"Enervated"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<ModifyCarac name="RULES-ATTR_S">-5</ModifyCarac>
+<Page>"243"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MORR_02">
+<Description language="ENGLISH">"Distracted by Death"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<Page>"243"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MORR_03">
+<Description language="ENGLISH">"Disturbing Visions"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<Page>"243"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MORR_04">
+<Description language="ENGLISH">"Skeletal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<ModifySkill name="RULES-COMP_CHARM">-10</ModifySkill>
+<ModifySkill name="RULES-COMP_INTIMIDATE">+10</ModifySkill>
+<Page>"243"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MORR_05">
+<Description language="ENGLISH">"Morr’s Mien"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<ModifyCarac name="RULES-ATTR_WP">+5</ModifyCarac>
+<Page>"243"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MORR_06">
+<Description language="ENGLISH">"Flock of Raven"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<Page>"243"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MORR_07">
+<Description language="ENGLISH">"Dead Eyes"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<Page>"243"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MORR_08">
+<Description language="ENGLISH">"Morr’s Servant"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<Page>"243"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MORR_09">
+<Description language="ENGLISH">"Enlightened"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<Page>"243"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MORR_10">
+<Description language="ENGLISH">"Marked by Morr"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<Page>"243"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MYRMIDIA_01">
+<Description language="ENGLISH">"Vengeful"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<ModifyCarac name="RULES-ATTR_Int">-5</ModifyCarac>
+<Page>"244"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MYRMIDIA_02">
+<Description language="ENGLISH">"Rites of War"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<Page>"244"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MYRMIDIA_03">
+<Description language="ENGLISH">"Calculating"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<Page>"244"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MYRMIDIA_04">
+<Description language="ENGLISH">"Righteous Fury"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<Page>"244"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MYRMIDIA_05">
+<Description language="ENGLISH">"Myrmidia’s Mien"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<ModifySkill name="RULES-COMP_COMMAND">+10</ModifySkill>
+<Page>"244"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MYRMIDIA_06">
+<Description language="ENGLISH">"Eagle Friend"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<Page>"244"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MYRMIDIA_07">
+<Description language="ENGLISH">"Eagle Eyes"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<Page>"244"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MYRMIDIA_08">
+<Description language="ENGLISH">"Fanatical Love"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<Page>"244"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MYRMIDIA_09">
+<Description language="ENGLISH">"War-honed"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<Page>"244"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_MYRMIDIA_10">
+<Description language="ENGLISH">"Marked by Myrmidia"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<Page>"244"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_RANALD_01">
+<Description language="ENGLISH">"Weak Willed"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<Page>"244"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_RANALD_02">
+<Description language="ENGLISH">"Liar"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<ModifySkill name="RULES-COMP_BLATHER">+10</ModifySkill>
+<Page>"244"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_RANALD_03">
+<Description language="ENGLISH">"Knavish"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<Page>"244"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_RANALD_04">
+<Description language="ENGLISH">"Lithe"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<Page>"244"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_RANALD_05">
+<Description language="ENGLISH">"Ranald’s Mien"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<Page>"244"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_RANALD_06">
+<Description language="ENGLISH">"Cat Friend"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<Page>"244"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_RANALD_07">
+<Description language="ENGLISH">"Forgettable"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<Page>"244"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_RANALD_08">
+<Description language="ENGLISH">"Ranald’s Luck"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<Page>"244"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_RANALD_09">
+<Description language="ENGLISH">"Irreverent"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<Page>"244"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_RANALD_10">
+<Description language="ENGLISH">"Marked by Ranald"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<Page>"244"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_SHALLYA_01">
+<Description language="ENGLISH">"Pacifist"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<ModifyCarac name="RULES-ATTR_WS">-5</ModifyCarac>
+<ModifyCarac name="RULES-ATTR_BS">-5</ModifyCarac>
+<Page>"245"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_SHALLYA_02">
+<Description language="ENGLISH">"Bleeding Heart"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<Page>"245"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_SHALLYA_03">
+<Description language="ENGLISH">"Fear of the Fly Lord"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<Page>"245"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_SHALLYA_04">
+<Description language="ENGLISH">"Unworthiness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<Page>"245"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_SHALLYA_05">
+<Description language="ENGLISH">"Shallya’s Mien"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<ModifyCarac name="RULES-ATTR_Fel">+5</ModifyCarac>
+<Page>"245"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_SHALLYA_06">
+<Description language="ENGLISH">"Peaceful Demeanour"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<Page>"245"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_SHALLYA_07">
+<Description language="ENGLISH">"Healing Hands"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<Page>"245"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_SHALLYA_08">
+<Description language="ENGLISH">"Tranquil Aura"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<Page>"245"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_SHALLYA_09">
+<Description language="ENGLISH">"Emboldened"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<Page>"245"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_SHALLYA_10">
+<Description language="ENGLISH">"Marked by Shallya"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<Page>"245"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_SIGMAR_01">
+<Description language="ENGLISH">"Stubborn"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<ModifyCarac name="RULES-ATTR_Int">-5</ModifyCarac>
+<Page>"245"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_SIGMAR_02">
+<Description language="ENGLISH">"Hammer Bearer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<Page>"245"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_SIGMAR_03">
+<Description language="ENGLISH">"Suspicious"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<Page>"245"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_SIGMAR_04">
+<Description language="ENGLISH">"Grudge Bearer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<Page>"245"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_SIGMAR_05">
+<Description language="ENGLISH">"Sigmar’s Mien"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<ModifyCarac name="RULES-ATTR_T">+5</ModifyCarac>
+<Page>"245"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_SIGMAR_06">
+<Description language="ENGLISH">"Dawongr (Dwarf Friend)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<Page>"245"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_SIGMAR_07">
+<Description language="ENGLISH">"Greenskin Animosity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<Page>"245"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_SIGMAR_08">
+<Description language="ENGLISH">"Symbol of Unity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<Page>"245"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_SIGMAR_09">
+<Description language="ENGLISH">"Enlightened"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<Page>"245"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_SIGMAR_10">
+<Description language="ENGLISH">"Marked by Sigmar"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<Page>"245"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_TAAL_AND_RHYA_01">
+<Description language="ENGLISH">"Wild Mind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<ModifyCarac name="RULES-ATTR_Int">-5</ModifyCarac>
+<Page>"246"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_TAAL_AND_RHYA_02">
+<Description language="ENGLISH">"Little Friends"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<Page>"246"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_TAAL_AND_RHYA_03">
+<Description language="ENGLISH">"Plant Growth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<Page>"246"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_TAAL_AND_RHYA_04">
+<Description language="ENGLISH">"Seasonal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<Page>"246"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_TAAL_AND_RHYA_05">
+<Description language="ENGLISH">"Taal or Rhya’s Mien"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<ModifyCarac name="RULES-ATTR_Fel">+5</ModifyCarac>
+<Page>"246"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_TAAL_AND_RHYA_06">
+<Description language="ENGLISH">"Animal Friend"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<Page>"246"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_TAAL_AND_RHYA_07">
+<Description language="ENGLISH">"Enlivened Flora"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<Page>"246"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_TAAL_AND_RHYA_08">
+<Description language="ENGLISH">"Tranquil Fauna"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<ModifySkill name="RULES-COMP_ANIMAL_CARE">+10</ModifySkill>
+<ModifySkill name="RULES-COMP_ANIMAL_TRAINING">+10</ModifySkill>
+<Page>"246"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_TAAL_AND_RHYA_09">
+<Description language="ENGLISH">"Beast Senses"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<Page>"246"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_TAAL_AND_RHYA_10">
+<Description language="ENGLISH">"Marked by Taal or Rhya"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<Page>"246"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_ULRIC_01">
+<Description language="ENGLISH">"Berserker"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<Page>"246"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_ULRIC_02">
+<Description language="ENGLISH">"Claws"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<ModifyCarac name="RULES-ATTR_BS">-5</ModifyCarac>
+<Page>"246"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_ULRIC_03">
+<Description language="ENGLISH">"Wolf ’s Eyes"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<Page>"246"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_ULRIC_04">
+<Description language="ENGLISH">"Predator"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<ModifySkill name="RULES-COMP_CHARM">-10</ModifySkill>
+<ModifySkill name="RULES-COMP_INTIMIDATE">+10</ModifySkill>
+<Page>"246"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_ULRIC_05">
+<Description language="ENGLISH">"Ulric’s Mien"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<ModifyCarac name="RULES-ATTR_S">+5</ModifyCarac>
+<Page>"246"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_ULRIC_06">
+<Description language="ENGLISH">"Wolf Friend"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<Page>"246"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_ULRIC_07">
+<Description language="ENGLISH">"Pack Leader"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<ModifySkill name="RULES-COMP_COMMAND">+10</ModifySkill>
+<Page>"246"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_ULRIC_08">
+<Description language="ENGLISH">"One with the Wild"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<ModifySkill name="RULES-COMP_OUTDOOR_SURVIVAL">+10</ModifySkill>
+<Page>"246"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_ULRIC_09">
+<Description language="ENGLISH">"Ulric’s Servant"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<Page>"246"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_ULRIC_10">
+<Description language="ENGLISH">"Marked by Ulric"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<Page>"246"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_VERENA_01">
+<Description language="ENGLISH">"Savant"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<ModifyCarac name="RULES-ATTR_Fel">-5</ModifyCarac>
+<Page>"247"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_VERENA_02">
+<Description language="ENGLISH">"Daemon’s Advocate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<Page>"247"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_VERENA_03">
+<Description language="ENGLISH">"Just Heart"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<Page>"247"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_VERENA_04">
+<Description language="ENGLISH">"Piercing Gaze"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<Page>"247"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_VERENA_05">
+<Description language="ENGLISH">"Verena’s Mien"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<ModifyCarac name="RULES-ATTR_Int">+5</ModifyCarac>
+<Page>"247"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_VERENA_06">
+<Description language="ENGLISH">"Owl Friend"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<Page>"247"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_VERENA_07">
+<Description language="ENGLISH">"Eidetic Recall"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<Page>"247"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_VERENA_08">
+<Description language="ENGLISH">"Voice of Wisdom"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<Page>"247"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_VERENA_09">
+<Description language="ENGLISH">"Enlightened"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<Page>"247"</Page>
+</Corruption>
+<Corruption name="TOS-MARK_VERENA_10">
+<Description language="ENGLISH">"Marked by Verena"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<Page>"247"</Page>
+</Corruption>
+</DATA_CORRUPTION_TABLE_DIVINE>
+<DATA_CORRUPTION_DIVINE_CHANCE>
+<Chance name="01-10" lore="Lore of Manann">"TOS-MARK_MANANN_01"</Chance>
+<Chance name="11-20" lore="Lore of Manann">"TOS-MARK_MANANN_02"</Chance>
+<Chance name="21-30" lore="Lore of Manann">"TOS-MARK_MANANN_03"</Chance>
+<Chance name="31-40" lore="Lore of Manann">"TOS-MARK_MANANN_04"</Chance>
+<Chance name="41-50" lore="Lore of Manann">"TOS-MARK_MANANN_05"</Chance>
+<Chance name="51-60" lore="Lore of Manann">"TOS-MARK_MANANN_06"</Chance>
+<Chance name="61-70" lore="Lore of Manann">"TOS-MARK_MANANN_07"</Chance>
+<Chance name="71-80" lore="Lore of Manann">"TOS-MARK_MANANN_08"</Chance>
+<Chance name="81-90" lore="Lore of Manann">"TOS-MARK_MANANN_09"</Chance>
+<Chance name="91-00" lore="Lore of Manann">"TOS-MARK_MANANN_10"</Chance>
+<Chance name="01-10" lore="Lore of Morr">"TOS-MARK_MORR_01"</Chance>
+<Chance name="11-20" lore="Lore of Morr">"TOS-MARK_MORR_02"</Chance>
+<Chance name="21-30" lore="Lore of Morr">"TOS-MARK_MORR_03"</Chance>
+<Chance name="31-40" lore="Lore of Morr">"TOS-MARK_MORR_04"</Chance>
+<Chance name="41-50" lore="Lore of Morr">"TOS-MARK_MORR_05"</Chance>
+<Chance name="51-60" lore="Lore of Morr">"TOS-MARK_MORR_06"</Chance>
+<Chance name="61-70" lore="Lore of Morr">"TOS-MARK_MORR_07"</Chance>
+<Chance name="71-80" lore="Lore of Morr">"TOS-MARK_MORR_08"</Chance>
+<Chance name="81-90" lore="Lore of Morr">"TOS-MARK_MORR_09"</Chance>
+<Chance name="91-00" lore="Lore of Morr">"TOS-MARK_MORR_10"</Chance>
+<Chance name="01-10" lore="Lore of Myrmidia">"TOS-MARK_MYRMIDIA_01"</Chance>
+<Chance name="11-20" lore="Lore of Myrmidia">"TOS-MARK_MYRMIDIA_02"</Chance>
+<Chance name="21-30" lore="Lore of Myrmidia">"TOS-MARK_MYRMIDIA_03"</Chance>
+<Chance name="31-40" lore="Lore of Myrmidia">"TOS-MARK_MYRMIDIA_04"</Chance>
+<Chance name="41-50" lore="Lore of Myrmidia">"TOS-MARK_MYRMIDIA_05"</Chance>
+<Chance name="51-60" lore="Lore of Myrmidia">"TOS-MARK_MYRMIDIA_06"</Chance>
+<Chance name="61-70" lore="Lore of Myrmidia">"TOS-MARK_MYRMIDIA_07"</Chance>
+<Chance name="71-80" lore="Lore of Myrmidia">"TOS-MARK_MYRMIDIA_08"</Chance>
+<Chance name="81-90" lore="Lore of Myrmidia">"TOS-MARK_MYRMIDIA_09"</Chance>
+<Chance name="91-00" lore="Lore of Myrmidia">"TOS-MARK_MYRMIDIA_10"</Chance>
+<Chance name="01-10" lore="Lore of Ranald">"TOS-MARK_RANALD_01"</Chance>
+<Chance name="11-20" lore="Lore of Ranald">"TOS-MARK_RANALD_02"</Chance>
+<Chance name="21-30" lore="Lore of Ranald">"TOS-MARK_RANALD_03"</Chance>
+<Chance name="31-40" lore="Lore of Ranald">"TOS-MARK_RANALD_04"</Chance>
+<Chance name="41-50" lore="Lore of Ranald">"TOS-MARK_RANALD_05"</Chance>
+<Chance name="51-60" lore="Lore of Ranald">"TOS-MARK_RANALD_06"</Chance>
+<Chance name="61-70" lore="Lore of Ranald">"TOS-MARK_RANALD_07"</Chance>
+<Chance name="71-80" lore="Lore of Ranald">"TOS-MARK_RANALD_08"</Chance>
+<Chance name="81-90" lore="Lore of Ranald">"TOS-MARK_RANALD_09"</Chance>
+<Chance name="91-00" lore="Lore of Ranald">"TOS-MARK_RANALD_10"</Chance>
+<Chance name="01-10" lore="Lore of Shallya">"TOS-MARK_SHALLYA_01"</Chance>
+<Chance name="11-20" lore="Lore of Shallya">"TOS-MARK_SHALLYA_02"</Chance>
+<Chance name="21-30" lore="Lore of Shallya">"TOS-MARK_SHALLYA_03"</Chance>
+<Chance name="31-40" lore="Lore of Shallya">"TOS-MARK_SHALLYA_04"</Chance>
+<Chance name="41-50" lore="Lore of Shallya">"TOS-MARK_SHALLYA_05"</Chance>
+<Chance name="51-60" lore="Lore of Shallya">"TOS-MARK_SHALLYA_06"</Chance>
+<Chance name="61-70" lore="Lore of Shallya">"TOS-MARK_SHALLYA_07"</Chance>
+<Chance name="71-80" lore="Lore of Shallya">"TOS-MARK_SHALLYA_08"</Chance>
+<Chance name="81-90" lore="Lore of Shallya">"TOS-MARK_SHALLYA_09"</Chance>
+<Chance name="91-00" lore="Lore of Shallya">"TOS-MARK_SHALLYA_10"</Chance>
+<Chance name="01-10" lore="Lore of Sigmar">"TOS-MARK_SIGMAR_01"</Chance>
+<Chance name="11-20" lore="Lore of Sigmar">"TOS-MARK_SIGMAR_02"</Chance>
+<Chance name="21-30" lore="Lore of Sigmar">"TOS-MARK_SIGMAR_03"</Chance>
+<Chance name="31-40" lore="Lore of Sigmar">"TOS-MARK_SIGMAR_04"</Chance>
+<Chance name="41-50" lore="Lore of Sigmar">"TOS-MARK_SIGMAR_05"</Chance>
+<Chance name="51-60" lore="Lore of Sigmar">"TOS-MARK_SIGMAR_06"</Chance>
+<Chance name="61-70" lore="Lore of Sigmar">"TOS-MARK_SIGMAR_07"</Chance>
+<Chance name="71-80" lore="Lore of Sigmar">"TOS-MARK_SIGMAR_08"</Chance>
+<Chance name="81-90" lore="Lore of Sigmar">"TOS-MARK_SIGMAR_09"</Chance>
+<Chance name="91-00" lore="Lore of Sigmar">"TOS-MARK_SIGMAR_10"</Chance>
+<Chance name="01-10" lore="Lore of Taal and Rhya">"TOS-MARK_TAAL_AND_RHYA_01"</Chance>
+<Chance name="11-20" lore="Lore of Taal and Rhya">"TOS-MARK_TAAL_AND_RHYA_02"</Chance>
+<Chance name="21-30" lore="Lore of Taal and Rhya">"TOS-MARK_TAAL_AND_RHYA_03"</Chance>
+<Chance name="31-40" lore="Lore of Taal and Rhya">"TOS-MARK_TAAL_AND_RHYA_04"</Chance>
+<Chance name="41-50" lore="Lore of Taal and Rhya">"TOS-MARK_TAAL_AND_RHYA_05"</Chance>
+<Chance name="51-60" lore="Lore of Taal and Rhya">"TOS-MARK_TAAL_AND_RHYA_06"</Chance>
+<Chance name="61-70" lore="Lore of Taal and Rhya">"TOS-MARK_TAAL_AND_RHYA_07"</Chance>
+<Chance name="71-80" lore="Lore of Taal and Rhya">"TOS-MARK_TAAL_AND_RHYA_08"</Chance>
+<Chance name="81-90" lore="Lore of Taal and Rhya">"TOS-MARK_TAAL_AND_RHYA_09"</Chance>
+<Chance name="91-00" lore="Lore of Taal and Rhya">"TOS-MARK_TAAL_AND_RHYA_10"</Chance>
+<Chance name="01-10" lore="Lore of Ulric">"TOS-MARK_ULRIC_01"</Chance>
+<Chance name="11-20" lore="Lore of Ulric">"TOS-MARK_ULRIC_02"</Chance>
+<Chance name="21-30" lore="Lore of Ulric">"TOS-MARK_ULRIC_03"</Chance>
+<Chance name="31-40" lore="Lore of Ulric">"TOS-MARK_ULRIC_04"</Chance>
+<Chance name="41-50" lore="Lore of Ulric">"TOS-MARK_ULRIC_05"</Chance>
+<Chance name="51-60" lore="Lore of Ulric">"TOS-MARK_ULRIC_06"</Chance>
+<Chance name="61-70" lore="Lore of Ulric">"TOS-MARK_ULRIC_07"</Chance>
+<Chance name="71-80" lore="Lore of Ulric">"TOS-MARK_ULRIC_08"</Chance>
+<Chance name="81-90" lore="Lore of Ulric">"TOS-MARK_ULRIC_09"</Chance>
+<Chance name="91-00" lore="Lore of Ulric">"TOS-MARK_ULRIC_10"</Chance>
+<Chance name="01-10" lore="Lore of Verena">"TOS-MARK_VERENA_01"</Chance>
+<Chance name="11-20" lore="Lore of Verena">"TOS-MARK_VERENA_02"</Chance>
+<Chance name="21-30" lore="Lore of Verena">"TOS-MARK_VERENA_03"</Chance>
+<Chance name="31-40" lore="Lore of Verena">"TOS-MARK_VERENA_04"</Chance>
+<Chance name="41-50" lore="Lore of Verena">"TOS-MARK_VERENA_05"</Chance>
+<Chance name="51-60" lore="Lore of Verena">"TOS-MARK_VERENA_06"</Chance>
+<Chance name="61-70" lore="Lore of Verena">"TOS-MARK_VERENA_07"</Chance>
+<Chance name="71-80" lore="Lore of Verena">"TOS-MARK_VERENA_08"</Chance>
+<Chance name="81-90" lore="Lore of Verena">"TOS-MARK_VERENA_09"</Chance>
+<Chance name="91-00" lore="Lore of Verena">"TOS-MARK_VERENA_10"</Chance>
+</DATA_CORRUPTION_DIVINE_CHANCE>
+<DATA_SPELL_V2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_COURAGE">
+<Description language="ENGLISH">"Blessing of Courage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A tuft of dog hair (+1)"</Ingredient>
+<Page>"215"</Page>
+<Duration>"—"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_FORTITUDE">
+<Description language="ENGLISH">"Blessing of Fortitude"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A piece of turtle shell (+1)"</Ingredient>
+<Page>"215"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_HEALING">
+<Description language="ENGLISH">"Blessing of Healing"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A sprig of holly (+1)"</Ingredient>
+<Page>"215"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_MIGHT">
+<Description language="ENGLISH">"Blessing of Might"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"An iron nail (+1)"</Ingredient>
+<Page>"215"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_PROTECTION">
+<Description language="ENGLISH">"Blessing of Protection"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A small token with your deity’s symbol (+1)"</Ingredient>
+<Page>"215"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_SPEED">
+<Description language="ENGLISH">"Blessing of Speed"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A snake scale (+1)"</Ingredient>
+<Page>"215"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_MANANN">
+<Description language="ENGLISH">"Blessing of Manann"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A fish (+1)"</Ingredient>
+<Page>"215"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch (You)"</Range>
+<Cult>"Manannan"</Cult>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_THE_MARINER">
+<Description language="ENGLISH">"Blessing of the Mariner"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A piece of rope (+1)"</Ingredient>
+<Page>"216"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch (You)"</Range>
+<Cult>"Manannan"</Cult>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_MORR">
+<Description language="ENGLISH">"Blessing of Morr"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A feather from a raven (+1)"</Ingredient>
+<Page>"216"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch (You)"</Range>
+<Cult>"Morrian"</Cult>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_PASSAGE">
+<Description language="ENGLISH">"Blessing of Passage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A torn burial cloth (+1)"</Ingredient>
+<Page>"216"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch (You)"</Range>
+<Cult>"Morrian"</Cult>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_FURY">
+<Description language="ENGLISH">"Blessing of Fury"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A polished ball of copper (+1)"</Ingredient>
+<Page>"216"</Page>
+<Duration>"1 minute (6 rounds) or triggered"</Duration>
+<Range>"Touch (You)"</Range>
+<Cult>"Myrmidian"</Cult>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_MYRMIDIA">
+<Description language="ENGLISH">"Blessing of Myrmidia"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"An eagle’s eye stone (+1)"</Ingredient>
+<Page>"216"</Page>
+<Duration>"1 round"</Duration>
+<Range>"Touch (You)"</Range>
+<Cult>"Myrmidian"</Cult>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_FORTUNE">
+<Description language="ENGLISH">"Blessing of Fortune"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A die (+1)"</Ingredient>
+<Page>"216"</Page>
+<Duration>"1 minute (6 rounds) or triggered"</Duration>
+<Range>"Touch (You)"</Range>
+<Cult>"Ranaldan"</Cult>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_RANALD">
+<Description language="ENGLISH">"Blessing of Ranald"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A glove in a purse (+1)"</Ingredient>
+<Page>"217"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch (You)"</Range>
+<Cult>"Ranaldan"</Cult>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_CALM">
+<Description language="ENGLISH">"Blessing of Calm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A cup of water (+1)"</Ingredient>
+<Page>"217"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+<Cult>"Shallyan"</Cult>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_SHALLYA">
+<Description language="ENGLISH">"Blessing of Shallya"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A herbal draught (+1)"</Ingredient>
+<Page>"217"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch (You)"</Range>
+<Cult>"Shallyan"</Cult>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_SIGMAR">
+<Description language="ENGLISH">"Blessing of Sigmar"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A fragment of meteoric iron (+1)"</Ingredient>
+<Page>"217"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch (You)"</Range>
+<Cult>"Sigmarite"</Cult>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_UNIFICATION">
+<Description language="ENGLISH">"Blessing of Unification"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Two lodestones (+1)"</Ingredient>
+<Page>"217"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+<Cult>"Sigmarite"</Cult>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_THE_HUNTER">
+<Description language="ENGLISH">"Blessing of the Hunter"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"An arrow (+1)"</Ingredient>
+<Page>"217"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch (You)"</Range>
+<Cult>"Taalite"</Cult>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_TAAL">
+<Description language="ENGLISH">"Blessing of Taal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A waterskin (+1)"</Ingredient>
+<Page>"218"</Page>
+<Duration>"1 minute (6 rounds) or triggered"</Duration>
+<Range>"Touch (You)"</Range>
+<Cult>"Taalite"</Cult>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_THE_BLOOD_HAND">
+<Description language="ENGLISH">"Blessing of the Blood-hand"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"The blood of a violently-killed wolf (+1)"</Ingredient>
+<Page>"218"</Page>
+<Duration>"See description"</Duration>
+<Range>"Touch (You)"</Range>
+<Cult>"Ulrican"</Cult>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_ULRIC">
+<Description language="ENGLISH">"Blessing of Ulric"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A wolf ’s fang (+1)"</Ingredient>
+<Page>"218"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch (You)"</Range>
+<Cult>"Ulrican"</Cult>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_VERENA">
+<Description language="ENGLISH">"Blessing of Verena"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A tuft of dog hair (+1)"</Ingredient>
+<Page>"218"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+<Cult>"Verenan"</Cult>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_WISDOM">
+<Description language="ENGLISH">"Blessing of Wisdom"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"An owl-feather quill (+1)"</Ingredient>
+<Page>"218"</Page>
+<Duration>"1 minute (6 rounds) or triggered"</Duration>
+<Range>"Touch (You)"</Range>
+<Cult>"Verenan"</Cult>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_ANATHEMA">
+<Description language="ENGLISH">"Anathema"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A small bell (+1)"</Ingredient>
+<Page>"218"</Page>
+<Duration>"1 hour/Magic"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_DORMANCY">
+<Description language="ENGLISH">"Dormancy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"An obsidian shard (+1)"</Ingredient>
+<Page>"218"</Page>
+<Duration>"See description"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_GREAT_PREACHING">
+<Description language="ENGLISH">"Great Preaching"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A bull’s horn (+1)"</Ingredient>
+<Page>"218"</Page>
+<Duration>"See description"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_LINK">
+<Description language="ENGLISH">"Link"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A fine, silver chain (+2)"</Ingredient>
+<Page>"219"</Page>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_REPEL_THE_UNCLEAN">
+<Description language="ENGLISH">"Repel the Unclean"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A sprig of witchbane (+2)"</Ingredient>
+<Page>"219"</Page>
+<Duration>"1 round/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_SANCTUARY">
+<Description language="ENGLISH">"Sanctuary"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A lock (+2)"</Ingredient>
+<Page>"219"</Page>
+<Duration>"1 hour/Magic"</Duration>
+<Range>"See text"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_STRENGTHENED_RESOLVE">
+<Description language="ENGLISH">"Strengthened Resolve"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A lord’s symbol (+1)"</Ingredient>
+<Page>"219"</Page>
+<Duration>"1 minute (6 rounds) or triggered"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_VOW">
+<Description language="ENGLISH">"Vow"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"One minute"</CastingTime>
+<Ingredient>"A written text of the vow (+2)"</Ingredient>
+<Page>"219"</Page>
+<Duration>"See description"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_FEARSOME_GLARE">
+<Description language="ENGLISH">"Fearsome Glare"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Gunndred"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A mask in the form of a skull face (+1)"</Ingredient>
+<Page>"219"</Page>
+<Duration>"Instant"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_PAINFUL_BLOWS">
+<Description language="ENGLISH">"Painful Blows"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Gunndred"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A cosh (+1)"</Ingredient>
+<Page>"219"</Page>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_RUSTLER_S_CLOAK">
+<Description language="ENGLISH">"Rustler’s Cloak"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Gunndred"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Muffling cloths (+2)"</Ingredient>
+<Page>"220"</Page>
+<Duration>"1 hour"</Duration>
+<Range>"60 yards (30 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_TERRORISING_BLOW">
+<Description language="ENGLISH">"Terrorising Blow"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Gunndred"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A drop of your own fresh blood (+2)"</Ingredient>
+<Page>"220"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_FEARSOME_MIEN">
+<Description language="ENGLISH">"Fearsome Mien"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Gunndred"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"The body part of a victim (+2)"</Ingredient>
+<Page>"220"</Page>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_THREATS_OF_TERROR">
+<Description language="ENGLISH">"Threats of Terror"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Gunndred"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A whip (+2)"</Ingredient>
+<Page>"220"</Page>
+<Duration>"Instant"</Duration>
+<Range>"48 yards (24 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BOUGHT_LOYALTY">
+<Description language="ENGLISH">"Bought Loyalty"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Handrich"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"20% of the transaction (+2)"</Ingredient>
+<Page>"221"</Page>
+<Duration>"See description"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BURGHER_ACQUISITION">
+<Description language="ENGLISH">"Burgher Acquisition"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Handrich"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"10% of the value of all transactions completed, minimum 5 gc (+2)"</Ingredient>
+<Page>"221"</Page>
+<Duration>"1 hour/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_EYE_FOR_PROFIT">
+<Description language="ENGLISH">"Eye for Profit"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Handrich"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"5% of all Evaluated items, minimum 3 gc (+2)"</Ingredient>
+<Page>"221"</Page>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_GILDED_TONGUE">
+<Description language="ENGLISH">"Gilded Tongue"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Handrich"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"10% of the value of all transactions completed, minimum 10 gc (+2)"</Ingredient>
+<Page>"221"</Page>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_TIME_IS_MONEY">
+<Description language="ENGLISH">"Time is Money"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Handrich"</Lore>
+<CastingNumber>"19"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"10% of debt (+2)"</Ingredient>
+<Page>"221"</Page>
+<Duration>"See description"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_WORD_OF_MOUTH">
+<Description language="ENGLISH">"Word of Mouth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Handrich"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"5 gc (+1)"</Ingredient>
+<Page>"221"</Page>
+<Duration>"10 minutes/Magic"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLOODY_HAND">
+<Description language="ENGLISH">"Bloody Hand"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khaine"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A vial of a murdered man’s blood (+2)"</Ingredient>
+<Page>"222"</Page>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_DAGGER_OF_KHAINE">
+<Description language="ENGLISH">"Dagger of Khaine"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khaine"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A murdered man’s finger (+1)"</Ingredient>
+<Page>"222"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_ETERNAL_TORMENT">
+<Description language="ENGLISH">"Eternal Torment"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khaine"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"10 minutes"</CastingTime>
+<Ingredient>"The corpse’s undamaged heart (+2)"</Ingredient>
+<Page>"222"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_HIDDEN_BLADE">
+<Description language="ENGLISH">"Hidden Blade"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khaine"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A crushed tail of a scorpion (+1)"</Ingredient>
+<Page>"222"</Page>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_STING_IN_THE_TAIL">
+<Description language="ENGLISH">"Sting in the Tail"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khaine"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A vial of scorpion venom (+1)"</Ingredient>
+<Page>"222"</Page>
+<Duration>"1 round/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_THE_LORD_OF_MURDER">
+<Description language="ENGLISH">"The Lord of Murder"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Khaine"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"The blood of any creature with an Attacks Characteristic of 5 (+2)"</Ingredient>
+<Page>"222"</Page>
+<Duration>"1 round/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BECALM">
+<Description language="ENGLISH">"Becalm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A dagger carved of whalebone (+2)"</Ingredient>
+<Page>"223"</Page>
+<SpellLists>"Lord of Journeys, Lord of Storms"</SpellLists>
+<Duration>"1 hour/Magic"</Duration>
+<Range>"96 yards (48 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSED_VOYAGE">
+<Description language="ENGLISH">"Blessed Voyage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A bottle of wine (+1)"</Ingredient>
+<Page>"223"</Page>
+<SpellLists>"Lord of Journeys, Lord of Bounty"</SpellLists>
+<Duration>"See description"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLESSING_OF_THE_ALBATROSS">
+<Description language="ENGLISH">"Blessing of the Albatross"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A bottle of wine and a fish (+2)"</Ingredient>
+<Page>"223"</Page>
+<SpellLists>"Lord of Bounty"</SpellLists>
+<Duration>"See description"</Duration>
+<Range>"See text"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BREATHE_WATER">
+<Description language="ENGLISH">"Breathe Water"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A live fish (+1)"</Ingredient>
+<Page>"223"</Page>
+<SpellLists>"Lord of Journeys, Lord of Bounty"</SpellLists>
+<Duration>"1 hour"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_CURSE_OF_THE_ALBATROSS">
+<Description language="ENGLISH">"Curse of the Albatross"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<CastingNumber>"19"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"An albatross feather (+2)"</Ingredient>
+<Page>"223"</Page>
+<SpellLists>"Lord of Journeys, Lord of Storms"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"48 yards (24 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_DROWNED_MAN_S_FACE">
+<Description language="ENGLISH">"Drowned Man’s Face"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A cup of salt water (+1)"</Ingredient>
+<Page>"223"</Page>
+<SpellLists>"Lord of Storms"</SpellLists>
+<Duration>"1 round/Magic"</Duration>
+<Range>"36 yards (18 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_FAIR_WIND">
+<Description language="ENGLISH">"Fair Wind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A bellows (+2)"</Ingredient>
+<Page>"224"</Page>
+<SpellLists>"Lord of Bounty"</SpellLists>
+<Duration>"1 hour"</Duration>
+<Range>"See text"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_FISHERMAN_S_EYE">
+<Description language="ENGLISH">"Fisherman’s Eye"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A small fishing line (+1)"</Ingredient>
+<Page>"224"</Page>
+<SpellLists>"Lord of Bounty"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_RIP_TIDES">
+<Description language="ENGLISH">"Rip Tides"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A handful of salt (+1)"</Ingredient>
+<Page>"224"</Page>
+<SpellLists>"Lord of Storms"</SpellLists>
+<Duration>"1 hour"</Duration>
+<Range>"See text"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_SEA_LEGS">
+<Description language="ENGLISH">"Sea Legs"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A splinter of wood from a wrecked ship (+2)"</Ingredient>
+<Page>"224"</Page>
+<SpellLists>"Lord of Storms"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"36 yards (18 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_WATER_BLAST">
+<Description language="ENGLISH">"Water Blast"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A vial of seawater (+1)"</Ingredient>
+<Page>"224"</Page>
+<SpellLists>"Lord of Journeys, Lord of Storms"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"36 yards (18 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_WATERWALK">
+<Description language="ENGLISH">"Waterwalk"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Manann"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A dried water beetle (+2)"</Ingredient>
+<Page>"224"</Page>
+<SpellLists>"Lord of Journeys, Lord of Bounty"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_DESTROY_UNDEAD">
+<Description language="ENGLISH">"Destroy Undead"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A wooden stake (+2)"</Ingredient>
+<Page>"225"</Page>
+<SpellLists>"Morr in Twilight, Morr in Daylight"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_DOOMING">
+<Description language="ENGLISH">"Dooming"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A hair, nail paring, and drop of blood from the target (+2)"</Ingredient>
+<Page>"225"</Page>
+<SpellLists>"Morr in Darkness"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_DREAM_MESSAGE">
+<Description language="ENGLISH">"Dream Message"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A piece of wool (+1)"</Ingredient>
+<Page>"225"</Page>
+<SpellLists>"Morr in Twilight, Morr in Darkness"</SpellLists>
+<Duration>"30 seconds"</Duration>
+<Range>"See text"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_ETERNAL_REST">
+<Description language="ENGLISH">"Eternal Rest"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"10 minutes"</CastingTime>
+<Ingredient>"A stake made of fragrant wood (+2)"</Ingredient>
+<Page>"225"</Page>
+<SpellLists>"Morr in Daylight"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_GLIMPSE_AHEAD">
+<Description language="ENGLISH">"Glimpse Ahead"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A small mirror (+2)"</Ingredient>
+<Page>"225"</Page>
+<SpellLists>"Morr in Darkness"</SpellLists>
+<Duration>"24 hours or triggered"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_GUIDING_DREAM">
+<Description language="ENGLISH">"Guiding Dream"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A stick of incense (+2)"</Ingredient>
+<Page>"225"</Page>
+<SpellLists>"Morr in Darkness"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_PRESERVE_CORPSE">
+<Description language="ENGLISH">"Preserve Corpse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A piece of fresh fruit (+1)"</Ingredient>
+<Page>"225"</Page>
+<SpellLists>"Morr in Twilight, Morr in Daylight"</SpellLists>
+<Duration>"24 hours"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_SIGN_OF_THE_RAVEN">
+<Description language="ENGLISH">"Sign of the Raven"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A raven’s feather (+1)"</Ingredient>
+<Page>"225"</Page>
+<SpellLists>"Morr in Twilight, Morr in Daylight"</SpellLists>
+<Duration>"1 round/Magic"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_SLEEP_OF_DEATH">
+<Description language="ENGLISH">"Sleep of Death"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A small silver scythe (+2)"</Ingredient>
+<Page>"226"</Page>
+<SpellLists>"Morr in Twilight, Morr in Daylight"</SpellLists>
+<Duration>"See description"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_SPEECH_OF_MORR">
+<Description language="ENGLISH">"Speech of Morr"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A large mirror (+2)"</Ingredient>
+<Page>"226"</Page>
+<SpellLists>"Morr in Darkness"</SpellLists>
+<Duration>"See description"</Duration>
+<Range>"See text"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_THRESHOLD_LINE">
+<Description language="ENGLISH">"Threshold Line"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A piece of charcoal (+2)"</Ingredient>
+<Page>"226"</Page>
+<SpellLists>"Morr in Daylight"</SpellLists>
+<Duration>"See description"</Duration>
+<Range>"See text"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_VISION_OF_MORR">
+<Description language="ENGLISH">"Vision of Morr"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morr"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A mushroom harvested from a grave (+2)"</Ingredient>
+<Page>"226"</Page>
+<SpellLists>"Morr in Twilight, Morr in Darkness"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BLAZING_SUN">
+<Description language="ENGLISH">"Blazing Sun"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A page mentioning Fury from the Bellona Myrmidia (+2)"</Ingredient>
+<Page>"226"</Page>
+<SpellLists>"Myrmidia the Wrathful"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"You (large template)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_COMMAND_THE_LEGION">
+<Description language="ENGLISH">"Command the Legion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"An eagle’s beak (+1)"</Ingredient>
+<Page>"226"</Page>
+<SpellLists>"Myrmidia the Commander"</SpellLists>
+<Duration>"1 round"</Duration>
+<Range>"See text"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_DISMAY_FOE">
+<Description language="ENGLISH">"Dismay Foe"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A beaten-copper mask (+2)"</Ingredient>
+<Page>"227"</Page>
+<SpellLists>"Myrmidia the Wrathful, Myrmidia the Captain"</SpellLists>
+<Duration>"1 round/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_EAGLE_S_VISION">
+<Description language="ENGLISH">"Eagle’s Vision"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A gold-rimmed lens (+2)"</Ingredient>
+<Page>"227"</Page>
+<SpellLists>"Myrmidia the Commander"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_FURY_S_CALL">
+<Description language="ENGLISH">"Fury’s Call"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A broken spear-tip (+2)"</Ingredient>
+<Page>"227"</Page>
+<SpellLists>"Myrmidia the Wrathful"</SpellLists>
+<Duration>"1 round/Magic"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_INSPIRED_LEADERSHIP">
+<Description language="ENGLISH">"Inspired Leadership"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A baton (+1)"</Ingredient>
+<Page>"227"</Page>
+<SpellLists>"Myrmidia the Captain, Myrmidia the Commander"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"You and 12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_QUICK_STRIKE">
+<Description language="ENGLISH">"Quick Strike"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"227"</Page>
+<SpellLists>"Myrmidia the Wrathful, Myrmidia the Captain"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_SHIELD_OF_MYRMIDIA">
+<Description language="ENGLISH">"Shield of Myrmidia"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"1 full action and 1 half action"</CastingTime>
+<Ingredient>"A shield (+2)"</Ingredient>
+<Page>"228"</Page>
+<SpellLists>"Myrmidia the Captain, Myrmidia the Commander"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_SHIELDMAIDEN_S_DEVOTION">
+<Description language="ENGLISH">"Shieldmaiden’s Devotion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"An eagle standard (+2)"</Ingredient>
+<Page>"228"</Page>
+<SpellLists>"Myrmidia the Commander"</SpellLists>
+<Duration>"1 round/Magic"</Duration>
+<Range>"36 yards (18 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_SKILL_OF_COMBAT">
+<Description language="ENGLISH">"Skill of Combat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A bundle of sticks (+1)"</Ingredient>
+<Page>"228"</Page>
+<SpellLists>"Myrmidia the Captain, Myrmidia the Commander"</SpellLists>
+<Duration>"1 round/Magic"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_SPEAR_OF_MYRMIDIA">
+<Description language="ENGLISH">"Spear of Myrmidia"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A whetstone (+1)"</Ingredient>
+<Page>"228"</Page>
+<SpellLists>"Myrmidia the Wrathful, Myrmidia the Captain"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_VENGEFUL_WRATH">
+<Description language="ENGLISH">"Vengeful Wrath"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Myrmidia"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"The blood of a wronged woman (+1)"</Ingredient>
+<Page>"228"</Page>
+<SpellLists>"Myrmidia the Wrathful"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BAMBOOZLE">
+<Description language="ENGLISH">"Bamboozle"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A piece of wool (+2)"</Ingredient>
+<Page>"228"</Page>
+<SpellLists>"Ranald the Rogue, Ranald the Dealer"</SpellLists>
+<Duration>"1 round"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BARGAIN_HUNTER">
+<Description language="ENGLISH">"Bargain Hunter"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A coin (+1)"</Ingredient>
+<Page>"228"</Page>
+<SpellLists>"Ranald the Dealer"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BOUNTIFUL_FORTUNE">
+<Description language="ENGLISH">"Bountiful Fortune"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A pair of silvered knucklebones (+2)"</Ingredient>
+<Page>"228"</Page>
+<SpellLists>"Ranald the Rogue, Ranald the Liberator"</SpellLists>
+<Duration>"1 minute (6 rounds) or triggered"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_EYE_OF_RANALD">
+<Description language="ENGLISH">"Eye of Ranald"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A small pair of scales (+2)"</Ingredient>
+<Page>"229"</Page>
+<SpellLists>"Ranald the Dealer"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_GOOD_FORTUNE">
+<Description language="ENGLISH">"Good Fortune"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A rabbit’s foot (+1)"</Ingredient>
+<Page>"229"</Page>
+<SpellLists>"Ranald the Rogue, Ranald the Dealer, Ranald the Liberator"</SpellLists>
+<Duration>"1 minute (6 rounds) or triggered"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_PERFECT_EMPATHY">
+<Description language="ENGLISH">"Perfect Empathy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A mirror (+2)"</Ingredient>
+<Page>"229"</Page>
+<SpellLists>"Ranald the Dealer"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_POOR_MAN_S_FACE">
+<Description language="ENGLISH">"Poor Man’s Face"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A box with a false bottom (+2)"</Ingredient>
+<Page>"229"</Page>
+<SpellLists>"Ranald the Liberator"</SpellLists>
+<Duration>"1 hour/Magic"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_RUMOUR_OF_BOUNTY_RUMOUR_OF_DEARTH">
+<Description language="ENGLISH">"Rumour of Bounty, Rumour of Dearth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A printed broadsheet (+2)"</Ingredient>
+<Page>"229"</Page>
+<SpellLists>"Ranald the Dealer"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_OPEN">
+<Description language="ENGLISH">"Open"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A key (+1)"</Ingredient>
+<Page>"229"</Page>
+<SpellLists>"Ranald the Rogue, Ranald the Liberator"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"2 yards (1 square)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_STEALTH_OF_RANALD">
+<Description language="ENGLISH">"Stealth of Ranald"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A tuft of cat fur (+1)"</Ingredient>
+<Page>"230"</Page>
+<SpellLists>"Ranald the Rogue, Ranald the Liberator"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_UNREMEMBERED_FACE">
+<Description language="ENGLISH">"Unremembered Face"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A mask (+2)"</Ingredient>
+<Page>"230"</Page>
+<SpellLists>"Ranald the Liberator"</SpellLists>
+<Duration>"1 hour/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_TRAPSENSE">
+<Description language="ENGLISH">"Trapsense"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"The eyes of a hawk (+2)"</Ingredient>
+<Page>"230"</Page>
+<SpellLists>"Ranald the Rogue"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_COMPASSIONATE_MIND">
+<Description language="ENGLISH">"Compassionate Mind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A blindfold (+2)"</Ingredient>
+<Page>"230"</Page>
+<SpellLists>"Shallya Enduring"</SpellLists>
+<Duration>"1 hour/Magic"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_CURE_DISEASE">
+<Description language="ENGLISH">"Cure Disease"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"1 full action and 1 half action"</CastingTime>
+<Ingredient>"A poultice (+2)"</Ingredient>
+<Page>"230"</Page>
+<SpellLists>"Shallya Contemplative, Shallya Restoring"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_CURE_INSANITY">
+<Description language="ENGLISH">"Cure Insanity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"1 hour"</CastingTime>
+<Ingredient>"A blessed water sprinkler (+2)"</Ingredient>
+<Page>"230"</Page>
+<SpellLists>"Shallya Contemplative, Shallya Restoring"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_CURE_POISON">
+<Description language="ENGLISH">"Cure Poison"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A snake’s fang (+1)"</Ingredient>
+<Page>"230"</Page>
+<SpellLists>"Shallya Contemplative, Shallya Restoring"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_CURE_WOUNDS">
+<Description language="ENGLISH">"Cure Wounds"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A leech (+1)"</Ingredient>
+<Page>"231"</Page>
+<SpellLists>"Shallya Contemplative, Shallya Restoring"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_DELAY_AFFLICTION">
+<Description language="ENGLISH">"Delay Affliction"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A silver heart (+2)"</Ingredient>
+<Page>"231"</Page>
+<SpellLists>"Shallya Restoring"</SpellLists>
+<Duration>"1 day/Magic"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_GOLDEN_TEARS">
+<Description language="ENGLISH">"Golden Tears"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A tear (+2)"</Ingredient>
+<Page>"231"</Page>
+<SpellLists>"Shallya Restoring"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_MARTYR">
+<Description language="ENGLISH">"Martyr"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"231"</Page>
+<SpellLists>"Shallya Contemplative, Shallya Enduring"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_PURIFY">
+<Description language="ENGLISH">"Purify"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A burning torch (+2)"</Ingredient>
+<Page>"231"</Page>
+<SpellLists>"Shallya Contemplative, Shallya Enduring"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"48 yards (24 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_SHALLYA_S_ENDURANCE">
+<Description language="ENGLISH">"Shallya’s Endurance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A bandage (+1)"</Ingredient>
+<Page>"232"</Page>
+<SpellLists>"Shallya Enduring"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_VESTMENT_OF_PURITY">
+<Description language="ENGLISH">"Vestment of Purity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A white robe (+2)"</Ingredient>
+<Page>"232"</Page>
+<SpellLists>"Shallya Enduring"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic (see description)"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_WITHSTAND_DISEASE">
+<Description language="ENGLISH">"Withstand Disease"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shallya"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A draught of pure water (+1)"</Ingredient>
+<Page>"232"</Page>
+<SpellLists>"Shallya Enduring"</SpellLists>
+<Duration>"1 hour/Magic"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_ARMOUR_OF_RIGHTEOUSNESS">
+<Description language="ENGLISH">"Armour of Righteousness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A small, iron ring (+1)"</Ingredient>
+<Page>"232"</Page>
+<SpellLists>"Sigmar the Anvil, Sigmar the Hammer"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BEACON_OF_COURAGE">
+<Description language="ENGLISH">"Beacon of Courage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A prism (+2)"</Ingredient>
+<Page>"232"</Page>
+<SpellLists>"Sigmar the Anvil, Sigmar the Hammer"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"See text"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_DENY_THE_HERETIC">
+<Description language="ENGLISH">"Deny the Heretic"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A small, silver hammer (+1)"</Ingredient>
+<Page>"232"</Page>
+<SpellLists>"Sigmar the Anvil"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_COMET_OF_SIGMAR">
+<Description language="ENGLISH">"Comet of Sigmar"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A goldenarrowhead (+2)"</Ingredient>
+<Page>"232"</Page>
+<SpellLists>"Sigmar the Hammer, Sigmar the Purifier"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_HAMMER_OF_SIGMAR">
+<Description language="ENGLISH">"Hammer of Sigmar"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A charm engraved with the symbol of Sigmar (+1)"</Ingredient>
+<Page>"233"</Page>
+<SpellLists>"Sigmar the Hammer, Sigmar the Purifier"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_HEALING_HAND">
+<Description language="ENGLISH">"Healing Hand"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"1 full action and 1 half action"</CastingTime>
+<Ingredient>"A leather glove (+2)"</Ingredient>
+<Page>"233"</Page>
+<SpellLists>"Sigmar the Anvil, Sigmar the Hammer"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_HEART_OF_THE_GRYPHON">
+<Description language="ENGLISH">"Heart of the Gryphon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A gold-filigree griffon feather (+2)"</Ingredient>
+<Page>"233"</Page>
+<SpellLists>"Sigmar the Anvil"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_HEED_NOT_THE_WITCH">
+<Description language="ENGLISH">"Heed Not the Witch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A blessed parchment marked with the prayer (+2)"</Ingredient>
+<Page>"233"</Page>
+<SpellLists>"Sigmar the Purifier"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_IMMACULATE_FLESH">
+<Description language="ENGLISH">"Immaculate Flesh"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A dove’s wing (+2)"</Ingredient>
+<Page>"233"</Page>
+<SpellLists>"Sigmar the Purifier"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_SOULFIRE">
+<Description language="ENGLISH">"Soulfire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A golden amulet engraved with the comet of Sigmar (+2)"</Ingredient>
+<Page>"233"</Page>
+<SpellLists>"Sigmar the Hammer, Sigmar the Purifier"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"You (large template)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_VANQUISH">
+<Description language="ENGLISH">"Vanquish"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A miniature hammer wrought from bronze (+2)"</Ingredient>
+<Page>"233"</Page>
+<SpellLists>"Sigmar the Anvil"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_WORD_OF_DAMNATION">
+<Description language="ENGLISH">"Word of Damnation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sigmar"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"1 full action and 1 half action"</CastingTime>
+<Ingredient>"A mirror (+2)"</Ingredient>
+<Page>"234"</Page>
+<SpellLists>"Sigmar the Purifier"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BEAR_S_PAW">
+<Description language="ENGLISH">"Bear’s Paw"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"The claw of a bear (+2)"</Ingredient>
+<Page>"234"</Page>
+<SpellLists>"Taal, King of Beasts, Taal and Rhya"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BEASTFRIEND">
+<Description language="ENGLISH">"Beastfriend"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"1 full action and 1 half action"</CastingTime>
+<Ingredient>"The tongue of a beast (+1)"</Ingredient>
+<Page>"234"</Page>
+<SpellLists>"Taal, King of Beasts, Taal and Rhya"</SpellLists>
+<Duration>"10 minutes"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_LORD_OF_THE_WILD">
+<Description language="ENGLISH">"Lord of the Wild"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A jawbone of the beast to be commanded (+2)"</Ingredient>
+<Page>"234"</Page>
+<SpellLists>"Taal, King of Beasts"</SpellLists>
+<Duration>"1 round"</Duration>
+<Range>"36 yards (18 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_OX_S_HEART">
+<Description language="ENGLISH">"Ox’s Heart"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A square of ox-hide (+2)"</Ingredient>
+<Page>"234"</Page>
+<SpellLists>"Taal, King of Beasts"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_RIVER_S_BLESSING">
+<Description language="ENGLISH">"River’s Blessing"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A live fish (+1)"</Ingredient>
+<Page>"234"</Page>
+<SpellLists>"Taal, King of Nature"</SpellLists>
+<Duration>"10 minutes/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_RHYA_S_COMFORT">
+<Description language="ENGLISH">"Rhya’s Comfort"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A cup of fresh milk (+2)"</Ingredient>
+<Page>"234"</Page>
+<SpellLists>"Taal and Rhya, Taal, King of Nature"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"You (large template)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_SNARLING_RAGE">
+<Description language="ENGLISH">"Snarling Rage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A large predator’s tooth (+1)"</Ingredient>
+<Page>"234"</Page>
+<SpellLists>"Taal, King of Beasts"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_STAG_S_LEAP">
+<Description language="ENGLISH">"Stag’s Leap"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A tuft of stag hair (+1)"</Ingredient>
+<Page>"235"</Page>
+<SpellLists>"Taal, King of Beasts, Taal and Rhya"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_TAAL_S_FURY">
+<Description language="ENGLISH">"Taal’s Fury"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<CastingNumber>"26"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"The horns of a Great Stag (+3)"</Ingredient>
+<Page>"235"</Page>
+<SpellLists>"Taal, King of Nature"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"36 yards (18 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_TANGLEFOOT">
+<Description language="ENGLISH">"Tanglefoot"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A cutting of vines (+1)"</Ingredient>
+<Page>"235"</Page>
+<SpellLists>"Taal and Rhya, Taal, King of Nature"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"48 yards (24 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_THUNDERCLAP">
+<Description language="ENGLISH">"Thunderclap"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A small gong (+2)"</Ingredient>
+<Page>"235"</Page>
+<SpellLists>"Taal and Rhya, Taal, King of Nature"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"48 yards (24 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_WILD_WIND">
+<Description language="ENGLISH">"Wild Wind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Taal and Rhya"</Lore>
+<CastingNumber>"19"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A handful of autumn leaves (+2)"</Ingredient>
+<Page>"235"</Page>
+<SpellLists>"Taal, King of Nature"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"You (large template)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_BATTLE_FURY">
+<Description language="ENGLISH">"Battle Fury"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A smear of fresh blood (+1)"</Ingredient>
+<Page>"235"</Page>
+<SpellLists>"Ulric, White Wolf, Ulric Blood-Hand"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_CRUSH_THE_WEAK">
+<Description language="ENGLISH">"Crush the Weak"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A broken wolf claw (+1)"</Ingredient>
+<Page>"236"</Page>
+<SpellLists>"Ulric Blood-Hand"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_FROST_S_BITE">
+<Description language="ENGLISH">"Frost’s Bite"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A frozen ball of blood (+1)"</Ingredient>
+<Page>"236"</Page>
+<SpellLists>"Ulric, Snow King"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_HEART_OF_THE_WOLF">
+<Description language="ENGLISH">"Heart of the Wolf"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"1 full action and 1 half action"</CastingTime>
+<Ingredient>"A wolf ’s heart (+2)"</Ingredient>
+<Page>"236"</Page>
+<SpellLists>"Ulric, Snow King, Ulric, White Wolf"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_HOARFROST_THEWS">
+<Description language="ENGLISH">"Hoarfrost Thews"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A handful of wolf fat (+2)"</Ingredient>
+<Page>"236"</Page>
+<SpellLists>"Ulric, Snow King"</SpellLists>
+<Duration>"1 day/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_HOWL_OF_THE_WOLF">
+<Description language="ENGLISH">"Howl of the Wolf"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A wolf ’s tongue (+2)"</Ingredient>
+<Page>"236"</Page>
+<SpellLists>"Ulric, White Wolf, Ulric Blood-Hand"</SpellLists>
+<Duration>"1 round"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_ICE_STORM">
+<Description language="ENGLISH">"Ice Storm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"An icicle (+2)"</Ingredient>
+<Page>"236"</Page>
+<SpellLists>"Ulric, Snow King, Ulric, White Wolf"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"48 yards (24 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_ULRIC_S_GIFT">
+<Description language="ENGLISH">"Ulric’s Gift"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"1 full action and 1 half action"</CastingTime>
+<Ingredient>"An axe (+2)"</Ingredient>
+<Page>"237"</Page>
+<SpellLists>"Ulric, White Wolf, Ulric Blood-Hand"</SpellLists>
+<Duration>"1 hour"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_UNBRIDLED_RAGE">
+<Description language="ENGLISH">"Unbridled Rage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<CastingNumber>"21"</CastingNumber>
+<CastingTime>"1 full action and 1 half action"</CastingTime>
+<Ingredient>"A dead wolf-cub’s paw (+3)"</Ingredient>
+<Page>"237"</Page>
+<SpellLists>"Ulric Blood-Hand"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"36 yards (18 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_THE_SNOW_KING_S_DECREE">
+<Description language="ENGLISH">"The Snow King’s Decree"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<CastingNumber>"21"</CastingNumber>
+<CastingTime>"2 full actions and 1 half action"</CastingTime>
+<Ingredient>"A best craftsmanship axe (+3)"</Ingredient>
+<Page>"237"</Page>
+<SpellLists>"Ulric, Snow King"</SpellLists>
+<Duration>"1 round/Magic"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_WILD_PACK">
+<Description language="ENGLISH">"Wild Pack"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A small horn carved of wolf bone (+2)"</Ingredient>
+<Page>"237"</Page>
+<SpellLists>"Ulric Blood-Hand"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_WINTER_S_CHILL">
+<Description language="ENGLISH">"Winter’s Chill"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ulric"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A tuft of wolf fur (+1)"</Ingredient>
+<Page>"237"</Page>
+<SpellLists>"Ulric, Snow King, Ulric, White Wolf"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_AS_VERENA_IS_MY_WITNESS">
+<Description language="ENGLISH">"As Verena is my Witness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Free action (but you still count as having used a “cast” action that round)"</CastingTime>
+<Ingredient>"A holy symbol of Verena (+2)"</Ingredient>
+<Page>"237"</Page>
+<SpellLists>"Verena the Wise"</SpellLists>
+<Duration>"1 round/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_EAVESDROP">
+<Description language="ENGLISH">"Eavesdrop"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A listening horn (+2)"</Ingredient>
+<Page>"237"</Page>
+<SpellLists>"Verena the Judge, Verena the Wise"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_OWL_S_WISDOM">
+<Description language="ENGLISH">"Owl’s Wisdom"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"An owl’s skull (+1)"</Ingredient>
+<Page>"238"</Page>
+<SpellLists>"Verena the Wise"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic (see description)"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_PRESERVE_THE_BALANCE">
+<Description language="ENGLISH">"Preserve the Balance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A silver pair of scales (+2)"</Ingredient>
+<Page>"238"</Page>
+<SpellLists>"Verena the Just"</SpellLists>
+<Duration>"1 minute (6 rounds) or triggered"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_REPROBATE_S_SENTENCE">
+<Description language="ENGLISH">"Reprobate’s Sentence"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A drop of blood from the criminal’s victim (+2)"</Ingredient>
+<Page>"238"</Page>
+<SpellLists>"Verena the Just"</SpellLists>
+<Duration>"1 day/Magic (see description)"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_RETRIBUTION">
+<Description language="ENGLISH">"Retribution"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A drop of blood from the criminal’s victim (+2)"</Ingredient>
+<Page>"238"</Page>
+<SpellLists>"Verena the Just"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_SHACKLES_OF_VERENA">
+<Description language="ENGLISH">"Shackles of Verena"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A pair of iron shackles (+1)"</Ingredient>
+<Page>"239"</Page>
+<SpellLists>"Verena the Just, Verena the Judge"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_SWORD_OF_JUSTICE">
+<Description language="ENGLISH">"Sword of Justice"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A charm engraved with a set of scales (+1)"</Ingredient>
+<Page>"239"</Page>
+<SpellLists>"Verena the Just, Verena the Judge"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_THE_BLIND_MAIDEN">
+<Description language="ENGLISH">"The Blind Maiden"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A silk blindfold (+1) (which must be worn)"</Ingredient>
+<Page>"239"</Page>
+<SpellLists>"Verena the Wise"</SpellLists>
+<Duration>"1 round/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_THE_PAST_REVEALED">
+<Description language="ENGLISH">"The Past Revealed"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"An owl’s eyes (+1)"</Ingredient>
+<Page>"239"</Page>
+<SpellLists>"Verena the Judge, Verena the Wise"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_TRIAL_BY_FIRE">
+<Description language="ENGLISH">"Trial by Fire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A fire opal worth at least 50 gc (+2)"</Ingredient>
+<Page>"239"</Page>
+<SpellLists>"Verena the Just, Verena the Judge"</SpellLists>
+<Duration>"See description"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_WORDS_OF_TRUTH">
+<Description language="ENGLISH">"Words of Truth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Verena"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A mirror (+2)"</Ingredient>
+<Page>"239"</Page>
+<SpellLists>"Verena the Judge, Verena the Wise"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"See text"</Range>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_CALL_DIVINE_SERVANT">
+<Description language="ENGLISH">"Call Divine Servant"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"26; the casting number should be modified by –1 if the ritual is conducted on a holy day of the cult, and a further –1 if conducted on appropriate holy ground."</CastingNumber>
+<CastingTime>"1d10+4 hours"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"240"</Page>
+<RitualType>"RULES-V2RITUAL_DIVINE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="TOS-SPEL_CONSECRATE">
+<Description language="ENGLISH">"Consecrate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"10 (shrine), 18 (temple/monastery), 26 (high temple); the casting number should be modified by –1 if held on a holy day of the cult, and a further –1 if the site is especially appropriate or grand, according to the cult’s tastes."</CastingNumber>
+<CastingTime>"1 hour (shrine), up to a day (temple/monastery), at least 3 days (high temple) X: Miracles"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"240"</Page>
+<RitualType>"RULES-V2RITUAL_DIVINE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"1 (shrine), 2 (temple/monastery), 3 (high temple)"</MagicMin>
+<XPCost>"100 (shrine), 200 (temple/monastery), 300 (high temple)"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SPELL_TALENT>
+<Sort id="TOS-SPEL_BLESSING_OF_COURAGE">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_FORTITUDE">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_HEALING">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_MIGHT">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_PROTECTION">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_SPEED">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_MANANN">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_THE_MARINER">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_MORR">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_PASSAGE">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_FURY">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_MYRMIDIA">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_FORTUNE">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_RANALD">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_CALM">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_SHALLYA">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_SIGMAR">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_UNIFICATION">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_THE_HUNTER">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_TAAL">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_THE_BLOOD_HAND">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_ULRIC">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_VERENA">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_WISDOM">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BECALM">
+<Talent>"RULES-T_DIVINE_LORE__MANANN"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSED_VOYAGE">
+<Talent>"RULES-T_DIVINE_LORE__MANANN"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLESSING_OF_THE_ALBATROSS">
+<Talent>"RULES-T_DIVINE_LORE__MANANN"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BREATHE_WATER">
+<Talent>"RULES-T_DIVINE_LORE__MANANN"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_CURSE_OF_THE_ALBATROSS">
+<Talent>"RULES-T_DIVINE_LORE__MANANN"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_DROWNED_MAN_S_FACE">
+<Talent>"RULES-T_DIVINE_LORE__MANANN"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_FAIR_WIND">
+<Talent>"RULES-T_DIVINE_LORE__MANANN"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_FISHERMAN_S_EYE">
+<Talent>"RULES-T_DIVINE_LORE__MANANN"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_RIP_TIDES">
+<Talent>"RULES-T_DIVINE_LORE__MANANN"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_SEA_LEGS">
+<Talent>"RULES-T_DIVINE_LORE__MANANN"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_WATER_BLAST">
+<Talent>"RULES-T_DIVINE_LORE__MANANN"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_WATERWALK">
+<Talent>"RULES-T_DIVINE_LORE__MANANN"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_DESTROY_UNDEAD">
+<Talent>"RULES-T_DIVINE_LORE__MORR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_DOOMING">
+<Talent>"RULES-T_DIVINE_LORE__MORR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_DREAM_MESSAGE">
+<Talent>"RULES-T_DIVINE_LORE__MORR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_ETERNAL_REST">
+<Talent>"RULES-T_DIVINE_LORE__MORR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_GLIMPSE_AHEAD">
+<Talent>"RULES-T_DIVINE_LORE__MORR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_GUIDING_DREAM">
+<Talent>"RULES-T_DIVINE_LORE__MORR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_PRESERVE_CORPSE">
+<Talent>"RULES-T_DIVINE_LORE__MORR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_SIGN_OF_THE_RAVEN">
+<Talent>"RULES-T_DIVINE_LORE__MORR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_SLEEP_OF_DEATH">
+<Talent>"RULES-T_DIVINE_LORE__MORR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_SPEECH_OF_MORR">
+<Talent>"RULES-T_DIVINE_LORE__MORR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_THRESHOLD_LINE">
+<Talent>"RULES-T_DIVINE_LORE__MORR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_VISION_OF_MORR">
+<Talent>"RULES-T_DIVINE_LORE__MORR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLAZING_SUN">
+<Talent>"RULES-T_DIVINE_LORE__MYRMIDIA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_COMMAND_THE_LEGION">
+<Talent>"RULES-T_DIVINE_LORE__MYRMIDIA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_DISMAY_FOE">
+<Talent>"RULES-T_DIVINE_LORE__MYRMIDIA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_EAGLE_S_VISION">
+<Talent>"RULES-T_DIVINE_LORE__MYRMIDIA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_FURY_S_CALL">
+<Talent>"RULES-T_DIVINE_LORE__MYRMIDIA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_INSPIRED_LEADERSHIP">
+<Talent>"RULES-T_DIVINE_LORE__MYRMIDIA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_QUICK_STRIKE">
+<Talent>"RULES-T_DIVINE_LORE__MYRMIDIA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_SHIELD_OF_MYRMIDIA">
+<Talent>"RULES-T_DIVINE_LORE__MYRMIDIA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_SHIELDMAIDEN_S_DEVOTION">
+<Talent>"RULES-T_DIVINE_LORE__MYRMIDIA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_SKILL_OF_COMBAT">
+<Talent>"RULES-T_DIVINE_LORE__MYRMIDIA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_SPEAR_OF_MYRMIDIA">
+<Talent>"RULES-T_DIVINE_LORE__MYRMIDIA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_VENGEFUL_WRATH">
+<Talent>"RULES-T_DIVINE_LORE__MYRMIDIA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BAMBOOZLE">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BARGAIN_HUNTER">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BOUNTIFUL_FORTUNE">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_EYE_OF_RANALD">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_GOOD_FORTUNE">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_PERFECT_EMPATHY">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_POOR_MAN_S_FACE">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_RUMOUR_OF_BOUNTY_RUMOUR_OF_DEARTH">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_OPEN">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_STEALTH_OF_RANALD">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_UNREMEMBERED_FACE">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_TRAPSENSE">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_COMPASSIONATE_MIND">
+<Talent>"RULES-T_DIVINE_LORE__SHALLYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_CURE_DISEASE">
+<Talent>"RULES-T_DIVINE_LORE__SHALLYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_CURE_INSANITY">
+<Talent>"RULES-T_DIVINE_LORE__SHALLYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_CURE_POISON">
+<Talent>"RULES-T_DIVINE_LORE__SHALLYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_CURE_WOUNDS">
+<Talent>"RULES-T_DIVINE_LORE__SHALLYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_DELAY_AFFLICTION">
+<Talent>"RULES-T_DIVINE_LORE__SHALLYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_GOLDEN_TEARS">
+<Talent>"RULES-T_DIVINE_LORE__SHALLYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_MARTYR">
+<Talent>"RULES-T_DIVINE_LORE__SHALLYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_PURIFY">
+<Talent>"RULES-T_DIVINE_LORE__SHALLYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_SHALLYA_S_ENDURANCE">
+<Talent>"RULES-T_DIVINE_LORE__SHALLYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_VESTMENT_OF_PURITY">
+<Talent>"RULES-T_DIVINE_LORE__SHALLYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_WITHSTAND_DISEASE">
+<Talent>"RULES-T_DIVINE_LORE__SHALLYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_ARMOUR_OF_RIGHTEOUSNESS">
+<Talent>"RULES-T_DIVINE_LORE__SIGMAR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BEACON_OF_COURAGE">
+<Talent>"RULES-T_DIVINE_LORE__SIGMAR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_DENY_THE_HERETIC">
+<Talent>"RULES-T_DIVINE_LORE__SIGMAR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_COMET_OF_SIGMAR">
+<Talent>"RULES-T_DIVINE_LORE__SIGMAR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_HAMMER_OF_SIGMAR">
+<Talent>"RULES-T_DIVINE_LORE__SIGMAR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_HEALING_HAND">
+<Talent>"RULES-T_DIVINE_LORE__SIGMAR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_HEART_OF_THE_GRYPHON">
+<Talent>"RULES-T_DIVINE_LORE__SIGMAR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_HEED_NOT_THE_WITCH">
+<Talent>"RULES-T_DIVINE_LORE__SIGMAR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_IMMACULATE_FLESH">
+<Talent>"RULES-T_DIVINE_LORE__SIGMAR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_SOULFIRE">
+<Talent>"RULES-T_DIVINE_LORE__SIGMAR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_VANQUISH">
+<Talent>"RULES-T_DIVINE_LORE__SIGMAR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_WORD_OF_DAMNATION">
+<Talent>"RULES-T_DIVINE_LORE__SIGMAR"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BEAR_S_PAW">
+<Talent>"RULES-T_DIVINE_LORE__TAAL_RHYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BEASTFRIEND">
+<Talent>"RULES-T_DIVINE_LORE__TAAL_RHYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_LORD_OF_THE_WILD">
+<Talent>"RULES-T_DIVINE_LORE__TAAL_RHYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_OX_S_HEART">
+<Talent>"RULES-T_DIVINE_LORE__TAAL_RHYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_RIVER_S_BLESSING">
+<Talent>"RULES-T_DIVINE_LORE__TAAL_RHYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_RHYA_S_COMFORT">
+<Talent>"RULES-T_DIVINE_LORE__TAAL_RHYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_SNARLING_RAGE">
+<Talent>"RULES-T_DIVINE_LORE__TAAL_RHYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_STAG_S_LEAP">
+<Talent>"RULES-T_DIVINE_LORE__TAAL_RHYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_TAAL_S_FURY">
+<Talent>"RULES-T_DIVINE_LORE__TAAL_RHYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_TANGLEFOOT">
+<Talent>"RULES-T_DIVINE_LORE__TAAL_RHYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_THUNDERCLAP">
+<Talent>"RULES-T_DIVINE_LORE__TAAL_RHYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_WILD_WIND">
+<Talent>"RULES-T_DIVINE_LORE__TAAL_RHYA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BATTLE_FURY">
+<Talent>"RULES-T_DIVINE_LORE__ULRIC"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_CRUSH_THE_WEAK">
+<Talent>"RULES-T_DIVINE_LORE__ULRIC"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_FROST_S_BITE">
+<Talent>"RULES-T_DIVINE_LORE__ULRIC"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_HEART_OF_THE_WOLF">
+<Talent>"RULES-T_DIVINE_LORE__ULRIC"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_HOARFROST_THEWS">
+<Talent>"RULES-T_DIVINE_LORE__ULRIC"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_HOWL_OF_THE_WOLF">
+<Talent>"RULES-T_DIVINE_LORE__ULRIC"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_ICE_STORM">
+<Talent>"RULES-T_DIVINE_LORE__ULRIC"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_ULRIC_S_GIFT">
+<Talent>"RULES-T_DIVINE_LORE__ULRIC"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_UNBRIDLED_RAGE">
+<Talent>"RULES-T_DIVINE_LORE__ULRIC"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_THE_SNOW_KING_S_DECREE">
+<Talent>"RULES-T_DIVINE_LORE__ULRIC"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_WILD_PACK">
+<Talent>"RULES-T_DIVINE_LORE__ULRIC"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_WINTER_S_CHILL">
+<Talent>"RULES-T_DIVINE_LORE__ULRIC"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_AS_VERENA_IS_MY_WITNESS">
+<Talent>"RULES-T_DIVINE_LORE__VERENA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_EAVESDROP">
+<Talent>"RULES-T_DIVINE_LORE__VERENA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_OWL_S_WISDOM">
+<Talent>"RULES-T_DIVINE_LORE__VERENA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_PRESERVE_THE_BALANCE">
+<Talent>"RULES-T_DIVINE_LORE__VERENA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_REPROBATE_S_SENTENCE">
+<Talent>"RULES-T_DIVINE_LORE__VERENA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_RETRIBUTION">
+<Talent>"RULES-T_DIVINE_LORE__VERENA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_SHACKLES_OF_VERENA">
+<Talent>"RULES-T_DIVINE_LORE__VERENA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_SWORD_OF_JUSTICE">
+<Talent>"RULES-T_DIVINE_LORE__VERENA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_THE_BLIND_MAIDEN">
+<Talent>"RULES-T_DIVINE_LORE__VERENA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_THE_PAST_REVEALED">
+<Talent>"RULES-T_DIVINE_LORE__VERENA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_TRIAL_BY_FIRE">
+<Talent>"RULES-T_DIVINE_LORE__VERENA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_WORDS_OF_TRUTH">
+<Talent>"RULES-T_DIVINE_LORE__VERENA"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_FEARSOME_GLARE">
+<Talent>"RULES-T_DIVINE_LORE__GUNNDRED"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_PAINFUL_BLOWS">
+<Talent>"RULES-T_DIVINE_LORE__GUNNDRED"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_RUSTLER_S_CLOAK">
+<Talent>"RULES-T_DIVINE_LORE__GUNNDRED"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_TERRORISING_BLOW">
+<Talent>"RULES-T_DIVINE_LORE__GUNNDRED"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_FEARSOME_MIEN">
+<Talent>"RULES-T_DIVINE_LORE__GUNNDRED"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_THREATS_OF_TERROR">
+<Talent>"RULES-T_DIVINE_LORE__GUNNDRED"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BOUGHT_LOYALTY">
+<Talent>"RULES-T_DIVINE_LORE__HANDRICH"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BURGHER_ACQUISITION">
+<Talent>"RULES-T_DIVINE_LORE__HANDRICH"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_EYE_FOR_PROFIT">
+<Talent>"RULES-T_DIVINE_LORE__HANDRICH"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_GILDED_TONGUE">
+<Talent>"RULES-T_DIVINE_LORE__HANDRICH"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_TIME_IS_MONEY">
+<Talent>"RULES-T_DIVINE_LORE__HANDRICH"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_WORD_OF_MOUTH">
+<Talent>"RULES-T_DIVINE_LORE__HANDRICH"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_BLOODY_HAND">
+<Talent>"RULES-T_DIVINE_LORE__KHAINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_DAGGER_OF_KHAINE">
+<Talent>"RULES-T_DIVINE_LORE__KHAINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_ETERNAL_TORMENT">
+<Talent>"RULES-T_DIVINE_LORE__KHAINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_HIDDEN_BLADE">
+<Talent>"RULES-T_DIVINE_LORE__KHAINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_STING_IN_THE_TAIL">
+<Talent>"RULES-T_DIVINE_LORE__KHAINE"</Talent>
+</Sort>
+<Sort id="TOS-SPEL_THE_LORD_OF_MURDER">
+<Talent>"RULES-T_DIVINE_LORE__KHAINE"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="RULES-T_DIVINE_LORE__GUNNDRED">
+<Description language="ENGLISH">"Divine Lore (Gunndred)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+</Talent>
+<Talent id="RULES-T_DIVINE_LORE__HANDRICH">
+<Description language="ENGLISH">"Divine Lore (Handrich)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+</Talent>
+<Talent id="RULES-T_DIVINE_LORE__KHAINE">
+<Description language="ENGLISH">"Divine Lore (Khaine)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+</DATA_BOOK>

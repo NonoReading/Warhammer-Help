@@ -42,12 +42,20 @@ implementation
 
 Procedure TWinSpecialisations.AjouteLigne(Gen: String; Code: String; Lib :string; Typ :String; SansTest :Boolean);
 // ajouter une ligne dans la table
+  var
+    MemeRadical: Boolean;
   Begin
     // Comparer les radicaux SANS le prefixe de livre : Code et Gen peuvent venir de deux
     // livres differents (ex. RULES-COMPPROJ_* generique, LUSTR-COMPPROJ_SARBAC specialisation),
     // le prefixe seul suffit sinon a faire echouer le rapprochement.
+    // Talents et competences V4 / V5 : la famille est ce qui precede le '__' (le radical avant le
+    // premier '_' vaut 'T' ou 'COMP' pour tous) ; autres types : ancien radical.
+    if (Pos(SeparateurSpecialisationTalent, Code) > 0) or (Pos(SeparateurSpecialisationTalent, Gen) > 0) then
+      MemeRadical := FamilleCompetence(CodeSansLivre(Code)) = FamilleCompetence(CodeSansLivre(Gen))
+    else
+      MemeRadical := ExtractStringBefore(CodeSansLivre(Code),'_') = ExtractStringBefore(CodeSansLivre(Gen),'_');
     if (SansTest = true) or
-       ((ExtractStringBefore(CodeSansLivre(Code),'_') = ExtractStringBefore(CodeSansLivre(Gen),'_'))
+       (MemeRadical
            and (Pos(SeparateurMulti, Code) = 0)
            and (Pos(ValeurGenerique, Code) = 0)) then
       begin
@@ -231,7 +239,8 @@ procedure TWinSpecialisations.FormCreate(Sender: TObject);
     TabSpecialisation.ColCount      := 4;
     TabSpecialisation.ColWidths[0]  := 20;
     TabSpecialisation.Cells[1,0]    := GetTexteLibelle('RULES-LAB_002');
-    TabSpecialisation.ColWidths[1]  := 200;
+    // le code reste en colonne 1 (lu a la validation) mais n'est pas montre : seul le libelle compte
+    TabSpecialisation.ColWidths[1]  := 0;
     TabSpecialisation.Cells[2,0]    := GetTexteLibelle(ConstLabSelSpe);
     TabSpecialisation.ColWidths[2]  := 250;
     TabSpecialisation.Cells[3,0]    := '';

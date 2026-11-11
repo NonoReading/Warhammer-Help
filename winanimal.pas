@@ -25,6 +25,11 @@ const
     ('Crew', 'M (Sail)', 'M (Oar)', 'Man', 'Size', 'T', 'W');
   ColonnesVehicule: array[0..3] of String =
     ('Motive Power', 'T', 'W', 'Strike');
+  // WFRP2 : profil principal puis secondaire d'un animal ; vehicules et bateaux : M, TB, W
+  ColonnesAnimalV2: array[0..15] of String =
+    ('WS', 'BS', 'S', 'T', 'Ag', 'Int', 'WP', 'Fel', 'A', 'W', 'SB', 'TB', 'M', 'Mag', 'IP', 'FP');
+  ColonnesVehiculeV2: array[0..2] of String =
+    ('M', 'TB', 'W');
 
 function NouvelleEtiquette(Fiche: TForm; Texte: String): TLabel;
 begin
@@ -107,9 +112,15 @@ begin
     Descr  := nil;
     Infos  := nil;
 
-    if (PTrapping.ProfilAnimal <> '') or (PTrapping.ProfilBateau <> '') or (PTrapping.ProfilVehicule <> '') then
+    if (PTrapping.ProfilAnimal <> '') or (PTrapping.ProfilBateau <> '') or (PTrapping.ProfilVehicule <> '')
+       or (PTrapping.ProfilV2 <> '') then
       begin
-        if PTrapping.ProfilAnimal <> '' then
+        if PTrapping.ProfilV2 <> '' then
+          begin
+            Valeurs := PTrapping.ProfilV2.Split([';']);
+            NbCol   := Length(Valeurs);       // 16 : animal ; 3 : vehicule (M, TB, W)
+          end
+        else if PTrapping.ProfilAnimal <> '' then
           begin
             Valeurs := PTrapping.ProfilAnimal.Split([' ']);
             NbCol   := 12;
@@ -139,7 +150,14 @@ begin
         Grille.DefaultColWidth := (Grille.Width - 4) div NbCol;
         for Ind := 0 to NbCol - 1 do
           begin
-            if NbCol = 12 then
+            if PTrapping.ProfilV2 <> '' then
+              begin
+                if (NbCol = 16) and (Ind <= High(ColonnesAnimalV2)) then
+                  Grille.Cells[Ind, 0] := ColonnesAnimalV2[Ind]
+                else if (NbCol = 3) and (Ind <= High(ColonnesVehiculeV2)) then
+                  Grille.Cells[Ind, 0] := ColonnesVehiculeV2[Ind];
+              end
+            else if NbCol = 12 then
               Grille.Cells[Ind, 0] := ColonnesProfil[Ind]
             else if NbCol = 7 then
               Grille.Cells[Ind, 0] := ColonnesBateau[Ind]
@@ -171,6 +189,32 @@ begin
         if TexteDescr <> '' then
           Descr := NouvelleEtiquette(Fiche, TexteDescr);
       end;
+
+    // WFRP2 : competences, talents et regles speciales de l'animal (texte du livre, une ligne chacun)
+    TexteDescr := '';
+    if PTrapping.CompetencesV2 <> '' then
+      TexteDescr := GetTexteLibelle('RULES-ANIMV2_SKILLS') + ' : ' + PTrapping.CompetencesV2;
+    if PTrapping.TalentsV2 <> '' then
+      begin
+        if TexteDescr <> '' then TexteDescr := TexteDescr + LineEnding;
+        TexteDescr := TexteDescr + GetTexteLibelle('RULES-ANIMV2_TALENTS') + ' : ' + PTrapping.TalentsV2;
+      end;
+    if PTrapping.ReglesV2 <> '' then
+      begin
+        if TexteDescr <> '' then TexteDescr := TexteDescr + LineEnding;
+        TexteDescr := TexteDescr + GetTexteLibelle('RULES-ANIMV2_SPECIAL') + ' : ' + PTrapping.ReglesV2;
+      end;
+    // WFRP2 : fiche texte (potions : effet et fabrication ; objets magiques : savoir, pouvoirs, histoire),
+    // une ligne "CODE_LIBELLE=valeur" par rubrique
+    if PTrapping.FicheV2 <> '' then
+      for Texte in PTrapping.FicheV2.Split([LineEnding]) do
+        begin
+          if TexteDescr <> '' then TexteDescr := TexteDescr + LineEnding + LineEnding;
+          TexteDescr := TexteDescr + GetTexteLibelle(Copy(Texte, 1, Pos('=', Texte) - 1)) + ' : '
+                        + Copy(Texte, Pos('=', Texte) + 1, MaxInt);
+        end;
+    if (TexteDescr <> '') and (Descr = nil) then
+      Descr := NouvelleEtiquette(Fiche, TexteDescr);
 
     Texte := '';
     if PTrapping.Prix <> '' then

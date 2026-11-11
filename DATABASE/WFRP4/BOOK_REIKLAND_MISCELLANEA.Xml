@@ -2,6 +2,7 @@
 <DATA_BOOK>
 <CODE_BOOK>"REIKL"</CODE_BOOK>
 <BOOK>"BOOK REIKLAND MISCELLANEA"</BOOK>
+<BOOKNAME>"REIKLAND MISCELLANEA"</BOOKNAME>
 <language>"ENGLISH"</language>
 <VERSION>"WFRP4"</VERSION>
 <OFFICIAL>"1"</OFFICIAL>
@@ -16,266 +17,266 @@
 </Label>
 </DATA_LABEL>
 <DATA_SPELL>
-<Sort id="REIKL-HEDGE_01">
+<Sort id="REIKL-HEDGE_BADWILL">
 <Description language="ENGLISH">"Badwill"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Fellowship Bonus Yards)"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_MAGIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MAGIE"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>119</Page>
 </Sort>
-<Sort id="REIKL-HEDGE_02">
+<Sort id="REIKL-HEDGE_BONESETTER">
 <Description language="ENGLISH">"Bonesetter"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_MAGIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MAGIE"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>119</Page>
 </Sort>
-<Sort id="REIKL-HEDGE_03">
+<Sort id="REIKL-HEDGE_CLEANSLATE">
 <Description language="ENGLISH">"Cleanslate"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_MAGIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MAGIE"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>119</Page>
 </Sort>
-<Sort id="REIKL-HEDGE_04">
+<Sort id="REIKL-HEDGE_FERTILISE">
 <Description language="ENGLISH">"Fertilise"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_MAGIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MAGIE"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>120</Page>
 </Sort>
-<Sort id="REIKL-HEDGE_05">
+<Sort id="REIKL-HEDGE_FETTERFETCH">
 <Description language="ENGLISH">"Fetterfetch"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Hours"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_MAGIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MAGIE"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>120</Page>
 </Sort>
-<Sort id="REIKL-HEDGE_06">
+<Sort id="REIKL-HEDGE_GEISTBANE">
 <Description language="ENGLISH">"Geistbane"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Hours"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_MAGIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MAGIE"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>121</Page>
 </Sort>
-<Sort id="REIKL-HEDGE_07">
+<Sort id="REIKL-HEDGE_KINDLE">
 <Description language="ENGLISH">"Kindle"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Hours"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_MAGIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MAGIE"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>121</Page>
 </Sort>
-<Sort id="REIKL-HEDGE_08">
+<Sort id="REIKL-HEDGE_ONERION">
 <Description language="ENGLISH">"Onerion"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Minutes"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_MAGIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MAGIE"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>122</Page>
 </Sort>
-<Sort id="REIKL-HEDGE_09">
+<Sort id="REIKL-HEDGE_STOUT_SPIRIT">
 <Description language="ENGLISH">"Stout Spirit"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Hours"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_MAGIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MAGIE"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>122</Page>
 </Sort>
-<Sort id="REIKL-HEDGE_10">
+<Sort id="REIKL-HEDGE_TRANKRAFT">
 <Description language="ENGLISH">"Trankraft"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Hours"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_MAGIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MAGIE"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>122</Page>
 </Sort>
-<Sort id="REIKL-HEDGE_11">
+<Sort id="REIKL-HEDGE_WOECHARM">
 <Description language="ENGLISH">"Woecharm"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 item of jewellery"</Target>
 <Duration>"(BATTR_WP) days"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_MAGIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MAGIE"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>123</Page>
 </Sort>
-<Sort id="REIKL-HEDGE_12">
+<Sort id="REIKL-HEDGE_GODSPAKT">
 <Description language="ENGLISH">"Godspakt"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"Instant"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_MAGIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MAGIE"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>123</Page>
 </Sort>
-<Sort id="REIKL-SORCEL_01">
+<Sort id="REIKL-SORCEL_BANISHMENT_OF_B_L">
 <Description language="ENGLISH">"Banishment of Böl"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Minutes"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_SORCEL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__SORCEL"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>125</Page>
 </Sort>
-<Sort id="REIKL-SORCEL_02">
+<Sort id="REIKL-SORCEL_BONESNAPPER">
 <Description language="ENGLISH">"Bonesnapper"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(BATTR_WP) yards"</Range>
-<Talent>"RULES-T0088_SORCEL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__SORCEL"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>125</Page>
 </Sort>
-<Sort id="REIKL-SORCEL_03">
+<Sort id="REIKL-SORCEL_CONGEAL">
 <Description language="ENGLISH">"Congeal"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Minutes"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_SORCEL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__SORCEL"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>126</Page>
 </Sort>
-<Sort id="REIKL-SORCEL_04">
+<Sort id="REIKL-SORCEL_CURSE_OF_THE_TREACHEROUS_TONGUE">
 <Description language="ENGLISH">"Curse of the Treacherous Tongue"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(ATTR_WP) yards"</Range>
-<Talent>"RULES-T0088_SORCEL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__SORCEL"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>126</Page>
 </Sort>
-<Sort id="REIKL-SORCEL_05">
+<Sort id="REIKL-SORCEL_FATETHIEF">
 <Description language="ENGLISH">"Fatethief"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Days"</Duration>
 <Range>"(BATTR_WP) yards"</Range>
-<Talent>"RULES-T0088_SORCEL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__SORCEL"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>126</Page>
 </Sort>
-<Sort id="REIKL-SORCEL_06">
+<Sort id="REIKL-SORCEL_LODESTONE">
 <Description language="ENGLISH">"Lodestone"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(BATTR_WP) Days"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_SORCEL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__SORCEL"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>126</Page>
 </Sort>
-<Sort id="REIKL-SORCEL_07">
+<Sort id="REIKL-SORCEL_MIRRORED_ABYSS">
 <Description language="ENGLISH">"Mirrored Abyss"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_SORCEL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__SORCEL"</Talent>
 <Level>"16"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>127</Page>
 </Sort>
-<Sort id="REIKL-SORCEL_08">
+<Sort id="REIKL-SORCEL_OUTCAST_S_CURSE">
 <Description language="ENGLISH">"Outcast's Curse"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Days"</Duration>
 <Range>"(BATTR_WP) yards"</Range>
-<Talent>"RULES-T0088_SORCEL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__SORCEL"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>127</Page>
 </Sort>
-<Sort id="REIKL-SORCEL_09">
+<Sort id="REIKL-SORCEL_PACTBIND">
 <Description language="ENGLISH">"Pactbind"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"Until Death or Fulfilment"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_SORCEL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__SORCEL"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>128</Page>
 </Sort>
-<Sort id="REIKL-SORCEL_10">
+<Sort id="REIKL-SORCEL_PAINJAR">
 <Description language="ENGLISH">"Painjar"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(BATTR_WP) yards"</Range>
-<Talent>"RULES-T0088_SORCEL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__SORCEL"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>129</Page>
 </Sort>
-<Sort id="REIKL-SORCEL_11">
+<Sort id="REIKL-SORCEL_WAYWARD_PATH">
 <Description language="ENGLISH">"Wayward Path"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Hours"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_SORCEL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__SORCEL"</Talent>
 <Level>"13"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>129</Page>
 </Sort>
-<Sort id="REIKL-SORCEL_12">
+<Sort id="REIKL-SORCEL_NAMELESS_SUMMONS">
 <Description language="ENGLISH">"Nameless Summons"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Special"</Duration>
 <Range>"(BATTR_WP) yards"</Range>
-<Talent>"RULES-T0088_SORCEL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__SORCEL"</Talent>
 <Level>"10"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>130</Page>

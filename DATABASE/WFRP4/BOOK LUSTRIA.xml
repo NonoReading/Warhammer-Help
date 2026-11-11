@@ -2,40 +2,31 @@
 <DATA_BOOK>
 <CODE_BOOK>"LUSTR"</CODE_BOOK>
 <BOOK>"BOOK LUSTRIA"</BOOK>
+<BOOKNAME>"LUSTRIA"</BOOKNAME>
 <language>"ENGLISH"</language>
 <VERSION>"WFRP4"</VERSION>
 <OFFICIAL>"1"</OFFICIAL>
 <COMPLETE>"1"</COMPLETE>
 <DISCLAIMER>"No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form by any means, electronic, mechanical, photocopying, recording, or otherwise, without the prior permission of the publishers. Warhammer Fantasy Roleplay 4th Edition (c) Copyright Games Workshop Limited 2023. Warhammer Fantasy Roleplay 4th Edition, the Warhammer Fantasy Roleplay 4th Edition logo, GW, Games Workshop, Warhammer, The Game of Fantasy Battles, the twin-tailed comet logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likeness thereof, are either (R) or TM, and/or (c) Games Workshop Limited, variably registered around the world, and used under licence. Cubicle 7 Entertainment and the Cubicle 7 Entertainment logo are trademarks of Cubicle 7 Entertainment Limited. All rights reserved."</DISCLAIMER>
 <DATA_SKILL_SPECIALIZATION>
-<Skill id="RULES-COMPSIGNES_LIZARD">
+<Skill id="RULES-COMP_SECRET_SIGNS__LIZARDMAN">
 <Description language="ENGLISH">"Secret Signs (Lizardman)"</Description>
-<Generique>"RULES-COMPSIGNES_*"</Generique>
+<Generique>"RULES-COMP_SECRET_SIGNS__*"</Generique>
 <Page>129</Page>
 </Skill>
-<Skill id="LUSTR-COMPPROJ_SARBAC">
+<Skill id="LUSTR-COMP_RANGED__BLOWPIPE">
 <Description language="ENGLISH">"Ranged (Blowpipe)"</Description>
-<Generique>"RULES-COMPPROJ_*"</Generique>
+<Generique>"RULES-COMP_RANGED__*"</Generique>
 <Page>128</Page>
 </Skill>
-<Skill id="RULES-COMPPROJ_ARC/LUSTR-COMPPROJ_SARBAC/RULES-COMPPROJ_LANC">
-<Description language="ENGLISH">"Ranged (Bow, Blowpipe, or Throwing)"</Description>
-<Generique>"RULES-COMPPROJ_*"</Generique>
-<Page>128</Page>
-</Skill>
-<Skill id="RULES-COMPSAVOIR_OLDONES">
+<Skill id="RULES-COMP_LORE__OLD_ONES">
 <Description language="ENGLISH">"Lore (Old Ones)"</Description>
-<Generique>"RULES-COMPSAVOIR_*"</Generique>
+<Generique>"RULES-COMP_LORE__*"</Generique>
 <Page>126</Page>
-</Skill>
-<Skill id="RULES-COMPFOCAL_CIEUX/RULES-COMPFOCAL_BETE">
-<Description language="ENGLISH">"Channelling (Azyr or Ghur)"</Description>
-<Generique>"RULES-COMPFOCAL_*"</Generique>
-<Page>120</Page>
 </Skill>
 </DATA_SKILL_SPECIALIZATION>
 <DATA_TALENT>
-<Talent id="LUSTR-T0CHA">
+<Talent id="LUSTR-T_CHAMELEON">
 <Trait>"1"</Trait>
 <Description language="ENGLISH">"Chameleon"</Description>
 <Short language="ENGLISH">""</Short>
@@ -45,7 +36,7 @@
 <Test language="ENGLISH">""</Test>
 <Page>151</Page>
 </Talent>
-<Talent id="LUSTR-T0TEL">
+<Talent id="LUSTR-T_TELEPATHY">
 <Trait>"1"</Trait>
 <Description language="ENGLISH">"Telepathy"</Description>
 <Short language="ENGLISH">""</Short>
@@ -55,11 +46,7 @@
 <Test language="ENGLISH">""</Test>
 <Page>151</Page>
 </Talent>
-<Talent id="RULES-T0088_BETE/RULES-T0088_CIEUX">
-<Description language="ENGLISH">"Arcane Magic (Beasts or Heavens)"</Description>
-<Page>44</Page>
-</Talent>
-<Talent id="LUSTR-T0SCA">
+<Talent id="LUSTR-T_ARMOUR_1_SCALY_SKIN">
 <Trait>"1"</Trait>
 <Modificateur Type="ModifArmour" Cible="RULES-ARMOL_HEAD" Facteur="1"/>
 <Modificateur Type="ModifArmour" Cible="RULES-ARMOL_ARM" Facteur="1"/>
@@ -113,47 +100,47 @@
 <Attribut name="RULES-ATTR_Move">"6"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill>"RULES-COMPATHL"</Skill>
-  <Skill>"RULES-COMPESCAL"</Skill>
-  <Skill>"RULES-COMPESQU"</Skill>
-  <Skill>"RULES-COMPCOMB_BASE"</Skill>
-  <Skill>"RULES-COMPSURVEXT"</Skill>
-  <Skill>"RULES-COMPPRECEP"</Skill>
-  <Skill>"RULES-COMPDISC_RURAL"</Skill>
-  <Skill>"RULES-COMPPROJ_ARC/LUSTR-COMPPROJ_SARBAC/RULES-COMPPROJ_LANC"</Skill>
+<Skill>"RULES-COMP_ATHLETICS"</Skill>
+  <Skill>"RULES-COMP_CLIMB"</Skill>
+  <Skill>"RULES-COMP_DODGE"</Skill>
+  <Skill>"RULES-COMP_MELEE__BASIC"</Skill>
+  <Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+  <Skill>"RULES-COMP_PERCEPTION"</Skill>
+  <Skill>"RULES-COMP_STEALTH__RURAL"</Skill>
+  <Skill>"RULES-COMP_RANGED__BOW/LUSTR-COMP_RANGED__BLOWPIPE/RULES-COMP_RANGED__THROWING"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent>"RULES-T0149/RULES-T0074/RULES-T0127/RULES-T0045/RULES-T0117/RULES-T0067"</Talent>
-  <Talent>"RULES-T0149/RULES-T0074/RULES-T0127/RULES-T0045/RULES-T0117/RULES-T0067"</Talent>
-  <Talent>"RULES-T0AMP"</Talent>
-  <Talent>"RULES-T0ARB"</Talent>
-  <Talent>"LUSTR-T0SCA"</Talent>
-  <Talent>"RULES-T0COL"</Talent>
-  <Talent>"RULES-T0164"</Talent>
-  <Talent>"RULES-T0SIZ_SMAL"</Talent>
+<Talent>"RULES-T_ACCURATE_SHOT/RULES-T_COOLHEADED/RULES-T_LIGHTNING_REFLEXES/RULES-T_NIMBLE_FINGERED/RULES-T_SAVVY/RULES-T_WARRIOR_BORN"</Talent>
+  <Talent>"RULES-T_ACCURATE_SHOT/RULES-T_COOLHEADED/RULES-T_LIGHTNING_REFLEXES/RULES-T_NIMBLE_FINGERED/RULES-T_SAVVY/RULES-T_WARRIOR_BORN"</Talent>
+  <Talent>"RULES-T_AMPHIBIOUS"</Talent>
+  <Talent>"RULES-T_ARBOREAL"</Talent>
+  <Talent>"LUSTR-T_ARMOUR_1_SCALY_SKIN"</Talent>
+  <Talent>"RULES-T_COLD_BLOODED"</Talent>
+  <Talent>"RULES-T_NIGHT_VISION"</Talent>
+  <Talent>"RULES-T_SIZE__SMAL"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_CAREER>
-<Career name="RULES-WORK36">"3"</Career>
-  <Career name="RULES-WORK23">"4"</Career>
-  <Career name="RULES-WORK58">"1"</Career>
-  <Career name="RULES-WORK03">"5"</Career>
-  <Career name="RULES-WORK34">"3"</Career>
-  <Career name="RULES-WORK07">"17"</Career>
-  <Career name="RULES-WORK20">"3"</Career>
-  <Career name="RULES-WORK44">"1"</Career>
-  <Career name="RULES-WORK56">"13"</Career>
-  <Career name="RULES-WORK29">"3"</Career>
-  <Career name="RULES-WORK10">"7"</Career>
-  <Career name="RULES-WORK40">"4"</Career>
-  <Career name="RULES-WORK41">"1"</Career>
-  <Career name="RULES-WORK19">"4"</Career>
-  <Career name="RULES-WORK63">"16"</Career>
-  <Career name="RULES-WORK55">"3"</Career>
-  <Career name="RULES-WORK38">"3"</Career>
-  <Career name="RULES-WORK06">"3"</Career>
-  <Career name="RULES-WORK43">"1"</Career>
-  <Career name="RULES-WORK30">"2"</Career>
-  <Career name="RULES-WORK57">"3"</Career>
+<Career name="RULES-WORK_PHYSICIAN">"3"</Career>
+  <Career name="RULES-WORK_SCHOLAR">"4"</Career>
+  <Career name="RULES-WORK_WIZARD">"1"</Career>
+  <Career name="RULES-WORK_ARTISAN">"5"</Career>
+  <Career name="RULES-WORK_MERCHANT">"3"</Career>
+  <Career name="RULES-WORK_TOWNSMAN">"17"</Career>
+  <Career name="RULES-WORK_ENVOY">"3"</Career>
+  <Career name="RULES-WORK_NOBLE">"1"</Career>
+  <Career name="RULES-WORK_SERVANT">"13"</Career>
+  <Career name="RULES-WORK_HERBALIST">"3"</Career>
+  <Career name="RULES-WORK_HUNTER">"7"</Career>
+  <Career name="RULES-WORK_MINER">"4"</Career>
+  <Career name="RULES-WORK_MYSTIC">"1"</Career>
+  <Career name="RULES-WORK_SCOUT">"4"</Career>
+  <Career name="RULES-WORK_VILLAGER">"16"</Career>
+  <Career name="RULES-WORK_ENTERTAINER">"3"</Career>
+  <Career name="RULES-WORK_MESSENGER">"3"</Career>
+  <Career name="RULES-WORK_BOATMAN">"3"</Career>
+  <Career name="RULES-WORK_HUFFER">"1"</Career>
+  <Career name="RULES-WORK_OUTLAW">"2"</Career>
+  <Career name="RULES-WORK_SOLDIER">"3"</Career>
   </SUBCHAPTER_CAREER>
 <Page>160</Page>
 </Specie>
@@ -181,78 +168,78 @@
 <Attribut name="RULES-ATTR_Move">"6"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill>"RULES-COMPATHL"</Skill>
-  <Skill>"RULES-COMPESCAL"</Skill>
-  <Skill>"RULES-COMPESQU"</Skill>
-  <Skill>"RULES-COMPCOMB_BASE"</Skill>
-  <Skill>"RULES-COMPSURVEXT"</Skill>
-  <Skill>"RULES-COMPPRECEP"</Skill>
-  <Skill>"RULES-COMPDISC_RURAL"</Skill>
-  <Skill>"RULES-COMPPROJ_ARC/LUSTR-COMPPROJ_SARBAC/RULES-COMPPROJ_LANC"</Skill>
+<Skill>"RULES-COMP_ATHLETICS"</Skill>
+  <Skill>"RULES-COMP_CLIMB"</Skill>
+  <Skill>"RULES-COMP_DODGE"</Skill>
+  <Skill>"RULES-COMP_MELEE__BASIC"</Skill>
+  <Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+  <Skill>"RULES-COMP_PERCEPTION"</Skill>
+  <Skill>"RULES-COMP_STEALTH__RURAL"</Skill>
+  <Skill>"RULES-COMP_RANGED__BOW/LUSTR-COMP_RANGED__BLOWPIPE/RULES-COMP_RANGED__THROWING"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent>"RULES-T0149/RULES-T0074/RULES-T0127/RULES-T0045/RULES-T0117"</Talent>
-  <Talent>"RULES-T0149/RULES-T0074/RULES-T0127/RULES-T0045/RULES-T0117"</Talent>
-  <Talent>"RULES-T0139_VUE"</Talent>
-  <Talent>"RULES-T0AMP"</Talent>
-  <Talent>"RULES-T0ARB"</Talent>
-  <Talent>"LUSTR-T0SCA"</Talent>
-  <Talent>"RULES-T0COL"</Talent>
-  <Talent>"RULES-T0164"</Talent>
-  <Talent>"RULES-T0SIZ_SMAL"</Talent>
-  <Talent>"LUSTR-T0CHA"</Talent>
-  <Talent>"RULES-T0STE"</Talent>
+<Talent>"RULES-T_ACCURATE_SHOT/RULES-T_COOLHEADED/RULES-T_LIGHTNING_REFLEXES/RULES-T_NIMBLE_FINGERED/RULES-T_SAVVY"</Talent>
+  <Talent>"RULES-T_ACCURATE_SHOT/RULES-T_COOLHEADED/RULES-T_LIGHTNING_REFLEXES/RULES-T_NIMBLE_FINGERED/RULES-T_SAVVY"</Talent>
+  <Talent>"RULES-T_ACUTE_SENSE__VUE"</Talent>
+  <Talent>"RULES-T_AMPHIBIOUS"</Talent>
+  <Talent>"RULES-T_ARBOREAL"</Talent>
+  <Talent>"LUSTR-T_ARMOUR_1_SCALY_SKIN"</Talent>
+  <Talent>"RULES-T_COLD_BLOODED"</Talent>
+  <Talent>"RULES-T_NIGHT_VISION"</Talent>
+  <Talent>"RULES-T_SIZE__SMAL"</Talent>
+  <Talent>"LUSTR-T_CHAMELEON"</Talent>
+  <Talent>"RULES-T_STEALTHY"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_CAREER>
-<Career name="RULES-WORK44">"1"</Career>
-  <Career name="RULES-WORK19">"99"</Career>
+<Career name="RULES-WORK_NOBLE">"1"</Career>
+  <Career name="RULES-WORK_SCOUT">"99"</Career>
   </SUBCHAPTER_CAREER>
 <Page>142</Page>
 </Specie>
 </DATA_SPECIE>
 <DATA_WEAPON>
-<Weapon id="LUSTR-COMB_BASE_01">
+<Weapon id="LUSTR-COMB_OBSINITE_CLUB">
 <Description language="ENGLISH">"Obsinite Club"</Description>
-<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Skill>"RULES-COMP_MELEE__BASIC"</Skill>
 <Damage>"+(BATTR_S)+3"</Damage>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
 <Reach>"RULES-WEAPR_SHORT"</Reach>
 <Price>"1CO"</Price>
 <Encumbrance>"1"</Encumbrance>
-<Quality>"RULES-WEAPB22"</Quality>
+<Quality>"RULES-WEAPB_PENETRATING"</Quality>
 <Hand>"1"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>163</Page>
 </Weapon>
-<Weapon id="LUSTR-COMB_BASE_02">
+<Weapon id="LUSTR-COMB_OBSINITE_SPIKED_MAUL">
 <Description language="ENGLISH">"Obsinite Spiked Maul"</Description>
-<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Skill>"RULES-COMP_MELEE__BASIC"</Skill>
 <Damage>"+(BATTR_S)+4"</Damage>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
 <Reach>"RULES-WEAPR_MID"</Reach>
 <Price>"2CO"</Price>
 <Encumbrance>"2"</Encumbrance>
-<Quality>"RULES-WEAPB22,RULES-WEAPB04"</Quality>
+<Quality>"RULES-WEAPB_PENETRATING,RULES-WEAPB_PUMMEL"</Quality>
 <Hand>"1"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>163</Page>
 </Weapon>
-<Weapon id="LUSTR-PROJ_SARBAC_01">
+<Weapon id="LUSTR-PROJ_BLOWPIPE">
 <Description language="ENGLISH">"Blowpipe"</Description>
-<Skill>"LUSTR-COMPPROJ_SARBAC"</Skill>
+<Skill>"LUSTR-COMP_RANGED__BLOWPIPE"</Skill>
 <Damage>"+0"</Damage>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Reach>"20"</Reach>
 <Price>"3CO"</Price>
 <Encumbrance>"1"</Encumbrance>
-<Quality>"RULES-WEAPB23 1"</Quality>
+<Quality>"RULES-WEAPB_RELOAD 1"</Quality>
 <Hand>"1"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>162</Page>
 </Weapon>
-<Weapon id="LUSTR-MUNI_01">
+<Weapon id="LUSTR-MUNI_BLOWPIPE_DART">
 <Description language="ENGLISH">"Blowpipe Dart (12)"</Description>
-<Skill>"LUSTR-COMPPROJ_SARBAC"</Skill>
+<Skill>"LUSTR-COMP_RANGED__BLOWPIPE"</Skill>
 <Damage>"+1"</Damage>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Reach>"+0"</Reach>
@@ -263,9 +250,9 @@
 <Ammunition>"1"</Ammunition>
 <Page>163</Page>
 </Weapon>
-<Weapon id="LUSTR-COMB_BASE_03">
+<Weapon id="LUSTR-COMB_MACHETE">
 <Description language="ENGLISH">"Machete"</Description>
-<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Skill>"RULES-COMP_MELEE__BASIC"</Skill>
 <Damage>"+(BATTR_S)+4"</Damage>
 <Availability>"RULES-DISPO_COMMON"</Availability>
 <Reach>"RULES-WEAPR_MID"</Reach>
@@ -276,114 +263,114 @@
 <Ammunition>"0"</Ammunition>
 <Page>200</Page>
 </Weapon>
-<Weapon id="LUSTR-PROJ_ARB_01">
+<Weapon id="LUSTR-PROJ_EAGLE_CLAW_BOLT_THROWER">
 <Description language="ENGLISH">"Eagle Claw Bolt Thrower"</Description>
-<Skill>"RULES-COMPPROJ_ARB"</Skill>
+<Skill>"RULES-COMP_RANGED__CROSSBOW"</Skill>
 <Damage>"+13"</Damage>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Reach>"150"</Reach>
 <Price>"200CO"</Price>
 <Encumbrance>"25"</Encumbrance>
-<Quality>"LUSTR-WEAPB03,UPINA-WEAPB35 2,RULES-WEAPB23 3"</Quality>
+<Quality>"LUSTR-WEAPB_ACCURATE_OR_VOLLEY_6,UPINA-WEAPB_CREWED 2,RULES-WEAPB_RELOAD 3"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>200</Page>
 </Weapon>
-<Weapon id="LUSTR-PROJ_ARB_02">
+<Weapon id="LUSTR-PROJ_EAGLE_EYE_BOLT_THROWER">
 <Description language="ENGLISH">"Eagle Eye Bolt Thrower"</Description>
-<Skill>"RULES-COMPPROJ_ARB"</Skill>
+<Skill>"RULES-COMP_RANGED__CROSSBOW"</Skill>
 <Damage>"+11"</Damage>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Reach>"90"</Reach>
 <Price>"45CO"</Price>
 <Encumbrance>"4"</Encumbrance>
-<Quality>"RULES-WEAPB10,UPINA-WEAPB35 1,RULES-WEAPB23 1"</Quality>
+<Quality>"RULES-WEAPB_DAMAGING,UPINA-WEAPB_CREWED 1,RULES-WEAPB_RELOAD 1"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>200</Page>
 </Weapon>
-<Weapon id="LUSTR-PROJ_SARBAC_02">
+<Weapon id="LUSTR-PROJ_GIANT_BLOWPIPE">
 <Description language="ENGLISH">"Giant Blowpipe"</Description>
-<Skill>"LUSTR-COMPPROJ_SARBAC"</Skill>
+<Skill>"LUSTR-COMP_RANGED__BLOWPIPE"</Skill>
 <Damage>"+0"</Damage>
 <Availability>"RULES-DISPO_UNIQUE"</Availability>
 <Reach>"40"</Reach>
 <Price>"-"</Price>
 <Encumbrance>"6"</Encumbrance>
-<Quality>"RULES-WEAPB23 1"</Quality>
+<Quality>"RULES-WEAPB_RELOAD 1"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>178</Page>
 </Weapon>
-<Weapon id="LUSTR-PROJ_ARC_01">
+<Weapon id="LUSTR-PROJ_GIANT_BOW">
 <Description language="ENGLISH">"Giant Bow"</Description>
-<Skill>"RULES-COMPPROJ_ARC"</Skill>
+<Skill>"RULES-COMP_RANGED__BOW"</Skill>
 <Damage>"+10"</Damage>
 <Availability>"RULES-DISPO_UNIQUE"</Availability>
 <Reach>"100"</Reach>
 <Price>"-"</Price>
 <Encumbrance>"15"</Encumbrance>
-<Quality>"RULES-WEAPB16,UPINA-WEAPB35 2,RULES-WEAPB23 2"</Quality>
+<Quality>"RULES-WEAPB_ACCURATE,UPINA-WEAPB_CREWED 2,RULES-WEAPB_RELOAD 2"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>178</Page>
 </Weapon>
-<Weapon id="LUSTR-PROJ_ING_01">
+<Weapon id="LUSTR-PROJ_ENGINE_OF_THE_GODS_BURNING_ALIGNMENT">
 <Description language="ENGLISH">"Engine of the Gods' Burning Alignment"</Description>
-<Skill>"RULES-COMPPROJ_ING"</Skill>
+<Skill>"RULES-COMP_RANGED__ENGINEERING"</Skill>
 <Damage>"+8"</Damage>
 <Availability>"RULES-DISPO_UNIQUE"</Availability>
 <Reach>"60"</Reach>
 <Price>"-"</Price>
 <Encumbrance>"75"</Encumbrance>
-<Quality>"RULES-WEAPB15 5,UPINA-WEAPB35 3,LUSTR-WEAPB02,UPINA-WEAPB36 1d10,RULES-WEAPB29"</Quality>
+<Quality>"RULES-WEAPB_BLAST 5,UPINA-WEAPB_CREWED 3,LUSTR-WEAPB_MAGICAL,UPINA-WEAPB_SALVO 1d10,RULES-WEAPB_ABLAZE"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>178</Page>
 </Weapon>
-<Weapon id="LUSTR-PROJ_ING_02">
+<Weapon id="LUSTR-PROJ_ENGINE_OF_THE_GODS_POWER_OF_THE_ANCIENTS">
 <Description language="ENGLISH">"Engine of the Gods' Power of the Ancients"</Description>
-<Skill>"RULES-COMPPROJ_ING"</Skill>
+<Skill>"RULES-COMP_RANGED__ENGINEERING"</Skill>
 <Damage>"+15"</Damage>
 <Availability>"RULES-DISPO_UNIQUE"</Availability>
 <Reach>"150"</Reach>
 <Price>"-"</Price>
 <Encumbrance>"40"</Encumbrance>
-<Quality>"UPINA-WEAPB35 3,RULES-WEAPB26,LUSTR-WEAPB02,RULES-WEAPB23 3,RULES-WEAPB29"</Quality>
+<Quality>"UPINA-WEAPB_CREWED 3,RULES-WEAPB_IMPRECISE,LUSTR-WEAPB_MAGICAL,RULES-WEAPB_RELOAD 3,RULES-WEAPB_ABLAZE"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>178</Page>
 </Weapon>
-<Weapon id="LUSTR-PROJ_ING_03">
+<Weapon id="LUSTR-PROJ_SOLAR_ENGINE_S_BEAM_OF_CHOTEC">
 <Description language="ENGLISH">"Solar Engine's Beam of Chotec"</Description>
-<Skill>"RULES-COMPPROJ_ING"</Skill>
+<Skill>"RULES-COMP_RANGED__ENGINEERING"</Skill>
 <Damage>"+1d10"</Damage>
 <Availability>"RULES-DISPO_UNIQUE"</Availability>
 <Reach>"60"</Reach>
 <Price>"-"</Price>
 <Encumbrance>"75"</Encumbrance>
-<Quality>"UPINA-WEAPB35 3,LUSTR-WEAPB02,RULES-WEAPB03 5,RULES-WEAPB29"</Quality>
+<Quality>"UPINA-WEAPB_CREWED 3,LUSTR-WEAPB_MAGICAL,RULES-WEAPB_REPEATER 5,RULES-WEAPB_ABLAZE"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>178</Page>
 </Weapon>
 </DATA_WEAPON>
 <DATA_WEAPON_BONUS>
-<BonusMalus id="LUSTR-WEAPB01">
+<BonusMalus id="LUSTR-WEAPB_VOLLEY">
 <Description language="ENGLISH">"Volley"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"fires (Rating) shots at once, Damage -4"</Short>
 <Modifier>"+"</Modifier>
 <Page>89</Page>
 </BonusMalus>
-<BonusMalus id="LUSTR-WEAPB02">
+<BonusMalus id="LUSTR-WEAPB_MAGICAL">
 <Description language="ENGLISH">"Magical"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"magical weapon"</Short>
 <Modifier>"+"</Modifier>
 <Page>178</Page>
 </BonusMalus>
-<BonusMalus id="LUSTR-WEAPB03">
+<BonusMalus id="LUSTR-WEAPB_ACCURATE_OR_VOLLEY_6">
 <Description language="ENGLISH">"Accurate or Volley 6"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Accurate or Volley 6"</Short>
@@ -392,45 +379,45 @@
 </BonusMalus>
 </DATA_WEAPON_BONUS>
 <DATA_ARMOR>
-<Armor id="LUSTR-ARMO_01">
+<Armor id="LUSTR-ARMO_LUSTRIAN_SKULLCAP">
 <Description language="ENGLISH">"Lustrian Skullcap"</Description>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
 <Price>"8PA"</Price>
 <Encumbrance>"1"</Encumbrance>
-<Quality>"RULES-ARMOB_03,RULES-ARMOB_08"</Quality>
+<Quality>"RULES-ARMOB_PARTIAL,RULES-ARMOB_UNDER_ARMOR"</Quality>
 <Location>"RULES-ARMOL_HEAD"</Location>
 <ArmorPoint>"1"</ArmorPoint>
 <Type>"RULES-ARMOT_SOFTLEATHER"</Type>
 <Page>89</Page>
 </Armor>
-<Armor id="LUSTR-ARMO_02">
+<Armor id="LUSTR-ARMO_LUSTRIAN_LEGGINGS">
 <Description language="ENGLISH">"Lustrian Leggings"</Description>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
 <Price>"14PA"</Price>
 <Encumbrance>"2"</Encumbrance>
-<Quality>"RULES-ARMOB_08"</Quality>
+<Quality>"RULES-ARMOB_UNDER_ARMOR"</Quality>
 <Location>"RULES-ARMOL_LEG"</Location>
 <ArmorPoint>"1"</ArmorPoint>
 <Type>"RULES-ARMOT_SOFTLEATHER"</Type>
 <Page>89</Page>
 </Armor>
-<Armor id="LUSTR-ARMO_03">
+<Armor id="LUSTR-ARMO_LUSTRIAN_JERKIN">
 <Description language="ENGLISH">"Lustrian Jerkin"</Description>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
 <Price>"10PA"</Price>
 <Encumbrance>"2"</Encumbrance>
-<Quality>"RULES-ARMOB_08"</Quality>
+<Quality>"RULES-ARMOB_UNDER_ARMOR"</Quality>
 <Location>"RULES-ARMOL_BODY"</Location>
 <ArmorPoint>"1"</ArmorPoint>
 <Type>"RULES-ARMOT_SOFTLEATHER"</Type>
 <Page>89</Page>
 </Armor>
-<Armor id="LUSTR-ARMO_04">
+<Armor id="LUSTR-ARMO_LUSTRIAN_JACK">
 <Description language="ENGLISH">"Lustrian Jack"</Description>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
 <Price>"12PA"</Price>
 <Encumbrance>"2"</Encumbrance>
-<Quality>"RULES-ARMOB_08"</Quality>
+<Quality>"RULES-ARMOB_UNDER_ARMOR"</Quality>
 <Location>"RULES-ARMOL_ARM,RULES-ARMOL_BODY"</Location>
 <ArmorPoint>"1"</ArmorPoint>
 <Type>"RULES-ARMOT_SOFTLEATHER"</Type>
@@ -438,21 +425,21 @@
 </Armor>
 </DATA_ARMOR>
 <DATA_TRAPPING>
-<Trapping id="LUSTR-TRAP_01">
+<Trapping id="LUSTR-TRAP_GOLD_PLATE_DECORATIVE">
 <Description language="ENGLISH">"Gold Plate (decorative)"</Description>
 <Theme>"RULES-LAB_205"</Theme>
 <Price>"25CO"</Price>
 <Encumbrance>"1"</Encumbrance>
 <Page>209</Page>
 </Trapping>
-<Trapping id="LUSTR-TRAP_02">
+<Trapping id="LUSTR-TRAP_GEMSTONES_12_JEWELS">
 <Description language="ENGLISH">"Gemstones (12 jewels)"</Description>
 <Theme>"RULES-LAB_205"</Theme>
 <Price>"36CO"</Price>
 <Encumbrance>"1"</Encumbrance>
 <Page>209</Page>
 </Trapping>
-<Trapping id="LUSTR-TRAP_03">
+<Trapping id="LUSTR-TRAP_OBSINITE_BLOCK">
 <Description language="ENGLISH">"Obsinite Block"</Description>
 <Theme>"RULES-LAB_205"</Theme>
 <Price>"40CO"</Price>
@@ -460,7 +447,7 @@
 <Buyer>"RULES-LAB_206"</Buyer>
 <Page>209</Page>
 </Trapping>
-<Trapping id="LUSTR-TRAP_04">
+<Trapping id="LUSTR-TRAP_STEGADON_SKULL">
 <Description language="ENGLISH">"Stegadon Skull"</Description>
 <Theme>"RULES-LAB_205"</Theme>
 <Price>"5CO"</Price>
@@ -468,7 +455,7 @@
 <Buyer>"RULES-LAB_207"</Buyer>
 <Page>209</Page>
 </Trapping>
-<Trapping id="LUSTR-TRAP_05">
+<Trapping id="LUSTR-TRAP_COLD_ONE_EGG">
 <Description language="ENGLISH">"Cold One Egg"</Description>
 <Theme>"RULES-LAB_205"</Theme>
 <Price>"15CO"</Price>
@@ -476,7 +463,7 @@
 <Buyer>"RULES-LAB_208"</Buyer>
 <Page>209</Page>
 </Trapping>
-<Trapping id="LUSTR-TRAP_06">
+<Trapping id="LUSTR-TRAP_STELA_STONE">
 <Description language="ENGLISH">"Stela Stone"</Description>
 <Theme>"RULES-LAB_205"</Theme>
 <Price>"5CO"</Price>
@@ -484,7 +471,7 @@
 <Buyer>"RULES-LAB_209"</Buyer>
 <Page>209</Page>
 </Trapping>
-<Trapping id="LUSTR-TRAP_07">
+<Trapping id="LUSTR-TRAP_SACRED_PLAQUE">
 <Description language="ENGLISH">"Sacred Plaque"</Description>
 <Theme>"RULES-LAB_205"</Theme>
 <Price>"20CO"</Price>
@@ -492,7 +479,7 @@
 <Buyer>"RULES-LAB_210"</Buyer>
 <Page>209</Page>
 </Trapping>
-<Trapping id="LUSTR-TRAP_08">
+<Trapping id="LUSTR-TRAP_HAWKSHIP">
 <Description language="ENGLISH">"Hawkship"</Description>
 <Theme>"RULES-LAB_261"</Theme>
 <Price>"300CO"</Price>
@@ -504,10 +491,10 @@
 </Trapping>
 </DATA_TRAPPING>
 <DATA_CAREER>
-<Career id="LUSTR-WORK123">
+<Career id="LUSTR-WORK_INTERPRETER">
 <Description language="ENGLISH">"Interpreter"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPLANG_*"</Skill>
+<Skill>"RULES-COMP_LANGUAGE__*"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -540,62 +527,62 @@
 <Attribut name="RULES-ATTR_Fel">"1"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPSUBOR">"1"</Skill>
-  <Skill name="RULES-COMPCHARM">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPRAGOT">"1"</Skill>
-  <Skill name="RULES-COMPMARCH">"1"</Skill>
-  <Skill name="RULES-COMPLANG_*">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPRECH">"1"</Skill>
-  <Skill name="RULES-COMPSIGNES_*">"1"</Skill>
-  <Skill name="RULES-COMPANIM">"2"</Skill>
-  <Skill name="RULES-COMPRESALC">"2"</Skill>
-  <Skill name="RULES-COMPCALM">"2"</Skill>
-  <Skill name="RULES-COMPEVAL">"2"</Skill>
-  <Skill name="RULES-COMPLANG_*">"2"</Skill>
-  <Skill name="RULES-COMPORIENT">"2"</Skill>
-  <Skill name="RULES-COMPART_*">"3"</Skill>
-  <Skill name="RULES-COMPINTIM">"3"</Skill>
-  <Skill name="RULES-COMPLANG_*">"3"</Skill>
-  <Skill name="RULES-COMPSURVEXT">"3"</Skill>
-  <Skill name="RULES-COMPLANG_*">"4"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
+<Skill name="RULES-COMP_BRIBERY">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+  <Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_RESEARCH">"1"</Skill>
+  <Skill name="RULES-COMP_SECRET_SIGNS__*">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM_ANIMAL">"2"</Skill>
+  <Skill name="RULES-COMP_CONSUME_ALCOHOL">"2"</Skill>
+  <Skill name="RULES-COMP_COOL">"2"</Skill>
+  <Skill name="RULES-COMP_EVALUATE">"2"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"2"</Skill>
+  <Skill name="RULES-COMP_NAVIGATION">"2"</Skill>
+  <Skill name="RULES-COMP_ART__*">"3"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"3"</Skill>
+  <Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"4"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0082">"1"</Talent>
-  <Talent name="RULES-T0083">"1"</Talent>
-  <Talent name="RULES-T0084">"1"</Talent>
-  <Talent name="RULES-T0081">"1"</Talent>
-  <Talent name="RULES-T0147">"2"</Talent>
-  <Talent name="RULES-T0102">"2"</Talent>
-  <Talent name="RULES-T0136_*">"2"</Talent>
-  <Talent name="RULES-T0034">"2"</Talent>
-  <Talent name="RULES-T0139_OUIE">"3"</Talent>
-  <Talent name="RULES-T0010">"3"</Talent>
-  <Talent name="RULES-T0146">"3"</Talent>
-  <Talent name="RULES-T0073">"3"</Talent>
-  <Talent name="RULES-T0056">"4"</Talent>
-  <Talent name="RULES-T0106">"4"</Talent>
-  <Talent name="RULES-T0110">"4"</Talent>
-  <Talent name="RULES-T0155">"4"</Talent>
+<Talent name="RULES-T_LINGUISTICS">"1"</Talent>
+  <Talent name="RULES-T_LIP_READING">"1"</Talent>
+  <Talent name="RULES-T_READ_WRITE">"1"</Talent>
+  <Talent name="RULES-T_SPEEDREADER">"1"</Talent>
+  <Talent name="RULES-T_BRIBER">"2"</Talent>
+  <Talent name="RULES-T_DEALMAKER">"2"</Talent>
+  <Talent name="RULES-T_ETIQUETTE__*">"2"</Talent>
+  <Talent name="RULES-T_SUPPORTIVE">"2"</Talent>
+  <Talent name="RULES-T_ACUTE_SENSE__OUIE">"3"</Talent>
+  <Talent name="RULES-T_BLATHER">"3"</Talent>
+  <Talent name="RULES-T_BOOKISH">"3"</Talent>
+  <Talent name="RULES-T_MIMIC">"3"</Talent>
+  <Talent name="RULES-T_IMPASSIONED_ZEAL">"4"</Talent>
+  <Talent name="RULES-T_NUMISMATICS">"4"</Talent>
+  <Talent name="RULES-T_PERFECT_PITCH">"4"</Talent>
+  <Talent name="RULES-T_TOWER_OF_MEMORIES">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Magnifying Glass">"1"</Item>
 <Item name="Phrase Book">"1"</Item>
-<Item name="RULES-TRAP_014">"2"</Item>
+<Item name="RULES-TRAP_AMULET">"2"</Item>
 <Item name="Clothing (In a Local Style)">"2"</Item>
-<Item name="RULES-TRAP_133">"2"</Item>
-<Item name="RULES-TRAP_090">"3"</Item>
+<Item name="RULES-TRAP_DECK_OF_CARDS">"2"</Item>
+<Item name="RULES-TRAP_BOOK_CRYPTOGRAPHY">"3"</Item>
 <Item name="Impressive personal library">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>194</Page>
 </Career>
-<Career id="LUSTR-WORK124">
+<Career id="LUSTR-WORK_ORACLE">
 <Description language="ENGLISH">"Oracle"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPINTUI"</Skill>
+<Skill>"RULES-COMP_INTUITION"</Skill>
 <Class>"RULES-CLASS_PEAS"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -628,61 +615,61 @@
 <Attribut name="RULES-ATTR_Fel">"3"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPANIM">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPORIENT">"1"</Skill>
-  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPPROJ_LANC">"1"</Skill>
-  <Skill name="RULES-COMPCHEV_*">"1"</Skill>
-  <Skill name="RULES-COMPSIGNES_LIZARD">"1"</Skill>
-  <Skill name="RULES-COMPPIST">"1"</Skill>
-  <Skill name="RULES-COMPSOINANI">"2"</Skill>
-  <Skill name="RULES-COMPDRESS_*">"2"</Skill>
-  <Skill name="RULES-COMPCALM">"2"</Skill>
-  <Skill name="RULES-COMPEVAL">"2"</Skill>
-  <Skill name="RULES-COMPINTIM">"2"</Skill>
-  <Skill name="RULES-COMPCOMB_HAST">"2"</Skill>
-  <Skill name="RULES-COMPGUERI">"3"</Skill>
-  <Skill name="RULES-COMPLANG_MAG">"3"</Skill>
-  <Skill name="RULES-COMPCOMM">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_MAGIE">"3"</Skill>
-  <Skill name="RULES-COMPFOCAL_CIEUX/RULES-COMPFOCAL_BETE">"4"</Skill>
-  <Skill name="RULES-COMPSAVOIR_OLDONES">"4"</Skill>
+<Skill name="RULES-COMP_CHARM_ANIMAL">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+  <Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_RANGED__THROWING">"1"</Skill>
+  <Skill name="RULES-COMP_RIDE__*">"1"</Skill>
+  <Skill name="RULES-COMP_SECRET_SIGNS__LIZARDMAN">"1"</Skill>
+  <Skill name="RULES-COMP_TRACK">"1"</Skill>
+  <Skill name="RULES-COMP_ANIMAL_CARE">"2"</Skill>
+  <Skill name="RULES-COMP_ANIMAL_TRAINING__*">"2"</Skill>
+  <Skill name="RULES-COMP_COOL">"2"</Skill>
+  <Skill name="RULES-COMP_EVALUATE">"2"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"2"</Skill>
+  <Skill name="RULES-COMP_MELEE__POLEARM">"2"</Skill>
+  <Skill name="RULES-COMP_HEAL">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__MAGICK">"3"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__MAGIC">"3"</Skill>
+  <Skill name="RULES-COMP_CHANNELLING__AZYR/RULES-COMP_CHANNELLING__GHUR">"4"</Skill>
+  <Skill name="RULES-COMP_LORE__OLD_ONES">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0074">"1"</Talent>
-  <Talent name="RULES-T0040">"1"</Talent>
-  <Talent name="RULES-T0137">"1"</Talent>
-  <Talent name="RULES-T0141">"1"</Talent>
-  <Talent name="RULES-T0115">"2"</Talent>
-  <Talent name="RULES-T0140">"2"</Talent>
-  <Talent name="RULES-T0019">"2"</Talent>
-  <Talent name="RULES-T0151">"2"</Talent>
-  <Talent name="RULES-T0088_BETE/RULES-T0088_CIEUX">"3"</Talent>
-  <Talent name="RULES-T0089">"3"</Talent>
-  <Talent name="RULES-T0020">"3"</Talent>
-  <Talent name="RULES-T0084">"3"</Talent>
-  <Talent name="RULES-T0071">"4"</Talent>
-  <Talent name="RULES-T0042">"4"</Talent>
-  <Talent name="RULES-T0005">"4"</Talent>
-  <Talent name="RULES-T0087">"4"</Talent>
+<Talent name="RULES-T_COOLHEADED">"1"</Talent>
+  <Talent name="RULES-T_DETECT_ARTEFACT">"1"</Talent>
+  <Talent name="RULES-T_SECOND_SIGHT">"1"</Talent>
+  <Talent name="RULES-T_SIXTH_SENSE">"1"</Talent>
+  <Talent name="RULES-T_MAGICAL_SENSE">"2"</Talent>
+  <Talent name="RULES-T_ORIENTATION">"2"</Talent>
+  <Talent name="RULES-T_ROUGHRIDER">"2"</Talent>
+  <Talent name="RULES-T_SURE_SHOT">"2"</Talent>
+  <Talent name="RULES-T_ARCANE_MAGIC__BETE/RULES-T_ARCANE_MAGIC__CIEUX">"3"</Talent>
+  <Talent name="RULES-T_PETTY_MAGIC">"3"</Talent>
+  <Talent name="RULES-T_LUCK">"3"</Talent>
+  <Talent name="RULES-T_READ_WRITE">"3"</Talent>
+  <Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"4"</Talent>
+  <Talent name="RULES-T_INSTINCTIVE_DICTION">"4"</Talent>
+  <Talent name="RULES-T_PURE_SOUL">"4"</Talent>
+  <Talent name="RULES-T_WAR_WIZARD">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="RULES-COMB_HAST_01">"1"</Item>
+<Item name="RULES-COMB_QUARTERSTAFF">"1"</Item>
   <Item name="Divining Rod">"2"</Item>
-<Item name="RULES-PROJ_LANC_05">"2"</Item>
+<Item name="RULES-PROJ_JAVELIN">"2"</Item>
   <Item name="Mask of the Old Ones">"2"</Item>
 <Item name="Collection of Feathers and Amulets">"3"</Item>
 <Item name="Recovered Magical Item">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>196</Page>
 </Career>
-<Career id="LUSTR-WORK125">
+<Career id="LUSTR-WORK_SURVIVALIST">
 <Description language="ENGLISH">"Survivalist"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPSURVEXT"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
 <Class>"RULES-CLASS_RANG"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -715,68 +702,68 @@
 <Attribut name="RULES-ATTR_Fel">"0"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPCALM">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPRESIST">"1"</Skill>
-  <Skill name="RULES-COMPGUERI">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPDISC_RURAL">"1"</Skill>
-  <Skill name="RULES-COMPNATA">"1"</Skill>
-  <Skill name="RULES-COMPRESALC">"2"</Skill>
-  <Skill name="RULES-COMPINTIM">"2"</Skill>
-  <Skill name="RULES-COMPSAVOIR_LOCAL">"2"</Skill>
-  <Skill name="RULES-COMPORIENT">"2"</Skill>
-  <Skill name="RULES-COMPPROJ_*">"2"</Skill>
-  <Skill name="RULES-COMPPIEG">"2"</Skill>
-  <Skill name="RULES-COMPATHL">"3"</Skill>
-  <Skill name="RULES-COMPANIM">"3"</Skill>
-  <Skill name="RULES-COMPSIGNES_RANGER">"3"</Skill>
-  <Skill name="RULES-COMPPIST">"3"</Skill>
-  <Skill name="RULES-COMPSOINANI">"4"</Skill>
-  <Skill name="RULES-COMPCOMM">"4"</Skill>
+<Skill name="RULES-COMP_COOL">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"1"</Skill>
+  <Skill name="RULES-COMP_HEAL">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_STEALTH__RURAL">"1"</Skill>
+  <Skill name="RULES-COMP_SWIM">"1"</Skill>
+  <Skill name="RULES-COMP_CONSUME_ALCOHOL">"2"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"2"</Skill>
+  <Skill name="RULES-COMP_LORE__LOCAL">"2"</Skill>
+  <Skill name="RULES-COMP_NAVIGATION">"2"</Skill>
+  <Skill name="RULES-COMP_RANGED__*">"2"</Skill>
+  <Skill name="RULES-COMP_SET_TRAP">"2"</Skill>
+  <Skill name="RULES-COMP_ATHLETICS">"3"</Skill>
+  <Skill name="RULES-COMP_CHARM_ANIMAL">"3"</Skill>
+  <Skill name="RULES-COMP_SECRET_SIGNS__RANGER">"3"</Skill>
+  <Skill name="RULES-COMP_TRACK">"3"</Skill>
+  <Skill name="RULES-COMP_ANIMAL_CARE">"4"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0047">"1"</Talent>
-  <Talent name="RULES-T0141">"1"</Talent>
-  <Talent name="RULES-T0016">"1"</Talent>
-  <Talent name="RULES-T0116">"1"</Talent>
-  <Talent name="RULES-T0111">"2"</Talent>
-  <Talent name="RULES-T0050">"2"</Talent>
-  <Talent name="RULES-T0086">"2"</Talent>
-  <Talent name="RULES-T0129_*">"2"</Talent>
-  <Talent name="RULES-T0108">"3"</Talent>
-  <Talent name="RULES-T0098">"3"</Talent>
-  <Talent name="RULES-T0140">"3"</Talent>
-  <Talent name="RULES-T0156">"3"</Talent>
-  <Talent name="RULES-T0139_OUIE">"4"</Talent>
-  <Talent name="RULES-T0061">"4"</Talent>
-  <Talent name="RULES-T0167">"4"</Talent>
-  <Talent name="RULES-T0123">"4"</Talent>
+<Talent name="RULES-T_HARDY">"1"</Talent>
+  <Talent name="RULES-T_SIXTH_SENSE">"1"</Talent>
+  <Talent name="RULES-T_STONE_SOUP">"1"</Talent>
+  <Talent name="RULES-T_TENACIOUS">"1"</Talent>
+  <Talent name="RULES-T_FIELD_DRESSING">"2"</Talent>
+  <Talent name="RULES-T_IMPLACABLE">"2"</Talent>
+  <Talent name="RULES-T_IRON_JAW">"2"</Talent>
+  <Talent name="RULES-T_RESISTANCE__*">"2"</Talent>
+  <Talent name="RULES-T_HUNTER_S_EYE">"3"</Talent>
+  <Talent name="RULES-T_MENACING">"3"</Talent>
+  <Talent name="RULES-T_ORIENTATION">"3"</Talent>
+  <Talent name="RULES-T_TRAPPER">"3"</Talent>
+  <Talent name="RULES-T_ACUTE_SENSE__OUIE">"4"</Talent>
+  <Talent name="RULES-T_CAREFUL_STRIKE">"4"</Talent>
+  <Talent name="RULES-T_IRON_WILL">"4"</Talent>
+  <Talent name="RULES-T_WELL_PREPARED">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="RULES-COMB_BASE_*">"1"</Item>
-  <Item name="RULES-TRAP_125">"2"</Item>
-<Item name="RULES-TRAP_150">"2"</Item>
-<Item name="RULES-PROJ_FROND_02">"2"</Item>
-  <Item name="RULES-MUNI_05">"2"</Item>
-  <Item name="RULES-TRAP_015">"2"</Item>
-<Item name="RULES-TRAP_013">"2"</Item>
+<Item name="RULES-COMP_MELEE__BASIC">"1"</Item>
+  <Item name="RULES-TRAP_BEDROLL">"2"</Item>
+<Item name="RULES-TRAP_ROPE_10_YARDS">"2"</Item>
+<Item name="RULES-PROJ_SLING">"2"</Item>
+  <Item name="RULES-MUNI_STONE_BULLET">"2"</Item>
+  <Item name="RULES-TRAP_BOOTS">"2"</Item>
+<Item name="RULES-TRAP_WATERSKIN">"2"</Item>
 <Item name="Animal Traps">"3"</Item>
 <Item name="Repertoire of Bird Calls">"3"</Item>
-<Item name="RULES-TRAP_050">"4"</Item>
-<Item name="RULES-TRAP_123">"4"</Item>
-<Item name="RULES-TRAP_041">"4"</Item>
-<Item name="RULES-TRAP_099">"4"</Item>
+<Item name="RULES-TRAP_ANTITOXIN_KIT">"4"</Item>
+<Item name="RULES-TRAP_BANDAGE">"4"</Item>
+<Item name="RULES-TRAP_RATIONS_1_DAY">"4"</Item>
+<Item name="RULES-TRAP_MAP">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>198</Page>
 </Career>
-<Career id="LUSTR-WORK126">
+<Career id="LUSTR-WORK_TRAILBLAZER">
 <Description language="ENGLISH">"Trailblazer"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPORIENT"</Skill>
+<Skill>"RULES-COMP_NAVIGATION"</Skill>
 <Class>"RULES-CLASS_RANG"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -809,66 +796,66 @@
 <Attribut name="RULES-ATTR_Fel">"4"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPESCAL">"1"</Skill>
-  <Skill name="RULES-COMPCALM">"1"</Skill>
-  <Skill name="RULES-COMPRESIST">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPORIENT">"1"</Skill>
-  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPRAMER">"1"</Skill>
-  <Skill name="RULES-COMPVOILE_*">"1"</Skill>
-  <Skill name="RULES-COMPNATA">"1"</Skill>
-  <Skill name="RULES-COMPATHL">"2"</Skill>
-  <Skill name="RULES-COMPRAGOT">"2"</Skill>
-  <Skill name="RULES-COMPPROJ_POUDRE">"2"</Skill>
-  <Skill name="RULES-COMPCHEV_CHEVAL">"2"</Skill>
-  <Skill name="RULES-COMPDISC_RURAL">"2"</Skill>
-  <Skill name="RULES-COMPMETIER_CARTO">"2"</Skill>
-  <Skill name="RULES-COMPSUBOR">"3"</Skill>
-  <Skill name="RULES-COMPESQU">"3"</Skill>
-  <Skill name="RULES-COMPCOND">"3"</Skill>
-  <Skill name="RULES-COMPRECH">"3"</Skill>
-  <Skill name="RULES-COMPEVAL">"4"</Skill>
-  <Skill name="RULES-COMPCOMM">"4"</Skill>
+<Skill name="RULES-COMP_CLIMB">"1"</Skill>
+  <Skill name="RULES-COMP_COOL">"1"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+  <Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_ROW">"1"</Skill>
+  <Skill name="RULES-COMP_SAIL__*">"1"</Skill>
+  <Skill name="RULES-COMP_SWIM">"1"</Skill>
+  <Skill name="RULES-COMP_ATHLETICS">"2"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"2"</Skill>
+  <Skill name="RULES-COMP_RANGED__BLACKPOWDER">"2"</Skill>
+  <Skill name="RULES-COMP_RIDE__HORSE">"2"</Skill>
+  <Skill name="RULES-COMP_STEALTH__RURAL">"2"</Skill>
+  <Skill name="RULES-COMP_TRADE__CARTOGRAPHER">"2"</Skill>
+  <Skill name="RULES-COMP_BRIBERY">"3"</Skill>
+  <Skill name="RULES-COMP_DODGE">"3"</Skill>
+  <Skill name="RULES-COMP_DRIVE">"3"</Skill>
+  <Skill name="RULES-COMP_RESEARCH">"3"</Skill>
+  <Skill name="RULES-COMP_EVALUATE">"4"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0162">"1"</Talent>
-  <Talent name="RULES-T0140">"1"</Talent>
-  <Talent name="RULES-T0013_*">"1"</Talent>
-  <Talent name="RULES-T0116">"1"</Talent>
-  <Talent name="RULES-T0139_VUE">"2"</Talent>
-  <Talent name="RULES-T0133">"2"</Talent>
-  <Talent name="RULES-T0105">"2"</Talent>
-  <Talent name="RULES-T0066">"2"</Talent>
-  <Talent name="RULES-T0064">"3"</Talent>
-  <Talent name="RULES-T0047">"3"</Talent>
-  <Talent name="RULES-T0168">"3"</Talent>
-  <Talent name="RULES-T0145">"3"</Talent>
-  <Talent name="RULES-T0102">"4"</Talent>
-  <Talent name="RULES-T0136_SOLD">"4"</Talent>
-  <Talent name="RULES-T0053">"4"</Talent>
-  <Talent name="RULES-T0084">"4"</Talent>
+<Talent name="RULES-T_FLEET_FOOTED">"1"</Talent>
+  <Talent name="RULES-T_ORIENTATION">"1"</Talent>
+  <Talent name="RULES-T_STRIDER__*">"1"</Talent>
+  <Talent name="RULES-T_TENACIOUS">"1"</Talent>
+  <Talent name="RULES-T_ACUTE_SENSE__VUE">"2"</Talent>
+  <Talent name="RULES-T_JUMP_UP">"2"</Talent>
+  <Talent name="RULES-T_ROVER">"2"</Talent>
+  <Talent name="RULES-T_SCALE_SHEER_SURFACE">"2"</Talent>
+  <Talent name="RULES-T_FLEE">"3"</Talent>
+  <Talent name="RULES-T_HARDY">"3"</Talent>
+  <Talent name="RULES-T_SEASONED_TRAVELLER">"3"</Talent>
+  <Talent name="RULES-T_SPRINTER">"3"</Talent>
+  <Talent name="RULES-T_DEALMAKER">"4"</Talent>
+  <Talent name="RULES-T_ETIQUETTE__SOLD">"4"</Talent>
+  <Talent name="RULES-T_INSPIRING">"4"</Talent>
+  <Talent name="RULES-T_READ_WRITE">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="RULES-TRAP_134">"1"</Item>
-<Item name="LUSTR-COMB_BASE_03">"1"</Item>
-  <Item name="RULES-TRAP_015">"1"</Item>
-<Item name="RULES-TRAP_035">"1"</Item>
-<Item name="RULES-TRAP_013">"1"</Item>
-<Item name="RULES-TRAP_129">"2"</Item>
-<Item name="RULES-TRAP_099">"2"</Item>
-<Item name="RULES-PROJ_POUDRE_04">"2"</Item>
-  <Item name="RULES-MUNI_06">"2"</Item>
+<Item name="RULES-TRAP_COOKING_POT">"1"</Item>
+<Item name="LUSTR-COMB_MACHETE">"1"</Item>
+  <Item name="RULES-TRAP_BOOTS">"1"</Item>
+<Item name="RULES-TRAP_WALKING_CANE">"1"</Item>
+<Item name="RULES-TRAP_WATERSKIN">"1"</Item>
+<Item name="RULES-TRAP_CHALK">"2"</Item>
+<Item name="RULES-TRAP_MAP">"2"</Item>
+<Item name="RULES-PROJ_PISTOL">"2"</Item>
+  <Item name="RULES-MUNI_BULLET_AND_POWDER">"2"</Item>
   <Item name="10 Shots">"2"</Item>
-<Item name="RULES-TRAP_085">"2"</Item>
-<Item name="RULES-TRAP_125">"3"</Item>
-<Item name="RULES-TRAP_138">"3"</Item>
-<Item name="RULES-TRAP_101">"3"</Item>
+<Item name="RULES-TRAP_TELESCOPE">"2"</Item>
+<Item name="RULES-TRAP_BEDROLL">"3"</Item>
+<Item name="RULES-TRAP_GRAPPLING_HOOK">"3"</Item>
+<Item name="RULES-TRAP_TRADE_TOOLS">"3"</Item>
 <Item name="Company of Explorers">"4"</Item>
-<Item name="RULES-TRAP_116+RULES-TRAP_119">"4"</Item>
-<Item name="RULES-TRAP_151">"4"</Item>
-<Item name="RULES-TRAP_035">"4"</Item>
+<Item name="RULES-TRAP_RIDING_HORSE+RULES-TRAP_SADDLE_AND_HARNESS">"4"</Item>
+<Item name="RULES-TRAP_TENT">"4"</Item>
+<Item name="RULES-TRAP_WALKING_CANE">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>200</Page>
 </Career>
@@ -876,96 +863,97 @@
 <DATA_CAREER_SPECIE>
   <Entry>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="LUSTR-WORK123">"X"</Career>
+<Career name="LUSTR-WORK_INTERPRETER">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="LUSTR-WORK123">"X"</Career>
+<Career name="LUSTR-WORK_INTERPRETER">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="LUSTR-WORK123">"X"</Career>
+<Career name="LUSTR-WORK_INTERPRETER">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="LUSTR-WORK123">"X"</Career>
+<Career name="LUSTR-WORK_INTERPRETER">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="LUSTR-WORK123">"X"</Career>
+<Career name="LUSTR-WORK_INTERPRETER">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="LUSTR-WORK124">"X"</Career>
+<Career name="LUSTR-WORK_ORACLE">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="LUSTR-WORK124">"X"</Career>
+<Career name="LUSTR-WORK_ORACLE">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="LUSTR-WORK124">"X"</Career>
+<Career name="LUSTR-WORK_ORACLE">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="LUSTR-WORK125">"X"</Career>
+<Career name="LUSTR-WORK_SURVIVALIST">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="LUSTR-WORK125">"X"</Career>
+<Career name="LUSTR-WORK_SURVIVALIST">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="LUSTR-WORK125">"X"</Career>
+<Career name="LUSTR-WORK_SURVIVALIST">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="LUSTR-WORK125">"X"</Career>
+<Career name="LUSTR-WORK_SURVIVALIST">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="LUSTR-WORK125">"X"</Career>
+<Career name="LUSTR-WORK_SURVIVALIST">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="LUSTR-WORK126">"X"</Career>
+<Career name="LUSTR-WORK_TRAILBLAZER">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="LUSTR-WORK126">"X"</Career>
+<Career name="LUSTR-WORK_TRAILBLAZER">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="LUSTR-WORK126">"X"</Career>
+<Career name="LUSTR-WORK_TRAILBLAZER">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="LUSTR-WORK126">"X"</Career>
+<Career name="LUSTR-WORK_TRAILBLAZER">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="LUSTR-WORK126">"X"</Career>
+<Career name="LUSTR-WORK_TRAILBLAZER">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK17">"X"</Career>
+<Career name="RULES-WORK_STEVEDORE">"X"</Career>
   </Entry>
 </DATA_CAREER_SPECIE>
 <DATA_SPECIE_CAREER_CHOICE>
   <Choice>
 <Specie>"ARCH2-RACE_OGRE"</Specie>
-<Career>"RULES-WORK11"</Career>
-<Alternative>"LUSTR-WORK126"</Alternative>
+<Career>"RULES-WORK_BOUNTY_HUNTER"</Career>
+<Alternative>"LUSTR-WORK_TRAILBLAZER"</Alternative>
 </Choice>
 <Choice>
 <Specie>"ARCH2-RACE_OGRE"</Specie>
-<Career>"RULES-WORK14"</Career>
-<Alternative>"LUSTR-WORK125"</Alternative>
+<Career>"RULES-WORK_PEDLAR"</Career>
+<Alternative>"LUSTR-WORK_SURVIVALIST"</Alternative>
 </Choice>
 </DATA_SPECIE_CAREER_CHOICE>
 <DATA_RULE>
 <Rule id="LUSTR-RULE_LUSTRIA">
 <Description language="ENGLISH">"Lustrian Class and Career Table"</Description>
+<Explanation language="ENGLISH">""</Explanation>
 <Page>192</Page>
 </Rule>
 </DATA_RULE>
@@ -973,1627 +961,1627 @@
   <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK02">"1"</Career>
+<Career name="RULES-WORK_APOTHECARY">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK31">"1"</Career>
+<Career name="RULES-WORK_ENGINEER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="LUSTR-WORK123">"2"</Career>
+<Career name="LUSTR-WORK_INTERPRETER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK45">"1"</Career>
+<Career name="RULES-WORK_NUN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK36">"1"</Career>
+<Career name="RULES-WORK_PHYSICIAN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK49">"5"</Career>
+<Career name="RULES-WORK_PRIEST">"5"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK23">"2"</Career>
+<Career name="RULES-WORK_SCHOLAR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK58">"1"</Career>
+<Career name="RULES-WORK_WIZARD">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK01">"1"</Career>
+<Career name="RULES-WORK_AGITATOR">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK03">"2"</Career>
+<Career name="RULES-WORK_ARTISAN">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK37">"2"</Career>
+<Career name="RULES-WORK_BEGGAR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK21">"1"</Career>
+<Career name="RULES-WORK_INVESTIGATOR">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK34">"2"</Career>
+<Career name="RULES-WORK_MERCHANT">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK52">"2"</Career>
+<Career name="RULES-WORK_RAT_CATCHER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK07">"1"</Career>
+<Career name="RULES-WORK_TOWNSMAN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK39">"1"</Career>
+<Career name="RULES-WORK_WATCHMAN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK15">"1"</Career>
+<Career name="RULES-WORK_ADVISOR">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK04">"1"</Career>
+<Career name="RULES-WORK_ARTIST">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK18">"1"</Career>
+<Career name="RULES-WORK_DUELLIST">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK20">"1"</Career>
+<Career name="RULES-WORK_ENVOY">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK44">"1"</Career>
+<Career name="RULES-WORK_NOBLE">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK56">"3"</Career>
+<Career name="RULES-WORK_SERVANT">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK24">"1"</Career>
+<Career name="RULES-WORK_SPY">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK32">"1"</Career>
+<Career name="RULES-WORK_WARDEN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK05">"1"</Career>
+<Career name="RULES-WORK_BAILIFF">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK59">"1"</Career>
+<Career name="RULES-WORK_HEDGE_WITCH">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK29">"1"</Career>
+<Career name="RULES-WORK_HERBALIST">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK10">"2"</Career>
+<Career name="RULES-WORK_HUNTER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK40">"1"</Career>
+<Career name="RULES-WORK_MINER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="LUSTR-WORK124">"1"</Career>
+<Career name="LUSTR-WORK_ORACLE">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK19">"1"</Career>
+<Career name="RULES-WORK_SCOUT">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK63">"4"</Career>
+<Career name="RULES-WORK_VILLAGER">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK11">"1"</Career>
+<Career name="RULES-WORK_BOUNTY_HUNTER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK55">"2"</Career>
+<Career name="RULES-WORK_ENTERTAINER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK26">"2"</Career>
+<Career name="RULES-WORK_FLAGELLANT">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK38">"1"</Career>
+<Career name="RULES-WORK_MESSENGER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK14">"1"</Career>
+<Career name="RULES-WORK_PEDLAR">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="LUSTR-WORK125">"2"</Career>
+<Career name="LUSTR-WORK_SURVIVALIST">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="LUSTR-WORK126">"2"</Career>
+<Career name="LUSTR-WORK_TRAILBLAZER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK54">"1"</Career>
+<Career name="RULES-WORK_WITCH_HUNTER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK06">"1"</Career>
+<Career name="RULES-WORK_BOATMAN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK43">"1"</Career>
+<Career name="RULES-WORK_HUFFER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK46">"2"</Career>
+<Career name="RULES-WORK_RIVERWARDEN">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK25">"2"</Career>
+<Career name="RULES-WORK_RIVERWOMAN">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK35">"4"</Career>
+<Career name="RULES-WORK_SEAMAN">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK16">"1"</Career>
+<Career name="RULES-WORK_SMUGGLER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK17">"2"</Career>
+<Career name="RULES-WORK_STEVEDORE">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK42">"1"</Career>
+<Career name="RULES-WORK_WRECKER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK22">"2"</Career>
+<Career name="RULES-WORK_BAWD">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK09">"1"</Career>
+<Career name="RULES-WORK_CHARLATAN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK53">"1"</Career>
+<Career name="RULES-WORK_FENCE">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK48">"3"</Career>
+<Career name="RULES-WORK_GRAVE_ROBBER">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK30">"3"</Career>
+<Career name="RULES-WORK_OUTLAW">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK51">"1"</Career>
+<Career name="RULES-WORK_RACKETEER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK64">"2"</Career>
+<Career name="RULES-WORK_THIEF">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK60">"1"</Career>
+<Career name="RULES-WORK_WITCH">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK08">"2"</Career>
+<Career name="RULES-WORK_CAVALRYMAN">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK27">"1"</Career>
+<Career name="RULES-WORK_GUARD">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK12">"1"</Career>
+<Career name="RULES-WORK_KNIGHT">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK28">"2"</Career>
+<Career name="RULES-WORK_PIT_FIGHTER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK61">"1"</Career>
+<Career name="RULES-WORK_PROTAGONIST">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK57">"4"</Career>
+<Career name="RULES-WORK_SOLDIER">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="RULES-WORK50">"1"</Career>
+<Career name="RULES-WORK_WARRIOR_PRIEST">"1"</Career>
   </Entry>
   <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK02">"1"</Career>
+<Career name="RULES-WORK_APOTHECARY">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK31">"3"</Career>
+<Career name="RULES-WORK_ENGINEER">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="LUSTR-WORK123">"2"</Career>
+<Career name="LUSTR-WORK_INTERPRETER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK36">"1"</Career>
+<Career name="RULES-WORK_PHYSICIAN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK23">"2"</Career>
+<Career name="RULES-WORK_SCHOLAR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK01">"2"</Career>
+<Career name="RULES-WORK_AGITATOR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK03">"6"</Career>
+<Career name="RULES-WORK_ARTISAN">"6"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK37">"1"</Career>
+<Career name="RULES-WORK_BEGGAR">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK21">"2"</Career>
+<Career name="RULES-WORK_INVESTIGATOR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK34">"5"</Career>
+<Career name="RULES-WORK_MERCHANT">"5"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK52">"1"</Career>
+<Career name="RULES-WORK_RAT_CATCHER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK07">"2"</Career>
+<Career name="RULES-WORK_TOWNSMAN">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK39">"2"</Career>
+<Career name="RULES-WORK_WATCHMAN">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK15">"2"</Career>
+<Career name="RULES-WORK_ADVISOR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK04">"1"</Career>
+<Career name="RULES-WORK_ARTIST">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK18">"1"</Career>
+<Career name="RULES-WORK_DUELLIST">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK20">"2"</Career>
+<Career name="RULES-WORK_ENVOY">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK44">"1"</Career>
+<Career name="RULES-WORK_NOBLE">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK56">"1"</Career>
+<Career name="RULES-WORK_SERVANT">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK24">"1"</Career>
+<Career name="RULES-WORK_SPY">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK32">"1"</Career>
+<Career name="RULES-WORK_WARDEN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK05">"1"</Career>
+<Career name="RULES-WORK_BAILIFF">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK10">"2"</Career>
+<Career name="RULES-WORK_HUNTER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK40">"5"</Career>
+<Career name="RULES-WORK_MINER">"5"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK19">"1"</Career>
+<Career name="RULES-WORK_SCOUT">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK63">"4"</Career>
+<Career name="RULES-WORK_VILLAGER">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK11">"3"</Career>
+<Career name="RULES-WORK_BOUNTY_HUNTER">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK55">"2"</Career>
+<Career name="RULES-WORK_ENTERTAINER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK38">"2"</Career>
+<Career name="RULES-WORK_MESSENGER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK14">"1"</Career>
+<Career name="RULES-WORK_PEDLAR">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="LUSTR-WORK125">"4"</Career>
+<Career name="LUSTR-WORK_SURVIVALIST">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="LUSTR-WORK126">"2"</Career>
+<Career name="LUSTR-WORK_TRAILBLAZER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK06">"1"</Career>
+<Career name="RULES-WORK_BOATMAN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK43">"1"</Career>
+<Career name="RULES-WORK_HUFFER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK25">"2"</Career>
+<Career name="RULES-WORK_RIVERWOMAN">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK35">"3"</Career>
+<Career name="RULES-WORK_SEAMAN">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK16">"1"</Career>
+<Career name="RULES-WORK_SMUGGLER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK17">"2"</Career>
+<Career name="RULES-WORK_STEVEDORE">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK42">"1"</Career>
+<Career name="RULES-WORK_WRECKER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK53">"2"</Career>
+<Career name="RULES-WORK_FENCE">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK30">"2"</Career>
+<Career name="RULES-WORK_OUTLAW">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK51">"1"</Career>
+<Career name="RULES-WORK_RACKETEER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK64">"1"</Career>
+<Career name="RULES-WORK_THIEF">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK27">"2"</Career>
+<Career name="RULES-WORK_GUARD">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK28">"3"</Career>
+<Career name="RULES-WORK_PIT_FIGHTER">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK61">"3"</Career>
+<Career name="RULES-WORK_PROTAGONIST">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK57">"3"</Career>
+<Career name="RULES-WORK_SOLDIER">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="RULES-WORK62">"5"</Career>
+<Career name="RULES-WORK_SLAYER">"5"</Career>
   </Entry>
   <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK02">"1"</Career>
+<Career name="RULES-WORK_APOTHECARY">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK31">"1"</Career>
+<Career name="RULES-WORK_ENGINEER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="LUSTR-WORK123">"2"</Career>
+<Career name="LUSTR-WORK_INTERPRETER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK36">"2"</Career>
+<Career name="RULES-WORK_PHYSICIAN">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK23">"2"</Career>
+<Career name="RULES-WORK_SCHOLAR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK01">"2"</Career>
+<Career name="RULES-WORK_AGITATOR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK03">"5"</Career>
+<Career name="RULES-WORK_ARTISAN">"5"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK37">"4"</Career>
+<Career name="RULES-WORK_BEGGAR">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK21">"2"</Career>
+<Career name="RULES-WORK_INVESTIGATOR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK34">"4"</Career>
+<Career name="RULES-WORK_MERCHANT">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK52">"3"</Career>
+<Career name="RULES-WORK_RAT_CATCHER">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK07">"2"</Career>
+<Career name="RULES-WORK_TOWNSMAN">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK39">"2"</Career>
+<Career name="RULES-WORK_WATCHMAN">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK15">"1"</Career>
+<Career name="RULES-WORK_ADVISOR">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK04">"2"</Career>
+<Career name="RULES-WORK_ARTIST">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK20">"1"</Career>
+<Career name="RULES-WORK_ENVOY">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK56">"6"</Career>
+<Career name="RULES-WORK_SERVANT">"6"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK24">"1"</Career>
+<Career name="RULES-WORK_SPY">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK32">"1"</Career>
+<Career name="RULES-WORK_WARDEN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK05">"1"</Career>
+<Career name="RULES-WORK_BAILIFF">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK29">"3"</Career>
+<Career name="RULES-WORK_HERBALIST">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK10">"2"</Career>
+<Career name="RULES-WORK_HUNTER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK40">"1"</Career>
+<Career name="RULES-WORK_MINER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK19">"1"</Career>
+<Career name="RULES-WORK_SCOUT">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK63">"4"</Career>
+<Career name="RULES-WORK_VILLAGER">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK11">"1"</Career>
+<Career name="RULES-WORK_BOUNTY_HUNTER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK55">"3"</Career>
+<Career name="RULES-WORK_ENTERTAINER">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK38">"2"</Career>
+<Career name="RULES-WORK_MESSENGER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK14">"1"</Career>
+<Career name="RULES-WORK_PEDLAR">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="LUSTR-WORK125">"2"</Career>
+<Career name="LUSTR-WORK_SURVIVALIST">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="LUSTR-WORK126">"3"</Career>
+<Career name="LUSTR-WORK_TRAILBLAZER">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK06">"1"</Career>
+<Career name="RULES-WORK_BOATMAN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK43">"1"</Career>
+<Career name="RULES-WORK_HUFFER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK46">"1"</Career>
+<Career name="RULES-WORK_RIVERWARDEN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK25">"2"</Career>
+<Career name="RULES-WORK_RIVERWOMAN">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK35">"3"</Career>
+<Career name="RULES-WORK_SEAMAN">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK16">"3"</Career>
+<Career name="RULES-WORK_SMUGGLER">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK17">"3"</Career>
+<Career name="RULES-WORK_STEVEDORE">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK22">"2"</Career>
+<Career name="RULES-WORK_BAWD">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK09">"1"</Career>
+<Career name="RULES-WORK_CHARLATAN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK53">"1"</Career>
+<Career name="RULES-WORK_FENCE">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK48">"3"</Career>
+<Career name="RULES-WORK_GRAVE_ROBBER">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK30">"1"</Career>
+<Career name="RULES-WORK_OUTLAW">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK51">"1"</Career>
+<Career name="RULES-WORK_RACKETEER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK64">"4"</Career>
+<Career name="RULES-WORK_THIEF">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK27">"1"</Career>
+<Career name="RULES-WORK_GUARD">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK28">"1"</Career>
+<Career name="RULES-WORK_PIT_FIGHTER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="RULES-WORK57">"3"</Career>
+<Career name="RULES-WORK_SOLDIER">"3"</Career>
   </Entry>
   <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK02">"2"</Career>
+<Career name="RULES-WORK_APOTHECARY">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="LUSTR-WORK123">"3"</Career>
+<Career name="LUSTR-WORK_INTERPRETER">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK36">"2"</Career>
+<Career name="RULES-WORK_PHYSICIAN">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK23">"4"</Career>
+<Career name="RULES-WORK_SCHOLAR">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK58">"4"</Career>
+<Career name="RULES-WORK_WIZARD">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK03">"3"</Career>
+<Career name="RULES-WORK_ARTISAN">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK21">"1"</Career>
+<Career name="RULES-WORK_INVESTIGATOR">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK34">"5"</Career>
+<Career name="RULES-WORK_MERCHANT">"5"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK07">"2"</Career>
+<Career name="RULES-WORK_TOWNSMAN">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK39">"1"</Career>
+<Career name="RULES-WORK_WATCHMAN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK15">"2"</Career>
+<Career name="RULES-WORK_ADVISOR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK04">"1"</Career>
+<Career name="RULES-WORK_ARTIST">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK18">"1"</Career>
+<Career name="RULES-WORK_DUELLIST">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK20">"2"</Career>
+<Career name="RULES-WORK_ENVOY">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK44">"3"</Career>
+<Career name="RULES-WORK_NOBLE">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK24">"2"</Career>
+<Career name="RULES-WORK_SPY">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK32">"1"</Career>
+<Career name="RULES-WORK_WARDEN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK29">"2"</Career>
+<Career name="RULES-WORK_HERBALIST">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK10">"3"</Career>
+<Career name="RULES-WORK_HUNTER">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="LUSTR-WORK124">"2"</Career>
+<Career name="LUSTR-WORK_ORACLE">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK19">"6"</Career>
+<Career name="RULES-WORK_SCOUT">"6"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK11">"2"</Career>
+<Career name="RULES-WORK_BOUNTY_HUNTER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK55">"3"</Career>
+<Career name="RULES-WORK_ENTERTAINER">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK38">"1"</Career>
+<Career name="RULES-WORK_MESSENGER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="LUSTR-WORK125">"2"</Career>
+<Career name="LUSTR-WORK_SURVIVALIST">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="LUSTR-WORK126">"3"</Career>
+<Career name="LUSTR-WORK_TRAILBLAZER">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK06">"1"</Career>
+<Career name="RULES-WORK_BOATMAN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK35">"5"</Career>
+<Career name="RULES-WORK_SEAMAN">"5"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK16">"10"</Career>
+<Career name="RULES-WORK_SMUGGLER">"10"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK17">"1"</Career>
+<Career name="RULES-WORK_STEVEDORE">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK22">"2"</Career>
+<Career name="RULES-WORK_BAWD">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK09">"3"</Career>
+<Career name="RULES-WORK_CHARLATAN">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK30">"3"</Career>
+<Career name="RULES-WORK_OUTLAW">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK08">"3"</Career>
+<Career name="RULES-WORK_CAVALRYMAN">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK27">"2"</Career>
+<Career name="RULES-WORK_GUARD">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK12">"1"</Career>
+<Career name="RULES-WORK_KNIGHT">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK28">"2"</Career>
+<Career name="RULES-WORK_PIT_FIGHTER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK61">"1"</Career>
+<Career name="RULES-WORK_PROTAGONIST">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="RULES-WORK57">"3"</Career>
+<Career name="RULES-WORK_SOLDIER">"3"</Career>
   </Entry>
   <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="LUSTR-WORK123">"2"</Career>
+<Career name="LUSTR-WORK_INTERPRETER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="RULES-WORK23">"1"</Career>
+<Career name="RULES-WORK_SCHOLAR">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="RULES-WORK58">"4"</Career>
+<Career name="RULES-WORK_WIZARD">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="RULES-WORK03">"4"</Career>
+<Career name="RULES-WORK_ARTISAN">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="RULES-WORK15">"3"</Career>
+<Career name="RULES-WORK_ADVISOR">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="RULES-WORK04">"3"</Career>
+<Career name="RULES-WORK_ARTIST">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="RULES-WORK20">"6"</Career>
+<Career name="RULES-WORK_ENVOY">"6"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="RULES-WORK44">"5"</Career>
+<Career name="RULES-WORK_NOBLE">"5"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="RULES-WORK24">"3"</Career>
+<Career name="RULES-WORK_SPY">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="RULES-WORK29">"6"</Career>
+<Career name="RULES-WORK_HERBALIST">"6"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="RULES-WORK10">"9"</Career>
+<Career name="RULES-WORK_HUNTER">"9"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="LUSTR-WORK124">"5"</Career>
+<Career name="LUSTR-WORK_ORACLE">"5"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="RULES-WORK19">"11"</Career>
+<Career name="RULES-WORK_SCOUT">"11"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="RULES-WORK11">"2"</Career>
+<Career name="RULES-WORK_BOUNTY_HUNTER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="RULES-WORK55">"4"</Career>
+<Career name="RULES-WORK_ENTERTAINER">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="RULES-WORK38">"2"</Career>
+<Career name="RULES-WORK_MESSENGER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="LUSTR-WORK125">"4"</Career>
+<Career name="LUSTR-WORK_SURVIVALIST">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="LUSTR-WORK126">"4"</Career>
+<Career name="LUSTR-WORK_TRAILBLAZER">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="RULES-WORK42">"1"</Career>
+<Career name="RULES-WORK_WRECKER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="RULES-WORK30">"6"</Career>
+<Career name="RULES-WORK_OUTLAW">"6"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="RULES-WORK08">"4"</Career>
+<Career name="RULES-WORK_CAVALRYMAN">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="RULES-WORK27">"2"</Career>
+<Career name="RULES-WORK_GUARD">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="RULES-WORK12">"2"</Career>
+<Career name="RULES-WORK_KNIGHT">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="RULES-WORK28">"2"</Career>
+<Career name="RULES-WORK_PIT_FIGHTER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="RULES-WORK57">"5"</Career>
+<Career name="RULES-WORK_SOLDIER">"5"</Career>
   </Entry>
   <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="LUSTR-WORK123">"1"</Career>
+<Career name="LUSTR-WORK_INTERPRETER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK45">"1"</Career>
+<Career name="RULES-WORK_NUN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK23">"2"</Career>
+<Career name="RULES-WORK_SCHOLAR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK01">"2"</Career>
+<Career name="RULES-WORK_AGITATOR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK03">"3"</Career>
+<Career name="RULES-WORK_ARTISAN">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK37">"2"</Career>
+<Career name="RULES-WORK_BEGGAR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK34">"2"</Career>
+<Career name="RULES-WORK_MERCHANT">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK52">"1"</Career>
+<Career name="RULES-WORK_RAT_CATCHER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK15">"2"</Career>
+<Career name="RULES-WORK_ADVISOR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK04">"1"</Career>
+<Career name="RULES-WORK_ARTIST">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK44">"1"</Career>
+<Career name="RULES-WORK_NOBLE">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK56">"6"</Career>
+<Career name="RULES-WORK_SERVANT">"6"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK29">"3"</Career>
+<Career name="RULES-WORK_HERBALIST">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK10">"4"</Career>
+<Career name="RULES-WORK_HUNTER">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="LUSTR-WORK124">"1"</Career>
+<Career name="LUSTR-WORK_ORACLE">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK19">"3"</Career>
+<Career name="RULES-WORK_SCOUT">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK63">"5"</Career>
+<Career name="RULES-WORK_VILLAGER">"5"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK55">"2"</Career>
+<Career name="RULES-WORK_ENTERTAINER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK38">"1"</Career>
+<Career name="RULES-WORK_MESSENGER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK14">"1"</Career>
+<Career name="RULES-WORK_PEDLAR">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="LUSTR-WORK125">"3"</Career>
+<Career name="LUSTR-WORK_SURVIVALIST">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="LUSTR-WORK126">"4"</Career>
+<Career name="LUSTR-WORK_TRAILBLAZER">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK06">"2"</Career>
+<Career name="RULES-WORK_BOATMAN">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK43">"3"</Career>
+<Career name="RULES-WORK_HUFFER">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK35">"8"</Career>
+<Career name="RULES-WORK_SEAMAN">"8"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK42">"5"</Career>
+<Career name="RULES-WORK_WRECKER">"5"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK09">"1"</Career>
+<Career name="RULES-WORK_CHARLATAN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK30">"3"</Career>
+<Career name="RULES-WORK_OUTLAW">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK64">"4"</Career>
+<Career name="RULES-WORK_THIEF">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK60">"5"</Career>
+<Career name="RULES-WORK_WITCH">"5"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK08">"3"</Career>
+<Career name="RULES-WORK_CAVALRYMAN">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK28">"4"</Career>
+<Career name="RULES-WORK_PIT_FIGHTER">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK61">"3"</Career>
+<Career name="RULES-WORK_PROTAGONIST">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HBJOR"</Specie>
-<Career name="RULES-WORK57">"8"</Career>
+<Career name="RULES-WORK_SOLDIER">"8"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="LUSTR-WORK123">"1"</Career>
+<Career name="LUSTR-WORK_INTERPRETER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK45">"1"</Career>
+<Career name="RULES-WORK_NUN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK23">"2"</Career>
+<Career name="RULES-WORK_SCHOLAR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK01">"2"</Career>
+<Career name="RULES-WORK_AGITATOR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK03">"3"</Career>
+<Career name="RULES-WORK_ARTISAN">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK37">"2"</Career>
+<Career name="RULES-WORK_BEGGAR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK34">"2"</Career>
+<Career name="RULES-WORK_MERCHANT">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK52">"1"</Career>
+<Career name="RULES-WORK_RAT_CATCHER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK15">"2"</Career>
+<Career name="RULES-WORK_ADVISOR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK04">"1"</Career>
+<Career name="RULES-WORK_ARTIST">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK44">"1"</Career>
+<Career name="RULES-WORK_NOBLE">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK56">"6"</Career>
+<Career name="RULES-WORK_SERVANT">"6"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK29">"3"</Career>
+<Career name="RULES-WORK_HERBALIST">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK10">"4"</Career>
+<Career name="RULES-WORK_HUNTER">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="LUSTR-WORK124">"1"</Career>
+<Career name="LUSTR-WORK_ORACLE">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK19">"3"</Career>
+<Career name="RULES-WORK_SCOUT">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK63">"5"</Career>
+<Career name="RULES-WORK_VILLAGER">"5"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK55">"2"</Career>
+<Career name="RULES-WORK_ENTERTAINER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK38">"1"</Career>
+<Career name="RULES-WORK_MESSENGER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK14">"1"</Career>
+<Career name="RULES-WORK_PEDLAR">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="LUSTR-WORK125">"3"</Career>
+<Career name="LUSTR-WORK_SURVIVALIST">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="LUSTR-WORK126">"4"</Career>
+<Career name="LUSTR-WORK_TRAILBLAZER">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK06">"2"</Career>
+<Career name="RULES-WORK_BOATMAN">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK43">"3"</Career>
+<Career name="RULES-WORK_HUFFER">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK35">"8"</Career>
+<Career name="RULES-WORK_SEAMAN">"8"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK42">"5"</Career>
+<Career name="RULES-WORK_WRECKER">"5"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK09">"1"</Career>
+<Career name="RULES-WORK_CHARLATAN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK30">"3"</Career>
+<Career name="RULES-WORK_OUTLAW">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK64">"4"</Career>
+<Career name="RULES-WORK_THIEF">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK60">"5"</Career>
+<Career name="RULES-WORK_WITCH">"5"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK08">"3"</Career>
+<Career name="RULES-WORK_CAVALRYMAN">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK28">"4"</Career>
+<Career name="RULES-WORK_PIT_FIGHTER">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK61">"3"</Career>
+<Career name="RULES-WORK_PROTAGONIST">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSARL"</Specie>
-<Career name="RULES-WORK57">"8"</Career>
+<Career name="RULES-WORK_SOLDIER">"8"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="LUSTR-WORK123">"1"</Career>
+<Career name="LUSTR-WORK_INTERPRETER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK45">"1"</Career>
+<Career name="RULES-WORK_NUN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK23">"2"</Career>
+<Career name="RULES-WORK_SCHOLAR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK01">"2"</Career>
+<Career name="RULES-WORK_AGITATOR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK03">"3"</Career>
+<Career name="RULES-WORK_ARTISAN">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK37">"2"</Career>
+<Career name="RULES-WORK_BEGGAR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK34">"2"</Career>
+<Career name="RULES-WORK_MERCHANT">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK52">"1"</Career>
+<Career name="RULES-WORK_RAT_CATCHER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK15">"2"</Career>
+<Career name="RULES-WORK_ADVISOR">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK04">"1"</Career>
+<Career name="RULES-WORK_ARTIST">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK44">"1"</Career>
+<Career name="RULES-WORK_NOBLE">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK56">"6"</Career>
+<Career name="RULES-WORK_SERVANT">"6"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK29">"3"</Career>
+<Career name="RULES-WORK_HERBALIST">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK10">"4"</Career>
+<Career name="RULES-WORK_HUNTER">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="LUSTR-WORK124">"1"</Career>
+<Career name="LUSTR-WORK_ORACLE">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK19">"3"</Career>
+<Career name="RULES-WORK_SCOUT">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK63">"5"</Career>
+<Career name="RULES-WORK_VILLAGER">"5"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK55">"2"</Career>
+<Career name="RULES-WORK_ENTERTAINER">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK38">"1"</Career>
+<Career name="RULES-WORK_MESSENGER">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK14">"1"</Career>
+<Career name="RULES-WORK_PEDLAR">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="LUSTR-WORK125">"3"</Career>
+<Career name="LUSTR-WORK_SURVIVALIST">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="LUSTR-WORK126">"4"</Career>
+<Career name="LUSTR-WORK_TRAILBLAZER">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK06">"2"</Career>
+<Career name="RULES-WORK_BOATMAN">"2"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK43">"3"</Career>
+<Career name="RULES-WORK_HUFFER">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK35">"8"</Career>
+<Career name="RULES-WORK_SEAMAN">"8"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK42">"5"</Career>
+<Career name="RULES-WORK_WRECKER">"5"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK09">"1"</Career>
+<Career name="RULES-WORK_CHARLATAN">"1"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK30">"3"</Career>
+<Career name="RULES-WORK_OUTLAW">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK64">"4"</Career>
+<Career name="RULES-WORK_THIEF">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK60">"5"</Career>
+<Career name="RULES-WORK_WITCH">"5"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK08">"3"</Career>
+<Career name="RULES-WORK_CAVALRYMAN">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK28">"4"</Career>
+<Career name="RULES-WORK_PIT_FIGHTER">"4"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK61">"3"</Career>
+<Career name="RULES-WORK_PROTAGONIST">"3"</Career>
   </Entry>
 <Entry>
 <Rule>"LUSTR-RULE_LUSTRIA"</Rule>
 <Specie>"SEAOF-RACE_HSKAE"</Specie>
-<Career name="RULES-WORK57">"8"</Career>
+<Career name="RULES-WORK_SOLDIER">"8"</Career>
   </Entry>
 </DATA_CAREER_ROLL>
 <DATA_OPTION_RULE>

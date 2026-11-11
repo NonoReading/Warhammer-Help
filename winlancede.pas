@@ -5,7 +5,7 @@ unit WinLanceDe;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, StdCtrls, Spin, Dialogs, BCButton,
+  Classes, SysUtils, Forms, Controls, StdCtrls, Spin, Dialogs, MessageTest, BCButton,
   GlobalFonts, ChargeTalent, ChargeConstantes, ChargeTexte,
   ChargeTalentCreation, Graphics, BCLabelContour;
 

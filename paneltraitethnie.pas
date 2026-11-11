@@ -13,7 +13,7 @@ unit PanelTraitEthnie;
 interface
 
 uses
-  BCLabelContour, Classes, SysUtils, Controls, Forms, StdCtrls, ExtCtrls, Grids, Dialogs, Graphics, DOM, BCButton,
+  BCLabelContour, Classes, SysUtils, Controls, Forms, StdCtrls, ExtCtrls, Grids, Dialogs, MessageTest, Graphics, DOM, BCButton,
   ChargeConstantes, ChargeTexte, GlobalFonts, PanelModificateurs;
 
 type
@@ -23,7 +23,7 @@ type
     FBarre, FBarre2: TPanel;
     FBoutonAjouter, FBoutonRetirer, FBoutonTrait, FBoutonRetirerTrait, FBoutonRenommerTrait, FBoutonValider, FBoutonAnnuler: TBCButton;
     FOnValider, FOnAnnuler: TNotifyEvent;
-    FTraitsLib, FTraitsCode, FTalLib, FTalCode, FTraitsInitiaux: TStringList;
+    FTraitsLib, FTraitsCode, FTalLib, FTalCode, FTraitsInitiaux, FPages: TStringList;
     FPrefixe, FLangue: String;
     function  Sanitaire(const S: String; Longueur: Integer): String;
     function  LibTalent(const Code: String): String;
@@ -78,6 +78,7 @@ begin
   FTalLib := TStringList.Create;
   FTalCode := TStringList.Create;
   FTraitsInitiaux := TStringList.Create;
+  FPages := TStringList.Create;
   BevelOuter := bvNone;
   Caption := '';
   FBarre := TPanel.Create(Self);
@@ -113,6 +114,7 @@ begin
   FTalLib.Free;
   FTalCode.Free;
   FTraitsInitiaux.Free;
+  FPages.Free;
   inherited Destroy;
 end;
 
@@ -307,6 +309,7 @@ begin
   FGrille.EditorMode := False;
   FGrille.RowCount := 1;
   FTraitsInitiaux.Clear;
+  FPages.Clear;
   if Chapitre = nil then Exit;
   Tr := Chapitre.FirstChild;
   while Tr <> nil do
@@ -316,6 +319,8 @@ begin
       CodeTrait := TDOMElement(Tr).GetAttribute('id');
       LibelleTrait := LibTrait(CodeTrait, ValeurXML(Tr.FindNode('Description')));
       FTraitsInitiaux.Add(CodeTrait + '=' + LibelleTrait);
+      if Tr.FindNode('Page') <> nil then
+        FPages.Add(CodeTrait + '=' + ValeurXML(Tr.FindNode('Page')));
       Op := Tr.FirstChild;
       while Op <> nil do
       begin
@@ -343,7 +348,7 @@ var
   N, Suivant: TDOMNode;
   ElTrait, ElOption, E: TDOMElement;
   I, R: Integer;
-  Code, IdOption, Base: String;
+  Code, IdOption, Base, Lib, Suf: String;
   Suffixe: Integer;
 
   procedure Balise(Parent: TDOMElement; const Nom, Valeur: String; Multilingue: Boolean);
@@ -378,7 +383,12 @@ begin
     begin
       ElTrait := Doc.CreateElement('SpecieTrait');
       ElTrait.SetAttribute('id', Traits[I]);
-      Balise(ElTrait, 'Description', LibTrait(Traits[I], ''), True);
+      // le suffixe « [code] » ne sert qu'a distinguer deux traits de meme libelle dans la grille
+      Lib := LibTrait(Traits[I], '');
+      Suf := ' [' + Traits[I] + ']';
+      if (Length(Lib) > Length(Suf)) and (Copy(Lib, Length(Lib) - Length(Suf) + 1, Length(Suf)) = Suf) then
+        Lib := Copy(Lib, 1, Length(Lib) - Length(Suf));
+      Balise(ElTrait, 'Description', Lib, True);
       for R := 1 to FGrille.RowCount - 1 do
         if CodeTraitDe(FGrille.Cells[0, R]) = Traits[I] then
         begin
@@ -403,6 +413,8 @@ begin
           ElTrait.AppendChild(Doc.CreateTextNode(#10));
           ElTrait.AppendChild(ElOption);
         end;
+      if FPages.IndexOfName(Traits[I]) >= 0 then
+        Balise(ElTrait, 'Page', FPages.Values[Traits[I]], False);
       ElTrait.AppendChild(Doc.CreateTextNode(#10));
       Chapitre.AppendChild(Doc.CreateTextNode(#10));
       Chapitre.AppendChild(ElTrait);

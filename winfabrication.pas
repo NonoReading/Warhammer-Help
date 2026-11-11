@@ -5,7 +5,7 @@ unit WinFabrication;
 interface
 
 uses
-  BCLabelContour, Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Grids, StdCtrls,
+  BCLabelContour, Classes, SysUtils, Forms, Controls, Graphics, Dialogs, MessageTest, Grids, StdCtrls,
   BCButton, ChargeTexte, ChargeConstantes, ChargeFabrication, GlobalFonts,
   Unitcalcul;
 

@@ -60,81 +60,6 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!--
-    DATA_CAREER_BONUS (1 echantillon) : Level porte un id propre (ex: "..._1"), contenu
-    variable (Order + choix libre parmi SkillChoice/SpecialRule/ModifySkill/ModifyCarac/
-    Skill/ModifyWeapon). Meme note de prudence que DATA_CAREER_ADAPTATION.
-  -->
-  <xs:complexType name="CareerBonusLevelType">
-    <xs:sequence>
-      <xs:element name="Order" type="PlainString"/>
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="SkillChoice" type="SkillChoiceType"/>
-        <xs:element name="SpecialRule" type="OptionallyNamedString"/>
-        <xs:element name="ModifySkill" type="xs:anyType"/>
-        <xs:group ref="ModificateursEffets"/>
-        <xs:element name="Skill" type="xs:anyType"/>
-        <xs:element name="Talent" type="xs:anyType"/>
-      </xs:choice>
-    </xs:sequence>
-    <xs:attribute name="id" type="xs:string" use="required"/>
-  </xs:complexType>
-
-  <!-- <SkillChoice Count="3" Value="5"/> (element vide, attributs seulement). -->
-  <xs:complexType name="SkillChoiceType">
-    <xs:attribute name="Count" type="xs:string" use="optional"/>
-    <xs:attribute name="Value" type="xs:string" use="optional"/>
-  </xs:complexType>
-
-  <!-- <ModifyWeapon name="..." skill="...">+10</ModifyWeapon> : skill= optionnel, precise
-       la competence quand l'arme visee en a plusieurs. -->
-  <xs:complexType name="ModifyWeaponType">
-    <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute name="name" type="xs:string" use="required"/>
-        <xs:attribute name="skill" type="xs:string" use="optional"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-
-  <xs:complexType name="CareerBonusType">
-    <xs:sequence>
-      <xs:element name="Description" type="LangString"/>
-      <xs:element name="Career" type="PlainString"/>
-      <xs:element name="Specie" type="PlainString"/>
-      <xs:element name="Talent" type="PlainString" minOccurs="0"/>
-      <xs:element name="Level" type="CareerBonusLevelType" maxOccurs="unbounded"/>
-    </xs:sequence>
-    <xs:attribute name="id" type="xs:string" use="required"/>
-  </xs:complexType>
-
-  <xs:complexType name="DataCareerBonusType">
-      <xs:annotation>
-        <xs:documentation xml:lang="fr">GREFFON DE DONNEES SUR UNE CARRIERE, selon l'appartenance du personnage (ex. regiments de l'Empire, Nations of Mankind p.6-7 : "treated as if added to their career"). Conditions : Specie (l'ethnie, ex. une province) ET Career (la carriere du Rulebook, ex. Soldier) ; quand elles sont reunies, chaque Level ajoute des competences/talents au niveau Order de la carriere. Dans un Level, &lt;Skill&gt;/&lt;Talent&gt; vides ("") = rien a ce palier ; "A/B" = un choix entre deux ; Level id = &lt;id du bonus&gt;_&lt;numero&gt;. Voir CONTEXT.md 2.44. Un commentaire XML est tolere entre deux CareerBonus mais pas a l'interieur d'une entree.</xs:documentation>
-      </xs:annotation>
-    <xs:sequence>
-      <xs:element name="CareerBonus" type="CareerBonusType" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <!-- DATA_CAREER_ROLL : Entry repete, pas d'id sur le wrapper (confirme le 28/09/2026). -->
-  <xs:complexType name="CareerRollEntryType">
-    <xs:sequence>
-      <xs:element name="Rule" type="PlainString"/>
-      <xs:element name="Specie" type="PlainString"/>
-      <xs:element name="Career" type="NamedString"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="DataCareerRollType">
-      <xs:annotation>
-        <xs:documentation xml:lang="fr">TABLE DE TIRAGE D100 DES CARRIERES POUR UNE REGLE (pas pour une ethnie). Une Entry = une carriere dans la colonne d'une ethnie ou race : Rule = code d'une regle (DATA_RULE) qui REMPLACE la table de base, Specie = ethnie OU race (une race vaut pour toutes ses ethnies), Career name = carriere ; la valeur est une CHANCE : un entier = poids (nombre de valeurs de d100 occupees, les bornes 01-03 etc. se deduisent en classant les carrieres par classe puis par libelle), "X" = eligible mais hors tirage. Pas d'id sur le wrapper. Les fourchettes ne se saisissent jamais : voir ChargeTirageMetier.pas. Commentaire XML entre deux Entry : tolere.</xs:documentation>
-      </xs:annotation>
-    <xs:sequence>
-      <xs:element name="Entry" type="CareerRollEntryType" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-
   <!-- DATA_CAREER_SUBCHOICE : Choice repete, Career + Alternative[name]. -->
   <xs:complexType name="CareerSubchoiceType">
     <xs:sequence>
@@ -416,24 +341,6 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- DATA_RULE -->
-  <xs:complexType name="RuleType">
-    <xs:sequence>
-      <xs:element name="Description" type="LangString"/>
-      <!-- Classe de base remplacee par une regle PARTIELLE (Seafarer) ; absente = regle totale -->
-      <xs:element name="Class" type="xs:string" minOccurs="0"/>
-          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
-      <xs:element name="Page" type="PlainString" minOccurs="0"/>
-    </xs:sequence>
-    <xs:attribute name="id" type="xs:string" use="required"/>
-  </xs:complexType>
-
-  <xs:complexType name="DataRuleType">
-    <xs:sequence>
-      <xs:element name="Rule" type="RuleType" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-
   <!-- ===================== DATA_BOOK (racine) ===================== -->
   <!--
     DISCLAIMER : minOccurs="0" car 2/31 livres WFRP4 en sont depourvus (dette connue,
@@ -448,6 +355,7 @@
       <xs:sequence>
         <xs:element name="CODE_BOOK" type="PlainString"/>
         <xs:element name="BOOK" type="PlainString"/>
+        <xs:element name="BOOKNAME" type="PlainString" minOccurs="0"/>
         <xs:element name="language" type="PlainString"/>
         <xs:element name="VERSION" type="PlainString"/>
         <xs:element name="OFFICIAL" type="PlainString"/>
@@ -489,6 +397,11 @@
           <xs:element name="DATA_NATION" type="DataNationType"/>
           <xs:element name="DATA_OPTION_RULE" type="DataOptionRuleType"/>
           <xs:element name="DATA_RULE" type="DataRuleType"/>
+          <xs:element name="DATA_RULE_SPECIE" type="DataRuleSpecieType"/>
+          <xs:element name="DATA_RULE_BACKGROUND" type="DataRuleBackgroundType"/>
+          <xs:element name="DATA_RULE_BACKGROUND_COUNT" type="DataRuleBackgroundCountType"/>
+          <xs:element name="DATA_RULE_SKILL_ROLL" type="DataRuleSkillRollType"/>
+          <xs:element name="DATA_RULE_TALENT_ROLL" type="DataRuleTalentRollType"/>
           <xs:element name="DATA_TRAPPING" type="DataTrappingType"/>
           <xs:element name="DATA_STARSIGN" type="DataStarsignType"/>
           <xs:element name="DATA_AFFLICTION" type="DataAfflictionType"/>

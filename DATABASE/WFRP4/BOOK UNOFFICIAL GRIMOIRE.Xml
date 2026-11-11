@@ -2,6 +2,7 @@
 <DATA_BOOK>
 <CODE_BOOK>"GRIM"</CODE_BOOK>
 <BOOK>"BOOK UNOFFICIAL GRIMOIRE"</BOOK>
+<BOOKNAME>"UNOFFICIAL GRIMOIRE"</BOOKNAME>
 <language>"ENGLISH"</language>
 <VERSION>"WFRP4"</VERSION>
 <OFFICIAL>"2"</OFFICIAL>
@@ -16,7 +17,7 @@
 </Label>
 </DATA_LABEL>
 <DATA_TALENT>
-  <Talent id="GRIM-T0200">
+  <Talent id="GRIM-T_REMOVE_CURSE">
 <Description language="ENGLISH">"Remove Curse"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -25,7 +26,7 @@
 <Test language="ENGLISH">""</Test>
 <Page>5</Page>
 </Talent>
-          <Talent id="GRIM-T0209">
+          <Talent id="GRIM-T_SUMMON_FAMILIAR">
 <Description language="ENGLISH">"Summon Familiar"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -36,64 +37,64 @@
 </Talent>
 </DATA_TALENT>
 <DATA_TALENT_SPECIALIZATION>
-  <Talent id="RULES-T0088_WARP">
+  <Talent id="RULES-T_ARCANE_MAGIC__WARP">
 <Description language="ENGLISH">"Arcane Magic (Warp)"</Description>
-  <Generique>"RULES-T0088_*"</Generique>
+  <Generique>"RULES-T_ARCANE_MAGIC__*"</Generique>
 <Page>133</Page>
 </Talent>
-<Talent id="RULES-T0088_GOBLIN">
+<Talent id="RULES-T_ARCANE_MAGIC__GOBLIN">
 <Description language="ENGLISH">"Arcane Magic (Goblin)"</Description>
-  <Generique>"RULES-T0088_*"</Generique>
+  <Generique>"RULES-T_ARCANE_MAGIC__*"</Generique>
 <Page>133</Page>
 </Talent>
-<Talent id="RULES-T0088_WILD">
+<Talent id="RULES-T_ARCANE_MAGIC__WILD">
 <Description language="ENGLISH">"Arcane Magic (Wild)"</Description>
-  <Generique>"RULES-T0088_*"</Generique>
+  <Generique>"RULES-T_ARCANE_MAGIC__*"</Generique>
 <Page>133</Page>
 </Talent>
-<Talent id="RULES-T0088_ELEMENT">
+<Talent id="RULES-T_ARCANE_MAGIC__ELEMENT">
 <Description language="ENGLISH">"Arcane Magic (Elementalism)"</Description>
-  <Generique>"RULES-T0088_*"</Generique>
+  <Generique>"RULES-T_ARCANE_MAGIC__*"</Generique>
 <Page>133</Page>
 </Talent>
-<Talent id="GRIM-T0201">
+<Talent id="GRIM-T_CHAOS_MAGIC__NURGLE">
 <Description language="ENGLISH">"Chaos Magic (Nurgle)"</Description>
-  <Generique>"RULES-T0172_*"</Generique>
+  <Generique>"RULES-T_CHAOS_MAGIC__*"</Generique>
 <Page>134</Page>
 </Talent>
-<Talent id="GRIM-T0202">
+<Talent id="GRIM-T_CHAOS_MAGIC__SLAANESH">
 <Description language="ENGLISH">"Chaos Magic (Slaanesh)"</Description>
-  <Generique>"RULES-T0172_*"</Generique>
+  <Generique>"RULES-T_CHAOS_MAGIC__*"</Generique>
 <Page>134</Page>
 </Talent>
 </DATA_TALENT_SPECIALIZATION>
   <DATA_SKILL_SPECIALIZATION>
-<Skill id="GRIM-COMPFOCAL_WILD">
+<Skill id="GRIM-COMP_CHANNELLING__LORE_OF_THE_WILD">
 <Description language="ENGLISH">"Channelling (Lore of the Wild)"</Description>
-<Generique>"RULES-COMPFOCAL_*"</Generique>
+<Generique>"RULES-COMP_CHANNELLING__*"</Generique>
 <Page>120</Page>
 </Skill>
-<Skill id="GRIM-COMPSAVOIR_WOOD">
+<Skill id="GRIM-COMP_LORE__WOODLAND">
 <Description language="ENGLISH">"Lore (Woodland)"</Description>
-<Generique>"RULES-COMPSAVOIR_*"</Generique>
+<Generique>"RULES-COMP_LORE__*"</Generique>
 <Page>126</Page>
 </Skill>
-<Skill id="GRIM-COMPSAVOIR_FAITH">
+<Skill id="GRIM-COMP_LORE__THE_OLD_FAITH">
 <Description language="ENGLISH">"Lore (The Old Faith)"</Description>
-<Generique>"RULES-COMPSAVOIR_*"</Generique>
+<Generique>"RULES-COMP_LORE__*"</Generique>
 <Page>126</Page>
 </Skill>
-<Skill id="GRIM-COMPSAVOIR_NATURE">
+<Skill id="GRIM-COMP_LORE__NATURE">
 <Description language="ENGLISH">"Lore (Nature)"</Description>
-<Generique>"RULES-COMPSAVOIR_*"</Generique>
+<Generique>"RULES-COMP_LORE__*"</Generique>
 <Page>126</Page>
 </Skill>
 </DATA_SKILL_SPECIALIZATION>
 <DATA_CAREER>
-<Career id="GRIM-WORK136">
+<Career id="GRIM-WORK_DRUIDIC_PRIEST">
 <Description language="ENGLISH">"Druidic Priest"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPSAVOIR_HERB"</Skill>
+<Skill>"RULES-COMP_LORE__HERBS"</Skill>
 <Class>"RULES-CLASS_PEAS"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -126,44 +127,44 @@
 <Attribut name="RULES-ATTR_Fel">"3"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPSOINANI">"1"</Skill>
-  <Skill name="RULES-COMPANIM">"1"</Skill>
-  <Skill name="RULES-COMPRESIST">"1"</Skill>
-  <Skill name="RULES-COMPGUERI">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_HERB">"1"</Skill>
-  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
-  <Skill name="RULES-COMPPIEG">"1"</Skill>
-  <Skill name="RULES-COMPPIST">"1"</Skill>
-  <Skill name="RULES-COMPDRESS_*">"2"</Skill>
-  <Skill name="RULES-COMPINTUI">"2"</Skill>
-  <Skill name="RULES-COMPLANG_MAG">"2"</Skill>
-  <Skill name="GRIM-COMPSAVOIR_FAITH">"2"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE/RULES-COMPCOMB_HAST">"2"</Skill>
-  <Skill name="RULES-COMPORIENT/RULES-COMPMETIER_HERB">"2"</Skill>
-  <Skill name="GRIM-COMPFOCAL_WILD">"3"</Skill>
-  <Skill name="RULES-COMPDIVERT_NARRA">"3"</Skill>
-  <Skill name="GRIM-COMPSAVOIR_WOOD">"3"</Skill>
-  <Skill name="RULES-COMPDISC_RURAL">"3"</Skill>
-  <Skill name="RULES-COMPCALM">"4"</Skill>
-  <Skill name="RULES-COMPNATA">"4"</Skill>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM_ANIMAL">"1"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"1"</Skill>
+  <Skill name="RULES-COMP_HEAL">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__HERBS">"1"</Skill>
+  <Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+  <Skill name="RULES-COMP_SET_TRAP">"1"</Skill>
+  <Skill name="RULES-COMP_TRACK">"1"</Skill>
+  <Skill name="RULES-COMP_ANIMAL_TRAINING__*">"2"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"2"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__MAGICK">"2"</Skill>
+  <Skill name="GRIM-COMP_LORE__THE_OLD_FAITH">"2"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC/RULES-COMP_MELEE__POLEARM">"2"</Skill>
+  <Skill name="RULES-COMP_NAVIGATION/RULES-COMP_TRADE__HERBALIST">"2"</Skill>
+  <Skill name="GRIM-COMP_CHANNELLING__LORE_OF_THE_WILD">"3"</Skill>
+  <Skill name="RULES-COMP_ENTERTAIN__STORYTELLING">"3"</Skill>
+  <Skill name="GRIM-COMP_LORE__WOODLAND">"3"</Skill>
+  <Skill name="RULES-COMP_STEALTH__RURAL">"3"</Skill>
+  <Skill name="RULES-COMP_COOL">"4"</Skill>
+  <Skill name="RULES-COMP_SWIM">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0003">"1"</Talent>
-  <Talent name="RULES-T0140">"1"</Talent>
-  <Talent name="RULES-T0013_*">"1"</Talent>
-  <Talent name="GRIM-T0209">"1"</Talent>
-  <Talent name="RULES-T0111/RULES-T0141">"2"</Talent>
-  <Talent name="RULES-T0089">"2"</Talent>
-  <Talent name="RULES-T0129_CORR/RULES-T0105">"2"</Talent>
-  <Talent name="RULES-T0137">"2"</Talent>
-  <Talent name="RULES-T0047/RULES-T0156">"3"</Talent>
-  <Talent name="RULES-T0042">"3"</Talent>
-  <Talent name="RULES-T0166/RULES-T0117">"3"</Talent>
-  <Talent name="RULES-T0088_WILD">"3"</Talent>
-  <Talent name="RULES-T0071">"4"</Talent>
-  <Talent name="RULES-T0074">"4"</Talent>
-  <Talent name="RULES-T0115">"4"</Talent>
-  <Talent name="RULES-T0005/RULES-T0129_CORR">"4"</Talent>
+<Talent name="RULES-T_ANIMAL_AFFINITY">"1"</Talent>
+  <Talent name="RULES-T_ORIENTATION">"1"</Talent>
+  <Talent name="RULES-T_STRIDER__*">"1"</Talent>
+  <Talent name="GRIM-T_SUMMON_FAMILIAR">"1"</Talent>
+  <Talent name="RULES-T_FIELD_DRESSING/RULES-T_SIXTH_SENSE">"2"</Talent>
+  <Talent name="RULES-T_PETTY_MAGIC">"2"</Talent>
+  <Talent name="RULES-T_RESISTANCE__CORR/RULES-T_ROVER">"2"</Talent>
+  <Talent name="RULES-T_SECOND_SIGHT">"2"</Talent>
+  <Talent name="RULES-T_HARDY/RULES-T_TRAPPER">"3"</Talent>
+  <Talent name="RULES-T_INSTINCTIVE_DICTION">"3"</Talent>
+  <Talent name="RULES-T_SHARP/RULES-T_SAVVY">"3"</Talent>
+  <Talent name="RULES-T_ARCANE_MAGIC__WILD">"3"</Talent>
+  <Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"4"</Talent>
+  <Talent name="RULES-T_COOLHEADED">"4"</Talent>
+  <Talent name="RULES-T_MAGICAL_SENSE">"4"</Talent>
+  <Talent name="RULES-T_PURE_SOUL/RULES-T_RESISTANCE__CORR">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Boots">"1"</Item>
@@ -183,10 +184,10 @@
 </SUBCHAPTER_ITEM>
 <Page>11</Page>
 </Career>
-<Career id="GRIM-WORK137">
+<Career id="GRIM-WORK_ELEMENTALIST">
 <Description language="ENGLISH">"Elementalist"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPFOCAL_*"</Skill>
+<Skill>"RULES-COMP_CHANNELLING__*"</Skill>
 <Class>"RULES-CLASS_RANG"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -219,44 +220,44 @@
 <Attribut name="RULES-ATTR_Fel">"4"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPFOCAL_*">"1"</Skill>
-  <Skill name="RULES-COMPRAGOT">"1"</Skill>
-  <Skill name="RULES-COMPLANG_MAG">"1"</Skill>
-  <Skill name="GRIM-COMPSAVOIR_NATURE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPORIENT">"1"</Skill>
-  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
-  <Skill name="RULES-COMPNATA">"1"</Skill>
-  <Skill name="RULES-COMPSOINANI/RULES-COMPGUERI">"2"</Skill>
-  <Skill name="RULES-COMPESQU">"2"</Skill>
-  <Skill name="RULES-COMPRESIST">"2"</Skill>
-  <Skill name="RULES-COMPINTUI">"2"</Skill>
-  <Skill name="RULES-COMPSAVOIR_HERB">"2"</Skill>
-  <Skill name="RULES-COMPDISC_*">"2"</Skill>
-  <Skill name="RULES-COMPCHARM">"3"</Skill>
-  <Skill name="RULES-COMPESCAL">"3"</Skill>
-  <Skill name="RULES-COMPPRECEP">"3"</Skill>
-  <Skill name="RULES-COMPCHEV_*/RULES-COMPRAMER">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
-  <Skill name="RULES-COMPRECH">"4"</Skill>
+<Skill name="RULES-COMP_CHANNELLING__*">"1"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__MAGICK">"1"</Skill>
+  <Skill name="GRIM-COMP_LORE__NATURE">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+  <Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+  <Skill name="RULES-COMP_SWIM">"1"</Skill>
+  <Skill name="RULES-COMP_ANIMAL_CARE/RULES-COMP_HEAL">"2"</Skill>
+  <Skill name="RULES-COMP_DODGE">"2"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"2"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"2"</Skill>
+  <Skill name="RULES-COMP_LORE__HERBS">"2"</Skill>
+  <Skill name="RULES-COMP_STEALTH__*">"2"</Skill>
+  <Skill name="RULES-COMP_CHARM">"3"</Skill>
+  <Skill name="RULES-COMP_CLIMB">"3"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"3"</Skill>
+  <Skill name="RULES-COMP_RIDE__*/RULES-COMP_ROW">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"4"</Skill>
+  <Skill name="RULES-COMP_RESEARCH">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0071">"1"</Talent>
-  <Talent name="RULES-T0089">"1"</Talent>
-  <Talent name="RULES-T0084">"1"</Talent>
-  <Talent name="RULES-T0137">"1"</Talent>
-  <Talent name="RULES-T0078">"2"</Talent>
-  <Talent name="RULES-T0088_ELEMENT">"2"</Talent>
-  <Talent name="RULES-T0129_CORR">"2"</Talent>
-  <Talent name="RULES-T0141">"2"</Talent>
-  <Talent name="RULES-T0139_*">"3"</Talent>
-  <Talent name="RULES-T0144">"3"</Talent>
-  <Talent name="RULES-T0091">"3"</Talent>
-  <Talent name="RULES-T0042">"3"</Talent>
-  <Talent name="RULES-T0040">"4"</Talent>
-  <Talent name="RULES-T0142">"4"</Talent>
-  <Talent name="RULES-T0115">"4"</Talent>
-  <Talent name="RULES-T0100">"4"</Talent>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"1"</Talent>
+  <Talent name="RULES-T_PETTY_MAGIC">"1"</Talent>
+  <Talent name="RULES-T_READ_WRITE">"1"</Talent>
+  <Talent name="RULES-T_SECOND_SIGHT">"1"</Talent>
+  <Talent name="RULES-T_BENEATH_NOTICE">"2"</Talent>
+  <Talent name="RULES-T_ARCANE_MAGIC__ELEMENT">"2"</Talent>
+  <Talent name="RULES-T_RESISTANCE__CORR">"2"</Talent>
+  <Talent name="RULES-T_SIXTH_SENSE">"2"</Talent>
+  <Talent name="RULES-T_ACUTE_SENSE__*">"3"</Talent>
+  <Talent name="RULES-T_CATFALL">"3"</Talent>
+  <Talent name="RULES-T_FAST_HANDS">"3"</Talent>
+  <Talent name="RULES-T_INSTINCTIVE_DICTION">"3"</Talent>
+  <Talent name="RULES-T_DETECT_ARTEFACT">"4"</Talent>
+  <Talent name="RULES-T_GREGARIOUS">"4"</Talent>
+  <Talent name="RULES-T_MAGICAL_SENSE">"4"</Talent>
+  <Talent name="RULES-T_STRONG_SWIMMER">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Grimoire">"1"</Item>
@@ -276,1935 +277,1935 @@
 <DATA_CAREER_SPECIE>
 <Entry>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="GRIM-WORK136">"X"</Career>
+<Career name="GRIM-WORK_DRUIDIC_PRIEST">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="GRIM-WORK137">"X"</Career>
+<Career name="GRIM-WORK_ELEMENTALIST">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="GRIM-WORK137">"X"</Career>
+<Career name="GRIM-WORK_ELEMENTALIST">"X"</Career>
   </Entry>
 </DATA_CAREER_SPECIE>
 <DATA_SPELL>
-  <Sort id="GRIM-PETTY_01">
+  <Sort id="GRIM-PETTY_BELLIGERENCE">
 <Description language="ENGLISH">"Belligerence"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>5</Page>
 </Sort>
-<Sort id="GRIM-PETTY_02">
+<Sort id="GRIM-PETTY_COMFORT">
 <Description language="ENGLISH">"Comfort"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>5</Page>
 </Sort>
-<Sort id="GRIM-PETTY_03">
+<Sort id="GRIM-PETTY_CONVERSE_BY_CANDLELIGHT">
 <Description language="ENGLISH">"Converse By Candlelight"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(ATTR_WP) minutes (each)"</Duration>
 <Range>"(BATTR_WP) miles (each)"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>5</Page>
 </Sort>
-<Sort id="GRIM-PETTY_04">
+<Sort id="GRIM-PETTY_FIND">
 <Description language="ENGLISH">"Find"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>5</Page>
 </Sort>
-<Sort id="GRIM-PETTY_05">
+<Sort id="GRIM-PETTY_INDUCE_FLAVOUR">
 <Description language="ENGLISH">"Induce Flavour"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>5</Page>
 </Sort>
-<Sort id="GRIM-PETTY_06">
+<Sort id="GRIM-PETTY_MAGIC_LOCK">
 <Description language="ENGLISH">"Magic Lock"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(ATTR_WP) minutes"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>5</Page>
 </Sort>
-<Sort id="GRIM-PETTY_07">
+<Sort id="GRIM-PETTY_MEND">
 <Description language="ENGLISH">"Mend"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>5</Page>
 </Sort>
-<Sort id="GRIM-PETTY_08">
+<Sort id="GRIM-PETTY_PETTY_CURSE">
 <Description language="ENGLISH">"Petty Curse"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Until removed"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>5</Page>
 </Sort>
-<Sort id="GRIM-PETTY_09">
+<Sort id="GRIM-PETTY_READ_OUT">
 <Description language="ENGLISH">"Read Out"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Up to (ATTR_WP) minutes"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>6</Page>
 </Sort>
-<Sort id="GRIM-PETTY_10">
+<Sort id="GRIM-PETTY_REINFORCE">
 <Description language="ENGLISH">"Reinforce"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) days"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>6</Page>
 </Sort>
-  <Sort id="GRIM-ARCAN_01">
+  <Sort id="GRIM-ARCAN_ACCELERATE">
 <Description language="ENGLISH">"Accelerate"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>6</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_02">
+<Sort id="GRIM-ARCAN_ALARM">
 <Description language="ENGLISH">"Alarm"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Until the next sunrise"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>6</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_03">
+<Sort id="GRIM-ARCAN_AETHYRIC_ARROW">
 <Description language="ENGLISH">"Aethyric Arrow"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>6</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_04">
+<Sort id="GRIM-ARCAN_BERSERK">
 <Description language="ENGLISH">"Berserk"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>6</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_05">
+<Sort id="GRIM-ARCAN_DEADLY_TOUCH">
 <Description language="ENGLISH">"Deadly Touch"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>6</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_06">
+<Sort id="GRIM-ARCAN_DEFT_HANDS">
 <Description language="ENGLISH">"Deft Hands"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(ATTR_WP) minutes"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>6</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_07">
+<Sort id="GRIM-ARCAN_DISPIRIT">
 <Description language="ENGLISH">"Dispirit"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>6</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_08">
+<Sort id="GRIM-ARCAN_ENTHUSE">
 <Description language="ENGLISH">"Enthuse"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>7</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_09">
+<Sort id="GRIM-ARCAN_FORBIDDING">
 <Description language="ENGLISH">"Forbidding"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(BATTR_WP) days"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"12"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>7</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_10">
+<Sort id="GRIM-ARCAN_MENTAL_DUEL">
 <Description language="ENGLISH">"Mental Duel"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Special"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>7</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_11">
+<Sort id="GRIM-ARCAN_OBSERVE">
 <Description language="ENGLISH">"Observe"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>7</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_12">
+<Sort id="GRIM-ARCAN_PAINLESS">
 <Description language="ENGLISH">"Painless"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>7</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_13">
+<Sort id="GRIM-ARCAN_PANIC">
 <Description language="ENGLISH">"Panic"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>7</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_14">
+<Sort id="GRIM-ARCAN_PARALYSE">
 <Description language="ENGLISH">"Paralyse"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>7</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_15">
+<Sort id="GRIM-ARCAN_PROVOCATION">
 <Description language="ENGLISH">"Provocation"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>7</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_16">
+<Sort id="GRIM-ARCAN_RALLY">
 <Description language="ENGLISH">"Rally"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>7</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_17">
+<Sort id="GRIM-ARCAN_REPRESS">
 <Description language="ENGLISH">"Repress"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>8</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_18">
+<Sort id="GRIM-ARCAN_SANCTUARY">
 <Description language="ENGLISH">"Sanctuary"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>8</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_19">
+<Sort id="GRIM-ARCAN_SILENCE">
 <Description language="ENGLISH">"Silence"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>8</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_20">
+<Sort id="GRIM-ARCAN_SLIPPERY_GROUND">
 <Description language="ENGLISH">"Slippery Ground"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>8</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_21">
+<Sort id="GRIM-ARCAN_SLUGGISH">
 <Description language="ENGLISH">"Sluggish"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>8</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_22">
+<Sort id="GRIM-ARCAN_SMASH">
 <Description language="ENGLISH">"Smash"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>8</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_23">
+<Sort id="GRIM-ARCAN_STEAL_AURA">
 <Description language="ENGLISH">"Steal Aura"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>8</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_24">
+<Sort id="GRIM-ARCAN_SUBVERT_BLESSING">
 <Description language="ENGLISH">"Subvert Blessing"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>8</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_25">
+<Sort id="GRIM-ARCAN_SUBVERT_MIRACLE">
 <Description language="ENGLISH">"Subvert Miracle"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>8</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_26">
+<Sort id="GRIM-ARCAN_TONGUES">
 <Description language="ENGLISH">"Tongues"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>8</Page>
 </Sort>
-<Sort id="GRIM-ARCAN_27">
+<Sort id="GRIM-ARCAN_WORD_OF_INVULNERABILITY">
 <Description language="ENGLISH">"Word of Invulnerability"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>8</Page>
 </Sort>
-  <Sort id="GRIM-BETE_01">
+  <Sort id="GRIM-BETE_THE_STANDING_OX">
 <Description language="ENGLISH">"The Standing Ox"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"Instant"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>9</Page>
 </Sort>
-<Sort id="GRIM-BETE_02">
+<Sort id="GRIM-BETE_WINTER_S_LONG_SLUMBER">
 <Description language="ENGLISH">"Winter's Long Slumber"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>9</Page>
 </Sort>
-<Sort id="GRIM-MORT_01">
+<Sort id="GRIM-MORT_ANIMUS_IMPRISONED">
 <Description language="ENGLISH">"Animus Imprisoned"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"15"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>9</Page>
 </Sort>
-<Sort id="GRIM-MORT_02">
+<Sort id="GRIM-MORT_TOMB_ROBBER_S_CURSE">
 <Description language="ENGLISH">"Tomb Robber's Curse"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Special"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>9</Page>
 </Sort>
-<Sort id="GRIM-FEU_01">
+<Sort id="GRIM-FEU_BLOOD_BOIL">
 <Description language="ENGLISH">"Blood Boil"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Special"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>9</Page>
 </Sort>
-<Sort id="GRIM-FEU_02">
+<Sort id="GRIM-FEU_FIERY_FLAVOUR">
 <Description language="ENGLISH">"Fiery Flavour"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>9</Page>
 </Sort>
-<Sort id="GRIM-CIEUX_01">
+<Sort id="GRIM-CIEUX_BIRDSPEAK">
 <Description language="ENGLISH">"Birdspeak"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_CIEUX"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>9</Page>
 </Sort>
-<Sort id="GRIM-CIEUX_02">
+<Sort id="GRIM-CIEUX_WIND_BLAST">
 <Description language="ENGLISH">"Wind Blast"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_CIEUX"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>10</Page>
 </Sort>
-<Sort id="GRIM-VIE_01">
+<Sort id="GRIM-VIE_GEYSER">
 <Description language="ENGLISH">"Geyser"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_VIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>10</Page>
 </Sort>
-<Sort id="GRIM-VIE_02">
+<Sort id="GRIM-VIE_LEAF_SWIRL">
 <Description language="ENGLISH">"Leaf Swirl"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_VIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>10</Page>
 </Sort>
-<Sort id="GRIM-LUMIERE_01">
+<Sort id="GRIM-LUMIERE_THE_POWER_OF_TRUTH">
 <Description language="ENGLISH">"The Power of Truth"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>10</Page>
 </Sort>
-<Sort id="GRIM-LUMIERE_02">
+<Sort id="GRIM-LUMIERE_RADIANT_WEAPON">
 <Description language="ENGLISH">"Radiant Weapon"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>10</Page>
 </Sort>
-<Sort id="GRIM-METAL_01">
+<Sort id="GRIM-METAL_STOKE_THE_FORGE">
 <Description language="ENGLISH">"Stoke the Forge"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>10</Page>
 </Sort>
-<Sort id="GRIM-METAL_02">
+<Sort id="GRIM-METAL_TALE_OF_METAL">
 <Description language="ENGLISH">"Tale of Metal"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>10</Page>
 </Sort>
-<Sort id="GRIM-OMBRE_01">
+<Sort id="GRIM-OMBRE_CLOAK_ACTIVITY">
 <Description language="ENGLISH">"Cloak Activity"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>10</Page>
 </Sort>
-<Sort id="GRIM-OMBRE_02">
+<Sort id="GRIM-OMBRE_SHADOW_DAGGERS">
 <Description language="ENGLISH">"Shadow Daggers"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>10</Page>
 </Sort>
-  <Sort id="GRIM-NURGLE_01">
+  <Sort id="GRIM-NURGLE_MALIGNANT_REGROWTH">
 <Description language="ENGLISH">"Malignant Regrowth"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"GRIM-T0201"</Talent>
+<Talent>"GRIM-T_CHAOS_MAGIC__NURGLE"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 <Page>27</Page>
 </Sort>
-<Sort id="GRIM-NURGLE_02">
+<Sort id="GRIM-NURGLE_MIASMA_OF_PESTILENCE">
 <Description language="ENGLISH">"Miasma of Pestilence"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) Rounds +"</Duration>
 <Range>"You"</Range>
-<Talent>"GRIM-T0201"</Talent>
+<Talent>"GRIM-T_CHAOS_MAGIC__NURGLE"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 <Page>27</Page>
 </Sort>
-<Sort id="GRIM-NURGLE_03">
+<Sort id="GRIM-NURGLE_PLAGUE_WIND">
 <Description language="ENGLISH">"Plague Wind"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"GRIM-T0201"</Talent>
+<Talent>"GRIM-T_CHAOS_MAGIC__NURGLE"</Talent>
 <Level>"14"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 <Page>27</Page>
 </Sort>
-<Sort id="GRIM-NURGLE_04">
+<Sort id="GRIM-NURGLE_REVEAL_THE_INNER_BEAUTY">
 <Description language="ENGLISH">"Reveal the Inner Beauty"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"GRIM-T0201"</Talent>
+<Talent>"GRIM-T_CHAOS_MAGIC__NURGLE"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 <Page>27</Page>
 </Sort>
-<Sort id="GRIM-NURGLE_05">
+<Sort id="GRIM-NURGLE_SPOIL">
 <Description language="ENGLISH">"Spoil"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"GRIM-T0201"</Talent>
+<Talent>"GRIM-T_CHAOS_MAGIC__NURGLE"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 <Page>27</Page>
 </Sort>
-<Sort id="GRIM-NURGLE_06">
+<Sort id="GRIM-NURGLE_STENCH_OF_NURGLE">
 <Description language="ENGLISH">"Stench of Nurgle"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"Area of Effect (BATTR_WP)m"</Range>
-<Talent>"GRIM-T0201"</Talent>
+<Talent>"GRIM-T_CHAOS_MAGIC__NURGLE"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 <Page>27</Page>
 </Sort>
-<Sort id="GRIM-NURGLE_07">
+<Sort id="GRIM-NURGLE_STREAM_OF_CORRUPTION">
 <Description language="ENGLISH">"Stream of Corruption"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Special"</Range>
-<Talent>"GRIM-T0201"</Talent>
+<Talent>"GRIM-T_CHAOS_MAGIC__NURGLE"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 <Page>27</Page>
 </Sort>
-<Sort id="GRIM-NURGLE_08">
+<Sort id="GRIM-NURGLE_WRITHING_CLOAK">
 <Description language="ENGLISH">"Writhing Cloak"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(ATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"GRIM-T0201"</Talent>
+<Talent>"GRIM-T_CHAOS_MAGIC__NURGLE"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 <Page>27</Page>
 </Sort>
-<Sort id="GRIM-SLAANESH_01">
+<Sort id="GRIM-SLAANESH_ACQUIESCENCE">
 <Description language="ENGLISH">"Acquiescence"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"GRIM-T0202"</Talent>
+<Talent>"GRIM-T_CHAOS_MAGIC__SLAANESH"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 <Page>28</Page>
 </Sort>
-<Sort id="GRIM-SLAANESH_02">
+<Sort id="GRIM-SLAANESH_BEAM_OF_SLAANESH">
 <Description language="ENGLISH">"Beam of Slaanesh"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"GRIM-T0202"</Talent>
+<Talent>"GRIM-T_CHAOS_MAGIC__SLAANESH"</Talent>
 <Level>"10"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 <Page>28</Page>
 </Sort>
-<Sort id="GRIM-SLAANESH_03">
+<Sort id="GRIM-SLAANESH_BEDAZZLE">
 <Description language="ENGLISH">"Bedazzle"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) Rounds +"</Duration>
 <Range>"You"</Range>
-<Talent>"GRIM-T0202"</Talent>
+<Talent>"GRIM-T_CHAOS_MAGIC__SLAANESH"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 <Page>28</Page>
 </Sort>
-<Sort id="GRIM-SLAANESH_04">
+<Sort id="GRIM-SLAANESH_FLESHY_CURSE">
 <Description language="ENGLISH">"Fleshy Curse"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Special"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"GRIM-T0202"</Talent>
+<Talent>"GRIM-T_CHAOS_MAGIC__SLAANESH"</Talent>
 <Level>"13"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 <Page>28</Page>
 </Sort>
-<Sort id="GRIM-SLAANESH_05">
+<Sort id="GRIM-SLAANESH_PAVANE_OF_SLAANESH">
 <Description language="ENGLISH">"Pavane of Slaanesh"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"GRIM-T0202"</Talent>
+<Talent>"GRIM-T_CHAOS_MAGIC__SLAANESH"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 <Page>28</Page>
 </Sort>
-<Sort id="GRIM-SLAANESH_06">
+<Sort id="GRIM-SLAANESH_PERFUME_OF_SLAANESH">
 <Description language="ENGLISH">"Perfume of Slaanesh"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (ATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) Rounds +"</Duration>
 <Range>"You"</Range>
-<Talent>"GRIM-T0202"</Talent>
+<Talent>"GRIM-T_CHAOS_MAGIC__SLAANESH"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 <Page>28</Page>
 </Sort>
-<Sort id="GRIM-SLAANESH_07">
+<Sort id="GRIM-SLAANESH_SEDUCTION_SONG">
 <Description language="ENGLISH">"Seduction Song"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"GRIM-T0202"</Talent>
+<Talent>"GRIM-T_CHAOS_MAGIC__SLAANESH"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 <Page>28</Page>
 </Sort>
-<Sort id="GRIM-SLAANESH_08">
+<Sort id="GRIM-SLAANESH_WHISPERS_OF_DOOM">
 <Description language="ENGLISH">"Whispers of Doom"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"GRIM-T0202"</Talent>
+<Talent>"GRIM-T_CHAOS_MAGIC__SLAANESH"</Talent>
 <Level>"10"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 <Page>28</Page>
 </Sort>
-<Sort id="GRIM-TZEENTCH_01">
+<Sort id="GRIM-TZEENTCH_BESTOW_THE_MUTATOR_S_BLESSING">
 <Description language="ENGLISH">"Bestow the Mutator's Blessing"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) days"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0172_TZEENTCH"</Talent>
+<Talent>"RULES-T_CHAOS_MAGIC__TZEENTCH"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 </Sort>
-<Sort id="GRIM-TZEENTCH_02">
+<Sort id="GRIM-TZEENTCH_BOLT_OF_CHANGE">
 <Description language="ENGLISH">"Bolt of Change"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0172_TZEENTCH"</Talent>
+<Talent>"RULES-T_CHAOS_MAGIC__TZEENTCH"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 <Page>29</Page>
 </Sort>
-<Sort id="GRIM-TZEENTCH_03">
+<Sort id="GRIM-TZEENTCH_BOON_OF_FLIGHT">
 <Description language="ENGLISH">"Boon of Flight"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(ATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0172_TZEENTCH"</Talent>
+<Talent>"RULES-T_CHAOS_MAGIC__TZEENTCH"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 </Sort>
-<Sort id="GRIM-TZEENTCH_04">
+<Sort id="GRIM-TZEENTCH_GIFT_OF_TZEENTCH">
 <Description language="ENGLISH">"Gift of Tzeentch"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0172_TZEENTCH"</Talent>
+<Talent>"RULES-T_CHAOS_MAGIC__TZEENTCH"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 </Sort>
-<Sort id="GRIM-TZEENTCH_05">
+<Sort id="GRIM-TZEENTCH_NIGHTMARE_REALITY">
 <Description language="ENGLISH">"Nightmare Reality"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (a single location)"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0172_TZEENTCH"</Talent>
+<Talent>"RULES-T_CHAOS_MAGIC__TZEENTCH"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 <Page>38</Page>
 </Sort>
-<Sort id="GRIM-TZEENTCH_06">
+<Sort id="GRIM-TZEENTCH_PINK_FIRE_OF_TZEENTCH">
 <Description language="ENGLISH">"Pink Fire of Tzeentch"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0172_TZEENTCH"</Talent>
+<Talent>"RULES-T_CHAOS_MAGIC__TZEENTCH"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 <Page>30</Page>
 </Sort>
-<Sort id="GRIM-TZEENTCH_07">
+<Sort id="GRIM-TZEENTCH_TREASON_OF_TZEENTCH">
 <Description language="ENGLISH">"Treason of Tzeentch"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0172_TZEENTCH"</Talent>
+<Talent>"RULES-T_CHAOS_MAGIC__TZEENTCH"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 </Sort>
-<Sort id="GRIM-TZEENTCH_08">
+<Sort id="GRIM-TZEENTCH_TZEENTCH_S_FIRE_STORM">
 <Description language="ENGLISH">"Tzeentch's Fire Storm"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0172_TZEENTCH"</Talent>
+<Talent>"RULES-T_CHAOS_MAGIC__TZEENTCH"</Talent>
 <Level>"13"</Level>
 <TypSpell>"Chaos Magic"</TypSpell>
 <Page>30</Page>
 </Sort>
-  <Sort id="GRIM-DAEMON_01">
+  <Sort id="GRIM-DAEMON_BANISH_DAEMON">
 <Description language="ENGLISH">"Banish Daemon"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"Instant"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_DEMON"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__DEMON"</Talent>
 <Level>"10"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>32</Page>
 </Sort>
-<Sort id="GRIM-DAEMON_02">
+<Sort id="GRIM-DAEMON_HELLRIDE">
 <Description language="ENGLISH">"Hellride"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"1d10 minutes"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_DEMON"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__DEMON"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>32</Page>
 </Sort>
-<Sort id="GRIM-DAEMON_03">
+<Sort id="GRIM-DAEMON_INVOKE_DARK_ENERGY">
 <Description language="ENGLISH">"Invoke Dark Energy"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(ATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_DEMON"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__DEMON"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>32</Page>
 </Sort>
-<Sort id="GRIM-DAEMON_04">
+<Sort id="GRIM-DAEMON_MANIFEST_DAEMONIC_PACK">
 <Description language="ENGLISH">"Manifest Daemonic Pack"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0088_DEMON"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__DEMON"</Talent>
 <Level>"16"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>33</Page>
 </Sort>
-<Sort id="GRIM-DAEMON_05">
+<Sort id="GRIM-DAEMON_MANIFEST_DAEMON_STEED">
 <Description language="ENGLISH">"Manifest Daemon Steed"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0088_DEMON"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__DEMON"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>33</Page>
 </Sort>
-<Sort id="GRIM-DAEMON_06">
+<Sort id="GRIM-DAEMON_TORMENTING_VISION">
 <Description language="ENGLISH">"Tormenting Vision"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_DEMON"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__DEMON"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>33</Page>
 </Sort>
-<Sort id="GRIM-DAEMON_07">
+<Sort id="GRIM-DAEMON_VEIL_OF_CORRUPTION">
 <Description language="ENGLISH">"Veil of Corruption"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_DEMON"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__DEMON"</Talent>
 <Level>"13"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>33</Page>
 </Sort>
-<Sort id="GRIM-DAEMON_08">
+<Sort id="GRIM-DAEMON_WORD_OF_PAIN">
 <Description language="ENGLISH">"Word of Pain"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"Instant"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_DEMON"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__DEMON"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>33</Page>
 </Sort>
-  <Sort id="GRIM-NECRO_01">
+  <Sort id="GRIM-NECRO_AWAKENING">
 <Description language="ENGLISH">"Awakening"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"Until the next sunrise"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_NECRO"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__NECRO"</Talent>
 <Level>"10"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>33</Page>
 </Sort>
-<Sort id="GRIM-NECRO_02">
+<Sort id="GRIM-NECRO_BANISH_UNDEAD">
 <Description language="ENGLISH">"Banish Undead"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_NECRO"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__NECRO"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>34</Page>
 </Sort>
-<Sort id="GRIM-NECRO_03">
+<Sort id="GRIM-NECRO_CONTROL_UNDEAD">
 <Description language="ENGLISH">"Control Undead"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Special"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0088_NECRO"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__NECRO"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>34</Page>
 </Sort>
-<Sort id="GRIM-NECRO_04">
+<Sort id="GRIM-NECRO_FORBIDDING">
 <Description language="ENGLISH">"Forbidding"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Until the next sunrise"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_NECRO"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__NECRO"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>34</Page>
 </Sort>
-<Sort id="GRIM-NECRO_05">
+<Sort id="GRIM-NECRO_HAND_OF_DUST">
 <Description language="ENGLISH">"Hand of Dust"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_NECRO"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__NECRO"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>34</Page>
 </Sort>
-<Sort id="GRIM-NECRO_06">
+<Sort id="GRIM-NECRO_INVIGORATING_VITAE">
 <Description language="ENGLISH">"Invigorating Vitae"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_NECRO"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__NECRO"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>34</Page>
 </Sort>
-<Sort id="GRIM-NECRO_07">
+<Sort id="GRIM-NECRO_RAISE_CHAMPION">
 <Description language="ENGLISH">"Raise Champion"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Until the next sunrise"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_NECRO"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__NECRO"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>34</Page>
 </Sort>
-<Sort id="GRIM-NECRO_08">
+<Sort id="GRIM-NECRO_RIDE_THROUGH_THE_NIGHT">
 <Description language="ENGLISH">"Ride Through the Night"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"Until the next sunrise"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_NECRO"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__NECRO"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>34</Page>
 </Sort>
-<Sort id="GRIM-NECRO_09">
+<Sort id="GRIM-NECRO_WIND_OF_WITHERING">
 <Description language="ENGLISH">"Wind of Withering"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (ATTR_WP)m"</Target>
 <Duration>"Instant"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_NECRO"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__NECRO"</Talent>
 <Level>"12"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>35</Page>
 </Sort>
-  <Sort id="GRIM-WARP_01">
+  <Sort id="GRIM-WARP_THE_CHITTERING">
 <Description language="ENGLISH">"The Chittering"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (ATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_WARP"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WARP"</Talent>
 <Level>"12"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>38</Page>
 </Sort>
-<Sort id="GRIM-WARP_02">
+<Sort id="GRIM-WARP_CLOAK_OF_THE_ASSASSIN">
 <Description language="ENGLISH">"Cloak of the Assassin"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_WARP"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WARP"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>38</Page>
 </Sort>
-<Sort id="GRIM-WARP_03">
+<Sort id="GRIM-WARP_CURSE_OF_THE_HORNED_ONE">
 <Description language="ENGLISH">"Curse of the Horned One"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(ATTR_WP) hours"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_WARP"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WARP"</Talent>
 <Level>"13"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>38</Page>
 </Sort>
-<Sort id="GRIM-WARP_04">
+<Sort id="GRIM-WARP_PESTILENT_BREATH">
 <Description language="ENGLISH">"Pestilent Breath"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"20+(BATTR_WP)m"</Range>
-<Talent>"RULES-T0088_WARP"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WARP"</Talent>
 <Level>"12"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>38</Page>
 </Sort>
-<Sort id="GRIM-WARP_05">
+<Sort id="GRIM-WARP_SKITTERLEAP">
 <Description language="ENGLISH">"Skitterleap"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Willpower Bonus x2 yards"</Range>
-<Talent>"RULES-T0088_WARP"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WARP"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>38</Page>
 </Sort>
-<Sort id="GRIM-WARP_06">
+<Sort id="GRIM-WARP_TRACELESS_DEMISE">
 <Description language="ENGLISH">"Traceless Demise"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_WARP"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WARP"</Talent>
 <Level>"14"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>38</Page>
 </Sort>
-<Sort id="GRIM-WARP_07">
+<Sort id="GRIM-WARP_VEIL_OF_FLIES">
 <Description language="ENGLISH">"Veil of Flies"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_WARP"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WARP"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>38</Page>
 </Sort>
-<Sort id="GRIM-WARP_08">
+<Sort id="GRIM-WARP_WARP_STORM">
 <Description language="ENGLISH">"Warp Storm"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_WARP"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WARP"</Talent>
 <Level>"12"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>38</Page>
 </Sort>
-  <Sort id="GRIM-GOBLIN_01">
+  <Sort id="GRIM-GOBLIN_ITCHY_NUISANCE">
 <Description language="ENGLISH">"Itchy Nuisance"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_GOBLIN"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__GOBLIN"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>44</Page>
 </Sort>
-<Sort id="GRIM-GOBLIN_02">
+<Sort id="GRIM-GOBLIN_SNEAKY_STABBIN">
 <Description language="ENGLISH">"Sneaky Stabbin'"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"(BATTR_Fel) allies"</Target>
 <Duration>"Special"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_GOBLIN"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__GOBLIN"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>44</Page>
 </Sort>
-  <Sort id="GRIM-DRUID_01">
+  <Sort id="GRIM-DRUID_ANIMAL_FRIEND">
 <Description language="ENGLISH">"Animal Friend"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"1 hour"</Duration>
 <Range>"1 yard"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>14</Page>
 </Sort>
-<Sort id="GRIM-DRUID_02">
+<Sort id="GRIM-DRUID_AMBER_CONTOUR">
 <Description language="ENGLISH">"Amber Contour"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>14</Page>
 </Sort>
-<Sort id="GRIM-DRUID_03">
+<Sort id="GRIM-DRUID_CALMING_HAND">
 <Description language="ENGLISH">"Calming Hand"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>14</Page>
 </Sort>
-<Sort id="GRIM-DRUID_04">
+<Sort id="GRIM-DRUID_CAREFUL_STEP">
 <Description language="ENGLISH">"Careful Step"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(ATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>14</Page>
 </Sort>
-<Sort id="GRIM-DRUID_05">
+<Sort id="GRIM-DRUID_CLEANSE_POISON">
 <Description language="ENGLISH">"Cleanse Poison"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>14</Page>
 </Sort>
-<Sort id="GRIM-DRUID_06">
+<Sort id="GRIM-DRUID_COMFORT">
 <Description language="ENGLISH">"Comfort"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>14</Page>
 </Sort>
-<Sort id="GRIM-DRUID_07">
+<Sort id="GRIM-DRUID_COMMUNE">
 <Description language="ENGLISH">"Commune"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>14</Page>
 </Sort>
-<Sort id="GRIM-DRUID_08">
+<Sort id="GRIM-DRUID_DELOUSE">
 <Description language="ENGLISH">"Delouse"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>14</Page>
 </Sort>
-<Sort id="GRIM-DRUID_09">
+<Sort id="GRIM-DRUID_EASE_PAIN">
 <Description language="ENGLISH">"Ease Pain"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>15</Page>
 </Sort>
-<Sort id="GRIM-DRUID_10">
+<Sort id="GRIM-DRUID_EASE_SYMPTOM">
 <Description language="ENGLISH">"Ease Symptom"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>15</Page>
 </Sort>
-<Sort id="GRIM-DRUID_11">
+<Sort id="GRIM-DRUID_FOREST_WALK">
 <Description language="ENGLISH">"Forest Walk"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(ATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>15</Page>
 </Sort>
-<Sort id="GRIM-DRUID_12">
+<Sort id="GRIM-DRUID_FRESH_WATER">
 <Description language="ENGLISH">"Fresh Water"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>15</Page>
 </Sort>
-<Sort id="GRIM-DRUID_13">
+<Sort id="GRIM-DRUID_GUST">
 <Description language="ENGLISH">"Gust"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>15</Page>
 </Sort>
-<Sort id="GRIM-DRUID_14">
+<Sort id="GRIM-DRUID_SENSE_CORRUPTION">
 <Description language="ENGLISH">"Sense Corruption"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(ATTR_WP) minutes"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>15</Page>
 </Sort>
-<Sort id="GRIM-DRUID_15">
+<Sort id="GRIM-DRUID_SENSE_WATER">
 <Description language="ENGLISH">"Sense Water"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(ATTR_WP) minutes"</Duration>
 <Range>"1 mile"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>15</Page>
 </Sort>
-<Sort id="GRIM-DRUID_16">
+<Sort id="GRIM-DRUID_SENSE_WILDLIFE">
 <Description language="ENGLISH">"Sense Wildlife"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(ATTR_WP) minutes"</Duration>
 <Range>"1 mile"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>15</Page>
 </Sort>
-<Sort id="GRIM-DRUID_17">
+<Sort id="GRIM-DRUID_SOOTHE_THE_SAVAGE_PLANT">
 <Description language="ENGLISH">"Soothe the Savage Plant"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>15</Page>
 </Sort>
-<Sort id="GRIM-DRUID_18">
+<Sort id="GRIM-DRUID_SPIRIT_LIGHTS">
 <Description language="ENGLISH">"Spirit Lights"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(ATTR_WP) minutes"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>15</Page>
 </Sort>
-<Sort id="GRIM-DRUID_19">
+<Sort id="GRIM-DRUID_SPIRIT_PERCEPTION">
 <Description language="ENGLISH">"Spirit Perception"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>15</Page>
 </Sort>
-  <Sort id="GRIM-WILD_01">
+  <Sort id="GRIM-WILD_ABSORB_CORRUPTION">
 <Description language="ENGLISH">"Absorb Corruption"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_WILD"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WILD"</Talent>
 <Level>"12"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>16</Page>
 </Sort>
-<Sort id="GRIM-WILD_02">
+<Sort id="GRIM-WILD_ANIMAL_MASTERY">
 <Description language="ENGLISH">"Animal Mastery"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0088_WILD"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WILD"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>16</Page>
 </Sort>
-<Sort id="GRIM-WILD_03">
+<Sort id="GRIM-WILD_AURA_OF_PURITY">
 <Description language="ENGLISH">"Aura of Purity"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_WILD"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WILD"</Talent>
 <Level>"14"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>16</Page>
 </Sort>
-<Sort id="GRIM-WILD_04">
+<Sort id="GRIM-WILD_AUTUMN_S_DECAY">
 <Description language="ENGLISH">"Autumn's Decay"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_WILD"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WILD"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>16</Page>
 </Sort>
-<Sort id="GRIM-WILD_05">
+<Sort id="GRIM-WILD_CALL_ANIMAL">
 <Description language="ENGLISH">"Call Animal"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Special"</Duration>
 <Range>"(BATTR_WP) miles"</Range>
-<Talent>"RULES-T0088_WILD"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WILD"</Talent>
 <Level>"12"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>16</Page>
 </Sort>
-<Sort id="GRIM-WILD_06">
+<Sort id="GRIM-WILD_CALL_LIGHTNING">
 <Description language="ENGLISH">"Call Lightning"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_WILD"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WILD"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>16</Page>
 </Sort>
-<Sort id="GRIM-WILD_07">
+<Sort id="GRIM-WILD_DRAWING_DOWN_THE_MOON">
 <Description language="ENGLISH">"Drawing Down the Moon"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_WILD"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WILD"</Talent>
 <Level>"12"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>16</Page>
 </Sort>
-<Sort id="GRIM-WILD_08">
+<Sort id="GRIM-WILD_EARTHPOWER">
 <Description language="ENGLISH">"Earthpower"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_WILD"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WILD"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>17</Page>
 </Sort>
-<Sort id="GRIM-WILD_09">
+<Sort id="GRIM-WILD_HEAL_ANIMAL">
 <Description language="ENGLISH">"Heal Animal"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_WILD"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WILD"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>17</Page>
 </Sort>
-<Sort id="GRIM-WILD_10">
+<Sort id="GRIM-WILD_MEND_BONES">
 <Description language="ENGLISH">"Mend Bones"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_WILD"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WILD"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>17</Page>
 </Sort>
-<Sort id="GRIM-WILD_11">
+<Sort id="GRIM-WILD_MORNING_MIST">
 <Description language="ENGLISH">"Morning Mist"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) minutes +"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_WILD"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WILD"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>17</Page>
 </Sort>
-<Sort id="GRIM-WILD_12">
+<Sort id="GRIM-WILD_QUICKENING">
 <Description language="ENGLISH">"Quickening"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_WILD"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WILD"</Talent>
 <Level>"11"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>17</Page>
 </Sort>
-<Sort id="GRIM-WILD_13">
+<Sort id="GRIM-WILD_RENEW_GROWTH">
 <Description language="ENGLISH">"Renew Growth"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Special"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_WILD"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WILD"</Talent>
 <Level>"12"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>17</Page>
 </Sort>
-<Sort id="GRIM-WILD_14">
+<Sort id="GRIM-WILD_RITE_OF_SPRING">
 <Description language="ENGLISH">"Rite of Spring"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_WILD"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WILD"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>17</Page>
 </Sort>
-<Sort id="GRIM-WILD_15">
+<Sort id="GRIM-WILD_SPIRIT_SELF">
 <Description language="ENGLISH">"Spirit Self"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) Rounds +"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_WILD"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WILD"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>17</Page>
 </Sort>
-<Sort id="GRIM-WILD_16">
+<Sort id="GRIM-WILD_STOUTSTAFF">
 <Description language="ENGLISH">"Stoutstaff"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(BATTR_WP) Rounds +"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_WILD"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WILD"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>17</Page>
 </Sort>
-<Sort id="GRIM-WILD_17">
+<Sort id="GRIM-WILD_SUMMER_RAIN">
 <Description language="ENGLISH">"Summer Rain"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(ATTR_WP) minutes"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_WILD"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WILD"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>18</Page>
 </Sort>
-<Sort id="GRIM-WILD_18">
+<Sort id="GRIM-WILD_TANGLETHORN">
 <Description language="ENGLISH">"Tanglethorn"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_WILD"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WILD"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>18</Page>
 </Sort>
-<Sort id="GRIM-WILD_19">
+<Sort id="GRIM-WILD_WINTER_S_BITE">
 <Description language="ENGLISH">"Winter's Bite"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_WILD"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WILD"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>18</Page>
 </Sort>
-  <Sort id="GRIM-ELEM_01">
+  <Sort id="GRIM-ELEM_ASSAULT_OF_STONE_EARTH">
 <Description language="ENGLISH">"Assault of Stone (Earth)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_ELEMENT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__ELEMENT"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>20</Page>
 </Sort>
-<Sort id="GRIM-ELEM_02">
+<Sort id="GRIM-ELEM_BLINDING_FLASH_AIR">
 <Description language="ENGLISH">"Blinding Flash (Air)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0088_ELEMENT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__ELEMENT"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>20</Page>
 </Sort>
-<Sort id="GRIM-ELEM_03">
+<Sort id="GRIM-ELEM_BREATHE_UNDERWATER_WATER">
 <Description language="ENGLISH">"Breathe Underwater (Water)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds +"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_ELEMENT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__ELEMENT"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>20</Page>
 </Sort>
-<Sort id="GRIM-ELEM_04">
+<Sort id="GRIM-ELEM_BRING_RAIN_WATER">
 <Description language="ENGLISH">"Bring Rain (Water)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_ELEMENT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__ELEMENT"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>20</Page>
 </Sort>
-<Sort id="GRIM-ELEM_05">
+<Sort id="GRIM-ELEM_CLAP_OF_THUNDER_AIR">
 <Description language="ENGLISH">"Clap of Thunder (Air)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Instant"</Duration>
 <Range>"1 mile"</Range>
-<Talent>"RULES-T0088_ELEMENT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__ELEMENT"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>20</Page>
 </Sort>
-<Sort id="GRIM-ELEM_06">
+<Sort id="GRIM-ELEM_CLEANSING_FLURRIES_AIR">
 <Description language="ENGLISH">"Cleansing Flurries (Air)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_ELEMENT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__ELEMENT"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>20</Page>
 </Sort>
-<Sort id="GRIM-ELEM_07">
+<Sort id="GRIM-ELEM_CLOUD_OF_SMOKE_FIRE">
 <Description language="ENGLISH">"Cloud of Smoke (Fire)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0088_ELEMENT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__ELEMENT"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>20</Page>
 </Sort>
-<Sort id="GRIM-ELEM_08">
+<Sort id="GRIM-ELEM_CRUMBLE_STONE_EARTH">
 <Description language="ENGLISH">"Crumble Stone (Earth)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_ELEMENT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__ELEMENT"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>21</Page>
 </Sort>
-<Sort id="GRIM-ELEM_09">
+<Sort id="GRIM-ELEM_DUST_STORM_AIR">
 <Description language="ENGLISH">"Dust Storm (Air)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(ATTR_WP) minutes"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_ELEMENT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__ELEMENT"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>21</Page>
 </Sort>
-<Sort id="GRIM-ELEM_10">
+<Sort id="GRIM-ELEM_EXTINGUISH_WATER">
 <Description language="ENGLISH">"Extinguish (Water)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_ELEMENT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__ELEMENT"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>21</Page>
 </Sort>
-<Sort id="GRIM-ELEM_11">
+<Sort id="GRIM-ELEM_FLAME_SHEET_FIRE">
 <Description language="ENGLISH">"Flame Sheet (Fire)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (Special)"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0088_ELEMENT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__ELEMENT"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>21</Page>
 </Sort>
-<Sort id="GRIM-ELEM_12">
+<Sort id="GRIM-ELEM_HAND_OF_FIRE_FIRE">
 <Description language="ENGLISH">"Hand of Fire (Fire)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_ELEMENT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__ELEMENT"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>21</Page>
 </Sort>
-<Sort id="GRIM-ELEM_13">
+<Sort id="GRIM-ELEM_LIGHT_AS_A_FEATHER_AIR">
 <Description language="ENGLISH">"Light as a Feather (Air)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds +"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_ELEMENT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__ELEMENT"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>21</Page>
 </Sort>
-<Sort id="GRIM-ELEM_14">
+<Sort id="GRIM-ELEM_PART_THE_SEAS_WATER">
 <Description language="ENGLISH">"Part the Seas (Water)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_ELEMENT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__ELEMENT"</Talent>
 <Level>"12"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>21</Page>
 </Sort>
-<Sort id="GRIM-ELEM_15">
+<Sort id="GRIM-ELEM_QUICKSAND_EARTH">
 <Description language="ENGLISH">"Quicksand (Earth)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Area of Effect (BATTR_WP)m"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_ELEMENT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__ELEMENT"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>21</Page>
 </Sort>
-<Sort id="GRIM-ELEM_16">
+<Sort id="GRIM-ELEM_RESIST_FIRE_FIRE">
 <Description language="ENGLISH">"Resist Fire (Fire)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) Rounds +"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_ELEMENT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__ELEMENT"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>21</Page>
 </Sort>
-<Sort id="GRIM-ELEM_17">
+<Sort id="GRIM-ELEM_SHAPE_ELEMENTAL">
 <Description language="ENGLISH">"Shape Elemental"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(ATTR_WP) minutes"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0088_ELEMENT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__ELEMENT"</Talent>
 <Level>"18"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>21</Page>
 </Sort>
-<Sort id="GRIM-ELEM_18">
+<Sort id="GRIM-ELEM_STOKE_FIRE_FIRE">
 <Description language="ENGLISH">"Stoke Fire (Fire)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_ELEMENT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__ELEMENT"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>21</Page>
 </Sort>
-<Sort id="GRIM-ELEM_19">
+<Sort id="GRIM-ELEM_SWARM_EARTH">
 <Description language="ENGLISH">"Swarm (Earth)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(BATTR_WP)m"</Range>
-<Talent>"RULES-T0088_ELEMENT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__ELEMENT"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>22</Page>
 </Sort>
-<Sort id="GRIM-ELEM_20">
+<Sort id="GRIM-ELEM_WALK_ON_WATER_WATER">
 <Description language="ENGLISH">"Walk on Water (Water)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(ATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_ELEMENT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__ELEMENT"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>22</Page>
 </Sort>
-<Sort id="GRIM-ELEM_21">
+<Sort id="GRIM-ELEM_WALL_SHAKER_EARTH">
 <Description language="ENGLISH">"Wall Shaker (Earth)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"1 Round +"</Duration>
 <Range>"(ATTR_WP)m"</Range>
-<Talent>"RULES-T0088_ELEMENT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__ELEMENT"</Talent>
 <Level>"16"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>22</Page>
 </Sort>
-  <Sort id="GRIM-WPETTY_01">
+  <Sort id="GRIM-WPETTY_FAVOUR">
 <Description language="ENGLISH">"Favour"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>36</Page>
 </Sort>
-<Sort id="GRIM-WPETTY_02">
+<Sort id="GRIM-WPETTY_GHOSTLY_FLAME">
 <Description language="ENGLISH">"Ghostly Flame"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(ATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>36</Page>
 </Sort>
-<Sort id="GRIM-WPETTY_03">
+<Sort id="GRIM-WPETTY_MARK_OF_THE_HORNED_RAT">
 <Description language="ENGLISH">"Mark of the Horned Rat"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>37</Page>
 </Sort>
-<Sort id="GRIM-WPETTY_04">
+<Sort id="GRIM-WPETTY_RAT_THRALL">
 <Description language="ENGLISH">"Rat Thrall"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>37</Page>
 </Sort>
-<Sort id="GRIM-WPETTY_05">
+<Sort id="GRIM-WPETTY_VECTOR">
 <Description language="ENGLISH">"Vector"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>37</Page>
 </Sort>
-<Sort id="GRIM-WPETTY_06">
+<Sort id="GRIM-WPETTY_WRACK">
 <Description language="ENGLISH">"Wrack"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(BATTR_WP) yards"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>37</Page>
 </Sort>
-<Sort id="GRIM-WARCAN_01">
+<Sort id="GRIM-WARCAN_BUOYANT">
 <Description language="ENGLISH">"Buoyant"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_WARP"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WARP"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>37</Page>
 </Sort>
-<Sort id="GRIM-WARCAN_02">
+<Sort id="GRIM-WARCAN_SCREECH">
 <Description language="ENGLISH">"Screech"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(BATTR_WP) miles"</Range>
-<Talent>"RULES-T0088_WARP"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WARP"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>37</Page>
 </Sort>
-<Sort id="GRIM-WARCAN_03">
+<Sort id="GRIM-WARCAN_SHADOW_S_COMPANION">
 <Description language="ENGLISH">"Shadow's Companion"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(ATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_WARP"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WARP"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>37</Page>
 </Sort>
-<Sort id="GRIM-WARCAN_04">
+<Sort id="GRIM-WARCAN_SWIFTPAWS">
 <Description language="ENGLISH">"Swiftpaws"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(ATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_WARP"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WARP"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>37</Page>
 </Sort>
-<Sort id="GRIM-WARCAN_05">
+<Sort id="GRIM-WARCAN_VERMINTIDE">
 <Description language="ENGLISH">"Vermintide"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>"(BATTR_WP) yards"</Range>
-<Talent>"RULES-T0088_WARP"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WARP"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>37</Page>
 </Sort>
-<Sort id="GRIM-WARCAN_06">
+<Sort id="GRIM-WARCAN_WARP_LIGHTNING">
 <Description language="ENGLISH">"Warp Lightning"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(BATTR_WP) yards"</Range>
-<Talent>"RULES-T0088_WARP"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__WARP"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>37</Page>

@@ -13,7 +13,7 @@ unit PanelAdaptation;
 interface
 
 uses
-  BCLabelContour, Classes, SysUtils, Controls, StdCtrls, ExtCtrls, Grids, Dialogs, DOM, BCButton,
+  BCLabelContour, Classes, SysUtils, Controls, StdCtrls, ExtCtrls, Grids, Dialogs, MessageTest, DOM, BCButton,
   ChargeTexte, GlobalFonts, PanelModificateurs, PanelFiche;
 
 type
@@ -255,8 +255,13 @@ var
   I: Integer;
 begin
   Result := Trim(Lib);
-  I := Libs.IndexOf(Result);
-  if I >= 0 then Result := Codes[I];
+  // un libelle peut finir par une espace (Pistage ) : on compare sans espaces de bout
+  for I := 0 to Libs.Count - 1 do
+    if Trim(Libs[I]) = Result then
+    begin
+      Result := Codes[I];
+      Break;
+    end;
 end;
 
 // Libelles et codes proposes pour une nature (Balise) ; faux si la nature est vide.

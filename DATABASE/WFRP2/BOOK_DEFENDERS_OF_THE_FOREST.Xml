@@ -1,0 +1,1295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"DOTF"</CODE_BOOK>
+<BOOK>"BOOK DEFENDERS OF THE FOREST"</BOOK>
+<BOOKNAME>"DEFENDERS OF THE FOREST (LIBER FANATICA)"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"© Copyright Games Workshop Limited 2013. All Rights Reserved. Games Workshop, the Games Workshop logo, Warhammer, Warhammer Fantasy Roleplay, the Warhammer Fan- tasy Roleplay logo, Fantasy Flight Games, the Fantasy Flight Games logo and all associated races and race insignia, marks, names, characters, illustrations, and images from the War- hammer universe are either ®, TM, and/or © Games Workshop Ltd 2000-2004, variably registered in the UK and other countries around the world. All rights reserved."</DISCLAIMER>
+<DATA_SPECIE>
+<Specie id="DOTF-RACE_ELF_WOOD_ATHEL_LOREN">
+<Description language="ENGLISH">"Elf (Wood, Athel Loren)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_ELF"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"5"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 9; 4-6: 10; 7-9: 11; 10: 12"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 1; 5-7: 2; 8-10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_CHARM_ANIMAL"</Skill>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ELVES"</Skill>
+<Skill>"DOTF-COMP_COMMON_KNOWLEDGE_ATHEL_LOREN"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERFORMER_DANCER/RULES-COMP_PERFORMER_MUSICIAN/RULES-COMP_PERFORMER_SINGER/RULES-COMP_TRADE_BOWYER/RULES-COMP_TRADE_FLETCHER"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ELTHARIN"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_SPECIALIST_WEAPON_GROUP__LONGBOW"</Talent>
+<Talent>"RULES-T_COOLHEADED/RULES-T_SAVVY"</Talent>
+<Talent>"RULES-T_EXCELLENT_VISION"</Talent>
+<Talent>"RULES-T_ROVER"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="CCOMP-CARE_APOTHECARY">"6"</Career>
+<Career name="RULES-CARE_APPRENTICE_WIZARD">"6"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"6"</Career>
+<Career name="RULES-CARE_ENVOY">"6"</Career>
+<Career name="RULES-CARE_HUNTER">"6"</Career>
+<Career name="RULES-CARE_INITIATE">"6"</Career>
+<Career name="RULES-CARE_KITHBAND_WARRIOR">"11"</Career>
+<Career name="RULES-CARE_MESSENGER">"7"</Career>
+<Career name="RULES-CARE_NOBLE">"7"</Career>
+<Career name="RULES-CARE_OUTLAW">"8"</Career>
+<Career name="RULES-CARE_OUTRIDER">"7"</Career>
+<Career name="CCOMP-CARE_RIVERWARDEN">"6"</Career>
+<Career name="RULES-CARE_STUDENT">"6"</Career>
+<Career name="RULES-CARE_TRADESMAN">"6"</Career>
+<Career name="RULES-CARE_VAGABOND">"6"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"3"</Page>
+</Specie>
+<Specie id="DOTF-RACE_ELF_WOOD_LAURELORN">
+<Description language="ENGLISH">"Elf (Wood, Laurelorn)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_ELF"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"5"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 9; 4-6: 10; 7-9: 11; 10: 12"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 1; 5-7: 2; 8-10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_CHARM_ANIMAL"</Skill>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ELVES"</Skill>
+<Skill>"DOTF-COMP_COMMON_KNOWLEDGE_LAURELORN"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERFORMER_DANCER/RULES-COMP_PERFORMER_MUSICIAN/RULES-COMP_PERFORMER_SINGER/RULES-COMP_TRADE_BOWYER/RULES-COMP_TRADE_FLETCHER"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ELTHARIN"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_SPECIALIST_WEAPON_GROUP__LONGBOW"</Talent>
+<Talent>"RULES-T_COOLHEADED/RULES-T_SAVVY"</Talent>
+<Talent>"RULES-T_EXCELLENT_VISION"</Talent>
+<Talent>"RULES-T_ROVER"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="CCOMP-CARE_APOTHECARY">"5"</Career>
+<Career name="RULES-CARE_APPRENTICE_WIZARD">"5"</Career>
+<Career name="CCOMP-CARE_CARTOGRAPHER">"4"</Career>
+<Career name="CCOMP-CARE_DILETTANTE">"5"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"5"</Career>
+<Career name="RULES-CARE_ENVOY">"5"</Career>
+<Career name="CCOMP-CARE_GAMBLER">"4"</Career>
+<Career name="RULES-CARE_HUNTER">"5"</Career>
+<Career name="RULES-CARE_INITIATE">"6"</Career>
+<Career name="RULES-CARE_KITHBAND_WARRIOR">"5"</Career>
+<Career name="RULES-CARE_MESSENGER">"5"</Career>
+<Career name="RULES-CARE_NOBLE">"2"</Career>
+<Career name="RULES-CARE_OUTLAW">"4"</Career>
+<Career name="RULES-CARE_OUTRIDER">"5"</Career>
+<Career name="CCOMP-CARE_PILGRIM">"10"</Career>
+<Career name="CCOMP-CARE_RIVERWARDEN">"5"</Career>
+<Career name="RULES-CARE_SCRIBE">"5"</Career>
+<Career name="RULES-CARE_STUDENT">"5"</Career>
+<Career name="RULES-CARE_TRADESMAN">"5"</Career>
+<Career name="RULES-CARE_VAGABOND">"5"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"3"</Page>
+</Specie>
+<Specie id="DOTF-RACE_ELF_WOOD_HINTERGLADES">
+<Description language="ENGLISH">"Elf (Wood, Hinterglades)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_ELF"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"5"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 9; 4-6: 10; 7-9: 11; 10: 12"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 1; 5-7: 2; 8-10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_CHARM_ANIMAL"</Skill>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ELVES"</Skill>
+<Skill>"DOTF-COMP_COMMON_KNOWLEDGE_HINTERGLADES"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_PERFORMER_DANCER/RULES-COMP_PERFORMER_MUSICIAN/RULES-COMP_PERFORMER_SINGER/RULES-COMP_TRADE_BOWYER/RULES-COMP_TRADE_FLETCHER"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ELTHARIN"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_SPECIALIST_WEAPON_GROUP__LONGBOW"</Talent>
+<Talent>"RULES-T_COOLHEADED/RULES-T_SAVVY"</Talent>
+<Talent>"RULES-T_EXCELLENT_VISION"</Talent>
+<Talent>"RULES-T_ROVER"</Talent>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="CCOMP-CARE_APOTHECARY">"3"</Career>
+<Career name="RULES-CARE_APPRENTICE_WIZARD">"3"</Career>
+<Career name="RULES-CARE_BODYGUARD">"3"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"3"</Career>
+<Career name="CCOMP-CARE_CARTOGRAPHER">"3"</Career>
+<Career name="CCOMP-CARE_DILETTANTE">"5"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"3"</Career>
+<Career name="RULES-CARE_ENVOY">"3"</Career>
+<Career name="CCOMP-CARE_GAMBLER">"3"</Career>
+<Career name="RULES-CARE_HUNTER">"3"</Career>
+<Career name="RULES-CARE_INITIATE">"3"</Career>
+<Career name="RULES-CARE_KITHBAND_WARRIOR">"3"</Career>
+<Career name="RULES-CARE_MERCENARY">"3"</Career>
+<Career name="RULES-CARE_MESSENGER">"3"</Career>
+<Career name="RULES-CARE_NOBLE">"3"</Career>
+<Career name="RULES-CARE_OUTLAW">"4"</Career>
+<Career name="RULES-CARE_OUTRIDER">"3"</Career>
+<Career name="CCOMP-CARE_PILGRIM">"3"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"3"</Career>
+<Career name="CCOMP-CARE_RACONTEUR">"6"</Career>
+<Career name="CCOMP-CARE_RIVERWARDEN">"3"</Career>
+<Career name="RULES-CARE_ROGUE">"3"</Career>
+<Career name="RULES-CARE_SCRIBE">"3"</Career>
+<Career name="RULES-CARE_SMUGGLER">"3"</Career>
+<Career name="RULES-CARE_STUDENT">"3"</Career>
+<Career name="RULES-CARE_THIEF">"5"</Career>
+<Career name="RULES-CARE_THUG">"4"</Career>
+<Career name="RULES-CARE_TRADESMAN">"5"</Career>
+<Career name="RULES-CARE_VAGABOND">"5"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"3"</Page>
+</Specie>
+</DATA_SPECIE>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMP_TRADE_TATTOO">
+<Description language="ENGLISH">"Trade (Tattoo)"</Description>
+<Generique>"RULES-COMP_TRADE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_MALLA_ROOM_BA_LARIN">
+<Description language="ENGLISH">"Speak Language (Malla-room-ba-larin)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="DOTF-COMP_COMMON_KNOWLEDGE_ATHEL_LOREN">
+<Description language="ENGLISH">"Common Knowledge (Athel Loren)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="DOTF-COMP_COMMON_KNOWLEDGE_LAURELORN">
+<Description language="ENGLISH">"Common Knowledge (Laurelorn Forest)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="DOTF-COMP_COMMON_KNOWLEDGE_HINTERGLADES">
+<Description language="ENGLISH">"Common Knowledge (Hinterglades)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+<DATA_CAREER>
+<Career id="DOTF-CARE_BLADESINGER">
+<Description language="ENGLISH">"Bladesinger"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +30%, BS +25%, S +20%, T +20%, Ag +25%, WP +25%"</MainProfile>
+<SecondaryProfile>"A +2, W +6, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"30"</Advance>
+<Advance name="RULES-ATTR_BS">"25"</Advance>
+<Advance name="RULES-ATTR_S">"20"</Advance>
+<Advance name="RULES-ATTR_T">"20"</Advance>
+<Advance name="RULES-ATTR_Ag">"25"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Command, Consume Alcohol, Dodge Blow, Intimidate, Perception, Performer (Acrobat), Performer (any one), Sleight of Hand, Trade (Tattoo)"</Skills>
+<Talents>"Disarm or Lightning Parry, Strike Mighty Blow or Quick Draw, Menacing, Strike to Stun, Fearless"</Talents>
+<Trappings>"Troupe of Wardancers, various weapons, warpaint and tattoos"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_ACROBAT">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_*">"1"</Skill>
+<Skill name="RULES-COMP_SLEIGHT_OF_HAND">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_TATTOO">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_DISARM/RULES-T_LIGHTNING_PARRY">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW/RULES-T_QUICK_DRAW">"1"</Talent>
+<Talent name="RULES-T_MENACING">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_STUN">"1"</Talent>
+<Talent name="RULES-T_FEARLESS">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"DOTF 41"</Source>
+</Career>
+<Career id="DOTF-CARE_HANDMAIDEN_STEWARD">
+<Description language="ENGLISH">"Handmaiden/Steward"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"T +5%, Int +10%, WP +15%, Fel +5%"</MainProfile>
+<SecondaryProfile>"W +2, Mag +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_Mag">"1"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Magic), Channelling, Magical Sense, Perception, Read/Write or Outdoor Survival, Search or Concealment, Speak Arcane Language (Arcane Elf), Trade (Herbalist)"</Skills>
+<Talents>"Aethyric Attunement or Fast Hands, Petty Magic (Arcane), Coolheaded or Savvy"</Talents>
+<Trappings>"Sling Bag with various herbs"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE/RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH/RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ARCANE_ELF">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_HERBALIST">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_FAST_HANDS">"1"</Talent>
+<Talent name="RULES-T_PETTY_MAGIC__ARCANE">"1"</Talent>
+<Talent name="RULES-T_COOLHEADED/RULES-T_SAVVY">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"DOTF 42"</Source>
+</Career>
+<Career id="DOTF-CARE_SPELLSINGER">
+<Description language="ENGLISH">"Spellsinger"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, T +10%, Ag +10%, Int +30%, WP +35%, Fel +15%"</MainProfile>
+<SecondaryProfile>"W +4, Mag +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"35"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_Mag">"4"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Magic), Academic Knowledge (Spirits), Channelling, Charm or Intimidate, Common Knowledge (any two), Gossip or Read/Write, Heal, Magical Sense, Outdoor Survival, Performer (Singer), Speak Arcane Language (Arcane Elf), Speak Language (Malla-room-ba-larin), Speak Language (any two), Trade (Tattoo)"</Skills>
+<Talents>"Spellcraft or Meditation, Dark Magic or Strong-minded, Fast Hands or Mighty Missile, Lesser Magic (any two), Lore of Athel Loren"</Talents>
+<Trappings>"Two Spite Companions, Two magical items"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_SPIRITS">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP/RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_SINGER">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ARCANE_ELF">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_MALLA_ROOM_BA_LARIN">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_TATTOO">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="UTOC-T_SPELLCRAFT/RULES-T_MEDITATION">"1"</Talent>
+<Talent name="RULES-T_DARK_MAGIC/RULES-T_STRONG_MINDED">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="DOTF-T_LORE_OF_ATHEL_LOREN">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"DOTF 42"</Source>
+</Career>
+<Career id="DOTF-CARE_SPELLWEAVER">
+<Description language="ENGLISH">"Spellweaver"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +15%, S +5%, T +15%, Ag +15%, Int +40%, WP +40%, Fel +20%"</MainProfile>
+<SecondaryProfile>"W +5, Mag +5"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"40"</Advance>
+<Advance name="RULES-ATTR_WP">"40"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+<Advance name="RULES-ATTR_W">"5"</Advance>
+<Advance name="RULES-ATTR_Mag">"5"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Magic), Academic Knowledge (Spirits), Academic Knowledge (any two), Channelling, Charm or Intimidate, Common Knowledge (any three), Heal, Magical Sense, Performer (Singer), Read/Write or Outdoor Survival, Speak Arcane Language (Arcane Elf), Speak Language (Malla-room-ba-larin), Speak Language (any two)"</Skills>
+<Talents>"Mighty Missile or Dark Magic, Meditation or Spellcraft, Hardy or Fast Hands, Lesser Magic (any two), Seasoned Traveller or Trade (Tattoo)"</Talents>
+<Trappings>"Three magic items, Several Spite Companions"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_SPIRITS">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_SINGER">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE/RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ARCANE_ELF">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_MALLA_ROOM_BA_LARIN">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_MIGHTY_MISSILE/RULES-T_DARK_MAGIC">"1"</Talent>
+<Talent name="RULES-T_MEDITATION/UTOC-T_SPELLCRAFT">"1"</Talent>
+<Talent name="RULES-T_HARDY/RULES-T_FAST_HANDS">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_SEASONED_TRAVELLER/Trade (Tattoo)">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"DOTF 43"</Source>
+</Career>
+<Career id="DOTF-CARE_TREESINGER">
+<Description language="ENGLISH">"Treesinger"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, T +5%, Ag +5%, Int +20%, WP +25%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +3, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Magic), Academic Knowledge (Spirits), Channelling, Charm Animal, Common Knowledge (any two), Heal, Magical Sense, Read/Write or Outdoor Survival, Performer (Singer), Speak Arcane Language (Arcane Elf), Speak Language (Malla-room-ba-larin), Speak Language (any one), Trade (Herbalist)"</Skills>
+<Talents>"Lore of the Forests or Dark Lore (any one), Aethyric Attunement or Dark Magic, Fast Hands or Very Resilient, Lesser Magic (any two), Meditation or Mighty Missile"</Talents>
+<Trappings>"One Spite Companion"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_SPIRITS">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM_ANIMAL">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE/RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_SINGER">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ARCANE_ELF">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_MALLA_ROOM_BA_LARIN">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_HERBALIST">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="DOTF-T_LORE_OF_THE_FORESTS/RULES-T_DARK_LORE__*">"1"</Talent>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_DARK_MAGIC">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_MEDITATION/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"DOTF 43"</Source>
+</Career>
+<Career id="DOTF-CARE_WARDANCER">
+<Description language="ENGLISH">"Wardancer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, BS +15%, S +10%, T +10%, Ag +15%, WP +15%"</MainProfile>
+<SecondaryProfile>"A +1, W +4, Mag +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_Mag">"1"</Advance>
+</Advances>
+<Skills>"Dodge Blow, Intimidate, Perception, Performer (Acrobat), Performer (any one)"</Skills>
+<Talents>"Disarm or Strike Mighty Blow, Lightning Reflexes or Strike to Injure, Martial Lore (Mirth and Mayhem), Specialist Weapon Group (Two-handed), Street Fighting, Swashbuckler"</Talents>
+<Trappings>"Various weapons, warpaint and tattoos"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_ACROBAT">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_DISARM/RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_REFLEXES/RULES-T_STRIKE_TO_INJURE">"1"</Talent>
+<Talent name="DOTF-T_MARTIAL_LORE__MIRTH_AND_MAYHEM">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED">"1"</Talent>
+<Talent name="RULES-T_STREET_FIGHTING">"1"</Talent>
+<Talent name="RULES-T_SWASHBUCKLER">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"DOTF 44"</Source>
+</Career>
+<Career id="DOTF-CARE_WARHAWK_RIDER">
+<Description language="ENGLISH">"Warhawk Rider"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +25%, S +10%, T +10%, Ag +20%, WP +15%"</MainProfile>
+<SecondaryProfile>"A +1, W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"25"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Animal Care, Dodge Blow, Gamble or Intimidate, Perception, Ride, Scale Sheer Surface"</Skills>
+<Talents>"Lightning Reflexes, Orientation, Quick Draw or Rapid Reload, Sharpshooter, Sure Shot or Trick Riding"</Talents>
+<Trappings>"Warhawk Companion"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_GAMBLE/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_LIGHTNING_REFLEXES">"1"</Talent>
+<Talent name="RULES-T_ORIENTATION">"1"</Talent>
+<Talent name="RULES-T_QUICK_DRAW/RULES-T_RAPID_RELOAD">"1"</Talent>
+<Talent name="RULES-T_SHARPSHOOTER">"1"</Talent>
+<Talent name="RULES-T_SURE_SHOT/RULES-T_TRICK_RIDING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"DOTF 44"</Source>
+</Career>
+<Career id="DOTF-CARE_WILDKIN">
+<Description language="ENGLISH">"Wildkin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, S +15%, T +15%, Ag +20%, WP +15%"</MainProfile>
+<SecondaryProfile>"A +1, W +6"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"15"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+</Advances>
+<Skills>"Charm Animal or Command, Concealment, Disguise, Dodge Blow, Follow Trail, Intimidate, Outdoor Survival, Perception, Scale Sheer Surface or Search, Silent Move, Shadowing or Swim"</Skills>
+<Talents>"Flee! or Frenzy, Hardy, Menacing, Mimic, Orientation, Rover, Sixth Sense or Street Fighting, Strike to Injure, Swashbuckler or Strike Mighty Blow, Warrior Born or Wrestling"</Talents>
+<Trappings>"Pelt of animal being mimicked, Claws to fit over hands (may fight as though with the Natural Weapons Talent)"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CHARM_ANIMAL/RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_DISGUISE">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE/RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+<Skill name="RULES-COMP_SHADOWING/RULES-COMP_SWIM">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_FLEE/RULES-T_FRENZY">"1"</Talent>
+<Talent name="RULES-T_HARDY">"1"</Talent>
+<Talent name="RULES-T_MENACING">"1"</Talent>
+<Talent name="RULES-T_MIMIC">"1"</Talent>
+<Talent name="RULES-T_ORIENTATION">"1"</Talent>
+<Talent name="RULES-T_ROVER">"1"</Talent>
+<Talent name="RULES-T_SIXTH_SENSE/RULES-T_STREET_FIGHTING">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE">"1"</Talent>
+<Talent name="RULES-T_SWASHBUCKLER/RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_WARRIOR_BORN/RULES-T_WRESTLING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"DOTF 45"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="DOTF-CARE_BLADESINGER">"RULES-CARE_ASSASSIN"</Link>
+<Link name="DOTF-CARE_BLADESINGER">"RULES-CARE_CHAMPION"</Link>
+<Link name="DOTF-CARE_BLADESINGER">"RULES-CARE_OUTLAW_CHIEF"</Link>
+<Link name="DOTF-CARE_BLADESINGER">"RULES-CARE_PRIEST"</Link>
+<Link name="DOTF-CARE_BLADESINGER">"RULES-CARE_VAMPIRE_HUNTER"</Link>
+<Link name="DOTF-CARE_WARDANCER">"DOTF-CARE_BLADESINGER"</Link>
+<Link name="DOTF-CARE_HANDMAIDEN_STEWARD">"RULES-CARE_CHARLATAN"</Link>
+<Link name="DOTF-CARE_HANDMAIDEN_STEWARD">"RULES-CARE_JOURNEYMAN_WIZARD"</Link>
+<Link name="DOTF-CARE_HANDMAIDEN_STEWARD">"RULES-CARE_PRIEST"</Link>
+<Link name="DOTF-CARE_HANDMAIDEN_STEWARD">"DOTF-CARE_TREESINGER"</Link>
+<Link name="DOTF-CARE_HANDMAIDEN_STEWARD">"DOTF-CARE_WILDKIN"</Link>
+<Link name="CCOMP-CARE_APOTHECARY">"DOTF-CARE_HANDMAIDEN_STEWARD"</Link>
+<Link name="RULES-CARE_ENTERTAINER">"DOTF-CARE_HANDMAIDEN_STEWARD"</Link>
+<Link name="RULES-CARE_INITIATE">"DOTF-CARE_HANDMAIDEN_STEWARD"</Link>
+<Link name="RULES-CARE_STUDENT">"DOTF-CARE_HANDMAIDEN_STEWARD"</Link>
+<Link name="DOTF-CARE_SPELLSINGER">"RULES-CARE_CHARLATAN"</Link>
+<Link name="DOTF-CARE_SPELLSINGER">"RULES-CARE_PRIEST"</Link>
+<Link name="DOTF-CARE_SPELLSINGER">"DOTF-CARE_SPELLWEAVER"</Link>
+<Link name="DOTF-CARE_SPELLSINGER">"RULES-CARE_WIZARD_LORD"</Link>
+<Link name="DOTF-CARE_TREESINGER">"DOTF-CARE_SPELLSINGER"</Link>
+<Link name="DOTF-CARE_SPELLWEAVER">"RULES-CARE_EXPLORER"</Link>
+<Link name="DOTF-CARE_SPELLWEAVER">"RULES-CARE_PRIEST"</Link>
+<Link name="DOTF-CARE_SPELLWEAVER">"RULES-CARE_GUILD_MASTER"</Link>
+<Link name="DOTF-CARE_TREESINGER">"RULES-CARE_CHARLATAN"</Link>
+<Link name="DOTF-CARE_TREESINGER">"RULES-CARE_MASTER_WIZARD"</Link>
+<Link name="DOTF-CARE_TREESINGER">"RULES-CARE_PRIEST"</Link>
+<Link name="RULES-CARE_STEWARD">"DOTF-CARE_TREESINGER"</Link>
+<Link name="DOTF-CARE_WARDANCER">"RULES-CARE_OUTLAW"</Link>
+<Link name="DOTF-CARE_WARDANCER">"RULES-CARE_PRIEST"</Link>
+<Link name="DOTF-CARE_WARDANCER">"RULES-CARE_VETERAN"</Link>
+<Link name="RULES-CARE_ENTERTAINER">"DOTF-CARE_WARDANCER"</Link>
+<Link name="RULES-CARE_KITHBAND_WARRIOR">"DOTF-CARE_WARDANCER"</Link>
+<Link name="DOTF-CARE_WARHAWK_RIDER">"CCOMP-CARE_GAMBLER"</Link>
+<Link name="DOTF-CARE_WARHAWK_RIDER">"RULES-CARE_OUTLAW"</Link>
+<Link name="DOTF-CARE_WARHAWK_RIDER">"RULES-CARE_VAGABOND"</Link>
+<Link name="DOTF-CARE_WARHAWK_RIDER">"RULES-CARE_VETERAN"</Link>
+<Link name="RULES-CARE_KITHBAND_WARRIOR">"DOTF-CARE_WARHAWK_RIDER"</Link>
+<Link name="DOTF-CARE_WILDKIN">"RULES-CARE_BONE_PICKER"</Link>
+<Link name="DOTF-CARE_WILDKIN">"RULES-CARE_HUNTER"</Link>
+<Link name="DOTF-CARE_WILDKIN">"RULES-CARE_OUTLAW"</Link>
+<Link name="DOTF-CARE_WILDKIN">"RULES-CARE_PRIEST"</Link>
+<Link name="DOTF-CARE_WILDKIN">"RULES-CARE_SCOUT"</Link>
+<Link name="DOTF-CARE_WILDKIN">"RULES-CARE_VAMPIRE_HUNTER"</Link>
+<Link name="RULES-CARE_STEWARD">"DOTF-CARE_WILDKIN"</Link>
+<Link name="RULES-CARE_HUNTER">"DOTF-CARE_WILDKIN"</Link>
+<Link name="RULES-CARE_KITHBAND_WARRIOR">"DOTF-CARE_WILDKIN"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_TALENT>
+<Talent id="DOTF-T_LORE_OF_THE_FORESTS">
+<Description language="ENGLISH">"Lore of the Forests"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"29"</Page>
+</Talent>
+<Talent id="DOTF-T_LORE_OF_ATHEL_LOREN">
+<Description language="ENGLISH">"Lore of Athel Loren"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"32"</Page>
+</Talent>
+<Talent id="DOTF-T_MARTIAL_LORE__*">
+<Description language="ENGLISH">"Martial Lore"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"35"</Page>
+</Talent>
+<Talent id="DOTF-T_DEVOTEE">
+<Description language="ENGLISH">"Devotee"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"15"</Page>
+</Talent>
+<Talent id="DOTF-T_BRAN_WA_SHIN">
+<Description language="ENGLISH">"Bran-Wa-Shin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"16"</Page>
+</Talent>
+<Talent id="DOTF-T_BEASTFRIEND">
+<Description language="ENGLISH">"Beastfriend (Kithband)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="DOTF-T_BRAVEHEART">
+<Description language="ENGLISH">"Braveheart"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="DOTF-T_BLADEMASTER">
+<Description language="ENGLISH">"Blademaster (Kithband)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="DOTF-T_CHANNELLER">
+<Description language="ENGLISH">"Channeller"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="DOTF-T_DEATHDANCER">
+<Description language="ENGLISH">"Deathdancer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="DOTF-T_DREAMWALKER">
+<Description language="ENGLISH">"Dreamwalker"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="DOTF-T_ETERNAL_GUARD">
+<Description language="ENGLISH">"Eternal Guard"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="DOTF-T_FOREST_WALKER">
+<Description language="ENGLISH">"Forest-Walker"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="DOTF-T_GLAMOURWEAVER">
+<Description language="ENGLISH">"Glamourweaver"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="DOTF-T_HAWK_EYE">
+<Description language="ENGLISH">"Hawk-Eye"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="DOTF-T_HEALER">
+<Description language="ENGLISH">"Healer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="DOTF-T_HORSEMASTER">
+<Description language="ENGLISH">"Horsemaster"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="DOTF-T_MOUNTAINEER">
+<Description language="ENGLISH">"Mountaineer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="DOTF-T_OUTLANDER">
+<Description language="ENGLISH">"Outlander"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="DOTF-T_PATHFINDER">
+<Description language="ENGLISH">"Pathfinder"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"14"</Page>
+</Talent>
+<Talent id="DOTF-T_SEER">
+<Description language="ENGLISH">"Seer (Kithband)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"14"</Page>
+</Talent>
+<Talent id="DOTF-T_SHADE">
+<Description language="ENGLISH">"Shade"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"14"</Page>
+</Talent>
+<Talent id="DOTF-T_SHADOWFAST">
+<Description language="ENGLISH">"Shadowfast"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"14"</Page>
+</Talent>
+<Talent id="DOTF-T_SKINWALKER">
+<Description language="ENGLISH">"Skinwalker"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"14"</Page>
+</Talent>
+<Talent id="DOTF-T_TREEWALKER">
+<Description language="ENGLISH">"Treewalker"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"14"</Page>
+</Talent>
+<Talent id="DOTF-T_WAYFARER">
+<Description language="ENGLISH">"Wayfarer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"14"</Page>
+</Talent>
+<Talent id="DOTF-T_WAYWATCHER">
+<Description language="ENGLISH">"Waywatcher"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"14"</Page>
+</Talent>
+<Talent id="DOTF-T_WEAPONMASTER">
+<Description language="ENGLISH">"Weaponmaster"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"14"</Page>
+</Talent>
+<Talent id="DOTF-T_WINDRIDER">
+<Description language="ENGLISH">"Windrider"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"14"</Page>
+</Talent>
+<Talent id="DOTF-T_WINDTALKER">
+<Description language="ENGLISH">"Windtalker"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"14"</Page>
+</Talent>
+<Talent id="DOTF-T_WILD_HUNTER">
+<Description language="ENGLISH">"Wild Hunter"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"12"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="DOTF-T_MARTIAL_LORE__MIRTH_AND_MAYHEM">
+<Description language="ENGLISH">"Martial Lore (Mirth and Mayhem)"</Description>
+<Generique>"DOTF-T_MARTIAL_LORE__*"</Generique>
+</Talent>
+<Talent id="DOTF-T_DIVINE_LORE__ISHA">
+<Description language="ENGLISH">"Divine Lore (Isha)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"20"</Page>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+<DATA_SPELL_V2>
+<SpellV2 id="DOTF-SPEL_TREE_SINGING">
+<Description language="ENGLISH">"Tree Singing"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Athel Loren"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A rod from the heart of a tree (+1)"</Ingredient>
+<Page>"32"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_WANDERING_EYE">
+<Description language="ENGLISH">"Wandering Eye"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Athel Loren"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A stag's eyeball (+1)"</Ingredient>
+<Page>"32"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_FURY_OF_THE_FOREST">
+<Description language="ENGLISH">"Fury of the Forest"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Athel Loren"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A dryad branch (+2)"</Ingredient>
+<Page>"32"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_THE_HIDDEN_PATH">
+<Description language="ENGLISH">"The Hidden Path"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Athel Loren"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A smooth pebble (+1)"</Ingredient>
+<Page>"32"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_TWILIGHT_HOST">
+<Description language="ENGLISH">"Twilight Host"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Athel Loren"</Lore>
+<CastingNumber>"21"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A handful of corpse hair (+2)"</Ingredient>
+<Page>"32"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_PATH_BETWEEN_WORLDS">
+<Description language="ENGLISH">"Path Between Worlds"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Athel Loren"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A handful of the related element (+2)"</Ingredient>
+<Page>"32"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_ARIEL_S_BLESSING">
+<Description language="ENGLISH">"Ariel's Blessing"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Athel Loren"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"1 full action and 1 half action"</CastingTime>
+<Ingredient>"A cup of fresh spring water (+1)"</Ingredient>
+<Page>"32"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_CALL_OF_THE_HUNT">
+<Description language="ENGLISH">"Call of the Hunt"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Athel Loren"</Lore>
+<CastingNumber>"27"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A hunting horn (+2)"</Ingredient>
+<Page>"32"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_FORECAST_DANGER">
+<Description language="ENGLISH">"Forecast Danger"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Athel Loren"</Lore>
+<CastingNumber>"29"</CastingNumber>
+<CastingTime>"30 minutes"</CastingTime>
+<Ingredient>"A pinch of powdered dreamleaf (+2)"</Ingredient>
+<Page>"33"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_AETHYRIC_PROJECTION">
+<Description language="ENGLISH">"Aethyric Projection"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Athel Loren"</Lore>
+<CastingNumber>"32"</CastingNumber>
+<CastingTime>"3 full actions"</CastingTime>
+<Ingredient>"A sprig of dreamroot (+3)"</Ingredient>
+<Page>"33"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_DANCE_OF_WINTER_S_CHILL">
+<Description language="ENGLISH">"Dance of Winter's Chill"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Mirth and Mayhem"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Dance (Magic minutes)"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"35"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_DANCE_OF_SPRING_RESURGENCE">
+<Description language="ENGLISH">"Dance of Spring Resurgence"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Mirth and Mayhem"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Dance (Magic minutes)"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"35"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_DANCE_OF_SUMMER_S_VIGOUR">
+<Description language="ENGLISH">"Dance of Summer's Vigour"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Mirth and Mayhem"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Dance (Magic minutes)"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"35"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_DANCE_OF_AUTUMN_S_DECLINE">
+<Description language="ENGLISH">"Dance of Autumn's Decline"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Mirth and Mayhem"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Dance (Magic minutes)"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"36"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_DANCE_OF_THE_WHIRLING_DEATH">
+<Description language="ENGLISH">"Dance of the Whirling Death"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Mirth and Mayhem"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Dance (Magic minutes)"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"36"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_DANCE_OF_THE_STORM_OF_BLADES">
+<Description language="ENGLISH">"Dance of the Storm of Blades"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Mirth and Mayhem"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Dance (Magic minutes)"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"36"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_DANCE_OF_THE_SHADOWS_COIL">
+<Description language="ENGLISH">"Dance of the Shadows Coil"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Mirth and Mayhem"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Dance (Magic minutes)"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"36"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_DANCE_OF_THE_WOVEN_MIST">
+<Description language="ENGLISH">"Dance of the Woven Mist"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Mirth and Mayhem"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Dance (Magic minutes)"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"36"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_RITUAL_OF_SPRING_AWAKENING">
+<Description language="ENGLISH">"Ritual of Spring Awakening"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"20 (30 if cast before winter solstice)"</CastingNumber>
+<CastingTime>"6 hours"</CastingTime>
+<Ingredient>"The still-beating heart of a stag and a garland of Winterblossom (p.109)."</Ingredient>
+<Page>"35"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE_DIVINE"</RitualType>
+<ArcaneLanguage>"Arcane Elf"</ArcaneLanguage>
+<MagicMin>"4"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_HASTEN_GROWTH">
+<Description language="ENGLISH">"Hasten Growth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Isha"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A bud (+1)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_RENEWAL">
+<Description language="ENGLISH">"Renewal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Isha"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"10 minutes"</CastingTime>
+<Ingredient>"A few drops of rainwater (+1)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_SPIRIT_GLAMOUR">
+<Description language="ENGLISH">"Spirit Glamour"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Isha"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Flower of Love-in-Idleness (+2)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_REVEAL_PATHWAY">
+<Description language="ENGLISH">"Reveal Pathway"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Isha"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"An oaken walking stick (+2)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_SURGE_OF_GHYRAN">
+<Description language="ENGLISH">"Surge of Ghyran"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Isha"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"1 full action and 1 half action"</CastingTime>
+<Ingredient>"A yew wand (+2)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="DOTF-SPEL_MOON_SHIFT">
+<Description language="ENGLISH">"Moon Shift"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Isha"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A crystal globe (+2)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SPELL_TALENT>
+<Sort id="DOTF-SPEL_TREE_SINGING">
+<Talent>"DOTF-T_LORE_OF_ATHEL_LOREN"</Talent>
+</Sort>
+<Sort id="DOTF-SPEL_WANDERING_EYE">
+<Talent>"DOTF-T_LORE_OF_ATHEL_LOREN"</Talent>
+</Sort>
+<Sort id="DOTF-SPEL_FURY_OF_THE_FOREST">
+<Talent>"DOTF-T_LORE_OF_ATHEL_LOREN"</Talent>
+</Sort>
+<Sort id="DOTF-SPEL_THE_HIDDEN_PATH">
+<Talent>"DOTF-T_LORE_OF_ATHEL_LOREN"</Talent>
+</Sort>
+<Sort id="DOTF-SPEL_TWILIGHT_HOST">
+<Talent>"DOTF-T_LORE_OF_ATHEL_LOREN"</Talent>
+</Sort>
+<Sort id="DOTF-SPEL_PATH_BETWEEN_WORLDS">
+<Talent>"DOTF-T_LORE_OF_ATHEL_LOREN"</Talent>
+</Sort>
+<Sort id="DOTF-SPEL_ARIEL_S_BLESSING">
+<Talent>"DOTF-T_LORE_OF_ATHEL_LOREN"</Talent>
+</Sort>
+<Sort id="DOTF-SPEL_CALL_OF_THE_HUNT">
+<Talent>"DOTF-T_LORE_OF_ATHEL_LOREN"</Talent>
+</Sort>
+<Sort id="DOTF-SPEL_FORECAST_DANGER">
+<Talent>"DOTF-T_LORE_OF_ATHEL_LOREN"</Talent>
+</Sort>
+<Sort id="DOTF-SPEL_AETHYRIC_PROJECTION">
+<Talent>"DOTF-T_LORE_OF_ATHEL_LOREN"</Talent>
+</Sort>
+<Sort id="DOTF-SPEL_DANCE_OF_WINTER_S_CHILL">
+<Talent>"DOTF-T_MARTIAL_LORE__MIRTH_AND_MAYHEM"</Talent>
+</Sort>
+<Sort id="DOTF-SPEL_DANCE_OF_SPRING_RESURGENCE">
+<Talent>"DOTF-T_MARTIAL_LORE__MIRTH_AND_MAYHEM"</Talent>
+</Sort>
+<Sort id="DOTF-SPEL_DANCE_OF_SUMMER_S_VIGOUR">
+<Talent>"DOTF-T_MARTIAL_LORE__MIRTH_AND_MAYHEM"</Talent>
+</Sort>
+<Sort id="DOTF-SPEL_DANCE_OF_AUTUMN_S_DECLINE">
+<Talent>"DOTF-T_MARTIAL_LORE__MIRTH_AND_MAYHEM"</Talent>
+</Sort>
+<Sort id="DOTF-SPEL_HASTEN_GROWTH">
+<Talent>"DOTF-T_DIVINE_LORE__ISHA"</Talent>
+</Sort>
+<Sort id="DOTF-SPEL_RENEWAL">
+<Talent>"DOTF-T_DIVINE_LORE__ISHA"</Talent>
+</Sort>
+<Sort id="DOTF-SPEL_SPIRIT_GLAMOUR">
+<Talent>"DOTF-T_DIVINE_LORE__ISHA"</Talent>
+</Sort>
+<Sort id="DOTF-SPEL_REVEAL_PATHWAY">
+<Talent>"DOTF-T_DIVINE_LORE__ISHA"</Talent>
+</Sort>
+<Sort id="DOTF-SPEL_SURGE_OF_GHYRAN">
+<Talent>"DOTF-T_DIVINE_LORE__ISHA"</Talent>
+</Sort>
+<Sort id="DOTF-SPEL_MOON_SHIFT">
+<Talent>"DOTF-T_DIVINE_LORE__ISHA"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+<DATA_WEAPON>
+<Weapon id="DOTF-COMB_V2_HUNTING_KNIVES">
+<Description language="ENGLISH">"Hunting Knives"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"-"</Price>
+<Encumbrance>"30"</Encumbrance>
+<Quality>"RULES-WEAPQ_FAST"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Page>"38"</Page>
+</Weapon>
+<Weapon id="DOTF-COMB_V2_SAEARATH">
+<Description language="ENGLISH">"Saearath"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Price>"-"</Price>
+<Encumbrance>"100"</Encumbrance>
+<Quality>"RULES-WEAPQ_FAST,RULES-WEAPQ_DEFENSIVE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Page>"38"</Page>
+</Weapon>
+</DATA_WEAPON>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="DOTF-EQUI_FOOD_AND_DRINK_AOILYM_FRUIT">
+<Description language="ENGLISH">"Aoilym Fruit"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Note>""</Note>
+<Page>"39"</Page>
+</EquipmentV2>
+<EquipmentV2 id="DOTF-EQUI_FOOD_AND_DRINK_ELVEN_WINE">
+<Description language="ENGLISH">"Elven Wine"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Note>""</Note>
+<Page>"39"</Page>
+</EquipmentV2>
+<EquipmentV2 id="DOTF-EQUI_MAGIC_ITEMS_STARFIRE_ARROWS">
+<Description language="ENGLISH">"Starfire Arrows"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"39"</Page>
+<AcademicKnowledge>"History"</AcademicKnowledge>
+<Powers>""</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="DOTF-EQUI_MAGIC_ITEMS_THE_RHYMER_S_HARP">
+<Description language="ENGLISH">"The Rhymer's Harp"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"39"</Page>
+<AcademicKnowledge>"History"</AcademicKnowledge>
+<Powers>""</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="DOTF-EQUI_MAGIC_ITEMS_MOONSTONES_OF_THE_HIDDEN_WAYS">
+<Description language="ENGLISH">"Moonstones of the Hidden Ways"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"39"</Page>
+<AcademicKnowledge>"History"</AcademicKnowledge>
+<Powers>""</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="DOTF-EQUI_MAGIC_ITEMS_ASYENDIL_S_BANE">
+<Description language="ENGLISH">"Asyendil's Bane"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"40"</Page>
+<AcademicKnowledge>"History"</AcademicKnowledge>
+<Powers>""</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="DOTF-EQUI_MAGIC_ITEMS_STONES_OF_THE_CRYSTAL_MERE">
+<Description language="ENGLISH">"Stones of the Crystal Mere"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"40"</Page>
+<AcademicKnowledge>"History"</AcademicKnowledge>
+<Powers>""</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="DOTF-EQUI_MAGIC_ITEMS_TALISMAN_OF_QWARR">
+<Description language="ENGLISH">"Talisman of Qwarr"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"40"</Page>
+<AcademicKnowledge>"History"</AcademicKnowledge>
+<Powers>""</Powers>
+<History>"Talons and beak of Qwarr, mightiest of the Great Eagles, who slew the Dragon Grathgol."</History>
+</EquipmentV2>
+<EquipmentV2 id="DOTF-EQUI_MAGIC_ITEMS_SPEAR_OF_DAITH">
+<Description language="ENGLISH">"Spear of Daith"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"40"</Page>
+<AcademicKnowledge>"History"</AcademicKnowledge>
+<Powers>""</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="DOTF-EQUI_MAGIC_ITEMS_THE_DRAGON_SWORD_CALEDFWLCH">
+<Description language="ENGLISH">"The Dragon Sword, Caledfwlch"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"40"</Page>
+<AcademicKnowledge>"History"</AcademicKnowledge>
+<Powers>""</Powers>
+<History>""</History>
+</EquipmentV2>
+<EquipmentV2 id="DOTF-EQUI_CREATURES_ARIEL_MAGE_QUEEN_OF_LOREN">
+<Description language="ENGLISH">"Ariel, Mage Queen of Loren"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"47;50;43;45;95;71;82;64;3;36;4;4;5;5;0;0"</Profile>
+<Skills>"Academic Knowledge (Magic +20, Spirits +20, Astronomy, History), Animal Care, Channelling +20, Charm +10, Charm Animal +20, Common Knowledge (Elves +20, Athel Loren +20, Bretonnia +10, Dwarfs), Heal +20, Gossip +10, Magical Sense +20, Outdoor Survival +10, Perception +10, Performer (Dancer, Singer +20), Intimidate, Read/Write +10, Search, Speak Arcane Language (Arcane Elf +20), Speak Language (Elthárin +20, Breton +10, Reikspiel, Malla-room-ba-larin +20), Trade (Herbalist +20, Tattoo)"</Skills>
+<Talents>"Aethyric Attunement, Coolheaded, Devotee (Isha), Excellent Vision, Fast Hands, Lightning Reflexes, Lore of Athel Loren, Lore of the Forests, Lore of Isha, Petty Magic (Arcane and Divine), Public Speaking, Unsettling, Rover, Seasoned Traveller, Spellcraft, Specialist Weapon Group (Throwing), Strong-minded, Savvy, Night Vision, Very Resilient, Lesser Magic (any six), Meditation, Mighty Missile"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"19"</Page>
+</EquipmentV2>
+<EquipmentV2 id="DOTF-EQUI_CREATURES_ORION_THE_KING_IN_THE_WOODS">
+<Description language="ENGLISH">"Orion, the King in the Woods"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"86;54;55;51;91;64;64;45;6;38;5;5;5;0;0;0"</Profile>
+<Skills>"Common Knowledge (Elves), Concealment +10, Common Knowledge (Athel Loren, Laurelorn, Bretonnia), Dodge Blow +20, Follow Trail +20, Intimidate, Navigation, Outdoor Survival +20, Perception +20, Ride, Search +10, Secret Signs (Ranger, Scout), Secret Language (Ranger Tongue), Scale Sheer Surface, Silent Move +20, Trade (Bowyer, Fletcher), Speak Language (Elthárin, Breton, Malla-room-ba-larin)"</Skills>
+<Talents>"Hardy, Specialist Weapon Group (Longbow, Two-handed, Cavalry, Throwing), Coolheaded, Excellent Vision, Keen Senses, Lightning Parry, Marksman, Menacing, Mighty Shot, Rover, Night Vision, Orientation, Quick Draw, Warrior Born, Very Resilient, Rapid Reload, Sure Shot, Strike Mighty Blow, Strike to Injure, Unsettling, Wrestling"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"22"</Page>
+</EquipmentV2>
+<EquipmentV2 id="DOTF-EQUI_CREATURES_HORNED_HUNTER">
+<Description language="ENGLISH">"Horned Hunter"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"67;47;48;55;65;61;67;44;3;18;4;5;6;3;0;0"</Profile>
+<Skills>"Academic Knowledge (Spirits +10), Channelling +10, Common Knowledge (Elves), Common Knowledge (Athel Loren), Concealment +10, Dodge Blow +20, Follow Trail +20, Intimidate, Navigation +10, Magical Sense +10, Ride +20, Outdoor Survival +20, Perception +20, Silent Move +20, Search +10, Secret Language (Ranger Tongue), Secret Signs (Ranger), Shadowing +20, Speak Language (Elthárin, Malla-room-ba-larin), Trade (Bowyer, Fletcher)"</Skills>
+<Talents>"Aethyric Attunement, Armoured Caster, Coolheaded, Divine Lore (Kurnous), Excellent Vision, Hardy, Fast Hands, Fleet Footed, Orientation, Specialist Weapon Group (Longbow), Lesser Magic (any three), Lightning Reflexes, Meditation, Mighty Shot, Petty Magic (Divine), Quick Draw, Rover, Rapid Reload, Strong-minded, Strike Mighty Blow, Sure Shot, Night Vision"</Talents>
+<SpecialRules>"Spirit of Kurnous: an aura of savagery gives the Unsettling talent."</SpecialRules>
+<Note>""</Note>
+<Page>"22"</Page>
+</EquipmentV2>
+<EquipmentV2 id="DOTF-EQUI_CREATURES_TOROTHAL_WITCH_QUEEN_OF_LAURELORN">
+<Description language="ENGLISH">"Torothal, Witch Queen of Laurelorn"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"48;57;37;52;60;77;76;54;2;15;3;5;5;5;0;0"</Profile>
+<Skills>"Academic Knowledge (Magic +20, Astronomy +10, History, Philosophy, Spirits +20), Channelling +20, Charm, Common Knowledge (Elves +10, Dwarfs), Common Knowledge (Laurelorn +20, the Empire), Heal, Magical Sense +20, Perception, Performer (Singer), Gossip +10, Intimidate +10, Read/Write +20, Search, Speak Arcane Language (Arcane Elf +20), Speak Language (Elthárin +20, Breton, Reikspiel, Khazalid, Malla-room-ba-larin), Swim +10"</Skills>
+<Talents>"Aethyric Attunement, Coolheaded, Excellent Vision, Fast Hands, Night Vision, Petty Magic (Arcane), Savvy, Spellcraft, Strong-minded, Lesser Magic (any four), Lore of the Forests, Meditation, Mighty Missile, Very Resilient"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"25"</Page>
+</EquipmentV2>
+<EquipmentV2 id="DOTF-EQUI_CREATURES_GREAT_STAG">
+<Description language="ENGLISH">"Great Stag"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"55;0;50;46;38;32;65;31;2;24;5;4;8;0;0;0"</Profile>
+<Skills>"Dodge Blow, Follow Trail +10%, Perception +20%, Swim"</Skills>
+<Talents>"Acute Hearing, Fearless, Keen Senses, Natural Weapons, Night Vision"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"101"</Page>
+</EquipmentV2>
+<EquipmentV2 id="DOTF-EQUI_CREATURES_SHADOW_BEAST">
+<Description language="ENGLISH">"Shadow Beast"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;0;22;24;37;18;31;18;1;18;2;2;6;0;0;0"</Profile>
+<Skills>"Concealment, Disguise, Dodge Blow, Perception, Shadowing"</Skills>
+<Talents>"Contortionist, Ethereal, Frightening, Mimic, Night Vision"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"102"</Page>
+</EquipmentV2>
+<EquipmentV2 id="DOTF-EQUI_CREATURES_ZOAT">
+<Description language="ENGLISH">"Zoat"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"59;0;54;54;47;66;75;43;2;25;5;5;7;4;0;0"</Profile>
+<Skills>"Academic Knowledge (History) +20%, Common Knowledge (Elves) +10, Concealment +10, Follow Trail +10, Magical Sense +20, Navigation, Outdoor Survival, Perception, Performer (Singer), Search, Silent Move, Shadowing, Speak Arcane Language (Arcane Elf), Speak Language (Eltharin, Malla-room-ba-larin)"</Skills>
+<Talents>"Disarm, Lesser Magic (any four), Lore of the Forests, Night Vision, Petty Magic (Arcane), Rover, Specialist Weapon Group (Two-handed), Scales (2), Stout-hearted, Strike Mighty Blow, Strike to Injure, Strong-minded, Wrestling"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"106"</Page>
+</EquipmentV2>
+<EquipmentV2 id="DOTF-EQUI_CREATURES_GLADE_WIDOW">
+<Description language="ENGLISH">"Glade-Widow"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"0;0;23;23;0;0;0;0;1;14;2;2;0;0;0;0"</Profile>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"110"</Page>
+</EquipmentV2>
+<EquipmentV2 id="DOTF-EQUI_CREATURES_DEATHLY_THORN">
+<Description language="ENGLISH">"Deathly-Thorn"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"0;15;23;18;0;0;0;0;1;12;2;1;0;0;0;0"</Profile>
+<SpecialRules>""</SpecialRules>
+<Note>"Plant that uses its thorns to transport its seeds."</Note>
+<Page>"110"</Page>
+</EquipmentV2>
+<EquipmentV2 id="DOTF-EQUI_CREATURES_SMALL_PREDATOR">
+<Description language="ENGLISH">"Small Predator"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"30;0;23;26;51;14;22;0;1;8;2;2;6;0;0;0"</Profile>
+<Skills>"Perception, Swim (Otter +20), Scale Sheer Surface (Wildcat)"</Skills>
+<Talents>"Keen Senses, Natural Weapons, Savvy (Fox)"</Talents>
+<Note>"Foxes, otters, badgers, wildcats and ferrets found in most forests."</Note>
+<Page>"113"</Page>
+</EquipmentV2>
+<EquipmentV2 id="DOTF-EQUI_CREATURES_CYANATHAIR_THE_CORRUPTOR">
+<Description language="ENGLISH">"Cyanathair the Corruptor"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"63;36;46;49;52;58;81;59;3;31;4;4;5;5;0;1"</Profile>
+<Skills>"Channelling +20, Command +10, Concealment, Common Knowledge (Drakwald, Forest of Arden), Dodge Blow, Heal, Follow Trail, Intimidate +20, Magical Sense, Outdoor Survival, Perception +20, Performer (Storyteller +10), Speak Arcane Language (Daemonic), Shadowing, Silent Move, Speak Language (Dark Tongue +20, Beast Tongue, Eltharin, Reikspiel, Breton)"</Skills>
+<Talents>"Aethyric Attunement, Arcane Lore (Beasts, Chaos, Death, Shadows), Fast Hands, Fearless, Keen Senses, Lesser Magic (any two), Master Orator, Mighty Missile, Meditation, Menacing, Petty Magic (Chaos), Rover, Specialist Weapon Group (Two-handed), Strike to Injure, Strong-minded, Very Strong"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"118"</Page>
+</EquipmentV2>
+<EquipmentV2 id="DOTF-EQUI_CREATURES_ARACHNAROK">
+<Description language="ENGLISH">"Arachnarok"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"45;0;58;67;41;32;43;11;8;64;5;6;7;0;0;0"</Profile>
+<Skills>"Perception +10%"</Skills>
+<Talents>"Keen Senses, Natural Weapons, Night Vision, Terrifying, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>"Greatest of the Giant Spiders, as large as a barn, worshipped as gods by Forest Goblins."</Note>
+<Page>"121"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+</DATA_BOOK>

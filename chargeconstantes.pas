@@ -21,6 +21,11 @@ Const
       SeparateurLivre                   = '-';
       ValeurSousCompetence		= '_';
       ValeurGenerique			= '_*';
+      // Talents V4 / V5 (24/10/2026) : une specialisation s'ecrit FAMILLE__SPEC (RULES-T_BLESS__SIGMAR), son generique
+      // FAMILLE__* ; un talent sans specialisation n'a pas de '__'. '__*' contient '_*' : les tests Pos(ValeurGenerique, ...)
+      // valent donc aussi pour les generiques de talents.
+      SeparateurSpecialisationTalent	= '__';
+      ValeurGeneriqueTalent		= '__*';
       ValeurNonRenseignee               = '?';
 
       // Fichier XML de personnages
@@ -56,6 +61,12 @@ Const
       ConstXmlChapitreTalent            = 'CHAPTER_TALENT';
       ConstXmlChapitreCoutXp            = 'CHAPTER_XP';
       ConstXmlSousChapitreCarac	        = 'SUBCHAPTER_ATTR';
+      // V2 : <Advances><Advance name="RULES-ATTR_xx">"5"</Advance></Advances> d'une carriere
+      ConstXmlAdvances                  = 'Advances';
+      ConstXmlExitCodes                 = 'ExitCodes';
+      ConstXmlBasic                     = 'Basic';
+      ConstXmlAdvance                   = 'Advance';
+      ConstXmlArgentDepart              = 'StartMoney';
       ConstXmlSousChapitreTalent	= 'SUBCHAPTER_TALENT';
       ConstXmlSousChapitreCompetence    = 'SUBCHAPTER_SKILL';
       ConstXmlSousChapitreCompMetier    = 'SUBCHAPTER_SKILLCAREER';
@@ -69,6 +80,9 @@ Const
       // DATA_CAREER_BONUS/DATA_SPELL_TALENT). Ecrit au niveau du personnage, a cote de
       // MEMBERSHIP, pas sous CHAPTER_CREATION : ce n'est pas une donnee de creation.
       ConstXmlSousChapitreCompAppartenance = 'SUBCHAPTER_SKILLAPPARTENANCE';
+      // V2 : avance gratuite de creation (Core p.14, etape 7), champ dedie a cote de
+      // MEMBERSHIP : jamais melangee a AugmentationAttribut (les avances achetees).
+      ConstXmlSousChapitreAvanceGratuite   = 'SUBCHAPTER_FREEADVANCE';
       ConstXmlChapitreOldWork		= 'CHAPTER_OLDCAREER';
       ConstXmlChapitreEquipement	= 'CHAPTER_ITEM';
       ConstXmlChapitreCorruption	= 'CHAPTER_CORRUPTION';
@@ -104,6 +118,7 @@ Const
       ConstXmlCompletLivre              = 'COMPLETE';
       ConstXmlTraductionDe              = 'TRANSLATION_OF';
       ConstXmlDisclaimerLivre           = 'DISCLAIMER';
+      ConstXmlNomLivre                  = 'BOOKNAME';
       ConstXmlRegle                     = 'RULES';
       ConstXmlOptions                   = 'OPTIONS';
       // Appartenances du personnage (regiment, ordre de chevalerie, culte) : les codes
@@ -119,6 +134,82 @@ Const
       ConstXmlDataTalent                = 'DATA_TALENT';
       ConstXmlDataTalentSpe             = 'DATA_TALENT_SPECIALIZATION';
       ConstXmlDataSkill                 = 'DATA_SKILL';
+      // WFRP1 : competences sans caracteristique ni cout, lues comme DATA_SKILL (nom, effet)
+      ConstXmlDataSkillV1               = 'DATA_SKILL_V1';
+      // WFRP1 : carrieres lues comme DATA_CAREER (competences au niveau 1, la valeur est la chance en %)
+      ConstXmlDataCareerV1              = 'DATA_CAREER_V1';
+      ConstXmlAdvanceSchemeV1           = 'AdvanceScheme';
+      // WFRP1 : liens entre carrieres (carriere 1 > carriere 2), hors des carrieres
+      ConstXmlDataCareerLinkV1          = 'DATA_CAREER_LINK_V1';
+      ConstXmlLinkV1                    = 'Link';
+      ConstXmlDataCareerLinkV2          = 'DATA_CAREER_LINK_V2';
+      // WFRP1 : table des metiers de l Artisan
+      ConstXmlDataTradeV1               = 'DATA_TRADE_V1';
+      ConstXmlTradeV1                   = 'Trade';
+      ConstXmlRollV1                    = 'Roll';
+      ConstXmlExitCodeV1                = 'ExitCode';
+      ConstXmlNoteV1                    = 'Note';
+      // WFRP1 : Destin et regles de la race, classes de carriere
+      ConstXmlFatePointsV1              = 'FatePoints';
+      ConstXmlRuleV1                    = 'Rule';
+      ConstXmlDataClassV1               = 'DATA_CLASS_V1';
+      ConstXmlRequirementV1             = 'Requirement';
+      ConstXmlRaceRequirementV1         = 'RaceRequirement';
+      ConstXmlMoneyV1                   = 'Money';
+      ConstXmlSpecieV1                  = 'Specie';
+      // WFRP1 : tirage des competences de depart (d100 classe x race) et modificateur d age de leur nombre
+      ConstXmlDataSkillRollV1           = 'DATA_SKILL_ROLL_V1';
+      ConstXmlDataSkillCountAgeV1       = 'DATA_SKILL_COUNT_AGE_V1';
+      ConstXmlDataMagicPointGainV1      = 'DATA_MAGIC_POINT_GAIN_V1';
+      ConstXmlDice                      = 'Dice';
+      ConstXmlMagicPoints               = 'MagicPoints';
+      // WFRP1 : alignement (RULES-V1ALIGN_xxx) et points de folie de la fiche (vides / 0 = alignement standard de la race / aucun)
+      ConstXmlAlignmentPerso            = 'Alignment';
+      ConstXmlInsanityPoints            = 'InsanityPoints';
+      // WFRP1 : bloc Background de la feuille (texte libre)
+      ConstXmlBirthPlaceV1              = 'BirthPlace';
+      ConstXmlParentsJobV1              = 'ParentsOccupation';
+      ConstXmlFamilyMembersV1           = 'FamilyMembers';
+      // les cinq alignements dans l'ordre de la ligne du livre (V1)
+      CodesAlignementV1: array[0..4] of String = ('RULES-V1ALIGN_CHAOS', 'RULES-V1ALIGN_EVIL', 'RULES-V1ALIGN_NEUTRAL',
+                                                  'RULES-V1ALIGN_GOOD', 'RULES-V1ALIGN_LAW');
+      // WFRP1 : handicaps des magiciens (tables, stades) et leur memorisation dans la fiche
+      ConstXmlDataDisabilityV1          = 'DATA_DISABILITY_V1';
+      ConstXmlDataDisabilityRollV1      = 'DATA_DISABILITY_ROLL_V1';
+      ConstXmlStageV1                   = 'Stage';
+      // WFRP1 : table d'avancement du Cleric / Druidic Priest
+      ConstXmlDataPriestAdvanceV1       = 'DATA_PRIEST_ADVANCE_V1';
+      ConstXmlRangeV1                   = 'Range';
+      ConstXmlResultV1                  = 'Result';
+      ConstXmlEPGiftV1                  = 'EPGift';
+      ConstXmlFatePointV1               = 'FatePoint';
+      ConstXmlBlessingV1                = 'Blessing';
+      ConstXmlFamiliarSkillsV1          = 'FamiliarSkills';
+      // WFRP1 : table des familiers du Druidic Priest et memorisation du familier dans la fiche
+      ConstXmlDataFamiliarV1            = 'DATA_FAMILIAR_V1';
+      ConstXmlFamiliarV1                = 'DruidFamiliar';
+      // WFRP1 : liste de prix (216 objets), un EquipmentV1 par objet
+      ConstXmlDataEquipmentV1           = 'DATA_EQUIPMENT_V1';
+      ConstXmlCategoryV1                = 'Category';
+      ConstXmlSubCategoryV1             = 'SubCategory';
+      ConstXmlCostV1                    = 'Cost';
+      ConstXmlEncumbranceV1             = 'Encumbrance';
+      ConstXmlAvailabilityV1            = 'Availability';
+      ConstXmlCombatModifiersV1         = 'CombatModifiers';
+      ConstXmlArmourPointsV1            = 'ArmourPoints';
+      ConstXmlLocationsV1               = 'Locations';
+      ConstXmlDisabilitiesV1            = 'Disabilities';
+      ConstXmlSpellsLearnedV1           = 'SpellsLearned';
+      ConstXmlSpellFailuresV1           = 'SpellFailures';
+      ConstXmlEvilWizardV1              = 'EvilWizard';
+      ConstXmlClasseV1                  = 'ClassV1';
+      ConstXmlCulteV1                   = 'CultV1';
+      ConstXmlAgeMinV1                  = 'AgeMin';
+      ConstXmlAgeMaxV1                  = 'AgeMax';
+      ConstXmlTrappingsV1               = 'Trappings';
+      ConstXmlBonusV1                   = 'Bonus';
+      ConstXmlBonusKind                 = 'Kind';
+      ConstXmlBonusValue                = 'Value';
       ConstXmlDataSkillSpe              = 'DATA_SKILL_SPECIALIZATION';
       ConstXmlDataSpecie                = 'DATA_SPECIE';
       ConstXmlDataCareer                = 'DATA_CAREER';
@@ -166,6 +257,13 @@ Const
       ConstXmlDataNation                = 'DATA_NATION';
       ConstXmlDataRegle                 = 'DATA_RULE';
       ConstXmlDataRegleMetier           = 'DATA_CAREER_ROLL';
+      ConstXmlDataRegleEthnie           = 'DATA_RULE_SPECIE';
+      ConstXmlDataRegleFond             = 'DATA_RULE_BACKGROUND';
+      ConstXmlDataFondCompte            = 'DATA_RULE_BACKGROUND_COUNT';
+      ConstXmlDataFondCompetence        = 'DATA_RULE_SKILL_ROLL';
+      ConstXmlDataFondTalent            = 'DATA_RULE_TALENT_ROLL';
+      ConstXmlFondNbCompetence          = 'Skills';
+      ConstXmlFondNbTalent              = 'Talents';
       ConstXmlDataSpecieCareerChoix     = 'DATA_SPECIE_CAREER_CHOICE';
       ConstXmlDataCareerSpecie    = 'DATA_CAREER_SPECIE';
       ConstXmlDataCareerSubChoice       = 'DATA_CAREER_SUBCHOICE';
@@ -175,6 +273,12 @@ Const
       ConstXmlDataCorruptionTableMent   = 'DATA_CORRUPTION_TABLE_MENTAL';
       ConstXmlDataCorruptionPhysChance  = 'DATA_CORRUPTION_PHYSICAL_CHANCE';
       ConstXmlDataCorruptionMentChance  = 'DATA_CORRUPTION_MENTAL_CHANCE';
+      // Marques des Dieux (WFRP2, Tome of Salvation) : table par dieu, le lore divin designe la table
+      ConstXmlDataCorruptionTableDivine  = 'DATA_CORRUPTION_TABLE_DIVINE';
+      ConstXmlDataCorruptionDivineChance = 'DATA_CORRUPTION_DIVINE_CHANCE';
+      ConstXmlDataCorruptionTableMutation  = 'DATA_CORRUPTION_TABLE_MUTATION';
+      ConstXmlDataCorruptionMutationChance = 'DATA_CORRUPTION_MUTATION_CHANCE';
+      ConstXmlLoreAttribut               = 'lore';
       ConstXmlDataDisease               = 'DATA_DISEASE';
       ConstXmlDataAffliction            = 'DATA_AFFLICTION';
       ConstXmlDataClassItem             = 'DATA_CLASS_ITEM';
@@ -186,6 +290,7 @@ Const
       ConstXmlLibelle                   = 'Libelle';
       ConstXmlEffet                     = 'Effet';
       ConstXmlDescription               = 'Description';
+      ConstXmlDescriptionFeminine       = 'DescriptionFeminine';
       ConstXmlExplanation               = 'Explanation';
       ConstXmlShort                     = 'Short';
       // Code complet (prefixe de livre inclus) de l'entree generique dont depend une
@@ -262,6 +367,7 @@ Const
       // Pointeur FACULTATIF pose sur une ethnie vers son code DATA_NATION (vide = aucune
       // nation, cas de la plupart des ethnies non-humaines). CONTEXT.md 2.51.
       ConstXmlNationality               = 'Nationality';
+      ConstXmlMutationDepart            = 'StartingMutation';
       // Details physiques d'une ethnie : Age et Height (deja definis plus bas pour la fiche)
       // servent aussi de balises de formule ; Eye/Hair portent le libelle en name= et la
       // plage 2d10 en contenu.
@@ -270,6 +376,24 @@ Const
       ConstXmlPhysNbTirageYeux          = 'EyeRolls';
       ConstXmlPhysYeux                  = 'Eye';
       ConstXmlPhysCheveux               = 'Hair';
+      // V2 (Core, tables 2-6 a 2-17) : tables d100 / d10 par race (name= resultat, contenu = plage) et
+      // tables communes DATA_PERSONAL_TABLE (Table id=, Entry name= detail=).
+      ConstXmlPhysTailleFemme           = 'HeightFemale';
+      ConstXmlPhysTailleHomme           = 'HeightMale';
+      ConstXmlPhysPoids                 = 'Weight';
+      ConstXmlPhysAge                   = 'AgeRoll';
+      ConstXmlPhysFratrie               = 'Siblings';
+      ConstXmlPhysNaissance             = 'Birthplace';
+      ConstXmlPhysLocalite              = 'BirthplaceSettlement';
+      ConstXmlPhysNaissanceHumaine      = 'BirthplaceHuman';
+      ConstXmlPhysNaissanceEffet        = 'BirthplaceEffect';
+      ConstXmlPhysParticulariteEffet    = 'OddityEffect';
+      ConstXmlPhysForme                 = 'Form';
+      ConstXmlPhysFormeAnimal           = 'FormAnimal';
+      ConstXmlPhysParticularite         = 'Oddity';
+      ConstXmlDataTablePersonnelle      = 'DATA_PERSONAL_TABLE';
+      ConstXmlTable                     = 'Table';
+      ConstXmlDetail                    = 'detail';
       // Noms d'une ethnie : bloc de tables (Name : name= libelle, part= partie, sex= M/F facultatif,
       // contenu = plage du de) et modeles d'assemblage (NamePattern, sex= facultatif).
       ConstXmlSousChapitreNoms          = 'SUBCHAPTER_NAMES';
@@ -294,6 +418,14 @@ Const
       ConstXmlSigneVariantePerso        = 'StarSignVariant';
       // Specialisation choisie pour le talent generique du signe (Craftsman, Impassioned Zeal)
       ConstXmlSigneTalentPerso          = 'StarSignTalent';
+      // Sous-bloc V2 de la fiche (details personnels du Core V2) : absent des fiches V4/V5.
+      ConstXmlFicheV2                   = 'V2';
+      ConstXmlFicheSexe                 = 'Gender';
+      ConstXmlFichePoids                = 'Weight';
+      ConstXmlFicheFratrie              = 'Siblings';
+      ConstXmlFicheSigneDistinctif      = 'DistinguishingMark';
+      ConstXmlFicheNaissance            = 'Birthplace';
+      ConstXmlFicheAstreV2              = 'StarSignV2';
       // Monnaie du personnage : couronnes d'or, pistoles d'argent, sous de laiton
       ConstXmlMonnaieCO                 = 'GoldCrowns';
       ConstXmlMonnaiePA                 = 'SilverShillings';
@@ -313,6 +445,8 @@ Const
       // Dossier d'icones de niveau propre a l'ethnie, sous \PICTURES\. Balise absente ou
       // vide = dossier NIV generique. Voir CheminNiveauImage dans ChargeRace.
       ConstXmlPictureLevel              = 'PictureLevel';
+      // V1 : cout en EP d'entree dans un niveau de carriere magique.
+      ConstXmlEntryCost                 = 'EntryCost';
       // Carriere DONT CELLE-CI EST LA SUITE. Balise facultative de <Career>, absente pour
       // l'immense majorite des metiers. Contient un code de metier, ou plusieurs separes
       // par SeparateurMulti. Sa presence, combinee a un premier <Level> superieur a 1, dit
@@ -399,6 +533,12 @@ Const
       // Present = habillage Warhammer en niveaux de gris (absent = en couleurs, fiches existantes).
       ConstXmlOptionPdfSansCouleur      = 'PdfNoColor';
       ConstXmlOptionPdfEconomie         = 'PdfInkSaver';
+      // Present = le personnage utilise les talents Momentum (regles WFRP5 en WFRP4) : ses talents
+      // portent le code MOMENTUM-T_xxx du livre BOOK_MOMENTUM au lieu de RULES-T_xxx.
+      ConstXmlOptionMomentum            = 'Momentum';
+      ConstCodeLivreMomentum            = 'MOMENTUM';
+      // code du livre dans les livres acceptes du perso ([BOOK MOMENTUM]) : a passer a VerifieFiltre
+      ConstFiltreLivreMomentum          = 'BOOK MOMENTUM';
       ConstXmlAge                       = 'Age';
       ConstXmlHeight                    = 'Height';
       ConstXmlHairColors                = 'HairColors';
@@ -466,14 +606,14 @@ Const
       // Sixieme pendant du meme moule, cote Reload d'une arme a distance : <Modificateur
       // Type="ModifyReloadRate" Cible="RELOAD" Facteur="-1"/> sur un DATA_CRAFTMANSHIP
       // (Rune of Reloading, Dwarf Player's Guide). Facteur additionne au chiffre de la
-      // Qualite RULES-WEAPB23 "Reload N" de l'arme (FabricationModificateurQualite, meme
+      // Qualite RULES-WEAPB_RELOAD "Reload N" de l'arme (FabricationModificateurQualite, meme
       // mecanisme que Rune of Cleaving/ModifyDamage) - plancher a 1 pour une arme portant
-      // la Qualite Salvo (UPINA-WEAPB36, Up in Arms), qui ne se recharge jamais totalement.
+      // la Qualite Salvo (UPINA-WEAPB_SALVO, Up in Arms), qui ne se recharge jamais totalement.
       // Affichage pas encore cable (chantier ouvert, A FAIRE.txt). 26/09/2026.
       ConstXmlModifieRechargement       = 'ModifyReloadRate';
       ConstCibleModifieRechargement     = 'RELOAD';
       // Septieme pendant du meme moule, generalisation de BonusAccurate (qualite d'arme
-      // catalogue RULES-WEAPB16, +10 pour toucher) a une fabrication/rune : <Modificateur
+      // catalogue RULES-WEAPB_ACCURATE, +10 pour toucher) a une fabrication/rune : <Modificateur
       // Type="ModifyAccurate" Cible="ACCURATE" Facteur="10"/> sur un DATA_CRAFTMANSHIP
       // (Rune of Accuracy, Dwarf Player's Guide, Max 3 - Niveau multiplie deja le Facteur
       // dans FabricationModificateurQualite). S'ajoute a Pourcent a cote du Ord(Pos(
@@ -490,6 +630,10 @@ Const
       ConstXmlModifieRechargementMin    = 'ModifyReloadMin';
       // Nombre de mains du personnage : base humanoide + <ModifyHands name="HANDS">-1</ModifyHands>
       // sur toute source (main perdue : mutation, affliction, blessure ; main de plus : creature).
+      // Bonus aux tests de lutte (Tentacles d'un familier, Realms of Sorcery 7-2 : +10 %). Charge et AFFICHE seulement,
+      // comme ModifyTestSL/ModifyCN : la lutte n'est ni une competence ni une arme, rien a calculer. 18/10/2026.
+      ConstXmlModifieLutte              = 'ModifyGrapple';
+      ConstCibleModifieLutte            = 'GRAPPLE';
       ConstXmlModifieMains              = 'ModifyHands';
       ConstCibleModifieMains            = 'HANDS';
       ConstMainsBase                    = 2;
@@ -646,25 +790,6 @@ Const
       // ConstCheminImageRace/Metier/Sort - déclaration déplacée, pas supprimée.
       ConstCheminImagePolice            = '\FONT\';
 
-      // pdf du personnage - par edition
-      ConstCheminPdfFront               = '\PICTURES\WFRP4\PDF\FRONT.png';
-      ConstCheminPdfBack                = '\PICTURES\WFRP4\PDF\BACK.png';
-      ConstCheminPdfShadow              = '\PICTURES\WFRP4\PDF\SHADOW.png';
-      ConstCheminPdfMetierBack          = '\PICTURES\WFRP4\PDF\PDF_BACKSHEET.jpg';
-      ConstCheminPdfMetierAdvance       = '\PICTURES\WFRP4\PDF\PDF_ADVANCE_SCHEME.png';
-      ConstCheminPdfMetierLigneG        = '\PICTURES\WFRP4\PDF\PDF_LINE_LEFT.png';
-      ConstCheminPdfMetierLigneD        = '\PICTURES\WFRP4\PDF\PDF_LINE_RIGHT.png';
-      ConstCheminPdfWarhammer           = '\PICTURES\WFRP4\PDF\PDF_WARHAMMER.png';
-      ConstCheminPdfRolePlay            = '\PICTURES\WFRP4\PDF\PDF_ROLEPLAY.png';
-      ConstCheminPdfUbersreik           = '\PICTURES\WFRP4\PDF\PDF_UBERSREIK.png';
-
-      // chemin des fichiers de données de base
-      ConstCheminAttribut               = '\DATABASE\WFRP4\LANGUAGE\%LANG%\ATTR.TXT';
-
-      // chemin des fichiers liés à l'expérience
-      ConstCheminXpAttribut             = '\DATABASE\WFRP4\ATTR_AUGM.TXT';
-      ConstCheminXpCompetence           = '\DATABASE\WFRP4\SKILL_AUGM.txt';
-
       // chemin des textes
       ConstCheminLivreExport            = '\DATABASE_EXPORT\';
       // Libellés/messages d'interface (RULES-LAB_*/RULES-MESS_*) : sortis du RULESBOOK vers un
@@ -697,6 +822,11 @@ Const
       // toggle .INI le 22/09/2026 (CONTEXT.md 2.89).
       ConstOptionStarSign               = 'STARSIGN';
       ConstOptionCareerAlt              = 'CAREERALT';
+      // Cases de l'etape Livre de WinCreation (creation en cours seulement, cochees par defaut) :
+      // cle = prefixe + livre, dans ReglesDesactiveesCreation.
+      ConstCleSousMetier                = 'SOUSMETIER-';   // DATA_CAREER_SUBCHOICE (second jet)
+      ConstCleChoixMetier               = 'CHOIXMETIER-';  // DATA_SPECIE_CAREER_CHOICE (choix par espece)
+      ConstCleMutationDepart            = 'MUTATION-';     // StartingMutation des regles V2 (ajout a l'origine)
       ConstIniVersion                   = 'VERSION=';
       // Langue de l'interface (RULES-LAB_*/RULES-MESS_*), décorrélée de ConstIniLangue (qui
       // reste la langue des livres/données) - Nono, 13/09/2026, CONTEXT.md §2.70.
@@ -741,7 +871,7 @@ Const
       // TalentVeloce / TalentChanceux / TalentObstine deja mortes depuis le 06/09/2026
       // (migrees vers ModifyCarac/PersonnageTalentAttributModif) mais pas encore
       // retirees ici - hors perimetre de ce chantier, voir A FAIRE.txt.
-      TalentHaineSacree                 = 'T0070';
+      TalentHaineSacree                 = 'T_HOLY_HATRED';
       // TalentSortBenediction / TalentSortMiracle / TalentSortMagieMineure / TalentSortDomaine
       // ('T0012'/'T0080'/'T0089'/'T0088') SUPPRIMEES le 23/08/2026 : la liste des talents qui
       // donnent acces aux sorts vit maintenant dans les donnees, balises <Magic>/<SpellMode>
@@ -754,6 +884,8 @@ Const
       EquipementMU                      = 'MUNI_';
       // Code d'un objet de texte pur propre a un personnage (TEXTE-1, TEXTE-2...), sans fiche ni livre.
       PrefixeEquipementTexte            = 'TEXTE-';
+      // Code d'une ligne Familier (FAMILIER-1...) : NomLibre porte le nom du personnage familier.
+      PrefixeEquipementFamilier         = 'FAMILIER-';
       EquipementAR                      = 'ARMO_';
       EquipementTR                      = 'TRAP_';
       EquipementQualite                 = '(Q)';
@@ -792,10 +924,12 @@ Const
       // des RACES est désormais portée par le bloc XML DATA_RACE (voir ChargeEspece.pas).
       CorruptionPhysique                = 'RULES-CORRUPTION_PHYSICAL';
       CorruptionMentale                 = 'RULES-CORRUPTION_MENTAL';
+      CorruptionDivine                  = 'RULES-CORRUPTION_DIVINE';
+      CorruptionMutation                = 'RULES-CORRUPTION_MUTATION';   // Tome of Corruption (WFRP2), tirage D1000
       // "GM's Choice" (Physical Corruption Table, 96-00) - pas une vraie mutation, une
       // instruction de consulter le MJ (CONTEXT.md §2.7). Seule la table Physical a ce cas ;
       // Mental n'a pas d'entrée équivalente à 96-00 ("Worried Jitters", une entrée normale).
-      CorruptionChoixMJ                 = 'CORPHY_020';
+      CorruptionChoixMJ                 = 'CORPHY_GM_S_CHOICE';
 
       KEY_ESC                           = #27;
 
@@ -858,16 +992,17 @@ Const
       ConstPFabrication                     = 'PFabrication';
       ConstPCorruptionTable                 = 'PCorruptionTable';
       ConstPRaceCouleur                     = 'PRaceCouleur';
+      ConstPMetierNiveau                    = 'PMetierNiveau';
       ConstPDisease                          = 'PDisease';
       ConstPAdaptation                      = 'PAdaptation';
       ConstPSigneAstral                     = 'PSigneAstral';
       ConstPAffliction                      = 'PAffliction';
 
-      ConstCEsquive                         = 'RULES-COMPESQU';
-      ConstCCalme                           = 'RULES-COMPCALM';
-      ConstCResitance                       = 'RULES-COMPRESIST';
-      ConstCCommandement                    = 'RULES-COMPCOMM';
-      ConstCIntuition                       = 'RULES-COMPINTUI';
+      ConstCEsquive                         = 'RULES-COMP_DODGE';
+      ConstCCalme                           = 'RULES-COMP_COOL';
+      ConstCResitance                       = 'RULES-COMP_ENDURANCE';
+      ConstCCommandement                    = 'RULES-COMP_LEADERSHIP';
+      ConstCIntuition                       = 'RULES-COMP_INTUITION';
 
       ConstCompetenceInverseDe              = 'ChooseDice';
       ConstCompetenceBonus                  = 'Bonus';
@@ -890,6 +1025,10 @@ Var
   // non vide = la case "selon mes competences" est proposee. 20/09/2026.
   SelectWinArmeCompetences: String = '';
   ChoixWinArme:        String = '';
+  // Code de l'arme / armure a montrer (double-clic sur l'equipement de WinPersonnage) : la fiche
+  // s'ouvre en consultation, ligne deja selectionnee. Vide = comportement habituel.
+  VoirWinArme:         String = '';
+  VoirWinArmure:       String = '';
   // Selection d'un objet du catalogue DATA_TRAPPING depuis WinPersonnage (WinEquipement).
   SelectWinTrapping:   String = '';
   ChoixWinTrapping:    String = '';
@@ -906,6 +1045,8 @@ Var
   ChoixWinTalent:      String = '';
   SelectWinAttribut:   String = '';
   ChoixWinAttribut:    String = '';
+  SelectWinBase:       Boolean = False;   // filtre des carrieres V1 / V2 : carrieres de base seulement
+  ChoixWinBase:        Boolean = False;
   SelectWinCompetence: String = '';
   ChoixWinCompetence:  String = '';
   RecherchePersonnage: String = '';
@@ -956,12 +1097,17 @@ Var
   // separes par virgule (ex. 'QUICKARMOUR'). Une option absente de la liste reste
   // active par defaut - meme principe que ListeLivreParVersion ci-dessus.
   ListeOptionDesactiveeParLivre: TStringList;
+  // Ids des regles de tirage decochees pour la creation en cours (videe a l'ouverture de WinCreation)
+  ReglesDesactiveesCreation: TStringList = nil;
   WinFiltreAppelant:   String = '';
   SelectWinGroupe:     String = '';
   ChoixWinGroupe:      String = '';
   SelectWinQuickArmor: Boolean= false;
   // Faux : WinWeapon ne propose pas les munitions (option {NoAmmo} du personnage) ; remis a vrai a la fermeture.
   SelectWinMunitions:  Boolean= true;
+  // Option Momentum du personnage ouvert : 0 = pas de filtre (consultation), 1 = talents WFRP4 seulement,
+  // 2 = talents Momentum (WFRP5) a la place de leurs equivalents WFRP4. Pose par WinPersonnage, remis a 0 a sa fermeture.
+  SelectWinMomentum:   Integer= 0;
   SelectWinF:          Integer = 0;
   SelectWinE:          Integer = 0;
   SelectWinFM:         Integer = 0;
@@ -971,6 +1117,9 @@ Var
   // renseigne le résultat avant de se fermer.
   MutationCodeRace:             String  = '';    // entrée : Personnage.Race, pour le tirage Physical/Mental
   MutationResilienceDisponible: Boolean = false;  // entrée : Résilience totale actuelle > 0
+  MutationLoreDivin:            String  = '';    // entrée : lore du dieu (Marque divine, WFRP2) ; '' = mutation de corruption
+  MutationDieuChaos:            String  = '';    // entrée : dieu (Khorne...) dont on tire la table 3-2 a 3-5 ; '' = table 3-1
+  MutationDuChaos:              Boolean = false;  // entrée : mutation du Tome of Corruption (WFRP2), tirage D1000
   MutationChoix:                String  = '';    // sortie : '' (annulé) / 'RESILIENCE' / 'MUTATION'
   // sortie (si MUTATION) : référence stockée sur le personnage (Personnage.Mutations, CONTEXT.md
   // §2.7) - le code stable du catalogue (ex. "RULES-CORMEN_007"), pas le texte résolu ni la
@@ -1102,6 +1251,19 @@ Var
   // ethnie peut en designer un autre sous cette racine via la balise <PictureLevel> (ex :
   // NIV_HELF pour les Hauts Elfes, dont le livre utilise des glyphes et des couleurs qui
   // lui sont propres).
+  // Fonds et logos du PDF : Var (pas Const) pour suivre ValVersion (PdfCheminsSelonVersion).
+  // Defaut WFRP4 : une version sans ses propres fichiers retombe sur WFRP4\PDF\.
+  ConstCheminPdfFront         : String = '\PICTURES\WFRP4\PDF\FRONT.png';
+  ConstCheminPdfBack          : String = '\PICTURES\WFRP4\PDF\BACK.png';
+  ConstCheminPdfShadow        : String = '\PICTURES\WFRP4\PDF\SHADOW.png';
+  ConstCheminPdfMetierBack    : String = '\PICTURES\WFRP4\PDF\PDF_BACKSHEET.jpg';
+  ConstCheminPdfMetierAdvance : String = '\PICTURES\WFRP4\PDF\PDF_ADVANCE_SCHEME.png';
+  ConstCheminPdfMetierLigneG  : String = '\PICTURES\WFRP4\PDF\PDF_LINE_LEFT.png';
+  ConstCheminPdfMetierLigneD  : String = '\PICTURES\WFRP4\PDF\PDF_LINE_RIGHT.png';
+  ConstCheminPdfWarhammer     : String = '\PICTURES\WFRP4\PDF\PDF_WARHAMMER.png';
+  ConstCheminPdfRolePlay      : String = '\PICTURES\WFRP4\PDF\PDF_ROLEPLAY.png';
+  ConstCheminPdfUbersreik     : String = '\PICTURES\WFRP4\PDF\PDF_UBERSREIK.png';
+
   ConstCheminImageNiveau:       String = '\PICTURES\WFRP4\NIV\';
   ConstCheminImageNiveauRacine: String = '\PICTURES\WFRP4\';
 
@@ -1145,12 +1307,16 @@ Function VerifieFiltre(Valeur: String; Liste: String): Boolean;
 Function ReplaceTilde(Ligne: String): String;
 Function LivreOrdre(Livre: String): String;
 Function OptionDesactivee(Livre, CodeOption: String): Boolean;
+Function RegleDesactivee(Livre, CodeRegle: String): Boolean;
+Function BasculeCreationActive(CodeRegle: String): Boolean;
+Procedure BasculeRegleCreation(CodeRegle: String);
 Procedure SauveIniOptions();
 Function CheminFichier(TypeDonnee: String; Livre: String): String;
 function extractnumbers(line: string): String;
 Function LivreRepertoireTravail(CodeLivre, Langue: String): String;
 Function LivreFichierActuel(CodeLivre, Langue: String): String;
 Function CheminImage(Chemin: String): String;
+procedure PdfCheminsSelonVersion(const Version: String);
 Function CheminImageClasse(CodeClasse: String): String;
 Function CheminIconeEspece(const CodeEspece: String): String;
 Function AfficheIconeEspece(Img: TImage; const CodeEspece, Nom: String): Boolean;
@@ -1165,8 +1331,44 @@ type
 
 // Une seule illustration presente : elle prend la place des deux. Aucune ou deux : emplacements d'origine.
 procedure PlaceImagesRace(Img1, Img2: TImage; var Z: TZoneImagesRace; A1, A2: Boolean);
+function CleValeurLivre(const Valeur: String): String;
+function ValeurLivreEgale(const Valeur, Mot: String): Boolean;
+function IndexAlignementV1(const Code: String): Integer;
 
 implementation
+
+// Rang d'un code d'alignement V1 dans CodesAlignementV1, -1 si inconnu
+function IndexAlignementV1(const Code: String): Integer;
+var
+  I: Integer;
+begin
+  Result := -1;
+  for I := 0 to High(CodesAlignementV1) do
+    if CodesAlignementV1[I] = Code then
+      Exit(I);
+end;
+
+// Cle de comparaison d une donnee a choisir des livres V1 / V2, que le livre stocke le MOT anglais (« Melee Weapons »)
+// ou le CODE (« RULES-EQCAT2_MELEE_WEAPONS ») : prefixe « RULES-xxx_ » retire, majuscules, espaces / « - » / « / » -> « _ ».
+function CleValeurLivre(const Valeur: String): String;
+var
+  P: Integer;
+begin
+  Result := Trim(Valeur);
+  if Copy(Result, 1, 6) = 'RULES-' then
+    begin
+      P := Pos('_', Result);
+      if P > 0 then Result := Copy(Result, P + 1, MaxInt);
+    end;
+  Result := StringReplace(StringReplace(StringReplace(UpperCase(Result), ' ', '_', [rfReplaceAll]),
+    '-', '_', [rfReplaceAll]), '/', '_', [rfReplaceAll]);
+end;
+
+// Vrai si la valeur du livre (mot ou code) designe le mot donne.
+function ValeurLivreEgale(const Valeur, Mot: String): Boolean;
+begin
+  Result := CleValeurLivre(Valeur) = CleValeurLivre(Mot);
+end;
 
 procedure NettoyerElementsFenetre(Fenetre: TWinControl);
   var
@@ -1432,6 +1634,34 @@ Function VerifieFiltre(Valeur: String; Liste: String): Boolean;
     Result := Res;
   end;
 
+// Une regle de tirage (DATA_RULE) peut etre decochee a l'etape « Livre » de WinCreation. Le choix ne
+// vaut que pour la creation en cours : il n'est ni ecrit dans l'INI ni dans le personnage.
+Function RegleDesactivee(Livre, CodeRegle: String): Boolean;
+  begin
+    // Etat par defaut = reglage global du livre (INI, option CAREERALT) ; la case de l'etape Livre de
+    // WinCreation l'inverse pour la creation en cours.
+    Result := OptionDesactivee(Livre, ConstOptionCareerAlt) <> BasculeCreationActive(CodeRegle);
+  end;
+
+// Le code a-t-il ete bascule par une case de l'etape Livre pour la creation en cours ?
+Function BasculeCreationActive(CodeRegle: String): Boolean;
+  begin
+    Result := Assigned(ReglesDesactiveesCreation) and (ReglesDesactiveesCreation.IndexOf(CodeRegle) >= 0);
+  end;
+
+Procedure BasculeRegleCreation(CodeRegle: String);
+  var
+    Ind: Integer;
+  begin
+    if ReglesDesactiveesCreation = nil then
+      ReglesDesactiveesCreation := TStringList.Create;
+    Ind := ReglesDesactiveesCreation.IndexOf(CodeRegle);
+    if Ind >= 0 then
+      ReglesDesactiveesCreation.Delete(Ind)
+    else
+      ReglesDesactiveesCreation.Add(CodeRegle);
+  end;
+
 Function OptionDesactivee(Livre, CodeOption: String): Boolean;
   Var
     Liste: TStringList;
@@ -1611,6 +1841,28 @@ Function CheminImage(Chemin: String): String;
       Result := Repli;
   end;
 
+// Fonds et logos du PDF de la version : \PICTURES\<Version>\PDF\<fichier> s'il existe (avec le
+// repli PICTURES_DEFAULT de CheminImage), sinon celui de WFRP4 (seule edition garnie aujourd'hui).
+procedure PdfCheminsSelonVersion(const Version: String);
+  function Choisit(const Fichier: String): String;
+    begin
+      Result := '\PICTURES\' + Version + '\PDF\' + Fichier;
+      if not FileExists(CheminImage(GetCurrentDir + Result)) then
+        Result := '\PICTURES\WFRP4\PDF\' + Fichier;
+    end;
+  begin
+    ConstCheminPdfFront := Choisit('FRONT.png');
+    ConstCheminPdfBack := Choisit('BACK.png');
+    ConstCheminPdfShadow := Choisit('SHADOW.png');
+    ConstCheminPdfMetierBack := Choisit('PDF_BACKSHEET.jpg');
+    ConstCheminPdfMetierAdvance := Choisit('PDF_ADVANCE_SCHEME.png');
+    ConstCheminPdfMetierLigneG := Choisit('PDF_LINE_LEFT.png');
+    ConstCheminPdfMetierLigneD := Choisit('PDF_LINE_RIGHT.png');
+    ConstCheminPdfWarhammer := Choisit('PDF_WARHAMMER.png');
+    ConstCheminPdfRolePlay := Choisit('PDF_ROLEPLAY.png');
+    ConstCheminPdfUbersreik := Choisit('PDF_UBERSREIK.png');
+  end;
+
 // Image d'une classe de carriere : le code complet (RULES-CLASS_ACAD) d'abord, puis le nom
 // court sans prefixe de livre (CLASS_ACAD), seul nom des fichiers historiques. Meme repli que
 // pour les ethnies et les metiers (CONTEXT.md 2.27).
@@ -1724,9 +1976,9 @@ function AfficheIconeSort(Img: TImage; const CodeTalent, Libelle: String): Boole
 var
   Famille: String;
 begin
-  if (Pos('T0012', CodeTalent) > 0) or (Pos('T0080', CodeTalent) > 0) then
+  if (Pos('T_BLESS', CodeTalent) > 0) or (Pos('T_INVOKE', CodeTalent) > 0) then
     Famille := 'GENERIC_DIVINE'
-  else if Pos('T0172', CodeTalent) > 0 then
+  else if Pos('T_CHAOS_MAGIC', CodeTalent) > 0 then
     Famille := 'GENERIC_CHAOS'
   else
     Famille := 'GENERIC_ARCANE';

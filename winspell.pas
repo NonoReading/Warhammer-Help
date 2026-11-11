@@ -23,6 +23,18 @@ type
     AffPortee: TEdit;
     AffCible: TEdit;
     AffDuree: TEdit;
+    AffTemps: TEdit;
+    AffIngredient: TEdit;
+    AffListes: TEdit;
+    LabListes: TLabelContour;
+    AffCulte: TEdit;
+    LabCulte: TLabelContour;
+    // Un panneau par famille de version pour les champs qui lui sont propres (les champs communs restent
+    // sur la fiche) : une version de plus = un panneau de plus. Voir A FAIRE CHAMPS-PAR-VERSION.
+    PanelV2: TPanel;
+    PanelV4: TPanel;
+    LabTemps: TLabelContour;
+    LabIngredient: TLabelContour;
     ButtonFiltre: TBCButton;
     Image1: TImage;
     ImageWar: TImage;
@@ -57,6 +69,7 @@ var
   WinSpells:    TWinSpells;
   FiltreLivre:  String;
   FiltreTalent: String;
+  FiltreGroupe: String;     // WFRP2 : listes de sorts (FiltreTalent y porte le Lore)
   FenFiltre:    TWinFiltre;
 
 implementation
@@ -107,8 +120,7 @@ Function SortTalentAccessible(TalentsDuSort, TalentsDuPersonnage: String): Boole
               Result := True
             // le sort ouvre toute une famille : on compare les familles
             else if Pos(ValeurGenerique, ListeSort[IndS]) > 0 then
-              if ExtractStringBefore(ListeSort[IndS], ValeurGenerique)
-                  = ExtractStringBefore(ListePerso[IndP], ValeurSousCompetence) then
+              if RadicalTalent(ListeSort[IndS]) = RadicalTalent(ListePerso[IndP]) then
                 Result := True;
           end;
     finally
@@ -121,17 +133,40 @@ Function TWinSpells.SpellFiltre(PSort: StructureSort):Boolean;
 var
   ResLivre:    Boolean = True;
   ResTalent:   Boolean = True;
+  ResListe:    Boolean = True;
+  ListesDuSort: TStringList;
+  Ind:         Integer;
 begin
   if FiltreLivre <> '' then
     if not VerifieFiltre(PSort.Livre, FiltreLivre) then
       ResLivre := false;
 
-  if filtreTalent <> '' then
+  if ValVersion = 'WFRP2' then
+    begin
+      // V2 : le filtre "talent" est le Lore du sort, le filtre "groupe" ses listes de sorts
+      if FiltreTalent <> '' then
+        if not VerifieFiltre(PSort.TypeSort, FiltreTalent) then
+          ResTalent := false;
+      if FiltreGroupe <> '' then
+        begin
+          ListesDuSort := TStringList.Create;
+          try
+            ExtractStrings([','], [' '], PChar(PSort.ListesSorts), ListesDuSort);
+            ResListe := False;
+            for Ind := 0 to ListesDuSort.Count - 1 do
+              if VerifieFiltre(Trim(ListesDuSort[Ind]), FiltreGroupe) then
+                ResListe := True;
+          finally
+            ListesDuSort.Free;
+          end;
+        end;
+    end
+  else if filtreTalent <> '' then
     // TalentsDuSort et non PSort.ListeTalent : voir CONTEXT.md 2.39.
     if not VerifieFiltre(TalentsDuSort(PSort), filtreTalent) then
       ResTalent:= false;
 
-  Result := (ResLivre and ResTalent);
+  Result := (ResLivre and ResTalent and ResListe);
 end;
 
 procedure TWinSpells.WinCharger();
@@ -162,6 +197,10 @@ procedure TWinSpells.WinCharger();
           GridAjouteColonne(TabSpell, GetTexteLibelle('RULES-LAB_007'));
           GridAjouteColonne(TabSpell, GetTexteLibelle('RULES-LAB_128'),100);
           GridAjouteColonne(TabSpell, GetTexteLibelle('RULES-LAB_001'),100);
+          GridAjouteColonne(TabSpell, GetTexteLibelle('RULES-LAB_709'));
+          GridAjouteColonne(TabSpell, GetTexteLibelle('RULES-LAB_710'));
+          GridAjouteColonne(TabSpell, GetTexteLibelle('RULES-LAB_757'));
+          GridAjouteColonne(TabSpell, GetTexteLibelle('RULES-LAB_781'));
         end;
       TabSpell.ColWidths[0]  := 20;
 
@@ -192,7 +231,7 @@ procedure TWinSpells.WinCharger();
               TabSpell.Cells[ 5,Nb]   := ReplaceTexteLibelle(PSort.Cible);
               TabSpell.Cells[ 6,Nb]   := ReplaceTexteLibelle(PSort.Duree);
               TabSpell.Cells[ 7,Nb]   := TexteOuPage(PSort.Description, ConstXmlDataSpell, PSort.Livre, PSort.CodeSort);
-              TabSpell.Cells[ 8,Nb]   := PSort.Niveau;
+              TabSpell.Cells[ 8,Nb]   := LibelleValeurLivre(PSort.Niveau);
               // Colonne 9 = la liste COMPLETE des talents (champ du sort + DATA_SPELL_TALENT).
               // C'est elle que relit TabSpellSelection pour remplir TabTalent : en la
               // remplissant ici avec TalentsDuSort, l'affichage du detail suit sans autre
@@ -200,6 +239,25 @@ procedure TWinSpells.WinCharger();
               TabSpell.Cells[ 9,Nb]   := TalentsDuSort(PSort);
               TabSpell.Cells[10,Nb]   := GetTexteLibelle(PSort.Livre,'','',true);
               TabSpell.Cells[11,Nb]   := PSort.CodeSort;
+              // Sorts WFRP2 seulement (vides en V4)
+              TabSpell.Cells[12,Nb]   := PSort.TempsIncantation;
+              TabSpell.Cells[13,Nb]   := PSort.Ingredient;
+              TabSpell.Cells[14,Nb]   := PSort.ListesSorts;
+              TabSpell.Cells[15,Nb]   := PSort.Culte;
+              // Rituels (Realms of Sorcery) : la fiche du rituel et ses conditions s'ajoutent au texte
+              // du sort (pas de champ propre : trop long pour une zone de saisie).
+              if PSort.TypeRituel <> '' then
+                TabSpell.Cells[7,Nb] := GetTexteLibelle('RULES-LAB_758') + ' : ' + GetTexteLibelle(PSort.TypeRituel, PSort.TypeRituel) + ' - ' +
+                  GetTexteLibelle('RULES-LAB_759') + ' : ' + PSort.LangueArcanique + ' - ' +
+                  GetTexteLibelle('RULES-LAB_760') + ' : ' + PSort.MagieMin + ' - ' +
+                  GetTexteLibelle('RULES-LAB_761') + ' : ' + PSort.CoutXP + LineEnding + LineEnding +
+                  TabSpell.Cells[7,Nb];
+              if PSort.ConditionsRituel <> '' then
+                TabSpell.Cells[7,Nb] := TabSpell.Cells[7,Nb] + LineEnding + LineEnding +
+                  GetTexteLibelle('RULES-LAB_762') + ' : ' + PSort.ConditionsRituel;
+              if PSort.ConsequencesRituel <> '' then
+                TabSpell.Cells[7,Nb] := TabSpell.Cells[7,Nb] + LineEnding + LineEnding +
+                  GetTexteLibelle('RULES-LAB_763') + ' : ' + PSort.ConsequencesRituel;
            end
       end;
 
@@ -227,6 +285,10 @@ procedure TWinSpells.WinCharger();
       LabPortee.Caption         := GetTexteLibelle('RULES-LAB_057');
       LabCible.Caption          := GetTexteLibelle('RULES-LAB_108');
       LabDuree.Caption          := GetTexteLibelle('RULES-LAB_109');
+      LabTemps.Caption          := GetTexteLibelle('RULES-LAB_709');
+      LabIngredient.Caption     := GetTexteLibelle('RULES-LAB_710');
+      LabListes.Caption         := GetTexteLibelle('RULES-LAB_757');
+      LabCulte.Caption          := GetTexteLibelle('RULES-LAB_781');
       LabNiveau.Caption         := GetTexteLibelle('RULES-LAB_019');
       AffLivre.Caption          := GetTexteLibelle('RULES-LAB_128');
       ButtonFiltre.Caption      := GetTexteLibelle('RULES-LAB_133');
@@ -247,6 +309,15 @@ procedure TWinSpells.FormCreate(Sender: TObject);
   Begin
       FiltreLivre := SelectWinLivre;
       WinCharger();
+    // Panneau des champs propres a la version ; en V2 la fiche perd la place de la rangee de Cible (V4)
+    // et le memo de description descend sous le panneau V2.
+    PanelV2.Visible := (ValVersion = 'WFRP2');
+    PanelV4.Visible := not PanelV2.Visible;
+    if PanelV2.Visible then
+      begin
+        AffEffet.Height := AffEffet.Height - (PanelV2.Top + PanelV2.Height + 8 - AffEffet.Top);
+        AffEffet.Top    := PanelV2.Top + PanelV2.Height + 8;
+      end;
     // Ancrage proportionnel, meme regle que WinRace (voir AncrageProportionnel).
     Ancrage := TAncrageProportionnel.Create(Self);
     Ancrage.Ajouter(ImageWar, 0.25, 0);
@@ -259,10 +330,10 @@ procedure TWinSpells.FormCreate(Sender: TObject);
     Ancrage.Ajouter(AffType, 0.5, 0);
     Ancrage.Ajouter(LabPortee, 0.5, 0);
     Ancrage.Ajouter(AffPortee, 0.5, 0);
-    Ancrage.Ajouter(LabCible, 0.5, 0);
-    Ancrage.Ajouter(AffCible, 0.5, 0);
+    Ancrage.Ajouter(PanelV4, 0.5, 0);
     Ancrage.Ajouter(LabDuree, 0.5, 0);
     Ancrage.Ajouter(AffDuree, 0.5, 0);
+    Ancrage.Ajouter(PanelV2, 0.5, 0);
     Ancrage.Ajouter(LabNiveau, 0.5, 0);
     Ancrage.Ajouter(AffNiveau, 0.5, 0);
     Ancrage.Ajouter(AffEffet, 0.5, 0.5);
@@ -278,14 +349,18 @@ procedure TWinSpells.ButtonFiltreClick(Sender: TObject);
   begin
     SelectWinLivre      := FiltreLivre;
     SelectWinTalent     := FiltreTalent;
+    SelectWinGroupe     := FiltreGroupe;
     WinFiltreAppelant   := ConstXmlSort;
     FenFiltre           := TWinFiltre.Create(Application);
     FenFiltre.Position  := poOwnerFormCenter;
     FenFiltre.ShowModal;
-    if (ChoixWinLivre <> FiltreLivre) or (ChoixWinTalent <> FiltreTalent) then
+    if (ChoixWinLivre <> FiltreLivre) or (ChoixWinTalent <> FiltreTalent)
+        or ((ValVersion = 'WFRP2') and (ChoixWinGroupe <> FiltreGroupe)) then
      Begin
        FiltreLivre := ChoixWinLivre;
        FiltreTalent:= ChoixWinTalent;
+       if ValVersion = 'WFRP2' then
+         FiltreGroupe := ChoixWinGroupe;
        WinVider();
        WinCharger();
        TabSpellSelection(TabSpell, 1,1);
@@ -369,6 +444,20 @@ procedure TWinSpells.TabSpellSelection(Sender: TObject; aCol, aRow: Integer);
           LabDuree.visible := false;
           AffDuree.visible := false;
         end;
+      // Sorts WFRP2 : temps d'incantation et ingredient, masques quand ils sont vides (V4)
+      AffTemps.Text        := TabSpell.Cells[12,aRow];
+      LabTemps.Visible     := AffTemps.Text <> '';
+      AffTemps.Visible     := AffTemps.Text <> '';
+      AffIngredient.Text   := TabSpell.Cells[13,aRow];
+      LabIngredient.Visible := AffIngredient.Text <> '';
+      AffIngredient.Visible := AffIngredient.Text <> '';
+      // Listes de sorts (Realms of Sorcery, Tome of Salvation) et culte (Tome of Salvation) : masques quand vides
+      AffListes.Text       := TabSpell.Cells[14,aRow];
+      LabListes.Visible    := AffListes.Text <> '';
+      AffListes.Visible    := AffListes.Text <> '';
+      AffCulte.Text        := TabSpell.Cells[15,aRow];
+      LabCulte.Visible     := AffCulte.Text <> '';
+      AffCulte.Visible     := AffCulte.Text <> '';
       AffEffet.Text        := TabSpell.Cells[ 7,aRow];
       AffNiveau.Text       := TabSpell.Cells[ 8,aRow];
       if AffNiveau.Text <> '' then

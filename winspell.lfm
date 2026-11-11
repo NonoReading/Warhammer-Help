@@ -133,28 +133,37 @@ object WinSpells: TWinSpells
     TabOrder = 4
     Text = 'AffPortee'
   end
-  object LabCible: TLabelContour
+  object PanelV4: TPanel
     Left = 881
-    Height = 20
-    Top = 226
-    Width = 34
-    Caption = 'Cible'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clWhite
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentColor = False
-    ParentFont = False
-  end
-  object AffCible: TEdit
-    Left = 881
-    Height = 28
-    Top = 250
+    Height = 60
+    Top = 218
     Width = 282
-    Color = cl3DLight
-    ReadOnly = True
+    BevelOuter = bvNone
+    ParentColor = True
     TabOrder = 5
-    Text = 'AffCible'
+    object LabCible: TLabelContour
+      Left = 0
+      Height = 20
+      Top = 8
+      Width = 34
+      Caption = 'Cible'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object AffCible: TEdit
+      Left = 0
+      Height = 28
+      Top = 32
+      Width = 282
+      Color = cl3DLight
+      ReadOnly = True
+      TabOrder = 0
+      Text = 'AffCible'
+    end
   end
   object LabDuree: TLabelContour
     Left = 881
@@ -201,6 +210,107 @@ object WinSpells: TWinSpells
     ReadOnly = True
     TabOrder = 7
     Text = 'AffNiveau'
+  end
+  object PanelV2: TPanel
+    Left = 544
+    Height = 112
+    Top = 290
+    Width = 618
+    BevelOuter = bvNone
+    ParentColor = True
+    TabOrder = 11
+    object LabTemps: TLabelContour
+      Left = 0
+      Height = 20
+      Top = 0
+      Width = 100
+      Caption = 'Temps'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object AffTemps: TEdit
+      Left = 0
+      Height = 28
+      Top = 24
+      Width = 297
+      Color = cl3DLight
+      ReadOnly = True
+      TabOrder = 0
+      Text = 'AffTemps'
+    end
+    object LabIngredient: TLabelContour
+      Left = 337
+      Height = 20
+      Top = 0
+      Width = 100
+      Caption = 'Ingrédient'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object AffIngredient: TEdit
+      Left = 337
+      Height = 28
+      Top = 24
+      Width = 281
+      Color = cl3DLight
+      ReadOnly = True
+      TabOrder = 1
+      Text = 'AffIngredient'
+    end
+    object LabListes: TLabelContour
+      Left = 0
+      Height = 20
+      Top = 60
+      Width = 100
+      Caption = 'Listes'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object AffListes: TEdit
+      Left = 0
+      Height = 28
+      Top = 84
+      Width = 297
+      Color = cl3DLight
+      ReadOnly = True
+      TabOrder = 2
+      Text = 'AffListes'
+    end
+    object LabCulte: TLabelContour
+      Left = 337
+      Height = 20
+      Top = 60
+      Width = 100
+      Caption = 'Culte'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object AffCulte: TEdit
+      Left = 337
+      Height = 28
+      Top = 84
+      Width = 281
+      Color = cl3DLight
+      ReadOnly = True
+      TabOrder = 3
+      Text = 'AffCulte'
+    end
   end
   object AffEffet: TMemo
     Left = 545

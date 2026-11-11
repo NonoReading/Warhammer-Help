@@ -1,0 +1,5509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"LFAN"</CODE_BOOK>
+<BOOK>"BOOK LIBER FANATICA"</BOOK>
+<BOOKNAME>"LIBER FANATICA"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMP_SECRET_SIGNS_BATTLE">
+<Description language="ENGLISH">"Secret Signs (Battle)"</Description>
+<Generique>"RULES-COMP_SECRET_SIGNS_*"</Generique>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+<DATA_RULE>
+<Rule id="LFAN-RULE_BACKGROUND_BOURGEOIS">""</Rule>
+<Rule id="LFAN-RULE_BACKGROUND_MERCANTILE">""</Rule>
+<Rule id="LFAN-RULE_BACKGROUND_MILITARY">""</Rule>
+<Rule id="LFAN-RULE_BACKGROUND_RURAL">""</Rule>
+<Rule id="LFAN-RULE_BACKGROUND_URBAN">""</Rule>
+<Rule id="LFAN-RULE_BACKGROUND_WANDERER">""</Rule>
+<Rule id="LFAN-RULE_BACKGROUND_WATERLINE">""</Rule>
+<Rule id="LFAN-RULE_BACKGROUND_WILDERNESS">""</Rule>
+<Rule id="LFAN-RULE_BACKGROUND_ELVES">""</Rule>
+<Rule id="LFAN-RULE_BACKGROUND_DWARFS">""</Rule>
+</DATA_RULE>
+<DATA_CAREER_ROLL>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_APPRENTICE_WIZARD">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BAILIFF">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BURGHER">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_INITIATE">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MESSENGER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_NOBLE">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SCRIBE">"10"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SQUIRE">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_STUDENT">"13"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_TRADESMAN">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_VALET">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_APPRENTICE_WIZARD">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BAILIFF">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BURGHER">"13"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_ENVOY">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_INITIATE">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MESSENGER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_NOBLE">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SCRIBE">"10"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SQUIRE">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_STUDENT">"13"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_TRADESMAN">"13"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_VALET">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_APPRENTICE_WIZARD">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BAILIFF">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BURGHER">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_INITIATE">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MESSENGER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_NOBLE">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SCRIBE">"10"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SQUIRE">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_STUDENT">"13"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_TRADESMAN">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_VALET">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_APPRENTICE_WIZARD">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BAILIFF">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BURGHER">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_INITIATE">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MESSENGER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_NOBLE">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SCRIBE">"10"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SQUIRE">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_STUDENT">"13"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_TRADESMAN">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_VALET">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BOATMAN">"10"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BURGHER">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_INITIATE">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MESSENGER">"10"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SCRIBE">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"10"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_TOLL_KEEPER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_TRADESMAN">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_VALET">"10"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BOATMAN">"10"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_ENVOY">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BURGHER">"13"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_INITIATE">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MESSENGER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SCRIBE">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_TOLL_KEEPER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_TRADESMAN">"13"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_VALET">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BOATMAN">"10"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BURGHER">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_INITIATE">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MESSENGER">"10"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SCRIBE">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"10"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_TOLL_KEEPER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_TRADESMAN">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_VALET">"10"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BOATMAN">"10"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BURGHER">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_INITIATE">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MESSENGER">"10"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SCRIBE">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"10"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_TOLL_KEEPER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_TRADESMAN">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_VALET">"10"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_INITIATE">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MARINE">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MERCENARY">"12"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MESSENGER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MILITIAMAN">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_OUTRIDER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SOLDIER">"12"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SQUIRE">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_VALET">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"12"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_INITIATE">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MARINE">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MERCENARY">"12"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MESSENGER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MILITIAMAN">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_OUTRIDER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SOLDIER">"12"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SQUIRE">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_VALET">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"12"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_INITIATE">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_FIELDWARDEN">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MARINE">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MERCENARY">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MESSENGER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MILITIAMAN">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_OUTRIDER">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SOLDIER">"12"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SQUIRE">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_VALET">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_INITIATE">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MARINE">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MERCENARY">"12"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MESSENGER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MILITIAMAN">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_OUTRIDER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SOLDIER">"12"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SQUIRE">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_VALET">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"12"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BODYGUARD">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_COACHMAN">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_GRAVE_ROBBER">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_HEDGE_WIZARD">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_JAILER">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MINER">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MILITIAMAN">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_PEASANT">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_RAT_CATCHER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_ROADWARDEN">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_ROGUE">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SCRIBE">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SERVANT">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_THIEF">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_TOLL_KEEPER">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_VAGABOND">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BODYGUARD">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_COACHMAN">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_GRAVE_ROBBER">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_HEDGE_WIZARD">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_JAILER">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MINER">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MILITIAMAN">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_PEASANT">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_RAT_CATCHER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_ROADWARDEN">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_ROGUE">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SCRIBE">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SERVANT">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_THIEF">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_TOLL_KEEPER">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_VAGABOND">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BODYGUARD">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_FIELDWARDEN">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_COACHMAN">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_GRAVE_ROBBER">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_HEDGE_WIZARD">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_JAILER">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MINER">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MILITIAMAN">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_PEASANT">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_RAT_CATCHER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_ROADWARDEN">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_ROGUE">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SCRIBE">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SERVANT">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_THIEF">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_TOLL_KEEPER">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_VAGABOND">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BODYGUARD">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_COACHMAN">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_GRAVE_ROBBER">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_HEDGE_WIZARD">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_JAILER">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MINER">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MILITIAMAN">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_PEASANT">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_RAT_CATCHER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_ROADWARDEN">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_ROGUE">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SCRIBE">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SERVANT">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_THIEF">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_TOLL_KEEPER">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_VAGABOND">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_AGITATOR">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BODYGUARD">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_COACHMAN">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_GRAVE_ROBBER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_INITIATE">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_JAILER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_PIT_FIGHTER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_PROTAGONIST">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_RAT_CATCHER">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_ROGUE">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SCRIBE">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SERVANT">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_STUDENT">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_THIEF">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_THUG">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_AGITATOR">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BODYGUARD">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_ENVOY">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_COACHMAN">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_GRAVE_ROBBER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_INITIATE">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_JAILER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_PIT_FIGHTER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_PROTAGONIST">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_RAT_CATCHER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_ROGUE">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SCRIBE">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SERVANT">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_STUDENT">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_THIEF">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_THUG">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_AGITATOR">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BODYGUARD">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_COACHMAN">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_GRAVE_ROBBER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_INITIATE">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_JAILER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_PIT_FIGHTER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_PROTAGONIST">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_RAT_CATCHER">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_ROGUE">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SCRIBE">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SERVANT">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_STUDENT">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_THIEF">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_THUG">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_AGITATOR">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BODYGUARD">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_COACHMAN">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_GRAVE_ROBBER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_INITIATE">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_JAILER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_PIT_FIGHTER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_PROTAGONIST">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_RAT_CATCHER">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_ROGUE">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SCRIBE">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SERVANT">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_STUDENT">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_THIEF">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_THUG">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BOATMAN">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_COACHMAN">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_FISHERMAN">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MESSENGER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_OUTLAW">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_OUTRIDER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_ROADWARDEN">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SEAMAN">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_VAGABOND">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_ESTALIAN_DIESTRO">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_KISLEVITE_KOSSAR">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_NORSE_BERSERKER">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BOATMAN">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_COACHMAN">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_FISHERMAN">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MESSENGER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_OUTLAW">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_OUTRIDER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_ROADWARDEN">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SEAMAN">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_VAGABOND">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_ESTALIAN_DIESTRO">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_KISLEVITE_KOSSAR">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_NORSE_BERSERKER">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BOATMAN">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_COACHMAN">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_FISHERMAN">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MESSENGER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_OUTLAW">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_OUTRIDER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_ROADWARDEN">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SEAMAN">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_VAGABOND">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_ESTALIAN_DIESTRO">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_KISLEVITE_KOSSAR">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_NORSE_BERSERKER">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BOATMAN">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_COACHMAN">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_FISHERMAN">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MESSENGER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_OUTLAW">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_OUTRIDER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_ROADWARDEN">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SEAMAN">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_VAGABOND">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_ESTALIAN_DIESTRO">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_KISLEVITE_KOSSAR">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_NORSE_BERSERKER">"1"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"48"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BOATMAN">"120"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_FERRYMAN">"80"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_FISHERMAN">"120"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_INITIATE">"87"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MARINE">"120"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SEAMAN">"120"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"122"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BODYGUARD">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_COACHMAN">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_GRAVE_ROBBER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_HEDGE_WIZARD">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_JAILER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MERCENARY">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MINER">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MILITIAMAN">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_PEASANT">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_RAT_CATCHER">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_ROADWARDEN">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_ROGUE">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SCRIBE">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SERVANT">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_THIEF">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_TOLL_KEEPER">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_VAGABOND">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_AGITATOR">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_PIT_FIGHTER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_PROTAGONIST">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_STUDENT">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_THUG">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"48"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BOATMAN">"120"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_FERRYMAN">"80"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_FISHERMAN">"120"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_INITIATE">"87"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MARINE">"120"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SEAMAN">"120"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"122"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BODYGUARD">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_COACHMAN">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_GRAVE_ROBBER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_HEDGE_WIZARD">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_JAILER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MERCENARY">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MINER">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MILITIAMAN">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_PEASANT">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_RAT_CATCHER">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_ROADWARDEN">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_ROGUE">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SCRIBE">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SERVANT">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_THIEF">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_TOLL_KEEPER">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_VAGABOND">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_AGITATOR">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_PIT_FIGHTER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_PROTAGONIST">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_STUDENT">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_THUG">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"48"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BOATMAN">"120"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_FERRYMAN">"80"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_FISHERMAN">"120"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_INITIATE">"87"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MARINE">"120"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SEAMAN">"120"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"122"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BODYGUARD">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_COACHMAN">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_GRAVE_ROBBER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_HEDGE_WIZARD">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_JAILER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MERCENARY">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MINER">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MILITIAMAN">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_PEASANT">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_RAT_CATCHER">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_ROADWARDEN">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_ROGUE">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SCRIBE">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SERVANT">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_THIEF">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_TOLL_KEEPER">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_VAGABOND">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_AGITATOR">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_PIT_FIGHTER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_PROTAGONIST">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_STUDENT">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_THUG">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"48"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BOATMAN">"120"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_FERRYMAN">"80"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_FISHERMAN">"120"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_INITIATE">"87"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MARINE">"120"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SEAMAN">"120"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"122"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BODYGUARD">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_COACHMAN">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_GRAVE_ROBBER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_HEDGE_WIZARD">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_JAILER">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MERCENARY">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MINER">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MILITIAMAN">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_PEASANT">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_RAT_CATCHER">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_ROADWARDEN">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_ROGUE">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SCRIBE">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SERVANT">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_THIEF">"11"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_TOLL_KEEPER">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_VAGABOND">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"8"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_AGITATOR">"7"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_PIT_FIGHTER">"3"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_PROTAGONIST">"6"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_STUDENT">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_THUG">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"412"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"764"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_HUNTER">"1000"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_INITIATE">"432"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MINER">"780"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_OUTLAW">"1000"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_PEASANT">"812"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_ROADWARDEN">"712"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"700"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"764"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_VAGABOND">"780"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_WOODSMAN">"900"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BODYGUARD">"48"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_COACHMAN">"80"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"32"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_GRAVE_ROBBER">"32"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_HEDGE_WIZARD">"80"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_JAILER">"32"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MERCENARY">"32"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MILITIAMAN">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_RAT_CATCHER">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_ROGUE">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SCRIBE">"48"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SERVANT">"32"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_THIEF">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_TOLL_KEEPER">"80"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"412"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"764"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_HUNTER">"1000"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_INITIATE">"432"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MINER">"780"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_OUTLAW">"1000"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_PEASANT">"812"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_ROADWARDEN">"712"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"700"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"764"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_VAGABOND">"780"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_WOODSMAN">"900"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BODYGUARD">"48"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_COACHMAN">"80"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"32"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_GRAVE_ROBBER">"32"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_HEDGE_WIZARD">"80"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_JAILER">"32"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MERCENARY">"32"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MILITIAMAN">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_RAT_CATCHER">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_ROGUE">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SCRIBE">"48"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SERVANT">"32"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_THIEF">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_TOLL_KEEPER">"80"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"412"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"764"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_HUNTER">"1000"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_INITIATE">"432"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MINER">"780"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_OUTLAW">"1000"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_PEASANT">"812"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_ROADWARDEN">"712"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"700"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"764"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_VAGABOND">"780"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_WOODSMAN">"900"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BODYGUARD">"48"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_COACHMAN">"80"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"32"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_GRAVE_ROBBER">"32"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_HEDGE_WIZARD">"80"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_JAILER">"32"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MERCENARY">"32"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MILITIAMAN">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_RAT_CATCHER">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_ROGUE">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SCRIBE">"48"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SERVANT">"32"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_THIEF">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_TOLL_KEEPER">"80"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"412"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"764"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_HUNTER">"1000"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_INITIATE">"432"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MINER">"780"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_OUTLAW">"1000"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_PEASANT">"812"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_ROADWARDEN">"712"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SMUGGLER">"700"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_TOMB_ROBBER">"764"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_VAGABOND">"780"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_WOODSMAN">"900"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BARBER_SURGEON">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BODYGUARD">"48"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_BONE_PICKER">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_COACHMAN">"80"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"32"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_GRAVE_ROBBER">"32"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_HEDGE_WIZARD">"80"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_JAILER">"32"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MERCENARY">"32"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MILITIAMAN">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_RAT_CATCHER">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_ROGUE">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SCRIBE">"48"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SERVANT">"32"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_THIEF">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_TOLL_KEEPER">"80"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"64"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_APPRENTICE_WIZARD">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_HUNTER">"13"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_INITIATE">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_KITHBAND_WARRIOR">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MESSENGER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_NOBLE">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SOLDIER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_STUDENT">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_TRADESMAN">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_WOODSMAN">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_APPRENTICE_WIZARD">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_HUNTER">"13"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_INITIATE">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_KITHBAND_WARRIOR">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MESSENGER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_NOBLE">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SOLDIER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_STUDENT">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_TRADESMAN">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_WOODSMAN">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_APPRENTICE_WIZARD">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_HUNTER">"13"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_INITIATE">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_KITHBAND_WARRIOR">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MESSENGER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_NOBLE">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SOLDIER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_STUDENT">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_TRADESMAN">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_WOODSMAN">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_APPRENTICE_WIZARD">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_ENTERTAINER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_HUNTER">"13"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_INITIATE">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_KITHBAND_WARRIOR">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MESSENGER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_NOBLE">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SOLDIER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_STUDENT">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_TRADESMAN">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_WOODSMAN">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_INITIATE">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_JAILER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_MINER">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_NOBLE">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_RUNEBEARER">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SCRIBE">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SHIELDBREAKER">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_SOLDIER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_STUDENT">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_TRADESMAN">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_VALET">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_INITIATE">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_JAILER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_MINER">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_NOBLE">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_RUNEBEARER">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SCRIBE">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SHIELDBREAKER">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_SOLDIER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_STUDENT">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_TRADESMAN">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_VALET">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_INITIATE">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_JAILER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_MINER">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_NOBLE">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_RUNEBEARER">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SCRIBE">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SHIELDBREAKER">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_SOLDIER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_STUDENT">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_TRADESMAN">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_VALET">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_INITIATE">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_JAILER">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_MINER">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_NOBLE">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_RUNEBEARER">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SCRIBE">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SHIELDBREAKER">"14"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_SOLDIER">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_STUDENT">"4"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_TRADESMAN">"9"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_VALET">"5"</Career>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Career name="RULES-CARE_WATCHMAN">"9"</Career>
+  </Entry>
+</DATA_CAREER_ROLL>
+<DATA_RULE_BACKGROUND>
+<Entry>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_BOURGEOIS">"11"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_DWARFS">"10"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_MERCANTILE">"12"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_MILITARY">"11"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_RURAL">"11"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_URBAN">"11"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_WANDERER">"12"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_WATERLINE">"11"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_DWARF"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_WILDERNESS">"11"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_BOURGEOIS">"11"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_ELVES">"10"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_MERCANTILE">"12"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_MILITARY">"11"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_RURAL">"11"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_URBAN">"11"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_WANDERER">"12"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_WATERLINE">"11"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_ELF"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_WILDERNESS">"11"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_BOURGEOIS">"12"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_MERCANTILE">"13"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_MILITARY">"12"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_RURAL">"13"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_URBAN">"12"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_WANDERER">"13"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_WATERLINE">"12"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HALFLING"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_WILDERNESS">"13"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_BOURGEOIS">"12"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_MERCANTILE">"13"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_MILITARY">"12"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_RURAL">"13"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_URBAN">"12"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_WANDERER">"13"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_WATERLINE">"12"</Rule>
+</Entry>
+<Entry>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Rule name="LFAN-RULE_BACKGROUND_WILDERNESS">"13"</Rule>
+</Entry>
+</DATA_RULE_BACKGROUND>
+<DATA_RULE_BACKGROUND_COUNT>
+<Entry>
+<Weight>"3"</Weight>
+<Skills>"1"</Skills>
+<Talents>"3"</Talents>
+</Entry>
+<Entry>
+<Weight>"3"</Weight>
+<Skills>"2"</Skills>
+<Talents>"2"</Talents>
+</Entry>
+<Entry>
+<Weight>"3"</Weight>
+<Skills>"3"</Skills>
+<Talents>"1"</Talents>
+</Entry>
+<Entry>
+<Weight>"1"</Weight>
+</Entry>
+</DATA_RULE_BACKGROUND_COUNT>
+<DATA_RULE_SKILL_ROLL>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Skill name="RULES-COMP_CHARM">"12"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Skill name="RULES-COMP_COMMAND">"11"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Skill name="RULES-COMP_EVALUATE">"12"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Skill name="RULES-COMP_LIP_READING">"3"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Skill name="RULES-COMP_PREPARE_POISON">"8"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Skill name="RULES-COMP_READ_WRITE">"14"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Skill name="RULES-COMP_RIDE">"12"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Skill name="RULES-COMP_BLATHER">"11"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Skill name="RULES-COMP_CHARM">"11"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Skill name="RULES-COMP_DRIVE">"8"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Skill name="RULES-COMP_EVALUATE">"11"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Skill name="RULES-COMP_GAMBLE">"3"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Skill name="RULES-COMP_GOSSIP">"8"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Skill name="RULES-COMP_HAGGLE">"11"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Skill name="RULES-COMP_PERCEPTION">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Skill name="RULES-COMP_READ_WRITE">"11"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_GUILD_TONGUE">"12"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Skill name="RULES-COMP_ANIMAL_CARE">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"8"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Skill name="RULES-COMP_COMMAND">"11"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Skill name="RULES-COMP_CONCEALMENT">"4"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Skill name="RULES-COMP_DODGE_BLOW">"11"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Skill name="RULES-COMP_GAMBLE">"8"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Skill name="RULES-COMP_INTIMIDATE">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Skill name="RULES-COMP_PERCEPTION">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Skill name="RULES-COMP_RIDE">"8"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_BATTLE_TONGUE">"11"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Skill name="RULES-COMP_SECRET_SIGNS_BATTLE">"11"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Skill name="RULES-COMP_ANIMAL_CARE">"13"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"9"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Skill name="RULES-COMP_BLATHER">"4"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Skill name="RULES-COMP_CHARM_ANIMAL">"9"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Skill name="RULES-COMP_CONCEALMENT">"8"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Skill name="RULES-COMP_DRIVE">"14"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Skill name="RULES-COMP_LIP_READING">"4"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Skill name="RULES-COMP_PREPARE_POISON">"4"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Skill name="RULES-COMP_READ_WRITE">"5"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Skill name="RULES-COMP_RIDE">"8"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Skill name="RULES-COMP_SEARCH">"9"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Skill name="RULES-COMP_SILENT_MOVE">"13"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Skill name="RULES-COMP_CHARM">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Skill name="RULES-COMP_CONCEALMENT">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Skill name="RULES-COMP_DISGUISE">"3"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Skill name="RULES-COMP_DRIVE">"3"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Skill name="RULES-COMP_GAMBLE">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Skill name="RULES-COMP_GOSSIP">"9"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Skill name="RULES-COMP_INTIMIDATE">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Skill name="RULES-COMP_PERCEPTION">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Skill name="RULES-COMP_SEARCH">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Skill name="RULES-COMP_SILENT_MOVE">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Skill name="RULES-COMP_BLATHER">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"3"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Skill name="RULES-COMP_LIP_READING">"3"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Skill name="RULES-COMP_PREPARE_POISON">"3"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Skill name="RULES-COMP_READ_WRITE">"9"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Skill name="RULES-COMP_SLEIGHT_OF_HAND">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Skill name="RULES-COMP_ANIMAL_CARE">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"4"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Skill name="RULES-COMP_BLATHER">"5"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Skill name="RULES-COMP_CHARM">"4"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Skill name="RULES-COMP_CHARM_ANIMAL">"4"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Skill name="RULES-COMP_CONCEALMENT">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Skill name="RULES-COMP_GAMBLE">"4"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Skill name="RULES-COMP_GOSSIP">"5"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Skill name="RULES-COMP_NAVIGATION">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Skill name="RULES-COMP_PERCEPTION">"4"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Skill name="RULES-COMP_RIDE">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Skill name="RULES-COMP_ROW">"5"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Skill name="RULES-COMP_SEARCH">"4"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_RANGER_TONGUE">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Skill name="RULES-COMP_SECRET_SIGNS_THIEF">"4"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Skill name="RULES-COMP_SILENT_MOVE">"2"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"5"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Skill name="RULES-COMP_SWIM">"2"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_BLATHER">"650"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"745"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"890"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_GAMBLE">"590"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_NAVIGATION">"500"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_PERCEPTION">"605"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_READ_WRITE">"710"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_ROW">"700"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_SAIL">"800"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"290"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"500"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_SWIM">"800"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_ANIMAL_CARE">"195"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"135"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_CHARM_ANIMAL">"135"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_CONCEALMENT">"210"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_DRIVE">"255"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_LIP_READING">"105"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_PREPARE_POISON">"105"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_RIDE">"120"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_SEARCH">"225"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_SILENT_MOVE">"285"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_CHARM">"90"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_DISGUISE">"45"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_GOSSIP">"135"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_INTIMIDATE">"90"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Skill name="RULES-COMP_SLEIGHT_OF_HAND">"90"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Skill name="RULES-COMP_ANIMAL_CARE">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"3"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Skill name="RULES-COMP_CHARM_ANIMAL">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Skill name="RULES-COMP_CONCEALMENT">"9"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Skill name="RULES-COMP_DRIVE">"3"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"9"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Skill name="RULES-COMP_NAVIGATION">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"9"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Skill name="RULES-COMP_PERCEPTION">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Skill name="RULES-COMP_RIDE">"3"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Skill name="RULES-COMP_SEARCH">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Skill name="RULES-COMP_SECRET_SIGNS_RANGER">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Skill name="RULES-COMP_SET_TRAP">"10"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Skill name="RULES-COMP_SILENT_MOVE">"9"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Skill name="RULES-COMP_ANIMAL_CARE">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Skill name="RULES-COMP_CHARM">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Skill name="RULES-COMP_CONCEALMENT">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"10"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Skill name="RULES-COMP_PERCEPTION">"10"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"3"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Skill name="RULES-COMP_SEARCH">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Skill name="RULES-COMP_SILENT_MOVE">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"3"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Skill name="RULES-COMP_CHANNELLING">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Skill name="RULES-COMP_CHARM_ANIMAL">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"10"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Skill name="RULES-COMP_SHADOWING">"7"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Skill name="RULES-COMP_HEAL">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Skill name="RULES-COMP_COMMAND">"16"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"16"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Skill name="RULES-COMP_EVALUATE">"10"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Skill name="RULES-COMP_GAMBLE">"11"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Skill name="RULES-COMP_INTIMIDATE">"15"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Skill name="RULES-COMP_PERCEPTION">"6"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Skill name="RULES-COMP_SEARCH">"5"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Skill name="RULES-COMP_DODGE_BLOW">"5"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Skill name="RULES-COMP_READ_WRITE">"5"</Skill>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Skill name="RULES-COMP_TRADE_*">"11"</Skill>
+  </Entry>
+</DATA_RULE_SKILL_ROLL>
+<DATA_RULE_TALENT_ROLL>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_ACUTE_HEARING">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_AMBIDEXTROUS">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_ARTISTIC">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_COOLHEADED">"7"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_DEALMAKER">"7"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_ETIQUETTE">"7"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_EXCELLENT_VISION">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_FEARLESS">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_FLEET_FOOTED">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_HARDY">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_LIGHTNING_REFLEXES">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_LINGUISTICS">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_LUCK">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_MASTER_GUNNER">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_RESISTANCE_TO_POISON">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_SAVVY">"7"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_SCHEMER">"7"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_SIXTH_SENSE">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_STOUT_HEARTED">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_STRONG_MINDED">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_STURDY">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_SUAVE">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_BOURGEOIS"</Rule>
+<Talent name="RULES-T_VERY_RESILIENT">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_AMBIDEXTROUS">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_ARTISTIC">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_COOLHEADED">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_DEALMAKER">"7"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_ETIQUETTE">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_EXCELLENT_VISION">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_FEARLESS">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_FLEE">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_HARDY">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_LIGHTNING_REFLEXES">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_LINGUISTICS">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_LUCK">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_SAVVY">"7"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_SCHEMER">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_SEASONED_TRAVELLER">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_SIXTH_SENSE">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_STOUT_HEARTED">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_STRONG_MINDED">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_STURDY">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_SUAVE">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_SUPER_NUMERATE">"7"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MERCANTILE"</Rule>
+<Talent name="RULES-T_VERY_RESILIENT">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_ACUTE_HEARING">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_AMBIDEXTROUS">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_COOLHEADED">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_DISARM">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_EXCELLENT_VISION">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_FEARLESS">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_FLEET_FOOTED">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_HARDY">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_LIGHTNING_REFLEXES">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_LUCK">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_MARKSMAN">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_MASTER_GUNNER">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_QUICK_DRAW">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_RAPID_RELOAD">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_SHARPSHOOTER">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_SIXTH_SENSE">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_STOUT_HEARTED">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_STRIKE_TO_STUN">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_STURDY">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_VERY_RESILIENT">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_VERY_STRONG">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_MILITARY"</Rule>
+<Talent name="RULES-T_WARRIOR_BORN">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_ACUTE_HEARING">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_AMBIDEXTROUS">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_ARTISTIC">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_COOLHEADED">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_EXCELLENT_VISION">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_FEARLESS">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_FLEE">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_FLEET_FOOTED">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_HARDY">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_LIGHTNING_REFLEXES">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_LUCK">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_MIGHTY_SHOT">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_NIGHT_VISION">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_QUICK_DRAW">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_RAPID_RELOAD">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_ROVER">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_SHARPSHOOTER">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_SIXTH_SENSE">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_STOUT_HEARTED">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_STRONG_MINDED">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_STURDY">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_VERY_RESILIENT">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_VERY_STRONG">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_RURAL"</Rule>
+<Talent name="RULES-T_WARRIOR_BORN">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_ACUTE_HEARING">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_ALLEY_CAT">"7"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_AMBIDEXTROUS">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_COOLHEADED">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_FLEE">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_FLEET_FOOTED">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_HARDY">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_LIGHTNING_REFLEXES">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_LINGUISTICS">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_LUCK">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_MIMIC">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_QUICK_DRAW">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_RESISTANCE_TO_DISEASE">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_SAVVY">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_SIXTH_SENSE">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_STOUT_HEARTED">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_STREET_FIGHTING">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_STREETWISE">"7"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_STRIKE_TO_STUN">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_STRONG_MINDED">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_STURDY">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_VERY_STRONG">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_URBAN"</Rule>
+<Talent name="RULES-T_WARRIOR_BORN">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_ACUTE_HEARING">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_ALLEY_CAT">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_AMBIDEXTROUS">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_COOLHEADED">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_EXCELLENT_VISION">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_FEARLESS">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_FLEE">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_FLEET_FOOTED">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_HARDY">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_LIGHTNING_REFLEXES">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_LINGUISTICS">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_LUCK">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_ORIENTATION">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_RESISTANCE_TO_DISEASE">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_ROVER">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_SAVVY">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_SEASONED_TRAVELLER">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_SIXTH_SENSE">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_STOUT_HEARTED">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_STRONG_MINDED">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_STURDY">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_SUAVE">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_VERY_RESILIENT">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_VERY_STRONG">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WANDERER"</Rule>
+<Talent name="RULES-T_WARRIOR_BORN">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_ACUTE_HEARING">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_AMBIDEXTROUS">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_CONTORTIONIST">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_COOLHEADED">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_EXCELLENT_VISION">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_FEARLESS">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_FLEE">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_FLEET_FOOTED">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_HARDY">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_LIGHTNING_REFLEXES">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_LINGUISTICS">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_LUCK">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_ORIENTATION">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_QUICK_DRAW">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_SAVVY">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_SEASONED_TRAVELLER">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_SIXTH_SENSE">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_STOUT_HEARTED">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_STRONG_MINDED">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_STURDY">"7"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_SUAVE">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_VERY_RESILIENT">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_VERY_STRONG">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WATERLINE"</Rule>
+<Talent name="RULES-T_WARRIOR_BORN">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_ACUTE_HEARING">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_AMBIDEXTROUS">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_COOLHEADED">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_EXCELLENT_VISION">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_FEARLESS">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_FLEE">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_FLEET_FOOTED">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_HARDY">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_LIGHTNING_REFLEXES">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_LUCK">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_MARKSMAN">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_MIGHTY_SHOT">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_NIGHT_VISION">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_ORIENTATION">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_RAPID_RELOAD">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_ROVER">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_SHARPSHOOTER">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_SIXTH_SENSE">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_STOUT_HEARTED">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_STURDY">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_TRAPFINDER">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_TUNNEL_RAT">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_VERY_RESILIENT">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_WILDERNESS"</Rule>
+<Talent name="RULES-T_VERY_STRONG">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_ACUTE_HEARING">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_AMBIDEXTROUS">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_CONTORTIONIST">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_FLEE">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_FLEET_FOOTED">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_HARDY">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_LIGHTNING_REFLEXES">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_LUCK">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_MARKSMAN">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_MIGHTY_SHOT">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_ORIENTATION">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_QUICK_DRAW">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_RAPID_RELOAD">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_ROVER">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_SAVVY">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_SEASONED_TRAVELLER">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_SHARPSHOOTER">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_SIXTH_SENSE">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_SUAVE">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_SURE_SHOT">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_SUPER_NUMERATE">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_SWASHBUCKLER">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_TRAPFINDER">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_VERY_RESILIENT">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_ELVES"</Rule>
+<Talent name="RULES-T_VERY_STRONG">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_ACUTE_HEARING">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_AMBIDEXTROUS">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_ARTISTIC">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_COOLHEADED">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_DISARM">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_EXCELLENT_VISION">"2"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_FEARLESS">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_HARDY">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_LUCK">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_ORIENTATION">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_RESISTANCE_TO_CHAOS">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_RESISTANCE_TO_DISEASE">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_RESISTANCE_TO_POISON">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_SEASONED_TRAVELLER">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_SIXTH_SENSE">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_STREET_FIGHTING">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"6"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_STRONG_MINDED">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_SUPER_NUMERATE">"3"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_TRAPFINDER">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_TUNNEL_RAT">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_VERY_RESILIENT">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_VERY_STRONG">"5"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_WARRIOR_BORN">"4"</Talent>
+  </Entry>
+<Entry>
+<Rule>"LFAN-RULE_BACKGROUND_DWARFS"</Rule>
+<Talent name="RULES-T_WRESTLING">"3"</Talent>
+  </Entry>
+</DATA_RULE_TALENT_ROLL>
+</DATA_BOOK>

@@ -1,0 +1,3657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"ASAG"</CODE_BOOK>
+<BOOK>"BOOK ARABY SAND AND GOLD"</BOOK>
+<BOOKNAME>"ARABY SAND AND GOLD"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_TALENT>
+<Talent id="ASAG-T_RELIGIOUS_FANATICISM">
+<Description language="ENGLISH">"Religious Fanaticism"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"4"</Page>
+</Talent>
+<Talent id="ASAG-T_SWIRLING_SHADOW">
+<Description language="ENGLISH">"Swirling Shadow"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"31"</Page>
+</Talent>
+<Talent id="ASAG-T_HOLY_FRENZY">
+<Description language="ENGLISH">"Holy Frenzy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"32"</Page>
+</Talent>
+<Talent id="ASAG-T_SENSUOUS_DEATH">
+<Description language="ENGLISH">"Sensuous Death"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"47"</Page>
+</Talent>
+<Talent id="ASAG-T_STORM_BLADES">
+<Description language="ENGLISH">"Storm Blades"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"47"</Page>
+</Talent>
+<Talent id="ASAG-T_WHIRLING_STEEL">
+<Description language="ENGLISH">"Whirling Steel"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"47"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_CAREER>
+<Career id="ASAG-CARE_ARABYAN_CORSAIR">
+<Description language="ENGLISH">"Arabyan Corsair"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, S +5%, T +5%, Ag +10%, WP +5%"</MainProfile>
+<SecondaryProfile>"A +1, W +3"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+</Advances>
+<Skills>"Gamble, Gossip or Secret Tongue (Battle), Swim, Dodge Blow, Common Knowledge (Araby), Common Knowledge (Bretonnia or Southlands, Tilea or Estalia), Roving, Intimidate, Speak Language (Estalian or Tilean or Bretonnian), Row"</Skills>
+<Talents>"Brawl or Hardy, Specialist Weapon Group (Two Handed), Menacing or Strike Mighty Blow, Seasoned Traveller, Strike to Stun, Disarm"</Talents>
+<Trappings>"Short bow, Full Leather Armour, Dagger or Gauntlet / Knuckle-Duster"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_GAMBLE">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP/RULES-COMP_SECRET_LANGUAGE_BATTLE">"1"</Skill>
+<Skill name="RULES-COMP_SWIM">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ARABY">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_BRETONNIA/RULES-COMP_COMMON_KNOWLEDGE_SOUTHLANDS/RULES-COMP_COMMON_KNOWLEDGE_TILEA/RULES-COMP_COMMON_KNOWLEDGE_ESTALIA">"1"</Skill>
+<Skill name="Roving">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ESTALIAN/RULES-COMP_SPEAK_LANGUAGE_TILEAN/RULES-COMP_SPEAK_LANGUAGE_BRETONNIAN">"1"</Skill>
+<Skill name="RULES-COMP_ROW">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="Brawl/RULES-T_HARDY">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED">"1"</Talent>
+<Talent name="RULES-T_MENACING/RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_SEASONED_TRAVELLER">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_STUN">"1"</Talent>
+<Talent name="RULES-T_DISARM">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"ASAG 17"</Source>
+</Career>
+<Career id="ASAG-CARE_ARABYAN_MYSTIC">
+<Description language="ENGLISH">"Arabyan Mystic"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"T +5%, Ag +5%, Int +10%, WP +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Read/Write, Heal, Academic Knowledge (Philosophy, Theology), Command, Perception, Common Knowledge (Araby)"</Skills>
+<Talents>"Savvy, Stout-hearted, Public Speaking, Sturdy or Very Resilient"</Talents>
+<Trappings>"Quarter Staff, Robes"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_PHILOSOPHY/RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ARABY">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SAVVY">"1"</Talent>
+<Talent name="RULES-T_STOUT_HEARTED">"1"</Talent>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+<Talent name="RULES-T_STURDY/RULES-T_VERY_RESILIENT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"ASAG 18"</Source>
+</Career>
+<Career id="ASAG-CARE_ARABYAN_NOBLEMAN">
+<Description language="ENGLISH">"Arabyan Nobleman"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, T +5%, Ag +5%, Int +10%, WP +5%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Read/Write, Blather or Command, Gamble or Gossip, Ride, Performer (Musician) or Lip Reading, Academic Knowledge (Genealogy/Heraldry or History, Theology and one other), Charm, Common Knowledge (Araby), Speak Language (Arabyan or Any)"</Skills>
+<Talents>"Savvy, Etiquette, Schemer, Luck or Public Speaking"</Talents>
+<Trappings>"Jewellery of a value of 7d10 gc, Shamshir or Sabre or Sword, Best Clothing, 1d10 gc"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_BLATHER/RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_GAMBLE/RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_MUSICIAN/RULES-COMP_LIP_READING">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_GENEALOGY/RULES-COMP_ACADEMIC_KNOWLEDGE_HERALDRY/RULES-COMP_ACADEMIC_KNOWLEDGE_HISTORY/RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY_AND_ONE_OTHER">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ARABY">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ARABYAN/RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SAVVY">"1"</Talent>
+<Talent name="RULES-T_ETIQUETTE">"1"</Talent>
+<Talent name="RULES-T_SCHEMER">"1"</Talent>
+<Talent name="RULES-T_LUCK/RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"ASAG 19"</Source>
+</Career>
+<Career id="ASAG-CARE_ARABYAN_SOLDIER">
+<Description language="ENGLISH">"Arabyan Soldier"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, Ag +10%, WP +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Gamble or Gossip, Animal Care, Drive or Ride, Dodge Blow, Common Knowledge (Araby) or Perception, Intimidate"</Skills>
+<Talents>"Frenzy or Sharpshooter, Strike to Stun or Rapid Reload, Disarm, Quick Draw or Strike Mighty Blow"</Talents>
+<Trappings>"Leather Jack, Curved Bow, Shield, Spear or Shamshir"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_GAMBLE/RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_DRIVE/RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ARABY/RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_FRENZY/RULES-T_SHARPSHOOTER">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_STUN/RULES-T_RAPID_RELOAD">"1"</Talent>
+<Talent name="RULES-T_DISARM">"1"</Talent>
+<Talent name="RULES-T_QUICK_DRAW/RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"ASAG 20"</Source>
+</Career>
+<Career id="ASAG-CARE_DERVISH">
+<Description language="ENGLISH">"Dervish"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, T +10%, Ag +10%, WP +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Performer (Dancer), Performer (Musician), Performer (Singer), Charm, Dodge Blow"</Skills>
+<Talents>"Specialist Weapon Group (Dervish), Ambidextrous, Fearless, Strong-minded, Warrior Born or Strike Mighty Blow"</Talents>
+<Trappings>"Drum, Abaya, dagger, Two Swords or Dervish Axe, Religious Symbol"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_PERFORMER_DANCER">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_MUSICIAN">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_SINGER">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__DERVISH">"1"</Talent>
+<Talent name="RULES-T_AMBIDEXTROUS">"1"</Talent>
+<Talent name="RULES-T_FEARLESS">"1"</Talent>
+<Talent name="RULES-T_STRONG_MINDED">"1"</Talent>
+<Talent name="RULES-T_WARRIOR_BORN/RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"ASAG 21"</Source>
+</Career>
+<Career id="ASAG-CARE_ARABYAN_RAIDER">
+<Description language="ENGLISH">"Arabyan Raider"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +10%, T +10%, Ag +10%, Int +5%, WP +5%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Ride, Animal Care, Outdoor Survival, Follow Trail or Navigation, Secret Language (Ranger)"</Skills>
+<Talents>"Quick Draw, Specialist Weapon Group (Firearm or Arabyan Arc), Sharpshooter or Rover, Orientation"</Talents>
+<Trappings>"Kalkan, Horse or Camel, Arabyan Arc and 10 shots or Jezail and 10 shots and gunpowder, a small Tent, Sword or Sabre, Soft Armour"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL/RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_RANGER">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_QUICK_DRAW">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__FIREARM/RULES-T_SPECIALIST_WEAPON_GROUP__ARABYAN_ARC">"1"</Talent>
+<Talent name="RULES-T_SHARPSHOOTER/RULES-T_ROVER">"1"</Talent>
+<Talent name="RULES-T_ORIENTATION">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"ASAG 22"</Source>
+</Career>
+<Career id="ASAG-CARE_ARABYAN_SLAVE">
+<Description language="ENGLISH">"Arabyan Slave"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, S +5%, T +5%, Ag +10%, WP +5%, Fel +5%"</MainProfile>
+<SecondaryProfile>"W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Blather, Animal Care or Trade (Cook), Search, Perception, Speak Language (Arabyan), Sleight of Hand or Dodge Blow"</Skills>
+<Talents>"Sharp Eyes, Acute Hearing, Flee! or Hardy, Very Resilient or Lightning Reflexes"</Talents>
+<Trappings>"Poor Quality Clothes"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_BLATHER">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_CARE/RULES-COMP_TRADE_COOK">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ARABYAN">"1"</Skill>
+<Skill name="RULES-COMP_SLEIGHT_OF_HAND/RULES-COMP_DODGE_BLOW">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="Sharp Eyes">"1"</Talent>
+<Talent name="RULES-T_ACUTE_HEARING">"1"</Talent>
+<Talent name="RULES-T_FLEE/RULES-T_HARDY">"1"</Talent>
+<Talent name="RULES-T_VERY_RESILIENT/RULES-T_LIGHTNING_REFLEXES">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"ASAG 23"</Source>
+</Career>
+<Career id="ASAG-CARE_DESERT_NOMAD">
+<Description language="ENGLISH">"Desert Nomad"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +10%, T +10%, Ag +5%, Int +5%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Navigation, Animal Care or Secret Language (Ranger), Gossip or Performer (Storyteller), Drive or Ride, Perception, Outdoor Survival, Haggle or Trade (Any), Follow Trail, Silent Move or Heal, Common Knowledge (Araby)"</Skills>
+<Talents>"Hardy or Rover, Orientation or Seasoned Traveller"</Talents>
+<Trappings>"Kalkan and Spear, Dagger, Horse or Camel with Saddles, Bow and Arrows, a small Tent"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_CARE/RULES-COMP_SECRET_LANGUAGE_RANGER">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP/RULES-COMP_PERFORMER_STORYTELLER">"1"</Skill>
+<Skill name="RULES-COMP_DRIVE/RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_HAGGLE/RULES-COMP_TRADE_*">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE/RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ARABY">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_HARDY/RULES-T_ROVER">"1"</Talent>
+<Talent name="RULES-T_ORIENTATION/RULES-T_SEASONED_TRAVELLER">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"ASAG 24"</Source>
+</Career>
+<Career id="ASAG-CARE_SADIN">
+<Description language="ENGLISH">"Sadin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"T +5%, Ag +5%, Int +10%, WP +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +2, Mag +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_Mag">"1"</Advance>
+</Advances>
+<Skills>"Performer (Palm Reader), Academic Knowledge (Theology), Blather or Charm, Trade (Apothecary) or Trade (Herbalist), Channelling, Perception, Magical Sense"</Skills>
+<Talents>"Hedge Magic, Petty Magic (Hedge), Luck"</Talents>
+<Trappings>"Apothecary Tools, Religious Symbol, 3 Healing Draughts"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_PERFORMER_PALM_READER">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_BLATHER/RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_APOTHECARY/RULES-COMP_TRADE_HERBALIST">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_HEDGE_MAGIC">"1"</Talent>
+<Talent name="RULES-T_PETTY_MAGIC__HEDGE">"1"</Talent>
+<Talent name="RULES-T_LUCK">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"ASAG 25"</Source>
+</Career>
+<Career id="ASAG-CARE_SULTAN_S_GUARD">
+<Description language="ENGLISH">"Sultan's Guard"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, S +10%, T +10%, Ag +10%, Int +5%, WP +10%, Fel +5%"</MainProfile>
+<SecondaryProfile>"A +1, W +3"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+</Advances>
+<Skills>"Heal, Perception, Dodge Blow, Intimidate"</Skills>
+<Talents>"Very Strong, Very Resilient, Street Fighting, Specialist Weapon Group (Two-Handed), Menacing, Fearless, Disarm, Strike Mighty Blow, Quick Draw, Wrestling"</Talents>
+<Trappings>"Good Quality Bechter Mailed Plate, Great Scimitar or Halberd, Good Quality Armoured Turban"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_VERY_STRONG">"1"</Talent>
+<Talent name="RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="RULES-T_STREET_FIGHTING">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED">"1"</Talent>
+<Talent name="RULES-T_MENACING">"1"</Talent>
+<Talent name="RULES-T_FEARLESS">"1"</Talent>
+<Talent name="RULES-T_DISARM">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_QUICK_DRAW">"1"</Talent>
+<Talent name="RULES-T_WRESTLING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"ASAG 26"</Source>
+</Career>
+<Career id="ASAG-CARE_APPRENTICE_SAND_SORCERER">
+<Description language="ENGLISH">"Apprentice Sand Sorcerer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"T +10%, Ag +5%, Int +10%, WP +10%"</MainProfile>
+<SecondaryProfile>"W +2, Mag +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_Mag">"1"</Advance>
+</Advances>
+<Skills>"Speak Arcane Language (Magick), Academic Knowledge (Magic) or Intimidate, Navigation or Perception, Channelling, Outdoor Survival, Common Knowledge (Araby), Magical Sense, Speak Language (Arabyan)"</Skills>
+<Talents>"Petty Magic (Sand), Hardy, Very Resilient, Aethyric Attunement or Lesser Magic (Any)"</Talents>
+<Trappings>"Leather Flask, Quarter-Staff, Backpack, food for 3 days, Robes"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION/RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ARABY">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ARABYAN">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_PETTY_MAGIC__SAND">"1"</Talent>
+<Talent name="RULES-T_HARDY">"1"</Talent>
+<Talent name="RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_LESSER_MAGIC__*">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"ASAG 27"</Source>
+</Career>
+<Career id="ASAG-CARE_APPRENTICE_ASSASSIN">
+<Description language="ENGLISH">"Apprentice Assassin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, Ag +10%, Int +10%, WP +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Heal, Pick Lock, Interrogate, Trade (Apothecary), Silent Move, Perception, Follow Trail, Concealment, Prepare Poison, Scale Sheer Surface"</Skills>
+<Talents>"Specialist Weapon Group (Blowpipe, Throwing), Alley Cat"</Talents>
+<Trappings>"Short bow, Black Abaya, Garrotte, Hook, Grappling Hook, 10 Yards of Rope, 10 Throwing knives"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_PICK_LOCK">"1"</Skill>
+<Skill name="Interrogate">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_APOTHECARY">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISON">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__BLOWPIPE/RULES-T_SPECIALIST_WEAPON_GROUP__THROWING">"1"</Talent>
+<Talent name="RULES-T_ALLEY_CAT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"ASAG 28"</Source>
+</Career>
+<Career id="ASAG-CARE_ARABYAN_ASSASSIN">
+<Description language="ENGLISH">"Arabyan Assassin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, BS +20%, S +10%, T +10%, Ag +25%, Int +20%, WP +25%, Fel +15%"</MainProfile>
+<SecondaryProfile>"A +2, W +6"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"25"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+</Advances>
+<Skills>"Disguise, Pick Lock, Search, Secret Signs (Thieves), Concealment, Follow Trail, Silent Move, Dodge Blow, Prepare Poison, Scale Sheer Surface"</Skills>
+<Talents>"Specialist Weapon Group (Blowpipe, Parrying, Throwing), Strike Mighty Blow, Disarm, Sure Shot, Sharpshooter, Quick Draw, Mighty Shot, Trapfinder"</Talents>
+<Trappings>"Short bow and arrows, Black Abaya, Blowgun, Garrotte, Grappling Hook, dagger, a set of lock picks, 10 yards of Rope, Poison, 4 Throwing Knives"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_DISGUISE">"1"</Skill>
+<Skill name="RULES-COMP_PICK_LOCK">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_SIGNS_THIEVES">"1"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISON">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__BLOWPIPE/RULES-T_SPECIALIST_WEAPON_GROUP__PARRYING/RULES-T_SPECIALIST_WEAPON_GROUP__THROWING">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_DISARM">"1"</Talent>
+<Talent name="RULES-T_SURE_SHOT">"1"</Talent>
+<Talent name="RULES-T_SHARPSHOOTER">"1"</Talent>
+<Talent name="RULES-T_QUICK_DRAW">"1"</Talent>
+<Talent name="RULES-T_MIGHTY_SHOT">"1"</Talent>
+<Talent name="RULES-T_TRAPFINDER">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ASAG 29"</Source>
+</Career>
+<Career id="ASAG-CARE_ARABYAN_CHAMPION">
+<Description language="ENGLISH">"Arabyan Champion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +25%, BS +20%, S +10%, T +20%, Ag +25%, Int +15%, WP +15%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"25"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"20"</Advance>
+<Advance name="RULES-ATTR_Ag">"25"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Gossip, Charm, Perception, Dodge Blow, Intimidate, Common Knowledge (Any)"</Skills>
+<Talents>"Etiquette, Lightning Parry, Specialist Weapon Group (Thrown), Menacing, Ambidextrous or Specialist Weapon Group (Parrying), Strike Mighty Blow, Disarm, Frenzy, Quick Draw, Sure Shot, Mighty Shot"</Talents>
+<Trappings>"Abaya, 2 Shamshirs or Shamshir and Main Gauche, 4 Throwing Knives, Soft Armour"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ETIQUETTE">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_PARRY">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__THROWN">"1"</Talent>
+<Talent name="RULES-T_MENACING">"1"</Talent>
+<Talent name="RULES-T_AMBIDEXTROUS/RULES-T_SPECIALIST_WEAPON_GROUP__PARRYING">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_DISARM">"1"</Talent>
+<Talent name="RULES-T_FRENZY">"1"</Talent>
+<Talent name="RULES-T_QUICK_DRAW">"1"</Talent>
+<Talent name="RULES-T_SURE_SHOT">"1"</Talent>
+<Talent name="RULES-T_MIGHTY_SHOT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ASAG 30"</Source>
+</Career>
+<Career id="ASAG-CARE_BLADE_DAUGHTER">
+<Description language="ENGLISH">"Blade Daughter"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, S +15%, T +10%, Ag +25%, Int +10%, WP +15%, Fel +15%"</MainProfile>
+<SecondaryProfile>"A +1, W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"15"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"25"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Read/Write, Lip Reading, Blather, Performer (Acrobatics), Performer (Dance), Academic Knowledge (Theology), Gossip, Charm, Shadowing, Perception, Concealment, Dodge Blow, Intimidate, Common Knowledge (Any)"</Skills>
+<Talents>"Specialist Weapons Group (Any), Contortionist, Ambidextrous, Disarm, Strike Mighty Blow, Lightning Reflexes, Swirling Shadow"</Talents>
+<Trappings>"2 Shamshirs, Jewellery worth 5d10 gc, coat, best quality Clothes"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_LIP_READING">"1"</Skill>
+<Skill name="RULES-COMP_BLATHER">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_ACROBAT">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_DANCE">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_SHADOWING">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__*">"1"</Talent>
+<Talent name="RULES-T_CONTORTIONIST">"1"</Talent>
+<Talent name="RULES-T_AMBIDEXTROUS">"1"</Talent>
+<Talent name="RULES-T_DISARM">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_REFLEXES">"1"</Talent>
+<Talent name="ASAG-T_SWIRLING_SHADOW">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ASAG 31"</Source>
+</Career>
+<Career id="ASAG-CARE_DYBUK">
+<Description language="ENGLISH">"Dybuk"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, S +15%, T +20%, Ag +15%, WP +15%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +6"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"15"</Advance>
+<Advance name="RULES-ATTR_T">"20"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+</Advances>
+<Skills>"Heal, Academic Knowledge (Theology), Dodge Blow, Common Knowledge (Araby), Intimidate"</Skills>
+<Talents>"Menacing, Strike Mighty Blow, Frenzy, Unsettling, Fearless, Ambidextrous, Holy Frenzy, Religious Fanaticism"</Talents>
+<Trappings>"2 Shamshirs"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ARABY">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_MENACING">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_FRENZY">"1"</Talent>
+<Talent name="RULES-T_UNSETTLING">"1"</Talent>
+<Talent name="RULES-T_FEARLESS">"1"</Talent>
+<Talent name="RULES-T_AMBIDEXTROUS">"1"</Talent>
+<Talent name="ASAG-T_HOLY_FRENZY">"1"</Talent>
+<Talent name="ASAG-T_RELIGIOUS_FANATICISM">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ASAG 32"</Source>
+</Career>
+<Career id="ASAG-CARE_PILLAR_OF_FAITH">
+<Description language="ENGLISH">"Pillar of Faith"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +30%, S +25%, T +20%, Ag +20%, Int +15%, WP +25%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +2, W +8"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"30"</Advance>
+<Advance name="RULES-ATTR_S">"25"</Advance>
+<Advance name="RULES-ATTR_T">"20"</Advance>
+<Advance name="RULES-ATTR_Ag">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"8"</Advance>
+</Advances>
+<Skills>"Command, Ride, Heal, Academic Knowledge (Strategy/Tactics), Academic Knowledge (Theology)"</Skills>
+<Talents>"Lightning Parry, Specialist Weapon Group (Two-Handed), Frenzy, Unsettling, Fearless or Strong-Minded, Ambidextrous, Resistance to Magic, Strike to Stun, Disarm, Sixth Sense, Warrior Born or Lightning Reflexes, Religious Fanaticism"</Talents>
+<Trappings>"Two Axes or Swords or Two-Handed Weapon (Axe or Halberd), highest quality Arabyan Plate, Highest Quality Armoured Turban (Gold Plated)"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_STRATEGY/RULES-COMP_ACADEMIC_KNOWLEDGE_TACTICS">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_LIGHTNING_PARRY">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED">"1"</Talent>
+<Talent name="RULES-T_FRENZY">"1"</Talent>
+<Talent name="RULES-T_UNSETTLING">"1"</Talent>
+<Talent name="RULES-T_FEARLESS/RULES-T_STRONG_MINDED">"1"</Talent>
+<Talent name="RULES-T_AMBIDEXTROUS">"1"</Talent>
+<Talent name="RULES-T_RESISTANCE_TO_MAGIC">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_STUN">"1"</Talent>
+<Talent name="RULES-T_DISARM">"1"</Talent>
+<Talent name="RULES-T_SIXTH_SENSE">"1"</Talent>
+<Talent name="RULES-T_WARRIOR_BORN/RULES-T_LIGHTNING_REFLEXES">"1"</Talent>
+<Talent name="ASAG-T_RELIGIOUS_FANATICISM">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ASAG 33"</Source>
+</Career>
+<Career id="ASAG-CARE_HASHASHIN">
+<Description language="ENGLISH">"Hashashin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +35%, BS +30%, S +20%, T +20%, Ag +35%, Int +10%, WP +30%, Fel +20%"</MainProfile>
+<SecondaryProfile>"A +2, W +7, M +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"35"</Advance>
+<Advance name="RULES-ATTR_BS">"30"</Advance>
+<Advance name="RULES-ATTR_S">"20"</Advance>
+<Advance name="RULES-ATTR_T">"20"</Advance>
+<Advance name="RULES-ATTR_Ag">"35"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"30"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"7"</Advance>
+<Advance name="RULES-ATTR_M">"1"</Advance>
+</Advances>
+<Skills>"Disguise, Performer (Acrobatics), Academic Knowledge (Theology), Pick Locks, Concealment, Silent Move, Outdoor Survival, Perception, Follow Trail, Torture, Shadowing, Dodge Blow, Brew Poison, Scale Sheer Surface, Intimidate, Common Knowledge (Any Two)"</Skills>
+<Talents>"Wrestling, Specialist Weapon Group (Blowgun, Thrown, Any), Menacing, Frenzy, Fearless, Unsettling, Ambidextrous, Resistance to Poison, Strike Mighty Blow, Sure Shot, Mighty Shot, Sharpshooter, Warrior Born, Trapfinder"</Talents>
+<Trappings>"Hand Weapon, Black Abaya, Garrotte, set of Lock Picks, Bottle of Poison, 10 yards of Rope, Grappling Hook, 4 Throwing Knives, Hidden Symbol of Azyata, Ordinary Clothes"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_DISGUISE">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_ACROBAT">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_PICK_LOCK">"1"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_TORTURE">"1"</Skill>
+<Skill name="RULES-COMP_SHADOWING">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="Brew Poison">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_WRESTLING">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__BLOWGUN/RULES-T_SPECIALIST_WEAPON_GROUP__THROWN/RULES-T_SPECIALIST_WEAPON_GROUP__*">"1"</Talent>
+<Talent name="RULES-T_MENACING">"1"</Talent>
+<Talent name="RULES-T_FRENZY">"1"</Talent>
+<Talent name="RULES-T_FEARLESS">"1"</Talent>
+<Talent name="RULES-T_UNSETTLING">"1"</Talent>
+<Talent name="RULES-T_AMBIDEXTROUS">"1"</Talent>
+<Talent name="RULES-T_RESISTANCE_TO_POISON">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_SURE_SHOT">"1"</Talent>
+<Talent name="RULES-T_MIGHTY_SHOT">"1"</Talent>
+<Talent name="RULES-T_SHARPSHOOTER">"1"</Talent>
+<Talent name="RULES-T_WARRIOR_BORN">"1"</Talent>
+<Talent name="RULES-T_TRAPFINDER">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ASAG 34"</Source>
+</Career>
+<Career id="ASAG-CARE_JANISSARY">
+<Description language="ENGLISH">"Janissary"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, BS +20%, S +15%, T +15%, Ag +15%, Int +5%, WP +20%"</MainProfile>
+<SecondaryProfile>"A +1, W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"15"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Gamble, Heal, Secret Language (Battle Tongue), Perception, Dodge Blow, Common Knowledge (Araby), Intimidate, Speak Language (Arabyan)"</Skills>
+<Talents>"Sharpshooter or Rapid Reload, Specialist Weapon Group (Gunpowder), Fearless, Strike to Stun or Sure Shot, Strong-Minded, Disarm or Quick Draw, Mighty Shot or Strike Mighty Blow"</Talents>
+<Trappings>"Sabre, Kalkan, Musket and Bullets/Powder for 10 shots or Curved Bow and 10 Arrows, full Leather Armour, 2 Pistols and Bullets/Powder for 10 shots"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_GAMBLE">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_BATTLE_TONGUE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ARABY">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ARABYAN">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SHARPSHOOTER/RULES-T_RAPID_RELOAD">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__GUNPOWDER">"1"</Talent>
+<Talent name="RULES-T_FEARLESS">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_STUN/RULES-T_SURE_SHOT">"1"</Talent>
+<Talent name="RULES-T_STRONG_MINDED">"1"</Talent>
+<Talent name="RULES-T_DISARM/RULES-T_QUICK_DRAW">"1"</Talent>
+<Talent name="RULES-T_MIGHTY_SHOT/RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ASAG 35"</Source>
+</Career>
+<Career id="ASAG-CARE_CAMEL_RIDER">
+<Description language="ENGLISH">"Camel Rider"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, BS +25%, S +10%, T +10%, Ag +15%"</MainProfile>
+<SecondaryProfile>"A +1, W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"25"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Ride, Sail, Animal Care, Secret Language (Ranger), Outdoor Survival, Dodge Blow"</Skills>
+<Talents>"Sharpshooter, Rapid Reload, Specialist Weapon Group (Gunpowder), Strike Mighty Blow, Sure Shot, Mighty Shot, Lightning Reflexes, Orientation"</Talents>
+<Trappings>"Sword or Sabre, Jezail, Kalkan, Dagger, Gunpowder and bullets for 10 shots, Turban, Soft Armour, Camel with Saddle and Harness"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_SAIL">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_RANGER">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SHARPSHOOTER">"1"</Talent>
+<Talent name="RULES-T_RAPID_RELOAD">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__GUNPOWDER">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_SURE_SHOT">"1"</Talent>
+<Talent name="RULES-T_MIGHTY_SHOT">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_REFLEXES">"1"</Talent>
+<Talent name="RULES-T_ORIENTATION">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ASAG 36"</Source>
+</Career>
+<Career id="ASAG-CARE_KADI">
+<Description language="ENGLISH">"Kadi"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, T +10%, Ag +10%, Int +30%, WP +20%, Fel +25%"</MainProfile>
+<SecondaryProfile>"W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"25"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Read/Write, Ride, Academic Knowledge (History, Law, Theology, Any), Gossip or Intimidate, Charm or Command, Search or Evaluate, Perception, Common Knowledge (Araby, Any), Speak Language (Classical, Arabyan)"</Skills>
+<Talents>"Etiquette, Menacing or Savvy, Public Speaking"</Talents>
+<Trappings>"Book of Rights, Writing Instruments, Metal-Framed Al-Kitab"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_HISTORY/RULES-COMP_ACADEMIC_KNOWLEDGE_LAW/RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY/RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH/RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ARABY/RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_CLASSICAL/RULES-COMP_SPEAK_LANGUAGE_ARABYAN">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ETIQUETTE">"1"</Talent>
+<Talent name="RULES-T_MENACING/RULES-T_SAVVY">"1"</Talent>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ASAG 37"</Source>
+</Career>
+<Career id="ASAG-CARE_KAHIN">
+<Description language="ENGLISH">"Kahin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, S +5%, T +10%, Ag +10%, Int +20%, WP +15%, Fel +20%"</MainProfile>
+<SecondaryProfile>"W +4, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Heal, Academic Knowledge (Theology, Astronomy), Animal Care, Charm, Trade (Apothecary) or Trade (Herbalist), Channelling, Perception, Haggle, Common Knowledge (Araby, any two), Magical Sense, Speak Language (Arabyan)"</Skills>
+<Talents>"Savvy or Suave, Hedge Magic, Etiquette, Lesser Magic (Dispel, Prophesy), Public Speaking"</Talents>
+<Trappings>"Healing Draught, Alchemical Tools"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY/RULES-COMP_ACADEMIC_KNOWLEDGE_ASTRONOMY">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_APOTHECARY/RULES-COMP_TRADE_HERBALIST">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ARABY/RULES-COMP_COMMON_KNOWLEDGE_*/RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ARABYAN">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SAVVY/RULES-T_SUAVE">"1"</Talent>
+<Talent name="RULES-T_HEDGE_MAGIC">"1"</Talent>
+<Talent name="RULES-T_ETIQUETTE">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__DISPEL/RULES-T_LESSER_MAGIC__PROPHESY">"1"</Talent>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ASAG 38"</Source>
+</Career>
+<Career id="ASAG-CARE_KALIGRAF">
+<Description language="ENGLISH">"Kaligraf"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"T +5%, Ag +25%, Int +25%, WP +20%, Fel +20%"</MainProfile>
+<SecondaryProfile>"W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"25"</Advance>
+<Advance name="RULES-ATTR_Int">"25"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Read/Write, Performer (Poetry) or Trade (Cartographer or Artist or Goldsmith), Academic Knowledge (Art or History, any two), Charm, Trade (Calligrapher), Perception, Common Knowledge (Araby, any two), Evaluate, Speak Language (Arabyan, Any Two)"</Skills>
+<Talents>"Savvy or Artistic, Etiquette, Linguistics"</Talents>
+<Trappings>"Pens, Wax Seals, Ink Set, Roll of Parchment"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_POETRY/RULES-COMP_TRADE_CARTOGRAPHER/RULES-COMP_TRADE_ARTIST/RULES-COMP_TRADE_GOLDSMITH">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ART/RULES-COMP_ACADEMIC_KNOWLEDGE_HISTORY/RULES-COMP_ACADEMIC_KNOWLEDGE_*/RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_CALLIGRAPHER">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ARABY/RULES-COMP_COMMON_KNOWLEDGE_*/RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ARABYAN/RULES-COMP_SPEAK_LANGUAGE_*/RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SAVVY/RULES-T_ARTISTIC">"1"</Talent>
+<Talent name="RULES-T_ETIQUETTE">"1"</Talent>
+<Talent name="RULES-T_LINGUISTICS">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ASAG 39"</Source>
+</Career>
+<Career id="ASAG-CARE_MAHOUT">
+<Description language="ENGLISH">"Mahout"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, S +10%, T +10%, Ag +15%, Int +10%, WP +10%, Fel +15%"</MainProfile>
+<SecondaryProfile>"W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Command, Animal Care, Animal Training, Ride, Trade (Elephant Breeding), Perception, Charm Animal, Common Knowledge (Araby)"</Skills>
+<Talents>"Excellent Vision, Cool-headed, Strike Mighty Blow, Hardy"</Talents>
+<Trappings>"Bow and 15 Arrows, Spear, Arabyan Elephant and Elephant Riding Equipment"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_ELEPHANT_BREEDING">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_CHARM_ANIMAL">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ARABY">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_EXCELLENT_VISION">"1"</Talent>
+<Talent name="RULES-T_COOLHEADED">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_HARDY">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ASAG 40"</Source>
+</Career>
+<Career id="ASAG-CARE_MAMELUKE">
+<Description language="ENGLISH">"Mameluke"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +25%, BS +25%, S +20%, T +20%, Ag +25%, Int +10%, WP +20%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +2, W +6"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"25"</Advance>
+<Advance name="RULES-ATTR_BS">"25"</Advance>
+<Advance name="RULES-ATTR_S">"20"</Advance>
+<Advance name="RULES-ATTR_T">"20"</Advance>
+<Advance name="RULES-ATTR_Ag">"25"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+</Advances>
+<Skills>"Ride, Academic Knowledge (Strategy, Tactics), Animal Care, Secret Language (Battle Tongue), Perception, Dodge Blow, Speak Language (Arabyan), Intimidate"</Skills>
+<Talents>"Rapid Reload, Lightning Parry, Specialist Weapon Group (Cavalry), Menacing, Frenzy, Fearless, Ambidextrous, Strike to Stun or Sure Shot, Disarm, Mighty Shot or Strike Mighty Blow, Quick Draw"</Talents>
+<Trappings>"Armoured Turban, Dagger, Curved Bow and 10 Arrows, Arabyan Horse with saddle and harness, Sword or Axe or Mace, Sipar, Spisa, Good Quality Chain Mail"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_STRATEGY/RULES-COMP_ACADEMIC_KNOWLEDGE_TACTICS">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_BATTLE_TONGUE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ARABYAN">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_RAPID_RELOAD">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_PARRY">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__CAVALRY">"1"</Talent>
+<Talent name="RULES-T_MENACING">"1"</Talent>
+<Talent name="RULES-T_FRENZY">"1"</Talent>
+<Talent name="RULES-T_FEARLESS">"1"</Talent>
+<Talent name="RULES-T_AMBIDEXTROUS">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_STUN/RULES-T_SURE_SHOT">"1"</Talent>
+<Talent name="RULES-T_DISARM">"1"</Talent>
+<Talent name="RULES-T_MIGHTY_SHOT/RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_QUICK_DRAW">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ASAG 41"</Source>
+</Career>
+<Career id="ASAG-CARE_SLAVE_MASTER">
+<Description language="ENGLISH">"Slave Master"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +25%, BS +25%, S +20%, T +10%, Ag +15%, Int +20%, WP +20%, Fel +20%"</MainProfile>
+<SecondaryProfile>"A +1, W +6"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"25"</Advance>
+<Advance name="RULES-ATTR_BS">"25"</Advance>
+<Advance name="RULES-ATTR_S">"20"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+</Advances>
+<Skills>"Read/Write, Command, Ride, Gossip, Drive, Charm, Trade (Merchant), Haggle, Torture, Follow Trail, Common Knowledge (Southlands or Tilea or Estalia or Bretonnia), Evaluate, Intimidate, Common Knowledge (Any Three)"</Skills>
+<Talents>"Specialist Weapon Group (Entangling), Menacing, Seasoned Traveller, Strike to Stun, Etiquette, Dealmaker, Super Numerate"</Talents>
+<Trappings>"Whip, Hand Weapon, Writing Tools, 100 gc"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_DRIVE">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_MERCHANT">"1"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_TORTURE">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_SOUTHLANDS/RULES-COMP_COMMON_KNOWLEDGE_TILEA/RULES-COMP_COMMON_KNOWLEDGE_ESTALIA/RULES-COMP_COMMON_KNOWLEDGE_BRETONNIA">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__ENTANGLING">"1"</Talent>
+<Talent name="RULES-T_MENACING">"1"</Talent>
+<Talent name="RULES-T_SEASONED_TRAVELLER">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_STUN">"1"</Talent>
+<Talent name="RULES-T_ETIQUETTE">"1"</Talent>
+<Talent name="RULES-T_DEALMAKER">"1"</Talent>
+<Talent name="RULES-T_SUPER_NUMERATE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ASAG 42"</Source>
+</Career>
+<Career id="ASAG-CARE_RAMMAL">
+<Description language="ENGLISH">"Rammal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, T +10%, Ag +5%, Int +20%, WP +25%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +4, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Speak Arcane Language (Magick), Academic Knowledge (Daemonology), Academic Knowledge (Magic), Navigation or Read/Write, Charm, Channelling, Perception, Outdoor Survival or Ride, Common Knowledge (Araby), Magical Sense, Intimidate, Common Knowledge (Any)"</Skills>
+<Talents>"Lesser Magic (Any Three), Arcane Lore (Sand), Petty Magic (Sand), Meditation or Mighty Missile, Coolheaded or Strong-Minded, Etiquette"</Talents>
+<Trappings>"Quarter-Staff, Book of Esoteric Knowledge, Writing Tools, Good Quality Clothes"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_DAEMONOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION/RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL/RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ARABY">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_ARCANE_LORE__SAND">"1"</Talent>
+<Talent name="RULES-T_PETTY_MAGIC__SAND">"1"</Talent>
+<Talent name="RULES-T_MEDITATION/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="RULES-T_COOLHEADED/RULES-T_STRONG_MINDED">"1"</Talent>
+<Talent name="RULES-T_ETIQUETTE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ASAG 43"</Source>
+</Career>
+<Career id="ASAG-CARE_KNIGHT_OF_THE_BURNING_SHAMSHIR">
+<Description language="ENGLISH">"Knight of the Burning Shamshir"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +30%, BS +30%, S +15%, T +20%, Ag +25%, Int +10%, WP +30%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +2, W +7"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"30"</Advance>
+<Advance name="RULES-ATTR_BS">"30"</Advance>
+<Advance name="RULES-ATTR_S">"15"</Advance>
+<Advance name="RULES-ATTR_T">"20"</Advance>
+<Advance name="RULES-ATTR_Ag">"25"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"30"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"7"</Advance>
+</Advances>
+<Skills>"Command, Ride, Academic Knowledge (Genealogy/Heraldry, Strategy/Tactics, Theology), Perception, Animal Training, Dodge Blow, Common Knowledge (Any, Araby), Speak Language (Any), Intimidate"</Skills>
+<Talents>"Specialist Weapon Group (Any, Cavalry), Frenzy, Sturdy, Strong-minded, Fearless, Strike to Stun, Cool-headed, Disarm, Strike Mighty Blow, Sure Shot, Mighty Shot, Warrior Born"</Talents>
+<Trappings>"Armoured Turban, Horse with Saddle and Harness, Curved Bow and 10 Arrows, Spisa, Shamshir, Symbol of Ormazd, Shield, Best Quality Arabyan Plate"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_GENEALOGY/RULES-COMP_ACADEMIC_KNOWLEDGE_HERALDRY/RULES-COMP_ACADEMIC_KNOWLEDGE_STRATEGY/RULES-COMP_ACADEMIC_KNOWLEDGE_TACTICS/RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*/RULES-COMP_COMMON_KNOWLEDGE_ARABY">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__*/RULES-T_SPECIALIST_WEAPON_GROUP__CAVALRY">"1"</Talent>
+<Talent name="RULES-T_FRENZY">"1"</Talent>
+<Talent name="RULES-T_STURDY">"1"</Talent>
+<Talent name="RULES-T_STRONG_MINDED">"1"</Talent>
+<Talent name="RULES-T_FEARLESS">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_STUN">"1"</Talent>
+<Talent name="RULES-T_COOLHEADED">"1"</Talent>
+<Talent name="RULES-T_DISARM">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_SURE_SHOT">"1"</Talent>
+<Talent name="RULES-T_MIGHTY_SHOT">"1"</Talent>
+<Talent name="RULES-T_WARRIOR_BORN">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ASAG 44"</Source>
+</Career>
+<Career id="ASAG-CARE_CARAVAN_GUARD">
+<Description language="ENGLISH">"Caravan Guard"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +15%, S +5%, T +15%, Ag +10%, Int +10%, WP +5%"</MainProfile>
+<SecondaryProfile>"A +1, W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Navigate, Animal Care, Drive or Ride, Secret Language (Ranger)"</Skills>
+<Talents>"Wrestling, Rapid Reload or Mighty Shot, Specialist Weapon Group (Gunpowder) or Sure Shot, Disarm or Quick Draw, Strike to Stun or Strike Mighty Blow"</Talents>
+<Trappings>"Kalkan and Spear, Bow and 10 Arrows or Jezail with Gunpowder and Bullets for 10 Shots, Camel and Equipment and Soft Armour"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_DRIVE/RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_RANGER">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_WRESTLING">"1"</Talent>
+<Talent name="RULES-T_RAPID_RELOAD/RULES-T_MIGHTY_SHOT">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__GUNPOWDER/RULES-T_SURE_SHOT">"1"</Talent>
+<Talent name="RULES-T_DISARM/RULES-T_QUICK_DRAW">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_STUN/RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ASAG 45"</Source>
+</Career>
+<Career id="ASAG-CARE_HOLY_RIDER">
+<Description language="ENGLISH">"Holy Rider"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, BS +20%, S +15%, T +15%, Ag +15%, Int +5%, WP +15%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"15"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Ride, Academic Knowledge (Genealogy/Heraldry, Strategy/Tactics, Theology), Secret Language (Battle Tongue), Perception, Outdoor Survival, Follow Trail, Dodge Blow, Speak Language (Any)"</Skills>
+<Talents>"Specialist Weapon Group (Cavalry), Frenzy, Strike Mighty Blow, Sure Shot, Mighty Shot"</Talents>
+<Trappings>"Sword or Sabre or Shamshir, Kalkan, A horse with a saddle, Curved Bow and 10 Arrows, Spisa, Bechter Armour"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_GENEALOGY/RULES-COMP_ACADEMIC_KNOWLEDGE_HERALDRY/RULES-COMP_ACADEMIC_KNOWLEDGE_STRATEGY/RULES-COMP_ACADEMIC_KNOWLEDGE_TACTICS/RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_BATTLE_TONGUE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__CAVALRY">"1"</Talent>
+<Talent name="RULES-T_FRENZY">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_SURE_SHOT">"1"</Talent>
+<Talent name="RULES-T_MIGHTY_SHOT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ASAG 46"</Source>
+</Career>
+<Career id="ASAG-CARE_BLADE_DANCER">
+<Description language="ENGLISH">"Blade Dancer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +30%, BS +10%, S +20%, T +15%, Ag +35%, Int +20%, WP +25%, Fel +30%"</MainProfile>
+<SecondaryProfile>"A +2, W +7, M +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"30"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"20"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"35"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_Fel">"30"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"7"</Advance>
+<Advance name="RULES-ATTR_M">"1"</Advance>
+</Advances>
+<Skills>"Disguise, Read/Write, Lip Reading, Blather, Performer (Acting), Performer (Acrobat), Performer (Dancer), Academic Knowledge (Theology), Pick Locks, Gossip, Charm, Shadowing, Perception, Follow Trail, Concealment, Dodge Blow, Common Knowledge (any two), Intimidate"</Skills>
+<Talents>"Suave, Lightning Parry, Storm Blades, Linguistics or Strong-Minded, Schemer or Alley Cat, Frenzy, Fearless, Ambidextrous, Disarm, Strike Mighty Blow, Lightning Reflexes, Warrior Born, Whirling Steel, Sensuous Death"</Talents>
+<Trappings>"Twi Shamshirs, Jewellery worth 10d10 gc, set of Lock Picks, Best Quality Clothes, Disguise Kit"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_DISGUISE">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_LIP_READING">"1"</Skill>
+<Skill name="RULES-COMP_BLATHER">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_ACTING">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_ACROBAT">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_DANCER">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_PICK_LOCK">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_SHADOWING">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SUAVE">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_PARRY">"1"</Talent>
+<Talent name="ASAG-T_STORM_BLADES">"1"</Talent>
+<Talent name="RULES-T_LINGUISTICS/RULES-T_STRONG_MINDED">"1"</Talent>
+<Talent name="RULES-T_SCHEMER/RULES-T_ALLEY_CAT">"1"</Talent>
+<Talent name="RULES-T_FRENZY">"1"</Talent>
+<Talent name="RULES-T_FEARLESS">"1"</Talent>
+<Talent name="RULES-T_AMBIDEXTROUS">"1"</Talent>
+<Talent name="RULES-T_DISARM">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_REFLEXES">"1"</Talent>
+<Talent name="RULES-T_WARRIOR_BORN">"1"</Talent>
+<Talent name="ASAG-T_WHIRLING_STEEL">"1"</Talent>
+<Talent name="ASAG-T_SENSUOUS_DEATH">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ASAG 47"</Source>
+</Career>
+<Career id="ASAG-CARE_VIZIER">
+<Description language="ENGLISH">"Vizier"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, S +5%, T +20%, Ag +15%, Int +30%, WP +40%, Fel +15%"</MainProfile>
+<SecondaryProfile>"A +1, W +6, Mag +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"20"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"40"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+<Advance name="RULES-ATTR_Mag">"4"</Advance>
+</Advances>
+<Skills>"Read/Write, Command or Intimidate, Secret Language (Djinn), Speak Arcane Language (Magick), Academic Knowledge (Daemonology, any two, Magick), Charm or Evaluate, Hypnotism, Perception, Outdoor Survival or Ride, Common Knowledge (Araby, any Two), Magical Sense, Speak Language (Arabyan, Any Two)"</Skills>
+<Talents>"Lesser Magic (Any Three), Fast Hands, Sixth Sense or Hardy, Etiquette or Menacing, Schemer or Public Speaking"</Talents>
+<Trappings>"3 Magic Items, Jewellery and Jewels worth 10d10 gc, Secret Book of Knowledge"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_DJINN">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_DAEMONOLOGY/RULES-COMP_ACADEMIC_KNOWLEDGE_*/RULES-COMP_ACADEMIC_KNOWLEDGE_*/RULES-COMP_ACADEMIC_KNOWLEDGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_HYPNOTISM">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL/RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ARABY/RULES-COMP_COMMON_KNOWLEDGE_*/RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ARABYAN/RULES-COMP_SPEAK_LANGUAGE_*/RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS">"1"</Talent>
+<Talent name="RULES-T_SIXTH_SENSE/RULES-T_HARDY">"1"</Talent>
+<Talent name="RULES-T_ETIQUETTE/RULES-T_MENACING">"1"</Talent>
+<Talent name="RULES-T_SCHEMER/RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ASAG 48"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="ASAG-CARE_ARABYAN_CORSAIR">"RULES-CARE_BOATMAN"</Link>
+<Link name="ASAG-CARE_ARABYAN_CORSAIR">"CCOMP-CARE_SLAVER"</Link>
+<Link name="ASAG-CARE_ARABYAN_CORSAIR">"COTO-CARE_RAIDER"</Link>
+<Link name="ASAG-CARE_ARABYAN_CORSAIR">"RULES-CARE_MERCENARY"</Link>
+<Link name="ASAG-CARE_ARABYAN_CORSAIR">"RULES-CARE_NAVIGATOR"</Link>
+<Link name="ASAG-CARE_ARABYAN_CORSAIR">"RULES-CARE_THUG"</Link>
+<Link name="ASAG-CARE_ARABYAN_CORSAIR">"RULES-CARE_SMUGGLER"</Link>
+<Link name="ASAG-CARE_ARABYAN_CORSAIR">"RULES-CARE_SERGEANT"</Link>
+<Link name="ASAG-CARE_ARABYAN_CORSAIR">"ASAG-CARE_CARAVAN_GUARD"</Link>
+<Link name="ASAG-CARE_ARABYAN_CORSAIR">"RULES-CARE_VETERAN"</Link>
+<Link name="ASAG-CARE_ARABYAN_CORSAIR">"RULES-CARE_MARINE"</Link>
+<Link name="COTO-CARE_RAIDER">"ASAG-CARE_ARABYAN_CORSAIR"</Link>
+<Link name="CCOMP-CARE_SLAVER">"ASAG-CARE_ARABYAN_CORSAIR"</Link>
+<Link name="ASAG-CARE_CAMEL_RIDER">"ASAG-CARE_ARABYAN_CORSAIR"</Link>
+<Link name="ASAG-CARE_SLAVE_MASTER">"ASAG-CARE_ARABYAN_CORSAIR"</Link>
+<Link name="RULES-CARE_MATE">"ASAG-CARE_ARABYAN_CORSAIR"</Link>
+<Link name="ASAG-CARE_CARAVAN_GUARD">"ASAG-CARE_ARABYAN_CORSAIR"</Link>
+<Link name="RULES-CARE_FISHERMAN">"ASAG-CARE_ARABYAN_CORSAIR"</Link>
+<Link name="RULES-CARE_BOATMAN">"ASAG-CARE_ARABYAN_CORSAIR"</Link>
+<Link name="ASAG-CARE_ARABYAN_MYSTIC">"ASAG-CARE_DERVISH"</Link>
+<Link name="ASAG-CARE_ARABYAN_MYSTIC">"RULES-CARE_ZEALOT"</Link>
+<Link name="ASAG-CARE_ARABYAN_MYSTIC">"ASAG-CARE_KADI"</Link>
+<Link name="ASAG-CARE_ARABYAN_MYSTIC">"CCOMP-CARE_MONK"</Link>
+<Link name="ASAG-CARE_ARABYAN_MYSTIC">"RULES-CARE_SCHOLAR"</Link>
+<Link name="ASAG-CARE_DERVISH">"ASAG-CARE_ARABYAN_MYSTIC"</Link>
+<Link name="RULES-CARE_ZEALOT">"ASAG-CARE_ARABYAN_MYSTIC"</Link>
+<Link name="ASAG-CARE_SADIN">"ASAG-CARE_ARABYAN_MYSTIC"</Link>
+<Link name="ASAG-CARE_ARABYAN_NOBLEMAN">"CCOMP-CARE_ASTROLOGER"</Link>
+<Link name="ASAG-CARE_ARABYAN_NOBLEMAN">"ASAG-CARE_BLADE_DAUGHTER"</Link>
+<Link name="ASAG-CARE_ARABYAN_NOBLEMAN">"RULES-CARE_COURTIER"</Link>
+<Link name="ASAG-CARE_ARABYAN_NOBLEMAN">"RULES-CARE_SQUIRE"</Link>
+<Link name="ASAG-CARE_ARABYAN_NOBLEMAN">"ASAG-CARE_KADI"</Link>
+<Link name="ASAG-CARE_ARABYAN_NOBLEMAN">"CCOMP-CARE_HORSE_MASTER"</Link>
+<Link name="ASAG-CARE_ARABYAN_NOBLEMAN">"ASAG-CARE_HOLY_RIDER"</Link>
+<Link name="ASAG-CARE_ARABYAN_NOBLEMAN">"RULES-CARE_POLITICIAN"</Link>
+<Link name="ASAG-CARE_ARABYAN_NOBLEMAN">"RULES-CARE_STUDENT"</Link>
+<Link name="RULES-CARE_SQUIRE">"ASAG-CARE_ARABYAN_NOBLEMAN"</Link>
+<Link name="RULES-CARE_STEWARD">"ASAG-CARE_ARABYAN_NOBLEMAN"</Link>
+<Link name="ASAG-CARE_RAMMAL">"ASAG-CARE_ARABYAN_NOBLEMAN"</Link>
+<Link name="ASAG-CARE_ARABYAN_SOLDIER">"CCOMP-CARE_SLAVER"</Link>
+<Link name="ASAG-CARE_ARABYAN_SOLDIER">"COTO-CARE_RAIDER"</Link>
+<Link name="ASAG-CARE_ARABYAN_SOLDIER">"RULES-CARE_MERCENARY"</Link>
+<Link name="ASAG-CARE_ARABYAN_SOLDIER">"RULES-CARE_HUNTER"</Link>
+<Link name="ASAG-CARE_ARABYAN_SOLDIER">"RULES-CARE_SERGEANT"</Link>
+<Link name="ASAG-CARE_ARABYAN_SOLDIER">"RULES-CARE_BODYGUARD"</Link>
+<Link name="ASAG-CARE_ARABYAN_SOLDIER">"ASAG-CARE_CARAVAN_GUARD"</Link>
+<Link name="ASAG-CARE_ARABYAN_SOLDIER">"RULES-CARE_VETERAN"</Link>
+<Link name="RULES-CARE_ZEALOT">"ASAG-CARE_ARABYAN_SOLDIER"</Link>
+<Link name="CCOMP-CARE_CADET">"ASAG-CARE_ARABYAN_SOLDIER"</Link>
+<Link name="RULES-CARE_MESSENGER">"ASAG-CARE_ARABYAN_SOLDIER"</Link>
+<Link name="RULES-CARE_BODYGUARD">"ASAG-CARE_ARABYAN_SOLDIER"</Link>
+<Link name="ASAG-CARE_MAHOUT">"ASAG-CARE_ARABYAN_SOLDIER"</Link>
+<Link name="ASAG-CARE_DERVISH">"ASAG-CARE_DYBUK"</Link>
+<Link name="ASAG-CARE_DERVISH">"RULES-CARE_MERCENARY"</Link>
+<Link name="ASAG-CARE_DERVISH">"RULES-CARE_VETERAN"</Link>
+<Link name="RULES-CARE_ZEALOT">"ASAG-CARE_DERVISH"</Link>
+<Link name="ASAG-CARE_DESERT_NOMAD">"ASAG-CARE_DERVISH"</Link>
+<Link name="ASAG-CARE_SADIN">"ASAG-CARE_DERVISH"</Link>
+<Link name="ASAG-CARE_ARABYAN_RAIDER">"ASAG-CARE_ARABYAN_CORSAIR"</Link>
+<Link name="ASAG-CARE_ARABYAN_RAIDER">"CCOMP-CARE_SLAVER"</Link>
+<Link name="ASAG-CARE_ARABYAN_RAIDER">"ASAG-CARE_CAMEL_RIDER"</Link>
+<Link name="ASAG-CARE_ARABYAN_RAIDER">"CCOMP-CARE_HORSE_ARCHER"</Link>
+<Link name="ASAG-CARE_ARABYAN_RAIDER">"RULES-CARE_MERCENARY"</Link>
+<Link name="ASAG-CARE_ARABYAN_RAIDER">"ASAG-CARE_CARAVAN_GUARD"</Link>
+<Link name="ASAG-CARE_ARABYAN_RAIDER">"ASAG-CARE_APPRENTICE_ASSASSIN"</Link>
+<Link name="ASAG-CARE_ARABYAN_RAIDER">"RULES-CARE_VETERAN"</Link>
+<Link name="ASAG-CARE_ARABYAN_RAIDER">"RULES-CARE_SCOUT"</Link>
+<Link name="ASAG-CARE_ARABYAN_CORSAIR">"ASAG-CARE_ARABYAN_RAIDER"</Link>
+<Link name="ASAG-CARE_ARABYAN_SOLDIER">"ASAG-CARE_ARABYAN_RAIDER"</Link>
+<Link name="RULES-CARE_OUTLAW">"ASAG-CARE_ARABYAN_RAIDER"</Link>
+<Link name="ASAG-CARE_CAMEL_RIDER">"ASAG-CARE_ARABYAN_RAIDER"</Link>
+<Link name="RULES-CARE_HUNTER">"ASAG-CARE_ARABYAN_RAIDER"</Link>
+<Link name="ASAG-CARE_DESERT_NOMAD">"ASAG-CARE_ARABYAN_RAIDER"</Link>
+<Link name="ASAG-CARE_ARABYAN_SLAVE">"RULES-CARE_PEASANT"</Link>
+<Link name="ASAG-CARE_ARABYAN_SLAVE">"ASAG-CARE_JANISSARY"</Link>
+<Link name="ASAG-CARE_ARABYAN_SLAVE">"ASAG-CARE_MAMELUKE"</Link>
+<Link name="ASAG-CARE_ARABYAN_SLAVE">"RULES-CARE_BURGHER"</Link>
+<Link name="ASAG-CARE_ARABYAN_SLAVE">"RULES-CARE_INTERROGATOR"</Link>
+<Link name="ASAG-CARE_ARABYAN_SLAVE">"RULES-CARE_COURTIER"</Link>
+<Link name="ASAG-CARE_ARABYAN_SLAVE">"RULES-CARE_MESSENGER"</Link>
+<Link name="ASAG-CARE_ARABYAN_SLAVE">"RULES-CARE_SERVANT"</Link>
+<Link name="ASAG-CARE_ARABYAN_SLAVE">"RULES-CARE_SPY"</Link>
+<Link name="ASAG-CARE_ARABYAN_SLAVE">"RULES-CARE_THIEF"</Link>
+<Link name="ASAG-CARE_DESERT_NOMAD">"RULES-CARE_OUTLAW"</Link>
+<Link name="ASAG-CARE_DESERT_NOMAD">"RULES-CARE_MINER"</Link>
+<Link name="ASAG-CARE_DESERT_NOMAD">"CCOMP-CARE_SLAVER"</Link>
+<Link name="ASAG-CARE_DESERT_NOMAD">"ASAG-CARE_CAMEL_RIDER"</Link>
+<Link name="ASAG-CARE_DESERT_NOMAD">"COTO-CARE_RAIDER"</Link>
+<Link name="ASAG-CARE_DESERT_NOMAD">"CCOMP-CARE_HORSE_MASTER"</Link>
+<Link name="ASAG-CARE_DESERT_NOMAD">"RULES-CARE_MERCENARY"</Link>
+<Link name="ASAG-CARE_DESERT_NOMAD">"RULES-CARE_SMUGGLER"</Link>
+<Link name="ASAG-CARE_DESERT_NOMAD">"RULES-CARE_ARTISAN"</Link>
+<Link name="ASAG-CARE_DESERT_NOMAD">"ASAG-CARE_CARAVAN_GUARD"</Link>
+<Link name="ASAG-CARE_DESERT_NOMAD">"RULES-CARE_SCOUT"</Link>
+<Link name="ASAG-CARE_SADIN">"ASAG-CARE_KAHIN"</Link>
+<Link name="ASAG-CARE_SADIN">"RULES-CARE_AGITATOR"</Link>
+<Link name="RULES-CARE_HEDGE_WIZARD">"ASAG-CARE_SADIN"</Link>
+<Link name="ASAG-CARE_SULTAN_S_GUARD">"ASAG-CARE_ARABYAN_CHAMPION"</Link>
+<Link name="ASAG-CARE_SULTAN_S_GUARD">"ASAG-CARE_PILLAR_OF_FAITH"</Link>
+<Link name="ASAG-CARE_SULTAN_S_GUARD">"RULES-CARE_VAMPIRE_HUNTER"</Link>
+<Link name="ASAG-CARE_SULTAN_S_GUARD">"RULES-CARE_MERCENARY"</Link>
+<Link name="ASAG-CARE_SULTAN_S_GUARD">"RULES-CARE_BODYGUARD"</Link>
+<Link name="ASAG-CARE_SULTAN_S_GUARD">"RULES-CARE_SERGEANT"</Link>
+<Link name="ASAG-CARE_SULTAN_S_GUARD">"RULES-CARE_VETERAN"</Link>
+<Link name="ASAG-CARE_APPRENTICE_SAND_SORCERER">"ASAG-CARE_RAMMAL"</Link>
+<Link name="ASAG-CARE_APPRENTICE_SAND_SORCERER">"RULES-CARE_SCRIBE"</Link>
+<Link name="ASAG-CARE_APPRENTICE_SAND_SORCERER">"RULES-CARE_SCHOLAR"</Link>
+<Link name="RULES-CARE_HEDGE_WIZARD">"ASAG-CARE_APPRENTICE_SAND_SORCERER"</Link>
+<Link name="RULES-CARE_SCHOLAR">"ASAG-CARE_APPRENTICE_SAND_SORCERER"</Link>
+<Link name="RULES-CARE_STUDENT">"ASAG-CARE_APPRENTICE_SAND_SORCERER"</Link>
+<Link name="ASAG-CARE_APPRENTICE_ASSASSIN">"ASAG-CARE_ARABYAN_ASSASSIN"</Link>
+<Link name="ASAG-CARE_APPRENTICE_ASSASSIN">"ASAG-CARE_ARABYAN_CHAMPION"</Link>
+<Link name="ASAG-CARE_APPRENTICE_ASSASSIN">"CCOMP-CARE_SLAVER"</Link>
+<Link name="ASAG-CARE_APPRENTICE_ASSASSIN">"RULES-CARE_BOUNTY_HUNTER"</Link>
+<Link name="ASAG-CARE_APPRENTICE_ASSASSIN">"CCOMP-CARE_ENFORCER"</Link>
+<Link name="RULES-CARE_ENTERTAINER">"ASAG-CARE_APPRENTICE_ASSASSIN"</Link>
+<Link name="RULES-CARE_BOUNTY_HUNTER">"ASAG-CARE_APPRENTICE_ASSASSIN"</Link>
+<Link name="COTO-CARE_RAIDER">"ASAG-CARE_APPRENTICE_ASSASSIN"</Link>
+<Link name="RULES-CARE_BODYGUARD">"ASAG-CARE_APPRENTICE_ASSASSIN"</Link>
+<Link name="RULES-CARE_THUG">"ASAG-CARE_APPRENTICE_ASSASSIN"</Link>
+<Link name="RULES-CARE_CAT_BURGLAR">"ASAG-CARE_APPRENTICE_ASSASSIN"</Link>
+<Link name="RULES-CARE_THIEF">"ASAG-CARE_APPRENTICE_ASSASSIN"</Link>
+<Link name="ASAG-CARE_ARABYAN_ASSASSIN">"ASAG-CARE_HASHASHIN"</Link>
+<Link name="ASAG-CARE_ARABYAN_ASSASSIN">"RULES-CARE_OUTLAW_CHIEF"</Link>
+<Link name="ASAG-CARE_ARABYAN_ASSASSIN">"RULES-CARE_DUELLIST"</Link>
+<Link name="ASAG-CARE_ARABYAN_ASSASSIN">"RULES-CARE_INTERROGATOR"</Link>
+<Link name="ASAG-CARE_ARABYAN_ASSASSIN">"RULES-CARE_SPY"</Link>
+<Link name="ASAG-CARE_ARABYAN_CHAMPION">"ASAG-CARE_ARABYAN_ASSASSIN"</Link>
+<Link name="RULES-CARE_DUELLIST">"ASAG-CARE_ARABYAN_ASSASSIN"</Link>
+<Link name="RULES-CARE_OUTLAW_CHIEF">"ASAG-CARE_ARABYAN_ASSASSIN"</Link>
+<Link name="RULES-CARE_TARGETEER">"ASAG-CARE_ARABYAN_ASSASSIN"</Link>
+<Link name="RULES-CARE_SPY">"ASAG-CARE_ARABYAN_ASSASSIN"</Link>
+<Link name="ASAG-CARE_ARABYAN_CHAMPION">"RULES-CARE_DUELLIST"</Link>
+<Link name="ASAG-CARE_ARABYAN_CHAMPION">"ASAG-CARE_HASHASHIN"</Link>
+<Link name="ASAG-CARE_ARABYAN_CHAMPION">"RULES-CARE_ROGUE"</Link>
+<Link name="RULES-CARE_COURTIER">"ASAG-CARE_ARABYAN_CHAMPION"</Link>
+<Link name="ASAG-CARE_MAMELUKE">"ASAG-CARE_ARABYAN_CHAMPION"</Link>
+<Link name="RULES-CARE_HIGHWAYMAN">"ASAG-CARE_ARABYAN_CHAMPION"</Link>
+<Link name="RULES-CARE_THUG">"ASAG-CARE_ARABYAN_CHAMPION"</Link>
+<Link name="RULES-CARE_SERGEANT">"ASAG-CARE_ARABYAN_CHAMPION"</Link>
+<Link name="ASAG-CARE_BLADE_DAUGHTER">"RULES-CARE_VAMPIRE_HUNTER"</Link>
+<Link name="ASAG-CARE_BLADE_DAUGHTER">"RULES-CARE_SPY"</Link>
+<Link name="ASAG-CARE_BLADE_DAUGHTER">"ASAG-CARE_BLADE_DANCER"</Link>
+<Link name="ASAG-CARE_DYBUK">"CCOMP-CARE_SCOURGE_OF_GOD"</Link>
+<Link name="RULES-CARE_ZEALOT">"ASAG-CARE_DYBUK"</Link>
+<Link name="ASAG-CARE_PILLAR_OF_FAITH">"RULES-CARE_DUELLIST"</Link>
+<Link name="ASAG-CARE_PILLAR_OF_FAITH">"RULES-CARE_VAMPIRE_HUNTER"</Link>
+<Link name="ASAG-CARE_PILLAR_OF_FAITH">"RULES-CARE_SERGEANT"</Link>
+<Link name="ASAG-CARE_PILLAR_OF_FAITH">"ASAG-CARE_KNIGHT_OF_THE_BURNING_SHAMSHIR"</Link>
+<Link name="RULES-CARE_SERGEANT">"ASAG-CARE_PILLAR_OF_FAITH"</Link>
+<Link name="RULES-CARE_VETERAN">"ASAG-CARE_PILLAR_OF_FAITH"</Link>
+<Link name="RULES-CARE_DUELLIST">"ASAG-CARE_HASHASHIN"</Link>
+<Link name="RULES-CARE_VAMPIRE_HUNTER">"ASAG-CARE_HASHASHIN"</Link>
+<Link name="RULES-CARE_MASTER_THIEF">"ASAG-CARE_HASHASHIN"</Link>
+<Link name="RULES-CARE_SPY">"ASAG-CARE_HASHASHIN"</Link>
+<Link name="RULES-CARE_VETERAN">"ASAG-CARE_HASHASHIN"</Link>
+<Link name="ASAG-CARE_JANISSARY">"ASAG-CARE_MAMELUKE"</Link>
+<Link name="ASAG-CARE_JANISSARY">"RULES-CARE_SERGEANT"</Link>
+<Link name="ASAG-CARE_JANISSARY">"RULES-CARE_VETERAN"</Link>
+<Link name="ASAG-CARE_JANISSARY">"RULES-CARE_HIGHWAYMAN"</Link>
+<Link name="ASAG-CARE_JANISSARY">"RULES-CARE_OUTLAW_CHIEF"</Link>
+<Link name="ASAG-CARE_CAMEL_RIDER">"CCOMP-CARE_SLAVER"</Link>
+<Link name="ASAG-CARE_CAMEL_RIDER">"RULES-CARE_OUTLAW_CHIEF"</Link>
+<Link name="ASAG-CARE_CAMEL_RIDER">"COTO-CARE_RAIDER"</Link>
+<Link name="ASAG-CARE_CAMEL_RIDER">"ASAG-CARE_CARAVAN_GUARD"</Link>
+<Link name="ASAG-CARE_CAMEL_RIDER">"RULES-CARE_VETERAN"</Link>
+<Link name="COTO-CARE_RAIDER">"ASAG-CARE_CAMEL_RIDER"</Link>
+<Link name="ASAG-CARE_CARAVAN_GUARD">"ASAG-CARE_CAMEL_RIDER"</Link>
+<Link name="ASAG-CARE_KADI">"CCOMP-CARE_AMBASSADOR"</Link>
+<Link name="ASAG-CARE_KADI">"ASAG-CARE_ARABYAN_NOBLEMAN"</Link>
+<Link name="ASAG-CARE_KADI">"RULES-CARE_DEMAGOGUE"</Link>
+<Link name="ASAG-CARE_KADI">"RULES-CARE_COURTIER"</Link>
+<Link name="ASAG-CARE_KADI">"RULES-CARE_MERCHANT"</Link>
+<Link name="ASAG-CARE_KADI">"RULES-CARE_CHARLATAN"</Link>
+<Link name="ASAG-CARE_KADI">"RULES-CARE_SCHOLAR"</Link>
+<Link name="ASAG-CARE_KADI">"RULES-CARE_POLITICIAN"</Link>
+<Link name="ASAG-CARE_KAHIN">"ASAG-CARE_KADI"</Link>
+<Link name="RULES-CARE_PHYSICIAN">"ASAG-CARE_KADI"</Link>
+<Link name="RULES-CARE_SCHOLAR">"ASAG-CARE_KADI"</Link>
+<Link name="RULES-CARE_POLITICIAN">"ASAG-CARE_KADI"</Link>
+<Link name="RULES-CARE_STUDENT">"ASAG-CARE_KADI"</Link>
+<Link name="CCOMP-CARE_MONK">"ASAG-CARE_KADI"</Link>
+<Link name="ASAG-CARE_KAHIN">"RULES-CARE_PHYSICIAN"</Link>
+<Link name="ASAG-CARE_KAHIN">"RULES-CARE_SCHOLAR"</Link>
+<Link name="ASAG-CARE_KAHIN">"CCOMP-CARE_MONK"</Link>
+<Link name="RULES-CARE_HEDGE_WIZARD">"ASAG-CARE_KAHIN"</Link>
+<Link name="ASAG-CARE_KALIGRAF">"RULES-CARE_DEMAGOGUE"</Link>
+<Link name="ASAG-CARE_KALIGRAF">"RULES-CARE_COURTIER"</Link>
+<Link name="ASAG-CARE_KALIGRAF">"ASAG-CARE_KADI"</Link>
+<Link name="ASAG-CARE_KALIGRAF">"RULES-CARE_MERCHANT"</Link>
+<Link name="ASAG-CARE_KALIGRAF">"RULES-CARE_GUILD_MASTER"</Link>
+<Link name="ASAG-CARE_KALIGRAF">"RULES-CARE_EXPLORER"</Link>
+<Link name="ASAG-CARE_KALIGRAF">"RULES-CARE_SPY"</Link>
+<Link name="ASAG-CARE_KALIGRAF">"RULES-CARE_SCHOLAR"</Link>
+<Link name="ASAG-CARE_KALIGRAF">"RULES-CARE_POLITICIAN"</Link>
+<Link name="ASAG-CARE_KALIGRAF">"CCOMP-CARE_MONK"</Link>
+<Link name="ASAG-CARE_ARABYAN_NOBLEMAN">"ASAG-CARE_KALIGRAF"</Link>
+<Link name="RULES-CARE_COURTIER">"ASAG-CARE_KALIGRAF"</Link>
+<Link name="RULES-CARE_PRIEST">"ASAG-CARE_KALIGRAF"</Link>
+<Link name="ASAG-CARE_RAMMAL">"ASAG-CARE_KALIGRAF"</Link>
+<Link name="RULES-CARE_SCRIBE">"ASAG-CARE_KALIGRAF"</Link>
+<Link name="ASAG-CARE_APPRENTICE_SAND_SORCERER">"ASAG-CARE_KALIGRAF"</Link>
+<Link name="RULES-CARE_POLITICIAN">"ASAG-CARE_KALIGRAF"</Link>
+<Link name="CCOMP-CARE_MONK">"ASAG-CARE_KALIGRAF"</Link>
+<Link name="RULES-CARE_STUDENT">"ASAG-CARE_KALIGRAF"</Link>
+<Link name="ASAG-CARE_MAHOUT">"RULES-CARE_MERCENARY"</Link>
+<Link name="ASAG-CARE_MAHOUT">"RULES-CARE_SERGEANT"</Link>
+<Link name="ASAG-CARE_MAHOUT">"CCOMP-CARE_ANIMAL_TRAINER"</Link>
+<Link name="ASAG-CARE_MAHOUT">"RULES-CARE_VETERAN"</Link>
+<Link name="RULES-CARE_ENTERTAINER">"ASAG-CARE_MAHOUT"</Link>
+<Link name="RULES-CARE_MERCENARY">"ASAG-CARE_MAHOUT"</Link>
+<Link name="ASAG-CARE_ARABYAN_SOLDIER">"ASAG-CARE_MAHOUT"</Link>
+<Link name="CCOMP-CARE_ANIMAL_TRAINER">"ASAG-CARE_MAHOUT"</Link>
+<Link name="ASAG-CARE_MAMELUKE">"RULES-CARE_COURTIER"</Link>
+<Link name="ASAG-CARE_MAMELUKE">"RULES-CARE_DUELLIST"</Link>
+<Link name="ASAG-CARE_MAMELUKE">"RULES-CARE_OUTLAW_CHIEF"</Link>
+<Link name="ASAG-CARE_MAMELUKE">"RULES-CARE_VAMPIRE_HUNTER"</Link>
+<Link name="ASAG-CARE_MAMELUKE">"RULES-CARE_SERGEANT"</Link>
+<Link name="ASAG-CARE_MAMELUKE">"RULES-CARE_VETERAN"</Link>
+<Link name="ASAG-CARE_SLAVE_MASTER">"RULES-CARE_OUTLAW_CHIEF"</Link>
+<Link name="ASAG-CARE_SLAVE_MASTER">"RULES-CARE_MERCHANT"</Link>
+<Link name="ASAG-CARE_SLAVE_MASTER">"RULES-CARE_GUILD_MASTER"</Link>
+<Link name="ASAG-CARE_SLAVE_MASTER">"RULES-CARE_SERGEANT"</Link>
+<Link name="ASAG-CARE_ARABYAN_CORSAIR">"ASAG-CARE_SLAVE_MASTER"</Link>
+<Link name="RULES-CARE_BOATMAN">"ASAG-CARE_SLAVE_MASTER"</Link>
+<Link name="CCOMP-CARE_SLAVER">"ASAG-CARE_SLAVE_MASTER"</Link>
+<Link name="RULES-CARE_OUTLAW_CHIEF">"ASAG-CARE_SLAVE_MASTER"</Link>
+<Link name="CCOMP-CARE_ADMIRAL">"ASAG-CARE_SLAVE_MASTER"</Link>
+<Link name="RULES-CARE_PIT_FIGHTER">"ASAG-CARE_SLAVE_MASTER"</Link>
+<Link name="RULES-CARE_MERCHANT">"ASAG-CARE_SLAVE_MASTER"</Link>
+<Link name="RULES-CARE_MERCENARY">"ASAG-CARE_SLAVE_MASTER"</Link>
+<Link name="RULES-CARE_VETERAN">"ASAG-CARE_SLAVE_MASTER"</Link>
+<Link name="ASAG-CARE_RAMMAL">"RULES-CARE_COURTIER"</Link>
+<Link name="ASAG-CARE_RAMMAL">"RULES-CARE_EXPLORER"</Link>
+<Link name="ASAG-CARE_RAMMAL">"RULES-CARE_SCHOLAR"</Link>
+<Link name="ASAG-CARE_RAMMAL">"CCOMP-CARE_ANCHORITE"</Link>
+<Link name="ASAG-CARE_RAMMAL">"ASAG-CARE_VIZIER"</Link>
+<Link name="ASAG-CARE_KNIGHT_OF_THE_BURNING_SHAMSHIR">"RULES-CARE_VAMPIRE_HUNTER"</Link>
+<Link name="ASAG-CARE_KNIGHT_OF_THE_BURNING_SHAMSHIR">"CCOMP-CARE_SCOURGE_OF_GOD"</Link>
+<Link name="ASAG-CARE_KNIGHT_OF_THE_BURNING_SHAMSHIR">"RULES-CARE_SERGEANT"</Link>
+<Link name="RULES-CARE_POLITICIAN">"ASAG-CARE_KNIGHT_OF_THE_BURNING_SHAMSHIR"</Link>
+<Link name="RULES-CARE_COURTIER">"ASAG-CARE_KNIGHT_OF_THE_BURNING_SHAMSHIR"</Link>
+<Link name="RULES-CARE_SQUIRE">"ASAG-CARE_KNIGHT_OF_THE_BURNING_SHAMSHIR"</Link>
+<Link name="RULES-CARE_VAMPIRE_HUNTER">"ASAG-CARE_KNIGHT_OF_THE_BURNING_SHAMSHIR"</Link>
+<Link name="RULES-CARE_KNIGHT">"ASAG-CARE_KNIGHT_OF_THE_BURNING_SHAMSHIR"</Link>
+<Link name="RULES-CARE_SERGEANT">"ASAG-CARE_KNIGHT_OF_THE_BURNING_SHAMSHIR"</Link>
+<Link name="ASAG-CARE_HOLY_RIDER">"ASAG-CARE_KNIGHT_OF_THE_BURNING_SHAMSHIR"</Link>
+<Link name="ASAG-CARE_CARAVAN_GUARD">"RULES-CARE_OUTLAW"</Link>
+<Link name="ASAG-CARE_CARAVAN_GUARD">"CCOMP-CARE_SLAVER"</Link>
+<Link name="ASAG-CARE_CARAVAN_GUARD">"RULES-CARE_BOUNTY_HUNTER"</Link>
+<Link name="ASAG-CARE_CARAVAN_GUARD">"CCOMP-CARE_HORSE_MASTER"</Link>
+<Link name="ASAG-CARE_CARAVAN_GUARD">"RULES-CARE_MERCENARY"</Link>
+<Link name="ASAG-CARE_CARAVAN_GUARD">"RULES-CARE_SERGEANT"</Link>
+<Link name="ASAG-CARE_CARAVAN_GUARD">"ASAG-CARE_HOLY_RIDER"</Link>
+<Link name="ASAG-CARE_CARAVAN_GUARD">"RULES-CARE_SCOUT"</Link>
+<Link name="ASAG-CARE_CARAVAN_GUARD">"RULES-CARE_VETERAN"</Link>
+<Link name="CCOMP-CARE_HORSE_ARCHER">"ASAG-CARE_CARAVAN_GUARD"</Link>
+<Link name="COTO-CARE_RAIDER">"ASAG-CARE_CARAVAN_GUARD"</Link>
+<Link name="RULES-CARE_MERCENARY">"ASAG-CARE_CARAVAN_GUARD"</Link>
+<Link name="RULES-CARE_BODYGUARD">"ASAG-CARE_CARAVAN_GUARD"</Link>
+<Link name="RULES-CARE_SOLDIER">"ASAG-CARE_CARAVAN_GUARD"</Link>
+<Link name="ASAG-CARE_HOLY_RIDER">"RULES-CARE_COURTIER"</Link>
+<Link name="ASAG-CARE_HOLY_RIDER">"RULES-CARE_VAMPIRE_HUNTER"</Link>
+<Link name="ASAG-CARE_HOLY_RIDER">"RULES-CARE_SERGEANT"</Link>
+<Link name="RULES-CARE_COURTIER">"ASAG-CARE_HOLY_RIDER"</Link>
+<Link name="RULES-CARE_SQUIRE">"ASAG-CARE_HOLY_RIDER"</Link>
+<Link name="RULES-CARE_VAMPIRE_HUNTER">"ASAG-CARE_HOLY_RIDER"</Link>
+<Link name="RULES-CARE_SERGEANT">"ASAG-CARE_HOLY_RIDER"</Link>
+<Link name="RULES-CARE_VETERAN">"ASAG-CARE_HOLY_RIDER"</Link>
+<Link name="ASAG-CARE_BLADE_DANCER">"RULES-CARE_COURTIER"</Link>
+<Link name="ASAG-CARE_BLADE_DANCER">"RULES-CARE_DUELLIST"</Link>
+<Link name="ASAG-CARE_BLADE_DANCER">"RULES-CARE_STEWARD"</Link>
+<Link name="ASAG-CARE_BLADE_DANCER">"RULES-CARE_MASTER_THIEF"</Link>
+<Link name="ASAG-CARE_BLADE_DANCER">"RULES-CARE_EXPLORER"</Link>
+<Link name="ASAG-CARE_BLADE_DANCER">"RULES-CARE_SPY"</Link>
+<Link name="ASAG-CARE_VIZIER">"RULES-CARE_COURTIER"</Link>
+<Link name="ASAG-CARE_VIZIER">"RULES-CARE_GUILD_MASTER"</Link>
+<Link name="ASAG-CARE_VIZIER">"RULES-CARE_EXPLORER"</Link>
+<Link name="ASAG-CARE_VIZIER">"RULES-CARE_SCHOLAR"</Link>
+<Link name="RULES-CARE_APPRENTICE_WIZARD">"ASAG-CARE_SADIN"</Link>
+<Link name="RULES-CARE_APPRENTICE_WIZARD">"ASAG-CARE_APPRENTICE_SAND_SORCERER"</Link>
+<Link name="RULES-CARE_APPRENTICE_WIZARD">"ASAG-CARE_KAHIN"</Link>
+<Link name="RULES-CARE_APPRENTICE_WIZARD">"ASAG-CARE_KALIGRAF"</Link>
+<Link name="RULES-CARE_JOURNEYMAN_WIZARD">"ASAG-CARE_RAMMAL"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_RULE>
+<Rule id="ASAG-RULE_GENERIC_NOMAD">""</Rule>
+<Rule id="ASAG-RULE_GENERIC_CITY_DWELLER">""</Rule>
+<Rule id="ASAG-RULE_ASAD">""</Rule>
+<Rule id="ASAG-RULE_BAKR">""</Rule>
+<Rule id="ASAG-RULE_DHI_B">""</Rule>
+<Rule id="ASAG-RULE_EBONIAN">""</Rule>
+<Rule id="ASAG-RULE_GHUTANI">""</Rule>
+<Rule id="ASAG-RULE_KAHIED">""</Rule>
+<Rule id="ASAG-RULE_MALALUK">""</Rule>
+<Rule id="ASAG-RULE_MUZIL">""</Rule>
+<Rule id="ASAG-RULE_NASR">""</Rule>
+<Rule id="ASAG-RULE_TAYIF">""</Rule>
+<Rule id="ASAG-RULE_TUAREG">""</Rule>
+<Rule id="ASAG-RULE_TURJUK">""</Rule>
+<Rule id="ASAG-RULE_ZAMESI">""</Rule>
+<Rule id="ASAG-RULE_CALIPHATE_OF_ALHAKA_EL_HAIKK">""</Rule>
+<Rule id="ASAG-RULE_CALIPHATE_OF_COPHER">""</Rule>
+<Rule id="ASAG-RULE_CALIPHATE_OF_GHAFSA">""</Rule>
+<Rule id="ASAG-RULE_CALIPHATE_OF_KUFRA">""</Rule>
+<Rule id="ASAG-RULE_CALIPHATE_OF_MEDES">""</Rule>
+<Rule id="ASAG-RULE_CALIPHATE_OF_NEJAZ">""</Rule>
+<Rule id="ASAG-RULE_CALIPHATE_OF_ZOAN">""</Rule>
+<Rule id="ASAG-RULE_EMIRATE_OF_BEL_ALIAD">""</Rule>
+<Rule id="ASAG-RULE_EMIRATE_OF_KA_SABAR">""</Rule>
+<Rule id="ASAG-RULE_EMIRATE_OF_MARTEKK">""</Rule>
+<Rule id="ASAG-RULE_EMIRATE_OF_SONGHAI">""</Rule>
+</DATA_RULE>
+<DATA_RULE_SPECIE>
+<Entry>
+<Rule>"ASAG-RULE_GENERIC_NOMAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_GENERIC_NOMAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_GENERIC_NOMAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL/RULES-COMP_NAVIGATION"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_GENERIC_NOMAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_ORIENTATION/RULES-T_ROVER"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_GENERIC_NOMAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_GENERIC_CITY_DWELLER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_GENERIC_CITY_DWELLER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_GENERIC_CITY_DWELLER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_GENERIC_CITY_DWELLER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"ASAG-T_RELIGIOUS_FANATICISM/RULES-T_COOLHEADED"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_GENERIC_CITY_DWELLER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_ASAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_ASAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_ASAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_GOSSIP/RULES-COMP_HAGGLE"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_ASAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_DEALMAKER/RULES-T_SAVVY"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_ASAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_BAKR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_BAKR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_BAKR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_GOSSIP/RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_BAKR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"ASAG-T_RELIGIOUS_FANATICISM/RULES-T_VERY_RESILIENT"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_BAKR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_DHI_B"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_DHI_B"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_DHI_B"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_ANIMAL_CARE/RULES-COMP_NAVIGATION"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_DHI_B"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_TRADE_*/RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_DHI_B"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EBONIAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EBONIAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EBONIAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_RIDE/RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EBONIAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_ORIENTATION/RULES-T_ROVER"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EBONIAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_GHUTANI"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_GHUTANI"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_GHUTANI"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL/RULES-COMP_NAVIGATION"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_GHUTANI"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_ORIENTATION/ASAG-T_RELIGIOUS_FANATICISM"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_GHUTANI"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_KAHIED"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_KAHIED"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_KAHIED"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL/RULES-COMP_SHADOWING/RULES-COMP_FOLLOW_TRAIL"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_KAHIED"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_ORIENTATION/RULES-T_FEARLESS"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_KAHIED"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_MALALUK"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_MALALUK"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_MALALUK"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_INTIMIDATE/RULES-COMP_RIDE"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_MALALUK"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_ORIENTATION/RULES-T_ROVER"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_MALALUK"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_MUZIL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_MUZIL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_MUZIL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_HAGGLE/RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_MUZIL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_SAVVY/RULES-T_COOLHEADED"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_MUZIL"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_NASR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_NASR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_NASR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_GOSSIP/RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_NASR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_COOLHEADED/RULES-T_WARRIOR_BORN"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_NASR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_TAYIF"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_TAYIF"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_TAYIF"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_ANIMAL_CARE/RULES-COMP_HAGGLE"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_TAYIF"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_EVALUATE/RULES-COMP_TRADE_HERBALIST"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_TAYIF"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_TUAREG"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_TUAREG"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_TUAREG"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_RIDE/RULES-COMP_CONCEALMENT"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_TUAREG"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_ORIENTATION/RULES-T_ROVER"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_TUAREG"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_TURJUK"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_TURJUK"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_TURJUK"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_RIDE/RULES-COMP_ANIMAL_CARE"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_TURJUK"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_SHARPSHOOTER/RULES-T_TRICK_RIDING"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_TURJUK"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_ZAMESI"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_ZAMESI"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_ZAMESI"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL/RULES-COMP_RIDE"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_ZAMESI"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_ORIENTATION/RULES-T_ROVER"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_ZAMESI"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_ALHAKA_EL_HAIKK"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_ALHAKA_EL_HAIKK"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_ALHAKA_EL_HAIKK"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMAND/RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_ALHAKA_EL_HAIKK"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_ALHAKA_EL_HAIKK"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"ASAG-T_RELIGIOUS_FANATICISM/RULES-T_PUBLIC_SPEAKING"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_COPHER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_COPHER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_COPHER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_HAGGLE/RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_COPHER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_PUBLIC_SPEAKING/RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_COPHER"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_SAVVY/RULES-T_DEALMAKER"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_GHAFSA"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_GHAFSA"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_GHAFSA"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_ANIMAL_CARE/RULES-COMP_TRADE_MINING"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_GHAFSA"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_GOSSIP/RULES-COMP_EVALUATE"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_GHAFSA"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"ASAG-T_RELIGIOUS_FANATICISM/RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_KUFRA"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_KUFRA"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_KUFRA"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_HAGGLE/RULES-COMP_SAIL"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_KUFRA"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_EVALUATE/RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_KUFRA"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_MEDES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_MEDES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_MEDES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_TRADE_MINING/RULES-COMP_SAIL"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_MEDES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_MEDES"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"ASAG-T_RELIGIOUS_FANATICISM/RULES-T_COOLHEADED"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_NEJAZ"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_NEJAZ"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_NEJAZ"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_CHARM/RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_NEJAZ"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"ASAG-T_RELIGIOUS_FANATICISM/RULES-T_COOLHEADED"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_NEJAZ"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_ZOAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_ZOAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_ZOAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMAND/RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_ZOAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_WARRIOR_BORN/RULES-T_SAVVY"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_CALIPHATE_OF_ZOAN"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EMIRATE_OF_BEL_ALIAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EMIRATE_OF_BEL_ALIAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EMIRATE_OF_BEL_ALIAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_UNDEAD/RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EMIRATE_OF_BEL_ALIAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"ASAG-T_RELIGIOUS_FANATICISM/RULES-T_VERY_RESILIENT"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EMIRATE_OF_BEL_ALIAD"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EMIRATE_OF_KA_SABAR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EMIRATE_OF_KA_SABAR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EMIRATE_OF_KA_SABAR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_HAGGLE/RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EMIRATE_OF_KA_SABAR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"ASAG-T_RELIGIOUS_FANATICISM/RULES-T_COOLHEADED"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EMIRATE_OF_KA_SABAR"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EMIRATE_OF_MARTEKK"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EMIRATE_OF_MARTEKK"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EMIRATE_OF_MARTEKK"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_EVALUATE/RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EMIRATE_OF_MARTEKK"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_CHARM/RULES-COMP_HAGGLE"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EMIRATE_OF_MARTEKK"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EMIRATE_OF_SONGHAI"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_ARABY"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EMIRATE_OF_SONGHAI"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_ARABYAN"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EMIRATE_OF_SONGHAI"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Skill>"RULES-COMP_INTIMIDATE/RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EMIRATE_OF_SONGHAI"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T_SCHEMER/RULES-T_ALLEY_CAT"</Talent>
+</Entry>
+<Entry>
+<Rule>"ASAG-RULE_EMIRATE_OF_SONGHAI"</Rule>
+<Specie>"RULES-SPECIE_HUMAN"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+</DATA_RULE_SPECIE>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMP_TRADE_MINING">
+<Description language="ENGLISH">"Trade (Mining)"</Description>
+<Generique>"RULES-COMP_TRADE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_UNDEAD">
+<Description language="ENGLISH">"Common Knowledge (Undead)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY_AND_ONE_OTHER">
+<Description language="ENGLISH">"Academic Knowledge (Theology and one other)"</Description>
+<Generique>"RULES-COMP_ACADEMIC_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SECRET_SIGNS_THIEVES">
+<Description language="ENGLISH">"Secret Signs (Thieves)"</Description>
+<Generique>"RULES-COMP_SECRET_SIGNS_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_PERFORMER_DANCE">
+<Description language="ENGLISH">"Performer (Dance)"</Description>
+<Generique>"RULES-COMP_PERFORMER_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_ACADEMIC_KNOWLEDGE_ART">
+<Description language="ENGLISH">"Academic Knowledge (Art)"</Description>
+<Generique>"RULES-COMP_ACADEMIC_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_TRADE_ELEPHANT_BREEDING">
+<Description language="ENGLISH">"Trade (Elephant Breeding)"</Description>
+<Generique>"RULES-COMP_TRADE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SECRET_LANGUAGE_DJINN">
+<Description language="ENGLISH">"Secret Language (Djinn)"</Description>
+<Generique>"RULES-COMP_SECRET_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGICK">
+<Description language="ENGLISH">"Academic Knowledge (Magick)"</Description>
+<Generique>"RULES-COMP_ACADEMIC_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_SOUTHLANDS">
+<Description language="ENGLISH">"Common Knowledge (Southlands)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_BRETONNIAN">
+<Description language="ENGLISH">"Speak Language (Bretonnian)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_ARABYAN">
+<Description language="ENGLISH">"Speak Language (Arabyan)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="RULES-T_SPECIALIST_WEAPON_GROUP__DERVISH">
+<Description language="ENGLISH">"Specialist Weapon Group (Dervish)"</Description>
+<Generique>"RULES-T_SPECIALIST_WEAPON_GROUP__*"</Generique>
+</Talent>
+<Talent id="RULES-T_SPECIALIST_WEAPON_GROUP__FIREARM">
+<Description language="ENGLISH">"Specialist Weapon Group (Firearm)"</Description>
+<Generique>"RULES-T_SPECIALIST_WEAPON_GROUP__*"</Generique>
+</Talent>
+<Talent id="RULES-T_SPECIALIST_WEAPON_GROUP__ARABYAN_ARC">
+<Description language="ENGLISH">"Specialist Weapon Group (Arabyan Arc)"</Description>
+<Generique>"RULES-T_SPECIALIST_WEAPON_GROUP__*"</Generique>
+</Talent>
+<Talent id="RULES-T_PETTY_MAGIC__SAND">
+<Description language="ENGLISH">"Petty Magic (Sand)"</Description>
+<Generique>"RULES-T_PETTY_MAGIC__*"</Generique>
+</Talent>
+<Talent id="RULES-T_SPECIALIST_WEAPON_GROUP__THROWN">
+<Description language="ENGLISH">"Specialist Weapon Group (Thrown)"</Description>
+<Generique>"RULES-T_SPECIALIST_WEAPON_GROUP__*"</Generique>
+</Talent>
+<Talent id="RULES-T_LESSER_MAGIC__PROPHESY">
+<Description language="ENGLISH">"Lesser Magic (Prophesy)"</Description>
+<Generique>"RULES-T_LESSER_MAGIC__*"</Generique>
+</Talent>
+<Talent id="RULES-T_ARCANE_LORE__SAND">
+<Description language="ENGLISH">"Arcane Lore (Sand)"</Description>
+<Generique>"RULES-T_ARCANE_LORE__*"</Generique>
+</Talent>
+<Talent id="RULES-T_DIVINE_LORE__ORMAZD">
+<Description language="ENGLISH">"Divine Lore (Ormazd)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"57"</Page>
+</Talent>
+<Talent id="RULES-T_DIVINE_LORE__AZYATA">
+<Description language="ENGLISH">"Divine Lore (Azyata)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"60"</Page>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+<DATA_SPELL_V2>
+<SpellV2 id="ASAG-SPEL_DJINN_S_GIFT">
+<Description language="ENGLISH">"Djinn's Gift"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Sand)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A Feather (+1)"</Ingredient>
+<Page>"50"</Page>
+<Range>"Varies"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_DEHYDRATION">
+<Description language="ENGLISH">"Dehydration"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Sand)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A cup of Alcohol (+1)"</Ingredient>
+<Page>"51"</Page>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_SAND_IN_YOUR_EYES">
+<Description language="ENGLISH">"Sand in Your Eyes"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Sand)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A handful of sand (+1)"</Ingredient>
+<Page>"51"</Page>
+<Range>"8 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_WANDERING_SAND">
+<Description language="ENGLISH">"Wandering Sand"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Sand)"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A Camel's Hoof (+1)"</Ingredient>
+<Page>"51"</Page>
+<Range>"None"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_DESERT_PROTECTION">
+<Description language="ENGLISH">"Desert Protection"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Sand)"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Two Full Actions"</CastingTime>
+<Ingredient>"Two-centimetre Ball of Wax (+1)"</Ingredient>
+<Page>"51"</Page>
+<Range>"None"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_SANDSTORM">
+<Description language="ENGLISH">"Sandstorm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"A 30cm² piece of pure silk. (+2)"</Ingredient>
+<Page>"52"</Page>
+<SpellLists>"Desert Wizard, Dewan"</SpellLists>
+<Range>"Special"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_DAO_S_BREATH">
+<Description language="ENGLISH">"Dao's Breath"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A 10cm tall shard of flint (+1)"</Ingredient>
+<Page>"52"</Page>
+<SpellLists>"Lord of the Djinn"</SpellLists>
+<Range>"16 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_DJINN_TRAVELLER">
+<Description language="ENGLISH">"Djinn Traveller"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"A small copper statue of a horse (+2)"</Ingredient>
+<Page>"52"</Page>
+<SpellLists>"Lord of the Djinn"</SpellLists>
+<Range>"Special"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_CHILD_OF_THE_DESERT">
+<Description language="ENGLISH">"Child of the Desert"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"An Iron model of a Scorpion (+2)"</Ingredient>
+<Page>"52"</Page>
+<SpellLists>"Desert Wizard"</SpellLists>
+<Range>"None"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_BITING_SAND">
+<Description language="ENGLISH">"Biting Sand"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"26"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"A pure crystal worth 75 gc (+2)"</Ingredient>
+<Page>"52"</Page>
+<SpellLists>"Dewan"</SpellLists>
+<Range>"48 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_MARID_S_GRACE">
+<Description language="ENGLISH">"Marid's Grace"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"At least ¼ a litre of water in container (+1)"</Ingredient>
+<Page>"52"</Page>
+<SpellLists>"Desert Wizard, Lord of the Djinn"</SpellLists>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_MIRAGE">
+<Description language="ENGLISH">"Mirage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"A Telescope (+2)"</Ingredient>
+<Page>"53"</Page>
+<SpellLists>"Desert Wizard"</SpellLists>
+<Range>"48 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_IFRIT_S_BURNING_HAND">
+<Description language="ENGLISH">"Ifrit's Burning Hand"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"A Disc of Gold (+2)"</Ingredient>
+<Page>"53"</Page>
+<SpellLists>"Lord of the Djinn"</SpellLists>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_SANDS_OF_TIME">
+<Description language="ENGLISH">"Sands of Time"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"32"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"An Obsidian Hourglass filled with sand (+2)"</Ingredient>
+<Page>"53"</Page>
+<SpellLists>"Dewan"</SpellLists>
+<Range>"48 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_SAND_GATE">
+<Description language="ENGLISH">"Sand Gate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"A Copper Key (+2)"</Ingredient>
+<Page>"53"</Page>
+<SpellLists>"Desert Wizard"</SpellLists>
+<Range>"Special"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_SAND_WHIP">
+<Description language="ENGLISH">"Sand Whip"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Half a yard braid of hair (+1)"</Ingredient>
+<Page>"53"</Page>
+<SpellLists>"Desert Wizard, Dewan"</SpellLists>
+<Range>"None"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_ACQUISITION_OF_POWER">
+<Description language="ENGLISH">"Acquisition of Power"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"23"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"A Prism (+3)"</Ingredient>
+<Page>"53"</Page>
+<SpellLists>"Lord of the Djinn, Dewan"</SpellLists>
+<Range>"None"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_DJINN_S_CURSE">
+<Description language="ENGLISH">"Djinn's Curse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"A Desert Gourd (+1)"</Ingredient>
+<Page>"54"</Page>
+<SpellLists>"Lord of the Djinn, Dewan"</SpellLists>
+<Range>"48 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_SUMMON_DJINN_SERVANT">
+<Description language="ENGLISH">"Summon Djinn Servant"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"Heart - Ox(Dao), Eagle (Djinn), Leopard (Ifrit), Dolphin (Marid) (+2)"</Ingredient>
+<Page>"54"</Page>
+<SpellLists>"Lord of the Djinn, Dewan"</SpellLists>
+<Range>"12 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_SUMMON_DJINN_PACK">
+<Description language="ENGLISH">"Summon Djinn Pack"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"26"</CastingNumber>
+<CastingTime>"2 Double Actions"</CastingTime>
+<Ingredient>"Heart - Ox (Dao, +1), Eagle (Djinn +2), Leopard (Ifrit +2), Dolphin (Marid, +3)"</Ingredient>
+<Page>"54"</Page>
+<SpellLists>"Lord of the Djinn"</SpellLists>
+<Range>"12 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_SUMMON_SAND_PHANTOM">
+<Description language="ENGLISH">"Summon Sand Phantom"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"28"</CastingNumber>
+<CastingTime>"3 Full Actions"</CastingTime>
+<Ingredient>"The skull of someone who died in the desert (+2)."</Ingredient>
+<Page>"54"</Page>
+<SpellLists>"Desert Wizard"</SpellLists>
+<Range>"12 yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_QUICKSAND">
+<Description language="ENGLISH">"Quicksand"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"A handful of Wet Clay (+3)"</Ingredient>
+<Page>"54"</Page>
+<SpellLists>"Desert Wizard"</SpellLists>
+<Range>"48 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_SUN_MISSILE">
+<Description language="ENGLISH">"Sun Missile"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"A Golden Arrowhead (+2)"</Ingredient>
+<Page>"54"</Page>
+<SpellLists>"Dewan"</SpellLists>
+<Range>"48 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_STREAM_OF_SAND">
+<Description language="ENGLISH">"Stream of Sand"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A Handful of Salt (+2)"</Ingredient>
+<Page>"55"</Page>
+<SpellLists>"Desert Wizard, Lord of the Djinn"</SpellLists>
+<Range>"48 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_VEIL_OF_SAND">
+<Description language="ENGLISH">"Veil of Sand"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A handful of Sea Salt (+1)"</Ingredient>
+<Page>"55"</Page>
+<SpellLists>"Dewan"</SpellLists>
+<Range>"None"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_DESERT_HEAT">
+<Description language="ENGLISH">"Desert Heat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Warm ashes from a fire (+2)"</Ingredient>
+<Page>"55"</Page>
+<SpellLists>"Desert Wizard"</SpellLists>
+<Range>"Sight"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_WISH">
+<Description language="ENGLISH">"Wish"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Sand"</Lore>
+<CastingNumber>"21"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A Small Copper Lamp (+1)"</Ingredient>
+<Page>"55"</Page>
+<SpellLists>"Lord of the Djinn, Dewan"</SpellLists>
+<Range>"Sight"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_WARD_OF_ORMAZD">
+<Description language="ENGLISH">"Ward of Ormazd"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ormazd"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Symbol of Ormazd (+1)"</Ingredient>
+<Page>"56"</Page>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_NOMAD_S_WATCH">
+<Description language="ENGLISH">"Nomad's Watch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ormazd"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small Nomadic charm (+1)"</Ingredient>
+<Page>"56"</Page>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_PURGE_FEAR">
+<Description language="ENGLISH">"Purge Fear"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ormazd"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A Torch (+1)"</Ingredient>
+<Page>"57"</Page>
+<SpellLists>"Ormazd the Guardian"</SpellLists>
+<Range>"24 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_AURA_OF_POWER">
+<Description language="ENGLISH">"Aura of Power"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ormazd"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"A lock from a lion's mane (+1)"</Ingredient>
+<Page>"57"</Page>
+<SpellLists>"Ormazd the Legislator"</SpellLists>
+<Range>"None"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_CHARITABLE_HEAT">
+<Description language="ENGLISH">"Charitable Heat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ormazd"</Lore>
+<CastingNumber>"19"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"A Honeycomb (+2)"</Ingredient>
+<Page>"58"</Page>
+<SpellLists>"Ormazd the Guardian"</SpellLists>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_ROBE_OF_FLAMES">
+<Description language="ENGLISH">"Robe of Flames"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ormazd"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A handful of Iron Filings (+1)"</Ingredient>
+<Page>"58"</Page>
+<SpellLists>"Ormazd the Legislator"</SpellLists>
+<Range>"None"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_CLEANSING_TOUCH">
+<Description language="ENGLISH">"Cleansing Touch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ormazd"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A Pearl (+3)"</Ingredient>
+<Page>"58"</Page>
+<SpellLists>"Ormazd the Guardian, Ormazd the Warrior"</SpellLists>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_BLINDING_RAY">
+<Description language="ENGLISH">"Blinding Ray"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ormazd"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"A Small Mirror (+1)"</Ingredient>
+<Page>"58"</Page>
+<SpellLists>"Ormazd the Guardian, Ormazd the Legislator"</SpellLists>
+<Range>"48 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_BURNING_SHAMSHIR">
+<Description language="ENGLISH">"Burning Shamshir"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ormazd"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Plate of Polished Copper (+1)"</Ingredient>
+<Page>"58"</Page>
+<SpellLists>"Ormazd the Guardian, Ormazd the Warrior"</SpellLists>
+<Range>"None"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_SOLAR_SPEAR">
+<Description language="ENGLISH">"Solar Spear"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ormazd"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Copper Rod (+1)"</Ingredient>
+<Page>"58"</Page>
+<SpellLists>"Ormazd the Warrior"</SpellLists>
+<Range>"24 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_SOLAR_PRISON">
+<Description language="ENGLISH">"Solar Prison"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ormazd"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Copper Ring (+1)"</Ingredient>
+<Page>"59"</Page>
+<SpellLists>"Ormazd the Legislator"</SpellLists>
+<Range>"Sight"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_RIGHTEOUS_ANGER">
+<Description language="ENGLISH">"Righteous Anger"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ormazd"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"Peacock Feather (+1)"</Ingredient>
+<Page>"59"</Page>
+<SpellLists>"Ormazd the Warrior"</SpellLists>
+<Range>"None"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_COURT_OF_ORMAZD">
+<Description language="ENGLISH">"Court of Ormazd"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ormazd"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"1 Minute (6 Rounds) + Caster's Mag characteristic"</CastingTime>
+<Ingredient>"Eyeball amulet made of Sapphire (+2)"</Ingredient>
+<Page>"59"</Page>
+<SpellLists>"Ormazd the Legislator"</SpellLists>
+<Range>"12 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_LIGHT_OF_TRUTH">
+<Description language="ENGLISH">"Light of Truth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ormazd"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"Magnifying Glass (+2)"</Ingredient>
+<Page>"59"</Page>
+<SpellLists>"Ormazd the Legislator"</SpellLists>
+<Range>"48 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_CALL_TO_BATTLE">
+<Description language="ENGLISH">"Call to Battle"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ormazd"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"Miniature Sword made of gold (+2)"</Ingredient>
+<Page>"59"</Page>
+<SpellLists>"Ormazd the Warrior"</SpellLists>
+<Range>"12 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_SCORCHED_EARTH">
+<Description language="ENGLISH">"Scorched Earth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ormazd"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The feather of a Roc (+3)"</Ingredient>
+<Page>"59"</Page>
+<SpellLists>"Ormazd the Warrior"</SpellLists>
+<Range>"24 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_AURA_OF_WEAKNESS">
+<Description language="ENGLISH">"Aura of Weakness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Azyata"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Fang of an Arabyan Snake (+1)"</Ingredient>
+<Page>"60"</Page>
+<Range>"None"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_NIGHT_HUNTER">
+<Description language="ENGLISH">"Night Hunter"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Azyata"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The Eyes of a Bat (+2)"</Ingredient>
+<Page>"61"</Page>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_MYSTIFYING_TRAIL">
+<Description language="ENGLISH">"Mystifying Trail"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Azyata"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"A snake's molted skin (+1)"</Ingredient>
+<Page>"61"</Page>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_LADY_S_VENGEANCE">
+<Description language="ENGLISH">"Lady's Vengeance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Azyata"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"A Live Viper (+1)"</Ingredient>
+<Page>"61"</Page>
+<Range>"Special"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_SNAKE_EYES">
+<Description language="ENGLISH">"Snake Eyes"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Azyata"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Eye of a Basilisk (+3)"</Ingredient>
+<Page>"61"</Page>
+<Range>"12 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_ARMOUR_OF_GLOOM">
+<Description language="ENGLISH">"Armour of Gloom"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Azyata"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"Snake Egg (+1)"</Ingredient>
+<Page>"61"</Page>
+<Range>"None"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_AWAKEN_THE_VIPER">
+<Description language="ENGLISH">"Awaken the Viper"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Azyata"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Blood inflicted by a Viper bite (+1)"</Ingredient>
+<Page>"61"</Page>
+<Range>"5 Yard radius"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_SUMMON_DJINN_DJINN_SERVANT">
+<Description language="ENGLISH">"Summon Djinn (Djinn Servant)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Two hours + Magic requirement of the spell"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"62"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"2"</MagicMin>
+<XPCost>"100"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_SUMMON_DJINN_DJINN">
+<Description language="ENGLISH">"Summon Djinn (Djinn)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Two hours + Magic requirement of the spell"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"62"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"200"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_SUMMON_DJINN_GREATER_DJINN">
+<Description language="ENGLISH">"Summon Djinn (Greater Djinn)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"32"</CastingNumber>
+<CastingTime>"Two hours + Magic requirement of the spell"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"62"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"4"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_BIND_DJINN_DJINN_SERVANT">
+<Description language="ENGLISH">"Bind Djinn (Djinn Servant)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"1 Hour"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"64"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"2"</MagicMin>
+<XPCost>"100"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_BIND_DJINN_DJINN">
+<Description language="ENGLISH">"Bind Djinn (Djinn)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"4 Hours"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"64"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"200"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_BIND_DJINN_GREATER_DJINN">
+<Description language="ENGLISH">"Bind Djinn (Greater Djinn)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"26"</CastingNumber>
+<CastingTime>"8 Hours"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"64"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"4"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_SUMMON_DJINN_ARMY">
+<Description language="ENGLISH">"Summon Djinn Army"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"32"</CastingNumber>
+<CastingTime>"6 Hours"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"65"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Djinn"</ArcaneLanguage>
+<MagicMin>"4"</MagicMin>
+<XPCost>"500"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_THE_STONE_FIST">
+<Description language="ENGLISH">"The Stone Fist"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Djinn Magic (Dao)"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"None"</Ingredient>
+<Page>"99"</Page>
+<Range>"None"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_STONE_WALL">
+<Description language="ENGLISH">"Stone Wall"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Djinn Magic (Dao)"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"None"</Ingredient>
+<Page>"99"</Page>
+<Range>"12 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_EARTHQUAKE">
+<Description language="ENGLISH">"Earthquake"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Djinn Magic (Dao)"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"None"</Ingredient>
+<Page>"99"</Page>
+<Range>"48 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_WIND_SHIELD">
+<Description language="ENGLISH">"Wind Shield"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Djinn Magic (Djinn)"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"None"</Ingredient>
+<Page>"99"</Page>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_HOWLING_WIND">
+<Description language="ENGLISH">"Howling Wind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Djinn Magic (Djinn)"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"None"</Ingredient>
+<Page>"101"</Page>
+<Range>"48 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_TORNADO">
+<Description language="ENGLISH">"Tornado"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Djinn Magic (Djinn)"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"3 Half Actions"</CastingTime>
+<Ingredient>"None"</Ingredient>
+<Page>"101"</Page>
+<Range>"12 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_DISPLAY_OF_POWER">
+<Description language="ENGLISH">"Display of Power"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Djinn Magic (Ifrit)"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"None"</Ingredient>
+<Page>"101"</Page>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_WALL_OF_FIRE">
+<Description language="ENGLISH">"Wall of Fire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Djinn Magic (Ifrit)"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"None"</Ingredient>
+<Page>"101"</Page>
+<Range>"12 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_FIRESTORM">
+<Description language="ENGLISH">"Firestorm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Djinn Magic (Ifrit)"</Lore>
+<CastingNumber>"26"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"None"</Ingredient>
+<Page>"101"</Page>
+<Range>"48 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_WALK_ON_WATER">
+<Description language="ENGLISH">"Walk on Water"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Djinn Magic (Marid)"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"None"</Ingredient>
+<Page>"101"</Page>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_DISRUPTED_MAGIC">
+<Description language="ENGLISH">"Disrupted Magic"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Djinn Magic (Marid)"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"None"</Ingredient>
+<Page>"102"</Page>
+<Range>"48 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ASAG-SPEL_DESTRUCTIVE_WAVE">
+<Description language="ENGLISH">"Destructive Wave"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Djinn Magic (Marid)"</Lore>
+<CastingNumber>"25"</CastingNumber>
+<CastingTime>"Double Action"</CastingTime>
+<Ingredient>"None"</Ingredient>
+<Page>"102"</Page>
+<Range>"Special"</Range>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SPELL_TALENT>
+<Sort id="ASAG-SPEL_DJINN_S_GIFT">
+<Talent>"RULES-T_PETTY_MAGIC__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_DEHYDRATION">
+<Talent>"RULES-T_PETTY_MAGIC__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_SAND_IN_YOUR_EYES">
+<Talent>"RULES-T_PETTY_MAGIC__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_WANDERING_SAND">
+<Talent>"RULES-T_PETTY_MAGIC__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_DESERT_PROTECTION">
+<Talent>"RULES-T_PETTY_MAGIC__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_SANDSTORM">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_DAO_S_BREATH">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_DJINN_TRAVELLER">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_CHILD_OF_THE_DESERT">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_BITING_SAND">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_MARID_S_GRACE">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_MIRAGE">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_IFRIT_S_BURNING_HAND">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_SANDS_OF_TIME">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_SAND_GATE">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_SAND_WHIP">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_ACQUISITION_OF_POWER">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_DJINN_S_CURSE">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_SUMMON_DJINN_SERVANT">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_SUMMON_DJINN_PACK">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_SUMMON_SAND_PHANTOM">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_QUICKSAND">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_SUN_MISSILE">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_STREAM_OF_SAND">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_VEIL_OF_SAND">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_DESERT_HEAT">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_WISH">
+<Talent>"RULES-T_ARCANE_LORE__SAND"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_WARD_OF_ORMAZD">
+<Talent>"RULES-T_DIVINE_LORE__ORMAZD"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_NOMAD_S_WATCH">
+<Talent>"RULES-T_DIVINE_LORE__ORMAZD"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_PURGE_FEAR">
+<Talent>"RULES-T_DIVINE_LORE__ORMAZD"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_AURA_OF_POWER">
+<Talent>"RULES-T_DIVINE_LORE__ORMAZD"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_CHARITABLE_HEAT">
+<Talent>"RULES-T_DIVINE_LORE__ORMAZD"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_ROBE_OF_FLAMES">
+<Talent>"RULES-T_DIVINE_LORE__ORMAZD"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_CLEANSING_TOUCH">
+<Talent>"RULES-T_DIVINE_LORE__ORMAZD"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_BLINDING_RAY">
+<Talent>"RULES-T_DIVINE_LORE__ORMAZD"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_BURNING_SHAMSHIR">
+<Talent>"RULES-T_DIVINE_LORE__ORMAZD"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_SOLAR_SPEAR">
+<Talent>"RULES-T_DIVINE_LORE__ORMAZD"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_SOLAR_PRISON">
+<Talent>"RULES-T_DIVINE_LORE__ORMAZD"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_RIGHTEOUS_ANGER">
+<Talent>"RULES-T_DIVINE_LORE__ORMAZD"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_COURT_OF_ORMAZD">
+<Talent>"RULES-T_DIVINE_LORE__ORMAZD"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_LIGHT_OF_TRUTH">
+<Talent>"RULES-T_DIVINE_LORE__ORMAZD"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_CALL_TO_BATTLE">
+<Talent>"RULES-T_DIVINE_LORE__ORMAZD"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_SCORCHED_EARTH">
+<Talent>"RULES-T_DIVINE_LORE__ORMAZD"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_AURA_OF_WEAKNESS">
+<Talent>"RULES-T_DIVINE_LORE__AZYATA"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_NIGHT_HUNTER">
+<Talent>"RULES-T_DIVINE_LORE__AZYATA"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_MYSTIFYING_TRAIL">
+<Talent>"RULES-T_DIVINE_LORE__AZYATA"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_LADY_S_VENGEANCE">
+<Talent>"RULES-T_DIVINE_LORE__AZYATA"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_SNAKE_EYES">
+<Talent>"RULES-T_DIVINE_LORE__AZYATA"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_ARMOUR_OF_GLOOM">
+<Talent>"RULES-T_DIVINE_LORE__AZYATA"</Talent>
+</Sort>
+<Sort id="ASAG-SPEL_AWAKEN_THE_VIPER">
+<Talent>"RULES-T_DIVINE_LORE__AZYATA"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_BLACK_VIPER">
+<Description language="ENGLISH">"Black Viper"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"33;0;36;32;53;8;39;0;2;4;3;3;4;0;0;0"</Profile>
+<Skills>"Shadowing +10%, Perception +20%, Dodge Blow +10%"</Skills>
+<Talents>"Natural Weapons"</Talents>
+<SpecialRules>"Viper Venom"</SpecialRules>
+<Note>""</Note>
+<Page>"70"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_LION">
+<Description language="ENGLISH">"Lion"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"42;0;42;42;40;14;25;0;2;18;4;4;6;0;0;0"</Profile>
+<Skills>"Swim, Perception +10%, Follow Trail +10%, Intimidate"</Skills>
+<Talents>"Natural Weapons, Strike Mighty Blow, Night Vision, Keen Senses"</Talents>
+<Note>""</Note>
+<Page>"71"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_GIANT_SCORPION">
+<Description language="ENGLISH">"Giant Scorpion"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"35;0;51;42;40;15;35;0;2;25;5;4;6;0;0;0"</Profile>
+<Skills>"Shadowing, Perception, Concealment"</Skills>
+<Talents>"Natural Weapons, Strike Mighty Blow, Night Vision, Keen Senses, Frightening"</Talents>
+<SpecialRules>"Armoured Chitin, Stinger Attack"</SpecialRules>
+<Note>""</Note>
+<Page>"72"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_SAND_APPARITION">
+<Description language="ENGLISH">"Sand Apparition"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"63;0;51;51;61;25;35;20;4;27;5;5;6;0;0;0"</Profile>
+<Skills>"Shadowing +10%, Perception +10%, Concealment +20%, Dodge Blow +10%, Follow Trail"</Skills>
+<Talents>"Natural Weapons, Strike Mighty Blow, Night Vision, Frightening"</Talents>
+<SpecialRules>"Unstable Form, Healing Sand, Sand Wanderer"</SpecialRules>
+<Note>""</Note>
+<Page>"73"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_SAND_DRAGON">
+<Description language="ENGLISH">"Sand Dragon"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"51;0;58;68;52;28;65;18;5;48;5;6;6;0;0;0"</Profile>
+<Skills>"Concealment +10%, Perception +20%, Scale Sheer Surface +10%, Intimidate +10%"</Skills>
+<Talents>"Natural Weapons, Flying (3), Strike Mighty Blow, Strike to Stun, Night Vision, Keen Senses"</Talents>
+<SpecialRules>"Hail of Blows, Fire Resistance, Desert Camouflage, Shredding, Breath of Sand"</SpecialRules>
+<Note>""</Note>
+<Page>"74"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_ROC">
+<Description language="ENGLISH">"Roc"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"48;0;71;65;45;38;53;25;4;32;7;6;4;0;0;0"</Profile>
+<Skills>"Dodge Blow, Perception +10%"</Skills>
+<Talents>"Natural Weapons, Excellent Vision, Flying (10), Strike Mighty Blow, Frightening, Night Vision, Keen Senses, Coolheaded"</Talents>
+<SpecialRules>"Iron Feathers"</SpecialRules>
+<Note>""</Note>
+<Page>"75"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_GIANT_VULTURE">
+<Description language="ENGLISH">"Giant Vulture"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"35;0;35;43;35;11;20;5;2;15;3;4;2;0;0;0"</Profile>
+<Skills>"Dodge Blow, Perception +10%, Intimidate +10%"</Skills>
+<Talents>"Natural Weapons, Excellent Vision, Flying (8), Keen Senses"</Talents>
+<Note>""</Note>
+<Page>"76"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_ARABYAN_ELEPHANT">
+<Description language="ENGLISH">"Arabyan Elephant"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"33;27;78;61;20;18;29;10;4;48;7;6;6;0;0;0"</Profile>
+<Skills>"Swim, Perception"</Skills>
+<Talents>"Natural Weapons, Strike Mighty Blow, Frightening, Very Strong"</Talents>
+<SpecialRules>"Hard Skin, Stampede, Panic"</SpecialRules>
+<Note>""</Note>
+<Page>"77"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_ARABYAN_STEED">
+<Description language="ENGLISH">"Arabyan Steed"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"30;0;40;40;35;10;10;0;1;16;4;4;9;0;0;0"</Profile>
+<Skills>"Swim, Perception +20%"</Skills>
+<Talents>"Excellent Vision, Acute Hearing, Natural Weapons, Strike Mighty Blow, Keen Senses"</Talents>
+<Note>""</Note>
+<Page>"78"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_CAMEL">
+<Description language="ENGLISH">"Camel"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"23;0;39;43;25;14;10;10;1;17;3;4;7;0;0;0"</Profile>
+<Skills>"Swim, Perception"</Skills>
+<Talents>"Acute Hearing, Natural Weapons, Keen Senses"</Talents>
+<SpecialRules>"Camel Stench, Camel's Hump, Stubborn"</SpecialRules>
+<Note>""</Note>
+<Page>"79"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_NECROLITH_COLOSSUS">
+<Description language="ENGLISH">"Necrolith Colossus"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"36;28;70;63;25;24;36;12;4;48;70;6;6;0;0;0"</Profile>
+<Skills>"Perception +10%"</Skills>
+<Talents>"Lightning Parry, Specialist Weapon Group (Two Handed), Strike Mighty Blow, Terrifying, Night Vision"</Talents>
+<SpecialRules>"Construct, Unstoppable Attack"</SpecialRules>
+<Note>""</Note>
+<Page>"80"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_SEPULCHRAL_STALKERS">
+<Description language="ENGLISH">"Sepulchral Stalkers"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"42;31;42;44;36;24;48;12;2;26;4;4;7;0;0;0"</Profile>
+<Skills>"Shadowing +20%, Perception +10%, Concealment +10%, Dodge Blow +20%, Follow Trail +10%"</Skills>
+<Talents>"Specialist Weapon Group (Two-handed), Strike Might Blow, Night Vision, Terrifying, Lightning Parry"</Talents>
+<SpecialRules>"Construct, Sand Ambush, Burial, Transmuting Glare"</SpecialRules>
+<Note>""</Note>
+<Page>"81"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_NECROSPHINX">
+<Description language="ENGLISH">"Necrosphinx"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"48;0;61;82;35;34;66;15;5;55;6;8;6;0;0;0"</Profile>
+<Skills>"Dodge Blow, Perception +20%"</Skills>
+<Talents>"Lightning Parry, Natural Weapons, Flying (3), Strike Mighty Blow, Frightening, Night Vision, Menacing"</Talents>
+<SpecialRules>"Construct, Hideous Strength, Poisoned Tail"</SpecialRules>
+<Note>""</Note>
+<Page>"82"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_CARRION">
+<Description language="ENGLISH">"Carrion"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"20;0;18;21;55;12;89;12;2;15;1;2;2;0;0;0"</Profile>
+<Skills>"Dodge Blow, Perception +10%"</Skills>
+<Talents>"Excellent Vision, Natural Weapons, Keen Senses, Fly (8), Undead, Night Vision"</Talents>
+<Note>""</Note>
+<Page>"83"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_TOMB_SCORPION">
+<Description language="ENGLISH">"Tomb Scorpion"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"43;0;51;51;27;0;0;0;3;32;5;5;7;0;0;0"</Profile>
+<Talents>"Terrifying, Night Vision"</Talents>
+<SpecialRules>"Construct, Stinger Attack, Hideous Strength, Resistance to Magic, Mindless"</SpecialRules>
+<Note>""</Note>
+<Page>"84"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_TOMB_KING">
+<Description language="ENGLISH">"Tomb King"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"63;36;56;56;40;45;89;31;4;36;5;5;4;0;0;0"</Profile>
+<Skills>"Read/Write +20%, Command +20%, Ride +20%, Academic Knowledge (Genealogy / Heraldry, History, Necromancy (+10%)), Perception, Dodge Blow +10%, Evaluation, Speak Language (Nehekharan)"</Skills>
+<Talents>"Specialist Weapon Group (Two-Handed), Strike to Stun, Undead, Strike Mighty Blow, Terrifying, Night Vision"</Talents>
+<SpecialRules>"Flammable, Unbreakable Will, Curse"</SpecialRules>
+<Note>""</Note>
+<Page>"85"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_GREATER_DAO">
+<Description language="ENGLISH">"Greater Dao"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"79;46;66;86;59;63;88;63;4;50;6;8;4;3;0;0"</Profile>
+<Skills>"Command +10%, Secret Language (Djinn) +10%, Arcane Language (Magick), Charm, Channelling +20%, Perception, Dodge Blow +10%, Common Knowledge (Araby), Intimidate +20%, Speak Language (Optional)"</Skills>
+<Talents>"Daemonic Aura, Menacing, Magic Resistance, Night Vision, Will of Iron"</Talents>
+<SpecialRules>"Magic Jinn, Stone Skin, Unstoppable, Instability, Elemental Resistance"</SpecialRules>
+<Note>""</Note>
+<Page>"87"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_LESSER_DAO">
+<Description language="ENGLISH">"Lesser Dao"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"61;37;53;73;48;48;88;53;3;39;5;7;4;2;0;0"</Profile>
+<Skills>"Command, Secret Language (Djinn), Arcane Language (Magick), Charm, Channelling, Perception, Dodge Blow, Common Knowledge (Araby), Intimidate +10%"</Skills>
+<Talents>"Daemonic Aura, Menacing, Magic Resistance, Night Vision, Will of Iron"</Talents>
+<SpecialRules>"Magic Jinn, Stone Skin, Instability, Elemental Resistance"</SpecialRules>
+<Note>""</Note>
+<Page>"88"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_DAO_SERVANT">
+<Description language="ENGLISH">"Dao Servant"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"31;17;33;53;28;18;48;35;1;17;3;5;4;0;0;0"</Profile>
+<Skills>"Secret Language (Djinn), Perception, Dodge Blow, Common Knowledge (Araby)"</Skills>
+<Talents>"Daemonic Aura, Magic Resistance, Night Vision"</Talents>
+<SpecialRules>"Stone Skin, Instability, Elemental Resistance"</SpecialRules>
+<Note>""</Note>
+<Page>"89"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_GREATER_DJINN">
+<Description language="ENGLISH">"Greater Djinn"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"79;46;55;66;87;73;88;63;4;42;5;6;6;3;0;0"</Profile>
+<Skills>"Command +10%, Secret Language (Djinn) +10%, Arcane Language (Magick), Charm +20%, Channelling +20%, Perception, Dodge Blow +10%, Common Knowledge (Araby), Intimidate, Speak Language (Optional)"</Skills>
+<Talents>"Daemonic Aura, Menacing, Magic Resistance, Night Vision, Will of Iron, Flying (9)"</Talents>
+<SpecialRules>"Magic Djinn, Instability, Elemental Resistance, Ethereal"</SpecialRules>
+<Note>""</Note>
+<Page>"90"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_LESSER_DJINN">
+<Description language="ENGLISH">"Lesser Djinn"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"61;37;48;53;68;58;68;55;3;3;4;5;6;2;0;0"</Profile>
+<Skills>"Command, Secret Language (Djinn), Arcane Language (Magick) +10%, Charm, Channelling +10%, Perception, Dodge Blow +10%, Common Knowledge (Araby), Intimidate"</Skills>
+<Talents>"Daemonic Aura, Menacing, Magic Resistance, Night Vision, Will of Iron, Flying (9)"</Talents>
+<SpecialRules>"Magic Djinn, Instability, Elemental Resistance"</SpecialRules>
+<Note>""</Note>
+<Page>"91"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_SERVANT_DJINN">
+<Description language="ENGLISH">"Servant Djinn"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"31;17;28;33;48;38;18;35;0;0;2;3;0;0;0;0"</Profile>
+<Skills>"Secret Language (Djinn), Perception, Dodge Blow, Common Knowledge (Araby)"</Skills>
+<Talents>"Daemonic Aura, Menacing, Magic Resistance, Night Vision, Flying (9)"</Talents>
+<SpecialRules>"Magic Djinn, Instability, Elemental Resistance"</SpecialRules>
+<Note>""</Note>
+<Page>"92"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_GREATER_IFRIT">
+<Description language="ENGLISH">"Greater Ifrit"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"79;46;66;66;69;73;88;63;4;42;6;6;4;3;0;0"</Profile>
+<Skills>"Command +10%, Secret Language (Djinn) +10%, Arcane Language (Magick), Charm, Channelling +20%, Perception, Dodge Blow +10%, Common Knowledge (Araby), Intimidate +20%, Speak Language (Optional)"</Skills>
+<Talents>"Daemonic Aura, Menacing, Magic Resistance, Night Vision, Will of Iron"</Talents>
+<SpecialRules>"Magic Djinn, Instability, Elemental Resistance, Burning Attacks, Burning Hatred"</SpecialRules>
+<Note>""</Note>
+<Page>"93"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_LESSER_IFRIT">
+<Description language="ENGLISH">"Lesser Ifrit"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"61;37;53;53;58;58;68;55;3;33;5;5;4;2;0;0"</Profile>
+<Skills>"Command +10%, Secret Language (Djinn) +10%, Arcane Language (Magick), Charm, Channelling +10%, Perception, Dodge Blow +10%, Common Knowledge (Araby), Intimidate +10%"</Skills>
+<Talents>"Daemonic Aura, Menacing, Magic Resistance, Night Vision, Will of Iron"</Talents>
+<SpecialRules>"Magic Djinn, Instability, Elemental Resistance, Burning Attacks"</SpecialRules>
+<Note>""</Note>
+<Page>"94"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_SERVANT_IFRIT">
+<Description language="ENGLISH">"Servant Ifrit"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"31;17;33;33;38;28;48;25;1;12;3;3;4;0;0;0"</Profile>
+<Skills>"Secret Language (Djinn), Perception, Dodge Blow, Common Knowledge (Araby)"</Skills>
+<Talents>"Daemonic Aura, Menacing, Magic Resistance, Night Vision"</Talents>
+<SpecialRules>"Magic Djinn, Instability, Elemental Resistance, Burning Attacks"</SpecialRules>
+<Note>""</Note>
+<Page>"95"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_GREATER_MARID">
+<Description language="ENGLISH">"Greater Marid"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"79;46;66;66;69;73;88;63;4;42;6;6;4;3;0;0"</Profile>
+<Skills>"Command +10%, Secret Language (Djinn) +10%, Arcane Language (Magick) +10%, Charm +10%, Channelling +20%, Perception, Dodge Blow +10%, Common Knowledge (Araby), Intimidate +10%, Speak Language (Optional)"</Skills>
+<Talents>"Daemonic Aura, Menacing, Magic Resistance, Night Vision, Will of Iron"</Talents>
+<SpecialRules>"Magic Djinn, Instability, Elemental Resistance, Magic Resistance, Absorption of Magic"</SpecialRules>
+<Note>""</Note>
+<Page>"96"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_LESSER_MARID">
+<Description language="ENGLISH">"Lesser Marid"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"61;37;53;53;58;58;68;55;3;33;5;5;4;2;0;0"</Profile>
+<Skills>"Command +10%, Secret Language (Djinn) +10%, Arcane Language (Magick), Charm, Channelling +10%, Perception, Dodge Blow +10%, Common Knowledge (Araby), Intimidate +10%"</Skills>
+<Talents>"Daemonic Aura, Menacing, Magic Resistance, Night Vision, Will of Iron"</Talents>
+<SpecialRules>"Magic Djinn, Instability, Elemental Resistance, Magic Resistance"</SpecialRules>
+<Note>""</Note>
+<Page>"97"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_CREATURES_SERVANT_MARID">
+<Description language="ENGLISH">"Servant Marid"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"31;17;33;33;38;28;48;25;1;12;3;3;3;0;0;0"</Profile>
+<Skills>"Secret Language (Djinn) +10%, Perception, Dodge Blow, Common Knowledge (Araby)"</Skills>
+<Talents>"Daemonic Aura, Menacing, Magic Resistance, Night Vision"</Talents>
+<SpecialRules>"Instability, Elemental Resistance, Magic Resistance"</SpecialRules>
+<Note>""</Note>
+<Page>"98"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_SPECIAL_EQUIPMENT_ARTEFACTS_FRUIT_OF_WONDER">
+<Description language="ENGLISH">"Fruit of Wonder"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ARTEFACTS"</SubCategory>
+<Cost>"-"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"66"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_SPECIAL_EQUIPMENT_ARTEFACTS_DJINN_S_GAZE">
+<Description language="ENGLISH">"Djinn's Gaze"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ARTEFACTS"</SubCategory>
+<Cost>"-"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"66"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_SPECIAL_EQUIPMENT_ARTEFACTS_FLYING_CARPET">
+<Description language="ENGLISH">"Flying Carpet"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ARTEFACTS"</SubCategory>
+<Cost>"-"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"67"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_SPECIAL_EQUIPMENT_ARTEFACTS_THE_EYE_OF_ORMAZD">
+<Description language="ENGLISH">"The Eye of Ormazd"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ARTEFACTS"</SubCategory>
+<Cost>"-"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"67"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_SPECIAL_EQUIPMENT_ARTEFACTS_ZULFIKAR">
+<Description language="ENGLISH">"Zulfikar"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ARTEFACTS"</SubCategory>
+<Cost>"-"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"67"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_SPECIAL_EQUIPMENT_ARTEFACTS_BOOK_OF_NAGASH">
+<Description language="ENGLISH">"Book of Nagash"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ARTEFACTS"</SubCategory>
+<Cost>"-"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"68"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_SPECIAL_EQUIPMENT_ARTEFACTS_ARROWS_OF_ASAPH">
+<Description language="ENGLISH">"Arrows of Asaph"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ARTEFACTS"</SubCategory>
+<Cost>"-"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"68"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ASAG-EQUI_SPECIAL_EQUIPMENT_ARTEFACTS_CASKET_OF_SOULS">
+<Description language="ENGLISH">"Casket of Souls"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ARTEFACTS"</SubCategory>
+<Cost>"-"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"69"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+</DATA_BOOK>

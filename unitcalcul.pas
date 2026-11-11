@@ -14,6 +14,7 @@ function ExtractStringBefore(const AText, ASeparator: string): string;
 function ExtractStringAfter(const AText, ASeparator: string): string;
 function ExtractString(const Source: string; StartIndex: Integer; const Delimiter: string): string;
 function FindRowByText(StringGrid: TStringGrid; const SearchText: string; ColumnIndex: Integer): Integer;
+function FindRowByCleTalent(StringGrid: TStringGrid; const CodeTalent: string; ColumnIndex: Integer): Integer;
 function CountOccurrences(const Text, SubText: string): Integer;
 function ExtractStringBetween(const AText, ASeparator1: string; ASeparator2: string): string;
 function ExtractChaine(const SubStr, S: string; Offset: Integer): String;
@@ -31,6 +32,8 @@ Procedure DecoupeCodeValeur(Code: String);
 Procedure DecoupeCodeRecherche(Code: String);
 Function CompareRechercheValeur(ValRecherche:String; ValTrouve:String):boolean;
 Function CodeSansLivre(Code: String): String;
+function MemeTalent(CodeTalent, Recherche: String): Boolean;
+function ValeurTableD10(Table: String; Jet: Integer): Integer;
 
 implementation
 
@@ -202,6 +205,22 @@ function FindRowByText(StringGrid: TStringGrid; const SearchText: string; Column
     end;
   end;
 
+// Ligne d'un talent : le code exact d'abord, puis la meme cle (ce qui suit le premier '-', codes a nom
+// V4 / V5) : un talent achete et le meme talent accorde par un autre livre tombent sur une seule ligne.
+function FindRowByCleTalent(StringGrid: TStringGrid; const CodeTalent: string; ColumnIndex: Integer): Integer;
+  var
+    row: Integer;
+    Cle: String;
+  begin
+    Result := FindRowByText(StringGrid, CodeTalent, ColumnIndex);
+    if (Result <> -1) or (CodeTalent = '') then
+      Exit;
+    Cle := CodeSansLivre(CodeTalent);
+    for row := 0 to StringGrid.RowCount - 1 do
+      if CodeSansLivre(StringGrid.Cells[ColumnIndex, row]) = Cle then
+        Exit(row);
+  end;
+
 Function GetTypeMetierEquipement(Equip: String): String;
   var
     TypeEquipement:   String;
@@ -236,7 +255,11 @@ Function GetTypeMetierEquipement(Equip: String): String;
           // resultat inchange (Divers, deja ce que rendait l'else), mais un futur prefixe non
           // liste ici tombera toujours dans le meme else sans laisser de trace - voir CONTEXT.md.
           EquipementTR: TypeEquipement := TypeEquipement+TypeEquipDi;
-          else          TypeEquipement := TypeEquipement+TypeEquipDi;
+          else
+            // code de competence de combat = choix d'une arme de cette competence (melee ou tir)
+            if Pos('COMP_MELEE__', CodeValeur) = 1 then TypeEquipement := TypeEquipement+TypeEquipCC
+            else if Pos('COMP_RANGED__', CodeValeur) = 1 then TypeEquipement := TypeEquipement+TypeEquipCT
+            else TypeEquipement := TypeEquipement+TypeEquipDi;
         end;
     end;
     Strings.free;
@@ -482,6 +505,15 @@ Function CodeSansLivre(Code: String): String;
       Result := Code;
   end;
 
+// Meme talent : meme code (convention de CompareRechercheValeur, code prefixe en premier) ou, hors V2, meme cle
+// (ce qui suit le premier '-', codes a nom V4 / V5). V2 exclu : 25 cles communes a des talents differents.
+Function MemeTalent(CodeTalent, Recherche: String): Boolean;
+  begin
+    Result := CompareRechercheValeur(CodeTalent, Recherche);
+    if (not Result) and (ValVersion <> 'WFRP2') and (CodeTalent <> '') and (Recherche <> '') then
+      Result := CodeSansLivre(CodeTalent) = CodeSansLivre(Recherche);
+  end;
+
 Function VerifieRecherche():Boolean;
 // Durci une premiere fois le 06/09/2026 (CONTEXT.md §2.49 etape 4), puis REVERTE le jour
 // meme : le durcissement cassait tous les GetTexteLibelle('PDF_XXX'/'LAB_XXX'/'MESS_XXX'/
@@ -519,5 +551,45 @@ begin
   result := Trouve;
 end;
 
-end.
+// Valeur d'une table "1-3: 11; 4-6: 12; 10: 14" pour un jet de d10
+function ValeurTableD10(Table: String; Jet: Integer): Integer;
+var
+  Lignes: TStringList;
+  K, P, Bas, Haut: Integer;
+  Plage, Val: String;
+begin
+  Result := 0;
+  // valeur fixe (familier lie : "6") : pas de table, le jet n'intervient pas
+  if Pos(':', Table) = 0 then
+    Exit(StrToIntDef(Trim(Table), 0));
+  Lignes := TStringList.Create;
+  try
+    Lignes.Delimiter     := ';';
+    Lignes.StrictDelimiter := true;
+    Lignes.DelimitedText := Table;
+    for K := 0 to Lignes.Count - 1 do
+      begin
+        P := Pos(':', Lignes[K]);
+        if P = 0 then Continue;
+        Plage := Trim(Copy(Lignes[K], 1, P - 1));
+        Val   := Trim(Copy(Lignes[K], P + 1, Length(Lignes[K])));
+        P := Pos('-', Plage);
+        if P > 0 then
+          begin
+            Bas  := StrToIntDef(Copy(Plage, 1, P - 1), 0);
+            Haut := StrToIntDef(Copy(Plage, P + 1, Length(Plage)), 0);
+          end
+        else
+          begin
+            Bas  := StrToIntDef(Plage, 0);
+            Haut := Bas;
+          end;
+        if (Jet >= Bas) and (Jet <= Haut) then
+          Exit(StrToIntDef(Val, 0));
+      end;
+  finally
+    Lignes.Free;
+  end;
+end;
 
+end.

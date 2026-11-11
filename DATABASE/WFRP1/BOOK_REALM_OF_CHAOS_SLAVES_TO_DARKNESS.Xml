@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"SLTD"</CODE_BOOK>
+<BOOK>"BOOK REALM OF CHAOS SLAVES TO DARKNESS"</BOOK>
+<BOOKNAME>"REALM OF CHAOS - SLAVES TO DARKNESS"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP1"</VERSION>
+<OFFICIAL>"0"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"Warhammer Fantasy Roleplay (c) Copyright Games Workshop Limited 2020. Warhammer Fantasy Roleplay, the Warhammer Fantasy Roleplay logo, GW, Games Workshop, Warhammer, the twin-tailed comet logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likeness thereof, are either (R) or TM, and/or (c) Games Workshop Limited, variably registered around the world, and used under licence. Cubicle 7 Entertainment and the Cubicle 7 Entertainment logo are trademarks of Cubicle 7 Entertainment Limited. All rights reserved."</DISCLAIMER>
+<DATA_SPELL_V1>
+<SpellV1 id="SLTD-SPELL_DEMONIC_DISPEL_DAEMONIC_PRESENCE">
+<Description language="ENGLISH">"Dispel Daemonic Presence"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Demonic"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"4"</MagicPoints>
+<Range>"24 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"The religious symbol of a good or neutral deity"</Ingredients>
+<MagicTest>"RULES-V1YESNO_OUI"</MagicTest>
+<Page>"71"</Page>
+</SpellV1>
+<SpellV1 id="SLTD-SPELL_DEMONIC_SUMMON_DAEMONIC_PACK">
+<Description language="ENGLISH">"Summon Daemonic Pack"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Demonic"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"8"</MagicPoints>
+<Range>"6 yards"</Range>
+<Duration>"2 hours per level of the summoner"</Duration>
+<Ingredients>"The heart of any humanoid creature, torn from a living body"</Ingredients>
+<Page>"71"</Page>
+</SpellV1>
+<SpellV1 id="SLTD-SPELL_SLAANESH_ACQUIESCENCE">
+<Description language="ENGLISH">"Acquiescence"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Slaanesh"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"3"</MagicPoints>
+<Range>"Touch"</Range>
+<Duration>"24 hours (almost immediate effect on some victims)"</Duration>
+<Ingredients>"A symbol of Slaanesh"</Ingredients>
+<MagicTest>"RULES-V1YESNO_OUI"</MagicTest>
+<Page>"78"</Page>
+</SpellV1>
+<SpellV1 id="SLTD-SPELL_SLAANESH_PAVANE_OF_SLAANESH">
+<Description language="ENGLISH">"Pavane of Slaanesh"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Slaanesh"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"8"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"Until the effects are broken"</Duration>
+<Ingredients>"A flask of wine"</Ingredients>
+<MagicTest>"RULES-V1YESNO_OUI"</MagicTest>
+<Page>"78"</Page>
+</SpellV1>
+<SpellV1 id="SLTD-SPELL_SLAANESH_BEAM_OF_SLAANESH">
+<Description language="ENGLISH">"Beam of Slaanesh"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Slaanesh"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"8"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"As Acquiescence"</Duration>
+<Ingredients>"A symbol of Slaanesh"</Ingredients>
+<MagicTest>"RULES-V1YESNO_OUI"</MagicTest>
+<Page>"79"</Page>
+</SpellV1>
+<SpellV1 id="SLTD-SPELL_SLAANESH_FLESHY_CURSE">
+<Description language="ENGLISH">"Fleshy Curse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Slaanesh"</SpellList>
+<SpellLevel>"4"</SpellLevel>
+<MagicPoints>"5"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"Until the victim is killed"</Duration>
+<Ingredients>""</Ingredients>
+<MagicTest>"RULES-V1YESNO_OUI"</MagicTest>
+<Page>"79"</Page>
+</SpellV1>
+</DATA_SPELL_V1>
+</DATA_BOOK>

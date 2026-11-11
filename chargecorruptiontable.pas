@@ -24,6 +24,15 @@ Type
 	Code:             string;
 	Libelle:          string;
 	Effet:            string;
+	Lore:             string;   // lore divin pour CorruptionDivine (Marques des Dieux), '' sinon
+	// Seulement pour CorruptionMutation (Tome of Corruption, WFRP2), '' sinon :
+	Peur:             string;   // points de peur ("1", "0-1", "1/2/3", "Varies")
+	TypeMutation:     string;   // "Single" ou "Multiple N" (nombre de prises)
+	Variations:       string;
+	Cosmetique:       Boolean;
+	// Code de la mutation de base quand cette entree est la 2e, 3e... prise d'une mutation a effets
+	// par rang (Growth, Shrink), '' sinon. Hors table de chance ; l'ordre du livre donne le rang.
+	MutationBase:     string;
 end;
 
   TListCorruptionTable = Specialize TList<StructureCorruptionTable>;
@@ -36,6 +45,7 @@ end;
 	TypeCorruption:   string;
 	Chance:           string;
 	Code:             string;
+	Lore:             string;   // lore divin pour CorruptionDivine, '' sinon
 end;
 
   TListCorruptionChance = Specialize TList<StructureCorruptionChance>;
@@ -59,12 +69,22 @@ Function CorruptionTypeResultat(CodeRace: String; Jet: Integer): String;
 // Cherche l'entrée du catalogue (Physical ou Mental Corruption Table, déjà déterminée) qui
 // correspond à un jet D100 : d'abord la table de chance (D100 -> Code), puis le catalogue
 // (Code -> Libelle/Effet). Code = '' dans le résultat si rien ne matche.
-Function CorruptionTableResultat(TypeCorruption: String; Jet: Integer): StructureCorruptionTable;
+// Lore = '' pour Physical/Mental ; pour CorruptionDivine, le lore du dieu (ex. "Lore of Manann") :
+// seules les lignes de chance de ce lore sont regardees.
+Function CorruptionTableResultat(TypeCorruption: String; Jet: Integer; Lore: String = ''): StructureCorruptionTable;
 
 // Retrouve une entrée du catalogue directement par son Code (ex. pour réafficher une mutation
 // déjà stockée sur un personnage, sans repasser par un jet de dé). Résultat vide si le Code
 // n'existe dans aucun livre chargé.
 Function ChercheCorruptionTable(Code: String): StructureCorruptionTable;
+
+// Mutation a effets par rang (champ MutationBase) : Code de la prise suivante quand Prises prises
+// de la mutation Base (variantes de rang comprises) sont deja sur la fiche. Prises = 0 ou aucune
+// entree de ce rang : Base lui-meme.
+Function MutationCodePourPrise(Base: String; Prises: Integer): String;
+
+// Code de la mutation de base d'un code stocke sur un personnage (Code lui-meme s'il n'est pas une prise de rang).
+Function MutationCodeBase(Code: String): String;
 
 // Une race a-t-elle une plage valide pour ce type de corruption (ex. False pour Physical chez
 // les Elfes) ? Utilisé pour griser le choix direct Physical/Mental dans WinMutation (CONTEXT.md
@@ -145,21 +165,18 @@ Function CorruptionTypeResultat(CodeRace: String; Jet: Integer): String;
           end;
   end;
 
-Function CorruptionTableResultat(TypeCorruption: String; Jet: Integer): StructureCorruptionTable;
+Function CorruptionTableResultat(TypeCorruption: String; Jet: Integer; Lore: String = ''): StructureCorruptionTable;
   var
     PCorruptionChance: StructureCorruptionChance;
     PCorruptionTable:  StructureCorruptionTable;
     CodeTrouve:        String;
   begin
-    Result.Livre          := '';
-    Result.TypeCorruption := '';
-    Result.Code           := '';
-    Result.Libelle        := '';
-    Result.Effet          := '';
+    Result := Default(StructureCorruptionTable);
 
     CodeTrouve := '';
     for PCorruptionChance in ListCorruptionChance do
-      if (PCorruptionChance.TypeCorruption = TypeCorruption) and CorruptionDansPlage(PCorruptionChance.Chance, Jet) then
+      if (PCorruptionChance.TypeCorruption = TypeCorruption) and (PCorruptionChance.Lore = Lore)
+         and CorruptionDansPlage(PCorruptionChance.Chance, Jet) then
         begin
           CodeTrouve := PCorruptionChance.Code;
           break;
@@ -183,11 +200,6 @@ Function ChercheCorruptionTable(Code: String): StructureCorruptionTable;
     // 22/08/2026 : un libelle de talent recopie d'une ligne a l'autre, une competence
     // affichee deux fois. CONTEXT.md 2.17.
     Result := Default(StructureCorruptionTable);
-    Result.Livre          := '';
-    Result.TypeCorruption := '';
-    Result.Code           := '';
-    Result.Libelle        := '';
-    Result.Effet          := '';
 
     for PCorruptionTable in ListCorruptionTable do
       if CompareRechercheValeur(Code, PCorruptionTable.Code) then
@@ -195,6 +207,32 @@ Function ChercheCorruptionTable(Code: String): StructureCorruptionTable;
           Result := PCorruptionTable;
           break;
         end;
+  end;
+
+Function MutationCodePourPrise(Base: String; Prises: Integer): String;
+  var
+    PCorruptionTable: StructureCorruptionTable;
+    Rang:             Integer;
+  begin
+    Result := Base;
+    Rang   := 0;   // nombre de prises de rang 2, 3... rencontrees dans l'ordre du livre
+    if Prises <= 0 then Exit;
+    for PCorruptionTable in ListCorruptionTable do
+      if (PCorruptionTable.MutationBase <> '') and CompareRechercheValeur(Base, PCorruptionTable.MutationBase) then
+        begin
+          Inc(Rang);
+          if Rang = Prises then
+            begin
+              Result := PCorruptionTable.Code;
+              Exit;
+            end;
+        end;
+  end;
+
+Function MutationCodeBase(Code: String): String;
+  begin
+    Result := ChercheCorruptionTable(Code).MutationBase;
+    if Result = '' then Result := Code;
   end;
 
 Function CorruptionTypeDisponible(CodeRace: String; TypeCorruption: String): Boolean;

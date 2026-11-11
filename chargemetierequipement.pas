@@ -55,7 +55,6 @@ function GetListeEquipement(ListeCodes: String; ListeTypes: String; QuantiteList
     Qualite:            String;
     ListeRes:           String;
     Lib:                String;
-    Debut:              String;
     NbCodes:            Integer;
   begin
     stringsI                := TStringList.Create;
@@ -87,11 +86,10 @@ function GetListeEquipement(ListeCodes: String; ListeTypes: String; QuantiteList
 
         if InList(stringsT[IndL], TypeEquipMetierArme) then
            begin
-             if pos(ValeurGenerique, Code) > 0 then
+             if (pos(ValeurGenerique, Code) > 0) or EstCodeCompetenceCombat(Code) then
                begin
-                 Debut := copy(Code,1,length(code) - length(ValeurGenerique) + 1);
                  for PArme in ListArme do
-                   if (copy(PArme.CodeArme,1,Length(Debut)) = Debut) and (Pos(ValeurGenerique,PArme.CodeArme) = 0) then
+                   if ArmeDeLaFamille(Code, PArme) then
                      begin
                         if Lib <> '' then
                           Lib:= Lib + ',';

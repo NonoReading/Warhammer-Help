@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"NORS"</CODE_BOOK>
+<BOOK>"BOOK NORSCA"</BOOK>
+<BOOKNAME>"NORSCA - WFRP2 RULES - JACKDAYS"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"This document is completely unofficial and in no way endorsed by Games Workshop Limited. Warhammer Fantasy Roleplay, the Warhammer Fantasy Roleplay logo, WFRP, Chaos, the Chaos device, the Chaos logo, Citadel, Citadel Device, Darkblade, 'Eavy Metal, Forge World, Games Workshop, Games Workshop logo, Golden Demon, Great Unclean One, GW, the Hammer of Sigmar logo, Horned Rat logo, Keeper of Secrets, Khemri, Khorne, the Khorne logo, Lord of Change, Nurgle, the Nurgle logo, Skaven, the Skaven symbol device, Slaanesh, the Slaanesh logo, Tomb Kings, Tzeentch, the Tzeentch logo, Warhammer, Warhammer World logo, White Dwarf, the White Dwarf logo, and all associated marks, names, races, race insignia, characters, vehicles, locations, units, artefacts, illustrations and images from the Warhammer world are either ®, TM and/or © Copyright Games Workshop Ltd 2000-2011, variably registered in the UK and other countries around the world. Used without"</DISCLAIMER>
+<DATA_TALENT>
+<Talent id="NORS-T_ANIMAL_SURVIVAL_INSTINCT">
+<Description language="ENGLISH">"Animal Survival Instinct"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"41"</Page>
+</Talent>
+<Talent id="NORS-T_REGENERATION">
+<Description language="ENGLISH">"Regeneration"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"42"</Page>
+</Talent>
+<Talent id="NORS-T_TIPSY">
+<Description language="ENGLISH">"Tipsy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"43"</Page>
+</Talent>
+<Talent id="NORS-T_TRACKER">
+<Description language="ENGLISH">"Tracker"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"43"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_SPECIE>
+<Specie id="NORS-RACE_BAERSONLING">
+<Description language="ENGLISH">"Human (Baersonling)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NORSCA"</Skill>
+<Skill>"RULES-COMP_CONSUME_ALCOHOL"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_NORSE"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"JRR-T_INURED_TO_CHAOS"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="NORS-CARE_NORSE_BEASTMASTER">"2"</Career>
+<Career name="RULES-CARE_NORSE_BERSERKER">"17"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_BONDSMAN">"5"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"5"</Career>
+<Career name="RULES-CARE_HUNTER">"13"</Career>
+<Career name="CCOMP-CARE_MARAUDER">"20"</Career>
+<Career name="RULES-CARE_MERCENARY">"10"</Career>
+<Career name="RULES-CARE_MINER">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"1"</Career>
+<Career name="RULES-CARE_PEASANT">"3"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"5"</Career>
+<Career name="CCOMP-CARE_REAVER">"4"</Career>
+<Career name="CCOMP-CARE_SEER">"1"</Career>
+<Career name="RULES-CARE_SERVANT">"1"</Career>
+<Career name="CCOMP-CARE_SKALD">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"4"</Career>
+<Career name="CCOMP-CARE_WHALER">"3"</Career>
+<Career name="RULES-CARE_WOODSMAN">"1"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"23"</Page>
+</Specie>
+<Specie id="NORS-RACE_BJORNLING">
+<Description language="ENGLISH">"Human (Bjornling)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NORSCA"</Skill>
+<Skill>"RULES-COMP_CONSUME_ALCOHOL"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_SAIL/RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_NORSE"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"JRR-T_INURED_TO_CHAOS"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="NORS-CARE_NORSE_BEASTMASTER">"3"</Career>
+<Career name="RULES-CARE_NORSE_BERSERKER">"10"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_BONDSMAN">"3"</Career>
+<Career name="RULES-CARE_BURGHER">"1"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"10"</Career>
+<Career name="RULES-CARE_HUNTER">"5"</Career>
+<Career name="CCOMP-CARE_MARAUDER">"16"</Career>
+<Career name="RULES-CARE_MERCENARY">"15"</Career>
+<Career name="RULES-CARE_MINER">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"1"</Career>
+<Career name="RULES-CARE_PEASANT">"3"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"2"</Career>
+<Career name="CCOMP-CARE_REAVER">"7"</Career>
+<Career name="RULES-CARE_SEAMAN">"3"</Career>
+<Career name="CCOMP-CARE_SEER">"1"</Career>
+<Career name="RULES-CARE_SERVANT">"1"</Career>
+<Career name="CCOMP-CARE_SKALD">"3"</Career>
+<Career name="RULES-CARE_TRADESMAN">"5"</Career>
+<Career name="CCOMP-CARE_WHALER">"3"</Career>
+<Career name="RULES-CARE_WOODSMAN">"5"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"23"</Page>
+</Specie>
+<Specie id="NORS-RACE_SARL">
+<Description language="ENGLISH">"Human (Sarl)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NORSCA"</Skill>
+<Skill>"RULES-COMP_CONSUME_ALCOHOL"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_SAIL/RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_NORSE"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"JRR-T_INURED_TO_CHAOS"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="NORS-CARE_NORSE_BEASTMASTER">"2"</Career>
+<Career name="RULES-CARE_NORSE_BERSERKER">"11"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_BONDSMAN">"4"</Career>
+<Career name="RULES-CARE_BURGHER">"1"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"10"</Career>
+<Career name="RULES-CARE_HUNTER">"8"</Career>
+<Career name="CCOMP-CARE_MARAUDER">"9"</Career>
+<Career name="RULES-CARE_MERCENARY">"5"</Career>
+<Career name="RULES-CARE_MINER">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"1"</Career>
+<Career name="RULES-CARE_PEASANT">"3"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"3"</Career>
+<Career name="CCOMP-CARE_REAVER">"15"</Career>
+<Career name="RULES-CARE_SEAMAN">"5"</Career>
+<Career name="CCOMP-CARE_SEER">"1"</Career>
+<Career name="RULES-CARE_SERVANT">"1"</Career>
+<Career name="CCOMP-CARE_SKALD">"2"</Career>
+<Career name="RULES-CARE_TRADESMAN">"4"</Career>
+<Career name="CCOMP-CARE_WHALER">"10"</Career>
+<Career name="RULES-CARE_WOODSMAN">"1"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"23"</Page>
+</Specie>
+<Specie id="NORS-RACE_SKAELING">
+<Description language="ENGLISH">"Human (Skaeling)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NORSCA"</Skill>
+<Skill>"RULES-COMP_CONSUME_ALCOHOL"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_SAIL"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_NORSE"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"JRR-T_INURED_TO_CHAOS"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="NORS-CARE_NORSE_BEASTMASTER">"3"</Career>
+<Career name="RULES-CARE_NORSE_BERSERKER">"10"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_BONDSMAN">"3"</Career>
+<Career name="RULES-CARE_BURGHER">"2"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"9"</Career>
+<Career name="RULES-CARE_HUNTER">"5"</Career>
+<Career name="CCOMP-CARE_MARAUDER">"15"</Career>
+<Career name="RULES-CARE_MERCENARY">"10"</Career>
+<Career name="RULES-CARE_MINER">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"1"</Career>
+<Career name="RULES-CARE_PEASANT">"3"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"2"</Career>
+<Career name="CCOMP-CARE_REAVER">"10"</Career>
+<Career name="RULES-CARE_SEAMAN">"3"</Career>
+<Career name="CCOMP-CARE_SEER">"1"</Career>
+<Career name="RULES-CARE_SERVANT">"1"</Career>
+<Career name="CCOMP-CARE_SKALD">"3"</Career>
+<Career name="RULES-CARE_TRADESMAN">"5"</Career>
+<Career name="CCOMP-CARE_WHALER">"5"</Career>
+<Career name="RULES-CARE_WOODSMAN">"5"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"23"</Page>
+</Specie>
+<Specie id="NORS-RACE_AESLING">
+<Description language="ENGLISH">"Human (Aesling)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NORSCA"</Skill>
+<Skill>"RULES-COMP_CONSUME_ALCOHOL"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_SAIL/RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_NORSE"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"JRR-T_INURED_TO_CHAOS"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_WARRIOR_BORN"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="NORS-CARE_NORSE_BEASTMASTER">"3"</Career>
+<Career name="RULES-CARE_NORSE_BERSERKER">"13"</Career>
+<Career name="RULES-CARE_BODYGUARD">"3"</Career>
+<Career name="CCOMP-CARE_BONDSMAN">"3"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"7"</Career>
+<Career name="RULES-CARE_HUNTER">"7"</Career>
+<Career name="CCOMP-CARE_MARAUDER">"25"</Career>
+<Career name="RULES-CARE_MERCENARY">"5"</Career>
+<Career name="RULES-CARE_MINER">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"1"</Career>
+<Career name="RULES-CARE_PEASANT">"3"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"5"</Career>
+<Career name="CCOMP-CARE_REAVER">"10"</Career>
+<Career name="RULES-CARE_SEAMAN">"1"</Career>
+<Career name="CCOMP-CARE_SEER">"1"</Career>
+<Career name="RULES-CARE_SERVANT">"1"</Career>
+<Career name="CCOMP-CARE_SKALD">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"4"</Career>
+<Career name="CCOMP-CARE_WHALER">"3"</Career>
+<Career name="RULES-CARE_WOODSMAN">"2"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"25"</Page>
+</Specie>
+<Specie id="NORS-RACE_GRAELING">
+<Description language="ENGLISH">"Human (Graeling)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NORSCA"</Skill>
+<Skill>"RULES-COMP_CONSUME_ALCOHOL"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_SAIL/RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_NORSE"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"JRR-T_INURED_TO_CHAOS"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_VERY_RESILIENT"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="NORS-CARE_NORSE_BEASTMASTER">"2"</Career>
+<Career name="RULES-CARE_NORSE_BERSERKER">"11"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_BONDSMAN">"3"</Career>
+<Career name="RULES-CARE_BURGHER">"1"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"10"</Career>
+<Career name="RULES-CARE_HUNTER">"5"</Career>
+<Career name="CCOMP-CARE_MARAUDER">"16"</Career>
+<Career name="RULES-CARE_MERCENARY">"15"</Career>
+<Career name="RULES-CARE_MINER">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"1"</Career>
+<Career name="RULES-CARE_PEASANT">"3"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"2"</Career>
+<Career name="CCOMP-CARE_REAVER">"7"</Career>
+<Career name="RULES-CARE_SEAMAN">"3"</Career>
+<Career name="CCOMP-CARE_SEER">"1"</Career>
+<Career name="RULES-CARE_SERVANT">"1"</Career>
+<Career name="CCOMP-CARE_SKALD">"3"</Career>
+<Career name="RULES-CARE_TRADESMAN">"5"</Career>
+<Career name="CCOMP-CARE_WHALER">"3"</Career>
+<Career name="RULES-CARE_WOODSMAN">"5"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"25"</Page>
+</Specie>
+<Specie id="NORS-RACE_VARG">
+<Description language="ENGLISH">"Human (Varg)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NORSCA"</Skill>
+<Skill>"RULES-COMP_CONSUME_ALCOHOL/RULES-COMP_ANIMAL_TRAINING"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_DRIVE/RULES-COMP_RIDE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_NORSE"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"JRR-T_INURED_TO_CHAOS"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_VERY_RESILIENT"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="NORS-CARE_NORSE_BEASTMASTER">"6"</Career>
+<Career name="RULES-CARE_NORSE_BERSERKER">"12"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_BONDSMAN">"5"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"6"</Career>
+<Career name="RULES-CARE_HUNTER">"16"</Career>
+<Career name="CCOMP-CARE_MARAUDER">"20"</Career>
+<Career name="RULES-CARE_MERCENARY">"5"</Career>
+<Career name="RULES-CARE_MINER">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"1"</Career>
+<Career name="RULES-CARE_PEASANT">"3"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"4"</Career>
+<Career name="CCOMP-CARE_REAVER">"5"</Career>
+<Career name="CCOMP-CARE_SEER">"1"</Career>
+<Career name="RULES-CARE_SERVANT">"1"</Career>
+<Career name="CCOMP-CARE_SKALD">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"4"</Career>
+<Career name="CCOMP-CARE_WHALER">"4"</Career>
+<Career name="RULES-CARE_WOODSMAN">"1"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"25"</Page>
+</Specie>
+<Specie id="NORS-RACE_KULDEVIND">
+<Description language="ENGLISH">"Human (Kuldevind)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NORSCA"</Skill>
+<Skill>"RULES-COMP_CONSUME_ALCOHOL/RULES-COMP_COMMON_KNOWLEDGE_CHAOS_WASTES"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_SAIL"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_NORSE"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"JRR-T_INURED_TO_CHAOS"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_ORIENTATION"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="NORS-CARE_NORSE_BEASTMASTER">"1"</Career>
+<Career name="RULES-CARE_NORSE_BERSERKER">"6"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_BONDSMAN">"4"</Career>
+<Career name="RULES-CARE_BURGHER">"1"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"16"</Career>
+<Career name="CCOMP-CARE_MARAUDER">"10"</Career>
+<Career name="RULES-CARE_MERCENARY">"5"</Career>
+<Career name="RULES-CARE_OUTLAW">"1"</Career>
+<Career name="RULES-CARE_PEASANT">"4"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"1"</Career>
+<Career name="CCOMP-CARE_REAVER">"15"</Career>
+<Career name="RULES-CARE_SEAMAN">"15"</Career>
+<Career name="CCOMP-CARE_SEER">"1"</Career>
+<Career name="RULES-CARE_SERVANT">"4"</Career>
+<Career name="CCOMP-CARE_SKALD">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"3"</Career>
+<Career name="CCOMP-CARE_WHALER">"9"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"27"</Page>
+</Specie>
+<Specie id="NORS-RACE_SKEGGI">
+<Description language="ENGLISH">"Human (Skeggi)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NEW_WORLD"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_SAIL"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_NORSE"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"JRR-T_INURED_TO_CHAOS"</Talent>
+<Talent>"JRR-T_PROVINCIAL_EXPERTISE__*"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="NORS-CARE_NORSE_BEASTMASTER">"2"</Career>
+<Career name="RULES-CARE_NORSE_BERSERKER">"9"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_BONDSMAN">"3"</Career>
+<Career name="RULES-CARE_BURGHER">"1"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+<Career name="RULES-CARE_FISHERMAN">"10"</Career>
+<Career name="RULES-CARE_HUNTER">"4"</Career>
+<Career name="CCOMP-CARE_MARAUDER">"22"</Career>
+<Career name="RULES-CARE_MERCENARY">"15"</Career>
+<Career name="RULES-CARE_OUTLAW">"1"</Career>
+<Career name="RULES-CARE_PEASANT">"5"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"2"</Career>
+<Career name="CCOMP-CARE_REAVER">"7"</Career>
+<Career name="RULES-CARE_SEAMAN">"1"</Career>
+<Career name="CCOMP-CARE_SEER">"1"</Career>
+<Career name="RULES-CARE_SERVANT">"1"</Career>
+<Career name="CCOMP-CARE_SKALD">"2"</Career>
+<Career name="RULES-CARE_TRADESMAN">"5"</Career>
+<Career name="CCOMP-CARE_WHALER">"3"</Career>
+<Career name="RULES-CARE_WOODSMAN">"2"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"27"</Page>
+</Specie>
+<Specie id="NORS-RACE_BYTTIGEN">
+<Description language="ENGLISH">"Human (Byttigen)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_NORSCA"</Skill>
+<Skill>"RULES-COMP_CONCEALMENT"</Skill>
+<Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_SCALE_SHEER_SURFACE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_NORSE"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_RESISTANCE_TO_DISEASE"</Talent>
+<Talent>"RULES-T_ROVER"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="NORS-CARE_NORSE_BEASTMASTER">"2"</Career>
+<Career name="RULES-CARE_NORSE_BERSERKER">"16"</Career>
+<Career name="RULES-CARE_BODYGUARD">"1"</Career>
+<Career name="CCOMP-CARE_BONDSMAN">"5"</Career>
+<Career name="RULES-CARE_HUNTER">"20"</Career>
+<Career name="CCOMP-CARE_MARAUDER">"20"</Career>
+<Career name="RULES-CARE_OUTLAW">"1"</Career>
+<Career name="RULES-CARE_PEASANT">"5"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"5"</Career>
+<Career name="CCOMP-CARE_SEER">"1"</Career>
+<Career name="RULES-CARE_SERVANT">"5"</Career>
+<Career name="CCOMP-CARE_SKALD">"5"</Career>
+<Career name="RULES-CARE_TRADESMAN">"9"</Career>
+<Career name="RULES-CARE_WOODSMAN">"1"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"27"</Page>
+</Specie>
+</DATA_SPECIE>
+<DATA_CAREER>
+<Career id="NORS-CARE_NORSE_BEASTMASTER">
+<Description language="ENGLISH">"Norse Beastmaster"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, S +5%, T +5%, Ag +5%, Int +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Animal Care, Animal Training, Charm Animal, Perception, Ride or Scale Sheer Surfaces, Silent Move"</Skills>
+<Talents>"Beastmaster, Coolheaded, Lightning Reflexes, Specialist Weapon Group (Entangling)"</Talents>
+<Trappings>"Hand Weapon, Collar with 10 yard Rope or Chain, Light Armour (Full Leather Armour), Whip"</Trappings>
+<Basic>"1"</Basic>
+<Source>"NORS 33"</Source>
+</Career>
+<Career id="NORS-CARE_NORSE_THRALL">
+<Description language="ENGLISH">"Norse Thrall"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, S +5%, T +5%, Ag +5%, WP +5%"</MainProfile>
+<SecondaryProfile>"W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Common Knowledge (Norsca), Concealment, Outdoor Survival, Perception, Search, Speak Language (Norse), Trade (Farming) or Trade (Miner) or Trade (Shipwright)"</Skills>
+<Talents>"Acute Hearing or Excellent Vision, Flee! or Hardy"</Talents>
+<Trappings>"None"</Trappings>
+<Basic>"1"</Basic>
+<Source>"NORS 34"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="NORS-CARE_NORSE_BEASTMASTER">"CCOMP-CARE_ANIMAL_TRAINER"</Link>
+<Link name="NORS-CARE_NORSE_BEASTMASTER">"CCOMP-CARE_BONDSMAN"</Link>
+<Link name="NORS-CARE_NORSE_BEASTMASTER">"CCOMP-CARE_FREEHOLDER"</Link>
+<Link name="NORS-CARE_NORSE_BEASTMASTER">"RULES-CARE_HUNTER"</Link>
+<Link name="NORS-CARE_NORSE_BEASTMASTER">"CCOMP-CARE_MARAUDER"</Link>
+<Link name="NORS-CARE_NORSE_BEASTMASTER">"RULES-CARE_SCOUT"</Link>
+<Link name="NORS-CARE_NORSE_BEASTMASTER">"RULES-CARE_VAGABOND"</Link>
+<Link name="CCOMP-CARE_BONDSMAN">"NORS-CARE_NORSE_BEASTMASTER"</Link>
+<Link name="RULES-CARE_HUNTER">"NORS-CARE_NORSE_BEASTMASTER"</Link>
+<Link name="NORS-CARE_NORSE_THRALL">"CCOMP-CARE_BONDSMAN"</Link>
+<Link name="NORS-CARE_NORSE_THRALL">"RULES-CARE_PEASANT"</Link>
+<Link name="NORS-CARE_NORSE_THRALL">"RULES-CARE_PIT_FIGHTER"</Link>
+<Link name="CCOMP-CARE_BEAR_TAMER">"NORS-CARE_NORSE_BEASTMASTER"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="NORS-EQUI_CREATURES_CAVE_BEAR">
+<Description language="ENGLISH">"Cave Bear"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"45;0;60;50;30;14;35;0;2;28;6;5;4;0;0;0"</Profile>
+<Skills>"Concealment (Ag +20), Follow Trail (Int), Intimidate (S +10), Outdoor Survival (Int +20), Perception (Int +10), Scale Sheer Surfaces (S), Swim (S +20)"</Skills>
+<Talents>"Bear Hug, Frenzy, Strike Mighty Blow, Strike to Injure"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"44"</Page>
+</EquipmentV2>
+<EquipmentV2 id="NORS-EQUI_CREATURES_FIREFOX">
+<Description language="ENGLISH">"Firefox"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;0;18;25;40;14;45;5;1;10;1;2;6;0;0;0"</Profile>
+<Skills>"Concealment (ag +10), Dodge Blow (Ag), Follow Trail (Int), Navigation (Int +20), Outdoor Survival (Int +20), Perception (Int +10), Silent Move (Ag +10), Swim (Int +20)"</Skills>
+<Talents>"Orientation, Rover"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"46"</Page>
+</EquipmentV2>
+<EquipmentV2 id="NORS-EQUI_CREATURES_FLIKKENES">
+<Description language="ENGLISH">"Flikkenes"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;30;25;35;25;25;30;15;1;6;2;3;3;0;0;0"</Profile>
+<Skills>"Common Knowledge (Trolls) (Int), Concealment (Ag +10), Dodge Blow (Ag), Outdoor Survival (Int +20), Perception (Int +10), Scale Sheer Surfaces (S +20), Silent Move (Ag +20), Speak Language (Goblin, Norse) (Int)"</Skills>
+<SpecialRules>"Chaos Mutations, Claws, Fearless of Trolls, Night Vision, Regeneration, Vomit"</SpecialRules>
+<Note>""</Note>
+<Page>"48"</Page>
+</EquipmentV2>
+<EquipmentV2 id="NORS-EQUI_CREATURES_FROST_DRAGON_OLD">
+<Description language="ENGLISH">"Frost Dragon (Old)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"59;0;65;68;30;47;89;34;6;55;6;6;7;0;0;0"</Profile>
+<Skills>"Academic Knowledge (Daemonology, History, Magic) (Int +20), Channelling (WP +20), Charm (Fel +10), Command (Fel +20), Common Knowledge (Chaos Wastes, Dragons, Dwarfs, Elves, Norsca, any one) (Int +20), Concealment (Ag +20), Dodge Blow (Ag +20), Evaluate (Int +20), Follow Trail (Int +20), Gossip (Fel), Intimidate (S +20), Magical Sense (WP +20), Navigation (Int +20), Outdoor Survival (Int +20), Perception (Int +20), Scale Sheer Surfaces (S +20), Search (Int +10), Silent Move (Ag +10), Speak Arcane Language (Daemonic, Magic, Any one) (Int +20), Speak Language (Khazalid, Kurgan, Norse, any one) (Int +20), Swim (S +20)"</Skills>
+<Talents>"Aethyric Attunement, Orientation, Resistance to Disease, Resistance to Poison, Seasoned Traveller, Strike Mighty Blow, Strike to Injure, Strike to Stun, Strong-minded"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"50"</Page>
+</EquipmentV2>
+<EquipmentV2 id="NORS-EQUI_CREATURES_GREAT_WHITE_WOLF">
+<Description language="ENGLISH">"Great White Wolf"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"46;0;50;52;36;20;45;10;3;36;5;5;6;0;0;0"</Profile>
+<Skills>"Follow Trail (Int +20), Outdoor Survival (Int +20), Perception (Int +10), Silent Move (Ag), Swim (Int +10)"</Skills>
+<Talents>"Strike Mighty Blow, Strike to Injure"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"54"</Page>
+</EquipmentV2>
+<EquipmentV2 id="NORS-EQUI_CREATURES_ICE_BEAR">
+<Description language="ENGLISH">"Ice Bear"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"39;0;59;53;30;12;35;0;2;28;5;5;4;0;0;0"</Profile>
+<Skills>"Concealment (Ag +20), Follow Trail (Int), Intimidate (S +10), Outdoor Survival (Int +20), Perception (Int +10), Scale Sheer Surfaces (S), Swim (S +20)"</Skills>
+<Talents>"Bear Hug, Frenzy, Strike Mighty Blow, Strike to Injure"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"55"</Page>
+</EquipmentV2>
+<EquipmentV2 id="NORS-EQUI_CREATURES_ICE_TROLL">
+<Description language="ENGLISH">"Ice Troll"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"39;15;52;49;22;18;27;10;3;32;5;4;6;0;0;0"</Profile>
+<Skills>"Common Knowledge (Trolls) (Int), Intimidate (S), Outdoor Survival (Int +20), Perception (Int +10), Scale Sheer Surfaces (S +10), Speak Language (Goblin, Norse) (Int)"</Skills>
+<Talents>"Specialist Weapon Group (Two-handed)"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"57"</Page>
+</EquipmentV2>
+<EquipmentV2 id="NORS-EQUI_CREATURES_FROSTJOTUNIR_FROST_GIANT">
+<Description language="ENGLISH">"Frostjotunir (Frost Giant)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"33;33;70;70;20;30;30;25;5;48;7;7;7;0;0;0"</Profile>
+<Skills>"Common Knowledge (Norsca) (Int), Consume Alcohol (T), Intimidate (S), Outdoor Survival (Int), Perception (Int), Scale Sheer Surfaces (S), Speak Language (Grumbarth, Norsca) (Int)"</Skills>
+<Talents>"Lightning Parry, Strike Mighty Blow, Strike to Injure, Strike to Stun"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"61"</Page>
+</EquipmentV2>
+<EquipmentV2 id="NORS-EQUI_CREATURES_UVAERJOTUNIR_STORM_GIANT">
+<Description language="ENGLISH">"Uvaerjotunir (Storm Giant)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"33;33;80;80;20;30;30;30;5;48;8;8;8;0;0;0"</Profile>
+<Skills>"Common Knowledge (Norsca) (Int), Consume Alcohol (T), Intimidate (S), Outdoor Survival (Int), Perception (Int), Scale Sheer Surfaces (S), Speak Language (Grumbarth, Norsca) (Int)"</Skills>
+<Talents>"Lightning Parry, Strike Mighty Blow, Strike to Injure, Strike to Stun"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"62"</Page>
+</EquipmentV2>
+<EquipmentV2 id="NORS-EQUI_CREATURES_KRAKEN">
+<Description language="ENGLISH">"Kraken"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"65;0;84;76;50;16;56;0;10;42;8;7;12;0;0;0"</Profile>
+<Skills>"Navigation (Int +10), Outdoor Survival (Int +20), Perception (Int +10), Swim (S +20)"</Skills>
+<Talents>"Orientation, Strike to Injure, Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"64"</Page>
+</EquipmentV2>
+<EquipmentV2 id="NORS-EQUI_CREATURES_YMIR">
+<Description language="ENGLISH">"Ymir"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"44;12;38;47;31;23;28;18;2;14;3;4;5;0;0;0"</Profile>
+<Skills>"Common Knowledge (Norsca) (Int), Concealment (Ag +10), Follow Trail (Int +20), Intimidate (S), Outdoor Survival (Int +20), Perception (Int), Shadowing (Int), Silent Move (Ag), Speak Language (Dark Tongue) (Int)"</Skills>
+<Talents>"Rover"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"67"</Page>
+</EquipmentV2>
+<EquipmentV2 id="NORS-EQUI_CREATURES_MAMMOTH">
+<Description language="ENGLISH">"Mammoth"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"45;0;75;75;10;14;29;10;1;32;7;7;8;0;0;0"</Profile>
+<Skills>"Outdoor Survival (Int +20), Perception (Int), Swim (S)"</Skills>
+<Talents>"Strike Mighty Blow, Sturdy – Revised"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"69"</Page>
+</EquipmentV2>
+<EquipmentV2 id="NORS-EQUI_CREATURES_SABERTOOTH_SMALL">
+<Description language="ENGLISH">"Sabertooth (Small)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"36;0;40;40;40;12;30;0;3;18;4;4;8;0;0;0"</Profile>
+<Skills>"Concealment (Ag), Dodge Blow (Ag), Follow Trail (Int +20), Outdoor Survival (Int +20), Perception (Int +10), Scale Sheer Surfaces (S +20), Shadowing (Ag +10), Silent Move (Ag +20), Swim (S +10)"</Skills>
+<Talents>"Rover, Strike Mighty Blow, Strike to Injure"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"70"</Page>
+</EquipmentV2>
+<EquipmentV2 id="NORS-EQUI_CREATURES_SABERTOOTH_LARGE">
+<Description language="ENGLISH">"Sabertooth (Large)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"42;0;55;50;40;12;30;0;3;26;5;5;8;0;0;0"</Profile>
+<Skills>"Concealment (Ag), Dodge Blow (Ag), Follow Trail (Int +20), Outdoor Survival (Int +20), Perception (Int +10), Scale Sheer Surfaces (S +20), Shadowing (Ag +10), Silent Move (Ag +20), Swim (S +10)"</Skills>
+<Talents>"Rover, Strike Mighty Blow, Strike to Injure"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"71"</Page>
+</EquipmentV2>
+<EquipmentV2 id="NORS-EQUI_CREATURES_SPISSEMUNS">
+<Description language="ENGLISH">"Spissemuns"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"35;25;35;40;25;23;27;15;1;11;3;4;4;0;0;0"</Profile>
+<Skills>"Common Knowledge (Trolls) (Int), Concealment (Ag +10), Intimidate (S), Outdoor Survival (Int +20), Perception (Int +10), Scale Sheer Surfaces (S +10), Secret Language (Ranger Tongue +20) (Int), Silent Move (Ag), Speak Language (Goblin, Norse) (Int)"</Skills>
+<Talents>"Menacing"</Talents>
+<SpecialRules>"Fearless, Mutations, Natural Weapons (Claws), Night Vision, Regeneration, Vomit"</SpecialRules>
+<Note>""</Note>
+<Page>"73"</Page>
+</EquipmentV2>
+<EquipmentV2 id="NORS-EQUI_CREATURES_WARRIOR_HAG">
+<Description language="ENGLISH">"Warrior Hag"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"40;30;40;40;40;30;40;30;3;20;4;4;5;0;0;0"</Profile>
+<Skills>"Academic Knowledge (Necromancy, Religion) (Int +20), Common Knowledge (Norsca, any one) (Int +20), Concealment (Ag), Dodge Blow (Ag +10), Intimidate (S +20), Outdoor Survival (Int +20), Perception (Int +20), Silent Move (Ag), Speak Arcane Language (Daemonic) (Int +20), Speak Language (Norse, any one) (Int)"</Skills>
+<Talents>"Ambidextrous"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"75"</Page>
+</EquipmentV2>
+<EquipmentV2 id="NORS-EQUI_CREATURES_WATCHERS_OF_TZEENTCH">
+<Description language="ENGLISH">"Watchers of Tzeentch"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"50;40;50;50;40;40;55;35;3;30;5;5;6;0;0;0"</Profile>
+<Skills>"Dodge Blow (Ag), Intimidate (S +20), Outdoor Survival (Int +10), Perception (Int +10), Speak Arcane Language (Daemonic, Magick) (Int), Speak Language (Dark Tongue, Any two) (Int), Torture (Fel +20)"</Skills>
+<Talents>"Ambidextrous, Strike Mighty Blow, Very Strong, Very Resilient"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"77"</Page>
+</EquipmentV2>
+<EquipmentV2 id="NORS-EQUI_SPECIAL_EQUIPMENT_DRAUGHTS_BERSERK_LUST">
+<Description language="ENGLISH">"Berserk Lust"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_DRAUGHTS"</SubCategory>
+<Cost>"20gc in the Empire (1 sceattas in Norsca)"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"Rare -20"</Availability>
+<Note>""</Note>
+<Page>"15"</Page>
+</EquipmentV2>
+<EquipmentV2 id="NORS-EQUI_SPECIAL_EQUIPMENT_DRAUGHTS_BLOODROOT">
+<Description language="ENGLISH">"Bloodroot"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_DRAUGHTS"</SubCategory>
+<Cost>"25gc in the Empire (3 sceattas in Norsca)"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"Very Rare -30"</Availability>
+<Note>""</Note>
+<Page>"15"</Page>
+</EquipmentV2>
+<EquipmentV2 id="NORS-EQUI_SPECIAL_EQUIPMENT_DRAUGHTS_DAEMON_DUST">
+<Description language="ENGLISH">"Daemon Dust"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_DRAUGHTS"</SubCategory>
+<Cost>"45gc in the Empire (4 sceattas in Norsca)"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"Very Rare -30"</Availability>
+<Note>""</Note>
+<Page>"16"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+<DATA_CORRUPTION_TABLE_MUTATION>
+<Corruption name="NORS-MUTA_ULFWERENAR">
+<Description language="ENGLISH">"Were (Ulfwerenar)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Fear>"1"</Fear>
+<MutationType>"RULES-V2MUT_SINGLE"</MutationType>
+<Page>"38"</Page>
+</Corruption>
+</DATA_CORRUPTION_TABLE_MUTATION>
+</DATA_BOOK>

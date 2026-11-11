@@ -1,0 +1,2815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"OWARM"</CODE_BOOK>
+<BOOK>"BOOK OLD WORLD ARMOURY"</BOOK>
+<BOOKNAME>"OLD WORLD ARMOURY"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"1"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_WEAPON>
+<Weapon id="OWARM-PROJ_V2_BOMB">
+<Description language="ENGLISH">"Bomb"</Description>
+<Skill>"-"</Skill>
+<Damage>"+6"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"4/20"</Reach>
+<Price>"75CO"</Price>
+<Encumbrance>"20"</Encumbrance>
+<Quality>"RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_EXPLOSIVE"</Type>
+<Page>"47"</Page>
+</Weapon>
+<Weapon id="OWARM-PROJ_V2_DUCK_FOOT">
+<Description language="ENGLISH">"Duck-Foot"</Description>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"16/-"</Reach>
+<Price>"500CO"</Price>
+<Encumbrance>"30"</Encumbrance>
+<Quality>"RULES-WEAPQ_SPECIAL,RULES-WEAPQ_EXPERIMENTAL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENGINEER"</Type>
+<Page>"47"</Page>
+</Weapon>
+<Weapon id="OWARM-PROJ_V2_INCENDIARY">
+<Description language="ENGLISH">"Incendiary"</Description>
+<Skill>"-"</Skill>
+<Damage>"+4"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Reach>"4/20"</Reach>
+<Price>"5CO"</Price>
+<Encumbrance>"20"</Encumbrance>
+<Quality>"RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_EXPLOSIVE"</Type>
+<Page>"47"</Page>
+</Weapon>
+<Weapon id="OWARM-PROJ_V2_JEZZAIL">
+<Description language="ENGLISH">"Jezzail"</Description>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Availability>""</Availability>
+<Reach>"24/72"</Reach>
+<Encumbrance>"60"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_GUNPOWDER"</Type>
+<Page>"47"</Page>
+</Weapon>
+<Weapon id="OWARM-COMB_V2_BEST_AXE">
+<Description language="ENGLISH">"Axe (Best)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"60CO"</Price>
+<Encumbrance>"45"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Page>"29"</Page>
+</Weapon>
+<Weapon id="OWARM-COMB_V2_BEST_MACE_HAMMER">
+<Description language="ENGLISH">"Mace/Hammer (Best)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"70CO"</Price>
+<Encumbrance>"65"</Encumbrance>
+<Quality>"RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Page>"29"</Page>
+</Weapon>
+<Weapon id="OWARM-COMB_V2_BEST_MILITARY_PICK">
+<Description language="ENGLISH">"Military Pick (Best)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Price>"90CO"</Price>
+<Encumbrance>"60"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Page>"29"</Page>
+</Weapon>
+<Weapon id="OWARM-COMB_V2_BEST_SWORD">
+<Description language="ENGLISH">"Sword (Best)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"140CO"</Price>
+<Encumbrance>"45"</Encumbrance>
+<Quality>"RULES-WEAPQ_DEFENSIVE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Page>"29"</Page>
+</Weapon>
+<Weapon id="OWARM-COMB_V2_BEST_GREAT_AXE">
+<Description language="ENGLISH">"Great Axe (Best)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"120CO"</Price>
+<Encumbrance>"180"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_SLOW,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Page>"37"</Page>
+</Weapon>
+<Weapon id="OWARM-COMB_V2_BEST_GREAT_MACE_WARHAMMER">
+<Description language="ENGLISH">"Great Mace/Warhammer (Best)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Price>"150CO"</Price>
+<Encumbrance>"260"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_PUMMELLING,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Page>"37"</Page>
+</Weapon>
+<Weapon id="OWARM-COMB_V2_BEST_GREAT_PICK">
+<Description language="ENGLISH">"Great Pick (Best)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Price>"200CO"</Price>
+<Encumbrance>"180"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_IMPACT,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Page>"37"</Page>
+</Weapon>
+<Weapon id="OWARM-COMB_V2_BEST_GREAT_SWORD">
+<Description language="ENGLISH">"Great Sword (Best)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"350CO"</Price>
+<Encumbrance>"250"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Page>"37"</Page>
+</Weapon>
+<Weapon id="OWARM-PROJ_V2_BELLYBOW">
+<Description language="ENGLISH">"Bellybow"</Description>
+<Skill>"-"</Skill>
+<Damage>"+5"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Reach>"50/100"</Reach>
+<Price>"150CO"</Price>
+<Encumbrance>"200"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Page>"49"</Page>
+</Weapon>
+<Weapon id="OWARM-PROJ_V2_BOLT_THROWER">
+<Description language="ENGLISH">"Bolt Thrower"</Description>
+<Skill>"-"</Skill>
+<Damage>"+12"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Reach>"150/300"</Reach>
+<Price>"750CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Page>"49"</Page>
+</Weapon>
+<Weapon id="OWARM-PROJ_V2_OXYBELES">
+<Description language="ENGLISH">"Oxybeles"</Description>
+<Skill>"-"</Skill>
+<Damage>"+10"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"70/150"</Reach>
+<Price>"550CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Page>"49"</Page>
+</Weapon>
+<Weapon id="OWARM-PROJ_V2_SCORPION">
+<Description language="ENGLISH">"Scorpion"</Description>
+<Skill>"-"</Skill>
+<Damage>"+8"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Reach>"100/200"</Reach>
+<Price>"375CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Page>"49"</Page>
+</Weapon>
+</DATA_WEAPON>
+<DATA_ARMOR>
+<Armor id="OWARM-ARMO_V2_STUDDED_LEATHER_STUDDED_SKULLCAP">
+<Description language="ENGLISH">"Studded Skullcap"</Description>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"10CO"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_HEAD"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTLEATHER"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_STUDDED_LEATHER_STUDDED_JERKIN">
+<Description language="ENGLISH">"Studded Jerkin"</Description>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"20CO"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTLEATHER"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_STUDDED_LEATHER_STUDDED_JACK">
+<Description language="ENGLISH">"Studded Jack"</Description>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"30CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY,RULES-ARMOL_ARM"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTLEATHER"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_STUDDED_LEATHER_STUDDED_LEGGINGS">
+<Description language="ENGLISH">"Studded Leggings"</Description>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"20CO"</Price>
+<Encumbrance>"20"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTLEATHER"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_STUDDED_LEATHER_FULL_STUDDED_LEATHER">
+<Description language="ENGLISH">"Full Studded Leather"</Description>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"90CO"</Price>
+<Encumbrance>"160"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_ANY"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTLEATHER"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_SCALE_SCALE_COIF">
+<Description language="ENGLISH">"Scale Coif"</Description>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"30CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_HEAD"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_SCALE_SCALE_SHIRT">
+<Description language="ENGLISH">"Scale Shirt"</Description>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"150CO"</Price>
+<Encumbrance>"260"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_SCALE_SLEEVED_SCALE_SHIRT">
+<Description language="ENGLISH">"Sleeved Scale Shirt"</Description>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"225CO"</Price>
+<Encumbrance>"340"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY,RULES-ARMOL_ARM"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_SCALE_SCALE_COAT">
+<Description language="ENGLISH">"Scale Coat"</Description>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"225CO"</Price>
+<Encumbrance>"400"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY,RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_SCALE_SLEEVED_SCALE_COAT">
+<Description language="ENGLISH">"Sleeved Scale Coat"</Description>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"300CO"</Price>
+<Encumbrance>"470"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY,RULES-ARMOL_ARM,RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_SCALE_SCALE_LEGGINGS">
+<Description language="ENGLISH">"Scale Leggings"</Description>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"75CO"</Price>
+<Encumbrance>"130"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_SCALE_FULL_SCALE_ARMOUR">
+<Description language="ENGLISH">"Full Scale Armour"</Description>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"360CO"</Price>
+<Encumbrance>"600"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_ANY"</Location>
+<ArmorPoint>"4"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_ITHILMAR_MAIL_ITHILMAR_MAIL_COIF">
+<Description language="ENGLISH">"Ithilmar Mail Coif"</Description>
+<Availability>""</Availability>
+<Encumbrance>"10"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_HEAD"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_ITHILMAR_MAIL_ITHILMAR_MAIL_SHIRT">
+<Description language="ENGLISH">"Ithilmar Mail Shirt"</Description>
+<Availability>""</Availability>
+<Encumbrance>"20"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_ITHILMAR_MAIL_ITHILMAR_SLEEVED_MAIL_SHIRT">
+<Description language="ENGLISH">"Ithilmar Sleeved Mail Shirt"</Description>
+<Availability>""</Availability>
+<Encumbrance>"30"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY,RULES-ARMOL_ARM"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_ITHILMAR_MAIL_ITHILMAR_MAIL_COAT">
+<Description language="ENGLISH">"Ithilmar Mail Coat"</Description>
+<Availability>""</Availability>
+<Encumbrance>"30"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY,RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_ITHILMAR_MAIL_ITHILMAR_SLEEVED_MAIL_COAT">
+<Description language="ENGLISH">"Ithilmar Sleeved Mail Coat"</Description>
+<Availability>""</Availability>
+<Encumbrance>"60"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY,RULES-ARMOL_ARM,RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_ITHILMAR_MAIL_ITHILMAR_MAIL_LEGGINGS">
+<Description language="ENGLISH">"Ithilmar Mail Leggings"</Description>
+<Availability>""</Availability>
+<Encumbrance>"20"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_ITHILMAR_MAIL_ITHILMAR_FULL_MAIL_ARMOUR">
+<Description language="ENGLISH">"Ithilmar Full Mail Armour"</Description>
+<Availability>""</Availability>
+<Encumbrance>"150"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_ANY"</Location>
+<ArmorPoint>"4"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_GROMRIL_PLATE_GROMRIL_HELMET">
+<Description language="ENGLISH">"Gromril Helmet"</Description>
+<Availability>""</Availability>
+<Encumbrance>"40"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_HEAD"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_GROMRIL_PLATE_GROMRIL_BREASTPLATE">
+<Description language="ENGLISH">"Gromril Breastplate"</Description>
+<Availability>""</Availability>
+<Encumbrance>"75"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_GROMRIL_PLATE_GROMRIL_PLATE_BRACERS">
+<Description language="ENGLISH">"Gromril Plate Bracers"</Description>
+<Availability>""</Availability>
+<Encumbrance>"30"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_ARM"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_GROMRIL_PLATE_GROMRIL_PLATE_LEGGINGS">
+<Description language="ENGLISH">"Gromril Plate Leggings"</Description>
+<Availability>""</Availability>
+<Encumbrance>"40"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"3"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>"20"</Page>
+</Armor>
+<Armor id="OWARM-ARMO_V2_GROMRIL_PLATE_GROMRIL_FULL_PLATE">
+<Description language="ENGLISH">"Gromril Full Plate"</Description>
+<Availability>""</Availability>
+<Encumbrance>"400"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_ANY"</Location>
+<ArmorPoint>"6"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>"20"</Page>
+</Armor>
+</DATA_ARMOR>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_APRON">
+<Description language="ENGLISH">"Apron"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"5p"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_BELT">
+<Description language="ENGLISH">"Belt"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"3s"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_BOOTS_HIP_HIGH">
+<Description language="ENGLISH">"Boots, Hip High"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"8 gc"</Cost>
+<Encumbrance>"15"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_BOOTS_HOBNAILED_DWARF">
+<Description language="ENGLISH">"Boots, Hobnailed, Dwarf"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"30 gc"</Cost>
+<Encumbrance>"30"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_BOOTS_LOW">
+<Description language="ENGLISH">"Boots, Low"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"18 s"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_BOOTS_RIDING">
+<Description language="ENGLISH">"Boots, Riding"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_BREECHES">
+<Description language="ENGLISH">"Breeches"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"15 s"</Cost>
+<Encumbrance>"4"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_CANNONS">
+<Description language="ENGLISH">"Cannons"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"6 gc"</Cost>
+<Encumbrance>"3"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_CAP_OR_HAT">
+<Description language="ENGLISH">"Cap or hat"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"10 s"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_CAPE_SHORT">
+<Description language="ENGLISH">"Cape, short"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"5s"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_CAPE_LONG">
+<Description language="ENGLISH">"Cape, long"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"9s"</Cost>
+<Encumbrance>"7"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_CHEMISE_TUNIC">
+<Description language="ENGLISH">"Chemise/Tunic"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"4"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_COAT_OR_JACKET_LIGHT">
+<Description language="ENGLISH">"Coat or Jacket, light"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_COAT_OR_JACK_HEAVY">
+<Description language="ENGLISH">"Coat or Jack, heavy"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_CODPIECE">
+<Description language="ENGLISH">"Codpiece"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"4 gc"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_CORSET">
+<Description language="ENGLISH">"Corset"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_COSTUME">
+<Description language="ENGLISH">"Costume"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"5 gc+"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_DOUBLET">
+<Description language="ENGLISH">"Doublet"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"10 s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_DRESS_GOWN">
+<Description language="ENGLISH">"Dress/Gown"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"15"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_GIRDLE">
+<Description language="ENGLISH">"Girdle"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"4 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_GLOVES">
+<Description language="ENGLISH">"Gloves"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"3 gc"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_HANDKERCHIEF">
+<Description language="ENGLISH">"Handkerchief"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"6p"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_HOOD">
+<Description language="ENGLISH">"Hood"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"5s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_JERKIN_VEST">
+<Description language="ENGLISH">"Jerkin/Vest"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"10 s"</Cost>
+<Encumbrance>"4"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_KILT">
+<Description language="ENGLISH">"Kilt"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"12 s"</Cost>
+<Encumbrance>"3"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_LOINCLOTH">
+<Description language="ENGLISH">"Loincloth"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"4s"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_ABUNDANT"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_MASK">
+<Description language="ENGLISH">"Mask"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"10 s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_NIGHTSHIRT">
+<Description language="ENGLISH">"Nightshirt"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"2 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_PRIEST_VESTMENTS">
+<Description language="ENGLISH">"Priest Vestments"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"13 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_SANDALS">
+<Description language="ENGLISH">"Sandals"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"2s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_SASH">
+<Description language="ENGLISH">"Sash"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"30 p"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_SCARF">
+<Description language="ENGLISH">"Scarf"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"15 p"</Cost>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_SOCKS">
+<Description language="ENGLISH">"Socks"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"26 s"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CLOTHING_SHOES">
+<Description language="ENGLISH">"Shoes"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"10 s"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"52"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_BARDING_HALF_LEATHER_BARDING">
+<Description language="ENGLISH">"Half Leather (Barding)"</Description>
+<Category>"RULES-EQCAT2_BARDING"</Category>
+<Cost>"50 gc"</Cost>
+<Encumbrance>"120"</Encumbrance>
+<Locations>"RULES-V1LOC_BODY, RULES-V1LOC_LEFT_FRONT_LEG, RULES-V1LOC_RIGHT_FRONT_LEG"</Locations>
+<ArmourPoints>"1"</ArmourPoints>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_BARDING_FULL_LEATHER_BARDING">
+<Description language="ENGLISH">"Full Leather (Barding)"</Description>
+<Category>"RULES-EQCAT2_BARDING"</Category>
+<Cost>"75 gc"</Cost>
+<Encumbrance>"240"</Encumbrance>
+<Locations>"RULES-V1LOC_ALL"</Locations>
+<ArmourPoints>"1"</ArmourPoints>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_BARDING_HALF_STUDDED_LEATHER_BARDING">
+<Description language="ENGLISH">"Half Studded Leather (Barding)"</Description>
+<Category>"RULES-EQCAT2_BARDING"</Category>
+<Cost>"135 gc"</Cost>
+<Encumbrance>"240"</Encumbrance>
+<Locations>"RULES-V1LOC_BODY, RULES-V1LOC_LEFT_FRONT_LEG, RULES-V1LOC_RIGHT_FRONT_LEG"</Locations>
+<ArmourPoints>"2"</ArmourPoints>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_BARDING_FULL_STUDDED_LEATHER_BARDING">
+<Description language="ENGLISH">"Full Studded Leather (Barding)"</Description>
+<Category>"RULES-EQCAT2_BARDING"</Category>
+<Cost>"270 gc"</Cost>
+<Encumbrance>"480"</Encumbrance>
+<Locations>"RULES-V1LOC_ALL"</Locations>
+<ArmourPoints>"2"</ArmourPoints>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_BARDING_HALF_MAIL_ARMOUR_BARDING">
+<Description language="ENGLISH">"Half Mail Armour (Barding)"</Description>
+<Category>"RULES-EQCAT2_BARDING"</Category>
+<Cost>"255 gc"</Cost>
+<Encumbrance>"315"</Encumbrance>
+<Locations>"RULES-V1LOC_BODY, RULES-V1LOC_LEFT_FRONT_LEG, RULES-V1LOC_RIGHT_FRONT_LEG"</Locations>
+<ArmourPoints>"3"</ArmourPoints>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_BARDING_FULL_MAIL_ARMOUR_BARDING">
+<Description language="ENGLISH">"Full Mail Armour (Barding)"</Description>
+<Category>"RULES-EQCAT2_BARDING"</Category>
+<Cost>"510 gc"</Cost>
+<Encumbrance>"630"</Encumbrance>
+<Locations>"RULES-V1LOC_ALL"</Locations>
+<ArmourPoints>"3"</ArmourPoints>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_BARDING_HALF_SCALE_ARMOUR_BARDING">
+<Description language="ENGLISH">"Half Scale Armour (Barding)"</Description>
+<Category>"RULES-EQCAT2_BARDING"</Category>
+<Cost>"540 gc"</Cost>
+<Encumbrance>"900"</Encumbrance>
+<Locations>"RULES-V1LOC_BODY, RULES-V1LOC_LEFT_FRONT_LEG, RULES-V1LOC_RIGHT_FRONT_LEG"</Locations>
+<ArmourPoints>"4"</ArmourPoints>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_BARDING_FULL_SCALE_ARMOUR_BARDING">
+<Description language="ENGLISH">"Full Scale Armour (Barding)"</Description>
+<Category>"RULES-EQCAT2_BARDING"</Category>
+<Cost>"1,080 gc"</Cost>
+<Encumbrance>"1,800"</Encumbrance>
+<Locations>"RULES-V1LOC_ALL"</Locations>
+<ArmourPoints>"4"</ArmourPoints>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_BARDING_HALF_PLATE_ARMOUR_BARDING">
+<Description language="ENGLISH">"Half Plate Armour (Barding)"</Description>
+<Category>"RULES-EQCAT2_BARDING"</Category>
+<Cost>"600 gc"</Cost>
+<Encumbrance>"600"</Encumbrance>
+<Locations>"RULES-V1LOC_BODY, RULES-V1LOC_LEFT_FRONT_LEG, RULES-V1LOC_RIGHT_FRONT_LEG"</Locations>
+<ArmourPoints>"5"</ArmourPoints>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_BARDING_FULL_PLATE_ARMOUR_BARDING">
+<Description language="ENGLISH">"Full Plate Armour (Barding)"</Description>
+<Category>"RULES-EQCAT2_BARDING"</Category>
+<Cost>"1,200 gc"</Cost>
+<Encumbrance>"1,200"</Encumbrance>
+<Locations>"RULES-V1LOC_ALL"</Locations>
+<ArmourPoints>"5"</ArmourPoints>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_ALE_PINT">
+<Description language="ENGLISH">"Ale, pint"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"2p"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_BEER_PINT">
+<Description language="ENGLISH">"Beer, pint"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"1p"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_ABUNDANT"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_BRANDY_BRETONNIAN">
+<Description language="ENGLISH">"Brandy, Bretonnian"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"13 s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_BREAD_LOAF">
+<Description language="ENGLISH">"Bread, loaf"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"2p"</Cost>
+<Encumbrance>"3"</Encumbrance>
+<Availability>"RULES-DISPO2_ABUNDANT"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_BUTTER_LB">
+<Description language="ENGLISH">"Butter (lb.)"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"30 p"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_CHEAP_PIE">
+<Description language="ENGLISH">"Cheap Pie"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"2p"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_CHEESE_VARIOUS_LB">
+<Description language="ENGLISH">"Cheese, various (lb.)"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"50 p"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_DELICACY">
+<Description language="ENGLISH">"Delicacy"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"3 p+"</Cost>
+<Encumbrance>"3"</Encumbrance>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_EGGS_12">
+<Description language="ENGLISH">"Eggs (12)"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"15 p"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_FISH_FRESH_1">
+<Description language="ENGLISH">"Fish, fresh (1)"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"2p"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON/RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_FISH_PICKLED_BARREL">
+<Description language="ENGLISH">"Fish, pickled, barrel"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"3p"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_FOOD_PER_DAY_POOR">
+<Description language="ENGLISH">"Food per Day (Poor)"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"5p"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_FOOD_PER_DAY_AVERAGE">
+<Description language="ENGLISH">"Food per Day (Average)"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"10 p"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_FOOD_PER_DAY_GOOD">
+<Description language="ENGLISH">"Food per Day (Good)"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"18 p"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_MEAD_PINT">
+<Description language="ENGLISH">"Mead, pint"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"3p"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_MEAT_SIDE_OF">
+<Description language="ENGLISH">"Meat, side of"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"1s"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_MILK_COW_OR_GOAT_PINT">
+<Description language="ENGLISH">"Milk, cow or goat, pint"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"2p"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_RATIONS">
+<Description language="ENGLISH">"Rations"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"6s"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_ROTGUT_QUART">
+<Description language="ENGLISH">"Rotgut, quart"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"4p"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_SOUP_MEAL">
+<Description language="ENGLISH">"Soup, meal"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"1p"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_ABUNDANT"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_SPIRITS">
+<Description language="ENGLISH">"Spirits"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"1s"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_WINE_PINT_QUALITY">
+<Description language="ENGLISH">"Wine, pint, quality"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"10 s"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_FOOD_AND_DRINK_WINE_PINT_WATERED">
+<Description language="ENGLISH">"Wine, pint, watered"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"1s"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_MUSICAL_INSTRUMENTS_COACH_HORN">
+<Description language="ENGLISH">"Coach horn"</Description>
+<Category>"RULES-EQCAT2_MUSICAL_INSTRUMENTS"</Category>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"30"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_MUSICAL_INSTRUMENTS_DRUM">
+<Description language="ENGLISH">"Drum"</Description>
+<Category>"RULES-EQCAT2_MUSICAL_INSTRUMENTS"</Category>
+<Cost>"30 s"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_MUSICAL_INSTRUMENTS_HARP_SMALL">
+<Description language="ENGLISH">"Harp, small"</Description>
+<Category>"RULES-EQCAT2_MUSICAL_INSTRUMENTS"</Category>
+<Cost>"20 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_MUSICAL_INSTRUMENTS_HARPSICHORD">
+<Description language="ENGLISH">"Harpsichord"</Description>
+<Category>"RULES-EQCAT2_MUSICAL_INSTRUMENTS"</Category>
+<Cost>"250 gc"</Cost>
+<Encumbrance>"1200"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_MUSICAL_INSTRUMENTS_LUTE">
+<Description language="ENGLISH">"Lute"</Description>
+<Category>"RULES-EQCAT2_MUSICAL_INSTRUMENTS"</Category>
+<Cost>"80 gc"</Cost>
+<Encumbrance>"30"</Encumbrance>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_MUSICAL_INSTRUMENTS_MANDOLIN">
+<Description language="ENGLISH">"Mandolin"</Description>
+<Category>"RULES-EQCAT2_MUSICAL_INSTRUMENTS"</Category>
+<Cost>"23 gc"</Cost>
+<Encumbrance>"15"</Encumbrance>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_MUSICAL_INSTRUMENTS_MOUTH_HARP">
+<Description language="ENGLISH">"Mouth harp"</Description>
+<Category>"RULES-EQCAT2_MUSICAL_INSTRUMENTS"</Category>
+<Cost>"8s"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_MUSICAL_INSTRUMENTS_RECORDER">
+<Description language="ENGLISH">"Recorder"</Description>
+<Category>"RULES-EQCAT2_MUSICAL_INSTRUMENTS"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_MUSICAL_INSTRUMENTS_TAMBOURINE">
+<Description language="ENGLISH">"Tambourine"</Description>
+<Category>"RULES-EQCAT2_MUSICAL_INSTRUMENTS"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_MUSICAL_INSTRUMENTS_VIOL">
+<Description language="ENGLISH">"Viol"</Description>
+<Category>"RULES-EQCAT2_MUSICAL_INSTRUMENTS"</Category>
+<Cost>"25 gc"</Cost>
+<Encumbrance>"30"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_MUSICAL_INSTRUMENTS_WHISTLE">
+<Description language="ENGLISH">"Whistle"</Description>
+<Category>"RULES-EQCAT2_MUSICAL_INSTRUMENTS"</Category>
+<Cost>"6s"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_READING_AND_WRITING_BOOK_GLUED_PRINTED">
+<Description language="ENGLISH">"Book, glued, printed"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"75 gc"</Cost>
+<Encumbrance>"35"</Encumbrance>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_READING_AND_WRITING_BOOK_STITCHED_PRINTED">
+<Description language="ENGLISH">"Book, stitched, printed"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"100 gc"</Cost>
+<Encumbrance>"35"</Encumbrance>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_READING_AND_WRITING_BOOK_ILLUMINATED">
+<Description language="ENGLISH">"Book, illuminated"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"350 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_READING_AND_WRITING_BRUSH">
+<Description language="ENGLISH">"Brush"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"2 gc"</Cost>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_READING_AND_WRITING_CARTOGRAPHER_KIT">
+<Description language="ENGLISH">"Cartographer kit"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"50 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_READING_AND_WRITING_CHARCOAL_STICK">
+<Description language="ENGLISH">"Charcoal stick"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"1s"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_READING_AND_WRITING_CHALK_ONE_STICK">
+<Description language="ENGLISH">"Chalk, one stick"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"2s"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_READING_AND_WRITING_INK_BLACK">
+<Description language="ENGLISH">"Ink, black"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_READING_AND_WRITING_INK_COLOUR">
+<Description language="ENGLISH">"Ink, colour"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_READING_AND_WRITING_INK_PURPLE">
+<Description language="ENGLISH">"Ink, purple"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"50 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_READING_AND_WRITING_INKPEN">
+<Description language="ENGLISH">"Inkpen"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"1 gc"</Cost>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_READING_AND_WRITING_LOCK_BOOK">
+<Description language="ENGLISH">"Lock, Book"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"45 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_READING_AND_WRITING_PAPER_SHEET">
+<Description language="ENGLISH">"Paper/sheet"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"5s"</Cost>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_READING_AND_WRITING_PARCHMENT_SHEET">
+<Description language="ENGLISH">"Parchment/sheet"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"1s"</Cost>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_READING_AND_WRITING_WRITING_KIT">
+<Description language="ENGLISH">"Writing Kit"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_BASKET">
+<Description language="ENGLISH">"Basket"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"2s"</Cost>
+<Encumbrance>"8"</Encumbrance>
+<Availability>"RULES-DISPO2_ABUNDANT"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_BOTTLE">
+<Description language="ENGLISH">"Bottle"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"3s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_BOX_IRON_LARGE">
+<Description language="ENGLISH">"Box, iron, large"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"10 s"</Cost>
+<Encumbrance>"300"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_BOX_IRON_SMALL">
+<Description language="ENGLISH">"Box, iron, small"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"150"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_BUCKET_METAL">
+<Description language="ENGLISH">"Bucket, metal"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"5s"</Cost>
+<Encumbrance>"30"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_BUCKET_WOOD">
+<Description language="ENGLISH">"Bucket, wood"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"3s"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"RULES-DISPO2_ABUNDANT"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_CAGE_LARGE">
+<Description language="ENGLISH">"Cage, large"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"24 gc"</Cost>
+<Encumbrance>"500"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_CAGE_SMALL">
+<Description language="ENGLISH">"Cage, small"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"6 gc"</Cost>
+<Encumbrance>"300"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_CASE_TUBE">
+<Description language="ENGLISH">"Case, tube"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_CASK_4_GALLONS">
+<Description language="ENGLISH">"Cask, 4 gallons"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"8s"</Cost>
+<Encumbrance>"200"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_CASK_10_GALLONS">
+<Description language="ENGLISH">"Cask, 10 gallons"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"12 s"</Cost>
+<Encumbrance>"500"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_CASK_25_GALLONS">
+<Description language="ENGLISH">"Cask, 25 gallons"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"1,250"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_CHEST_WOODEN_LARGE">
+<Description language="ENGLISH">"Chest, wooden, large"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"300"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_CHEST_WOODEN_SMALL">
+<Description language="ENGLISH">"Chest, wooden, small"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"2 gc"</Cost>
+<Encumbrance>"175"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_CUP_WOODEN_OR_CLAY">
+<Description language="ENGLISH">"Cup, wooden or clay"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"8p"</Cost>
+<Availability>"RULES-DISPO2_ABUNDANT"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_GLASS">
+<Description language="ENGLISH">"Glass"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"2s"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_GOBLET">
+<Description language="ENGLISH">"Goblet"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"3s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_JUG_CLAY_1_GALLON">
+<Description language="ENGLISH">"Jug, clay, 1 gallon"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"4s"</Cost>
+<Encumbrance>"15"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_JUG_CLAY_5_GALLONS">
+<Description language="ENGLISH">"Jug, clay, 5 gallons"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"10 s"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_KETTLE">
+<Description language="ENGLISH">"Kettle"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"30 s"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_PITCHER_CLAY">
+<Description language="ENGLISH">"Pitcher, clay"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"2s"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_ABUNDANT"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_POUCH_LARGE">
+<Description language="ENGLISH">"Pouch, large"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"5s"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_POUCH_SMALL">
+<Description language="ENGLISH">"Pouch, small"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"2s"</Cost>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_POT_CLAY">
+<Description language="ENGLISH">"Pot, clay"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"2s"</Cost>
+<Encumbrance>"60"</Encumbrance>
+<Availability>"RULES-DISPO2_ABUNDANT"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_POT_IRON">
+<Description language="ENGLISH">"Pot, iron"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"90"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_SACK_LARGE">
+<Description language="ENGLISH">"Sack, large"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"5s"</Cost>
+<Encumbrance>"7"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_SACK_SMALL">
+<Description language="ENGLISH">"Sack, small"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"30 p"</Cost>
+<Encumbrance>"4"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_SKIN_WATER">
+<Description language="ENGLISH">"Skin, water"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"8s"</Cost>
+<Encumbrance>"1/100"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_TANKARD_PEWTER">
+<Description language="ENGLISH">"Tankard, pewter"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_TANKARD_WOODEN">
+<Description language="ENGLISH">"Tankard, wooden"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"10 s"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_TRUNK_SMALL">
+<Description language="ENGLISH">"Trunk, Small"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"16 s"</Cost>
+<Encumbrance>"275"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_TRUNK_LARGE">
+<Description language="ENGLISH">"Trunk, Large"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"400"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_CARRYING_EQUIPMENT_VIAL">
+<Description language="ENGLISH">"Vial"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"10 p"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_LIGHTING_CHARCOAL">
+<Description language="ENGLISH">"Charcoal"</Description>
+<Category>"RULES-EQCAT2_LIGHTING"</Category>
+<Cost>"1s"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_LIGHTING_KINDLING_FIREWOOD">
+<Description language="ENGLISH">"Kindling/Firewood"</Description>
+<Category>"RULES-EQCAT2_LIGHTING"</Category>
+<Cost>"2s"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_LIGHTING_TORCH_TREATED">
+<Description language="ENGLISH">"Torch, treated"</Description>
+<Category>"RULES-EQCAT2_LIGHTING"</Category>
+<Cost>"10 p"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_LIGHTING_TORCH_UNTREATED">
+<Description language="ENGLISH">"Torch, untreated"</Description>
+<Category>"RULES-EQCAT2_LIGHTING"</Category>
+<Cost>"5p"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_ARMOIRE">
+<Description language="ENGLISH">"Armoire"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"50 gc"</Cost>
+<Encumbrance>"800"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_BANNER">
+<Description language="ENGLISH">"Banner"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_BED_FRAME">
+<Description language="ENGLISH">"Bed Frame"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"8 gc"</Cost>
+<Encumbrance>"1,600"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_BEDROLL">
+<Description language="ENGLISH">"Bedroll"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"15 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_BELL">
+<Description language="ENGLISH">"Bell"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"25 s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_BLANKET">
+<Description language="ENGLISH">"Blanket"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"25 s"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_BOOK_OR_SCROLL_CASE">
+<Description language="ENGLISH">"Book or Scroll Case"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"75 gc"</Cost>
+<Encumbrance>"650"</Encumbrance>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_BRUSH_OR_COMB">
+<Description language="ENGLISH">"Brush or Comb"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"15 p"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_CHAIR">
+<Description language="ENGLISH">"Chair"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"300"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_CLOTHES_PEGS_DOZEN">
+<Description language="ENGLISH">"Clothes pegs (dozen)"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"1s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_COSMETICS">
+<Description language="ENGLISH">"Cosmetics"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"10 s"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_COUCH">
+<Description language="ENGLISH">"Couch"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"30 gc"</Cost>
+<Encumbrance>"1,200"</Encumbrance>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_CUTLERY_WOODEN">
+<Description language="ENGLISH">"Cutlery, wooden"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"5s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_CUTLERY_METAL">
+<Description language="ENGLISH">"Cutlery, metal"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"4"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_CUTLERY_SILVER">
+<Description language="ENGLISH">"Cutlery, silver"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"15 gc"</Cost>
+<Encumbrance>"3"</Encumbrance>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_DECK_OF_CARDS">
+<Description language="ENGLISH">"Deck of cards"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_DESK">
+<Description language="ENGLISH">"Desk"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"50 gc"</Cost>
+<Encumbrance>"1,000"</Encumbrance>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_DICE_BONE">
+<Description language="ENGLISH">"Dice, bone"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"6s"</Cost>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_DICE_BONE_WEIGHTED">
+<Description language="ENGLISH">"Dice, bone, weighted"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"12 s"</Cost>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_FOOTSTOOL">
+<Description language="ENGLISH">"Footstool"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_GRAPPLING_HOOK">
+<Description language="ENGLISH">"Grappling Hook"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"4 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_LADDER">
+<Description language="ENGLISH">"Ladder"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"10 s"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_LADDER_ROPE">
+<Description language="ENGLISH">"Ladder, rope"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_LOCK_AVERAGE">
+<Description language="ENGLISH">"Lock, average"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_LOCK_QUALITY">
+<Description language="ENGLISH">"Lock, quality"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"30 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_MARBLES">
+<Description language="ENGLISH">"Marbles"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"1s"</Cost>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_MATTRESS_FLOCK">
+<Description language="ENGLISH">"Mattress, flock"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"8 gc"</Cost>
+<Encumbrance>"400"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_MATTRESS_FEATHER">
+<Description language="ENGLISH">"Mattress, feather"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"12 gc"</Cost>
+<Encumbrance>"350"</Encumbrance>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_MIRROR_LARGE_METAL">
+<Description language="ENGLISH">"Mirror, large metal"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_MIRROR_SMALL_SILVER">
+<Description language="ENGLISH">"Mirror, small silver"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"20 gc"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_PERFUME_OR_COLOGNE">
+<Description language="ENGLISH">"Perfume or Cologne"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"1 gc"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_POLE_1_YARD">
+<Description language="ENGLISH">"Pole, 1 yard"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"1s"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_ROPE_1_YARD">
+<Description language="ENGLISH">"Rope, 1 yard"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"1s"</Cost>
+<Encumbrance>"3"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_SHAVING_KIT">
+<Description language="ENGLISH">"Shaving Kit"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_SNUFF_BOX">
+<Description language="ENGLISH">"Snuff Box"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"2 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_SOAP">
+<Description language="ENGLISH">"Soap"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"2p"</Cost>
+<Encumbrance>"3"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_TABLE">
+<Description language="ENGLISH">"Table"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"8 gc"</Cost>
+<Encumbrance>"1,500"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_TARP">
+<Description language="ENGLISH">"Tarp"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"5s"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_TENT_SMALL">
+<Description language="ENGLISH">"Tent, small"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"15 s"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_TENT_LARGE">
+<Description language="ENGLISH">"Tent, large"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"2 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_TENT_PAVILION">
+<Description language="ENGLISH">"Tent, pavilion"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"800"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_PERSONAL_EQUIPMENT_TINDERBOX">
+<Description language="ENGLISH">"Tinderbox"</Description>
+<Category>"RULES-EQCAT2_PERSONAL_EQUIPMENT"</Category>
+<Cost>"30 s"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_DRAUGHTS_ANTITOXINS">
+<Description language="ENGLISH">"Antitoxins"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_DRAUGHTS"</SubCategory>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_DRAUGHTS_BUGMAN_S_XXXXXX">
+<Description language="ENGLISH">"Bugman’s XXXXXX"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_DRAUGHTS"</SubCategory>
+<Cost>"50 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_DRAUGHTS_CURE_ALL">
+<Description language="ENGLISH">"Cure-all"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_DRAUGHTS"</SubCategory>
+<Cost>"11 gc"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_DRAUGHTS_ESMERELDA_S_CALMING_NECTAR">
+<Description language="ENGLISH">"Esmerelda’s Calming Nectar"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_DRAUGHTS"</SubCategory>
+<Cost>"300 gc"</Cost>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_DRAUGHTS_ESSENCE_OF_CHAOS">
+<Description language="ENGLISH">"Essence of Chaos"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_DRAUGHTS"</SubCategory>
+<Cost>"225 gc"</Cost>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_DRAUGHTS_FEYEYES">
+<Description language="ENGLISH">"Feyeyes"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_DRAUGHTS"</SubCategory>
+<Cost>"25 s"</Cost>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_DRAUGHTS_MAMMA_MELCHIN_S">
+<Description language="ENGLISH">"Mamma Melchin’s"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_DRAUGHTS"</SubCategory>
+<Cost>"18 s"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_DRAUGHTS_MOOT_MILK">
+<Description language="ENGLISH">"Moot Milk"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_DRAUGHTS"</SubCategory>
+<Cost>"50 gc"</Cost>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_ANIMAL_CALL">
+<Description language="ENGLISH">"Animal Call"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"25 s"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_ANVIL">
+<Description language="ENGLISH">"Anvil"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"65 gc"</Cost>
+<Encumbrance>"300"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_AWL">
+<Description language="ENGLISH">"Awl"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"2s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_BELLOWS">
+<Description language="ENGLISH">"Bellows"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"6 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_BRANDING_IRON">
+<Description language="ENGLISH">"Branding Iron"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_BUTCHER_TOOLS">
+<Description language="ENGLISH">"Butcher tools"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"13 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_CANDLE_TIMEKEEPING">
+<Description language="ENGLISH">"Candle, timekeeping"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"12 s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_CHAIN_YARD">
+<Description language="ENGLISH">"Chain, yard"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"30 s"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_CHISEL_WOOD_SET">
+<Description language="ENGLISH">"Chisel, wood, set"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"8 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_COIN_DIE">
+<Description language="ENGLISH">"Coin die"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_FILE_SET">
+<Description language="ENGLISH">"File set"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"6 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_FISHHOOK_AND_LINE">
+<Description language="ENGLISH">"Fishhook and line"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"3s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_FISHING_NET">
+<Description language="ENGLISH">"Fishing net"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"18 s"</Cost>
+<Encumbrance>"30"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_FORGE">
+<Description language="ENGLISH">"Forge"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"1,200 gc"</Cost>
+<Encumbrance>"5000"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_FUSE">
+<Description language="ENGLISH">"Fuse"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"1s"</Cost>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_GIN_TRAP_LARGE">
+<Description language="ENGLISH">"Gin Trap, Large"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"4 gc"</Cost>
+<Encumbrance>"40"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_GLUE">
+<Description language="ENGLISH">"Glue"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_HACKSAW">
+<Description language="ENGLISH">"Hacksaw"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_HAMMER">
+<Description language="ENGLISH">"Hammer"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"2 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_HOE">
+<Description language="ENGLISH">"Hoe"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"2 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_HOURGLASS">
+<Description language="ENGLISH">"Hourglass"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_MAGNIFYING_GLASS">
+<Description language="ENGLISH">"Magnifying glass"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"75 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_NAILS_10">
+<Description language="ENGLISH">"Nails (10)"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"1p"</Cost>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_NAVIGATIONAL_CHARTS">
+<Description language="ENGLISH">"Navigational charts"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"25 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_NEEDLE_SEWING_5">
+<Description language="ENGLISH">"Needle, sewing (5)"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"8s"</Cost>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_PESTLE_MORTAR">
+<Description language="ENGLISH">"Pestle &amp; Mortar"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"4 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_PICK_CLIMBING">
+<Description language="ENGLISH">"Pick, climbing"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"2 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_PICK_MINER_S">
+<Description language="ENGLISH">"Pick, miner’s"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"25 s"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_PITCHFORK">
+<Description language="ENGLISH">"Pitchfork"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_PLOUGH">
+<Description language="ENGLISH">"Plough"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"150"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_SAW">
+<Description language="ENGLISH">"Saw"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"7 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_SCALES">
+<Description language="ENGLISH">"Scales"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"20 gc"</Cost>
+<Encumbrance>"75"</Encumbrance>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_SCYTHE">
+<Description language="ENGLISH">"Scythe"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_SLEDGE_HAMMER">
+<Description language="ENGLISH">"Sledge hammer"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"40"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_SNARE_WIRE">
+<Description language="ENGLISH">"Snare (wire)"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_TELESCOPE">
+<Description language="ENGLISH">"Telescope"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"100 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_TRADE_TOOLS_ARTISAN">
+<Description language="ENGLISH">"Trade Tools, Artisan"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"50 gc"</Cost>
+<Encumbrance>"40"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_TRADE_TOOLS_ENGRAVER">
+<Description language="ENGLISH">"Trade Tools, Engraver"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"50 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_TRADE_TOOLS_NAVIGATOR">
+<Description language="ENGLISH">"Trade Tools, Navigator"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"50 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_TRADE_TOOLS_PHYSICIAN">
+<Description language="ENGLISH">"Trade Tools, Physician"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"50 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_TRADE_TOOLS_SMITH">
+<Description language="ENGLISH">"Trade Tools, Smith"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"50 gc"</Cost>
+<Encumbrance>"300"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_TRADE_TOOLS_OTHER">
+<Description language="ENGLISH">"Trade Tools, Other"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"50 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_TWINE_ROLL">
+<Description language="ENGLISH">"Twine, roll"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"8p"</Cost>
+<Availability>"RULES-DISPO2_ABUNDANT"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_WAX_SEALING">
+<Description language="ENGLISH">"Wax, Sealing"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_WEDGE_WOOD">
+<Description language="ENGLISH">"Wedge, wood"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"8p"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_WHEELBARROW">
+<Description language="ENGLISH">"Wheelbarrow"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"70"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_TOOLS_WHETSTONE">
+<Description language="ENGLISH">"Whetstone"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_POISONS_BELLADONNA">
+<Description language="ENGLISH">"Belladonna"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_POISONS"</SubCategory>
+<Cost>"15 gc"</Cost>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_POISONS_BOTTLED_LOVE">
+<Description language="ENGLISH">"Bottled Love"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_POISONS"</SubCategory>
+<Cost>"10 gc"</Cost>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_POISONS_CYANIDE">
+<Description language="ENGLISH">"Cyanide"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_POISONS"</SubCategory>
+<Cost>"30 gc"</Cost>
+<Availability>"Araby-Poison"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_POISONS_GREEN_SCORPION_VENOM">
+<Description language="ENGLISH">"Green Scorpion Venom"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_POISONS"</SubCategory>
+<Cost>"1,000 gc"</Cost>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_POISONS_HENBELL">
+<Description language="ENGLISH">"Henbell"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_POISONS"</SubCategory>
+<Cost>"50 gc"</Cost>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_POISONS_RABID_DOG_SALIVA">
+<Description language="ENGLISH">"Rabid Dog Saliva"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_POISONS"</SubCategory>
+<Cost>"35 gc"</Cost>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_POISONS_RUBY_SULPHUR_EXTRACT">
+<Description language="ENGLISH">"Ruby Sulphur Extract"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_POISONS"</SubCategory>
+<Cost>"1,200 gc"</Cost>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_POISONS_SAGEKILL">
+<Description language="ENGLISH">"Sagekill"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_POISONS"</SubCategory>
+<Cost>"150 gc"</Cost>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_POISONS_SIGMAR_S_BLOOD">
+<Description language="ENGLISH">"Sigmar’s Blood"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_POISONS"</SubCategory>
+<Cost>"80 gc"</Cost>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_POISONS_SPIDER_SPITTLE">
+<Description language="ENGLISH">"Spider Spittle"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_POISONS"</SubCategory>
+<Cost>"20 gc"</Cost>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_POISONS_VIPER_KISS">
+<Description language="ENGLISH">"Viper Kiss"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_POISONS"</SubCategory>
+<Cost>"350 gc"</Cost>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_POISONS_THUNG">
+<Description language="ENGLISH">"Thung"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_POISONS"</SubCategory>
+<Cost>"10 gc"</Cost>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_REPLACEMENTS_AND_APPENDAGES_EAR_HORN">
+<Description language="ENGLISH">"Ear Horn"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_REPLACEMENTS_AND_APPENDAGES"</SubCategory>
+<Cost>"5p"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_REPLACEMENTS_AND_APPENDAGES_HOOK">
+<Description language="ENGLISH">"Hook"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_REPLACEMENTS_AND_APPENDAGES"</SubCategory>
+<Cost>"10+ s"</Cost>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_REPLACEMENTS_AND_APPENDAGES_SKID_BOARD">
+<Description language="ENGLISH">"Skid Board"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_REPLACEMENTS_AND_APPENDAGES"</SubCategory>
+<Cost>"5+ p"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_REPLACEMENTS_AND_APPENDAGES_TEETH_CAPS">
+<Description language="ENGLISH">"Teeth Caps"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_REPLACEMENTS_AND_APPENDAGES"</SubCategory>
+<Cost>"10+ s"</Cost>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_LIVESTOCK_CAT">
+<Description language="ENGLISH">"Cat"</Description>
+<Category>"RULES-EQCAT2_LIVESTOCK"</Category>
+<Cost>"1s"</Cost>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Profile>"25;0;10;10;38;10;10;0;1;6;1;1;6;0;0;0"</Profile>
+<Skills>"Concealment, Perception +20%, Scale Sheer Surface, Silent Move, Swim"</Skills>
+<Talents>"Alley Cat, Flee!, Keen Senses"</Talents>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_LIVESTOCK_DOG_PEDIGREE">
+<Description language="ENGLISH">"Dog (pedigree)"</Description>
+<Category>"RULES-EQCAT2_LIVESTOCK"</Category>
+<Cost>"3 gc"</Cost>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Profile>"25;0;21;21;30;15;30;0;1;6;2;2;6;0;0;0"</Profile>
+<Skills>"Follow Trail, Perception +20%, Swim"</Skills>
+<Talents>"Flee!, Keen Senses, Natural Weapons"</Talents>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_LIVESTOCK_DOG_WAR">
+<Description language="ENGLISH">"Dog, War"</Description>
+<Category>"RULES-EQCAT2_LIVESTOCK"</Category>
+<Cost>"30 gc"</Cost>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Profile>"41;0;32;38;30;15;43;0;1;10;3;3;6;0;0;0"</Profile>
+<Skills>"Follow Trail, Intimidate, Perception +20%, Swim"</Skills>
+<Talents>"Flee!, Keen Senses, Natural Weapons, Strike Mighty Blow"</Talents>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_LIVESTOCK_HUNTING_BIRD">
+<Description language="ENGLISH">"Hunting Bird"</Description>
+<Category>"RULES-EQCAT2_LIVESTOCK"</Category>
+<Cost>"80 gc"</Cost>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Profile>"38;0;10;10;38;12;24;0;2;7;1;1;2 (8);0;0;0"</Profile>
+<Skills>"Perception +20%"</Skills>
+<Talents>"Flier, Keen Senses, Orientation, Strike to Injure"</Talents>
+<SpecialRules>"Hunter: the talons and beak of a raptor cause SB -2 damage with the Fast Quality."</SpecialRules>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_LIVESTOCK_MONKEY">
+<Description language="ENGLISH">"Monkey"</Description>
+<Category>"RULES-EQCAT2_LIVESTOCK"</Category>
+<Cost>"40 gc"</Cost>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Profile>"20;25;10;10;40;15;10;5;1;6;1;1;4;0;0;0"</Profile>
+<Skills>"Concealment, Scale Sheer Surface"</Skills>
+<Talents>"Flee!"</Talents>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_LIVESTOCK_TRAINED_RAVEN">
+<Description language="ENGLISH">"Trained Raven"</Description>
+<Category>"RULES-EQCAT2_LIVESTOCK"</Category>
+<Cost>"10 gc"</Cost>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Profile>"38;0;10;10;38;12;24;0;2;6;1;1;2 (8);0;0;0"</Profile>
+<Skills>"Perception +20%"</Skills>
+<Talents>"Excellent Vision, Flier, Keen Senses"</Talents>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_ODDITIES_AMULET_AND_TALISMANS">
+<Description language="ENGLISH">"Amulet and Talismans"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ODDITIES"</SubCategory>
+<Cost>"2p"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_ODDITIES_BEZOAR">
+<Description language="ENGLISH">"Bezoar"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ODDITIES"</SubCategory>
+<Cost>"30 gc"</Cost>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_ODDITIES_GARLIC">
+<Description language="ENGLISH">"Garlic"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ODDITIES"</SubCategory>
+<Cost>"7p"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_ODDITIES_MIRAGLIANO_GLASS">
+<Description language="ENGLISH">"Miragliano Glass"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ODDITIES"</SubCategory>
+<Cost>"40 gc"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_ODDITIES_POWDERED_EMERALD">
+<Description language="ENGLISH">"Powdered Emerald"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ODDITIES"</SubCategory>
+<Cost>"100 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_ODDITIES_PURITY_SEAL">
+<Description language="ENGLISH">"Purity Seal"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ODDITIES"</SubCategory>
+<Cost>"8 gc"</Cost>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_ODDITIES_RELIGIOUS_RELIC">
+<Description language="ENGLISH">"Religious Relic"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ODDITIES"</SubCategory>
+<Cost>"10+ gc"</Cost>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_ODDITIES_SCROLL">
+<Description language="ENGLISH">"Scroll"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ODDITIES"</SubCategory>
+<Cost>"1 gc"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_ODDITIES_TOADSTONE">
+<Description language="ENGLISH">"Toadstone"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ODDITIES"</SubCategory>
+<Cost>"40 gc"</Cost>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_RELIGIOUS_EQUIPMENT_ASPERGILLA">
+<Description language="ENGLISH">"Aspergilla"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"30 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_RELIGIOUS_EQUIPMENT_BEADS_PRAYER">
+<Description language="ENGLISH">"Beads, prayer"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_RELIGIOUS_EQUIPMENT_BRAZIER_LARGE">
+<Description language="ENGLISH">"Brazier, large"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"50 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_RELIGIOUS_EQUIPMENT_BRAZIER_MEDIUM">
+<Description language="ENGLISH">"Brazier, medium"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"20 gc"</Cost>
+<Encumbrance>"30"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_RELIGIOUS_EQUIPMENT_BRAZIER_SMALL">
+<Description language="ENGLISH">"Brazier, small"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"15"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_RELIGIOUS_EQUIPMENT_CANDELABRA">
+<Description language="ENGLISH">"Candelabra"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"15 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_RELIGIOUS_EQUIPMENT_CANDLESTICKS">
+<Description language="ENGLISH">"Candlesticks"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"6s"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_RELIGIOUS_EQUIPMENT_CENSER">
+<Description language="ENGLISH">"Censer"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"2 gc"</Cost>
+<Encumbrance>"25"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_RELIGIOUS_EQUIPMENT_INCENSE_STICK_OR_BLOCK">
+<Description language="ENGLISH">"Incense, stick or block"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"1 gc"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_SPECIAL_EQUIPMENT_RELIGIOUS_EQUIPMENT_RELIC_BOX">
+<Description language="ENGLISH">"Relic Box"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_RELIGIOUS_EQUIPMENT"</SubCategory>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_MOUNTS_BRETONNIAN_WARHORSE">
+<Description language="ENGLISH">"Bretonnian Warhorse"</Description>
+<Category>"RULES-EQCAT2_MOUNTS"</Category>
+<Cost>"750 gc"</Cost>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Profile>"35;0;45;45;30;12;10;0;1;18;4;4;9;0;0;0"</Profile>
+<Skills>"Perception +10%, Swim"</Skills>
+<Talents>"Acute Hearing, Keen Senses, Natural Weapons, Strike Mighty Blow"</Talents>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_MOUNTS_DESTRIER">
+<Description language="ENGLISH">"Destrier"</Description>
+<Category>"RULES-EQCAT2_MOUNTS"</Category>
+<Cost>"500 gc"</Cost>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Profile>"30;0;45;45;30;10;10;0;1;18;4;4;8;0;0;0"</Profile>
+<Skills>"Perception +10%, Swim"</Skills>
+<Talents>"Acute Hearing, Keen Senses, Natural Weapons, Strike Mighty Blow"</Talents>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_MOUNTS_LIGHT_WARHORSE">
+<Description language="ENGLISH">"Light Warhorse"</Description>
+<Category>"RULES-EQCAT2_MOUNTS"</Category>
+<Cost>"300 gc"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Profile>"30;0;40;40;30;10;10;0;1;14;4;4;8;0;0;0"</Profile>
+<Skills>"Perception +10%, Swim"</Skills>
+<Talents>"Acute Hearing, Keen Senses, Natural Weapons, Strike Mighty Blow"</Talents>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_MOUNTS_PONY">
+<Description language="ENGLISH">"Pony"</Description>
+<Category>"RULES-EQCAT2_MOUNTS"</Category>
+<Cost>"50 gc"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Profile>"25;0;35;35;35;10;10;0;0;12;3;3;6;0;0;0"</Profile>
+<Skills>"Perception, Swim"</Skills>
+<Talents>"Acute Hearing, Keen Senses"</Talents>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_MOUNTS_RIDING_HORSE">
+<Description language="ENGLISH">"Riding Horse"</Description>
+<Category>"RULES-EQCAT2_MOUNTS"</Category>
+<Cost>"80 gc"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Profile>"25;0;38;38;30;10;10;0;0;12;3;3;8;0;0;0"</Profile>
+<Skills>"Perception +10%, Swim"</Skills>
+<Talents>"Acute Hearing, Keen Senses"</Talents>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_MOUNT_GEAR_FODDER">
+<Description language="ENGLISH">"Fodder"</Description>
+<Category>"RULES-EQCAT2_MOUNT_GEAR"</Category>
+<Cost>"5p"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_MOUNT_GEAR_GROOMING_KIT">
+<Description language="ENGLISH">"Grooming Kit"</Description>
+<Category>"RULES-EQCAT2_MOUNT_GEAR"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"30"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_MOUNT_GEAR_HARNESS">
+<Description language="ENGLISH">"Harness"</Description>
+<Category>"RULES-EQCAT2_MOUNT_GEAR"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_MOUNT_GEAR_SADDLE">
+<Description language="ENGLISH">"Saddle"</Description>
+<Category>"RULES-EQCAT2_MOUNT_GEAR"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_MOUNT_GEAR_SADDLEBAG">
+<Description language="ENGLISH">"Saddlebag"</Description>
+<Category>"RULES-EQCAT2_MOUNT_GEAR"</Category>
+<Cost>"2 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_LIVESTOCK_DONKEY">
+<Description language="ENGLISH">"Donkey"</Description>
+<Category>"RULES-EQCAT2_LIVESTOCK"</Category>
+<Cost>"15 gc"</Cost>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_LIVESTOCK_HORSE_DRAFT">
+<Description language="ENGLISH">"Horse, draft"</Description>
+<Category>"RULES-EQCAT2_LIVESTOCK"</Category>
+<Cost>"25 gc"</Cost>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_LIVESTOCK_MULE">
+<Description language="ENGLISH">"Mule"</Description>
+<Category>"RULES-EQCAT2_LIVESTOCK"</Category>
+<Cost>"20 gc"</Cost>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_LIVESTOCK_PACKHORSE">
+<Description language="ENGLISH">"Packhorse"</Description>
+<Category>"RULES-EQCAT2_LIVESTOCK"</Category>
+<Cost>"40 gc"</Cost>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_VEHICLES_BARGE_RIVER">
+<Description language="ENGLISH">"Barge, River"</Description>
+<Category>"RULES-EQCAT2_VEHICLES"</Category>
+<Cost>"1,200 gc"</Cost>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Profile>"3;8;100"</Profile>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_VEHICLES_BOAT_ROWING">
+<Description language="ENGLISH">"Boat, Rowing"</Description>
+<Category>"RULES-EQCAT2_VEHICLES"</Category>
+<Cost>"90 gc"</Cost>
+<Encumbrance>"900"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Profile>"3;4;10"</Profile>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_VEHICLES_CART">
+<Description language="ENGLISH">"Cart"</Description>
+<Category>"RULES-EQCAT2_VEHICLES"</Category>
+<Cost>"50 gc"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Profile>"3;4;20"</Profile>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_VEHICLES_COACH">
+<Description language="ENGLISH">"Coach"</Description>
+<Category>"RULES-EQCAT2_VEHICLES"</Category>
+<Cost>"500 gc"</Cost>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Profile>"4;5;60"</Profile>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_VEHICLES_RIVERBOAT">
+<Description language="ENGLISH">"Riverboat"</Description>
+<Category>"RULES-EQCAT2_VEHICLES"</Category>
+<Cost>"600 gc"</Cost>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Profile>"3;5;70"</Profile>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_VEHICLES_SHIP">
+<Description language="ENGLISH">"Ship"</Description>
+<Category>"RULES-EQCAT2_VEHICLES"</Category>
+<Cost>"12,000 gc"</Cost>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Profile>"3;10;150"</Profile>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWARM-EQUI_VEHICLES_WAGON">
+<Description language="ENGLISH">"Wagon"</Description>
+<Category>"RULES-EQCAT2_VEHICLES"</Category>
+<Cost>"90 gc"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Profile>"3;4;30"</Profile>
+<Page>"123"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="OWARM-T_SPECIALIST_WEAPON_GROUP__EXPLOSIVE">
+<Description language="ENGLISH">"Specialist Weapon Group (Explosive)"</Description>
+<Generique>"RULES-T_SPECIALIST_WEAPON_GROUP__*"</Generique>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+</DATA_BOOK>

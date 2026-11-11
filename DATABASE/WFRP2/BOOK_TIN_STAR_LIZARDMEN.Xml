@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"TSL"</CODE_BOOK>
+<BOOK>"BOOK TIN STAR LIZARDMEN"</BOOK>
+<BOOKNAME>"TIN STAR GAMES - NEW RACE LIZARDMEN"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_CAREER>
+<Career id="TSL-CARE_EMISSARY">
+<Description language="ENGLISH">"Emissary"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, Int +10%, WP +5%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Charm, Common Knowledge (the Empire), Evaluate, Gossip, Haggle, Perception, Read/Write, Speak Language (any)"</Skills>
+<Talents>"Etiquette, Linguistics, Suave"</Talents>
+<Trappings>"Noble's Garb, Sabre, Foreign Trinkets worth 4d10 crowns"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_THE_EMPIRE">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ETIQUETTE">"1"</Talent>
+<Talent name="RULES-T_LINGUISTICS">"1"</Talent>
+<Talent name="RULES-T_SUAVE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"TSL 2"</Source>
+</Career>
+<Career id="TSL-CARE_SURVEYOR">
+<Description language="ENGLISH">"Surveyor"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, Int +10%, Fel +5%"</MainProfile>
+<SecondaryProfile>"W +3"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Cartography), Common Knowledge (the Empire), Concealment, Evaluate, Follow Trail, Navigation, Outdoor Survival, Perception, Read/Write"</Skills>
+<Talents>"Alley Cat or Rover, Orientation, Seasoned Traveller, Savvy"</Talents>
+<Trappings>"Light Armour (Full Leather), Theodolite, Writing Kit"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_CARTOGRAPHY">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_THE_EMPIRE">"1"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ALLEY_CAT/RULES-T_ROVER">"1"</Talent>
+<Talent name="RULES-T_ORIENTATION">"1"</Talent>
+<Talent name="RULES-T_SEASONED_TRAVELLER">"1"</Talent>
+<Talent name="RULES-T_SAVVY">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"TSL 3"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="TSL-CARE_EMISSARY">"RULES-CARE_BURGHER"</Link>
+<Link name="TSL-CARE_EMISSARY">"RULES-CARE_NOBLE"</Link>
+<Link name="TSL-CARE_EMISSARY">"RULES-CARE_SCHOLAR"</Link>
+<Link name="TSL-CARE_EMISSARY">"RULES-CARE_SPY"</Link>
+<Link name="TSL-CARE_SURVEYOR">"RULES-CARE_HUNTER"</Link>
+<Link name="TSL-CARE_SURVEYOR">"RULES-CARE_NAVIGATOR"</Link>
+<Link name="TSL-CARE_SURVEYOR">"RULES-CARE_OUTRIDER"</Link>
+<Link name="TSL-CARE_SURVEYOR">"RULES-CARE_VAGABOND"</Link>
+<Link name="RULES-CARE_BOATMAN">"TSL-CARE_SURVEYOR"</Link>
+<Link name="RULES-CARE_CAMP_FOLLOWER">"TSL-CARE_SURVEYOR"</Link>
+<Link name="RULES-CARE_SEAMAN">"TSL-CARE_SURVEYOR"</Link>
+<Link name="RULES-CARE_OUTRIDER">"TSL-CARE_SURVEYOR"</Link>
+<Link name="RULES-CARE_VAGABOND">"TSL-CARE_SURVEYOR"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_SPECIE>
+<Specie id="TSL-RACE_SKINK">
+<Description language="ENGLISH">"Skink (Tin Star)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"COTO-SPECIE_LIZARDMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"5"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 9; 4-6: 10; 7-9: 11; 10: 12"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-7: 1; 8-10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_LUSTRIA"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_XLOTL"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_POISON"</Talent>
+<Talent>"RULES-T_WARRIOR_BORN/RULES-T_VERY_STRONG"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_APPRENTICE_WIZARD">"3"</Career>
+<Career name="RULES-CARE_BOATMAN">"1"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"3"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"5"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"2"</Career>
+<Career name="TSL-CARE_EMISSARY">"6"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"4"</Career>
+<Career name="RULES-CARE_FISHERMAN">"3"</Career>
+<Career name="RULES-CARE_HEDGE_WIZARD">"3"</Career>
+<Career name="RULES-CARE_HUNTER">"2"</Career>
+<Career name="RULES-CARE_JAILER">"2"</Career>
+<Career name="RULES-CARE_MARINE">"5"</Career>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+<Career name="RULES-CARE_MINER">"2"</Career>
+<Career name="RULES-CARE_OUTLAW">"3"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"7"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"2"</Career>
+<Career name="RULES-CARE_SEAMAN">"5"</Career>
+<Career name="RULES-CARE_SMUGGLER">"3"</Career>
+<Career name="RULES-CARE_STUDENT">"3"</Career>
+<Career name="TSL-CARE_SURVEYOR">"9"</Career>
+<Career name="RULES-CARE_THIEF">"4"</Career>
+<Career name="RULES-CARE_THUG">"6"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"5"</Career>
+<Career name="RULES-CARE_TRADESMAN">"3"</Career>
+<Career name="RULES-CARE_VAGABOND">"7"</Career>
+</SUBCHAPTER_CAREER>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="F">"Forename"</NamePattern>
+<NamePattern sex="M">"Forename"</NamePattern>
+<Name part="Forename" sex="F" name="Axla'a">"1-5"</Name>
+<Name part="Forename" sex="F" name="Brau'na">"6-10"</Name>
+<Name part="Forename" sex="F" name="Chata'la">"11-15"</Name>
+<Name part="Forename" sex="F" name="Hlaninu">"16-20"</Name>
+<Name part="Forename" sex="F" name="Hran'xa">"21-25"</Name>
+<Name part="Forename" sex="F" name="K'lana">"26-30"</Name>
+<Name part="Forename" sex="F" name="K'rala'lu">"31-35"</Name>
+<Name part="Forename" sex="F" name="K'taunu">"36-40"</Name>
+<Name part="Forename" sex="F" name="Lau'ka">"41-45"</Name>
+<Name part="Forename" sex="F" name="Lakar'na">"46-50"</Name>
+<Name part="Forename" sex="F" name="Mak'uana">"51-55"</Name>
+<Name part="Forename" sex="F" name="Mx'na">"56-60"</Name>
+<Name part="Forename" sex="F" name="Nur't'ka">"61-65"</Name>
+<Name part="Forename" sex="F" name="Q'talau'c">"66-70"</Name>
+<Name part="Forename" sex="F" name="Q'tarau">"71-75"</Name>
+<Name part="Forename" sex="F" name="Q'zalepc">"76-80"</Name>
+<Name part="Forename" sex="F" name="Rx'kar">"81-85"</Name>
+<Name part="Forename" sex="F" name="Rzanau'lc">"86-90"</Name>
+<Name part="Forename" sex="F" name="Yxatla">"91-95"</Name>
+<Name part="Forename" sex="F" name="Yz'lau">"96-100"</Name>
+<Name part="Forename" sex="M" name="Axoltepc">"1-5"</Name>
+<Name part="Forename" sex="M" name="Aztlan'k">"6-10"</Name>
+<Name part="Forename" sex="M" name="Ch'tanau'lc">"11-15"</Name>
+<Name part="Forename" sex="M" name="H'lak'eu">"16-20"</Name>
+<Name part="Forename" sex="M" name="H'kaneu">"21-25"</Name>
+<Name part="Forename" sex="M" name="Hranupta">"26-30"</Name>
+<Name part="Forename" sex="M" name="K'laz">"31-35"</Name>
+<Name part="Forename" sex="M" name="K'narra'k">"36-40"</Name>
+<Name part="Forename" sex="M" name="K'zanetpec">"41-45"</Name>
+<Name part="Forename" sex="M" name="Laxzakau">"46-50"</Name>
+<Name part="Forename" sex="M" name="Laxak'ala">"51-55"</Name>
+<Name part="Forename" sex="M" name="Lx'aunak">"56-60"</Name>
+<Name part="Forename" sex="M" name="Nx'or">"61-65"</Name>
+<Name part="Forename" sex="M" name="Rokorzt">"66-70"</Name>
+<Name part="Forename" sex="M" name="R'xar'nau">"71-75"</Name>
+<Name part="Forename" sex="M" name="Tlcorel">"76-80"</Name>
+<Name part="Forename" sex="M" name="T'xoleptel">"81-85"</Name>
+<Name part="Forename" sex="M" name="T'zor'au">"86-90"</Name>
+<Name part="Forename" sex="M" name="X'kor">"91-95"</Name>
+<Name part="Forename" sex="M" name="Xozk'altec">"96-100"</Name>
+</SUBCHAPTER_NAMES>
+<Page>"1"</Page>
+</Specie>
+<Specie id="TSL-RACE_SAURUS">
+<Description language="ENGLISH">"Saurus (Tin Star)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"COTO-SPECIE_LIZARDMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+30"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 11; 4-6: 12; 7-9: 13; 10: 14"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-7: 1; 8-10: 2"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_LUSTRIA"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_XLOTL"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_NIGHT_VISION"</Talent>
+<Talent>"RULES-T_RESISTANCE_TO_POISON"</Talent>
+<Talent>"RULES-T_WARRIOR_BORN/RULES-T_VERY_STRONG"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_BOATMAN">"2"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"5"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"2"</Career>
+<Career name="TSL-CARE_EMISSARY">"3"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"3"</Career>
+<Career name="RULES-CARE_HUNTER">"7"</Career>
+<Career name="RULES-CARE_JAILER">"5"</Career>
+<Career name="RULES-CARE_MARINE">"8"</Career>
+<Career name="RULES-CARE_MERCENARY">"17"</Career>
+<Career name="RULES-CARE_MINER">"4"</Career>
+<Career name="RULES-CARE_OUTLAW">"2"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"14"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"1"</Career>
+<Career name="RULES-CARE_SEAMAN">"9"</Career>
+<Career name="RULES-CARE_SMUGGLER">"3"</Career>
+<Career name="TSL-CARE_SURVEYOR">"2"</Career>
+<Career name="RULES-CARE_THUG">"9"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"1"</Career>
+</SUBCHAPTER_CAREER>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="F">"Forename"</NamePattern>
+<NamePattern sex="M">"Forename"</NamePattern>
+<Name part="Forename" sex="F" name="Axla'a">"1-5"</Name>
+<Name part="Forename" sex="F" name="Brau'na">"6-10"</Name>
+<Name part="Forename" sex="F" name="Chata'la">"11-15"</Name>
+<Name part="Forename" sex="F" name="Hlaninu">"16-20"</Name>
+<Name part="Forename" sex="F" name="Hran'xa">"21-25"</Name>
+<Name part="Forename" sex="F" name="K'lana">"26-30"</Name>
+<Name part="Forename" sex="F" name="K'rala'lu">"31-35"</Name>
+<Name part="Forename" sex="F" name="K'taunu">"36-40"</Name>
+<Name part="Forename" sex="F" name="Lau'ka">"41-45"</Name>
+<Name part="Forename" sex="F" name="Lakar'na">"46-50"</Name>
+<Name part="Forename" sex="F" name="Mak'uana">"51-55"</Name>
+<Name part="Forename" sex="F" name="Mx'na">"56-60"</Name>
+<Name part="Forename" sex="F" name="Nur't'ka">"61-65"</Name>
+<Name part="Forename" sex="F" name="Q'talau'c">"66-70"</Name>
+<Name part="Forename" sex="F" name="Q'tarau">"71-75"</Name>
+<Name part="Forename" sex="F" name="Q'zalepc">"76-80"</Name>
+<Name part="Forename" sex="F" name="Rx'kar">"81-85"</Name>
+<Name part="Forename" sex="F" name="Rzanau'lc">"86-90"</Name>
+<Name part="Forename" sex="F" name="Yxatla">"91-95"</Name>
+<Name part="Forename" sex="F" name="Yz'lau">"96-100"</Name>
+<Name part="Forename" sex="M" name="Axoltepc">"1-5"</Name>
+<Name part="Forename" sex="M" name="Aztlan'k">"6-10"</Name>
+<Name part="Forename" sex="M" name="Ch'tanau'lc">"11-15"</Name>
+<Name part="Forename" sex="M" name="H'lak'eu">"16-20"</Name>
+<Name part="Forename" sex="M" name="H'kaneu">"21-25"</Name>
+<Name part="Forename" sex="M" name="Hranupta">"26-30"</Name>
+<Name part="Forename" sex="M" name="K'laz">"31-35"</Name>
+<Name part="Forename" sex="M" name="K'narra'k">"36-40"</Name>
+<Name part="Forename" sex="M" name="K'zanetpec">"41-45"</Name>
+<Name part="Forename" sex="M" name="Laxzakau">"46-50"</Name>
+<Name part="Forename" sex="M" name="Laxak'ala">"51-55"</Name>
+<Name part="Forename" sex="M" name="Lx'aunak">"56-60"</Name>
+<Name part="Forename" sex="M" name="Nx'or">"61-65"</Name>
+<Name part="Forename" sex="M" name="Rokorzt">"66-70"</Name>
+<Name part="Forename" sex="M" name="R'xar'nau">"71-75"</Name>
+<Name part="Forename" sex="M" name="Tlcorel">"76-80"</Name>
+<Name part="Forename" sex="M" name="T'xoleptel">"81-85"</Name>
+<Name part="Forename" sex="M" name="T'zor'au">"86-90"</Name>
+<Name part="Forename" sex="M" name="X'kor">"91-95"</Name>
+<Name part="Forename" sex="M" name="Xozk'altec">"96-100"</Name>
+</SUBCHAPTER_NAMES>
+<Page>"1"</Page>
+</Specie>
+</DATA_SPECIE>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMP_ACADEMIC_KNOWLEDGE_CARTOGRAPHY">
+<Description language="ENGLISH">"Academic Knowledge (Cartography)"</Description>
+<Generique>"RULES-COMP_ACADEMIC_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_XLOTL">
+<Description language="ENGLISH">"Speak Language (Xlotl)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+</DATA_BOOK>

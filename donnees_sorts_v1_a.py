@@ -1,0 +1,66 @@
+"""Sorts V1, partie A : Petty Magic et Battle Magic niveau 1 (Core p.153-156, lus sur les images du PDF, PDF = page imprimee + 7).
+
+Tuple : (nom, liste, niveau, points de magie, portee, duree, ingredients, test de magie, page, effet condense).
+Effets condenses, pas verbatim. Test de magie : "oui" = la cible a droit a un test de Volonte, "non" = missile magique, "" = non precise.
+"""
+
+PETTY = "Petty"
+BATTLE = "Battle"
+
+SORTS_A = [
+    ("Curse", PETTY, "P", "1", "12 yards", "Until dispelled", "Hair, fingernail, etc from the victim", "oui", "153",
+     "Places a minor curse (warts, baldness, flatulence...) on one victim within 12 yards; Will Power test to resist. Removed automatically by the caster or by Remove Curse from a higher level caster."),
+    ("Gift of Tongues", PETTY, "P", "1 per turn", "Hearing", "1+ turns", "The tongue of any creature", "", "153",
+     "The caster speaks and understands any language heard; 1 turn per magic point, extendable."),
+    ("Glowing Light", PETTY, "P", "1 per hour", "Touch", "1+ hours", "Any object desired by the caster", "", "153",
+     "One held object glows like a lantern for 1 hour, extendable with more magic points; the object disappears at the end."),
+    ("Magic Alarm", PETTY, "P", "2", "Touch", "Until triggered", "A small bell", "", "153",
+     "The caster is alerted (even asleep, whatever the distance) when a living creature passes within 1 yard of the spot; one at a time."),
+    ("Magic Flame", PETTY, "P", "1", "Personal", "Until extinguished", "None", "", "153",
+     "A small bluish flame burns on the open palm; lights flammables and gives light as a candle, no damage."),
+    ("Magic Lock", PETTY, "P", "3 per week", "1 yard", "1+ weeks", "A dab of glue", "", "153",
+     "A lock or bolt cannot be picked or forced open; the door can still be smashed."),
+    ("Marsh Lights", PETTY, "P", "1", "Not Applicable", "1 hour", "2 fireflies", "", "153",
+     "Creates lights like distant torches within 100 yards, moving 8 to 16 yards per round along paths; for false trails."),
+    ("Open", PETTY, "P", "3", "1 yard", "Instant", "A small silver key", "", "154",
+     "Unlocks, unbolts or lifts a lock, bolt or latch for the next minute; fails on a magically locked one."),
+    ("Produce Small Creature", PETTY, "P", "2", "Personal", "Not Applicable", "None", "", "154",
+     "Produces a small normal animal from a hat or pocket; the species is rolled once (D6 : mouse, rabbit, dove, snake, fish, lizard) and is always the same for the caster."),
+    ("Protection from Rain", PETTY, "P", "1", "Personal", "1 hour", "A miniature umbrella", "", "154",
+     "Rain does not fall on the caster for 1 hour or until dispelled."),
+    ("Reinforce Door", PETTY, "P", "3 per week", "1 yard", "1+ weeks", "A small lock", "", "154",
+     "A door or chest gains +1 Toughness; up to three castings (+3)."),
+    ("Remove Curse", PETTY, "P", "1", "Touch", "Instantaneous", "None", "", "154",
+     "Removes one curse placed by a caster of the same level or lower."),
+    ("Sleep", PETTY, "P", "2", "Touch", "D6 turns", "A piece of down", "oui", "154",
+     "A touched humanoid under ten feet tall falls into a coma-like sleep unless it passes a Will Power test; in combat needs a successful open-hand hit."),
+    ("Sounds", PETTY, "P", "1", "Within hearing", "1 round", "A small speaking trumpet", "", "155",
+     "Produces any noise except speech, loud or soft, up to 24 yards from the caster, for one round."),
+    ("Zone of Cold", PETTY, "P", "1", "Personal", "1 hour", "A lit torch", "", "155",
+     "A 12-yard Zone around the caster, 10 degrees colder; while maintained the caster casts no new magic nor meditates; Zones may not overlap."),
+    ("Zone of Silence", PETTY, "P", "1", "Personal", "1 hour", "A ball of wax", "", "155",
+     "A 12-yard Zone in which no sound enters or leaves; same Zone restrictions."),
+    ("Zone of Warmth", PETTY, "P", "1", "Personal", "1 hour", "A piece of animal fur", "", "155",
+     "A 12-yard Zone 10 degrees warmer; same Zone restrictions."),
+
+    ("Aura of Resistance", BATTLE, "1", "2", "Personal", "1 hour per level", "A pair of magnets", "", "155",
+     "+1 armour point on every body location; one Aura at a time; dispelled by magical weapon hits."),
+    ("Cause Animosity", BATTLE, "1", "4", "48 yards", "1D6 rounds", "Any part of a dead Goblinoid", "oui", "155",
+     "A group normally subject to animosity (Goblins) attacks itself unless it passes a Will Power test; ends when other enemies appear."),
+    ("Cure Light Injury", BATTLE, "1", "3", "Personal", "Permanent until further Wounds are received", "A piece of lint", "", "155",
+     "Heals D6 Wounds by touch (caster or another), not a character with fewer than two Wounds left; a failed cast causes D6 Wounds."),
+    ("Fire Ball", BATTLE, "1", "1 per Fire ball", "48 yards", "Instantaneous", "A ball of sulphur", "non", "155",
+     "A magic missile hitting 1D3 creatures per caster level, Strength 3, 1D10 Wounds ignoring armour (+1D8 on flammables); one fire ball per level per round; Initiative test for half damage."),
+    ("Flight", BATTLE, "1", "3", "Personal", "1 round", "A wing feather from a bird of prey", "", "156",
+     "The caster flies 48 yards in any direction; continues at 3 magic points per round, no other spell; carries half normal encumbrance."),
+    ("Hammerhand", BATTLE, "1", "2", "Personal", "D6 x 10 turns, or until caster is wounded", "A small silver hammer", "", "156",
+     "Twice as many Attacks and Strength +2; dispelled when the caster loses any Wounds."),
+    ("Immunity from Poison", BATTLE, "1", "2", "Personal", "1D6 x 10 turns per level of caster", "The tail of a scorpion", "", "156",
+     "The caster or a character within 6 yards is immune to poisons and venoms."),
+    ("Steal Mind", BATTLE, "1", "4", "24 yards", "D6 rounds", "A phial of pure alcohol", "oui", "156",
+     "A single target within 24 yards becomes utterly mindless (counts as prone, cannot move on its own) unless it passes a Will Power test."),
+    ("Strength of Combat", BATTLE, "1", "1", "Personal", "Until the next sunrise", "The scalp of any giant", "", "156",
+     "Temporarily raises one fighting characteristic: WS or BS +10; M, S, T, I or A +1; or Wounds +1D6+1."),
+    ("Wind Blast", BATTLE, "1", "2", "48 yards", "While caster concentrates", "An animal bladder", "", "156",
+     "A blast of wind knocks a character or group off balance for 1 round, then prevents movement and missile fire and halves Wound damage in combat; Strength x5 test to advance at half rate."),
+]

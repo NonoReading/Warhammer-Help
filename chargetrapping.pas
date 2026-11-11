@@ -20,6 +20,11 @@ Type
     TraitsAnimal:       String;   // traits separes par des virgules, tels qu'imprimes dans le livre (aussi ceux d'un bateau)
     ProfilBateau:       String;   // 7 valeurs Crew;M voile;M rames;Man;Size;T;W separees par des points-virgules (bateaux)
     ProfilVehicule:     String;   // 4 valeurs Motive Power;T;W;Strike separees par des points-virgules (chars, chariots, vehicules terrestres)
+    ProfilV2:           String;   // WFRP2 : 16 valeurs WS..FP separees par des points-virgules (animaux, montures) ou 3 valeurs M;TB;W (vehicules)
+    CompetencesV2:      String;   // WFRP2 : competences de l'animal, texte du livre
+    TalentsV2:          String;   // idem, talents
+    ReglesV2:           String;   // idem, regles speciales
+    FicheV2:            String;   // WFRP2 : lignes "CODE_LIBELLE=valeur" (potions, objets magiques), affichees par la fiche (WinAnimal)
     Disponibilite:      String;
     Theme:              String;
     Acheteur:           String;

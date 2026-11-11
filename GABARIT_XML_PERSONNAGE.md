@@ -95,6 +95,9 @@ PLAYER
 │
 ├── OPTIONS                                  -> options cochees ([XpDiv25][PdfFeldo2P]...)
 ├── MEMBERSHIP / ADAPTATION_CHOICE / SUBCHAPTER_SKILLAPPARTENANCE
+├── SUBCHAPTER_FREEADVANCE                   -> Personnage.AvanceGratuiteAttribut (V2 : avance gratuite de creation,
+│                                               Core p.14 etape 7 ; comptee dans le total de la caracteristique, jamais en XP ;
+│                                               les avances achetees restent sous CHAPTER_AUGMENTATION/SUBCHAPTER_ATTR)
 ```
 
 ## Piege deja rencontre

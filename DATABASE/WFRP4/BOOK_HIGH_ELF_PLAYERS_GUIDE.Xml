@@ -2,6 +2,7 @@
 <DATA_BOOK>
 <CODE_BOOK>"HELFG"</CODE_BOOK>
 <BOOK>"BOOK HIGH ELF PLAYERS GUIDE"</BOOK>
+<BOOKNAME>"HIGH ELF PLAYERS GUIDE"</BOOKNAME>
 <language>"ENGLISH"</language>
 <VERSION>"WFRP4"</VERSION>
 <OFFICIAL>"1"</OFFICIAL>
@@ -16,75 +17,56 @@
 </Label>
 </DATA_LABEL>
 <DATA_SKILL_SPECIALIZATION>
-<Skill id="RULES-COMPART_POETRY">
+<Skill id="RULES-COMP_ART__POETRY">
 <Description language="ENGLISH">"Art (Poetry)"</Description>
-<Generique>"RULES-COMPART_*"</Generique>
+<Generique>"RULES-COMP_ART__*"</Generique>
 <Page>119</Page>
 </Skill>
-  <Skill id="RULES-COMPART_PEINT/RULES-COMPART_SCUL">
-<Description language="ENGLISH">"Art (Painting or Sculpture)"</Description>
-<Generique>"RULES-COMPART_*"</Generique>
-<Page>119</Page>
-</Skill>
-  <Skill id="RULES-COMPMARCH/RULES-COMPPARI">
-<Description language="ENGLISH">"Haggle or Gamble"</Description>
-<Page>119</Page>
-</Skill>
-  <Skill id="RULES-COMPSIGNES_SHADOWWAR">
+      <Skill id="RULES-COMP_SECRET_SIGNS__SHADOW_WARRIORS">
 <Description language="ENGLISH">"Secret Signs (Shadow Warriors)"</Description>
-<Generique>"RULES-COMPSIGNES_*"</Generique>
+<Generique>"RULES-COMP_SECRET_SIGNS__*"</Generique>
 <Page>129</Page>
 </Skill>
-  <Skill id="RULES-COMPMETIER_JEWELLER">
+  <Skill id="RULES-COMP_TRADE__JEWELLER">
 <Description language="ENGLISH">"Trade (Jeweller)"</Description>
-<Generique>"RULES-COMPMETIER_*"</Generique>
+<Generique>"RULES-COMP_TRADE__*"</Generique>
 <Page>128</Page>
 </Skill>
-  <Skill id="RULES-COMPFOCAL_QHAYSH">
+  <Skill id="RULES-COMP_CHANNELLING__QHAYSH">
 <Description language="ENGLISH">"Channelling (Qhaysh)"</Description>
-<Generique>"RULES-COMPFOCAL_*"</Generique>
+<Generique>"RULES-COMP_CHANNELLING__*"</Generique>
 <Page>120</Page>
 </Skill>
-  <Skill id="RULES-COMPART_CALLI/RULES-COMPART_GRAV">
-<Description language="ENGLISH">"Art (Calligraphy or Engraving)"</Description>
-<Generique>"RULES-COMPART_*"</Generique>
-<Page>119</Page>
-</Skill>
-  <Skill id="RULES-COMPFOCAL_BETE/RULES-COMPFOCAL_MORT/RULES-COMPFOCAL_FEU/RULES-COMPFOCAL_CIEUX/RULES-COMPFOCAL_VIE/RULES-COMPFOCAL_LUMIERE/RULES-COMPFOCAL_METAL/RULES-COMPFOCAL_OMBRE">
-<Description language="ENGLISH">"Channelling (Any Colour)"</Description>
-<Generique>"RULES-COMPFOCAL_*"</Generique>
-<Page>120</Page>
-</Skill>
-  </DATA_SKILL_SPECIALIZATION>
+      </DATA_SKILL_SPECIALIZATION>
 <DATA_TALENT_SPECIALIZATION>
-<Talent id="RULES-T0132_DELF">
+<Talent id="RULES-T_FEARLESS__DELF">
 <Description language="ENGLISH">"Fearless (Dark Elves)"</Description>
-<Generique>"RULES-T0132_*"</Generique>
+<Generique>"RULES-T_FEARLESS__*"</Generique>
 <Page>137</Page>
 </Talent>
-  <Talent id="RULES-T0132_SEAMONSTR">
+  <Talent id="RULES-T_FEARLESS__SEAMONSTR">
 <Description language="ENGLISH">"Fearless (Sea Monsters)"</Description>
-<Generique>"RULES-T0132_*"</Generique>
+<Generique>"RULES-T_FEARLESS__*"</Generique>
 <Page>137</Page>
 </Talent>
-  <Talent id="RULES-T0134_OCEAN">
+  <Talent id="RULES-T_SAVANT__OCEAN">
 <Description language="ENGLISH">"Savant (Oceans)"</Description>
-<Generique>"RULES-T0134_*"</Generique>
+<Generique>"RULES-T_SAVANT__*"</Generique>
 <Page>143</Page>
 </Talent>
-  <Talent id="RULES-T0069_DELF">
+  <Talent id="RULES-T_HATRED__DELF">
 <Description language="ENGLISH">"Hatred (Dark Elves)"</Description>
-<Generique>"RULES-T0069_*"</Generique>
+<Generique>"RULES-T_HATRED__*"</Generique>
 <Page>140</Page>
 </Talent>
-  <Talent id="RULES-T0134_MAGIE">
+  <Talent id="RULES-T_SAVANT__MAGIE">
 <Description language="ENGLISH">"Savant (Magic)"</Description>
-<Generique>"RULES-T0134_*"</Generique>
+<Generique>"RULES-T_SAVANT__*"</Generique>
 <Page>143</Page>
 </Talent>
   </DATA_TALENT_SPECIALIZATION>
 <DATA_TALENT>
-<Talent id="HELFG-T0186">
+<Talent id="HELFG-T_MARTIAL_ARTS">
 <Description language="ENGLISH">"Martial Arts"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -93,7 +75,7 @@
 <Test language="ENGLISH">""</Test>
 <Page>68</Page>
 </Talent>
-<Talent id="HELFG-T0187">
+<Talent id="HELFG-T_SWORD_DANCING">
 <Description language="ENGLISH">"Sword-dancing"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -102,7 +84,7 @@
   <Test language="ENGLISH">""</Test>
 <Page>68</Page>
 </Talent>
-<Talent id="HELFG-T0188">
+<Talent id="HELFG-T_UNCOUTH_URANAI">
 <Description language="ENGLISH">"Uncouth Uranai"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -111,7 +93,7 @@
 <Test language="ENGLISH">""</Test>
 <Page>57</Page>
 </Talent>
-<Talent id="HELFG-T0189">
+<Talent id="HELFG-T_BLESSED__BY_ISHA">
 <Description language="ENGLISH">"Blessed by Isha"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -120,7 +102,7 @@
 <Test language="ENGLISH">""</Test>
 <Page>83</Page>
 </Talent>
-<Talent id="HELFG-T0190">
+<Talent id="HELFG-T_HIGH_MAGIC">
   <Magic>"1"</Magic>
 <SpellMode>"NONE"</SpellMode>
 <SpellTypes>"Domain Magic,Miracle,Blessing"</SpellTypes>
@@ -135,7 +117,7 @@
 <Test language="ENGLISH">""</Test>
 <Page>83</Page>
 </Talent>
-<Talent id="HELFG-T0191">
+<Talent id="HELFG-T_LILEATH_S_BLESSING">
 <Description language="ENGLISH">"Lileath's Blessing"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -144,7 +126,7 @@
 <Test language="ENGLISH">"Channelling (Qhaysh)"</Test>
 <Page>83</Page>
 </Talent>
-<Talent id="HELFG-T0192">
+<Talent id="HELFG-T_MIND_OVER_BODY">
 <Description language="ENGLISH">"Mind over Body"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -153,7 +135,7 @@
 <Test language="ENGLISH">"Pray"</Test>
 <Page>101</Page>
 </Talent>
-<Talent id="HELFG-T0193">
+<Talent id="HELFG-T_CADAI_MEDITATION">
 <Description language="ENGLISH">"Cadai Meditation"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -162,7 +144,7 @@
 <Test language="ENGLISH">"Pray"</Test>
 <Page>101</Page>
 </Talent>
-<Talent id="HELFG-T0194">
+<Talent id="HELFG-T_EYE_OF_THE_STORM">
 <Description language="ENGLISH">"Eye of the Storm"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -171,7 +153,7 @@
 <Test language="ENGLISH">"Pray"</Test>
 <Page>105</Page>
 </Talent>
-<Talent id="HELFG-T0195">
+<Talent id="HELFG-T_SANCTUARY_OF_THE_MIND">
 <Description language="ENGLISH">"Sanctuary of the Mind"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -184,99 +166,99 @@
 <DATA_CAREER_SPECIE>
   <Entry>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="HELFG-WORK127">"X"</Career>
+<Career name="HELFG-WORK_SEA_GUARD">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="HELFG-WORK128">"X"</Career>
+<Career name="HELFG-WORK_SWORDMASTER">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="HELFG-WORK129">"X"</Career>
+<Career name="HELFG-WORK_SHADOW_WARRIOR">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="HELFG-WORK130">"X"</Career>
+<Career name="HELFG-WORK_MERCHANT_ADVENTURER">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="HELFG-WORK131">"X"</Career>
+<Career name="HELFG-WORK_AESTHETICIST">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="HELFG-WORK133">"X"</Career>
+<Career name="HELFG-WORK_SMITH_PRIEST_OF_VAUL">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="HELFG-WORK134">"X"</Career>
+<Career name="HELFG-WORK_STORM_WEAVER">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="HELFG-WORK135">"X"</Career>
+<Career name="HELFG-WORK_LOREMASTER_OF_HOETH">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="HELFG-WORK133">"X"</Career>
+<Career name="HELFG-WORK_SMITH_PRIEST_OF_VAUL">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HELF"</Specie>
-<Career name="UPINA-WORK69">"X"</Career>
+<Career name="UPINA-WORK_ARTILLERIST">"X"</Career>
   </Entry>
 </DATA_CAREER_SPECIE>
 <DATA_CAREER_ADAPTATION>
     <Adaptation id="HELFG-ADAPT_001">
 <Description language="ENGLISH">"Pit Fighter (High Elf)"</Description>
-<Career>"RULES-WORK28"</Career>
+<Career>"RULES-WORK_PIT_FIGHTER"</Career>
 <Specie>"HELFG-RACE_CALED/HELFG-RACE_ELLYR/HELFG-RACE_AVELO/HELFG-RACE_SAPHE/HELFG-RACE_EATAI/HELFG-RACE_TIRAN/HELFG-RACE_NAGAR/HELFG-RACE_CHRAC/HELFG-RACE_COTHI/HELFG-RACE_YVRES"</Specie>
 <Optional>"1"</Optional>
 <Level id="1">
 <Order>"1"</Order>
 <Talent>
-<Remove>"RULES-T0026"</Remove>
-<Add>"RULES-T0055"</Add>
+<Remove>"RULES-T_DIRTY_FIGHTING"</Remove>
+<Add>"RULES-T_FEINT"</Add>
 </Talent>
 </Level>
 </Adaptation>
   <Adaptation id="HELFG-ADAPT_002">
 <Description language="ENGLISH">"Cavalryman (High Elf)"</Description>
-<Career>"RULES-WORK08"</Career>
+<Career>"RULES-WORK_CAVALRYMAN"</Career>
 <Specie>"HELFG-RACE_CALED/HELFG-RACE_ELLYR/HELFG-RACE_AVELO/HELFG-RACE_SAPHE/HELFG-RACE_EATAI/HELFG-RACE_TIRAN/HELFG-RACE_NAGAR/HELFG-RACE_CHRAC/HELFG-RACE_COTHI/HELFG-RACE_YVRES"</Specie>
 <Level id="2">
 <Order>"2"</Order>
 <Skill>
-<Remove>"RULES-COMPPROJ_POUDRE"</Remove>
-<Add>"RULES-COMPPIST"</Add>
+<Remove>"RULES-COMP_RANGED__BLACKPOWDER"</Remove>
+<Add>"RULES-COMP_TRACK"</Add>
 </Skill>
 <Trapping>
-<Remove>"RULES-PROJ_POUDRE_04"</Remove>
-<Add>"RULES-PROJ_ARC_02"</Add>
+<Remove>"RULES-PROJ_PISTOL"</Remove>
+<Add>"RULES-PROJ_ELF_BOW"</Add>
 </Trapping>
 <Trapping>
-<Remove>"RULES-MUNI_06"</Remove>
-<Add>"RULES-MUNI_02"</Add>
+<Remove>"RULES-MUNI_BULLET_AND_POWDER"</Remove>
+<Add>"RULES-MUNI_ARROW"</Add>
 </Trapping>
 </Level>
 </Adaptation>
   <Adaptation id="HELFG-ADAPT_003">
 <Description language="ENGLISH">"Artisan (High Elf)"</Description>
-<Career>"RULES-WORK03"</Career>
+<Career>"RULES-WORK_ARTISAN"</Career>
 <Specie>"HELFG-RACE_CALED/HELFG-RACE_ELLYR/HELFG-RACE_AVELO/HELFG-RACE_SAPHE/HELFG-RACE_EATAI/HELFG-RACE_TIRAN/HELFG-RACE_NAGAR/HELFG-RACE_CHRAC/HELFG-RACE_COTHI/HELFG-RACE_YVRES"</Specie>
 <Level id="2">
 <Order>"2"</Order>
 <Talent>
-<Remove>"RULES-T0136_GUILD"</Remove>
-<Add>"RULES-T0136_NOBLE"</Add>
+<Remove>"RULES-T_ETIQUETTE__GUILD"</Remove>
+<Add>"RULES-T_ETIQUETTE__NOBLE"</Add>
 </Talent>
 <Trapping>
-<Remove>"RULES-TRAP_096"</Remove>
+<Remove>"RULES-TRAP_GUILD_LICENSE"</Remove>
 <Add>"Highborn Patronage"</Add>
 </Trapping>
 </Level>
 <Level id="3">
 <Order>"3"</Order>
 <Skill>
-<Remove>"RULES-COMPSIGNES_GUILD"</Remove>
-<Add>"RULES-COMPSAVOIR_MAGIE"</Add>
+<Remove>"RULES-COMP_SECRET_SIGNS__GUILDER"</Remove>
+<Add>"RULES-COMP_LORE__MAGIC"</Add>
 </Skill>
 </Level>
 <Level id="4">
@@ -289,43 +271,43 @@
 </Adaptation>
   <Adaptation id="HELFG-ADAPT_004">
 <Description language="ENGLISH">"Merchant (High Elf)"</Description>
-<Career>"RULES-WORK34"</Career>
+<Career>"RULES-WORK_MERCHANT"</Career>
 <Specie>"HELFG-RACE_CALED/HELFG-RACE_ELLYR/HELFG-RACE_AVELO/HELFG-RACE_SAPHE/HELFG-RACE_EATAI/HELFG-RACE_TIRAN/HELFG-RACE_NAGAR/HELFG-RACE_CHRAC/HELFG-RACE_COTHI/HELFG-RACE_YVRES"</Specie>
 <Level id="2">
 <Order>"2"</Order>
 <Trapping>
-<Remove>"RULES-TRAP_096"</Remove>
+<Remove>"RULES-TRAP_GUILD_LICENSE"</Remove>
 <Add>"Merchant's Charter"</Add>
 </Trapping>
 </Level>
 </Adaptation>
   <Adaptation id="HELFG-ADAPT_005">
 <Description language="ENGLISH">"Seaman (High Elf)"</Description>
-<Career>"RULES-WORK35"</Career>
+<Career>"RULES-WORK_SEAMAN"</Career>
 <Specie>"HELFG-RACE_CALED/HELFG-RACE_ELLYR/HELFG-RACE_AVELO/HELFG-RACE_SAPHE/HELFG-RACE_EATAI/HELFG-RACE_TIRAN/HELFG-RACE_NAGAR/HELFG-RACE_CHRAC/HELFG-RACE_COTHI/HELFG-RACE_YVRES"</Specie>
 <Optional>"1"</Optional>
 <Level id="1">
 <Order>"1"</Order>
 <Skill>
-<Remove>"RULES-COMPRESALC"</Remove>
-<Add>"RULES-COMPATHL"</Add>
+<Remove>"RULES-COMP_CONSUME_ALCOHOL"</Remove>
+<Add>"RULES-COMP_ATHLETICS"</Add>
 </Skill>
 <Skill>
-<Remove>"RULES-COMPCOMB_BAGAR"</Remove>
-<Add>"RULES-COMPCOMB_BASE"</Add>
+<Remove>"RULES-COMP_MELEE__BRAWLING"</Remove>
+<Add>"RULES-COMP_MELEE__BASIC"</Add>
 </Skill>
 </Level>
 <Level id="2">
 <Order>"2"</Order>
 <Skill>
-<Remove>"RULES-COMPATHL"</Remove>
-<Add>"RULES-COMPINTUI"</Add>
+<Remove>"RULES-COMP_ATHLETICS"</Remove>
+<Add>"RULES-COMP_INTUITION"</Add>
 </Skill>
 </Level>
 </Adaptation>
   <Adaptation id="HELFG-ADAPT_006">
 <Description language="ENGLISH">"Wizard (High Elf)"</Description>
-<Career>"RULES-WORK58"</Career>
+<Career>"RULES-WORK_WIZARD"</Career>
 <Specie>"HELFG-RACE_CALED/HELFG-RACE_ELLYR/HELFG-RACE_AVELO/HELFG-RACE_SAPHE/HELFG-RACE_EATAI/HELFG-RACE_TIRAN/HELFG-RACE_NAGAR/HELFG-RACE_CHRAC/HELFG-RACE_COTHI/HELFG-RACE_YVRES"</Specie>
 <Level id="2">
 <Order>"2"</Order>
@@ -336,28 +318,28 @@
 </Adaptation>
   <Adaptation id="HELFG-ADAPT_007">
 <Description language="ENGLISH">"Warden (Outer Kingdoms)"</Description>
-<Career>"RULES-WORK32"</Career>
+<Career>"RULES-WORK_WARDEN"</Career>
 <Specie>"HELFG-RACE_TIRAN/HELFG-RACE_NAGAR/HELFG-RACE_CHRAC/HELFG-RACE_COTHI/HELFG-RACE_YVRES"</Specie>
 <Standing>"1"</Standing>
 </Adaptation>
   <Adaptation id="HELFG-ADAPT_008">
 <Description language="ENGLISH">"Entertainer (High Elf)"</Description>
-<Career>"RULES-WORK55"</Career>
+<Career>"RULES-WORK_ENTERTAINER"</Career>
 <Specie>"HELFG-RACE_CALED/HELFG-RACE_ELLYR/HELFG-RACE_AVELO/HELFG-RACE_SAPHE/HELFG-RACE_EATAI/HELFG-RACE_TIRAN/HELFG-RACE_NAGAR/HELFG-RACE_CHRAC/HELFG-RACE_COTHI/HELFG-RACE_YVRES"</Specie>
 <Standing>"1"</Standing>
 </Adaptation>
   <Adaptation id="HELFG-ADAPT_009">
 <Description language="ENGLISH">"Light Cavalry (High Elf)"</Description>
-<Career>"UPINA-WORK76"</Career>
+<Career>"UPINA-WORK_LIGHT_CAVALRY"</Career>
 <Specie>"HELFG-RACE_CALED/HELFG-RACE_ELLYR/HELFG-RACE_AVELO/HELFG-RACE_SAPHE/HELFG-RACE_EATAI/HELFG-RACE_TIRAN/HELFG-RACE_NAGAR/HELFG-RACE_CHRAC/HELFG-RACE_COTHI/HELFG-RACE_YVRES"</Specie>
 <Level id="4">
 <Order>"4"</Order>
 <Skill>
-<Remove>"RULES-COMPPROJ_POUDRE"</Remove>
-<Add>"RULES-COMPSIGNES_SCOUT"</Add>
+<Remove>"RULES-COMP_RANGED__BLACKPOWDER"</Remove>
+<Add>"RULES-COMP_SECRET_SIGNS__SCOUT"</Add>
 </Skill>
 <Trapping>
-<Remove>"UPINA-PROJ_POUDRE_08"</Remove>
+<Remove>"UPINA-PROJ_PISTOL"</Remove>
 <Add>"magic weapon"</Add>
 </Trapping>
 </Level>
@@ -387,68 +369,68 @@
 <Attribut name="RULES-ATTR_Move">"5"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill>"RULES-COMPESCAL"</Skill>
-  <Skill>"RULES-COMPCALM"</Skill>
-  <Skill>"RULES-COMPDIVERT_CHANT"</Skill>
-  <Skill>"RULES-COMPEVAL"</Skill>
-  <Skill>"RULES-COMPINTIM"</Skill>
-  <Skill>"RULES-COMPLANG_ELTHA"</Skill>
-  <Skill>"RULES-COMPCOMM"</Skill>
-  <Skill>"RULES-COMPCOMB_BASE"</Skill>
-  <Skill>"RULES-COMPORIENT"</Skill>
-  <Skill>"RULES-COMPPRECEP"</Skill>
-  <Skill>"RULES-COMPPROJ_ARC"</Skill>
-  <Skill>"RULES-COMPNATA"</Skill>
+<Skill>"RULES-COMP_CLIMB"</Skill>
+  <Skill>"RULES-COMP_COOL"</Skill>
+  <Skill>"RULES-COMP_ENTERTAIN__SINGING"</Skill>
+  <Skill>"RULES-COMP_EVALUATE"</Skill>
+  <Skill>"RULES-COMP_INTIMIDATE"</Skill>
+  <Skill>"RULES-COMP_LANGUAGE__ELTHARIN"</Skill>
+  <Skill>"RULES-COMP_LEADERSHIP"</Skill>
+  <Skill>"RULES-COMP_MELEE__BASIC"</Skill>
+  <Skill>"RULES-COMP_NAVIGATION"</Skill>
+  <Skill>"RULES-COMP_PERCEPTION"</Skill>
+  <Skill>"RULES-COMP_RANGED__BOW"</Skill>
+  <Skill>"RULES-COMP_SWIM"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent>"RULES-T0139_VUE"</Talent>
-  <Talent>"RULES-T0122/RULES-T0041"</Talent>
-  <Talent>"RULES-T0164"</Talent>
-  <Talent>"RULES-T0084"</Talent>
-  <Talent>"RULES-T0137/RULES-T0107"</Talent>
+<Talent>"RULES-T_ACUTE_SENSE__VUE"</Talent>
+  <Talent>"RULES-T_COMMANDING_PRESENCE/RULES-T_RESOLUTE"</Talent>
+  <Talent>"RULES-T_NIGHT_VISION"</Talent>
+  <Talent>"RULES-T_READ_WRITE"</Talent>
+  <Talent>"RULES-T_SECOND_SIGHT/RULES-T_STRONG_MINDED"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_CAREER>
-  <Career name="RULES-WORK02">"3"</Career>
-  <Career name="RULES-WORK33">"3"</Career>
-  <Career name="HELFG-WORK132">"3"</Career>
-  <Career name="RULES-WORK36">"2"</Career>
-  <Career name="RULES-WORK23">"3"</Career>
-  <Career name="RULES-WORK03">"3"</Career>
-  <Career name="RULES-WORK21">"2"</Career>
-  <Career name="RULES-WORK34">"6"</Career>
-  <Career name="HELFG-WORK130">"2"</Career>
-  <Career name="RULES-WORK07">"2"</Career>
-  <Career name="RULES-WORK39">"2"</Career>
-  <Career name="RULES-WORK15">"2"</Career>
-  <Career name="HELFG-WORK131">"3"</Career>
-  <Career name="RULES-WORK04">"2"</Career>
-  <Career name="RULES-WORK18">"3"</Career>
-  <Career name="RULES-WORK20">"4"</Career>
-  <Career name="RULES-WORK44">"2"</Career>
-  <Career name="RULES-WORK56">"3"</Career>
-  <Career name="RULES-WORK24">"3"</Career>
-  <Career name="RULES-WORK32">"2"</Career>
-  <Career name="RULES-WORK29">"1"</Career>
-  <Career name="RULES-WORK10">"1"</Career>
-  <Career name="RULES-WORK19">"2"</Career>
-  <Career name="RULES-WORK63">"1"</Career>
-  <Career name="RULES-WORK11">"1"</Career>
-  <Career name="RULES-WORK55">"3"</Career>
-  <Career name="RULES-WORK38">"2"</Career>
-  <Career name="RULES-WORK06">"3"</Career>
-  <Career name="RULES-WORK43">"3"</Career>
-  <Career name="RULES-WORK35">"5"</Career>
-  <Career name="RULES-WORK16">"3"</Career>
-  <Career name="RULES-WORK22">"3"</Career>
-  <Career name="RULES-WORK09">"2"</Career>
-  <Career name="RULES-WORK08">"2"</Career>
-  <Career name="RULES-WORK27">"2"</Career>
-  <Career name="RULES-WORK12">"2"</Career>
-  <Career name="HELFG-WORK127">"4"</Career>
-  <Career name="RULES-WORK28">"1"</Career>
-  <Career name="RULES-WORK61">"1"</Career>
-  <Career name="RULES-WORK57">"2"</Career>
-  <Career name="HELFG-WORK128">"1"</Career>
+  <Career name="RULES-WORK_APOTHECARY">"3"</Career>
+  <Career name="RULES-WORK_LAWYER">"3"</Career>
+  <Career name="HELFG-WORK_MAGE">"3"</Career>
+  <Career name="RULES-WORK_PHYSICIAN">"2"</Career>
+  <Career name="RULES-WORK_SCHOLAR">"3"</Career>
+  <Career name="RULES-WORK_ARTISAN">"3"</Career>
+  <Career name="RULES-WORK_INVESTIGATOR">"2"</Career>
+  <Career name="RULES-WORK_MERCHANT">"6"</Career>
+  <Career name="HELFG-WORK_MERCHANT_ADVENTURER">"2"</Career>
+  <Career name="RULES-WORK_TOWNSMAN">"2"</Career>
+  <Career name="RULES-WORK_WATCHMAN">"2"</Career>
+  <Career name="RULES-WORK_ADVISOR">"2"</Career>
+  <Career name="HELFG-WORK_AESTHETICIST">"3"</Career>
+  <Career name="RULES-WORK_ARTIST">"2"</Career>
+  <Career name="RULES-WORK_DUELLIST">"3"</Career>
+  <Career name="RULES-WORK_ENVOY">"4"</Career>
+  <Career name="RULES-WORK_NOBLE">"2"</Career>
+  <Career name="RULES-WORK_SERVANT">"3"</Career>
+  <Career name="RULES-WORK_SPY">"3"</Career>
+  <Career name="RULES-WORK_WARDEN">"2"</Career>
+  <Career name="RULES-WORK_HERBALIST">"1"</Career>
+  <Career name="RULES-WORK_HUNTER">"1"</Career>
+  <Career name="RULES-WORK_SCOUT">"2"</Career>
+  <Career name="RULES-WORK_VILLAGER">"1"</Career>
+  <Career name="RULES-WORK_BOUNTY_HUNTER">"1"</Career>
+  <Career name="RULES-WORK_ENTERTAINER">"3"</Career>
+  <Career name="RULES-WORK_MESSENGER">"2"</Career>
+  <Career name="RULES-WORK_BOATMAN">"3"</Career>
+  <Career name="RULES-WORK_HUFFER">"3"</Career>
+  <Career name="RULES-WORK_SEAMAN">"5"</Career>
+  <Career name="RULES-WORK_SMUGGLER">"3"</Career>
+  <Career name="RULES-WORK_BAWD">"3"</Career>
+  <Career name="RULES-WORK_CHARLATAN">"2"</Career>
+  <Career name="RULES-WORK_CAVALRYMAN">"2"</Career>
+  <Career name="RULES-WORK_GUARD">"2"</Career>
+  <Career name="RULES-WORK_KNIGHT">"2"</Career>
+  <Career name="HELFG-WORK_SEA_GUARD">"4"</Career>
+  <Career name="RULES-WORK_PIT_FIGHTER">"1"</Career>
+  <Career name="RULES-WORK_PROTAGONIST">"1"</Career>
+  <Career name="RULES-WORK_SOLDIER">"2"</Career>
+  <Career name="HELFG-WORK_SWORDMASTER">"1"</Career>
   </SUBCHAPTER_CAREER>
 <Page>54</Page>
 </Specie>
@@ -475,69 +457,69 @@
 <Attribut name="RULES-ATTR_Move">"5"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill>"RULES-COMPSOINANI"</Skill>
-  <Skill>"RULES-COMPANIM"</Skill>
-  <Skill>"RULES-COMPCALM"</Skill>
-  <Skill>"RULES-COMPDIVERT_CHANT"</Skill>
-  <Skill>"RULES-COMPEVAL"</Skill>
-  <Skill>"RULES-COMPLANG_ELTHA"</Skill>
-  <Skill>"RULES-COMPCOMM"</Skill>
-  <Skill>"RULES-COMPCOMB_BASE"</Skill>
-  <Skill>"RULES-COMPORIENT"</Skill>
-  <Skill>"RULES-COMPPRECEP"</Skill>
-  <Skill>"RULES-COMPMUSIC_*"</Skill>
-  <Skill>"RULES-COMPPROJ_ARC"</Skill>
-  <Skill>"RULES-COMPCHEV_CHEVAL"</Skill>
+<Skill>"RULES-COMP_ANIMAL_CARE"</Skill>
+  <Skill>"RULES-COMP_CHARM_ANIMAL"</Skill>
+  <Skill>"RULES-COMP_COOL"</Skill>
+  <Skill>"RULES-COMP_ENTERTAIN__SINGING"</Skill>
+  <Skill>"RULES-COMP_EVALUATE"</Skill>
+  <Skill>"RULES-COMP_LANGUAGE__ELTHARIN"</Skill>
+  <Skill>"RULES-COMP_LEADERSHIP"</Skill>
+  <Skill>"RULES-COMP_MELEE__BASIC"</Skill>
+  <Skill>"RULES-COMP_NAVIGATION"</Skill>
+  <Skill>"RULES-COMP_PERCEPTION"</Skill>
+  <Skill>"RULES-COMP_PLAY__*"</Skill>
+  <Skill>"RULES-COMP_RANGED__BOW"</Skill>
+  <Skill>"RULES-COMP_RIDE__HORSE"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent>"RULES-T0139_VUE"</Talent>
-  <Talent>"RULES-T0003/RULES-T0140"</Talent>
-  <Talent>"RULES-T0164"</Talent>
-  <Talent>"RULES-T0084"</Talent>
-  <Talent>"RULES-T0137/RULES-T0141"</Talent>
+<Talent>"RULES-T_ACUTE_SENSE__VUE"</Talent>
+  <Talent>"RULES-T_ANIMAL_AFFINITY/RULES-T_ORIENTATION"</Talent>
+  <Talent>"RULES-T_NIGHT_VISION"</Talent>
+  <Talent>"RULES-T_READ_WRITE"</Talent>
+  <Talent>"RULES-T_SECOND_SIGHT/RULES-T_SIXTH_SENSE"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_CAREER>
-  <Career name="RULES-WORK02">"3"</Career>
-  <Career name="RULES-WORK33">"3"</Career>
-  <Career name="HELFG-WORK132">"3"</Career>
-  <Career name="RULES-WORK36">"2"</Career>
-  <Career name="RULES-WORK23">"3"</Career>
-  <Career name="RULES-WORK03">"3"</Career>
-  <Career name="RULES-WORK21">"2"</Career>
-  <Career name="RULES-WORK34">"6"</Career>
-  <Career name="HELFG-WORK130">"2"</Career>
-  <Career name="RULES-WORK07">"2"</Career>
-  <Career name="RULES-WORK39">"2"</Career>
-  <Career name="RULES-WORK15">"2"</Career>
-  <Career name="HELFG-WORK131">"3"</Career>
-  <Career name="RULES-WORK04">"2"</Career>
-  <Career name="RULES-WORK18">"3"</Career>
-  <Career name="RULES-WORK20">"4"</Career>
-  <Career name="RULES-WORK44">"2"</Career>
-  <Career name="RULES-WORK56">"3"</Career>
-  <Career name="RULES-WORK24">"3"</Career>
-  <Career name="RULES-WORK32">"2"</Career>
-  <Career name="RULES-WORK29">"1"</Career>
-  <Career name="RULES-WORK10">"1"</Career>
-  <Career name="RULES-WORK19">"2"</Career>
-  <Career name="RULES-WORK63">"1"</Career>
-  <Career name="RULES-WORK11">"1"</Career>
-  <Career name="RULES-WORK55">"3"</Career>
-  <Career name="RULES-WORK38">"2"</Career>
-  <Career name="RULES-WORK06">"3"</Career>
-  <Career name="RULES-WORK43">"3"</Career>
-  <Career name="RULES-WORK35">"5"</Career>
-  <Career name="RULES-WORK16">"3"</Career>
-  <Career name="RULES-WORK22">"3"</Career>
-  <Career name="RULES-WORK09">"2"</Career>
-  <Career name="RULES-WORK08">"2"</Career>
-  <Career name="RULES-WORK27">"2"</Career>
-  <Career name="RULES-WORK12">"2"</Career>
-  <Career name="HELFG-WORK127">"4"</Career>
-  <Career name="RULES-WORK28">"1"</Career>
-  <Career name="RULES-WORK61">"1"</Career>
-  <Career name="RULES-WORK57">"2"</Career>
-  <Career name="HELFG-WORK128">"1"</Career>
+  <Career name="RULES-WORK_APOTHECARY">"3"</Career>
+  <Career name="RULES-WORK_LAWYER">"3"</Career>
+  <Career name="HELFG-WORK_MAGE">"3"</Career>
+  <Career name="RULES-WORK_PHYSICIAN">"2"</Career>
+  <Career name="RULES-WORK_SCHOLAR">"3"</Career>
+  <Career name="RULES-WORK_ARTISAN">"3"</Career>
+  <Career name="RULES-WORK_INVESTIGATOR">"2"</Career>
+  <Career name="RULES-WORK_MERCHANT">"6"</Career>
+  <Career name="HELFG-WORK_MERCHANT_ADVENTURER">"2"</Career>
+  <Career name="RULES-WORK_TOWNSMAN">"2"</Career>
+  <Career name="RULES-WORK_WATCHMAN">"2"</Career>
+  <Career name="RULES-WORK_ADVISOR">"2"</Career>
+  <Career name="HELFG-WORK_AESTHETICIST">"3"</Career>
+  <Career name="RULES-WORK_ARTIST">"2"</Career>
+  <Career name="RULES-WORK_DUELLIST">"3"</Career>
+  <Career name="RULES-WORK_ENVOY">"4"</Career>
+  <Career name="RULES-WORK_NOBLE">"2"</Career>
+  <Career name="RULES-WORK_SERVANT">"3"</Career>
+  <Career name="RULES-WORK_SPY">"3"</Career>
+  <Career name="RULES-WORK_WARDEN">"2"</Career>
+  <Career name="RULES-WORK_HERBALIST">"1"</Career>
+  <Career name="RULES-WORK_HUNTER">"1"</Career>
+  <Career name="RULES-WORK_SCOUT">"2"</Career>
+  <Career name="RULES-WORK_VILLAGER">"1"</Career>
+  <Career name="RULES-WORK_BOUNTY_HUNTER">"1"</Career>
+  <Career name="RULES-WORK_ENTERTAINER">"3"</Career>
+  <Career name="RULES-WORK_MESSENGER">"2"</Career>
+  <Career name="RULES-WORK_BOATMAN">"3"</Career>
+  <Career name="RULES-WORK_HUFFER">"3"</Career>
+  <Career name="RULES-WORK_SEAMAN">"5"</Career>
+  <Career name="RULES-WORK_SMUGGLER">"3"</Career>
+  <Career name="RULES-WORK_BAWD">"3"</Career>
+  <Career name="RULES-WORK_CHARLATAN">"2"</Career>
+  <Career name="RULES-WORK_CAVALRYMAN">"2"</Career>
+  <Career name="RULES-WORK_GUARD">"2"</Career>
+  <Career name="RULES-WORK_KNIGHT">"2"</Career>
+  <Career name="HELFG-WORK_SEA_GUARD">"4"</Career>
+  <Career name="RULES-WORK_PIT_FIGHTER">"1"</Career>
+  <Career name="RULES-WORK_PROTAGONIST">"1"</Career>
+  <Career name="RULES-WORK_SOLDIER">"2"</Career>
+  <Career name="HELFG-WORK_SWORDMASTER">"1"</Career>
   </SUBCHAPTER_CAREER>
 <Page>54</Page>
 </Specie>
@@ -564,62 +546,62 @@
 <Attribut name="RULES-ATTR_Move">"5"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill>"RULES-COMPATHL"</Skill>
-  <Skill>"RULES-COMPCALM"</Skill>
-  <Skill>"RULES-COMPDIVERT_CHANT"</Skill>
-  <Skill>"RULES-COMPRAGOT"</Skill>
-  <Skill>"RULES-COMPINTUI"</Skill>
-  <Skill>"RULES-COMPLANG_ELTHA"</Skill>
-  <Skill>"RULES-COMPCOMM"</Skill>
-  <Skill>"RULES-COMPCOMB_BASE"</Skill>
-  <Skill>"RULES-COMPORIENT"</Skill>
-  <Skill>"RULES-COMPPRECEP"</Skill>
-  <Skill>"RULES-COMPMUSIC_*"</Skill>
-  <Skill>"RULES-COMPPROJ_ARC"</Skill>
+<Skill>"RULES-COMP_ATHLETICS"</Skill>
+  <Skill>"RULES-COMP_COOL"</Skill>
+  <Skill>"RULES-COMP_ENTERTAIN__SINGING"</Skill>
+  <Skill>"RULES-COMP_GOSSIP"</Skill>
+  <Skill>"RULES-COMP_INTUITION"</Skill>
+  <Skill>"RULES-COMP_LANGUAGE__ELTHARIN"</Skill>
+  <Skill>"RULES-COMP_LEADERSHIP"</Skill>
+  <Skill>"RULES-COMP_MELEE__BASIC"</Skill>
+  <Skill>"RULES-COMP_NAVIGATION"</Skill>
+  <Skill>"RULES-COMP_PERCEPTION"</Skill>
+  <Skill>"RULES-COMP_PLAY__*"</Skill>
+  <Skill>"RULES-COMP_RANGED__BOW"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent>"RULES-T0139_VUE"</Talent>
-  <Talent>"RULES-T0009/RULES-T0007"</Talent>
-  <Talent>"RULES-T0164"</Talent>
-  <Talent>"RULES-T0084"</Talent>
-  <Talent>"RULES-T0137/RULES-T0141"</Talent>
+<Talent>"RULES-T_ACUTE_SENSE__VUE"</Talent>
+  <Talent>"RULES-T_ATTRACTIVE/RULES-T_ARTISTIC"</Talent>
+  <Talent>"RULES-T_NIGHT_VISION"</Talent>
+  <Talent>"RULES-T_READ_WRITE"</Talent>
+  <Talent>"RULES-T_SECOND_SIGHT/RULES-T_SIXTH_SENSE"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_CAREER>
-  <Career name="RULES-WORK02">"4"</Career>
-  <Career name="HELFG-WORK132">"5"</Career>
-  <Career name="RULES-WORK36">"3"</Career>
-  <Career name="RULES-WORK23">"5"</Career>
-  <Career name="RULES-WORK03">"4"</Career>
-  <Career name="RULES-WORK34">"1"</Career>
-  <Career name="HELFG-WORK130">"1"</Career>
-  <Career name="RULES-WORK15">"2"</Career>
-  <Career name="HELFG-WORK131">"3"</Career>
-  <Career name="RULES-WORK04">"5"</Career>
-  <Career name="RULES-WORK18">"2"</Career>
-  <Career name="RULES-WORK20">"3"</Career>
-  <Career name="RULES-WORK44">"3"</Career>
-  <Career name="RULES-WORK56">"2"</Career>
-  <Career name="RULES-WORK24">"2"</Career>
-  <Career name="RULES-WORK32">"2"</Career>
-  <Career name="RULES-WORK29">"4"</Career>
-  <Career name="RULES-WORK10">"4"</Career>
-  <Career name="RULES-WORK19">"4"</Career>
-  <Career name="RULES-WORK63">"3"</Career>
-  <Career name="RULES-WORK11">"1"</Career>
-  <Career name="RULES-WORK55">"6"</Career>
-  <Career name="RULES-WORK38">"4"</Career>
-  <Career name="RULES-WORK06">"1"</Career>
-  <Career name="RULES-WORK35">"3"</Career>
-  <Career name="RULES-WORK16">"2"</Career>
-  <Career name="RULES-WORK22">"4"</Career>
-  <Career name="RULES-WORK09">"3"</Career>
-  <Career name="RULES-WORK30">"1"</Career>
-  <Career name="RULES-WORK08">"4"</Career>
-  <Career name="RULES-WORK27">"2"</Career>
-  <Career name="RULES-WORK12">"2"</Career>
-  <Career name="RULES-WORK61">"1"</Career>
-  <Career name="RULES-WORK57">"3"</Career>
-  <Career name="HELFG-WORK128">"1"</Career>
+  <Career name="RULES-WORK_APOTHECARY">"4"</Career>
+  <Career name="HELFG-WORK_MAGE">"5"</Career>
+  <Career name="RULES-WORK_PHYSICIAN">"3"</Career>
+  <Career name="RULES-WORK_SCHOLAR">"5"</Career>
+  <Career name="RULES-WORK_ARTISAN">"4"</Career>
+  <Career name="RULES-WORK_MERCHANT">"1"</Career>
+  <Career name="HELFG-WORK_MERCHANT_ADVENTURER">"1"</Career>
+  <Career name="RULES-WORK_ADVISOR">"2"</Career>
+  <Career name="HELFG-WORK_AESTHETICIST">"3"</Career>
+  <Career name="RULES-WORK_ARTIST">"5"</Career>
+  <Career name="RULES-WORK_DUELLIST">"2"</Career>
+  <Career name="RULES-WORK_ENVOY">"3"</Career>
+  <Career name="RULES-WORK_NOBLE">"3"</Career>
+  <Career name="RULES-WORK_SERVANT">"2"</Career>
+  <Career name="RULES-WORK_SPY">"2"</Career>
+  <Career name="RULES-WORK_WARDEN">"2"</Career>
+  <Career name="RULES-WORK_HERBALIST">"4"</Career>
+  <Career name="RULES-WORK_HUNTER">"4"</Career>
+  <Career name="RULES-WORK_SCOUT">"4"</Career>
+  <Career name="RULES-WORK_VILLAGER">"3"</Career>
+  <Career name="RULES-WORK_BOUNTY_HUNTER">"1"</Career>
+  <Career name="RULES-WORK_ENTERTAINER">"6"</Career>
+  <Career name="RULES-WORK_MESSENGER">"4"</Career>
+  <Career name="RULES-WORK_BOATMAN">"1"</Career>
+  <Career name="RULES-WORK_SEAMAN">"3"</Career>
+  <Career name="RULES-WORK_SMUGGLER">"2"</Career>
+  <Career name="RULES-WORK_BAWD">"4"</Career>
+  <Career name="RULES-WORK_CHARLATAN">"3"</Career>
+  <Career name="RULES-WORK_OUTLAW">"1"</Career>
+  <Career name="RULES-WORK_CAVALRYMAN">"4"</Career>
+  <Career name="RULES-WORK_GUARD">"2"</Career>
+  <Career name="RULES-WORK_KNIGHT">"2"</Career>
+  <Career name="RULES-WORK_PROTAGONIST">"1"</Career>
+  <Career name="RULES-WORK_SOLDIER">"3"</Career>
+  <Career name="HELFG-WORK_SWORDMASTER">"1"</Career>
   </SUBCHAPTER_CAREER>
 <Page>54</Page>
 </Specie>
@@ -646,67 +628,67 @@
 <Attribut name="RULES-ATTR_Move">"5"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill>"RULES-COMPCALM"</Skill>
-  <Skill>"RULES-COMPDIVERT_CHANT"</Skill>
-  <Skill>"RULES-COMPEVAL"</Skill>
-  <Skill>"RULES-COMPLANG_ELTHA"</Skill>
-  <Skill>"RULES-COMPSAVOIR_*"</Skill>
-  <Skill>"RULES-COMPCOMB_BASE"</Skill>
-  <Skill>"RULES-COMPORIENT"</Skill>
-  <Skill>"RULES-COMPPRECEP"</Skill>
-  <Skill>"RULES-COMPMUSIC_*"</Skill>
-  <Skill>"RULES-COMPPROJ_ARC"</Skill>
-  <Skill>"RULES-COMPRECH"</Skill>
+<Skill>"RULES-COMP_COOL"</Skill>
+  <Skill>"RULES-COMP_ENTERTAIN__SINGING"</Skill>
+  <Skill>"RULES-COMP_EVALUATE"</Skill>
+  <Skill>"RULES-COMP_LANGUAGE__ELTHARIN"</Skill>
+  <Skill>"RULES-COMP_LORE__*"</Skill>
+  <Skill>"RULES-COMP_MELEE__BASIC"</Skill>
+  <Skill>"RULES-COMP_NAVIGATION"</Skill>
+  <Skill>"RULES-COMP_PERCEPTION"</Skill>
+  <Skill>"RULES-COMP_PLAY__*"</Skill>
+  <Skill>"RULES-COMP_RANGED__BOW"</Skill>
+  <Skill>"RULES-COMP_RESEARCH"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent>"RULES-T0139_VUE/RULES-T0146"</Talent>
-  <Talent>"RULES-T0074/RULES-T0117"</Talent>
-  <Talent>"RULES-T0164"</Talent>
-  <Talent>"RULES-T0084"</Talent>
-  <Talent>"RULES-T0137"</Talent>
+<Talent>"RULES-T_ACUTE_SENSE__VUE/RULES-T_BOOKISH"</Talent>
+  <Talent>"RULES-T_COOLHEADED/RULES-T_SAVVY"</Talent>
+  <Talent>"RULES-T_NIGHT_VISION"</Talent>
+  <Talent>"RULES-T_READ_WRITE"</Talent>
+  <Talent>"RULES-T_SECOND_SIGHT"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_CAREER>
-  <Career name="RULES-WORK02">"3"</Career>
-  <Career name="RULES-WORK33">"3"</Career>
-  <Career name="HELFG-WORK132">"3"</Career>
-  <Career name="RULES-WORK36">"2"</Career>
-  <Career name="RULES-WORK23">"3"</Career>
-  <Career name="RULES-WORK03">"3"</Career>
-  <Career name="RULES-WORK21">"2"</Career>
-  <Career name="RULES-WORK34">"6"</Career>
-  <Career name="HELFG-WORK130">"2"</Career>
-  <Career name="RULES-WORK07">"2"</Career>
-  <Career name="RULES-WORK39">"2"</Career>
-  <Career name="RULES-WORK15">"2"</Career>
-  <Career name="HELFG-WORK131">"3"</Career>
-  <Career name="RULES-WORK04">"2"</Career>
-  <Career name="RULES-WORK18">"3"</Career>
-  <Career name="RULES-WORK20">"4"</Career>
-  <Career name="RULES-WORK44">"2"</Career>
-  <Career name="RULES-WORK56">"3"</Career>
-  <Career name="RULES-WORK24">"3"</Career>
-  <Career name="RULES-WORK32">"2"</Career>
-  <Career name="RULES-WORK29">"1"</Career>
-  <Career name="RULES-WORK10">"1"</Career>
-  <Career name="RULES-WORK19">"2"</Career>
-  <Career name="RULES-WORK63">"1"</Career>
-  <Career name="RULES-WORK11">"1"</Career>
-  <Career name="RULES-WORK55">"3"</Career>
-  <Career name="RULES-WORK38">"2"</Career>
-  <Career name="RULES-WORK06">"3"</Career>
-  <Career name="RULES-WORK43">"3"</Career>
-  <Career name="RULES-WORK35">"5"</Career>
-  <Career name="RULES-WORK16">"3"</Career>
-  <Career name="RULES-WORK22">"3"</Career>
-  <Career name="RULES-WORK09">"2"</Career>
-  <Career name="RULES-WORK08">"2"</Career>
-  <Career name="RULES-WORK27">"2"</Career>
-  <Career name="RULES-WORK12">"2"</Career>
-  <Career name="HELFG-WORK127">"4"</Career>
-  <Career name="RULES-WORK28">"1"</Career>
-  <Career name="RULES-WORK61">"1"</Career>
-  <Career name="RULES-WORK57">"2"</Career>
-  <Career name="HELFG-WORK128">"1"</Career>
+  <Career name="RULES-WORK_APOTHECARY">"3"</Career>
+  <Career name="RULES-WORK_LAWYER">"3"</Career>
+  <Career name="HELFG-WORK_MAGE">"3"</Career>
+  <Career name="RULES-WORK_PHYSICIAN">"2"</Career>
+  <Career name="RULES-WORK_SCHOLAR">"3"</Career>
+  <Career name="RULES-WORK_ARTISAN">"3"</Career>
+  <Career name="RULES-WORK_INVESTIGATOR">"2"</Career>
+  <Career name="RULES-WORK_MERCHANT">"6"</Career>
+  <Career name="HELFG-WORK_MERCHANT_ADVENTURER">"2"</Career>
+  <Career name="RULES-WORK_TOWNSMAN">"2"</Career>
+  <Career name="RULES-WORK_WATCHMAN">"2"</Career>
+  <Career name="RULES-WORK_ADVISOR">"2"</Career>
+  <Career name="HELFG-WORK_AESTHETICIST">"3"</Career>
+  <Career name="RULES-WORK_ARTIST">"2"</Career>
+  <Career name="RULES-WORK_DUELLIST">"3"</Career>
+  <Career name="RULES-WORK_ENVOY">"4"</Career>
+  <Career name="RULES-WORK_NOBLE">"2"</Career>
+  <Career name="RULES-WORK_SERVANT">"3"</Career>
+  <Career name="RULES-WORK_SPY">"3"</Career>
+  <Career name="RULES-WORK_WARDEN">"2"</Career>
+  <Career name="RULES-WORK_HERBALIST">"1"</Career>
+  <Career name="RULES-WORK_HUNTER">"1"</Career>
+  <Career name="RULES-WORK_SCOUT">"2"</Career>
+  <Career name="RULES-WORK_VILLAGER">"1"</Career>
+  <Career name="RULES-WORK_BOUNTY_HUNTER">"1"</Career>
+  <Career name="RULES-WORK_ENTERTAINER">"3"</Career>
+  <Career name="RULES-WORK_MESSENGER">"2"</Career>
+  <Career name="RULES-WORK_BOATMAN">"3"</Career>
+  <Career name="RULES-WORK_HUFFER">"3"</Career>
+  <Career name="RULES-WORK_SEAMAN">"5"</Career>
+  <Career name="RULES-WORK_SMUGGLER">"3"</Career>
+  <Career name="RULES-WORK_BAWD">"3"</Career>
+  <Career name="RULES-WORK_CHARLATAN">"2"</Career>
+  <Career name="RULES-WORK_CAVALRYMAN">"2"</Career>
+  <Career name="RULES-WORK_GUARD">"2"</Career>
+  <Career name="RULES-WORK_KNIGHT">"2"</Career>
+  <Career name="HELFG-WORK_SEA_GUARD">"4"</Career>
+  <Career name="RULES-WORK_PIT_FIGHTER">"1"</Career>
+  <Career name="RULES-WORK_PROTAGONIST">"1"</Career>
+  <Career name="RULES-WORK_SOLDIER">"2"</Career>
+  <Career name="HELFG-WORK_SWORDMASTER">"1"</Career>
   </SUBCHAPTER_CAREER>
 <Page>54</Page>
 </Specie>
@@ -733,68 +715,68 @@
 <Attribut name="RULES-ATTR_Move">"5"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill>"RULES-COMPCHARM"</Skill>
-  <Skill>"RULES-COMPCALM"</Skill>
-  <Skill>"RULES-COMPDIVERT_CHANT"</Skill>
-  <Skill>"RULES-COMPEVAL"</Skill>
-  <Skill>"RULES-COMPRAGOT"</Skill>
-  <Skill>"RULES-COMPLANG_*"</Skill>
-  <Skill>"RULES-COMPLANG_ELTHA"</Skill>
-  <Skill>"RULES-COMPCOMM"</Skill>
-  <Skill>"RULES-COMPCOMB_BASE"</Skill>
-  <Skill>"RULES-COMPPRECEP"</Skill>
-  <Skill>"RULES-COMPVOILE_*"</Skill>
-  <Skill>"RULES-COMPNATA"</Skill>
+<Skill>"RULES-COMP_CHARM"</Skill>
+  <Skill>"RULES-COMP_COOL"</Skill>
+  <Skill>"RULES-COMP_ENTERTAIN__SINGING"</Skill>
+  <Skill>"RULES-COMP_EVALUATE"</Skill>
+  <Skill>"RULES-COMP_GOSSIP"</Skill>
+  <Skill>"RULES-COMP_LANGUAGE__*"</Skill>
+  <Skill>"RULES-COMP_LANGUAGE__ELTHARIN"</Skill>
+  <Skill>"RULES-COMP_LEADERSHIP"</Skill>
+  <Skill>"RULES-COMP_MELEE__BASIC"</Skill>
+  <Skill>"RULES-COMP_PERCEPTION"</Skill>
+  <Skill>"RULES-COMP_SAIL__*"</Skill>
+  <Skill>"RULES-COMP_SWIM"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent>"RULES-T0139_VUE"</Talent>
-  <Talent>"RULES-T0102/RULES-T0117"</Talent>
-  <Talent>"RULES-T0164"</Talent>
-  <Talent>"RULES-T0084"</Talent>
-  <Talent>"RULES-T0079/RULES-T0141"</Talent>
+<Talent>"RULES-T_ACUTE_SENSE__VUE"</Talent>
+  <Talent>"RULES-T_DEALMAKER/RULES-T_SAVVY"</Talent>
+  <Talent>"RULES-T_NIGHT_VISION"</Talent>
+  <Talent>"RULES-T_READ_WRITE"</Talent>
+  <Talent>"RULES-T_SCHEMER/RULES-T_SIXTH_SENSE"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_CAREER>
-  <Career name="RULES-WORK02">"3"</Career>
-  <Career name="RULES-WORK33">"3"</Career>
-  <Career name="HELFG-WORK132">"3"</Career>
-  <Career name="RULES-WORK36">"2"</Career>
-  <Career name="RULES-WORK23">"3"</Career>
-  <Career name="RULES-WORK03">"3"</Career>
-  <Career name="RULES-WORK21">"2"</Career>
-  <Career name="RULES-WORK34">"6"</Career>
-  <Career name="HELFG-WORK130">"2"</Career>
-  <Career name="RULES-WORK07">"2"</Career>
-  <Career name="RULES-WORK39">"2"</Career>
-  <Career name="RULES-WORK15">"2"</Career>
-  <Career name="HELFG-WORK131">"3"</Career>
-  <Career name="RULES-WORK04">"2"</Career>
-  <Career name="RULES-WORK18">"3"</Career>
-  <Career name="RULES-WORK20">"4"</Career>
-  <Career name="RULES-WORK44">"2"</Career>
-  <Career name="RULES-WORK56">"3"</Career>
-  <Career name="RULES-WORK24">"3"</Career>
-  <Career name="RULES-WORK32">"2"</Career>
-  <Career name="RULES-WORK29">"1"</Career>
-  <Career name="RULES-WORK10">"1"</Career>
-  <Career name="RULES-WORK19">"2"</Career>
-  <Career name="RULES-WORK63">"1"</Career>
-  <Career name="RULES-WORK11">"1"</Career>
-  <Career name="RULES-WORK55">"3"</Career>
-  <Career name="RULES-WORK38">"2"</Career>
-  <Career name="RULES-WORK06">"3"</Career>
-  <Career name="RULES-WORK43">"3"</Career>
-  <Career name="RULES-WORK35">"5"</Career>
-  <Career name="RULES-WORK16">"3"</Career>
-  <Career name="RULES-WORK22">"3"</Career>
-  <Career name="RULES-WORK09">"2"</Career>
-  <Career name="RULES-WORK08">"2"</Career>
-  <Career name="RULES-WORK27">"2"</Career>
-  <Career name="RULES-WORK12">"2"</Career>
-  <Career name="HELFG-WORK127">"4"</Career>
-  <Career name="RULES-WORK28">"1"</Career>
-  <Career name="RULES-WORK61">"1"</Career>
-  <Career name="RULES-WORK57">"2"</Career>
-  <Career name="HELFG-WORK128">"1"</Career>
+  <Career name="RULES-WORK_APOTHECARY">"3"</Career>
+  <Career name="RULES-WORK_LAWYER">"3"</Career>
+  <Career name="HELFG-WORK_MAGE">"3"</Career>
+  <Career name="RULES-WORK_PHYSICIAN">"2"</Career>
+  <Career name="RULES-WORK_SCHOLAR">"3"</Career>
+  <Career name="RULES-WORK_ARTISAN">"3"</Career>
+  <Career name="RULES-WORK_INVESTIGATOR">"2"</Career>
+  <Career name="RULES-WORK_MERCHANT">"6"</Career>
+  <Career name="HELFG-WORK_MERCHANT_ADVENTURER">"2"</Career>
+  <Career name="RULES-WORK_TOWNSMAN">"2"</Career>
+  <Career name="RULES-WORK_WATCHMAN">"2"</Career>
+  <Career name="RULES-WORK_ADVISOR">"2"</Career>
+  <Career name="HELFG-WORK_AESTHETICIST">"3"</Career>
+  <Career name="RULES-WORK_ARTIST">"2"</Career>
+  <Career name="RULES-WORK_DUELLIST">"3"</Career>
+  <Career name="RULES-WORK_ENVOY">"4"</Career>
+  <Career name="RULES-WORK_NOBLE">"2"</Career>
+  <Career name="RULES-WORK_SERVANT">"3"</Career>
+  <Career name="RULES-WORK_SPY">"3"</Career>
+  <Career name="RULES-WORK_WARDEN">"2"</Career>
+  <Career name="RULES-WORK_HERBALIST">"1"</Career>
+  <Career name="RULES-WORK_HUNTER">"1"</Career>
+  <Career name="RULES-WORK_SCOUT">"2"</Career>
+  <Career name="RULES-WORK_VILLAGER">"1"</Career>
+  <Career name="RULES-WORK_BOUNTY_HUNTER">"1"</Career>
+  <Career name="RULES-WORK_ENTERTAINER">"3"</Career>
+  <Career name="RULES-WORK_MESSENGER">"2"</Career>
+  <Career name="RULES-WORK_BOATMAN">"3"</Career>
+  <Career name="RULES-WORK_HUFFER">"3"</Career>
+  <Career name="RULES-WORK_SEAMAN">"5"</Career>
+  <Career name="RULES-WORK_SMUGGLER">"3"</Career>
+  <Career name="RULES-WORK_BAWD">"3"</Career>
+  <Career name="RULES-WORK_CHARLATAN">"2"</Career>
+  <Career name="RULES-WORK_CAVALRYMAN">"2"</Career>
+  <Career name="RULES-WORK_GUARD">"2"</Career>
+  <Career name="RULES-WORK_KNIGHT">"2"</Career>
+  <Career name="HELFG-WORK_SEA_GUARD">"4"</Career>
+  <Career name="RULES-WORK_PIT_FIGHTER">"1"</Career>
+  <Career name="RULES-WORK_PROTAGONIST">"1"</Career>
+  <Career name="RULES-WORK_SOLDIER">"2"</Career>
+  <Career name="HELFG-WORK_SWORDMASTER">"1"</Career>
   </SUBCHAPTER_CAREER>
 <Page>54</Page>
 </Specie>
@@ -821,69 +803,69 @@
 <Attribut name="RULES-ATTR_Move">"5"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill>"RULES-COMPSOINANI"</Skill>
-  <Skill>"RULES-COMPCALM"</Skill>
-  <Skill>"RULES-COMPRESIST"</Skill>
-  <Skill>"RULES-COMPDIVERT_CHANT"</Skill>
-  <Skill>"RULES-COMPLANG_ELTHA"</Skill>
-  <Skill>"RULES-COMPCOMM"</Skill>
-  <Skill>"RULES-COMPCOMB_BASE"</Skill>
-  <Skill>"RULES-COMPORIENT"</Skill>
-  <Skill>"RULES-COMPPRECEP"</Skill>
-  <Skill>"RULES-COMPMUSIC_*"</Skill>
-  <Skill>"RULES-COMPPROJ_ARC"</Skill>
-  <Skill>"RULES-COMPNATA"</Skill>
+<Skill>"RULES-COMP_ANIMAL_CARE"</Skill>
+  <Skill>"RULES-COMP_COOL"</Skill>
+  <Skill>"RULES-COMP_ENDURANCE"</Skill>
+  <Skill>"RULES-COMP_ENTERTAIN__SINGING"</Skill>
+  <Skill>"RULES-COMP_LANGUAGE__ELTHARIN"</Skill>
+  <Skill>"RULES-COMP_LEADERSHIP"</Skill>
+  <Skill>"RULES-COMP_MELEE__BASIC"</Skill>
+  <Skill>"RULES-COMP_NAVIGATION"</Skill>
+  <Skill>"RULES-COMP_PERCEPTION"</Skill>
+  <Skill>"RULES-COMP_PLAY__*"</Skill>
+  <Skill>"RULES-COMP_RANGED__BOW"</Skill>
+  <Skill>"RULES-COMP_SWIM"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent>"RULES-T0139_VUE"</Talent>
-  <Talent>"RULES-T0074/RULES-T0069_DELF"</Talent>
-  <Talent>"RULES-T0164"</Talent>
-  <Talent>"RULES-T0084"</Talent>
-  <Talent>"RULES-T0116/RULES-T0141"</Talent>
+<Talent>"RULES-T_ACUTE_SENSE__VUE"</Talent>
+  <Talent>"RULES-T_COOLHEADED/RULES-T_HATRED__DELF"</Talent>
+  <Talent>"RULES-T_NIGHT_VISION"</Talent>
+  <Talent>"RULES-T_READ_WRITE"</Talent>
+  <Talent>"RULES-T_TENACIOUS/RULES-T_SIXTH_SENSE"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_CAREER>
-  <Career name="RULES-WORK02">"3"</Career>
-  <Career name="RULES-WORK33">"2"</Career>
-  <Career name="HELFG-WORK132">"3"</Career>
-  <Career name="RULES-WORK36">"4"</Career>
-  <Career name="RULES-WORK23">"4"</Career>
-  <Career name="RULES-WORK03">"3"</Career>
-  <Career name="RULES-WORK21">"2"</Career>
-  <Career name="RULES-WORK34">"3"</Career>
-  <Career name="HELFG-WORK130">"2"</Career>
-  <Career name="RULES-WORK07">"3"</Career>
-  <Career name="RULES-WORK39">"1"</Career>
-  <Career name="RULES-WORK15">"2"</Career>
-  <Career name="HELFG-WORK131">"2"</Career>
-  <Career name="RULES-WORK04">"1"</Career>
-  <Career name="RULES-WORK18">"1"</Career>
-  <Career name="RULES-WORK20">"3"</Career>
-  <Career name="RULES-WORK44">"3"</Career>
-  <Career name="RULES-WORK56">"2"</Career>
-  <Career name="RULES-WORK24">"2"</Career>
-  <Career name="RULES-WORK32">"5"</Career>
-  <Career name="RULES-WORK29">"1"</Career>
-  <Career name="RULES-WORK10">"3"</Career>
-  <Career name="RULES-WORK19">"5"</Career>
-  <Career name="RULES-WORK63">"3"</Career>
-  <Career name="RULES-WORK11">"3"</Career>
-  <Career name="RULES-WORK55">"1"</Career>
-  <Career name="RULES-WORK38">"2"</Career>
-  <Career name="RULES-WORK06">"2"</Career>
-  <Career name="RULES-WORK43">"2"</Career>
-  <Career name="RULES-WORK35">"4"</Career>
-  <Career name="RULES-WORK16">"1"</Career>
-  <Career name="RULES-WORK22">"1"</Career>
-  <Career name="RULES-WORK09">"2"</Career>
-  <Career name="RULES-WORK30">"3"</Career>
-  <Career name="RULES-WORK08">"4"</Career>
-  <Career name="RULES-WORK27">"2"</Career>
-  <Career name="RULES-WORK12">"2"</Career>
-  <Career name="HELFG-WORK127">"1"</Career>
-  <Career name="RULES-WORK28">"2"</Career>
-  <Career name="RULES-WORK61">"1"</Career>
-  <Career name="RULES-WORK57">"3"</Career>
-  <Career name="HELFG-WORK128">"1"</Career>
+  <Career name="RULES-WORK_APOTHECARY">"3"</Career>
+  <Career name="RULES-WORK_LAWYER">"2"</Career>
+  <Career name="HELFG-WORK_MAGE">"3"</Career>
+  <Career name="RULES-WORK_PHYSICIAN">"4"</Career>
+  <Career name="RULES-WORK_SCHOLAR">"4"</Career>
+  <Career name="RULES-WORK_ARTISAN">"3"</Career>
+  <Career name="RULES-WORK_INVESTIGATOR">"2"</Career>
+  <Career name="RULES-WORK_MERCHANT">"3"</Career>
+  <Career name="HELFG-WORK_MERCHANT_ADVENTURER">"2"</Career>
+  <Career name="RULES-WORK_TOWNSMAN">"3"</Career>
+  <Career name="RULES-WORK_WATCHMAN">"1"</Career>
+  <Career name="RULES-WORK_ADVISOR">"2"</Career>
+  <Career name="HELFG-WORK_AESTHETICIST">"2"</Career>
+  <Career name="RULES-WORK_ARTIST">"1"</Career>
+  <Career name="RULES-WORK_DUELLIST">"1"</Career>
+  <Career name="RULES-WORK_ENVOY">"3"</Career>
+  <Career name="RULES-WORK_NOBLE">"3"</Career>
+  <Career name="RULES-WORK_SERVANT">"2"</Career>
+  <Career name="RULES-WORK_SPY">"2"</Career>
+  <Career name="RULES-WORK_WARDEN">"5"</Career>
+  <Career name="RULES-WORK_HERBALIST">"1"</Career>
+  <Career name="RULES-WORK_HUNTER">"3"</Career>
+  <Career name="RULES-WORK_SCOUT">"5"</Career>
+  <Career name="RULES-WORK_VILLAGER">"3"</Career>
+  <Career name="RULES-WORK_BOUNTY_HUNTER">"3"</Career>
+  <Career name="RULES-WORK_ENTERTAINER">"1"</Career>
+  <Career name="RULES-WORK_MESSENGER">"2"</Career>
+  <Career name="RULES-WORK_BOATMAN">"2"</Career>
+  <Career name="RULES-WORK_HUFFER">"2"</Career>
+  <Career name="RULES-WORK_SEAMAN">"4"</Career>
+  <Career name="RULES-WORK_SMUGGLER">"1"</Career>
+  <Career name="RULES-WORK_BAWD">"1"</Career>
+  <Career name="RULES-WORK_CHARLATAN">"2"</Career>
+  <Career name="RULES-WORK_OUTLAW">"3"</Career>
+  <Career name="RULES-WORK_CAVALRYMAN">"4"</Career>
+  <Career name="RULES-WORK_GUARD">"2"</Career>
+  <Career name="RULES-WORK_KNIGHT">"2"</Career>
+  <Career name="HELFG-WORK_SEA_GUARD">"1"</Career>
+  <Career name="RULES-WORK_PIT_FIGHTER">"2"</Career>
+  <Career name="RULES-WORK_PROTAGONIST">"1"</Career>
+  <Career name="RULES-WORK_SOLDIER">"3"</Career>
+  <Career name="HELFG-WORK_SWORDMASTER">"1"</Career>
   </SUBCHAPTER_CAREER>
 <Page>55</Page>
 </Specie>
@@ -910,65 +892,65 @@
 <Attribut name="RULES-ATTR_Move">"5"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill>"RULES-COMPATHL"</Skill>
-  <Skill>"RULES-COMPCALM"</Skill>
-  <Skill>"RULES-COMPRESIST"</Skill>
-  <Skill>"RULES-COMPDIVERT_CHANT"</Skill>
-  <Skill>"RULES-COMPLANG_ELTHA"</Skill>
-  <Skill>"RULES-COMPCOMB_BASE"</Skill>
-  <Skill>"RULES-COMPORIENT"</Skill>
-  <Skill>"RULES-COMPSURVEXT"</Skill>
-  <Skill>"RULES-COMPPRECEP"</Skill>
-  <Skill>"RULES-COMPPROJ_ARC"</Skill>
-  <Skill>"RULES-COMPDISC_RURAL"</Skill>
-  <Skill>"RULES-COMPNATA"</Skill>
+<Skill>"RULES-COMP_ATHLETICS"</Skill>
+  <Skill>"RULES-COMP_COOL"</Skill>
+  <Skill>"RULES-COMP_ENDURANCE"</Skill>
+  <Skill>"RULES-COMP_ENTERTAIN__SINGING"</Skill>
+  <Skill>"RULES-COMP_LANGUAGE__ELTHARIN"</Skill>
+  <Skill>"RULES-COMP_MELEE__BASIC"</Skill>
+  <Skill>"RULES-COMP_NAVIGATION"</Skill>
+  <Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+  <Skill>"RULES-COMP_PERCEPTION"</Skill>
+  <Skill>"RULES-COMP_RANGED__BOW"</Skill>
+  <Skill>"RULES-COMP_STEALTH__RURAL"</Skill>
+  <Skill>"RULES-COMP_SWIM"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent>"RULES-T0139_VUE"</Talent>
-  <Talent>"RULES-T0074/RULES-T0116"</Talent>
-  <Talent>"RULES-T0069_DELF"</Talent>
-  <Talent>"RULES-T0164"</Talent>
-  <Talent>"RULES-T0084"</Talent>
-  <Talent>"RULES-T0105/RULES-T0141"</Talent>
+<Talent>"RULES-T_ACUTE_SENSE__VUE"</Talent>
+  <Talent>"RULES-T_COOLHEADED/RULES-T_TENACIOUS"</Talent>
+  <Talent>"RULES-T_HATRED__DELF"</Talent>
+  <Talent>"RULES-T_NIGHT_VISION"</Talent>
+  <Talent>"RULES-T_READ_WRITE"</Talent>
+  <Talent>"RULES-T_ROVER/RULES-T_SIXTH_SENSE"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_CAREER>
-  <Career name="RULES-WORK02">"3"</Career>
-  <Career name="HELFG-WORK132">"2"</Career>
-  <Career name="RULES-WORK36">"2"</Career>
-  <Career name="RULES-WORK23">"2"</Career>
-  <Career name="RULES-WORK03">"3"</Career>
-  <Career name="RULES-WORK21">"3"</Career>
-  <Career name="RULES-WORK34">"1"</Career>
-  <Career name="HELFG-WORK130">"2"</Career>
-  <Career name="RULES-WORK15">"1"</Career>
-  <Career name="HELFG-WORK131">"1"</Career>
-  <Career name="RULES-WORK04">"1"</Career>
-  <Career name="RULES-WORK18">"3"</Career>
-  <Career name="RULES-WORK20">"3"</Career>
-  <Career name="RULES-WORK44">"2"</Career>
-  <Career name="RULES-WORK56">"3"</Career>
-  <Career name="RULES-WORK24">"5"</Career>
-  <Career name="RULES-WORK32">"2"</Career>
-  <Career name="RULES-WORK29">"4"</Career>
-  <Career name="RULES-WORK10">"5"</Career>
-  <Career name="RULES-WORK19">"8"</Career>
-  <Career name="RULES-WORK63">"3"</Career>
-  <Career name="RULES-WORK11">"5"</Career>
-  <Career name="RULES-WORK55">"3"</Career>
-  <Career name="RULES-WORK38">"3"</Career>
-  <Career name="HELFG-WORK129">"4"</Career>
-  <Career name="RULES-WORK06">"1"</Career>
-  <Career name="RULES-WORK16">"1"</Career>
-  <Career name="RULES-WORK22">"2"</Career>
-  <Career name="RULES-WORK09">"4"</Career>
-  <Career name="RULES-WORK30">"4"</Career>
-  <Career name="RULES-WORK08">"4"</Career>
-  <Career name="RULES-WORK27">"1"</Career>
-  <Career name="RULES-WORK12">"2"</Career>
-  <Career name="RULES-WORK28">"2"</Career>
-  <Career name="RULES-WORK61">"2"</Career>
-  <Career name="RULES-WORK57">"2"</Career>
-  <Career name="HELFG-WORK128">"1"</Career>
+  <Career name="RULES-WORK_APOTHECARY">"3"</Career>
+  <Career name="HELFG-WORK_MAGE">"2"</Career>
+  <Career name="RULES-WORK_PHYSICIAN">"2"</Career>
+  <Career name="RULES-WORK_SCHOLAR">"2"</Career>
+  <Career name="RULES-WORK_ARTISAN">"3"</Career>
+  <Career name="RULES-WORK_INVESTIGATOR">"3"</Career>
+  <Career name="RULES-WORK_MERCHANT">"1"</Career>
+  <Career name="HELFG-WORK_MERCHANT_ADVENTURER">"2"</Career>
+  <Career name="RULES-WORK_ADVISOR">"1"</Career>
+  <Career name="HELFG-WORK_AESTHETICIST">"1"</Career>
+  <Career name="RULES-WORK_ARTIST">"1"</Career>
+  <Career name="RULES-WORK_DUELLIST">"3"</Career>
+  <Career name="RULES-WORK_ENVOY">"3"</Career>
+  <Career name="RULES-WORK_NOBLE">"2"</Career>
+  <Career name="RULES-WORK_SERVANT">"3"</Career>
+  <Career name="RULES-WORK_SPY">"5"</Career>
+  <Career name="RULES-WORK_WARDEN">"2"</Career>
+  <Career name="RULES-WORK_HERBALIST">"4"</Career>
+  <Career name="RULES-WORK_HUNTER">"5"</Career>
+  <Career name="RULES-WORK_SCOUT">"8"</Career>
+  <Career name="RULES-WORK_VILLAGER">"3"</Career>
+  <Career name="RULES-WORK_BOUNTY_HUNTER">"5"</Career>
+  <Career name="RULES-WORK_ENTERTAINER">"3"</Career>
+  <Career name="RULES-WORK_MESSENGER">"3"</Career>
+  <Career name="HELFG-WORK_SHADOW_WARRIOR">"4"</Career>
+  <Career name="RULES-WORK_BOATMAN">"1"</Career>
+  <Career name="RULES-WORK_SMUGGLER">"1"</Career>
+  <Career name="RULES-WORK_BAWD">"2"</Career>
+  <Career name="RULES-WORK_CHARLATAN">"4"</Career>
+  <Career name="RULES-WORK_OUTLAW">"4"</Career>
+  <Career name="RULES-WORK_CAVALRYMAN">"4"</Career>
+  <Career name="RULES-WORK_GUARD">"1"</Career>
+  <Career name="RULES-WORK_KNIGHT">"2"</Career>
+  <Career name="RULES-WORK_PIT_FIGHTER">"2"</Career>
+  <Career name="RULES-WORK_PROTAGONIST">"2"</Career>
+  <Career name="RULES-WORK_SOLDIER">"2"</Career>
+  <Career name="HELFG-WORK_SWORDMASTER">"1"</Career>
   </SUBCHAPTER_CAREER>
 <Page>55</Page>
 </Specie>
@@ -995,71 +977,71 @@
 <Attribut name="RULES-ATTR_Move">"5"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill>"RULES-COMPCALM"</Skill>
-  <Skill>"RULES-COMPRESIST"</Skill>
-  <Skill>"RULES-COMPDIVERT_CHANT"</Skill>
-  <Skill>"RULES-COMPEVAL"</Skill>
-  <Skill>"RULES-COMPGUERI"</Skill>
-  <Skill>"RULES-COMPLANG_ELTHA"</Skill>
-  <Skill>"RULES-COMPCOMM"</Skill>
-  <Skill>"RULES-COMPCOMB_BASE"</Skill>
-  <Skill>"RULES-COMPORIENT"</Skill>
-  <Skill>"RULES-COMPSURVEXT"</Skill>
-  <Skill>"RULES-COMPPRECEP"</Skill>
-  <Skill>"RULES-COMPPROJ_ARC"</Skill>
-  <Skill>"RULES-COMPPIEG"</Skill>
+<Skill>"RULES-COMP_COOL"</Skill>
+  <Skill>"RULES-COMP_ENDURANCE"</Skill>
+  <Skill>"RULES-COMP_ENTERTAIN__SINGING"</Skill>
+  <Skill>"RULES-COMP_EVALUATE"</Skill>
+  <Skill>"RULES-COMP_HEAL"</Skill>
+  <Skill>"RULES-COMP_LANGUAGE__ELTHARIN"</Skill>
+  <Skill>"RULES-COMP_LEADERSHIP"</Skill>
+  <Skill>"RULES-COMP_MELEE__BASIC"</Skill>
+  <Skill>"RULES-COMP_NAVIGATION"</Skill>
+  <Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+  <Skill>"RULES-COMP_PERCEPTION"</Skill>
+  <Skill>"RULES-COMP_RANGED__BOW"</Skill>
+  <Skill>"RULES-COMP_SET_TRAP"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent>"RULES-T0139_VUE"</Talent>
-  <Talent>"RULES-T0047/RULES-T0108"</Talent>
-  <Talent>"RULES-T0164"</Talent>
-  <Talent>"RULES-T0084"</Talent>
-  <Talent>"RULES-T0141"</Talent>
-  <Talent>"RULES-T0013_BOID"</Talent>
+<Talent>"RULES-T_ACUTE_SENSE__VUE"</Talent>
+  <Talent>"RULES-T_HARDY/RULES-T_HUNTER_S_EYE"</Talent>
+  <Talent>"RULES-T_NIGHT_VISION"</Talent>
+  <Talent>"RULES-T_READ_WRITE"</Talent>
+  <Talent>"RULES-T_SIXTH_SENSE"</Talent>
+  <Talent>"RULES-T_STRIDER__BOID"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_CAREER>
-  <Career name="RULES-WORK02">"3"</Career>
-  <Career name="RULES-WORK33">"2"</Career>
-  <Career name="HELFG-WORK132">"3"</Career>
-  <Career name="RULES-WORK36">"4"</Career>
-  <Career name="RULES-WORK23">"4"</Career>
-  <Career name="RULES-WORK03">"3"</Career>
-  <Career name="RULES-WORK21">"2"</Career>
-  <Career name="RULES-WORK34">"3"</Career>
-  <Career name="HELFG-WORK130">"2"</Career>
-  <Career name="RULES-WORK07">"3"</Career>
-  <Career name="RULES-WORK39">"1"</Career>
-  <Career name="RULES-WORK15">"2"</Career>
-  <Career name="HELFG-WORK131">"2"</Career>
-  <Career name="RULES-WORK04">"1"</Career>
-  <Career name="RULES-WORK18">"1"</Career>
-  <Career name="RULES-WORK20">"3"</Career>
-  <Career name="RULES-WORK44">"3"</Career>
-  <Career name="RULES-WORK56">"2"</Career>
-  <Career name="RULES-WORK24">"2"</Career>
-  <Career name="RULES-WORK32">"5"</Career>
-  <Career name="RULES-WORK29">"1"</Career>
-  <Career name="RULES-WORK10">"3"</Career>
-  <Career name="RULES-WORK19">"5"</Career>
-  <Career name="RULES-WORK63">"3"</Career>
-  <Career name="RULES-WORK11">"3"</Career>
-  <Career name="RULES-WORK55">"1"</Career>
-  <Career name="RULES-WORK38">"2"</Career>
-  <Career name="RULES-WORK06">"2"</Career>
-  <Career name="RULES-WORK43">"2"</Career>
-  <Career name="RULES-WORK35">"4"</Career>
-  <Career name="RULES-WORK16">"1"</Career>
-  <Career name="RULES-WORK22">"1"</Career>
-  <Career name="RULES-WORK09">"2"</Career>
-  <Career name="RULES-WORK30">"3"</Career>
-  <Career name="RULES-WORK08">"4"</Career>
-  <Career name="RULES-WORK27">"2"</Career>
-  <Career name="RULES-WORK12">"2"</Career>
-  <Career name="HELFG-WORK127">"1"</Career>
-  <Career name="RULES-WORK28">"2"</Career>
-  <Career name="RULES-WORK61">"1"</Career>
-  <Career name="RULES-WORK57">"3"</Career>
-  <Career name="HELFG-WORK128">"1"</Career>
+  <Career name="RULES-WORK_APOTHECARY">"3"</Career>
+  <Career name="RULES-WORK_LAWYER">"2"</Career>
+  <Career name="HELFG-WORK_MAGE">"3"</Career>
+  <Career name="RULES-WORK_PHYSICIAN">"4"</Career>
+  <Career name="RULES-WORK_SCHOLAR">"4"</Career>
+  <Career name="RULES-WORK_ARTISAN">"3"</Career>
+  <Career name="RULES-WORK_INVESTIGATOR">"2"</Career>
+  <Career name="RULES-WORK_MERCHANT">"3"</Career>
+  <Career name="HELFG-WORK_MERCHANT_ADVENTURER">"2"</Career>
+  <Career name="RULES-WORK_TOWNSMAN">"3"</Career>
+  <Career name="RULES-WORK_WATCHMAN">"1"</Career>
+  <Career name="RULES-WORK_ADVISOR">"2"</Career>
+  <Career name="HELFG-WORK_AESTHETICIST">"2"</Career>
+  <Career name="RULES-WORK_ARTIST">"1"</Career>
+  <Career name="RULES-WORK_DUELLIST">"1"</Career>
+  <Career name="RULES-WORK_ENVOY">"3"</Career>
+  <Career name="RULES-WORK_NOBLE">"3"</Career>
+  <Career name="RULES-WORK_SERVANT">"2"</Career>
+  <Career name="RULES-WORK_SPY">"2"</Career>
+  <Career name="RULES-WORK_WARDEN">"5"</Career>
+  <Career name="RULES-WORK_HERBALIST">"1"</Career>
+  <Career name="RULES-WORK_HUNTER">"3"</Career>
+  <Career name="RULES-WORK_SCOUT">"5"</Career>
+  <Career name="RULES-WORK_VILLAGER">"3"</Career>
+  <Career name="RULES-WORK_BOUNTY_HUNTER">"3"</Career>
+  <Career name="RULES-WORK_ENTERTAINER">"1"</Career>
+  <Career name="RULES-WORK_MESSENGER">"2"</Career>
+  <Career name="RULES-WORK_BOATMAN">"2"</Career>
+  <Career name="RULES-WORK_HUFFER">"2"</Career>
+  <Career name="RULES-WORK_SEAMAN">"4"</Career>
+  <Career name="RULES-WORK_SMUGGLER">"1"</Career>
+  <Career name="RULES-WORK_BAWD">"1"</Career>
+  <Career name="RULES-WORK_CHARLATAN">"2"</Career>
+  <Career name="RULES-WORK_OUTLAW">"3"</Career>
+  <Career name="RULES-WORK_CAVALRYMAN">"4"</Career>
+  <Career name="RULES-WORK_GUARD">"2"</Career>
+  <Career name="RULES-WORK_KNIGHT">"2"</Career>
+  <Career name="HELFG-WORK_SEA_GUARD">"1"</Career>
+  <Career name="RULES-WORK_PIT_FIGHTER">"2"</Career>
+  <Career name="RULES-WORK_PROTAGONIST">"1"</Career>
+  <Career name="RULES-WORK_SOLDIER">"3"</Career>
+  <Career name="HELFG-WORK_SWORDMASTER">"1"</Career>
   </SUBCHAPTER_CAREER>
 <Page>55</Page>
 </Specie>
@@ -1086,69 +1068,69 @@
 <Attribut name="RULES-ATTR_Move">"5"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill>"RULES-COMPATHL"</Skill>
-  <Skill>"RULES-COMPCALM"</Skill>
-  <Skill>"RULES-COMPDIVERT_CHANT"</Skill>
-  <Skill>"RULES-COMPEVAL"</Skill>
-  <Skill>"RULES-COMPMARCH"</Skill>
-  <Skill>"RULES-COMPLANG_ELTHA"</Skill>
-  <Skill>"RULES-COMPCOMB_BASE"</Skill>
-  <Skill>"RULES-COMPORIENT"</Skill>
-  <Skill>"RULES-COMPPRECEP"</Skill>
-  <Skill>"RULES-COMPPROJ_ARC"</Skill>
-  <Skill>"RULES-COMPVOILE_*"</Skill>
-  <Skill>"RULES-COMPNATA"</Skill>
+<Skill>"RULES-COMP_ATHLETICS"</Skill>
+  <Skill>"RULES-COMP_COOL"</Skill>
+  <Skill>"RULES-COMP_ENTERTAIN__SINGING"</Skill>
+  <Skill>"RULES-COMP_EVALUATE"</Skill>
+  <Skill>"RULES-COMP_HAGGLE"</Skill>
+  <Skill>"RULES-COMP_LANGUAGE__ELTHARIN"</Skill>
+  <Skill>"RULES-COMP_MELEE__BASIC"</Skill>
+  <Skill>"RULES-COMP_NAVIGATION"</Skill>
+  <Skill>"RULES-COMP_PERCEPTION"</Skill>
+  <Skill>"RULES-COMP_RANGED__BOW"</Skill>
+  <Skill>"RULES-COMP_SAIL__*"</Skill>
+  <Skill>"RULES-COMP_SWIM"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent>"RULES-T0139_VUE"</Talent>
-  <Talent>"RULES-T0119/RULES-T0047"</Talent>
-  <Talent>"RULES-T0164"</Talent>
-  <Talent>"RULES-T0084"</Talent>
-  <Talent>"RULES-T0140/RULES-T0141"</Talent>
+<Talent>"RULES-T_ACUTE_SENSE__VUE"</Talent>
+  <Talent>"RULES-T_SEA_LEGS/RULES-T_HARDY"</Talent>
+  <Talent>"RULES-T_NIGHT_VISION"</Talent>
+  <Talent>"RULES-T_READ_WRITE"</Talent>
+  <Talent>"RULES-T_ORIENTATION/RULES-T_SIXTH_SENSE"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_CAREER>
-  <Career name="RULES-WORK02">"3"</Career>
-  <Career name="RULES-WORK33">"2"</Career>
-  <Career name="HELFG-WORK132">"3"</Career>
-  <Career name="RULES-WORK36">"4"</Career>
-  <Career name="RULES-WORK23">"4"</Career>
-  <Career name="RULES-WORK03">"3"</Career>
-  <Career name="RULES-WORK21">"2"</Career>
-  <Career name="RULES-WORK34">"3"</Career>
-  <Career name="HELFG-WORK130">"2"</Career>
-  <Career name="RULES-WORK07">"3"</Career>
-  <Career name="RULES-WORK39">"1"</Career>
-  <Career name="RULES-WORK15">"2"</Career>
-  <Career name="HELFG-WORK131">"2"</Career>
-  <Career name="RULES-WORK04">"1"</Career>
-  <Career name="RULES-WORK18">"1"</Career>
-  <Career name="RULES-WORK20">"3"</Career>
-  <Career name="RULES-WORK44">"3"</Career>
-  <Career name="RULES-WORK56">"2"</Career>
-  <Career name="RULES-WORK24">"2"</Career>
-  <Career name="RULES-WORK32">"5"</Career>
-  <Career name="RULES-WORK29">"1"</Career>
-  <Career name="RULES-WORK10">"3"</Career>
-  <Career name="RULES-WORK19">"5"</Career>
-  <Career name="RULES-WORK63">"3"</Career>
-  <Career name="RULES-WORK11">"3"</Career>
-  <Career name="RULES-WORK55">"1"</Career>
-  <Career name="RULES-WORK38">"2"</Career>
-  <Career name="RULES-WORK06">"2"</Career>
-  <Career name="RULES-WORK43">"2"</Career>
-  <Career name="RULES-WORK35">"4"</Career>
-  <Career name="RULES-WORK16">"1"</Career>
-  <Career name="RULES-WORK22">"1"</Career>
-  <Career name="RULES-WORK09">"2"</Career>
-  <Career name="RULES-WORK30">"3"</Career>
-  <Career name="RULES-WORK08">"4"</Career>
-  <Career name="RULES-WORK27">"2"</Career>
-  <Career name="RULES-WORK12">"2"</Career>
-  <Career name="HELFG-WORK127">"1"</Career>
-  <Career name="RULES-WORK28">"2"</Career>
-  <Career name="RULES-WORK61">"1"</Career>
-  <Career name="RULES-WORK57">"3"</Career>
-  <Career name="HELFG-WORK128">"1"</Career>
+  <Career name="RULES-WORK_APOTHECARY">"3"</Career>
+  <Career name="RULES-WORK_LAWYER">"2"</Career>
+  <Career name="HELFG-WORK_MAGE">"3"</Career>
+  <Career name="RULES-WORK_PHYSICIAN">"4"</Career>
+  <Career name="RULES-WORK_SCHOLAR">"4"</Career>
+  <Career name="RULES-WORK_ARTISAN">"3"</Career>
+  <Career name="RULES-WORK_INVESTIGATOR">"2"</Career>
+  <Career name="RULES-WORK_MERCHANT">"3"</Career>
+  <Career name="HELFG-WORK_MERCHANT_ADVENTURER">"2"</Career>
+  <Career name="RULES-WORK_TOWNSMAN">"3"</Career>
+  <Career name="RULES-WORK_WATCHMAN">"1"</Career>
+  <Career name="RULES-WORK_ADVISOR">"2"</Career>
+  <Career name="HELFG-WORK_AESTHETICIST">"2"</Career>
+  <Career name="RULES-WORK_ARTIST">"1"</Career>
+  <Career name="RULES-WORK_DUELLIST">"1"</Career>
+  <Career name="RULES-WORK_ENVOY">"3"</Career>
+  <Career name="RULES-WORK_NOBLE">"3"</Career>
+  <Career name="RULES-WORK_SERVANT">"2"</Career>
+  <Career name="RULES-WORK_SPY">"2"</Career>
+  <Career name="RULES-WORK_WARDEN">"5"</Career>
+  <Career name="RULES-WORK_HERBALIST">"1"</Career>
+  <Career name="RULES-WORK_HUNTER">"3"</Career>
+  <Career name="RULES-WORK_SCOUT">"5"</Career>
+  <Career name="RULES-WORK_VILLAGER">"3"</Career>
+  <Career name="RULES-WORK_BOUNTY_HUNTER">"3"</Career>
+  <Career name="RULES-WORK_ENTERTAINER">"1"</Career>
+  <Career name="RULES-WORK_MESSENGER">"2"</Career>
+  <Career name="RULES-WORK_BOATMAN">"2"</Career>
+  <Career name="RULES-WORK_HUFFER">"2"</Career>
+  <Career name="RULES-WORK_SEAMAN">"4"</Career>
+  <Career name="RULES-WORK_SMUGGLER">"1"</Career>
+  <Career name="RULES-WORK_BAWD">"1"</Career>
+  <Career name="RULES-WORK_CHARLATAN">"2"</Career>
+  <Career name="RULES-WORK_OUTLAW">"3"</Career>
+  <Career name="RULES-WORK_CAVALRYMAN">"4"</Career>
+  <Career name="RULES-WORK_GUARD">"2"</Career>
+  <Career name="RULES-WORK_KNIGHT">"2"</Career>
+  <Career name="HELFG-WORK_SEA_GUARD">"1"</Career>
+  <Career name="RULES-WORK_PIT_FIGHTER">"2"</Career>
+  <Career name="RULES-WORK_PROTAGONIST">"1"</Career>
+  <Career name="RULES-WORK_SOLDIER">"3"</Career>
+  <Career name="HELFG-WORK_SWORDMASTER">"1"</Career>
   </SUBCHAPTER_CAREER>
 <Page>55</Page>
 </Specie>
@@ -1175,70 +1157,70 @@
 <Attribut name="RULES-ATTR_Move">"5"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill>"RULES-COMPCALM"</Skill>
-  <Skill>"RULES-COMPRESIST"</Skill>
-  <Skill>"RULES-COMPDIVERT_CHANT"</Skill>
-  <Skill>"RULES-COMPEVAL"</Skill>
-  <Skill>"RULES-COMPINTUI"</Skill>
-  <Skill>"RULES-COMPLANG_ELTHA"</Skill>
-  <Skill>"RULES-COMPCOMM"</Skill>
-  <Skill>"RULES-COMPCOMB_BASE"</Skill>
-  <Skill>"RULES-COMPORIENT"</Skill>
-  <Skill>"RULES-COMPPRECEP"</Skill>
-  <Skill>"RULES-COMPPROJ_ARC"</Skill>
-  <Skill>"RULES-COMPNATA"</Skill>
+<Skill>"RULES-COMP_COOL"</Skill>
+  <Skill>"RULES-COMP_ENDURANCE"</Skill>
+  <Skill>"RULES-COMP_ENTERTAIN__SINGING"</Skill>
+  <Skill>"RULES-COMP_EVALUATE"</Skill>
+  <Skill>"RULES-COMP_INTUITION"</Skill>
+  <Skill>"RULES-COMP_LANGUAGE__ELTHARIN"</Skill>
+  <Skill>"RULES-COMP_LEADERSHIP"</Skill>
+  <Skill>"RULES-COMP_MELEE__BASIC"</Skill>
+  <Skill>"RULES-COMP_NAVIGATION"</Skill>
+  <Skill>"RULES-COMP_PERCEPTION"</Skill>
+  <Skill>"RULES-COMP_RANGED__BOW"</Skill>
+  <Skill>"RULES-COMP_SWIM"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent>"RULES-T0139_VUE"</Talent>
-  <Talent>"RULES-T0074/RULES-T0025"</Talent>
-  <Talent>"RULES-T0164"</Talent>
-  <Talent>"RULES-T0084"</Talent>
-  <Talent>"RULES-T0041/RULES-T0050"</Talent>
-  <Talent>"RULES-T0137/RULES-T0141"</Talent>
+<Talent>"RULES-T_ACUTE_SENSE__VUE"</Talent>
+  <Talent>"RULES-T_COOLHEADED/RULES-T_STOUT_HEARTED"</Talent>
+  <Talent>"RULES-T_NIGHT_VISION"</Talent>
+  <Talent>"RULES-T_READ_WRITE"</Talent>
+  <Talent>"RULES-T_RESOLUTE/RULES-T_IMPLACABLE"</Talent>
+  <Talent>"RULES-T_SECOND_SIGHT/RULES-T_SIXTH_SENSE"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_CAREER>
-  <Career name="RULES-WORK02">"3"</Career>
-  <Career name="RULES-WORK33">"2"</Career>
-  <Career name="HELFG-WORK132">"3"</Career>
-  <Career name="RULES-WORK36">"4"</Career>
-  <Career name="RULES-WORK23">"4"</Career>
-  <Career name="RULES-WORK03">"3"</Career>
-  <Career name="RULES-WORK21">"2"</Career>
-  <Career name="RULES-WORK34">"3"</Career>
-  <Career name="HELFG-WORK130">"2"</Career>
-  <Career name="RULES-WORK07">"3"</Career>
-  <Career name="RULES-WORK39">"1"</Career>
-  <Career name="RULES-WORK15">"2"</Career>
-  <Career name="HELFG-WORK131">"2"</Career>
-  <Career name="RULES-WORK04">"1"</Career>
-  <Career name="RULES-WORK18">"1"</Career>
-  <Career name="RULES-WORK20">"3"</Career>
-  <Career name="RULES-WORK44">"3"</Career>
-  <Career name="RULES-WORK56">"2"</Career>
-  <Career name="RULES-WORK24">"2"</Career>
-  <Career name="RULES-WORK32">"5"</Career>
-  <Career name="RULES-WORK29">"1"</Career>
-  <Career name="RULES-WORK10">"3"</Career>
-  <Career name="RULES-WORK19">"5"</Career>
-  <Career name="RULES-WORK63">"3"</Career>
-  <Career name="RULES-WORK11">"3"</Career>
-  <Career name="RULES-WORK55">"1"</Career>
-  <Career name="RULES-WORK38">"2"</Career>
-  <Career name="RULES-WORK06">"2"</Career>
-  <Career name="RULES-WORK43">"2"</Career>
-  <Career name="RULES-WORK35">"4"</Career>
-  <Career name="RULES-WORK16">"1"</Career>
-  <Career name="RULES-WORK22">"1"</Career>
-  <Career name="RULES-WORK09">"2"</Career>
-  <Career name="RULES-WORK30">"3"</Career>
-  <Career name="RULES-WORK08">"4"</Career>
-  <Career name="RULES-WORK27">"2"</Career>
-  <Career name="RULES-WORK12">"2"</Career>
-  <Career name="HELFG-WORK127">"1"</Career>
-  <Career name="RULES-WORK28">"2"</Career>
-  <Career name="RULES-WORK61">"1"</Career>
-  <Career name="RULES-WORK57">"3"</Career>
-  <Career name="HELFG-WORK128">"1"</Career>
+  <Career name="RULES-WORK_APOTHECARY">"3"</Career>
+  <Career name="RULES-WORK_LAWYER">"2"</Career>
+  <Career name="HELFG-WORK_MAGE">"3"</Career>
+  <Career name="RULES-WORK_PHYSICIAN">"4"</Career>
+  <Career name="RULES-WORK_SCHOLAR">"4"</Career>
+  <Career name="RULES-WORK_ARTISAN">"3"</Career>
+  <Career name="RULES-WORK_INVESTIGATOR">"2"</Career>
+  <Career name="RULES-WORK_MERCHANT">"3"</Career>
+  <Career name="HELFG-WORK_MERCHANT_ADVENTURER">"2"</Career>
+  <Career name="RULES-WORK_TOWNSMAN">"3"</Career>
+  <Career name="RULES-WORK_WATCHMAN">"1"</Career>
+  <Career name="RULES-WORK_ADVISOR">"2"</Career>
+  <Career name="HELFG-WORK_AESTHETICIST">"2"</Career>
+  <Career name="RULES-WORK_ARTIST">"1"</Career>
+  <Career name="RULES-WORK_DUELLIST">"1"</Career>
+  <Career name="RULES-WORK_ENVOY">"3"</Career>
+  <Career name="RULES-WORK_NOBLE">"3"</Career>
+  <Career name="RULES-WORK_SERVANT">"2"</Career>
+  <Career name="RULES-WORK_SPY">"2"</Career>
+  <Career name="RULES-WORK_WARDEN">"5"</Career>
+  <Career name="RULES-WORK_HERBALIST">"1"</Career>
+  <Career name="RULES-WORK_HUNTER">"3"</Career>
+  <Career name="RULES-WORK_SCOUT">"5"</Career>
+  <Career name="RULES-WORK_VILLAGER">"3"</Career>
+  <Career name="RULES-WORK_BOUNTY_HUNTER">"3"</Career>
+  <Career name="RULES-WORK_ENTERTAINER">"1"</Career>
+  <Career name="RULES-WORK_MESSENGER">"2"</Career>
+  <Career name="RULES-WORK_BOATMAN">"2"</Career>
+  <Career name="RULES-WORK_HUFFER">"2"</Career>
+  <Career name="RULES-WORK_SEAMAN">"4"</Career>
+  <Career name="RULES-WORK_SMUGGLER">"1"</Career>
+  <Career name="RULES-WORK_BAWD">"1"</Career>
+  <Career name="RULES-WORK_CHARLATAN">"2"</Career>
+  <Career name="RULES-WORK_OUTLAW">"3"</Career>
+  <Career name="RULES-WORK_CAVALRYMAN">"4"</Career>
+  <Career name="RULES-WORK_GUARD">"2"</Career>
+  <Career name="RULES-WORK_KNIGHT">"2"</Career>
+  <Career name="HELFG-WORK_SEA_GUARD">"1"</Career>
+  <Career name="RULES-WORK_PIT_FIGHTER">"2"</Career>
+  <Career name="RULES-WORK_PROTAGONIST">"1"</Career>
+  <Career name="RULES-WORK_SOLDIER">"3"</Career>
+  <Career name="HELFG-WORK_SWORDMASTER">"1"</Career>
   </SUBCHAPTER_CAREER>
 <Page>55</Page>
 </Specie>
@@ -1276,75 +1258,75 @@
 <Name part="Epithet" name="Whitecrest">"9"</Name>
 </SUBCHAPTER_NAMES>
 <SUBCHAPTER_SKILL>
-<Skill>"RULES-COMPCALM"</Skill>
-  <Skill>"RULES-COMPRESIST"</Skill>
-  <Skill>"RULES-COMPDIVERT_CHANT"</Skill>
-  <Skill>"RULES-COMPEVAL"</Skill>
-  <Skill>"RULES-COMPRAGOT"</Skill>
-  <Skill>"RULES-COMPMARCH"</Skill>
-  <Skill>"RULES-COMPLANG_ELTHA"</Skill>
-  <Skill>"RULES-COMPLANG_*"</Skill>
-  <Skill>"RULES-COMPCOMB_BASE"</Skill>
-  <Skill>"RULES-COMPORIENT"</Skill>
-  <Skill>"RULES-COMPVOILE_*"</Skill>
-  <Skill>"RULES-COMPNATA"</Skill>
+<Skill>"RULES-COMP_COOL"</Skill>
+  <Skill>"RULES-COMP_ENDURANCE"</Skill>
+  <Skill>"RULES-COMP_ENTERTAIN__SINGING"</Skill>
+  <Skill>"RULES-COMP_EVALUATE"</Skill>
+  <Skill>"RULES-COMP_GOSSIP"</Skill>
+  <Skill>"RULES-COMP_HAGGLE"</Skill>
+  <Skill>"RULES-COMP_LANGUAGE__ELTHARIN"</Skill>
+  <Skill>"RULES-COMP_LANGUAGE__*"</Skill>
+  <Skill>"RULES-COMP_MELEE__BASIC"</Skill>
+  <Skill>"RULES-COMP_NAVIGATION"</Skill>
+  <Skill>"RULES-COMP_SAIL__*"</Skill>
+  <Skill>"RULES-COMP_SWIM"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent>"RULES-T0139_VUE"</Talent>
-  <Talent>"RULES-T0164"</Talent>
-  <Talent>"RULES-T0085/RULES-T0119"</Talent>
-  <Talent>"RULES-T0140/RULES-T0141"</Talent>
-  <Talent>"RULES-T0084"</Talent>
-  <Talent>"HELFG-T0188"</Talent>
+<Talent>"RULES-T_ACUTE_SENSE__VUE"</Talent>
+  <Talent>"RULES-T_NIGHT_VISION"</Talent>
+  <Talent>"RULES-T_OLD_SALT/RULES-T_SEA_LEGS"</Talent>
+  <Talent>"RULES-T_ORIENTATION/RULES-T_SIXTH_SENSE"</Talent>
+  <Talent>"RULES-T_READ_WRITE"</Talent>
+  <Talent>"HELFG-T_UNCOUTH_URANAI"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_CAREER>
-  <Career name="RULES-WORK02">"2"</Career>
-  <Career name="RULES-WORK33">"2"</Career>
-  <Career name="HELFG-WORK132">"3"</Career>
-  <Career name="RULES-WORK36">"4"</Career>
-  <Career name="RULES-WORK23">"3"</Career>
-  <Career name="RULES-WORK03">"3"</Career>
-  <Career name="RULES-WORK21">"3"</Career>
-  <Career name="RULES-WORK34">"5"</Career>
-  <Career name="HELFG-WORK130">"2"</Career>
-  <Career name="RULES-WORK07">"1"</Career>
-  <Career name="RULES-WORK39">"1"</Career>
-  <Career name="RULES-WORK15">"3"</Career>
-  <Career name="HELFG-WORK131">"1"</Career>
-  <Career name="RULES-WORK04">"1"</Career>
-  <Career name="RULES-WORK18">"1"</Career>
-  <Career name="RULES-WORK20">"4"</Career>
-  <Career name="RULES-WORK44">"3"</Career>
-  <Career name="RULES-WORK56">"2"</Career>
-  <Career name="RULES-WORK24">"4"</Career>
-  <Career name="RULES-WORK19">"3"</Career>
-  <Career name="RULES-WORK11">"4"</Career>
-  <Career name="RULES-WORK55">"3"</Career>
-  <Career name="RULES-WORK38">"3"</Career>
-  <Career name="RULES-WORK06">"4"</Career>
-  <Career name="RULES-WORK43">"4"</Career>
-  <Career name="RULES-WORK35">"5"</Career>
-  <Career name="RULES-WORK16">"3"</Career>
-  <Career name="RULES-WORK17">"2"</Career>
-  <Career name="RULES-WORK22">"3"</Career>
-  <Career name="RULES-WORK09">"4"</Career>
-  <Career name="RULES-WORK30">"1"</Career>
-  <Career name="RULES-WORK08">"1"</Career>
-  <Career name="RULES-WORK27">"2"</Career>
-  <Career name="RULES-WORK12">"1"</Career>
-  <Career name="HELFG-WORK127">"3"</Career>
-  <Career name="RULES-WORK28">"1"</Career>
-  <Career name="RULES-WORK61">"1"</Career>
-  <Career name="RULES-WORK57">"4"</Career>
+  <Career name="RULES-WORK_APOTHECARY">"2"</Career>
+  <Career name="RULES-WORK_LAWYER">"2"</Career>
+  <Career name="HELFG-WORK_MAGE">"3"</Career>
+  <Career name="RULES-WORK_PHYSICIAN">"4"</Career>
+  <Career name="RULES-WORK_SCHOLAR">"3"</Career>
+  <Career name="RULES-WORK_ARTISAN">"3"</Career>
+  <Career name="RULES-WORK_INVESTIGATOR">"3"</Career>
+  <Career name="RULES-WORK_MERCHANT">"5"</Career>
+  <Career name="HELFG-WORK_MERCHANT_ADVENTURER">"2"</Career>
+  <Career name="RULES-WORK_TOWNSMAN">"1"</Career>
+  <Career name="RULES-WORK_WATCHMAN">"1"</Career>
+  <Career name="RULES-WORK_ADVISOR">"3"</Career>
+  <Career name="HELFG-WORK_AESTHETICIST">"1"</Career>
+  <Career name="RULES-WORK_ARTIST">"1"</Career>
+  <Career name="RULES-WORK_DUELLIST">"1"</Career>
+  <Career name="RULES-WORK_ENVOY">"4"</Career>
+  <Career name="RULES-WORK_NOBLE">"3"</Career>
+  <Career name="RULES-WORK_SERVANT">"2"</Career>
+  <Career name="RULES-WORK_SPY">"4"</Career>
+  <Career name="RULES-WORK_SCOUT">"3"</Career>
+  <Career name="RULES-WORK_BOUNTY_HUNTER">"4"</Career>
+  <Career name="RULES-WORK_ENTERTAINER">"3"</Career>
+  <Career name="RULES-WORK_MESSENGER">"3"</Career>
+  <Career name="RULES-WORK_BOATMAN">"4"</Career>
+  <Career name="RULES-WORK_HUFFER">"4"</Career>
+  <Career name="RULES-WORK_SEAMAN">"5"</Career>
+  <Career name="RULES-WORK_SMUGGLER">"3"</Career>
+  <Career name="RULES-WORK_STEVEDORE">"2"</Career>
+  <Career name="RULES-WORK_BAWD">"3"</Career>
+  <Career name="RULES-WORK_CHARLATAN">"4"</Career>
+  <Career name="RULES-WORK_OUTLAW">"1"</Career>
+  <Career name="RULES-WORK_CAVALRYMAN">"1"</Career>
+  <Career name="RULES-WORK_GUARD">"2"</Career>
+  <Career name="RULES-WORK_KNIGHT">"1"</Career>
+  <Career name="HELFG-WORK_SEA_GUARD">"3"</Career>
+  <Career name="RULES-WORK_PIT_FIGHTER">"1"</Career>
+  <Career name="RULES-WORK_PROTAGONIST">"1"</Career>
+  <Career name="RULES-WORK_SOLDIER">"4"</Career>
   </SUBCHAPTER_CAREER>
 <Page>57</Page>
 </Specie>
 </DATA_SPECIE>
 <DATA_CAREER>
-<Career id="HELFG-WORK127">
+<Career id="HELFG-WORK_SEA_GUARD">
 <Description language="ENGLISH">"Sea Guard"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPCOMB_HAST"</Skill>
+<Skill>"RULES-COMP_MELEE__POLEARM"</Skill>
   <Class>"RULES-CLASS_WARR"</Class>
 <PictureLevel>"NIV_HELF"</PictureLevel>
 <SUBCHAPTER_LEVEL>
@@ -1378,67 +1360,67 @@
 <Attribut name="RULES-ATTR_Fel">"0"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPSOINANI">"1"</Skill>
-  <Skill name="RULES-COMPRESALC">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPRAGOT">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_HAST">"1"</Skill>
-  <Skill name="RULES-COMPPROJ_ARC">"1"</Skill>
-  <Skill name="RULES-COMPPROJ_ARB">"1"</Skill>
-  <Skill name="RULES-COMPVOILE_*">"1"</Skill>
-  <Skill name="RULES-COMPNATA">"1"</Skill>
-  <Skill name="RULES-COMPATHL">"2"</Skill>
-  <Skill name="RULES-COMPESCAL">"2"</Skill>
-  <Skill name="RULES-COMPRESIST">"2"</Skill>
-  <Skill name="RULES-COMPPARI">"2"</Skill>
-  <Skill name="RULES-COMPSURVEXT">"2"</Skill>
-  <Skill name="RULES-COMPVOILE_*">"2"</Skill>
-  <Skill name="RULES-COMPCOMM">"3"</Skill>
-  <Skill name="RULES-COMPORIENT">"3"</Skill>
-  <Skill name="RULES-COMPPRECEP">"3"</Skill>
-  <Skill name="RULES-COMPVOILE_*">"3"</Skill>
-  <Skill name="RULES-COMPCOND">"4"</Skill>
-  <Skill name="RULES-COMPINTIM">"4"</Skill>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+  <Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__POLEARM">"1"</Skill>
+  <Skill name="RULES-COMP_RANGED__BOW">"1"</Skill>
+  <Skill name="RULES-COMP_RANGED__CROSSBOW">"1"</Skill>
+  <Skill name="RULES-COMP_SAIL__*">"1"</Skill>
+  <Skill name="RULES-COMP_SWIM">"1"</Skill>
+  <Skill name="RULES-COMP_ATHLETICS">"2"</Skill>
+  <Skill name="RULES-COMP_CLIMB">"2"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"2"</Skill>
+  <Skill name="RULES-COMP_GAMBLE">"2"</Skill>
+  <Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"2"</Skill>
+  <Skill name="RULES-COMP_SAIL__*">"2"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"3"</Skill>
+  <Skill name="RULES-COMP_NAVIGATION">"3"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"3"</Skill>
+  <Skill name="RULES-COMP_SAIL__*">"3"</Skill>
+  <Skill name="RULES-COMP_DRIVE">"4"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0036">"1"</Talent>
-  <Talent name="RULES-T0113">"1"</Talent>
-  <Talent name="RULES-T0047">"1"</Talent>
-  <Talent name="RULES-T0067">"1"</Talent>
-  <Talent name="RULES-T0027">"2"</Talent>
-  <Talent name="RULES-T0127">"2"</Talent>
-  <Talent name="RULES-T0119">"2"</Talent>
-  <Talent name="RULES-T0121">"2"</Talent>
-  <Talent name="RULES-T0053">"3"</Talent>
-  <Talent name="RULES-T0085">"3"</Talent>
-  <Talent name="RULES-T0134_OCEAN">"3"</Talent>
-  <Talent name="RULES-T0060">"3"</Talent>
-  <Talent name="RULES-T0163">"4"</Talent>
-  <Talent name="RULES-T0025">"4"</Talent>
-  <Talent name="RULES-T0013_COASTAL">"4"</Talent>
-  <Talent name="RULES-T0100">"4"</Talent>
+<Talent name="RULES-T_DRILLED">"1"</Talent>
+  <Talent name="RULES-T_FISHERMAN">"1"</Talent>
+  <Talent name="RULES-T_HARDY">"1"</Talent>
+  <Talent name="RULES-T_WARRIOR_BORN">"1"</Talent>
+  <Talent name="RULES-T_ENCLOSED_FIGHTER">"2"</Talent>
+  <Talent name="RULES-T_LIGHTNING_REFLEXES">"2"</Talent>
+  <Talent name="RULES-T_SEA_LEGS">"2"</Talent>
+  <Talent name="RULES-T_SHIELDSMAN">"2"</Talent>
+  <Talent name="RULES-T_INSPIRING">"3"</Talent>
+  <Talent name="RULES-T_OLD_SALT">"3"</Talent>
+  <Talent name="RULES-T_SAVANT__OCEAN">"3"</Talent>
+  <Talent name="RULES-T_STRIKE_TO_INJURE">"3"</Talent>
+  <Talent name="RULES-T_COMBAT_AWARE">"4"</Talent>
+  <Talent name="RULES-T_STOUT_HEARTED">"4"</Talent>
+  <Talent name="RULES-T_STRIDER__COASTAL">"4"</Talent>
+  <Talent name="RULES-T_STRONG_SWIMMER">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Elf Bow and 10 Arrows">"1"</Item>
-<Item name="RULES-COMB_HAST_03">"1"</Item>
-<Item name="RULES-TRAP_034">"1"</Item>
+<Item name="RULES-COMB_SPEAR">"1"</Item>
+<Item name="RULES-TRAP_UNIFORM">"1"</Item>
 <Item name="Breastplate">"2"</Item>
-<Item name="RULES-ARMO_11">"2"</Item>
-<Item name="RULES-ARMO_07">"2"</Item>
-<Item name="RULES-COMB_BASE_07">"2"</Item>
+<Item name="RULES-ARMO_HELM">"2"</Item>
+<Item name="RULES-ARMO_MAIL_SHIRT">"2"</Item>
+<Item name="RULES-COMB_SHIELD">"2"</Item>
 <Item name="Symbol of Rank">"3"</Item>
-<Item name="RULES-TRAP_034 (Q)">"3"</Item>
-<Item name="RULES-TRAP_034 (Q)">"4"</Item>
+<Item name="RULES-TRAP_UNIFORM (Q)">"3"</Item>
+<Item name="RULES-TRAP_UNIFORM (Q)">"4"</Item>
 <Item name="Skycutter Chariot and Swiftfeather Roc">"4"</Item>
 <Item name="Tall Sea Helm">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>64</Page>
 </Career>
-<Career id="HELFG-WORK128">
+<Career id="HELFG-WORK_SWORDMASTER">
 <Description language="ENGLISH">"Swordmaster"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPCOMB_2M"</Skill>
+<Skill>"RULES-COMP_MELEE__TWO_HANDED"</Skill>
   <Class>"RULES-CLASS_WARR"</Class>
 <PictureLevel>"NIV_HELF"</PictureLevel>
 <SUBCHAPTER_LEVEL>
@@ -1472,53 +1454,53 @@
 <Attribut name="RULES-ATTR_Fel">"0"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPART_PEINT/RULES-COMPART_SCUL">"1"</Skill>
-  <Skill name="RULES-COMPATHL">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BAGAR">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_2M">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPREPRES_ACROB">"1"</Skill>
-  <Skill name="RULES-COMPMUSIC_*">"1"</Skill>
-  <Skill name="RULES-COMPART_POETRY">"2"</Skill>
-  <Skill name="RULES-COMPCALM">"2"</Skill>
-  <Skill name="RULES-COMPRESIST">"2"</Skill>
-  <Skill name="RULES-COMPRAGOT">"2"</Skill>
-  <Skill name="RULES-COMPINTUI">"2"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"2"</Skill>
-  <Skill name="RULES-COMPART_PEINT/RULES-COMPART_SCUL">"3"</Skill>
-  <Skill name="RULES-COMPGUERI">"3"</Skill>
-  <Skill name="RULES-COMPCOMM">"3"</Skill>
-  <Skill name="RULES-COMPPROJ_ARC">"3"</Skill>
-  <Skill name="RULES-COMPINTIM">"4"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
+<Skill name="RULES-COMP_ART__PAINTING/RULES-COMP_ART__SCULPTURE">"1"</Skill>
+  <Skill name="RULES-COMP_ATHLETICS">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BRAWLING">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__TWO_HANDED">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_PERFORM__ACROBATICS">"1"</Skill>
+  <Skill name="RULES-COMP_PLAY__*">"1"</Skill>
+  <Skill name="RULES-COMP_ART__POETRY">"2"</Skill>
+  <Skill name="RULES-COMP_COOL">"2"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"2"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"2"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"2"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"2"</Skill>
+  <Skill name="RULES-COMP_ART__PAINTING/RULES-COMP_ART__SCULPTURE">"3"</Skill>
+  <Skill name="RULES-COMP_HEAL">"3"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"3"</Skill>
+  <Skill name="RULES-COMP_RANGED__BOW">"3"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"4"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0139_*">"1"</Talent>
-  <Talent name="RULES-T0061">"1"</Talent>
-  <Talent name="RULES-T0039">"1"</Talent>
-  <Talent name="HELFG-T0186">"1"</Talent>
-  <Talent name="RULES-T0011">"2"</Talent>
-  <Talent name="RULES-T0130">"2"</Talent>
-  <Talent name="RULES-T0060">"2"</Talent>
-  <Talent name="HELFG-T0187">"2"</Talent>
-  <Talent name="RULES-T0095">"3"</Talent>
-  <Talent name="RULES-T0062">"3"</Talent>
-  <Talent name="RULES-T0137">"3"</Talent>
-  <Talent name="RULES-T0037">"3"</Talent>
-  <Talent name="RULES-T0122">"4"</Talent>
-  <Talent name="RULES-T0005">"4"</Talent>
-  <Talent name="RULES-T0168">"4"</Talent>
-  <Talent name="RULES-T0138">"4"</Talent>
+<Talent name="RULES-T_ACUTE_SENSE__*">"1"</Talent>
+  <Talent name="RULES-T_CAREFUL_STRIKE">"1"</Talent>
+  <Talent name="RULES-T_DISARM">"1"</Talent>
+  <Talent name="HELFG-T_MARTIAL_ARTS">"1"</Talent>
+  <Talent name="RULES-T_BEAT_BLADE">"2"</Talent>
+  <Talent name="RULES-T_RIPOSTE">"2"</Talent>
+  <Talent name="RULES-T_STRIKE_TO_INJURE">"2"</Talent>
+  <Talent name="HELFG-T_SWORD_DANCING">"2"</Talent>
+  <Talent name="RULES-T_COMBAT_MASTER">"3"</Talent>
+  <Talent name="RULES-T_REACTION_STRIKE">"3"</Talent>
+  <Talent name="RULES-T_SECOND_SIGHT">"3"</Talent>
+  <Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"3"</Talent>
+  <Talent name="RULES-T_COMMANDING_PRESENCE">"4"</Talent>
+  <Talent name="RULES-T_PURE_SOUL">"4"</Talent>
+  <Talent name="RULES-T_SEASONED_TRAVELLER">"4"</Talent>
+  <Talent name="RULES-T_WAR_LEADER">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Clay Set or Painting Set">"1"</Item>
-<Item name="RULES-TRAP_029">"1"</Item>
+<Item name="RULES-TRAP_ROBES">"1"</Item>
 <Item name="Book on Philosophy">"2"</Item>
 <Item name="Greatsword of Hoeth">"2"</Item>
-<Item name="RULES-ARMO_07">"2"</Item>
+<Item name="RULES-ARMO_MAIL_SHIRT">"2"</Item>
 <Item name="Tall Helmet">"2"</Item>
 <Item name="Travelling Clothes">"2"</Item>
 <Item name="Book on the Art of War">"3"</Item>
@@ -1530,10 +1512,10 @@
 </SUBCHAPTER_ITEM>
 <Page>66</Page>
 </Career>
-<Career id="HELFG-WORK129">
+<Career id="HELFG-WORK_SHADOW_WARRIOR">
 <Description language="ENGLISH">"Shadow Warrior"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPDISC_RURAL"</Skill>
+<Skill>"RULES-COMP_STEALTH__RURAL"</Skill>
   <Class>"RULES-CLASS_RANG"</Class>
 <PictureLevel>"NIV_HELF"</PictureLevel>
 <SUBCHAPTER_LEVEL>
@@ -1567,67 +1549,67 @@
 <Attribut name="RULES-ATTR_Fel">"0"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPATHL">"1"</Skill>
-  <Skill name="RULES-COMPESCAL">"1"</Skill>
-  <Skill name="RULES-COMPRESIST">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPORIENT">"1"</Skill>
-  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
-  <Skill name="RULES-COMPPROJ_ARC">"1"</Skill>
-  <Skill name="RULES-COMPPIEG">"1"</Skill>
-  <Skill name="RULES-COMPDISC_RURAL">"1"</Skill>
-  <Skill name="RULES-COMPNATA">"1"</Skill>
-  <Skill name="RULES-COMPCALM">"2"</Skill>
-  <Skill name="RULES-COMPESQU">"2"</Skill>
-  <Skill name="RULES-COMPINTIM">"2"</Skill>
-  <Skill name="RULES-COMPCOMB_BAGAR">"2"</Skill>
-  <Skill name="RULES-COMPSIGNES_SHADOWWAR">"2"</Skill>
-  <Skill name="RULES-COMPPIST">"2"</Skill>
-  <Skill name="RULES-COMPCHARM">"3"</Skill>
-  <Skill name="RULES-COMPRAGOT">"3"</Skill>
-  <Skill name="RULES-COMPGUERI">"3"</Skill>
-  <Skill name="RULES-COMPCOMM">"3"</Skill>
-  <Skill name="RULES-COMPCROCH">"4"</Skill>
-  <Skill name="RULES-COMPDISC_URB">"4"</Skill>
+<Skill name="RULES-COMP_ATHLETICS">"1"</Skill>
+  <Skill name="RULES-COMP_CLIMB">"1"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+  <Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+  <Skill name="RULES-COMP_RANGED__BOW">"1"</Skill>
+  <Skill name="RULES-COMP_SET_TRAP">"1"</Skill>
+  <Skill name="RULES-COMP_STEALTH__RURAL">"1"</Skill>
+  <Skill name="RULES-COMP_SWIM">"1"</Skill>
+  <Skill name="RULES-COMP_COOL">"2"</Skill>
+  <Skill name="RULES-COMP_DODGE">"2"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"2"</Skill>
+  <Skill name="RULES-COMP_MELEE__BRAWLING">"2"</Skill>
+  <Skill name="RULES-COMP_SECRET_SIGNS__SHADOW_WARRIORS">"2"</Skill>
+  <Skill name="RULES-COMP_TRACK">"2"</Skill>
+  <Skill name="RULES-COMP_CHARM">"3"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"3"</Skill>
+  <Skill name="RULES-COMP_HEAL">"3"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"3"</Skill>
+  <Skill name="RULES-COMP_PICK_LOCK">"4"</Skill>
+  <Skill name="RULES-COMP_STEALTH__URBAN">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0148">"1"</Talent>
-  <Talent name="RULES-T0105">"1"</Talent>
-  <Talent name="RULES-T0066">"1"</Talent>
-  <Talent name="RULES-T0013_BOID">"1"</Talent>
-  <Talent name="RULES-T0074">"2"</Talent>
-  <Talent name="RULES-T0132_DELF">"2"</Talent>
-  <Talent name="RULES-T0098">"2"</Talent>
-  <Talent name="RULES-T0043">"2"</Talent>
-  <Talent name="RULES-T0149">"3"</Talent>
-  <Talent name="RULES-T0096">"3"</Talent>
-  <Talent name="RULES-T0072">"3"</Talent>
-  <Talent name="RULES-T0060">"3"</Talent>
-  <Talent name="RULES-T0144">"4"</Talent>
-  <Talent name="RULES-T0168">"4"</Talent>
-  <Talent name="RULES-T0152">"4"</Talent>
-  <Talent name="RULES-T0123">"4"</Talent>
+<Talent name="RULES-T_DEADEYE_SHOT">"1"</Talent>
+  <Talent name="RULES-T_ROVER">"1"</Talent>
+  <Talent name="RULES-T_SCALE_SHEER_SURFACE">"1"</Talent>
+  <Talent name="RULES-T_STRIDER__BOID">"1"</Talent>
+  <Talent name="RULES-T_COOLHEADED">"2"</Talent>
+  <Talent name="RULES-T_FEARLESS__DELF">"2"</Talent>
+  <Talent name="RULES-T_MENACING">"2"</Talent>
+  <Talent name="RULES-T_SHADOW">"2"</Talent>
+  <Talent name="RULES-T_ACCURATE_SHOT">"3"</Talent>
+  <Talent name="RULES-T_DUAL_WIELDER">"3"</Talent>
+  <Talent name="RULES-T_SECRET_IDENTITY">"3"</Talent>
+  <Talent name="RULES-T_STRIKE_TO_INJURE">"3"</Talent>
+  <Talent name="RULES-T_CATFALL">"4"</Talent>
+  <Talent name="RULES-T_SEASONED_TRAVELLER">"4"</Talent>
+  <Talent name="RULES-T_SHARPSHOOTER">"4"</Talent>
+  <Talent name="RULES-T_WELL_PREPARED">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="RULES-TRAP_125">"1"</Item>
+<Item name="RULES-TRAP_BEDROLL">"1"</Item>
 <Item name="Elf Bow and 10 Barbed Arrows">"1"</Item>
-<Item name="RULES-TRAP_150+RULES-TRAP_138">"1"</Item>
+<Item name="RULES-TRAP_ROPE_10_YARDS+RULES-TRAP_GRAPPLING_HOOK">"1"</Item>
 <Item name="Crescent Pendant of Lileath">"2"</Item>
 <Item name="Face Wrap">"2"</Item>
-<Item name="RULES-ARMO_11">"2"</Item>
-<Item name="RULES-ARMO_07">"2"</Item>
+<Item name="RULES-ARMO_HELM">"2"</Item>
+<Item name="RULES-ARMO_MAIL_SHIRT">"2"</Item>
 <Item name="Cadre of Shadow Warriors">"3"</Item>
 <Item name="Caltrops">"3"</Item>
-<Item name="RULES-TRAP_058">"3"</Item>
-<Item name="RULES-TRAP_068">"4"</Item>
+<Item name="RULES-TRAP_DISGUISE_KIT">"3"</Item>
+<Item name="RULES-TRAP_LOCK_PICKS">"4"</Item>
 <Item name="Ring of Contacts">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>70</Page>
 </Career>
-<Career id="HELFG-WORK130">
+<Career id="HELFG-WORK_MERCHANT_ADVENTURER">
 <Description language="ENGLISH">"Merchant Adventurer"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPVOILE_*"</Skill>
+<Skill>"RULES-COMP_SAIL__*"</Skill>
   <Class>"RULES-CLASS_BURG"</Class>
 <PictureLevel>"NIV_HELF"</PictureLevel>
 <SUBCHAPTER_LEVEL>
@@ -1661,55 +1643,55 @@
 <Attribut name="RULES-ATTR_Fel">"1"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPATHL">"1"</Skill>
-  <Skill name="RULES-COMPANIM">"1"</Skill>
-  <Skill name="RULES-COMPESCAL">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPRAGOT">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPORIENT">"1"</Skill>
-  <Skill name="RULES-COMPPROJ_ARC">"1"</Skill>
-  <Skill name="RULES-COMPVOILE_*">"1"</Skill>
-  <Skill name="RULES-COMPNATA">"1"</Skill>
-  <Skill name="RULES-COMPCHARM">"2"</Skill>
-  <Skill name="RULES-COMPRESALC">"2"</Skill>
-  <Skill name="RULES-COMPEVAL">"2"</Skill>
-  <Skill name="RULES-COMPMARCH/RULES-COMPPARI">"2"</Skill>
-  <Skill name="RULES-COMPLANG_*">"2"</Skill>
-  <Skill name="RULES-COMPCOMB_BAGAR">"2"</Skill>
-  <Skill name="RULES-COMPSUBOR">"3"</Skill>
-  <Skill name="RULES-COMPCALM">"3"</Skill>
-  <Skill name="RULES-COMPRESIST">"3"</Skill>
-  <Skill name="RULES-COMPLANG_*">"3"</Skill>
-  <Skill name="RULES-COMPINTIM">"4"</Skill>
-  <Skill name="RULES-COMPCOMM">"4"</Skill>
+<Skill name="RULES-COMP_ATHLETICS">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM_ANIMAL">"1"</Skill>
+  <Skill name="RULES-COMP_CLIMB">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+  <Skill name="RULES-COMP_RANGED__BOW">"1"</Skill>
+  <Skill name="RULES-COMP_SAIL__*">"1"</Skill>
+  <Skill name="RULES-COMP_SWIM">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM">"2"</Skill>
+  <Skill name="RULES-COMP_CONSUME_ALCOHOL">"2"</Skill>
+  <Skill name="RULES-COMP_EVALUATE">"2"</Skill>
+  <Skill name="RULES-COMP_HAGGLE/RULES-COMP_GAMBLE">"2"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"2"</Skill>
+  <Skill name="RULES-COMP_MELEE__BRAWLING">"2"</Skill>
+  <Skill name="RULES-COMP_BRIBERY">"3"</Skill>
+  <Skill name="RULES-COMP_COOL">"3"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"3"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"4"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0113">"1"</Talent>
-  <Talent name="RULES-T0020">"1"</Talent>
-  <Talent name="RULES-T0140">"1"</Talent>
-  <Talent name="RULES-T0100">"1"</Talent>
-  <Talent name="RULES-T0026">"2"</Talent>
-  <Talent name="RULES-T0085">"2"</Talent>
-  <Talent name="RULES-T0120">"2"</Talent>
-  <Talent name="RULES-T0168">"2"</Talent>
-  <Talent name="RULES-T0040">"3"</Talent>
-  <Talent name="RULES-T0086">"3"</Talent>
-  <Talent name="RULES-T0119">"3"</Talent>
-  <Talent name="RULES-T0035">"3"</Talent>
-  <Talent name="RULES-T0122">"4"</Talent>
-  <Talent name="RULES-T0132_SEAMONSTR">"4"</Talent>
-  <Talent name="RULES-T0151">"4"</Talent>
-  <Talent name="RULES-T0159">"4"</Talent>
+<Talent name="RULES-T_FISHERMAN">"1"</Talent>
+  <Talent name="RULES-T_LUCK">"1"</Talent>
+  <Talent name="RULES-T_ORIENTATION">"1"</Talent>
+  <Talent name="RULES-T_STRONG_SWIMMER">"1"</Talent>
+  <Talent name="RULES-T_DIRTY_FIGHTING">"2"</Talent>
+  <Talent name="RULES-T_OLD_SALT">"2"</Talent>
+  <Talent name="RULES-T_PILOT">"2"</Talent>
+  <Talent name="RULES-T_SEASONED_TRAVELLER">"2"</Talent>
+  <Talent name="RULES-T_DETECT_ARTEFACT">"3"</Talent>
+  <Talent name="RULES-T_IRON_JAW">"3"</Talent>
+  <Talent name="RULES-T_SEA_LEGS">"3"</Talent>
+  <Talent name="RULES-T_STURDY">"3"</Talent>
+  <Talent name="RULES-T_COMMANDING_PRESENCE">"4"</Talent>
+  <Talent name="RULES-T_FEARLESS__SEAMONSTR">"4"</Talent>
+  <Talent name="RULES-T_SURE_SHOT">"4"</Talent>
+  <Talent name="RULES-T_VERY_RESILIENT">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="RULES-TRAP_048">"1"</Item>
+<Item name="RULES-TRAP_ABACUS">"1"</Item>
 <Item name="Elf Bow and 10 Arrows">"1"</Item>
-<Item name="RULES-COMB_BASE_*">"1"</Item>
+<Item name="RULES-COMP_MELEE__BASIC">"1"</Item>
 <Item name="Tidecutter and Giant Flying Fish">"1"</Item>
 <Item name="Bloodhawk or Razorbill and Crew">"2"</Item>
-<Item name="RULES-COMB_BASE_*">"2"</Item>
-<Item name="RULES-ARMO_04">"2"</Item>
+<Item name="RULES-COMP_MELEE__BASIC">"2"</Item>
+<Item name="RULES-ARMO_LEATHER_JACK">"2"</Item>
 <Item name="Shipping Charts and Sextant">"2"</Item>
 <Item name="Three Barrels of Goods">"2"</Item>
 <Item name="Fleet of Two Tidecutters">"3"</Item>
@@ -1721,10 +1703,10 @@
 </SUBCHAPTER_ITEM>
 <Page>72</Page>
 </Career>
-<Career id="HELFG-WORK131">
+<Career id="HELFG-WORK_AESTHETICIST">
 <Description language="ENGLISH">"Aestheticist"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPINTUI"</Skill>
+<Skill>"RULES-COMP_INTUITION"</Skill>
   <Class>"RULES-CLASS_COUR"</Class>
 <PictureLevel>"NIV_HELF"</PictureLevel>
 <SUBCHAPTER_LEVEL>
@@ -1758,52 +1740,52 @@
 <Attribut name="RULES-ATTR_Fel">"1"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPART_*">"1"</Skill>
-  <Skill name="RULES-COMPCHARM">"1"</Skill>
-  <Skill name="RULES-COMPCALM">"1"</Skill>
-  <Skill name="RULES-COMPDIVERT_*">"1"</Skill>
-  <Skill name="RULES-COMPEVAL">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPRAGOT">"1"</Skill>
-  <Skill name="RULES-COMPMARCH">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPMETIER_JEWELLER">"1"</Skill>
-  <Skill name="RULES-COMPART_*">"2"</Skill>
-  <Skill name="RULES-COMPRESALC">"2"</Skill>
-  <Skill name="RULES-COMPSAVOIR_LOCAL">"2"</Skill>
-  <Skill name="RULES-COMPSAVOIR_MAGIE">"2"</Skill>
-  <Skill name="RULES-COMPDISC_URB">"2"</Skill>
-  <Skill name="RULES-COMPMETIER_*">"2"</Skill>
-  <Skill name="RULES-COMPSUBOR">"3"</Skill>
-  <Skill name="RULES-COMPLANG_*">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_HERAL">"3"</Skill>
-  <Skill name="RULES-COMPREPRES_*">"3"</Skill>
-  <Skill name="RULES-COMPGUERI">"4"</Skill>
-  <Skill name="RULES-COMPCOMM">"4"</Skill>
+<Skill name="RULES-COMP_ART__*">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM">"1"</Skill>
+  <Skill name="RULES-COMP_COOL">"1"</Skill>
+  <Skill name="RULES-COMP_ENTERTAIN__*">"1"</Skill>
+  <Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+  <Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_TRADE__JEWELLER">"1"</Skill>
+  <Skill name="RULES-COMP_ART__*">"2"</Skill>
+  <Skill name="RULES-COMP_CONSUME_ALCOHOL">"2"</Skill>
+  <Skill name="RULES-COMP_LORE__LOCAL">"2"</Skill>
+  <Skill name="RULES-COMP_LORE__MAGIC">"2"</Skill>
+  <Skill name="RULES-COMP_STEALTH__URBAN">"2"</Skill>
+  <Skill name="RULES-COMP_TRADE__*">"2"</Skill>
+  <Skill name="RULES-COMP_BRIBERY">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__HERALDRY">"3"</Skill>
+  <Skill name="RULES-COMP_PERFORM__*">"3"</Skill>
+  <Skill name="RULES-COMP_HEAL">"4"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0139_*">"1"</Talent>
-  <Talent name="RULES-T0007">"1"</Talent>
-  <Talent name="RULES-T0137">"1"</Talent>
-  <Talent name="RULES-T0002">"1"</Talent>
-  <Talent name="RULES-T0074">"2"</Talent>
-  <Talent name="RULES-T0092_*">"2"</Talent>
-  <Talent name="RULES-T0136_NOBLE">"2"</Talent>
-  <Talent name="RULES-T0045">"2"</Talent>
-  <Talent name="RULES-T0104">"3"</Talent>
-  <Talent name="RULES-T0040">"3"</Talent>
-  <Talent name="RULES-T0142">"3"</Talent>
-  <Talent name="RULES-T0157_*">"3"</Talent>
-  <Talent name="RULES-T0051">"4"</Talent>
-  <Talent name="RULES-T0165">"4"</Talent>
-  <Talent name="RULES-T0090">"4"</Talent>
-  <Talent name="RULES-T0005">"4"</Talent>
+<Talent name="RULES-T_ACUTE_SENSE__*">"1"</Talent>
+  <Talent name="RULES-T_ARTISTIC">"1"</Talent>
+  <Talent name="RULES-T_SECOND_SIGHT">"1"</Talent>
+  <Talent name="RULES-T_SUAVE">"1"</Talent>
+  <Talent name="RULES-T_COOLHEADED">"2"</Talent>
+  <Talent name="RULES-T_CRAFTSMAN__*">"2"</Talent>
+  <Talent name="RULES-T_ETIQUETTE__NOBLE">"2"</Talent>
+  <Talent name="RULES-T_NIMBLE_FINGERED">"2"</Talent>
+  <Talent name="RULES-T_CAROUSER">"3"</Talent>
+  <Talent name="RULES-T_DETECT_ARTEFACT">"3"</Talent>
+  <Talent name="RULES-T_GREGARIOUS">"3"</Talent>
+  <Talent name="RULES-T_MASTER_TRADESMAN__*">"3"</Talent>
+  <Talent name="RULES-T_ARGUMENTATIVE">"4"</Talent>
+  <Talent name="RULES-T_HOLY_VISIONS">"4"</Talent>
+  <Talent name="RULES-T_MAGNUM_OPUS">"4"</Talent>
+  <Talent name="RULES-T_PURE_SOUL">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Bottle of Perfume">"1"</Item>
 <Item name="Charms">"1"</Item>
 <Item name="Colourful Scarves">"1"</Item>
-<Item name="RULES-TRAP_055">"1"</Item>
+<Item name="RULES-TRAP_COMB">"1"</Item>
 <Item name="Crystal Pendulum">"2"</Item>
 <Item name="Flamboyant Clothing">"2"</Item>
 <Item name="Selection of Amulets">"2"</Item>
@@ -1811,14 +1793,14 @@
 <Item name="Incense Sticks">"3"</Item>
 <Item name="Tuning fork">"3"</Item>
 <Item name="Aethyrolabe">"4"</Item>
-<Item name="RULES-TRAP_029 (Q)">"4"</Item>
+<Item name="RULES-TRAP_ROBES (Q)">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>74</Page>
 </Career>
-<Career id="HELFG-WORK132">
+<Career id="HELFG-WORK_MAGE">
 <Description language="ENGLISH">"Mage"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPLANG_MAG"</Skill>
+<Skill>"RULES-COMP_LANGUAGE__MAGICK"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
 <PictureLevel>"NIV_HELF"</PictureLevel>
 <SUBCHAPTER_LEVEL>
@@ -1856,61 +1838,61 @@
 <Attribut name="RULES-ATTR_Fel">"1"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPART_CALLI/RULES-COMPART_GRAV">"1"</Skill>
-  <Skill name="RULES-COMPFOCAL_BETE/RULES-COMPFOCAL_MORT/RULES-COMPFOCAL_FEU/RULES-COMPFOCAL_CIEUX/RULES-COMPFOCAL_VIE/RULES-COMPFOCAL_LUMIERE/RULES-COMPFOCAL_METAL/RULES-COMPFOCAL_OMBRE">"1"</Skill>
-  <Skill name="RULES-COMPCHARM">"1"</Skill>
-  <Skill name="RULES-COMPRAGOT">"1"</Skill>
-  <Skill name="RULES-COMPGUERI">"1"</Skill>
-  <Skill name="RULES-COMPLANG_MAG">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_MAGIE">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_THEO">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPPRIERE">"1"</Skill>
-  <Skill name="RULES-COMPFOCAL_BETE/RULES-COMPFOCAL_MORT/RULES-COMPFOCAL_FEU/RULES-COMPFOCAL_CIEUX/RULES-COMPFOCAL_VIE/RULES-COMPFOCAL_LUMIERE/RULES-COMPFOCAL_METAL/RULES-COMPFOCAL_OMBRE">"2"</Skill>
-  <Skill name="RULES-COMPCALM">"2"</Skill>
-  <Skill name="RULES-COMPINTIM">"2"</Skill>
-  <Skill name="RULES-COMPLANG_*">"2"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"2"</Skill>
-  <Skill name="RULES-COMPRECH">"2"</Skill>
-  <Skill name="RULES-COMPFOCAL_QHAYSH">"3"</Skill>
-  <Skill name="RULES-COMPEVAL">"3"</Skill>
-  <Skill name="RULES-COMPCOMB_HAST">"3"</Skill>
-  <Skill name="RULES-COMPCHEV_CHEVAL">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
-  <Skill name="RULES-COMPESQU">"4"</Skill>
-  <Skill name="RULES-COMPLANG_*">"5"</Skill>
+<Skill name="RULES-COMP_ART__CALLIGRAPHY/RULES-COMP_ART__ENGRAVING">"1"</Skill>
+  <Skill name="RULES-COMP_CHANNELLING__GHUR/RULES-COMP_CHANNELLING__SHYISH/RULES-COMP_CHANNELLING__AQSHY/RULES-COMP_CHANNELLING__AZYR/RULES-COMP_CHANNELLING__GHYRAN/RULES-COMP_CHANNELLING__HYSH/RULES-COMP_CHANNELLING__CHAMON/RULES-COMP_CHANNELLING__ULGU">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM">"1"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+  <Skill name="RULES-COMP_HEAL">"1"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__MAGICK">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__MAGIC">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__THEOLOGY">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_PRAY">"1"</Skill>
+  <Skill name="RULES-COMP_CHANNELLING__GHUR/RULES-COMP_CHANNELLING__SHYISH/RULES-COMP_CHANNELLING__AQSHY/RULES-COMP_CHANNELLING__AZYR/RULES-COMP_CHANNELLING__GHYRAN/RULES-COMP_CHANNELLING__HYSH/RULES-COMP_CHANNELLING__CHAMON/RULES-COMP_CHANNELLING__ULGU">"2"</Skill>
+  <Skill name="RULES-COMP_COOL">"2"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"2"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"2"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"2"</Skill>
+  <Skill name="RULES-COMP_RESEARCH">"2"</Skill>
+  <Skill name="RULES-COMP_CHANNELLING__QHAYSH">"3"</Skill>
+  <Skill name="RULES-COMP_EVALUATE">"3"</Skill>
+  <Skill name="RULES-COMP_MELEE__POLEARM">"3"</Skill>
+  <Skill name="RULES-COMP_RIDE__HORSE">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"4"</Skill>
+  <Skill name="RULES-COMP_DODGE">"4"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"5"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0071">"1"</Talent>
-  <Talent name="RULES-T0040">"1"</Talent>
-  <Talent name="RULES-T0089">"1"</Talent>
-  <Talent name="RULES-T0137">"1"</Talent>
-  <Talent name="RULES-T0088_*">"2"</Talent>
-  <Talent name="RULES-T0074">"2"</Talent>
-  <Talent name="RULES-T0042">"2"</Talent>
-  <Talent name="RULES-T0117">"2"</Talent>
-  <Talent name="HELFG-T0189">"3"</Talent>
-  <Talent name="RULES-T0096">"3"</Talent>
-  <Talent name="HELFG-T0190">"3"</Talent>
-  <Talent name="HELFG-T0191">"3"</Talent>
-  <Talent name="RULES-T0091">"4"</Talent>
-  <Talent name="RULES-T0167">"4"</Talent>
-  <Talent name="RULES-T0115">"4"</Talent>
-  <Talent name="RULES-T0098">"4"</Talent>
-  <Talent name="RULES-T0163">"5"</Talent>
-  <Talent name="RULES-T0134_MAGIE">"5"</Talent>
-  <Talent name="RULES-T0141">"5"</Talent>
-  <Talent name="RULES-T0087">"5"</Talent>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"1"</Talent>
+  <Talent name="RULES-T_DETECT_ARTEFACT">"1"</Talent>
+  <Talent name="RULES-T_PETTY_MAGIC">"1"</Talent>
+  <Talent name="RULES-T_SECOND_SIGHT">"1"</Talent>
+  <Talent name="RULES-T_ARCANE_MAGIC__*">"2"</Talent>
+  <Talent name="RULES-T_COOLHEADED">"2"</Talent>
+  <Talent name="RULES-T_INSTINCTIVE_DICTION">"2"</Talent>
+  <Talent name="RULES-T_SAVVY">"2"</Talent>
+  <Talent name="HELFG-T_BLESSED__BY_ISHA">"3"</Talent>
+  <Talent name="RULES-T_DUAL_WIELDER">"3"</Talent>
+  <Talent name="HELFG-T_HIGH_MAGIC">"3"</Talent>
+  <Talent name="HELFG-T_LILEATH_S_BLESSING">"3"</Talent>
+  <Talent name="RULES-T_FAST_HANDS">"4"</Talent>
+  <Talent name="RULES-T_IRON_WILL">"4"</Talent>
+  <Talent name="RULES-T_MAGICAL_SENSE">"4"</Talent>
+  <Talent name="RULES-T_MENACING">"4"</Talent>
+  <Talent name="RULES-T_COMBAT_AWARE">"5"</Talent>
+  <Talent name="RULES-T_SAVANT__MAGIE">"5"</Talent>
+  <Talent name="RULES-T_SIXTH_SENSE">"5"</Talent>
+  <Talent name="RULES-T_WAR_WIZARD">"5"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Chalk or Chisel">"1"</Item>
-<Item name="RULES-TRAP_028">"1"</Item>
-<Item name="RULES-TRAP_029">"1"</Item>
+<Item name="RULES-TRAP_RELIGIOUS_SYMBOL">"1"</Item>
+<Item name="RULES-TRAP_ROBES">"1"</Item>
 <Item name="Grimoire">"2"</Item>
-<Item name="RULES-TRAP_028">"2"</Item>
-<Item name="RULES-COMB_BASE_*">"3"</Item>
-<Item name="RULES-TRAP_112">"3"</Item>
-<Item name="RULES-TRAP_028">"3"</Item>
+<Item name="RULES-TRAP_RELIGIOUS_SYMBOL">"2"</Item>
+<Item name="RULES-COMP_MELEE__BASIC">"3"</Item>
+<Item name="RULES-TRAP_LIGHT_WARHORSE">"3"</Item>
+<Item name="RULES-TRAP_RELIGIOUS_SYMBOL">"3"</Item>
 <Item name="Staff">"3"</Item>
 <Item name="Wayshard">"3"</Item>
 <Item name="Magical Item">"4"</Item>
@@ -1919,12 +1901,12 @@
 </SUBCHAPTER_ITEM>
 <Page>90</Page>
 </Career>
-<Career id="HELFG-WORK133">
+<Career id="HELFG-WORK_SMITH_PRIEST_OF_VAUL">
 <Description language="ENGLISH">"Smith-priest of Vaul"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPMETIER_FORGE"</Skill>
+<Skill>"RULES-COMP_TRADE__BLACKSMITH"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
-<Parent>"HELFG-WORK132"</Parent>
+<Parent>"HELFG-WORK_MAGE"</Parent>
   <PictureLevel>"NIV_HELF"</PictureLevel>
 <SUBCHAPTER_LEVEL>
 <Level id="3">
@@ -1953,32 +1935,32 @@
 <Attribut name="RULES-ATTR_Fel">"3"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPART_GRAV">"3"</Skill>
-  <Skill name="RULES-COMPFOCAL_QHAYSH">"3"</Skill>
-  <Skill name="RULES-COMPEVAL">"3"</Skill>
-  <Skill name="RULES-COMPMETIER_FORGE">"3"</Skill>
-  <Skill name="RULES-COMPMARCH">"4"</Skill>
-  <Skill name="RULES-COMPINTUI">"4"</Skill>
-  <Skill name="RULES-COMPCOMM">"5"</Skill>
+<Skill name="RULES-COMP_ART__ENGRAVING">"3"</Skill>
+  <Skill name="RULES-COMP_CHANNELLING__QHAYSH">"3"</Skill>
+  <Skill name="RULES-COMP_EVALUATE">"3"</Skill>
+  <Skill name="RULES-COMP_TRADE__BLACKSMITH">"3"</Skill>
+  <Skill name="RULES-COMP_HAGGLE">"4"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"4"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"5"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0007">"3"</Talent>
-  <Talent name="HELFG-T0193">"3"</Talent>
-  <Talent name="RULES-T0092_FORGE">"3"</Talent>
-  <Talent name="HELFG-T0190">"3"</Talent>
-  <Talent name="RULES-T0157_FORGE">"4"</Talent>
-  <Talent name="HELFG-T0192">"4"</Talent>
-  <Talent name="RULES-T0077">"4"</Talent>
-  <Talent name="RULES-T0116">"4"</Talent>
-  <Talent name="RULES-T0165">"5"</Talent>
-  <Talent name="RULES-T0090">"5"</Talent>
-  <Talent name="RULES-T0141">"5"</Talent>
-  <Talent name="RULES-T0107">"5"</Talent>
+<Talent name="RULES-T_ARTISTIC">"3"</Talent>
+  <Talent name="HELFG-T_CADAI_MEDITATION">"3"</Talent>
+  <Talent name="RULES-T_CRAFTSMAN__FORGE">"3"</Talent>
+  <Talent name="HELFG-T_HIGH_MAGIC">"3"</Talent>
+  <Talent name="RULES-T_MASTER_TRADESMAN__FORGE">"4"</Talent>
+  <Talent name="HELFG-T_MIND_OVER_BODY">"4"</Talent>
+  <Talent name="RULES-T_STRONG_BACK">"4"</Talent>
+  <Talent name="RULES-T_TENACIOUS">"4"</Talent>
+  <Talent name="RULES-T_HOLY_VISIONS">"5"</Talent>
+  <Talent name="RULES-T_MAGNUM_OPUS">"5"</Talent>
+  <Talent name="RULES-T_SIXTH_SENSE">"5"</Talent>
+  <Talent name="RULES-T_STRONG_MINDED">"5"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Prayer Book">"3"</Item>
-<Item name="RULES-TRAP_028">"3"</Item>
-<Item name="RULES-TRAP_101">"3"</Item>
+<Item name="RULES-TRAP_RELIGIOUS_SYMBOL">"3"</Item>
+<Item name="RULES-TRAP_TRADE_TOOLS">"3"</Item>
 <Item name="Blindness">"4"</Item>
 <Item name="Forge">"4"</Item>
 <Item name="Ithilmar Ore">"5"</Item>
@@ -1987,12 +1969,12 @@
 </SUBCHAPTER_ITEM>
 <Page>100</Page>
 </Career>
-<Career id="HELFG-WORK134">
+<Career id="HELFG-WORK_STORM_WEAVER">
 <Description language="ENGLISH">"Storm Weaver"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPVOILE_*"</Skill>
+<Skill>"RULES-COMP_SAIL__*"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
-<Parent>"HELFG-WORK132"</Parent>
+<Parent>"HELFG-WORK_MAGE"</Parent>
   <PictureLevel>"NIV_HELF"</PictureLevel>
 <SUBCHAPTER_LEVEL>
 <Level id="3">
@@ -2021,32 +2003,32 @@
 <Attribut name="RULES-ATTR_Fel">"3"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPFOCAL_QHAYSH">"3"</Skill>
-  <Skill name="RULES-COMPRAMER">"3"</Skill>
-  <Skill name="RULES-COMPVOILE_*">"3"</Skill>
-  <Skill name="RULES-COMPNATA">"3"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"4"</Skill>
-  <Skill name="RULES-COMPORIENT">"4"</Skill>
-  <Skill name="RULES-COMPCOMM">"5"</Skill>
+<Skill name="RULES-COMP_CHANNELLING__QHAYSH">"3"</Skill>
+  <Skill name="RULES-COMP_ROW">"3"</Skill>
+  <Skill name="RULES-COMP_SAIL__*">"3"</Skill>
+  <Skill name="RULES-COMP_SWIM">"3"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"4"</Skill>
+  <Skill name="RULES-COMP_NAVIGATION">"4"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"5"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0071">"3"</Talent>
-  <Talent name="HELFG-T0193">"3"</Talent>
-  <Talent name="HELFG-T0190">"3"</Talent>
-  <Talent name="HELFG-T0194">"3"</Talent>
-  <Talent name="RULES-T0132_SEAMONSTR">"4"</Talent>
-  <Talent name="RULES-T0140">"4"</Talent>
-  <Talent name="RULES-T0119">"4"</Talent>
-  <Talent name="RULES-T0100">"4"</Talent>
-  <Talent name="RULES-T0165">"5"</Talent>
-  <Talent name="RULES-T0085">"5"</Talent>
-  <Talent name="RULES-T0168">"5"</Talent>
-  <Talent name="RULES-T0087">"5"</Talent>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"3"</Talent>
+  <Talent name="HELFG-T_CADAI_MEDITATION">"3"</Talent>
+  <Talent name="HELFG-T_HIGH_MAGIC">"3"</Talent>
+  <Talent name="HELFG-T_EYE_OF_THE_STORM">"3"</Talent>
+  <Talent name="RULES-T_FEARLESS__SEAMONSTR">"4"</Talent>
+  <Talent name="RULES-T_ORIENTATION">"4"</Talent>
+  <Talent name="RULES-T_SEA_LEGS">"4"</Talent>
+  <Talent name="RULES-T_STRONG_SWIMMER">"4"</Talent>
+  <Talent name="RULES-T_HOLY_VISIONS">"5"</Talent>
+  <Talent name="RULES-T_OLD_SALT">"5"</Talent>
+  <Talent name="RULES-T_SEASONED_TRAVELLER">"5"</Talent>
+  <Talent name="RULES-T_WAR_WIZARD">"5"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Prayer Book">"3"</Item>
-<Item name="RULES-TRAP_028">"3"</Item>
-<Item name="RULES-TRAP_118">"3"</Item>
+<Item name="RULES-TRAP_RELIGIOUS_SYMBOL">"3"</Item>
+<Item name="RULES-TRAP_ROW_BOAT">"3"</Item>
 <Item name="Sea Charts">"4"</Item>
 <Item name="Sextant">"4"</Item>
 <Item name="Sailing Ship and Crew">"5"</Item>
@@ -2054,12 +2036,12 @@
 </SUBCHAPTER_ITEM>
 <Page>104</Page>
 </Career>
-<Career id="HELFG-WORK135">
+<Career id="HELFG-WORK_LOREMASTER_OF_HOETH">
 <Description language="ENGLISH">"Loremaster of Hoeth"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPRECH"</Skill>
+<Skill>"RULES-COMP_RESEARCH"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
-<Parent>"HELFG-WORK132"</Parent>
+<Parent>"HELFG-WORK_MAGE"</Parent>
   <PictureLevel>"NIV_HELF"</PictureLevel>
 <SUBCHAPTER_LEVEL>
 <Level id="3">
@@ -2088,35 +2070,35 @@
 <Attribut name="RULES-ATTR_Fel">"3"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPFOCAL_QHAYSH">"3"</Skill>
-  <Skill name="RULES-COMPLANG_*">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"3"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"3"</Skill>
-  <Skill name="RULES-COMPPRIERE">"3"</Skill>
-  <Skill name="RULES-COMPRECH">"3"</Skill>
-  <Skill name="RULES-COMPLANG_*">"4"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"5"</Skill>
+<Skill name="RULES-COMP_CHANNELLING__QHAYSH">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"3"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"3"</Skill>
+  <Skill name="RULES-COMP_PRAY">"3"</Skill>
+  <Skill name="RULES-COMP_RESEARCH">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"4"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"4"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"5"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0146">"3"</Talent>
-  <Talent name="HELFG-T0193">"3"</Talent>
-  <Talent name="HELFG-T0190">"3"</Talent>
-  <Talent name="HELFG-T0195">"3"</Talent>
-  <Talent name="RULES-T0042">"4"</Talent>
-  <Talent name="RULES-T0082">"4"</Talent>
-  <Talent name="RULES-T0081">"4"</Talent>
-  <Talent name="RULES-T0155">"4"</Talent>
-  <Talent name="RULES-T0163">"5"</Talent>
-  <Talent name="RULES-T0115">"5"</Talent>
-  <Talent name="RULES-T0165">"5"</Talent>
-  <Talent name="RULES-T0005">"5"</Talent>
+<Talent name="RULES-T_BOOKISH">"3"</Talent>
+  <Talent name="HELFG-T_CADAI_MEDITATION">"3"</Talent>
+  <Talent name="HELFG-T_HIGH_MAGIC">"3"</Talent>
+  <Talent name="HELFG-T_SANCTUARY_OF_THE_MIND">"3"</Talent>
+  <Talent name="RULES-T_INSTINCTIVE_DICTION">"4"</Talent>
+  <Talent name="RULES-T_LINGUISTICS">"4"</Talent>
+  <Talent name="RULES-T_SPEEDREADER">"4"</Talent>
+  <Talent name="RULES-T_TOWER_OF_MEMORIES">"4"</Talent>
+  <Talent name="RULES-T_COMBAT_AWARE">"5"</Talent>
+  <Talent name="RULES-T_MAGICAL_SENSE">"5"</Talent>
+  <Talent name="RULES-T_HOLY_VISIONS">"5"</Talent>
+  <Talent name="RULES-T_PURE_SOUL">"5"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Prayer Book">"3"</Item>
-<Item name="RULES-TRAP_028">"3"</Item>
-<Item name="RULES-TRAP_087">"3"</Item>
-<Item name="RULES-TRAP_029 (Q)">"4"</Item>
+<Item name="RULES-TRAP_RELIGIOUS_SYMBOL">"3"</Item>
+<Item name="RULES-TRAP_WRITING_KIT">"3"</Item>
+<Item name="RULES-TRAP_ROBES (Q)">"4"</Item>
 <Item name="Rare Books">"4"</Item>
 <Item name="Library">"5"</Item>
 <Item name="Office">"5"</Item>
@@ -2125,795 +2107,795 @@
 </Career>
 </DATA_CAREER>
 <DATA_SPELL>
-  <Sort id="HELFG-PETTY_01">
+  <Sort id="HELFG-PETTY_BLESS_ARROW">
 <Description language="ENGLISH">"Bless Arrow"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 arrow"</Target>
 <Duration>"Willpower Bonus Rounds"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>80</Page>
 </Sort>
-<Sort id="HELFG-PETTY_02">
+<Sort id="HELFG-PETTY_CALM">
 <Description language="ENGLISH">"Calm"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>80</Page>
 </Sort>
-<Sort id="HELFG-PETTY_03">
+<Sort id="HELFG-PETTY_GREENFINGER">
 <Description language="ENGLISH">"Greenfinger"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Willpower Bonus yards)"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>80</Page>
 </Sort>
-<Sort id="HELFG-PETTY_04">
+<Sort id="HELFG-PETTY_IDENTIFY_DISEASE">
 <Description language="ENGLISH">"Identify Disease"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>81</Page>
 </Sort>
-<Sort id="HELFG-PETTY_05">
+<Sort id="HELFG-PETTY_REMOVE_DIRT">
 <Description language="ENGLISH">"Remove Dirt"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 or AoE (Willpower Bonus yards)"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>81</Page>
 </Sort>
-<Sort id="HELFG-PETTY_06">
+<Sort id="HELFG-PETTY_REVEAL_MAGIC">
 <Description language="ENGLISH">"Reveal Magic"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Willpower Bonus yards)"</Target>
 <Duration>"Willpower Bonus Rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0089"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Minor Magic"</TypSpell>
 <Page>81</Page>
 </Sort>
-<Sort id="HELFG-ARCANE_01">
+<Sort id="HELFG-ARCANE_ENCHANT_PLANT">
 <Description language="ENGLISH">"Enchant Plant"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 plant"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_VIE,RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE,RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>81</Page>
 </Sort>
-<Sort id="HELFG-ARCANE_02">
+<Sort id="HELFG-ARCANE_LESSER_BANISHMENT">
 <Description language="ENGLISH">"Lesser Banishment"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"RULES-T0088_LUMIERE,RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE,RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>81</Page>
 </Sort>
-<Sort id="HELFG-ARCANE_03">
+<Sort id="HELFG-ARCANE_MAGIC_ALARM">
 <Description language="ENGLISH">"Magic Alarm"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Initiative Bonus yards)"</Target>
 <Duration>"Willpower Bonus hours"</Duration>
 <Range>"Willpower Bonus yards"</Range>
-<Talent>"RULES-T0088_CIEUX,RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX,RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>82</Page>
 </Sort>
-<Sort id="HELFG-ARCANE_04">
+<Sort id="HELFG-ARCANE_MASKING_THE_MIND">
 <Description language="ENGLISH">"Masking the Mind"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"Willpower Bonus hours"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_MORT,RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT,RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>82</Page>
 </Sort>
-<Sort id="HELFG-ARCANE_05">
+<Sort id="HELFG-ARCANE_PURIFY_BODY">
 <Description language="ENGLISH">"Purify Body"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0088_VIE,RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE,RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>82</Page>
 </Sort>
-<Sort id="HELFG-ARCANE_06">
+<Sort id="HELFG-ARCANE_SPEAK_WITH_ANIMAL">
 <Description language="ENGLISH">"Speak with Animal"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Intelligence minutes"</Duration>
 <Range>"Willpower Bonus yards"</Range>
-<Talent>"RULES-T0088_CIEUX,RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX,RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>82</Page>
 </Sort>
-<Sort id="HELFG-ARCANE_07">
+<Sort id="HELFG-ARCANE_VOICE_OF_IRON">
 <Description language="ENGLISH">"Voice of Iron"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"Fellowship minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_FEU,RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU,RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>82</Page>
 </Sort>
-<Sort id="HELFG-ARCANE_08">
+<Sort id="HELFG-ARCANE_ZONE_OF_COMFORT">
 <Description language="ENGLISH">"Zone of Comfort"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"Willpower Bonus hours"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_FEU,RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU,RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>82</Page>
 </Sort>
-<Sort id="HELFG-HIGH_01">
+<Sort id="HELFG-HIGH_APOTHEOSIS">
 <Description language="ENGLISH">"Apotheosis"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"1 Round"</Duration>
 <Range>"Half Willpower yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>86</Page>
 </Sort>
-<Sort id="HELFG-HIGH_02">
+<Sort id="HELFG-HIGH_ARCANE_UNFORGING">
 <Description language="ENGLISH">"Arcane Unforging"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>86</Page>
 </Sort>
-<Sort id="HELFG-HIGH_03">
+<Sort id="HELFG-HIGH_CORUSCATION_OF_FINREIR">
 <Description language="ENGLISH">"Coruscation of Finreir"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"Willpower Bonus Rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"11"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>86</Page>
 </Sort>
-<Sort id="HELFG-HIGH_04">
+<Sort id="HELFG-HIGH_CURSE_OF_ARROW_ATTRACTION">
 <Description language="ENGLISH">"Curse of Arrow Attraction"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Ballistic Skill Bonus yards)"</Target>
 <Duration>"Willpower Bonus Rounds"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>86</Page>
 </Sort>
-<Sort id="HELFG-HIGH_05">
+<Sort id="HELFG-HIGH_DEADLOCK">
 <Description language="ENGLISH">"Deadlock"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 spellcaster, spell, or item"</Target>
 <Duration>"Willpower Bonus minutes"</Duration>
 <Range>"Half Toughness yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>87</Page>
 </Sort>
-<Sort id="HELFG-HIGH_06">
+<Sort id="HELFG-HIGH_DRAIN_MAGIC">
 <Description language="ENGLISH">"Drain Magic"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Willpower Bonus yards)"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Half Willpower yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>87</Page>
 </Sort>
-<Sort id="HELFG-HIGH_07">
+<Sort id="HELFG-HIGH_FIERY_CONVOCATION">
 <Description language="ENGLISH">"Fiery Convocation"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Willpower Bonus yards)"</Target>
 <Duration>"Willpower Bonus Rounds"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"10"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>87</Page>
 </Sort>
-<Sort id="HELFG-HIGH_08">
+<Sort id="HELFG-HIGH_FORTUNE_IS_FICKLE">
 <Description language="ENGLISH">"Fortune is Fickle"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Fellowship Bonus Rounds"</Duration>
 <Range>"Fellowship yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>87</Page>
 </Sort>
-<Sort id="HELFG-HIGH_09">
+<Sort id="HELFG-HIGH_GLAMOUR_OF_TECLIS">
 <Description language="ENGLISH">"Glamour of Teclis"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Intelligence Bonus yards)"</Target>
 <Duration>"Intelligence Bonus Rounds"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>88</Page>
 </Sort>
-<Sort id="HELFG-HIGH_10">
+<Sort id="HELFG-HIGH_GREATER_BANISHMENT">
 <Description language="ENGLISH">"Greater Banishment"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Half Willpower yards)"</Target>
 <Duration>"1 Round"</Duration>
 <Range>"You"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"14"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>88</Page>
 </Sort>
-<Sort id="HELFG-HIGH_11">
+<Sort id="HELFG-HIGH_HAND_OF_GLORY">
 <Description language="ENGLISH">"Hand of Glory"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Fellowship Bonus yards)"</Target>
 <Duration>"1 Round"</Duration>
 <Range>"You"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>88</Page>
 </Sort>
-<Sort id="HELFG-HIGH_12">
+<Sort id="HELFG-HIGH_INVISIBLE_EYE">
 <Description language="ENGLISH">"Invisible Eye"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Intelligence Bonus hours"</Duration>
 <Range>"Intelligence Bonus yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>88</Page>
 </Sort>
-<Sort id="HELFG-HIGH_13">
+<Sort id="HELFG-HIGH_SHIELD_OF_SAPHERY">
 <Description language="ENGLISH">"Shield of Saphery"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Willpower Bonus yards)"</Target>
 <Duration>"1 Round"</Duration>
 <Range>"You"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>89</Page>
 </Sort>
-<Sort id="HELFG-HIGH_14">
+<Sort id="HELFG-HIGH_SOUL_QUENCH">
 <Description language="ENGLISH">"Soul Quench"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Willpower Bonus yards)"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Half Willpower yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>89</Page>
 </Sort>
-<Sort id="HELFG-HIGH_15">
+<Sort id="HELFG-HIGH_TEMPEST">
 <Description language="ENGLISH">"Tempest"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (2 x Willpower Bonus yards)"</Target>
 <Duration>"1 Round"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>89</Page>
 </Sort>
-<Sort id="HELFG-HIGH_16">
+<Sort id="HELFG-HIGH_WALK_BETWEEN_WORLDS">
 <Description language="ENGLISH">"Walk between Worlds"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Willpower Bonus yards)"</Target>
 <Duration>"1 Round"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>89</Page>
 </Sort>
-<Sort id="HELFG-VAUL_01">
+<Sort id="HELFG-VAUL_ARTIST_S_TOUCH">
 <Description language="ENGLISH">"Artist's Touch"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 item"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Blessing"</TypSpell>
 <Page>102</Page>
 </Sort>
-<Sort id="HELFG-VAUL_02">
+<Sort id="HELFG-VAUL_PATIENCE_OF_VAUL">
 <Description language="ENGLISH">"Patience of Vaul"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 item"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Blessing"</TypSpell>
 <Page>102</Page>
 </Sort>
-<Sort id="HELFG-VAUL_03">
+<Sort id="HELFG-VAUL_VAUL_S_GRACE">
 <Description language="ENGLISH">"Vaul's Grace"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 item"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>102</Page>
 </Sort>
-<Sort id="HELFG-VAUL_04">
+<Sort id="HELFG-VAUL_VAUL_S_RAGE">
 <Description language="ENGLISH">"Vaul's Rage"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 forge or campfire (maximum)"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Willpower Bonus yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>102</Page>
 </Sort>
-<Sort id="HELFG-VAUL_05">
+<Sort id="HELFG-VAUL_DIVINATION_OF_FLAMES">
 <Description language="ENGLISH">"Divination of Flames"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 forge or campfire (maximum)"</Target>
 <Duration>"Intelligence Bonus hours"</Duration>
 <Range>"Initiative Bonus yards (maximum)"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>102</Page>
 </Sort>
-<Sort id="HELFG-VAUL_06">
+<Sort id="HELFG-VAUL_DIVINATION_OF_STONES">
 <Description language="ENGLISH">"Divination of Stones"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Intelligence Bonus hours"</Duration>
 <Range>"Intelligence Bonus miles"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>103</Page>
 </Sort>
-<Sort id="HELFG-VAUL_07">
+<Sort id="HELFG-VAUL_FIRES_OF_PERFECTION">
 <Description language="ENGLISH">"Fires of Perfection"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 item"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>103</Page>
 </Sort>
-<Sort id="HELFG-VAUL_08">
+<Sort id="HELFG-VAUL_WISDOM_OF_THE_SKYSTEEL">
 <Description language="ENGLISH">"Wisdom of the Skysteel"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 item"</Target>
 <Duration>"1 Endeavour"</Duration>
 <Range>"Touch"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"11"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>103</Page>
 </Sort>
-<Sort id="HELFG-VAUL_09">
+<Sort id="HELFG-VAUL_FORTRESS_OF_HOTEK">
 <Description language="ENGLISH">"Fortress of Hotek"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 forge chamber or building (maximum)"</Target>
 <Duration>"Willpower Bonus hours"</Duration>
 <Range>"Willpower Bonus yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"14"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>103</Page>
 </Sort>
-<Sort id="HELFG-MATH_01">
+<Sort id="HELFG-MATH_FISHBONDING">
 <Description language="ENGLISH">"Fishbonding"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Willpower minutes"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Blessing"</TypSpell>
 <Page>106</Page>
 </Sort>
-<Sort id="HELFG-MATH_02">
+<Sort id="HELFG-MATH_STORMSENSE">
 <Description language="ENGLISH">"Stormsense"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Initiative miles"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Blessing"</TypSpell>
 <Page>106</Page>
 </Sort>
-<Sort id="HELFG-MATH_03">
+<Sort id="HELFG-MATH_OCEAN_S_FURY">
 <Description language="ENGLISH">"Ocean's Fury"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Willpower Bonus miles)"</Target>
 <Duration>"3 x Willpower Bonus minutes (see below)"</Duration>
 <Range>"You"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>106</Page>
 </Sort>
-<Sort id="HELFG-MATH_04">
+<Sort id="HELFG-MATH_SPIRITS_OF_THE_WAVES">
 <Description language="ENGLISH">"Spirits of the Waves"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (2 x Fellowship Bonus yards)"</Target>
 <Duration>"Fellowship Bonus minutes"</Duration>
 <Range>"2 x Fellowship yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>106</Page>
 </Sort>
-<Sort id="HELFG-MATH_05">
+<Sort id="HELFG-MATH_ARMOUR_OF_MATHLANN">
 <Description language="ENGLISH">"Armour of Mathlann"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 boat or ship"</Target>
 <Duration>"Willpower minutes"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"10"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>106</Page>
 </Sort>
-<Sort id="HELFG-MATH_06">
+<Sort id="HELFG-MATH_CALL_OF_THE_SEAS">
 <Description language="ENGLISH">"Call of the Seas"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Willpower Bonus Rounds"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"14"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>106</Page>
 </Sort>
-<Sort id="HELFG-MATH_07">
+<Sort id="HELFG-MATH_CLOAK_OF_MATHLANN">
 <Description language="ENGLISH">"Cloak of Mathlann"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 boat or ship"</Target>
 <Duration>"Willpower minutes"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"11"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>107</Page>
 </Sort>
-<Sort id="HELFG-MATH_08">
+<Sort id="HELFG-MATH_MISTRESS_OF_THE_DEEP">
 <Description language="ENGLISH">"Mistress of the Deep"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Fellowship Bonus Rounds"</Duration>
 <Range>"Fellowship yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>107</Page>
 </Sort>
-<Sort id="HELFG-MATH_09">
+<Sort id="HELFG-MATH_WATERLUNGS">
 <Description language="ENGLISH">"Waterlungs"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Willpower Bonus hours"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>107</Page>
 </Sort>
-<Sort id="HELFG-MATH_10">
+<Sort id="HELFG-MATH_WRITHING_MISTS">
 <Description language="ENGLISH">"Writhing Mists"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Willpower Bonus yards)"</Target>
 <Duration>"Willpower Bonus minutes"</Duration>
 <Range>"Willpower yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>107</Page>
 </Sort>
-<Sort id="HELFG-HOETH_01">
+<Sort id="HELFG-HOETH_DIVINE_STYLUS">
 <Description language="ENGLISH">"Divine Stylus"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"Willpower Bonus minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Blessing"</TypSpell>
 <Page>110</Page>
 </Sort>
-<Sort id="HELFG-HOETH_02">
+<Sort id="HELFG-HOETH_ENLIGHTENMENT">
 <Description language="ENGLISH">"Enlightenment"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 animal"</Target>
 <Duration>"Intelligence Bonus minutes"</Duration>
 <Range>"Willpower Bonus yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"0"</Level>
 <TypSpell>"Blessing"</TypSpell>
 <Page>110</Page>
 </Sort>
-<Sort id="HELFG-HOETH_03">
+<Sort id="HELFG-HOETH_ARCANE_INSIGHT">
 <Description language="ENGLISH">"Arcane Insight"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 object"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Touch"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>110</Page>
 </Sort>
-<Sort id="HELFG-HOETH_04">
+<Sort id="HELFG-HOETH_GREATER_SPIRIT_BOND">
 <Description language="ENGLISH">"Greater Spirit Bond"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Willpower Bonus minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>110</Page>
 </Sort>
-<Sort id="HELFG-HOETH_05">
+<Sort id="HELFG-HOETH_CRUCIBLE_OF_LIGHT">
 <Description language="ENGLISH">"Crucible of Light"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 sword"</Target>
 <Duration>"Intelligence Bonus minutes"</Duration>
 <Range>"Touch"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>110</Page>
 </Sort>
-<Sort id="HELFG-HOETH_06">
+<Sort id="HELFG-HOETH_MNEMONIC_CONTROL">
 <Description language="ENGLISH">"Mnemonic Control"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Willpower Bonus yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>110</Page>
 </Sort>
-<Sort id="HELFG-HOETH_07">
+<Sort id="HELFG-HOETH_PSYCHIC_SENDING">
 <Description language="ENGLISH">"Psychic Sending"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Willpower miles"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>111</Page>
 </Sort>
-<Sort id="HELFG-HOETH_08">
+<Sort id="HELFG-HOETH_SACRED_WARDS">
 <Description language="ENGLISH">"Sacred Wards"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Intelligence Bonus yards)"</Target>
 <Duration>"Intelligence Bonus hours"</Duration>
 <Range>"Touch"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"11"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>111</Page>
 </Sort>
-<Sort id="HELFG-HOETH_09">
+<Sort id="HELFG-HOETH_SOULCRAFT">
 <Description language="ENGLISH">"Soulcraft"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 Ghost"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Willpower Bonus yards"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"10"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>111</Page>
 </Sort>
-<Sort id="HELFG-HOETH_10">
+<Sort id="HELFG-HOETH_THE_PRIMARY_WORDS">
 <Description language="ENGLISH">"The Primary Words"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"Intelligence Bonus hours"</Duration>
 <Range>"You"</Range>
-<Talent>"HELFG-T0190"</Talent>
+<Talent>"HELFG-T_HIGH_MAGIC"</Talent>
 <Level>"15"</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>111</Page>
 </Sort>
 </DATA_SPELL>
 <DATA_ARMOR>
-  <Armor id="HELFG-ARMO_01">
+  <Armor id="HELFG-ARMO_ITHILMAR_BREASTPLATE">
 <Description language="ENGLISH">"Ithilmar Breastplate"</Description>
 <Availability>"RULES-DISPO_UNIQUE"</Availability>
 <Price>"1280CO"</Price>
 <Encumbrance>"1"</Encumbrance>
-<Quality>"RULES-ARMOB_02,RULES-ARMOB_04,RULES-ARMOB_05"</Quality>
+<Quality>"RULES-ARMOB_IMPENETRABLE,RULES-ARMOB_WEAKPOINTS,RULES-ARMOB_NOT_DISCREET"</Quality>
 <Location>"RULES-ARMOL_BODY"</Location>
 <ArmorPoint>"2"</ArmorPoint>
 <Type>"RULES-ARMOT_PLATE"</Type>
 <InherentCraftsmanship>"RULES-QUALITY_04 2,RULES-QUALITY_03 2"</InherentCraftsmanship>
 <Page>34</Page>
 </Armor>
-<Armor id="HELFG-ARMO_02">
+<Armor id="HELFG-ARMO_ITHILMAR_OPEN_HELM">
 <Description language="ENGLISH">"Ithilmar Open Helm"</Description>
 <Availability>"RULES-DISPO_UNIQUE"</Availability>
 <Price>"256CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<Quality>"RULES-ARMOB_03,RULES-ARMOB_05,RULES-ARMOB_06"</Quality>
+<Quality>"RULES-ARMOB_PARTIAL,RULES-ARMOB_NOT_DISCREET,RULES-ARMOB_NARROW_THE_VIEW"</Quality>
 <Location>"RULES-ARMOL_HEAD"</Location>
 <ArmorPoint>"2"</ArmorPoint>
 <Type>"RULES-ARMOT_PLATE"</Type>
 <InherentCraftsmanship>"RULES-QUALITY_04 2,RULES-QUALITY_03 2"</InherentCraftsmanship>
 <Page>34</Page>
 </Armor>
-<Armor id="HELFG-ARMO_03">
+<Armor id="HELFG-ARMO_ITHILMAR_BRACERS">
 <Description language="ENGLISH">"Ithilmar Bracers"</Description>
 <Availability>"RULES-DISPO_UNIQUE"</Availability>
 <Price>"1024CO"</Price>
 <Encumbrance>"1"</Encumbrance>
-<Quality>"RULES-ARMOB_02,RULES-ARMOB_04,RULES-ARMOB_05"</Quality>
+<Quality>"RULES-ARMOB_IMPENETRABLE,RULES-ARMOB_WEAKPOINTS,RULES-ARMOB_NOT_DISCREET"</Quality>
 <Location>"RULES-ARMOL_ARM"</Location>
 <ArmorPoint>"2"</ArmorPoint>
 <Type>"RULES-ARMOT_PLATE"</Type>
 <InherentCraftsmanship>"RULES-QUALITY_04 2,RULES-QUALITY_03 2"</InherentCraftsmanship>
 <Page>34</Page>
 </Armor>
-<Armor id="HELFG-ARMO_04">
+<Armor id="HELFG-ARMO_ITHILMAR_PLATE_LEGGINGS">
 <Description language="ENGLISH">"Ithilmar Plate Leggings"</Description>
 <Availability>"RULES-DISPO_UNIQUE"</Availability>
 <Price>"1280CO"</Price>
 <Encumbrance>"1"</Encumbrance>
-<Quality>"RULES-ARMOB_02,RULES-ARMOB_04,RULES-ARMOB_05"</Quality>
+<Quality>"RULES-ARMOB_IMPENETRABLE,RULES-ARMOB_WEAKPOINTS,RULES-ARMOB_NOT_DISCREET"</Quality>
 <Location>"RULES-ARMOL_LEG"</Location>
 <ArmorPoint>"2"</ArmorPoint>
 <Type>"RULES-ARMOT_PLATE"</Type>
 <InherentCraftsmanship>"RULES-QUALITY_04 2,RULES-QUALITY_03 2"</InherentCraftsmanship>
 <Page>34</Page>
 </Armor>
-<Armor id="HELFG-ARMO_05">
+<Armor id="HELFG-ARMO_ITHILMAR_HELM">
 <Description language="ENGLISH">"Ithilmar Helm"</Description>
 <Availability>"RULES-DISPO_UNIQUE"</Availability>
 <Price>"384CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<Quality>"RULES-ARMOB_02,RULES-ARMOB_04,RULES-ARMOB_05,RULES-ARMOB_07"</Quality>
+<Quality>"RULES-ARMOB_IMPENETRABLE,RULES-ARMOB_WEAKPOINTS,RULES-ARMOB_NOT_DISCREET,RULES-ARMOB_BLOCKS_THE_VIEW"</Quality>
 <Location>"RULES-ARMOL_HEAD"</Location>
 <ArmorPoint>"2"</ArmorPoint>
 <Type>"RULES-ARMOT_PLATE"</Type>
 <InherentCraftsmanship>"RULES-QUALITY_04 2,RULES-QUALITY_03 2"</InherentCraftsmanship>
 <Page>34</Page>
 </Armor>
-  <Armor id="HELFG-ARMO_06">
+  <Armor id="HELFG-ARMO_ITHILTAEN_HELM">
 <Description language="ENGLISH">"Ithiltaen Helm"</Description>
 <Availability>"RULES-DISPO_UNIQUE"</Availability>
 <Price>"1536CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<Quality>"RULES-ARMOB_02,RULES-ARMOB_04,RULES-ARMOB_05,RULES-ARMOB_07"</Quality>
+<Quality>"RULES-ARMOB_IMPENETRABLE,RULES-ARMOB_WEAKPOINTS,RULES-ARMOB_NOT_DISCREET,RULES-ARMOB_BLOCKS_THE_VIEW"</Quality>
 <Location>"RULES-ARMOL_HEAD"</Location>
 <ArmorPoint>"2"</ArmorPoint>
 <Type>"RULES-ARMOT_PLATE"</Type>
 <InherentCraftsmanship>"RULES-QUALITY_04 2,RULES-QUALITY_03 4"</InherentCraftsmanship>
 <Page>34</Page>
 </Armor>
-<Armor id="HELFG-ARMO_07">
+<Armor id="HELFG-ARMO_DRAGON_ARMOUR_BREASTPLATE">
 <Description language="ENGLISH">"Dragon Armour Breastplate"</Description>
 <Availability>"RULES-DISPO_UNIQUE"</Availability>
 <Price>"10240CO"</Price>
 <Encumbrance>"3"</Encumbrance>
-<Quality>"RULES-ARMOB_02,RULES-ARMOB_04,RULES-ARMOB_05"</Quality>
+<Quality>"RULES-ARMOB_IMPENETRABLE,RULES-ARMOB_WEAKPOINTS,RULES-ARMOB_NOT_DISCREET"</Quality>
 <Location>"RULES-ARMOL_BODY"</Location>
 <ArmorPoint>"2"</ArmorPoint>
 <Type>"RULES-ARMOT_PLATE"</Type>
 <InherentCraftsmanship>"RULES-QUALITY_04 3,RULES-QUALITY_03 2"</InherentCraftsmanship>
 <Page>34</Page>
 </Armor>
-<Armor id="HELFG-ARMO_08">
+<Armor id="HELFG-ARMO_DRAGON_ARMOUR_OPEN_HELM">
 <Description language="ENGLISH">"Dragon Armour Open Helm"</Description>
 <Availability>"RULES-DISPO_UNIQUE"</Availability>
 <Price>"2048CO"</Price>
 <Encumbrance>"1"</Encumbrance>
-<Quality>"RULES-ARMOB_03,RULES-ARMOB_05,RULES-ARMOB_06"</Quality>
+<Quality>"RULES-ARMOB_PARTIAL,RULES-ARMOB_NOT_DISCREET,RULES-ARMOB_NARROW_THE_VIEW"</Quality>
 <Location>"RULES-ARMOL_HEAD"</Location>
 <ArmorPoint>"2"</ArmorPoint>
 <Type>"RULES-ARMOT_PLATE"</Type>
 <InherentCraftsmanship>"RULES-QUALITY_04 3,RULES-QUALITY_03 2"</InherentCraftsmanship>
 <Page>34</Page>
 </Armor>
-<Armor id="HELFG-ARMO_09">
+<Armor id="HELFG-ARMO_DRAGON_ARMOUR_BRACERS">
 <Description language="ENGLISH">"Dragon Armour Bracers"</Description>
 <Availability>"RULES-DISPO_UNIQUE"</Availability>
 <Price>"8192CO"</Price>
 <Encumbrance>"3"</Encumbrance>
-<Quality>"RULES-ARMOB_02,RULES-ARMOB_04,RULES-ARMOB_05"</Quality>
+<Quality>"RULES-ARMOB_IMPENETRABLE,RULES-ARMOB_WEAKPOINTS,RULES-ARMOB_NOT_DISCREET"</Quality>
 <Location>"RULES-ARMOL_ARM"</Location>
 <ArmorPoint>"2"</ArmorPoint>
 <Type>"RULES-ARMOT_PLATE"</Type>
 <InherentCraftsmanship>"RULES-QUALITY_04 3,RULES-QUALITY_03 2"</InherentCraftsmanship>
 <Page>34</Page>
 </Armor>
-<Armor id="HELFG-ARMO_10">
+<Armor id="HELFG-ARMO_DRAGON_ARMOUR_PLATE_LEGGINGS">
 <Description language="ENGLISH">"Dragon Armour Plate Leggings"</Description>
 <Availability>"RULES-DISPO_UNIQUE"</Availability>
 <Price>"10240CO"</Price>
 <Encumbrance>"3"</Encumbrance>
-<Quality>"RULES-ARMOB_02,RULES-ARMOB_04,RULES-ARMOB_05"</Quality>
+<Quality>"RULES-ARMOB_IMPENETRABLE,RULES-ARMOB_WEAKPOINTS,RULES-ARMOB_NOT_DISCREET"</Quality>
 <Location>"RULES-ARMOL_LEG"</Location>
 <ArmorPoint>"2"</ArmorPoint>
 <Type>"RULES-ARMOT_PLATE"</Type>
 <InherentCraftsmanship>"RULES-QUALITY_04 3,RULES-QUALITY_03 2"</InherentCraftsmanship>
 <Page>34</Page>
 </Armor>
-<Armor id="HELFG-ARMO_11">
+<Armor id="HELFG-ARMO_DRAGON_ARMOUR_HELM">
 <Description language="ENGLISH">"Dragon Armour Helm"</Description>
 <Availability>"RULES-DISPO_UNIQUE"</Availability>
 <Price>"3072CO"</Price>
 <Encumbrance>"2"</Encumbrance>
-<Quality>"RULES-ARMOB_02,RULES-ARMOB_04,RULES-ARMOB_05,RULES-ARMOB_07"</Quality>
+<Quality>"RULES-ARMOB_IMPENETRABLE,RULES-ARMOB_WEAKPOINTS,RULES-ARMOB_NOT_DISCREET,RULES-ARMOB_BLOCKS_THE_VIEW"</Quality>
 <Location>"RULES-ARMOL_HEAD"</Location>
 <ArmorPoint>"2"</ArmorPoint>
 <Type>"RULES-ARMOT_PLATE"</Type>
 <InherentCraftsmanship>"RULES-QUALITY_04 3,RULES-QUALITY_03 2"</InherentCraftsmanship>
 <Page>34</Page>
 </Armor>
-  <Armor id="HELFG-ARMO_12">
+  <Armor id="HELFG-ARMO_WHITE_LION_HIDE_CLOAK">
 <Description language="ENGLISH">"White Lion Hide Cloak"</Description>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"20CO"</Price>
 <Encumbrance>"2"</Encumbrance>
-<Quality>"RULES-ARMOB_03"</Quality>
+<Quality>"RULES-ARMOB_PARTIAL"</Quality>
 <Location>"RULES-ARMOL_BODY"</Location>
 <ArmorPoint>"2"</ArmorPoint>
 <Type>"RULES-ARMOT_SOFTLEATHER"</Type>
@@ -2922,23 +2904,23 @@
 </Armor>
 </DATA_ARMOR>
 <DATA_WEAPON>
-  <Weapon id="HELFG-COMB_2M_01">
+  <Weapon id="HELFG-COMB_GREATSWORD_OF_HOETH">
 <Description language="ENGLISH">"Greatsword of Hoeth"</Description>
-<Skill>"RULES-COMPCOMB_2M"</Skill>
+<Skill>"RULES-COMP_MELEE__TWO_HANDED"</Skill>
 <Damage>"+(BATTR_S)+6"</Damage>
 <Availability>"RULES-DISPO_UNIQUE"</Availability>
 <Reach>"RULES-WEAPR_LONG"</Reach>
 <Price>"2000CO"</Price>
 <Encumbrance>"2"</Encumbrance>
-<Quality>"RULES-WEAPB10,RULES-WEAPB30"</Quality>
+<Quality>"RULES-WEAPB_DAMAGING,RULES-WEAPB_HACK"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <InherentCraftsmanship>"RULES-QUALITY_04 3,RULES-QUALITY_03 3"</InherentCraftsmanship>
 <Page>33</Page>
 </Weapon>
-  <Weapon id="HELFG-COMB_BASE_01">
+  <Weapon id="HELFG-COMB_SWORD">
 <Description language="ENGLISH">"Sword"</Description>
-<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Skill>"RULES-COMP_MELEE__BASIC"</Skill>
 <Damage>"+(BATTR_S)+4"</Damage>
 <Availability>"RULES-DISPO_COMMON"</Availability>
 <Reach>"RULES-WEAPR_MID"</Reach>
@@ -2951,9 +2933,9 @@
 <InherentCraftsmanship>"RULES-QUALITY_04 1,RULES-QUALITY_03 1"</InherentCraftsmanship>
 <Page>33</Page>
 </Weapon>
-  <Weapon id="HELFG-COMB_BASE_02">
+  <Weapon id="HELFG-COMB_DAGGER">
 <Description language="ENGLISH">"Dagger"</Description>
-<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Skill>"RULES-COMP_MELEE__BASIC"</Skill>
 <Damage>"+(BATTR_S)+2"</Damage>
 <Availability>"RULES-DISPO_COMMON"</Availability>
 <Reach>"RULES-WEAPR_CLOSE"</Reach>
@@ -2965,96 +2947,96 @@
 <InherentCraftsmanship>"RULES-QUALITY_04 1,RULES-QUALITY_03 1"</InherentCraftsmanship>
 <Page>33</Page>
 </Weapon>
-<Weapon id="HELFG-COMB_BASE_03">
+<Weapon id="HELFG-COMB_SHIELD">
 <Description language="ENGLISH">"Shield"</Description>
-<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Skill>"RULES-COMP_MELEE__BASIC"</Skill>
 <Damage>"+(BATTR_S)+2"</Damage>
 <Availability>"RULES-DISPO_COMMON"</Availability>
 <Reach>"RULES-WEAPR_CLOSE"</Reach>
 <Price>"8CO"</Price>
 <Encumbrance>"1"</Encumbrance>
-<Quality>"RULES-WEAPB18 2,RULES-WEAPB08"</Quality>
+<Quality>"RULES-WEAPB_SHIELD 2,RULES-WEAPB_DEFENSIVE"</Quality>
 <Hand>"1"</Hand>
 <Ammunition>"0"</Ammunition>
 <Type>"RULES-WTYPE_SHIELD"</Type>
 <InherentCraftsmanship>"RULES-QUALITY_04 1,RULES-QUALITY_03 1"</InherentCraftsmanship>
 <Page>33</Page>
 </Weapon>
-  <Weapon id="HELFG-COMB_CAVAL_01">
+  <Weapon id="HELFG-COMB_LANCE">
 <Description language="ENGLISH">"Lance"</Description>
-<Skill>"RULES-COMPCOMB_CAVAL"</Skill>
+<Skill>"RULES-COMP_MELEE__CAVALRY"</Skill>
 <Damage>"+(BATTR_S)+6"</Damage>
 <Availability>"RULES-DISPO_RARE"</Availability>
 <Reach>"RULES-WEAPR_BIG"</Reach>
 <Price>"4CO"</Price>
 <Encumbrance>"3"</Encumbrance>
-<Quality>"RULES-WEAPB21,RULES-WEAPB12"</Quality>
+<Quality>"RULES-WEAPB_IMPACT,RULES-WEAPB_IMPALE"</Quality>
 <Hand>"1"</Hand>
 <Ammunition>"0"</Ammunition>
 <Type>"RULES-WTYPE_LANCE"</Type>
 <InherentCraftsmanship>"RULES-QUALITY_04 1,RULES-QUALITY_03 1"</InherentCraftsmanship>
 <Page>33</Page>
 </Weapon>
-<Weapon id="HELFG-COMB_HAST_01">
+<Weapon id="HELFG-COMB_HALBERD">
 <Description language="ENGLISH">"Halberd"</Description>
-<Skill>"RULES-COMPCOMB_HAST"</Skill>
+<Skill>"RULES-COMP_MELEE__POLEARM"</Skill>
 <Damage>"+(BATTR_S)+4"</Damage>
 <Availability>"RULES-DISPO_COMMON"</Availability>
 <Reach>"RULES-WEAPR_LONG"</Reach>
 <Price>"8CO"</Price>
 <Encumbrance>"3"</Encumbrance>
-<Quality>"RULES-WEAPB08,RULES-WEAPB30,RULES-WEAPB12"</Quality>
+<Quality>"RULES-WEAPB_DEFENSIVE,RULES-WEAPB_HACK,RULES-WEAPB_IMPALE"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Type>"RULES-WTYPE_HALBERD"</Type>
 <InherentCraftsmanship>"RULES-QUALITY_04 1,RULES-QUALITY_03 1"</InherentCraftsmanship>
 <Page>33</Page>
 </Weapon>
-<Weapon id="HELFG-COMB_HAST_02">
+<Weapon id="HELFG-COMB_SPEAR">
 <Description language="ENGLISH">"Spear"</Description>
-<Skill>"RULES-COMPCOMB_HAST"</Skill>
+<Skill>"RULES-COMP_MELEE__POLEARM"</Skill>
 <Damage>"+(BATTR_S)+4"</Damage>
 <Availability>"RULES-DISPO_COMMON"</Availability>
 <Reach>"RULES-WEAPR_BIG"</Reach>
 <Price>"3CO"</Price>
 <Encumbrance>"2"</Encumbrance>
-<Quality>"RULES-WEAPB12"</Quality>
+<Quality>"RULES-WEAPB_IMPALE"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Type>"RULES-WTYPE_SPEAR"</Type>
 <InherentCraftsmanship>"RULES-QUALITY_04 1,RULES-QUALITY_03 1"</InherentCraftsmanship>
 <Page>33</Page>
 </Weapon>
-<Weapon id="HELFG-COMB_2M_02">
+<Weapon id="HELFG-COMB_2H_GREAT_AXE">
 <Description language="ENGLISH">"(2H) Great Axe"</Description>
-<Skill>"RULES-COMPCOMB_2M"</Skill>
+<Skill>"RULES-COMP_MELEE__TWO_HANDED"</Skill>
 <Damage>"+(BATTR_S)+6"</Damage>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
 <Reach>"RULES-WEAPR_LONG"</Reach>
 <Price>"16CO"</Price>
 <Encumbrance>"3"</Encumbrance>
-<Quality>"RULES-WEAPB30,RULES-WEAPB21,RULES-WEAPB25"</Quality>
+<Quality>"RULES-WEAPB_HACK,RULES-WEAPB_IMPACT,RULES-WEAPB_TIRING"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Type>"RULES-WTYPE_AXE"</Type>
 <InherentCraftsmanship>"RULES-QUALITY_04 1,RULES-QUALITY_03 1"</InherentCraftsmanship>
 <Page>33</Page>
 </Weapon>
-<Weapon id="HELFG-PROJ_ARB_01">
+<Weapon id="HELFG-PROJ_EAGLE_CLAW_BOLT_THROWER">
 <Description language="ENGLISH">"Eagle Claw Bolt Thrower"</Description>
-<Skill>"RULES-COMPPROJ_ARB"</Skill>
+<Skill>"RULES-COMP_RANGED__CROSSBOW"</Skill>
 <Damage>"+13"</Damage>
 <Availability>"RULES-DISPO_COMMON"</Availability>
 <Reach>"150"</Reach>
 <Encumbrance>"0"</Encumbrance>
-<Quality>"RULES-WEAPB16,UPINA-WEAPB35 2,RULES-WEAPB23 3"</Quality>
+<Quality>"RULES-WEAPB_ACCURATE,UPINA-WEAPB_CREWED 2,RULES-WEAPB_RELOAD 3"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>39</Page>
 </Weapon>
 </DATA_WEAPON>
 <DATA_TRAPPING>
-<Trapping id="HELFG-TRAP_001">
+<Trapping id="HELFG-TRAP_BLACK_LOTUS">
 <Description language="ENGLISH">"Black Lotus"</Description>
 <Theme>"RULES-LAB_197"</Theme>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
@@ -3062,7 +3044,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>36</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_002">
+<Trapping id="HELFG-TRAP_MOONFLOWER">
 <Description language="ENGLISH">"Moonflower"</Description>
 <Theme>"RULES-LAB_197"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -3070,7 +3052,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>36</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_003">
+<Trapping id="HELFG-TRAP_DIGESTIVE_TONIC">
 <Description language="ENGLISH">"Digestive Tonic"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_COMMON"</Availability>
@@ -3078,7 +3060,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>36</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_004">
+<Trapping id="HELFG-TRAP_EARTH_ROOT">
 <Description language="ENGLISH">"Earth Root"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_COMMON"</Availability>
@@ -3086,7 +3068,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>36</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_005">
+<Trapping id="HELFG-TRAP_FAXTORYLL">
 <Description language="ENGLISH">"Faxtoryll"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
@@ -3094,7 +3076,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>36</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_006">
+<Trapping id="HELFG-TRAP_HEALING_DRAUGHT">
 <Description language="ENGLISH">"Healing Draught"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_COMMON"</Availability>
@@ -3102,7 +3084,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>36</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_007">
+<Trapping id="HELFG-TRAP_HEALING_POULTICE">
 <Description language="ENGLISH">"Healing Poultice"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_COMMON"</Availability>
@@ -3110,7 +3092,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>36</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_008">
+<Trapping id="HELFG-TRAP_NIGHTSHADE">
 <Description language="ENGLISH">"Nightshade"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
@@ -3118,7 +3100,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>36</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_009">
+<Trapping id="HELFG-TRAP_SALWORT">
 <Description language="ENGLISH">"Salwort"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_COMMON"</Availability>
@@ -3126,7 +3108,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>36</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_010">
+<Trapping id="HELFG-TRAP_VITALITY_DRAUGHT">
 <Description language="ENGLISH">"Vitality Draught"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_COMMON"</Availability>
@@ -3134,7 +3116,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>36</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_011">
+<Trapping id="HELFG-TRAP_HEARTLEAF_1_HALM">
 <Description language="ENGLISH">"Heartleaf (1 halm)"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -3142,7 +3124,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>36</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_012">
+<Trapping id="HELFG-TRAP_NARINOCHA_WINE_BOTTLE">
 <Description language="ENGLISH">"Narinocha Wine, bottle"</Description>
 <Theme>"RULES-LAB_192"</Theme>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
@@ -3150,7 +3132,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>36</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_013">
+<Trapping id="HELFG-TRAP_SUNROOT_EXTRACT_VIAL">
 <Description language="ENGLISH">"Sunroot Extract, vial"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
@@ -3158,7 +3140,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>36</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_014">
+<Trapping id="HELFG-TRAP_VIRIDESCENT_PALLIATIVE_VIAL">
 <Description language="ENGLISH">"Viridescent Palliative, vial"</Description>
 <Theme>"RULES-LAB_198"</Theme>
 <Availability>"RULES-DISPO_RARE"</Availability>
@@ -3166,7 +3148,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>36</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_015">
+<Trapping id="HELFG-TRAP_AETHYROLABE">
 <Description language="ENGLISH">"Aethyrolabe"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -3174,7 +3156,7 @@
 <Encumbrance>"1"</Encumbrance>
 <Page>37</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_016">
+<Trapping id="HELFG-TRAP_FLAMESPYRE_PHOENIX_FEATHER">
 <Description language="ENGLISH">"Flamespyre Phoenix Feather"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -3182,7 +3164,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>37</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_017">
+<Trapping id="HELFG-TRAP_FROSTHEART_PHOENIX_FEATHER">
 <Description language="ENGLISH">"Frostheart Phoenix Feather"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -3190,7 +3172,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>37</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_018">
+<Trapping id="HELFG-TRAP_STAFF_OF_NIGHTELM">
 <Description language="ENGLISH">"Staff of Nightelm"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -3198,7 +3180,7 @@
 <Encumbrance>"1"</Encumbrance>
 <Page>37</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_019">
+<Trapping id="HELFG-TRAP_STAFF_OF_THE_ETERNAL_GROVE">
 <Description language="ENGLISH">"Staff of the Eternal Grove"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Availability>"RULES-DISPO_RARE"</Availability>
@@ -3206,7 +3188,7 @@
 <Encumbrance>"1"</Encumbrance>
 <Page>37</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_020">
+<Trapping id="HELFG-TRAP_WAYSHARD">
 <Description language="ENGLISH">"Wayshard"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Availability>"RULES-DISPO_RARE"</Availability>
@@ -3214,7 +3196,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>37</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_021">
+<Trapping id="HELFG-TRAP_DRAGONSHIP">
 <Description language="ENGLISH">"Dragonship"</Description>
 <Theme>"RULES-LAB_261"</Theme>
 <Encumbrance>"0"</Encumbrance>
@@ -3223,7 +3205,7 @@
 <AnimalTraits>"Armoured, Flying Jib, Dragonblade Ram"</AnimalTraits>
 <Page>40</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_022">
+<Trapping id="HELFG-TRAP_EAGLESHIP">
 <Description language="ENGLISH">"Eagleship"</Description>
 <Theme>"RULES-LAB_261"</Theme>
 <Encumbrance>"0"</Encumbrance>
@@ -3232,7 +3214,7 @@
 <AnimalTraits>"Armoured, Flying Jib"</AnimalTraits>
 <Page>40</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_023">
+<Trapping id="HELFG-TRAP_HAWKSHIP_HIGH_ELF">
 <Description language="ENGLISH">"Hawkship (High Elf)"</Description>
 <Theme>"RULES-LAB_261"</Theme>
 <Encumbrance>"0"</Encumbrance>
@@ -3241,7 +3223,7 @@
 <AnimalTraits>"Armoured, Flying Jib"</AnimalTraits>
 <Page>40</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_024">
+<Trapping id="HELFG-TRAP_BLOODHAWK">
 <Description language="ENGLISH">"Bloodhawk"</Description>
 <Theme>"RULES-LAB_261"</Theme>
 <Encumbrance>"0"</Encumbrance>
@@ -3250,7 +3232,7 @@
 <AnimalTraits>"Flying Jib"</AnimalTraits>
 <Page>40</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_025">
+<Trapping id="HELFG-TRAP_FALCON">
 <Description language="ENGLISH">"Falcon"</Description>
 <Theme>"RULES-LAB_261"</Theme>
 <Encumbrance>"0"</Encumbrance>
@@ -3259,7 +3241,7 @@
 <AnimalTraits>"Flying Jib"</AnimalTraits>
 <Page>40</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_026">
+<Trapping id="HELFG-TRAP_ALBATROSS">
 <Description language="ENGLISH">"Albatross"</Description>
 <Theme>"RULES-LAB_261"</Theme>
 <Encumbrance>"0"</Encumbrance>
@@ -3267,7 +3249,7 @@
 <BoatProfile>"75;10 (30);-;+1 SL;50;65;200"</BoatProfile>
 <Page>42</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_027">
+<Trapping id="HELFG-TRAP_GOLDEN_EAGLE">
 <Description language="ENGLISH">"Golden Eagle"</Description>
 <Theme>"RULES-LAB_261"</Theme>
 <Encumbrance>"0"</Encumbrance>
@@ -3275,7 +3257,7 @@
 <BoatProfile>"20;8 (10);-;+1 SL;40;65;150"</BoatProfile>
 <Page>42</Page>
 </Trapping>
-<Trapping id="HELFG-TRAP_028">
+<Trapping id="HELFG-TRAP_RAZORBILL">
 <Description language="ENGLISH">"Razorbill"</Description>
 <Theme>"RULES-LAB_261"</Theme>
 <Encumbrance>"0"</Encumbrance>

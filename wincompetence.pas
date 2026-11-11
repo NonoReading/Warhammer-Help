@@ -34,6 +34,8 @@ type
     TabMetierCompetence: TStringGrid;
     TabCompetence: TStringGrid;
     TabSpe: TStringGrid;
+    LabBonus: TLabelContour;
+    TabBonus: TStringGrid;
     procedure ButtonFiltreClick({%H-}Sender: TObject);
     procedure FormClose({%H-}Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate({%H-}Sender: TObject);
@@ -67,6 +69,36 @@ uses XmlExportImport;
 
 { TWinCompetence }
 
+// Vrai si Code appartient a la famille de la competence Ref (Ref comprise, sans le livre).
+// Generique "X_*" : tout code qui commence par "X_" (V4 COMPART_*, V2 COMP_ACADEMIC_KNOWLEDGE_*).
+// V2 (codes COMP_...) : le radical avant le 1er "_" vaut "COMP" pour toutes les competences,
+// donc egalite stricte. V4 : meme radical avant le 1er "_".
+function MemeFamille(Code, Ref: String): Boolean;
+var
+  Prefixe: String;
+begin
+  Code := CodeSansLivre(Code);
+  Ref  := CodeSansLivre(Ref);
+  if (Length(Ref) > 2) and (Copy(Ref, Length(Ref) - 1, 2) = ValeurGenerique) then
+    begin
+      Prefixe := Copy(Ref, 1, Length(Ref) - 1);
+      Result  := Copy(Code, 1, Length(Prefixe)) = Prefixe;
+    end
+  else
+    Result := FamilleCompetence(Code) = FamilleCompetence(Ref);
+end;
+
+// Vrai si la grille contient deja cette carriere avec ce niveau (colonnes 1 et 3).
+function DejaListe(Grille: TStringGrid; CodeMetier: String; Niveau: Integer): Boolean;
+var
+  I: Integer;
+begin
+  Result := False;
+  for I := 1 to Grille.RowCount - 1 do
+    if (Grille.Cells[1, I] = CodeMetier) and (Grille.Cells[3, I] = IntToStr(Niveau)) then
+      Exit(True);
+end;
+
 procedure TWinCompetence.FormResize(Sender: TObject);
 begin
     if Ancrage <> nil then
@@ -94,6 +126,8 @@ begin
     Ancrage.Ajouter(ImageWar, 0.25, 0);
     Ancrage.Ajouter(TabMetierCompetence, 1, 0);
     Ancrage.Ajouter(LabMetierCompetence, 1, 0);
+    Ancrage.Ajouter(LabBonus, 1, 0);
+    Ancrage.Ajouter(TabBonus, 1, 0);
     Ancrage.Ajouter(LabLivre, 1, 0);
     Ancrage.Ajouter(AffLivre, 1, 0);
     Ancrage.Ajouter(LabSpe, 1, 0);
@@ -142,25 +176,37 @@ begin
     TabMetierCompetence.RowCount        := 2;
     TabMetierCompetence.ColWidths[0]    := 20;
 
+    if TabBonus.ColCount < 2 then
+      begin
+        TabBonus.ColCount := 1;
+        GridAjouteColonne(TabBonus, GetTexteLibelle('RULES-LAB_001'), 0);
+        GridAjouteColonne(TabBonus, 'Test', 170);
+        GridAjouteColonne(TabBonus, 'Bonus', 70);
+      end;
+    TabBonus.RowCount     := 2;
+    TabBonus.ColWidths[0] := 20;
+    SelectionGrilleWarhammer(TabBonus);
+    LabBonus.Caption      := 'Bonus';
+
     if TabSpe.ColCount < 2 then
       begin
         TabSpe.ColCount        := 1;
         GridAjouteColonne(TabSpe, GetTexteLibelle('RULES-LAB_001'), 0);
-        GridAjouteColonne(TabSpe, GetTexteLibelle('RULES-LAB_006'), 70);
+        GridAjouteColonne(TabSpe, GetTexteLibelle('RULES-LAB_078'), 70);
       end;
     TabSpe.RowCount        := 2;
     TabSpe.ColWidths[0]    := 20;
 
-    if Pos(ValeurSousCompetence, SelectWinCompetence) > 0 then
+    // Lien explicite (CONTEXT.md 2.67) prioritaire sur la deduction par radical, qui
+    // gardait le prefixe de livre de SelectWinCompetence au lieu de celui de la
+    // generique - seul repli quand <Generique> n'est pas renseigne.
+    PCompetence := ChercheCompetence(SelectWinCompetence);
+    if (SelectWinCompetence <> '') and PCompetence.SousCompetence then
       begin
-        // Lien explicite (CONTEXT.md 2.67) prioritaire sur la deduction par radical, qui
-        // gardait le prefixe de livre de SelectWinCompetence au lieu de celui de la
-        // generique - seul repli quand <Generique> n'est pas renseigne.
-        PCompetence := ChercheCompetence(SelectWinCompetence);
         if PCompetence.CodeGenerique <> '' then
           SelectWinCompetence := PCompetence.CodeGenerique
         else
-          SelectWinCompetence := ExtractStringBefore(SelectWinCompetence, ValeurSousCompetence) + ValeurGenerique;
+          SelectWinCompetence := CodeGeneriqueDeduit(SelectWinCompetence);
       end;
 
     For PCompetence in ListCompetence do
@@ -259,6 +305,7 @@ procedure TWinCompetence.TabCompetenceAfterSelection(Sender: TObject; aCol,
     PMetier:           StructureMetier;
     PCompetence:       StructureCompetence;
     Ind:               Integer;
+    Lignes:            TStringList;
   begin
     // renseigner les données
     AffCode.Text             := TabCompetence.Cells[1,aRow];
@@ -272,13 +319,32 @@ procedure TWinCompetence.TabCompetenceAfterSelection(Sender: TObject; aCol,
     AffSpecialisation.Visible:= (AffSpecialisation.Text <> '');
     LabSpecialisation.Visible:= (AffSpecialisation.Text <> '');
 
+    // Table des bonus (WFRP1) : une ligne "cible #9 valeur" par <Bonus> de la competence
+    ClearStringGrid(TabBonus);
+    TabBonus.RowCount := 2;
+    Lignes := TStringList.Create;
+    try
+      Lignes.Text := ChercheCompetence(AffCode.Text).BonusTexte;
+      for Ind := 0 to Lignes.Count - 1 do
+        begin
+          if Ind + 2 > TabBonus.RowCount then
+            TabBonus.RowCount := Ind + 2;
+          TabBonus.Cells[2, Ind + 1] := Copy(Lignes[Ind], 1, Pos(#9, Lignes[Ind]) - 1);
+          TabBonus.Cells[3, Ind + 1] := Copy(Lignes[Ind], Pos(#9, Lignes[Ind]) + 1, MaxInt);
+        end;
+      LabBonus.Visible := (Lignes.Count > 0);
+      TabBonus.Visible := (Lignes.Count > 0);
+    finally
+      Lignes.Free;
+    end;
+
     ClearStringGrid(TabMetierCompetence);
     TabMetierCompetence.RowCount := 2;
     Ind := 0;
     For PMetierCompetence in ListMetierCompetence do
       // Radicaux compares SANS le prefixe de livre : une carriere d'un livre peut citer une
       // competence generique d'un autre (meme piege que winspecialisation.pas AjouteLigne).
-      if ExtractStringBefore(CodeSansLivre(PMetierCompetence.CodeCompetence),'_') = extractStringBefore(CodeSansLivre(AffCode.Text),'_') then
+      if MemeFamille(PMetierCompetence.CodeCompetence, AffCode.Text) and not DejaListe(TabMetierCompetence, PMetierCompetence.CodeMetier, PMetierCompetence.NiveauMetier) then
         begin
           PMetier := chercheMetier(PMetierCompetence.CodeMetier);
           Inc(Ind);
@@ -299,7 +365,7 @@ procedure TWinCompetence.TabCompetenceAfterSelection(Sender: TObject; aCol,
         For PCompetence in ListCompetence do
           // Meme radical SANS le livre : une specialisation (ex. LUSTR-COMPPROJ_SARBAC) peut
           // venir d'un livre different de sa competence generique (ex. RULES-COMPPROJ_*).
-          if (PCompetence.CodeCompetence <> AffCode.Text) and (ExtractStringBefore(CodeSansLivre(PCompetence.CodeCompetence),ValeurSousCompetence) = ExtractStringBefore(CodeSansLivre(AffCode.Text),ValeurSousCompetence)) then
+          if (PCompetence.CodeCompetence <> AffCode.Text) and MemeFamille(PCompetence.CodeCompetence, AffCode.Text) then
             begin
               Inc(Ind);
               if Ind = TabSpe.RowCount then

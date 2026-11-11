@@ -16,7 +16,7 @@ unit PanelBonusCarriere;
 interface
 
 uses
-  BCLabelContour, Classes, SysUtils, Controls, Forms, StdCtrls, ExtCtrls, Grids, Dialogs, DOM, BCButton,
+  BCLabelContour, Classes, SysUtils, Controls, Forms, StdCtrls, ExtCtrls, Grids, Dialogs, MessageTest, DOM, BCButton,
   ChargeConstantes, ChargeTexte, GlobalFonts, PanelModificateurs, PanelFiche;
 
 type
@@ -246,8 +246,9 @@ var
 begin
   Result := '';
   if Trim(Lib) = '' then Exit;
-  I := Libs.IndexOf(Trim(Lib));
-  if I >= 0 then Result := Codes[I];
+  // les libelles de la liste peuvent porter une espace finale (Description du livre) : comparaison sans espaces
+  for I := 0 to Libs.Count - 1 do
+    if SameText(Trim(Libs[I]), Trim(Lib)) then Exit(Codes[I]);
 end;
 
 // "A" ou "A/B" : la premiere alternative en Col, le reste (une ou plusieurs) en Col + 1.
@@ -400,13 +401,17 @@ begin
     Niv := TrouverNiveau(Element, N);
     if Niv = nil then
     begin
-      if (Competence = '') and (Talent = '') and (Nb = '') and (CompterModificateurs(FCopies[N]) = 0) then Continue;
+      if (Competence = '') and (Talent = '') and (Nb = '') and (CompterModificateurs(FCopies[N]) = 0) and
+         (FCopies[N].FindNode('SpecialRule') = nil) then Continue;
       Niv := Element.OwnerDocument.CreateElement('Level');
       Niv.SetAttribute('id', Element.GetAttribute('id') + '_' + IntToStr(N));
       Element.AppendChild(Niv);
       E := Element.OwnerDocument.CreateElement('Order');
       Niv.AppendChild(E);
       EcrireValeurXML(E, IntToStr(N));
+      // SpecialRule ne s'edite pas : un niveau cree de toutes pieces la reprend de la copie chargee
+      if FCopies[N].FindNode('SpecialRule') <> nil then
+        Niv.AppendChild(FCopies[N].FindNode('SpecialRule').CloneNode(True, Niv.OwnerDocument));
     end;
     PoserBalise(Niv, 'Skill', Competence);
     PoserBalise(Niv, 'Talent', Talent);
@@ -429,8 +434,8 @@ begin
       begin
         if EstModificateur(Noeud) then
         begin
-          if Apres <> nil then Niv.InsertBefore(Noeud.CloneNode(True), Apres)
-          else Niv.AppendChild(Noeud.CloneNode(True));
+          if Apres <> nil then Niv.InsertBefore(Noeud.CloneNode(True, Niv.OwnerDocument), Apres)
+          else Niv.AppendChild(Noeud.CloneNode(True, Niv.OwnerDocument));
         end;
         Noeud := Noeud.NextSibling;
       end;

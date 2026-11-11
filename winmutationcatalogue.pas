@@ -11,7 +11,7 @@ interface
 
 uses
   GlobalFonts, Classes, SysUtils, Forms, Controls, Graphics, Grids,
-  ChargeConstantes, ChargeTexte, ChargeCorruptionTable;
+  StdCtrls, ChargeConstantes, ChargeTexte, ChargeCorruptionTable;
 
 type
 
@@ -20,7 +20,9 @@ type
   TWinMutationCatalogue = class(TForm)
   private
     TabMutation: TStringGrid;
+    MemoDetail:  TMemo;
     procedure Remplir();
+    procedure LigneChoisie(Sender: TObject; aCol, aRow: Integer);
   public
     constructor Create(TheOwner: TComponent); override;
   end;
@@ -39,6 +41,16 @@ begin
   Color        := clBlack;
   Width        := 1000;
   Height       := 600;
+  // Panneau de lecture en bas : le texte complet (Effet + Variations) de la ligne choisie,
+  // car la cellule de la grille coupe les longs textes.
+  MemoDetail              := TMemo.Create(Self);
+  MemoDetail.Parent       := Self;
+  MemoDetail.Align        := alBottom;
+  MemoDetail.Height       := 200;
+  MemoDetail.ReadOnly     := True;
+  MemoDetail.WordWrap     := True;
+  MemoDetail.ScrollBars   := ssAutoVertical;
+  MemoDetail.BorderSpacing.Around := 16;
   TabMutation             := TStringGrid.Create(Self);
   TabMutation.Parent      := Self;
   CouleurSelectionGrille(TabMutation);
@@ -46,8 +58,22 @@ begin
   TabMutation.BorderSpacing.Around := 16;
   TabMutation.FixedCols   := 0;
   TabMutation.Options     := TabMutation.Options - [goEditing] + [goRowSelect];
+  TabMutation.OnSelection := @LigneChoisie;
   Remplir();
 end;
+
+procedure TWinMutationCatalogue.LigneChoisie(Sender: TObject; aCol, aRow: Integer);
+  var
+    P: StructureCorruptionTable;
+  begin
+    MemoDetail.Clear;
+    if (aRow < 1) or (aRow > ListCorruptionTable.Count) then Exit;
+    P := ListCorruptionTable[aRow - 1];
+    MemoDetail.Lines.Add(P.Libelle);
+    MemoDetail.Lines.Add(TexteOuPageMutation(P.Effet, P.Livre, P.Code));
+    if P.Variations <> '' then
+      MemoDetail.Lines.Add('Variations : ' + P.Variations);
+  end;
 
 procedure TWinMutationCatalogue.Remplir();
   var

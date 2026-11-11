@@ -1,0 +1,950 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"RELE"</CODE_BOOK>
+<BOOK>"BOOK RETURN OF ELEMENTALISM"</BOOK>
+<BOOKNAME>"LOST IN TRANSLATION - THE RETURN OF ELEMENTALISM - WFRP2"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"The Lost in Translation (LiT) series is intended to be a completely unofficial addition to Warhammer Fantasy RolePlay owned by Games Workshop (GW). All relevant trademarks and copyrights are used without permission and in no way meant to challenge ownership to them by GW. LiT fully recognises"</DISCLAIMER>
+<DATA_TALENT>
+<Talent id="RELE-T_ELEMENTAL_MAGIC_RELE">
+<Description language="ENGLISH">"Elemental Magic"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"12, 15-16"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_CAREER>
+<Career id="RELE-CARE_ELEMENTALIST_APPRENTICE">
+<Description language="ENGLISH">"Elementalist Apprentice"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"Ag +5%, Int +10%, WP +15%, Fel +5%"</MainProfile>
+<SecondaryProfile>"W +2, Mag +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_Mag">"1"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Magic), Channelling (Elemental Magic), Magical Sense, Outdoor Survival, Read/Write, Search, Speak Arcane Language (Elemental Magick)"</Skills>
+<Talents>"Aethyric Attunement (Elemental Magic) or Fast Hands, Petty Magic (Elemental), Rover or Very Resilient"</Talents>
+<Trappings>"Quarter Staff, Backpack, Leather Flask"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING_ELEMENTAL_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ELEMENTAL_MAGICK">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT__ELEMENTAL_MAGIC/RULES-T_FAST_HANDS">"1"</Talent>
+<Talent name="RULES-T_PETTY_MAGIC__ELEMENTAL">"1"</Talent>
+<Talent name="RULES-T_ROVER/RULES-T_VERY_RESILIENT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"RELE 8"</Source>
+</Career>
+<Career id="RELE-CARE_ELEMENTALIST">
+<Description language="ENGLISH">"Elementalist"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, T +5%, Ag +10%, Int +20%, WP +25%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +3, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Elemental Magic), Academic Knowledge (any one), Channelling, Charm or Intimidate, Common Knowledge (any two), Gossip, Magical Sense, Read/Write, Ride or Swim, Speak Arcane Language (Elemental Magick), Speak Language (any two)"</Skills>
+<Talents>"Aethyric Attunement (Elemental Magic) or Acute Hearing, Elemental Magic (any two), Fast Hands or Very Resilient, Heal or Mighty Missile, Meditation or Orientation"</Talents>
+<Trappings>"Quarter Staff, Healing Poultice"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ELEMENTAL_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_RIDE/RULES-COMP_SWIM">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ELEMENTAL_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT__ELEMENTAL_MAGIC/RULES-T_ACUTE_HEARING">"1"</Talent>
+<Talent name="RELE-T_ELEMENTAL_MAGIC__*">"1"</Talent>
+<Talent name="RELE-T_ELEMENTAL_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="Heal/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="RULES-T_MEDITATION/RULES-T_ORIENTATION">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"RELE 9"</Source>
+</Career>
+<Career id="RELE-CARE_MASTER_ELEMENTALIST">
+<Description language="ENGLISH">"Master Elementalist"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, T +10%, Ag +15%, Int +30%, WP +35%, Fel +15%"</MainProfile>
+<SecondaryProfile>"W +4, Mag +3"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"35"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_Mag">"3"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Elemental Magic), Academic Knowledge (any two), Channelling, Charm or Intimidate, Common Knowledge (any two), Gossip, Magical Sense, Read/Write, Ride or Swim, Speak Arcane Language (Arcane Old Faith), Speak Arcane Language (Elemental Magick), Speak Language (any three)"</Skills>
+<Talents>"Aethyric Attunement (Elemental Magic) or Acute Hearing, Elemental Magic, Fast Hands or Very Resilient, Heal or Mighty Missile, Meditation or Orientation"</Talents>
+<Trappings>"Quarter Staff, Healing Poultice, Antitoxin Kit"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ELEMENTAL_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_RIDE/RULES-COMP_SWIM">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ARCANE_OLD_FAITH">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ELEMENTAL_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT__ELEMENTAL_MAGIC/RULES-T_ACUTE_HEARING">"1"</Talent>
+<Talent name="RELE-T_ELEMENTAL_MAGIC_RELE">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="Heal/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="RULES-T_MEDITATION/RULES-T_ORIENTATION">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"RELE 10"</Source>
+</Career>
+<Career id="RELE-CARE_ELEMENTAL_SAGE">
+<Description language="ENGLISH">"Elemental Sage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +15%, S +5%, T +15%, Ag +20%, Int +35%, WP +40%, Fel +20%"</MainProfile>
+<SecondaryProfile>"W +5, Mag +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"35"</Advance>
+<Advance name="RULES-ATTR_WP">"40"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+<Advance name="RULES-ATTR_W">"5"</Advance>
+<Advance name="RULES-ATTR_Mag">"4"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Elemental Magic), Academic Knowledge (any three), Channelling, Charm or Intimidate, Common Knowledge (any three), Magical Sense, Read/Write, Speak Arcane Language (Arcane Old Faith), Speak Arcane Language (Elemental Magick), Speak Language (any four)"</Skills>
+<Talents>"Aethyric Attunement (Elemental Magic) or Acute Hearing, Elemental Magic, Fast Hands or Hardy, Heal or Mighty Missile, Meditation or Orientation"</Talents>
+<Trappings>"Quarter Staff, Healing Poultice, Antitoxin Kit"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ELEMENTAL_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ARCANE_OLD_FAITH">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ELEMENTAL_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT__ELEMENTAL_MAGIC/RULES-T_ACUTE_HEARING">"1"</Talent>
+<Talent name="RELE-T_ELEMENTAL_MAGIC_RELE">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_HARDY">"1"</Talent>
+<Talent name="Heal/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="RULES-T_MEDITATION/RULES-T_ORIENTATION">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"RELE 10"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="RELE-CARE_ELEMENTALIST_APPRENTICE">"LITM-CARE_ALCHEMIST_APPRENTICE"</Link>
+<Link name="RELE-CARE_ELEMENTALIST_APPRENTICE">"RULES-CARE_APPRENTICE_WIZARD"</Link>
+<Link name="RELE-CARE_ELEMENTALIST_APPRENTICE">"RELE-CARE_ELEMENTALIST"</Link>
+<Link name="RELE-CARE_ELEMENTALIST_APPRENTICE">"RULES-CARE_INITIATE"</Link>
+<Link name="RELE-CARE_ELEMENTALIST_APPRENTICE">"RULES-CARE_SCHOLAR"</Link>
+<Link name="LITM-CARE_ALCHEMIST_APPRENTICE">"RELE-CARE_ELEMENTALIST_APPRENTICE"</Link>
+<Link name="RULES-CARE_HEDGE_WIZARD">"RELE-CARE_ELEMENTALIST_APPRENTICE"</Link>
+<Link name="RULES-CARE_PEASANT">"RELE-CARE_ELEMENTALIST_APPRENTICE"</Link>
+<Link name="RULES-CARE_SCRIBE">"RELE-CARE_ELEMENTALIST_APPRENTICE"</Link>
+<Link name="RULES-CARE_STUDENT">"RELE-CARE_ELEMENTALIST_APPRENTICE"</Link>
+<Link name="RELE-CARE_ELEMENTALIST">"LITM-CARE_ALCHEMIST"</Link>
+<Link name="RELE-CARE_ELEMENTALIST">"RULES-CARE_CHARLATAN"</Link>
+<Link name="RELE-CARE_ELEMENTALIST">"RELE-CARE_MASTER_ELEMENTALIST"</Link>
+<Link name="RELE-CARE_ELEMENTALIST">"RULES-CARE_SCHOLAR"</Link>
+<Link name="RELE-CARE_MASTER_ELEMENTALIST">"LITM-CARE_ALCHEMIST"</Link>
+<Link name="RELE-CARE_MASTER_ELEMENTALIST">"RELE-CARE_ELEMENTAL_SAGE"</Link>
+<Link name="RELE-CARE_MASTER_ELEMENTALIST">"RULES-CARE_SCHOLAR"</Link>
+<Link name="RELE-CARE_ELEMENTAL_SAGE">"LITM-CARE_ALCHEMIST"</Link>
+<Link name="RULES-CARE_APPRENTICE_WIZARD">"RELE-CARE_ELEMENTALIST_APPRENTICE"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_SPELL_V2>
+<SpellV2 id="RELE-SPEL_DAMPEN">
+<Description language="ENGLISH">"Dampen"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Elemental)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A drop of water (+1)"</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_DETECT_FOUL_AIR">
+<Description language="ENGLISH">"Detect Foul Air"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Elemental)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A fan (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_GLOWING_LIGHT">
+<Description language="ENGLISH">"Glowing Light"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Elemental)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Piece of flint (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_GUST">
+<Description language="ENGLISH">"Gust"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Elemental)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A feather or leaf (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_MAGIC_FLAME">
+<Description language="ENGLISH">"Magic Flame"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Elemental)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Piece of Charcoal or wood chip (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_PEBBLES">
+<Description language="ENGLISH">"Pebbles"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Elemental)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Three pebbles (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_PROTECTION_FROM_RAIN">
+<Description language="ENGLISH">"Protection from Rain"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Elemental)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Feather from a waterfowl (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_CANDLELIGHT">
+<Description language="ENGLISH">"Candlelight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Elemental)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A candle (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_DETECT_TREACHEROUS_GROUND">
+<Description language="ENGLISH">"Detect Treacherous Ground"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Elemental)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Small stone (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_EARTHEAR">
+<Description language="ENGLISH">"Earthear"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Elemental)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"None"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_FLOAT">
+<Description language="ENGLISH">"Float"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Elemental)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A feather (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_LAND_GENTLY">
+<Description language="ENGLISH">"Land Gently"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Elemental)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A piece of down (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_HIDE_TRACKS">
+<Description language="ENGLISH">"Hide Tracks"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Elemental)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Flat stone (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_MARSH_LIGHTS">
+<Description language="ENGLISH">"Marsh Lights"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Elemental)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A firefly (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_REFLECTING_POOL">
+<Description language="ENGLISH">"Reflecting Pool"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Elemental)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"None"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_SWIM">
+<Description language="ENGLISH">"Swim"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Elemental)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Tuft of hair from an otter, fisher, or beaver (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_BLINDING_FLASH">
+<Description language="ENGLISH">"Blinding Flash"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A sliver of brimstone (+1)"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_ASSAULT_OF_STONE">
+<Description language="ENGLISH">"Assault of Stone"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Handful of Pebbles (+1)"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_CLOAK_OF_AIR">
+<Description language="ENGLISH">"Cloak of Air"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Dragonfly wing (+1)"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_CLOUD_OF_SMOKE">
+<Description language="ENGLISH">"Cloud of Smoke"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"An oil-soaked rag (+1)"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_CREATE_SPRING">
+<Description language="ENGLISH">"Create Spring"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"2 rounds"</CastingTime>
+<Ingredient>"A freshwater pearl (+1)"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_FIND_MINERAL">
+<Description language="ENGLISH">"Find Mineral"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"2 rounds"</CastingTime>
+<Ingredient>"A small miner's pick (+1)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_BREATHE_UNDERWATER">
+<Description language="ENGLISH">"Breathe Underwater"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Fish eggs (+1)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_FIRE_BALL">
+<Description language="ENGLISH">"Fire Ball"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A ball of sulphur (+2)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_FLIGHT">
+<Description language="ENGLISH">"Flight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Wing feather of a bird of prey (+2)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_WALK_ON_WATER">
+<Description language="ENGLISH">"Walk on Water"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A water beetle (+1)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_BURNING_HEAD">
+<Description language="ENGLISH">"Burning Head"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Rag dipped in lamp oil (+1)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_MELD_INTO_STONE">
+<Description language="ENGLISH">"Meld into Stone"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Fistful of stone dust"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_WIND_BLAST">
+<Description language="ENGLISH">"Wind Blast"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"An animal bladder"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_EXTINGUISH_FIRE">
+<Description language="ENGLISH">"Extinguish Fire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A drop of water (+1)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_ICY_GROUND">
+<Description language="ENGLISH">"Icy Ground"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A drop of water (+1)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_MOVE_OBJECT">
+<Description language="ENGLISH">"Move Object"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A feather (+1)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_CAUSE_FIRE">
+<Description language="ENGLISH">"Cause Fire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Flint and steel (+1)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_NAVIGATE_UNDERGROUND">
+<Description language="ENGLISH">"Navigate Underground"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A lump of iron ore (+1)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_PART_WATER">
+<Description language="ENGLISH">"Part Water"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"2 rounds"</CastingTime>
+<Ingredient>"A small wooden paddle (+2)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_SHARDS_OF_AIR">
+<Description language="ENGLISH">"Shards of Air"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"The sting of a bee or wasp (+1)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_SUMMON_ELEMENTAL_SPRITE">
+<Description language="ENGLISH">"Summon Elemental Sprite"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"5 minutes"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_BANISH_ELEMENTAL">
+<Description language="ENGLISH">"Banish Elemental"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_DUST_STORM">
+<Description language="ENGLISH">"Dust Storm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A fan (+1)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_PIERCING_BOLTS_OF_BURNING">
+<Description language="ENGLISH">"Piercing Bolts of Burning"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"An arrow (+1)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_RESIST_FIRE">
+<Description language="ENGLISH">"Resist Fire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A fire opal gem of 50GC value (+2)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_WALK_EARTHQUAKE">
+<Description language="ENGLISH">"Walk Earthquake"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A miniature silver balance scale (+2)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_CREATE_GEYSER">
+<Description language="ENGLISH">"Create Geyser"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Small cooking pot (+1)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_CREATE_QUICKSAND">
+<Description language="ENGLISH">"Create Quicksand"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"An eye from a Bog Octopus (+3)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_FLAME_SHEET">
+<Description language="ENGLISH">"Flame Sheet"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A burning ribbon (+1)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_FOUL_AIR">
+<Description language="ENGLISH">"Foul Air"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A rotten egg (+1)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_SWELL_RIVER">
+<Description language="ENGLISH">"Swell River"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Two Full Actions"</CastingTime>
+<Ingredient>"Four drops of water caught in a jar (+1)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_CRUMBLE_STONE">
+<Description language="ENGLISH">"Crumble Stone"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Jawbone of a Troll (+3)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_DROP">
+<Description language="ENGLISH">"Drop"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A projectile firework (+2)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_FIRE_BREATH">
+<Description language="ENGLISH">"Fire Breath"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A dragon's scale (+3)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_TORNADO">
+<Description language="ENGLISH">"Tornado"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A handful of gold dust (+3)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_EXTENDED_FLIGHT">
+<Description language="ENGLISH">"Extended Flight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"26"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The heart of an eagle (+2)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_FLAME_STORM">
+<Description language="ENGLISH">"Flame Storm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"26"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Flint and steel (+1)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_SUMMON_ELEMENTAL">
+<Description language="ENGLISH">"Summon Elemental"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"26"</CastingNumber>
+<CastingTime>"10 minutes"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_TUNNEL_THROUGH_STONE">
+<Description language="ENGLISH">"Tunnel through Stone"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"26"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A troll's stomach (+3)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_ANIMATE_WATER">
+<Description language="ENGLISH">"Animate Water"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"28"</CastingNumber>
+<CastingTime>"Two Full Actions"</CastingTime>
+<Ingredient>"None"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_FIELD_OF_LAVA">
+<Description language="ENGLISH">"Field of Lava"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"28"</CastingNumber>
+<CastingTime>"Two Full Actions"</CastingTime>
+<Ingredient>"A piece of rock from a volcano that erupted in the past decade (+2)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_WALL_SHAKER">
+<Description language="ENGLISH">"Wall Shaker"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"28"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The thyroid gland of a giant (+3)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_CREATE_CHASM">
+<Description language="ENGLISH">"Create Chasm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"30"</CastingNumber>
+<CastingTime>"Two Full Actions"</CastingTime>
+<Ingredient>"The foot bones of a giant (+3)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_DISPEL_ELEMENTALS">
+<Description language="ENGLISH">"Dispel Elementals"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"30"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_FOUNTAIN_OF_LIFE">
+<Description language="ENGLISH">"Fountain of Life"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"30"</CastingNumber>
+<CastingTime>"Two Full Actions"</CastingTime>
+<Ingredient>"A vial of dew collected at sunrise on a mountain top (+2)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_SCOURGING_WIND">
+<Description language="ENGLISH">"Scourging Wind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"30"</CastingNumber>
+<CastingTime>"Two Full Actions"</CastingTime>
+<Ingredient>"A whip with three griffon feathers tied to the end (+3)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_WALLS_OF_ROCK">
+<Description language="ENGLISH">"Walls of Rock"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"30"</CastingNumber>
+<CastingTime>"5 minutes"</CastingTime>
+<Ingredient>"A clay model of the structure to be created (+2)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_ERUPT">
+<Description language="ENGLISH">"Erupt"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"32"</CastingNumber>
+<CastingTime>"5 minutes"</CastingTime>
+<Ingredient>"1 pound of dried sunworm flesh (+3)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_EARTHQUAKE">
+<Description language="ENGLISH">"Earthquake"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"34"</CastingNumber>
+<CastingTime>"10 minutes"</CastingTime>
+<Ingredient>"A pint of dragon's blood (+3)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_INFERNO">
+<Description language="ENGLISH">"Inferno"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"34"</CastingNumber>
+<CastingTime>"Two Full Actions"</CastingTime>
+<Ingredient>"A dragon's tooth (+3)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_SUMMON_ELEMENTAL_HORDE">
+<Description language="ENGLISH">"Summon Elemental Horde"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"34"</CastingNumber>
+<CastingTime>"15 minutes"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_TEMPEST">
+<Description language="ENGLISH">"Tempest"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"34"</CastingNumber>
+<CastingTime>"5 minutes"</CastingTime>
+<Ingredient>"Three wing feathers from a giant eagle (+3)"</Ingredient>
+<Page>"26"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_WAVE_OF_DESTRUCTION">
+<Description language="ENGLISH">"Wave of Destruction"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Elemental Magic"</Lore>
+<CastingNumber>"34"</CastingNumber>
+<CastingTime>"5 minutes"</CastingTime>
+<Ingredient>"The beak of a dragon turtle or tooth of a sea drake (+3)"</Ingredient>
+<Page>"26"</Page>
+</SpellV2>
+<SpellV2 id="RELE-SPEL_BIND_ELEMENTAL_RITUAL">
+<Description language="ENGLISH">"Bind Elemental Ritual"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"25"</CastingNumber>
+<CastingTime>"6 hours"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"27"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Elemental Magick"</ArcaneLanguage>
+<MagicMin>"4"</MagicMin>
+<XPCost>"400"</XPCost>
+<Conditions>"The ritual must be conducted within 10 yards of where the Elemental is to be bound."</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SPELL_TALENT>
+<Sort id="RELE-SPEL_DAMPEN">
+<Talent>"RULES-T_PETTY_MAGIC__ELEMENTAL"</Talent>
+</Sort>
+<Sort id="RELE-SPEL_DETECT_FOUL_AIR">
+<Talent>"RULES-T_PETTY_MAGIC__ELEMENTAL"</Talent>
+</Sort>
+<Sort id="RELE-SPEL_GLOWING_LIGHT">
+<Talent>"RULES-T_PETTY_MAGIC__ELEMENTAL"</Talent>
+</Sort>
+<Sort id="RELE-SPEL_GUST">
+<Talent>"RULES-T_PETTY_MAGIC__ELEMENTAL"</Talent>
+</Sort>
+<Sort id="RELE-SPEL_MAGIC_FLAME">
+<Talent>"RULES-T_PETTY_MAGIC__ELEMENTAL"</Talent>
+</Sort>
+<Sort id="RELE-SPEL_PEBBLES">
+<Talent>"RULES-T_PETTY_MAGIC__ELEMENTAL"</Talent>
+</Sort>
+<Sort id="RELE-SPEL_PROTECTION_FROM_RAIN">
+<Talent>"RULES-T_PETTY_MAGIC__ELEMENTAL"</Talent>
+</Sort>
+<Sort id="RELE-SPEL_CANDLELIGHT">
+<Talent>"RULES-T_PETTY_MAGIC__ELEMENTAL"</Talent>
+</Sort>
+<Sort id="RELE-SPEL_DETECT_TREACHEROUS_GROUND">
+<Talent>"RULES-T_PETTY_MAGIC__ELEMENTAL"</Talent>
+</Sort>
+<Sort id="RELE-SPEL_EARTHEAR">
+<Talent>"RULES-T_PETTY_MAGIC__ELEMENTAL"</Talent>
+</Sort>
+<Sort id="RELE-SPEL_FLOAT">
+<Talent>"RULES-T_PETTY_MAGIC__ELEMENTAL"</Talent>
+</Sort>
+<Sort id="RELE-SPEL_LAND_GENTLY">
+<Talent>"RULES-T_PETTY_MAGIC__ELEMENTAL"</Talent>
+</Sort>
+<Sort id="RELE-SPEL_HIDE_TRACKS">
+<Talent>"RULES-T_PETTY_MAGIC__ELEMENTAL"</Talent>
+</Sort>
+<Sort id="RELE-SPEL_MARSH_LIGHTS">
+<Talent>"RULES-T_PETTY_MAGIC__ELEMENTAL"</Talent>
+</Sort>
+<Sort id="RELE-SPEL_REFLECTING_POOL">
+<Talent>"RULES-T_PETTY_MAGIC__ELEMENTAL"</Talent>
+</Sort>
+<Sort id="RELE-SPEL_SWIM">
+<Talent>"RULES-T_PETTY_MAGIC__ELEMENTAL"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="RELE-EQUI_CREATURES_ELEMENTAL">
+<Description language="ENGLISH">"Elemental"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"90;90;90;90;90;90;90;0;9;90;9;9;9;0;0;0"</Profile>
+<Skills>"Perception, Speak Arcane Language (Elemental Magick)"</Skills>
+<Talents>"Ambidextrous, Daemonic Aura, Elemental Magic, Frightening, Natural Weapons, Night Vision, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"28"</Page>
+</EquipmentV2>
+<EquipmentV2 id="RELE-EQUI_CREATURES_ELEMENTAL_SPRITE">
+<Description language="ENGLISH">"Elemental Sprite"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"35;0;35;35;35;35;35;35;3;30;3;3;5;0;0;0"</Profile>
+<Skills>"Dodge Blow, Perception, Speak Arcane Language (Elemental Magick)"</Skills>
+<Talents>"Ambidextrous, Daemonic Aura, Natural Weapons, Night Vision, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"29"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMP_CHANNELLING_ELEMENTAL_MAGIC">
+<Description language="ENGLISH">"Channelling (Elemental Magic)"</Description>
+<Generique>"RULES-COMP_CHANNELLING_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ELEMENTAL_MAGICK">
+<Description language="ENGLISH">"Speak Arcane Language (Elemental Magick)"</Description>
+<Generique>"RULES-COMP_SPEAK_ARCANE_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_ACADEMIC_KNOWLEDGE_ELEMENTAL_MAGIC">
+<Description language="ENGLISH">"Academic Knowledge (Elemental Magic)"</Description>
+<Generique>"RULES-COMP_ACADEMIC_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ARCANE_OLD_FAITH">
+<Description language="ENGLISH">"Speak Arcane Language (Arcane Old Faith)"</Description>
+<Generique>"RULES-COMP_SPEAK_ARCANE_LANGUAGE_*"</Generique>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="RULES-T_AETHYRIC_ATTUNEMENT__ELEMENTAL_MAGIC">
+<Description language="ENGLISH">"Aethyric Attunement (Elemental Magic)"</Description>
+<Generique>"RULES-T_AETHYRIC_ATTUNEMENT__*"</Generique>
+</Talent>
+<Talent id="RULES-T_PETTY_MAGIC__ELEMENTAL">
+<Description language="ENGLISH">"Petty Magic (Elemental)"</Description>
+<Generique>"RULES-T_PETTY_MAGIC__*"</Generique>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+</DATA_BOOK>

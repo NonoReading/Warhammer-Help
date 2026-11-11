@@ -18,6 +18,8 @@ RACINE = Path(__file__).resolve().parent
 SCHEMAS = {
     "WFRP4": RACINE / "SCHEMA_WFRP4.xsd",
     "WFRP5": RACINE / "SCHEMA_WFRP5.xsd",
+    "WFRP2": RACINE / "SCHEMA_WFRP2.xsd",
+    "WFRP1": RACINE / "SCHEMA_WFRP1.xsd",
 }
 
 

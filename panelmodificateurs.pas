@@ -12,7 +12,7 @@ unit PanelModificateurs;
 interface
 
 uses
-  BCLabelContour, Classes, SysUtils, Controls, Forms, StdCtrls, ExtCtrls, Grids, Dialogs, DOM, BCButton,
+  BCLabelContour, Classes, SysUtils, Controls, Forms, StdCtrls, ExtCtrls, Grids, Dialogs, MessageTest, DOM, BCButton,
   ChargeConstantes, ChargeModificateur, ChargeTexte, ChargeCompetence, UnitCalcul, GlobalFonts;
 
 type
@@ -30,6 +30,7 @@ type
     FCompLibelles: TStrings;  // competences liees (index 0 = ligne vide), parallele a FCompCodes
     FCompCodes: TStringList;
     FCodesCondition: TStringList;  // conditions (if=) proposees : codes declares par les livres (DATA_CONDITION), fournis par l'appelant
+    FCaracLib, FCaracCode: TStringList;  // caracteristiques de l'element charge : libelle -> code d'origine (Move et M ont le meme libelle)
     FFiltreLib, FFiltreCode: TStringList;  // filtres affiches en libelle (RULES-LAB_x) : libelle -> code d'origine
     function  LibFiltre(const Code: String): String;
     function  CodeFiltre(const Lib: String): String;
@@ -37,6 +38,7 @@ type
     function  CodeTypeBonus(const Lib: String): String;
     function  LibCibleBonus(const Typ, Code: String): String;
     function  CodeCibleBonus(const Typ, Lib: String): String;
+    function  CibleLigne(const Typ: String; R: Integer): String;
     procedure GrilleSelectEditor(Sender: TObject; aCol, aRow: Integer; var Editor: TWinControl);
     procedure GrilleMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
     procedure GrillePickListSelect(Sender: TObject);
@@ -77,8 +79,8 @@ implementation
 
 const
   // caracteristiques proposees comme cible d'un bonus
-  CodesCaracBonus: array[0..14] of String = ('WS', 'BS', 'S', 'T', 'I', 'Ag', 'Dex', 'Int', 'WP', 'Fel',
-    'Fate', 'Resil', 'Wound', 'Supp', 'Move');
+  CodesCaracBonus: array[0..19] of String = ('WS', 'BS', 'S', 'T', 'I', 'Ag', 'Dex', 'Int', 'WP', 'Fel',
+    'Fate', 'Resil', 'Wound', 'Supp', 'Move', 'A', 'W', 'M', 'Mag', 'IP');
   // emplacements d'armure proposes comme cible d'une protection (ModifArmour)
   CodesEmplacementBonus: array[0..3] of String = (BonusTete, BonusBras, BonusCorps, BonusJambes);  // "Tous les emplacements"
   // choix proposes pour une protection : les quatre pieces d'armure + le bouclier (jamais dans "Tous")
@@ -179,8 +181,13 @@ begin
   Codes := TStringList.Create;
   try
     SpecialitesDe(CodeBase, Libs, Codes);
-    I := Libs.IndexOf(Lib);
-    if I >= 0 then Result := Codes[I];
+    // libelles a espace finale (« Langue (Magick) ») : Lib arrive deja sans espaces de bout
+    for I := 0 to Libs.Count - 1 do
+      if Trim(Libs[I]) = Trim(Lib) then
+      begin
+        Result := Codes[I];
+        Break;
+      end;
   finally
     Libs.Free;
     Codes.Free;
@@ -192,6 +199,8 @@ end;
 constructor TPanelModificateurs.Create(AOwner: TComponent);
 begin
   inherited Create(AOwner);
+  FCaracLib := TStringList.Create;
+  FCaracCode := TStringList.Create;
   FFiltreLib := TStringList.Create;
   FFiltreCode := TStringList.Create;
   BevelOuter := bvNone;
@@ -211,7 +220,11 @@ begin
   CouleurSelectionGrille(FGrille);
   FGrille.Align := alClient;
   FGrille.BorderSpacing.Bottom := 6;
-  FGrille.ColCount := 5;  // Type, Cible, Valeur, Option, Condition (filtre if=)
+  // Type, Cible, Valeur, Option, Condition (filtre if=), puis deux colonnes cachees : ligne lue en <Modificateur>,
+  // libelle de la cible suivi de son code (la liste des competences peut avoir change de langue entre la lecture et l'ecriture)
+  FGrille.ColCount := 7;
+  FGrille.ColWidths[5] := 0;
+  FGrille.ColWidths[6] := 0;
   FGrille.RowCount := 1;
   FGrille.FixedRows := 1;
   FGrille.FixedCols := 0;
@@ -230,6 +243,8 @@ end;
 
 destructor TPanelModificateurs.Destroy;
 begin
+  FCaracLib.Free;
+  FCaracCode.Free;
   FFiltreLib.Free;
   FFiltreCode.Free;
   inherited Destroy;
@@ -372,11 +387,19 @@ end;
 function TPanelModificateurs.LibCibleBonus(const Typ, Code: String): String;
 var
   I: Integer;
+  Lib: String;
 begin
   Result := Code;
   if Code = '' then Exit;
   if EstTypeCarac(Typ) and (Pos('RULES-ATTR_', Code) = 1) then
-    Result := FLibAttribut(Code)
+  begin
+    Result := FLibAttribut(Code);
+    if FCaracLib.IndexOf(Result) < 0 then
+    begin
+      FCaracLib.Add(Result);
+      FCaracCode.Add(Code);
+    end;
+  end
   else if EstTypeDegat(Typ) then
     Result := LibCategorieDegat(Code)
   else if EstTypeEmplacement(Typ) then
@@ -387,7 +410,45 @@ begin
     if I > 0 then
       Result := FCompLibelles[I]
     else
+    begin
       Result := LibCategorieDegat(Code);  // CC / CT : categorie de competence, meme libelle que pour les degats
+      // toute specialisation (RULES-COMP_CHANNELLING__*) : libelle de la competence suivi de « (Any) », comme le Rulebook
+      if (Result = Code) and (Length(Code) > 3) and (Copy(Code, Length(Code) - 2, 3) = '__*') then
+      begin
+        Lib := GetTexteLibelle(Copy(Code, 1, Length(Code) - 3), '');
+        if Lib <> '' then Result := Lib + ' (Any)';
+      end;
+      // competence absente de la liste commune : on l'y ajoute, sinon CodeCibleBonus ne retrouve pas le code
+      if (Result <> Code) and (Pos('COMP_', Code) > 0) and (FCompLibelles.IndexOf(Result) < 0) then
+      begin
+        FCompLibelles.Add(Result);
+        FCompCodes.Add(Code);
+      end;
+    end;
+  end
+  else if (Length(Code) > 3) and (Copy(Code, Length(Code) - 2, 3) = '__*') then
+  begin
+    // cible libre (ModifyTestSL...) : meme libelle « Competence (Any) » ; le code est garde par CibleLigne tant que le libelle n'est pas retouche
+    Lib := GetTexteLibelle(Copy(Code, 1, Length(Code) - 3), '');
+    if Lib = Copy(Code, 1, Length(Code) - 3) then Lib := '';  // introuvable : GetTexteLibelle renvoie le code
+    if Lib = '' then
+    begin
+      Lib := ChercheCompetence(Code).Libelle;  // la competence generique « __* » a son propre libelle (« Channelling (Any) »)
+      if Lib <> '' then
+      begin
+        Result := Lib;
+        Exit;
+      end;
+    end;
+    if Lib = '' then
+      // pas de libelle de base (competence qui n'existe que par specialisations) : celui d'une specialisation, sans sa parenthese
+      for I := 0 to FCompCodes.Count - 1 do
+        if Pos(Copy(Code, 1, Length(Code) - 1), FCompCodes[I]) = 1 then
+        begin
+          Lib := Trim(Copy(FCompLibelles[I], 1, Pos(' (', FCompLibelles[I] + ' (') - 1));
+          Break;
+        end;
+    if Lib <> '' then Result := Lib + ' (Any)';
   end;
 end;
 
@@ -399,6 +460,8 @@ begin
   if Lib = '' then Exit;
   if EstTypeCarac(Typ) then
   begin
+    I := FCaracLib.IndexOf(Lib);
+    if I >= 0 then Exit(FCaracCode[I]);
     for I := 0 to High(CodesCaracBonus) do
       if FLibAttribut('RULES-ATTR_' + CodesCaracBonus[I]) = Lib then Exit('RULES-ATTR_' + CodesCaracBonus[I]);
   end
@@ -425,6 +488,21 @@ begin
   end;
 end;
 
+// Code de la cible de la ligne R : celui lu avec la ligne tant que le libelle n'a pas ete retouche, sinon la recherche par libelle.
+function TPanelModificateurs.CibleLigne(const Typ: String; R: Integer): String;
+var
+  Lib, Memo: String;
+  P: Integer;
+begin
+  Lib := Trim(FGrille.Cells[1, R]);
+  Memo := FGrille.Cells[6, R];
+  P := Pos(#1, Memo);  // certains libelles de competence finissent par une espace : on compare sans
+  if (Lib <> '') and (P > 0) and (Trim(Copy(Memo, 1, P - 1)) = Lib) then
+    Result := Copy(Memo, P + 1, MaxInt)
+  else
+    Result := CodeCibleBonus(Typ, Lib);
+end;
+
 // Une ligne par bonus/malus de l'element : Type | Cible | Valeur | Filtre. Les deux formats se lisent :
 // <ModifyX name="Cible" [skill="Filtre" | if="Filtre"]>Valeur</ModifyX> et
 // <Modificateur Type="ModifyX" Cible Facteur="Valeur" [Filtre]/>. Une cible imposee (type ncFixe) reste vide.
@@ -437,6 +515,8 @@ var
   Comp: StructureCompetence;
 begin
   FGrille.RowCount := 1;
+  FCaracLib.Clear;
+  FCaracCode.Clear;
   Noeud := Element.FirstChild;
   while Noeud <> nil do
   begin
@@ -461,6 +541,8 @@ begin
       R := FGrille.RowCount;
       FGrille.RowCount := R + 1;
       FGrille.Cells[0, R] := LibTypeBonus(Typ);
+      // format d'origine retenu : '1' = <Modificateur>, '0' = balise historique (reecrite telle quelle), '' = ligne nouvelle
+      if E.NodeName = ConstXmlModificateur then FGrille.Cells[5, R] := '1' else FGrille.Cells[5, R] := '0';
       if NatureTypeBonus(Typ) = ncFixe then Cible := '';
       Specialite := '';
       if EstTypeCompetence(Typ) and (Cible <> '') then
@@ -473,6 +555,7 @@ begin
         end;
       end;
       FGrille.Cells[1, R] := LibCibleBonus(Typ, Cible);
+      FGrille.Cells[6, R] := FGrille.Cells[1, R] + #1 + Cible;
       FGrille.Cells[2, R] := Valeur;
       // Option : specialite (competence) ou competence filtrant ModifyWeapon ; Condition : le if= (libelle)
       FGrille.Cells[3, R] := '';
@@ -506,7 +589,7 @@ begin
     I := IndiceTypeEffet(Typ);
     if I < 0 then Continue;
     // cible obligatoire, sauf les types a cible imposee : Ecrire ignorerait la ligne en silence
-    if (TypesEffet[I].Nature <> ncFixe) and (CodeCibleBonus(Typ, Trim(FGrille.Cells[1, R])) = '') then
+    if (TypesEffet[I].Nature <> ncFixe) and (CibleLigne(Typ, R) = '') then
     begin
       ShowMessage(Format(GetTexteLibelle('RULES-LAB_478'), [R]));
       Result := False;
@@ -553,7 +636,7 @@ begin
     if TypesEffet[I].Nature = ncFixe then
       Cible := TypesEffet[I].CibleFixe
     else
-      Cible := CodeCibleBonus(Typ, Trim(FGrille.Cells[1, R]));
+      Cible := CibleLigne(Typ, R);
     Valeur := Trim(FGrille.Cells[2, R]);
     Filtre := Trim(FGrille.Cells[3, R]);  // Option
     if Typ = ConstXmlModifieArme then
@@ -573,20 +656,21 @@ begin
     for K := 0 to NbCibles - 1 do
     begin
       if NbCibles > 1 then Cible := CodesEmplacementBonus[K];
-      if EcritureGenerique(Typ, Filtre) and (StrToIntDef(Valeur, MaxInt) <> MaxInt) then
+      if ((FGrille.Cells[5, R] <> '0') and EcritureGenerique(Typ, Filtre) or (FGrille.Cells[5, R] = '1')) and (StrToIntDef(Valeur, MaxInt) <> MaxInt) then
       begin
         E := Element.OwnerDocument.CreateElement(ConstXmlModificateur);
         E.SetAttribute(ConstXmlType, Typ);
         E.SetAttribute(ConstXmlEffetCible, Cible);
         E.SetAttribute(ConstXmlEffetFacteur, Valeur);
-        E.SetAttribute(ConstXmlModificateurFiltre, Filtre);
+        if Filtre <> '' then E.SetAttribute(ConstXmlModificateurFiltre, Filtre);
         Element.AppendChild(E);
       end
       else
       begin
         E := Element.OwnerDocument.CreateElement(Typ);
         E.SetAttribute(ConstXmlData, Cible);
-        if (Typ = ConstXmlModifieArme) and (Filtre <> '') then E.SetAttribute(ConstXmlModifieArmeCompetence, Filtre);
+        if (Typ = ConstXmlModifieArme) and (Filtre <> '') then E.SetAttribute(ConstXmlModifieArmeCompetence, Filtre)
+        else if Filtre <> '' then E.SetAttribute('if', Filtre);  // balise historique conservee avec sa condition
         Element.AppendChild(E);
         EcrireValeurXML(E, Valeur);
       end;
@@ -641,7 +725,8 @@ begin
   else if (aCol = 1) and EstTypeCarac(Typ) then
   begin
     for I := 0 to High(CodesCaracBonus) do
-      Combo.Items.Add(FLibAttribut('RULES-ATTR_' + CodesCaracBonus[I]));
+      if Combo.Items.IndexOf(FLibAttribut('RULES-ATTR_' + CodesCaracBonus[I])) < 0 then  // Move et M : meme libelle
+        Combo.Items.Add(FLibAttribut('RULES-ATTR_' + CodesCaracBonus[I]));
   end
   else if (aCol = 1) and EstTypeDegat(Typ) then
   begin

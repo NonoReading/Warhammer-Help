@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"HAND"</CODE_BOOK>
+<BOOK>"BOOK HANDRICH RANALD"</BOOK>
+<BOOKNAME>"THE LORES OF HANDRICH AND RANALD THE DEALER - WFRP2"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_SPELL_V2>
+<SpellV2 id="HAND-SPEL_KEEN_DEALINGS">
+<Description language="ENGLISH">"Keen Dealings"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Handrich"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A cane (+1)"</Ingredient>
+<Page>"2"</Page>
+<Duration>""</Duration>
+<Range>""</Range>
+</SpellV2>
+<SpellV2 id="HAND-SPEL_LIGHTENING_THE_LOAD">
+<Description language="ENGLISH">"Lightening The Load"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Handrich"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full Action + 1 half action for each 1000 Encumbrance affected"</CastingTime>
+<Ingredient>"A droplet of oil contained in a vessel of water (+1)"</Ingredient>
+<Page>"2"</Page>
+<Duration>""</Duration>
+<Range>""</Range>
+</SpellV2>
+<SpellV2 id="HAND-SPEL_EVALUATING_EYE_OF_HANDRICH">
+<Description language="ENGLISH">"Evaluating Eye Of Handrich"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Handrich"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A magnifying glass (+1)"</Ingredient>
+<Page>"2"</Page>
+<Duration>""</Duration>
+<Range>""</Range>
+</SpellV2>
+<SpellV2 id="HAND-SPEL_BLESSED_VENTURE">
+<Description language="ENGLISH">"Blessed Venture"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Handrich"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"10 Minutes"</CastingTime>
+<Ingredient>"A gold crown (+1)"</Ingredient>
+<Page>"2"</Page>
+<Duration>""</Duration>
+<Range>""</Range>
+</SpellV2>
+<SpellV2 id="HAND-SPEL_HANDRICH_S_FORTRESS">
+<Description language="ENGLISH">"Handrich’s Fortress"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Handrich"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A golden key (+2)"</Ingredient>
+<Page>"2"</Page>
+<Duration>""</Duration>
+<Range>""</Range>
+</SpellV2>
+<SpellV2 id="HAND-SPEL_THE_OATH_THAT_BINDS">
+<Description language="ENGLISH">"The Oath That Binds"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Handrich"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"2 Full Actions"</CastingTime>
+<Ingredient>"An item exchanged by the trade partner (+2)"</Ingredient>
+<Page>"2"</Page>
+<Duration>""</Duration>
+<Range>""</Range>
+</SpellV2>
+<SpellV2 id="HAND-SPEL_VEIL_OF_SECRECY">
+<Description language="ENGLISH">"Veil Of Secrecy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A blindfold (+1)"</Ingredient>
+<Page>"3"</Page>
+<Duration>""</Duration>
+<Range>""</Range>
+</SpellV2>
+<SpellV2 id="HAND-SPEL_VENEER_OF_EXCELLENCE">
+<Description language="ENGLISH">"Veneer Of Excellence"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A silken scarf (+1)"</Ingredient>
+<Page>"3"</Page>
+<Duration>""</Duration>
+<Range>""</Range>
+</SpellV2>
+<SpellV2 id="HAND-SPEL_GILDING_THE_SHIMMY">
+<Description language="ENGLISH">"Gilding The Shimmy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A counterfeiting set (+2)"</Ingredient>
+<Page>"3"</Page>
+<Duration>""</Duration>
+<Range>""</Range>
+</SpellV2>
+<SpellV2 id="HAND-SPEL_GLAMOUR_OF_PERFECTION">
+<Description language="ENGLISH">"Glamour Of Perfection"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ranald"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"1 Full Action + 1 half action per Trade Unit of goods"</CastingTime>
+<Ingredient>"A letter of commendation from a Guild Master (+2)"</Ingredient>
+<Page>"3"</Page>
+<Duration>""</Duration>
+<Range>""</Range>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SPELL_TALENT>
+<Sort id="HAND-SPEL_VEIL_OF_SECRECY">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="HAND-SPEL_VENEER_OF_EXCELLENCE">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="HAND-SPEL_GILDING_THE_SHIMMY">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="HAND-SPEL_GLAMOUR_OF_PERFECTION">
+<Talent>"RULES-T_DIVINE_LORE__RANALD"</Talent>
+</Sort>
+<Sort id="HAND-SPEL_KEEN_DEALINGS">
+<Talent>"RULES-T_DIVINE_LORE__HANDRICH"</Talent>
+</Sort>
+<Sort id="HAND-SPEL_LIGHTENING_THE_LOAD">
+<Talent>"RULES-T_DIVINE_LORE__HANDRICH"</Talent>
+</Sort>
+<Sort id="HAND-SPEL_EVALUATING_EYE_OF_HANDRICH">
+<Talent>"RULES-T_DIVINE_LORE__HANDRICH"</Talent>
+</Sort>
+<Sort id="HAND-SPEL_BLESSED_VENTURE">
+<Talent>"RULES-T_DIVINE_LORE__HANDRICH"</Talent>
+</Sort>
+<Sort id="HAND-SPEL_HANDRICH_S_FORTRESS">
+<Talent>"RULES-T_DIVINE_LORE__HANDRICH"</Talent>
+</Sort>
+<Sort id="HAND-SPEL_THE_OATH_THAT_BINDS">
+<Talent>"RULES-T_DIVINE_LORE__HANDRICH"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+</DATA_BOOK>

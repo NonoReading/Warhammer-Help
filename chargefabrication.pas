@@ -66,6 +66,8 @@ Function FabricationEstPractical(ListeCode :String): Boolean;
 Function FabricationEstUnreliable(ListeCode :String): Boolean;
 Function FabricationPortee(ListeCode :String): Integer;
 Function FabricationQualitesArme(ListeCode :String): String;
+// Ajoute a ListeBonus (qualites d'une arme, virgules) les codes de Ajout qui n'y sont pas deja. 18/10/2026.
+procedure ArmeAjouteQualites(var ListeBonus: String; const Ajout: String);
 // Codes des armes alternatives (virgules) que les accessoires d UN objet lui donnent en plus. 20/09/2026.
 Function FabricationArmesAlternatives(ListeCode :String): String;
 procedure FabricationDetail(ListeCode :String; var BonusItem :String; var ListeBonus :String);
@@ -89,7 +91,7 @@ uses
   // ChargeTrapping utilise ChargeFabrication dans son interface (FabricationModificateurQualite) :
   // dependance circulaire evitee en n'important ChargeTrapping qu'ici, pas dans l'interface
   // ci-dessus (FabricationDuCatalogue, brique b "objets a fabrication integree", 28/09/2026).
-  ChargeTrapping, ChargeCompetence, ChargeAttribut;
+  ChargeTrapping, ChargeCompetence, ChargeAttribut, ChargeArmeBonus;
 
 function FabricationTheme(CodeFabrication: String): String;
 var
@@ -298,9 +300,45 @@ Function FabricationQualitesArme(ListeCode :String): String;
                 if Result <> '' then Result := Result + ',';
                 Result := Result + Ajout;
               end;
+            // Qualite d'arme (TOC-WEAPQ_*) qui en accorde d'autres : Parry = Balanced + Defensive. 18/10/2026.
+            Ajout := ChercheArmeBonus(ExtractStringBefore(Strings[IndTab],' ')).QualitesAccordees;
+            if Ajout <> '' then
+              begin
+                if Result <> '' then Result := Result + ',';
+                Result := Result + Ajout;
+              end;
           end;
         strings.Free;
       end;
+  end;
+
+procedure ArmeAjouteQualites(var ListeBonus: String; const Ajout: String);
+  var
+    Morceaux: TStringList;
+    Ind:      Integer;
+    Code:     String;
+  begin
+    if Ajout = '' then
+      exit;
+    if ListeBonus = '-' then
+      ListeBonus := '';
+    Morceaux := TStringList.Create;
+    try
+      ExtractStrings([','], [], PChar(Ajout), Morceaux);
+      for Ind := 0 to Morceaux.Count - 1 do
+        begin
+          Code := Trim(Morceaux[Ind]);
+          // deja presente (avec ou sans niveau "CODE 2") : pas de doublon
+          if (Code <> '') and (Pos(Code + ',', ListeBonus + ',') = 0) and (Pos(Code + ' ', ListeBonus + ',') = 0) then
+            begin
+              if ListeBonus <> '' then
+                ListeBonus := ListeBonus + ',';
+              ListeBonus := ListeBonus + Code;
+            end;
+        end;
+    finally
+      Morceaux.Free;
+    end;
   end;
 
 Function FabricationArmesAlternatives(ListeCode :String): String;

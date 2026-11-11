@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"ELWD"</CODE_BOOK>
+<BOOK>"BOOK ELVEN WARDANCERS"</BOOK>
+<BOOKNAME>"ELVEN WARDANCERS"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"Copyright © Games Workshop Limited 2007. Games Workshop, the Games Workshop logo, Black Industries and their respective logos, Warhammer and all associated marks, logos, places, names, creatures, races and race insignia / devices / logos / symbols, locations, weapons, units, characters, products, illustrations and images from Warhammer are either ®, TM and/or © Games Workshop Ltd 2000-2007, variably registered in the UK and other countries around the world. All Rights Reserved."</DISCLAIMER>
+<DATA_CAREER>
+<Career id="ELWD-CARE_WARDANCER">
+<Description language="ENGLISH">"Wardancer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, BS +10%, S +5%, T +5%, Ag +15%, WP +10%, Fel +5%"</MainProfile>
+<SecondaryProfile>"A +1, W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Religion), Dodge Blow, Gossip or Performer (Singer), Perception or Performer (Musician), Performer (Acrobat), Performer (Dancer)"</Skills>
+<Talents>"Ambidextrous, Fleet Footed, Shadow Dance, Specialist Weapon Group (Throwing), Specialist Weapon Group (Two-Handed), Stout-Hearted, Swashbuckler"</Talents>
+<Trappings>"Pair of Hand Weapons, Great Weapon (Sword or Axe), Talismanic Tattoos or War Paint"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_RELIGION">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP/RULES-COMP_PERFORMER_SINGER">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION/RULES-COMP_PERFORMER_MUSICIAN">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_ACROBAT">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_DANCER">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AMBIDEXTROUS">"1"</Talent>
+<Talent name="RULES-T_FLEET_FOOTED">"1"</Talent>
+<Talent name="ELWD-T_SHADOW_DANCE">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__THROWING">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED">"1"</Talent>
+<Talent name="RULES-T_STOUT_HEARTED">"1"</Talent>
+<Talent name="RULES-T_SWASHBUCKLER">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"ELWD 11"</Source>
+</Career>
+<Career id="ELWD-CARE_BLADESINGER">
+<Description language="ENGLISH">"Bladesinger"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +40%, BS +20%, S +15%, T +15%, Ag +25%, WP +20%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +2, W +6"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"40"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"15"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"25"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Religion), Command, Common Knowledge (Elves), Dodge Blow, Intimidate or Performer (Any), Performer (Acrobat), Performer (Dancer)"</Skills>
+<Talents>"Shadow Dance, Sharpshooter or Lightning Parry, Strike Mighty Blow or Strike to Injure"</Talents>
+<Trappings>"Best Quality Pair of Hand Weapons, Best Quality Two Handed Weapon (Sword or Axe), Talismanic Tattoos or War Paint"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_RELIGION">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ELVES">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE/RULES-COMP_PERFORMER_*">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_ACROBAT">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_DANCER">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="ELWD-T_SHADOW_DANCE">"1"</Talent>
+<Talent name="RULES-T_SHARPSHOOTER/RULES-T_LIGHTNING_PARRY">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW/RULES-T_STRIKE_TO_INJURE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"ELWD 12"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="ELWD-CARE_WARDANCER">"DOTF-CARE_BLADESINGER"</Link>
+<Link name="ELWD-CARE_WARDANCER">"RULES-CARE_JUDICIAL_CHAMPION"</Link>
+<Link name="ELWD-CARE_WARDANCER">"RULES-CARE_MINSTREL"</Link>
+<Link name="ELWD-CARE_WARDANCER">"RULES-CARE_VETERAN"</Link>
+<Link name="ELWD-CARE_WARDANCER">"RULES-CARE_VAMPIRE_HUNTER"</Link>
+<Link name="RULES-CARE_BOUNTY_HUNTER">"ELWD-CARE_WARDANCER"</Link>
+<Link name="RULES-CARE_ENTERTAINER">"ELWD-CARE_WARDANCER"</Link>
+<Link name="RULES-CARE_KITHBAND_WARRIOR">"ELWD-CARE_WARDANCER"</Link>
+<Link name="RULES-CARE_PIT_FIGHTER">"ELWD-CARE_WARDANCER"</Link>
+<Link name="RULES-CARE_SCOUT">"ELWD-CARE_WARDANCER"</Link>
+<Link name="ELWD-CARE_BLADESINGER">"RULES-CARE_CAPTAIN"</Link>
+<Link name="ELWD-CARE_BLADESINGER">"RULES-CARE_CHAMPION"</Link>
+<Link name="ELWD-CARE_BLADESINGER">"RULES-CARE_OUTLAW_CHIEF"</Link>
+<Link name="ELWD-CARE_WARDANCER">"ELWD-CARE_BLADESINGER"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_TALENT>
+<Talent id="ELWD-T_SHADOW_DANCE">
+<Description language="ENGLISH">"Shadow Dance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+</DATA_TALENT>
+</DATA_BOOK>

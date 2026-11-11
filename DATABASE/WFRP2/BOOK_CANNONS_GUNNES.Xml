@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"CGUN"</CODE_BOOK>
+<BOOK>"BOOK CANNONS AND GUNNES"</BOOK>
+<BOOKNAME>"CANNONS AND GUNNES - WFRP2"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"Copyright © Games Workshop Limited 2006. Games Workshop, the Games Workshop logo, Black Industries and their respective logos, Warhammer and all associated marks, logos, places, names, creatures, races and race insignia / devices / logos / symbols, locations, weapons, units, characters, products, illustrations and images from Warhammer are either ®, TM and/or © Games Workshop Ltd 2000-2006, variably registered in the UK and other countries around the world. All Rights Reserved."</DISCLAIMER>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_SWIVEL_GUN">
+<Description language="ENGLISH">"Swivel Gun (CG)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"200 gc"</Cost>
+<Encumbrance>"150"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"3"</Damage>
+<Range>"3/1000"</Range>
+<Reload>"4-6"</Reload>
+<Qualities>"Crew 2, Ball 1/2 lb or 6 musket balls lb, Unreliable"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_VOLLEY_GUN">
+<Description language="ENGLISH">"Volley Gun (CG)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"300 gc + 25% per barrel over 6"</Cost>
+<Encumbrance>"400"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"3"</Damage>
+<Range>"3/50"</Range>
+<Reload>"2 per barrel"</Reload>
+<Qualities>"Crew 2, Unreliable, one BS test per barrel"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_ESMERELDA">
+<Description language="ENGLISH">"Esmerelda (CG)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"100 gc"</Cost>
+<Encumbrance>"100"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"3"</Damage>
+<Range>"200/750"</Range>
+<Reload>"6"</Reload>
+<Qualities>"Crew 2, Ball 1/2 lb, Unreliable"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_FALCONETTE">
+<Description language="ENGLISH">"Falconette (CG)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"500 gc"</Cost>
+<Encumbrance>"200"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"5"</Damage>
+<Range>"300/1000"</Range>
+<Reload>"6"</Reload>
+<Qualities>"Crew 2, Ball 1 to 2 lb, Unreliable"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_FALCON">
+<Description language="ENGLISH">"Falcon (CG)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"600 gc"</Cost>
+<Encumbrance>"400"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"5"</Damage>
+<Range>"400/2500"</Range>
+<Reload>"6"</Reload>
+<Qualities>"Crew 2, Ball 3 to 4 lb, Unreliable"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_SAKER">
+<Description language="ENGLISH">"Saker (CG)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"750 gc"</Cost>
+<Encumbrance>"600"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"10"</Damage>
+<Range>"400/3750"</Range>
+<Reload>"18"</Reload>
+<Qualities>"Crew 4, Ball 5 to 7 lb, Unreliable"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_GROSSE_SAKER">
+<Description language="ENGLISH">"Grosse Saker (CG)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"900 gc"</Cost>
+<Encumbrance>"900"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"15"</Damage>
+<Range>"600/4500"</Range>
+<Reload>"30"</Reload>
+<Qualities>"Crew 4, Ball 7 to 10 lb, Unreliable"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_CULVERIN">
+<Description language="ENGLISH">"Culverin (CG)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"1500 gc"</Cost>
+<Encumbrance>"1200"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"20"</Damage>
+<Range>"800/5000"</Range>
+<Reload>"150"</Reload>
+<Qualities>"Crew 6, Ball 10 to 18 lb, Unreliable"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_GROSSE_CULVERIN">
+<Description language="ENGLISH">"Grosse Culverin (CG)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"2000 gc"</Cost>
+<Encumbrance>"2000"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"25"</Damage>
+<Range>"1700/6600"</Range>
+<Reload>"150"</Reload>
+<Qualities>"Crew 6, Ball 24 lb, Unreliable"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_KONIG_CULVERIN">
+<Description language="ENGLISH">"Konig Culverin (CG)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"2500 gc"</Cost>
+<Encumbrance>"2500"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"30"</Damage>
+<Range>"650/3700"</Range>
+<Reload>"200"</Reload>
+<Qualities>"Crew 6, Ball 24 to 40 lb, Unreliable"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_IMPERIAL_CULVERIN">
+<Description language="ENGLISH">"Imperial Culverin (CG)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"3500 gc +"</Cost>
+<Encumbrance>"3000"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"35"</Damage>
+<Range>"800/2500"</Range>
+<Reload>"300"</Reload>
+<Qualities>"Crew 8, Ball 40 and up lb, Unreliable"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_MISCELLANEA_STONE_SHOT">
+<Description language="ENGLISH">"Stone Shot (CG)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"1 gc/lb"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Shatters on impact: 50% not reusable"</Qualities>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_MISCELLANEA_SOLID_SHOT">
+<Description language="ENGLISH">"Solid Shot (CG)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"3 gc/lb"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Metal, can be recovered and reused; can be heated to start fires"</Qualities>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_MISCELLANEA_SHELL">
+<Description language="ENGLISH">"Shell (CG)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"4 gc/lb"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Unreliable, cannot be reused; fused separately, explodes as Fireball x1 per 5 damage"</Qualities>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_RUNES_RUNE_OF_ACCURACY">
+<Description language="ENGLISH">"Rune of Accuracy"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_ENGINEERING_RUNES"</SubCategory>
+<Page>"1"</Page>
+<RuneType>"RULES-V2RUNE_ENGINEERING"</RuneType>
+<InscriptionNumber>"-"</InscriptionNumber>
+<Empowerment>"-"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"-"</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_RUNES_RUNE_OF_FORGING">
+<Description language="ENGLISH">"Rune of Forging"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_ENGINEERING_RUNES"</SubCategory>
+<Page>"1"</Page>
+<RuneType>"RULES-V2RUNE_ENGINEERING"</RuneType>
+<InscriptionNumber>"-"</InscriptionNumber>
+<Empowerment>"-"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"-"</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_RUNES_RUNE_OF_BURNING">
+<Description language="ENGLISH">"Rune of Burning"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_ENGINEERING_RUNES"</SubCategory>
+<Page>"1"</Page>
+<RuneType>"RULES-V2RUNE_ENGINEERING"</RuneType>
+<InscriptionNumber>"-"</InscriptionNumber>
+<Empowerment>"-"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"-"</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_RUNES_RUNE_OF_PENETRATING">
+<Description language="ENGLISH">"Rune of Penetrating"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_ENGINEERING_RUNES"</SubCategory>
+<Page>"1"</Page>
+<RuneType>"RULES-V2RUNE_ENGINEERING"</RuneType>
+<InscriptionNumber>"-"</InscriptionNumber>
+<Empowerment>"-"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"-"</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_RUNES_RUNE_OF_FORTUNE_CANNON">
+<Description language="ENGLISH">"Rune of Fortune (Cannon)"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_ENGINEERING_RUNES"</SubCategory>
+<Page>"1"</Page>
+<RuneType>"RULES-V2RUNE_ENGINEERING"</RuneType>
+<InscriptionNumber>"-"</InscriptionNumber>
+<Empowerment>"-"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"-"</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_RUNES_RUNE_OF_STALWART">
+<Description language="ENGLISH">"Rune of Stalwart"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_ENGINEERING_RUNES"</SubCategory>
+<Page>"1"</Page>
+<RuneType>"RULES-V2RUNE_ENGINEERING"</RuneType>
+<InscriptionNumber>"-"</InscriptionNumber>
+<Empowerment>"-"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"-"</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_RUNES_RUNE_OF_VALIANT">
+<Description language="ENGLISH">"Rune of Valiant"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_ENGINEERING_RUNES"</SubCategory>
+<Page>"1"</Page>
+<RuneType>"RULES-V2RUNE_ENGINEERING"</RuneType>
+<InscriptionNumber>"-"</InscriptionNumber>
+<Empowerment>"-"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"-"</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_RUNES_RUNE_OF_DISGUISE">
+<Description language="ENGLISH">"Rune of Disguise"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_ENGINEERING_RUNES"</SubCategory>
+<Page>"1"</Page>
+<RuneType>"RULES-V2RUNE_ENGINEERING"</RuneType>
+<InscriptionNumber>"-"</InscriptionNumber>
+<Empowerment>"-"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"-"</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_RUNES_RUNE_OF_IMMOLATION">
+<Description language="ENGLISH">"Rune of Immolation"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_ENGINEERING_RUNES"</SubCategory>
+<Page>"1"</Page>
+<RuneType>"RULES-V2RUNE_ENGINEERING"</RuneType>
+<InscriptionNumber>"-"</InscriptionNumber>
+<Empowerment>"-"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"-"</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_RUNES_RUNE_OF_RELOADING">
+<Description language="ENGLISH">"Rune of Reloading"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_ENGINEERING_RUNES"</SubCategory>
+<Page>"1"</Page>
+<RuneType>"RULES-V2RUNE_ENGINEERING"</RuneType>
+<InscriptionNumber>"-"</InscriptionNumber>
+<Empowerment>"-"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"-"</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="CGUN-EQUI_RUNES_RUNE_OF_SEEKING">
+<Description language="ENGLISH">"Rune of Seeking"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_ENGINEERING_RUNES"</SubCategory>
+<Page>"1"</Page>
+<RuneType>"RULES-V2RUNE_ENGINEERING"</RuneType>
+<InscriptionNumber>"-"</InscriptionNumber>
+<Empowerment>"-"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"-"</TemporaryEffect>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+</DATA_BOOK>

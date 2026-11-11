@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, StdCtrls, ComCtrls, ExtCtrls, Menus,
-  Dialogs, Graphics, BCButton, ChargeConstantes, ChargeModificateur, ChargeTexte, ChargeCompetence, ChargeTalent, ChargeSort, ChargeMetier, ChargeMetierEquipement, ChargeLivre, ChargeArme, ChargeArmure, ChargeTrapping, ChargeRace, ChargeEspece, ChargeRegle, ChargeTirageMetier, UnitCalcul, PanelModificateurs, PanelFiche, PanelQualites, PanelTirage, PanelEquipClasse, PanelTraitEthnie, PanelCarriereEspece, PanelSousMetier, PanelSigneEffets, PanelBonusCarriere, PanelAdaptation, PanelRaceExtra, PanelNoms, PanelTraduction, Grids,
+  Dialogs, MessageTest, Graphics, BCButton, ChargeConstantes, ChargeModificateur, ChargeTexte, ChargeCompetence, ChargeTalent, ChargeSort, ChargeMetier, ChargeMetierEquipement, ChargeLivre, ChargeArme, ChargeArmure, ChargeTrapping, ChargeRace, ChargeEspece, ChargeRegle, ChargeTirageMetier, UnitCalcul, PanelModificateurs, PanelFiche, PanelQualites, PanelTirage, PanelEquipClasse, PanelTraitEthnie, PanelCarriereEspece, PanelRegleEthnie, PanelSousMetier, PanelSigneEffets, PanelCarriereV1, PanelCarrieresCoches, PanelListeChoix, PanelSousBlocs, PanelTexteListe, PanelLignesV1, PanelBonusCarriere, PanelAdaptation, PanelRaceExtra, PanelNoms, PanelTraduction, PanelImageLivre, Grids,
   Generics.Collections, DOM, XMLRead, XMLWrite, FGL, GlobalFonts, BCLabelContour;
 
 type
@@ -107,6 +107,30 @@ const
   NT_ADAPTATION_CARRIERE        = 63;
   NT_LIEN_CARRIERE_ESPECE       = 64;
   NT_SECOND_JET                 = 65;
+  NT_COMPETENCE_V2              = 66;  // competence WFRP2 : fiche texte, consultation seule (CONTEXT.md 2.122)
+  NT_TALENT_V2                  = 67;  // talent WFRP2 : idem
+  NT_SORT_V2                    = 68;  // sort WFRP2 : idem, regroupe par domaine (Lore)
+  NT_EQUIPEMENT_V2              = 69;  // article d'equipement WFRP2 : idem, regroupe par table (Category)
+  NT_REGLE_ETHNIE               = 70;  // regles qui remplacent competences et talents d'une ethnie (DATA_RULE_SPECIE)
+  NT_SORT_V1                    = 71;  // sort WFRP1 (DATA_SPELL_V1) : fiche editable, regroupe par liste (SpellList)
+  NT_COMPETENCE_V1              = 72;  // competence WFRP1 (DATA_SKILL_V1, balise <Skill>) : fiche editable
+  NT_EQUIPEMENT_V1              = 73;  // objet WFRP1 (DATA_EQUIPMENT_V1) : fiche editable, regroupe par Category
+  NT_DIEU_V1                    = 74;  // divinite WFRP1 (DATA_DEITY_V1, balise <Deity>) : fiche editable (textes ; acces aux sorts / competences non montres)
+  NT_CULTE_V1                   = 75;  // culte WFRP1 (DATA_CULT_V1, balise <Cult>) : fiche editable (nom ; prieres non montrees)
+  NT_CLASSE_V1                  = 77;  // classe WFRP1 (DATA_CLASS_V1, balise <Class>) : fiche editable (textes ; exigences non montrees)
+  NT_METIER_V1                  = 78;  // metier d'artisan WFRP1 (DATA_TRADE_V1, balise <Trade>) : fiche editable (nom, plage ; competences non montrees)
+  NT_HANDICAP_V1                = 79;  // handicap WFRP1 (DATA_DISABILITY_V1, balise <Disability>) : fiche editable (nom, texte ; stades non montres)
+  NT_LIGNE_TABLE_V1             = 80;  // ligne sans id d'une table WFRP1 (tirages, ages, disponibilite...) : fiche editable, champs tires de ses balises
+  NT_CORRUPTION_V2              = 82;  // corruption WFRP2 (DATA_CORRUPTION_TABLE_MUTATION / _DIVINE, balise <Corruption name>) : fiche generique
+  NT_LIBELLE_LIVRE              = 83;  // libelle du livre (DATA_LABEL / Label language / Text name), code du noeud = LANGUE|nom : fiche code + texte
+  NT_ATTRIBUT_V1                = 81;  // caracteristique WFRP1 (DATA_ATTRIBUT, balise <Attribut id>) : fiche editable (textes, abreviation, ordre)
+  NT_ENTREES_CARRIERE           = 84;  // branche « metiers d'entree » d'une carriere WFRP2 : cases a cocher (Entries)
+  NT_SORTIES_CARRIERE           = 85;  // branche « metiers de sortie » d'une carriere WFRP2 : cases a cocher (Exits + ExitCodes)
+  NT_CARAC_CARRIERE             = 86;  // branche « caracteristiques » d'une carriere WFRP2 : profils du livre + tableau Advances
+  NT_COMPETENCES_CARRIERE       = 87;  // branche « competences » d'une carriere WFRP2 : tableau a alternatives (SUBCHAPTER_SKILL)
+  NT_TALENTS_CARRIERE           = 88;  // branche « talents » d'une carriere WFRP2 : tableau a alternatives (SUBCHAPTER_TALENT)
+  NT_EQUIPEMENT_CARRIERE        = 89;  // branche « equipement » d'une carriere WFRP2 : tableau (SUBCHAPTER_ITEM)
+  NT_FAMILIER_V1                = 76;  // familier WFRP1 (DATA_FAMILIAR_V1, balise <Familiar>) : fiche editable (textes ; competences et regime non montres)
   // 46 a 52 : petites tables a entrees nommees (index PetitesTablesChapitre = type - NT_PETITE_TABLE_DEBUT)
   NT_PETITE_TABLE_DEBUT = 46;
   NT_PETITE_TABLE_FIN   = 52;
@@ -119,8 +143,11 @@ type
   TNodeInfo = class
     TypeNode: Integer;
     Code:     String;
+    Chapitre: String;  // balise du chapitre pour une branche (cle de l'encart explicatif RULES-HELP_BRANCHE_<balise>)
   end;
-  
+
+  TListeChampsFiche = array of StructureChampFiche;
+
   TWinLivres = class(TForm)
     // Panels
     PanelLeft: TPanel;
@@ -197,6 +224,18 @@ type
     MenuItemAjouter: TMenuItem;
     MenuItemModifier: TMenuItem;
     MenuItemSupprimer: TMenuItem;
+    MenuItemDeplierBranche: TMenuItem;
+    MenuItemReplierBranche: TMenuItem;
+    MenuItemNouvelleDivinite: TMenuItem;
+    MenuItemNouveauCulte: TMenuItem;
+    MenuItemNouveauSortV1: TMenuItem;
+    MenuItemNouvelObjetV1: TMenuItem;
+    MenuItemNouvelleClasse: TMenuItem;
+    MenuItemNouveauHandicap: TMenuItem;
+    MenuItemNouveauFamilier: TMenuItem;
+    MenuItemLigneNouvelle: TMenuItem;
+    MenuItemLigneDupliquer: TMenuItem;
+    MenuItemLigneSupprimer: TMenuItem;
     MenuItemNouvelleRace: TMenuItem;
     MenuItemNouvelleCompetence: TMenuItem;
     MenuItemNouveauTalent: TMenuItem;
@@ -206,6 +245,7 @@ type
     
     // Événements
     procedure FormCreate(Sender: TObject);
+    procedure ButtonQuestionClick(Sender: TObject);
     procedure CreerPanneauxDetail;
     procedure AjouterEntreeMenu(Popup: TPopupMenu; var Entree: TMenuItem; Clic: TNotifyEvent);
     procedure InitTalentsUI();
@@ -222,6 +262,7 @@ type
     procedure ButtonMettreAJourClick(Sender: TObject);
     procedure MajBoutonFinaliser;
     function  LivreInacheve: Boolean;
+    function DossierTravailLivre(AFilePath: String): String;
     function DerniereVersionTravail(AFilePath: String): String;
     procedure TreeViewLivreChange(Sender: TObject; Node: TTreeNode);
     procedure TreeViewLivreChanging(Sender: TObject; Node: TTreeNode; var AllowChange: Boolean);
@@ -229,11 +270,28 @@ type
     function ConfirmerAbandonModifs: Boolean;
     procedure GridNiveauPrepareCanvas(Sender: TObject; aCol, aRow: Integer; aState: TGridDrawState);
     procedure TreeViewLivreDblClick(Sender: TObject);
+    procedure GridNiveauxDblClick(Sender: TObject);
     procedure TreeViewLivreContextPopup(Sender: TObject; MousePos: TPoint; var Handled: Boolean);
     procedure PopupMenuTreePopup(Sender: TObject);
     procedure MenuItemAjouterClick(Sender: TObject);
     procedure MenuItemModifierClick(Sender: TObject);
     procedure MenuItemSupprimerClick(Sender: TObject);
+    procedure MenuDeplierBrancheClick(Sender: TObject);
+    procedure MenuReplierBrancheClick(Sender: TObject);
+    function NoeudGroupeV1(Node: TTreeNode; TypeFeuille: Integer): TTreeNode;
+    procedure CreerElementV1(Chap, NomTag, Infixe, ChampNom, CodeLibBranche, CodeLibTitre: String;
+      TypeFeuille: Integer; const AutresChamps: array of String; GroupeNoeud: TTreeNode = nil);
+    procedure MenuNouveauSortV1Click(Sender: TObject);
+    procedure MenuNouvelObjetV1Click(Sender: TObject);
+    procedure MenuNouvelleDiviniteClick(Sender: TObject);
+    procedure MenuNouveauCulteClick(Sender: TObject);
+    procedure MenuNouvelleClasseClick(Sender: TObject);
+    procedure MenuNouveauHandicapClick(Sender: TObject);
+    procedure MenuNouveauFamilierClick(Sender: TObject);
+    procedure ModifierLigneTable(Operation: Integer);  // 0 nouvelle, 1 dupliquer, 2 supprimer
+    procedure MenuLigneNouvelleClick(Sender: TObject);
+    procedure MenuLigneDupliquerClick(Sender: TObject);
+    procedure MenuLigneSupprimerClick(Sender: TObject);
     procedure ButtonAttrValiderClick(Sender: TObject);
     procedure ButtonAttrAnnulerClick(Sender: TObject);
     procedure GridAttrEthnieSelectEditor(Sender: TObject; aCol, aRow: Integer; var Editor: TWinControl);
@@ -262,15 +320,43 @@ type
     BenedInit: String;  // benedictions cochees a l'ouverture de la fiche d'un dieu (seuls les changements sont reecrits)
     PanelQualitesArme: TPanelQualitesLiees;  // qualites liees (arme ; armure ensuite)
     QualLibelles, QualCodes: TStringList;  // qualites d'arme proposees : libelle affiche / code ecrit
+    RulebookBaseDoc: TXMLDocument;  // Rulebook anglais complet (le fichier de langue ne porte que des textes, ni TypSpell ni lignes de DATA_SPELL_TALENT)
     RulebookDoc: TXMLDocument;  // Rulebook de l'edition du livre ouvert, lu une fois (RulebookXML)
     RulebookEssaye: Boolean;
     RulebookLangue: String;  // langue du Rulebook en memoire
+    RulebookDossier: String;  // dossier (= edition) dont viennent RulebookDoc / RulebookBaseDoc
     RulebookTextes: TStringList;  // ses <Text> : code=libelle
     MenuItemNouvelleArmure: TMenuItem;
     MenuItemNouveauTrapping: TMenuItem;
     MenuItemNouvelleMaladie: TMenuItem;
     MenuItemNouvelleAffliction: TMenuItem;
     MenuItemNouveauSigne: TMenuItem;
+    PanelCarriereV1: TPanelCarriereV1;  // schema d'avancement et competences d'une carriere WFRP1
+    PanelBonusCompetenceV1: TPanelSousBlocs;  // <Bonus> d'une competence WFRP1
+    PanelCulteV1: TPanelSousBlocs;            // <Prayer> et <Gift> d'un culte WFRP1
+    PanelCochesCarriere: array[0..1] of TPanelCarrieresCoches;  // 0 = metiers d'entree, 1 = metiers de sortie (carriere WFRP2)
+    PanelListesCarriere: array[0..4] of TPanelListeChoix;  // 0 = Advances, 1 = competences, 2 = talents, 3 = equipement (carriere WFRP2), 4 = equipement (carriere WFRP1)
+    FicheCoches: Integer;     // 0 = fiche normale d'une carriere, sinon branche : 1 entrees, 2 sorties, 3 caracteristiques, 4 competences, 5 talents, 6 equipement
+    PanelCarriereV2: TPanelSousBlocs;        // Advances / SUBCHAPTER_ITEM / SUBCHAPTER_SKILL / SUBCHAPTER_TALENT d'une carriere WFRP2
+    PanelDieuV1: TPanelSousBlocs;            // <SpellAccess> et <SkillAccess> d'une divinite WFRP1
+    PanelClasseV1: TPanelSousBlocs;           // <Requirement> d'une classe WFRP1
+    PanelHandicapV1: TPanelSousBlocs;         // <Permanent> et <Stage> d'un handicap WFRP1
+    PanelMetierV1: TPanelSousBlocs;           // <Skill> et <ExitCode> d'un metier d'artisan WFRP1
+    PanelTableauxGen: TPanelSousBlocs;        // balises repetees <Balise name="x">"v"</Balise> d'une fiche generique : un tableau par balise (recree a chaque fiche)
+    AnnexesTableauGen: TStringList;           // balises rattachees a un tableau (BirthplaceHuman -> Birthplace), meme rang que BalisesTableauGen ('' = aucune)
+    ConteneurTableauGen: String;              // bloc de la fiche qui porte ces balises ('' = l'element)
+    BalisesTableauGen: TStringList;           // balises de la fiche generique en cours qui passent en tableau
+    PanelEffetTalent: TPanelSousBlocs;        // <Effet Cible Forme Facteur Carac> d'un talent (drapeaux du moteur)
+    FTimerFamille: TTimer;                    // differe la reconstruction de la fiche talent apres le clic sur une famille
+    FamillesTalent: String;                   // familles cochees dans la fiche talent (MAGIE, MOTEUR, NIVEAU), jamais ecrites dans le XML
+    FTalentElement: TDOMElement;              // talent affiche, pour reconstruire la fiche apres un changement de famille
+    FTalentEtranger: Boolean;
+    PanelQualitesV2: TPanelTexteListe;        // <Qualities> d'un objet WFRP2 : un mot par ligne, liste deroulante
+    PanelLignesObjetV1: TPanelLignesMulti;    // objet WFRP1 : modificateurs de combat (Modificateur | Valeur) puis bandes de portee (Bande | Distance | ES)
+    PanelTableCout: TPanelSousBlocs;          // <Cost name="plage"> de DATA_SKILL_COST / DATA_ATTRIBUT_COST
+    PanelTableChance: TPanelSousBlocs;        // <Chance name="plage"> de DATA_CORRUPTION_PHYSICAL / MENTAL_CHANCE
+    PanelTableChoix: TPanelSousBlocs;         // <Choice Specie Career Alternative> de DATA_SPECIE_CAREER_CHOICE
+    PanelLiensCarriere: TPanelSousBlocs;      // <Link name="carriere 1">"carriere 2"</Link> de DATA_CAREER_LINK_V1 (WFRP1)
     PanelSigneEffets: TPanelSigneEffets;  // effets (Modifier) d'un signe astral, sous les champs de sa fiche
     MenuItemNouveauBonus: TMenuItem;
     PanelBonusCarriere: TPanelBonusCarriere;  // paliers d'un bonus de carriere, sous les champs de sa fiche
@@ -288,12 +374,16 @@ type
     PanelTirageRace: TPanelTirageRace;  // table du tirage de race (DATA_RANDOM_SPECIE) : race, debut, fin
     PanelSousMetier: TPanelSousMetier;  // second jet apres le metier (DATA_CAREER_SUBCHOICE) : depart, obtenu, fourchette
     PanelTraduction: TPanelTraduction;  // livre de traduction : grille anglais / langue du livre (lecture seule)
+    PanelImageLivre: TPanelImageLivre;  // apercu + remplacement de l'image d'une ethnie / d'une carriere
     PanelCarriereEspece: TPanelCarriereEspece;  // liens carriere <-> espece (DATA_CAREER_SPECIE) : espece, carriere
+    TestSansMessage: Boolean;  // test --winlivretest : les validateurs ne montrent aucune boite de dialogue
+    PanelRegleEthnie: TPanelRegleEthnie;  // regles par ethnie (DATA_RULE_SPECIE) : regle, ethnie, competence ou talent
     PanelTraitEthnie: TPanelTraitEthnie;  // traits d'ethnie (DATA_SPECIE_TRAIT) : trait, option, groupes de talents
     PanelEquipClasse: TPanelEquipClasse;  // equipement de depart par classe (DATA_CLASS_ITEM) : classe, objet, quantite
     PanelFiche: TPanelFiche;  // fiche generique : champs propres a l'element + grille des modificateurs + Valider/Annuler
     FicheTag: String;         // balise de l'element affiche dans PanelFiche
     FicheTypeNoeud: Integer;  // type de noeud de l'arbre correspondant
+    FicheGenerique: Boolean;  // la fiche affichee est la fiche generique WFRP1 (AfficherFicheGeneriqueV1)
     MenuItemNouveauSort: TMenuItem;
     FicheSnapshot: String;  // contenu des champs d'une fiche ou d'un panneau modifiable a l'affichage ('' = rien a perdre)
     TimerFiche: TTimer;  // grise/degrise Valider et Annuler selon FicheSnapshot
@@ -320,6 +410,7 @@ type
     RaceSkillsData: TStringList;        // Compétences de la race sélectionnée
     RaceCareersData: TStringList;       // Carrières de la race sélectionnée (Code|Valeur)
     NodeSelectionnee: TTreeNode;
+    MemoEncartBranche: TMemo;  // encart « a quoi sert cette branche » (affiche quand une branche est selectionnee)
     TypeNodeSelectionnee: String;  // 'CHAPITRE', 'DONNEE' ou 'ATTRIBUT'
     CodeDonneeSelectionnee: String;
     CurrentRaceCode: String;        // Store code of selected race
@@ -328,15 +419,36 @@ type
     // Procédures privées
     function GetBookLabel(BookCode: String): String;
     procedure AfficherDonneeRace(ACode: String);
+    procedure AfficherFicheEthnie(Element: TDOMElement; ACode: String);
     procedure AfficherDonneeAttribut(ACode: String);
     procedure ParseAttributValue(Valeur: String; out AttrType: String; out Dices: String; out BaseValue: String; out SimpleValue: String; out Formula: String);
     function GetAttributLabel(CodeAttribut: String): String;
+    function LibelleCompetenceCarriereV1(Code: String): String;
+    function LibelleChoixCompetence(const Code: String): String;
+    function LibelleSortV1(Code: String): String;
+    function CodeSortV1(Libelle: String): String;
+    function TableValeursEditable(const Chapitre: String): Boolean;
+    procedure AfficherFicheTableValeurs(const Chapitre: String);
+    function LibelleCorruption(Code: String): String;
+    function CodeCorruption(Libelle: String): String;
+    function LibelleChoixMetier(Code: String): String;
+    function CodeChoixMetier(Libelle: String): String;
+    function ChoixCompetencesV1: String;
+    function ChoixMeresSpecialisationV1(const Courant: String): String;
+    function ChoixDivinitesV1(const Courant: String): String;
+    function ChoixValeursBalise(const Balise, Courant: String): String;
+    function ChoixRegimeV1: String;
+    function ChoixMotsV1(const Prefixe: String; const Mots: array of String; Codes: Boolean = False): String;
+    function ChoixParBaliseV2(const Balise: String): String;
+    function ChoixMeresTalentsV2(const Courant: String): String;
+    function ChoixTalentsLiesV2(const Courants: String): String;
     function  NouveauBouton(Proprio: TComponent): TBCButton;
     function  InstantaneFiche: String;
     procedure PrendreSnapshotFiche;
     procedure AfficherTirageTalent;
     function  ChapitreTirageTalent: TDOMElement;
     function  LibelleTalentTirage(Code: String): String;
+    function  LibelleCompetenceTirage(Code: String): String;
     function  LibelleEthnieTirage(Code: String): String;
     procedure TirageValiderClick(Sender: TObject);
     procedure TirageAnnulerClick(Sender: TObject);
@@ -351,6 +463,10 @@ type
     procedure CarriereEspeceValiderClick(Sender: TObject);
     procedure CarriereEspeceAnnulerClick(Sender: TObject);
     procedure AfficherCarriereEspece;
+    procedure RegleEthnieValiderClick(Sender: TObject);
+    procedure RegleEthnieAnnulerClick(Sender: TObject);
+    procedure AfficherRegleEthnie;
+    function  ChapitreRegleEthnie: TDOMElement;
     procedure SousMetierValiderClick(Sender: TObject);
     procedure SousMetierAnnulerClick(Sender: TObject);
     procedure AfficherSousMetier;
@@ -393,12 +509,15 @@ type
     procedure EcrireTalentsTable(const CodeSort, Talents: String);
     procedure RangerTalentsSort(Element: TDOMElement);
     function  ChoixBenedictions(const Dieu: String; out Coches, Verrous: String): String;
+    function  ChoixCasesLabels(Premier, Dernier: Integer): String;
     function  AutreLivreRulebook: Boolean;
+    function  ChapitreReserveRulebook(const Chapitre: String): Boolean;
     function  TrouverTalentRulebook(const Id: String): TDOMElement;
     procedure RangerBenedictionsDieu(const Dieu: String);
     procedure RemplirConditions;
     function  TalentsDeTableDoc(Doc: TXMLDocument; const CodeSort: String): String;
     function  RulebookXML: TXMLDocument;
+    function  RulebookBaseXML: TXMLDocument;
     function  LibelleAffiche(const Code: String): String;
     function  LibelleBonusMalusRulebook(const Code: String): String;
     procedure RemplirGroupesArmes(Tri: TStringList);
@@ -424,6 +543,10 @@ type
     procedure SupprimerLibelleLivre(const Code: String);
     procedure AfficherFicheCondition(Element: TDOMElement);
     procedure AfficherDonneeCondition(Code: String);
+    function  TrouverTexteLibelle(const Code: String): TDOMElement;
+    procedure AfficherDonneeLibelle(Code: String);
+    procedure AfficherDonneeV2(Code, NomTag: String);
+    procedure ChargerBrancheGroupeeV2(ChapitreTag, ElementTag, GroupeTag, CodeTitre: String; TypeNoeud: Integer; NodeParent: TTreeNode; SansBranche: Boolean = False);
     procedure CreerCondition;
     procedure MenuNouvelleConditionClick(Sender: TObject);
     procedure AfficherFicheFabrication(Element: TDOMElement);
@@ -486,13 +609,33 @@ type
     procedure AfficherTalentsForRace();
     procedure AfficherCareersForRace(RaceCode: String);
     procedure AfficherRacesForMetier(CareerCode: String);
+    procedure PoserImageLivre(const Genre, Code: String);
     procedure AfficherFicheCarriere(Element: TDOMElement);
     procedure AfficherDonneeMetier(CareerCode: String);
+    procedure AfficherBrancheCoches(CareerCode: String; Genre: Integer);
+    procedure AfficherBrancheCarriereV1(Element: TDOMElement; CareerCode: String; Genre: Integer);
     procedure AfficherFicheCompetence(Element: TDOMElement; TypeNoeud: Integer);
     procedure AfficherDonneeCompetence(CodeComp, Titre: String);
     procedure LoadCorruptionForRaceTree(RaceNode: TTreeNode; RaceCode: String);
     procedure ChargerBrancheSimple(ChapitreTag, ElementTag, TitreBranche: String; TypeNoeud: Integer; NodeParent: TTreeNode; Regrouper: Boolean = False; Trier: Boolean = True);
+    procedure ChargerBrancheLignesV1(ChapitreTag, TitreBranche: String; NodeParent: TTreeNode);
+    function  TrouverLigneTable(Code: String): TDOMElement;
+    function  TexteLigneTable(Ligne: TDOMElement): String;
+    function  LibelleCodeV1(const Code: String): String;
+    function  EstLivreV1: Boolean;
+    function  EstLivreV2: Boolean;
+    function  VersionFicheLivre: String;
+    function  ChapitreV1Permis(const NomChap: String): Boolean;
+    function  ChapitrePermisVersion(const NomChap: String): Boolean;
+    procedure AfficherLigneTable(Code: String);
+    procedure ChampsGeneriques(Mere: TDOMElement; Prefixe: String; var Champs: TListeChampsFiche; var N: Integer);
+    procedure AfficherFicheGeneriqueV1(Element: TDOMElement; BaliseElement: String; TypeNoeud: Integer; Code: String);
+    procedure ListerBalisesEnTableau(Element: TDOMElement);
+    procedure AfficherDonneeCorruptionV2(Code: String);
+    function  FicheGeneriqueV1Possible(Element: TDOMElement): Boolean;
     procedure AfficherFicheTalent(Element: TDOMElement; Etranger: Boolean = False);
+    procedure ReconstruireFicheTalent(Donnee: PtrInt);
+    procedure TimerFamilleTick(Sender: TObject);
     procedure AfficherDonneeTalent(CodeTalent, Titre: String);
     function  NotesDonnees(Element: TDOMElement): String;
     procedure AfficherDonneeEquipement(Code, TagName, Titre: String);
@@ -540,7 +683,7 @@ type
     function  EditionPermise: Boolean;
     function  NoeudCarrieres(Node: TTreeNode): TTreeNode;
     function  DemanderNouvelleCarriere(out Lib, Classe: String): Boolean;
-    function  CodeNouvelleCarriere: String;
+    function  CodeNouvelleCarriere(const Lib: String): String;
     function  AjouterNoeudEthnie(NodeRaces: TTreeNode; XMLElement: TDOMElement): TTreeNode;
     function  NoeudEthnies(Node: TTreeNode): TTreeNode;
     function  DemanderNouvelleEthnie(out Lib, Espece: String): Boolean;
@@ -603,6 +746,10 @@ type
     
   public
     procedure ChargerXMLFile(AFilePath: String);
+    procedure TesterAllerRetour(const Sortie, Arbre: String; Edition: Boolean = False);
+    function  AjoutRetraitLigneGrilles(Cont: TWinControl; const Ajouter, Retirer: String): Integer;
+    procedure DumpEcran(const Sortie: String; Echantillon: Integer);
+    procedure TesterGrillesCarriere(Doc: TXMLDocument; Racine: TDOMElement);
   end;
 
 var
@@ -611,7 +758,7 @@ var
   FileCode: String;        // Nom sans extension (ex: "BOOK RULESBOOK")
 implementation
 
-uses WinWeapon, WinArmor, WinEquipement, XmlExportImport, ChargeSigneAstral;
+uses WinWeapon, WinArmor, WinEquipement, XmlExportImport, ChargeSigneAstral, DumpEcran, GuideAide, AideContextuelle;
 
 {$R *.lfm}
 
@@ -641,11 +788,13 @@ const
   PetitesTablesLib: array[0..6] of String = ('RULES-LAB_318', 'RULES-LAB_319', 'RULES-LAB_320',
     'RULES-LAB_321', 'RULES-LAB_322', 'RULES-LAB_323', 'RULES-LAB_324');
   // Chapitres de valeurs, affichés en bloc (type 53).
-  TablesEntieres: array[0..6] of String = ('DATA_SKILL_COST', 'DATA_ATTRIBUT_COST',
+  TablesEntieres: array[0..9] of String = ('DATA_SKILL_COST', 'DATA_ATTRIBUT_COST',
     'DATA_CAREER_ROLL', 'DATA_CAREER_SUBCHOICE', 'DATA_RANDOM_TALENT',
-    'DATA_CORRUPTION_PHYSICAL_CHANCE', 'DATA_CORRUPTION_MENTAL_CHANCE');
-  TablesEntieresLib: array[0..6] of String = ('RULES-LAB_325', 'RULES-LAB_326',
-    'RULES-LAB_327', 'RULES-LAB_328', 'RULES-LAB_329', 'RULES-LAB_340', 'RULES-LAB_341');
+    'DATA_CORRUPTION_PHYSICAL_CHANCE', 'DATA_CORRUPTION_MENTAL_CHANCE', 'DATA_SPECIE_CAREER_CHOICE',
+    'DATA_CAREER_LINK_V1', 'DATA_CAREER_LINK_V2');
+  TablesEntieresLib: array[0..9] of String = ('RULES-LAB_325', 'RULES-LAB_326',
+    'RULES-LAB_327', 'RULES-LAB_328', 'RULES-LAB_329', 'RULES-LAB_340', 'RULES-LAB_341', 'RULES-LAB_977',
+    'RULES-LAB_983', 'RULES-LAB_983');
 
 // Libellé d'interface d'un chapitre technique (DATA_...), le nom du chapitre s'il n'en a pas.
 function LibelleChapitre(Chapitre: String): String;
@@ -662,7 +811,7 @@ begin
 end;
 
 // Attache un TNodeInfo au noeud. Libère l'ancien s'il y en avait un.
-procedure SetNodeInfo(Node: TTreeNode; AType: Integer; ACode: String = '');
+procedure SetNodeInfo(Node: TTreeNode; AType: Integer; ACode: String = ''; AChapitre: String = '');
 var
   Info: TNodeInfo;
 begin
@@ -674,6 +823,7 @@ begin
   Info          := TNodeInfo.Create;
   Info.TypeNode := AType;
   Info.Code     := ACode;
+  Info.Chapitre := AChapitre;
   Node.Data     := Info;
 end;
 
@@ -699,7 +849,7 @@ end;
 // n'en porte pas. La cle de la table est le bloc DATA_* + l'id, d'ou la liste des blocs.
 function PageDeFiche(const Code: String): String;
 const
-  Blocs: array[0..20] of String = ('DATA_TALENT', 'DATA_TALENT_SPECIALIZATION', 'DATA_SPELL',
+  Blocs: array[0..24] of String = ('DATA_SKILL_V2', 'DATA_TALENT_V2', 'DATA_SPELL_V2', 'DATA_EQUIPMENT_V2', 'DATA_TALENT', 'DATA_TALENT_SPECIALIZATION', 'DATA_SPELL',
     'DATA_CAREER', 'DATA_ARMOR', 'DATA_WEAPON', 'DATA_SKILL', 'DATA_SKILL_SPECIALIZATION',
     'DATA_TRAPPING', 'DATA_RACE', 'DATA_NATION', 'DATA_SPECIE', 'DATA_RULE', 'DATA_CONDITION',
     'DATA_DISEASE', 'DATA_AFFLICTION', 'DATA_ARMOR_BONUS', 'DATA_WEAPON_BONUS',
@@ -752,6 +902,9 @@ end;
 // Panneaux et listes de la zone de detail (cree par FormCreate, dans cet ordre : PanelFiche depend de
 // PanelBonus et PanelQualitesArme, eux-memes crees plus haut).
 procedure TWinLivres.CreerPanneauxDetail;
+var
+  I: Integer;
+  Tableau: TPanelLignesV1;
 begin
   TalSortLib := TStringList.Create;
   TalSortCodes := TStringList.Create;
@@ -798,11 +951,18 @@ begin
   PanelTraduction.Parent := StringGridDetail.Parent;
   PanelTraduction.Initialiser(ButtonChargerXML);
   PanelTraduction.OnEnregistrer := @TraductionEnregistrerClick;
+  PanelImageLivre := TPanelImageLivre.Create(Self);
+  PanelImageLivre.Parent := StringGridDetail.Parent;
   PanelCarriereEspece := TPanelCarriereEspece.Create(Self);
   PanelCarriereEspece.Parent := StringGridDetail.Parent;
   PanelCarriereEspece.Initialiser(ButtonChargerXML);
   PanelCarriereEspece.OnValider := @CarriereEspeceValiderClick;
   PanelCarriereEspece.OnAnnuler := @CarriereEspeceAnnulerClick;
+  PanelRegleEthnie := TPanelRegleEthnie.Create(Self);
+  PanelRegleEthnie.Parent := StringGridDetail.Parent;
+  PanelRegleEthnie.Initialiser(ButtonChargerXML);
+  PanelRegleEthnie.OnValider := @RegleEthnieValiderClick;
+  PanelRegleEthnie.OnAnnuler := @RegleEthnieAnnulerClick;
   PanelSousMetier := TPanelSousMetier.Create(Self);
   PanelSousMetier.Parent := StringGridDetail.Parent;
   PanelSousMetier.Initialiser(ButtonChargerXML);
@@ -814,7 +974,96 @@ begin
   PanelTraitEthnie.OnValider := @TraitsEthnieValiderClick;
   PanelTraitEthnie.OnAnnuler := @TraitsEthnieAnnulerClick;
   PanelSigneEffets := TPanelSigneEffets.Create(Self);
-  PanelSigneEffets.Initialiser(ButtonChargerXML, @GetAttributLabel);
+  PanelSigneEffets.Initialiser(ButtonChargerXML, @GetAttributLabel, @LibelleTalentTirage);
+  PanelCarriereV1 := TPanelCarriereV1.Create(Self);
+  PanelCarriereV1.Initialiser(ButtonChargerXML, @GetAttributLabel, @LibelleCompetenceCarriereV1);
+  PanelBonusCompetenceV1 := TPanelSousBlocs.Create(Self);
+  PanelBonusCompetenceV1.Initialiser(ButtonChargerXML, @LibelleSortV1, @CodeSortV1,
+    ['Bonus|RULES-LAB_904|Kind:RULES-LAB_901,Target:RULES-LAB_905,Value:RULES-LAB_025']);
+  PanelBonusCompetenceV1.OrdreBalises := 'Description,Explanation,Bonus,Cumulative,Variants,Page';
+  PanelDieuV1 := TPanelSousBlocs.Create(Self);
+  PanelDieuV1.Initialiser(ButtonChargerXML, @LibelleSortV1, @CodeSortV1,
+    ['SpellAccess|RULES-LAB_908|Kind:RULES-LAB_901,Value:RULES-LAB_911:c,Note:RULES-LAB_910',
+     'SkillAccess|RULES-LAB_909|Kind:RULES-LAB_901,Value:RULES-LAB_009:c,Note:RULES-LAB_910']);
+  PanelDieuV1.OrdreBalises := 'Description,Explanation,Alignment,Domain,Strictures,SpellAccess,SkillAccess,Trials,Blessings,Temples,FriendsEnemies,Page';
+  PanelCochesCarriere[0] := TPanelCarrieresCoches.Create(Self, False);
+  PanelCochesCarriere[1] := TPanelCarrieresCoches.Create(Self, True);
+  for I := 0 to 4 do PanelListesCarriere[I] := TPanelListeChoix.Create(Self);
+  PanelListesCarriere[0].Initialiser(ButtonChargerXML, 'Advances', 'Advance', '',
+    ',Skills,Talents,Trappings,StartMoney,SUBCHAPTER_ITEM,SUBCHAPTER_SKILL,SUBCHAPTER_TALENT,Entries,Exits,ExitCodes,Basic,Source,Page,',
+    '', 1, True, '', '', 'RULES-LAB_008', 'RULES-LAB_025', @GetAttributLabel);
+  PanelListesCarriere[1].Initialiser(ButtonChargerXML, 'SUBCHAPTER_SKILL', 'Skill', 'Skills',
+    ',SUBCHAPTER_TALENT,Entries,Exits,ExitCodes,Basic,Source,Page,',
+    ',Talents,Trappings,StartMoney,SUBCHAPTER_ITEM,SUBCHAPTER_SKILL,SUBCHAPTER_TALENT,Entries,Exits,ExitCodes,Basic,Source,Page,',
+    3, False, '1', '', 'RULES-LAB_009', 'RULES-LAB_025', @LibelleDeCode);
+  PanelListesCarriere[2].Initialiser(ButtonChargerXML, 'SUBCHAPTER_TALENT', 'Talent', 'Talents',
+    ',Entries,Exits,ExitCodes,Basic,Source,Page,',
+    ',Trappings,StartMoney,SUBCHAPTER_ITEM,SUBCHAPTER_SKILL,SUBCHAPTER_TALENT,Entries,Exits,ExitCodes,Basic,Source,Page,',
+    3, False, '1', '', 'RULES-LAB_007', 'RULES-LAB_025', @LibelleDeCode);
+  PanelListesCarriere[3].Initialiser(ButtonChargerXML, 'SUBCHAPTER_ITEM', 'Item', 'Trappings',
+    ',SUBCHAPTER_SKILL,SUBCHAPTER_TALENT,Entries,Exits,ExitCodes,Basic,Source,Page,',
+    ',StartMoney,SUBCHAPTER_ITEM,SUBCHAPTER_SKILL,SUBCHAPTER_TALENT,Entries,Exits,ExitCodes,Basic,Source,Page,',
+    3, True, '1', 'quantite', 'RULES-LAB_013', 'RULES-LAB_025', @LibelleDeCode);
+  // carriere WFRP1 : meme tableau, ordre des balises du schema V1 (SUBCHAPTER_SKILL, Trappings, SUBCHAPTER_ITEM, StartMoney...)
+  PanelListesCarriere[4].Initialiser(ButtonChargerXML, 'SUBCHAPTER_ITEM', 'Item', 'Trappings',
+    ',StartMoney,Entries,Exits,ExitCodes,Source,Page,',
+    ',SUBCHAPTER_ITEM,StartMoney,Entries,Exits,ExitCodes,Source,Page,',
+    3, True, '1', 'quantite', 'RULES-LAB_013', 'RULES-LAB_025', @LibelleDeCode);
+  PanelCarriereV2 := TPanelSousBlocs.Create(Self);
+  PanelCarriereV2.Initialiser(ButtonChargerXML, @LibelleSortV1, @CodeSortV1,
+    ['Advances|RULES-LAB_945|*Advance:RULES-LAB_945',
+     'SUBCHAPTER_ITEM|RULES-LAB_013|*Item:RULES-LAB_013',
+     'SUBCHAPTER_SKILL|RULES-LAB_009|*Skill:RULES-LAB_009',
+     'SUBCHAPTER_TALENT|RULES-LAB_007|*Talent:RULES-LAB_007']);
+  PanelCarriereV2.OrdreBalises := 'Description,Explanation,MainProfile,SecondaryProfile,Advances,Skills,Talents,Trappings,StartMoney,SUBCHAPTER_ITEM,SUBCHAPTER_SKILL,SUBCHAPTER_TALENT,Entries,Exits,ExitCodes,Basic,Source,Page';
+  PanelClasseV1 := TPanelSousBlocs.Create(Self);
+  PanelClasseV1.Initialiser(ButtonChargerXML, @LibelleSortV1, @CodeSortV1,
+    ['Requirement|RULES-LAB_912|@name:RULES-LAB_008:c,.:RULES-LAB_025',
+     'RaceRequirement|RULES-LAB_922|Specie:RULES-LAB_923:c,*Requirement:RULES-LAB_912']);
+  PanelClasseV1.OrdreBalises := 'Description,Explanation,Requirement,RaceRequirement,Trappings,Money,Page';
+  PanelHandicapV1 := TPanelSousBlocs.Create(Self);
+  PanelHandicapV1.Initialiser(ButtonChargerXML, @LibelleSortV1, @CodeSortV1,
+    ['Permanent|RULES-LAB_915|@name:RULES-LAB_008:c,.:RULES-LAB_025',
+     'Stage|RULES-LAB_920|@number:RULES-LAB_900,*Modifier:RULES-LAB_921,Text:RULES-LAB_906']);
+  PanelHandicapV1.OrdreBalises := 'Description,Explanation,Stage,Permanent,InsanityPoints,Page';
+  PanelMetierV1 := TPanelSousBlocs.Create(Self);
+  PanelMetierV1.Initialiser(ButtonChargerXML, @LibelleSortV1, @CodeSortV1,
+    ['Skill|RULES-LAB_009|.:RULES-LAB_009:c', 'ExitCode|RULES-LAB_918|.:RULES-LAB_918:c']);
+  PanelMetierV1.OrdreBalises := 'Description,Roll,Skill,ExitCode,Note';
+  PanelQualitesV2 := TPanelTexteListe.Create(Self);
+  PanelQualitesV2.Initialiser(ButtonChargerXML, 'Qualities', 'RULES-LAB_720', 'Locations,ArmourPoints,Availability,Note,Page');
+  PanelLignesObjetV1 := TPanelLignesMulti.Create(Self);
+  Tableau := TPanelLignesV1.Create(Self);
+  Tableau.Initialiser(ButtonChargerXML, 'CombatModifiers', 'CombatModifier', 'RULES-LAB_895',
+    'RangeBands,Reload,ArmourPoints,Locations,Note,Page', ['Stat|RULES-LAB_993', 'Value|RULES-LAB_994'],
+    ['RULES-V1MOD_INITIATIVE', 'RULES-V1MOD_TOHIT', 'RULES-V1MOD_DAMAGE', 'RULES-V1MOD_PARRY']);
+  PanelLignesObjetV1.Ajouter(Tableau);
+  Tableau := TPanelLignesV1.Create(Self);
+  Tableau.Initialiser(ButtonChargerXML, 'RangeBands', 'RangeBand', 'RULES-LAB_718',
+    'Reload,ArmourPoints,Locations,Note,Page', ['Band|RULES-LAB_995', 'Distance|RULES-LAB_996', 'Strength|RULES-LAB_997'],
+    ['RULES-V1RANGE_POINTBLANK', 'RULES-V1RANGE_SHORT', 'RULES-V1RANGE_LONG', 'RULES-V1RANGE_EXTREME']);
+  PanelLignesObjetV1.Ajouter(Tableau);
+  PanelEffetTalent := TPanelSousBlocs.Create(Self);
+  PanelEffetTalent.Initialiser(ButtonChargerXML, @LibelleSortV1, @CodeSortV1,
+    ['Effet|RULES-LAB_964|@Cible:RULES-LAB_905,@Forme:RULES-LAB_965,@Facteur:RULES-LAB_966,@Carac:RULES-LAB_967']);
+  PanelTableCout := TPanelSousBlocs.Create(Self);
+  PanelTableCout.Initialiser(ButtonChargerXML, @LibelleSortV1, @CodeSortV1,
+    ['Cost|RULES-LAB_025|@name:RULES-LAB_976,.:RULES-LAB_025']);
+  PanelTableChance := TPanelSousBlocs.Create(Self);
+  PanelTableChance.Initialiser(ButtonChargerXML, @LibelleCorruption, @CodeCorruption,
+    ['Chance|RULES-LAB_156|@name:RULES-LAB_976,.:RULES-LAB_156:c']);
+  PanelTableChoix := TPanelSousBlocs.Create(Self);
+  PanelTableChoix.Initialiser(ButtonChargerXML, @LibelleChoixMetier, @CodeChoixMetier,
+    ['Choice|RULES-LAB_977|Specie:RULES-LAB_923:c,Career:RULES-LAB_006:c,Alternative:RULES-LAB_978:c']);
+  PanelLiensCarriere := TPanelSousBlocs.Create(Self);
+  PanelLiensCarriere.HauteurGrille := 500;  // plusieurs centaines de liens par livre
+  PanelLiensCarriere.Initialiser(ButtonChargerXML, @LibelleChoixMetier, @CodeChoixMetier,
+    ['Link|RULES-LAB_983|@name:RULES-LAB_984:c,.:RULES-LAB_985:c']);
+  PanelCulteV1 := TPanelSousBlocs.Create(Self);
+  PanelCulteV1.Initialiser(ButtonChargerXML, @LibelleSortV1, @CodeSortV1,
+    ['Prayer|RULES-LAB_902|Rank:RULES-LAB_900,Kind:RULES-LAB_901,Value:RULES-LAB_907:c',
+     'Gift|RULES-LAB_903|Rank:RULES-LAB_900,Text:RULES-LAB_906']);
+  PanelCulteV1.OrdreBalises := 'Description,Deity,Prayer,Gift,Page';
   PanelBonusCarriere := TPanelBonusCarriere.Create(Self);
   PanelBonusCarriere.Initialiser(ButtonChargerXML, @GetAttributLabel, ComboCompLieeFiche.Items, CodesCompLieeFiche, CodesConditions);
   PanelAdaptation := TPanelAdaptation.Create(Self);
@@ -832,6 +1081,11 @@ begin
   if Assigned(Clic) then
     Entree.OnClick := Clic;
   Popup.Items.Add(Entree);
+end;
+
+procedure TWinLivres.ButtonQuestionClick(Sender: TObject);
+begin
+  OuvreGuide(GuideQuestions, '');
 end;
 
 procedure TWinLivres.FormCreate(Sender: TObject);
@@ -880,6 +1134,18 @@ begin
   AjouterEntreeMenu(PopupMenuTree, MenuItemNouveauSort, @MenuNouveauSortClick);
   AjouterEntreeMenu(PopupMenuTree, MenuItemNouvelleSpecialisation, @MenuNouvelleSpecialisationClick);
   AjouterEntreeMenu(PopupMenuTree, MenuItemNouvelleSpecTalent, @MenuNouvelleSpecTalentClick);
+  AjouterEntreeMenu(PopupMenuTree, MenuItemDeplierBranche, @MenuDeplierBrancheClick);
+  AjouterEntreeMenu(PopupMenuTree, MenuItemReplierBranche, @MenuReplierBrancheClick);
+  AjouterEntreeMenu(PopupMenuTree, MenuItemNouvelleDivinite, @MenuNouvelleDiviniteClick);
+  AjouterEntreeMenu(PopupMenuTree, MenuItemNouveauCulte, @MenuNouveauCulteClick);
+  AjouterEntreeMenu(PopupMenuTree, MenuItemNouveauSortV1, @MenuNouveauSortV1Click);
+  AjouterEntreeMenu(PopupMenuTree, MenuItemNouvelObjetV1, @MenuNouvelObjetV1Click);
+  AjouterEntreeMenu(PopupMenuTree, MenuItemNouvelleClasse, @MenuNouvelleClasseClick);
+  AjouterEntreeMenu(PopupMenuTree, MenuItemNouveauHandicap, @MenuNouveauHandicapClick);
+  AjouterEntreeMenu(PopupMenuTree, MenuItemNouveauFamilier, @MenuNouveauFamilierClick);
+  AjouterEntreeMenu(PopupMenuTree, MenuItemLigneNouvelle, @MenuLigneNouvelleClick);
+  AjouterEntreeMenu(PopupMenuTree, MenuItemLigneDupliquer, @MenuLigneDupliquerClick);
+  AjouterEntreeMenu(PopupMenuTree, MenuItemLigneSupprimer, @MenuLigneSupprimerClick);
 
   // Menu contextuel du tableau des competences d'une ethnie (libelles poses a l'affichage)
   PopupMenuSkills := TPopupMenu.Create(Self);
@@ -897,6 +1163,11 @@ begin
   with StringGridAttrEthnie.Columns.Add do  // col 4 : montant du salaire, visible seulement pour les niveaux
   begin
     Title.Caption := 'Montant';
+    Width := 0;
+  end;
+  with StringGridAttrEthnie.Columns.Add do  // col 5 : forme feminine du nom du niveau (DescriptionFeminine), niveaux seulement
+  begin
+    Title.Caption := 'Feminin';
     Width := 0;
   end;
   PopupMenuNiveaux := TPopupMenu.Create(Self);
@@ -950,11 +1221,41 @@ begin
   ButtonEnregistrerTravail.Caption := GetTexteLibelle('RULES-LAB_348');
   ButtonPublierRevision.Caption := GetTexteLibelle('RULES-LAB_350');
   ButtonMettreAJour.OnClick := @ButtonMettreAJourClick;
+  // Aide : bouton « ? Question » (GuideAide.pas) et aide F1 (AideContextuelle.pas)
+  CreeBoutonGuide(Self, GetTexteLibelle('RULES-HELP_LAB_QUESTION', '? Question'), 'RULES-HELP_BTN_QUESTION',
+    ClientWidth - 150, 4, 140, @ButtonQuestionClick);
+  ButtonChargerXML.HelpKeyword        := 'RULES-HELP_LIVRE_CHARGER';
+  ButtonEnregistrerTravail.HelpKeyword := 'RULES-HELP_LIVRE_ENREGISTRER';
+  ButtonPublierRevision.HelpKeyword   := 'RULES-HELP_LIVRE_PUBLIER';
+  ButtonNouvelleTraduction.HelpKeyword := 'RULES-HELP_LIVRE_TRADUCTION';
+  ButtonMettreAJour.HelpKeyword       := 'RULES-HELP_LIVRE_MAJ';
+  ButtonFinaliser.HelpKeyword         := 'RULES-HELP_LIVRE_FINALISER';
+  TreeViewLivre.HelpKeyword           := 'RULES-HELP_LIVRE_ARBRE';
+  StringGridSkills.HelpKeyword        := 'RULES-HELP_LIVRE_SKILLS';
+  StringGridCareers.HelpKeyword       := 'RULES-HELP_LIVRE_CAREERS';
+  MemoEncartBranche := TMemo.Create(Self);
+  with MemoEncartBranche do
+  begin
+    Parent := TreeViewLivre.Parent;  // sous l'arbre : l'arbre se raccourcit, la partie droite ne change pas
+    Align := alBottom;
+    Height := 110;
+    BorderSpacing.Around := 4;
+    ReadOnly := True;
+    TabStop := False;
+    BorderStyle := bsNone;
+    ScrollBars := ssNone;
+    WordWrap := True;
+    Color := $302820;
+    Font.Color := clWhite;
+    Font.Size := 11;
+    Visible := False;
+  end;
   TimerFiche := TTimer.Create(Self);
   TimerFiche.Interval := 300;
   TimerFiche.OnTimer := @TimerFicheTimer;
   CreerPanneauxDetail;
   StringGridAttrEthnie.OnContextPopup := @GridAttrEthnieContextPopup;
+  StringGridAttrEthnie.OnDblClick := @GridNiveauxDblClick;
   with StringGridSkills.Columns.Add do  // col 5 : niveau, visible seulement pour une carriere
   begin
     Title.Caption := 'Niv.';
@@ -1389,7 +1690,7 @@ begin
   if (XMLDoc = nil) or (CurrentFilePath = '') then Exit;
   if not LangueExportOk then Exit;
   if not ConfirmerSortsSansTalent then Exit;
-  Dossier := ExtractFilePath(Application.ExeName) + 'TRAVAIL' + PathDelim + ChangeFileExt(ExtractFileName(CurrentFilePath), '');
+  Dossier := DossierTravailLivre(CurrentFilePath);
   if not ForceDirectories(Dossier) then
   begin
     ShowMessage(Format(GetTexteLibelle('RULES-LAB_451'), [Dossier]));
@@ -1771,6 +2072,30 @@ begin
   Libelle := GetTexteLibelle(CodeAttribut);
   if Libelle <> '' then
     Result := Libelle;
+  // caracteristique propre a WFRP1 (Ld...) : sa Description est dans le livre ouvert ou le Rulebook
+  if Result = CodeAttribut then
+  begin
+    XMLElement := TrouverElementParId('Attribut', CodeAttribut);
+    if XMLElement <> nil then Libelle := ValeurXML(XMLElement.FindNode('Description')) else Libelle := '';
+    // la ligne <Attribut name="..."> d'une ethnie est trouvee par name= mais n'a pas de Description : repli sur le Rulebook
+    if Libelle = '' then Libelle := LibelleCodeV1(CodeAttribut);
+    // dernier recours : la definition <Attribut id> du Rulebook (langue des livres, puis anglais)
+    if (Libelle = '') and (RulebookXML <> nil) then
+    begin
+      TextElements := RulebookXML.GetElementsByTagName('Attribut');
+      for I := 0 to TextElements.Count - 1 do
+        if (Libelle = '') and (TDOMElement(TextElements.Item[I]).GetAttribute('id') = CodeAttribut) then
+          Libelle := ValeurXML(TextElements.Item[I].FindNode('Description'));
+    end;
+    if (Libelle = '') and (RulebookBaseXML <> nil) then
+    begin
+      TextElements := RulebookBaseXML.GetElementsByTagName('Attribut');
+      for I := 0 to TextElements.Count - 1 do
+        if (Libelle = '') and (TDOMElement(TextElements.Item[I]).GetAttribute('id') = CodeAttribut) then
+          Libelle := ValeurXML(TextElements.Item[I].FindNode('Description'));
+    end;
+    if Libelle <> '' then Result := Libelle;
+  end;
 end;
 
 // ========== LOAD ATTRIBUTES FOR RACE ==========
@@ -2292,6 +2617,35 @@ begin
   end;
 end;
 
+// Libelle d'un code de competence (Genre 'S') ou de talent (Genre 'T') du niveau d'une carriere : un choix
+// « A/B » est libelle morceau par morceau (le code brut n'a pas de fiche) ; un code inconnu reste tel quel.
+function LibelleChoixNiveau(const Code, Genre: String): String;
+var
+  Morceaux: TStringList;
+  I: Integer;
+  Lib: String;
+begin
+  Morceaux := TStringList.Create;
+  try
+    Morceaux.Delimiter := '/';
+    Morceaux.StrictDelimiter := True;
+    Morceaux.DelimitedText := Code;
+    Result := '';
+    for I := 0 to Morceaux.Count - 1 do
+    begin
+      if Genre = 'S' then
+        Lib := ChercheCompetence(Morceaux[I]).Libelle
+      else
+        Lib := ChercheTalent(Morceaux[I]).Libelle;
+      if Lib = '' then Lib := Morceaux[I];
+      if I > 0 then Result := Result + '/';
+      Result := Result + Lib;
+    end;
+  finally
+    Morceaux.Free;
+  end;
+end;
+
 // Feuilles d'une branche "Compétence" d'un niveau : les <Skill> du chapitre dont la valeur est ce niveau.
 // SkillPrincipal = le <Skill> racine du <Career>, marqué d'une étoile.
 procedure TWinLivres.RemplirBrancheNiveauCompetences(NodeBranche: TTreeNode; Chapitre: TDOMNode; Niveau: Integer; SkillPrincipal: String);
@@ -2312,7 +2666,7 @@ begin
     if Competence.CodeCompetence <> '' then
       LibComp := Competence.Libelle
     else
-      LibComp := CodeComp;  // fallback si la compétence est inconnue
+      LibComp := LibelleChoixNiveau(CodeComp, 'S');  // choix A/B ou compétence inconnue
     if CodeComp = SkillPrincipal then
       LibComp := LibComp + ' *';
     NodeFeuille := TreeViewLivre.Items.AddChild(NodeBranche, LibComp);
@@ -2351,7 +2705,7 @@ begin
     if Talent.CodeTalent <> '' then
       LibTal := Talent.Libelle
     else
-      LibTal := CodeTal;  // fallback
+      LibTal := LibelleChoixNiveau(CodeTal, 'T');  // choix A/B ou talent inconnu
     NodeFeuille := TreeViewLivre.Items.AddChild(NodeBranche, LibTal);
     SetNodeInfo(NodeFeuille, NT_TALENT_NIVEAU, CodeTal);  // 23 = talent du niveau
   end;
@@ -2424,6 +2778,10 @@ begin
     Trapping := ChercheTrapping(CodeItem);
     if Trapping.CodeTrapping <> '' then
       Result := Trapping.Libelle + Qualite
+    else if (Pos(' (', CodeItem) > 0) and (ChercheTrapping(Copy(CodeItem, 1, Pos(' (', CodeItem) - 1)).CodeTrapping <> '') then
+      // « RULES-TRAP_TRADE_TOOLS (Thief) » : le code suivi de sa precision, le libelle du code puis la precision
+      Result := ChercheTrapping(Copy(CodeItem, 1, Pos(' (', CodeItem) - 1)).Libelle +
+        Copy(CodeItem, Pos(' (', CodeItem), MaxInt) + Qualite
     else
       Result := CodeItem + Qualite;  // fallback
   end
@@ -2541,7 +2899,7 @@ procedure TWinLivres.LoadMetierNiveaux(CareerElement: TDOMElement; CareerCode: S
 var
   Chapitre: TDOMNode;
   Elements: TDOMNodeList;
-  I, Niveau: Integer;
+  I, Niveau, P: Integer;
   LevelElement: TDOMElement;
   NodeNiveau: TTreeNode;
   LibNiveau, Salaire, TexteNiveau, SkillPrincipal: String;
@@ -2567,7 +2925,15 @@ begin
     // "1.Pamphleteer - Bronze 1"
     TexteNiveau := IntToStr(Niveau) + '.' + LibNiveau;
     if Salaire <> '' then
-      TexteNiveau := TexteNiveau + ' - ' + GetTexteLibelle(Salaire, '', ' ');
+    begin
+      // Palier (TIERS_SILVER) en libelle, montant apres l espace
+      P := Pos(' ', Salaire);
+      if P > 0 then
+        TexteNiveau := TexteNiveau + ' - ' + GetTexteLibelle('RULES-' + Copy(Salaire, 1, P - 1)) +
+          Copy(Salaire, P, Length(Salaire))
+      else
+        TexteNiveau := TexteNiveau + ' - ' + GetTexteLibelle('RULES-' + Salaire);
+    end;
     
     NodeNiveau := TreeViewLivre.Items.AddChild(MetierNode, TexteNiveau);
     // Code = "CODEMETIER|niveau" pour retrouver l'élément XML plus tard
@@ -2614,7 +2980,9 @@ begin
     begin
       CodeMetier := TDOMElement(CareerElements.Item[J]).GetAttribute('name');
       if CodeMetier = '' then Continue;
-      
+      // "-" = carriere indisponible pour cette race : pas une race possible
+      if Trim(StringReplace(TDOMElement(CareerElements.Item[J]).TextContent, '"', '', [rfReplaceAll])) = SeparateurChance then Continue;
+
       Actuel := MetierRacesMap.Values[CodeMetier];
       if Actuel = '' then
         MetierRacesMap.Values[CodeMetier] := CodeRace
@@ -2632,8 +3000,8 @@ end;
 // du code de la spécialisation ("RULES-COMPART_CALLI" -> "RULES-COMPART_*").
 procedure TWinLivres.ChargerBrancheSimple(ChapitreTag, ElementTag, TitreBranche: String; TypeNoeud: Integer; NodeParent: TTreeNode; Regrouper: Boolean = False; Trier: Boolean = True);
 var
-  Chapitres, Elements: TDOMNodeList;
-  I, UnderPos, Idx, Src: Integer;
+  Chapitres, Elements, SortsRulebook: TDOMNodeList;
+  I, Idx, Src, JSort: Integer;
   Etrangers: Boolean;
   PrefEtranger: String;
   XMLElement, MereElement, Autre: TDOMElement;
@@ -2651,9 +3019,16 @@ begin
     PrefEtranger := ValeurXML(RulebookXML.GetElementsByTagName('DATA_BOOK').Item[0].FindNode('CODE_BOOK'));
   // Livre de travail : la branche existe meme vide, pour pouvoir la remplir ensuite
   if (Chapitres.Count = 0) and not CreationPermise and not Etrangers then Exit;
+  // chapitre reserve au Rulebook (caracteristiques...) : pas de branche vide dans les autres livres
+  if (Chapitres.Count = 0) and ChapitreReserveRulebook(ChapitreTag) then Exit;
+  // livre V1 : pas de branche vide pour un chapitre que son schema n'admet pas
+  if (Chapitres.Count = 0) and EstLivreV1 and not ChapitreV1Permis(ChapitreTag) then Exit;
+  // toute version : pas de branche vide pour un chapitre qui n'existe pas dans cette edition (V1 : voir ci-dessus)
+  if (Chapitres.Count = 0) and not Etrangers and not ChapitrePermisVersion(ChapitreTag) then Exit;
 
   NodeBranche := TreeViewLivre.Items.AddChild(NodeParent, TitreBranche);
   SetNodeInfo(NodeBranche, NT_CHAPITRE);  // 0 = chapitre
+  TNodeInfo(NodeBranche.Data).Chapitre := ChapitreTag;
   if (Chapitres.Count = 0) and not Etrangers then Exit;
 
   // On reste dans le chapitre : les éléments de même nom nichés dans les
@@ -2690,6 +3065,7 @@ begin
       if (Src = 1) and (TrouverElementParId(ElementTag, Code) <> nil) then Continue;
 
       Libelle := ValeurXML(XMLElement.FindNode('Description'));
+      if (Libelle = '') and (ElementTag = 'Familiar') then Libelle := ValeurXML(XMLElement.FindNode('Animal'));
       if Libelle = '' then
       begin
         // Libellé d'interface (ex. RULES-CLASS_ACAD), sinon description de la
@@ -2701,21 +3077,61 @@ begin
           Autre := TrouverElementParId(ElementTag, Code);
           if (Autre <> nil) and (Autre <> XMLElement) then
             Libelle := ValeurXML(Autre.FindNode('Description'));
+          // un <Sort> de DATA_SPELL_TALENT : le nom est dans le sort lui-meme (SpellV2, SpellV1 ou Spell)
+          if ((Libelle = '') or (Libelle = Code)) and (ElementTag = 'Sort') then
+          begin
+            Autre := TrouverElementParId('SpellV2', Code);
+            if Autre = nil then Autre := TrouverElementParId('SpellV1', Code);
+            if Autre = nil then Autre := TrouverElementParId('Spell', Code);
+            if Autre <> nil then Libelle := ValeurXML(Autre.FindNode('Description'));
+            // une benediction ajoutee par un autre livre (ligne de talents seule) : son nom est dans le Rulebook
+            if ((Libelle = '') or (Libelle = Code)) and (RulebookXML <> nil) then
+            begin
+              Libelle := '';
+              SortsRulebook := RulebookXML.GetElementsByTagName('Sort');
+              for JSort := 0 to SortsRulebook.Count - 1 do
+              begin
+                Autre := TDOMElement(SortsRulebook.Item[JSort]);
+                if (Autre.GetAttribute('id') = Code) and (Autre.FindNode('Description') <> nil) then
+                begin
+                  Libelle := ValeurXML(Autre.FindNode('Description'));
+                  Break;
+                end;
+              end;
+            end;
+          end;
           if Libelle = '' then
             Libelle := Code;
         end;
       end;
-      
+
       if Src = 1 then Libelle := Libelle + ' [' + PrefEtranger + ']';
       NodeCible := NodeBranche;
 
       if Regrouper then
       begin
-        UnderPos := Pos(ValeurSousCompetence, Code);
-        if UnderPos > 0 then
+        CodeMere := '';
+        if ElementTag = 'Talent' then
         begin
-          CodeMere := Copy(Code, 1, UnderPos - 1) + ValeurSousCompetence + '*';
-          
+          // Un nom de talent contient lui-meme des '_' : la specialisation est reconnue a son '__'
+          // (RULES-T_BLESS__SIGMAR). La famille est le <Generique> de la fiche, a defaut ce qui precede le '__'.
+          if XMLElement.FindNode('Generique') <> nil then
+            CodeMere := ValeurXML(XMLElement.FindNode('Generique'));
+          if (CodeMere = '') and (Pos(ValeurGenerique, Code) = 0) and (Pos(SeparateurSpecialisationTalent, Code) > 0) then
+            CodeMere := Copy(Code, 1, Pos(SeparateurSpecialisationTalent, Code) - 1) + ValeurGeneriqueTalent;
+        end
+        else
+        begin
+          // Competences V4 / V5 : meme regle que les talents, la famille est le <Generique> de la fiche,
+          // a defaut ce qui precede le '__' (RULES-COMP_LORE__BEASTS -> RULES-COMP_LORE__*).
+          if XMLElement.FindNode('Generique') <> nil then
+            CodeMere := ValeurXML(XMLElement.FindNode('Generique'));
+          if (CodeMere = '') and (Pos(ValeurGenerique, Code) = 0) and (Pos(SeparateurSpecialisationTalent, Code) > 0) then
+            CodeMere := CodeGeneriqueDeduit(Code);
+        end;
+        if CodeMere <> '' then
+        begin
+
           Idx := Meres.IndexOf(CodeMere);
           if Idx >= 0 then
             NodeCible := TTreeNode(Meres.Objects[Idx])
@@ -2738,9 +3154,43 @@ begin
                 end;
               if Autre <> nil then LibelleMere := ValeurXML(Autre.FindNode('Description'));
             end;
+            // sinon la competence generique de la base (ou du jeu de libelles), comme pour une feuille
+            if LibelleMere = '' then
+              LibelleMere := LibelleDeCode(CodeMere);
+            if LibelleMere = '' then
+              LibelleMere := LibelleCodeV1(CodeMere);
+            // RULES-COMP_ARCANE_LANGUAGE__* : la competence RULES-COMP_ARCANE_LANGUAGE, suivie de "(Any)" comme le Rulebook
+            if (LibelleMere = '') and (Copy(CodeMere, Length(CodeMere) - 2, 3) = '__*') then
+            begin
+              LibelleMere := LibelleCodeV1(Copy(CodeMere, 1, Length(CodeMere) - 3));
+              if LibelleMere <> '' then LibelleMere := LibelleMere + ' (Any)';
+            end;
+            // talent generique V2 sans talent mere defini (RULES-T_FLIER__*) : nom du premier talent du groupe,
+            // sans sa parenthese, suivi de « (Any) »
+            if (LibelleMere = '') and (Copy(CodeMere, Length(CodeMere) - 2, 3) = '__*') and (Libelle <> '') then
+            begin
+              LibelleMere := Libelle;
+              if Pos(' (', LibelleMere) > 0 then LibelleMere := Copy(LibelleMere, 1, Pos(' (', LibelleMere) - 1);
+              LibelleMere := LibelleMere + ' (Any)';
+            end;
+            // V2 : parent defini sans le « _* » final (Rulebook : RULES-COMP_SPEAK_ARCANE_LANGUAGE),
+            // alors que ses specialisations pointent vers RULES-COMP_SPEAK_ARCANE_LANGUAGE_*
+            if (LibelleMere = '') and (Copy(CodeMere, Length(CodeMere) - 1, 2) = '_*') then
+            begin
+              Autre := TrouverElementParId(ElementTag, Copy(CodeMere, 1, Length(CodeMere) - 2));
+              if Autre <> nil then LibelleMere := ValeurXML(Autre.FindNode('Description'));
+              if (LibelleMere = '') and (RulebookXML <> nil) then
+                for Idx := 0 to RulebookXML.GetElementsByTagName(ElementTag).Count - 1 do
+                  if TDOMElement(RulebookXML.GetElementsByTagName(ElementTag).Item[Idx]).GetAttribute('id') = Copy(CodeMere, 1, Length(CodeMere) - 2) then
+                  begin
+                    LibelleMere := ValeurXML(TDOMElement(RulebookXML.GetElementsByTagName(ElementTag).Item[Idx]).FindNode('Description'));
+                    Break;
+                  end;
+              if LibelleMere <> '' then LibelleMere := LibelleMere + ' (Various)';
+            end;
             if LibelleMere = '' then
               LibelleMere := CodeMere;  // fallback
-            
+
             NodeMere := TreeViewLivre.Items.AddChild(NodeBranche, LibelleMere);
             SetNodeInfo(NodeMere, NT_CHAPITRE, CodeMere);  // 0 = regroupement passif
             
@@ -2768,6 +3218,21 @@ begin
   end;
 end;
 
+// Dossier des versions de travail d'un livre (sans separateur final). WFRP4 garde l'ancien
+// emplacement TRAVAIL\<nom du livre> ; les autres versions (dossier parent du fichier,
+// DATABASE\WFRP2, WFRP5...) ont leur sous-dossier TRAVAIL\<version>\<nom du livre>, pour
+// qu'un livre de meme nom dans deux versions ne partage pas ses copies.
+function TWinLivres.DossierTravailLivre(AFilePath: String): String;
+var
+  Version: String;
+begin
+  Result := ExtractFilePath(Application.ExeName) + 'TRAVAIL' + PathDelim;
+  Version := ExtractFileName(ExcludeTrailingPathDelimiter(ExtractFilePath(AFilePath)));
+  if (Version <> '') and (UpperCase(Version) <> 'WFRP4') and (UpperCase(Version) <> 'DATABASE') then
+    Result := Result + Version + PathDelim;
+  Result := Result + ChangeFileExt(ExtractFileName(AFilePath), '');
+end;
+
 // Si le livre charge est inacheve (<COMPLETE> = 0 dans DATA_BOOK), renvoie la version de
 // travail la plus recente de TRAVAIL\<nom du livre>\ (le tri alphabetique des noms
 // AAAAMMJJ-HHMMSS est le tri chronologique). Sinon, ou s'il n'y en a aucune : ''.
@@ -2785,8 +3250,7 @@ begin
   if Livre = nil then Exit;
   Noeud := Livre.FindNode(ConstXmlCompletLivre);
   if (Noeud = nil) or (Trim(StringReplace(UTF8Encode(Noeud.TextContent), '"', '', [rfReplaceAll])) <> '0') then Exit;
-  Dossier := ExtractFilePath(Application.ExeName) + 'TRAVAIL' + PathDelim +
-    ChangeFileExt(ExtractFileName(AFilePath), '') + PathDelim;
+  Dossier := DossierTravailLivre(AFilePath) + PathDelim;
   Meilleur := '';
   if FindFirst(Dossier + '*.xml', faAnyFile, SR) = 0 then
   begin
@@ -2812,7 +3276,7 @@ var
     NodeInfos: TTreeNode;
   begin
     NodeInfos := TreeViewLivre.Items.AddChild(NodeRoot, GetTexteLibelle('RULES-LAB_128'));
-    SetNodeInfo(NodeInfos, NT_INFO_LIVRE);
+    SetNodeInfo(NodeInfos, NT_INFO_LIVRE, '', 'BOOK_INFO');
   end;
 
   procedure BrancheRaces;
@@ -2821,7 +3285,7 @@ var
     I: Integer;
   begin
     NodeRaces := TreeViewLivre.Items.AddChild(NodeRoot, GetTexteLibelle('RULES-LAB_042'));
-    SetNodeInfo(NodeRaces, NT_CHAPITRE);
+    SetNodeInfo(NodeRaces, NT_CHAPITRE, '', 'DATA_SPECIE');
     
     SpecieElements := XMLDoc.GetElementsByTagName('Specie');
     
@@ -2841,7 +3305,7 @@ var
     I: Integer;
   begin
     NodeRacesGroupes := TreeViewLivre.Items.AddChild(NodeRoot, GetTexteLibelle('RULES-LAB_397'));
-    SetNodeInfo(NodeRacesGroupes, NT_CHAPITRE);
+    SetNodeInfo(NodeRacesGroupes, NT_CHAPITRE, '', 'DATA_RACE');
     ElementsRaces := XMLDoc.GetElementsByTagName('DATA_RACE');
     if ElementsRaces.Count > 0 then
       for I := 0 to ElementsRaces.Item[0].ChildNodes.Count - 1 do
@@ -2861,7 +3325,7 @@ var
     ConstruireMetierRacesMap();
     
     NodeCareers := TreeViewLivre.Items.AddChild(NodeRoot, GetTexteLibelle('RULES-LAB_006'));
-    SetNodeInfo(NodeCareers, NT_CHAPITRE);
+    SetNodeInfo(NodeCareers, NT_CHAPITRE, '', 'DATA_CAREER');
     
     CareerElements := XMLDoc.GetElementsByTagName('Career');
     
@@ -2896,17 +3360,93 @@ var
     // ========== TALENTS ==========
     ChargerBrancheSimple('DATA_TALENT', 'Talent', GetTexteLibelle('RULES-LAB_007'), 28, NodeRoot);
     ChargerBrancheSimple('DATA_TALENT_SPECIALIZATION', 'Talent', GetTexteLibelle('RULES-LAB_147'), 29, NodeRoot, True);
+
+    // ========== WFRP2 : competences et talents en texte (balises propres, SCHEMA_WFRP2.xsd) ==========
+    ChargerBrancheSimple('DATA_SKILL_V2', 'SkillV2', GetTexteLibelle('RULES-LAB_009'), NT_COMPETENCE_V2, NodeRoot);
+    ChargerBrancheSimple('DATA_TALENT_V2', 'TalentV2', GetTexteLibelle('RULES-LAB_007'), NT_TALENT_V2, NodeRoot);
+    ChargerBrancheGroupeeV2('DATA_SPELL_V2', 'SpellV2', 'Lore', 'RULES-LAB_083', NT_SORT_V2, NodeRoot);
+
+    // ========== WFRP1 : sorts (SCHEMA_WFRP1.xsd), groupes par liste de sorts ==========
+    ChargerBrancheGroupeeV2('DATA_SPELL_V1', 'SpellV1', 'SpellList', 'RULES-LAB_083', NT_SORT_V1, NodeRoot);
+    ChargerBrancheSimple('DATA_SKILL_V1', 'Skill', GetTexteLibelle('RULES-LAB_009'), NT_COMPETENCE_V1, NodeRoot);
+
+    // ========== WFRP1 : divinites, cultes et familiers ==========
+    ChargerBrancheSimple('DATA_DEITY_V1', 'Deity', GetTexteLibelle('RULES-LAB_869'), NT_DIEU_V1, NodeRoot, False, False);
+    ChargerBrancheSimple('DATA_CULT_V1', 'Cult', GetTexteLibelle('RULES-LAB_870'), NT_CULTE_V1, NodeRoot, False, False);
+    ChargerBrancheSimple('DATA_FAMILIAR_V1', 'Familiar', GetTexteLibelle('RULES-LAB_871'), NT_FAMILIER_V1, NodeRoot, False, False);
+    ChargerBrancheSimple('DATA_DISABILITY_V1', 'Disability', GetTexteLibelle('RULES-LAB_842'), NT_HANDICAP_V1, NodeRoot, False, False);
+    ChargerBrancheSimple('DATA_ATTRIBUT', 'Attribut', GetTexteLibelle('RULES-LAB_924'), NT_ATTRIBUT_V1, NodeRoot, False, False);
+    ChargerBrancheSimple('DATA_CLASS_V1', 'Class', GetTexteLibelle('RULES-LAB_880'), NT_CLASSE_V1, NodeRoot, False, False);
+    ChargerBrancheSimple('DATA_TRADE_V1', 'Trade', GetTexteLibelle('RULES-LAB_812'), NT_METIER_V1, NodeRoot, False, False);
+
+    // ========== WFRP1 : tables de lignes sans id (une ligne = un nœud) ==========
+    ChargerBrancheLignesV1(ConstXmlDataSkillRollV1, GetTexteLibelle('RULES-LAB_885'), NodeRoot);
+    ChargerBrancheLignesV1(ConstXmlDataRegleMetier, GetTexteLibelle('RULES-LAB_886'), NodeRoot);
+    ChargerBrancheLignesV1(ConstXmlDataSkillCountAgeV1, GetTexteLibelle('RULES-LAB_887'), NodeRoot);
+    ChargerBrancheLignesV1('DATA_SPELL_LEARNING_V1', GetTexteLibelle('RULES-LAB_888'), NodeRoot);
+    ChargerBrancheLignesV1(ConstXmlDataMagicPointGainV1, GetTexteLibelle('RULES-LAB_891'), NodeRoot);
+    ChargerBrancheLignesV1(ConstXmlDataPriestAdvanceV1, GetTexteLibelle('RULES-LAB_892'), NodeRoot);
+    ChargerBrancheLignesV1(ConstXmlDataDisabilityRollV1, GetTexteLibelle('RULES-LAB_893'), NodeRoot);
+    ChargerBrancheLignesV1('DATA_AVAILABILITY_V1', GetTexteLibelle('RULES-LAB_889'), NodeRoot);
+    ChargerBrancheLignesV1('DATA_CLOTHING_QUALITY_V1', GetTexteLibelle('RULES-LAB_890'), NodeRoot);
   end;
 
   procedure BrancheEquipement;
   begin
     NodeEquip := TreeViewLivre.Items.AddChild(NodeRoot, GetTexteLibelle('RULES-LAB_013'));
-    SetNodeInfo(NodeEquip, NT_CHAPITRE);
+    SetNodeInfo(NodeEquip, NT_CHAPITRE, '', 'EQUIPEMENT');
+    // ordre de creation : fabrication et bonus d'abord (les armes et armures s'appuient dessus)
+    ChargerBrancheSimple('DATA_CRAFTMANSHIP', 'Craftsmanship', GetTexteLibelle('RULES-LAB_125'), 39, NodeEquip);
+    ChargerBrancheSimple('DATA_WEAPON_BONUS', 'BonusMalus',
+                         GetTexteLibelle('RULES-LAB_476') + ' ' + GetTexteLibelle('RULES-LAB_063'), 32, NodeEquip);
+    ChargerBrancheSimple('DATA_ARMOR_BONUS', 'BonusMalus',
+                         GetTexteLibelle('RULES-LAB_476') + ' ' + GetTexteLibelle('RULES-LAB_065'), 34, NodeEquip);
+    // WFRP2 : les tables d'equipement du livre sont directement sous ce noeud
+    ChargerBrancheGroupeeV2('DATA_EQUIPMENT_V2', 'EquipmentV2', 'Category', '', NT_EQUIPEMENT_V2, NodeEquip, True);
     
+    // WFRP1 : objets groupes par categorie
+    ChargerBrancheGroupeeV2('DATA_EQUIPMENT_V1', 'EquipmentV1', 'Category', '', NT_EQUIPEMENT_V1, NodeEquip, True);
+
     ChargerBrancheSimple('DATA_WEAPON', 'Weapon', GetTexteLibelle('RULES-LAB_063'), 30, NodeEquip);
     ChargerBrancheSimple('DATA_ARMOR',  'Armor',  GetTexteLibelle('RULES-LAB_065'), 31, NodeEquip);
     ChargerBrancheSimple('DATA_ARMOR_SIMP', 'ArmorSimp', GetTexteLibelle('RULES-LAB_149'), 33, NodeEquip);
     ChargerBrancheSimple('DATA_TRAPPING', 'Trapping', GetTexteLibelle('RULES-LAB_196'), 38, NodeEquip);
+  end;
+
+  // libelles du livre (DATA_LABEL) : un noeud par <Text>, code LANGUE|nom, texte du noeud = le libelle lui-meme
+  procedure BrancheLibellesLivre;
+  var
+    Bloc, Etiquette, Texte: TDOMNode;
+    Lang, Nom, Lib: String;
+    NodeBranche, NodeLangue: TTreeNode;
+  begin
+    Bloc := XMLDoc.GetElementsByTagName('DATA_LABEL').Item[0];
+    if Bloc = nil then Exit;
+    NodeBranche := TreeViewLivre.Items.AddChild(NodeRoot, GetTexteLibelle('RULES-LAB_975'));
+    SetNodeInfo(NodeBranche, NT_CHAPITRE, '', 'DATA_LABEL');
+    Etiquette := Bloc.FirstChild;
+    while Etiquette <> nil do
+    begin
+      if Etiquette.NodeName = 'Label' then
+      begin
+        Lang := TDOMElement(Etiquette).GetAttribute('language');
+        NodeLangue := TreeViewLivre.Items.AddChild(NodeBranche, Lang);
+        SetNodeInfo(NodeLangue, NT_CHAPITRE);
+        Texte := Etiquette.FirstChild;
+        while Texte <> nil do
+        begin
+          if Texte.NodeName = 'Text' then
+          begin
+            Nom := TDOMElement(Texte).GetAttribute('name');
+            Lib := ValeurXML(Texte);
+            if Lib = '' then Lib := Nom;
+            SetNodeInfo(TreeViewLivre.Items.AddChild(NodeLangue, Lib), NT_LIBELLE_LIVRE, Lang + '|' + Nom);
+          end;
+          Texte := Texte.NextSibling;
+        end;
+      end;
+      Etiquette := Etiquette.NextSibling;
+    end;
   end;
 
   procedure BrancheTablesRegles;
@@ -2916,6 +3456,17 @@ var
     ChargerBrancheSimple('DATA_OPTION_RULE', 'OptionRule', GetTexteLibelle('RULES-LAB_277'), 41, NodeRoot);
     ChargerBrancheSimple('DATA_CORRUPTION_TABLE_PHYSICAL', 'Corruption', GetTexteLibelle('RULES-LAB_156') + ' (' + GetTexteLibelle('RULES-LAB_330') + ')', 42, NodeRoot, False, False);
     ChargerBrancheSimple('DATA_CORRUPTION_TABLE_MENTAL', 'Corruption', GetTexteLibelle('RULES-LAB_156') + ' (' + GetTexteLibelle('RULES-LAB_331') + ')', 43, NodeRoot, False, False);
+    // WFRP2 : mutations et corruptions divines (fiche generique) et leurs tables de tirage (lignes)
+    ChargerBrancheSimple('DATA_CORRUPTION_TABLE_MUTATION', 'Corruption', GetTexteLibelle('RULES-LAB_947'), NT_CORRUPTION_V2, NodeRoot, False, False);
+    ChargerBrancheLignesV1('DATA_CORRUPTION_MUTATION_CHANCE', GetTexteLibelle('RULES-LAB_949'), NodeRoot);
+    ChargerBrancheSimple('DATA_CORRUPTION_TABLE_DIVINE', 'Corruption', GetTexteLibelle('RULES-LAB_948'), NT_CORRUPTION_V2, NodeRoot, False, False);
+    ChargerBrancheLignesV1('DATA_CORRUPTION_DIVINE_CHANCE', GetTexteLibelle('RULES-LAB_950'), NodeRoot);
+    // WFRP2 (Liber Fanatica) : tables du BACKGROUND, lignes sans id
+    ChargerBrancheLignesV1('DATA_RULE_BACKGROUND', GetTexteLibelle('RULES-LAB_953'), NodeRoot);
+    ChargerBrancheLignesV1('DATA_RULE_BACKGROUND_COUNT', GetTexteLibelle('RULES-LAB_954'), NodeRoot);
+    ChargerBrancheLignesV1('DATA_RULE_SKILL_ROLL', GetTexteLibelle('RULES-LAB_952'), NodeRoot);
+    ChargerBrancheLignesV1('DATA_RULE_TALENT_ROLL', GetTexteLibelle('RULES-LAB_951'), NodeRoot);
+    ChargerBrancheLignesV1(ConstXmlDataTablePersonnelle, GetTexteLibelle('RULES-LAB_955'), NodeRoot);
     ChargerBrancheSimple('DATA_DISEASE', 'Disease', GetTexteLibelle('RULES-LAB_281'), 44, NodeRoot);
     ChargerBrancheSimple('DATA_AFFLICTION', 'Affliction', GetTexteLibelle('RULES-LAB_296'), 45, NodeRoot);
     ChargerBrancheSimple('DATA_STARSIGN', 'StarSign', GetTexteLibelle('RULES-LAB_318'), 60, NodeRoot);
@@ -2933,63 +3484,75 @@ var
       // DATA_STARSIGN a sa fiche (type 60), DATA_CAREER_BONUS aussi (type 62), DATA_CAREER_ADAPTATION aussi (type 63)
       if (PetitesTablesChapitre[I] <> 'DATA_RULE') and (PetitesTablesChapitre[I] <> 'DATA_CLASS_ITEM') and
          (PetitesTablesChapitre[I] <> 'DATA_STARSIGN') and (PetitesTablesChapitre[I] <> 'DATA_SPECIE_TRAIT') and
-         (PetitesTablesChapitre[I] <> 'DATA_CAREER_BONUS') and (PetitesTablesChapitre[I] <> 'DATA_CAREER_ADAPTATION') then
+         (PetitesTablesChapitre[I] <> 'DATA_CAREER_BONUS') and (PetitesTablesChapitre[I] <> 'DATA_CAREER_ADAPTATION') and
+         (PetitesTablesChapitre[I] <> 'DATA_SPELL_TALENT') then  // s'edite depuis la fiche du sort ou celle du dieu
         ChargerBrancheSimple(PetitesTablesChapitre[I], PetitesTablesTag[I], LibelleChapitre(PetitesTablesChapitre[I]), NT_PETITE_TABLE_DEBUT + I, NodeRoot);
+    // livre WFRP1 : ses regles (DATA_RULE) sont des fiches propres, la matrice du tirage des metiers ne les montre pas
+    // (WFRP2 aussi depuis la 64e partie : Liber Fanatica a des regles de background avec Description et Page)
+    if SameText(ValeurXML(XMLDoc.GetElementsByTagName('DATA_BOOK').Item[0].FindNode(ConstXmlVersionLivre)), 'WFRP1') or
+       SameText(ValeurXML(XMLDoc.GetElementsByTagName('DATA_BOOK').Item[0].FindNode(ConstXmlVersionLivre)), 'WFRP2') or
+       (XMLDoc.GetElementsByTagName('DATA_RULE').Count > 0) then  // V4 : Page et Description d'une regle ne sont pas dans la matrice
+      ChargerBrancheSimple('DATA_RULE', 'Rule', LibelleChapitre('DATA_RULE'), NT_PETITE_TABLE_DEBUT + 1, NodeRoot);
     // DATA_SPECIE_TRAIT : un seul noeud, qui ouvre la grille de tous les traits d'ethnie (type 61)
-    if (XMLDoc.GetElementsByTagName('DATA_SPECIE_TRAIT').Count > 0) or CreationPermise then
+    if (XMLDoc.GetElementsByTagName('DATA_SPECIE_TRAIT').Count > 0) or (CreationPermise and not EstLivreV1 and ChapitrePermisVersion('DATA_SPECIE_TRAIT')) then
     begin
       NodeTirage := TreeViewLivre.Items.AddChild(NodeRoot, LibelleChapitre('DATA_SPECIE_TRAIT'));
-      SetNodeInfo(NodeTirage, NT_TRAIT_ETHNIE);
+      SetNodeInfo(NodeTirage, NT_TRAIT_ETHNIE, '', 'DATA_SPECIE_TRAIT');
     end;
     // DATA_CAREER_SPECIE : un seul noeud, qui ouvre la table des liens carriere <-> espece (type 64)
-    if (XMLDoc.GetElementsByTagName('DATA_CAREER_SPECIE').Count > 0) or CreationPermise then
+    if (XMLDoc.GetElementsByTagName('DATA_CAREER_SPECIE').Count > 0) or (CreationPermise and not EstLivreV1 and ChapitrePermisVersion('DATA_CAREER_SPECIE')) then
     begin
       NodeTirage := TreeViewLivre.Items.AddChild(NodeRoot, GetTexteLibelle('RULES-LAB_583', 'Career species'));
-      SetNodeInfo(NodeTirage, NT_LIEN_CARRIERE_ESPECE);
+      SetNodeInfo(NodeTirage, NT_LIEN_CARRIERE_ESPECE, '', 'DATA_CAREER_SPECIE');
+    end;
+    // DATA_RULE_SPECIE : un seul noeud, qui ouvre la table des regles par ethnie (type 70)
+    if (XMLDoc.GetElementsByTagName('DATA_RULE_SPECIE').Count > 0) or (CreationPermise and ChapitrePermisVersion('DATA_RULE_SPECIE')) then
+    begin
+      NodeTirage := TreeViewLivre.Items.AddChild(NodeRoot, GetTexteLibelle('RULES-LAB_808', 'Rules by ethnicity'));
+      SetNodeInfo(NodeTirage, NT_REGLE_ETHNIE, '', 'DATA_RULE_SPECIE');
     end;
     // DATA_CLASS_ITEM : un seul noeud, qui ouvre la table d'equipement de toutes les classes
-    if (XMLDoc.GetElementsByTagName('DATA_CLASS_ITEM').Count > 0) or CreationPermise then
+    if (XMLDoc.GetElementsByTagName('DATA_CLASS_ITEM').Count > 0) or (CreationPermise and not EstLivreV1 and ChapitrePermisVersion('DATA_CLASS_ITEM')) then
     begin
       NodeTirage := TreeViewLivre.Items.AddChild(NodeRoot, LibelleChapitre('DATA_CLASS_ITEM'));
-      SetNodeInfo(NodeTirage, NT_EQUIP_CLASSE);
+      SetNodeInfo(NodeTirage, NT_EQUIP_CLASSE, '', 'DATA_CLASS_ITEM');
     end;
     // DATA_CAREER_SUBCHOICE : un seul noeud, qui ouvre la grille du second jet (type 65)
-    if (XMLDoc.GetElementsByTagName('DATA_CAREER_SUBCHOICE').Count > 0) or CreationPermise then
+    if (XMLDoc.GetElementsByTagName('DATA_CAREER_SUBCHOICE').Count > 0) or (CreationPermise and not EstLivreV1 and ChapitrePermisVersion('DATA_CAREER_SUBCHOICE')) then
     begin
       NodeTirage := TreeViewLivre.Items.AddChild(NodeRoot, LibelleChapitre('DATA_CAREER_SUBCHOICE'));
-      SetNodeInfo(NodeTirage, NT_SECOND_JET);
+      SetNodeInfo(NodeTirage, NT_SECOND_JET, '', 'DATA_CAREER_SUBCHOICE');
     end;
     for I := 0 to High(TablesEntieres) do
-      if ((XMLDoc.GetElementsByTagName(TablesEntieres[I]).Count > 0) or CreationPermise) and
-         (TablesEntieres[I] <> 'DATA_CAREER_SUBCHOICE') then
+      if ((XMLDoc.GetElementsByTagName(TablesEntieres[I]).Count > 0) or
+          (CreationPermise and (not EstLivreV1 or ChapitreV1Permis(TablesEntieres[I])) and
+           ChapitrePermisVersion(TablesEntieres[I]))) and
+         (TablesEntieres[I] <> 'DATA_CAREER_SUBCHOICE') and
+         not ((XMLDoc.GetElementsByTagName(TablesEntieres[I]).Count = 0) and ChapitreReserveRulebook(TablesEntieres[I])) and
+         ((TablesEntieres[I] <> 'DATA_CAREER_LINK_V1') or EstLivreV1) and  // liens entre carrieres : un chapitre par version
+         ((TablesEntieres[I] <> 'DATA_CAREER_LINK_V2') or EstLivreV2) then
       begin
         NodeTirage := TreeViewLivre.Items.AddChild(NodeRoot, LibelleChapitre(TablesEntieres[I]));
-        SetNodeInfo(NodeTirage, NT_TABLE_VALEURS, TablesEntieres[I]);
+        SetNodeInfo(NodeTirage, NT_TABLE_VALEURS, TablesEntieres[I], TablesEntieres[I]);
       end;
   end;
 
-  procedure BrancheEquipementSuite;
+  procedure BrancheSorts;
   begin
-    ChargerBrancheSimple('DATA_CRAFTMANSHIP', 'Craftsmanship', GetTexteLibelle('RULES-LAB_125'), 39, NodeEquip);
-    ChargerBrancheSimple('DATA_WEAPON_BONUS', 'BonusMalus',
-                         GetTexteLibelle('RULES-LAB_476') + ' ' + GetTexteLibelle('RULES-LAB_063'), 32, NodeEquip);
-    ChargerBrancheSimple('DATA_ARMOR_BONUS', 'BonusMalus',
-                         GetTexteLibelle('RULES-LAB_476') + ' ' + GetTexteLibelle('RULES-LAB_065'), 34, NodeEquip);
+    ChargerBrancheSimple('DATA_SPELL', 'Sort', GetTexteLibelle('RULES-LAB_083'), 35, NodeRoot);
   end;
 
-  procedure BrancheSortsEtTirage;
+  procedure BrancheTirageRace;
   var
     NodeTirage: TTreeNode;
   begin
-    ChargerBrancheSimple('DATA_SPELL', 'Sort', GetTexteLibelle('RULES-LAB_083'), 35, NodeRoot);
-    
     // ========== TIRAGE ALÉATOIRE DE RACE ==========
     // Un seul noeud, sans enfant : il ouvre directement la table.
-    if (XMLDoc.GetElementsByTagName('DATA_RANDOM_SPECIE').Count > 0) or CreationPermise then
+    if (XMLDoc.GetElementsByTagName('DATA_RANDOM_SPECIE').Count > 0) or (CreationPermise and not EstLivreV1 and ChapitrePermisVersion('DATA_RANDOM_SPECIE')) then
     begin
       NodeTirage := TreeViewLivre.Items.AddChild(NodeRoot,
                       GetTexteLibelle('RULES-LAB_042') + ' ' + GetTexteLibelle('RULES-LAB_085'));
-      SetNodeInfo(NodeTirage, NT_TIRAGE_RACE);
+      SetNodeInfo(NodeTirage, NT_TIRAGE_RACE, '', 'DATA_RANDOM_SPECIE');
     end;
   end;
 
@@ -3032,6 +3595,9 @@ begin
 
     // Récupérer le label traduit
     NodeRoot := TreeViewLivre.Items.Add(nil, GetBookLabel(FileCode));
+    // Pas de libelle traduit : nom d'affichage du livre (<BOOKNAME>) plutot que le code "BOOK ..."
+    if SameText(NodeRoot.Text, StringReplace(FileCode, '_', ' ', [rfReplaceAll])) and (XmlNomAffichageLivre(AFilePath) <> '') then
+      NodeRoot.Text := XmlNomAffichageLivre(AFilePath);
 
     // Afficher le nom complet dans LabelLivre
     LabelLivre.Caption := GetTexteLibelle('RULES-LAB_128') + ': ' + FileName;
@@ -3052,16 +3618,18 @@ begin
       Exit;
     end;
 
+    // Ordre de creation : ce qui ne depend de rien d'abord, puis ce qui s'appuie dessus
     BrancheInfosLivre;
+    BrancheCompetencesTalents;
+    BrancheEquipement;
+    BrancheSorts;
+    BrancheTablesRegles;
     BrancheRaces;
     BrancheRacesGroupes;
     BrancheCarrieres;
-    BrancheCompetencesTalents;
-    BrancheEquipement;
-    BrancheTablesRegles;
+    BrancheTirageRace;
     BranchePetitesTables;
-    BrancheEquipementSuite;
-    BrancheSortsEtTirage;
+    BrancheLibellesLivre;
 
     // Races et carrieres en ordre alphabetique (sinon l'ordre du fichier)
     NodeRaces.AlphaSort;
@@ -3088,7 +3656,27 @@ begin
   if Node = nil then Exit;
   
   NodeSelectionnee := Node;
-  
+  FicheGenerique := False;
+  // Titre par defaut = texte du noeud (sinon le libelle de la maquette « Select » reste affiche
+  // pour les types qui ne fixent pas de titre) ; chaque branche ci-dessous peut le remplacer
+  LabelFormTitle.Caption := Node.Text;
+  MemoEncartBranche.Visible := False;
+  // Image d'ethnie / de carriere : seulement sur la branche de l'ethnie ou de la carriere (reposee par AfficherDonnee...),
+  // pas sur ses sous-branches (Attribute, Specie's Skills, Talent, Career...)
+  if PanelImageLivre <> nil then
+    PanelImageLivre.Masquer;
+  // Encart : a quoi sert la branche (texte RULES-HELP_BRANCHE_<balise>, absent = pas d'encart)
+  if (Node.Data <> nil) and (TNodeInfo(Node.Data).Chapitre <> '') then
+  begin
+    PageSource := 'RULES-HELP_BRANCHE_' + TNodeInfo(Node.Data).Chapitre;
+    RaceCodeFound := GetTexteLibelle(PageSource);
+    if (RaceCodeFound <> '') and (RaceCodeFound <> PageSource) then
+    begin
+      MemoEncartBranche.Text := RaceCodeFound;
+      MemoEncartBranche.Visible := True;
+    end;
+  end;
+
   // Vérifier le type de nœud basé sur Node.Data
   case GetNodeType(Node) of
     NT_CHAPITRE: begin
@@ -3208,6 +3796,19 @@ begin
          TypeNodeSelectionnee := 'METIER';
          AfficherDonneeMetier(GetNodeCode(Node));
        end;
+    NT_ENTREES_CARRIERE, NT_SORTIES_CARRIERE, NT_CARAC_CARRIERE, NT_COMPETENCES_CARRIERE, NT_TALENTS_CARRIERE, NT_EQUIPEMENT_CARRIERE: begin
+         // Branches d'une carriere WFRP2 : entrees / sorties en cases, caracteristiques / competences / talents / equipement en tableaux
+         TypeNodeSelectionnee := 'METIER';
+         case GetNodeType(Node) of
+           NT_ENTREES_CARRIERE: AfficherBrancheCoches(GetNodeCode(Node), 1);
+           NT_SORTIES_CARRIERE: AfficherBrancheCoches(GetNodeCode(Node), 2);
+           NT_CARAC_CARRIERE: AfficherBrancheCoches(GetNodeCode(Node), 3);
+           NT_COMPETENCES_CARRIERE: AfficherBrancheCoches(GetNodeCode(Node), 4);
+           NT_TALENTS_CARRIERE: AfficherBrancheCoches(GetNodeCode(Node), 5);
+         else
+           AfficherBrancheCoches(GetNodeCode(Node), 6);
+         end;
+       end;
     NT_RACES_POSSIBLES: begin
          // Branche "Races possibles" d'un métier
          TypeNodeSelectionnee := 'CHAPITRE';
@@ -3320,6 +3921,11 @@ begin
          TypeNodeSelectionnee := 'EQUIPEMENT';
          AfficherDonneeCondition(GetNodeCode(Node));
        end;
+    NT_LIBELLE_LIVRE: begin
+         // Libelle du livre (DATA_LABEL)
+         TypeNodeSelectionnee := 'EQUIPEMENT';
+         AfficherDonneeLibelle(GetNodeCode(Node));
+       end;
     NT_OPTION_REGLE: begin
          // Option de règle
          TypeNodeSelectionnee := 'EQUIPEMENT';
@@ -3344,6 +3950,77 @@ begin
          // Signe astral
          TypeNodeSelectionnee := 'EQUIPEMENT';
          AfficherDonneeBonusMalus(GetNodeCode(Node), GetTexteLibelle('RULES-LAB_272'), 'StarSign');
+       end;
+    NT_COMPETENCE_V2: begin
+         // Competence WFRP2 (lecture seule)
+         TypeNodeSelectionnee := 'EQUIPEMENT';
+         AfficherDonneeV2(GetNodeCode(Node), 'SkillV2');
+       end;
+    NT_TALENT_V2: begin
+         // Talent WFRP2 (lecture seule)
+         TypeNodeSelectionnee := 'EQUIPEMENT';
+         AfficherDonneeV2(GetNodeCode(Node), 'TalentV2');
+       end;
+    NT_SORT_V2: begin
+         // Sort WFRP2 (lecture seule)
+         TypeNodeSelectionnee := 'EQUIPEMENT';
+         AfficherDonneeV2(GetNodeCode(Node), 'SpellV2');
+       end;
+    NT_SORT_V1: begin
+         // Sort WFRP1 (editable)
+         TypeNodeSelectionnee := 'EQUIPEMENT';
+         AfficherDonneeV2(GetNodeCode(Node), 'SpellV1');
+       end;
+    NT_COMPETENCE_V1: begin
+         // Competence WFRP1 (editable)
+         TypeNodeSelectionnee := 'EQUIPEMENT';
+         AfficherDonneeV2(GetNodeCode(Node), 'SkillV1');
+       end;
+    NT_EQUIPEMENT_V1: begin
+         // Objet WFRP1 (editable)
+         TypeNodeSelectionnee := 'EQUIPEMENT';
+         AfficherDonneeV2(GetNodeCode(Node), 'EquipmentV1');
+       end;
+    NT_DIEU_V1: begin
+         TypeNodeSelectionnee := 'EQUIPEMENT';
+         AfficherDonneeV2(GetNodeCode(Node), 'Deity');
+       end;
+    NT_CULTE_V1: begin
+         TypeNodeSelectionnee := 'EQUIPEMENT';
+         AfficherDonneeV2(GetNodeCode(Node), 'Cult');
+       end;
+    NT_FAMILIER_V1: begin
+         TypeNodeSelectionnee := 'EQUIPEMENT';
+         AfficherDonneeV2(GetNodeCode(Node), 'Familiar');
+       end;
+    NT_HANDICAP_V1: begin
+         TypeNodeSelectionnee := 'EQUIPEMENT';
+         AfficherDonneeV2(GetNodeCode(Node), 'Disability');
+       end;
+    NT_LIGNE_TABLE_V1: begin
+         TypeNodeSelectionnee := 'EQUIPEMENT';
+         AfficherLigneTable(GetNodeCode(Node));
+       end;
+    NT_ATTRIBUT_V1: begin
+         TypeNodeSelectionnee := 'EQUIPEMENT';
+         AfficherDonneeV2(GetNodeCode(Node), 'Attribut');
+       end;
+    NT_CORRUPTION_V2: begin
+         TypeNodeSelectionnee := 'EQUIPEMENT';
+         AfficherDonneeCorruptionV2(GetNodeCode(Node));
+       end;
+    NT_CLASSE_V1: begin
+         TypeNodeSelectionnee := 'EQUIPEMENT';
+         AfficherDonneeV2(GetNodeCode(Node), 'Class');
+       end;
+    NT_METIER_V1: begin
+         TypeNodeSelectionnee := 'EQUIPEMENT';
+         AfficherDonneeV2(GetNodeCode(Node), 'Trade');
+       end;
+    NT_EQUIPEMENT_V2: begin
+         // Article d'equipement WFRP2 (lecture seule)
+         TypeNodeSelectionnee := 'EQUIPEMENT';
+         AfficherDonneeV2(GetNodeCode(Node), 'EquipmentV2');
        end;
     NT_BONUS_CARRIERE: begin
          // Bonus de carriere
@@ -3388,6 +4065,12 @@ begin
          TypeNodeSelectionnee := 'CHAPITRE';
          LabelFormTitle.Caption := GetTexteLibelle('RULES-LAB_583', 'Career species');
          AfficherCarriereEspece;
+       end;
+    NT_REGLE_ETHNIE: begin
+         // Regles par ethnie
+         TypeNodeSelectionnee := 'CHAPITRE';
+         LabelFormTitle.Caption := GetTexteLibelle('RULES-LAB_808', 'Rules by ethnicity');
+         AfficherRegleEthnie;
        end;
     NT_SECOND_JET: begin
          // Second jet apres le metier
@@ -3441,10 +4124,11 @@ begin
     PanelEquipClasse.FinEdition;
     PanelTraitEthnie.FinEdition;
     PanelCarriereEspece.FinEdition;
+    PanelRegleEthnie.FinEdition;
     PanelTraduction.FinEdition;
     PanelSousMetier.FinEdition;
     PanelTirageMetier.FinEdition;
-    if InstantaneFiche <> FicheSnapshot then
+    if (InstantaneFiche <> FicheSnapshot) and not TestSansMessage then  // test d'edition : on abandonne sans demander
     begin
       Result := MessageDlg(GetTexteLibelle('RULES-LAB_355'), mtConfirmation, [mbYes, mbNo], 0) = mrYes;
       if not Result then Exit;
@@ -3483,6 +4167,35 @@ procedure TWinLivres.TreeViewLivreDblClick(Sender: TObject);
 begin
   // Pour l'instant, juste READ-ONLY
   // Double-clic ne fait rien
+end;
+
+// Grille des niveaux d'une carriere : le double-clic d'une ligne ouvre le noeud
+// de ce niveau dans l'arbre (profil, competences, talents, equipement).
+procedure TWinLivres.GridNiveauxDblClick(Sender: TObject);
+var
+  Pt: TPoint;
+  C, R, I: Integer;
+  Pere, N: TTreeNode;
+  Cible: String;
+begin
+  if not ModeNiveaux then Exit;
+  Pt := StringGridAttrEthnie.ScreenToClient(Mouse.CursorPos);
+  StringGridAttrEthnie.MouseToCell(Pt.X, Pt.Y, C, R);
+  if R < 1 then Exit;
+  if not ConfirmerAbandonModifs then Exit;
+  Cible := AttrRaceCode + '|' + Trim(StringGridAttrEthnie.Cells[1, R]);
+  Pere := TreeViewLivre.Selected;
+  if Pere = nil then Exit;
+  if Pere.Parent <> nil then Pere := Pere.Parent;  // le noeud « niveaux » est une soeur des niveaux
+  for I := 0 to Pere.Count - 1 do
+  begin
+    N := Pere.Items[I];
+    if GetNodeCode(N) = Cible then
+    begin
+      TreeViewLivre.Selected := N;
+      Exit;
+    end;
+  end;
 end;
 
 procedure TWinLivres.TreeViewLivreContextPopup(Sender: TObject; MousePos: TPoint; var Handled: Boolean);
@@ -3560,7 +4273,7 @@ begin
   MenuItemNouvelleFabrication.Visible := NoeudFabrications(TreeViewLivre.Selected) <> nil;
   MenuItemNouvelleFabrication.Enabled := (XMLDoc <> nil) and CreationPermise;
   MenuItemNouveauSort.Caption := GetTexteLibelle('RULES-LAB_452');
-  MenuItemNouveauSort.Visible := NoeudSorts(TreeViewLivre.Selected) <> nil;
+  MenuItemNouveauSort.Visible := (NoeudSorts(TreeViewLivre.Selected) <> nil) and not EstLivreV1;
   MenuItemNouveauSort.Enabled := (XMLDoc <> nil) and CreationPermise;
   MenuItemNouvelleSpecialisation.Caption := GetTexteLibelle('RULES-LAB_406');
   MenuItemNouvelleSpecialisation.Visible := NoeudBrancheSimple(TreeViewLivre.Selected, 'RULES-LAB_146', 27) <> nil;
@@ -3568,10 +4281,221 @@ begin
   MenuItemNouvelleSpecTalent.Caption := GetTexteLibelle('RULES-LAB_410');
   MenuItemNouvelleSpecTalent.Visible := NoeudBrancheSimple(TreeViewLivre.Selected, 'RULES-LAB_147', 29) <> nil;
   MenuItemNouvelleSpecTalent.Enabled := (XMLDoc <> nil) and CreationPermise;
+  MenuItemDeplierBranche.Caption := GetTexteLibelle('RULES-LAB_927', 'Expand branch');
+  MenuItemDeplierBranche.Visible := (TreeViewLivre.Selected <> nil) and (TreeViewLivre.Selected.Count > 0);
+  MenuItemReplierBranche.Caption := GetTexteLibelle('RULES-LAB_928', 'Collapse branch');
+  MenuItemReplierBranche.Visible := MenuItemDeplierBranche.Visible;
+  MenuItemNouvelleDivinite.Caption := GetTexteLibelle('RULES-LAB_932', 'New deity');
+  MenuItemNouvelleDivinite.Visible := NoeudBrancheSimple(TreeViewLivre.Selected, 'RULES-LAB_869', NT_DIEU_V1) <> nil;
+  MenuItemNouvelleDivinite.Enabled := (XMLDoc <> nil) and CreationPermise;
+  MenuItemNouveauCulte.Caption := GetTexteLibelle('RULES-LAB_933', 'New cult');
+  MenuItemNouveauCulte.Visible := NoeudBrancheSimple(TreeViewLivre.Selected, 'RULES-LAB_870', NT_CULTE_V1) <> nil;
+  MenuItemNouveauCulte.Enabled := (XMLDoc <> nil) and CreationPermise;
+  MenuItemNouveauSortV1.Caption := GetTexteLibelle('RULES-LAB_937', 'New spell');
+  MenuItemNouveauSortV1.Visible := NoeudGroupeV1(TreeViewLivre.Selected, NT_SORT_V1) <> nil;
+  MenuItemNouveauSortV1.Enabled := (XMLDoc <> nil) and CreationPermise;
+  MenuItemNouvelObjetV1.Caption := GetTexteLibelle('RULES-LAB_938', 'New item');
+  MenuItemNouvelObjetV1.Visible := NoeudGroupeV1(TreeViewLivre.Selected, NT_EQUIPEMENT_V1) <> nil;
+  MenuItemNouvelObjetV1.Enabled := (XMLDoc <> nil) and CreationPermise;
+  MenuItemNouvelleClasse.Caption := GetTexteLibelle('RULES-LAB_935', 'New class');
+  MenuItemNouvelleClasse.Visible := NoeudBrancheSimple(TreeViewLivre.Selected, 'RULES-LAB_880', NT_CLASSE_V1) <> nil;
+  MenuItemNouvelleClasse.Enabled := (XMLDoc <> nil) and CreationPermise;
+  MenuItemNouveauHandicap.Caption := GetTexteLibelle('RULES-LAB_936', 'New disability');
+  MenuItemNouveauHandicap.Visible := NoeudBrancheSimple(TreeViewLivre.Selected, 'RULES-LAB_842', NT_HANDICAP_V1) <> nil;
+  MenuItemNouveauHandicap.Enabled := (XMLDoc <> nil) and CreationPermise;
+  MenuItemNouveauFamilier.Caption := GetTexteLibelle('RULES-LAB_934', 'New familiar');
+  MenuItemNouveauFamilier.Visible := NoeudBrancheSimple(TreeViewLivre.Selected, 'RULES-LAB_871', NT_FAMILIER_V1) <> nil;
+  MenuItemNouveauFamilier.Enabled := (XMLDoc <> nil) and CreationPermise;
+  MenuItemLigneNouvelle.Caption := GetTexteLibelle('RULES-LAB_929', 'New line');
+  MenuItemLigneDupliquer.Caption := GetTexteLibelle('RULES-LAB_930', 'Duplicate line');
+  MenuItemLigneSupprimer.Caption := GetTexteLibelle('RULES-LAB_931', 'Delete line');
+  MenuItemLigneDupliquer.Visible := (TreeViewLivre.Selected <> nil) and (GetNodeType(TreeViewLivre.Selected) = NT_LIGNE_TABLE_V1);
+  MenuItemLigneSupprimer.Visible := MenuItemLigneDupliquer.Visible;
+  // « Nouvelle ligne » : sur une ligne, ou sur la branche dont les filles sont des lignes (ajout en fin de table)
+  MenuItemLigneNouvelle.Visible := MenuItemLigneDupliquer.Visible or ((TreeViewLivre.Selected <> nil) and
+    (TreeViewLivre.Selected.Count > 0) and (GetNodeType(TreeViewLivre.Selected.GetLastChild) = NT_LIGNE_TABLE_V1));
+  MenuItemLigneNouvelle.Enabled := (XMLDoc <> nil) and CreationPermise;
+  MenuItemLigneDupliquer.Enabled := MenuItemLigneNouvelle.Enabled;
+  MenuItemLigneSupprimer.Enabled := MenuItemLigneNouvelle.Enabled;
   MenuItemModifier.Visible := False;
   MenuItemSupprimer.Caption := GetTexteLibelle('RULES-LAB_398');
-  MenuItemSupprimer.Visible := (TreeViewLivre.Selected <> nil) and (GetNodeType(TreeViewLivre.Selected) in [NT_RACE, NT_METIER_NIVEAU1, NT_COMPETENCE_N1, NT_SPECIALISATION_COMPETENCE, NT_TALENT_N1, NT_SPECIALISATION_TALENT, NT_ARME, NT_ARMURE, NT_QUALITE_ARME, NT_QUALITE_ARMURE, NT_SORT, NT_TRAPPING, NT_FABRICATION, NT_NATION, NT_CORRUPTION_PHYSIQUE, NT_CORRUPTION_MENTALE, NT_MALADIE, NT_AFFLICTION, NT_RACE_GROUPE, NT_CONDITION, NT_SIGNE_ASTRAL, NT_BONUS_CARRIERE, NT_ADAPTATION_CARRIERE]);
+  MenuItemSupprimer.Visible := (TreeViewLivre.Selected <> nil) and (GetNodeType(TreeViewLivre.Selected) in [NT_RACE, NT_METIER_NIVEAU1, NT_COMPETENCE_N1, NT_SPECIALISATION_COMPETENCE, NT_TALENT_N1, NT_SPECIALISATION_TALENT, NT_ARME, NT_ARMURE, NT_QUALITE_ARME, NT_QUALITE_ARMURE, NT_SORT, NT_TRAPPING, NT_FABRICATION, NT_NATION, NT_CORRUPTION_PHYSIQUE, NT_CORRUPTION_MENTALE, NT_MALADIE, NT_AFFLICTION, NT_RACE_GROUPE, NT_CONDITION, NT_SIGNE_ASTRAL, NT_BONUS_CARRIERE, NT_ADAPTATION_CARRIERE, NT_DIEU_V1, NT_CULTE_V1, NT_FAMILIER_V1, NT_CLASSE_V1, NT_HANDICAP_V1, NT_SORT_V1, NT_EQUIPEMENT_V1]);
   MenuItemSupprimer.Enabled := (XMLDoc <> nil) and CreationPermise;
+end;
+
+// Deplie / replie le noeud selectionne et tous ses descendants.
+procedure TWinLivres.MenuDeplierBrancheClick(Sender: TObject);
+begin
+  if TreeViewLivre.Selected = nil then Exit;
+  TreeViewLivre.BeginUpdate;
+  try
+    TreeViewLivre.Selected.Expand(True);
+  finally
+    TreeViewLivre.EndUpdate;
+  end;
+end;
+
+procedure TWinLivres.MenuReplierBrancheClick(Sender: TObject);
+begin
+  if TreeViewLivre.Selected = nil then Exit;
+  TreeViewLivre.BeginUpdate;
+  try
+    TreeViewLivre.Selected.Collapse(True);
+  finally
+    TreeViewLivre.EndUpdate;
+  end;
+end;
+
+// Ligne d'une table V1 : nouvelle (copie videe de la ligne choisie), copie ou suppression.
+// Les lignes sont reperees par leur rang : apres l'operation, les freres du noeud sont renumerotes.
+// Petite fenetre : le resultat d'une nouvelle ligne d'avancement de pretre (code lu par le moteur).
+function ChoisirResultatPretre(out Code: String): Boolean;
+const
+  Codes: array[0..4] of String = ('WRATH', 'UNWORTHY', 'TRIAL', 'NOT_READY', 'ADVANCE');
+var
+  F: TForm;
+  Liste: TComboBox;
+  Etiquette: TLabel;
+  Ok: TButton;
+  I: Integer;
+begin
+  Code := '';
+  F := TForm.CreateNew(nil);
+  try
+    F.BorderStyle := bsDialog;
+    F.Position := poScreenCenter;
+    F.Caption := 'Result';
+    F.ClientWidth := 380;
+    F.ClientHeight := 110;
+    Etiquette := TLabel.Create(F);
+    Etiquette.Parent := F;
+    Etiquette.SetBounds(12, 12, 356, 20);
+    Etiquette.Caption := 'Result';
+    Liste := TComboBox.Create(F);
+    Liste.Parent := F;
+    Liste.Style := csDropDownList;
+    Liste.SetBounds(12, 36, 356, 24);
+    for I := 0 to High(Codes) do
+      Liste.Items.Add(GetTexteLibelle('RULES-LAB_' + IntToStr(940 + I)));
+    Liste.ItemIndex := 4;
+    Ok := TButton.Create(F);
+    Ok.Parent := F;
+    Ok.SetBounds(12, 72, 100, 28);
+    Ok.Caption := 'OK';
+    Ok.ModalResult := mrOk;
+    Ok.Default := True;
+    Result := F.ShowModal = mrOk;
+    if Result then Code := Codes[Liste.ItemIndex];
+  finally
+    F.Free;
+  end;
+end;
+
+procedure TWinLivres.ModifierLigneTable(Operation: Integer);
+
+  procedure Vider(El: TDOMElement);
+  var
+    Fils: TDOMNode;
+  begin
+    Fils := El.FirstChild;
+    if not (Fils is TDOMElement) then
+    begin
+      while El.FirstChild <> nil do El.RemoveChild(El.FirstChild);
+      Exit;
+    end;
+    while Fils <> nil do
+    begin
+      if Fils is TDOMElement then Vider(TDOMElement(Fils));
+      Fils := Fils.NextSibling;
+    end;
+  end;
+
+var
+  Node, Pere, Suivant, NouveauNoeud: TTreeNode;
+  Code, Prefixe, ResultatPretre: String;
+  Ligne, Copie, Nouveau: TDOMElement;
+  Fils, Suivant2: TDOMNode;
+  I, P: Integer;
+begin
+  Node := TreeViewLivre.Selected;
+  if (Node = nil) or (XMLDoc = nil) or not CreationPermise then Exit;
+  // branche de lignes : la nouvelle ligne se range apres la derniere
+  if (Operation = 0) and (GetNodeType(Node) <> NT_LIGNE_TABLE_V1) and (Node.Count > 0) then
+    Node := Node.GetLastChild;
+  if GetNodeType(Node) <> NT_LIGNE_TABLE_V1 then Exit;
+  Code := GetNodeCode(Node);
+  Ligne := TrouverLigneTable(Code);
+  Pere := Node.Parent;
+  if (Ligne = nil) or (Pere = nil) then Exit;
+  if not ConfirmerAbandonModifs then Exit;
+  P := LastDelimiter('|', Code);
+  Prefixe := Copy(Code, 1, P);
+  if Operation = 2 then
+  begin
+    if MessageDlg(Format(GetTexteLibelle('RULES-LAB_399'), [Node.Text, 0]), mtConfirmation, [mbYes, mbNo], 0) <> mrYes then Exit;
+    MasquerForm();
+    Ligne.ParentNode.RemoveChild(Ligne);
+    Node.Delete;
+    NouveauNoeud := nil;
+  end
+  else
+  begin
+    // ligne d'avancement de pretre : le resultat se choisit avant la fiche, il decide des balises
+    ResultatPretre := '';
+    if (Operation = 0) and (Ligne.ParentNode.ParentNode <> nil) and
+       (Ligne.ParentNode.ParentNode.NodeName = ConstXmlDataPriestAdvanceV1) then
+      if not ChoisirResultatPretre(ResultatPretre) then Exit;
+    Copie := TDOMElement(Ligne.CloneNode(True));
+    if Operation = 0 then Vider(Copie);
+    if ResultatPretre <> '' then
+    begin
+      Fils := Copie.FirstChild;
+      while Fils <> nil do
+      begin
+        Suivant2 := Fils.NextSibling;
+        if (Fils is TDOMElement) and (Fils.NodeName <> 'Range') and (Fils.NodeName <> 'Explanation') then
+          Copie.RemoveChild(Fils);
+        Fils := Suivant2;
+      end;
+      Fils := Copie.FirstChild;
+      while (Fils <> nil) and (Fils.NodeName <> 'Explanation') do Fils := Fils.NextSibling;
+      Nouveau := XMLDoc.CreateElement('Result');
+      EcrireValeurXML(Nouveau, ResultatPretre);
+      Copie.InsertBefore(Nouveau, Fils);
+      if ResultatPretre = 'UNWORTHY' then
+        for I := 1 to 3 do
+        begin
+          Nouveau := XMLDoc.CreateElement('NewCareerClass');
+          EcrireValeurXML(Nouveau, '');
+          Copie.InsertBefore(Nouveau, Fils);
+        end;
+    end;
+    Ligne.ParentNode.InsertBefore(Copie, Ligne.NextSibling);
+    Suivant := Node.GetNextSibling;
+    if Suivant <> nil then
+      NouveauNoeud := TreeViewLivre.Items.Insert(Suivant, TexteLigneTable(Copie))
+    else
+      NouveauNoeud := TreeViewLivre.Items.AddChild(Pere, TexteLigneTable(Copie));
+  end;
+  for I := 0 to Pere.Count - 1 do
+    SetNodeInfo(Pere.Items[I], NT_LIGNE_TABLE_V1, Prefixe + IntToStr(I));
+  if NouveauNoeud <> nil then
+    TreeViewLivre.Selected := NouveauNoeud;
+end;
+
+procedure TWinLivres.MenuLigneNouvelleClick(Sender: TObject);
+begin
+  ModifierLigneTable(0);
+end;
+
+procedure TWinLivres.MenuLigneDupliquerClick(Sender: TObject);
+begin
+  ModifierLigneTable(1);
+end;
+
+procedure TWinLivres.MenuLigneSupprimerClick(Sender: TObject);
+begin
+  ModifierLigneTable(2);
 end;
 
 // Correction des donnees EXISTANTES : tout livre ouvert, officiel compris (errata). Creer et supprimer restent
@@ -3666,20 +4590,24 @@ begin
   NodeRace := TreeViewLivre.Items.AddChild(NodeRaces, RaceData.Libelle);
   SetNodeInfo(NodeRace, NT_RACE, Code);  // 1 = donnée
   
-  // ========== CHARGER LES ATTRIBUTS DE CETTE RACE ==========
-  LoadAttributesForRace(XMLElement, NodeRace, Code);
-  
-  // ========== CHARGER LES COMPÉTENCES DE CETTE RACE DANS L'ARBRE ==========
-  LoadSkillsForRaceTree(XMLElement, NodeRace, Code);
-  
-  // ========== CHARGER LES TALENTS DE CETTE RACE DANS L'ARBRE ==========
-  LoadTalentsForRaceTree(XMLElement, NodeRace, Code);
-  
-  // ========== CHARGER LES CARRIÈRES DE CETTE RACE DANS L'ARBRE ==========
-  LoadCareersForRaceTree(XMLElement, NodeRace, Code);
+  // V1 : une ethnie n'a aucune sous-branche, tout se lit et se modifie dans sa fiche
+  if not EstLivreV1 then
+  begin
+    // ========== CHARGER LES ATTRIBUTS DE CETTE RACE ==========
+    LoadAttributesForRace(XMLElement, NodeRace, Code);
 
-  // ========== CORRUPTION DE CETTE RACE (tranches de tirage) ==========
-  LoadCorruptionForRaceTree(NodeRace, Code);
+    // ========== CHARGER LES COMPÉTENCES DE CETTE RACE DANS L'ARBRE ==========
+    LoadSkillsForRaceTree(XMLElement, NodeRace, Code);
+
+    // ========== CHARGER LES TALENTS DE CETTE RACE DANS L'ARBRE ==========
+    LoadTalentsForRaceTree(XMLElement, NodeRace, Code);
+
+    // ========== CHARGER LES CARRIÈRES DE CETTE RACE DANS L'ARBRE ==========
+    LoadCareersForRaceTree(XMLElement, NodeRace, Code);
+
+    // ========== CORRUPTION DE CETTE RACE (tranches de tirage) ==========
+    LoadCorruptionForRaceTree(NodeRace, Code);
+  end;
   Result := NodeRace;
 end;
 
@@ -3695,8 +4623,29 @@ begin
   Result := TreeViewLivre.Items.AddChild(NodeCareers, Description);
   SetNodeInfo(Result, NT_METIER_NIVEAU1, Code);  // 14 = métier racine
   LoadMetierRacesPossibles(Code, Result);
-  SetNodeInfo(TreeViewLivre.Items.AddChild(Result, GetTexteLibelle('RULES-LAB_369')), 56, Code);  // 56 = niveaux (edition)
-  LoadMetierNiveaux(XMLElement, Code, Result);
+  // Carriere WFRP2 : metiers d'entree et de sortie, un tableau de cases par branche (pas de feuille par metier)
+  if XMLElement.FindNode('MainProfile') <> nil then
+    begin
+      SetNodeInfo(TreeViewLivre.Items.AddChild(Result, GetTexteLibelle('RULES-LAB_982', 'Characteristics')), NT_CARAC_CARRIERE, Code);
+      SetNodeInfo(TreeViewLivre.Items.AddChild(Result, GetTexteLibelle('RULES-LAB_009')), NT_COMPETENCES_CARRIERE, Code);
+      SetNodeInfo(TreeViewLivre.Items.AddChild(Result, GetTexteLibelle('RULES-LAB_007')), NT_TALENTS_CARRIERE, Code);
+      SetNodeInfo(TreeViewLivre.Items.AddChild(Result, GetTexteLibelle('RULES-LAB_013')), NT_EQUIPEMENT_CARRIERE, Code);
+      // ni entrees ni sorties en V2 non plus : liens du chapitre DATA_CAREER_LINK_V2
+    end;
+  // Carriere WFRP1 (schema d'avancement) : une branche par bloc, comme en WFRP2
+  if XMLElement.FindNode('AdvanceScheme') <> nil then
+    begin
+      SetNodeInfo(TreeViewLivre.Items.AddChild(Result, GetTexteLibelle('RULES-LAB_982', 'Characteristics')), NT_CARAC_CARRIERE, Code);
+      SetNodeInfo(TreeViewLivre.Items.AddChild(Result, GetTexteLibelle('RULES-LAB_009')), NT_COMPETENCES_CARRIERE, Code);
+      SetNodeInfo(TreeViewLivre.Items.AddChild(Result, GetTexteLibelle('RULES-LAB_013')), NT_EQUIPEMENT_CARRIERE, Code);
+      // ni entrees ni sorties en V1 : ce sont les liens du chapitre DATA_CAREER_LINK_V1 (WinMetier les lit dans les deux sens)
+    end;
+  // Carriere WFRP2 (profil texte, pas d'echelons) : ni noeud ni niveaux (CONTEXT.md 2.122)
+  if (XMLElement.FindNode('MainProfile') = nil) and (XMLElement.FindNode('AdvanceScheme') = nil) then
+    begin
+      SetNodeInfo(TreeViewLivre.Items.AddChild(Result, GetTexteLibelle('RULES-LAB_369')), 56, Code);  // 56 = niveaux (edition)
+      LoadMetierNiveaux(XMLElement, Code, Result);
+    end;
 end;
 
 // Les 8 classes du Rulebook, puis celles que d'autres carrieres du livre declarent, puis la classe actuelle.
@@ -3762,6 +4711,12 @@ begin
     RemplirCodesClasse(Codes, '');
     for I := 0 to Codes.Count - 1 do
       Combo.Items.Add(GetTexteLibelle(Codes[I]));
+    // V2 : une carriere n'a pas de classe (SCHEMA_WFRP2.xsd), le choix n'est pas propose
+    if EstLivreV2 then
+    begin
+      Lbl.Visible := False;
+      Combo.Visible := False;
+    end;
 
     BOk := NouveauBouton(F);
     BOk.Parent := F;
@@ -3780,13 +4735,13 @@ begin
 
     while F.ShowModal = mrOk do
     begin
-      if (Trim(EditNom.Text) = '') or (Combo.ItemIndex < 0) then
+      if (Trim(EditNom.Text) = '') or (not EstLivreV2 and (Combo.ItemIndex < 0)) then
       begin
         ShowMessage(GetTexteLibelle('RULES-LAB_386'));
         Continue;
       end;
       Lib := Trim(EditNom.Text);
-      Classe := Codes[Combo.ItemIndex];
+      if Combo.ItemIndex >= 0 then Classe := Codes[Combo.ItemIndex];
       Result := True;
       Break;
     end;
@@ -3796,36 +4751,39 @@ begin
   end;
 end;
 
-// Code libre "<CODE_BOOK>-WORKnn" : un cran au-dessus du plus grand numero deja utilise par le livre.
-function TWinLivres.CodeNouvelleCarriere: String;
+// Code a nom "<CODE_BOOK>-WORK_NOM" (libelle en majuscules, ponctuation -> _) ; un chiffre en suffixe
+// departage deux carrieres de meme nom dans le livre.
+function TWinLivres.CodeNouvelleCarriere(const Lib: String): String;
 var
   Livre: TDOMNode;
-  Elements: TDOMNodeList;
-  Prefixe, Id: String;
-  I, N, Max: Integer;
+  Prefixe, Mot: String;
+  I, N: Integer;
 begin
   Livre := XMLDoc.GetElementsByTagName('DATA_BOOK').Item[0];
-  Prefixe := ValeurXML(Livre.FindNode('CODE_BOOK')) + '-WORK';
-  Max := 0;
-  Elements := XMLDoc.GetElementsByTagName('Career');
-  for I := 0 to Elements.Count - 1 do
+  Prefixe := ValeurXML(Livre.FindNode('CODE_BOOK')) + '-WORK_';
+  Mot := '';
+  for I := 1 to Length(Lib) do
+    if UpCase(Lib[I]) in ['A'..'Z', '0'..'9'] then
+      Mot := Mot + UpCase(Lib[I])
+    else if (Mot <> '') and (Mot[Length(Mot)] <> '_') then
+      Mot := Mot + '_';
+  while (Mot <> '') and (Mot[Length(Mot)] = '_') do
+    Delete(Mot, Length(Mot), 1);
+  if Mot = '' then Mot := 'NEW';
+  N := 1;
+  Result := Prefixe + Mot;
+  while TrouverCareerElement(Result) <> nil do
   begin
-    Id := TDOMElement(Elements.Item[I]).GetAttribute('id');
-    if (Pos(Prefixe, Id) = 1) and (StrToIntDef(Copy(Id, Length(Prefixe) + 1, 10), 0) > Max) then
-      Max := StrToInt(Copy(Id, Length(Prefixe) + 1, 10));
-  end;
-  N := Max + 1;
-  repeat
-    Result := Prefixe + Format('%.2d', [N]);
     Inc(N);
-  until TrouverCareerElement(Result) = nil;
+    Result := Prefixe + Mot + IntToStr(N);
+  end;
 end;
 
 // Cree le squelette d'une carriere en memoire (XMLDoc), l'ajoute a l'arbre et la selectionne ;
 // les ecrans d'edition existants la completent. Rien n'est ecrit sur disque ici.
 procedure TWinLivres.CreerCarriere;
 var
-  Lib, Classe, Code, Langue: String;
+  Lib, Classe, Code, Langue, NomChapitre: String;
   Livre, Chapitre: TDOMNode;
   Carriere, Niveau: TDOMElement;
   NodeCareers, NodeNouveau: TTreeNode;
@@ -3851,28 +4809,66 @@ begin
   Livre := XMLDoc.GetElementsByTagName('DATA_BOOK').Item[0];
   Langue := ValeurXML(Livre.FindNode('language'));
   if Langue = '' then Langue := 'ENGLISH';
-  Code := CodeNouvelleCarriere;
+  Code := CodeNouvelleCarriere(Lib);
 
-  Chapitre := XMLDoc.GetElementsByTagName('DATA_CAREER').Item[0];
+  // V1 : SCHEMA_WFRP1.xsd ne connait que DATA_CAREER_V1
+  if EstLivreV1 then NomChapitre := 'DATA_CAREER_V1' else NomChapitre := 'DATA_CAREER';
+  Chapitre := XMLDoc.GetElementsByTagName(NomChapitre).Item[0];
   if Chapitre = nil then
-    Chapitre := Ajouter(TDOMElement(Livre), 'DATA_CAREER');
+    Chapitre := Ajouter(TDOMElement(Livre), NomChapitre);
 
   Carriere := Ajouter(TDOMElement(Chapitre), 'Career');
   Carriere.SetAttribute('id', Code);
   Ajouter(Carriere, 'Description', Lib, True, True);
   Ajouter(Carriere, 'Explanation', '', True, True);
+  if EstLivreV2 then
+  begin
+    // V2 : profils en texte, listes en texte et en codes, pas de niveaux ni de classe (SCHEMA_WFRP2.xsd) ;
+    // Advances est facultatif et vide interdit : la fiche l'ecrit des qu'une ligne est saisie
+    Ajouter(Carriere, 'MainProfile', '-', True);
+    Ajouter(Carriere, 'SecondaryProfile', '-', True);
+    Ajouter(Carriere, 'Skills', '', True);
+    Ajouter(Carriere, 'Talents', '', True);
+    Ajouter(Carriere, 'Trappings', '', True);
+    Ajouter(Carriere, 'SUBCHAPTER_ITEM');
+    Ajouter(Carriere, 'SUBCHAPTER_SKILL');
+    Ajouter(Carriere, 'SUBCHAPTER_TALENT');
+    Ajouter(Carriere, 'Entries', '', True);
+    Ajouter(Carriere, 'Exits', '', True);
+    Ajouter(Carriere, 'Page', '', True);
+  end
+  else
+  begin
   Ajouter(Carriere, 'Class', Classe, True);
-  Niveau := Ajouter(Ajouter(Carriere, 'SUBCHAPTER_LEVEL'), 'Level');
-  Niveau.SetAttribute('id', '1');
-  Ajouter(Niveau, 'Description', Lib, True, True);
-  Ajouter(Niveau, 'Salary', 'TIERS_BRASS 1', True);
-  // les dix caracteristiques a 0 (jamais de niveau) : l'ecran d'edition ne reecrit que les lignes existantes
-  Chapitre := Ajouter(Carriere, 'SUBCHAPTER_ATTR');
-  for I := 0 to High(AttributsCarriere) do
-    Ajouter(TDOMElement(Chapitre), 'Attribut', '0', True).SetAttribute('name', 'RULES-ATTR_' + AttributsCarriere[I]);
-  Ajouter(Carriere, 'SUBCHAPTER_SKILL');
-  Ajouter(Carriere, 'SUBCHAPTER_TALENT');
-  Ajouter(Carriere, 'SUBCHAPTER_ITEM');
+  if SameText(ValeurXML(Livre.FindNode(ConstXmlVersionLivre)), 'WFRP1') then
+  begin
+    // V1 : une carriere = un echelon, schema d'avancement et competences (comme « Alchemist, level 1 »)
+    Ajouter(Carriere, 'Level', '1', True);
+    Ajouter(Carriere, 'EntryCost', '', True);
+    Ajouter(Carriere, 'AdvanceScheme');
+    Ajouter(Carriere, 'Skills', '', True);
+    Ajouter(Carriere, 'SUBCHAPTER_SKILL');
+    Ajouter(Carriere, 'Trappings', '', True);
+    // pas de <Exits> en V1 (SCHEMA_WFRP1.xsd) : les liens sont dans DATA_CAREER_LINK_V1
+    Ajouter(Carriere, 'Page', '', True);
+  end
+  else
+  begin
+    Niveau := Ajouter(Ajouter(Carriere, 'SUBCHAPTER_LEVEL'), 'Level');
+    Niveau.SetAttribute('id', '1');
+    Ajouter(Niveau, 'Description', Lib, True, True);
+    Ajouter(Niveau, 'Salary', 'TIERS_BRASS 1', True);
+    // les dix caracteristiques a 0 (jamais de niveau) : l'ecran d'edition ne reecrit que les lignes existantes
+    Chapitre := Ajouter(Carriere, 'SUBCHAPTER_ATTR');
+    for I := 0 to High(AttributsCarriere) do
+      Ajouter(TDOMElement(Chapitre), 'Attribut', '0', True).SetAttribute('name', 'RULES-ATTR_' + AttributsCarriere[I]);
+    Ajouter(Carriere, 'SUBCHAPTER_SKILL');
+    Ajouter(Carriere, 'SUBCHAPTER_TALENT');
+    Ajouter(Carriere, 'SUBCHAPTER_ITEM');
+    // comme les 191 carrieres du Rulebook V4 : numero de page, vide a la creation
+    Ajouter(Carriere, 'Page', '', True);
+  end;
+  end;
 
   NodeNouveau := AjouterNoeudCarriere(NodeCareers, Carriere);
   NodeCareers.AlphaSort;
@@ -4004,6 +5000,8 @@ var
   Ethnie: TDOMElement;
   NodeRaces, NodeNouveau: TTreeNode;
   I: Integer;
+  Version: String;
+  Codes, Valeurs: TStringList;
 
   function Ajouter(Parent: TDOMElement; const Nom: String; const Valeur: String = '';
     AvecValeur: Boolean = False; AvecLangue: Boolean = False): TDOMElement;
@@ -4014,6 +5012,12 @@ var
     Parent.AppendChild(Result);
     if AvecValeur then
       EcrireValeurXML(Result, Valeur);
+  end;
+
+  procedure AjouterAttr(const Code, Valeur: String);
+  begin
+    Codes.Add(Code);
+    Valeurs.Add(Valeur);
   end;
 
 begin
@@ -4036,13 +5040,53 @@ begin
   Ajouter(Ethnie, 'Description', Lib, True, True);
   Ajouter(Ethnie, 'Explanation', '', True, True);
   Ajouter(Ethnie, 'Ethnic', Espece, True);
-  // les quinze attributs a des valeurs neutres : l'ecran d'edition ne reecrit que les lignes existantes
-  Chapitre := Ajouter(Ethnie, 'SUBCHAPTER_ATTR');
-  for I := 0 to High(CodesAttr) do
-    Ajouter(TDOMElement(Chapitre), 'Attribut', ValeursAttr[I], True).SetAttribute('name', 'RULES-ATTR_' + CodesAttr[I]);
+  Version := UpperCase(ValeurXML(Livre.FindNode(ConstXmlVersionLivre)));
+  // les attributs a des valeurs neutres, avec les codes de la version du livre :
+  // l'ecran d'edition ne reecrit que les lignes existantes
+  Codes := TStringList.Create;
+  Valeurs := TStringList.Create;
+  try
+    if Version = 'WFRP1' then
+    begin
+      // V1 : Rule / Wounds / FatePoints au niveau de l'ethnie, 14 caracteristiques a codes V1
+      Ajouter(Ethnie, 'Rule', '', True);
+      Ajouter(Ethnie, 'Wounds', '1d3+4', True);
+      Ajouter(Ethnie, 'FatePoints', '1d3+1', True);
+      AjouterAttr('M', '4'); AjouterAttr('WS', '2d10+20'); AjouterAttr('BS', '2d10+20');
+      AjouterAttr('S', '1d3+1'); AjouterAttr('T', '1d3+1'); AjouterAttr('W', '1d3+4');
+      AjouterAttr('I', '2d10+20'); AjouterAttr('A', '1'); AjouterAttr('Dex', '2d10+20');
+      AjouterAttr('Ld', '2d10+20'); AjouterAttr('Int', '2d10+20'); AjouterAttr('Cl', '2d10+20');
+      AjouterAttr('WP', '2d10+20'); AjouterAttr('Fel', '2d10+20');
+    end
+    else if Version = 'WFRP2' then
+    begin
+      // V2 : W et FP = tables de d10 par plage
+      AjouterAttr('WS', '2d10+20'); AjouterAttr('BS', '2d10+20'); AjouterAttr('S', '2d10+20');
+      AjouterAttr('T', '2d10+20'); AjouterAttr('Ag', '2d10+20'); AjouterAttr('Int', '2d10+20');
+      AjouterAttr('WP', '2d10+20'); AjouterAttr('Fel', '2d10+20'); AjouterAttr('A', '1');
+      AjouterAttr('M', '4'); AjouterAttr('Mag', '0'); AjouterAttr('IP', '0');
+      AjouterAttr('W', '1-3: 11; 4-6: 12; 7-9: 13; 10: 14');
+      AjouterAttr('FP', '1-4: 1; 5-7: 2; 8-10: 3');
+    end
+    else
+      for I := 0 to High(CodesAttr) do
+        AjouterAttr(CodesAttr[I], ValeursAttr[I]);
+    Chapitre := Ajouter(Ethnie, 'SUBCHAPTER_ATTR');
+    for I := 0 to Codes.Count - 1 do
+      Ajouter(TDOMElement(Chapitre), 'Attribut', Valeurs[I], True).SetAttribute('name', 'RULES-ATTR_' + Codes[I]);
+  finally
+    Codes.Free;
+    Valeurs.Free;
+  end;
   Ajouter(Ethnie, 'SUBCHAPTER_SKILL');
-  Ajouter(Ethnie, 'SUBCHAPTER_TALENT');
-  Ajouter(Ethnie, 'SUBCHAPTER_CAREER');
+  // V1 : ni talents ni metiers par ethnie (les carrieres viennent des tirages de carriere)
+  if Version <> 'WFRP1' then
+  begin
+    Ajouter(Ethnie, 'SUBCHAPTER_TALENT');
+    Ajouter(Ethnie, 'SUBCHAPTER_CAREER');
+  end;
+  // Page : derniere balise de la sequence du schema
+  Ajouter(Ethnie, 'Page', '', True);
 
   NodeNouveau := AjouterNoeudEthnie(NodeRaces, Ethnie);
   NodeRaces.AlphaSort;
@@ -4083,10 +5127,16 @@ begin
   MasquerForm();
   Race := TrouverElementParId('Race', ACode);
   if Race = nil then Exit;
+  if FicheGeneriqueV1Possible(Race) then
+  begin
+    AfficherFicheGeneriqueV1(Race, 'Race', NT_RACE_GROUPE, ACode);
+    Exit;
+  end;
   FicheTag := 'Race';
   FicheTypeNoeud := NT_RACE_GROUPE;
   PanelFiche.Definir([
-    ChampFiche('Description', 'RULES-LAB_002', gfTexte, True, True)]);
+    ChampFiche('Description', 'RULES-LAB_002', gfTexte, True, True),
+    ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False)]);
   PanelFiche.MasquerGrille;  // un groupe de races ne porte aucun modificateur
   CodesRaces := TStringList.Create;
   LibRaces := TStringList.Create;
@@ -4258,6 +5308,7 @@ begin
   else
   begin
     NomTag := 'Skill'; Chap := 'DATA_SKILL'; TypeFeuille := 26;
+    if EstLivreV1 then begin Chap := 'DATA_SKILL_V1'; TypeFeuille := NT_COMPETENCE_V1; end;
     Branche := NoeudBrancheSimple(TreeViewLivre.Selected, 'RULES-LAB_009', 26);
   end;
   if Branche = nil then Exit;
@@ -4274,7 +5325,7 @@ begin
     F.Position := poOwnerFormCenter;
     F.BorderStyle := bsDialog;
     F.ClientWidth := 380;
-    if EstTalent then F.ClientHeight := 120 else F.ClientHeight := 170;
+    if EstTalent or EstLivreV1 then F.ClientHeight := 120 else F.ClientHeight := 170;
     Lbl := TLabelContour.Create(F);
     Lbl.Parent := F;
     Lbl.SetBounds(12, 12, 356, 18);
@@ -4299,6 +5350,14 @@ begin
       CaseSpec.Parent := F;
       CaseSpec.SetBounds(12, 112, 356, 20);
       CaseSpec.Caption := GetTexteLibelle('RULES-LAB_407');
+      // V1 : une competence n'a pas de caracteristique de base (SCHEMA_WFRP1.xsd)
+      if EstLivreV1 then
+      begin
+        Lbl.Visible := False;
+        Combo.Visible := False;
+        Combo.ItemIndex := 0;
+        CaseSpec.Top := 62;
+      end;
     end;
     if EstTalent then
     begin
@@ -4356,21 +5415,28 @@ begin
   end
   else
   begin
+    // nom de la competence en majuscules, mots separes par '_' (RULES-COMP_SLEIGHT_OF_HAND)
     Mot := '';
     for I := 1 to Length(Lib) do
-      if (UpCase(Lib[I]) in ['A'..'Z']) and (Length(Mot) < 5) then
-        Mot := Mot + UpCase(Lib[I]);
+      if UpCase(Lib[I]) in ['A'..'Z', '0'..'9'] then
+        Mot := Mot + UpCase(Lib[I])
+      else if (Mot <> '') and (Mot[Length(Mot)] <> '_') then
+        Mot := Mot + '_';
+    Mot := Trim(Mot);
+    while (Mot <> '') and (Mot[Length(Mot)] = '_') do
+      Delete(Mot, Length(Mot), 1);
     if Mot = '' then Mot := 'NEW';
-    // avec specialites : code en "_*" et libelle "(Any)", comme "Art (Any)" du Rulebook
-    if AvecSpec then Suffixe := ValeurSousCompetence + '*' else Suffixe := '';
-    Code := Prefixe + '-COMP' + Mot + Suffixe;
+    // avec specialites : code en "__*" et libelle "(Any)", comme "Art (Any)" du Rulebook
+    // V1 : la competence a variantes porte <Variants>, son code reste sans « __* » et son libelle sans « (Any) »
+    if AvecSpec and not EstLivreV1 then Suffixe := ValeurGeneriqueTalent else Suffixe := '';
+    Code := Prefixe + '-COMP_' + Mot + Suffixe;
     N := 1;
     while Existe(Code) do
     begin
       Inc(N);
-      Code := Prefixe + '-COMP' + Mot + IntToStr(N) + Suffixe;
+      Code := Prefixe + '-COMP_' + Mot + IntToStr(N) + Suffixe;
     end;
-    if AvecSpec then Lib := Lib + ' (Any)';
+    if AvecSpec and not EstLivreV1 then Lib := Lib + ' (Any)';
   end;
 
   Chapitre := XMLDoc.GetElementsByTagName(Chap).Item[0];
@@ -4382,9 +5448,15 @@ begin
   Elem := XMLDoc.CreateElement(NomTag);
   Elem.SetAttribute('id', Code);
   Chapitre.AppendChild(Elem);
-  if not EstTalent then Ajouter(Elem, 'Attribut', Attr, False);
+  if not EstTalent and not EstLivreV1 then Ajouter(Elem, 'Attribut', Attr, False);
   Ajouter(Elem, 'Description', Lib, True);
-  if EstTalent then
+  if EstTalent and EstLivreV2 then
+  begin
+    // talent V2 : seulement Description / Explanation / Page (Short, Max, PDF et Test sont propres a la V4)
+    Ajouter(Elem, 'Explanation', '', True);
+    Ajouter(Elem, 'Page', '', True);
+  end
+  else if EstTalent then
   begin
     Ajouter(Elem, 'Short', '', True);
     Ajouter(Elem, 'Explanation', '', True);
@@ -4393,13 +5465,173 @@ begin
     Ajouter(Elem, 'Test', '', True);
   end
   else
+  begin
     Ajouter(Elem, 'Explanation', '', True);
+    if AvecSpec and EstLivreV1 then Ajouter(Elem, 'Variants', '1', False);
+    // competence V2 : RelatedTalents et Page (SkillV2Type)
+    if EstLivreV2 then
+    begin
+      Ajouter(Elem, 'RelatedTalents', '', True);
+      Ajouter(Elem, 'Page', '', True);
+    end;
+  end;
 
   Noeud := TreeViewLivre.Items.AddChild(Branche, Lib);
   SetNodeInfo(Noeud, TypeFeuille, Code);
   Branche.AlphaSort;
   Branche.Expand(False);
   TreeViewLivre.Selected := Noeud;
+end;
+
+// Cree un element V1 simple (divinite, culte, familier) : nom saisi, id "<livre>-<Infixe>_<NOM>", puis les balises
+// obligatoires de SCHEMA_WFRP1.xsd laissees vides (a completer dans la fiche).
+// Noeud de groupe (liste d'un sort, categorie d'un objet) V1 : le noeud lui-meme s'il porte des feuilles du type,
+// ou le parent d'une de ces feuilles ; nil sinon.
+function TWinLivres.NoeudGroupeV1(Node: TTreeNode; TypeFeuille: Integer): TTreeNode;
+begin
+  Result := nil;
+  if Node = nil then Exit;
+  if GetNodeType(Node) = TypeFeuille then
+    Node := Node.Parent;
+  if (Node <> nil) and (GetNodeType(Node) = NT_CHAPITRE) and (Node.Count > 0) and
+     (GetNodeType(Node.GetFirstChild) = TypeFeuille) then
+    Result := Node;
+end;
+
+procedure TWinLivres.CreerElementV1(Chap, NomTag, Infixe, ChampNom, CodeLibBranche, CodeLibTitre: String;
+  TypeFeuille: Integer; const AutresChamps: array of String; GroupeNoeud: TTreeNode);
+var
+  Lib, Mot, Prefixe, Code, Langue, Attr, Valeur: String;
+  Livre, Chapitre: TDOMNode;
+  Elem, E: TDOMElement;
+  I, N, P: Integer;
+  AvecLangue: Boolean;
+  Branche, Noeud: TTreeNode;
+begin
+  if (XMLDoc = nil) or not CreationPermise then Exit;
+  if GroupeNoeud <> nil then
+    Branche := GroupeNoeud
+  else
+    Branche := NoeudBrancheSimple(TreeViewLivre.Selected, CodeLibBranche, TypeFeuille);
+  if Branche = nil then Exit;
+  if not ConfirmerAbandonModifs then Exit;
+  Lib := '';
+  if not InputQuery(GetTexteLibelle(CodeLibTitre), GetTexteLibelle('RULES-LAB_403'), Lib) then Exit;
+  Lib := Trim(Lib);
+  if Lib = '' then
+  begin
+    ShowMessage(GetTexteLibelle('RULES-LAB_404'));
+    Exit;
+  end;
+  Livre := XMLDoc.GetElementsByTagName('DATA_BOOK').Item[0];
+  Langue := ValeurXML(Livre.FindNode('language'));
+  if Langue = '' then Langue := 'ENGLISH';
+  Prefixe := ValeurXML(Livre.FindNode('CODE_BOOK'));
+  // nom en majuscules, mots separes par '_' (RULES-DEITY_THE_OLD_FAITH)
+  Mot := '';
+  for I := 1 to Length(Lib) do
+    if UpCase(Lib[I]) in ['A'..'Z', '0'..'9'] then
+      Mot := Mot + UpCase(Lib[I])
+    else if (Mot <> '') and (Mot[Length(Mot)] <> '_') then
+      Mot := Mot + '_';
+  while (Mot <> '') and (Mot[Length(Mot)] = '_') do
+    Delete(Mot, Length(Mot), 1);
+  if Mot = '' then Mot := 'NEW';
+  Code := Prefixe + '-' + Infixe + '_' + Mot;
+  N := 1;
+  while TrouverElementParId(NomTag, Code) <> nil do
+  begin
+    Inc(N);
+    Code := Prefixe + '-' + Infixe + '_' + Mot + IntToStr(N);
+  end;
+  Chapitre := XMLDoc.GetElementsByTagName(Chap).Item[0];
+  if Chapitre = nil then
+  begin
+    Chapitre := XMLDoc.CreateElement(Chap);
+    Livre.AppendChild(Chapitre);
+  end;
+  Elem := XMLDoc.CreateElement(NomTag);
+  Elem.SetAttribute('id', Code);
+  Chapitre.AppendChild(Elem);
+  E := XMLDoc.CreateElement(ChampNom);
+  E.SetAttribute('language', Langue);
+  Elem.AppendChild(E);
+  EcrireValeurXML(E, Lib);
+  // "*Balise" = texte a langue (LangString) ; "Balise@name=valeur" = balise a attribut name
+  for I := Low(AutresChamps) to High(AutresChamps) do
+  begin
+    Mot := AutresChamps[I];
+    Attr := '';
+    P := Pos('@name=', Mot);
+    if P > 0 then
+    begin
+      Attr := Copy(Mot, P + 6, MaxInt);
+      Mot := Copy(Mot, 1, P - 1);
+    end;
+    AvecLangue := (Mot <> '') and (Mot[1] = '*');
+    if AvecLangue then Delete(Mot, 1, 1);
+    // "Balise=#G" : la valeur est celle du groupe (liste du sort, categorie de l'objet)
+    Valeur := '';
+    if (GroupeNoeud <> nil) and (Length(Mot) > 3) and (Copy(Mot, Length(Mot) - 2, 3) = '=#G') then
+    begin
+      Mot := Copy(Mot, 1, Length(Mot) - 3);
+      Valeur := GroupeNoeud.Text;
+    end;
+    E := XMLDoc.CreateElement(Mot);
+    if AvecLangue then E.SetAttribute('language', Langue);
+    if Attr <> '' then E.SetAttribute('name', Attr);
+    Elem.AppendChild(E);
+    EcrireValeurXML(E, Valeur);
+  end;
+  Noeud := TreeViewLivre.Items.AddChild(Branche, Lib);
+  SetNodeInfo(Noeud, TypeFeuille, Code);
+  Branche.AlphaSort;
+  Branche.Expand(False);
+  TreeViewLivre.Selected := Noeud;
+end;
+
+procedure TWinLivres.MenuNouvelleDiviniteClick(Sender: TObject);
+begin
+  CreerElementV1('DATA_DEITY_V1', 'Deity', 'DEITY', 'Description', 'RULES-LAB_869', 'RULES-LAB_932', NT_DIEU_V1, ['Alignment']);
+end;
+
+procedure TWinLivres.MenuNouveauCulteClick(Sender: TObject);
+begin
+  CreerElementV1('DATA_CULT_V1', 'Cult', 'CULT', 'Description', 'RULES-LAB_870', 'RULES-LAB_933', NT_CULTE_V1, []);
+end;
+
+procedure TWinLivres.MenuNouveauSortV1Click(Sender: TObject);
+begin
+  // le sort va dans la liste choisie (noeud de liste, ou sort de cette liste)
+  CreerElementV1('DATA_SPELL_V1', 'SpellV1', 'SPELL', 'Description', '', 'RULES-LAB_937', NT_SORT_V1,
+    ['*Explanation', 'SpellList=#G', 'SpellLevel', 'MagicPoints', 'Range', 'Duration', 'Ingredients'],
+    NoeudGroupeV1(TreeViewLivre.Selected, NT_SORT_V1));
+end;
+
+procedure TWinLivres.MenuNouvelObjetV1Click(Sender: TObject);
+begin
+  // la fiche propose tous les champs du schema : seule la categorie est creee ici
+  CreerElementV1('DATA_EQUIPMENT_V1', 'EquipmentV1', 'EQUIP', 'Description', '', 'RULES-LAB_938', NT_EQUIPEMENT_V1,
+    ['Category=#G'], NoeudGroupeV1(TreeViewLivre.Selected, NT_EQUIPEMENT_V1));
+end;
+
+procedure TWinLivres.MenuNouvelleClasseClick(Sender: TObject);
+begin
+  // au moins une exigence de caracteristique (Requirement), a regler ensuite dans le XML
+  CreerElementV1('DATA_CLASS_V1', 'Class', 'CLASS', 'Description', 'RULES-LAB_880', 'RULES-LAB_935', NT_CLASSE_V1,
+    ['*Explanation', 'Requirement@name=RULES-ATTR_WS', 'Trappings', 'Money']);
+end;
+
+procedure TWinLivres.MenuNouveauHandicapClick(Sender: TObject);
+begin
+  CreerElementV1('DATA_DISABILITY_V1', 'Disability', 'DISABILITY', 'Description', 'RULES-LAB_842', 'RULES-LAB_936', NT_HANDICAP_V1,
+    ['*Explanation']);
+end;
+
+procedure TWinLivres.MenuNouveauFamilierClick(Sender: TObject);
+begin
+  CreerElementV1('DATA_FAMILIAR_V1', 'Familiar', 'FAMILIAR', 'Animal', 'RULES-LAB_871', 'RULES-LAB_934', NT_FAMILIER_V1,
+    ['Range', 'Skill1', 'Skill2', 'Armour', 'Shield', 'TimesPlaces', 'Diet']);
 end;
 
 // Rulebook de l'edition du livre ouvert (meme dossier), lu une fois : sert aux listes de choix
@@ -4410,6 +5642,16 @@ var
   Textes: TDOMNodeList;
   I: Integer;
 begin
+  // un livre d'une autre edition (autre dossier) a ete ouvert : les Rulebooks gardes ne sont plus les bons
+  if RulebookDossier <> ExtractFilePath(CurrentFilePath) then
+  begin
+    RulebookDossier := ExtractFilePath(CurrentFilePath);
+    RulebookDoc.Free;
+    RulebookDoc := nil;
+    RulebookBaseDoc.Free;
+    RulebookBaseDoc := nil;
+    RulebookEssaye := False;
+  end;
   // la langue des livres peut changer en cours de session : le Rulebook suit
   if RulebookEssaye and (RulebookLangue <> ValLangue) then
   begin
@@ -4437,6 +5679,27 @@ begin
     end;
   end;
   Result := RulebookDoc;
+end;
+
+// Le Rulebook anglais complet, lu une fois : en langue de livres non anglaise RulebookXML est le fichier de langue,
+// qui n'a ni TypSpell (benedictions) ni lignes de DATA_SPELL_TALENT.
+function TWinLivres.RulebookBaseXML: TXMLDocument;
+var
+  Fichier: String;
+begin
+  if ValLangue = ConstAnglais then Exit(RulebookXML);
+  RulebookXML;  // verifie le dossier et vide les deux caches si le livre ouvert a change d'edition
+  if RulebookBaseDoc = nil then
+  begin
+    Fichier := ExtractFilePath(CurrentFilePath) + 'BOOK_RULESBOOK.Xml';
+    if FileExists(Fichier) then
+    try
+      ReadXMLFile(RulebookBaseDoc, Fichier);
+    except
+      RulebookBaseDoc := nil;
+    end;
+  end;
+  Result := RulebookBaseDoc;
 end;
 
 // Libelle d'un code a afficher : celui du Rulebook dans la langue des livres s'il existe,
@@ -4473,13 +5736,11 @@ procedure TWinLivres.RemplirGroupesArmes(Tri: TStringList);
 
   procedure Proposer(const CodeSkill, Libelle: String);
   var
-    P, K: Integer;
+    K: Integer;
   begin
     for K := 0 to Tri.Count - 1 do  // un code deja propose garde son premier libelle
       if Copy(Tri[K], Pos(#1, Tri[K]) + 1, Length(Tri[K])) = CodeSkill then Exit;
-    P := Pos('-COMP', CodeSkill);
-    if P = 0 then Exit;
-    if (Pos('COMB_', CodeSkill) <= P) and (Pos('PROJ_', CodeSkill) <= P) then Exit;
+    if (Pos('-COMP_MELEE__', CodeSkill) = 0) and (Pos('-COMP_RANGED__', CodeSkill) = 0) then Exit;
     if Copy(CodeSkill, Length(CodeSkill), 1) = '*' then Exit;
     if Pos('/', CodeSkill) > 0 then Exit;
     Tri.Add(Libelle + #1 + CodeSkill);
@@ -4614,11 +5875,11 @@ const
     'RULES-ARMOT_MAIL', 'RULES-ARMOT_PLATE', 'RULES-ARMOT_SOFTKITS', 'RULES-ARMOT_BRIGANDINE');
   EmplacementsArmure: array[0..3] of String = ('RULES-ARMOL_HEAD', 'RULES-ARMOL_BODY', 'RULES-ARMOL_ARM', 'RULES-ARMOL_LEG');
 
-// Cree une armure : nom seul ; le code suit la convention des livres <LIVRE>-ARMO_NN. Squelette : corps, 1 point,
+// Cree une armure : nom seul ; le code suit la convention des livres <LIVRE>-ARMO_NOM. Squelette : corps, 1 point,
 // premier materiau de l'edition, Common ; le reste se saisit ensuite dans la fiche.
 procedure TWinLivres.CreerArmure;
 var
-  Lib, Code, Prefixe, Langue, Materiau: String;
+  Lib, Code, Prefixe, Langue, Materiau, Mot: String;
   Livre, Chapitre: TDOMNode;
   Elem: TDOMElement;
   I, N: Integer;
@@ -4695,11 +5956,23 @@ begin
   Langue := ValeurXML(Livre.FindNode('language'));
   if Langue = '' then Langue := 'ENGLISH';
   Prefixe := ValeurXML(Livre.FindNode('CODE_BOOK'));
+  // nom de l'armure en majuscules, mots separes par '_' (RULES-ARMO_LEATHER_SKULLCAP)
+  Mot := '';
+  for I := 1 to Length(Lib) do
+    if UpCase(Lib[I]) in ['A'..'Z', '0'..'9'] then
+      Mot := Mot + UpCase(Lib[I])
+    else if (Mot <> '') and (Mot[Length(Mot)] <> '_') then
+      Mot := Mot + '_';
+  while (Mot <> '') and (Mot[Length(Mot)] = '_') do
+    Delete(Mot, Length(Mot), 1);
+  if Mot = '' then Mot := 'NEW';
+  Code := Prefixe + '-ARMO_' + Mot;
   N := 1;
-  repeat
-    Code := Prefixe + '-ARMO_' + Format('%.2d', [N]);
+  while TrouverElementParId('Armor', Code) <> nil do
+  begin
     Inc(N);
-  until TrouverElementParId('Armor', Code) = nil;
+    Code := Prefixe + '-ARMO_' + Mot + IntToStr(N);
+  end;
   Materiau := '';
   for I := Low(MateriauxArmure) to High(MateriauxArmure) do
     if GetTexteLibelle(MateriauxArmure[I]) <> MateriauxArmure[I] then
@@ -4748,7 +6021,23 @@ begin
     Result := Node;
 end;
 
-// Cree un sort : nom + type (balise <TypSpell>, valeur en anglais comme dans les livres). Code <LIVRE>-SPELL_NN.
+// Nom en majuscules pour un code a nom : lettres et chiffres, le reste devient un seul '_' (Dazzle -> DAZZLE).
+function NomEnMajuscules(const Lib: String): String;
+var
+  I: Integer;
+begin
+  Result := '';
+  for I := 1 to Length(Lib) do
+    if UpCase(Lib[I]) in ['A'..'Z', '0'..'9'] then
+      Result := Result + UpCase(Lib[I])
+    else if (Result <> '') and (Result[Length(Result)] <> '_') then
+      Result := Result + '_';
+  while (Result <> '') and (Result[Length(Result)] = '_') do
+    Delete(Result, Length(Result), 1);
+  if Result = '' then Result := 'NEW';
+end;
+
+// Cree un sort : nom + type (balise <TypSpell>, valeur en anglais comme dans les livres). Code <LIVRE>-SPELL_NOM.
 // Squelette : cible 1, duree Instantane, portee Contact, niveau 0 ; le reste se saisit ensuite.
 procedure TWinLivres.CreerSort;
 var
@@ -4842,10 +6131,12 @@ begin
   if Langue = '' then Langue := 'ENGLISH';
   Prefixe := ValeurXML(Livre.FindNode('CODE_BOOK'));
   N := 1;
-  repeat
-    Code := Prefixe + '-SPELL_' + Format('%.2d', [N]);
+  Code := Prefixe + '-SPELL_' + NomEnMajuscules(Lib);
+  while TrouverElementParId('Sort', Code) <> nil do
+  begin
     Inc(N);
-  until TrouverElementParId('Sort', Code) = nil;
+    Code := Prefixe + '-SPELL_' + NomEnMajuscules(Lib) + '_' + IntToStr(N);
+  end;
 
   Chapitre := XMLDoc.GetElementsByTagName('DATA_SPELL').Item[0];
   if Chapitre = nil then
@@ -4907,13 +6198,14 @@ begin
   end;
 end;
 
-// Cree une qualite d'arme (<LIVRE>-WEAPBNN) ou d'armure (<LIVRE>-ARMOB_NN) : nom seul, le reste se saisit ensuite.
+// Cree une qualite d'arme (<LIVRE>-WEAPB_NOM) ou d'armure (<LIVRE>-ARMOB_NOM) : nom seul, le reste se saisit ensuite.
 procedure TWinLivres.CreerQualite;
 var
   Lib, Code, Prefixe, Langue, Radical, NomChapitre: String;
   Livre, Chapitre: TDOMNode;
   Elem: TDOMElement;
-  N: Integer;
+  N, I: Integer;
+  Mot: String;
   Branche, Noeud: TTreeNode;
   F: TForm;
   EditNom: TEdit;
@@ -4993,14 +6285,26 @@ begin
   end
   else
   begin
-    Radical := '-WEAPB';
+    Radical := '-WEAPB_';
     NomChapitre := 'DATA_WEAPON_BONUS';
   end;
+  // nom de la qualite en majuscules, mots separes par '_' (RULES-WEAPB_TRAP_BLADE, RULES-ARMOB_FLEXIBLE)
+  Mot := '';
+  for I := 1 to Length(Lib) do
+    if UpCase(Lib[I]) in ['A'..'Z', '0'..'9'] then
+      Mot := Mot + UpCase(Lib[I])
+    else if (Mot <> '') and (Mot[Length(Mot)] <> '_') then
+      Mot := Mot + '_';
+  while (Mot <> '') and (Mot[Length(Mot)] = '_') do
+    Delete(Mot, Length(Mot), 1);
+  if Mot = '' then Mot := 'NEW';
+  Code := Prefixe + Radical + Mot;
   N := 1;
-  repeat
-    Code := Prefixe + Radical + Format('%.2d', [N]);
+  while TrouverElementParId('BonusMalus', Code) <> nil do
+  begin
     Inc(N);
-  until TrouverElementParId('BonusMalus', Code) = nil;
+    Code := Prefixe + Radical + Mot + IntToStr(N);
+  end;
 
   Chapitre := XMLDoc.GetElementsByTagName(NomChapitre).Item[0];
   if Chapitre = nil then
@@ -5032,16 +6336,36 @@ end;
 
 // Fiche d'une qualite d'arme ou d'armure : seule la liste des champs lui est propre ; modifiable si le livre l'autorise.
 procedure TWinLivres.AfficherFicheQualite(Element: TDOMElement);
+var
+  ChampModif: StructureChampFiche;
+  EstArme: Boolean;
 begin
   if Element = nil then Exit;
+  EstArme := (Element.ParentNode <> nil) and (Element.ParentNode.NodeName = 'DATA_WEAPON_BONUS');
   FicheTag := 'BonusMalus';
   FicheTypeNoeud := GetNodeType(TreeViewLivre.Selected);
+  // Modifier avec attribut name (malus d'armure sur une competence) : la liste +/- ne sait pas le porter
+  if (Element.FindNode('Modifier') <> nil) and (TDOMElement(Element.FindNode('Modifier')).GetAttribute('name') <> '') then
+    ChampModif := ChampFiche('Modifier', 'RULES-LAB_034', gfTexte, False, False, True, False)
+  else
+    ChampModif := ChampFiche('Modifier', 'RULES-LAB_034', gfListe, False, False, True, False, '+|-');
   PanelFiche.Definir([
     ChampFiche('Description', 'RULES-LAB_002', gfTexte, False, True),
-    ChampFiche('Modifier', 'RULES-LAB_034', gfListe, False, False, True, False, '+|-'),
-    ChampFiche('Short', 'RULES-LAB_073', gfTexte, True, False, True),
+    ChampModif,
+    ChampFiche('Modifier@name', 'RULES-LAB_034', gfTexte, True, False, True, False),
+    ChampFiche('Short', 'RULES-LAB_073', gfTexte, True, False, not EstArme),  // obligatoire au schema pour une qualite d'arme
     ChampFiche('NeedsValue', 'RULES-LAB_495', gfCases, True, False, True, False, '1=' + GetTexteLibelle('RULES-LAB_495')),
-    ChampFiche('Explanation', 'RULES-LAB_279', gfMemo, True, False, True)]);
+    // qualites d'arme donnees par celle-ci : un ou plusieurs codes separes par des virgules
+    ChampFiche('WeaponQuality', 'RULES-LAB_292', gfTexte, True, False, True, False),
+    ChampFiche('Talent', 'RULES-LAB_007', gfCodeLibre, False, False, True, False,
+      ChoixParTags(['Talent'], ValeurXML(Element.FindNode('Talent')))),
+    ChampFiche('Explanation', 'RULES-LAB_279', gfMemo, True, False, False),  // obligatoire au schema (arme et armure)
+    ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False)]);
+  // ordre du schema : Description, Explanation, (Short), puis le reste, Page en dernier
+  if EstArme then
+    PanelFiche.OrdreBalises := 'Description,Explanation,Short,*NeedsValue,*WeaponQuality,*Talent,Modifier,*Page'
+  else
+    PanelFiche.OrdreBalises := 'Description,Explanation,*Modifier,*NeedsValue,*Corruption,*Talent,*Page';
   RemplirCompLieeFiche('');  // cibles de competence de la grille (liste commune avec la fiche de talent)
   PanelFiche.Charger(Element);
   PanelFiche.LectureSeule := not EditionPermise;
@@ -5063,12 +6387,13 @@ end;
 
 const
   // themes proposes (RULES-LAB_190 a 199) et disponibilites ; un code sans libelle n'appartient pas a l'edition chargee
-  ThemesTrapping: array[0..9] of String = ('RULES-LAB_190', 'RULES-LAB_191', 'RULES-LAB_192', 'RULES-LAB_193',
-    'RULES-LAB_194', 'RULES-LAB_195', 'RULES-LAB_196', 'RULES-LAB_197', 'RULES-LAB_198', 'RULES-LAB_199');
+  ThemesTrapping: array[0..14] of String = ('RULES-LAB_190', 'RULES-LAB_191', 'RULES-LAB_192', 'RULES-LAB_193',
+    'RULES-LAB_194', 'RULES-LAB_195', 'RULES-LAB_196', 'RULES-LAB_197', 'RULES-LAB_198', 'RULES-LAB_199',
+    'RULES-LAB_260', 'RULES-LAB_261', 'RULES-LAB_262', 'RULES-LAB_288', 'RULES-LAB_313');
   DisposEquipement: array[0..4] of String = ('RULES-DISPO_COMMON', 'RULES-DISPO_LIMITED', 'RULES-DISPO_RARE',
     'RULES-DISPO_EXOTIC', 'RULES-DISPO_UNIQUE');
 
-// Cree un trapping : nom seul ; code <LIVRE>-TRAP_NNN. Squelette : theme divers, Common, encombrement 0.
+// Cree un trapping : nom seul ; code <LIVRE>-TRAP_NOM. Squelette : theme divers, Common, encombrement 0.
 procedure TWinLivres.CreerTrapping;
 var
   Lib, Code, Prefixe, Langue: String;
@@ -5148,10 +6473,12 @@ begin
   if Langue = '' then Langue := 'ENGLISH';
   Prefixe := ValeurXML(Livre.FindNode('CODE_BOOK'));
   N := 1;
-  repeat
-    Code := Prefixe + '-TRAP_' + Format('%.3d', [N]);
+  Code := Prefixe + '-TRAP_' + NomEnMajuscules(Lib);
+  while TrouverElementParId('Trapping', Code) <> nil do
+  begin
     Inc(N);
-  until TrouverElementParId('Trapping', Code) = nil;
+    Code := Prefixe + '-TRAP_' + NomEnMajuscules(Lib) + '_' + IntToStr(N);
+  end;
 
   Chapitre := XMLDoc.GetElementsByTagName('DATA_TRAPPING').Item[0];
   if Chapitre = nil then
@@ -5371,8 +6698,114 @@ end;
 // Fiche d'un trapping : seule la liste des champs lui est propre ; modifiable si le livre l'autorise.
 procedure TWinLivres.AfficherFicheTrapping(Element: TDOMElement);
 var
-  Themes, Dispos: String;
+  Themes, Dispos, Familles: String;
   I: Integer;
+  AvecFamilles: Boolean;
+  Champs: TTableauChampsFiche;
+
+  function Rempli(const Balise: String): Boolean;
+  begin
+    Result := (Element.FindNode(Balise) <> nil) and (Trim(ValeurXML(Element.FindNode(Balise))) <> '');
+  end;
+
+  procedure Ajoute(const Champ: StructureChampFiche);
+  begin
+    SetLength(Champs, Length(Champs) + 1);
+    Champs[High(Champs)] := Champ;
+  end;
+
+  // abreviation d'une caracteristique (RULES-SHORTATTR_x), pour l'en-tete d'une colonne
+  function CourtAttr(const Code: String): String;
+  begin
+    Result := GetTexteLibelle('RULES-SHORTATTR_' + Code, Code);
+  end;
+
+  // fabrications proposees (qualites et defauts de fabrication) du livre ouvert et du Rulebook : « |=|code<tab>libelle »
+  function PropositionsFabrications: String;
+  var
+    Liste: TStringList;
+    Doc: TXMLDocument;
+    Elements: TDOMNodeList;
+    N, K: Integer;
+    Code, Lib: String;
+  begin
+    Result := '';
+    Liste := TStringList.Create;
+    try
+      Liste.Sorted := True;
+      Liste.Duplicates := dupIgnore;
+      for N := 0 to 1 do
+      begin
+        if N = 0 then Doc := XMLDoc else Doc := RulebookXML;
+        if Doc = nil then Continue;
+        Elements := Doc.GetElementsByTagName('Craftsmanship');
+        for K := 0 to Elements.Count - 1 do
+        begin
+          Code := TDOMElement(Elements.Item[K]).GetAttribute('id');
+          Lib := Trim(ValeurXML(Elements.Item[K].FindNode('Description')));
+          if Lib = '' then Lib := GetTexteLibelle(Code, Code);
+          if (Code <> '') and (Pos('|', Lib) = 0) then Liste.Add(Lib + #1 + Code);
+        end;
+      end;
+      for K := 0 to Liste.Count - 1 do
+        Result := Result + '|' + Copy(Liste[K], Pos(#1, Liste[K]) + 1, MaxInt) + #9 + Copy(Liste[K], 1, Pos(#1, Liste[K]) - 1);
+      if Result <> '' then Result := '|=' + Result;
+    finally
+      Liste.Free;
+    end;
+  end;
+
+  // noms des traits de creature proposes : talents marques <Trait> du livre ouvert et du Rulebook, sans leur
+  // suite « (Any) » / « (Rating) », tries ; chaine « |= |nom|nom... » a la suite des libelles de colonnes
+  function PropositionsTraits: String;
+  var
+    Liste: TStringList;
+    Doc: TXMLDocument;
+    Elements: TDOMNodeList;
+    N, K, P: Integer;
+    Nom, Code, Exigence, Suite: String;
+  begin
+    Result := '';
+    Liste := TStringList.Create;
+    try
+      Liste.Sorted := True;
+      Liste.Duplicates := dupIgnore;
+      for N := 0 to 1 do
+      begin
+        if N = 0 then Doc := XMLDoc else Doc := RulebookXML;
+        if Doc = nil then Continue;
+        Elements := Doc.GetElementsByTagName('Talent');
+        for K := 0 to Elements.Count - 1 do
+          if ValeurXML(Elements.Item[K].FindNode('Trait')) = ConstVrai then
+          begin
+            // une specialisation (RULES-T_SIZE__LARG) n'est pas un trait a part : seule sa mere (__*) est proposee
+            Code := TDOMElement(Elements.Item[K]).GetAttribute('id');
+            if (Pos('__', Code) > 0) and (Copy(Code, Length(Code) - 2, 3) <> '__*') then Continue;
+            Nom := Trim(ValeurXML(Elements.Item[K].FindNode('Description')));
+            P := Pos(' (', Nom);
+            Exigence := '';
+            if P > 0 then
+            begin
+              // « (Any) » : specialisation ; « (Rating) » : nombre ; autre mot (Type, Target...) : l'un ou l'autre
+              Suite := LowerCase(Trim(Copy(Nom, P + 2, Length(Nom) - P - 2)));
+              if Suite = 'any' then Exigence := 'S'
+              else if Suite = 'rating' then Exigence := 'N'
+              else Exigence := 'P';
+              Nom := Copy(Nom, 1, P - 1);
+            end;
+            if (Nom <> '') and (Pos('|', Nom) = 0) and (Pos(#9, Nom) = 0) then
+            begin
+              if Exigence <> '' then Nom := Nom + #9 + Exigence;
+              Liste.Add(Nom);
+            end;
+          end;
+      end;
+      for K := 0 to Liste.Count - 1 do Result := Result + '|' + Liste[K];
+      if Result <> '' then Result := '|=' + Result;
+    finally
+      Liste.Free;
+    end;
+  end;
 begin
   if Element = nil then Exit;
   FicheTag := 'Trapping';
@@ -5383,15 +6816,53 @@ begin
   Dispos := '';
   for I := Low(DisposEquipement) to High(DisposEquipement) do
     Dispos := Dispos + '|' + DisposEquipement[I];
-  PanelFiche.Definir([
-    ChampFiche('Description', 'RULES-LAB_002', gfTexte, False, True),
-    ChampFiche('Theme', 'RULES-LAB_201', gfCode, False, True, False, False, Copy(Themes, 2, MaxInt)),
-    ChampFiche('Price', 'RULES-LAB_054', gfTexte, False, False, True, False, '', cfPrix),
-    ChampFiche('Encumbrance', 'RULES-LAB_055', gfTexte, False, True, False, False, '', cfEntier),
-    ChampFiche('Availability', 'RULES-LAB_056', gfCode, False, True, False, False, Copy(Dispos, 2, MaxInt)),
-    ChampFiche('Carries', 'RULES-LAB_185', gfTexte, False, False, True, False, '', cfEntier)]);
+  // familles (groupes Animal, Vehicule, Commerce, Qualite) : cochees par l'utilisateur ou deja presentes dans les donnees
+  Familles := FamillesTalent;
+  if Rempli('AnimalProfile') or Rempli('AnimalTraits') then Familles := Familles + ',ANIMAL';
+  if Rempli('BoatProfile') or Rempli('VehicleProfile') then Familles := Familles + ',VEHICULE';
+  if Rempli('Locality') or Rempli('Season') then Familles := Familles + ',COMMERCE';
+  if Rempli('InherentCraftsmanship') then Familles := Familles + ',QUALITE';
+  AvecFamilles := EditionPermise;
+  FTalentElement := Element;  // pour reconstruire la fiche apres un changement de famille
+  Ajoute(ChampFiche('Description', 'RULES-LAB_002', gfTexte, False, True));
+  if AvecFamilles then
+    Ajoute(ChampFiche('FamilleTrapping', 'RULES-LAB_FAMILLE_TRAPPING', gfCases, False, False, True, False,
+      'ANIMAL=' + GetTexteLibelle('RULES-LAB_FAMILLE_ANIMAL', 'Animal') +
+      '|VEHICULE=' + GetTexteLibelle('RULES-LAB_FAMILLE_VEHICULE', 'Boat / vehicle') +
+      '|COMMERCE=' + GetTexteLibelle('RULES-LAB_FAMILLE_COMMERCE', 'Trade goods (locality, season)') +
+      '|QUALITE=' + GetTexteLibelle('RULES-LAB_FAMILLE_QUALITE', 'Inherent craftsmanship')));
+  Ajoute(ChampFiche('Theme', 'RULES-LAB_201', gfCode, False, True, False, False, Copy(Themes, 2, MaxInt)));
+  Ajoute(ChampFiche('Price', 'RULES-LAB_054', gfTexte, False, False, True, False, '', cfPrix));
+  Ajoute(ChampFiche('Encumbrance', 'RULES-LAB_055', gfTexte, False, False, True, False, '', cfEntierSigne));
+  Ajoute(ChampFiche('Availability', 'RULES-LAB_056', gfCode, False, False, False, False, Copy(Dispos, 2, MaxInt)));
+  Ajoute(ChampFiche('Carries', 'RULES-LAB_185', gfTexte, False, False, True, False, '', cfEntier));
+  Ajoute(EnGroupes(ChampFiche('Locality', 'RULES-LAB_238', gfCases, False, False, True, False, ChoixCasesLabels(229, 237)), 'Commerce'));
+  Ajoute(EnGroupes(ChampFiche('Season', 'RULES-LAB_239', gfCases, False, False, True, False,
+    ChoixCasesLabels(226, 228) + '|RULES-LAB_225=' + GetTexteLibelle('RULES-LAB_225')), 'Commerce'));  // ordre du livre : hiver puis printemps
+  // profils et traits en tableau (genre gfTableau) : le XML garde son texte (« 7 25 0 ... », « 32;4 (-);... », « Bestial, Size (Large) »)
+  Ajoute(EnGroupes(ChampFiche('AnimalProfile', 'RULES-LAB_960', gfTableau, True, False, True, False,
+    'F |' + CourtAttr('Move') + '|' + CourtAttr('WS') + '|' + CourtAttr('BS') + '|' + CourtAttr('S') + '|' + CourtAttr('T') +
+    '|' + CourtAttr('I') + '|' + CourtAttr('Ag') + '|' + CourtAttr('Dex') + '|' + CourtAttr('Int') + '|' + CourtAttr('WP') +
+    '|' + CourtAttr('Fel') + '|' + CourtAttr('Wound')), 'Animal'));
+  Ajoute(EnGroupes(ChampFiche('AnimalTraits', 'RULES-LAB_961', gfTableau, True, False, True, False,
+    'T|' + GetTexteLibelle('RULES-LAB_TAB_TRAIT', 'Trait') + '|' + GetTexteLibelle('RULES-LAB_TAB_SPEC', 'Specialisation') +
+    '|' + GetTexteLibelle('RULES-LAB_TAB_VALEUR', 'Value') + PropositionsTraits), 'Animal'));
+  Ajoute(EnGroupes(ChampFiche('BoatProfile', 'RULES-LAB_963', gfTableau, True, False, True, False,
+    'F;|' + GetTexteLibelle('RULES-LAB_TAB_EQUIPAGE', 'Crew') + '|' + GetTexteLibelle('RULES-LAB_TAB_VOILE', 'Sail M') +
+    '|' + GetTexteLibelle('RULES-LAB_TAB_RAMES', 'Oar M') + '|' + GetTexteLibelle('RULES-LAB_TAB_MAN', 'Man') +
+    '|' + GetTexteLibelle('RULES-LAB_TAB_TAILLE', 'Size') + '|' + CourtAttr('T') + '|' + CourtAttr('Wound')), 'Vehicule'));
+  Ajoute(EnGroupes(ChampFiche('VehicleProfile', 'RULES-LAB_979', gfTableau, True, False, True, False,
+    'F;|' + GetTexteLibelle('RULES-LAB_TAB_MOTEUR', 'Motive power') + '|' + CourtAttr('T') + '|' + CourtAttr('Wound') +
+    '|' + GetTexteLibelle('RULES-LAB_TAB_FRAPPE', 'Strike')), 'Vehicule'));
+  Ajoute(EnGroupes(ChampFiche('InherentCraftsmanship', 'RULES-LAB_962', gfTableau, True, False, True, False,
+    'Q|' + GetTexteLibelle('RULES-LAB_125') + '|' + GetTexteLibelle('RULES-LAB_019') + PropositionsFabrications), 'Qualite'));
+  Ajoute(ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False));
+  FiltrerChampsFiche(Champs, Element, VersionFicheLivre, Familles);
+  PanelFiche.Definir(Champs);
+  if AvecFamilles then PanelFiche.DeclarerVirtuel('FamilleTrapping');
   RemplirCompLieeFiche('');  // cibles de competence de la grille (liste commune avec la fiche de talent)
   PanelFiche.Charger(Element);
+  if AvecFamilles then PanelFiche.CocherCodes('FamilleTrapping', Familles);
   PanelFiche.LectureSeule := not EditionPermise;
   PanelFiche.Placer(StringGridDetail.Left, StringGridDetail.Top);
   PanelFiche.Visible := True;
@@ -5428,7 +6899,7 @@ begin
   for I := 0 to Tri.Count - 1 do
   begin
     Code := Copy(Tri[I], Pos(#1, Tri[I]) + 1, Length(Tri[I]));
-    if SeulementTir and (Pos('PROJ_', Code) = 0) then Continue;
+    if SeulementTir and (Pos('COMP_RANGED', Code) = 0) then Continue;
     Combo.Items.Add(Copy(Tri[I], 1, Pos(#1, Tri[I]) - 1));
     Codes.Add(Code);
   end;
@@ -5441,13 +6912,13 @@ begin
 end;
 
 // Cree une arme : nom + groupe d'armes (competence de combat ou de tir). Le code suit la convention des
-// livres : <LIVRE>-<GROUPE>_NN (LUSTR-COMB_BASE_01). Squelette seul, les autres champs se saisissent ensuite.
+// livres : <LIVRE>-COMB_NOM ou <LIVRE>-PROJ_NOM (LUSTR-COMB_SHORT_SWORD). Squelette seul, les autres champs se saisissent ensuite.
 procedure TWinLivres.CreerArme;
 var
-  Lib, Code, Prefixe, Langue, Groupe, Id: String;
+  Lib, Code, Prefixe, Langue, Groupe, Id, Mot: String;
   Livre, Chapitre: TDOMNode;
   Elem: TDOMElement;
-  N: Integer;
+  N, I: Integer;
   Branche, Noeud: TTreeNode;
   F: TForm;
   EditNom: TEdit;
@@ -5455,7 +6926,8 @@ var
   BOk, BAnnuler: TBCButton;
   Lbl: TLabel;
   Ok, Munition: Boolean;
-  CaseMun: TCheckBox;
+  CaseMun, CaseTir: TCheckBox;
+  Tir: Boolean;
   Filtre: TFiltreGroupesArme;
   Tri, Codes: TStringList;
 
@@ -5514,6 +6986,19 @@ begin
     CaseMun.SetBounds(12, 114, 356, 22);
     CaseMun.Caption := GetTexteLibelle('RULES-LAB_592', 'Ammunition (arrows, bolts, bullets)');
     CaseMun.OnClick := @Filtre.CaseClick;
+    CaseTir := nil;
+    if EstLivreV2 then
+    begin
+      // V2 : pas de groupe d'armes (Skill = « - » partout) ; une case dit si l'arme est de tir (PROJ_V2_)
+      Lbl.Visible := False;
+      Combo.Visible := False;
+      CaseTir := TCheckBox.Create(F);
+      CaseTir.Parent := F;
+      CaseTir.SetBounds(12, 62, 356, 22);
+      CaseTir.Caption := GetTexteLibelle('RULES-LAB_ARME_TIR_V2', 'Ranged weapon (bow, crossbow, sling...)');
+      CaseMun.Top := 90;
+      F.ClientHeight := 170;
+    end;
     BOk := NouveauBouton(F);
     BOk.Parent := F;
     BOk.SetBounds(150, F.ClientHeight - 38, 105, 32);
@@ -5530,18 +7015,27 @@ begin
     F.OnKeyDown := @ToucheDialogue;
     while F.ShowModal = mrOk do
     begin
-      if (Trim(EditNom.Text) = '') or (Combo.ItemIndex < 0) then
+      if (Trim(EditNom.Text) = '') or (not EstLivreV2 and (Combo.ItemIndex < 0)) then
       begin
         ShowMessage(GetTexteLibelle('RULES-LAB_404'));
         Continue;
       end;
-      if CaseMun.Checked and (Pos('PROJ_', Codes[Combo.ItemIndex]) = 0) then
+      if not EstLivreV2 and CaseMun.Checked and (Pos('COMP_RANGED', Codes[Combo.ItemIndex]) = 0) then
       begin
         ShowMessage(GetTexteLibelle('RULES-LAB_593', 'An ammunition serves a ranged weapon group: choose a ranged skill.'));
         Continue;
       end;
       Lib := Trim(EditNom.Text);
-      Groupe := Codes[Combo.ItemIndex];
+      if EstLivreV2 then
+      begin
+        Groupe := '-';
+        Tir := CaseTir.Checked or CaseMun.Checked;
+      end
+      else
+      begin
+        Groupe := Codes[Combo.ItemIndex];
+        Tir := Pos('COMP_RANGED', Groupe) > 0;
+      end;
       Munition := CaseMun.Checked;
       Ok := True;
       Break;
@@ -5558,14 +7052,29 @@ begin
   Langue := ValeurXML(Livre.FindNode('language'));
   if Langue = '' then Langue := 'ENGLISH';
   Prefixe := ValeurXML(Livre.FindNode('CODE_BOOK'));
-  // <LIVRE>-<groupe sans "xxx-COMP">_NN
-  Id := Copy(Groupe, Pos('-COMP', Groupe) + 5, Length(Groupe));
-  if Munition then Id := 'MUNI';  // le jeu reconnait une munition a son code MUNI_
+  // le jeu reconnait une arme a son code COMB_ (corps a corps) ou PROJ_ (tir), une munition a MUNI_ ;
+  // nom en majuscules (RULES-COMB_SHORT_SWORD)
+  if Munition then Id := 'MUNI_'
+  else if Tir then Id := 'PROJ_'
+  else Id := 'COMB_';
+  // V2 : les armes du livre portent COMB_V2_ / PROJ_V2_ / MUNI_V2_
+  if EstLivreV2 then Id := Id + 'V2_';
   N := 1;
-  repeat
-    Code := Prefixe + '-' + Id + '_' + Format('%.2d', [N]);
+  Mot := '';
+  for I := 1 to Length(Lib) do
+    if UpCase(Lib[I]) in ['A'..'Z', '0'..'9'] then
+      Mot := Mot + UpCase(Lib[I])
+    else if (Mot <> '') and (Mot[Length(Mot)] <> '_') then
+      Mot := Mot + '_';
+  while (Mot <> '') and (Mot[Length(Mot)] = '_') do
+    Delete(Mot, Length(Mot), 1);
+  if Mot = '' then Mot := 'NEW';
+  Code := Prefixe + '-' + Id + Mot;
+  while TrouverElementParId('Weapon', Code) <> nil do
+  begin
     Inc(N);
-  until TrouverElementParId('Weapon', Code) = nil;
+    Code := Prefixe + '-' + Id + Mot + IntToStr(N);
+  end;
 
   Chapitre := XMLDoc.GetElementsByTagName('DATA_WEAPON').Item[0];
   if Chapitre = nil then
@@ -5579,19 +7088,34 @@ begin
   Ajouter('Description', Lib, True);
   Ajouter('Skill', Groupe, False);
   if Munition then Ajouter('Damage', '+0', False) else Ajouter('Damage', '-', False);
-  Ajouter('Availability', 'RULES-DISPO_COMMON', False);
-  Ajouter('Reach', 'RULES-WEAPR_PERSO', False);
-  Ajouter('Encumbrance', '0', False);
-  Ajouter('Quality', '-', False);
-  if Munition then
+  if EstLivreV2 then
   begin
-    Ajouter('Hand', '0', False);
-    Ajouter('Ammunition', '1', False);
+    // arme V2 : codes DISPO2 / WTYPE2, portee en texte (armes de tir seulement), Price et Page, ni Ammunition ni code de portee
+    Ajouter('Availability', 'RULES-DISPO2_COMMON', False);
+    if Tir then Ajouter('Reach', '', False);
+    Ajouter('Price', '', False);
+    Ajouter('Encumbrance', '0', False);
+    Ajouter('Quality', '', False);
+    if Munition then Ajouter('Hand', '0', False) else Ajouter('Hand', '1', False);
+    Ajouter('Type', 'RULES-WTYPE2_ORDINARY', False);
+    Ajouter('Page', '', False);
   end
   else
   begin
-    Ajouter('Hand', '1', False);
-    Ajouter('Ammunition', '0', False);
+    Ajouter('Availability', 'RULES-DISPO_COMMON', False);
+    Ajouter('Reach', 'RULES-WEAPR_PERSO', False);
+    Ajouter('Encumbrance', '0', False);
+    Ajouter('Quality', '-', False);
+    if Munition then
+    begin
+      Ajouter('Hand', '0', False);
+      Ajouter('Ammunition', '1', False);
+    end
+    else
+    begin
+      Ajouter('Hand', '1', False);
+      Ajouter('Ammunition', '0', False);
+    end;
   end;
 
   Noeud := TreeViewLivre.Items.AddChild(Branche, Lib);
@@ -5650,6 +7174,26 @@ begin
         end;
       end;
     end;
+    // WFRP1 : la competence a specialites est une <Skill id="RULES-COMP_ARCANE_LANGUAGE"> portant <Variants>"1"</Variants> ;
+    // sa mere de regroupement est RULES-COMP_ARCANE_LANGUAGE__* (lien <Generique> des specialisations)
+    if not EstTalent then
+      for N := 0 to 1 do
+      begin
+        if N = 0 then Livre := XMLDoc else Livre := RulebookXML;
+        if Livre = nil then Continue;
+        Elements := TDOMDocument(Livre).GetElementsByTagName('Skill');
+        for I := 0 to Elements.Count - 1 do
+        begin
+          E := TDOMElement(Elements.Item[I]);
+          CodeMere := E.GetAttribute('id');
+          if (CodeMere = '') or (Copy(CodeMere, Length(CodeMere), 1) = '*') or (Pos('__', CodeMere) > 0) then Continue;
+          if (ValeurXML(E.FindNode('Variants')) = '') or (ValeurXML(E.FindNode('Variants')) = '0') then Continue;
+          CodeMere := CodeMere + '__*';
+          if Codes.IndexOf(CodeMere) >= 0 then Continue;
+          Codes.Add(CodeMere);
+          Libs.Add(ValeurXML(E.FindNode('Description')));
+        end;
+      end;
     // + celles des autres livres charges (ex. "Lore (Any)" du Rulebook)
     if EstTalent then
     begin
@@ -5752,12 +7296,17 @@ begin
   Livre := XMLDoc.GetElementsByTagName('DATA_BOOK').Item[0];
   Langue := ValeurXML(Livre.FindNode('language'));
   if Langue = '' then Langue := 'ENGLISH';
+  // nom de la specialisation en majuscules, mots separes par '_' (RULES-COMP_LORE__OLD_ONES)
   Mot := '';
   for I := 1 to Length(Lib) do
-    if (UpCase(Lib[I]) in ['A'..'Z']) and (Length(Mot) < 5) then
-      Mot := Mot + UpCase(Lib[I]);
+    if UpCase(Lib[I]) in ['A'..'Z', '0'..'9'] then
+      Mot := Mot + UpCase(Lib[I])
+    else if (Mot <> '') and (Mot[Length(Mot)] <> '_') then
+      Mot := Mot + '_';
+  while (Mot <> '') and (Mot[Length(Mot)] = '_') do
+    Delete(Mot, Length(Mot), 1);
   if Mot = '' then Mot := 'NEW';
-  // code du livre ouvert + suite de la mere (DWARF-COMPSAVOIR_RUNES pour la mere RULES-COMPSAVOIR_*)
+  // code du livre ouvert + suite de la mere (DWARF-COMP_LORE__ pour la mere RULES-COMP_LORE__*)
   P := Pos('-', CodeSansEtoile);
   CodeSansEtoile := ValeurXML(Livre.FindNode('CODE_BOOK')) + Copy(CodeSansEtoile, P, Length(CodeSansEtoile));
   Code := CodeSansEtoile + Mot;
@@ -5937,6 +7486,13 @@ begin
     NT_CONDITION: NomTag := 'Condition';
     NT_COMPETENCE_N1, NT_SPECIALISATION_COMPETENCE: NomTag := 'Skill';
     NT_TALENT_N1, NT_SPECIALISATION_TALENT: NomTag := 'Talent';
+    NT_DIEU_V1: NomTag := 'Deity';
+    NT_CULTE_V1: NomTag := 'Cult';
+    NT_FAMILIER_V1: NomTag := 'Familiar';
+    NT_CLASSE_V1: NomTag := 'Class';
+    NT_HANDICAP_V1: NomTag := 'Disability';
+    NT_SORT_V1: NomTag := 'SpellV1';
+    NT_EQUIPEMENT_V1: NomTag := 'EquipmentV1';
   else
     Exit;
   end;
@@ -6011,7 +7567,7 @@ begin
       end;
     end;
     Node := TreeViewLivre.Selected;
-    if (Node <> nil) and (GetNodeCode(Node) = Code) and (GetNodeType(Node) in [NT_RACE, NT_METIER_NIVEAU1, NT_COMPETENCE_N1, NT_SPECIALISATION_COMPETENCE, NT_TALENT_N1, NT_SPECIALISATION_TALENT, NT_ARME, NT_ARMURE, NT_QUALITE_ARME, NT_QUALITE_ARMURE, NT_SORT, NT_TRAPPING, NT_FABRICATION, NT_NATION, NT_CORRUPTION_PHYSIQUE, NT_CORRUPTION_MENTALE, NT_MALADIE, NT_AFFLICTION, NT_RACE_GROUPE, NT_CONDITION, NT_SIGNE_ASTRAL, NT_BONUS_CARRIERE, NT_ADAPTATION_CARRIERE]) then
+    if (Node <> nil) and (GetNodeCode(Node) = Code) and (GetNodeType(Node) in [NT_RACE, NT_METIER_NIVEAU1, NT_COMPETENCE_N1, NT_SPECIALISATION_COMPETENCE, NT_TALENT_N1, NT_SPECIALISATION_TALENT, NT_ARME, NT_ARMURE, NT_QUALITE_ARME, NT_QUALITE_ARMURE, NT_SORT, NT_TRAPPING, NT_FABRICATION, NT_NATION, NT_CORRUPTION_PHYSIQUE, NT_CORRUPTION_MENTALE, NT_MALADIE, NT_AFFLICTION, NT_RACE_GROUPE, NT_CONDITION, NT_SIGNE_ASTRAL, NT_BONUS_CARRIERE, NT_ADAPTATION_CARRIERE, NT_DIEU_V1, NT_CULTE_V1, NT_FAMILIER_V1, NT_CLASSE_V1, NT_HANDICAP_V1, NT_SORT_V1, NT_EQUIPEMENT_V1]) then
     begin
       MasquerForm();
       Node.Delete;
@@ -6146,6 +7702,7 @@ begin
   MenuEquipArmure.Visible := False;
   MenuEquipDivers.Visible := False;
   StringGridAttrEthnie.Columns[3].Width := 0;
+  StringGridAttrEthnie.Columns[4].Width := 0;  // nom feminin : seulement dans le tableau des niveaux
   LabelFormSkills.Visible := False;
   StringGridSkills.Visible := False;
   StringGridCareers.Visible := False;
@@ -6162,6 +7719,7 @@ begin
   PanelEquipClasse.Visible := False;
   PanelTraitEthnie.Visible := False;
   PanelCarriereEspece.Visible := False;
+  PanelRegleEthnie.Visible := False;
   PanelTraduction.Visible := False;
   PanelSousMetier.Visible := False;
   PanelTirageMetier.Visible := False;
@@ -6285,17 +7843,13 @@ begin
     Premier := Copy(Premier, 1, P - 1);
   Result := Premier;
   if ChercheCompetence(Premier).SousCompetence then
-  begin
-    P := Pos('_', Premier);
-    if P > 0 then
-      Result := Copy(Premier, 1, P - 1) + '_*';
-  end;
+    Result := CodeGeneriqueDe(ChercheCompetence(Premier));
 end;
 
 // Specialisations d'une competence generique : libelles et codes en parallele.
 procedure SpecsDe(const Base: String; Libelles, Codes: TStrings);
 var
-  I, P: Integer;
+  I: Integer;
   Code: String;
 begin
   Libelles.Clear;
@@ -6304,8 +7858,7 @@ begin
     if ListCompetence[I].SousCompetence then
     begin
       Code := ListCompetence[I].CodeCompetence;
-      P := Pos('_', Code);
-      if (P > 0) and (Copy(Code, 1, P - 1) + '_*' = Base) then
+      if CodeGeneriqueDe(ListCompetence[I]) = Base then
       begin
         Libelles.Add(ListCompetence[I].Libelle);
         Codes.Add(Code);
@@ -6331,14 +7884,12 @@ end;
 // Talents : le generique est "RULES-T0139_*", ses specialisations "RULES-T0139_GOUT" ; un talent
 // sans '_', un aleatoire (RULES-T*) ou un choix "A/B" est sa propre base.
 function BaseTalent(const Code: String): String;
-var
-  P: Integer;
 begin
   Result := Code;
   if (Code = 'RULES-T*') or (Pos('/', Code) > 0) then Exit;
-  P := Pos('_', Code);
-  if P > 0 then
-    Result := Copy(Code, 1, P - 1) + '_*';
+  // un nom de talent contient des '_' : la famille est cherchee parmi les generiques declares
+  if CodeFamilleTalent(Code) <> '' then
+    Result := CodeFamilleTalent(Code);
 end;
 
 procedure SpecsTalent(const Base: String; Libelles, Codes: TStrings);
@@ -6394,7 +7945,7 @@ end;
 procedure TWinLivres.RemplirLigneSkill(ARow: Integer; const Code: String; Coche: Boolean);
 var
   Competence, Generique: StructureCompetence;
-  Base, Spec: String;
+  Base, Spec, LibBase: String;
   Parts: TStringList;
   I: Integer;
 begin
@@ -6436,7 +7987,14 @@ begin
   if Generique.CodeCompetence <> '' then
     StringGridSkills.Cells[2, ARow] := Generique.Libelle
   else
-    StringGridSkills.Cells[2, ARow] := Base;
+  begin
+    // generique WFRP1 « FAMILLE__* » : sa fiche porte l'id sans le « __* » (ex. RULES-COMP_SPEAK_LANGUAGE)
+    LibBase := LibelleCodeV1(Base);
+    if (LibBase = '') and (Copy(Base, Length(Base) - 2, 3) = '__*') then
+      LibBase := LibelleCodeV1(Copy(Base, 1, Length(Base) - 3));
+    if LibBase = '' then LibBase := Base;
+    StringGridSkills.Cells[2, ARow] := LibBase;
+  end;
   StringGridSkills.Cells[3, ARow] := Spec;
   if Coche then
     StringGridSkills.Cells[4, ARow] := '1'
@@ -6700,7 +8258,9 @@ begin
       if Bases.IndexOf(Code) < 0 then
         Absentes.Add(ListTalent[I].Libelle + '|' + Code);
     end;
-    Absentes.Add(GetTexteLibelle('RULES-LAB_085') + '|RULES-T*');
+    // la ligne "aleatoire" decochee sert a en ajouter un : inutile (et trompeuse) hors livre modifiable
+    if CreationPermise then
+      Absentes.Add(GetTexteLibelle('RULES-LAB_085') + '|RULES-T*');
 
     if Presentes.Count + Absentes.Count = 0 then
     begin
@@ -7134,10 +8694,13 @@ begin
       if (Nouveaux.IndexOf(Code) >= 0) and (Code <> 'RULES-T*') then
       begin
         MajBoutonsAttr(True);
-        if ModeTalents then
-          ShowMessage(GetTexteLibelle('RULES-LAB_362'))
-        else
-          ShowMessage(GetTexteLibelle('RULES-LAB_358'));
+        if not TestSansMessage then
+        begin
+          if ModeTalents then
+            ShowMessage(GetTexteLibelle('RULES-LAB_362'))
+          else
+            ShowMessage(GetTexteLibelle('RULES-LAB_358'));
+        end;
         StringGridSkills.Row := I;
         Exit;
       end;
@@ -7234,6 +8797,7 @@ procedure TWinLivres.AjouterLigneNiveau(ARow, Id: Integer; ModeleRow: Integer);
 begin
   StringGridAttrEthnie.Cells[1, ARow] := IntToStr(Id);
   StringGridAttrEthnie.Cells[2, ARow] := '';
+  StringGridAttrEthnie.Cells[5, ARow] := '';
   StringGridAttrEthnie.Cells[3, ARow] := StringGridAttrEthnie.Cells[3, ModeleRow];
   StringGridAttrEthnie.Cells[4, ARow] := StringGridAttrEthnie.Cells[4, ModeleRow];
 end;
@@ -7270,6 +8834,8 @@ begin
   StringGridAttrEthnie.Columns[1].Width := 250;
   StringGridAttrEthnie.Columns[2].Width := 120;
   StringGridAttrEthnie.Columns[3].Width := 80;
+  StringGridAttrEthnie.Columns[4].Title.Caption := GetTexteLibelle('RULES-LAB_1004');  // Nom feminin
+  StringGridAttrEthnie.Columns[4].Width := 200;
   StringGridAttrEthnie.RowCount := 1;
   AttrSnapshot := '';
   MajBoutonsAttr(False);
@@ -7292,6 +8858,7 @@ begin
       Tier := Salaire;
     StringGridAttrEthnie.Cells[1, RowIdx] := Niveau.GetAttribute('id');
     StringGridAttrEthnie.Cells[2, RowIdx] := ValeurXML(Niveau.FindNode('Description'));
+    StringGridAttrEthnie.Cells[5, RowIdx] := ValeurXML(Niveau.FindNode('DescriptionFeminine'));
     StringGridAttrEthnie.Cells[3, RowIdx] := Tier;
     for K := 0 to 2 do
       if TiersSalaire[K] = Tier then
@@ -7505,6 +9072,38 @@ const
       EcrireValeurXML(TDOMElement(B), Valeur);
   end;
 
+  // Forme feminine du nom (balise facultative, juste apres Description, avant Salary) : posee si remplie, retiree si videe.
+  procedure PoserFeminin(Parent: TDOMElement; const Valeur: String);
+  var
+    B, Salaire: TDOMNode;
+    E: TDOMElement;
+  begin
+    B := Parent.FindNode('DescriptionFeminine');
+    if B <> nil then
+    begin
+      if Valeur = '' then
+        Parent.RemoveChild(B)
+      else if ValeurXML(B) <> Valeur then
+        EcrireValeurXML(TDOMElement(B), Valeur);
+      Exit;
+    end;
+    if Valeur = '' then Exit;
+    E := XMLDoc.CreateElement('DescriptionFeminine');
+    E.SetAttribute('language', Langue);
+    Salaire := Parent.FindNode('Salary');
+    if Salaire <> nil then
+    begin
+      Parent.InsertBefore(E, Salaire);
+      Parent.InsertBefore(XMLDoc.CreateTextNode(#10), Salaire);
+    end
+    else
+    begin
+      Parent.AppendChild(XMLDoc.CreateTextNode(#10));
+      Parent.AppendChild(E);
+    end;
+    EcrireValeurXML(E, Valeur);
+  end;
+
 begin
   FermerEditeursAttr;
   MajBoutonsAttr(False);
@@ -7528,7 +9127,7 @@ begin
       for J := 0 to 2 do
         if StringGridAttrEthnie.Cells[3, I] = GetTexteLibelle('RULES-' + TiersSalaire[J]) then
           K := J;
-      if (Nom = '') or (K < 0) or not EntierPositif(StringGridAttrEthnie.Cells[4, I], Montant) or (Montant > 9) then
+      if (Nom = '') or (K < 0) or not EntierPositif(StringGridAttrEthnie.Cells[4, I], Montant) or (Montant > 99) then
       begin
         MajBoutonsAttr(True);
         ShowMessage(GetTexteLibelle('RULES-LAB_375'));
@@ -7640,6 +9239,7 @@ begin
         if StringGridAttrEthnie.Cells[3, N] = GetTexteLibelle('RULES-' + TiersSalaire[J]) then
           Code := TiersSalaire[J];
       PoserSous(Niveau, 'Description', Trim(StringGridAttrEthnie.Cells[2, N]));
+      PoserFeminin(Niveau, Trim(StringGridAttrEthnie.Cells[5, N]));
       PoserSous(Niveau, 'Salary', Code + ' ' + Trim(StringGridAttrEthnie.Cells[4, N]));
     end;
 
@@ -7721,7 +9321,13 @@ begin
   NbNiveauxCarriere := 1;
   Niveaux := CareerElement.FindNode('SUBCHAPTER_LEVEL');
   if Niveaux <> nil then
+  begin
     NbNiveauxCarriere := TDOMElement(Niveaux).GetElementsByTagName('Level').Count;
+    // carriere dont les niveaux ne partent pas de 1 (Stoneshaper : seul le niveau 2 est declare)
+    for I := 0 to TDOMElement(Niveaux).GetElementsByTagName('Level').Count - 1 do
+      if StrToIntDef(TDOMElement(TDOMElement(Niveaux).GetElementsByTagName('Level').Item[I]).GetAttribute('id'), 0) > NbNiveauxCarriere then
+        NbNiveauxCarriere := StrToIntDef(TDOMElement(TDOMElement(Niveaux).GetElementsByTagName('Level').Item[I]).GetAttribute('id'), 0);
+  end;
   if NbNiveauxCarriere < 1 then NbNiveauxCarriere := 1;
 
   if Talents then
@@ -7913,27 +9519,36 @@ begin
         StringGridSkills.Row := I;
         Exit;
       end;
-      if Vus.IndexOf(Code) >= 0 then
+      // une meme competence revient legitimement a deux niveaux (Duellist : Melee (*) en 1 et 4, Huffer : Lore (Local) en 1 et 3)
+      if Vus.IndexOf(Code + '|' + IntToStr(N)) >= 0 then
       begin
         MajBoutonsAttr(True);
-        if ModeTalents then
-          ShowMessage(GetTexteLibelle('RULES-LAB_362'))
-        else
-          ShowMessage(GetTexteLibelle('RULES-LAB_358'));
+        if not TestSansMessage then
+        begin
+          if ModeTalents then
+            ShowMessage(GetTexteLibelle('RULES-LAB_362'))
+          else
+            ShowMessage(GetTexteLibelle('RULES-LAB_358'));
+        end;
         StringGridSkills.Row := I;
         Exit;
       end;
-      Vus.Add(Code);
+      Vus.Add(Code + '|' + IntToStr(N));
       Tri.Add(Format('%.2d|%.4d|%s', [N, I, Code]));
     end;
 
     // la competence principale de la carriere doit rester une competence cochee de niveau 1
-    if not ModeTalents then
+    // (carriere a Parent : sa competence principale est celle de la carriere parente)
+    if (not ModeTalents) and (CareerElement.FindNode('Parent') = nil) then
     begin
       Code := ValeurXML(CareerElement.FindNode('Skill'));
       Principale := False;
       for I := 0 to Tri.Count - 1 do
-        if (Copy(Tri[I], 1, 2) = '01') and (Copy(Tri[I], 9, Length(Tri[I])) = Code) then
+        // premier niveau de la carriere (Tri est trie) : il ne vaut pas toujours 1 (Stoneshaper commence au niveau 2)
+        if (Copy(Tri[I], 1, 2) = Copy(Tri[0], 1, 2)) and (Copy(Tri[I], 9, Length(Tri[I])) = Code) then
+          Principale := True
+        // ou une des deux competences au choix d un niveau suivant (Doom Priest, Forge Priest : Lore (Theology) / Lore (Warfare) au niveau 2)
+        else if Pos('/' + Code + '/', '/' + Copy(Tri[I], 9, Length(Tri[I])) + '/') > 0 then
           Principale := True;
       if (Code <> '') and not Principale then
       begin
@@ -8262,7 +9877,9 @@ begin
 
   // ---- 1. Validation : un niveau declare (ou 0) pour chaque ligne ----
   for I := 1 to StringGridAttrEthnie.RowCount - 1 do
-    if AttrNiveauxValides.IndexOf(Trim(StringGridAttrEthnie.Cells[2, I])) < 0 then
+    // carriere a Parent (Guild Engineer) : ses valeurs viennent des niveaux de la carriere parente, non declares ici
+    if (AttrNiveauxValides.IndexOf(Trim(StringGridAttrEthnie.Cells[2, I])) < 0) and
+       ((CareerElement.FindNode('Parent') = nil) or (StrToIntDef(Trim(StringGridAttrEthnie.Cells[2, I]), -1) < 0)) then
     begin
       MajBoutonsAttr(True);
       ShowMessage(GetTexteLibelle('RULES-LAB_368'));
@@ -8403,6 +10020,11 @@ begin
   StringGridAttrEthnie.RowCount := RowCar;
   StringGridAttrSimples.RowCount := RowSimple;
   StringGridAttrBlessures.RowCount := RowBless;
+
+  // Les tableaux vides (V2 : tout est dans le premier) ne servent a rien : on les masque.
+  StringGridAttrSimples.Visible := StringGridAttrSimples.RowCount > 1;
+  StringGridAttrBlessures.Visible := StringGridAttrBlessures.RowCount > 1;
+  LabelAttrBlessures.Visible := StringGridAttrBlessures.Visible;
 
   AttrSnapshot := InstantaneAttrEthnie(nil, 0, 0, '');
   MajBoutonsAttr(False);
@@ -8625,7 +10247,7 @@ begin
     if not EntierPositif(StringGridAttrEthnie.Cells[2, I], N) then
     begin
       MajBoutonsAttr(True);
-      ShowMessage(GetTexteLibelle('RULES-LAB_347'));
+      if not TestSansMessage then ShowMessage(GetTexteLibelle('RULES-LAB_347'));
       StringGridAttrEthnie.Row := I;
       StringGridAttrEthnie.Col := 2;
       Exit;
@@ -8633,7 +10255,7 @@ begin
     if not EntierPositif(StringGridAttrEthnie.Cells[3, I], N) then
     begin
       MajBoutonsAttr(True);
-      ShowMessage(GetTexteLibelle('RULES-LAB_347'));
+      if not TestSansMessage then ShowMessage(GetTexteLibelle('RULES-LAB_347'));
       StringGridAttrEthnie.Row := I;
       StringGridAttrEthnie.Col := 3;
       Exit;
@@ -8643,7 +10265,7 @@ begin
     if not EntierPositif(StringGridAttrSimples.Cells[2, I], N) then
     begin
       MajBoutonsAttr(True);
-      ShowMessage(GetTexteLibelle('RULES-LAB_347'));
+      if not TestSansMessage then ShowMessage(GetTexteLibelle('RULES-LAB_347'));
       StringGridAttrSimples.Row := I;
       StringGridAttrSimples.Col := 2;
       Exit;
@@ -8652,7 +10274,7 @@ begin
     if not EntierPositif(StringGridAttrBlessures.Cells[2, I], N) then
     begin
       MajBoutonsAttr(True);
-      ShowMessage(GetTexteLibelle('RULES-LAB_347'));
+      if not TestSansMessage then ShowMessage(GetTexteLibelle('RULES-LAB_347'));
       StringGridAttrBlessures.Row := I;
       StringGridAttrBlessures.Col := 2;
       Exit;
@@ -8857,7 +10479,7 @@ var
   CareerElement: TDOMElement;
   Chapitre: TDOMNode;
   Elements: TDOMNodeList;
-  I, RowIdx, PipePos, UnderPos: Integer;
+  I, RowIdx, PipePos: Integer;
   CareerCode, CodeComp, BaseCode, SkillPrincipal: String;
   ColComp, ColSpec: String;
   Competence, Generique: StructureCompetence;
@@ -8913,12 +10535,8 @@ begin
     else if Competence.SousCompetence then
     begin
       // Spécialisation : remonter à la compétence générique "XXX_*"
-      UnderPos := Pos('_', CodeComp);
-      if UnderPos > 0 then
-        BaseCode := Copy(CodeComp, 1, UnderPos - 1) + '_*'
-      else
-        BaseCode := '';
-      
+      BaseCode := CodeGeneriqueDe(Competence);
+
       Generique := ChercheCompetence(BaseCode);
       if Generique.CodeCompetence <> '' then
         ColComp := Generique.Libelle
@@ -8959,7 +10577,7 @@ var
   CareerElement: TDOMElement;
   Chapitre: TDOMNode;
   Elements: TDOMNodeList;
-  I, RowIdx, PipePos, UnderPos: Integer;
+  I, RowIdx, PipePos: Integer;
   CareerCode, CodeTal, BaseCode: String;
   ColTal, ColSpec: String;
   Talent, Generique: StructureTalent;
@@ -9012,11 +10630,10 @@ begin
     else if Talent.SousTalent then
     begin
       // Spécialisation : remonter au talent générique "XXX_*"
-      UnderPos := Pos('_', CodeTal);
-      if UnderPos > 0 then
-        BaseCode := Copy(CodeTal, 1, UnderPos - 1) + '_*'
+      if Talent.CodeGenerique <> '' then
+        BaseCode := Talent.CodeGenerique
       else
-        BaseCode := '';
+        BaseCode := CodeFamilleTalent(CodeTal);
       
       Generique := ChercheTalent(BaseCode);
       if Generique.CodeTalent <> '' then
@@ -9114,7 +10731,7 @@ begin
   StringGridAttrEthnie.Columns[2].Title.Caption := GetTexteLibelle('RULES-LAB_376');  // Quantite
   StringGridAttrEthnie.Columns[3].Title.Caption := GetTexteLibelle('RULES-LAB_019');  // Niv.
   StringGridAttrEthnie.Columns[0].Width := 320;
-  StringGridAttrEthnie.Columns[1].Width := 300;
+  StringGridAttrEthnie.Columns[1].Width := 0;  // colonne Code masquee (edition seulement, le libelle est en colonne 0)
   StringGridAttrEthnie.Columns[2].Width := 80;
   StringGridAttrEthnie.Columns[3].Width := 60;
   StringGridAttrEthnie.RowCount := 1;
@@ -9425,7 +11042,6 @@ procedure TWinLivres.AfficherCareersForRace(RaceCode: String);
 var
   RowIdx, I, J: Integer;
   Metier: StructureMetier;
-  Livre: StructureLivre;
   CareerFound: Boolean;
   CareerValue: String;
   CodeLivre: String;
@@ -9504,12 +11120,10 @@ begin
       end;
       
       // Chercher le livre
-      Livre := ChercheLivreLibelle(Metier.Livre);
-      if Livre.CodeLivre <> '' then
-        CodeLivre := GetTexteLibelle(Livre.Libelle)
-      else
-        CodeLivre := Metier.Livre;
-      
+      // Libelle (traduit) du livre, comme la grille des races
+      CodeLivre := GetTexteLibelle(Metier.Livre, '', '', True);
+      if CodeLivre = '' then CodeLivre := Metier.Livre;
+
       // Format stockage pour tri: "Selected|CleClasse|CleLibelle|Libelle|Code|Livre|Classe|CareerValue"
       // Selected = "0" pour sélectionné (viendra en premier), "1" pour non-sélectionné ;
       // puis l'ordre du dé : classe, puis libellé (mêmes clés que CalculeTirageMetier)
@@ -9602,6 +11216,7 @@ begin
   // Tout doit tenir dans 900 de large (les boutons restent à droite, à 940) sans défilement :
   // colonne réservée masquée, puis Livre et Libellé rognés au besoin
   StringGridCareers.ColWidths[0] := 0;
+  StringGridCareers.ColWidths[1] := 0;  // le code metier n'interesse pas : le libelle suffit (la colonne reste lue par le code)
   Excedent := -880;  // 900 moins la barre verticale
   for J := 0 to StringGridCareers.ColCount - 1 do
     Excedent := Excedent + StringGridCareers.ColWidths[J];
@@ -9748,14 +11363,14 @@ begin
   MajBoutonsAttr(InstantaneCareers <> AttrSnapshot);
 end;
 
-// Chance valide : 'X' (eligible hors tirage) ou un poids entier de 1 a 100 (nombre de valeurs
-// de de du metier ; les bornes se calculent a l'usage, voir ChargeTirageMetier).
+// Chance valide : 'X' ou '-' (hors tirage, deja dans les livres officiels) ou un poids entier de 1 a 100
+// (nombre de valeurs de de du metier ; les bornes se calculent a l'usage, voir ChargeTirageMetier).
 function ChanceValide(S: String): Boolean;
 var
   Poids: Integer;
 begin
   S := Trim(S);
-  if S = 'X' then
+  if (S = 'X') or (S = '-') then
   begin
     Result := True;
     Exit;
@@ -9794,7 +11409,17 @@ begin
       if not ChanceValide(Chance) then
       begin
         MajBoutonsAttr(True);
-        ShowMessage(GetTexteLibelle('RULES-LAB_359'));
+        if TestSansMessage then
+          with TStringList.Create do
+          try
+            if FileExists('error.log') then LoadFromFile('error.log');
+            Add('Chance invalide : ' + AttrRaceCode + ' / ' + StringGridCareers.Cells[1, I] + ' = [' + Chance + ']');
+            SaveToFile('error.log');
+          finally
+            Free;
+          end
+        else
+          ShowMessage(GetTexteLibelle('RULES-LAB_359'));
         StringGridCareers.Row := I;
         StringGridCareers.Col := 5;
         Exit;
@@ -9976,20 +11601,64 @@ end;
 procedure TWinLivres.AfficherDonneeRace(ACode: String);
 var
   Element: TDOMElement;
-  I: Integer;
 begin
   MasquerAfficherElements('');
   MasquerForm();
   Element := TrouverElementParId('Specie', ACode);
   if Element = nil then Exit;
+  // V4 / V5 : la fiche a son panneau de noms, meme quand l'ethnie n'a pas encore de SUBCHAPTER_NAMES (ethnie neuve)
+  if (EstLivreV1 or EstLivreV2) and FicheGeneriqueV1Possible(Element) then
+  begin
+    AfficherFicheGeneriqueV1(Element, 'Specie', NT_RACE, ACode);
+    PoserImageLivre('E', ACode);
+    Exit;
+  end;
+  FamillesTalent := '';  // nouvelle navigation : les familles cochees ne se gardent pas d'une ethnie a l'autre
+  AfficherFicheEthnie(Element, ACode);
+end;
+
+// Fiche d'une ethnie (V2, V4, V5). Champs rares en groupes : Rattachement (Nationality 16 ethnies sur 88, PictureLevel 11,
+// V4 / V5) et Recit (Background, RoleplayingHints : 4 ethnies sur 103, V2) ; familles cochees ou deja presentes.
+procedure TWinLivres.AfficherFicheEthnie(Element: TDOMElement; ACode: String);
+var
+  Familles: String;
+  AvecFamilles: Boolean;
+  Champs: TTableauChampsFiche;
+  I: Integer;
+
+  procedure Ajoute(const Champ: StructureChampFiche);
+  begin
+    SetLength(Champs, Length(Champs) + 1);
+    Champs[High(Champs)] := Champ;
+  end;
+begin
   FicheTag := 'Specie';
   FicheTypeNoeud := NT_RACE;
-  PanelFiche.Definir([
-    ChampFiche('Description', 'RULES-LAB_002', gfTexte, True, True),
-    ChampFiche('Explanation', 'RULES-LAB_003', gfMemo, True, False, True)]);
+  Familles := FamillesTalent;
+  AvecFamilles := EditionPermise;
+  FTalentElement := Element;  // pour reconstruire la fiche apres un changement de famille
+  SetLength(Champs, 0);
+  Ajoute(ChampFiche('Description', 'RULES-LAB_002', gfTexte, True, True));
+  if AvecFamilles then
+    Ajoute(ChampFiche('FamilleEthnie', 'RULES-LAB_FAMILLE_ETHNIE', gfCases, False, False, True, False,
+      'RATTACHEMENT=' + GetTexteLibelle('RULES-LAB_FAMILLE_RATTACHEMENT', 'Nationality, level picture') +
+      '|RECIT=' + GetTexteLibelle('RULES-LAB_FAMILLE_RECIT', 'Background, roleplaying hints')));
+  Ajoute(ChampFiche('Explanation', 'RULES-LAB_003', gfMemo, True, False, True));
+  Ajoute(ChampFiche('Ethnic', 'RULES-LAB_561', gfCodeLibre, False, False, True, False,
+    ChoixParTags(['Race'], ValeurXML(Element.FindNode('Ethnic')))));
+  Ajoute(EnGroupes(ChampFiche('Nationality', 'RULES-LAB_332', gfCodeLibre, False, False, True, False,
+    ChoixParTags(['Nation'], ValeurXML(Element.FindNode('Nationality')))), 'Rattachement+V4,V5'));
+  Ajoute(EnGroupes(ChampFiche('PictureLevel', 'RULES-LAB_958', gfTexte, False, False, True, False), 'Rattachement+V4,V5'));
+  Ajoute(EnGroupes(ChampFiche('Background', 'RULES-LAB_726', gfMemo, True, False, True, False), 'Recit+V2'));
+  Ajoute(EnGroupes(ChampFiche('RoleplayingHints', 'RULES-LAB_727', gfMemo, True, False, True, False), 'Recit+V2'));
+  Ajoute(ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False));
+  FiltrerChampsFiche(Champs, Element, VersionFicheLivre, Familles);
+  PanelFiche.Definir(Champs);
+  if AvecFamilles then PanelFiche.DeclarerVirtuel('FamilleEthnie');
   PanelFiche.MasquerGrille;  // le moteur ne lit aucun modificateur d'ethnie
   PanelFiche.Extra := PanelNoms;
   PanelFiche.Charger(Element);
+  if AvecFamilles then PanelFiche.CocherCodes('FamilleEthnie', Familles);
   // une ethnie sans Description n'est qu'un ajout a une race d'un autre livre : le libelle de l'arbre est celui de cette race
   if (RacesDataList <> nil) and (PanelFiche.ValeurChamp('Description') = '') then
   begin
@@ -10000,6 +11669,7 @@ begin
   PanelFiche.Placer(StringGridDetail.Left, StringGridDetail.Top);
   PanelFiche.Visible := True;
   CodeDonneeSelectionnee := ACode;
+  PoserImageLivre('E', ACode);
   if EditionPermise then PrendreSnapshotFiche;
 end;
 
@@ -10023,11 +11693,14 @@ begin
     // une ligne de DATA_SPELL_TALENT porte l'id du sort sans etre le sort
     if (Element.ParentNode <> nil) and (Element.ParentNode.NodeName = 'DATA_SPELL_TALENT') then Continue;
     
-    if (Element.GetAttribute('id') = Id) or (Element.GetAttribute('name') = Id) then
+    if Element.GetAttribute('id') = Id then
     begin
       Result := Element;
       Exit;
     end;
+    // repli sur name= (reference), seulement si aucun element n'a cet id : une ligne de tirage
+    // <Skill name="x"> placee avant la definition ne doit pas la masquer
+    if (Result = nil) and (Element.GetAttribute('name') = Id) then Result := Element;
   end;
 end;
 
@@ -10138,12 +11811,23 @@ begin
   MasquerForm();
   Element := TrouverElementParId(TagName, Code);
   if Element = nil then Exit;
-  if TagName = 'Weapon' then
+  // livre WFRP2 : codes de disponibilite, de type et de portee propres a l'edition, que les listes fermees de la fiche WFRP4 refusent
+  if ((TagName = 'Weapon') or (TagName = 'Armor')) and FicheGeneriqueV1Possible(Element) then
+  begin
+    if TagName = 'Weapon' then
+      AfficherFicheGeneriqueV1(Element, TagName, NT_ARME, Code)
+    else
+      AfficherFicheGeneriqueV1(Element, TagName, NT_ARMURE, Code);
+  end
+  else if TagName = 'Weapon' then
     AfficherFicheArme(Element)
   else if TagName = 'Armor' then
     AfficherFicheArmure(Element)
   else if TagName = 'Trapping' then
-    AfficherFicheTrapping(Element)
+  begin
+    FamillesTalent := '';  // nouvelle navigation : les familles cochees ne se gardent pas d'un objet a l'autre
+    AfficherFicheTrapping(Element);
+  end
   else if TagName = 'ArmorSimp' then
     AfficherFicheArmureSimple(Element);
   CodeDonneeSelectionnee := Code;
@@ -10169,6 +11853,8 @@ begin
     ChampFiche('Price', 'RULES-LAB_054', gfTexte, False, False, True, False, '', cfPrix),
     ChampFiche('Availability', 'RULES-LAB_056', gfCode, False, True, False, False, Copy(Dispos, 2, MaxInt)),
     ChampFiche('Quality', 'RULES-LAB_476', gfQualites, False, False, False, False)]);
+  // ordre du schema (ArmorSimpType)
+  PanelFiche.OrdreBalises := 'Description,Availability,Price,Encumbrance,Quality,ArmorPoint';
   RemplirCompLieeFiche('');
   PanelFiche.Charger(Element);
   PanelFiche.LectureSeule := True;
@@ -10312,9 +11998,14 @@ begin
     ChampFiche('Duration', 'RULES-LAB_109', gfListe, False, False, True, False, Duree),
     ChampFiche('Range', 'RULES-LAB_057', gfListe, False, False, True, False, Portee),
     ChampFiche('Target', 'RULES-LAB_108', gfTexte, False, False, True, False),
-    ChampFiche('Level', 'RULES-LAB_019', gfTexte, False, False, True, False, '', cfEntier),
+    // texte libre : le niveau d'un rituel peut etre une formule (« Equal to the Beast's Wounds », « 50 (25) »)
+    ChampFiche('Level', 'RULES-LAB_019', gfTexte, False, False, True, False),
     ChampFiche('Talent', 'RULES-LAB_007', gfCases, True, False, True, False, Copy(Talents, 2, MaxInt)),
-    ChampFiche('Explanation', 'RULES-LAB_279', gfMemo, True, False, True)]);
+    ChampFiche('Explanation', 'RULES-LAB_279', gfMemo, True, False, True),
+    ChampFiche('XpFixed', 'RULES-LAB_959', gfTexte, True, False, True, False),
+    ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False)]);
+  // ordre du schema (SortType) : sans lui, un sort neuf est ecrit dans l'ordre d'affichage de la fiche
+  PanelFiche.OrdreBalises := 'Description,*Explanation,Target,Duration,Range,Talent,Level,TypSpell,*XpFixed,*CULTE,*Page';
   RemplirCompLieeFiche('');
   PanelFiche.Charger(Element);
   PanelFiche.CocherCodes('Talent', Coches);
@@ -10358,6 +12049,8 @@ begin
     Result := 'N' + PanelTraitEthnie.Signature(Sep)
   else if PanelCarriereEspece.Visible then
     Result := 'S' + PanelCarriereEspece.Signature(Sep)
+  else if PanelRegleEthnie.Visible then
+    Result := 'G' + PanelRegleEthnie.Signature(Sep)
   else if PanelTraduction.Visible then
     Result := 'L' + PanelTraduction.Signature(Sep)
   else if PanelSousMetier.Visible then
@@ -10390,6 +12083,8 @@ begin
     PanelTraitEthnie.ActiverBoutons(Modifie);
   if PanelCarriereEspece.Visible then
     PanelCarriereEspece.ActiverBoutons(Modifie);
+  if PanelRegleEthnie.Visible then
+    PanelRegleEthnie.ActiverBoutons(Modifie);
   if PanelTraduction.Visible then
     PanelTraduction.ActiverBoutons(Modifie);
   if PanelSousMetier.Visible then
@@ -10598,8 +12293,7 @@ begin
     end;
     if (Courant <> '') and (Vus.IndexOf(Courant) < 0) then
     begin
-      P := Pos('_', Courant);
-      if P > 0 then Lib := LibelleTalentTirage(Copy(Courant, 1, P - 1)) else Lib := LibelleTalentTirage(Courant);
+      Lib := LibelleTalentTirage(RadicalTalent(Courant));
       if (Length(Courant) > 0) and (Courant[Length(Courant)] = '*') then Lib := Lib + ' (*)';
       Liste.Add(Lib + #9 + Courant);
     end;
@@ -10635,6 +12329,24 @@ var
   Coches: TStringList;
   I: Integer;
 begin
+  // famille de talent cochee / decochee : la fiche est reconstruite apres l'evenement (le controle clique serait detruit)
+  if ((FicheTag = 'Talent') and (Balise = 'FamilleTalent')) or ((FicheTag = 'Trapping') and (Balise = 'FamilleTrapping')) or
+     ((FicheTag = 'Career') and (Balise = 'FamilleCarriere')) or ((FicheTag = 'Specie') and (Balise = 'FamilleEthnie')) then
+  begin
+    FamillesTalent := UpperCase(PanelFiche.ValeurChamp(Balise));
+    // minuteur et non file asynchrone : le clic sur la case doit etre completement termine avant que Definir
+    // detruise la liste de cases (detruite pendant son propre clic, WinLivre se fermait)
+    if FTimerFamille = nil then
+    begin
+      FTimerFamille := TTimer.Create(Self);
+      FTimerFamille.Enabled := False;
+      FTimerFamille.Interval := 80;
+      FTimerFamille.OnTimer := @TimerFamilleTick;
+    end;
+    FTimerFamille.Enabled := False;
+    FTimerFamille.Enabled := True;
+    Exit;
+  end;
   if (FicheTag = 'Sort') and (Balise = 'TypSpell') and CreationPermise then
   begin
     RemplirTalentsSort(PanelFiche.ValeurChamp('TypSpell'));
@@ -10673,6 +12385,16 @@ begin
   end;
 end;
 
+
+// Chapitres qui ne definissent que les regles de base du jeu : dans un livre autre que le Rulebook,
+// on ne montre pas leur branche tant que le livre n'y met rien.
+function TWinLivres.ChapitreReserveRulebook(const Chapitre: String): Boolean;
+begin
+  Result := AutreLivreRulebook and
+    ((Chapitre = 'DATA_ATTRIBUT') or
+     (Chapitre = 'DATA_SKILL_COST') or (Chapitre = 'DATA_ATTRIBUT_COST') or
+     (Chapitre = 'DATA_CORRUPTION_PHYSICAL_CHANCE') or (Chapitre = 'DATA_CORRUPTION_MENTAL_CHANCE'));
+end;
 
 // Vrai si le livre ouvert n'est pas le Rulebook (il en reprend alors les elements, en lecture seule).
 function TWinLivres.AutreLivreRulebook: Boolean;
@@ -10729,6 +12451,21 @@ end;
 
 // Toutes les benedictions des livres (Rulebook et livre ouvert) sous la forme "code=libelle|..." triee par libelle ;
 // Coches = celles qui citent ce dieu (leur <Talent>, ou une ligne de DATA_SPELL_TALENT de l'un des deux livres).
+// Cases a cocher "code=libelle|..." pour les libelles RULES-LAB_<Premier> a RULES-LAB_<Dernier> (localites, saisons).
+function TWinLivres.ChoixCasesLabels(Premier, Dernier: Integer): String;
+var
+  I: Integer;
+  Code: String;
+begin
+  Result := '';
+  for I := Premier to Dernier do
+  begin
+    Code := 'RULES-LAB_' + IntToStr(I);
+    if Result <> '' then Result := Result + '|';
+    Result := Result + Code + '=' + GetTexteLibelle(Code);
+  end;
+end;
+
 function TWinLivres.ChoixBenedictions(const Dieu: String; out Coches, Verrous: String): String;
 var
   Vus, Tri: TStringList;
@@ -10745,7 +12482,7 @@ begin
   Autre := AutreLivreRulebook;
   PrefRulebook := '';
   if Autre then PrefRulebook := ValeurXML(RulebookXML.GetElementsByTagName('DATA_BOOK').Item[0].FindNode('CODE_BOOK'));
-  Docs[0] := RulebookXML;
+  Docs[0] := RulebookBaseXML;
   Docs[1] := XMLDoc;
   Vus := TStringList.Create;
   Tri := TStringList.Create;
@@ -10906,7 +12643,8 @@ begin
       if T = '' then
       begin
         G := Gen.Values[Id];
-        if (G = '') and (Pos('_', Id) > 0) then G := Copy(Id, 1, Pos('_', Id)) + '*';
+        if G = '' then G := CodeFamilleTalent(Id);
+        if (G = '') and (Pos('_', Id) > 0) and (Pos('-T_', Id) = 0) then G := Copy(Id, 1, Pos('_', Id)) + '*';
         if (G <> '') and (G <> Id) then T := Propres.Values[G];
       end;
       if T <> '' then Resultat.Values[Id] := T;
@@ -11119,6 +12857,26 @@ begin
   end;
 end;
 
+// Libelle (<Description>) du talent de ce code, cherche dans le livre ouvert puis dans le Rulebook ; le code sinon.
+function LibelleTalentDeCode(const Code: String; Docs: array of TXMLDocument): String;
+var
+  N, J: Integer;
+  Elems: TDOMNodeList;
+begin
+  Result := Code;
+  for N := Low(Docs) to High(Docs) do
+  begin
+    if Docs[N] = nil then Continue;
+    Elems := Docs[N].GetElementsByTagName('Talent');
+    for J := 0 to Elems.Count - 1 do
+      if TDOMElement(Elems.Item[J]).GetAttribute('id') = Code then
+      begin
+        if ValeurXML(Elems.Item[J].FindNode('Description')) <> '' then
+          Exit(ValeurXML(Elems.Item[J].FindNode('Description')));
+      end;
+  end;
+end;
+
 // Une entrée d'une petite table : une ligne par balise enfant.
 procedure TWinLivres.AfficherDonneePetiteTable(Chapitre, TagElement, Code: String);
 var
@@ -11128,6 +12886,8 @@ var
   Element, Trouve: TDOMElement;
   Enfant: TDOMNode;
   Valeur: String;
+  ListeCodes: TStringList;
+  K: Integer;
 begin
   MasquerAfficherElements('DETAIL');
   MasquerForm();
@@ -11151,11 +12911,23 @@ begin
   end;
   if Trouve = nil then Exit;
 
+  // regle d'un livre WFRP1 : fiche generique (nom, page...), editable
+  if (Chapitre = 'DATA_RULE') and FicheGeneriqueV1Possible(Trouve) then
+  begin
+    MasquerAfficherElements('');
+    AfficherFicheGeneriqueV1(Trouve, TagElement, NT_PETITE_TABLE_DEBUT + 1, Code);
+    Exit;
+  end;
+
   StringGridDetail.RowCount := 1;
   StringGridDetail.Columns[0].Title.Caption := GetTexteLibelle('RULES-LAB_002');
   StringGridDetail.Columns[1].Title.Caption := GetTexteLibelle('RULES-LAB_025');
 
-  LabelFormTitle.Caption := LibelleChapitre(Chapitre) + ': ' + Code;
+  // un sort de DATA_SPELL_TALENT : son nom (texte du noeud) dans le titre, le code reste sur la ligne « Code »
+  if (Chapitre = 'DATA_SPELL_TALENT') and (NodeSelectionnee <> nil) then
+    LabelFormTitle.Caption := LibelleChapitre(Chapitre) + ': ' + NodeSelectionnee.Text
+  else
+    LabelFormTitle.Caption := LibelleChapitre(Chapitre) + ': ' + Code;
   AjouterLigneDetail(GetTexteLibelle('RULES-LAB_001'), Code);
 
   Enfant := Trouve.FirstChild;
@@ -11164,13 +12936,32 @@ begin
     if Enfant.NodeType = ELEMENT_NODE then
     begin
       Valeur := AplatirElement(TDOMElement(Enfant));
-      if Valeur = '' then
+      if (Valeur = '') and (Chapitre = 'DATA_SPELL_TALENT') and (Enfant.NodeName = 'Talent') then
+      begin
+        // le talent du sort en libelle, pas son code ; plusieurs talents (dieux d'une benediction) = codes separes par des virgules
+        ListeCodes := TStringList.Create;
+        try
+          ListeCodes.StrictDelimiter := True;
+          ListeCodes.CommaText := ValeurXML(Enfant);
+          // un talent par ligne (tableau) : le libelle de la balise n'est donne qu'a la premiere
+          for K := 0 to ListeCodes.Count - 1 do
+          begin
+            Valeur := LibelleTalentDeCode(Trim(ListeCodes[K]), [XMLDoc, RulebookXML]);
+            if K = 0 then AjouterLigneDetail(GetTexteLibelle(Enfant.NodeName), Valeur)
+            else AjouterLigneDetail('', Valeur);
+          end;
+          Valeur := #1;  // lignes deja ajoutees
+        finally
+          ListeCodes.Free;
+        end;
+      end
+      else if Valeur = '' then
         Valeur := TraduireCodesDansTexte(ValeurXML(Enfant))
       else
         Valeur := '(' + Valeur + ')';
       if TDOMElement(Enfant).GetAttribute('id') <> '' then
         Valeur := '[' + TDOMElement(Enfant).GetAttribute('id') + '] ' + Valeur;
-      AjouterLigneDetail(GetTexteLibelle(Enfant.NodeName), Valeur);
+      if Valeur <> #1 then AjouterLigneDetail(GetTexteLibelle(Enfant.NodeName), Valeur);
     end;
     Enfant := Enfant.NextSibling;
   end;
@@ -11315,7 +13106,7 @@ var
   E: TDOMElement;
   I: Integer;
 begin
-  MasquerAfficherElements('DETAIL');
+  MasquerAfficherElements('');
   MasquerForm();
   if XMLDoc = nil then Exit;
   LabelFormTitle.Caption := GetTexteLibelle('RULES-LAB_042') + ' ' + GetTexteLibelle('RULES-LAB_085');
@@ -11468,7 +13259,7 @@ var
   Classes: TStringList;
   I: Integer;
 begin
-  MasquerAfficherElements('DETAIL');
+  MasquerAfficherElements('');
   MasquerForm();
   if XMLDoc = nil then Exit;
   Classes := TStringList.Create;
@@ -11533,7 +13324,7 @@ var
   E: TDOMElement;
   I: Integer;
 begin
-  MasquerAfficherElements('DETAIL');
+  MasquerAfficherElements('');
   MasquerForm();
   if XMLDoc = nil then Exit;
   Metiers := TStringList.Create;
@@ -11603,6 +13394,129 @@ begin
   AfficherCarriereEspece;
 end;
 
+// Le chapitre DATA_RULE_SPECIE du livre ouvert (enfant direct de DATA_BOOK), nil s'il n'existe pas encore.
+function TWinLivres.ChapitreRegleEthnie: TDOMElement;
+var
+  N: TDOMNode;
+begin
+  Result := nil;
+  if XMLDoc = nil then Exit;
+  N := XMLDoc.DocumentElement.FindNode('DATA_RULE_SPECIE');
+  if N <> nil then Result := TDOMElement(N);
+end;
+
+// Libelle d'une competence : celui du livre ouvert, sinon celui des listes du jeu.
+function TWinLivres.LibelleCompetenceTirage(Code: String): String;
+var
+  E: TDOMElement;
+  PC: StructureCompetence;
+begin
+  Result := '';
+  E := TrouverElementParId('Skill', Code);
+  if E <> nil then Result := ValeurXML(E.FindNode('Description'));
+  if Result = '' then
+  begin
+    PC := ChercheCompetence(Code);
+    if PC.CodeCompetence = Code then Result := PC.Libelle;
+  end;
+  if Result = '' then Result := Code;
+end;
+
+// Regles par ethnie : regles, ethnies et races, competences et talents du jeu et du livre ouvert au choix.
+procedure TWinLivres.AfficherRegleEthnie;
+var
+  Regles, Especes, Competences, Talents: TStringList;
+  PRg: StructureRegle;
+  PR: StructureRace;
+  PE: StructureEspece;
+  PC: StructureCompetence;
+  PT: StructureTalent;
+  Liste: TDOMNodeList;
+  E: TDOMElement;
+
+  procedure AjouteIds(Cible: TStrings; const Balise: String);
+  var
+    J: Integer;
+  begin
+    Liste := XMLDoc.GetElementsByTagName(Balise);
+    for J := 0 to Liste.Count - 1 do
+    begin
+      E := TDOMElement(Liste.Item[J]);
+      if E.GetAttribute('id') <> '' then Cible.Add(E.GetAttribute('id'));
+    end;
+  end;
+
+begin
+  MasquerAfficherElements('');
+  MasquerForm();
+  if XMLDoc = nil then Exit;
+  Regles := TStringList.Create;
+  Especes := TStringList.Create;
+  Competences := TStringList.Create;
+  Talents := TStringList.Create;
+  try
+    Regles.Sorted := True;
+    Regles.Duplicates := dupIgnore;
+    Especes.Sorted := True;
+    Especes.Duplicates := dupIgnore;
+    Competences.Sorted := True;
+    Competences.Duplicates := dupIgnore;
+    Talents.Sorted := True;
+    Talents.Duplicates := dupIgnore;
+    for PRg in ListRegle do
+      Regles.Add(PRg.CodeRegle);
+    AjouteIds(Regles, 'Rule');
+    for PR in ListRace do
+      Especes.Add(PR.CodeRace);
+    for PE in ListEspece do
+      Especes.Add(PE.CodeEspece);
+    AjouteIds(Especes, 'Specie');
+    AjouteIds(Especes, 'Race');
+    for PC in ListCompetence do
+      Competences.Add(PC.CodeCompetence);
+    AjouteIds(Competences, 'Skill');
+    for PT in ListTalent do
+      Talents.Add(PT.CodeTalent);
+    AjouteIds(Talents, 'Talent');
+    PanelRegleEthnie.Configurer(@LibelleRegleTirage, @LibelleColonneTirage, @LibelleCompetenceTirage,
+      @LibelleTalentTirage, Regles, Especes, Competences, Talents);
+  finally
+    Regles.Free;
+    Especes.Free;
+    Competences.Free;
+    Talents.Free;
+  end;
+  PanelRegleEthnie.Charger(ChapitreRegleEthnie);
+  PanelRegleEthnie.LectureSeule := not EditionPermise;
+  PanelRegleEthnie.Anchors := [akLeft, akTop, akRight, akBottom];
+  PanelRegleEthnie.SetBounds(StringGridDetail.Left, StringGridDetail.Top,
+    PanelRegleEthnie.Parent.ClientWidth - StringGridDetail.Left - 10,
+    PanelRegleEthnie.Parent.ClientHeight - StringGridDetail.Top - 10);
+  PanelRegleEthnie.Visible := True;
+  CodeDonneeSelectionnee := 'DATA_RULE_SPECIE';
+  if EditionPermise then PrendreSnapshotFiche;
+end;
+
+procedure TWinLivres.RegleEthnieValiderClick(Sender: TObject);
+var
+  Chap: TDOMElement;
+begin
+  if not PanelRegleEthnie.Controler then Exit;
+  Chap := ChapitreRegleEthnie;
+  if Chap = nil then
+  begin
+    Chap := XMLDoc.CreateElement('DATA_RULE_SPECIE');
+    XMLDoc.DocumentElement.AppendChild(Chap);
+  end;
+  PanelRegleEthnie.Ecrire(Chap);
+  AfficherRegleEthnie;
+end;
+
+procedure TWinLivres.RegleEthnieAnnulerClick(Sender: TObject);
+begin
+  AfficherRegleEthnie;
+end;
+
 // Le chapitre DATA_CAREER_SUBCHOICE du livre ouvert (enfant direct de DATA_BOOK), nil s'il n'existe pas encore.
 function TWinLivres.ChapitreSousMetier: TDOMElement;
 var
@@ -11623,7 +13537,7 @@ var
   E: TDOMElement;
   I: Integer;
 begin
-  MasquerAfficherElements('DETAIL');
+  MasquerAfficherElements('');
   MasquerForm();
   if XMLDoc = nil then Exit;
   Metiers := TStringList.Create;
@@ -11716,7 +13630,7 @@ var
   Livre: TDOMNode;
   Langue: String;
 begin
-  MasquerAfficherElements('DETAIL');
+  MasquerAfficherElements('');
   MasquerForm();
   if XMLDoc = nil then Exit;
   Livre := XMLDoc.GetElementsByTagName('DATA_BOOK').Item[0];
@@ -11983,13 +13897,22 @@ begin
   MasquerForm();
 
   if XMLDoc = nil then Exit;
+  // ces trois ecrans ont leur propre fiche ou panneau : la grille de detail (restee du noeud precedent) n'a rien a faire la
+  if TableValeursEditable(Chapitre) then
+  begin
+    StringGridDetail.Visible := False;
+    AfficherFicheTableValeurs(Chapitre);
+    Exit;
+  end;
   if Chapitre = 'DATA_RANDOM_TALENT' then
   begin
+    StringGridDetail.Visible := False;
     AfficherTirageTalent;
     Exit;
   end;
   if Chapitre = 'DATA_CAREER_ROLL' then
   begin
+    StringGridDetail.Visible := False;
     AfficherTirageMetier;
     Exit;
   end;
@@ -12051,7 +13974,8 @@ begin
     ChampFiche('Contraction', 'RULES-LAB_282', gfTexte, True),
     ChampFiche('Incubation', 'RULES-LAB_283'),
     ChampFiche('Duration', 'RULES-LAB_284'),
-    ChampFiche('Symptoms', 'RULES-LAB_285', gfMemo, True, False, True)]);
+    ChampFiche('Symptoms', 'RULES-LAB_285', gfMemo, True, False, True),
+    ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False)]);
   RemplirCompLieeFiche('');  // cibles de competence de la grille (liste commune avec la fiche de talent)
   PanelFiche.Charger(Element);
   PanelFiche.LectureSeule := not EditionPermise;
@@ -12068,7 +13992,9 @@ begin
   FicheTypeNoeud := NT_AFFLICTION;
   PanelFiche.Definir([
     ChampFiche('Description', 'RULES-LAB_002', gfTexte, True, True),
-    ChampFiche('Explanation', 'RULES-LAB_279', gfMemo, True, False, True)]);
+    ChampFiche('Explanation', 'RULES-LAB_279', gfMemo, True, False, True),
+    ChampFiche('ModifyHands', 'RULES-LAB_980', gfTexte, False, False, True, False),
+    ChampFiche('ModifyHands@name', 'RULES-LAB_980', gfTexte, True, False, True, False)]);
   RemplirCompLieeFiche('');
   PanelFiche.Charger(Element);
   PanelFiche.LectureSeule := not EditionPermise;
@@ -12094,7 +14020,8 @@ begin
     ChampFiche('God', 'RULES-LAB_534', gfTexte, False, False, False, False),
     ChampFiche('Appearance', 'RULES-LAB_535', gfTexte, True, False),
     ChampFiche('Personality', 'RULES-LAB_536', gfMemo, True, False),
-    ChampFiche('Talent', 'RULES-LAB_007', gfCodeLibre, False, False, True, False, ChoixTalentsSigne(ValeurXML(Element.FindNode('Talent'))))]);
+    ChampFiche('Talent', 'RULES-LAB_007', gfCodeLibre, False, False, True, False, ChoixTalentsSigne(ValeurXML(Element.FindNode('Talent')))),
+    ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False)]);
   PanelFiche.MasquerGrille;  // les effets du signe ne sont pas ceux de la grille des modificateurs
   PanelFiche.Extra := PanelSigneEffets;
   RemplirCompLieeFiche('');
@@ -12433,7 +14360,9 @@ begin
   FicheTypeNoeud := TypeNoeud;
   PanelFiche.Definir([
     ChampFiche('Description', 'RULES-LAB_002', gfTexte, True, True),
-    ChampFiche('Explanation', 'RULES-LAB_279', gfMemo, True, False, True)]);
+    ChampFiche('Explanation', 'RULES-LAB_279', gfMemo, True, False, True),
+    ChampFiche('Weapon', 'RULES-LAB_063', gfCodeLibre, False, False, True, False, ChoixParTags(['Weapon'], ValeurXML(Element.FindNode('Weapon')))),
+    ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False)]);
   RemplirCompLieeFiche('');
   PanelFiche.Charger(Element);
   PanelFiche.LectureSeule := not EditionPermise;
@@ -12459,7 +14388,7 @@ begin
       Result := 42 + I;
 end;
 
-// Cree une mutation dans la table physique ou mentale selon la branche : code <LIVRE>-CORPHY_NNN / CORMEN_NNN.
+// Cree une mutation dans la table physique ou mentale selon la branche : code <LIVRE>-CORPHY_NOM / CORMEN_NOM.
 procedure TWinLivres.CreerMutation;
 var
   Code, Prefixe, Langue, Lib, NomChap, Mot: String;
@@ -12499,10 +14428,12 @@ begin
   if Langue = '' then Langue := 'ENGLISH';
   Prefixe := ValeurXML(Livre.FindNode('CODE_BOOK'));
   N := 1;
-  repeat
-    Code := Prefixe + '-' + Mot + Format('%.3d', [N]);
+  Code := Prefixe + '-' + Mot + NomEnMajuscules(Lib);
+  while TrouverElementParId('Corruption', Code) <> nil do
+  begin
     Inc(N);
-  until TrouverElementParId('Corruption', Code) = nil;
+    Code := Prefixe + '-' + Mot + NomEnMajuscules(Lib) + '_' + IntToStr(N);
+  end;
 
   Chapitre := XMLDoc.GetElementsByTagName(NomChap).Item[0];
   if Chapitre = nil then
@@ -12541,7 +14472,8 @@ begin
   FicheTag := 'Nation';
   FicheTypeNoeud := NT_NATION;
   PanelFiche.Definir([
-    ChampFiche('Description', 'RULES-LAB_002', gfTexte, True, True)]);
+    ChampFiche('Description', 'RULES-LAB_002', gfTexte, True, True),
+    ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False)]);
   RemplirCompLieeFiche('');
   PanelFiche.Charger(Element);
   PanelFiche.LectureSeule := not EditionPermise;
@@ -12561,7 +14493,8 @@ begin
   PanelFiche.Definir([
     ChampFiche('Code', 'RULES-LAB_001', gfTexte, False, False, True, False),
     ChampFiche('Description', 'RULES-LAB_002', gfTexte, True, True),
-    ChampFiche('Explanation', 'RULES-LAB_279', gfMemo, True, False, True)]);
+    ChampFiche('Explanation', 'RULES-LAB_279', gfMemo, True, False, True),
+    ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False)]);
   RemplirCompLieeFiche('');
   PanelFiche.Charger(Element);
   PanelFiche.LectureSeule := True;
@@ -12582,12 +14515,29 @@ begin
   FicheTypeNoeud := NT_FABRICATION;
   Applique := 'Weapon=' + GetTexteLibelle('RULES-LAB_063') + '|Armour=' + GetTexteLibelle('RULES-LAB_065') +
     '|Misc=' + GetTexteLibelle('RULES-LAB_064');
+  RemplirQualitesArme('WEAPB');  // WeaponQuality : qualites d'arme ajoutees, en panneau a libelles
   PanelFiche.Definir([
     ChampFiche('Description', 'RULES-LAB_002', gfTexte, True, True),
     ChampFiche('Short', 'RULES-LAB_073', gfTexte, True, False, True),
     ChampFiche('Max', 'RULES-LAB_044', gfTexte, False, False, True, False, '', cfEntier),
     ChampFiche('Applies', 'RULES-LAB_333', gfCases, False, True, False, False, Applique),
-    ChampFiche('Explanation', 'RULES-LAB_279', gfMemo, True, False, True)]);
+    ChampFiche('Explanation', 'RULES-LAB_279', gfMemo, True, False, True),
+    ChampFiche('Talent', 'RULES-LAB_007', gfTexte, False, False, True, False),
+    ChampFiche('Talent#2', 'RULES-LAB_007', gfTexte, False, False, True, False),
+    ChampFiche('Talent#3', 'RULES-LAB_007', gfTexte, False, False, True, False),
+    ChampFiche('RangeBonus', 'RULES-LAB_057', gfTexte, False, False, True, False, '', cfEntier),
+    ChampFiche('WeaponQuality', 'RULES-LAB_292', gfQualites, False, False, True, False),
+    ChampFiche('AlternateWeapon', 'RULES-LAB_339', gfTexte, False, False, True, False),
+    ChampFiche('Encumbrance', 'RULES-LAB_055', gfTexte, False, False, True, False, '', cfEntier),
+    // regle propre au programme : le mot-cle de <Modifier> declenche un calcul ecrit en Pascal (chargefabrication.pas)
+    ChampFiche('Modifier', 'RULES-LAB_034', gfCode, False, False, True, False, '=-' +
+      '|BONUS=' + GetTexteLibelle('RULES-CRAFTMOD_BONUS', 'BONUS') +
+      '|PRACTICAL=' + GetTexteLibelle('RULES-CRAFTMOD_PRACTICAL', 'PRACTICAL') +
+      '|UNRELIABLE=' + GetTexteLibelle('RULES-CRAFTMOD_UNRELIABLE', 'UNRELIABLE') +
+      '|BULKY=' + GetTexteLibelle('RULES-CRAFTMOD_BULKY', 'BULKY')),
+    ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False)]);
+  // ordre du schema (CraftsmanshipType) : Explanation et Short avant les balises libres, Page en dernier
+  PanelFiche.OrdreBalises := 'Description,*Explanation,Short,*Applies,*Max,*Talent,*RangeBonus,*WeaponQuality,*AlternateWeapon,*Encumbrance,*Modifier,*Page';
   RemplirCompLieeFiche('');
   PanelFiche.Charger(Element);
   // balise absente = fabrication generique (tous les objets) : on la montre explicitement
@@ -12811,6 +14761,67 @@ begin
   end;
 end;
 
+// <Text> d'un libelle du livre ouvert, par son code LANGUE|nom (nil si absent).
+function TWinLivres.TrouverTexteLibelle(const Code: String): TDOMElement;
+var
+  Langue, Nom: String;
+  Bloc, Etiquette, Texte: TDOMNode;
+begin
+  Result := nil;
+  if (XMLDoc = nil) or (Pos('|', Code) = 0) then Exit;
+  Langue := ExtractStringBefore(Code, '|');
+  Nom := ExtractStringAfter(Code, '|');
+  Bloc := XMLDoc.GetElementsByTagName('DATA_LABEL').Item[0];
+  if Bloc = nil then Exit;
+  Etiquette := Bloc.FirstChild;
+  while Etiquette <> nil do
+  begin
+    if (Etiquette.NodeName = 'Label') and (TDOMElement(Etiquette).GetAttribute('language') = Langue) then
+    begin
+      Texte := Etiquette.FirstChild;
+      while Texte <> nil do
+      begin
+        if (Texte.NodeName = 'Text') and (TDOMElement(Texte).GetAttribute('name') = Nom) then
+        begin
+          Result := TDOMElement(Texte);
+          Exit;
+        end;
+        Texte := Texte.NextSibling;
+      end;
+    end;
+    Etiquette := Etiquette.NextSibling;
+  end;
+end;
+
+// Fiche d'un libelle du livre : code (affichage seul) et texte, tous deux ranges a la main (champs virtuels).
+procedure TWinLivres.AfficherDonneeLibelle(Code: String);
+var
+  Element: TDOMElement;
+begin
+  MasquerAfficherElements('');
+  MasquerForm();
+  Element := TrouverTexteLibelle(Code);
+  if Element = nil then Exit;
+  FicheTag := 'Libelle';
+  FicheTypeNoeud := NT_LIBELLE_LIVRE;
+  PanelFiche.Definir([
+    ChampFiche('Code', 'RULES-LAB_001', gfTexte, False, False, True, False),
+    ChampFiche('Libelle', 'RULES-LAB_002', gfTexte, True, True, False, False)]);
+  PanelFiche.DeclarerVirtuel('Code');
+  PanelFiche.DeclarerVirtuel('Libelle');
+  PanelFiche.DeclarerAffichageSeul('Code');
+  PanelFiche.MasquerGrille;
+  RemplirCompLieeFiche('');
+  PanelFiche.Charger(Element);
+  PanelFiche.SetValeurChamp('Code', Element.GetAttribute('name'));
+  PanelFiche.SetValeurChamp('Libelle', ValeurXML(Element));
+  PanelFiche.LectureSeule := not EditionPermise;
+  PanelFiche.Placer(StringGridDetail.Left, StringGridDetail.Top);
+  PanelFiche.Visible := True;
+  if EditionPermise then PrendreSnapshotFiche;
+  CodeDonneeSelectionnee := Code;
+end;
+
 // Fiche d'une condition : libelle (range dans le DATA_LABEL, champ virtuel) et nature (Kind).
 procedure TWinLivres.AfficherFicheCondition(Element: TDOMElement);
 begin
@@ -12821,7 +14832,8 @@ begin
     ChampFiche('Libelle', 'RULES-LAB_002', gfTexte, True, True),
     ChampFiche('Kind', 'RULES-LAB_493', gfCode, False, True, False, False,
       'Information=' + GetTexteLibelle('RULES-LAB_490') + '|Optional=' + GetTexteLibelle('RULES-LAB_491') +
-      '|Conditional=' + GetTexteLibelle('RULES-LAB_492'))]);
+      '|Conditional=' + GetTexteLibelle('RULES-LAB_492')),
+    ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False)]);
   PanelFiche.DeclarerVirtuel('Libelle');
   PanelFiche.MasquerGrille;  // une condition ne porte aucun modificateur
   RemplirCompLieeFiche('');
@@ -12831,6 +14843,1199 @@ begin
   PanelFiche.Placer(StringGridDetail.Left, StringGridDetail.Top);
   PanelFiche.Visible := True;
   if EditionPermise then PrendreSnapshotFiche;
+end;
+
+// Fiche d'une competence ou d'un talent WFRP2 : texte du livre, consultation seule.
+procedure TWinLivres.AfficherDonneeV2(Code, NomTag: String);
+const
+  // balise de l'article d'equipement et libelle ; seuls les champs presents sont affiches
+  ChampsEquipement: array[0..35, 0..1] of String = (
+    ('Category', 'RULES-LAB_711'), ('SubCategory', 'RULES-LAB_712'), ('Cost', 'RULES-LAB_015'),
+    ('CostWeek', 'RULES-LAB_713'), ('Share', 'RULES-LAB_714'), ('Encumbrance', 'RULES-LAB_715'),
+    ('Group', 'RULES-LAB_716'), ('Damage', 'RULES-LAB_717'), ('Range', 'RULES-LAB_718'),
+    ('Reload', 'RULES-LAB_719'), ('Qualities', 'RULES-LAB_720'), ('Locations', 'RULES-LAB_721'),
+    ('ArmourPoints', 'RULES-LAB_722'), ('Availability', 'RULES-LAB_723'), ('Note', 'RULES-LAB_724'),
+    ('LagTime', 'RULES-LAB_764'), ('Volatility', 'RULES-LAB_765'), ('IngredientCost', 'RULES-LAB_766'),
+    ('IngredientLocale', 'RULES-LAB_767'), ('IngredientDifficulty', 'RULES-LAB_768'),
+    ('CreationDifficulty', 'RULES-LAB_769'), ('CreationTime', 'RULES-LAB_770'),
+    ('AcademicKnowledge', 'RULES-LAB_771'), ('Powers', 'RULES-LAB_772'), ('SideEffects', 'RULES-LAB_784'), ('History', 'RULES-LAB_773'),
+    ('RuneType', 'RULES-LAB_775'), ('InscriptionNumber', 'RULES-LAB_776'), ('Empowerment', 'RULES-LAB_777'),
+    ('PermanentEffect', 'RULES-LAB_778'), ('TemporaryEffect', 'RULES-LAB_779'),
+    ('CombatModifiers', 'RULES-LAB_895'), ('Profile', 'RULES-LAB_250'), ('Skills', 'RULES-LAB_009'),
+    ('Talents', 'RULES-LAB_007'), ('SpecialRules', 'RULES-ANIMV2_SPECIAL'));
+var
+  Element: TDOMElement;
+  Champs: array of StructureChampFiche;
+  K, N: Integer;
+  Dispo, Courant: String;
+  Mots, Morceaux: TStringList;
+begin
+  MasquerAfficherElements('');
+  MasquerForm();
+  // la competence WFRP1 porte la balise <Skill> (NomTag 'SkillV1' sert seulement a la reconnaitre)
+  if NomTag = 'SkillV1' then
+    Element := TrouverElementParId('Skill', Code)
+  else
+    Element := TrouverElementParId(NomTag, Code);
+  if Element = nil then Exit;
+  if NomTag = 'SkillV1' then FicheTag := 'Skill' else FicheTag := NomTag;
+  if NomTag = 'SkillV1' then
+    begin
+      FicheTypeNoeud := NT_COMPETENCE_V1;
+      PanelFiche.Definir([
+        ChampFiche('Description', 'RULES-LAB_002', gfTexte, True),
+        ChampFiche('Generique', 'RULES-LAB_146', gfTexte, True, False, True, False),
+        ChampFiche('Explanation', 'RULES-LAB_003', gfMemo, True, False, True),
+        ChampFiche('Variants', 'RULES-LAB_913', gfTexte, True, False, True, False),
+        ChampFiche('Cumulative', 'RULES-LAB_914', gfTexte, True, False, True, False),
+        ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False)]);
+      PanelFiche.OrdreBalises := 'Description,Explanation,Bonus,*Cumulative,*Variants,*Page';
+    end
+  else if NomTag = 'SkillV2' then
+    begin
+      FicheTypeNoeud := NT_COMPETENCE_V2;
+      PanelFiche.Definir([
+        ChampFiche('Description', 'RULES-LAB_002', gfTexte, True),
+        ChampFiche('SkillType', 'RULES-LAB_706', gfTexte, True, False, True, False),
+        ChampFiche('Characteristic', 'RULES-LAB_705', gfTexte, True, False, True, False),
+        ChampFiche('Explanation', 'RULES-LAB_003', gfMemo, True),
+        ChampFiche('RelatedTalents', 'RULES-LAB_707', gfMemo, True, False, True, False)]);
+    end
+  else if (NomTag = 'EquipmentV2') or (NomTag = 'EquipmentV1') then
+    begin
+      if NomTag = 'EquipmentV1' then FicheTypeNoeud := NT_EQUIPEMENT_V1 else FicheTypeNoeud := NT_EQUIPEMENT_V2;
+      SetLength(Champs, 4 + Length(ChampsEquipement));
+      Champs[0] := ChampFiche('Description', 'RULES-LAB_002', gfTexte, True);
+      N := 1;
+      // libelle francais d'un objet V1 (2e <Description language="FRENCH">) : champ propre, sa langue en attribut
+      if (NomTag = 'EquipmentV1') and (NoeudDeBalise(Element, 'Description#2') <> nil) then
+      begin
+        Champs[N] := ChampFiche('Description#2', 'Description (2)', gfTexte, True, False, False, False);
+        Inc(N);
+        Champs[N] := ChampFiche('Description#2@language', 'Description (2) language', gfTexte, True, False, False, False);
+        Inc(N);
+      end;
+      for K := 0 to High(ChampsEquipement) do
+        // V1 : tous les champs du schema sont proposes (balise creee seulement si remplie) ; V2 : ceux deja presents
+        if ((Element.FindNode(ChampsEquipement[K, 0]) <> nil) and
+            not ((NomTag = 'EquipmentV2') and (ChampsEquipement[K, 0] = 'Qualities')) and  // Qualities : tableau (PanelQualitesV2)
+            not ((NomTag = 'EquipmentV1') and ((ChampsEquipement[K, 0] = 'CombatModifiers') or (ChampsEquipement[K, 0] = 'Range')))) or  // CombatModifiers et Range : tableaux (PanelLignesObjetV1)
+           ((NomTag = 'EquipmentV1') and (Pos(',' + ChampsEquipement[K, 0] + ',',
+             ',SubCategory,Cost,Encumbrance,Availability,Reload,ArmourPoints,Locations,Note,') > 0)) then
+        begin
+          if (NomTag = 'EquipmentV1') and (ChampsEquipement[K, 0] = 'Category') then
+            Champs[N] := ChampFiche('Category', ChampsEquipement[K, 1], gfCodeLibre, True, False, True, False,
+              ChoixMotsV1('V1CAT_', ['WEAPON', 'MISC', 'TRANSPORT', 'ARMOUR', 'CLOTHING', 'HIRELING', 'SUBSISTENCE', 'DWELLING', 'MEDICAL'], True))
+          else if (NomTag = 'EquipmentV1') and (ChampsEquipement[K, 0] = 'SubCategory') then
+            Champs[N] := ChampFiche('SubCategory', ChampsEquipement[K, 1], gfCodeLibre, True, False, True, False,
+              ChoixMotsV1('V1SUBCAT_', ['MELEE', 'MISSILE', 'TOOLS', 'FIREARM', 'HOUSEHOLD', 'MUSIC', 'CARRYING', 'LIVESTOCK',
+                'ILLUMINATION', 'SKILLED', 'VEHICLE', 'TRAVEL', 'POTION', 'UNSKILLED', 'CHARM', 'READING', 'RIDING', 'POISON'], True))
+          else if (NomTag = 'EquipmentV1') and (ChampsEquipement[K, 0] = 'Locations') then
+            // zones couvertes : cases a cocher, valeurs ecrites « Body/Arms » (separees par une barre oblique)
+            Champs[N] := ChampFiche('Locations', ChampsEquipement[K, 1], gfCases, True, False, True, False,
+              ChoixMotsV1('V1LOC_', ['Head', 'Body', 'Arms', 'Legs', 'All'], True))
+          else if (NomTag = 'EquipmentV1') and (ChampsEquipement[K, 0] = 'Availability') then
+            Champs[N] := ChampFiche('Availability', ChampsEquipement[K, 1], gfCodeLibre, True, False, True, False,
+              ChoixMotsV1('DISPO2_', ['Plentiful', 'Common', 'Average', 'Scarce', 'Rare', 'Very Rare', 'Almost Unknown'], True))
+          else if (NomTag = 'EquipmentV2') and (ChampsEquipement[K, 0] = 'Availability') then
+          begin
+            // mots du livre (Common...), parfois ecrits en code (RULES-DISPO2_SCARCE) ou « - » : la valeur d'origine reste proposee
+            Dispo := ChoixMotsV1('DISPO2_', ['Abundant', 'Plentiful', 'Common', 'Average', 'Scarce', 'Rare', 'Very Rare', 'Extremely Rare'], True) + '|-=-';
+            Courant := ValeurXML(Element.FindNode('Availability'));
+            if (Pos('RULES-DISPO2_', Courant) = 1) and (Length(Courant) > Length('RULES-DISPO2_'))
+               and (Pos('|' + Courant + '=', '|' + Dispo) = 0) then
+              Dispo := Dispo + '|' + Courant + '=' + GetTexteLibelle(Courant);
+            Champs[N] := ChampFiche('Availability', ChampsEquipement[K, 1], gfCodeLibre, True, False, True, False, Dispo);
+          end
+          else if (NomTag = 'EquipmentV2') and (ChampsEquipement[K, 0] = 'Locations') then
+            // zones V2 : cases a cocher, valeurs separees par « , » (« Body, Left Front Leg, and Right Front Leg » rendue telle quelle si inchangee)
+            Champs[N] := ChampFiche('Locations', ChampsEquipement[K, 1], gfCases, True, False, True, False,
+              ChoixMotsV1('V1LOC_', ['Head', 'Body', 'Arms', 'Legs', 'Left Front Leg', 'Right Front Leg', 'All'], True))
+          else if (NomTag = 'EquipmentV2') and (ChoixParBaliseV2(ChampsEquipement[K, 0]) <> '') then
+            Champs[N] := ChampFiche(ChampsEquipement[K, 0], ChampsEquipement[K, 1], gfCodeLibre, True, False, True, False,
+              ChoixParBaliseV2(ChampsEquipement[K, 0]))
+          else
+            Champs[N] := ChampFiche(ChampsEquipement[K, 0], ChampsEquipement[K, 1], gfTexte, True, False, True, False);
+          Inc(N);
+        end;
+      if (NomTag = 'EquipmentV1') or (Element.FindNode('Page') <> nil) then
+        begin
+          Champs[N] := ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False);
+          Inc(N);
+        end;
+      SetLength(Champs, N);
+      PanelFiche.Definir(Champs);
+      if NomTag = 'EquipmentV1' then PanelFiche.DeclarerSeparateurCases('Locations', '/')
+      else PanelFiche.DeclarerSeparateurCases('Locations', ', ');
+      if NomTag = 'EquipmentV1' then
+        PanelFiche.OrdreBalises := 'Description,Category,*SubCategory,*Cost,*Encumbrance,*Availability,*CombatModifiers,*RangeBands,*Reload,*ArmourPoints,*Locations,*Note,*Page'
+      else
+        // ordre de SCHEMA_WFRP2.xsd (EquipmentV2Type)
+        PanelFiche.OrdreBalises := 'Description,Category,*SubCategory,*Cost,*CostWeek,*Share,*Encumbrance,*Group,*Damage,*Range,*Reload,*Qualities,*Locations,*ArmourPoints,*Availability,*Profile,*Skills,*Talents,*SpecialRules,*Note,*Page,*LagTime,*Volatility,*IngredientCost,*IngredientLocale,*IngredientDifficulty,*CreationDifficulty,*CreationTime,*AcademicKnowledge,*Powers,*SideEffects,*History,*RuneType,*InscriptionNumber,*Empowerment,*PermanentEffect,*TemporaryEffect';
+      // la categorie est celle de la branche ou l'objet a ete cree : elle ne se modifie pas ici
+      PanelFiche.DeclarerAffichageSeul('Category');
+    end
+  else if NomTag = 'SpellV2' then
+    begin
+      FicheTypeNoeud := NT_SORT_V2;
+      PanelFiche.Definir([
+        ChampFiche('Description', 'RULES-LAB_002', gfTexte, True),
+        // Lore, CastingNumber, CastingTime, Ingredient : obligatoires au schema (SpellV2Type), ecrits meme vides
+        ChampFiche('Lore', 'RULES-LAB_708', gfTexte, True, False, False, False),
+        ChampFiche('CastingNumber', 'RULES-LAB_335', gfTexte, True, False, False, False),
+        ChampFiche('CastingTime', 'RULES-LAB_709', gfTexte, True, False, False, False),
+        ChampFiche('Ingredient', 'RULES-LAB_710', gfTexte, True, False, False, False),
+        ChampFiche('Range', 'RULES-LAB_718', gfTexte, True, False, True, False),
+        ChampFiche('Duration', 'RULES-LAB_284', gfTexte, True, False, True, False),
+        ChampFiche('Cult', 'RULES-LAB_781', gfTexte, True, False, True, False),
+        ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False),
+        ChampFiche('SpellLists', 'RULES-LAB_757', gfTexte, True, False, True, False),
+        ChampFiche('RitualType', 'RULES-LAB_758', gfCodeLibre, True, False, True, False, ChoixParBaliseV2('RitualType')),
+        ChampFiche('ArcaneLanguage', 'RULES-LAB_759', gfTexte, True, False, True, False),
+        ChampFiche('MagicMin', 'RULES-LAB_760', gfTexte, True, False, True, False),
+        ChampFiche('XPCost', 'RULES-LAB_761', gfTexte, True, False, True, False),
+        ChampFiche('Conditions', 'RULES-LAB_762', gfMemo, True, False, True, False),
+        ChampFiche('Consequences', 'RULES-LAB_763', gfMemo, True, False, True, False),
+        ChampFiche('Explanation', 'RULES-LAB_003', gfMemo, True),
+        ChampFiche('Talent', 'RULES-LAB_007', gfTexte, True, False, True, False)]);
+      // le talent d'acces n'est pas dans le sort : il est range dans DATA_SPELL_TALENT (EcrireTalentsTable)
+      PanelFiche.DeclarerVirtuel('Talent');
+      // ordre de SCHEMA_WFRP2.xsd (SpellV2Type) : une balise ajoutee se range a sa place
+      PanelFiche.OrdreBalises := 'Description,Explanation,Lore,CastingNumber,CastingTime,Ingredient,*Page,*SpellLists,*Duration,*Range,*Cult,*RitualType,*ArcaneLanguage,*MagicMin,*XPCost,*Conditions,*Consequences';
+    end
+  else if NomTag = 'Deity' then
+    begin
+      FicheTypeNoeud := NT_DIEU_V1;
+      PanelFiche.Definir([
+        ChampFiche('Description', 'RULES-LAB_002', gfTexte, True),
+        ChampFiche('Alignment', 'RULES-LAB_872', gfCodeLibre, True, False, True, False,
+          ChoixMotsV1('V1ALIGN_', ['Neutral', 'Chaos', 'Law', 'Good', 'Evil'], True)),
+        ChampFiche('Domain', 'RULES-LAB_873', gfTexte, True, False, True, False),
+        ChampFiche('Strictures', 'RULES-LAB_874', gfMemo, True, False, True, False),
+        ChampFiche('Trials', 'RULES-LAB_875', gfMemo, True, False, True, False),
+        ChampFiche('Blessings', 'RULES-LAB_876', gfMemo, True, False, True, False),
+        ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False)]);
+    end
+  else if NomTag = 'Disability' then
+    begin
+      FicheTypeNoeud := NT_HANDICAP_V1;
+      PanelFiche.Definir([
+        ChampFiche('Description', 'RULES-LAB_002', gfTexte, True),
+        ChampFiche('Explanation', 'RULES-LAB_003', gfMemo, True, False, True),
+        ChampFiche('InsanityPoints', 'RULES-LAB_916', gfTexte, True, False, True, False),
+        ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False)]);
+    end
+  else if NomTag = 'Attribut' then
+    begin
+      FicheTypeNoeud := NT_ATTRIBUT_V1;
+      PanelFiche.Definir([
+        ChampFiche('Description', 'RULES-LAB_002', gfTexte, True),
+        ChampFiche('Short', 'RULES-LAB_925', gfTexte, True, False, True),
+        ChampFiche('Explanation', 'RULES-LAB_003', gfMemo, True, False, True),
+        ChampFiche('Order', 'RULES-LAB_926', gfTexte, True, False, True, False),
+        ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False)]);
+      PanelFiche.OrdreBalises := 'Description,Explanation,Short,*Order,*Page';
+    end
+  else if NomTag = 'Class' then
+    begin
+      FicheTypeNoeud := NT_CLASSE_V1;
+      PanelFiche.Definir([
+        ChampFiche('Description', 'RULES-LAB_002', gfTexte, True),
+        ChampFiche('Explanation', 'RULES-LAB_003', gfMemo, True, False, True),
+        ChampFiche('Trappings', 'RULES-LAB_196', gfMemo, True, False, True, False),
+        ChampFiche('Money', 'RULES-LAB_694', gfTexte, True, False, True, False),
+        ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False)]);
+    end
+  else if NomTag = 'Trade' then
+    begin
+      FicheTypeNoeud := NT_METIER_V1;
+      PanelFiche.Definir([
+        ChampFiche('Description', 'RULES-LAB_002', gfTexte, True),
+        ChampFiche('Roll', 'RULES-LAB_877', gfTexte, True, False, True, False),
+        ChampFiche('Note', 'RULES-LAB_910', gfTexte, True, False, True, False)]);
+    end
+  else if NomTag = 'Cult' then
+    begin
+      FicheTypeNoeud := NT_CULTE_V1;
+      PanelFiche.Definir([
+        ChampFiche('Description', 'RULES-LAB_002', gfTexte, True),
+        ChampFiche('Deity', 'RULES-LAB_534', gfCodeLibre, True, False, True, False,
+          ChoixDivinitesV1(ValeurXML(Element.FindNode('Deity')))),
+        ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False)]);
+    end
+  else if NomTag = 'Familiar' then
+    begin
+      FicheTypeNoeud := NT_FAMILIER_V1;
+      PanelFiche.Definir([
+        ChampFiche('Animal', 'RULES-LAB_252', gfTexte, True),
+        ChampFiche('Range', 'RULES-LAB_877', gfTexte, True, False, True, False),
+        ChampFiche('Skill1', 'RULES-FAMDIET_SKILLS', gfCodeLibre, False, False, True, False, ChoixCompetencesV1),
+        ChampFiche('Skill2', 'RULES-FAMDIET_SKILLS', gfCodeLibre, False, False, True, False, ChoixCompetencesV1),
+        ChampFiche('SkillNote', 'RULES-LAB_917', gfTexte, True, False, True, False),
+        ChampFiche('Diet', 'RULES-FAMDIET_DIET', gfCodeLibre, False, False, True, False, ChoixRegimeV1),
+        ChampFiche('Armour', 'RULES-EQCAT2_ARMOUR', gfCodeLibre, True, False, True, False,
+          ChoixMotsV1('V1ARMOUR_', ['None', 'Leather', 'Any'], True)),
+        ChampFiche('Shield', 'RULES-ARMOL_SHIELD', gfTexte, True, False, True, False),
+        ChampFiche('ForbiddenWeapons', 'RULES-LAB_878', gfCases, True, False, True, False,
+          ChoixMotsV1('V1WPN_', ['2-h', 'firearms', 'missile', 'blunt', 'sharp'])),
+        ChampFiche('TimesPlaces', 'RULES-LAB_879', gfTexte, True, False, True, False)]);
+      PanelFiche.OrdreBalises := 'Range,Animal,Skill1,Skill2,*SkillNote,Armour,Shield,*ForbiddenWeapons,TimesPlaces,Diet';
+    end
+  else if NomTag = 'SpellV1' then
+    begin
+      FicheTypeNoeud := NT_SORT_V1;
+      PanelFiche.Definir([
+        ChampFiche('Description', 'RULES-LAB_002', gfTexte, True),
+        ChampFiche('SpellList', 'RULES-LAB_847', gfCodeLibre, True, False, True, False, ChoixValeursBalise('SpellList', ValeurXML(Element.FindNode('SpellList')))),
+        ChampFiche('SpellLevel', 'RULES-LAB_848', gfCodeLibre, True, False, True, False,
+          // P / Master / High = codes (traduisibles) ; chiffres 1 a 5 = valeur inchangee (non traduisibles)
+          ChoixMotsV1('V1LEVEL_', ['P'], True) + '|1=1|2=2|3=3|4=4|5=5|' + ChoixMotsV1('V1LEVEL_', ['Master', 'High'], True)),
+        ChampFiche('MagicPoints', 'RULES-LAB_867', gfTexte, True, False, True, False),
+        ChampFiche('Range', 'RULES-LAB_718', gfTexte, True, False, True, False),
+        ChampFiche('Duration', 'RULES-LAB_284', gfTexte, True, False, True, False),
+        ChampFiche('Ingredients', 'RULES-LAB_868', gfTexte, True, False, True, False),
+        ChampFiche('MagicTest', 'RULES-LAB_894', gfCodeLibre, True, False, True, False,
+          ChoixMotsV1('V1YESNO_', ['oui', 'non'], True)),
+        ChampFiche('AreaOfEffect', 'RULES-LAB_897', gfTexte, True, False, True, False),
+        ChampFiche('Resistance', 'RULES-LAB_898', gfCodeLibre, True, False, True, False,
+          ChoixMotsV1('V1RESIST_', ['None', 'WP'], True)),
+        ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False),
+        ChampFiche('Explanation', 'RULES-LAB_003', gfMemo, True)]);
+      PanelFiche.OrdreBalises := 'Description,Explanation,SpellList,SpellLevel,MagicPoints,Range,Duration,Ingredients,*AreaOfEffect,*Resistance,*MagicTest,*Page';
+    end
+  else
+    begin
+      FicheTypeNoeud := NT_TALENT_V2;
+      PanelFiche.Definir([
+        ChampFiche('Description', 'RULES-LAB_002', gfTexte, True),
+        ChampFiche('Explanation', 'RULES-LAB_003', gfMemo, True)]);
+    end;
+  PanelFiche.MasquerGrille;
+  if FicheTypeNoeud = NT_COMPETENCE_V1 then PanelFiche.Extra := PanelBonusCompetenceV1
+  else if FicheTypeNoeud = NT_CULTE_V1 then PanelFiche.Extra := PanelCulteV1
+  else if FicheTypeNoeud = NT_DIEU_V1 then PanelFiche.Extra := PanelDieuV1
+  else if FicheTypeNoeud = NT_CLASSE_V1 then PanelFiche.Extra := PanelClasseV1
+  else if FicheTypeNoeud = NT_HANDICAP_V1 then PanelFiche.Extra := PanelHandicapV1
+  else if FicheTypeNoeud = NT_METIER_V1 then PanelFiche.Extra := PanelMetierV1
+  else if FicheTypeNoeud = NT_EQUIPEMENT_V1 then PanelFiche.Extra := PanelLignesObjetV1
+  else if (FicheTypeNoeud = NT_EQUIPEMENT_V2) and (Element.FindNode('Qualities') <> nil) then
+  begin
+    // qualites de l'objet : noms definis dans DATA_WEAPON_BONUS (livre + Rulebook), plus les mots courants hors definition
+    Mots := TStringList.Create;
+    Morceaux := TStringList.Create;
+    try
+      Morceaux.Delimiter := '|';
+      Morceaux.StrictDelimiter := True;
+      Morceaux.DelimitedText := ChoixParTags(['BonusMalus'], '');
+      for K := 0 to Morceaux.Count - 1 do
+        if Pos('=', Morceaux[K]) > 0 then Mots.Add(Copy(Morceaux[K], Pos('=', Morceaux[K]) + 1, MaxInt));
+      Mots.Add('None');
+      Mots.Add('Special');
+      PanelQualitesV2.DefinirChoix(Mots);
+    finally
+      Morceaux.Free;
+      Mots.Free;
+    end;
+    PanelFiche.Extra := PanelQualitesV2;
+  end;
+  PanelFiche.Charger(Element);
+  if FicheTypeNoeud = NT_SORT_V2 then PanelFiche.SetValeurChamp('Talent', TalentsDeTable(Element.GetAttribute('id')));
+  PanelFiche.LectureSeule := not (FicheTypeNoeud in [NT_SORT_V2, NT_EQUIPEMENT_V2, NT_SORT_V1, NT_COMPETENCE_V1, NT_EQUIPEMENT_V1, NT_DIEU_V1, NT_CULTE_V1, NT_FAMILIER_V1, NT_CLASSE_V1, NT_METIER_V1, NT_HANDICAP_V1, NT_ATTRIBUT_V1]) or not EditionPermise;
+  PanelFiche.Placer(StringGridDetail.Left, StringGridDetail.Top);
+  PanelFiche.Visible := True;
+  CodeDonneeSelectionnee := Code;
+end;
+
+// ========== Tables WFRP1 a lignes sans id ==========
+// Code d'une ligne : <balise du chapitre>|<rang de la ligne dans le chapitre>.
+function TWinLivres.TrouverLigneTable(Code: String): TDOMElement;
+var
+  P, N, K: Integer;
+  Courant, Fils: TDOMNode;
+  Reste: String;
+begin
+  Result := nil;
+  P := Pos('|', Code);
+  if (XMLDoc = nil) or (P = 0) then Exit;
+  Courant := XMLDoc.GetElementsByTagName(Copy(Code, 1, P - 1)).Item[0];
+  Reste := Copy(Code, P + 1, MaxInt);
+  // Reste = rangs successifs separes par "|" (chapitre -> ligne, ou chapitre -> <Table> -> ligne)
+  while (Courant <> nil) and (Reste <> '') do
+  begin
+    P := Pos('|', Reste);
+    if P = 0 then P := Length(Reste) + 1;
+    N := StrToIntDef(Copy(Reste, 1, P - 1), -1);
+    Reste := Copy(Reste, P + 1, MaxInt);
+    K := 0;
+    Fils := Courant.FirstChild;
+    Courant := nil;
+    while Fils <> nil do
+    begin
+      if Fils.NodeType = ELEMENT_NODE then
+      begin
+        if K = N then
+        begin
+          Courant := Fils;
+          Break;
+        end;
+        Inc(K);
+      end;
+      Fils := Fils.NextSibling;
+    end;
+  end;
+  if Courant <> nil then Result := TDOMElement(Courant);
+end;
+
+// Livre ouvert de l'edition WFRP1 : ses donnees suivent SCHEMA_WFRP1.xsd (chapitres *_V1), pas le format V4.
+function TWinLivres.EstLivreV1: Boolean;
+begin
+  Result := (XMLDoc <> nil) and (XMLDoc.GetElementsByTagName('DATA_BOOK').Count > 0) and
+    SameText(ValeurXML(XMLDoc.GetElementsByTagName('DATA_BOOK').Item[0].FindNode(ConstXmlVersionLivre)), 'WFRP1');
+end;
+
+// Version du livre ouvert sous la forme 'V1', 'V2', 'V4', 'V5' (jeton des groupes d'affichage des fiches) ; '' si inconnue.
+function TWinLivres.VersionFicheLivre: String;
+var
+  Brut: String;
+begin
+  Result := '';
+  if (XMLDoc = nil) or (XMLDoc.GetElementsByTagName('DATA_BOOK').Count = 0) then Exit;
+  Brut := UpperCase(ValeurXML(XMLDoc.GetElementsByTagName('DATA_BOOK').Item[0].FindNode(ConstXmlVersionLivre)));
+  if (Length(Brut) = 5) and (Copy(Brut, 1, 4) = 'WFRP') then Result := 'V' + Brut[5];
+end;
+
+function TWinLivres.EstLivreV2: Boolean;
+begin
+  Result := (XMLDoc <> nil) and (XMLDoc.GetElementsByTagName('DATA_BOOK').Count > 0) and
+    SameText(ValeurXML(XMLDoc.GetElementsByTagName('DATA_BOOK').Item[0].FindNode(ConstXmlVersionLivre)), 'WFRP2');
+end;
+
+// Une branche vide (livre de travail) n'est proposee que si son chapitre existe dans la version du livre ouvert
+// (relevé des chapitres des livres de DATABASE, 09/11/2026 ; la V5 suit la V4). Chiffres = versions 1, 2, 4, 5.
+// Un chapitre inconnu de la table reste propose ; un chapitre deja rempli est toujours montre (voir les appelants).
+function TWinLivres.ChapitrePermisVersion(const NomChap: String): Boolean;
+const
+  Table: String =
+    '|DATA_AFFLICTION=45|DATA_ARMOR=245|DATA_ARMOR_BONUS=45|DATA_ARMOR_SIMP=45|DATA_ATTRIBUT=1245|DATA_ATTRIBUT_COST=45' +
+    '|DATA_CAREER=245|DATA_CAREER_ADAPTATION=45|DATA_CAREER_BONUS=245|DATA_CAREER_ROLL=1245|DATA_CAREER_SPECIE=45' +
+    '|DATA_CAREER_SUBCHOICE=45|DATA_CLASS_ITEM=45|DATA_CONDITION=45|DATA_CORRUPTION_DIVINE_CHANCE=2|DATA_CORRUPTION_MENTAL=45' +
+    '|DATA_CORRUPTION_MENTAL_CHANCE=45|DATA_CORRUPTION_MUTATION_CHANCE=2|DATA_CORRUPTION_PHYSICAL=45|DATA_CORRUPTION_PHYSICAL_CHANCE=45' +
+    '|DATA_CORRUPTION_TABLE_DIVINE=2|DATA_CORRUPTION_TABLE_MENTAL=45|DATA_CORRUPTION_TABLE_MUTATION=2|DATA_CORRUPTION_TABLE_PHYSICAL=45' +
+    '|DATA_CRAFTMANSHIP=45|DATA_DISEASE=45|DATA_LABEL=45|DATA_NATION=45|DATA_OPTION_RULE=45|DATA_PERSONAL_TABLE=2|DATA_RACE=1245' +
+    '|DATA_RANDOM_SPECIE=45|DATA_RANDOM_TALENT=245|DATA_RULE=1245|DATA_RULE_BACKGROUND=2|DATA_RULE_BACKGROUND_COUNT=2' +
+    '|DATA_RULE_SKILL_ROLL=2|DATA_RULE_SPECIE=2|DATA_RULE_TALENT_ROLL=2|DATA_SKILL=245|DATA_SKILL_COST=45' +
+    '|DATA_SKILL_SPECIALIZATION=1245|DATA_SPECIE=1245|DATA_SPECIE_CAREER_CHOICE=45|DATA_SPECIE_TRAIT=45|DATA_SPELL=45' +
+    '|DATA_SPELL_TALENT=245|DATA_STARSIGN=45|DATA_TALENT=245|DATA_TALENT_SPECIALIZATION=245|DATA_TRAPPING=45|DATA_WEAPON=245' +
+    '|DATA_WEAPON_BONUS=245|';
+var
+  V: String;
+  P: Integer;
+begin
+  Result := True;
+  V := VersionFicheLivre;
+  if V = '' then Exit;
+  V := Copy(V, 2, 1);
+  // chapitres propres a une edition : suffixe _V1 / _V2
+  if Copy(NomChap, Length(NomChap) - 2, 3) = '_V1' then Exit(V = '1');
+  if Copy(NomChap, Length(NomChap) - 2, 3) = '_V2' then Exit(V = '2');
+  P := Pos('|' + NomChap + '=', Table);
+  if P = 0 then Exit;
+  // 4 caracteres au plus apres « = » : les chiffres puis le separateur « | » (aucun nom de chapitre ne contient de chiffre)
+  Result := Pos(V, Copy(Table, P + Length(NomChap) + 2, 4)) > 0;
+end;
+
+// Chapitres que SCHEMA_WFRP1.xsd admet : les *_V1 et les blocs communs. Les autres (talents, armes, maladies...)
+// ne sont pas proposes, meme vides, dans un livre de travail V1.
+function TWinLivres.ChapitreV1Permis(const NomChap: String): Boolean;
+begin
+  Result := (Copy(NomChap, Length(NomChap) - 2, 3) = '_V1') or
+    (Pos('|' + NomChap + '|', '|DATA_ATTRIBUT|DATA_SKILL_SPECIALIZATION|DATA_SPECIE|DATA_RACE|DATA_PERSONAL_TABLE|DATA_RULE|DATA_RULE_SPECIE|DATA_RULE_SKILL_ROLL|DATA_CAREER_ROLL|') > 0);
+end;
+
+// Libelle d'un code de carriere, d'espece / race ou de regle WFRP1 pris dans le livre ouvert (puis le Rulebook), '' si inconnu.
+// Affichage seulement : le code reste ce qui est ecrit dans le XML.
+function TWinLivres.LibelleCodeV1(const Code: String): String;
+var
+  I, K: Integer;
+  Doc: TXMLDocument;
+  Balise: String;
+  Element: TDOMElement;
+  Liste: TDOMNodeList;
+begin
+  Result := '';
+  if Code = '' then Exit;
+  if RacesDataList <> nil then
+  begin
+    I := RacesDataList.IndexOf(Code);
+    if (I >= 0) and (RacesDataList.Data[I]^.Libelle <> '') then Exit(RacesDataList.Data[I]^.Libelle);
+  end;
+  for I := 0 to 2 do
+  begin
+    // 3e source : le Rulebook complet (RulebookXML est le fichier de langue quand la langue n'est pas l'anglais)
+    case I of
+      0: Doc := XMLDoc;
+      1: Doc := RulebookXML;
+    else Doc := RulebookBaseXML;
+    end;
+    if Doc = nil then Continue;
+    for Balise in ['Career', 'Specie', 'Race', 'Rule', 'Attribut', 'Skill', 'Disability', 'Class', 'SpellV1'] do
+    begin
+      Liste := Doc.GetElementsByTagName(Balise);
+      for K := 0 to Liste.Count - 1 do
+      begin
+        Element := TDOMElement(Liste.Item[K]);
+        if Element.GetAttribute('id') <> Code then Continue;
+        Result := ValeurXML(Element.FindNode('Description'));
+        if Result <> '' then Exit;
+      end;
+    end;
+    // carriere a niveaux (RULES-WORK_ALCHEMIST -> _1 .. _4) : le libelle du niveau 1 sans ", level 1"
+    Liste := Doc.GetElementsByTagName('Career');
+    for K := 0 to Liste.Count - 1 do
+    begin
+      Element := TDOMElement(Liste.Item[K]);
+      if Element.GetAttribute('id') <> Code + '_1' then Continue;
+      Result := ValeurXML(Element.FindNode('Description'));
+      if Pos(',', Result) > 0 then Result := Copy(Result, 1, Pos(',', Result) - 1);
+      if Result <> '' then Exit;
+    end;
+  end;
+end;
+
+// Libelle d'une ligne : ses valeurs, codes remplaces par leur libelle, separees par " - ".
+function TWinLivres.TexteLigneTable(Ligne: TDOMElement): String;
+  function Lib(const Valeur: String): String;
+  var
+    Trouve: String;
+    Element: TDOMElement;
+  begin
+    Result := LibelleDeCode(Valeur);
+    if Result = '' then Result := GetTexteLibelle(Valeur);
+    if (Result = '') or (Result = Valeur) then
+    begin
+      Trouve := LibelleCodeV1(Valeur);
+      if Trouve <> '' then Result := Trouve else if Result = '' then Result := Valeur;
+    end;
+    if (Result = Valeur) and (Pos('DISABILITY_', Valeur) > 0) then
+    begin
+      // handicap : sa description, dans le livre ouvert
+      Element := TrouverElementParId('Disability', Valeur);
+      if Element <> nil then
+      begin
+        Trouve := ValeurXML(Element.FindNode('Description'));
+        if Trouve <> '' then Result := Trouve;
+      end;
+    end;
+  end;
+var
+  Fils: TDOMNode;
+  Valeur, Nom, Morceau: String;
+begin
+  Result := '';
+  // ligne sans balise fille (<Entry name="...">"01-09"</Entry>) : son attribut puis son texte
+  if not (Ligne.FirstChild is TDOMElement) and (Ligne.GetAttribute('name') <> '') then
+    Exit(Lib(Ligne.GetAttribute('name')) + ' ' + ValeurXML(Ligne));
+  Fils := Ligne.FirstChild;
+  while Fils <> nil do
+  begin
+    if (Fils.NodeType = ELEMENT_NODE) and (Fils.NodeName <> 'Explanation') then
+    begin
+      Valeur := ValeurXML(Fils);
+      Nom := TDOMElement(Fils).GetAttribute('name');
+      if Nom <> '' then Morceau := Lib(Nom) + ' ' + Valeur else Morceau := Lib(Valeur);
+      if Result <> '' then Result := Result + ' - ';
+      Result := Result + Morceau;
+    end;
+    Fils := Fils.NextSibling;
+  end;
+  if Result = '' then Result := Ligne.NodeName;
+end;
+
+// Un champ par balise de Parent (et un par attribut name), en descendant dans les sous-chapitres ("SUBCHAPTER_ATTR/Attribut#2").
+// Description / Explanation de l'element racine gardent leur libelle habituel et leur attribut language.
+// Un commentaire ou un blanc peut preceder la premiere balise fille : on les saute.
+function AUneFilleElement(Noeud: TDOMNode): Boolean;
+var
+  F: TDOMNode;
+begin
+  Result := False;
+  F := Noeud.FirstChild;
+  while (F <> nil) and not Result do
+  begin
+    Result := F.NodeType = ELEMENT_NODE;
+    F := F.NextSibling;
+  end;
+end;
+
+procedure TWinLivres.ChampsGeneriques(Mere: TDOMElement; Prefixe: String; var Champs: TListeChampsFiche; var N: Integer);
+var
+  Fils: TDOMNode;
+  Nom, Chemin, Lib: String;
+  K: Integer;
+  Vues: TStringList;
+
+  // libelle (code RULES-LAB_...) du titre d'un champ d'arme / d'armure V2 ; la balise elle-meme si aucun
+  function LabelEquipementV2(const Element, Balise: String): String;
+  begin
+    Result := Balise;
+    if Balise = 'Skill' then Result := 'RULES-LAB_009'
+    else if Balise = 'Damage' then Result := 'RULES-LAB_159'
+    else if Balise = 'Availability' then Result := 'RULES-LAB_056'
+    else if Balise = 'Reach' then Result := 'RULES-LAB_057'
+    else if Balise = 'Price' then Result := 'RULES-LAB_054'
+    else if Balise = 'Encumbrance' then Result := 'RULES-LAB_055'
+    else if Balise = 'Quality' then Result := 'RULES-LAB_476'
+    else if Balise = 'Hand' then Result := 'RULES-LAB_053'
+    else if Balise = 'Type' then
+    begin
+      if Element = 'Weapon' then Result := 'RULES-LAB_171' else Result := 'RULES-LAB_074';
+    end
+    else if Balise = 'Location' then Result := 'RULES-LAB_075'
+    else if Balise = 'ArmorPoint' then Result := 'RULES-LAB_076';
+  end;
+
+  // ChoixParTags ; une valeur « CODE_A/CODE_B » (choix entre deux) est ajoutee avec « libelle A / libelle B »
+  function ChoixCodesLibelles(const Tags: array of String; const Courant: String): String;
+  var
+    Parties: TStringList;
+    J, P: Integer;
+    Libs, L: String;
+  begin
+    if Pos('/', Courant) = 0 then
+    begin
+      Result := ChoixParTags(Tags, Courant);
+      Exit;
+    end;
+    Result := ChoixParTags(Tags, '');
+    Parties := TStringList.Create;
+    try
+      Parties.Delimiter := '/';
+      Parties.StrictDelimiter := True;
+      Parties.DelimitedText := Courant;
+      Libs := '';
+      for J := 0 to Parties.Count - 1 do
+      begin
+        // libelle pris dans la liste deja construite (« |CODE=libelle| »), sinon LibelleDeCode, sinon le code
+        L := '';
+        P := Pos('|' + Trim(Parties[J]) + '=', '|' + Result);
+        if P > 0 then
+        begin
+          L := Copy('|' + Result, P + Length(Trim(Parties[J])) + 2, MaxInt);
+          if Pos('|', L) > 0 then L := Copy(L, 1, Pos('|', L) - 1);
+        end;
+        if L = '' then L := LibelleDeCode(Trim(Parties[J]));
+        if L = '' then L := Trim(Parties[J]);
+        if Libs <> '' then Libs := Libs + ' / ';
+        Libs := Libs + L;
+      end;
+    finally
+      Parties.Free;
+    end;
+    if Result <> '' then Result := Result + '|';
+    Result := Result + Courant + '=' + Libs;
+  end;
+
+  // degats V2 que les deux champs (bonus d'attribut, valeur fixe) relisent sans rien changer : "+(BATTR_S)", "+(BATTR_S)-3", "+6"
+  function DegatsV2Simple(const S: String): Boolean;
+  var
+    J, P: Integer;
+  begin
+    Result := False;
+    if Copy(S, 1, 8) = '+(BATTR_' then
+    begin
+      P := Pos(')', S);
+      if P = 0 then Exit;
+      Result := True;
+      for J := P + 1 to Length(S) do
+        if not ((J = P + 1) and (S[J] in ['+', '-'])) and not (S[J] in ['0'..'9']) then Result := False;
+      if (P < Length(S)) and (Length(S) = P + 1) then Result := False;
+    end
+    else if (Length(S) >= 2) and (S[1] = '+') then
+    begin
+      Result := True;
+      for J := 2 to Length(S) do
+        if not (S[J] in ['0'..'9']) then Result := False;
+    end;
+  end;
+
+  // groupes de competence d'arme (« code=libelle »), comme la fiche d'arme dediee
+  function ListeGroupesArme: String;
+  var
+    TriG: TStringList;
+    J: Integer;
+  begin
+    Result := '';
+    TriG := TStringList.Create;
+    try
+      RemplirGroupesArmes(TriG);
+      for J := 0 to TriG.Count - 1 do
+        Result := Result + '|' + Copy(TriG[J], Pos(#1, TriG[J]) + 1, Length(TriG[J])) + '=' + Copy(TriG[J], 1, Pos(#1, TriG[J]) - 1);
+    finally
+      TriG.Free;
+    end;
+    Result := Copy(Result, 2, MaxInt);
+  end;
+
+  // portees d'arme V4 / V5 (« code=libelle ») : un code sans libelle n'appartient pas a l'edition chargee ; puis Force x N
+  function ListePorteesArme: String;
+  const
+    PorteesCorps: array[0..10] of String = ('PERSO', 'VSHORT', 'CLOSE', 'SHORT', 'AVERAGE', 'MID', 'LONG', 'VLONG', 'BIG', 'HUGE', 'MASSIVE');
+  var
+    J: Integer;
+    CodeP, LibP: String;
+  begin
+    Result := '';
+    for J := Low(PorteesCorps) to High(PorteesCorps) do
+    begin
+      CodeP := 'RULES-WEAPR_' + PorteesCorps[J];
+      LibP := LibelleAffiche(CodeP);
+      if LibP = CodeP then Continue;
+      Result := Result + '|' + CodeP + '=' + LibP;
+    end;
+    for J := 1 to 4 do
+    begin
+      if J = 1 then CodeP := '(BATTR_S)' else CodeP := '(BATTR_S)X' + IntToStr(J);
+      Result := Result + '|' + CodeP + '=' + GetTexteLibelle('RULES-LAB_034') + ' ' + GetAttributLabel('RULES-ATTR_S') + ' x ' + IntToStr(J);
+    end;
+    Result := Copy(Result, 2, MaxInt);
+  end;
+
+  // liste « code=libelle » d'un champ d'arme / d'armure V2 ; '' si le champ reste libre
+  function ChoixEquipementV2(const Element, Balise: String): String;
+  var
+    J: Integer;
+  begin
+    Result := '';
+    if (Element = 'Weapon') and not EstLivreV1 and not EstLivreV2 and (Balise = 'Skill') then
+      Result := ListeGroupesArme
+    else if (Element = 'Weapon') and not EstLivreV1 and not EstLivreV2 and (Balise = 'Reach') then
+      Result := ListePorteesArme
+    else if (Element = 'Weapon') and not EstLivreV1 and not EstLivreV2 and (Balise = 'Type') then
+      Result := ChoixMotsV1('WTYPE_', ['Sword', 'Axe', 'Hammer', 'Lance', 'Halberd', 'Spear', 'Shield', 'Rapier', 'Swordbreaker'], True)
+    else if (Balise = 'Availability') and not EstLivreV2 then
+    begin
+      // livres V4 : echelle a 5 niveaux (RULES-DISPO_*), comme la fiche equipement
+      for J := Low(DisposEquipement) to High(DisposEquipement) do
+        Result := Result + '|' + DisposEquipement[J] + '=' + GetTexteLibelle(DisposEquipement[J], DisposEquipement[J]);
+      Result := Copy(Result, 2, MaxInt) + '|-=-';
+    end
+    else if Balise = 'Availability' then
+      Result := ChoixMotsV1('DISPO2_', ['Abundant', 'Plentiful', 'Common', 'Average', 'Scarce', 'Rare', 'Very Rare', 'Extremely Rare'], True) + '|-=-'
+    else if (Balise = 'Type') and (Element = 'Weapon') then
+      Result := ChoixMotsV1('WTYPE2_', ['Ordinary', 'Two-Handed', 'Ammunition', 'Entangling', 'Throwing', 'Gunpowder', 'Flail',
+        'Parrying', 'Fencing', 'Cavalry', 'Sling', 'Special', 'Crossbow', 'Longbow', 'Engineer', 'Blowgun', 'Bow', 'Engineering',
+        'Choppa', 'Orc Choppa', 'White Wolf', 'Explosive'], True)
+    else if (Balise = 'Quality') and (Element = 'Weapon') then
+      Result := ChoixMotsV1('WEAPQ_', ['Armour Piercing', 'Balanced', 'Defensive', 'Experimental', 'Fast', 'Impact', 'Precise',
+        'Pummelling', 'Shrapnel', 'Slow', 'Snare', 'Special', 'Tiring', 'Unreliable'], True)
+    else if (Balise = 'Type') and (Element = 'Armor') then
+      for J := Low(MateriauxArmure) to High(MateriauxArmure) do
+        Result := Result + '|' + MateriauxArmure[J] + '=' + LibelleAffiche(MateriauxArmure[J])
+    else if (Balise = 'Location') and (Element = 'Armor') then
+    begin
+      for J := Low(EmplacementsArmure) to High(EmplacementsArmure) do
+        Result := Result + '|' + EmplacementsArmure[J] + '=' + LibelleAffiche(EmplacementsArmure[J]);
+      Result := Result + '|RULES-ARMOL_ANY=' + LibelleAffiche('RULES-ARMOL_ANY');
+    end;
+    if (Result <> '') and (Result[1] = '|') then Result := Copy(Result, 2, MaxInt);
+  end;
+
+begin
+  // element sans balise fille : son texte ("." = l'element lui-meme) et son attribut name
+  if not AUneFilleElement(Mere) then
+  begin
+    SetLength(Champs, N + 4);
+    Champs[N] := ChampFiche(Prefixe + '.', Mere.NodeName, gfTexte, True, False, True, False);
+    Inc(N);
+    // tirage de corruption : le dieu de la table (lore) precede la tranche (name)
+    if Mere.GetAttribute('lore') <> '' then
+    begin
+      Champs[N] := ChampFiche(Prefixe + '.@lore', Mere.NodeName + ' (lore)', gfTexte, True, False, True, False);
+      Inc(N);
+    end;
+    if Mere.GetAttribute('name') <> '' then
+    begin
+      if (Mere.NodeName = 'Entry') and (Mere.ParentNode <> nil) and (Mere.ParentNode.ParentNode <> nil) and
+         (Mere.ParentNode.ParentNode.NodeName = ConstXmlDataDisabilityRollV1) then
+        // ligne du tirage des handicaps : liste des handicaps du livre et du Rulebook
+        Champs[N] := ChampFiche(Prefixe + '.@name', Mere.NodeName + ' (name)', gfCodeLibre, True, False, True, False, ChoixParTags(['Disability'], Mere.GetAttribute('name')))
+      else
+        Champs[N] := ChampFiche(Prefixe + '.@name', Mere.NodeName + ' (name)', gfTexte, True, False, True, False);
+      Inc(N);
+    end;
+    // ligne d'une table personnelle (DATA_PERSONAL_TABLE) : le detail suit le nom
+    if Mere.GetAttribute('detail') <> '' then
+    begin
+      Champs[N] := ChampFiche(Prefixe + '.@detail', Mere.NodeName + ' (detail)', gfTexte, True, False, True, False);
+      Inc(N);
+    end;
+    SetLength(Champs, N);
+    Exit;
+  end;
+  Vues := TStringList.Create;
+  try
+    Fils := Mere.FirstChild;
+    while Fils <> nil do
+    begin
+      if Fils.NodeType = ELEMENT_NODE then
+      begin
+        // une balise repetee (NewCareerClass x3) : la 2e s'appelle "Balise#2", etc.
+        K := Vues.IndexOf(Fils.NodeName);
+        if K < 0 then K := Vues.AddObject(Fils.NodeName, TObject(PtrInt(0)));
+        Vues.Objects[K] := TObject(PtrInt(Vues.Objects[K]) + 1);
+        Nom := Fils.NodeName;
+        if PtrInt(Vues.Objects[K]) > 1 then Nom := Nom + '#' + IntToStr(PtrInt(Vues.Objects[K]));
+        Chemin := Prefixe + Nom;
+        // balise passee en tableau (voir ListerBalisesEnTableau) : pas de champ
+        if (BalisesTableauGen <> nil) and
+           ((BalisesTableauGen.IndexOf(Fils.NodeName) >= 0) or (AnnexesTableauGen.IndexOf(Fils.NodeName) >= 0)) and
+           ((Prefixe = '') and (ConteneurTableauGen = '') or
+            (ConteneurTableauGen <> '') and (Prefixe = ConteneurTableauGen + '/')) then
+        begin
+          Fils := Fils.NextSibling;
+          Continue;
+        end;
+        if AUneFilleElement(Fils) then
+          ChampsGeneriques(TDOMElement(Fils), Chemin + '/', Champs, N)
+        else
+        begin
+          SetLength(Champs, N + 2);
+          if (Prefixe = '') and (Fils.NodeName = 'Explanation') then
+            Champs[N] := ChampFiche(Chemin, 'RULES-LAB_003', gfMemo, True, False, not EstLivreV2, True)
+          else if (Prefixe = '') and (Fils.NodeName = 'Description') then
+            Champs[N] := ChampFiche(Chemin, 'RULES-LAB_002', gfTexte, True, False, not EstLivreV2, True)
+          else if ((Mere.NodeName = 'Specie') or
+                   (((Mere.NodeName = 'SUBCHAPTER_SKILL') or (Mere.NodeName = 'SUBCHAPTER_TALENT')) and
+                    (Mere.ParentNode <> nil) and (Mere.ParentNode.NodeName = 'Specie'))) and
+                  (TDOMElement(Fils).GetAttribute('name') = '') and
+                  ((Fils.NodeName = 'Ethnic') or (Fils.NodeName = 'Skill') or (Fils.NodeName = 'Talent')) then
+          begin
+            // familier : ethnie, competence et talent par leur libelle ; « A/B » = un choix entre deux
+            if Fils.NodeName = 'Ethnic' then Lib := ChoixCodesLibelles(['Race'], ValeurXML(Fils))
+            else if Fils.NodeName = 'Skill' then Lib := ChoixCodesLibelles(['Skill'], ValeurXML(Fils))
+            else Lib := ChoixCodesLibelles(['Talent'], ValeurXML(Fils));
+            Champs[N] := ChampFiche(Chemin, Fils.NodeName, gfCodeLibre, True, False, not EstLivreV2, False, Lib);
+          end
+          else if (Mere.NodeName = 'SUBCHAPTER_CAREER') and (Fils.NodeName = 'Career') and
+                  (TDOMElement(Fils).GetAttribute('name') <> '') and
+                  (Mere.ParentNode <> nil) and (Mere.ParentNode.NodeName = 'Specie') then
+            // carriere d'une espece : la valeur est la chance au tirage (X ou nombre de valeurs du d100)
+            Champs[N] := ChampFiche(Chemin, 'RULES-LAB_986', gfTexte, True, False, not EstLivreV2, False)
+          else if (Prefixe = '') and (Mere.NodeName = 'Weapon') and (Fils.NodeName = 'Damage') and
+                  DegatsV2Simple(ValeurXML(Fils)) then
+            Champs[N] := ChampFiche(Chemin, 'RULES-LAB_159', gfDegats, True, False, False, False)
+          else if (Prefixe = '') and ((Mere.NodeName = 'Weapon') or (Mere.NodeName = 'Armor')) and
+                  (Fils.NodeName = 'Quality') and not EstLivreV1 and not EstLivreV2 then
+          begin
+            // livre V4 : qualites en liste « A,B,C » (panneau a lignes, libelles), comme la fiche dediee
+            if Mere.NodeName = 'Weapon' then RemplirQualitesArme('WEAPB') else RemplirQualitesArme('ARMOB');
+            Champs[N] := ChampFiche(Chemin, 'RULES-LAB_476', gfQualites, False, False, False, False);
+          end
+          else if (Prefixe = '') and ((Mere.NodeName = 'Weapon') or (Mere.NodeName = 'Armor')) and
+                  (ChoixEquipementV2(Mere.NodeName, Fils.NodeName) <> '') then
+            // arme / armure V2 : valeurs ecrites en codes dans le XML, proposees par leur libelle
+            Champs[N] := ChampFiche(Chemin, LabelEquipementV2(Mere.NodeName, Fils.NodeName), gfCodeLibre, True, False, not EstLivreV2, False,
+              ChoixEquipementV2(Mere.NodeName, Fils.NodeName))
+          else if (Prefixe = '') and ((Mere.NodeName = 'Weapon') or (Mere.NodeName = 'Armor')) and
+                  (LabelEquipementV2(Mere.NodeName, Fils.NodeName) <> Fils.NodeName) then
+            Champs[N] := ChampFiche(Chemin, LabelEquipementV2(Mere.NodeName, Fils.NodeName), gfTexte, True, False, not EstLivreV2, False)
+          else if Fils.NodeName = 'Class' then
+            Champs[N] := ChampFiche(Chemin, Fils.NodeName, gfCodeLibre, True, False, not EstLivreV2, False, ChoixParTags(['Class'], ValeurXML(Fils)))
+          else if (Fils.NodeName = 'Career') and (TDOMElement(Fils).GetAttribute('name') = '') then
+            Champs[N] := ChampFiche(Chemin, Fils.NodeName, gfCodeLibre, True, False, not EstLivreV2, False, ChoixParTags(['Career'], ValeurXML(Fils)))
+          else if Fils.NodeName = 'Result' then
+          begin
+            // avancement des pretres : code d'effet lu par le moteur (chargemetierattribut.pas)
+            Champs[N] := ChampFiche(Chemin, Fils.NodeName, gfCodeLibre, True, False, not EstLivreV2, False,
+              'WRATH=' + GetTexteLibelle('RULES-LAB_940') + '|UNWORTHY=' + GetTexteLibelle('RULES-LAB_941') +
+              '|TRIAL=' + GetTexteLibelle('RULES-LAB_942') + '|NOT_READY=' + GetTexteLibelle('RULES-LAB_943') +
+              '|ADVANCE=' + GetTexteLibelle('RULES-LAB_944'));
+          end
+          else if Fils.NodeName = 'Race' then
+          begin
+            // gains de points de magie : 'ALL' (toutes les especes) ou un code d'espece
+            Lib := ValeurXML(Fils);
+            if Lib = 'ALL' then Lib := '';
+            Champs[N] := ChampFiche(Chemin, Fils.NodeName, gfCodeLibre, True, False, not EstLivreV2, False,
+              'ALL=' + GetTexteLibelle('RULES-LAB_939') + '|' + ChoixParTags(['Specie', 'Race', 'Nation'], Lib));
+          end
+          else if Fils.NodeName = 'Generique' then
+            Champs[N] := ChampFiche(Chemin, Fils.NodeName, gfCodeLibre, True, False, not EstLivreV2, False, ChoixMeresSpecialisationV1(ValeurXML(Fils)))
+          else if Fils.NodeName = 'Specie' then
+            Champs[N] := ChampFiche(Chemin, Fils.NodeName, gfCodeLibre, True, False, not EstLivreV2, False, ChoixParTags(['Specie', 'Race', 'Nation'], ValeurXML(Fils)))
+          else if Fils.NodeName = 'MutationType' then
+            Champs[N] := ChampFiche(Chemin, Fils.NodeName, gfCodeLibre, True, False, not EstLivreV2, False, ChoixParBaliseV2('MutationType'))
+          else
+            // un texte traduisible du livre (Variations...) garde son attribut language
+            // livres V2 : balise du livre ecrite meme vide (obligatoire au schema) ; un sous-chapitre vide (SUBCHAPTER_x) reste facultatif
+            // (V1 / V4 : comportement d'avant, une balise vide n'est pas recreee)
+            Champs[N] := ChampFiche(Chemin, Fils.NodeName, gfTexte, True, False, (Pos('SUBCHAPTER_', Fils.NodeName) = 1) or not EstLivreV2, TDOMElement(Fils).GetAttribute('language') <> '');
+          Inc(N);
+          if (Fils.NodeName = 'Opinion') and (TDOMElement(Fils).GetAttribute('target') <> '') then
+          begin
+            // opinion d'une race : la race visee et celui qui parle sont des attributs
+            SetLength(Champs, N + 2);
+            Champs[N] := ChampFiche(Chemin + '@target', Fils.NodeName + ' (target)', gfCodeLibre, True, False, not EstLivreV2, False, ChoixParTags(['Specie', 'Race', 'Nation'], TDOMElement(Fils).GetAttribute('target')));
+            Inc(N);
+            Champs[N] := ChampFiche(Chemin + '@source', Fils.NodeName + ' (source)', gfTexte, True, False, not EstLivreV2, False);
+            Inc(N);
+          end;
+          if TDOMElement(Fils).GetAttribute('name') <> '' then
+          begin
+            // code de competence en attribut (<Skill name="RULES-COMP_...">) : liste des competences du livre et du Rulebook
+            if Fils.NodeName = 'Skill' then
+              Champs[N] := ChampFiche(Chemin + '@name', Fils.NodeName + ' (name)', gfCodeLibre, True, False, True, False, ChoixParTags(['Skill'], TDOMElement(Fils).GetAttribute('name')))
+            else if Fils.NodeName = 'Career' then
+              Champs[N] := ChampFiche(Chemin + '@name', Fils.NodeName + ' (name)', gfCodeLibre, True, False, True, False, ChoixParTags(['Career'], TDOMElement(Fils).GetAttribute('name')))
+            else if Fils.NodeName = 'NewCareerClass' then
+              Champs[N] := ChampFiche(Chemin + '@name', Fils.NodeName + ' (name)', gfCodeLibre, True, False, True, False, ChoixParTags(['Class'], TDOMElement(Fils).GetAttribute('name')))
+            else if (Fils.NodeName = 'Entry') and (Fils.ParentNode <> nil) and (Fils.ParentNode.ParentNode <> nil) and
+                    (Fils.ParentNode.ParentNode.NodeName = ConstXmlDataDisabilityRollV1) then
+              // ligne du tirage des handicaps : liste des handicaps du livre et du Rulebook
+              Champs[N] := ChampFiche(Chemin + '@name', Fils.NodeName + ' (name)', gfCodeLibre, True, False, True, False, ChoixParTags(['Disability'], TDOMElement(Fils).GetAttribute('name')))
+            else
+              Champs[N] := ChampFiche(Chemin + '@name', Fils.NodeName + ' (name)', gfTexte, True, False, True, False);
+            Inc(N);
+          end;
+          SetLength(Champs, N);
+        end;
+      end;
+      Fils := Fils.NextSibling;
+    end;
+  finally
+    Vues.Free;
+  end;
+end;
+
+// Fiche generique d'un element d'un livre WFRP1 dont la fiche habituelle (nom + texte) cacherait des donnees :
+// elle garde la balise de l'element, son type de noeud et son code, et montre tout le reste.
+// Balises feuilles repetees au moins 3 fois sous l'element, toutes avec un attribut name
+// (<Eye name="Blue">"2"</Eye>) : elles passent en tableau (nom, valeur) au lieu d'un champ par ligne.
+// Cherche d'abord sous l'element, puis dans le premier de ses blocs (SUBCHAPTER_PHYSICAL...) qui en contient ;
+// ConteneurTableauGen = nom de ce bloc ('' = l'element lui-meme).
+procedure TWinLivres.ListerBalisesEnTableau(Element: TDOMElement);
+
+  procedure Scanner(Mere: TDOMNode);
+  var
+    Fils: TDOMNode;
+    Compte, SansNom: TStringList;
+    K: Integer;
+    Nom: String;
+  begin
+    Compte := TStringList.Create;
+    SansNom := TStringList.Create;
+    try
+      Fils := Mere.FirstChild;
+      while Fils <> nil do
+      begin
+        if Fils.NodeType = ELEMENT_NODE then
+        begin
+          Nom := Fils.NodeName;
+          K := Compte.IndexOf(Nom);
+          if K < 0 then K := Compte.AddObject(Nom, TObject(PtrInt(0)));
+          Compte.Objects[K] := TObject(PtrInt(Compte.Objects[K]) + 1);
+          if AUneFilleElement(Fils) or (TDOMElement(Fils).GetAttribute('name') = '') then
+            if SansNom.IndexOf(Nom) < 0 then SansNom.Add(Nom);
+        end;
+        Fils := Fils.NextSibling;
+      end;
+      for K := 0 to Compte.Count - 1 do
+        if (PtrInt(Compte.Objects[K]) >= 3) and (SansNom.IndexOf(Compte[K]) < 0) and
+           (Pos(',' + Compte[K] + ',', ',Skill,Career,NewCareerClass,Opinion,Entry,Class,Race,Specie,Result,') = 0) then
+          BalisesTableauGen.Add(Compte[K]);
+      // balise isolee sans name dont le nom prolonge celui d'un tableau (BirthplaceHuman) : ligne du meme tableau
+      for K := 0 to BalisesTableauGen.Count - 1 do
+      begin
+        AnnexesTableauGen.Add('');
+        Fils := Mere.FirstChild;
+        while Fils <> nil do
+        begin
+          Nom := Fils.NodeName;
+          if (Fils.NodeType = ELEMENT_NODE) and (Length(Nom) > Length(BalisesTableauGen[K])) and
+             (Copy(Nom, 1, Length(BalisesTableauGen[K])) = BalisesTableauGen[K]) and
+             not AUneFilleElement(Fils) and (TDOMElement(Fils).GetAttribute('name') = '') and
+             (PtrInt(Compte.Objects[Compte.IndexOf(Nom)]) = 1) then
+            AnnexesTableauGen[K] := Nom;
+          Fils := Fils.NextSibling;
+        end;
+      end;
+    finally
+      Compte.Free;
+      SansNom.Free;
+    end;
+  end;
+
+var
+  Fils: TDOMNode;
+begin
+  if BalisesTableauGen = nil then BalisesTableauGen := TStringList.Create;
+  if AnnexesTableauGen = nil then AnnexesTableauGen := TStringList.Create;
+  BalisesTableauGen.Clear;
+  AnnexesTableauGen.Clear;
+  ConteneurTableauGen := '';
+  Scanner(Element);
+  if BalisesTableauGen.Count > 0 then Exit;
+  Fils := Element.FirstChild;
+  while Fils <> nil do
+  begin
+    if (Fils.NodeType = ELEMENT_NODE) and AUneFilleElement(Fils) then
+    begin
+      BalisesTableauGen.Clear;
+      AnnexesTableauGen.Clear;
+      Scanner(Fils);
+      if BalisesTableauGen.Count > 0 then
+      begin
+        ConteneurTableauGen := Fils.NodeName;
+        Exit;
+      end;
+    end;
+    Fils := Fils.NextSibling;
+  end;
+end;
+
+procedure TWinLivres.AfficherFicheGeneriqueV1(Element: TDOMElement; BaliseElement: String; TypeNoeud: Integer; Code: String);
+var
+  Champs: TListeChampsFiche;
+  N: Integer;
+  Specs: array of String;
+begin
+  FicheTag := BaliseElement;
+  FicheTypeNoeud := TypeNoeud;
+  FicheGenerique := True;
+  N := 0;
+  SetLength(Champs, 0);
+  ListerBalisesEnTableau(Element);
+  ChampsGeneriques(Element, '', Champs, N);
+  PanelFiche.Definir(Champs);
+  PanelFiche.MasquerGrille;
+  // le tableau precedent (Definir l'a deja masque) est jete, un nouveau est cree pour les balises de cette fiche
+  FreeAndNil(PanelTableauxGen);
+  if BalisesTableauGen.Count > 0 then
+  begin
+    SetLength(Specs, BalisesTableauGen.Count);
+    for N := 0 to BalisesTableauGen.Count - 1 do
+    begin
+      Specs[N] := BalisesTableauGen[N];
+      if AnnexesTableauGen[N] <> '' then Specs[N] := Specs[N] + '+' + AnnexesTableauGen[N];
+      // premiere colonne = nom du resultat (Pale Grey, 90...), deuxieme = tranche du de
+      // caracteristiques d'une ethnie (RULES-ATTR_M...) : nom affiche par son libelle (colonne codee), le code reste dans le XML
+      if BalisesTableauGen[N] = 'Attribut' then
+        Specs[N] := Specs[N] + '|' + BalisesTableauGen[N] + '|@name:RULES-LAB_014:c,.:RULES-LAB_976'
+      else
+        Specs[N] := Specs[N] + '|' + BalisesTableauGen[N] + '|@name:RULES-LAB_014,.:RULES-LAB_976';
+    end;
+    PanelTableauxGen := TPanelSousBlocs.Create(Self);
+    PanelTableauxGen.LargeurNom := 300;
+    PanelTableauxGen.Conteneur := ConteneurTableauGen;
+    PanelTableauxGen.Initialiser(ButtonChargerXML, @LibelleSortV1, @CodeSortV1, Specs);
+    PanelFiche.Extra := PanelTableauxGen;
+  end;
+  BalisesTableauGen.Clear;
+  AnnexesTableauGen.Clear;  // les autres fiches generiques ne doivent pas en heriter
+  PanelFiche.Charger(Element);
+  PanelFiche.LectureSeule := not EditionPermise;
+  PanelFiche.Placer(StringGridDetail.Left, StringGridDetail.Top);
+  PanelFiche.Visible := True;
+  CodeDonneeSelectionnee := Code;
+  if EditionPermise then PrendreSnapshotFiche;
+end;
+
+// Corruption WFRP2 (mutation ou corruption divine) : fiche generique, toutes les balises du livre.
+procedure TWinLivres.AfficherDonneeCorruptionV2(Code: String);
+var
+  Element: TDOMElement;
+begin
+  MasquerAfficherElements('');
+  MasquerForm();
+  Element := TrouverElementParId('Corruption', Code);
+  if Element = nil then Exit;
+  AfficherFicheGeneriqueV1(Element, 'Corruption', NT_CORRUPTION_V2, Code);
+end;
+
+// Livre WFRP1 ou WFRP2 sans tables de noms (celles-ci gardent leur panneau) : ses fiches generiques montrent toutes les donnees.
+function TWinLivres.FicheGeneriqueV1Possible(Element: TDOMElement): Boolean;
+var
+  Version: String;
+begin
+  Result := (XMLDoc <> nil) and (Element <> nil) and (Element.FindNode('SUBCHAPTER_NAMES') = nil);
+  if not Result then Exit;
+  Version := ValeurXML(XMLDoc.GetElementsByTagName('DATA_BOOK').Item[0].FindNode(ConstXmlVersionLivre));
+  Result := SameText(Version, 'WFRP1') or SameText(Version, 'WFRP2') or SameText(Version, 'WFRP4');
+end;
+
+// Fiche d'une ligne : un champ par balise de la ligne (et un par attribut name).
+procedure TWinLivres.AfficherLigneTable(Code: String);
+const
+  BalisesCadeau: array[0..3] of String = ('EPGift', 'FatePoint', 'Blessing', 'FamiliarSkills');
+var
+  Ligne: TDOMElement;
+  Champs: TListeChampsFiche;
+  N, I, J, K: Integer;
+  EstPretre, Present: Boolean;
+begin
+  MasquerAfficherElements('');
+  MasquerForm();
+  Ligne := TrouverLigneTable(Code);
+  if Ligne = nil then Exit;
+  FicheTag := 'Ligne';
+  FicheTypeNoeud := NT_LIGNE_TABLE_V1;
+  N := 0;
+  SetLength(Champs, 0);
+  ChampsGeneriques(Ligne, '', Champs, N);
+  // ligne d'avancement de pretre : les quatre cadeaux facultatifs sont toujours proposes ; vides, leur balise n'existe pas
+  EstPretre := (Ligne.ParentNode <> nil) and (Ligne.ParentNode.ParentNode <> nil) and
+    (Ligne.ParentNode.ParentNode.NodeName = ConstXmlDataPriestAdvanceV1);
+  if EstPretre then
+    for I := 0 to High(BalisesCadeau) do
+    begin
+      Present := False;
+      for J := 0 to High(Champs) do
+        if Champs[J].Balise = BalisesCadeau[I] then Present := True;
+      if Present then Continue;
+      J := Length(Champs);
+      for K := 0 to High(Champs) do
+        if Champs[K].Balise = 'Explanation' then
+        begin
+          J := K;
+          Break;
+        end;
+      SetLength(Champs, Length(Champs) + 1);
+      for K := High(Champs) downto J + 1 do Champs[K] := Champs[K - 1];
+      Champs[J] := ChampFiche(BalisesCadeau[I], BalisesCadeau[I], gfTexte, True, False, True, False);
+    end;
+  PanelFiche.Definir(Champs);
+  if EstPretre then
+    PanelFiche.OrdreBalises := 'Range,Result,NewCareerClass,*EPGift,*FatePoint,*Blessing,*FamiliarSkills,Explanation';
+  PanelFiche.MasquerGrille;
+  PanelFiche.Charger(Ligne);
+  PanelFiche.LectureSeule := not EditionPermise;
+  PanelFiche.Placer(StringGridDetail.Left, StringGridDetail.Top);
+  PanelFiche.Visible := True;
+  CodeDonneeSelectionnee := Code;
+end;
+
+procedure TWinLivres.ChargerBrancheLignesV1(ChapitreTag, TitreBranche: String; NodeParent: TTreeNode);
+var
+  Chapitre, Fils, Sous: TDOMNode;
+  NodeBranche, NodeSous, NodeFeuille: TTreeNode;
+  K, J: Integer;
+begin
+  if XMLDoc = nil then Exit;
+  Chapitre := XMLDoc.GetElementsByTagName(ChapitreTag).Item[0];
+  if Chapitre = nil then Exit;
+  NodeBranche := TreeViewLivre.Items.AddChild(NodeParent, TitreBranche);
+  SetNodeInfo(NodeBranche, NT_CHAPITRE);
+  TNodeInfo(NodeBranche.Data).Chapitre := ChapitreTag;
+  K := 0;
+  Fils := Chapitre.FirstChild;
+  while Fils <> nil do
+  begin
+    if Fils.NodeType = ELEMENT_NODE then
+    begin
+      if Fils.NodeName = 'Table' then
+      begin
+        // table nommee (<Table id="CLERIC">) : une sous-branche, ses lignes dessous
+        NodeSous := TreeViewLivre.Items.AddChild(NodeBranche, GetTexteLibelle(TDOMElement(Fils).GetAttribute('id')));
+        SetNodeInfo(NodeSous, NT_CHAPITRE);
+        J := 0;
+        Sous := Fils.FirstChild;
+        while Sous <> nil do
+        begin
+          if Sous.NodeType = ELEMENT_NODE then
+          begin
+            NodeFeuille := TreeViewLivre.Items.AddChild(NodeSous, TexteLigneTable(TDOMElement(Sous)));
+            SetNodeInfo(NodeFeuille, NT_LIGNE_TABLE_V1, ChapitreTag + '|' + IntToStr(K) + '|' + IntToStr(J));
+            Inc(J);
+          end;
+          Sous := Sous.NextSibling;
+        end;
+      end
+      else
+      begin
+        NodeFeuille := TreeViewLivre.Items.AddChild(NodeBranche, TexteLigneTable(TDOMElement(Fils)));
+        SetNodeInfo(NodeFeuille, NT_LIGNE_TABLE_V1, ChapitreTag + '|' + IntToStr(K));
+      end;
+      Inc(K);
+    end;
+    Fils := Fils.NextSibling;
+  end;
+end;
+
+// Branche WFRP2 groupee : un noeud par valeur de GroupeTag (domaine d'un sort, table d'equipement),
+// dans l'ordre du livre ; elements dans l'ordre du livre aussi, donc sans tri alphabetique.
+procedure TWinLivres.ChargerBrancheGroupeeV2(ChapitreTag, ElementTag, GroupeTag, CodeTitre: String; TypeNoeud: Integer; NodeParent: TTreeNode; SansBranche: Boolean);
+var
+  Chapitre: TDOMNode;
+  Chapitres: TDOMNodeList;
+  Elements: TDOMNodeList;
+  Element: TDOMElement;
+  NodeBranche, NodeDomaine, NodeFeuille: TTreeNode;
+  Domaines: TStringList;
+  I, Idx, C: Integer;
+  Code, Domaine, Lib: String;
+begin
+  if XMLDoc = nil then Exit;
+  Chapitres := XMLDoc.GetElementsByTagName(ChapitreTag);
+  if Chapitres.Count = 0 then Exit;
+  if SansBranche then
+    NodeBranche := NodeParent
+  else
+  begin
+    NodeBranche := TreeViewLivre.Items.AddChild(NodeParent, GetTexteLibelle(CodeTitre));
+    SetNodeInfo(NodeBranche, NT_CHAPITRE, '', ChapitreTag);
+  end;
+  Domaines := TStringList.Create;
+  try
+    // un livre peut porter plusieurs blocs du meme chapitre (ex. DATA_EQUIPMENT_V2) : on les lit tous
+    for C := 0 to Chapitres.Count - 1 do
+    begin
+      Chapitre := Chapitres.Item[C];
+      Elements := TDOMElement(Chapitre).GetElementsByTagName(ElementTag);
+      for I := 0 to Elements.Count - 1 do
+      begin
+        Element := TDOMElement(Elements.Item[I]);
+        Code := Element.GetAttribute('id');
+        if Code = '' then Continue;
+        Domaine := ValeurXML(Element.FindNode(GroupeTag));
+        Idx := Domaines.IndexOf(Domaine);
+        if Idx >= 0 then
+          NodeDomaine := TTreeNode(Domaines.Objects[Idx])
+        else
+        begin
+          // livres convertis : la categorie est un CODE (RULES-EQCAT2_*), on affiche son libelle
+          // un groupe « RULES-T_xxx__* » est un talent generique : libelle du talent mere + « (Any) »
+          if Copy(Domaine, 1, 6) = 'RULES-' then
+          begin
+            Lib := '';
+            if Copy(Domaine, Length(Domaine) - 2, 3) = '__*' then
+            begin
+              Lib := ChercheTalent(Domaine).Libelle;
+              if Lib = '' then
+              begin
+                // talent mere non defini dans les livres : nom du premier talent du groupe, sans sa parenthese
+                Lib := ValeurXML(Element.FindNode('Description'));
+                if Pos(' (', Lib) > 0 then Lib := Copy(Lib, 1, Pos(' (', Lib) - 1);
+              end;
+              if Lib <> '' then Lib := Lib + ' (Any)';
+            end;
+            if Lib = '' then Lib := GetTexteLibelle(Domaine, Domaine);
+            NodeDomaine := TreeViewLivre.Items.AddChild(NodeBranche, Lib);
+          end
+          else if (ElementTag = 'EquipmentV1') and (Domaine <> '') then
+            // livre V1 : la categorie est le mot du livre (WEAPON) ; libelle RULES-V1CAT_*, mot brut si absent
+            NodeDomaine := TreeViewLivre.Items.AddChild(NodeBranche, GetTexteLibelle('RULES-V1CAT_' + Domaine, Domaine))
+          else
+            NodeDomaine := TreeViewLivre.Items.AddChild(NodeBranche, Domaine);
+          SetNodeInfo(NodeDomaine, NT_CHAPITRE);
+          Domaines.AddObject(Domaine, NodeDomaine);
+        end;
+        NodeFeuille := TreeViewLivre.Items.AddChild(NodeDomaine, ValeurXML(Element.FindNode('Description')));
+        SetNodeInfo(NodeFeuille, TypeNoeud, Code);
+      end;
+    end;
+  finally
+    Domaines.Free;
+  end;
 end;
 
 procedure TWinLivres.AfficherDonneeCondition(Code: String);
@@ -12906,6 +16111,7 @@ var
   Element: TDOMElement;
   Langue, Lib, Hors, LibType: String;
   I: Integer;
+  Feuille, Ancien, Groupe: TTreeNode;
 begin
   // en-tete du livre : seule la mention legale se range (RangerDisclaimer), le reste est en lecture seule
   if FicheTag = 'Livre' then
@@ -12913,8 +16119,29 @@ begin
     if RangerDisclaimer then ReafficherFiche;
     Exit;
   end;
+  // libelle du livre : le texte se range directement dans le <Text>
+  if FicheTag = 'Libelle' then
+  begin
+    Element := TrouverTexteLibelle(CodeDonneeSelectionnee);
+    if Element = nil then Exit;
+    EcrireValeurXML(Element, PanelFiche.ValeurChamp('Libelle'));
+    if TreeViewLivre.Selected <> nil then
+      TreeViewLivre.Selected.Text := PanelFiche.ValeurChamp('Libelle');
+    ReafficherFiche;
+    Exit;
+  end;
+  if FicheTag = 'TableValeurs' then
+  begin
+    if XMLDoc.GetElementsByTagName(CodeDonneeSelectionnee).Count = 0 then Exit;
+    Langue := ValeurXML(XMLDoc.GetElementsByTagName('DATA_BOOK').Item[0].FindNode('language'));
+    if Langue = '' then Langue := 'ENGLISH';
+    if PanelFiche.Ecrire(TDOMElement(XMLDoc.GetElementsByTagName(CodeDonneeSelectionnee).Item[0]), Langue) then ReafficherFiche;
+    Exit;
+  end;
   if FicheTag = 'Career' then
     Element := TrouverCareerElement(CodeDonneeSelectionnee)
+  else if FicheTag = 'Ligne' then
+    Element := TrouverLigneTable(CodeDonneeSelectionnee)
   else
     Element := TrouverElementParId(FicheTag, CodeDonneeSelectionnee);
   // specialisation d'un autre livre : seules les benedictions se rangent, dans le livre ouvert
@@ -12947,9 +16174,16 @@ begin
     end;
   end;
   if not PanelFiche.Ecrire(Element, Langue) then Exit;
+  if FicheTag = 'Ligne' then
+  begin
+    if TreeViewLivre.Selected <> nil then TreeViewLivre.Selected.Text := TexteLigneTable(Element);
+    ReafficherFiche;
+    Exit;
+  end;
   if FicheTag = 'Sort' then RangerTalentsSort(Element);
+  if FicheTypeNoeud = NT_SORT_V2 then EcrireTalentsTable(Element.GetAttribute('id'), Trim(PanelFiche.ValeurChamp('Talent')));
   if FicheTag = 'Condition' then EcrireLibelleLivre(CodeDonneeSelectionnee, PanelFiche.ValeurChamp('Libelle'));
-  if (FicheTag = 'Talent') and (Pos('T0012_', CodeSansLivre(CodeDonneeSelectionnee)) = 1) then
+  if (FicheTag = 'Talent') and (Pos('T_BLESS__', CodeSansLivre(CodeDonneeSelectionnee)) = 1) then
     RangerBenedictionsDieu(CodeDonneeSelectionnee);
   Lib := ValeurXML(Element.FindNode('Description'));
   if FicheTag = 'Condition' then Lib := PanelFiche.ValeurChamp('Libelle');
@@ -12968,7 +16202,694 @@ begin
   for I := 0 to TreeViewLivre.Items.Count - 1 do
     if ((GetNodeType(TreeViewLivre.Items[I]) = FicheTypeNoeud) or ((FicheTag = 'Talent') and (GetNodeType(TreeViewLivre.Items[I]) = NT_SPECIALISATION_TALENT)) or ((FicheTag = 'Skill') and (GetNodeType(TreeViewLivre.Items[I]) in [NT_COMPETENCE_N1, NT_SPECIALISATION_COMPETENCE]))) and (GetNodeCode(TreeViewLivre.Items[I]) = CodeDonneeSelectionnee) then
       TreeViewLivre.Items[I].Text := Lib;
+  // sort V1 : la liste (SpellList) a pu changer, on range la feuille sous le bon groupe
+  if FicheTypeNoeud = NT_SORT_V1 then
+    for I := 0 to TreeViewLivre.Items.Count - 1 do
+      if (GetNodeType(TreeViewLivre.Items[I]) = NT_SORT_V1) and (GetNodeCode(TreeViewLivre.Items[I]) = CodeDonneeSelectionnee) then
+      begin
+        Feuille := TreeViewLivre.Items[I];
+        Ancien := Feuille.Parent;
+        Groupe := nil;
+        Lib := ValeurXML(Element.FindNode('SpellList'));
+        if (Ancien <> nil) and (Ancien.Parent <> nil) and (Ancien.Text <> Lib) then
+        begin
+          Groupe := Ancien.Parent.GetFirstChild;
+          while (Groupe <> nil) and (Groupe.Text <> Lib) do Groupe := Groupe.GetNextSibling;
+          if Groupe = nil then
+          begin
+            Groupe := TreeViewLivre.Items.AddChild(Ancien.Parent, Lib);
+            SetNodeInfo(Groupe, NT_CHAPITRE);
+          end;
+          Feuille.MoveTo(Groupe, naAddChild);
+          if Ancien.Count = 0 then Ancien.Delete;
+          TreeViewLivre.Selected := Feuille;
+        end;
+        Break;
+      end;
   ReafficherFiche;
+end;
+
+// Test : sous-chapitres des carrieres (niveaux, competences, talents, attributs, equipement) reconstruits par les
+// validateurs de grilles, comme pour les especes. Deuxieme passe, car les validateurs refont des noeuds de l'arbre.
+procedure TWinLivres.TesterGrillesCarriere(Doc: TXMLDocument; Racine: TDOMElement);
+const
+  Types: array[0..4] of Integer = (NT_NIVEAUX_CARRIERE, NT_BRANCHE_COMPETENCE_NIVEAU, NT_BRANCHE_TALENT_NIVEAU,
+    NT_BRANCHE_ATTRIBUT_NIVEAU, NT_BRANCHE_EQUIPEMENT_NIVEAU);
+  Noms: array[0..4] of String = ('SUBCHAPTER_LEVEL', 'SUBCHAPTER_SKILL', 'SUBCHAPTER_TALENT', 'SUBCHAPTER_ATTR', 'SUBCHAPTER_ITEM');
+var
+  Codes: TStringList;
+  I, K: Integer;
+  Code, CodeNoeud: String;
+  Noeud: TTreeNode;
+  Original, Conteneur, Neuf, Fils: TDOMElement;
+  Enfant, Sous, Suivant: TDOMNode;
+begin
+  Codes := TStringList.Create;
+  try
+    for I := 0 to TreeViewLivre.Items.Count - 1 do
+      if (GetNodeType(TreeViewLivre.Items[I]) = NT_NIVEAUX_CARRIERE) and (Codes.IndexOf(GetNodeCode(TreeViewLivre.Items[I])) < 0) then
+        Codes.Add(GetNodeCode(TreeViewLivre.Items[I]));
+    for Code in Codes do
+    begin
+      Original := TrouverCareerElement(Code);
+      if Original = nil then Continue;
+      for K := 0 to High(Types) do
+      begin
+        Noeud := nil;
+        for I := 0 to TreeViewLivre.Items.Count - 1 do
+        begin
+          if GetNodeType(TreeViewLivre.Items[I]) <> Types[K] then Continue;
+          CodeNoeud := GetNodeCode(TreeViewLivre.Items[I]);
+          if (K = 0) and (CodeNoeud = Code) then Noeud := TreeViewLivre.Items[I]
+          else if (K > 0) and (Copy(CodeNoeud, 1, Length(Code) + 1) = Code + '|') then Noeud := TreeViewLivre.Items[I];
+          if Noeud <> nil then Break;
+        end;
+        if Noeud = nil then Continue;
+        TreeViewLivre.Selected := Noeud;
+        TreeViewLivreChange(TreeViewLivre, Noeud);
+        Enfant := Original.FindNode(Noms[K]);
+        if Enfant <> nil then
+          case K of
+            0: begin
+              // les niveaux restent, leur nom et leur salaire sont relus dans la grille
+              Sous := Enfant.FirstChild;
+              while Sous <> nil do
+              begin
+                Suivant := Sous.NextSibling;
+                if Sous.NodeName = 'Level' then
+                begin
+                  while Sous.FirstChild <> nil do Sous.RemoveChild(Sous.FirstChild);
+                end;
+                Sous := Suivant;
+              end;
+            end;
+            3: begin
+              Sous := Enfant.FirstChild;
+              while Sous <> nil do
+              begin
+                if Sous.NodeName = 'Attribut' then EcrireValeurXML(TDOMElement(Sous), '');
+                Sous := Sous.NextSibling;
+              end;
+            end;
+          else Original.RemoveChild(Enfant);
+          end;
+        ButtonAttrValiderClick(nil);
+        Enfant := Original.FindNode(Noms[K]);
+        if Enfant = nil then Continue;
+        Conteneur := TDOMElement(Racine.FindNode('DATA_CAREER'));
+        if Conteneur = nil then
+        begin
+          Conteneur := Doc.CreateElement('DATA_CAREER');
+          Racine.AppendChild(Conteneur);
+        end;
+        Neuf := nil;
+        Sous := Conteneur.FirstChild;
+        while (Sous <> nil) and (Neuf = nil) do
+        begin
+          if (Sous.NodeType = ELEMENT_NODE) and (TDOMElement(Sous).GetAttribute('id') = Original.GetAttribute('id')) then
+            Neuf := TDOMElement(Sous);
+          Sous := Sous.NextSibling;
+        end;
+        if Neuf = nil then
+        begin
+          Neuf := Doc.CreateElement('Career');
+          Neuf.SetAttribute('id', Original.GetAttribute('id'));
+          Conteneur.AppendChild(Neuf);
+        end;
+        Fils := TDOMElement(Neuf.FindNode(Noms[K]));
+        if Fils <> nil then Neuf.RemoveChild(Fils);
+        // ordre du schema (CareerType) : niveaux, caracteristiques, competences, talents, equipement, puis Page :
+        // le bloc se place avant la premiere balise de rang superieur
+        Sous := Neuf.FirstChild;
+        while (Sous <> nil) and not ((Sous.NodeType = ELEMENT_NODE) and
+          (Pos('|' + Sous.NodeName + '|', '|SUBCHAPTER_LEVEL|SUBCHAPTER_ATTR|SUBCHAPTER_SKILL|SUBCHAPTER_TALENT|SUBCHAPTER_ITEM|Page|') >
+           Pos('|' + Enfant.NodeName + '|', '|SUBCHAPTER_LEVEL|SUBCHAPTER_ATTR|SUBCHAPTER_SKILL|SUBCHAPTER_TALENT|SUBCHAPTER_ITEM|Page|'))) do
+          Sous := Sous.NextSibling;
+        Neuf.InsertBefore(Enfant.CloneNode(True, Doc), Sous);
+      end;
+    end;
+  finally
+    Codes.Free;
+  end;
+end;
+
+// Dump de l'ecran (WarhammerHelp.exe --dumpwinlivre <livre> <sortie.txt> [N]) : pour chaque noeud de
+// l'arbre (N par type de noeud, 0 = tous), selectionne le noeud et ecrit en texte ce que la fiche affiche
+// (libelles, champs, listes, cases, grilles). Sert a lire l'ecran sans le voir.
+procedure TWinLivres.DumpEcran(const Sortie: String; Echantillon: Integer);
+var
+  I, T: Integer;
+  Node: TTreeNode;
+  Lignes: TStringList;
+  Vus: TStringList;
+  Cle: String;
+  Cpt: Integer;
+begin
+  Lignes := TStringList.Create;
+  Vus := TStringList.Create;
+  TestSansMessage := True;
+  TestSansMessageGlobal := True;
+  try
+    for I := 0 to TreeViewLivre.Items.Count - 1 do
+    begin
+      Node := TreeViewLivre.Items[I];
+      T := GetNodeType(Node);
+      if Echantillon > 0 then
+      begin
+        Cle := IntToStr(T);
+        Cpt := StrToIntDef(Vus.Values[Cle], 0);
+        if Cpt >= Echantillon then Continue;
+        Vus.Values[Cle] := IntToStr(Cpt + 1);
+      end;
+      Lignes.Add('=== NOEUD type ' + IntToStr(T) + ' code "' + GetNodeCode(Node) + '" texte "' + Node.Text + '"');
+      try
+        TreeViewLivre.Selected := Node;
+        TreeViewLivreChange(TreeViewLivre, Node);
+        Lignes.Add('  TITRE "' + LabelFormTitle.Caption + '"');
+        DumpControles(StringGridDetail.Parent, 1, Lignes);
+      except
+        on E: Exception do Lignes.Add('  !!! EXCEPTION ' + E.Message);
+      end;
+    end;
+    // arbre complet (tous les noeuds, meme sans echantillon) : texte affiche de chaque noeud, pour reperer un code brut
+    Lignes.Add('=== ARBRE COMPLET');
+    for I := 0 to TreeViewLivre.Items.Count - 1 do
+    begin
+      Node := TreeViewLivre.Items[I];
+      Lignes.Add(StringOfChar(' ', 2 * Node.Level) + 'type ' + IntToStr(GetNodeType(Node)) + ' "' + Node.Text + '"');
+    end;
+    Lignes.SaveToFile(Sortie);
+  finally
+    Vus.Free;
+    Lignes.Free;
+  end;
+end;
+
+// Test d'aller-retour sans ecran (WarhammerHelp.exe --winlivretest <livre> <sortie> <arbre>) :
+// chaque fiche des types suivis est affichee puis validee telle quelle, donc le XML ecrit vient
+// des champs de la fiche ; <arbre> liste tous les noeuds (type;code;texte) pour verifier qu'aucune donnee ne manque.
+// Clique « Ajouter » puis « Retirer » sur chaque couple de boutons visibles d'un meme parent (une grille) ; rend le nombre de couples cliques
+function TWinLivres.AjoutRetraitLigneGrilles(Cont: TWinControl; const Ajouter, Retirer: String): Integer;
+var
+  I, J: Integer;
+  BA, BR: TBCButton;
+begin
+  Result := 0;
+  BA := nil;
+  BR := nil;
+  for I := 0 to Cont.ControlCount - 1 do
+  begin
+    if Cont.Controls[I] is TWinControl then
+      if Cont.Controls[I].Visible then
+        Inc(Result, AjoutRetraitLigneGrilles(TWinControl(Cont.Controls[I]), Ajouter, Retirer));
+    if (Cont.Controls[I] is TBCButton) and Cont.Controls[I].Visible then
+    begin
+      if Cont.Controls[I].Caption = Ajouter then BA := TBCButton(Cont.Controls[I]);
+      if Cont.Controls[I].Caption = Retirer then BR := TBCButton(Cont.Controls[I]);
+    end;
+  end;
+  J := 0;
+  if (BA <> nil) and (BR <> nil) and BA.Enabled and BR.Enabled and Assigned(BA.OnClick) and Assigned(BR.OnClick) then
+  begin
+    BA.OnClick(BA);
+    BR.OnClick(BR);
+    J := 1;
+  end;
+  Inc(Result, J);
+end;
+
+procedure TWinLivres.TesterAllerRetour(const Sortie, Arbre: String; Edition: Boolean);
+var
+  I, IndiceCoches, NbPageModif, NbGrillesModif: Integer;
+  Node: TTreeNode;
+  Liste: TStringList;
+  Doc: TXMLDocument;
+  Racine, Conteneur, Original, Neuf, Table: TDOMElement;
+  Enfant: TDOMNode;
+  J: Integer;
+  Attribut: TDOMElement;
+  ValeursAttr, Tri: TStringList;
+  Langue, Talents, NomSousChapitre: String;
+  BenedDieux: TStringList;  // benediction -> dieux qui la donnent (fiches des dieux du livre)
+  Present: Boolean;
+begin
+  NbPageModif := 0;
+  NbGrillesModif := 0;
+  Liste := TStringList.Create;
+  Doc := TXMLDocument.Create;
+  TestSansMessage := True;
+  TestSansMessageGlobal := True;
+  ValeursAttr := TStringList.Create;
+  BenedDieux := TStringList.Create;
+  try
+    // le livre exporte est BATI A PARTIR DE L'ARBRE : chaque element ne contient que les champs de sa fiche
+    // (en-tete du livre mis a part) ; ce qui n'est pas affiche n'est pas ecrit, et ressort a la comparaison.
+    Racine := Doc.CreateElement('DATA_BOOK');
+    Doc.AppendChild(Racine);
+    Langue := 'ENGLISH';
+    Enfant := XMLDoc.DocumentElement.FirstChild;
+    while Enfant <> nil do
+    begin
+      if (Enfant.NodeType = ELEMENT_NODE) and (Copy(Enfant.NodeName, 1, 5) <> 'DATA_') then
+        Racine.AppendChild(Enfant.CloneNode(True, Doc));
+      if SameText(Enfant.NodeName, 'language') then Langue := ValeurXML(Enfant);
+      Enfant := Enfant.NextSibling;
+    end;
+    if Langue = '' then Langue := 'ENGLISH';
+    for I := 0 to TreeViewLivre.Items.Count - 1 do
+    begin
+      Node := TreeViewLivre.Items[I];
+      Liste.Add(IntToStr(GetNodeType(Node)) + ';' + GetNodeCode(Node) + ';' + Node.Text);
+      if GetNodeType(Node) = NT_REGLE_ETHNIE then
+      begin
+        // regles par ethnie : la grille ecrit tout le chapitre DATA_RULE_SPECIE
+        TreeViewLivre.Selected := Node;
+        TreeViewLivreChange(TreeViewLivre, Node);
+        Conteneur := Doc.CreateElement('DATA_RULE_SPECIE');
+        Racine.AppendChild(Conteneur);
+        PanelRegleEthnie.Ecrire(Conteneur);
+        Continue;
+      end;
+      if GetNodeType(Node) = NT_LIBELLE_LIVRE then
+      begin
+        // libelle du livre : un <Text name> dans le <Label language> de sa langue, texte tire de la fiche
+        TreeViewLivre.Selected := Node;
+        TreeViewLivreChange(TreeViewLivre, Node);
+        Conteneur := TDOMElement(Racine.FindNode('DATA_LABEL'));
+        if Conteneur = nil then
+        begin
+          Conteneur := Doc.CreateElement('DATA_LABEL');
+          Racine.AppendChild(Conteneur);
+        end;
+        Table := nil;
+        Enfant := Conteneur.FirstChild;
+        while (Enfant <> nil) and (Table = nil) do
+        begin
+          if TDOMElement(Enfant).GetAttribute('language') = ExtractStringBefore(GetNodeCode(Node), '|') then
+            Table := TDOMElement(Enfant);
+          Enfant := Enfant.NextSibling;
+        end;
+        if Table = nil then
+        begin
+          Table := Doc.CreateElement('Label');
+          Table.SetAttribute('language', ExtractStringBefore(GetNodeCode(Node), '|'));
+          Conteneur.AppendChild(Table);
+        end;
+        Neuf := Doc.CreateElement('Text');
+        Neuf.SetAttribute('name', PanelFiche.ValeurChamp('Code'));
+        Table.AppendChild(Neuf);
+        EcrireValeurXML(Neuf, PanelFiche.ValeurChamp('Libelle'));
+        Continue;
+      end;
+      if GetNodeType(Node) = NT_TRAIT_ETHNIE then
+      begin
+        // traits d'ethnie : la table ecrit tout le chapitre DATA_SPECIE_TRAIT
+        TreeViewLivre.Selected := Node;
+        TreeViewLivreChange(TreeViewLivre, Node);
+        Conteneur := Doc.CreateElement('DATA_SPECIE_TRAIT');
+        Racine.AppendChild(Conteneur);
+        PanelTraitEthnie.Ecrire(Conteneur);
+        Continue;
+      end;
+      if GetNodeType(Node) = NT_LIEN_CARRIERE_ESPECE then
+      begin
+        // liens carriere <-> espece : la table ecrit tout le chapitre DATA_CAREER_SPECIE
+        TreeViewLivre.Selected := Node;
+        TreeViewLivreChange(TreeViewLivre, Node);
+        Conteneur := Doc.CreateElement('DATA_CAREER_SPECIE');
+        Racine.AppendChild(Conteneur);
+        PanelCarriereEspece.Ecrire(Conteneur);
+        Continue;
+      end;
+      if GetNodeType(Node) = NT_EQUIP_CLASSE then
+      begin
+        // equipement de depart par classe : la grille ecrit tout le chapitre DATA_CLASS_ITEM
+        TreeViewLivre.Selected := Node;
+        TreeViewLivreChange(TreeViewLivre, Node);
+        Conteneur := Doc.CreateElement('DATA_CLASS_ITEM');
+        Racine.AppendChild(Conteneur);
+        PanelEquipClasse.Ecrire(Conteneur);
+        Continue;
+      end;
+      if GetNodeType(Node) = NT_CORRUPTION_ETHNIE then
+      begin
+        // tranches de corruption d'une ethnie : la fiche les ecrit dans XMLDoc, les <Specie> de la race
+        // sont copies dans les chapitres DATA_CORRUPTION_PHYSICAL / _MENTAL du document neuf
+        TreeViewLivre.Selected := Node;
+        TreeViewLivreChange(TreeViewLivre, Node);
+        ValiderCorruptionEthnie;
+        for J := 0 to 1 do
+        begin
+          Original := TrouverSpecieCorruption(J, GetNodeCode(Node), XMLDoc);
+          if Original = nil then Continue;
+          Conteneur := TDOMElement(Racine.FindNode(ChapitresCorruption[J]));
+          if Conteneur = nil then
+          begin
+            Conteneur := Doc.CreateElement(ChapitresCorruption[J]);
+            Racine.AppendChild(Conteneur);
+          end;
+          Conteneur.AppendChild(Original.CloneNode(True, Doc));
+        end;
+        Continue;
+      end;
+      if GetNodeType(Node) = NT_SECOND_JET then
+      begin
+        // second jet apres le metier : la grille ecrit tout le chapitre DATA_CAREER_SUBCHOICE
+        TreeViewLivre.Selected := Node;
+        TreeViewLivreChange(TreeViewLivre, Node);
+        Conteneur := Doc.CreateElement('DATA_CAREER_SUBCHOICE');
+        Racine.AppendChild(Conteneur);
+        PanelSousMetier.Ecrire(Conteneur);
+        Continue;
+      end;
+      if GetNodeType(Node) = NT_TIRAGE_RACE then
+      begin
+        // tirage de race : la table ecrit tout le chapitre DATA_RANDOM_SPECIE
+        TreeViewLivre.Selected := Node;
+        TreeViewLivreChange(TreeViewLivre, Node);
+        Conteneur := Doc.CreateElement('DATA_RANDOM_SPECIE');
+        Racine.AppendChild(Conteneur);
+        PanelTirageRace.Ecrire(Conteneur);
+        Continue;
+      end;
+      if (GetNodeType(Node) = NT_TABLE_VALEURS) and (GetNodeCode(Node) = 'DATA_RANDOM_TALENT') then
+      begin
+        // tirages de talents : la matrice talent x ethnie ecrit tout le chapitre
+        TreeViewLivre.Selected := Node;
+        TreeViewLivreChange(TreeViewLivre, Node);
+        Conteneur := Doc.CreateElement('DATA_RANDOM_TALENT');
+        Racine.AppendChild(Conteneur);
+        PanelTirage.Ecrire(Conteneur);
+        Continue;
+      end;
+      if (GetNodeType(Node) = NT_TABLE_VALEURS) and TableValeursEditable(GetNodeCode(Node)) then
+      begin
+        // chapitre absent du livre d'origine (livres WFRP2) : la fiche ne s'affiche pas, rien a ecrire
+        if XMLDoc.GetElementsByTagName(GetNodeCode(Node)).Count = 0 then Continue;
+        // coûts et tirages de corruption : la grille ecrit tout le chapitre
+        TreeViewLivre.Selected := Node;
+        TreeViewLivreChange(TreeViewLivre, Node);
+        Conteneur := Doc.CreateElement(GetNodeCode(Node));
+        Racine.AppendChild(Conteneur);
+        PanelFiche.Ecrire(Conteneur, Langue);
+        Continue;
+      end;
+      if GetNodeType(Node) in [NT_COMPETENCES_RACE, NT_TALENTS_RACE, NT_CARRIERES_RACE, NT_ATTRIBUTS_ETHNIE] then
+      begin
+        // grilles de sous-branche d'une espece : le sous-chapitre d'origine est retire du document de travail,
+        // le validateur le reconstruit a partir de la grille, puis il est copie dans le document neuf
+        // (attributs : les elements restent mais leurs valeurs sont videes, sauf les Blessures dont la formule sert a l'affichage)
+        TreeViewLivre.Selected := Node;
+        TreeViewLivreChange(TreeViewLivre, Node);
+        Original := TrouverElementParId('Specie', GetNodeCode(Node));
+        if Original <> nil then
+        begin
+          case GetNodeType(Node) of
+            NT_COMPETENCES_RACE: NomSousChapitre := 'SUBCHAPTER_SKILL';
+            NT_TALENTS_RACE: NomSousChapitre := 'SUBCHAPTER_TALENT';
+            NT_ATTRIBUTS_ETHNIE: NomSousChapitre := 'SUBCHAPTER_ATTR';
+          else NomSousChapitre := 'SUBCHAPTER_CAREER';
+          end;
+          Enfant := Original.FindNode(NomSousChapitre);
+          ValeursAttr.Clear;
+          if GetNodeType(Node) = NT_ATTRIBUTS_ETHNIE then
+          begin
+            if Enfant <> nil then
+              for J := 0 to TDOMElement(Enfant).GetElementsByTagName('Attribut').Count - 1 do
+              begin
+                Attribut := TDOMElement(TDOMElement(Enfant).GetElementsByTagName('Attribut').Item[J]);
+                ValeursAttr.Add(ValeurXML(Attribut));
+                if ClasseAttributEthnie(Attribut.GetAttribute('name')) <> 'BLESSURES' then EcrireValeurXML(Attribut, '');
+              end;
+          end
+          else if Enfant <> nil then Original.RemoveChild(Enfant);
+          case GetNodeType(Node) of
+            NT_CARRIERES_RACE: ValiderCarrieresEthnie;
+            NT_ATTRIBUTS_ETHNIE: ButtonAttrValiderClick(nil);
+          else ValiderCompetencesEthnie;
+          end;
+          Enfant := Original.FindNode(NomSousChapitre);
+          if (GetNodeType(Node) = NT_ATTRIBUTS_ETHNIE) and (Enfant <> nil) then
+          begin
+            // valeur que la grille ne sait pas editer : elle reste telle quelle dans un vrai export
+            for J := 0 to TDOMElement(Enfant).GetElementsByTagName('Attribut').Count - 1 do
+            begin
+              Attribut := TDOMElement(TDOMElement(Enfant).GetElementsByTagName('Attribut').Item[J]);
+              // la grille n'ecrit pas « +0 » : « 2d10 » reconstruit equivaut a « 2d10+0 » d'origine
+              if (J < ValeursAttr.Count) and ((ValeurXML(Attribut) = '') or (ValeurXML(Attribut) + '+0' = ValeursAttr[J])) then
+                EcrireValeurXML(Attribut, ValeursAttr[J]);
+            end;
+          end;
+          if Enfant <> nil then
+          begin
+            Conteneur := TDOMElement(Racine.FindNode('DATA_SPECIE'));
+            if Conteneur = nil then
+            begin
+              Conteneur := Doc.CreateElement('DATA_SPECIE');
+              Racine.AppendChild(Conteneur);
+            end;
+            Neuf := nil;
+            Table := TDOMElement(Conteneur.FirstChild);
+            while (Table <> nil) and (Neuf = nil) do
+            begin
+              if (Table.NodeType = ELEMENT_NODE) and (Table.GetAttribute('id') = Original.GetAttribute('id')) then Neuf := Table;
+              Table := TDOMElement(Table.NextSibling);
+            end;
+            if Neuf = nil then
+            begin
+              Neuf := Doc.CreateElement('Specie');
+              Neuf.SetAttribute('id', Original.GetAttribute('id'));
+              Conteneur.AppendChild(Neuf);
+            end;
+            // la fiche de l'espece a pu deja ecrire ce sous-chapitre : la grille le remplace
+            if Neuf.FindNode(NomSousChapitre) <> nil then Neuf.RemoveChild(Neuf.FindNode(NomSousChapitre));
+            // Page est la derniere balise d'une ethnie (schema) : la grille se place avant elle
+            if Neuf.FindNode('Page') <> nil then
+              Neuf.InsertBefore(Enfant.CloneNode(True, Doc), Neuf.FindNode('Page'))
+            else
+              Neuf.AppendChild(Enfant.CloneNode(True, Doc));
+          end;
+        end;
+        Continue;
+      end;
+      if GetNodeType(Node) in [NT_SORT, NT_SORT_V2, NT_EQUIPEMENT_V2, NT_COMPETENCE_V2, NT_TALENT_V2, NT_SORT_V1, NT_COMPETENCE_V1, NT_EQUIPEMENT_V1, NT_DIEU_V1, NT_CULTE_V1, NT_FAMILIER_V1, NT_CLASSE_V1, NT_METIER_V1, NT_HANDICAP_V1, NT_ATTRIBUT_V1, NT_CORRUPTION_V2, NT_METIER_NIVEAU1, NT_LIGNE_TABLE_V1, NT_RACE, NT_RACE_GROUPE, 27, NT_TALENT_N1, 29, NT_ARME, NT_ARMURE, NT_QUALITE_ARME, NT_QUALITE_ARMURE, NT_PETITE_TABLE_DEBUT + 1, 26, NT_BONUS_CARRIERE, NT_ADAPTATION_CARRIERE, NT_TRAPPING, NT_FABRICATION, NT_SIGNE_ASTRAL, NT_CORRUPTION_PHYSIQUE, NT_CORRUPTION_MENTALE, NT_MALADIE, NT_AFFLICTION, NT_CONDITION, NT_ARMURE_SIMPLIFIEE, NT_NATION, NT_OPTION_REGLE] then
+      begin
+        TreeViewLivre.Selected := Node;
+        TreeViewLivreChange(TreeViewLivre, Node);  // sans ecran, la selection ne declenche pas l'affichage de la fiche
+        // ces types n'ont pas tous la fiche generique : seule celle-ci ecrit tout l'element
+        // (la fiche d'ethnie a tables de noms n'est pas generique, mais son panneau PanelNoms ecrit SUBCHAPTER_NAMES)
+        if (GetNodeType(Node) in [NT_RACE, NT_RACE_GROUPE, 27, NT_PETITE_TABLE_DEBUT + 1]) and not FicheGenerique and
+          not ((FicheTag = 'Specie') and (PanelFiche.Extra = PanelNoms)) then Continue;
+        if FicheTag = 'Career' then
+          Original := TrouverCareerElement(CodeDonneeSelectionnee)
+        else if FicheTag = 'Ligne' then
+          Original := TrouverLigneTable(CodeDonneeSelectionnee)
+        else
+          Original := TrouverElementParId(FicheTag, CodeDonneeSelectionnee);
+        if (Original = nil) or (Original.ParentNode = nil) then
+        begin
+          Liste.Add('SANS_ELEMENT;' + FicheTag + ';' + CodeDonneeSelectionnee);
+          Continue;
+        end;
+        if (FicheTag = 'Ligne') and (Original.ParentNode.NodeName = 'Table') then
+        begin
+          // ligne d'une <Table id="..."> : le chapitre, puis la table, sont recrees dans le document neuf
+          Conteneur := TDOMElement(Racine.FindNode(Original.ParentNode.ParentNode.NodeName));
+          if Conteneur = nil then
+          begin
+            Conteneur := Doc.CreateElement(Original.ParentNode.ParentNode.NodeName);
+            Racine.AppendChild(Conteneur);
+          end;
+          Table := nil;
+          Enfant := Conteneur.FirstChild;
+          while (Enfant <> nil) and (Table = nil) do
+          begin
+            if (Enfant.NodeName = 'Table') and (TDOMElement(Enfant).GetAttribute('id') = TDOMElement(Original.ParentNode).GetAttribute('id')) then
+              Table := TDOMElement(Enfant);
+            Enfant := Enfant.NextSibling;
+          end;
+          if Table = nil then
+          begin
+            Table := Doc.CreateElement('Table');
+            Table.SetAttribute('id', TDOMElement(Original.ParentNode).GetAttribute('id'));
+            Conteneur.AppendChild(Table);
+          end;
+          Conteneur := Table;
+        end
+        else
+        begin
+          Conteneur := TDOMElement(Racine.FindNode(Original.ParentNode.NodeName));
+          if Conteneur = nil then
+          begin
+            Conteneur := Doc.CreateElement(Original.ParentNode.NodeName);
+            Racine.AppendChild(Conteneur);
+          end;
+        end;
+        Neuf := Doc.CreateElement(Original.NodeName);
+        if Original.GetAttribute('id') <> '' then Neuf.SetAttribute('id', Original.GetAttribute('id'));
+        // corruptions et maladies : la cle est dans l'attribut name, que la fiche ne porte pas
+        if (Original.GetAttribute('id') = '') and ((FicheTag = 'Corruption') or (FicheTag = 'Disease') or (FicheTag = 'Affliction')) then Neuf.SetAttribute('name', Original.GetAttribute('name'));
+        Conteneur.AppendChild(Neuf);
+        // test d'edition : la Page est saisie a 999 dans chaque fiche qui en a une ; elle doit ressortir telle quelle dans le XML
+        if Edition and PanelFiche.PoserTexteChamp('Page', '999') then Inc(NbPageModif);
+        // test d'edition : sur chaque grille visible, « Ajouter » puis « Retirer » (ligne ajoutee = ligne retiree) ne doit rien changer au XML
+        if Edition then Inc(NbGrillesModif, AjoutRetraitLigneGrilles(Self, GetTexteLibelle('RULES-LAB_899'), GetTexteLibelle('RULES-LAB_421')));
+        PanelFiche.Ecrire(Neuf, Langue);
+        // carriere WFRP2 : entrees et sorties ne sont plus des champs de la fiche mais des branches de cases
+        if (FicheTag = 'Career') and (Original.FindNode('MainProfile') <> nil) then
+        begin
+          // profils + Advances : la fiche de la branche « caracteristiques », ecrite dans le meme element
+          AfficherBrancheCoches(Original.GetAttribute('id'), 3);
+          PanelFiche.Ecrire(Neuf, Langue);
+          for IndiceCoches := 1 to 3 do
+          begin
+            PanelListesCarriere[IndiceCoches].Charger(Original);
+            PanelListesCarriere[IndiceCoches].Ecrire(Neuf);
+          end;
+          for IndiceCoches := 0 to 1 do
+          begin
+            PanelCochesCarriere[IndiceCoches].Charger(Original);
+            PanelCochesCarriere[IndiceCoches].Ecrire(Neuf);
+          end;
+        end;
+        // carriere WFRP1 : schema, competences, equipement, entrees et sorties sont des branches, ecrites dans le meme element
+        if (FicheTag = 'Career') and (Original.FindNode('AdvanceScheme') <> nil) then
+          for IndiceCoches := 3 to 5 do
+          begin
+            AfficherBrancheCoches(Original.GetAttribute('id'), IndiceCoches + Ord(IndiceCoches = 5));  // genres 3, 4 puis 6 (ni talents, ni entrees, ni sorties en V1)
+            PanelFiche.Ecrire(Neuf, Langue);
+          end;
+        // fabrication generique (balise Applies absente) : la fiche coche tout par defaut, ce que le livre n'ecrit pas
+        if (FicheTag = 'Craftsmanship') and (Original.FindNode('Applies') = nil) and (Neuf.FindNode('Applies') <> nil) then
+          Neuf.RemoveChild(Neuf.FindNode('Applies'));
+        // benediction V4 : ses dieux sont rangés dans DATA_SPELL_TALENT, son <Talent> reste vide (RangerTalentsSort)
+        // (une benediction dont le livre garde les dieux dans son <Talent> les garde la : le test ne la deplace pas)
+        Talents := '';
+        if (FicheTypeNoeud = NT_SORT) and SameText(PanelFiche.ValeurChamp('TypSpell'), 'Blessing') and (ValeurXML(Original.FindNode('Talent')) = '') then
+          Talents := 'B';
+        if Talents = 'B' then
+          if Neuf.FindNode('Talent') <> nil then EcrireValeurXML(TDOMElement(Neuf.FindNode('Talent')), '');
+        if (FicheTypeNoeud = NT_SORT_V2) or (Talents = 'B') then
+        begin
+          // talent d'acces du sort : une ligne de DATA_SPELL_TALENT par talent, comme dans le livre
+          Talents := PanelFiche.ValeurChamp('Talent');
+          if Talents <> '' then
+          begin
+            Conteneur := TDOMElement(Racine.FindNode('DATA_SPELL_TALENT'));
+            if Conteneur = nil then
+            begin
+              Conteneur := Doc.CreateElement('DATA_SPELL_TALENT');
+              Racine.AppendChild(Conteneur);
+            end;
+            while Talents <> '' do
+            begin
+              Table := Doc.CreateElement('Sort');
+              Table.SetAttribute('id', Original.GetAttribute('id'));
+              Enfant := Doc.CreateElement('Talent');
+              // V4 : une seule ligne par benediction, tous les dieux dans le meme <Talent> (EcrireTalentsTable)
+              if FicheTypeNoeud = NT_SORT then
+                TDOMElement(Enfant).AppendChild(Doc.CreateTextNode('"' + Talents + '"'))
+              else
+                TDOMElement(Enfant).AppendChild(Doc.CreateTextNode('"' + Trim(ExtractStringBefore(Talents, ',')) + '"'));
+              Table.AppendChild(Enfant);
+              Conteneur.AppendChild(Table);
+              if (FicheTypeNoeud = NT_SORT) or (Pos(',', Talents) = 0) then Talents := '' else Talents := ExtractStringAfter(Talents, ',');
+            end;
+          end;
+        end;
+        // dieu de la Benediction : les benedictions cochees dans sa fiche, rangees apres la boucle dans DATA_SPELL_TALENT
+        if (FicheTag = 'Talent') and (Pos('T_BLESS__', CodeSansLivre(Original.GetAttribute('id'))) = 1) then
+        begin
+          Talents := PanelFiche.ValeurChamp('Benedictions');
+          while Talents <> '' do
+          begin
+            NomSousChapitre := Trim(ExtractStringBefore(Talents, ','));
+            if NomSousChapitre <> '' then
+            begin
+              if BenedDieux.IndexOfName(NomSousChapitre) < 0 then BenedDieux.Values[NomSousChapitre] := Original.GetAttribute('id')
+              else BenedDieux.Values[NomSousChapitre] := BenedDieux.Values[NomSousChapitre] + ',' + Original.GetAttribute('id');
+            end;
+            if Pos(',', Talents) = 0 then Talents := '' else Talents := ExtractStringAfter(Talents, ',');
+          end;
+        end;
+        // ethnie sans Description (simple ajout a une race d'un autre livre) : la fiche y affiche le libelle de la race, qui n'est pas une donnee du livre
+        if (FicheTag = 'Specie') and (Original.FindNode('Description') = nil) and (Neuf.FindNode('Description') <> nil) then
+          Neuf.RemoveChild(Neuf.FindNode('Description'));
+      end;
+    end;
+    // benedictions donnees par les dieux de ce livre mais decrites ailleurs (Rulebook) : une ligne par benediction,
+    // sans les dieux que le Rulebook cite deja
+    for I := 0 to BenedDieux.Count - 1 do
+    begin
+      NomSousChapitre := BenedDieux.Names[I];
+      Conteneur := TDOMElement(Racine.FindNode('DATA_SPELL_TALENT'));
+      Present := False;
+      if Conteneur <> nil then
+      begin
+        Enfant := Conteneur.FirstChild;
+        while Enfant <> nil do
+        begin
+          if (Enfant.NodeType = ELEMENT_NODE) and (TDOMElement(Enfant).GetAttribute('id') = NomSousChapitre) then Present := True;
+          Enfant := Enfant.NextSibling;
+        end;
+      end;
+      if Present then Continue;
+      Talents := BenedDieux.ValueFromIndex[I];
+      Langue := '';
+      while Talents <> '' do
+      begin
+        if not (AutreLivreRulebook and ListeContient(TalentsDeTableDoc(RulebookBaseXML, NomSousChapitre), Trim(ExtractStringBefore(Talents, ',')))) then
+        begin
+          if Langue <> '' then Langue := Langue + ',';
+          Langue := Langue + Trim(ExtractStringBefore(Talents, ','));
+        end;
+        if Pos(',', Talents) = 0 then Talents := '' else Talents := ExtractStringAfter(Talents, ',');
+      end;
+      if Langue = '' then Continue;
+      // les dieux d une ligne du livre sont ranges par code : l ordre de l arbre n est pas celui du livre
+      Tri := TStringList.Create;
+      try
+        Tri.Delimiter := ',';
+        Tri.StrictDelimiter := True;
+        Tri.DelimitedText := Langue;
+        Tri.Sort;
+        Langue := Tri.DelimitedText;
+      finally
+        Tri.Free;
+      end;
+      if Conteneur = nil then
+      begin
+        Conteneur := Doc.CreateElement('DATA_SPELL_TALENT');
+        Racine.AppendChild(Conteneur);
+      end;
+      Table := Doc.CreateElement('Sort');
+      Table.SetAttribute('id', NomSousChapitre);
+      Enfant := Doc.CreateElement('Talent');
+      TDOMElement(Enfant).AppendChild(Doc.CreateTextNode('"' + Langue + '"'));
+      Table.AppendChild(Enfant);
+      Conteneur.AppendChild(Table);
+    end;
+    TesterGrillesCarriere(Doc, Racine);
+    // le test cree un chapitre pour chaque panneau meme sans ligne : un chapitre sans element n'existe pas dans le livre
+    Enfant := Racine.FirstChild;
+    while Enfant <> nil do
+    begin
+      Original := TDOMElement(Enfant.NextSibling);  // (pas un element : sert seulement a garder le suivant)
+      if (Enfant.NodeType = ELEMENT_NODE) and (Copy(Enfant.NodeName, 1, 5) = 'DATA_') and
+         (TDOMElement(Enfant).GetElementsByTagName('*').Count = 0) then
+        Racine.RemoveChild(Enfant);
+      Enfant := Original;
+    end;
+    if Edition then Liste.Add('PAGE_MODIFIEE;' + IntToStr(NbPageModif) + ';');
+    if Edition then Liste.Add('GRILLES_AJOUT_RETRAIT;' + IntToStr(NbGrillesModif) + ';');
+    Liste.SaveToFile(Arbre);
+    WriteXMLFile(Doc, Sortie);
+  finally
+    BenedDieux.Free;
+    ValeursAttr.Free;
+    Liste.Free;
+    Doc.Free;
+  end;
 end;
 
 procedure TWinLivres.FicheAnnulerClick(Sender: TObject);
@@ -12978,7 +16899,13 @@ end;
 
 procedure TWinLivres.ReafficherFiche;
 begin
-  if FicheTag = 'Livre' then
+  if FicheTag = 'TableValeurs' then
+    AfficherFicheTableValeurs(CodeDonneeSelectionnee)
+  else if (FicheTag = 'Corruption') and (FicheTypeNoeud = NT_CORRUPTION_V2) then
+    AfficherDonneeCorruptionV2(CodeDonneeSelectionnee)
+  else if (FicheTag = 'Skill') and (FicheTypeNoeud = NT_COMPETENCE_V1) then
+    AfficherDonneeV2(CodeDonneeSelectionnee, 'SkillV1')
+  else if FicheTag = 'Livre' then
     AfficherInfosLivre
   else if FicheTag = 'Disease' then
     AfficherDonneeMaladie(CodeDonneeSelectionnee)
@@ -12988,14 +16915,36 @@ begin
     AfficherDonneeCompetence(CodeDonneeSelectionnee, GetTexteLibelle('RULES-LAB_146'))
   else if FicheTag = 'Skill' then
     AfficherDonneeCompetence(CodeDonneeSelectionnee, GetTexteLibelle('RULES-LAB_009'))
+  else if (FicheTag = 'Career') and (FicheCoches > 0) then
+    AfficherBrancheCoches(CodeDonneeSelectionnee, FicheCoches)
   else if FicheTag = 'Career' then
     AfficherDonneeMetier(CodeDonneeSelectionnee)
+  else if FicheTag = 'Ligne' then
+    AfficherLigneTable(CodeDonneeSelectionnee)
   else if FicheTag = 'Specie' then
     AfficherDonneeRace(CodeDonneeSelectionnee)
   else if FicheTag = 'Race' then
     AfficherRaceGroupe(CodeDonneeSelectionnee)
   else if FicheTag = 'Sort' then
     AfficherDonneeSort(CodeDonneeSelectionnee, GetTexteLibelle('RULES-LAB_083'))
+  else if FicheTag = 'SpellV1' then
+    AfficherDonneeV2(CodeDonneeSelectionnee, 'SpellV1')
+  else if FicheTag = 'EquipmentV1' then
+    AfficherDonneeV2(CodeDonneeSelectionnee, 'EquipmentV1')
+  else if (FicheTag = 'Deity') and (FicheTypeNoeud = NT_DIEU_V1) then
+    AfficherDonneeV2(CodeDonneeSelectionnee, 'Deity')
+  else if (FicheTag = 'Disability') and (FicheTypeNoeud = NT_HANDICAP_V1) then
+    AfficherDonneeV2(CodeDonneeSelectionnee, 'Disability')
+  else if (FicheTag = 'Attribut') and (FicheTypeNoeud = NT_ATTRIBUT_V1) then
+    AfficherDonneeV2(CodeDonneeSelectionnee, 'Attribut')
+  else if (FicheTag = 'Class') and (FicheTypeNoeud = NT_CLASSE_V1) then
+    AfficherDonneeV2(CodeDonneeSelectionnee, 'Class')
+  else if (FicheTag = 'Trade') and (FicheTypeNoeud = NT_METIER_V1) then
+    AfficherDonneeV2(CodeDonneeSelectionnee, 'Trade')
+  else if (FicheTag = 'Cult') and (FicheTypeNoeud = NT_CULTE_V1) then
+    AfficherDonneeV2(CodeDonneeSelectionnee, 'Cult')
+  else if (FicheTag = 'Familiar') and (FicheTypeNoeud = NT_FAMILIER_V1) then
+    AfficherDonneeV2(CodeDonneeSelectionnee, 'Familiar')
   else if FicheTag = 'Craftsmanship' then
     AfficherDonneeBonusMalus(CodeDonneeSelectionnee, GetTexteLibelle('RULES-LAB_125'), 'Craftsmanship')
   else if FicheTag = 'OptionRule' then
@@ -13044,7 +16993,7 @@ var
 begin
   Result := '';
   Reste := CodeSansLivre(Code);
-  if Pos('WORK', Reste) = 1 then
+  if Pos('WORK', Reste) = 1 then // WORK_NOM
   begin
     if ChercheMetier(Code).CodeMetier <> '' then
       Result := ChercheMetier(Code).Libelle;
@@ -13377,8 +17326,58 @@ procedure TWinLivres.AfficherFicheTalent(Element: TDOMElement; Etranger: Boolean
 const
   Attributs: array[0..9] of String = ('WS', 'BS', 'S', 'T', 'I', 'Ag', 'Dex', 'Int', 'WP', 'Fel');
 var
-  Maximums, Dieu, Coches, Verrous: String;
+  Maximums, Dieu, Coches, Verrous, Familles: String;
   I: Integer;
+  AvecFamilles: Boolean;
+  Champs: TTableauChampsFiche;
+
+  function Rempli(const Balise: String): Boolean;
+  begin
+    Result := (Element.FindNode(Balise) <> nil) and (Trim(ValeurXML(Element.FindNode(Balise))) <> '');
+  end;
+
+  // familles actives : cochees par l'utilisateur, ou deja presentes dans les donnees du talent
+  function FamillesActives: String;
+  begin
+    Result := FamillesTalent;
+    if Rempli('Magic') or Rempli('SpellTypes') or Rempli('XpMultiplier') or Rempli('XpFloor') or
+       Rempli('XpDivisor') or Rempli('XpFree') or Rempli('SpellMode') then Result := Result + ',MAGIE';
+    if Element.FindNode('Effet') <> nil then Result := Result + ',MOTEUR';
+    if Rempli('GrantAt') or Rempli('LoseAt') then Result := Result + ',NIVEAU';
+  end;
+
+  procedure Ajoute(const Champ: StructureChampFiche);
+  begin
+    SetLength(Champs, Length(Champs) + 1);
+    Champs[High(Champs)] := Champ;
+  end;
+
+  procedure AjouteFamilles;
+  begin
+    if AvecFamilles then
+      Ajoute(ChampFiche('FamilleTalent', 'RULES-LAB_FAMILLE_TALENT', gfCases, True, False, True, False,
+        'MAGIE=' + GetTexteLibelle('RULES-LAB_FAMILLE_MAGIE', 'Magic talent') +
+        '|MOTEUR=' + GetTexteLibelle('RULES-LAB_FAMILLE_MOTEUR', 'Engine effect') +
+        '|NIVEAU=' + GetTexteLibelle('RULES-LAB_FAMILLE_NIVEAU', 'Granted / lost at a career level')));
+  end;
+
+  // champs que porte un talent de regle : competences liees (PDF), magie, couts d'experience
+  procedure AjouteSuite;
+  begin
+    // PDF : propre a V4 / V5 (absent en V2, 110 talents V4 non vides, balise toujours vide en V5)
+    Ajoute(EnGroupes(ChampFiche('PDF', 'RULES-LAB_691', gfTexte, True, False, True, False), 'V4,V5'));
+    // groupe « Magie » : visible seulement si l'un de ces champs est deja rempli (talents de magie)
+    Ajoute(EnGroupes(ChampFiche('Magic', 'RULES-LAB_968', gfTexte, True, False, True, False), 'Magie'));
+    Ajoute(EnGroupes(ChampFiche('SpellTypes', 'RULES-LAB_969', gfTexte, True, False, True, False), 'Magie'));
+    Ajoute(EnGroupes(ChampFiche('XpMultiplier', 'RULES-LAB_970', gfTexte, True, False, True, False), 'Magie'));
+    Ajoute(EnGroupes(ChampFiche('XpFloor', 'RULES-LAB_971', gfTexte, True, False, True, False), 'Magie'));
+    Ajoute(EnGroupes(ChampFiche('XpDivisor', 'RULES-LAB_972', gfTexte, True, False, True, False), 'Magie'));
+    Ajoute(EnGroupes(ChampFiche('XpFree', 'RULES-LAB_973', gfTexte, True, False, True, False), 'Magie'));
+    // talent octroye / perdu a un niveau de carriere : « CODE_CARRIERE/niveau »
+    // groupe « Niveau » : visible seulement si l'un des deux est deja rempli (2 occurrences en tout : Nations of Mankind)
+    Ajoute(EnGroupes(ChampFiche('GrantAt', 'RULES-LAB_461', gfTexte, False, False, True, False), 'Niveau'));
+    Ajoute(EnGroupes(ChampFiche('LoseAt', 'RULES-LAB_462', gfTexte, False, False, True, False), 'Niveau'));
+  end;
 begin
   if Element = nil then Exit;
   FicheTag := 'Talent';
@@ -13392,26 +17391,70 @@ begin
   Dieu := Element.GetAttribute('id');
   Coches := '';
   Verrous := '';
+  FTalentElement := Element;
+  FTalentEtranger := Etranger;
+  Familles := FamillesActives;
+  // cases « familles » : elles ajoutent ou retirent des champs (groupes Magie, Moteur, Niveau) ; jamais ecrites dans le XML
+  AvecFamilles := EditionPermise and not Etranger;
   // un dieu de la Benediction (T0012_*) : les benedictions qu'il donne, cochees ici et rangees dans DATA_SPELL_TALENT
-  if Pos('T0012_', CodeSansLivre(Dieu)) = 1 then
+  if Pos('T_BLESS__', CodeSansLivre(Dieu)) = 1 then
   begin
-    PanelFiche.Definir([
-      ChampFiche('Description', 'RULES-LAB_002', gfTexte, True, True),
-      ChampFiche('Max', 'RULES-LAB_044', gfCodeLibre, False, False, True, False, Maximums),
-      ChampFiche('Test', 'RULES-LAB_422', gfTexte, True, False, True),
-      ChampFiche('Explanation', 'RULES-LAB_279', gfMemo, True, False, True),
-      ChampFiche('Benedictions', 'RULES-LAB_066', gfCases, True, False, True, False, ChoixBenedictions(Dieu, Coches, Verrous))]);
+    Ajoute(ChampFiche('Description', 'RULES-LAB_002', gfTexte, True, True));
+    AjouteFamilles;
+    Ajoute(ChampFiche('Generique', 'RULES-LAB_146', gfTexte, True, False, True, False));
+    Ajoute(ChampFiche('Max', 'RULES-LAB_044', gfCodeLibre, False, False, True, False, Maximums));
+    Ajoute(ChampFiche('SpellMode', 'RULES-LAB_956', gfCodeLibre, False, False, True, False, 'AUTO=AUTO|CHOICE=CHOICE|NONE=NONE'));
+    Ajoute(ChampFiche('Test', 'RULES-LAB_422', gfTexte, True, False, True));
+    Ajoute(ChampFiche('Explanation', 'RULES-LAB_279', gfMemo, True, False, True));
+    Ajoute(ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False));
+    AjouteSuite;
+    Ajoute(ChampFiche('Benedictions', 'RULES-LAB_066', gfCases, True, False, True, False, ChoixBenedictions(Dieu, Coches, Verrous)));
+    FiltrerChampsFiche(Champs, Element, VersionFicheLivre, Familles);
+    PanelFiche.Definir(Champs);
     PanelFiche.DeclarerVirtuel('Benedictions');
+    if AvecFamilles then PanelFiche.DeclarerVirtuel('FamilleTalent');
+    if Pos('MOTEUR', Familles) > 0 then PanelFiche.Extra := PanelEffetTalent;  // groupe « Moteur »
+  end
+  else if Element.FindNode('Generique') <> nil then
+  begin
+    // specialisation de talent : modele de talent generique (ex. "RULES-TAL_xxx_*")
+    Ajoute(ChampFiche('Description', 'RULES-LAB_002', gfTexte, True, True));
+    AjouteFamilles;
+    Ajoute(ChampFiche('Generique', 'RULES-LAB_146', gfCodeLibre, True, False, True, False,
+      ChoixMeresTalentsV2(ValeurXML(Element.FindNode('Generique')))));
+    Ajoute(ChampFiche('Max', 'RULES-LAB_044', gfCodeLibre, False, False, True, False, Maximums));
+    Ajoute(EnGroupes(ChampFiche('Trait', 'RULES-LAB_688', gfCases, True, False, True, False,
+      ConstVrai + '=' + GetTexteLibelle('RULES-LAB_688', 'Creature trait (cannot be bought or chosen)')), 'V4,V5'));
+    Ajoute(ChampFiche('Test', 'RULES-LAB_422', gfTexte, True, False, True));
+    Ajoute(ChampFiche('Explanation', 'RULES-LAB_279', gfMemo, True, False, True));
+    Ajoute(ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False));
+    AjouteSuite;
+    FiltrerChampsFiche(Champs, Element, VersionFicheLivre, Familles);
+    PanelFiche.Definir(Champs);
+    if AvecFamilles then PanelFiche.DeclarerVirtuel('FamilleTalent');
+    if Pos('MOTEUR', Familles) > 0 then PanelFiche.Extra := PanelEffetTalent;  // groupe « Moteur »
   end
   else
-    PanelFiche.Definir([
-      ChampFiche('Description', 'RULES-LAB_002', gfTexte, True, True),
-      ChampFiche('Max', 'RULES-LAB_044', gfCodeLibre, False, False, True, False, Maximums),
-      ChampFiche('Trait', 'RULES-LAB_688', gfCases, True, False, True, False,
-        ConstVrai + '=' + GetTexteLibelle('RULES-LAB_688', 'Creature trait (cannot be bought or chosen)')),
-      ChampFiche('Test', 'RULES-LAB_422', gfTexte, True, False, True),
-      ChampFiche('Explanation', 'RULES-LAB_279', gfMemo, True, False, True)]);
+  begin
+    Ajoute(ChampFiche('Description', 'RULES-LAB_002', gfTexte, True, True));
+    AjouteFamilles;
+    Ajoute(ChampFiche('Max', 'RULES-LAB_044', gfCodeLibre, False, False, True, False, Maximums));
+    Ajoute(EnGroupes(ChampFiche('Trait', 'RULES-LAB_688', gfCases, True, False, True, False,
+      ConstVrai + '=' + GetTexteLibelle('RULES-LAB_688', 'Creature trait (cannot be bought or chosen)')), 'V4,V5'));
+    // SpellMode : rare (V2 7 / 646, V4 6 / 567, V5 5 / 230), range dans le groupe Magie
+    Ajoute(EnGroupes(ChampFiche('SpellMode', 'RULES-LAB_956', gfCodeLibre, False, False, True, False, 'AUTO=AUTO|CHOICE=CHOICE|NONE=NONE'), 'Magie'));
+    Ajoute(ChampFiche('Test', 'RULES-LAB_422', gfTexte, True, False, True));
+    Ajoute(ChampFiche('Explanation', 'RULES-LAB_279', gfMemo, True, False, True));
+    Ajoute(ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False));
+    AjouteSuite;
+    FiltrerChampsFiche(Champs, Element, VersionFicheLivre, Familles);
+    PanelFiche.Definir(Champs);
+    if AvecFamilles then PanelFiche.DeclarerVirtuel('FamilleTalent');
+    // groupe « Moteur » : le bloc Engine effect n'apparait que si le talent a un <Effet> ou si la famille est cochee
+    if Pos('MOTEUR', Familles) > 0 then PanelFiche.Extra := PanelEffetTalent;
+  end;
   PanelFiche.Charger(Element);
+  if AvecFamilles then PanelFiche.CocherCodes('FamilleTalent', Familles);
   BenedInit := Coches;
   if Coches <> '' then PanelFiche.CocherCodes('Benedictions', Coches);
   PanelFiche.VerrouillerCases(Verrous);
@@ -13423,6 +17466,48 @@ begin
   PanelFiche.Placer(StringGridDetail.Left, StringGridDetail.Top);
   PanelFiche.Visible := True;
   if EditionPermise then PrendreSnapshotFiche;
+end;
+
+// Reconstruit la fiche du talent affiche apres un changement de famille, en gardant les saisies en cours
+// (champs texte et listes ; la grille des bonus et le bloc Engine effect repartent des donnees du livre).
+procedure TWinLivres.ReconstruireFicheTalent(Donnee: PtrInt);
+var
+  Balises, Valeurs: TStringList;
+begin
+  if (FTalentElement = nil) or ((FicheTag <> 'Talent') and (FicheTag <> 'Trapping') and (FicheTag <> 'Career') and
+     (FicheTag <> 'Specie')) then Exit;
+  Balises := TStringList.Create;
+  Valeurs := TStringList.Create;
+  try
+    try
+      PanelFiche.SauverValeurs(Balises, Valeurs);
+      // comme en navigation normale : fiche masquee et focus hors de la fiche avant que Definir detruise les champs
+      // (une liste detruite pendant qu'elle a le focus faisait fermer WinLivre)
+      PanelFiche.Visible := False;
+      ActiveControl := nil;
+      if FicheTag = 'Trapping' then
+        AfficherFicheTrapping(FTalentElement)
+      else if FicheTag = 'Career' then
+        AfficherFicheCarriere(FTalentElement)
+      else if FicheTag = 'Specie' then
+        AfficherFicheEthnie(FTalentElement, CodeDonneeSelectionnee)
+      else
+        AfficherFicheTalent(FTalentElement, FTalentEtranger);
+      PanelFiche.RestaurerValeurs(Balises, Valeurs);
+    except
+      on E: Exception do
+        ShowMessage('Reconstruction de la fiche talent : ' + E.ClassName + ' - ' + E.Message);
+    end;
+  finally
+    Valeurs.Free;
+    Balises.Free;
+  end;
+end;
+
+procedure TWinLivres.TimerFamilleTick(Sender: TObject);
+begin
+  FTimerFamille.Enabled := False;
+  ReconstruireFicheTalent(0);
 end;
 
 procedure TWinLivres.AfficherDonneeTalent(CodeTalent, Titre: String);
@@ -13440,6 +17525,7 @@ begin
     Etranger := Element <> nil;
   end;
   if Element = nil then Exit;
+  FamillesTalent := '';
   AfficherFicheTalent(Element, Etranger);
   CodeDonneeSelectionnee := CodeTalent;
 end;
@@ -13503,12 +17589,30 @@ const
 var
   CodeAttr, Choix: String;
   I: Integer;
+  Champs: TTableauChampsFiche;
 begin
   if Element = nil then Exit;
   FicheTag := 'Skill';
   FicheTypeNoeud := TypeNoeud;
   CodeAttr := ValeurXML(Element.FindNode('Attribut'));
-  if CodeAttr = '' then
+  // une competence generique (« Trade (Various) ») porte un Attribut vide : la balise est la, la valeur non
+  if (Element.FindNode('Attribut') = nil) and (Element.FindNode('Generique') <> nil) and
+     (ValeurXML(Element.FindNode('Generique')) <> '') then
+  begin
+    // specialisation : sa mere (RULES-COMP_LORE__*) en libelle (« Lore (Any) »), pas en code brut
+    CodeAttr := ValeurXML(Element.FindNode('Generique'));
+    Choix := LibelleDeCode(CodeAttr);
+    if (Choix = '') and (Copy(CodeAttr, Length(CodeAttr) - 2, 3) = '__*') then
+    begin
+      Choix := LibelleCodeV1(Copy(CodeAttr, 1, Length(CodeAttr) - 3));
+      if Choix <> '' then Choix := Choix + ' (Any)';
+    end;
+    if Choix = '' then Choix := CodeAttr;
+    PanelFiche.Definir([
+      ChampFiche('Description', 'RULES-LAB_002', gfTexte, True, True),
+      ChampFiche('Generique', 'RULES-LAB_146', gfCodeLibre, True, False, True, False, CodeAttr + '=' + Choix)]);
+  end
+  else if Element.FindNode('Attribut') = nil then
     PanelFiche.Definir([
       ChampFiche('Description', 'RULES-LAB_002', gfTexte, True, True)])
   else
@@ -13517,12 +17621,24 @@ begin
     Choix := '';
     for I := Low(Attributs) to High(Attributs) do
       Choix := Choix + '|RULES-ATTR_' + Attributs[I] + '=' + GetAttributLabel('RULES-ATTR_' + Attributs[I]);
-    if Pos('|' + CodeAttr + '=', Choix) = 0 then
+    if CodeAttr = '' then
+      Choix := Choix + '|='
+    else if Pos('|' + CodeAttr + '=', Choix) = 0 then
       Choix := Choix + '|' + CodeAttr + '=' + GetAttributLabel(CodeAttr);
-    PanelFiche.Definir([
-      ChampFiche('Description', 'RULES-LAB_002', gfTexte, True, True),
-      ChampFiche('Attribut', 'RULES-LAB_008', gfCode, False, True, False, False, Copy(Choix, 2, MaxInt)),
-      ChampFiche('Explanation', 'RULES-LAB_279', gfMemo, True, False, True)]);
+    // groupes par version : Basic n'existe pas en V5, RelatedTalents seulement en V2 (un champ deja rempli reste visible)
+    SetLength(Champs, 6);
+    Champs[0] := ChampFiche('Description', 'RULES-LAB_002', gfTexte, True, True);
+    Champs[1] := ChampFiche('Attribut', 'RULES-LAB_008', gfCode, False, CodeAttr <> '', CodeAttr = '', False, Copy(Choix, 2, MaxInt));
+    Champs[2] := ChampFiche('Explanation', 'RULES-LAB_279', gfMemo, True, False, True);
+    Champs[3] := EnGroupes(ChampFiche('Basic', 'RULES-LAB_881', gfCode, False, False, True, False,
+      '1=' + GetTexteLibelle('RULES-LAB_882') + '|0=' + GetTexteLibelle('RULES-LAB_883')), 'V1,V2,V4');
+    // talents lies : cases a cocher (codes de talents separes par des virgules) ; « None » ancien = aucune case
+    Champs[4] := EnGroupes(ChampFiche('RelatedTalents', 'RULES-LAB_707', gfCases, True, False, True, False,
+      ChoixTalentsLiesV2(ValeurXML(Element.FindNode('RelatedTalents')))), 'V2');
+    Champs[5] := ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False);
+    FiltrerChampsFiche(Champs, Element, VersionFicheLivre, '');
+    PanelFiche.Definir(Champs);
+    PanelFiche.OrdreBalises := 'Attribut,Description,Explanation,*Basic,*RelatedTalents,*Page';
   end;
   PanelFiche.MasquerGrille;  // une competence ne porte aucun modificateur
   PanelFiche.Charger(Element);
@@ -13540,28 +17656,642 @@ begin
   MasquerForm();
   Element := TrouverElementParId('Skill', CodeComp);
   if Element = nil then Exit;
-  if Titre = GetTexteLibelle('RULES-LAB_146') then
+  if (Titre = GetTexteLibelle('RULES-LAB_146')) and FicheGeneriqueV1Possible(Element) then
+    AfficherFicheGeneriqueV1(Element, 'Skill', 27, CodeComp)
+  else if Titre = GetTexteLibelle('RULES-LAB_146') then
     AfficherFicheCompetence(Element, 27)
   else
     AfficherFicheCompetence(Element, 26);
   CodeDonneeSelectionnee := CodeComp;
 end;
 
+// Libelle d'une competence de carriere V4, ou d'un choix « A/B/C » : chaque morceau en libelle, jamais en code brut.
+function TWinLivres.LibelleChoixCompetence(const Code: String): String;
+var
+  Morceaux: TStringList;
+  K: Integer;
+  Un, Lib: String;
+begin
+  Result := '';
+  Morceaux := TStringList.Create;
+  try
+    Morceaux.StrictDelimiter := True;
+    Morceaux.Delimiter := '/';
+    Morceaux.DelimitedText := Code;
+    for K := 0 to Morceaux.Count - 1 do
+    begin
+      Un := Trim(Morceaux[K]);
+      Lib := ChercheCompetence(Un).Libelle;
+      if ChercheCompetence(Un).CodeCompetence = '' then Lib := '';
+      if Lib = '' then Lib := LibelleDeCode(Un);
+      if (Lib = '') and (Copy(Un, Length(Un) - 2, 3) = '__*') then
+      begin
+        Lib := LibelleCodeV1(Copy(Un, 1, Length(Un) - 3));
+        if Lib <> '' then Lib := Lib + ' (Any)';
+      end;
+      if Lib = '' then Lib := Un;
+      if K > 0 then Result := Result + ' / ';
+      Result := Result + Lib;
+    end;
+  finally
+    Morceaux.Free;
+  end;
+end;
+
+function TWinLivres.LibelleCompetenceCarriereV1(Code: String): String;
+var
+  Competence: StructureCompetence;
+begin
+  Competence := ChercheCompetence(Code);
+  if Competence.CodeCompetence <> '' then
+    Result := Competence.Libelle
+  else
+    Result := LibelleAffiche(Code);
+  if ((Result = '') or (Result = Code)) and (LibelleCodeV1(Code) <> '') then Result := LibelleCodeV1(Code);
+end;
+
+// Libelle d'un sort / d'une priere WFRP1 du livre ouvert (sa Description), sinon celui du code.
+// Tables de valeurs a plage -> valeur (<Cost name="0-5">"25"</Cost>, <Chance name="01-05">"code de corruption"</Chance>) :
+// grille editable, la fiche ecrit tout le chapitre.
+function TWinLivres.TableValeursEditable(const Chapitre: String): Boolean;
+begin
+  Result := (Chapitre = 'DATA_SKILL_COST') or (Chapitre = 'DATA_ATTRIBUT_COST') or
+    (Chapitre = 'DATA_CORRUPTION_PHYSICAL_CHANCE') or (Chapitre = 'DATA_CORRUPTION_MENTAL_CHANCE') or
+    (Chapitre = 'DATA_SPECIE_CAREER_CHOICE') or (Chapitre = 'DATA_CAREER_LINK_V1') or
+    (Chapitre = 'DATA_CAREER_LINK_V2');
+end;
+
+procedure TWinLivres.AfficherFicheTableValeurs(const Chapitre: String);
+var
+  Chap, Liste: TDOMNodeList;
+  Libelles: TStringList;
+  Table: String;
+  Fils: TDOMNode;
+  I: Integer;
+  PM: StructureMetier;
+  DuRulebook: Boolean;
+begin
+  MasquerAfficherElements('');
+  MasquerForm();
+  if XMLDoc = nil then Exit;
+  Chap := XMLDoc.GetElementsByTagName(Chapitre);
+  // liens entre carrieres : un livre V1 neuf n'a pas encore le chapitre, il est cree vide (autorise par SCHEMA_WFRP1.xsd)
+  if (Chap.Count = 0) and CreationPermise and
+     (((Chapitre = 'DATA_CAREER_LINK_V1') and EstLivreV1) or ((Chapitre = 'DATA_CAREER_LINK_V2') and EstLivreV2)) then
+  begin
+    XMLDoc.GetElementsByTagName('DATA_BOOK').Item[0].AppendChild(XMLDoc.CreateElement(Chapitre));
+    Chap := XMLDoc.GetElementsByTagName(Chapitre);
+  end;
+  // table de regles absente de ce livre : celle du Rulebook s'applique, montree en lecture seule
+  DuRulebook := False;
+  if (Chap.Count = 0) and (RulebookBaseXML <> nil) then
+  begin
+    Chap := RulebookBaseXML.GetElementsByTagName(Chapitre);
+    DuRulebook := Chap.Count > 0;
+  end;
+  if Chap.Count = 0 then Exit;
+  FicheTag := 'TableValeurs';
+  FicheTypeNoeud := NT_TABLE_VALEURS;
+  CodeDonneeSelectionnee := Chapitre;
+  if DuRulebook then
+    LabelFormTitle.Caption := LibelleChapitre(Chapitre) + ' - ' + GetTexteLibelle('RULES-LAB_TABLE_RULEBOOK', 'Rulebook table, not changed by this book');
+  PanelFiche.Definir([]);
+  PanelFiche.MasquerGrille;  // pas de modificateurs dans ces tables
+  if (Chapitre = 'DATA_CORRUPTION_PHYSICAL_CHANCE') or (Chapitre = 'DATA_CORRUPTION_MENTAL_CHANCE') then
+  begin
+    // la colonne propose les corruptions existantes de la table, pas une saisie libre
+    Libelles := TStringList.Create;
+    try
+      if Chapitre = 'DATA_CORRUPTION_PHYSICAL_CHANCE' then Table := 'DATA_CORRUPTION_TABLE_PHYSICAL'
+      else Table := 'DATA_CORRUPTION_TABLE_MENTAL';
+      Liste := XMLDoc.GetElementsByTagName(Table);
+      if Liste.Count > 0 then
+      begin
+        Fils := Liste.Item[0].FirstChild;
+        while Fils <> nil do
+        begin
+          if (Fils.NodeType = ELEMENT_NODE) and (Fils.NodeName = 'Corruption') and
+             (ValeurXML(Fils.FindNode('Description')) <> '') then
+            Libelles.Add(ValeurXML(Fils.FindNode('Description')));
+          Fils := Fils.NextSibling;
+        end;
+      end;
+      PanelTableChance.DefinirChoix(0, 1, Libelles);
+    finally
+      Libelles.Free;
+    end;
+    PanelFiche.Extra := PanelTableChance;
+  end
+  else if Chapitre = 'DATA_SPECIE_CAREER_CHOICE' then
+    PanelFiche.Extra := PanelTableChoix
+  else if (Chapitre = 'DATA_CAREER_LINK_V1') or (Chapitre = 'DATA_CAREER_LINK_V2') then
+  begin
+    // les deux colonnes proposent les carrieres connues (livre ouvert, puis celles du jeu), pas une saisie libre
+    Libelles := TStringList.Create;
+    try
+      Libelles.Sorted := True;
+      Libelles.Duplicates := dupIgnore;
+      Liste := XMLDoc.GetElementsByTagName('Career');
+      for I := 0 to Liste.Count - 1 do
+        if (TDOMElement(Liste.Item[I]).GetAttribute('id') <> '') and (Liste.Item[I].FindNode('AdvanceScheme') <> nil) and
+           (ValeurXML(Liste.Item[I].FindNode('Description')) <> '') then
+          Libelles.Add(ValeurXML(Liste.Item[I].FindNode('Description')));
+      for PM in ListMetier do
+        if Trim(PM.Libelle) <> '' then Libelles.Add(Trim(PM.Libelle));
+      PanelLiensCarriere.DefinirChoix(0, 0, Libelles);
+      PanelLiensCarriere.DefinirChoix(0, 1, Libelles);
+    finally
+      Libelles.Free;
+    end;
+    PanelFiche.Extra := PanelLiensCarriere;
+  end
+  else
+    PanelFiche.Extra := PanelTableCout;
+  RemplirCompLieeFiche('');
+  PanelFiche.Charger(TDOMElement(Chap.Item[0]));
+  PanelFiche.LectureSeule := DuRulebook or not EditionPermise;
+  PanelFiche.Placer(StringGridDetail.Left, StringGridDetail.Top);
+  PanelFiche.Visible := True;
+  if EditionPermise and not DuRulebook then PrendreSnapshotFiche;
+end;
+
+function TWinLivres.LibelleCorruption(Code: String): String;
+var
+  Corruption: TDOMElement;
+begin
+  Result := '';
+  Corruption := TrouverElementParId('Corruption', Code);
+  if Corruption <> nil then Result := ValeurXML(Corruption.FindNode('Description'));
+end;
+
+function TWinLivres.CodeCorruption(Libelle: String): String;
+var
+  Elements: TDOMNodeList;
+  I: Integer;
+  Cle: String;
+begin
+  Result := '';
+  Elements := XMLDoc.GetElementsByTagName('Corruption');
+  for I := 0 to Elements.Count - 1 do
+    if ValeurXML(Elements.Item[I].FindNode('Description')) = Libelle then
+    begin
+      Cle := TDOMElement(Elements.Item[I]).GetAttribute('id');
+      if Cle = '' then Cle := TDOMElement(Elements.Item[I]).GetAttribute('name');
+      Result := Cle;
+      Exit;
+    end;
+end;
+
+// Race ou metier d'un choix de metier par espece : element du livre ouvert, sinon race / metier du jeu, sinon le code.
+function TWinLivres.LibelleChoixMetier(Code: String): String;
+var
+  El: TDOMElement;
+  PR: StructureRace;
+  PM: StructureMetier;
+begin
+  Result := '';
+  El := TrouverElementParId('Career', Code);
+  if El = nil then El := TrouverElementParId('Specie', Code);
+  if El <> nil then Result := ValeurXML(El.FindNode('Description'));
+  if Result = '' then
+  begin
+    PM := ChercheMetier(Code);
+    if PM.CodeMetier = Code then Result := PM.Libelle;
+  end;
+  if Result = '' then
+  begin
+    PR := ChercheRace(Code);
+    if PR.CodeRace = Code then Result := PR.Libelle;
+  end;
+end;
+
+function TWinLivres.CodeChoixMetier(Libelle: String): String;
+var
+  PM: StructureMetier;
+  PR: StructureRace;
+begin
+  Result := CodeSortV1(Libelle);
+  if Result <> '' then Exit;
+  for PM in ListMetier do
+    if Trim(PM.Libelle) = Trim(Libelle) then Exit(PM.CodeMetier);
+  for PR in ListRace do
+    if Trim(PR.Libelle) = Trim(Libelle) then Exit(PR.CodeRace);
+end;
+
+function TWinLivres.LibelleSortV1(Code: String): String;
+var
+  Sort: TDOMElement;
+begin
+  Result := '';
+  Sort := TrouverElementParId('SpellV1', Code);
+  if Sort <> nil then Result := ValeurXML(Sort.FindNode('Description'));
+  if Result = '' then Result := LibelleCompetenceCarriereV1(Code);
+  // caracteristique (RULES-ATTR_M, _Ld...) : libelle d'interface ou Description du Rulebook
+  if ((Result = '') or (Result = Code)) and (Copy(Code, 1, 11) = 'RULES-ATTR_') then
+    Result := GetAttributLabel(Code);
+end;
+
+// Code de l'element du livre dont la Description est Libelle (sort, competence, carriere...), sinon de
+// l'attribut du jeu dont le libelle est Libelle ; '' si aucun.
+function TWinLivres.CodeSortV1(Libelle: String): String;
+const
+  Attributs: array[0..13] of String = ('M', 'WS', 'BS', 'S', 'T', 'W', 'I', 'A', 'Dex', 'Ld', 'Int', 'Cl', 'WP', 'Fel');
+var
+  Elements: TDOMNodeList;
+  I: Integer;
+begin
+  Result := '';
+  Elements := XMLDoc.GetElementsByTagName('*');
+  for I := 0 to Elements.Count - 1 do
+    if (TDOMElement(Elements.Item[I]).GetAttribute('id') <> '')
+      and (ValeurXML(Elements.Item[I].FindNode('Description')) = Libelle) then
+    begin
+      Result := TDOMElement(Elements.Item[I]).GetAttribute('id');
+      Exit;
+    end;
+  for I := 0 to High(Attributs) do
+    if (GetAttributLabel('RULES-ATTR_' + Attributs[I]) = Libelle) or (Attributs[I] = Libelle) then
+    begin
+      Result := 'RULES-ATTR_' + Attributs[I];
+      Exit;
+    end;
+end;
+
+// Competences du livre ouvert, au format « code=libelle|... » d'un champ de fiche a liste.
+function TWinLivres.ChoixCompetencesV1: String;
+var
+  Elements: TDOMNodeList;
+  I: Integer;
+begin
+  Result := '';
+  Elements := XMLDoc.GetElementsByTagName('Skill');
+  for I := 0 to Elements.Count - 1 do
+    if TDOMElement(Elements.Item[I]).GetAttribute('id') <> '' then
+      Result := Result + '|' + TDOMElement(Elements.Item[I]).GetAttribute('id') + '='
+        + ValeurXML(Elements.Item[I].FindNode('Description'));
+  Result := Copy(Result, 2, MaxInt);
+end;
+
+// Competences a specialisations (Variants) du livre ouvert et du Rulebook : « <id>__*=<libelle> (Any)|... »,
+// la valeur de <Generique> d'une specialisation ; la valeur courante s'ajoute si elle manque.
+function TWinLivres.ChoixMeresSpecialisationV1(const Courant: String): String;
+var
+  Liste: TStringList;
+  Doc: TXMLDocument;
+  Elements: TDOMNodeList;
+  I, N: Integer;
+  Code, Lib: String;
+begin
+  Result := '';
+  Liste := TStringList.Create;
+  try
+    Liste.Sorted := True;
+    Liste.Duplicates := dupIgnore;
+    for N := 0 to 1 do
+    begin
+      if N = 0 then Doc := XMLDoc else Doc := RulebookXML;
+      if Doc = nil then Continue;
+      Elements := Doc.GetElementsByTagName('Skill');
+      for I := 0 to Elements.Count - 1 do
+      begin
+        Code := TDOMElement(Elements.Item[I]).GetAttribute('id');
+        // V4 : la mere d'une specialisation est une competence dont l'id finit par __* (son libelle porte deja « (Any) »)
+        if (Length(Code) > 3) and (Copy(Code, Length(Code) - 2, 3) = '__*') then
+        begin
+          Lib := ValeurXML(Elements.Item[I].FindNode('Description'));
+          if Lib <> '' then Liste.Add(Lib + #9 + Code);
+          Continue;
+        end;
+        if (Code = '') or (Elements.Item[I].FindNode('Variants') = nil) then Continue;
+        Lib := ValeurXML(Elements.Item[I].FindNode('Description'));
+        if Lib = '' then Lib := Code;
+        Liste.Add(Lib + ' (Any)' + #9 + Code + '__*');
+      end;
+    end;
+    if (Courant <> '') and (Pos(#9 + Courant, Liste.Text) = 0) then
+      Liste.Add(Courant + #9 + Courant);
+    for I := 0 to Liste.Count - 1 do
+      Result := Result + '|' + Copy(Liste[I], Pos(#9, Liste[I]) + 1, MaxInt) + '=' + Copy(Liste[I], 1, Pos(#9, Liste[I]) - 1);
+    Result := Copy(Result, 2, MaxInt);
+  finally
+    Liste.Free;
+  end;
+end;
+
+// Divinites (balise Deity avec id) du livre ouvert et du Rulebook : « code=libelle|... » ; la valeur courante s'ajoute si elle manque.
+function TWinLivres.ChoixDivinitesV1(const Courant: String): String;
+var
+  Liste: TStringList;
+  Doc: TXMLDocument;
+  Elements: TDOMNodeList;
+  I, N: Integer;
+  Code, Lib: String;
+begin
+  Result := '';
+  Liste := TStringList.Create;
+  try
+    Liste.Sorted := True;
+    Liste.Duplicates := dupIgnore;
+    for N := 0 to 1 do
+    begin
+      if N = 0 then Doc := XMLDoc else Doc := RulebookXML;
+      if Doc = nil then Continue;
+      Elements := Doc.GetElementsByTagName('Deity');
+      for I := 0 to Elements.Count - 1 do
+      begin
+        Code := TDOMElement(Elements.Item[I]).GetAttribute('id');
+        if Code = '' then Continue;
+        Lib := ValeurXML(Elements.Item[I].FindNode('Description'));
+        if Lib = '' then Lib := Code;
+        Liste.Add(Lib + #9 + Code);
+      end;
+    end;
+    if (Courant <> '') and (Pos(#9 + Courant, Liste.Text) = 0) then
+      Liste.Add(Courant + #9 + Courant);
+    for I := 0 to Liste.Count - 1 do
+      Result := Result + '|' + Copy(Liste[I], Pos(#9, Liste[I]) + 1, MaxInt) + '=' + Copy(Liste[I], 1, Pos(#9, Liste[I]) - 1);
+    Result := Copy(Result, 2, MaxInt);
+  finally
+    Liste.Free;
+  end;
+end;
+
+// Valeurs distinctes d'une balise (SpellList...) dans le livre ouvert et le Rulebook, triees, au format « valeur=valeur|... ».
+function TWinLivres.ChoixValeursBalise(const Balise, Courant: String): String;
+var
+  Liste: TStringList;
+  Doc: TXMLDocument;
+  Elements: TDOMNodeList;
+  I, N: Integer;
+  Valeur: String;
+begin
+  Result := '';
+  Liste := TStringList.Create;
+  try
+    Liste.Sorted := True;
+    Liste.Duplicates := dupIgnore;
+    for N := 0 to 1 do
+    begin
+      if N = 0 then Doc := XMLDoc else Doc := RulebookXML;
+      if Doc = nil then Continue;
+      Elements := Doc.GetElementsByTagName(Balise);
+      for I := 0 to Elements.Count - 1 do
+      begin
+        Valeur := ValeurXML(Elements.Item[I]);
+        if Valeur <> '' then Liste.Add(Valeur);
+      end;
+    end;
+    if Courant <> '' then Liste.Add(Courant);
+    for I := 0 to Liste.Count - 1 do
+      Result := Result + '|' + Liste[I] + '=' + Liste[I];
+    Result := Copy(Result, 2, MaxInt);
+  finally
+    Liste.Free;
+  end;
+end;
+
+// Regimes de familier (valeurs de <Diet> du livre ouvert), au format « code=libelle|... ».
+function TWinLivres.ChoixRegimeV1: String;
+var
+  Elements: TDOMNodeList;
+  I: Integer;
+  Code: String;
+begin
+  Result := '';
+  Elements := XMLDoc.GetElementsByTagName('Diet');
+  for I := 0 to Elements.Count - 1 do
+  begin
+    Code := ValeurXML(Elements.Item[I]);
+    if (Code <> '') and (Pos('|' + Code + '=', '|' + Result) = 0) then
+      Result := Result + '|' + Code + '=' + GetTexteLibelle('RULES-FAMDIET_' + Code);
+  end;
+  Result := Copy(Result, 2, MaxInt);
+end;
+
+// Liste « mot du livre = libelle traduit » pour une balise V1 dont la valeur est un mot anglais du livre
+// (Plentiful, Neutral...). Le libelle est RULES-<Prefixe><MOT EN MAJUSCULES, ESPACES -> _> ; sans libelle, le mot lui-meme.
+// La valeur ecrite dans le XML reste le mot du livre.
+function TWinLivres.ChoixMotsV1(const Prefixe: String; const Mots: array of String; Codes: Boolean): String;
+var
+  I: Integer;
+  Cle: String;
+begin
+  Result := '';
+  for I := 0 to High(Mots) do
+  begin
+    Cle := 'RULES-' + Prefixe + StringReplace(StringReplace(StringReplace(UpperCase(Mots[I]), ' ', '_', [rfReplaceAll]),
+      '-', '_', [rfReplaceAll]), '/', '_', [rfReplaceAll]);
+    // Codes = True : la valeur ecrite dans le XML est le CODE (livres convertis) ; sinon le mot du livre
+    if Codes then
+      Result := Result + '|' + Cle + '=' + GetTexteLibelle(Cle, Mots[I])
+    else
+      Result := Result + '|' + Mots[I] + '=' + GetTexteLibelle(Cle, Mots[I]);
+  end;
+  Result := Copy(Result, 2, MaxInt);
+end;
+
+// Talents « mere » d'une specialisation (id finissant par __*, ex. Arcane Lore) du livre ouvert et du Rulebook :
+// « code=libelle (Any) » tries par libelle ; le code courant s'ajoute s'il manque.
+function TWinLivres.ChoixMeresTalentsV2(const Courant: String): String;
+var
+  Liste: TStringList;
+  Doc: TXMLDocument;
+  Elements: TDOMNodeList;
+  I, N: Integer;
+  Code, Lib: String;
+begin
+  Result := '';
+  Liste := TStringList.Create;
+  try
+    Liste.Sorted := True;
+    Liste.Duplicates := dupIgnore;
+    for N := 0 to 1 do
+    begin
+      if N = 0 then Doc := XMLDoc else Doc := RulebookXML;
+      if Doc = nil then Continue;
+      Elements := Doc.GetElementsByTagName('Talent');
+      for I := 0 to Elements.Count - 1 do
+      begin
+        Code := TDOMElement(Elements.Item[I]).GetAttribute('id');
+        if (Length(Code) < 4) or (Copy(Code, Length(Code) - 2, 3) <> '__*') then Continue;
+        Lib := ValeurXML(Elements.Item[I].FindNode('Description'));
+        if Lib = '' then Lib := Code;
+        // les meres V4 portent deja « (Any) » dans leur libelle (« Blessed (Any) »), celles de V2 non
+        if (Length(Lib) >= 5) and SameText(Copy(Lib, Length(Lib) - 4, 5), '(Any)') then
+          Liste.Add(Lib + #9 + Code)
+        else
+          Liste.Add(Lib + ' (Any)' + #9 + Code);
+      end;
+    end;
+    if (Courant <> '') and (Pos(#9 + Courant, Liste.Text) = 0) then
+      Liste.Add(Courant + #9 + Courant);
+    for I := 0 to Liste.Count - 1 do
+      Result := Result + '|' + Copy(Liste[I], Pos(#9, Liste[I]) + 1, MaxInt) + '=' + Copy(Liste[I], 1, Pos(#9, Liste[I]) - 1);
+    Result := Copy(Result, 2, MaxInt);
+  finally
+    Liste.Free;
+  end;
+end;
+
+// Talents proposes en « talents lies » d'une competence V2 : tous ceux du livre ouvert et du Rulebook (sauf les meres
+// « __* »), « code=libelle » tries par libelle ; un code deja present dans la valeur s'ajoute s'il manque.
+function TWinLivres.ChoixTalentsLiesV2(const Courants: String): String;
+var
+  Liste, Deja: TStringList;
+  Doc: TXMLDocument;
+  Elements: TDOMNodeList;
+  I, N: Integer;
+  Code, Lib: String;
+begin
+  Result := '';
+  Liste := TStringList.Create;
+  Deja := TStringList.Create;
+  try
+    Liste.Sorted := True;
+    Liste.Duplicates := dupIgnore;
+    Deja.Sorted := True;
+    Deja.Duplicates := dupIgnore;
+    for N := 0 to 1 do
+    begin
+      if N = 0 then Doc := XMLDoc else Doc := RulebookXML;
+      if Doc = nil then Continue;
+      Elements := Doc.GetElementsByTagName('Talent');
+      for I := 0 to Elements.Count - 1 do
+      begin
+        Code := TDOMElement(Elements.Item[I]).GetAttribute('id');
+        if (Code = '') or (Copy(Code, Length(Code) - 2, 3) = '__*') or (Deja.IndexOf(Code) >= 0) then Continue;
+        Deja.Add(Code);
+        Lib := ValeurXML(Elements.Item[I].FindNode('Description'));
+        if Lib = '' then Lib := Code;
+        Liste.Add(Lib + #9 + Code);
+      end;
+    end;
+    // valeur deja presente (codes, ou ancien texte libre) : ce qui n'est pas dans la liste est ajoute tel quel
+    with TStringList.Create do
+    try
+      StrictDelimiter := True;
+      Delimiter := ',';
+      DelimitedText := Courants;
+      for I := 0 to Count - 1 do
+        if (Trim(Strings[I]) <> '') and (Deja.IndexOf(Trim(Strings[I])) < 0) then
+          Liste.Add(Trim(Strings[I]) + #9 + Trim(Strings[I]));
+    finally
+      Free;
+    end;
+    for I := 0 to Liste.Count - 1 do
+      Result := Result + '|' + Copy(Liste[I], Pos(#9, Liste[I]) + 1, MaxInt) + '=' + Copy(Liste[I], 1, Pos(#9, Liste[I]) - 1);
+    Result := Copy(Result, 2, MaxInt);
+  finally
+    Deja.Free;
+    Liste.Free;
+  end;
+end;
+
+// Liste de choix d'une balise des livres WFRP2 (valeurs relevees dans les 70 livres par TRAVAIL\valeurs_par_balise.py) ;
+// '' si la balise n'a pas de liste. Une valeur du livre hors liste reste affichee et conservee telle quelle.
+function TWinLivres.ChoixParBaliseV2(const Balise: String): String;
+begin
+  Result := '';
+  if Balise = 'Category' then
+    Result := ChoixMotsV1('EQCAT2_', ['Creatures', 'Melee Weapons', 'Missile Weapons', 'Runes', 'Special Equipment', 'Magic Items',
+      'Miscellanea', 'Tools', 'Tables', 'Clothing', 'Carrying Equipment', 'Food and Drink', 'Personal Equipment',
+      'Reading and Writing', 'Livestock', 'Vehicles', 'Mounts', 'Advanced Armour', 'Musical Instruments', 'Lighting',
+      'Services', 'Barding', 'Familiars', 'Vehicle Upgrades', 'Travel Services', 'Mount Gear', 'Animals', 'Lodging'], True)
+  else if Balise = 'SubCategory' then
+    Result := ChoixMotsV1('EQCAT2_', ['Draughts', 'Talismanic Runes', 'Weapon Runes', 'Divine Runes', 'Poisons', 'Religious Equipment',
+      'Armour Runes', 'Oddities', 'Artefacts', 'Replacements and Appendages', 'Engineering Runes', 'Ammunition', 'Chain',
+      'Skilled Services', 'Leather', 'Plate', 'Common Services', 'Armour Sets', 'Construct Runes', 'Tool Runes',
+      'Protection Runes', 'Alchemical Mixtures'], True)
+  else if Balise = 'Group' then
+    Result := ChoixMotsV1('WTYPE2_', ['Ordinary', 'Two-Handed', 'Ammunition', 'Entangling', 'Throwing', 'Gunpowder', 'Flail',
+      'Parrying', 'Fencing', 'Cavalry', 'Sling', 'Special', 'Crossbow', 'Longbow', 'Engineer', 'Blowgun', 'Bow', 'Engineering',
+      'Choppa', 'Orc Choppa', 'White Wolf'], True)
+  else if Balise = 'Volatility' then
+    Result := ChoixMotsV1('V2VOLAT_', ['Mild', 'Minor', 'Moderate', 'Major', 'Extreme'], True)
+  else if Balise = 'RuneType' then
+    Result := ChoixMotsV1('V2RUNE_', ['Talismanic', 'Weapon', 'Armour', 'Divine/Talismanic', 'Engineering', 'Divine/Special',
+      'Divine', 'Construct', 'Divine/Weapon', 'Tool', 'Protection'], True)
+  else if Balise = 'RitualType' then
+    Result := ChoixMotsV1('V2RITUAL_', ['Arcane', 'Divine', 'Arcane/Divine', 'Dark Magic', 'Natural'], True)
+  else if Balise = 'MutationType' then
+    Result := ChoixMotsV1('V2MUT_', ['Single', 'Multiple', 'Multiple 2', 'Multiple 3', 'Multiple 4', 'Multiple 5', 'Multiple 6'], True);
+end;
+
 // Fiche d'une carriere : libelle, description, classe et competence principale (une des competences de niveau 1).
 procedure TWinLivres.AfficherFicheCarriere(Element: TDOMElement);
 var
-  Classe, CodeComp, LibComp, ChoixClasse, ChoixComp: String;
-  Competence: StructureCompetence;
+  Classe, CodeComp, LibComp, ChoixClasse, ChoixComp, Familles: String;
   Elements: TDOMNodeList;
   ChapitreSkill: TDOMNode;
   Tri: TStringList;
   Codes: TStringList;
   I: Integer;
+  AvecFamilles: Boolean;
+  Champs: TTableauChampsFiche;
+
+  procedure AjouteChamp(var Liste: TTableauChampsFiche; const Champ: StructureChampFiche);
+  begin
+    SetLength(Liste, Length(Liste) + 1);
+    Liste[High(Liste)] := Champ;
+  end;
 begin
   if Element = nil then Exit;
   FicheTag := 'Career';
   FicheTypeNoeud := NT_METIER_NIVEAU1;
-  Classe := ValeurXML(Element.FindNode('Class'));
+  FicheCoches := 0;
+  // Carriere WFRP2 (CONTEXT.md 2.122) : fiche simple, consultation seule, aucun champ de saisie V4
+  if Element.FindNode('MainProfile') <> nil then
+    begin
+      PanelFiche.Definir([
+        ChampFiche('Description', 'RULES-LAB_002', gfTexte, True),
+        ChampFiche('Explanation', 'RULES-LAB_003', gfMemo, True),
+        ChampFiche('Basic', 'RULES-LAB_881', gfCode, False, False, True, False, '1=' + GetTexteLibelle('RULES-LAB_882') + '|0=' + GetTexteLibelle('RULES-LAB_883')),
+        ChampFiche('StartMoney', 'RULES-LAB_694', gfTexte, False, False, True, False),
+        ChampFiche('Source', 'RULES-LAB_946', gfTexte, False, False, True, False),
+        ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False)]);
+      // profils, competences, talents, equipement, entrees et sorties : une branche chacun (AfficherBrancheCoches)
+      PanelFiche.OrdreBalises := 'Description,Explanation,MainProfile,SecondaryProfile,Advances,Skills,Talents,Trappings,*StartMoney,SUBCHAPTER_ITEM,SUBCHAPTER_SKILL,SUBCHAPTER_TALENT,Entries,Exits,*ExitCodes,*Basic,*Source,*Page';
+      PanelFiche.MasquerGrille;
+      PanelFiche.Charger(Element);
+      PanelFiche.LectureSeule := not EditionPermise;
+      PanelFiche.Placer(StringGridDetail.Left, StringGridDetail.Top);
+      PanelFiche.Visible := True;
+      if EditionPermise then PrendreSnapshotFiche;
+      Exit;
+    end;
+  // Carriere WFRP1 (schema d'avancement, pas de niveaux) : textes du livre ; le schema et les listes de codes ne sont pas montres
+  if Element.FindNode('AdvanceScheme') <> nil then
+    begin
+      Codes := TStringList.Create;
+      try
+        RemplirCodesClasse(Codes, ValeurXML(Element.FindNode('Class')));
+        ChoixClasse := '';
+        for I := 0 to Codes.Count - 1 do
+          ChoixClasse := ChoixClasse + '|' + Codes[I] + '=' + GetTexteLibelle(Codes[I]);
+      finally
+        Codes.Free;
+      end;
+      // schema d'avancement, competences, equipement, entrees et sorties : une branche chacun (AfficherBrancheCarriereV1)
+      PanelFiche.Definir([
+        ChampFiche('Description', 'RULES-LAB_002', gfTexte, True),
+        ChampFiche('Explanation', 'RULES-LAB_003', gfMemo, True, False, True),
+        ChampFiche('Basic', 'RULES-LAB_881', gfCode, False, False, True, False, '1=' + GetTexteLibelle('RULES-LAB_882') + '|0=' + GetTexteLibelle('RULES-LAB_883')),
+        ChampFiche('Class', 'RULES-PDF_MAIN1_CLASS', gfCode, False, False, True, False, Copy(ChoixClasse, 2, MaxInt)),
+        ChampFiche('Level', 'RULES-LAB_019', gfTexte, False, False, True, False),
+        ChampFiche('EntryCost', 'RULES-LAB_919', gfTexte, False, False, True, False),
+        ChampFiche('MagicSchool', 'RULES-LAB_896', gfTexte, False, False, True, False),
+        ChampFiche('Page', 'RULES-LAB_699', gfTexte, True, False, True, False)]);
+      PanelFiche.OrdreBalises := 'Description,Explanation,*Class,*Basic,*Level,*MagicSchool,*EntryCost,AdvanceScheme,Skills,SUBCHAPTER_SKILL,Trappings,SUBCHAPTER_ITEM,*StartMoney,*Source,*Page';
+      PanelFiche.MasquerGrille;
+      PanelFiche.Extra := nil;
+      PanelFiche.Charger(Element);
+      PanelFiche.LectureSeule := not EditionPermise;
+      PanelFiche.Placer(StringGridDetail.Left, StringGridDetail.Top);
+      PanelFiche.Visible := True;
+      if EditionPermise then PrendreSnapshotFiche;
+      Exit;
+    end;
+  Classe :=ValeurXML(Element.FindNode('Class'));
   CodeComp := ValeurXML(Element.FindNode('Skill'));
   // classes : le XML porte un code (CLASS_BURG), traduit a l'affichage
   Codes := TStringList.Create;
@@ -13587,20 +18317,12 @@ begin
         begin
           LibComp := TDOMElement(Elements.Item[I]).GetAttribute('name');
           if LibComp = '' then Continue;
-          Competence := ChercheCompetence(LibComp);
-          if Competence.CodeCompetence <> '' then
-            Tri.Add(Competence.Libelle + #1 + LibComp)
-          else
-            Tri.Add(LibComp + #1 + LibComp);
+          Tri.Add(LibelleChoixCompetence(LibComp) + #1 + LibComp);
         end;
     end;
     if (CodeComp <> '') and (Pos(#1 + CodeComp, Tri.Text) = 0) then
     begin
-      Competence := ChercheCompetence(CodeComp);
-      if Competence.CodeCompetence <> '' then
-        Tri.Add(Competence.Libelle + #1 + CodeComp)
-      else
-        Tri.Add(CodeComp + #1 + CodeComp);
+      Tri.Add(LibelleChoixCompetence(CodeComp) + #1 + CodeComp);
     end;
     ChoixComp := '';
     for I := 0 to Tri.Count - 1 do
@@ -13608,13 +18330,36 @@ begin
   finally
     Tri.Free;
   end;
-  PanelFiche.Definir([
-    ChampFiche('Description', 'RULES-LAB_002', gfTexte, True, True),
-    ChampFiche('Explanation', 'RULES-LAB_003', gfMemo, True, False, True),
-    ChampFiche('Class', 'RULES-PDF_MAIN1_CLASS', gfCode, False, False, True, False, Copy(ChoixClasse, 2, MaxInt)),
-    ChampFiche('Skill', 'RULES-LAB_009', gfCode, False, False, True, False, Copy(ChoixComp, 2, MaxInt))]);
+  // familles (groupes Espece, Variante) : champs rares (Specie 10 carrieres sur 203, Parent 18, PictureLevel 9, V4 seulement),
+  // montres si deja remplis ou si l'utilisateur coche la famille (case virtuelle, jamais ecrite dans le XML)
+  Familles := FamillesTalent;
+  if (Element.FindNode('Specie') <> nil) then Familles := Familles + ',ESPECE';
+  if (Element.FindNode('Parent') <> nil) or (Element.FindNode('PictureLevel') <> nil) then Familles := Familles + ',VARIANTE';
+  AvecFamilles := EditionPermise;
+  FTalentElement := Element;  // pour reconstruire la fiche apres un changement de famille
+  SetLength(Champs, 0);
+  AjouteChamp(Champs, ChampFiche('Description', 'RULES-LAB_002', gfTexte, True, True));
+  if AvecFamilles then
+    AjouteChamp(Champs, ChampFiche('FamilleCarriere', 'RULES-LAB_FAMILLE_CARRIERE', gfCases, False, False, True, False,
+      'ESPECE=' + GetTexteLibelle('RULES-LAB_FAMILLE_ESPECE', 'Restricted to species') +
+      '|VARIANTE=' + GetTexteLibelle('RULES-LAB_FAMILLE_VARIANTE', 'Variant of another career')));
+  AjouteChamp(Champs, ChampFiche('Explanation', 'RULES-LAB_003', gfMemo, True, False, True));
+  AjouteChamp(Champs, ChampFiche('Class', 'RULES-PDF_MAIN1_CLASS', gfCode, False, False, True, False, Copy(ChoixClasse, 2, MaxInt)));
+  AjouteChamp(Champs, ChampFiche('Skill', 'RULES-LAB_009', gfCode, False, False, True, False, Copy(ChoixComp, 2, MaxInt)));
+  AjouteChamp(Champs, EnGroupes(ChampFiche('Specie', 'RULES-LAB_561', gfCodeLibre, False, False, True, False, ChoixParTags(['Specie', 'Race', 'Nation'], ValeurXML(Element.FindNode('Specie')))), 'Espece+V4,V5'));
+  AjouteChamp(Champs, EnGroupes(ChampFiche('Specie#2', 'RULES-LAB_561', gfCodeLibre, False, False, True, False, ChoixParTags(['Specie', 'Race', 'Nation'], ValeurXML(NoeudDeBalise(Element, 'Specie#2')))), 'Espece+V4,V5'));
+  AjouteChamp(Champs, EnGroupes(ChampFiche('Specie#3', 'RULES-LAB_561', gfCodeLibre, False, False, True, False, ChoixParTags(['Specie', 'Race', 'Nation'], ValeurXML(NoeudDeBalise(Element, 'Specie#3')))), 'Espece+V4,V5'));
+  AjouteChamp(Champs, EnGroupes(ChampFiche('Parent', 'RULES-LAB_957', gfCodeLibre, False, False, True, False, ChoixParTags(['Career'], ValeurXML(Element.FindNode('Parent')))), 'Variante+V4,V5'));
+  AjouteChamp(Champs, EnGroupes(ChampFiche('PictureLevel', 'RULES-LAB_958', gfTexte, False, False, True, False), 'Variante+V4,V5'));
+  AjouteChamp(Champs, ChampFiche('Page', 'RULES-LAB_699', gfTexte, False, False, True, False));
+  FiltrerChampsFiche(Champs, Element, VersionFicheLivre, Familles);
+  PanelFiche.Definir(Champs);
+  // ordre du schema (CareerType) : Skill avant Class, les blocs de niveaux apres les balises libres, Page en dernier
+  PanelFiche.OrdreBalises := 'Description,Explanation,*Skill,Class,*Parent,*Ammunition,*PictureLevel,*Specie,*SUBCHAPTER_LEVEL,*SUBCHAPTER_ATTR,*SUBCHAPTER_SKILL,*SUBCHAPTER_TALENT,*SUBCHAPTER_ITEM,*Page';
+  if AvecFamilles then PanelFiche.DeclarerVirtuel('FamilleCarriere');
   PanelFiche.MasquerGrille;  // la carriere ne porte aucun modificateur (ceux de l'appartenance sont a part)
   PanelFiche.Charger(Element);
+  if AvecFamilles then PanelFiche.CocherCodes('FamilleCarriere', Familles);
   PanelFiche.LectureSeule := not EditionPermise;
   PanelFiche.Placer(StringGridDetail.Left, StringGridDetail.Top);
   PanelFiche.Visible := True;
@@ -13629,7 +18374,170 @@ begin
   MasquerForm();
   Element := TrouverCareerElement(CareerCode);
   if Element = nil then Exit;
+  FamillesTalent := '';  // nouvelle navigation : les familles cochees ne se gardent pas d'une carriere a l'autre
   AfficherFicheCarriere(Element);
+  CodeDonneeSelectionnee := CareerCode;
+  PoserImageLivre('C', CareerCode);
+end;
+
+// Apercu de l'image de l'ethnie / de la carriere, a droite de la fiche (ou collee au bord droit si la place manque).
+procedure TWinLivres.PoserImageLivre(const Genre, Code: String);
+var
+  X: Integer;
+begin
+  X := PanelFiche.Left + PanelFiche.Width + 8;
+  if X + PanelImageLivre.Width > PanelImageLivre.Parent.ClientWidth then
+    X := PanelImageLivre.Parent.ClientWidth - PanelImageLivre.Width - 4;
+  PanelImageLivre.Afficher(Genre, Code, EditionPermise, X, PanelFiche.Top);
+end;
+
+// Branche d'une carriere WFRP1 : 3 schema d'avancement, 4 competences (texte + grille), 6 equipement.
+// Meme principe que les branches WFRP2. Les entrees et sorties ne sont pas dans la carriere : voir DATA_CAREER_LINK_V1.
+procedure TWinLivres.AfficherBrancheCarriereV1(Element: TDOMElement; CareerCode: String; Genre: Integer);
+begin
+  FicheTag := 'Career';
+  FicheTypeNoeud := NT_METIER_NIVEAU1;
+  FicheCoches := Genre;
+  case Genre of
+    4: PanelFiche.Definir([ChampFiche('Skills', 'RULES-LAB_009', gfMemo, True, False, True, False)]);
+    // equipement de depart : tableau d'objets (« A / B » = choix a la creation), le texte du livre reste dans Trappings
+    6: begin
+         PanelListesCarriere[4].Preparer(ChoixParTags(['EquipmentV1'], ''));
+         PanelFiche.Definir([]);
+       end;
+  else
+    PanelFiche.Definir([]);
+  end;
+  PanelFiche.OrdreBalises := 'Description,Explanation,*Class,*Basic,*Level,*MagicSchool,*EntryCost,AdvanceScheme,Skills,SUBCHAPTER_SKILL,Trappings,SUBCHAPTER_ITEM,*StartMoney,*Source,*Page';
+  PanelFiche.MasquerGrille;
+  if Genre = 3 then
+  begin
+    PanelCarriereV1.DefinirMode(1);
+    PanelFiche.Extra := PanelCarriereV1;
+  end
+  else if Genre = 4 then
+  begin
+    PanelCarriereV1.DefinirMode(2);
+    PanelFiche.Extra := PanelCarriereV1;
+  end
+  else if Genre = 6 then
+    PanelFiche.Extra := PanelListesCarriere[4];
+  PanelFiche.Charger(Element);
+  PanelFiche.LectureSeule := not EditionPermise;
+  PanelFiche.Placer(StringGridDetail.Left, StringGridDetail.Top);
+  PanelFiche.Visible := True;
+  if EditionPermise then PrendreSnapshotFiche;
+  CodeDonneeSelectionnee := CareerCode;
+end;
+
+procedure TWinLivres.AfficherBrancheCoches(CareerCode: String; Genre: Integer);
+const
+  AttributsV2: array[0..17] of String = ('M', 'WS', 'BS', 'S', 'T', 'W', 'I', 'Ag', 'Dex', 'Int', 'WP', 'Fel', 'A', 'Mag', 'IP', 'FP', 'SB', 'TB');
+var
+  Sorties: Boolean;
+  Element: TDOMElement;
+  ChoixListe, LibAttr: String;
+  Tri, Choix: TStringList;
+  Docs: array[0..1] of TXMLDocument;
+  Elements: TDOMNodeList;
+  D, I, K: Integer;
+  Code, Nom: String;
+begin
+  MasquerAfficherElements('');
+  MasquerForm();
+  Element := TrouverCareerElement(CareerCode);
+  if Element = nil then Exit;
+  if Element.FindNode('AdvanceScheme') <> nil then
+  begin
+    AfficherBrancheCarriereV1(Element, CareerCode, Genre);
+    Exit;
+  end;
+  if Genre >= 3 then
+  begin
+    // caracteristiques (profils du livre + Advances), competences, talents, equipement : tableaux
+    FicheTag := 'Career';
+    FicheTypeNoeud := NT_METIER_NIVEAU1;
+    FicheCoches := Genre;
+    ChoixListe := '';
+    case Genre of
+      3: begin
+           for K := 0 to High(AttributsV2) do
+           begin
+             LibAttr := GetAttributLabel('RULES-ATTR_' + AttributsV2[K]);
+             if (LibAttr = '') or (LibAttr = 'RULES-ATTR_' + AttributsV2[K]) then Continue;
+             if ChoixListe <> '' then ChoixListe := ChoixListe + '|';
+             ChoixListe := ChoixListe + 'RULES-ATTR_' + AttributsV2[K] + '=' + LibAttr;
+           end;
+           K := 0;
+         end;
+      4: begin ChoixListe := ChoixParTags(['Skill'], ''); K := 1; end;
+      5: begin ChoixListe := ChoixParTags(['Talent'], ''); K := 2; end;
+    else
+      begin ChoixListe := ChoixParTags(['Weapon', 'Armor', 'EquipmentV2', 'Trapping'], ''); K := 3; end;
+    end;
+    PanelListesCarriere[K].Preparer(ChoixListe);
+    if Genre = 3 then
+      PanelFiche.Definir([
+        ChampFiche('MainProfile', 'RULES-LAB_701', gfTexte, True, False, True, False),
+        ChampFiche('SecondaryProfile', 'RULES-LAB_702', gfTexte, True, False, True, False)])
+    else
+      PanelFiche.Definir([]);
+    PanelFiche.OrdreBalises := 'Description,Explanation,MainProfile,SecondaryProfile,Advances,Skills,Talents,Trappings,*StartMoney,SUBCHAPTER_ITEM,SUBCHAPTER_SKILL,SUBCHAPTER_TALENT,Entries,Exits,*ExitCodes,*Basic,*Source,*Page';
+    PanelFiche.MasquerGrille;
+    PanelFiche.Extra := PanelListesCarriere[K];
+    PanelFiche.Charger(Element);
+    PanelFiche.LectureSeule := not EditionPermise;
+    PanelFiche.Placer(StringGridDetail.Left, StringGridDetail.Top);
+    PanelFiche.Visible := True;
+    if EditionPermise then PrendreSnapshotFiche;
+    CodeDonneeSelectionnee := CareerCode;
+    Exit;
+  end;
+  Sorties := Genre = 2;
+  Tri := TStringList.Create;
+  Choix := TStringList.Create;
+  try
+    Tri.Sorted := True;
+    Tri.Duplicates := dupAccept;
+    Docs[0] := XMLDoc;
+    Docs[1] := RulebookBaseXML;
+    for D := 0 to 1 do
+    begin
+      if (Docs[D] = nil) or ((D = 1) and (Docs[1] = Docs[0])) then Continue;
+      Elements := Docs[D].GetElementsByTagName('Career');
+      for I := 0 to Elements.Count - 1 do
+      begin
+        Code := TDOMElement(Elements.Item[I]).GetAttribute('id');
+        if (Code = '') or (TDOMElement(Elements.Item[I]).FindNode('MainProfile') = nil) then Continue;
+        Nom := ValeurXML(TDOMElement(Elements.Item[I]).FindNode('Description'));
+        if Nom = '' then Continue;
+        Tri.Add(Nom + #1 + Code);
+      end;
+    end;
+    for I := 0 to Tri.Count - 1 do
+    begin
+      K := Pos(#1, Tri[I]);
+      Code := Copy(Tri[I], K + 1, MaxInt);
+      Nom := Copy(Tri[I], 1, K - 1);
+      if Choix.IndexOfName(Code) < 0 then Choix.Add(Code + '=' + Nom);
+    end;
+    if Sorties then K := 1 else K := 0;
+    PanelCochesCarriere[K].Preparer(Choix);
+  finally
+    Choix.Free;
+    Tri.Free;
+  end;
+  FicheTag := 'Career';
+  FicheTypeNoeud := NT_METIER_NIVEAU1;
+  if Sorties then FicheCoches := 2 else FicheCoches := 1;
+  PanelFiche.Definir([]);
+  PanelFiche.MasquerGrille;
+  PanelFiche.Extra := PanelCochesCarriere[K];
+  PanelFiche.Charger(Element);
+  PanelFiche.LectureSeule := not EditionPermise;
+  PanelFiche.Placer(StringGridDetail.Left, StringGridDetail.Top);
+  PanelFiche.Visible := True;
+  if EditionPermise then PrendreSnapshotFiche;
   CodeDonneeSelectionnee := CareerCode;
 end;
 
@@ -13640,6 +18548,8 @@ begin
     ComboCompLieeFiche.Visible := False;
   if PanelBonus <> nil then
     PanelBonus.Visible := False;
+  if PanelImageLivre <> nil then
+    PanelImageLivre.Masquer;
   EditFormAttrName.Clear;
   EditFormAttrDices.Clear;
   EditFormAttrBaseValue.Clear;
@@ -13690,8 +18600,8 @@ begin
     LabelTalentsRandom.Visible := False;
   if TreeViewTalents <> nil then
     TreeViewTalents.Visible := False;
-    
-  LabelFormTitle.Caption := GetTexteLibelle('RULES-LAB_004');
+
+  // (le titre n'est plus remis a « Select » : TreeViewLivreChange le fixe au texte du noeud)
   NettoyerForm();
 end;
 

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"ELEM"</CODE_BOOK>
+<BOOK>"BOOK ELEMENTALISM"</BOOK>
+<BOOKNAME>"ELEMENTALISM - WFRP2"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"This document is completely unofficial and in no way endorsed by Games Workshop Limited. Warhammer Fantasy Roleplay, the Warhammer Fantasy Roleplay logo, WFRP, Chaos, the Chaos device, the Chaos logo, Citadel, Citadel Device, Darkblade, 'Eavy Metal, Forge World, Games Workshop, Games Workshop logo, Golden Demon, Great Unclean One, GW, the Hammer of Sigmar logo, Horned Rat logo, Keeper of Secrets, Khemri, Khorne, the Khorne logo, Lord of Change, Nurgle, the Nurgle logo, Skaven, the Skaven symbol device, Slaanesh, the Slaanesh logo, Tomb Kings, Tzeentch, the Tzeentch logo, Warhammer, Warhammer World logo, White Dwarf, the White Dwarf logo, and all associated marks, names, races, race insignia, characters, vehicles, locations, units, artefacts, illustrations and images from the Warhammer world are either ®, TM and/or © Copyright Games Workshop Ltd 2000-2016, variably registered in the UK and other countries around the world. Used without"</DISCLAIMER>
+<DATA_TALENT>
+<Talent id="ELEM-T_ELEMENTAL_ENEMY">
+<Description language="ENGLISH">"Elemental Enemy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"12"</Page>
+</Talent>
+<Talent id="ELEM-T_ELEMENTAL_IMMUNITY">
+<Description language="ENGLISH">"Elemental Immunity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"12"</Page>
+</Talent>
+<Talent id="ELEM-T_ELEMENTAL_MAGIC">
+<Description language="ENGLISH">"Elemental Magic"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"12"</Page>
+</Talent>
+<Talent id="ELEM-T_ETHEREAL">
+<Description language="ENGLISH">"Ethereal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"12"</Page>
+</Talent>
+<Talent id="ELEM-T_FORMLESS">
+<Description language="ENGLISH">"Formless"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"12"</Page>
+</Talent>
+<Talent id="ELEM-T_HARD_SKIN">
+<Description language="ENGLISH">"Hard Skin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="ELEM-T_INSTABILITY">
+<Description language="ENGLISH">"Instability"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="ELEM-T_UNSTOPPABLE_BLOWS">
+<Description language="ENGLISH">"Unstoppable Blows"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="ELEM-T_WILL_OF_IRON">
+<Description language="ENGLISH">"Will of Iron"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"13"</Page>
+</Talent>
+<Talent id="ELEM-T_MASTER_RUNE__OF_ELEMENTALISM">
+<Description language="ENGLISH">"Master Rune of Elementalism"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"36"</Page>
+</Talent>
+<Talent id="ELEM-T_RUNE__OF_ELEMENTALISM">
+<Description language="ENGLISH">"Rune of Elementalism"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"36"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_SPELL_V2>
+<SpellV2 id="ELEM-SPEL_SUMMON_LEAST_ELEMENTAL_FORCE">
+<Description language="ENGLISH">"Summon Least Elemental Force"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"1 hour"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"33"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Elemental"</ArcaneLanguage>
+<MagicMin>"2"</MagicMin>
+<XPCost>"200"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="ELEM-SPEL_SUMMON_LESSER_ELEMENTAL_FORCE">
+<Description language="ENGLISH">"Summon Lesser Elemental Force"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"1 hour + 1 hour from Least Ritual"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"33"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Elemental"</ArcaneLanguage>
+<MagicMin>"2"</MagicMin>
+<XPCost>"200"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="ELEM-SPEL_SUMMON_MAJOR_ELEMENTAL_FORCE">
+<Description language="ENGLISH">"Summon Major Elemental Force"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"26"</CastingNumber>
+<CastingTime>"1 hour + 1 hour Lesser Ritual + 1 hour Least Ritual"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"33"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Elemental"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="ELEM-SPEL_SUMMON_GREATER_ELEMENTAL_FORCE">
+<Description language="ENGLISH">"Summon Greater Elemental Force"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"30"</CastingNumber>
+<CastingTime>"1 hour + 1 hour Major Ritual + 1 hour Lesser Ritual + 1 hour Least Ritual"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"33"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Elemental"</ArcaneLanguage>
+<MagicMin>"4"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_AIR_ELEMENTAL_GREATER">
+<Description language="ENGLISH">"Air Elemental, Greater"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"80;0;80;80;80;20;60;0;6;60;8;8;8;5;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals) +20%, Concealment, Follow Trail, Intimidate +20%, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental) +20%, Speak Arcane Language (Daemonic) +10%"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Elemental Enemy (Earth), Elemental Immunity (Air), Elemental Magic, Ethereal, Flier, Formless, Instability, Natural Weapons (Air Crush), Night Vision, Terrifying, Unstoppable Blows, Whirlwind, Wind, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"14"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_AIR_ELEMENTAL_MAJOR">
+<Description language="ENGLISH">"Air Elemental, Major"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"60;0;60;60;60;20;50;0;4;40;6;6;6;4;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals) +20%, Concealment, Follow Trail, Intimidate +10%, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental) +10%, Speak Arcane Language (Daemonic)"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Elemental Enemy (Earth), Elemental Immunity (Air), Elemental Magic, Ethereal, Flier, Formless, Instability, Natural Weapons (Air Crush), Night Vision, Terrifying, Unstoppable Blows, Whirlwind, Wind, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"14"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_AIR_ELEMENTAL_LESSER">
+<Description language="ENGLISH">"Air Elemental, Lesser"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"40;0;40;40;40;20;40;0;2;20;4;4;4;3;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals) +10%, Concealment, Follow Trail, Intimidate, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental)"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Elemental Enemy (Earth), Elemental Immunity (Air), Elemental Magic, Ethereal, Flier, Formless, Frightening, Instability, Natural Weapons (Air Crush), Night Vision, Whirlwind, Wind, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"15"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_AIR_ELEMENTAL_LEAST">
+<Description language="ENGLISH">"Air Elemental, Least"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"20;0;20;20;20;20;30;0;2;10;2;2;4;2;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals), Concealment, Dodge Blow +20%, Follow Trail, Intimidate, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental)"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Elemental Enemy (Earth), Elemental Immunity (Air), Elemental Magic, Ethereal, Flier, Formless, Frightening, Instability, Natural Weapons (Air Crush), Night Vision, Whirlwind, Wind, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"15"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_EARTH_ELEMENTAL_GREATER">
+<Description language="ENGLISH">"Earth Elemental, Greater"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"80;80;80;80;80;20;60;0;6;60;8;8;8;5;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals) +20%, Concealment, Follow Trail, Intimidate +20%, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental) +20%, Speak Arcane Language (Daemonic) +10%"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Elemental Enemy (Air), Elemental Immunity (Earth), Elemental Magic, Formless, Hard Skin (3; Stone), Hurling Earth, Instability, Natural Weapons (Hurling Earth, Stony Fists), Night Vision, Stony Fists, Terrifying, Unstoppable Blows, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_EARTH_ELEMENTAL_MAJOR">
+<Description language="ENGLISH">"Earth Elemental, Major"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"60;60;60;60;60;20;50;0;4;40;6;6;8;4;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals) +20%, Concealment, Follow Trail, Intimidate +10%, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental) +10%, Speak Arcane Language (Daemonic)"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Elemental Enemy (Air), Elemental Immunity (Earth), Elemental Magic, Formless, Hard Skin (3; Stone), Hurling Earth, Instability, Natural Weapons (Hurling Earth, Stony Fists), Night Vision, Stony Fists, Terrifying, Unstoppable Blows, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"18"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_EARTH_ELEMENTAL_LESSER">
+<Description language="ENGLISH">"Earth Elemental, Lesser"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"40;0;40;40;40;20;40;0;2;20;4;4;4;3;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals) +10%, Concealment, Follow Trail, Intimidate, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental)"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Elemental Enemy (Air), Elemental Immunity (Earth), Elemental Magic, Formless, Frightening, Hard Skin (3; Stone), Hurling Earth, Instability, Natural Weapons (Hurling Earth, Stony Fists), Night Vision, Stony Fists, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"18"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_EARTH_ELEMENTAL_LEAST">
+<Description language="ENGLISH">"Earth Elemental, Least"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"20;0;20;20;20;20;30;0;2;10;2;2;4;2;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals), Concealment, Dodge Blow +10%, Follow Trail, Intimidate, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental)"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Elemental Enemy (Air), Elemental Immunity (Earth), Elemental Magic, Formless, Frightening, Hard Skin (3; Stone), Hurling Earth, Instability, Natural Weapons (Hurling Earth, Stony Fists), Night Vision, Stony Fists, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"19"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_FIRE_ELEMENTAL_GREATER">
+<Description language="ENGLISH">"Fire Elemental, Greater"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"80;0;80;80;80;20;60;0;6;60;8;8;8;5;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals) +20%, Follow Trail, Intimidate +20%, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental) +20%, Speak Arcane Language (Daemonic) +10%"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Burning Defense, Elemental Enemy (Water), Elemental Immunity (Fire), Elemental Magic, Ethereal, Fiery Healing, Formless, Instability, Natural Weapons (Burning Touch), Night Vision, Terrifying, Unstoppable Blows, Vulnerable to Water, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"20"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_FIRE_ELEMENTAL_MAJOR">
+<Description language="ENGLISH">"Fire Elemental, Major"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"60;0;60;60;60;20;50;0;4;40;6;6;6;4;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals) +20%, Follow Trail, Intimidate +10%, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental) +10%, Speak Arcane Language (Daemonic)"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Burning Defense, Elemental Enemy (Water), Elemental Immunity (Fire), Elemental Magic, Ethereal, Fiery Healing, Formless, Instability, Natural Weapons (Burning Touch), Night Vision, Terrifying, Unstoppable Blows, Vulnerable to Water, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"20"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_FIRE_ELEMENTAL_LESSER">
+<Description language="ENGLISH">"Fire Elemental, Lesser"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"40;0;40;40;40;20;40;0;2;20;4;4;4;3;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals) +10%, Follow Trail, Intimidate, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental)"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Burning Defense, Elemental Enemy (Water), Elemental Immunity (Fire), Elemental Magic, Ethereal, Fiery Healing, Formless, Frightening, Instability, Natural Weapons (Burning Touch), Night Vision, Vulnerable to Water, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"21"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_FIRE_ELEMENTAL_LEAST">
+<Description language="ENGLISH">"Fire Elemental, Least"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"20;0;20;20;20;20;30;0;2;10;2;2;4;2;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals), Dodge Blow +10%, Follow Trail, Intimidate, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental)"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Burning Defense, Elemental Enemy (Water), Elemental Immunity (Fire), Elemental Magic, Ethereal, Fiery Healing, Formless, Frightening, Instability, Natural Weapons (Burning Touch), Night Vision, Vulnerable to Water, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"21"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_METAL_ELEMENTAL_GREATER">
+<Description language="ENGLISH">"Metal Elemental, Greater"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"80;0;80;80;80;20;60;0;6;60;8;8;8;5;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals) +20%, Concealment, Follow Trail, Intimidate +20%, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental) +20%, Speak Arcane Language (Daemonic) +10%"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Absorb Metal, Elemental Enemy (Wood), Elemental Immunity (Metal), Elemental Magic, Formless, Hard Skin (5; Metal), Instability, Iron Fists, Natural Weapons (Iron Fists), Night Vision, Terrifying, Unstoppable Blows, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"23"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_METAL_ELEMENTAL_MAJOR">
+<Description language="ENGLISH">"Metal Elemental, Major"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"60;0;60;60;60;20;50;0;4;40;6;6;8;4;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals) +20%, Concealment, Follow Trail, Intimidate +10%, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental) +10%, Speak Arcane Language (Daemonic)"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Absorb Metal, Elemental Enemy (Wood), Elemental Immunity (Metal), Elemental Magic, Formless, Hard Skin (5; Metal), Instability, Iron Fists, Natural Weapons (Iron Fists), Night Vision, Terrifying, Unstoppable Blows, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"24"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_METAL_ELEMENTAL_LESSER">
+<Description language="ENGLISH">"Metal Elemental, Lesser"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"40;0;40;40;40;20;40;0;2;20;4;4;4;3;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals) +10%, Concealment, Follow Trail, Intimidate, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental)"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Absorb Metal, Elemental Enemy (Wood), Elemental Immunity (Metal), Elemental Magic, Formless, Frightening, Hard Skin (5; Metal), Instability, Iron Fists, Natural Weapons (Iron Fists), Night Vision, Unstoppable Blows, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"24"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_METAL_ELEMENTAL_LEAST">
+<Description language="ENGLISH">"Metal Elemental, Least"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"20;0;20;20;20;20;30;0;2;10;2;2;4;2;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals), Concealment, Dodge Blow +10%, Follow Trail, Intimidate, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental)"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Absorb Metal, Elemental Enemy (Wood), Elemental Immunity (Metal), Elemental Magic, Formless, Frightening, Hard Skin (5; Metal), Instability, Iron Fists, Natural Weapons (Iron Fists), Night Vision, Unstoppable Blows, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"25"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_WATER_ELEMENTAL_GREATER">
+<Description language="ENGLISH">"Water Elemental, Greater"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"80;0;80;80;80;20;60;0;6;60;8;8;8;5;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals) +20%, Concealment, Follow Trail, Intimidate +20%, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental) +20%, Speak Arcane Language (Daemonic) +10%"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Elemental Enemy (Fire), Elemental Immunity (Water), Elemental Magic, Extinguish Fire, Formless, Instability, Natural Weapons (Water Smash), Night Vision, Terrifying, Unstoppable Blows, Vortex, Water Movement, Water Smash, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"26"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_WATER_ELEMENTAL_MAJOR">
+<Description language="ENGLISH">"Water Elemental, Major"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"60;0;60;60;60;20;50;0;4;40;6;6;8;4;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals) +20%, Concealment, Follow Trail, Intimidate +10%, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental) +10%, Speak Arcane Language (Daemonic)"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Elemental Enemy (Fire), Elemental Immunity (Water), Elemental Magic, Extinguish Fire, Formless, Instability, Natural Weapons (Water Smash), Night Vision, Terrifying, Unstoppable Blows, Vortex, Water Movement, Water Smash, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"27"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_WATER_ELEMENTAL_LESSER">
+<Description language="ENGLISH">"Water Elemental, Lesser"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"40;0;40;40;40;20;40;0;2;20;4;4;4;3;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals) +10%, Concealment, Follow Trail, Intimidate, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental)"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Elemental Enemy (Fire), Elemental Immunity (Water), Elemental Magic, Extinguish Fire, Formless, Frightening, Instability, Natural Weapons (Water Smash), Night Vision, Unstoppable Blows, Vortex, Water Movement, Water Smash, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"27"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_WATER_ELEMENTAL_LEAST">
+<Description language="ENGLISH">"Water Elemental, Least"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"20;0;20;20;20;20;30;0;2;10;2;2;4;2;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals), Concealment, Dodge Blow +10%, Follow Trail, Intimidate, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental)"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Elemental Enemy (Fire), Elemental Immunity (Water), Elemental Magic, Extinguish Fire, Formless, Frightening, Instability, Natural Weapons (Water Smash), Night Vision, Unstoppable Blows, Vortex, Water Movement, Water Smash, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"28"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_WOOD_ELEMENTAL_GREATER">
+<Description language="ENGLISH">"Wood Elemental, Greater"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"80;0;80;80;80;20;60;0;6;60;8;8;8;5;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals) +20%, Concealment, Follow Trail, Intimidate +20%, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental) +20%, Speak Arcane Language (Daemonic) +10%"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Elemental Enemy (Metal), Elemental Immunity (Wood), Elemental Magic, Flammable, Formless, Hammering Limbs, Hard Skin (3; Bark), Instability, Natural Weapons (Hammering Limbs), Night Vision, Terrifying, Unstoppable Blows, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"30"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_WOOD_ELEMENTAL_MAJOR">
+<Description language="ENGLISH">"Wood Elemental, Major"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"60;0;60;60;60;20;50;0;4;40;6;6;8;4;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals) +20%, Concealment, Follow Trail, Intimidate +10%, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental) +10%, Speak Arcane Language (Daemonic)"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Elemental Enemy (Metal), Elemental Immunity (Wood), Elemental Magic, Flammable, Formless, Hammering Limbs, Hard Skin (3; Bark), Instability, Natural Weapons (Hammering Limbs), Night Vision, Terrifying, Unstoppable Blows, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"31"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_WOOD_ELEMENTAL_LESSER">
+<Description language="ENGLISH">"Wood Elemental, Lesser"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"40;0;40;40;40;20;40;0;2;20;4;4;4;3;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals) +10%, Concealment, Follow Trail, Intimidate, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental)"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Elemental Enemy (Metal), Elemental Immunity (Wood), Elemental Magic, Flammable, Formless, Frightening, Hammering Limbs, Hard Skin (3; Bark), Instability, Natural Weapons (Hammering Limbs), Night Vision, Unstoppable Blows, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"31"</Page>
+</EquipmentV2>
+<EquipmentV2 id="ELEM-EQUI_CREATURES_WOOD_ELEMENTAL_LEAST">
+<Description language="ENGLISH">"Wood Elemental, Least"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"20;0;20;20;20;20;30;0;2;10;2;2;4;2;0;0"</Profile>
+<Skills>"Common Knowledge (Elementals), Concealment, Dodge Blow +10%, Follow Trail, Intimidate, Navigation +20%, Perception +20%, Magical Sense +20%, Outdoor Survival, Speak Arcane Language (Elemental)"</Skills>
+<Talents>"Ambidextrous, Orientation, Strike to Injure, Elemental Enemy (Metal), Elemental Immunity (Wood), Elemental Magic, Flammable, Formless, Frightening, Hammering Limbs, Hard Skin (3; Bark), Instability, Natural Weapons (Hammering Limbs), Night Vision, Unstoppable Blows, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"32"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+</DATA_BOOK>

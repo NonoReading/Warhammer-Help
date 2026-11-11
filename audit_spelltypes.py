@@ -1,13 +1,19 @@
 import re,glob,sys,collections
-DECL={'T0089':{'Minor Magic'},'T0088':{'Arcane Magic','Domain Magic','Ritual'},
+# Familles de talents : lues dans les balises <SpellTypes> des talents des livres.
+# Table de secours, utilisee seulement si aucun livre ne declare <SpellTypes>.
+DECL_SECOURS={'T0089':{'Minor Magic'},'T0088':{'Arcane Magic','Domain Magic','Ritual'},
 'T0172':{'Chaos Magic','Arcane Magic'},'T0080':{'Miracle'},'T0012':{'Blessing'},
 'HELFG-T0190':{'Domain Magic','Miracle','Blessing'}}
+DECL={}
 root='DATABASE/'+(sys.argv[1] if len(sys.argv)>1 else 'WFRP4')
 files=glob.glob(root+'/*.[Xx]ml')
 gen={}; sorts=[]; tals={}
 for f in files:
     t=open(f,encoding='utf-8',errors='replace').read()
     for m in re.finditer(r'<Talent id="([^"]+)">(.*?)</Talent>',t,re.S):
+        st=re.search(r'<SpellTypes>"?([^"<]*)"?</SpellTypes>',m.group(2))
+        if st and st.group(1).strip():
+            DECL.setdefault(m.group(1).rstrip('*').rstrip('_'),set()).update(x.strip() for x in st.group(1).split(',') if x.strip())
         g=re.search(r'<Generique>"?([^"<]*)"?</Generique>',m.group(2))
         tals[m.group(1)]=f
         if g and g.group(1): gen[m.group(1)]=g.group(1).rstrip('*').rstrip('_')
@@ -16,6 +22,9 @@ for f in files:
         ta=re.search(r'<Talent>"?([^"<]*)"?</Talent>',b); ty=re.search(r'<TypSpell>"?([^"<]*)"?</TypSpell>',b)
         d=re.search(r'<Description[^>]*>"?([^"<]*)',b)
         sorts.append((m.group(1),f.replace(chr(92),'/').split('/')[-1],ta.group(1) if ta else None,ty.group(1) if ty else None,d.group(1) if d else ''))
+if not DECL:
+    DECL=DECL_SECOURS
+    print('(aucun <SpellTypes> trouve : table de secours)')
 def root_of(c):
     c=c.rstrip('*').rstrip('_')
     return gen.get(c,c)

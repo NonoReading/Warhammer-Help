@@ -19,44 +19,9 @@ Var
   ListeAttributAugmentation:      TListeAttributAugmentation;
   NbAttributAugmentation:         Integer;
 
-procedure ChargerAttributAugmentation(Livre: String);
 Function ChercheAttributAugmentation(Min :Integer; Max: Integer): StructureAttributAugmentation;
 
 implementation
-
-procedure ChargerAttributAugmentation(Livre: String);
-var
-  PAttributAugmentation:          StructureAttributAugmentation;
-  fichier:                        TextFile;
-  ligne:                          string;
-  strings:                        TStringList;
-  Path:                           String;
-Begin
-  // Fichier des Augmentations d'Attributs
-  Path := CheminFichier(ConstCheminXpAttribut, Livre);
-  if FileExists(Path) then
-     begin
-     // Ouvrir le fichier en lecture
-       AssignFile(fichier, Path);
-       Reset(fichier);
-
-       // Lire chaque ligne du fichier
-       while not Eof(fichier) do
-       begin
-         strings            := TStringList.Create;
-         ReadLn(fichier, ligne);
-         Ligne := ReplaceTilde(Ligne);
-         ExtractStrings([Separateurtabulation], [], PChar(Ligne), Strings);
-         PAttributAugmentation.MinMax     := Strings[0];
-         PAttributAugmentation.Cout       := StrToInt(Strings[1]);
-         PAttributAugmentation.Livre      := Livre;
-         ListeAttributAugmentation.add(PAttributAugmentation);
-         inc(NbAttributAugmentation);
-         strings.Free;
-       end;
-       CloseFile(fichier);
-   end;
-end;
 
 Function ChercheAttributAugmentation(Min :Integer; Max: Integer): StructureAttributAugmentation;
 var
@@ -68,9 +33,15 @@ Begin
     if PAttributAugmentation.MinMax = MinMax then
       begin
        Result := PAttributAugmentation;
-       break;
+       Exit;
       end;
-
+  // au dela de la derniere ligne chiffree, la ligne ouverte du livre (« 70+ ») s'applique
+  for PAttributAugmentation in ListeAttributAugmentation do
+    if Copy(PAttributAugmentation.MinMax, Length(PAttributAugmentation.MinMax), 1) = '+' then
+      begin
+       Result := PAttributAugmentation;
+       Exit;
+      end;
 end;
 
 

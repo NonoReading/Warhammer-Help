@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"ETCE"</CODE_BOOK>
+<BOOK>"BOOK ETCETERONOMICON"</BOOK>
+<BOOKNAME>"THE ETCETERONOMICON - EVEN MORE MAGIC - WFRP2"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_SPELL_V2>
+<SpellV2 id="ETCE-SPEL_BLOODFIRE">
+<Description language="ENGLISH">"Bloodfire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Fire"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The hand of a man burned to death (+3)"</Ingredient>
+<Page>"5"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_THE_CAPTIVATING_FLAME">
+<Description language="ENGLISH">"The Captivating Flame"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Fire"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A ball of Sulphur on a chain (+1)"</Ingredient>
+<Page>"5"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_IGNITE">
+<Description language="ENGLISH">"Ignite"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Fire"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A ball of wax (+1)"</Ingredient>
+<Page>"5-6"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_KINDRED_OF_THE_HEARTH">
+<Description language="ENGLISH">"Kindred of the Hearth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Fire"</Lore>
+<CastingNumber>"21"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The birth hood from a new-born baby (+3)"</Ingredient>
+<Page>"6"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_LEAPING_FLAMES">
+<Description language="ENGLISH">"Leaping Flames"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Fire"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A mouthful of wine (+1)"</Ingredient>
+<Page>"6"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_OIL_AND_WATER">
+<Description language="ENGLISH">"Oil and Water"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Fire"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A taper that has burned for thirteen days (+2)"</Ingredient>
+<Page>"6"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_PASSION_REBORN">
+<Description language="ENGLISH">"Passion Reborn"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Fire"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A coal from a fire which has burned all night (+1)"</Ingredient>
+<Page>"6-7"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_PASSION_UNBOUND">
+<Description language="ENGLISH">"Passion Unbound"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Fire"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A drop of blood from a chaemeleoleech (+2)"</Ingredient>
+<Page>"7"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_STOVESKIN">
+<Description language="ENGLISH">"Stoveskin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Fire"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The tail of a salamander (+2)"</Ingredient>
+<Page>"7"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_TAME_THE_DRAGON">
+<Description language="ENGLISH">"Tame the Dragon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Fire"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A stopper from a wine-vat (+1)"</Ingredient>
+<Page>"7"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_ARMS_OF_THE_FOREST">
+<Description language="ENGLISH">"Arms of the Forest"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Life"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A birds' nest (+1)"</Ingredient>
+<Page>"8"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_BEND_WITH_THE_WIND">
+<Description language="ENGLISH">"Bend With the Wind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Life"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A stick of willow (+2)"</Ingredient>
+<Page>"8"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_DRIFTWOOD">
+<Description language="ENGLISH">"Driftwood"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Life"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A piece of driftwood (+1)"</Ingredient>
+<Page>"8"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_FOUR_SEASONS_IN_ONE_DAY">
+<Description language="ENGLISH">"Four Seasons in One Day"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Life"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pendulum (+1)"</Ingredient>
+<Page>"9"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_GHYRAN_REVEALED">
+<Description language="ENGLISH">"Ghyran Revealed"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Life"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"2 Full Actions"</CastingTime>
+<Ingredient>"A sunflower (in summer) or an edelweiss (in winter) (+2)"</Ingredient>
+<Page>"9"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_HALE_AND_HEARTY">
+<Description language="ENGLISH">"Hale and Hearty"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Life"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A budding flower (+1)"</Ingredient>
+<Page>"9"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_LIFE_FORCE">
+<Description language="ENGLISH">"Life Force"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Life"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A leaf from an evergreen tree (+2)"</Ingredient>
+<Page>"9"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_STRENGTH_OF_THE_EARTH">
+<Description language="ENGLISH">"Strength of the Earth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Life"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A piece of peat, buried underground for more than a century (+2)"</Ingredient>
+<Page>"10"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_WIND_S_WHISPER">
+<Description language="ENGLISH">"Wind's Whisper"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Life"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A sheaf of corn or maize (+2)"</Ingredient>
+<Page>"10"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_THE_WOOD_REBORN">
+<Description language="ENGLISH">"The Wood Reborn"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Life"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A seed from a tree of Athel Loren (+2)"</Ingredient>
+<Page>"10"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_CHARGE_THE_BLACK_GATE">
+<Description language="ENGLISH">"Charge the Black Gate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Death"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"1 Full Action"</CastingTime>
+<Ingredient>"A grave marker bearing your name (+1)"</Ingredient>
+<Page>"11"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_DEATHMASK">
+<Description language="ENGLISH">"Deathmask"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Death"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"2 Full Rounds"</CastingTime>
+<Ingredient>"A death mask (+1)"</Ingredient>
+<Page>"11"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_DEATHWISH">
+<Description language="ENGLISH">"Deathwish"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Death"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"1 Full Action"</CastingTime>
+<Ingredient>"A hangman's noose that has killed twelve men (+2)"</Ingredient>
+<Page>"11-12"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_GLIMPSE_OF_THE_DEPARTED">
+<Description language="ENGLISH">"Glimpse of the Departed"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Death"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"10 minutes"</CastingTime>
+<Ingredient>"Something belonging to the deceased (+2)"</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_GRIM_HARVEST">
+<Description language="ENGLISH">"Grim Harvest"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Death"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A piece of crumbled headstone (+2)"</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_NAME_THE_BLADE">
+<Description language="ENGLISH">"Name the Blade"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Death"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"1 Full Action"</CastingTime>
+<Ingredient>"The tooth of a vampire (+2)"</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_ONLY_THE_COALS">
+<Description language="ENGLISH">"Only the Coals"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Death"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A jewel ground to dust (+2)"</Ingredient>
+<Page>"12-13"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_SHYISH_UNCOVERED">
+<Description language="ENGLISH">"Shyish Uncovered"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Death"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A shovel that has dug a dozen graves (+2)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_STILL_BLOOD">
+<Description language="ENGLISH">"Still Blood"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Death"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A blade as cold as ice (+2)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_TASTE_OF_DEATH">
+<Description language="ENGLISH">"Taste of Death"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Death"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A dead mouse (+2)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_AZYR_ILLUMINATED">
+<Description language="ENGLISH">"Azyr Illuminated"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of The Heavens"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A drop of quicksilver (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_BROKEN_CONSTELLATION">
+<Description language="ENGLISH">"Broken Constellation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of The Heavens"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A belonging of the target (+2)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_THE_CROWNING_FATE">
+<Description language="ENGLISH">"The Crowning Fate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of The Heavens"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A ball of pure crystal (+3)"</Ingredient>
+<Page>"14-15"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_THE_ENEMY_FORESEEN">
+<Description language="ENGLISH">"The Enemy Foreseen"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of The Heavens"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A shield that saved a life in battle (+2)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_FATE_S_WHISPER">
+<Description language="ENGLISH">"Fate's Whisper"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of The Heavens"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A compass (+2)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_FORTUITOUS_OBJECT">
+<Description language="ENGLISH">"Fortuitous Object"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of The Heavens"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A thread of pure silk (+2)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_MAP_OF_THE_HEAVENS">
+<Description language="ENGLISH">"Map of the Heavens"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of The Heavens"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A star map (+1)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_SEE_THE_ONCOMING_BLOW">
+<Description language="ENGLISH">"See the Oncoming Blow"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of The Heavens"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"The eye of an owl (+1)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_STARLESS_NIGHT">
+<Description language="ENGLISH">"Starless Night"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of The Heavens"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"2 Full Actions"</CastingTime>
+<Ingredient>"A falcon's hood (+1)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_THE_WITCHLING_STAR">
+<Description language="ENGLISH">"The Witchling Star"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of The Heavens"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"10 minutes"</CastingTime>
+<Ingredient>"A cracked mirror (+2)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_THE_BEAST_UNBROKEN">
+<Description language="ENGLISH">"The Beast Unbroken"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Beasts"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A broken bridle (+2)"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_CALL_THE_HORDE">
+<Description language="ENGLISH">"Call the Horde"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Beasts"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A hunting horn (+2)"</Ingredient>
+<Page>"17-18"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_EYES_OF_THE_PACK">
+<Description language="ENGLISH">"Eyes of the Pack"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Beasts"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A wolf pelt (+2)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_FORM_OF_THE_SCURRYING_RODENT">
+<Description language="ENGLISH">"Form of the Scurrying Rodent"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Beasts"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A rodent's tail (+1)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_FORM_OF_THE_SLIPPERY_FISH">
+<Description language="ENGLISH">"Form of the Slippery Fish"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Beasts"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A fish's head (+2)"</Ingredient>
+<Page>"18-19"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_FURY_OF_THE_MOTHER_BEAR">
+<Description language="ENGLISH">"Fury of the Mother Bear"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Beasts"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A bear pelt (+2)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_GLORIOUS_TRANSFORMATION">
+<Description language="ENGLISH">"Glorious Transformation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Beasts"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"2 Full Actions"</CastingTime>
+<Ingredient>"A feather from a black swan (+2)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_LOST_CUB">
+<Description language="ENGLISH">"Lost Cub"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Beasts"</Lore>
+<CastingNumber>"19"</CastingNumber>
+<CastingTime>"10 Minutes"</CastingTime>
+<Ingredient>"A piece of animal dung (+2)"</Ingredient>
+<Page>"19-20"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_MUSK_SPRAY">
+<Description language="ENGLISH">"Musk Spray"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Beasts"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A scent gland (+1)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_WINTER_COAT">
+<Description language="ENGLISH">"Winter Coat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Beasts"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Hair from a wolf (+1)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_BAR_THE_GATE">
+<Description language="ENGLISH">"Bar the Gate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Light"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A drop of mercury (+2)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_BRIGHT_BASTION">
+<Description language="ENGLISH">"Bright Bastion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Light"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A polished silver shield (+2)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_DAEMONWARD">
+<Description language="ENGLISH">"Daemonward"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Light"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A main-gauche (+1)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_DRIVING_INTENT">
+<Description language="ENGLISH">"Driving Intent"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Light"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A lodestone (+1)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_ENLIGHTENMENT">
+<Description language="ENGLISH">"Enlightenment"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Light"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A lens (+2)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_ILLUMINATE_THE_FIELD">
+<Description language="ENGLISH">"Illuminate the Field"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Light"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A garnet worth at least 30 gc (+2)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_INFUSION_OF_LIGHT">
+<Description language="ENGLISH">"Infusion of Light"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Light"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A piece of quartz (+1)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_PERFECT_COMPREHENSION">
+<Description language="ENGLISH">"Perfect Comprehension"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Light"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"2 Full Actions"</CastingTime>
+<Ingredient>"A wax candle blessed by a priest of Verena (+2)"</Ingredient>
+<Page>"22-23"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_PIERCE_THE_VEIL">
+<Description language="ENGLISH">"Pierce the Veil"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Light"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"The wings of a bat (+1)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_PURITY_OF_PURPOSE">
+<Description language="ENGLISH">"Purity of Purpose"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Light"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"A Full Action and a Half Action"</CastingTime>
+<Ingredient>"A lodestone (+2)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_BLACK_HORRORS">
+<Description language="ENGLISH">"Black Horrors"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shadow"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A hair from a vampire (+2)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_BLUR_THE_IMAGE">
+<Description language="ENGLISH">"Blur the Image"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shadow"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A caterpillar (+2)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_DEEP_POCKETS">
+<Description language="ENGLISH">"Deep Pockets"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shadow"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"A Full Action"</CastingTime>
+<Ingredient>"A black silk kerchief (+2)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_FACE_OF_THE_STRANGER">
+<Description language="ENGLISH">"Face of the Stranger"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shadow"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"An item belonging to the target (+2)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_FALSE_PROMISE">
+<Description language="ENGLISH">"False Promise"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shadow"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pair of rose-tinted spectacles (+1)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_PHANTOM_FOE">
+<Description language="ENGLISH">"Phantom Foe"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shadow"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A small firework (+2)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_SHADOWBRIDGE">
+<Description language="ENGLISH">"Shadowbridge"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shadow"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A silken thread (+2)"</Ingredient>
+<Page>"26"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_SHADOWHOUND">
+<Description language="ENGLISH">"Shadowhound"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shadow"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A clipping from the claws of a faithful hound (+1)"</Ingredient>
+<Page>"26"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_SHADOWLEAP">
+<Description language="ENGLISH">"Shadowleap"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shadow"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Soot from a chimney which has burnt all night (+2)"</Ingredient>
+<Page>"26"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_WANDERING_SHADOW">
+<Description language="ENGLISH">"Wandering Shadow"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Shadow"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A model of the caster (+2)"</Ingredient>
+<Page>"27"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_ANATOMICAL_EVALUATION">
+<Description language="ENGLISH">"Anatomical Evaluation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Metal"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pair of callipers (+1)"</Ingredient>
+<Page>"28"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_ARMOUR_OF_TIN">
+<Description language="ENGLISH">"Armour of Tin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Metal"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A tin soldier (+2)"</Ingredient>
+<Page>"28"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_FIND_THE_WEAKNESS">
+<Description language="ENGLISH">"Find the Weakness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Metal"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A rusted hinge (+1)"</Ingredient>
+<Page>"28-29"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_GUARD_OF_GOLD">
+<Description language="ENGLISH">"Guard of Gold"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Metal"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A gold ball (+2)"</Ingredient>
+<Page>"29"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_THE_KNOT_UNTIED">
+<Description language="ENGLISH">"The Knot Untied"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Metal"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A piece of paper covered in gilded writing (+2)"</Ingredient>
+<Page>"29"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_LAW_OF_FLUID">
+<Description language="ENGLISH">"Law of Fluid"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Metal"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A pinch of sulphur (+2)"</Ingredient>
+<Page>"29"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_METAL_FOR_FLESH">
+<Description language="ENGLISH">"Metal for Flesh"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Metal"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A copper rod (+1)"</Ingredient>
+<Page>"30"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_THE_METAL_MENDED">
+<Description language="ENGLISH">"The Metal Mended"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Metal"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"2 Full Actions"</CastingTime>
+<Ingredient>"A brass rod (+2)"</Ingredient>
+<Page>"30"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_TRANSMUTATION_OF_FLUID">
+<Description language="ENGLISH">"Transmutation of Fluid"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Metal"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A mouthful of near-boiling water (+2)"</Ingredient>
+<Page>"30"</Page>
+</SpellV2>
+<SpellV2 id="ETCE-SPEL_UNDERSTAND_THE_MECHANISM">
+<Description language="ENGLISH">"Understand the Mechanism"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Metal"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"1 Minute"</CastingTime>
+<Ingredient>"A draughtsman's quill (+1)"</Ingredient>
+<Page>"30"</Page>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SPELL_TALENT>
+<Sort id="ETCE-SPEL_BLOODFIRE">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_THE_CAPTIVATING_FLAME">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_IGNITE">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_KINDRED_OF_THE_HEARTH">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_LEAPING_FLAMES">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_OIL_AND_WATER">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_PASSION_REBORN">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_PASSION_UNBOUND">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_STOVESKIN">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_TAME_THE_DRAGON">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_ARMS_OF_THE_FOREST">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_BEND_WITH_THE_WIND">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_DRIFTWOOD">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_FOUR_SEASONS_IN_ONE_DAY">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_GHYRAN_REVEALED">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_HALE_AND_HEARTY">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_LIFE_FORCE">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_STRENGTH_OF_THE_EARTH">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_WIND_S_WHISPER">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_THE_WOOD_REBORN">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_CHARGE_THE_BLACK_GATE">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_DEATHMASK">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_DEATHWISH">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_GLIMPSE_OF_THE_DEPARTED">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_GRIM_HARVEST">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_NAME_THE_BLADE">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_ONLY_THE_COALS">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_SHYISH_UNCOVERED">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_STILL_BLOOD">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_TASTE_OF_DEATH">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_AZYR_ILLUMINATED">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_BROKEN_CONSTELLATION">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_THE_CROWNING_FATE">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_THE_ENEMY_FORESEEN">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_FATE_S_WHISPER">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_FORTUITOUS_OBJECT">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_MAP_OF_THE_HEAVENS">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_SEE_THE_ONCOMING_BLOW">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_STARLESS_NIGHT">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_THE_WITCHLING_STAR">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_THE_BEAST_UNBROKEN">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_CALL_THE_HORDE">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_EYES_OF_THE_PACK">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_FORM_OF_THE_SCURRYING_RODENT">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_FORM_OF_THE_SLIPPERY_FISH">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_FURY_OF_THE_MOTHER_BEAR">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_GLORIOUS_TRANSFORMATION">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_LOST_CUB">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_MUSK_SPRAY">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_WINTER_COAT">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_BAR_THE_GATE">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_BRIGHT_BASTION">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_DAEMONWARD">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_DRIVING_INTENT">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_ENLIGHTENMENT">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_ILLUMINATE_THE_FIELD">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_INFUSION_OF_LIGHT">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_PERFECT_COMPREHENSION">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_PIERCE_THE_VEIL">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_PURITY_OF_PURPOSE">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_BLACK_HORRORS">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_BLUR_THE_IMAGE">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_DEEP_POCKETS">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_FACE_OF_THE_STRANGER">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_FALSE_PROMISE">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_PHANTOM_FOE">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_SHADOWBRIDGE">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_SHADOWHOUND">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_SHADOWLEAP">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_WANDERING_SHADOW">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_ANATOMICAL_EVALUATION">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_ARMOUR_OF_TIN">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_FIND_THE_WEAKNESS">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_GUARD_OF_GOLD">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_THE_KNOT_UNTIED">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_LAW_OF_FLUID">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_METAL_FOR_FLESH">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_THE_METAL_MENDED">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_TRANSMUTATION_OF_FLUID">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ETCE-SPEL_UNDERSTAND_THE_MECHANISM">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+</DATA_BOOK>

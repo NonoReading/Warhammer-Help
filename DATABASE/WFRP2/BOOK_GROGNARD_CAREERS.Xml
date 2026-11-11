@@ -1,0 +1,1029 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"GROG"</CODE_BOOK>
+<BOOK>"BOOK GROGNARD CAREERS"</BOOK>
+<BOOKNAME>"GROGNARD CAREERS"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"It is completely unofficial and in no way endorsed by Games Workshop Limited. © Andrew Law, 2005 (www.hapimeses.com)"</DISCLAIMER>
+<DATA_CAREER>
+<Career id="GROG-CARE_BUYER">
+<Description language="ENGLISH">"Buyer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"Ag +5%, Int +10%, WP +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Charm or Gossip, Evaluate, Haggle, Drive or Ride, Perception or Search, Read/Write, Secret Language (Guild Tongue), Speak Language (Breton, Estalian, Kislevian, Reikspiel, or Tilean)"</Skills>
+<Talents>"Dealmaker, Savvy or Suave, Super Numerate"</Talents>
+<Trappings>"Abacus, Ledger, One Set of Good Craftsmanship Clothes, Purse, 1d10 gc"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_DRIVE/RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION/RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_GUILD_TONGUE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_BRETON/RULES-COMP_SPEAK_LANGUAGE_ESTALIAN/RULES-COMP_SPEAK_LANGUAGE_KISLEVIAN/RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL/RULES-COMP_SPEAK_LANGUAGE_TILEAN">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_DEALMAKER">"1"</Talent>
+<Talent name="RULES-T_SAVVY/RULES-T_SUAVE">"1"</Talent>
+<Talent name="RULES-T_SUPER_NUMERATE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"GROG New careers p.2"</Source>
+</Career>
+<Career id="GROG-CARE_CORPSE_HANDLER">
+<Description language="ENGLISH">"Corpse Handler"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, S +5%, T +10%, Ag +5%, Int +5%, WP +10%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Consume Alcohol, Evaluate or Gossip, Haggle, Perception, Read/Write, Search, Trade (Herbalist)"</Skills>
+<Talents>"Coolheaded, Hardy or Savvy, Resistance to Disease, Very Resilient or Very Strong"</Talents>
+<Trappings>"Wide-brimmed leather hat, "beaked" leather mask with glass eyes (the beak packed with herbs), leather breeches, long leather gloves, high leather boots, long leather apron, leather pouch of herbs and garlic, handcart"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE/RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_HERBALIST">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_COOLHEADED">"1"</Talent>
+<Talent name="RULES-T_HARDY/RULES-T_SAVVY">"1"</Talent>
+<Talent name="RULES-T_RESISTANCE_TO_DISEASE">"1"</Talent>
+<Talent name="RULES-T_VERY_RESILIENT/RULES-T_VERY_STRONG">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"GROG Corpsehandler"</Source>
+</Career>
+<Career id="GROG-CARE_DIPLOMAT">
+<Description language="ENGLISH">"Diplomat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"Ag +5%, Int +10%, WP +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Blather or Charm, Command or Performer (Actor) Common Knowledge (Home Nation), Gossip, Haggle, Perception, Read/Write, Speak Language (any one)"</Skills>
+<Talents>"Dealmaker or Seasoned Traveller, Etiquette or Linguistics, Public Speaking or Schemer"</Talents>
+<Trappings>"Best Craftsmanship Clothing, Sovereign Diploma, Diplomatic Pouch"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_BLATHER/RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND/RULES-COMP_PERFORMER_ACTOR_COMMON_KNOWLEDGE_HOME_NATION">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_DEALMAKER/RULES-T_SEASONED_TRAVELLER">"1"</Talent>
+<Talent name="RULES-T_ETIQUETTE/RULES-T_LINGUISTICS">"1"</Talent>
+<Talent name="RULES-T_PUBLIC_SPEAKING/RULES-T_SCHEMER">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"GROG Diplomat"</Source>
+</Career>
+<Career id="GROG-CARE_DRUZHINA">
+<Description language="ENGLISH">"Druzhina"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +5%, T +5%, Int +5%, WP +5%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Charm or Dodge Blow, Command, Common Knowledge (Kislev), Consume Alcohol, Gamble or Gossip, Read/Write, Ride, Speak Language (Kislevian)"</Skills>
+<Talents>"Coolheaded or Schemer, Etiquette, Luck or Public Speaking, Strike Mighty Blow or Specialist Weapon Group (Cavalry, Gunpowder, or Two-handed)"</Talents>
+<Trappings>"Hand Weapon or Shortbow with 10 Arrows or Great Weapon or Pistol with 10 Firearm Balls and Gunpowder, Medium Armour (Mail Shirt and Leather Jerkin), Noble's Garb, Riding Horse with Saddle and Harness, 1d10gc, Jewellery worth 1d10gc"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_KISLEV">"1"</Skill>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+<Skill name="RULES-COMP_GAMBLE/RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_KISLEVIAN">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_COOLHEADED/RULES-T_SCHEMER">"1"</Talent>
+<Talent name="RULES-T_ETIQUETTE">"1"</Talent>
+<Talent name="RULES-T_LUCK/RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW/RULES-T_SPECIALIST_WEAPON_GROUP__CAVALRY/RULES-T_SPECIALIST_WEAPON_GROUP__GUNPOWDER/RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"GROG Kislevites p.2"</Source>
+</Career>
+<Career id="GROG-CARE_GAFFER">
+<Description language="ENGLISH">"Gaffer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"Ag +5%, Int +10%, WP +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Charm or Trade (Carpenter, Stoneworker or Thatcher), Command, Common Knowledge (the Empire or Halflings), Gossip or Haggle, Perception, Read/Write, Secret Language (Guild Tongue) Speak Language (Halfling or Reikspiel)"</Skills>
+<Talents>"Dealmaker or Super Numerate, Savvy or Suave"</Talents>
+<Trappings>"Gaffer Guild Pin, Tradetools, 1d10 gc"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_TRADE_CARPENTER/RULES-COMP_TRADE_STONEWORKER/RULES-COMP_TRADE_THATCHER">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_THE_EMPIRE/RULES-COMP_COMMON_KNOWLEDGE_HALFLINGS">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP/RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_GUILD_TONGUE_SPEAK_LANGUAGE_HALFLING/RULES-COMP_SECRET_LANGUAGE_REIKSPIEL">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_DEALMAKER/RULES-T_SUPER_NUMERATE">"1"</Talent>
+<Talent name="RULES-T_SAVVY/RULES-T_SUAVE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"GROG Gaffer"</Source>
+</Career>
+<Career id="GROG-CARE_GONG_FARMER">
+<Description language="ENGLISH">"Gong Farmer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, S +5%, T +10%, Ag +5%, WP +10%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Consume Alcohol, Drive, Evaluate or Haggle, Perception, Scale Sheer Surface, Search"</Skills>
+<Talents>"Hardy or Very Resilient, Orientation, Resistance to Disease, Tunnel Rat"</Talents>
+<Trappings>"Lantern, Lamp Oil, Spade, 3 Sacks"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+<Skill name="RULES-COMP_DRIVE">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE/RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_HARDY/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="RULES-T_ORIENTATION">"1"</Talent>
+<Talent name="RULES-T_RESISTANCE_TO_DISEASE">"1"</Talent>
+<Talent name="RULES-T_TUNNEL_RAT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"GROG Gong farmer"</Source>
+</Career>
+<Career id="GROG-CARE_GRYPHON_LEGION_LANCER">
+<Description language="ENGLISH">"Gryphon Legion Lancer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +35%, S +20%, T +25%, Ag +25%, Int +15%, WP +25%, Fel +15%"</MainProfile>
+<SecondaryProfile>"A +2, W +8"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"35"</Advance>
+<Advance name="RULES-ATTR_S">"20"</Advance>
+<Advance name="RULES-ATTR_T">"25"</Advance>
+<Advance name="RULES-ATTR_Ag">"25"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"8"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Genealogy/Heraldry), Animal Care, Charm or Intimidate, Command, Common Knowledge (Kislev), Common Knowledge (the Empire), Consume Alcohol or Gamble, Dodge Blow, Gossip or Haggle, Perception, Read/Write, Secret Language (Battle Tongue), Speak Language (Kislevian), Speak Language (Reikspiel)"</Skills>
+<Talents>"Etiquette, Hardy or Sturdy, Lightning Parry, Seasoned Traveller, Stout-Hearted, Strike to Stun"</Talents>
+<Trappings>"Hand Weapon, Lance, Best Craftsmanship Heavy Armour (Breastplate, Mail Shirt, Leather Jack, Helmet, Mail Coif, Leather Skullcap), Shield, Griffon Feathered Wing Back Banner, Destrier with Saddle and Harness"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_GENEALOGY/RULES-COMP_ACADEMIC_KNOWLEDGE_HERALDRY">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_KISLEV">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_THE_EMPIRE">"1"</Skill>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL/RULES-COMP_GAMBLE">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP/RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_BATTLE_TONGUE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_KISLEVIAN">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ETIQUETTE">"1"</Talent>
+<Talent name="RULES-T_HARDY/RULES-T_STURDY">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_PARRY">"1"</Talent>
+<Talent name="RULES-T_SEASONED_TRAVELLER">"1"</Talent>
+<Talent name="RULES-T_STOUT_HEARTED">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_STUN">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"GROG Kislevites p.2"</Source>
+</Career>
+<Career id="GROG-CARE_INVENTOR">
+<Description language="ENGLISH">"Inventor"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, S +5%, T +5%, Ag +10%, Int +30%, WP +20%"</MainProfile>
+<SecondaryProfile>"W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Engineering), Academic Knowledge (Science), Drive, Evaluate, Haggle, Perception, Read/Write, Search, Speak Arcane Language (Runic) or Speak Language (Classical), Speak Language (Khazalid or Tilean), Trade (any three)"</Skills>
+<Talents>"Savvy, Super Numerate"</Talents>
+<Trappings>"Blank Book, Trade Tools (Engineer's Kit), Trade Tools (other tools appropriate to Trade Skills), Writing Kit, Workshop"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ENGINEERING">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_SCIENCE">"1"</Skill>
+<Skill name="RULES-COMP_DRIVE">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_RUNIC/RULES-COMP_SPEAK_LANGUAGE_CLASSICAL">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_KHAZALID/RULES-COMP_SPEAK_LANGUAGE_TILEAN">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SAVVY">"1"</Talent>
+<Talent name="RULES-T_SUPER_NUMERATE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"GROG Inventor"</Source>
+</Career>
+<Career id="GROG-CARE_JESTER">
+<Description language="ENGLISH">"Jester"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"Ag +10%, Int +10%, WP +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Genealogy/Heraldry) or Common Knowledge (any one), Blather, Charm or Gossip, Dodge Blow, Perception, Performer (Jester), Performer (any one) or Sleight of Hand, Speak Language (any one)"</Skills>
+<Talents>"Contortionist or Mimic, Etiquette, Public Speaking"</Talents>
+<Trappings>"Bladder on a Stick, Costume (Jester's Motley), Noble Patron"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_GENEALOGY/RULES-COMP_ACADEMIC_KNOWLEDGE_HERALDRY/RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_BLATHER">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_JESTER">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_*/RULES-COMP_SLEIGHT_OF_HAND">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_CONTORTIONIST/RULES-T_MIMIC">"1"</Talent>
+<Talent name="RULES-T_ETIQUETTE">"1"</Talent>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"GROG New careers p.2"</Source>
+</Career>
+<Career id="GROG-CARE_KISLEVITE_RANGER">
+<Description language="ENGLISH">"Kislevite Ranger"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, BS +25%, S +10%, T +15%, Ag +15%, Int +10%, WP +15%"</MainProfile>
+<SecondaryProfile>"A +1, W +6"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"25"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+</Advances>
+<Skills>"Concealment, Dodge Blow or Search, Follow Trail, Navigation, Outdoor Survival, Perception, Scale Sheer Surface or Set Trap, Secret Language (Ranger Tongue), Secret Signs (Ranger), Silent Move, Trade (Herbalist)"</Skills>
+<Talents>"Hardy or Very Resilient, Mighty Shot, Mimic, Orientation, Rapid Reload or Sharpshooter, Rover"</Talents>
+<Trappings>"Hand Weapon, Shortbow with 10 Arrows, Light Armour (Leather Jerkin), Hunter's Cloak (provides +5% bonus to Concealment Tests in areas of tundra and woodland)"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW/RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE/RULES-COMP_SET_TRAP">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_RANGER_TONGUE">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_SIGNS_RANGER">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_HERBALIST">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_HARDY/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="RULES-T_MIGHTY_SHOT">"1"</Talent>
+<Talent name="RULES-T_MIMIC">"1"</Talent>
+<Talent name="RULES-T_ORIENTATION">"1"</Talent>
+<Talent name="RULES-T_RAPID_RELOAD/RULES-T_SHARPSHOOTER">"1"</Talent>
+<Talent name="RULES-T_ROVER">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"GROG Kislevites p.3"</Source>
+</Career>
+<Career id="GROG-CARE_LANDSKNECHT">
+<Description language="ENGLISH">"Landsknecht"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, S +5%, T +5%, Ag +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Dodge Blow, Gossip or Haggle, Perception or Search, Intimidate, Secret Language (Battle Tongue)"</Skills>
+<Talents>"Mighty Shot or Strike Mighty Blow, Rapid Reload or Quick Draw, Sharpshooter or Strike to Stun, Specialist Weapon Group (Two-Handed), Specialist Weapon Group (Gunpowder)"</Talents>
+<Trappings>"Best Craftsmanship Clothing, 2 Great Weapons (Halberd and Two-Handed Sword), Firearm with ammunition for 10 shots, Light Armour (Full Leather Armour), d10 gc"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP/RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION/RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_BATTLE_TONGUE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_MIGHTY_SHOT/RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_RAPID_RELOAD/RULES-T_QUICK_DRAW">"1"</Talent>
+<Talent name="RULES-T_SHARPSHOOTER/RULES-T_STRIKE_TO_STUN">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__GUNPOWDER">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"GROG Landsknecht"</Source>
+</Career>
+<Career id="GROG-CARE_LONGSHANK">
+<Description language="ENGLISH">"Longshank"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, BS +20%, S +10%, T +15%, Ag +15%, Int +15%, WP +15%"</MainProfile>
+<SecondaryProfile>"A +1, W +6"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+</Advances>
+<Skills>"Animal Care, Common Knowledge (the Empire), Concealment, Dodge Blow, Follow Trail, Heal, Navigation, Outdoor Survival, Perception, Ride, Scale Sheer Surface, Secret Language (Ranger), Secret Signs (Ranger), Set Trap, Silent Move, Swim"</Skills>
+<Talents>"Mighty Shot or Strike Mighty Blow, Orientation or Rover, Sharpshooter or Sure Shot"</Talents>
+<Trappings>"Leather Jack, Sword, Bow with 10 Arrows, Religious Symbol (Taal or Rhya)"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_THE_EMPIRE">"1"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_RANGER">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_SIGNS_RANGER">"1"</Skill>
+<Skill name="RULES-COMP_SET_TRAP">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+<Skill name="RULES-COMP_SWIM">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_MIGHTY_SHOT/RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_ORIENTATION/RULES-T_ROVER">"1"</Talent>
+<Talent name="RULES-T_SHARPSHOOTER/RULES-T_SURE_SHOT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"GROG New careers p.3"</Source>
+</Career>
+<Career id="GROG-CARE_LONGSHANK_VETERAN">
+<Description language="ENGLISH">"Longshank Veteran"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +25%, BS +25%, S +10%, T +20%, Ag +15%, Int +20%, WP +15%"</MainProfile>
+<SecondaryProfile>"A +2, W +6"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"25"</Advance>
+<Advance name="RULES-ATTR_BS">"25"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"20"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_A">"2"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Strategy/Tactics), Command, Concealment, Dodge Blow, Follow Trail, Heal, Outdoor Survival, Perception, Prepare Poison, Secret Language (Ranger), Secret Signs (Ranger), Set Trap, Silent Move, Trade (Herbalist)"</Skills>
+<Talents>"Quick Draw, Resistance to Poison, Seasoned Traveller"</Talents>
+<Trappings>"Leather Jack, Sword, Bow with 10 Arrows, Religious Symbol (Taal or Rhya)"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_STRATEGY/RULES-COMP_ACADEMIC_KNOWLEDGE_TACTICS">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_FOLLOW_TRAIL">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISON">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_RANGER">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_SIGNS_RANGER">"1"</Skill>
+<Skill name="RULES-COMP_SET_TRAP">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_HERBALIST">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_QUICK_DRAW">"1"</Talent>
+<Talent name="RULES-T_RESISTANCE_TO_POISON">"1"</Talent>
+<Talent name="RULES-T_SEASONED_TRAVELLER">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"GROG New careers p.3"</Source>
+</Career>
+<Career id="GROG-CARE_NURSEMAID">
+<Description language="ENGLISH">"Nursemaid"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"S +5%, Ag +5%, Int +10%, WP +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Genealogy/Heraldry) or Charm, Command or Intimidate, Common Knowledge (any one) or Read/Write, Gossip or Silent Move, Haggle, Heal or Sleight of Hand, Perception, Search"</Skills>
+<Talents>"Etiquette or Hardy, Lightning Reflexes"</Talents>
+<Trappings>"Large Blanket, 3 Toys"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_GENEALOGY/RULES-COMP_ACADEMIC_KNOWLEDGE_HERALDRY/RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*/RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP/RULES-COMP_SILENT_MOVE">"1"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_HEAL/RULES-COMP_SLEIGHT_OF_HAND">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ETIQUETTE/RULES-T_HARDY">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_REFLEXES">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"GROG Nanny"</Source>
+</Career>
+<Career id="GROG-CARE_PLAGUE_DOCTOR">
+<Description language="ENGLISH">"Plague Doctor"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"S +5%, T +15%, Ag +10%, Int +25%, WP +25%"</MainProfile>
+<SecondaryProfile>"W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"25"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Command, Heal, Intimidate, Perception, Prepare Poison, Read/Write, Search, Secret Language (Guild Tongue), Speak Language (Classical), Trade (Apothecary or Herbalist)"</Skills>
+<Talents>"Coolheaded, Hardy or Very Resilient, Resistance to Disease, Surgery"</Talents>
+<Trappings>"Doctor's Wand (Best Craftsmanship Basic Weapon), Book of Diseases, Plague Doctor's Sealed Costume, d10 Jars of Herbs, Medicines or Unguents"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISON">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_GUILD_TONGUE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_CLASSICAL">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_APOTHECARY/RULES-COMP_TRADE_HERBALIST">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_COOLHEADED">"1"</Talent>
+<Talent name="RULES-T_HARDY/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="RULES-T_RESISTANCE_TO_DISEASE">"1"</Talent>
+<Talent name="RULES-T_SURGERY">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"GROG Plague doctor"</Source>
+</Career>
+<Career id="GROG-CARE_PURSUER">
+<Description language="ENGLISH">"Pursuer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, T +5%, Ag +15%, WP +5%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Dodge Blow"</Skills>
+<Talents>"Ambidextrous, Disarm or Wrestling, Fleet Footed or Very Resilient, Lightning Reflexes or Rapid Reload, Mighty Shot or Strike Mighty Blow, Quick Draw or Strike to Injure, Specialist Weapon group (Entangling), Specialist Weapon Group (Parrying)"</Talents>
+<Trappings>"Helmet, buckler, dagger, net; trident and two javelins, or two short swords and spear"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AMBIDEXTROUS">"1"</Talent>
+<Talent name="RULES-T_DISARM/RULES-T_WRESTLING">"1"</Talent>
+<Talent name="RULES-T_FLEET_FOOTED/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_REFLEXES/RULES-T_RAPID_RELOAD">"1"</Talent>
+<Talent name="RULES-T_MIGHTY_SHOT/RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
+<Talent name="RULES-T_QUICK_DRAW/RULES-T_STRIKE_TO_INJURE">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__ENTANGLING">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__PARRYING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"GROG Pursuer"</Source>
+</Career>
+<Career id="GROG-CARE_SEXTON">
+<Description language="ENGLISH">"Sexton"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, S +5%, Ag +10%, Int +5%, WP +5%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Theology) or Speak Language (Classical), Drive, Evaluate, Gossip, Haggle, Perception, Read/Write, Scale Sheer Surface, Search"</Skills>
+<Talents>"Resistance to Disease or Strong-Minded"</Talents>
+<Trappings>"Broom, Spade, Religious Symbol"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY/RULES-COMP_SPEAK_LANGUAGE_CLASSICAL">"1"</Skill>
+<Skill name="RULES-COMP_DRIVE">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_RESISTANCE_TO_DISEASE/RULES-T_STRONG_MINDED">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"GROG Sexton"</Source>
+</Career>
+<Career id="GROG-CARE_SNOTBALLER">
+<Description language="ENGLISH">"Snotballer"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, S +5%, T +10%, Ag +5%, WP +5%"</MainProfile>
+<SecondaryProfile>"W +2, M +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_M">"1"</Advance>
+</Advances>
+<Skills>"Consume Alcohol, Dodge Blow, Gamble, Intimidate, Perception"</Skills>
+<Talents>"Hardy, Fleet Footed or Very Strong, Lightning Reflexes or Very Resilient, Street Fighting, Strike to Stun, Wrestling"</Talents>
+<Trappings>"Light Armour (Brightly coloured Leather Jerkin with number on back, Leather Leggings with shin padding), Mail Coif, Tough Leather Boots"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_GAMBLE">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_HARDY">"1"</Talent>
+<Talent name="RULES-T_FLEET_FOOTED/RULES-T_VERY_STRONG">"1"</Talent>
+<Talent name="RULES-T_LIGHTNING_REFLEXES/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="RULES-T_STREET_FIGHTING">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_STUN">"1"</Talent>
+<Talent name="RULES-T_WRESTLING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"GROG Snotballer"</Source>
+</Career>
+<Career id="GROG-CARE_STREET_PREACHER">
+<Description language="ENGLISH">"Street Preacher"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, T +5%, Ag +5%, Int +5%, WP +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (any one) or Blather, Charm or Intimidate, Common Knowledge (the Empire), Command or Performer (Actor), Gossip, Perception, Speak Language (Reikspiel)"</Skills>
+<Talents>"Cool Headed or Flee!, Public Speaking, Streetwise"</Talents>
+<Trappings>"Placard, 1d10 Books or Pamphlets supporting your cause"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*/RULES-COMP_BLATHER">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_THE_EMPIRE">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND/RULES-COMP_PERFORMER_ACTOR">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_COOLHEADED/RULES-T_FLEE">"1"</Talent>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+<Talent name="RULES-T_STREETWISE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"GROG Street preacher"</Source>
+</Career>
+<Career id="GROG-CARE_TEAMSTER">
+<Description language="ENGLISH">"Teamster"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +10%, T +5%, Ag +5%, WP +5%, Fel +5%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Animal Care, Common Knowledge (Bretonnia, Estalia, Kislev, or Tilea), Drive, Navigation, Perception, Ride, Secret Signs (Ranger), Speak Language (Breton, Estalian, Kislevian, or Tilean)"</Skills>
+<Talents>"Hardy or Very Resilient, Orientation or Seasoned Traveller, Specialist Weapon Group (Entangling)"</Talents>
+<Trappings>"Overcoat, Whip, Wide-Brimmed Hat"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_BRETONNIA/RULES-COMP_COMMON_KNOWLEDGE_ESTALIA/RULES-COMP_COMMON_KNOWLEDGE_KISLEV/RULES-COMP_COMMON_KNOWLEDGE_TILEA">"1"</Skill>
+<Skill name="RULES-COMP_DRIVE">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_SIGNS_RANGER">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_BRETON/RULES-COMP_SPEAK_LANGUAGE_ESTALIAN/RULES-COMP_SPEAK_LANGUAGE_KISLEVIAN/RULES-COMP_SPEAK_LANGUAGE_TILEAN">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_HARDY/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="RULES-T_ORIENTATION/RULES-T_SEASONED_TRAVELLER">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__ENTANGLING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"GROG New careers p.2"</Source>
+</Career>
+<Career id="GROG-CARE_TRAVELLING_JUDGE">
+<Description language="ENGLISH">"Travelling Judge"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, T +5%, Ag +10%, Int +20%, WP +10%, Fel +20%"</MainProfile>
+<SecondaryProfile>"W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Law), Charm, Command, Common Knowledge (the Empire), Gossip, Intimidate, Perception, Read/Write, Ride, Speak Language (Classical), Speak Language (Reikspiel)"</Skills>
+<Talents>"Orientation, Seasoned Traveller"</Talents>
+<Trappings>"Licence, Palanquin or Riding Horse with Saddle and Harness, Book of Imperial Law, Gavel and Hammer, Impressive Hat, 4 Bodyguards/Executioners"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_LAW">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_THE_EMPIRE">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_CLASSICAL">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ORIENTATION">"1"</Talent>
+<Talent name="RULES-T_SEASONED_TRAVELLER">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"GROG New careers p.4"</Source>
+</Career>
+<Career id="GROG-CARE_VILLAGE_HEADMAN">
+<Description language="ENGLISH">"Village Headman"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, S +5%, T +10%, Ag +5%, Int +15%, WP +15%, Fel +15%"</MainProfile>
+<SecondaryProfile>"W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Animal Care, Charm, Charm Animal or Swim, Common Knowledge (any one), Drive or Row, Evaluate, Gossip, Haggle, Perception, Performer (Storyteller), Trade (any one)"</Skills>
+<Talents>"Public Speaking, Savvy or Suave"</Talents>
+<Trappings>"None save the respect and confidence of a village"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_CHARM_ANIMAL/RULES-COMP_SWIM">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_DRIVE/RULES-COMP_ROW">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_STORYTELLER">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+<Talent name="RULES-T_SAVVY/RULES-T_SUAVE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"GROG New careers p.4"</Source>
+</Career>
+<Career id="GROG-CARE_WATERCOACHMAN">
+<Description language="ENGLISH">"Watercoachman"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, S +10%, T +5%, Ag +10%, WP +5%, Fel +5%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Common Knowledge (the Wasteland), Consume Alcohol or Performer (Comedian, Singer, or Storyteller), Gossip, Haggle, Perception, Row, Speak Language (Eltharin, Estalian, Norse, or Tilean), Swim"</Skills>
+<Talents>"Orientation, Street Fighting or Very Resilient"</Talents>
+<Trappings>"Light Armour (Leather Jack), Row Boat and Oars or Gondola and Pole, 2 Lanterns, Lamp Oil, Flask of Poor Craftsmanship Spirits or Tea"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_THE_WASTELAND">"1"</Skill>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL/RULES-COMP_PERFORMER_COMEDIAN/RULES-COMP_PERFORMER_SINGER/RULES-COMP_PERFORMER_STORYTELLER">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_ROW">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ELTHARIN/RULES-COMP_SPEAK_LANGUAGE_ESTALIAN/RULES-COMP_SPEAK_LANGUAGE_NORSE/RULES-COMP_SPEAK_LANGUAGE_TILEAN">"1"</Skill>
+<Skill name="RULES-COMP_SWIM">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ORIENTATION">"1"</Talent>
+<Talent name="RULES-T_STREET_FIGHTING/RULES-T_VERY_RESILIENT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"GROG New careers p.2"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="GROG-CARE_BUYER">"RULES-CARE_FENCE"</Link>
+<Link name="GROG-CARE_BUYER">"RULES-CARE_MERCHANT"</Link>
+<Link name="GROG-CARE_BUYER">"RULES-CARE_ROGUE"</Link>
+<Link name="GROG-CARE_BUYER">"RULES-CARE_VALET"</Link>
+<Link name="RULES-CARE_BURGHER">"GROG-CARE_BUYER"</Link>
+<Link name="RULES-CARE_SERVANT">"GROG-CARE_BUYER"</Link>
+<Link name="GROG-CARE_CORPSE_HANDLER">"RULES-CARE_BARBER_SURGEON"</Link>
+<Link name="GROG-CARE_CORPSE_HANDLER">"RULES-CARE_BONE_PICKER"</Link>
+<Link name="GROG-CARE_CORPSE_HANDLER">"RULES-CARE_GRAVE_ROBBER"</Link>
+<Link name="GROG-CARE_CORPSE_HANDLER">"RULES-CARE_RAT_CATCHER"</Link>
+<Link name="RULES-CARE_BARBER_SURGEON">"GROG-CARE_CORPSE_HANDLER"</Link>
+<Link name="RULES-CARE_BONE_PICKER">"GROG-CARE_CORPSE_HANDLER"</Link>
+<Link name="RULES-CARE_PEASANT">"GROG-CARE_CORPSE_HANDLER"</Link>
+<Link name="RULES-CARE_RAT_CATCHER">"GROG-CARE_CORPSE_HANDLER"</Link>
+<Link name="GROG-CARE_DIPLOMAT">"CCOMP-CARE_AMBASSADOR"</Link>
+<Link name="GROG-CARE_DIPLOMAT">"RULES-CARE_ASSASSIN"</Link>
+<Link name="GROG-CARE_DIPLOMAT">"RULES-CARE_EXPLORER"</Link>
+<Link name="GROG-CARE_DIPLOMAT">"RULES-CARE_NOBLE"</Link>
+<Link name="GROG-CARE_DIPLOMAT">"RULES-CARE_POLITICIAN"</Link>
+<Link name="GROG-CARE_DIPLOMAT">"RULES-CARE_SPY"</Link>
+<Link name="RULES-CARE_ENVOY">"GROG-CARE_DIPLOMAT"</Link>
+<Link name="RULES-CARE_SCHOLAR">"GROG-CARE_DIPLOMAT"</Link>
+<Link name="RULES-CARE_NOBLE">"GROG-CARE_DIPLOMAT"</Link>
+<Link name="GROG-CARE_DRUZHINA">"RULES-CARE_COURTIER"</Link>
+<Link name="GROG-CARE_DRUZHINA">"RULES-CARE_POLITICIAN"</Link>
+<Link name="GROG-CARE_DRUZHINA">"CCOMP-CARE_WINGED_LANCER"</Link>
+<Link name="GROG-CARE_GAFFER">"RULES-CARE_ARTISAN"</Link>
+<Link name="GROG-CARE_GAFFER">"RULES-CARE_BURGHER"</Link>
+<Link name="GROG-CARE_GAFFER">"RULES-CARE_POLITICIAN"</Link>
+<Link name="GROG-CARE_GAFFER">"RULES-CARE_STUDENT"</Link>
+<Link name="RULES-CARE_BURGHER">"GROG-CARE_GAFFER"</Link>
+<Link name="RULES-CARE_FIELDWARDEN">"GROG-CARE_GAFFER"</Link>
+<Link name="RULES-CARE_TRADESMAN">"GROG-CARE_GAFFER"</Link>
+<Link name="GROG-CARE_GONG_FARMER">"RULES-CARE_BONE_PICKER"</Link>
+<Link name="GROG-CARE_GONG_FARMER">"RULES-CARE_GRAVE_ROBBER"</Link>
+<Link name="GROG-CARE_GONG_FARMER">"RULES-CARE_RAT_CATCHER"</Link>
+<Link name="RULES-CARE_BONE_PICKER">"GROG-CARE_GONG_FARMER"</Link>
+<Link name="RULES-CARE_PEASANT">"GROG-CARE_GONG_FARMER"</Link>
+<Link name="RULES-CARE_RAT_CATCHER">"GROG-CARE_GONG_FARMER"</Link>
+<Link name="GROG-CARE_GRYPHON_LEGION_LANCER">"RULES-CARE_CAPTAIN"</Link>
+<Link name="GROG-CARE_GRYPHON_LEGION_LANCER">"RULES-CARE_CHAMPION"</Link>
+<Link name="GROG-CARE_GRYPHON_LEGION_LANCER">"RULES-CARE_NOBLE_LORD"</Link>
+<Link name="CCOMP-CARE_WINGED_LANCER">"GROG-CARE_GRYPHON_LEGION_LANCER"</Link>
+<Link name="GROG-CARE_INVENTOR">"RULES-CARE_ARTISAN"</Link>
+<Link name="GROG-CARE_INVENTOR">"RULES-CARE_ENGINEER"</Link>
+<Link name="GROG-CARE_INVENTOR">"RULES-CARE_SCHOLAR"</Link>
+<Link name="RULES-CARE_ARTISAN">"GROG-CARE_INVENTOR"</Link>
+<Link name="RULES-CARE_ENGINEER">"GROG-CARE_INVENTOR"</Link>
+<Link name="RULES-CARE_SCHOLAR">"GROG-CARE_INVENTOR"</Link>
+<Link name="GROG-CARE_JESTER">"RULES-CARE_AGITATOR"</Link>
+<Link name="GROG-CARE_JESTER">"RULES-CARE_ENTERTAINER"</Link>
+<Link name="GROG-CARE_JESTER">"RULES-CARE_OUTLAW"</Link>
+<Link name="GROG-CARE_JESTER">"RULES-CARE_ROGUE"</Link>
+<Link name="RULES-CARE_ENTERTAINER">"GROG-CARE_JESTER"</Link>
+<Link name="RULES-CARE_PEASANT">"GROG-CARE_JESTER"</Link>
+<Link name="GROG-CARE_KISLEVITE_RANGER">"RULES-CARE_SCOUT"</Link>
+<Link name="GROG-CARE_KISLEVITE_RANGER">"RULES-CARE_TARGETEER"</Link>
+<Link name="CCOMP-CARE_BEAR_TAMER">"GROG-CARE_KISLEVITE_RANGER"</Link>
+<Link name="CCOMP-CARE_HORSE_ARCHER">"GROG-CARE_KISLEVITE_RANGER"</Link>
+<Link name="RULES-CARE_HUNTER">"GROG-CARE_KISLEVITE_RANGER"</Link>
+<Link name="RULES-CARE_PEASANT">"GROG-CARE_KISLEVITE_RANGER"</Link>
+<Link name="RULES-CARE_WOODSMAN">"GROG-CARE_KISLEVITE_RANGER"</Link>
+<Link name="GROG-CARE_LANDSKNECHT">"RULES-CARE_BODYGUARD"</Link>
+<Link name="GROG-CARE_LANDSKNECHT">"RULES-CARE_BOUNTY_HUNTER"</Link>
+<Link name="GROG-CARE_LANDSKNECHT">"RULES-CARE_MERCENARY"</Link>
+<Link name="GROG-CARE_LANDSKNECHT">"RULES-CARE_OUTLAW"</Link>
+<Link name="GROG-CARE_LANDSKNECHT">"RULES-CARE_SERGEANT"</Link>
+<Link name="GROG-CARE_LANDSKNECHT">"RULES-CARE_VETERAN"</Link>
+<Link name="RULES-CARE_BODYGUARD">"GROG-CARE_LANDSKNECHT"</Link>
+<Link name="RULES-CARE_BOUNTY_HUNTER">"GROG-CARE_LANDSKNECHT"</Link>
+<Link name="RULES-CARE_MERCENARY">"GROG-CARE_LANDSKNECHT"</Link>
+<Link name="RULES-CARE_MILITIAMAN">"GROG-CARE_LANDSKNECHT"</Link>
+<Link name="RULES-CARE_PIT_FIGHTER">"GROG-CARE_LANDSKNECHT"</Link>
+<Link name="RULES-CARE_PROTAGONIST">"GROG-CARE_LANDSKNECHT"</Link>
+<Link name="RULES-CARE_ROADWARDEN">"GROG-CARE_LANDSKNECHT"</Link>
+<Link name="RULES-CARE_SOLDIER">"GROG-CARE_LANDSKNECHT"</Link>
+<Link name="RULES-CARE_THUG">"GROG-CARE_LANDSKNECHT"</Link>
+<Link name="RULES-CARE_TOLL_KEEPER">"GROG-CARE_LANDSKNECHT"</Link>
+<Link name="RULES-CARE_WATCHMAN">"GROG-CARE_LANDSKNECHT"</Link>
+<Link name="GROG-CARE_LONGSHANK">"RULES-CARE_FRIAR"</Link>
+<Link name="GROG-CARE_LONGSHANK">"GROG-CARE_LONGSHANK_VETERAN"</Link>
+<Link name="GROG-CARE_LONGSHANK">"RULES-CARE_OUTLAW_CHIEF"</Link>
+<Link name="GROG-CARE_LONGSHANK">"RULES-CARE_SCOUT"</Link>
+<Link name="GROG-CARE_LONGSHANK">"RULES-CARE_TARGETEER"</Link>
+<Link name="RULES-CARE_HUNTER">"GROG-CARE_LONGSHANK"</Link>
+<Link name="GROG-CARE_LONGSHANK_VETERAN">"RULES-CARE_FRIAR"</Link>
+<Link name="GROG-CARE_LONGSHANK_VETERAN">"RULES-CARE_OUTLAW_CHIEF"</Link>
+<Link name="GROG-CARE_LONGSHANK_VETERAN">"RULES-CARE_SCOUT"</Link>
+<Link name="GROG-CARE_LONGSHANK_VETERAN">"RULES-CARE_TARGETEER"</Link>
+<Link name="GROG-CARE_NURSEMAID">"RULES-CARE_BURGHER"</Link>
+<Link name="GROG-CARE_NURSEMAID">"RULES-CARE_CAMP_FOLLOWER"</Link>
+<Link name="GROG-CARE_NURSEMAID">"RULES-CARE_SPY"</Link>
+<Link name="GROG-CARE_NURSEMAID">"RULES-CARE_VALET"</Link>
+<Link name="RULES-CARE_PEASANT">"GROG-CARE_NURSEMAID"</Link>
+<Link name="RULES-CARE_SERVANT">"GROG-CARE_NURSEMAID"</Link>
+<Link name="GROG-CARE_PLAGUE_DOCTOR">"RULES-CARE_GUILD_MASTER"</Link>
+<Link name="GROG-CARE_PLAGUE_DOCTOR">"RULES-CARE_INITIATE"</Link>
+<Link name="GROG-CARE_PLAGUE_DOCTOR">"RULES-CARE_INTERROGATOR"</Link>
+<Link name="GROG-CARE_PLAGUE_DOCTOR">"RULES-CARE_PHYSICIAN"</Link>
+<Link name="GROG-CARE_PLAGUE_DOCTOR">"RULES-CARE_SCHOLAR"</Link>
+<Link name="RULES-CARE_BARBER_SURGEON">"GROG-CARE_PLAGUE_DOCTOR"</Link>
+<Link name="GROG-CARE_CORPSE_HANDLER">"GROG-CARE_PLAGUE_DOCTOR"</Link>
+<Link name="RULES-CARE_PHYSICIAN">"GROG-CARE_PLAGUE_DOCTOR"</Link>
+<Link name="RULES-CARE_SCHOLAR">"GROG-CARE_PLAGUE_DOCTOR"</Link>
+<Link name="RULES-CARE_STUDENT">"GROG-CARE_PLAGUE_DOCTOR"</Link>
+<Link name="GROG-CARE_PURSUER">"RULES-CARE_BOUNTY_HUNTER"</Link>
+<Link name="GROG-CARE_PURSUER">"RULES-CARE_PIT_FIGHTER"</Link>
+<Link name="GROG-CARE_PURSUER">"RULES-CARE_PROTAGONIST"</Link>
+<Link name="RULES-CARE_PIT_FIGHTER">"GROG-CARE_PURSUER"</Link>
+<Link name="RULES-CARE_PROTAGONIST">"GROG-CARE_PURSUER"</Link>
+<Link name="GROG-CARE_SEXTON">"RULES-CARE_GRAVE_ROBBER"</Link>
+<Link name="GROG-CARE_SEXTON">"RULES-CARE_INITIATE"</Link>
+<Link name="GROG-CARE_SEXTON">"RULES-CARE_SCRIBE"</Link>
+<Link name="GROG-CARE_SEXTON">"RULES-CARE_TRADESMAN"</Link>
+<Link name="RULES-CARE_BURGHER">"GROG-CARE_SEXTON"</Link>
+<Link name="RULES-CARE_INITIATE">"GROG-CARE_SEXTON"</Link>
+<Link name="RULES-CARE_PEASANT">"GROG-CARE_SEXTON"</Link>
+<Link name="RULES-CARE_SERVANT">"GROG-CARE_SEXTON"</Link>
+<Link name="GROG-CARE_SNOTBALLER">"RULES-CARE_BODYGUARD"</Link>
+<Link name="GROG-CARE_SNOTBALLER">"RULES-CARE_MILITIAMAN"</Link>
+<Link name="GROG-CARE_SNOTBALLER">"RULES-CARE_THUG"</Link>
+<Link name="GROG-CARE_SNOTBALLER">"RULES-CARE_WATCHMAN"</Link>
+<Link name="UTOC-CARE_LABOURER">"GROG-CARE_SNOTBALLER"</Link>
+<Link name="RULES-CARE_MILITIAMAN">"GROG-CARE_SNOTBALLER"</Link>
+<Link name="RULES-CARE_THUG">"GROG-CARE_SNOTBALLER"</Link>
+<Link name="RULES-CARE_WATCHMAN">"GROG-CARE_SNOTBALLER"</Link>
+<Link name="GROG-CARE_STREET_PREACHER">"RULES-CARE_CHARLATAN"</Link>
+<Link name="GROG-CARE_STREET_PREACHER">"RULES-CARE_DEMAGOGUE"</Link>
+<Link name="GROG-CARE_STREET_PREACHER">"RULES-CARE_FLAGELLANT"</Link>
+<Link name="GROG-CARE_STREET_PREACHER">"RULES-CARE_INITIATE"</Link>
+<Link name="GROG-CARE_STREET_PREACHER">"RULES-CARE_OUTLAW"</Link>
+<Link name="GROG-CARE_STREET_PREACHER">"RULES-CARE_ZEALOT"</Link>
+<Link name="RULES-CARE_AGITATOR">"GROG-CARE_STREET_PREACHER"</Link>
+<Link name="RULES-CARE_INITIATE">"GROG-CARE_STREET_PREACHER"</Link>
+<Link name="RULES-CARE_PEASANT">"GROG-CARE_STREET_PREACHER"</Link>
+<Link name="RULES-CARE_ZEALOT">"GROG-CARE_STREET_PREACHER"</Link>
+<Link name="GROG-CARE_TEAMSTER">"RULES-CARE_COACHMAN"</Link>
+<Link name="GROG-CARE_TEAMSTER">"CCOMP-CARE_DROVER"</Link>
+<Link name="GROG-CARE_TEAMSTER">"RULES-CARE_OUTRIDER"</Link>
+<Link name="GROG-CARE_TEAMSTER">"RULES-CARE_ROADWARDEN"</Link>
+<Link name="GROG-CARE_TEAMSTER">"RULES-CARE_SMUGGLER"</Link>
+<Link name="GROG-CARE_TEAMSTER">"RULES-CARE_VAGABOND"</Link>
+<Link name="RULES-CARE_COACHMAN">"GROG-CARE_TEAMSTER"</Link>
+<Link name="CCOMP-CARE_DROVER">"GROG-CARE_TEAMSTER"</Link>
+<Link name="RULES-CARE_OUTRIDER">"GROG-CARE_TEAMSTER"</Link>
+<Link name="GROG-CARE_TRAVELLING_JUDGE">"RULES-CARE_DEMAGOGUE"</Link>
+<Link name="GROG-CARE_TRAVELLING_JUDGE">"RULES-CARE_POLITICIAN"</Link>
+<Link name="UTOC-CARE_LAWYER">"GROG-CARE_TRAVELLING_JUDGE"</Link>
+<Link name="GROG-CARE_VILLAGE_HEADMAN">"RULES-CARE_ARTISAN"</Link>
+<Link name="GROG-CARE_VILLAGE_HEADMAN">"RULES-CARE_FRIAR"</Link>
+<Link name="GROG-CARE_VILLAGE_HEADMAN">"RULES-CARE_POLITICIAN"</Link>
+<Link name="RULES-CARE_CHARCOAL_BURNER">"GROG-CARE_VILLAGE_HEADMAN"</Link>
+<Link name="RULES-CARE_FIELDWARDEN">"GROG-CARE_VILLAGE_HEADMAN"</Link>
+<Link name="RULES-CARE_FISHERMAN">"GROG-CARE_VILLAGE_HEADMAN"</Link>
+<Link name="RULES-CARE_HEDGE_WIZARD">"GROG-CARE_VILLAGE_HEADMAN"</Link>
+<Link name="RULES-CARE_HUNTER">"GROG-CARE_VILLAGE_HEADMAN"</Link>
+<Link name="RULES-CARE_PEASANT">"GROG-CARE_VILLAGE_HEADMAN"</Link>
+<Link name="RULES-CARE_RAT_CATCHER">"GROG-CARE_VILLAGE_HEADMAN"</Link>
+<Link name="RULES-CARE_TRADESMAN">"GROG-CARE_VILLAGE_HEADMAN"</Link>
+<Link name="RULES-CARE_WOODSMAN">"GROG-CARE_VILLAGE_HEADMAN"</Link>
+<Link name="GROG-CARE_WATERCOACHMAN">"RULES-CARE_BOATMAN"</Link>
+<Link name="GROG-CARE_WATERCOACHMAN">"RULES-CARE_FERRYMAN"</Link>
+<Link name="GROG-CARE_WATERCOACHMAN">"RULES-CARE_FISHERMAN"</Link>
+<Link name="GROG-CARE_WATERCOACHMAN">"RULES-CARE_SEAMAN"</Link>
+<Link name="RULES-CARE_BOATMAN">"GROG-CARE_WATERCOACHMAN"</Link>
+<Link name="RULES-CARE_FERRYMAN">"GROG-CARE_WATERCOACHMAN"</Link>
+<Link name="RULES-CARE_FISHERMAN">"GROG-CARE_WATERCOACHMAN"</Link>
+<Link name="RULES-CARE_SEAMAN">"GROG-CARE_WATERCOACHMAN"</Link>
+<Link name="RULES-CARE_CHARCOAL_BURNER">"GROG-CARE_KISLEVITE_RANGER"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMP_PERFORMER_ACTOR_COMMON_KNOWLEDGE_HOME_NATION">
+<Description language="ENGLISH">"Performer (Actor) Common Knowledge (Home Nation)"</Description>
+<Generique>"RULES-COMP_PERFORMER_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_TRADE_THATCHER">
+<Description language="ENGLISH">"Trade (Thatcher)"</Description>
+<Generique>"RULES-COMP_TRADE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SECRET_LANGUAGE_GUILD_TONGUE_SPEAK_LANGUAGE_HALFLING">
+<Description language="ENGLISH">"Secret Language (Guild Tongue) Speak Language (Halfling)"</Description>
+<Generique>"RULES-COMP_SECRET_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SECRET_LANGUAGE_REIKSPIEL">
+<Description language="ENGLISH">"Secret Language (Reikspiel)"</Description>
+<Generique>"RULES-COMP_SECRET_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_ARCANE_LANGUAGE_RUNIC">
+<Description language="ENGLISH">"Speak Arcane Language (Runic)"</Description>
+<Generique>"RULES-COMP_SPEAK_ARCANE_LANGUAGE_*"</Generique>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+</DATA_BOOK>

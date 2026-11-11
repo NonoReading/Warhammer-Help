@@ -49,6 +49,8 @@ Var
   NbArmeUnique:  Integer;
 
 function ChercheArme(CodeArme :String): StructureArme;
+function EstCodeCompetenceCombat(const Code: String): Boolean;
+function ArmeDeLaFamille(const CodeJoker: String; PArme: StructureArme): Boolean;
 function TexteArme(PArme: StructureArme):String;
 function TexteLigneArme(PArme: StructureArme):String;
 Function CheminArmeImage(CodeCompetence: String; Indice: String): String;
@@ -76,6 +78,38 @@ Begin
           break;
         end;
 end;
+
+// Une ligne d'equipement qui porte un code de competence de combat (RULES-COMP_MELEE__BASIC...) est
+// un choix d'arme : toutes les armes de cette competence.
+function EstCodeCompetenceCombat(const Code: String): Boolean;
+  begin
+    Result := (Pos('COMP_MELEE__', Code) > 0) or (Pos('COMP_RANGED__', Code) > 0);
+  end;
+
+// Une arme fait-elle partie du choix d'une ligne d'equipement (code de competence de combat, ou joker) ?
+// Les armes ont des codes a nom (migration du 24/10/2026) : un code de competence les retrouve ;
+// les jokers RULES-COMB_* / RULES-PROJ_* gardent le test par prefixe de code. Un joker n'est jamais membre.
+function ArmeDeLaFamille(const CodeJoker: String; PArme: StructureArme): Boolean;
+  var
+    Debut: String;
+  begin
+    Result := False;
+    if Pos(ValeurGenerique, PArme.CodeArme) > 0 then Exit;
+    // code de competence de combat (RULES-COMP_MELEE__BASIC, RULES-COMP_RANGED__*) : les armes de cette
+    // competence ; "__*" = toute specialisation. Une munition n'est jamais un choix d'arme.
+    if EstCodeCompetenceCombat(CodeJoker) then
+      begin
+        if Pos(EquipementMU, PArme.CodeArme) > 0 then Exit;
+        if Copy(CodeJoker, Length(CodeJoker) - 2, 3) = '__*' then
+          Result := Pos(Copy(CodeJoker, 1, Length(CodeJoker) - 1), PArme.CodeCompetence) > 0
+        else
+          Result := Pos(CodeJoker, PArme.CodeCompetence) > 0;
+        Exit;
+      end;
+    // joker restant (RULES-COMB_*, RULES-PROJ_*) : toute arme dont le code commence pareil
+    Debut := copy(CodeJoker, 1, length(CodeJoker) - length(ValeurGenerique) + 1);
+    Result := copy(PArme.CodeArme, 1, Length(Debut)) = Debut;
+  end;
 
 function TexteArme(PArme: StructureArme):String;
   Var
@@ -113,11 +147,11 @@ function TexteArme(PArme: StructureArme):String;
     else
       begin
         Texte := GetTexteLibelle('RULES-LAB_010') + ' : ';
-        Debut := copy(PArme.CodeArme,1,Length(PArme.CodeArme) - Length(ValeurGenerique) + 1);
+        Debut := PArme.CodeArme;
         For Ind := 0 to NbArme-1 do
           Begin
             PArme := ListArme[Ind];
-            if (copy(PArme.CodeArme,1,Length(Debut)) = Debut) and (Pos(ValeurGenerique,PArme.CodeArme) = 0) then
+            if ArmeDeLaFamille(Debut, PArme) then
               begin
                 Texte  := Texte + SeparateurRetourLigne + ' - ' + PArme.Libelle;
               end;
@@ -154,7 +188,7 @@ function TexteLigneArme(PArme: StructureArme):String;
 
 Function CheminArmeImage(CodeCompetence: String; Indice: String): String;
   begin
-    Result := CheminImage(GetCurrentDir+StringReplace(ConstCheminImageArme, ConstLivre, ConstRulesBook, [rfReplaceAll])+ExtractStringAfter(ExtractStringBefore(CodeCompetence,'_'),SeparateurLivre)+Indice+'.JPG');
+    Result := CheminImage(GetCurrentDir+StringReplace(ConstCheminImageArme, ConstLivre, ConstRulesBook, [rfReplaceAll])+ExtractStringAfter(FamilleCompetence(CodeCompetence),SeparateurLivre)+Indice+'.JPG');
   end;
 
 

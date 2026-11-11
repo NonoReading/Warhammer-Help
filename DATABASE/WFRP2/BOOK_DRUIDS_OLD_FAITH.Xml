@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"DRUI"</CODE_BOOK>
+<BOOK>"BOOK DRUIDS OLD FAITH"</BOOK>
+<BOOKNAME>"LOST IN TRANSLATION - IN SEARCH OF THE OLD FAITH - WFRP2"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"The Lost in Translation (LiT) series is intended to be a completely unofficial addition to Warhammer Fantasy RolePlay owned by Games Workshop (GW). All relevant trademarks and copyrights are used without permission and in no way meant to challenge ownership to them by GW. LiT fully recognises said copyright"</DISCLAIMER>
+<DATA_TALENT>
+<Talent id="DRUI-T_LEY_TRAVELLER">
+<Description language="ENGLISH">"Ley Traveller"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"6"</Page>
+</Talent>
+<Talent id="DRUI-T_MOTHER_S_ANGER">
+<Description language="ENGLISH">"Mother's Anger"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"10"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="RULES-T_DIVINE_LORE__OLD_FAITH">
+<Description language="ENGLISH">"Divine Lore (Old Faith)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"10"</Page>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+<DATA_CAREER>
+<Career id="DRUI-CARE_DRUIDIC_INITIATE">
+<Description language="ENGLISH">"Druidic Initiate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, T +5%, Ag +10%, Int +10%, WP +10%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Herbalism), Animal Care, Common Knowledge (Old Faith), Heal, Speak Language (Reikspiel)"</Skills>
+<Talents>"Hardy, Orientation, Rover"</Talents>
+<Trappings>"Religious symbols, homespun robes, hand weapon, sling bag and a bundle of healing herbs"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_HERBALISM">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_OLD_FAITH">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_REIKSPIEL">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_HARDY">"1"</Talent>
+<Talent name="RULES-T_ORIENTATION">"1"</Talent>
+<Talent name="RULES-T_ROVER">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"DRUI 4"</Source>
+</Career>
+<Career id="DRUI-CARE_DRUID">
+<Description language="ENGLISH">"Druid"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, S +5%, T +10%, Ag +15%, Int +15%, WP +15%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +4, Mag +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_Mag">"1"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Theology), Animal Training, Channelling, Common Knowledge (The Empire), Concealment, Magical Sense, Navigation, Perception, Prepare Poison, Secret Signs (Old Faith), Set Trap, Silent Move, Speak Arcane Language (Old Faith)"</Skills>
+<Talents>"Aethyric Attunement or Dark Magic, Divine Lore (Old Faith), Hardy or Keen Senses, Meditation, Rover, Very Resilient"</Talents>
+<Trappings>"Sickle and bowl, pouch with herbs and spell components, hand weapon, religious symbols"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_ANIMAL_TRAINING">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_THE_EMPIRE">"1"</Skill>
+<Skill name="RULES-COMP_CONCEALMENT">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISON">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_SIGNS_OLD_FAITH">"1"</Skill>
+<Skill name="RULES-COMP_SET_TRAP">"1"</Skill>
+<Skill name="RULES-COMP_SILENT_MOVE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_OLD_FAITH">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_DARK_MAGIC">"1"</Talent>
+<Talent name="RULES-T_DIVINE_LORE__OLD_FAITH">"1"</Talent>
+<Talent name="RULES-T_HARDY/RULES-T_KEEN_SENSES">"1"</Talent>
+<Talent name="RULES-T_MEDITATION">"1"</Talent>
+<Talent name="RULES-T_ROVER">"1"</Talent>
+<Talent name="RULES-T_VERY_RESILIENT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"DRUI 5"</Source>
+</Career>
+<Career id="DRUI-CARE_ELDER_DRUID">
+<Description language="ENGLISH">"Elder Druid"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, BS +20%, S +15%, T +20%, Ag +25%, Int +20%, WP +30%, Fel +20%"</MainProfile>
+<SecondaryProfile>"A +1, W +7, Mag +3"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"15"</Advance>
+<Advance name="RULES-ATTR_T">"20"</Advance>
+<Advance name="RULES-ATTR_Ag">"25"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"30"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"7"</Advance>
+<Advance name="RULES-ATTR_Mag">"3"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Astronomy), Academic Knowledge (any one other), Academic Knowledge (Theology), Channelling, Charm, Common Knowledge (any two), Intimidate, Magical Sense, Navigation, Outdoor Survival, Perception, Read/Write, Speak Language (any one)"</Skills>
+<Talents>"Aethyric Attunement or Dark Magic, Divine Lore (Old Faith), Hardy or Keen Senses, Ley Traveller, Luck or Seasoned Traveller, Public Speaking, Rover, Sixth Sense"</Talents>
+<Trappings>"Religious relic"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ASTRONOMY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ANY_ONE_OTHER">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_DARK_MAGIC">"1"</Talent>
+<Talent name="RULES-T_DIVINE_LORE__OLD_FAITH">"1"</Talent>
+<Talent name="RULES-T_HARDY/RULES-T_KEEN_SENSES">"1"</Talent>
+<Talent name="DRUI-T_LEY_TRAVELLER">"1"</Talent>
+<Talent name="RULES-T_LUCK/RULES-T_SEASONED_TRAVELLER">"1"</Talent>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+<Talent name="RULES-T_ROVER">"1"</Talent>
+<Talent name="RULES-T_SIXTH_SENSE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"DRUI 6"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="DRUI-CARE_DRUIDIC_INITIATE">"RULES-CARE_AGITATOR"</Link>
+<Link name="DRUI-CARE_DRUIDIC_INITIATE">"RULES-CARE_CHARLATAN"</Link>
+<Link name="DRUI-CARE_DRUIDIC_INITIATE">"DRUI-CARE_DRUID"</Link>
+<Link name="DRUI-CARE_DRUIDIC_INITIATE">"RULES-CARE_INNKEEPER"</Link>
+<Link name="DRUI-CARE_DRUIDIC_INITIATE">"RULES-CARE_PHYSICIAN"</Link>
+<Link name="DRUI-CARE_DRUIDIC_INITIATE">"RULES-CARE_SCOUT"</Link>
+<Link name="RULES-CARE_CHARCOAL_BURNER">"DRUI-CARE_DRUIDIC_INITIATE"</Link>
+<Link name="RULES-CARE_FIELDWARDEN">"DRUI-CARE_DRUIDIC_INITIATE"</Link>
+<Link name="RULES-CARE_FISHERMAN">"DRUI-CARE_DRUIDIC_INITIATE"</Link>
+<Link name="RULES-CARE_HUNTER">"DRUI-CARE_DRUIDIC_INITIATE"</Link>
+<Link name="RULES-CARE_HEDGE_WIZARD">"DRUI-CARE_DRUIDIC_INITIATE"</Link>
+<Link name="RULES-CARE_PEASANT">"DRUI-CARE_DRUIDIC_INITIATE"</Link>
+<Link name="RULES-CARE_WOODSMAN">"DRUI-CARE_DRUIDIC_INITIATE"</Link>
+<Link name="DRUI-CARE_DRUID">"RULES-CARE_CHARLATAN"</Link>
+<Link name="DRUI-CARE_DRUID">"RULES-CARE_DEMAGOGUE"</Link>
+<Link name="DRUI-CARE_DRUID">"DRUI-CARE_ELDER_DRUID"</Link>
+<Link name="DRUI-CARE_DRUID">"RULES-CARE_OUTLAW_CHIEF"</Link>
+<Link name="DRUI-CARE_DRUID">"RULES-CARE_SCOUT"</Link>
+<Link name="DRUI-CARE_ELDER_DRUID">"RULES-CARE_DEMAGOGUE"</Link>
+<Link name="DRUI-CARE_ELDER_DRUID">"RULES-CARE_EXPLORER"</Link>
+<Link name="DRUI-CARE_ELDER_DRUID">"RULES-CARE_NAVIGATOR"</Link>
+<Link name="DRUI-CARE_ELDER_DRUID">"RULES-CARE_VAMPIRE_HUNTER"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_SPELL_V2>
+<SpellV2 id="DRUI-SPEL_CURE_POISON">
+<Description language="ENGLISH">"Cure Poison"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A sprig of mistletoe (+1)"</Ingredient>
+<Page>"11"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_DELOUSE">
+<Description language="ENGLISH">"Delouse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pinch of pepper (+1)"</Ingredient>
+<Page>"11"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_HEAL_INJURY">
+<Description language="ENGLISH">"Heal Injury"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A spider's web (+1)"</Ingredient>
+<Page>"11"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_IDENTIFY_NATURE">
+<Description language="ENGLISH">"Identify Nature"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A sprig of any natural herb and a hair from any natural animal (+1)"</Ingredient>
+<Page>"11"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_ANIMAL_MASTERY">
+<Description language="ENGLISH">"Animal Mastery"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A tooth from any animal (+1)"</Ingredient>
+<Page>"11"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_MIST_CLOUD">
+<Description language="ENGLISH">"Mist Cloud"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A drop of water (+1)"</Ingredient>
+<Page>"11"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_HIDING">
+<Description language="ENGLISH">"Hiding"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A piece of cloth (+1)"</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_SUMMON_SPIRIT_FAMILIAR">
+<Description language="ENGLISH">"Summon Spirit Familiar"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_CAUSE_RAIN">
+<Description language="ENGLISH">"Cause Rain"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A drop of water (+1)"</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_CURE_DISEASE">
+<Description language="ENGLISH">"Cure Disease"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A sprig of mistletoe (+1)"</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_GIANT_ANIMAL_MASTERY">
+<Description language="ENGLISH">"Giant Animal Mastery"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A tooth or some other body part of a giant animal (+2)"</Ingredient>
+<Page>"12"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_HEAL_VEGETATION">
+<Description language="ENGLISH">"Heal Vegetation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small bag of auroch, deer or horse dung (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_LEAVE_NO_TRACE">
+<Description language="ENGLISH">"Leave No Trace"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A feather or tuft of fur (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_PLAGUE_OF_LICE">
+<Description language="ENGLISH">"Plague of Lice"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A drop of blood (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_STAMPEDE">
+<Description language="ENGLISH">"Stampede"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The jawbone of a snake or the skull of a wolf (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_AREA_OF_PURITY">
+<Description language="ENGLISH">"Area of Purity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A bronze dagger (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_DECOMPOSE">
+<Description language="ENGLISH">"Decompose"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A dried leaf (+1)"</Ingredient>
+<Page>"13-14"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_TANGLETHORN">
+<Description language="ENGLISH">"Tanglethorn"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A briar or bramble (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_TRAVEL_ALONG_THE_LEY_LINE">
+<Description language="ENGLISH">"Travel along the Ley Line"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A feather of a swift or falcon (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_STEAM_CLOUD">
+<Description language="ENGLISH">"Steam Cloud"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A drop of water and a burning torch within 10 yards (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_SHAPECHANGE">
+<Description language="ENGLISH">"Shapechange"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Two Full Actions"</CastingTime>
+<Ingredient>"The skin of the animal to change into (+2)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_SUMMON_SWARM">
+<Description language="ENGLISH">"Summon Swarm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A preserved part of the type of creature summoned (+1)"</Ingredient>
+<Page>"14-15"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_TAP_EARTHPOWER">
+<Description language="ENGLISH">"Tap Earthpower"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"One minute"</CastingTime>
+<Ingredient>"A stone bowl with three drops of Druid's blood (+2)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_ANIMATE_TREE">
+<Description language="ENGLISH">"Animate Tree"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Two Full Actions"</CastingTime>
+<Ingredient>"A seed or berry from the type of tree to be animated (+1)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_CREATE_VEGETATION">
+<Description language="ENGLISH">"Create Vegetation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Two Full Actions"</CastingTime>
+<Ingredient>"A small bag of herbivore dung and a handful of seeds (+1)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_ENTANGLEMENT">
+<Description language="ENGLISH">"Entanglement"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pinch of dung and sprig of Bloodsedge (+2)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_HEDGE_OF_THORNS">
+<Description language="ENGLISH">"Hedge of Thorns"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A stem from wild rose or berry bush (+1)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_RAINBOW_BRIDGE">
+<Description language="ENGLISH">"Rainbow Bridge"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A wooden miniature bridge, painted with the colours of a rainbow (+2)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_CREATE_BOG">
+<Description language="ENGLISH">"Create Bog"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A ball of mud (+1)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_DRAWING_DOWN_THE_MOON">
+<Description language="ENGLISH">"Drawing down the Moon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Two moonstones (+2)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_SUNBEAM">
+<Description language="ENGLISH">"Sunbeam"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of the Old Faith"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A 1-inch diameter disc of burnished copper (+2)"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="DRUI-SPEL_CREATE_SACRED_GROVE">
+<Description language="ENGLISH">"Create Sacred Grove"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"One hour each night starting at midnight until the day of the new moon (of Mannslieb)"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"17"</Page>
+<RitualType>"RULES-V2RITUAL_DIVINE"</RitualType>
+<ArcaneLanguage>"Old Faith"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>"None"</Consequences>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SPELL_TALENT>
+<Sort id="DRUI-SPEL_CURE_POISON">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_DELOUSE">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_HEAL_INJURY">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_IDENTIFY_NATURE">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_ANIMAL_MASTERY">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_MIST_CLOUD">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_HIDING">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_SUMMON_SPIRIT_FAMILIAR">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_CAUSE_RAIN">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_CURE_DISEASE">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_GIANT_ANIMAL_MASTERY">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_HEAL_VEGETATION">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_LEAVE_NO_TRACE">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_PLAGUE_OF_LICE">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_STAMPEDE">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_AREA_OF_PURITY">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_DECOMPOSE">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_TANGLETHORN">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_TRAVEL_ALONG_THE_LEY_LINE">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_STEAM_CLOUD">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_SHAPECHANGE">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_SUMMON_SWARM">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_TAP_EARTHPOWER">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_ANIMATE_TREE">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_CREATE_VEGETATION">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_ENTANGLEMENT">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_HEDGE_OF_THORNS">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_RAINBOW_BRIDGE">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_CREATE_BOG">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_DRAWING_DOWN_THE_MOON">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+<Sort id="DRUI-SPEL_SUNBEAM">
+<Talent>"RULES-T_DIVINE_LORE__OLD_FAITH"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMP_ACADEMIC_KNOWLEDGE_HERBALISM">
+<Description language="ENGLISH">"Academic Knowledge (Herbalism)"</Description>
+<Generique>"RULES-COMP_ACADEMIC_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_OLD_FAITH">
+<Description language="ENGLISH">"Common Knowledge (Old Faith)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SECRET_SIGNS_OLD_FAITH">
+<Description language="ENGLISH">"Secret Signs (Old Faith)"</Description>
+<Generique>"RULES-COMP_SECRET_SIGNS_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_ARCANE_LANGUAGE_OLD_FAITH">
+<Description language="ENGLISH">"Speak Arcane Language (Old Faith)"</Description>
+<Generique>"RULES-COMP_SPEAK_ARCANE_LANGUAGE_*"</Generique>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+</DATA_BOOK>

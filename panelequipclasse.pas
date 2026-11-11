@@ -18,7 +18,7 @@ unit PanelEquipClasse;
 interface
 
 uses
-  BCLabelContour, Classes, SysUtils, Controls, Forms, StdCtrls, ExtCtrls, Grids, Dialogs, Graphics, DOM, BCButton,
+  BCLabelContour, Classes, SysUtils, Controls, Forms, StdCtrls, ExtCtrls, Grids, Dialogs, MessageTest, Graphics, DOM, BCButton,
   ChargeConstantes, ChargeTexte, GlobalFonts, PanelTirage;
 
 type
@@ -110,7 +110,7 @@ begin
   CouleurSelectionGrille(FGrille);
   FGrille.Align := alClient;
   FGrille.BorderSpacing.Top := 6;
-  FGrille.ColCount := 8;  // 4 = code ou nom libre (cachee), 5 = Action, 6 = cible, 7 = code de la cible (cachee)
+  FGrille.ColCount := 9;  // 4 = code ou nom libre (cachee), 5 = Action, 6 = cible, 7 = code de la cible (cachee), 8 = groupe d'objets lies par '+' (cachee)
   FGrille.RowCount := 1;
   FGrille.FixedRows := 1;
   FGrille.FixedCols := 0;
@@ -180,6 +180,7 @@ begin
   FGrille.ColWidths[5] := 120;
   FGrille.ColWidths[6] := 380;
   FGrille.ColWidths[7] := 0;
+  FGrille.ColWidths[8] := 0;
   FGrille.Cells[5, 0] := GetTexteLibelle('RULES-LAB_681', 'Action');
   FGrille.Cells[6, 0] := GetTexteLibelle('RULES-LAB_685', 'Target item');
   FGrille.Cells[0, 0] := GetTexteLibelle('RULES-LAB_385', 'Class');
@@ -274,7 +275,7 @@ end;
 procedure TPanelEquipClasse.Charger(Chapitre: TDOMElement);
 var
   Cl, Sous, It: TDOMNode;
-  Classe, Q: String;
+  Classe, Q, Marque: String;
   R, J: Integer;
   Parts: TStringList;
 begin
@@ -321,6 +322,9 @@ begin
                   FGrille.Cells[4, R] := Trim(Parts[J]);
                   FGrille.Cells[3, R] := Q;
                   FGrille.Cells[5, R] := FActions[0];
+                  // lignes issues d'un meme Item « A+B » : meme marqueur, reassemblees a l'ecriture
+                  if J = 0 then Marque := IntToStr(R);
+                  if Parts.Count > 1 then FGrille.Cells[8, R] := Marque;
                   MajLibelleLigne(R);
                 end;
               end;
@@ -367,9 +371,10 @@ var
   Classes: TStringList;
   ElClasse, ElSous, ElItem: TDOMElement;
   I, R: Integer;
-  Code, Q: String;
+  Code, Q, MarqueAvant: String;
 begin
   FGrille.EditorMode := False;
+  MarqueAvant := '';
   Doc := Chapitre.OwnerDocument;
   while Chapitre.FirstChild <> nil do
     Chapitre.RemoveChild(Chapitre.FirstChild);
@@ -395,6 +400,13 @@ begin
             ElClasse.AppendChild(Doc.CreateTextNode(#10));
             ElClasse.AppendChild(ElSous);
           end;
+          // ligne du meme groupe que la precedente : objet lie par '+' a celui deja ecrit
+          if (ElItem <> nil) and (Trim(FGrille.Cells[8, R]) <> '') and (Trim(FGrille.Cells[8, R]) = MarqueAvant) then
+          begin
+            ElItem.SetAttribute('name', ElItem.GetAttribute('name') + SeparateurEnsemble + Trim(FGrille.Cells[4, R]));
+            Continue;
+          end;
+          MarqueAvant := Trim(FGrille.Cells[8, R]);
           Q := Trim(FGrille.Cells[3, R]);
           ElItem := Doc.CreateElement('Item');
           ElItem.SetAttribute('name', Trim(FGrille.Cells[4, R]));

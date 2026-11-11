@@ -1,0 +1,2104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"KOTG"</CODE_BOOK>
+<BOOK>"BOOK KNIGHTS OF THE GRAIL"</BOOK>
+<BOOKNAME>"KNIGHTS OF THE GRAIL"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"1"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_TALENT>
+<Talent id="KOTG-T_BIRTH_SWORD">
+<Description language="ENGLISH">"Birth Sword"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"66"</Page>
+</Talent>
+<Talent id="KOTG-T_VIRTUE_OF_CHIVALRY">
+<Description language="ENGLISH">"Virtue of Chivalry"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"107"</Page>
+</Talent>
+<Talent id="KOTG-T_VIRTUE_OF_AUDACITY">
+<Description language="ENGLISH">"Virtue of Audacity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"107"</Page>
+</Talent>
+<Talent id="KOTG-T_VIRTUE_OF_CONFIDENCE">
+<Description language="ENGLISH">"Virtue of Confidence"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"107"</Page>
+</Talent>
+<Talent id="KOTG-T_VIRTUE_OF_DISCIPLINE">
+<Description language="ENGLISH">"Virtue of Discipline"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"107"</Page>
+</Talent>
+<Talent id="KOTG-T_VIRTUE_OF_DUTY">
+<Description language="ENGLISH">"Virtue of Duty"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"107"</Page>
+</Talent>
+<Talent id="KOTG-T_VIRTUE_OF_EMPATHY">
+<Description language="ENGLISH">"Virtue of Empathy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"107"</Page>
+</Talent>
+<Talent id="KOTG-T_VIRTUE_OF_HEROISM">
+<Description language="ENGLISH">"Virtue of Heroism"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"107"</Page>
+</Talent>
+<Talent id="KOTG-T_VIRTUE_OF_THE_IDEAL">
+<Description language="ENGLISH">"Virtue of the Ideal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"107"</Page>
+</Talent>
+<Talent id="KOTG-T_VIRTUE_OF_THE_IMPETUOUS_KNIGHT">
+<Description language="ENGLISH">"Virtue of the Impetuous Knight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"107"</Page>
+</Talent>
+<Talent id="KOTG-T_VIRTUE_OF_THE_JOUST">
+<Description language="ENGLISH">"Virtue of the Joust"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"108"</Page>
+</Talent>
+<Talent id="KOTG-T_VIRTUE_OF_KNIGHTLY_TEMPER">
+<Description language="ENGLISH">"Virtue of Knightly Temper"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"108"</Page>
+</Talent>
+<Talent id="KOTG-T_VIRTUE_OF_NOBLE_DISDAIN">
+<Description language="ENGLISH">"Virtue of Noble Disdain"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"108"</Page>
+</Talent>
+<Talent id="KOTG-T_VIRTUE_OF_THE_PENITENT">
+<Description language="ENGLISH">"Virtue of the Penitent"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"108"</Page>
+</Talent>
+<Talent id="KOTG-T_VIRTUE_OF_PURITY">
+<Description language="ENGLISH">"Virtue of Purity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"108"</Page>
+</Talent>
+<Talent id="KOTG-T_VIRTUE_OF_STOICISM">
+<Description language="ENGLISH">"Virtue of Stoicism"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"108"</Page>
+</Talent>
+<Talent id="KOTG-T_VIRTUE_OF_THE_QUEST">
+<Description language="ENGLISH">"Virtue of the Quest"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"108"</Page>
+</Talent>
+<Talent id="KOTG-T_GRAIL_VIRTUE_OF_AUDACITY">
+<Description language="ENGLISH">"Grail Virtue of Audacity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"108"</Page>
+</Talent>
+<Talent id="KOTG-T_GRAIL_VIRTUE_OF_CONFIDENCE">
+<Description language="ENGLISH">"Grail Virtue of Confidence"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"109"</Page>
+</Talent>
+<Talent id="KOTG-T_GRAIL_VIRTUE_OF_DISCIPLINE">
+<Description language="ENGLISH">"Grail Virtue of Discipline"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"109"</Page>
+</Talent>
+<Talent id="KOTG-T_GRAIL_VIRTUE_OF_DUTY">
+<Description language="ENGLISH">"Grail Virtue of Duty"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"109"</Page>
+</Talent>
+<Talent id="KOTG-T_GRAIL_VIRTUE_OF_EMPATHY">
+<Description language="ENGLISH">"Grail Virtue of Empathy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"109"</Page>
+</Talent>
+<Talent id="KOTG-T_GRAIL_VIRTUE_OF_HEROISM">
+<Description language="ENGLISH">"Grail Virtue of Heroism"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"109"</Page>
+</Talent>
+<Talent id="KOTG-T_GRAIL_VIRTUE_OF_THE_IDEAL">
+<Description language="ENGLISH">"Grail Virtue of the Ideal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"109"</Page>
+</Talent>
+<Talent id="KOTG-T_GRAIL_VIRTUE_OF_THE_IMPETUOUS_KNIGHT">
+<Description language="ENGLISH">"Grail Virtue of the Impetuous Knight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"109"</Page>
+</Talent>
+<Talent id="KOTG-T_GRAIL_VIRTUE_OF_THE_JOUST">
+<Description language="ENGLISH">"Grail Virtue of the Joust"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"109"</Page>
+</Talent>
+<Talent id="KOTG-T_GRAIL_VIRTUE_OF_KNIGHTLY_TEMPER">
+<Description language="ENGLISH">"Grail Virtue of Knightly Temper"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"109"</Page>
+</Talent>
+<Talent id="KOTG-T_GRAIL_VIRTUE_OF_NOBLE_DISDAIN">
+<Description language="ENGLISH">"Grail Virtue of Noble Disdain"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"109"</Page>
+</Talent>
+<Talent id="KOTG-T_GRAIL_VIRTUE_OF_THE_PENITENT">
+<Description language="ENGLISH">"Grail Virtue of the Penitent"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"109"</Page>
+</Talent>
+<Talent id="KOTG-T_GRAIL_VIRTUE_OF_PURITY">
+<Description language="ENGLISH">"Grail Virtue of Purity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"109"</Page>
+</Talent>
+<Talent id="KOTG-T_GRAIL_VIRTUE_OF_STOICISM">
+<Description language="ENGLISH">"Grail Virtue of Stoicism"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"109"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_SPECIE>
+<Specie id="KOTG-RACE_BRETONNIA">
+<Description language="ENGLISH">"Human (Bretonnia)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename"</NamePattern>
+<NamePattern sex="F">"Forename"</NamePattern>
+<Name part="Forename" sex="F" name="Armengild">"1-5"</Name>
+<Name part="Forename" sex="F" name="Bertha">"6-10"</Name>
+<Name part="Forename" sex="F" name="Chrodegard">"11-15"</Name>
+<Name part="Forename" sex="F" name="Dhuoda">"16-20"</Name>
+<Name part="Forename" sex="F" name="Eleanor">"21-25"</Name>
+<Name part="Forename" sex="F" name="Hrotswitha">"26-30"</Name>
+<Name part="Forename" sex="F" name="Heloise">"31-35"</Name>
+<Name part="Forename" sex="F" name="Isabel">"36-40"</Name>
+<Name part="Forename" sex="F" name="Isolde">"41-45"</Name>
+<Name part="Forename" sex="F" name="Lisseut">"46-50"</Name>
+<Name part="Forename" sex="F" name="Marie">"51-55"</Name>
+<Name part="Forename" sex="F" name="Mathilde">"56-60"</Name>
+<Name part="Forename" sex="F" name="Nimugild">"61-65"</Name>
+<Name part="Forename" sex="F" name="Perlesault">"66-70"</Name>
+<Name part="Forename" sex="F" name="Rhadegund">"71-75"</Name>
+<Name part="Forename" sex="F" name="Rumengild">"76-80"</Name>
+<Name part="Forename" sex="F" name="Sirisgard">"81-85"</Name>
+<Name part="Forename" sex="F" name="Sonengund">"86-90"</Name>
+<Name part="Forename" sex="F" name="Vermengard">"91-95"</Name>
+<Name part="Forename" sex="F" name="Walswitha">"96-100"</Name>
+<Name part="Forename" sex="M" name="Aiden">"1-5"</Name>
+<Name part="Forename" sex="M" name="Aigulf">"6-10"</Name>
+<Name part="Forename" sex="M" name="Bertelis">"11-15"</Name>
+<Name part="Forename" sex="M" name="Carloman">"16-20"</Name>
+<Name part="Forename" sex="M" name="Chrodegang">"21-25"</Name>
+<Name part="Forename" sex="M" name="Ferragus">"26-30"</Name>
+<Name part="Forename" sex="M" name="Hrodbert">"31-35"</Name>
+<Name part="Forename" sex="M" name="Jacen">"36-40"</Name>
+<Name part="Forename" sex="M" name="Louis">"41-45"</Name>
+<Name part="Forename" sex="M" name="Merovech">"46-50"</Name>
+<Name part="Forename" sex="M" name="Odo">"51-55"</Name>
+<Name part="Forename" sex="M" name="Orderic">"56-60"</Name>
+<Name part="Forename" sex="M" name="Panteleon">"61-65"</Name>
+<Name part="Forename" sex="M" name="Piers">"66-70"</Name>
+<Name part="Forename" sex="M" name="Redemund">"71-75"</Name>
+<Name part="Forename" sex="M" name="Roland">"76-80"</Name>
+<Name part="Forename" sex="M" name="Suidbert">"81-85"</Name>
+<Name part="Forename" sex="M" name="Theudis">"86-90"</Name>
+<Name part="Forename" sex="M" name="Waldon">"91-95"</Name>
+<Name part="Forename" sex="M" name="Yonec">"96-100"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_BRETONNIA"</Skill>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_BRETON"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T*"</Talent>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"2"</Career>
+<Career name="RULES-CARE_FERRYMAN">"1"</Career>
+<Career name="RULES-CARE_MESSENGER">"2"</Career>
+<Career name="RULES-CARE_SERVANT">"3"</Career>
+<Career name="RULES-CARE_BAILIFF">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"2"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"2"</Career>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"1"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"1"</Career>
+<Career name="RULES-CARE_MINER">"2"</Career>
+<Career name="RULES-CARE_STUDENT">"2"</Career>
+<Career name="RULES-CARE_BOATMAN">"2"</Career>
+<Career name="CCOMP-CARE_GRAIL_PILGRIM">"1"</Career>
+<Career name="RULES-CARE_NOBLE">"2"</Career>
+<Career name="RULES-CARE_THIEF">"2"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_HERRIMAULT">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"2"</Career>
+<Career name="RULES-CARE_THUG">"2"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+<Career name="RULES-CARE_HUNTER">"2"</Career>
+<Career name="RULES-CARE_OUTRIDER">"2"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"2"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"2"</Career>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+<Career name="RULES-CARE_PEASANT">"4"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"2"</Career>
+<Career name="RULES-CARE_BURGHER">"2"</Career>
+<Career name="RULES-CARE_JAILER">"1"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"2"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"2"</Career>
+<Career name="CCOMP-CARE_KNIGHT_ERRANT">"2"</Career>
+<Career name="RULES-CARE_PROTAGONIST">"2"</Career>
+<Career name="RULES-CARE_VAGABOND">"2"</Career>
+<Career name="CCOMP-CARE_CARCASSONNE_SHEPHERD">"2"</Career>
+<Career name="CCOMP-CARE_MAN_AT_ARMS">"2"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"2"</Career>
+<Career name="RULES-CARE_VALET">"3"</Career>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"2"</Career>
+<Career name="RULES-CARE_MARINE">"2"</Career>
+<Career name="RULES-CARE_ROGUE">"2"</Career>
+<Career name="RULES-CARE_WATCHMAN">"2"</Career>
+<Career name="RULES-CARE_COACHMAN">"2"</Career>
+<Career name="CCOMP-CARE_MEDIATOR">"2"</Career>
+<Career name="RULES-CARE_SCRIBE">"2"</Career>
+<Career name="RULES-CARE_WOODSMAN">"2"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+<Career name="RULES-CARE_SEAMAN">"2"</Career>
+<Career name="RULES-CARE_ZEALOT">"2"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"92"</Page>
+</Specie>
+<Specie id="KOTG-RACE_L_ANGUILLE">
+<Description language="ENGLISH">"Human (L'Anguille)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename"</NamePattern>
+<NamePattern sex="F">"Forename"</NamePattern>
+<Name part="Forename" sex="F" name="Armengild">"1-5"</Name>
+<Name part="Forename" sex="F" name="Bertha">"6-10"</Name>
+<Name part="Forename" sex="F" name="Chrodegard">"11-15"</Name>
+<Name part="Forename" sex="F" name="Dhuoda">"16-20"</Name>
+<Name part="Forename" sex="F" name="Eleanor">"21-25"</Name>
+<Name part="Forename" sex="F" name="Hrotswitha">"26-30"</Name>
+<Name part="Forename" sex="F" name="Heloise">"31-35"</Name>
+<Name part="Forename" sex="F" name="Isabel">"36-40"</Name>
+<Name part="Forename" sex="F" name="Isolde">"41-45"</Name>
+<Name part="Forename" sex="F" name="Lisseut">"46-50"</Name>
+<Name part="Forename" sex="F" name="Marie">"51-55"</Name>
+<Name part="Forename" sex="F" name="Mathilde">"56-60"</Name>
+<Name part="Forename" sex="F" name="Nimugild">"61-65"</Name>
+<Name part="Forename" sex="F" name="Perlesault">"66-70"</Name>
+<Name part="Forename" sex="F" name="Rhadegund">"71-75"</Name>
+<Name part="Forename" sex="F" name="Rumengild">"76-80"</Name>
+<Name part="Forename" sex="F" name="Sirisgard">"81-85"</Name>
+<Name part="Forename" sex="F" name="Sonengund">"86-90"</Name>
+<Name part="Forename" sex="F" name="Vermengard">"91-95"</Name>
+<Name part="Forename" sex="F" name="Walswitha">"96-100"</Name>
+<Name part="Forename" sex="M" name="Aiden">"1-5"</Name>
+<Name part="Forename" sex="M" name="Aigulf">"6-10"</Name>
+<Name part="Forename" sex="M" name="Bertelis">"11-15"</Name>
+<Name part="Forename" sex="M" name="Carloman">"16-20"</Name>
+<Name part="Forename" sex="M" name="Chrodegang">"21-25"</Name>
+<Name part="Forename" sex="M" name="Ferragus">"26-30"</Name>
+<Name part="Forename" sex="M" name="Hrodbert">"31-35"</Name>
+<Name part="Forename" sex="M" name="Jacen">"36-40"</Name>
+<Name part="Forename" sex="M" name="Louis">"41-45"</Name>
+<Name part="Forename" sex="M" name="Merovech">"46-50"</Name>
+<Name part="Forename" sex="M" name="Odo">"51-55"</Name>
+<Name part="Forename" sex="M" name="Orderic">"56-60"</Name>
+<Name part="Forename" sex="M" name="Panteleon">"61-65"</Name>
+<Name part="Forename" sex="M" name="Piers">"66-70"</Name>
+<Name part="Forename" sex="M" name="Redemund">"71-75"</Name>
+<Name part="Forename" sex="M" name="Roland">"76-80"</Name>
+<Name part="Forename" sex="M" name="Suidbert">"81-85"</Name>
+<Name part="Forename" sex="M" name="Theudis">"86-90"</Name>
+<Name part="Forename" sex="M" name="Waldon">"91-95"</Name>
+<Name part="Forename" sex="M" name="Yonec">"96-100"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_BRETONNIA"</Skill>
+<Skill>"RULES-COMP_EVALUATE/RULES-COMP_SAIL"</Skill>
+<Skill>"RULES-COMP_GOSSIP/RULES-COMP_HAGGLE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_BRETON"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"2"</Career>
+<Career name="RULES-CARE_FERRYMAN">"1"</Career>
+<Career name="RULES-CARE_MESSENGER">"2"</Career>
+<Career name="RULES-CARE_SERVANT">"3"</Career>
+<Career name="RULES-CARE_BAILIFF">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"2"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"2"</Career>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"1"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"1"</Career>
+<Career name="RULES-CARE_MINER">"2"</Career>
+<Career name="RULES-CARE_STUDENT">"2"</Career>
+<Career name="RULES-CARE_BOATMAN">"2"</Career>
+<Career name="CCOMP-CARE_GRAIL_PILGRIM">"1"</Career>
+<Career name="RULES-CARE_NOBLE">"2"</Career>
+<Career name="RULES-CARE_THIEF">"2"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_HERRIMAULT">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"2"</Career>
+<Career name="RULES-CARE_THUG">"2"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+<Career name="RULES-CARE_HUNTER">"2"</Career>
+<Career name="RULES-CARE_OUTRIDER">"2"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"2"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"2"</Career>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+<Career name="RULES-CARE_PEASANT">"4"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"2"</Career>
+<Career name="RULES-CARE_BURGHER">"2"</Career>
+<Career name="RULES-CARE_JAILER">"1"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"2"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"2"</Career>
+<Career name="CCOMP-CARE_KNIGHT_ERRANT">"2"</Career>
+<Career name="RULES-CARE_PROTAGONIST">"2"</Career>
+<Career name="RULES-CARE_VAGABOND">"2"</Career>
+<Career name="CCOMP-CARE_CARCASSONNE_SHEPHERD">"2"</Career>
+<Career name="CCOMP-CARE_MAN_AT_ARMS">"2"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"2"</Career>
+<Career name="RULES-CARE_VALET">"3"</Career>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"2"</Career>
+<Career name="RULES-CARE_MARINE">"2"</Career>
+<Career name="RULES-CARE_ROGUE">"2"</Career>
+<Career name="RULES-CARE_WATCHMAN">"2"</Career>
+<Career name="RULES-CARE_COACHMAN">"2"</Career>
+<Career name="CCOMP-CARE_MEDIATOR">"2"</Career>
+<Career name="RULES-CARE_SCRIBE">"2"</Career>
+<Career name="RULES-CARE_WOODSMAN">"2"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+<Career name="RULES-CARE_SEAMAN">"2"</Career>
+<Career name="RULES-CARE_ZEALOT">"2"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"92"</Page>
+</Specie>
+<Specie id="KOTG-RACE_AQUITAINE">
+<Description language="ENGLISH">"Human (Aquitaine)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename"</NamePattern>
+<NamePattern sex="F">"Forename"</NamePattern>
+<Name part="Forename" sex="F" name="Armengild">"1-5"</Name>
+<Name part="Forename" sex="F" name="Bertha">"6-10"</Name>
+<Name part="Forename" sex="F" name="Chrodegard">"11-15"</Name>
+<Name part="Forename" sex="F" name="Dhuoda">"16-20"</Name>
+<Name part="Forename" sex="F" name="Eleanor">"21-25"</Name>
+<Name part="Forename" sex="F" name="Hrotswitha">"26-30"</Name>
+<Name part="Forename" sex="F" name="Heloise">"31-35"</Name>
+<Name part="Forename" sex="F" name="Isabel">"36-40"</Name>
+<Name part="Forename" sex="F" name="Isolde">"41-45"</Name>
+<Name part="Forename" sex="F" name="Lisseut">"46-50"</Name>
+<Name part="Forename" sex="F" name="Marie">"51-55"</Name>
+<Name part="Forename" sex="F" name="Mathilde">"56-60"</Name>
+<Name part="Forename" sex="F" name="Nimugild">"61-65"</Name>
+<Name part="Forename" sex="F" name="Perlesault">"66-70"</Name>
+<Name part="Forename" sex="F" name="Rhadegund">"71-75"</Name>
+<Name part="Forename" sex="F" name="Rumengild">"76-80"</Name>
+<Name part="Forename" sex="F" name="Sirisgard">"81-85"</Name>
+<Name part="Forename" sex="F" name="Sonengund">"86-90"</Name>
+<Name part="Forename" sex="F" name="Vermengard">"91-95"</Name>
+<Name part="Forename" sex="F" name="Walswitha">"96-100"</Name>
+<Name part="Forename" sex="M" name="Aiden">"1-5"</Name>
+<Name part="Forename" sex="M" name="Aigulf">"6-10"</Name>
+<Name part="Forename" sex="M" name="Bertelis">"11-15"</Name>
+<Name part="Forename" sex="M" name="Carloman">"16-20"</Name>
+<Name part="Forename" sex="M" name="Chrodegang">"21-25"</Name>
+<Name part="Forename" sex="M" name="Ferragus">"26-30"</Name>
+<Name part="Forename" sex="M" name="Hrodbert">"31-35"</Name>
+<Name part="Forename" sex="M" name="Jacen">"36-40"</Name>
+<Name part="Forename" sex="M" name="Louis">"41-45"</Name>
+<Name part="Forename" sex="M" name="Merovech">"46-50"</Name>
+<Name part="Forename" sex="M" name="Odo">"51-55"</Name>
+<Name part="Forename" sex="M" name="Orderic">"56-60"</Name>
+<Name part="Forename" sex="M" name="Panteleon">"61-65"</Name>
+<Name part="Forename" sex="M" name="Piers">"66-70"</Name>
+<Name part="Forename" sex="M" name="Redemund">"71-75"</Name>
+<Name part="Forename" sex="M" name="Roland">"76-80"</Name>
+<Name part="Forename" sex="M" name="Suidbert">"81-85"</Name>
+<Name part="Forename" sex="M" name="Theudis">"86-90"</Name>
+<Name part="Forename" sex="M" name="Waldon">"91-95"</Name>
+<Name part="Forename" sex="M" name="Yonec">"96-100"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_BRETONNIA"</Skill>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_BRETON"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_COOLHEADED"</Talent>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"2"</Career>
+<Career name="RULES-CARE_FERRYMAN">"1"</Career>
+<Career name="RULES-CARE_MESSENGER">"2"</Career>
+<Career name="RULES-CARE_SERVANT">"3"</Career>
+<Career name="RULES-CARE_BAILIFF">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"2"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"2"</Career>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"1"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"1"</Career>
+<Career name="RULES-CARE_MINER">"2"</Career>
+<Career name="RULES-CARE_STUDENT">"2"</Career>
+<Career name="RULES-CARE_BOATMAN">"2"</Career>
+<Career name="CCOMP-CARE_GRAIL_PILGRIM">"1"</Career>
+<Career name="RULES-CARE_NOBLE">"2"</Career>
+<Career name="RULES-CARE_THIEF">"2"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_HERRIMAULT">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"2"</Career>
+<Career name="RULES-CARE_THUG">"2"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+<Career name="RULES-CARE_HUNTER">"2"</Career>
+<Career name="RULES-CARE_OUTRIDER">"2"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"2"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"2"</Career>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+<Career name="RULES-CARE_PEASANT">"4"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"2"</Career>
+<Career name="RULES-CARE_BURGHER">"2"</Career>
+<Career name="RULES-CARE_JAILER">"1"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"2"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"2"</Career>
+<Career name="CCOMP-CARE_KNIGHT_ERRANT">"2"</Career>
+<Career name="RULES-CARE_PROTAGONIST">"2"</Career>
+<Career name="RULES-CARE_VAGABOND">"2"</Career>
+<Career name="CCOMP-CARE_CARCASSONNE_SHEPHERD">"2"</Career>
+<Career name="CCOMP-CARE_MAN_AT_ARMS">"2"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"2"</Career>
+<Career name="RULES-CARE_VALET">"3"</Career>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"2"</Career>
+<Career name="RULES-CARE_MARINE">"2"</Career>
+<Career name="RULES-CARE_ROGUE">"2"</Career>
+<Career name="RULES-CARE_WATCHMAN">"2"</Career>
+<Career name="RULES-CARE_COACHMAN">"2"</Career>
+<Career name="CCOMP-CARE_MEDIATOR">"2"</Career>
+<Career name="RULES-CARE_SCRIBE">"2"</Career>
+<Career name="RULES-CARE_WOODSMAN">"2"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+<Career name="RULES-CARE_SEAMAN">"2"</Career>
+<Career name="RULES-CARE_ZEALOT">"2"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"93"</Page>
+</Specie>
+<Specie id="KOTG-RACE_ARTOIS">
+<Description language="ENGLISH">"Human (Artois)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename"</NamePattern>
+<NamePattern sex="F">"Forename"</NamePattern>
+<Name part="Forename" sex="F" name="Armengild">"1-5"</Name>
+<Name part="Forename" sex="F" name="Bertha">"6-10"</Name>
+<Name part="Forename" sex="F" name="Chrodegard">"11-15"</Name>
+<Name part="Forename" sex="F" name="Dhuoda">"16-20"</Name>
+<Name part="Forename" sex="F" name="Eleanor">"21-25"</Name>
+<Name part="Forename" sex="F" name="Hrotswitha">"26-30"</Name>
+<Name part="Forename" sex="F" name="Heloise">"31-35"</Name>
+<Name part="Forename" sex="F" name="Isabel">"36-40"</Name>
+<Name part="Forename" sex="F" name="Isolde">"41-45"</Name>
+<Name part="Forename" sex="F" name="Lisseut">"46-50"</Name>
+<Name part="Forename" sex="F" name="Marie">"51-55"</Name>
+<Name part="Forename" sex="F" name="Mathilde">"56-60"</Name>
+<Name part="Forename" sex="F" name="Nimugild">"61-65"</Name>
+<Name part="Forename" sex="F" name="Perlesault">"66-70"</Name>
+<Name part="Forename" sex="F" name="Rhadegund">"71-75"</Name>
+<Name part="Forename" sex="F" name="Rumengild">"76-80"</Name>
+<Name part="Forename" sex="F" name="Sirisgard">"81-85"</Name>
+<Name part="Forename" sex="F" name="Sonengund">"86-90"</Name>
+<Name part="Forename" sex="F" name="Vermengard">"91-95"</Name>
+<Name part="Forename" sex="F" name="Walswitha">"96-100"</Name>
+<Name part="Forename" sex="M" name="Aiden">"1-5"</Name>
+<Name part="Forename" sex="M" name="Aigulf">"6-10"</Name>
+<Name part="Forename" sex="M" name="Bertelis">"11-15"</Name>
+<Name part="Forename" sex="M" name="Carloman">"16-20"</Name>
+<Name part="Forename" sex="M" name="Chrodegang">"21-25"</Name>
+<Name part="Forename" sex="M" name="Ferragus">"26-30"</Name>
+<Name part="Forename" sex="M" name="Hrodbert">"31-35"</Name>
+<Name part="Forename" sex="M" name="Jacen">"36-40"</Name>
+<Name part="Forename" sex="M" name="Louis">"41-45"</Name>
+<Name part="Forename" sex="M" name="Merovech">"46-50"</Name>
+<Name part="Forename" sex="M" name="Odo">"51-55"</Name>
+<Name part="Forename" sex="M" name="Orderic">"56-60"</Name>
+<Name part="Forename" sex="M" name="Panteleon">"61-65"</Name>
+<Name part="Forename" sex="M" name="Piers">"66-70"</Name>
+<Name part="Forename" sex="M" name="Redemund">"71-75"</Name>
+<Name part="Forename" sex="M" name="Roland">"76-80"</Name>
+<Name part="Forename" sex="M" name="Suidbert">"81-85"</Name>
+<Name part="Forename" sex="M" name="Theudis">"86-90"</Name>
+<Name part="Forename" sex="M" name="Waldon">"91-95"</Name>
+<Name part="Forename" sex="M" name="Yonec">"96-100"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_BRETONNIA/RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_GOSSIP/RULES-COMP_PERCEPTION"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_BRETON"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T*"</Talent>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"2"</Career>
+<Career name="RULES-CARE_FERRYMAN">"1"</Career>
+<Career name="RULES-CARE_MESSENGER">"2"</Career>
+<Career name="RULES-CARE_SERVANT">"3"</Career>
+<Career name="RULES-CARE_BAILIFF">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"2"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"2"</Career>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"1"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"1"</Career>
+<Career name="RULES-CARE_MINER">"2"</Career>
+<Career name="RULES-CARE_STUDENT">"2"</Career>
+<Career name="RULES-CARE_BOATMAN">"2"</Career>
+<Career name="CCOMP-CARE_GRAIL_PILGRIM">"1"</Career>
+<Career name="RULES-CARE_NOBLE">"2"</Career>
+<Career name="RULES-CARE_THIEF">"2"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_HERRIMAULT">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"2"</Career>
+<Career name="RULES-CARE_THUG">"2"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+<Career name="RULES-CARE_HUNTER">"2"</Career>
+<Career name="RULES-CARE_OUTRIDER">"2"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"2"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"2"</Career>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+<Career name="RULES-CARE_PEASANT">"4"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"2"</Career>
+<Career name="RULES-CARE_BURGHER">"2"</Career>
+<Career name="RULES-CARE_JAILER">"1"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"2"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"2"</Career>
+<Career name="CCOMP-CARE_KNIGHT_ERRANT">"2"</Career>
+<Career name="RULES-CARE_PROTAGONIST">"2"</Career>
+<Career name="RULES-CARE_VAGABOND">"2"</Career>
+<Career name="CCOMP-CARE_CARCASSONNE_SHEPHERD">"2"</Career>
+<Career name="CCOMP-CARE_MAN_AT_ARMS">"2"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"2"</Career>
+<Career name="RULES-CARE_VALET">"3"</Career>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"2"</Career>
+<Career name="RULES-CARE_MARINE">"2"</Career>
+<Career name="RULES-CARE_ROGUE">"2"</Career>
+<Career name="RULES-CARE_WATCHMAN">"2"</Career>
+<Career name="RULES-CARE_COACHMAN">"2"</Career>
+<Career name="CCOMP-CARE_MEDIATOR">"2"</Career>
+<Career name="RULES-CARE_SCRIBE">"2"</Career>
+<Career name="RULES-CARE_WOODSMAN">"2"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+<Career name="RULES-CARE_SEAMAN">"2"</Career>
+<Career name="RULES-CARE_ZEALOT">"2"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"93"</Page>
+</Specie>
+<Specie id="KOTG-RACE_BASTONNE">
+<Description language="ENGLISH">"Human (Bastonne)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename"</NamePattern>
+<NamePattern sex="F">"Forename"</NamePattern>
+<Name part="Forename" sex="F" name="Armengild">"1-5"</Name>
+<Name part="Forename" sex="F" name="Bertha">"6-10"</Name>
+<Name part="Forename" sex="F" name="Chrodegard">"11-15"</Name>
+<Name part="Forename" sex="F" name="Dhuoda">"16-20"</Name>
+<Name part="Forename" sex="F" name="Eleanor">"21-25"</Name>
+<Name part="Forename" sex="F" name="Hrotswitha">"26-30"</Name>
+<Name part="Forename" sex="F" name="Heloise">"31-35"</Name>
+<Name part="Forename" sex="F" name="Isabel">"36-40"</Name>
+<Name part="Forename" sex="F" name="Isolde">"41-45"</Name>
+<Name part="Forename" sex="F" name="Lisseut">"46-50"</Name>
+<Name part="Forename" sex="F" name="Marie">"51-55"</Name>
+<Name part="Forename" sex="F" name="Mathilde">"56-60"</Name>
+<Name part="Forename" sex="F" name="Nimugild">"61-65"</Name>
+<Name part="Forename" sex="F" name="Perlesault">"66-70"</Name>
+<Name part="Forename" sex="F" name="Rhadegund">"71-75"</Name>
+<Name part="Forename" sex="F" name="Rumengild">"76-80"</Name>
+<Name part="Forename" sex="F" name="Sirisgard">"81-85"</Name>
+<Name part="Forename" sex="F" name="Sonengund">"86-90"</Name>
+<Name part="Forename" sex="F" name="Vermengard">"91-95"</Name>
+<Name part="Forename" sex="F" name="Walswitha">"96-100"</Name>
+<Name part="Forename" sex="M" name="Aiden">"1-5"</Name>
+<Name part="Forename" sex="M" name="Aigulf">"6-10"</Name>
+<Name part="Forename" sex="M" name="Bertelis">"11-15"</Name>
+<Name part="Forename" sex="M" name="Carloman">"16-20"</Name>
+<Name part="Forename" sex="M" name="Chrodegang">"21-25"</Name>
+<Name part="Forename" sex="M" name="Ferragus">"26-30"</Name>
+<Name part="Forename" sex="M" name="Hrodbert">"31-35"</Name>
+<Name part="Forename" sex="M" name="Jacen">"36-40"</Name>
+<Name part="Forename" sex="M" name="Louis">"41-45"</Name>
+<Name part="Forename" sex="M" name="Merovech">"46-50"</Name>
+<Name part="Forename" sex="M" name="Odo">"51-55"</Name>
+<Name part="Forename" sex="M" name="Orderic">"56-60"</Name>
+<Name part="Forename" sex="M" name="Panteleon">"61-65"</Name>
+<Name part="Forename" sex="M" name="Piers">"66-70"</Name>
+<Name part="Forename" sex="M" name="Redemund">"71-75"</Name>
+<Name part="Forename" sex="M" name="Roland">"76-80"</Name>
+<Name part="Forename" sex="M" name="Suidbert">"81-85"</Name>
+<Name part="Forename" sex="M" name="Theudis">"86-90"</Name>
+<Name part="Forename" sex="M" name="Waldon">"91-95"</Name>
+<Name part="Forename" sex="M" name="Yonec">"96-100"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_BRETONNIA"</Skill>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_BRETON"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_STOUT_HEARTED"</Talent>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"2"</Career>
+<Career name="RULES-CARE_FERRYMAN">"1"</Career>
+<Career name="RULES-CARE_MESSENGER">"2"</Career>
+<Career name="RULES-CARE_SERVANT">"3"</Career>
+<Career name="RULES-CARE_BAILIFF">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"2"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"2"</Career>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"1"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"1"</Career>
+<Career name="RULES-CARE_MINER">"2"</Career>
+<Career name="RULES-CARE_STUDENT">"2"</Career>
+<Career name="RULES-CARE_BOATMAN">"2"</Career>
+<Career name="CCOMP-CARE_GRAIL_PILGRIM">"1"</Career>
+<Career name="RULES-CARE_NOBLE">"2"</Career>
+<Career name="RULES-CARE_THIEF">"2"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_HERRIMAULT">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"2"</Career>
+<Career name="RULES-CARE_THUG">"2"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+<Career name="RULES-CARE_HUNTER">"2"</Career>
+<Career name="RULES-CARE_OUTRIDER">"2"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"2"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"2"</Career>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+<Career name="RULES-CARE_PEASANT">"4"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"2"</Career>
+<Career name="RULES-CARE_BURGHER">"2"</Career>
+<Career name="RULES-CARE_JAILER">"1"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"2"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"2"</Career>
+<Career name="CCOMP-CARE_KNIGHT_ERRANT">"2"</Career>
+<Career name="RULES-CARE_PROTAGONIST">"2"</Career>
+<Career name="RULES-CARE_VAGABOND">"2"</Career>
+<Career name="CCOMP-CARE_CARCASSONNE_SHEPHERD">"2"</Career>
+<Career name="CCOMP-CARE_MAN_AT_ARMS">"2"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"2"</Career>
+<Career name="RULES-CARE_VALET">"3"</Career>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"2"</Career>
+<Career name="RULES-CARE_MARINE">"2"</Career>
+<Career name="RULES-CARE_ROGUE">"2"</Career>
+<Career name="RULES-CARE_WATCHMAN">"2"</Career>
+<Career name="RULES-CARE_COACHMAN">"2"</Career>
+<Career name="CCOMP-CARE_MEDIATOR">"2"</Career>
+<Career name="RULES-CARE_SCRIBE">"2"</Career>
+<Career name="RULES-CARE_WOODSMAN">"2"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+<Career name="RULES-CARE_SEAMAN">"2"</Career>
+<Career name="RULES-CARE_ZEALOT">"2"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"93"</Page>
+</Specie>
+<Specie id="KOTG-RACE_BORDELEAUX">
+<Description language="ENGLISH">"Human (Bordeleaux)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename"</NamePattern>
+<NamePattern sex="F">"Forename"</NamePattern>
+<Name part="Forename" sex="F" name="Armengild">"1-5"</Name>
+<Name part="Forename" sex="F" name="Bertha">"6-10"</Name>
+<Name part="Forename" sex="F" name="Chrodegard">"11-15"</Name>
+<Name part="Forename" sex="F" name="Dhuoda">"16-20"</Name>
+<Name part="Forename" sex="F" name="Eleanor">"21-25"</Name>
+<Name part="Forename" sex="F" name="Hrotswitha">"26-30"</Name>
+<Name part="Forename" sex="F" name="Heloise">"31-35"</Name>
+<Name part="Forename" sex="F" name="Isabel">"36-40"</Name>
+<Name part="Forename" sex="F" name="Isolde">"41-45"</Name>
+<Name part="Forename" sex="F" name="Lisseut">"46-50"</Name>
+<Name part="Forename" sex="F" name="Marie">"51-55"</Name>
+<Name part="Forename" sex="F" name="Mathilde">"56-60"</Name>
+<Name part="Forename" sex="F" name="Nimugild">"61-65"</Name>
+<Name part="Forename" sex="F" name="Perlesault">"66-70"</Name>
+<Name part="Forename" sex="F" name="Rhadegund">"71-75"</Name>
+<Name part="Forename" sex="F" name="Rumengild">"76-80"</Name>
+<Name part="Forename" sex="F" name="Sirisgard">"81-85"</Name>
+<Name part="Forename" sex="F" name="Sonengund">"86-90"</Name>
+<Name part="Forename" sex="F" name="Vermengard">"91-95"</Name>
+<Name part="Forename" sex="F" name="Walswitha">"96-100"</Name>
+<Name part="Forename" sex="M" name="Aiden">"1-5"</Name>
+<Name part="Forename" sex="M" name="Aigulf">"6-10"</Name>
+<Name part="Forename" sex="M" name="Bertelis">"11-15"</Name>
+<Name part="Forename" sex="M" name="Carloman">"16-20"</Name>
+<Name part="Forename" sex="M" name="Chrodegang">"21-25"</Name>
+<Name part="Forename" sex="M" name="Ferragus">"26-30"</Name>
+<Name part="Forename" sex="M" name="Hrodbert">"31-35"</Name>
+<Name part="Forename" sex="M" name="Jacen">"36-40"</Name>
+<Name part="Forename" sex="M" name="Louis">"41-45"</Name>
+<Name part="Forename" sex="M" name="Merovech">"46-50"</Name>
+<Name part="Forename" sex="M" name="Odo">"51-55"</Name>
+<Name part="Forename" sex="M" name="Orderic">"56-60"</Name>
+<Name part="Forename" sex="M" name="Panteleon">"61-65"</Name>
+<Name part="Forename" sex="M" name="Piers">"66-70"</Name>
+<Name part="Forename" sex="M" name="Redemund">"71-75"</Name>
+<Name part="Forename" sex="M" name="Roland">"76-80"</Name>
+<Name part="Forename" sex="M" name="Suidbert">"81-85"</Name>
+<Name part="Forename" sex="M" name="Theudis">"86-90"</Name>
+<Name part="Forename" sex="M" name="Waldon">"91-95"</Name>
+<Name part="Forename" sex="M" name="Yonec">"96-100"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_BRETONNIA"</Skill>
+<Skill>"RULES-COMP_CONSUME_ALCOHOL"</Skill>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_BRETON"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"2"</Career>
+<Career name="RULES-CARE_FERRYMAN">"1"</Career>
+<Career name="RULES-CARE_MESSENGER">"2"</Career>
+<Career name="RULES-CARE_SERVANT">"3"</Career>
+<Career name="RULES-CARE_BAILIFF">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"2"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"2"</Career>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"1"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"1"</Career>
+<Career name="RULES-CARE_MINER">"2"</Career>
+<Career name="RULES-CARE_STUDENT">"2"</Career>
+<Career name="RULES-CARE_BOATMAN">"2"</Career>
+<Career name="CCOMP-CARE_GRAIL_PILGRIM">"1"</Career>
+<Career name="RULES-CARE_NOBLE">"2"</Career>
+<Career name="RULES-CARE_THIEF">"2"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_HERRIMAULT">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"2"</Career>
+<Career name="RULES-CARE_THUG">"2"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+<Career name="RULES-CARE_HUNTER">"2"</Career>
+<Career name="RULES-CARE_OUTRIDER">"2"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"2"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"2"</Career>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+<Career name="RULES-CARE_PEASANT">"4"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"2"</Career>
+<Career name="RULES-CARE_BURGHER">"2"</Career>
+<Career name="RULES-CARE_JAILER">"1"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"2"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"2"</Career>
+<Career name="CCOMP-CARE_KNIGHT_ERRANT">"2"</Career>
+<Career name="RULES-CARE_PROTAGONIST">"2"</Career>
+<Career name="RULES-CARE_VAGABOND">"2"</Career>
+<Career name="CCOMP-CARE_CARCASSONNE_SHEPHERD">"2"</Career>
+<Career name="CCOMP-CARE_MAN_AT_ARMS">"2"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"2"</Career>
+<Career name="RULES-CARE_VALET">"3"</Career>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"2"</Career>
+<Career name="RULES-CARE_MARINE">"2"</Career>
+<Career name="RULES-CARE_ROGUE">"2"</Career>
+<Career name="RULES-CARE_WATCHMAN">"2"</Career>
+<Career name="RULES-CARE_COACHMAN">"2"</Career>
+<Career name="CCOMP-CARE_MEDIATOR">"2"</Career>
+<Career name="RULES-CARE_SCRIBE">"2"</Career>
+<Career name="RULES-CARE_WOODSMAN">"2"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+<Career name="RULES-CARE_SEAMAN">"2"</Career>
+<Career name="RULES-CARE_ZEALOT">"2"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"93"</Page>
+</Specie>
+<Specie id="KOTG-RACE_BRIONNE">
+<Description language="ENGLISH">"Human (Brionne)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename"</NamePattern>
+<NamePattern sex="F">"Forename"</NamePattern>
+<Name part="Forename" sex="F" name="Armengild">"1-5"</Name>
+<Name part="Forename" sex="F" name="Bertha">"6-10"</Name>
+<Name part="Forename" sex="F" name="Chrodegard">"11-15"</Name>
+<Name part="Forename" sex="F" name="Dhuoda">"16-20"</Name>
+<Name part="Forename" sex="F" name="Eleanor">"21-25"</Name>
+<Name part="Forename" sex="F" name="Hrotswitha">"26-30"</Name>
+<Name part="Forename" sex="F" name="Heloise">"31-35"</Name>
+<Name part="Forename" sex="F" name="Isabel">"36-40"</Name>
+<Name part="Forename" sex="F" name="Isolde">"41-45"</Name>
+<Name part="Forename" sex="F" name="Lisseut">"46-50"</Name>
+<Name part="Forename" sex="F" name="Marie">"51-55"</Name>
+<Name part="Forename" sex="F" name="Mathilde">"56-60"</Name>
+<Name part="Forename" sex="F" name="Nimugild">"61-65"</Name>
+<Name part="Forename" sex="F" name="Perlesault">"66-70"</Name>
+<Name part="Forename" sex="F" name="Rhadegund">"71-75"</Name>
+<Name part="Forename" sex="F" name="Rumengild">"76-80"</Name>
+<Name part="Forename" sex="F" name="Sirisgard">"81-85"</Name>
+<Name part="Forename" sex="F" name="Sonengund">"86-90"</Name>
+<Name part="Forename" sex="F" name="Vermengard">"91-95"</Name>
+<Name part="Forename" sex="F" name="Walswitha">"96-100"</Name>
+<Name part="Forename" sex="M" name="Aiden">"1-5"</Name>
+<Name part="Forename" sex="M" name="Aigulf">"6-10"</Name>
+<Name part="Forename" sex="M" name="Bertelis">"11-15"</Name>
+<Name part="Forename" sex="M" name="Carloman">"16-20"</Name>
+<Name part="Forename" sex="M" name="Chrodegang">"21-25"</Name>
+<Name part="Forename" sex="M" name="Ferragus">"26-30"</Name>
+<Name part="Forename" sex="M" name="Hrodbert">"31-35"</Name>
+<Name part="Forename" sex="M" name="Jacen">"36-40"</Name>
+<Name part="Forename" sex="M" name="Louis">"41-45"</Name>
+<Name part="Forename" sex="M" name="Merovech">"46-50"</Name>
+<Name part="Forename" sex="M" name="Odo">"51-55"</Name>
+<Name part="Forename" sex="M" name="Orderic">"56-60"</Name>
+<Name part="Forename" sex="M" name="Panteleon">"61-65"</Name>
+<Name part="Forename" sex="M" name="Piers">"66-70"</Name>
+<Name part="Forename" sex="M" name="Redemund">"71-75"</Name>
+<Name part="Forename" sex="M" name="Roland">"76-80"</Name>
+<Name part="Forename" sex="M" name="Suidbert">"81-85"</Name>
+<Name part="Forename" sex="M" name="Theudis">"86-90"</Name>
+<Name part="Forename" sex="M" name="Waldon">"91-95"</Name>
+<Name part="Forename" sex="M" name="Yonec">"96-100"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_BRETONNIA"</Skill>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+<Skill>"RULES-COMP_PERFORMER_MUSICIAN/RULES-COMP_PERFORMER_SINGER"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_BRETON"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"2"</Career>
+<Career name="RULES-CARE_FERRYMAN">"1"</Career>
+<Career name="RULES-CARE_MESSENGER">"2"</Career>
+<Career name="RULES-CARE_SERVANT">"3"</Career>
+<Career name="RULES-CARE_BAILIFF">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"2"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"2"</Career>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"1"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"1"</Career>
+<Career name="RULES-CARE_MINER">"2"</Career>
+<Career name="RULES-CARE_STUDENT">"2"</Career>
+<Career name="RULES-CARE_BOATMAN">"2"</Career>
+<Career name="CCOMP-CARE_GRAIL_PILGRIM">"1"</Career>
+<Career name="RULES-CARE_NOBLE">"2"</Career>
+<Career name="RULES-CARE_THIEF">"2"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_HERRIMAULT">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"2"</Career>
+<Career name="RULES-CARE_THUG">"2"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+<Career name="RULES-CARE_HUNTER">"2"</Career>
+<Career name="RULES-CARE_OUTRIDER">"2"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"2"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"2"</Career>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+<Career name="RULES-CARE_PEASANT">"4"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"2"</Career>
+<Career name="RULES-CARE_BURGHER">"2"</Career>
+<Career name="RULES-CARE_JAILER">"1"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"2"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"2"</Career>
+<Career name="CCOMP-CARE_KNIGHT_ERRANT">"2"</Career>
+<Career name="RULES-CARE_PROTAGONIST">"2"</Career>
+<Career name="RULES-CARE_VAGABOND">"2"</Career>
+<Career name="CCOMP-CARE_CARCASSONNE_SHEPHERD">"2"</Career>
+<Career name="CCOMP-CARE_MAN_AT_ARMS">"2"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"2"</Career>
+<Career name="RULES-CARE_VALET">"3"</Career>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"2"</Career>
+<Career name="RULES-CARE_MARINE">"2"</Career>
+<Career name="RULES-CARE_ROGUE">"2"</Career>
+<Career name="RULES-CARE_WATCHMAN">"2"</Career>
+<Career name="RULES-CARE_COACHMAN">"2"</Career>
+<Career name="CCOMP-CARE_MEDIATOR">"2"</Career>
+<Career name="RULES-CARE_SCRIBE">"2"</Career>
+<Career name="RULES-CARE_WOODSMAN">"2"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+<Career name="RULES-CARE_SEAMAN">"2"</Career>
+<Career name="RULES-CARE_ZEALOT">"2"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"93"</Page>
+</Specie>
+<Specie id="KOTG-RACE_CARCASSONNE">
+<Description language="ENGLISH">"Human (Carcassonne)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename"</NamePattern>
+<NamePattern sex="F">"Forename"</NamePattern>
+<Name part="Forename" sex="F" name="Armengild">"1-5"</Name>
+<Name part="Forename" sex="F" name="Bertha">"6-10"</Name>
+<Name part="Forename" sex="F" name="Chrodegard">"11-15"</Name>
+<Name part="Forename" sex="F" name="Dhuoda">"16-20"</Name>
+<Name part="Forename" sex="F" name="Eleanor">"21-25"</Name>
+<Name part="Forename" sex="F" name="Hrotswitha">"26-30"</Name>
+<Name part="Forename" sex="F" name="Heloise">"31-35"</Name>
+<Name part="Forename" sex="F" name="Isabel">"36-40"</Name>
+<Name part="Forename" sex="F" name="Isolde">"41-45"</Name>
+<Name part="Forename" sex="F" name="Lisseut">"46-50"</Name>
+<Name part="Forename" sex="F" name="Marie">"51-55"</Name>
+<Name part="Forename" sex="F" name="Mathilde">"56-60"</Name>
+<Name part="Forename" sex="F" name="Nimugild">"61-65"</Name>
+<Name part="Forename" sex="F" name="Perlesault">"66-70"</Name>
+<Name part="Forename" sex="F" name="Rhadegund">"71-75"</Name>
+<Name part="Forename" sex="F" name="Rumengild">"76-80"</Name>
+<Name part="Forename" sex="F" name="Sirisgard">"81-85"</Name>
+<Name part="Forename" sex="F" name="Sonengund">"86-90"</Name>
+<Name part="Forename" sex="F" name="Vermengard">"91-95"</Name>
+<Name part="Forename" sex="F" name="Walswitha">"96-100"</Name>
+<Name part="Forename" sex="M" name="Aiden">"1-5"</Name>
+<Name part="Forename" sex="M" name="Aigulf">"6-10"</Name>
+<Name part="Forename" sex="M" name="Bertelis">"11-15"</Name>
+<Name part="Forename" sex="M" name="Carloman">"16-20"</Name>
+<Name part="Forename" sex="M" name="Chrodegang">"21-25"</Name>
+<Name part="Forename" sex="M" name="Ferragus">"26-30"</Name>
+<Name part="Forename" sex="M" name="Hrodbert">"31-35"</Name>
+<Name part="Forename" sex="M" name="Jacen">"36-40"</Name>
+<Name part="Forename" sex="M" name="Louis">"41-45"</Name>
+<Name part="Forename" sex="M" name="Merovech">"46-50"</Name>
+<Name part="Forename" sex="M" name="Odo">"51-55"</Name>
+<Name part="Forename" sex="M" name="Orderic">"56-60"</Name>
+<Name part="Forename" sex="M" name="Panteleon">"61-65"</Name>
+<Name part="Forename" sex="M" name="Piers">"66-70"</Name>
+<Name part="Forename" sex="M" name="Redemund">"71-75"</Name>
+<Name part="Forename" sex="M" name="Roland">"76-80"</Name>
+<Name part="Forename" sex="M" name="Suidbert">"81-85"</Name>
+<Name part="Forename" sex="M" name="Theudis">"86-90"</Name>
+<Name part="Forename" sex="M" name="Waldon">"91-95"</Name>
+<Name part="Forename" sex="M" name="Yonec">"96-100"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_BRETONNIA"</Skill>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_BRETON"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"KOTG-T_BIRTH_SWORD/RULES-T_WARRIOR_BORN"</Talent>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"2"</Career>
+<Career name="RULES-CARE_FERRYMAN">"1"</Career>
+<Career name="RULES-CARE_MESSENGER">"2"</Career>
+<Career name="RULES-CARE_SERVANT">"3"</Career>
+<Career name="RULES-CARE_BAILIFF">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"2"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"2"</Career>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"1"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"1"</Career>
+<Career name="RULES-CARE_MINER">"2"</Career>
+<Career name="RULES-CARE_STUDENT">"2"</Career>
+<Career name="RULES-CARE_BOATMAN">"2"</Career>
+<Career name="CCOMP-CARE_GRAIL_PILGRIM">"1"</Career>
+<Career name="RULES-CARE_NOBLE">"2"</Career>
+<Career name="RULES-CARE_THIEF">"2"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_HERRIMAULT">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"2"</Career>
+<Career name="RULES-CARE_THUG">"2"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+<Career name="RULES-CARE_HUNTER">"2"</Career>
+<Career name="RULES-CARE_OUTRIDER">"2"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"2"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"2"</Career>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+<Career name="RULES-CARE_PEASANT">"4"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"2"</Career>
+<Career name="RULES-CARE_BURGHER">"2"</Career>
+<Career name="RULES-CARE_JAILER">"1"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"2"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"2"</Career>
+<Career name="CCOMP-CARE_KNIGHT_ERRANT">"2"</Career>
+<Career name="RULES-CARE_PROTAGONIST">"2"</Career>
+<Career name="RULES-CARE_VAGABOND">"2"</Career>
+<Career name="CCOMP-CARE_CARCASSONNE_SHEPHERD">"2"</Career>
+<Career name="CCOMP-CARE_MAN_AT_ARMS">"2"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"2"</Career>
+<Career name="RULES-CARE_VALET">"3"</Career>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"2"</Career>
+<Career name="RULES-CARE_MARINE">"2"</Career>
+<Career name="RULES-CARE_ROGUE">"2"</Career>
+<Career name="RULES-CARE_WATCHMAN">"2"</Career>
+<Career name="RULES-CARE_COACHMAN">"2"</Career>
+<Career name="CCOMP-CARE_MEDIATOR">"2"</Career>
+<Career name="RULES-CARE_SCRIBE">"2"</Career>
+<Career name="RULES-CARE_WOODSMAN">"2"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+<Career name="RULES-CARE_SEAMAN">"2"</Career>
+<Career name="RULES-CARE_ZEALOT">"2"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"94"</Page>
+</Specie>
+<Specie id="KOTG-RACE_COURONNE">
+<Description language="ENGLISH">"Human (Couronne)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename"</NamePattern>
+<NamePattern sex="F">"Forename"</NamePattern>
+<Name part="Forename" sex="F" name="Armengild">"1-5"</Name>
+<Name part="Forename" sex="F" name="Bertha">"6-10"</Name>
+<Name part="Forename" sex="F" name="Chrodegard">"11-15"</Name>
+<Name part="Forename" sex="F" name="Dhuoda">"16-20"</Name>
+<Name part="Forename" sex="F" name="Eleanor">"21-25"</Name>
+<Name part="Forename" sex="F" name="Hrotswitha">"26-30"</Name>
+<Name part="Forename" sex="F" name="Heloise">"31-35"</Name>
+<Name part="Forename" sex="F" name="Isabel">"36-40"</Name>
+<Name part="Forename" sex="F" name="Isolde">"41-45"</Name>
+<Name part="Forename" sex="F" name="Lisseut">"46-50"</Name>
+<Name part="Forename" sex="F" name="Marie">"51-55"</Name>
+<Name part="Forename" sex="F" name="Mathilde">"56-60"</Name>
+<Name part="Forename" sex="F" name="Nimugild">"61-65"</Name>
+<Name part="Forename" sex="F" name="Perlesault">"66-70"</Name>
+<Name part="Forename" sex="F" name="Rhadegund">"71-75"</Name>
+<Name part="Forename" sex="F" name="Rumengild">"76-80"</Name>
+<Name part="Forename" sex="F" name="Sirisgard">"81-85"</Name>
+<Name part="Forename" sex="F" name="Sonengund">"86-90"</Name>
+<Name part="Forename" sex="F" name="Vermengard">"91-95"</Name>
+<Name part="Forename" sex="F" name="Walswitha">"96-100"</Name>
+<Name part="Forename" sex="M" name="Aiden">"1-5"</Name>
+<Name part="Forename" sex="M" name="Aigulf">"6-10"</Name>
+<Name part="Forename" sex="M" name="Bertelis">"11-15"</Name>
+<Name part="Forename" sex="M" name="Carloman">"16-20"</Name>
+<Name part="Forename" sex="M" name="Chrodegang">"21-25"</Name>
+<Name part="Forename" sex="M" name="Ferragus">"26-30"</Name>
+<Name part="Forename" sex="M" name="Hrodbert">"31-35"</Name>
+<Name part="Forename" sex="M" name="Jacen">"36-40"</Name>
+<Name part="Forename" sex="M" name="Louis">"41-45"</Name>
+<Name part="Forename" sex="M" name="Merovech">"46-50"</Name>
+<Name part="Forename" sex="M" name="Odo">"51-55"</Name>
+<Name part="Forename" sex="M" name="Orderic">"56-60"</Name>
+<Name part="Forename" sex="M" name="Panteleon">"61-65"</Name>
+<Name part="Forename" sex="M" name="Piers">"66-70"</Name>
+<Name part="Forename" sex="M" name="Redemund">"71-75"</Name>
+<Name part="Forename" sex="M" name="Roland">"76-80"</Name>
+<Name part="Forename" sex="M" name="Suidbert">"81-85"</Name>
+<Name part="Forename" sex="M" name="Theudis">"86-90"</Name>
+<Name part="Forename" sex="M" name="Waldon">"91-95"</Name>
+<Name part="Forename" sex="M" name="Yonec">"96-100"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_BRETONNIA"</Skill>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+<Skill>"RULES-COMP_RIDE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_BRETON"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_TRICK_RIDING"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"2"</Career>
+<Career name="RULES-CARE_FERRYMAN">"1"</Career>
+<Career name="RULES-CARE_MESSENGER">"2"</Career>
+<Career name="RULES-CARE_SERVANT">"3"</Career>
+<Career name="RULES-CARE_BAILIFF">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"2"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"2"</Career>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"1"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"1"</Career>
+<Career name="RULES-CARE_MINER">"2"</Career>
+<Career name="RULES-CARE_STUDENT">"2"</Career>
+<Career name="RULES-CARE_BOATMAN">"2"</Career>
+<Career name="CCOMP-CARE_GRAIL_PILGRIM">"1"</Career>
+<Career name="RULES-CARE_NOBLE">"2"</Career>
+<Career name="RULES-CARE_THIEF">"2"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_HERRIMAULT">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"2"</Career>
+<Career name="RULES-CARE_THUG">"2"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+<Career name="RULES-CARE_HUNTER">"2"</Career>
+<Career name="RULES-CARE_OUTRIDER">"2"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"2"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"2"</Career>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+<Career name="RULES-CARE_PEASANT">"4"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"2"</Career>
+<Career name="RULES-CARE_BURGHER">"2"</Career>
+<Career name="RULES-CARE_JAILER">"1"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"2"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"2"</Career>
+<Career name="CCOMP-CARE_KNIGHT_ERRANT">"2"</Career>
+<Career name="RULES-CARE_PROTAGONIST">"2"</Career>
+<Career name="RULES-CARE_VAGABOND">"2"</Career>
+<Career name="CCOMP-CARE_CARCASSONNE_SHEPHERD">"2"</Career>
+<Career name="CCOMP-CARE_MAN_AT_ARMS">"2"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"2"</Career>
+<Career name="RULES-CARE_VALET">"3"</Career>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"2"</Career>
+<Career name="RULES-CARE_MARINE">"2"</Career>
+<Career name="RULES-CARE_ROGUE">"2"</Career>
+<Career name="RULES-CARE_WATCHMAN">"2"</Career>
+<Career name="RULES-CARE_COACHMAN">"2"</Career>
+<Career name="CCOMP-CARE_MEDIATOR">"2"</Career>
+<Career name="RULES-CARE_SCRIBE">"2"</Career>
+<Career name="RULES-CARE_WOODSMAN">"2"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+<Career name="RULES-CARE_SEAMAN">"2"</Career>
+<Career name="RULES-CARE_ZEALOT">"2"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"94"</Page>
+</Specie>
+<Specie id="KOTG-RACE_GISOREUX">
+<Description language="ENGLISH">"Human (Gisoreux)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename"</NamePattern>
+<NamePattern sex="F">"Forename"</NamePattern>
+<Name part="Forename" sex="F" name="Armengild">"1-5"</Name>
+<Name part="Forename" sex="F" name="Bertha">"6-10"</Name>
+<Name part="Forename" sex="F" name="Chrodegard">"11-15"</Name>
+<Name part="Forename" sex="F" name="Dhuoda">"16-20"</Name>
+<Name part="Forename" sex="F" name="Eleanor">"21-25"</Name>
+<Name part="Forename" sex="F" name="Hrotswitha">"26-30"</Name>
+<Name part="Forename" sex="F" name="Heloise">"31-35"</Name>
+<Name part="Forename" sex="F" name="Isabel">"36-40"</Name>
+<Name part="Forename" sex="F" name="Isolde">"41-45"</Name>
+<Name part="Forename" sex="F" name="Lisseut">"46-50"</Name>
+<Name part="Forename" sex="F" name="Marie">"51-55"</Name>
+<Name part="Forename" sex="F" name="Mathilde">"56-60"</Name>
+<Name part="Forename" sex="F" name="Nimugild">"61-65"</Name>
+<Name part="Forename" sex="F" name="Perlesault">"66-70"</Name>
+<Name part="Forename" sex="F" name="Rhadegund">"71-75"</Name>
+<Name part="Forename" sex="F" name="Rumengild">"76-80"</Name>
+<Name part="Forename" sex="F" name="Sirisgard">"81-85"</Name>
+<Name part="Forename" sex="F" name="Sonengund">"86-90"</Name>
+<Name part="Forename" sex="F" name="Vermengard">"91-95"</Name>
+<Name part="Forename" sex="F" name="Walswitha">"96-100"</Name>
+<Name part="Forename" sex="M" name="Aiden">"1-5"</Name>
+<Name part="Forename" sex="M" name="Aigulf">"6-10"</Name>
+<Name part="Forename" sex="M" name="Bertelis">"11-15"</Name>
+<Name part="Forename" sex="M" name="Carloman">"16-20"</Name>
+<Name part="Forename" sex="M" name="Chrodegang">"21-25"</Name>
+<Name part="Forename" sex="M" name="Ferragus">"26-30"</Name>
+<Name part="Forename" sex="M" name="Hrodbert">"31-35"</Name>
+<Name part="Forename" sex="M" name="Jacen">"36-40"</Name>
+<Name part="Forename" sex="M" name="Louis">"41-45"</Name>
+<Name part="Forename" sex="M" name="Merovech">"46-50"</Name>
+<Name part="Forename" sex="M" name="Odo">"51-55"</Name>
+<Name part="Forename" sex="M" name="Orderic">"56-60"</Name>
+<Name part="Forename" sex="M" name="Panteleon">"61-65"</Name>
+<Name part="Forename" sex="M" name="Piers">"66-70"</Name>
+<Name part="Forename" sex="M" name="Redemund">"71-75"</Name>
+<Name part="Forename" sex="M" name="Roland">"76-80"</Name>
+<Name part="Forename" sex="M" name="Suidbert">"81-85"</Name>
+<Name part="Forename" sex="M" name="Theudis">"86-90"</Name>
+<Name part="Forename" sex="M" name="Waldon">"91-95"</Name>
+<Name part="Forename" sex="M" name="Yonec">"96-100"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_CHARM/RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_BRETONNIA"</Skill>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_BRETON"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"2"</Career>
+<Career name="RULES-CARE_FERRYMAN">"1"</Career>
+<Career name="RULES-CARE_MESSENGER">"2"</Career>
+<Career name="RULES-CARE_SERVANT">"3"</Career>
+<Career name="RULES-CARE_BAILIFF">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"2"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"2"</Career>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"1"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"1"</Career>
+<Career name="RULES-CARE_MINER">"2"</Career>
+<Career name="RULES-CARE_STUDENT">"2"</Career>
+<Career name="RULES-CARE_BOATMAN">"2"</Career>
+<Career name="CCOMP-CARE_GRAIL_PILGRIM">"1"</Career>
+<Career name="RULES-CARE_NOBLE">"2"</Career>
+<Career name="RULES-CARE_THIEF">"2"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_HERRIMAULT">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"2"</Career>
+<Career name="RULES-CARE_THUG">"2"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+<Career name="RULES-CARE_HUNTER">"2"</Career>
+<Career name="RULES-CARE_OUTRIDER">"2"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"2"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"2"</Career>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+<Career name="RULES-CARE_PEASANT">"4"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"2"</Career>
+<Career name="RULES-CARE_BURGHER">"2"</Career>
+<Career name="RULES-CARE_JAILER">"1"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"2"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"2"</Career>
+<Career name="CCOMP-CARE_KNIGHT_ERRANT">"2"</Career>
+<Career name="RULES-CARE_PROTAGONIST">"2"</Career>
+<Career name="RULES-CARE_VAGABOND">"2"</Career>
+<Career name="CCOMP-CARE_CARCASSONNE_SHEPHERD">"2"</Career>
+<Career name="CCOMP-CARE_MAN_AT_ARMS">"2"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"2"</Career>
+<Career name="RULES-CARE_VALET">"3"</Career>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"2"</Career>
+<Career name="RULES-CARE_MARINE">"2"</Career>
+<Career name="RULES-CARE_ROGUE">"2"</Career>
+<Career name="RULES-CARE_WATCHMAN">"2"</Career>
+<Career name="RULES-CARE_COACHMAN">"2"</Career>
+<Career name="CCOMP-CARE_MEDIATOR">"2"</Career>
+<Career name="RULES-CARE_SCRIBE">"2"</Career>
+<Career name="RULES-CARE_WOODSMAN">"2"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+<Career name="RULES-CARE_SEAMAN">"2"</Career>
+<Career name="RULES-CARE_ZEALOT">"2"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"94"</Page>
+</Specie>
+<Specie id="KOTG-RACE_LYONESSE">
+<Description language="ENGLISH">"Human (Lyonesse)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename"</NamePattern>
+<NamePattern sex="F">"Forename"</NamePattern>
+<Name part="Forename" sex="F" name="Armengild">"1-5"</Name>
+<Name part="Forename" sex="F" name="Bertha">"6-10"</Name>
+<Name part="Forename" sex="F" name="Chrodegard">"11-15"</Name>
+<Name part="Forename" sex="F" name="Dhuoda">"16-20"</Name>
+<Name part="Forename" sex="F" name="Eleanor">"21-25"</Name>
+<Name part="Forename" sex="F" name="Hrotswitha">"26-30"</Name>
+<Name part="Forename" sex="F" name="Heloise">"31-35"</Name>
+<Name part="Forename" sex="F" name="Isabel">"36-40"</Name>
+<Name part="Forename" sex="F" name="Isolde">"41-45"</Name>
+<Name part="Forename" sex="F" name="Lisseut">"46-50"</Name>
+<Name part="Forename" sex="F" name="Marie">"51-55"</Name>
+<Name part="Forename" sex="F" name="Mathilde">"56-60"</Name>
+<Name part="Forename" sex="F" name="Nimugild">"61-65"</Name>
+<Name part="Forename" sex="F" name="Perlesault">"66-70"</Name>
+<Name part="Forename" sex="F" name="Rhadegund">"71-75"</Name>
+<Name part="Forename" sex="F" name="Rumengild">"76-80"</Name>
+<Name part="Forename" sex="F" name="Sirisgard">"81-85"</Name>
+<Name part="Forename" sex="F" name="Sonengund">"86-90"</Name>
+<Name part="Forename" sex="F" name="Vermengard">"91-95"</Name>
+<Name part="Forename" sex="F" name="Walswitha">"96-100"</Name>
+<Name part="Forename" sex="M" name="Aiden">"1-5"</Name>
+<Name part="Forename" sex="M" name="Aigulf">"6-10"</Name>
+<Name part="Forename" sex="M" name="Bertelis">"11-15"</Name>
+<Name part="Forename" sex="M" name="Carloman">"16-20"</Name>
+<Name part="Forename" sex="M" name="Chrodegang">"21-25"</Name>
+<Name part="Forename" sex="M" name="Ferragus">"26-30"</Name>
+<Name part="Forename" sex="M" name="Hrodbert">"31-35"</Name>
+<Name part="Forename" sex="M" name="Jacen">"36-40"</Name>
+<Name part="Forename" sex="M" name="Louis">"41-45"</Name>
+<Name part="Forename" sex="M" name="Merovech">"46-50"</Name>
+<Name part="Forename" sex="M" name="Odo">"51-55"</Name>
+<Name part="Forename" sex="M" name="Orderic">"56-60"</Name>
+<Name part="Forename" sex="M" name="Panteleon">"61-65"</Name>
+<Name part="Forename" sex="M" name="Piers">"66-70"</Name>
+<Name part="Forename" sex="M" name="Redemund">"71-75"</Name>
+<Name part="Forename" sex="M" name="Roland">"76-80"</Name>
+<Name part="Forename" sex="M" name="Suidbert">"81-85"</Name>
+<Name part="Forename" sex="M" name="Theudis">"86-90"</Name>
+<Name part="Forename" sex="M" name="Waldon">"91-95"</Name>
+<Name part="Forename" sex="M" name="Yonec">"96-100"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_BRETONNIA"</Skill>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_BRETON"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_SCHEMER"</Talent>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"2"</Career>
+<Career name="RULES-CARE_FERRYMAN">"1"</Career>
+<Career name="RULES-CARE_MESSENGER">"2"</Career>
+<Career name="RULES-CARE_SERVANT">"3"</Career>
+<Career name="RULES-CARE_BAILIFF">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"2"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"2"</Career>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"1"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"1"</Career>
+<Career name="RULES-CARE_MINER">"2"</Career>
+<Career name="RULES-CARE_STUDENT">"2"</Career>
+<Career name="RULES-CARE_BOATMAN">"2"</Career>
+<Career name="CCOMP-CARE_GRAIL_PILGRIM">"1"</Career>
+<Career name="RULES-CARE_NOBLE">"2"</Career>
+<Career name="RULES-CARE_THIEF">"2"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_HERRIMAULT">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"2"</Career>
+<Career name="RULES-CARE_THUG">"2"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+<Career name="RULES-CARE_HUNTER">"2"</Career>
+<Career name="RULES-CARE_OUTRIDER">"2"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"2"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"2"</Career>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+<Career name="RULES-CARE_PEASANT">"4"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"2"</Career>
+<Career name="RULES-CARE_BURGHER">"2"</Career>
+<Career name="RULES-CARE_JAILER">"1"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"2"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"2"</Career>
+<Career name="CCOMP-CARE_KNIGHT_ERRANT">"2"</Career>
+<Career name="RULES-CARE_PROTAGONIST">"2"</Career>
+<Career name="RULES-CARE_VAGABOND">"2"</Career>
+<Career name="CCOMP-CARE_CARCASSONNE_SHEPHERD">"2"</Career>
+<Career name="CCOMP-CARE_MAN_AT_ARMS">"2"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"2"</Career>
+<Career name="RULES-CARE_VALET">"3"</Career>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"2"</Career>
+<Career name="RULES-CARE_MARINE">"2"</Career>
+<Career name="RULES-CARE_ROGUE">"2"</Career>
+<Career name="RULES-CARE_WATCHMAN">"2"</Career>
+<Career name="RULES-CARE_COACHMAN">"2"</Career>
+<Career name="CCOMP-CARE_MEDIATOR">"2"</Career>
+<Career name="RULES-CARE_SCRIBE">"2"</Career>
+<Career name="RULES-CARE_WOODSMAN">"2"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+<Career name="RULES-CARE_SEAMAN">"2"</Career>
+<Career name="RULES-CARE_ZEALOT">"2"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"94"</Page>
+</Specie>
+<Specie id="KOTG-RACE_MONTFORT">
+<Description language="ENGLISH">"Human (Montfort)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename"</NamePattern>
+<NamePattern sex="F">"Forename"</NamePattern>
+<Name part="Forename" sex="F" name="Armengild">"1-5"</Name>
+<Name part="Forename" sex="F" name="Bertha">"6-10"</Name>
+<Name part="Forename" sex="F" name="Chrodegard">"11-15"</Name>
+<Name part="Forename" sex="F" name="Dhuoda">"16-20"</Name>
+<Name part="Forename" sex="F" name="Eleanor">"21-25"</Name>
+<Name part="Forename" sex="F" name="Hrotswitha">"26-30"</Name>
+<Name part="Forename" sex="F" name="Heloise">"31-35"</Name>
+<Name part="Forename" sex="F" name="Isabel">"36-40"</Name>
+<Name part="Forename" sex="F" name="Isolde">"41-45"</Name>
+<Name part="Forename" sex="F" name="Lisseut">"46-50"</Name>
+<Name part="Forename" sex="F" name="Marie">"51-55"</Name>
+<Name part="Forename" sex="F" name="Mathilde">"56-60"</Name>
+<Name part="Forename" sex="F" name="Nimugild">"61-65"</Name>
+<Name part="Forename" sex="F" name="Perlesault">"66-70"</Name>
+<Name part="Forename" sex="F" name="Rhadegund">"71-75"</Name>
+<Name part="Forename" sex="F" name="Rumengild">"76-80"</Name>
+<Name part="Forename" sex="F" name="Sirisgard">"81-85"</Name>
+<Name part="Forename" sex="F" name="Sonengund">"86-90"</Name>
+<Name part="Forename" sex="F" name="Vermengard">"91-95"</Name>
+<Name part="Forename" sex="F" name="Walswitha">"96-100"</Name>
+<Name part="Forename" sex="M" name="Aiden">"1-5"</Name>
+<Name part="Forename" sex="M" name="Aigulf">"6-10"</Name>
+<Name part="Forename" sex="M" name="Bertelis">"11-15"</Name>
+<Name part="Forename" sex="M" name="Carloman">"16-20"</Name>
+<Name part="Forename" sex="M" name="Chrodegang">"21-25"</Name>
+<Name part="Forename" sex="M" name="Ferragus">"26-30"</Name>
+<Name part="Forename" sex="M" name="Hrodbert">"31-35"</Name>
+<Name part="Forename" sex="M" name="Jacen">"36-40"</Name>
+<Name part="Forename" sex="M" name="Louis">"41-45"</Name>
+<Name part="Forename" sex="M" name="Merovech">"46-50"</Name>
+<Name part="Forename" sex="M" name="Odo">"51-55"</Name>
+<Name part="Forename" sex="M" name="Orderic">"56-60"</Name>
+<Name part="Forename" sex="M" name="Panteleon">"61-65"</Name>
+<Name part="Forename" sex="M" name="Piers">"66-70"</Name>
+<Name part="Forename" sex="M" name="Redemund">"71-75"</Name>
+<Name part="Forename" sex="M" name="Roland">"76-80"</Name>
+<Name part="Forename" sex="M" name="Suidbert">"81-85"</Name>
+<Name part="Forename" sex="M" name="Theudis">"86-90"</Name>
+<Name part="Forename" sex="M" name="Waldon">"91-95"</Name>
+<Name part="Forename" sex="M" name="Yonec">"96-100"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_BRETONNIA"</Skill>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_BRETON"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_HARDY"</Talent>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"2"</Career>
+<Career name="RULES-CARE_FERRYMAN">"1"</Career>
+<Career name="RULES-CARE_MESSENGER">"2"</Career>
+<Career name="RULES-CARE_SERVANT">"3"</Career>
+<Career name="RULES-CARE_BAILIFF">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"2"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"2"</Career>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"1"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"1"</Career>
+<Career name="RULES-CARE_MINER">"2"</Career>
+<Career name="RULES-CARE_STUDENT">"2"</Career>
+<Career name="RULES-CARE_BOATMAN">"2"</Career>
+<Career name="CCOMP-CARE_GRAIL_PILGRIM">"1"</Career>
+<Career name="RULES-CARE_NOBLE">"2"</Career>
+<Career name="RULES-CARE_THIEF">"2"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_HERRIMAULT">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"2"</Career>
+<Career name="RULES-CARE_THUG">"2"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+<Career name="RULES-CARE_HUNTER">"2"</Career>
+<Career name="RULES-CARE_OUTRIDER">"2"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"2"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"2"</Career>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+<Career name="RULES-CARE_PEASANT">"4"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"2"</Career>
+<Career name="RULES-CARE_BURGHER">"2"</Career>
+<Career name="RULES-CARE_JAILER">"1"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"2"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"2"</Career>
+<Career name="CCOMP-CARE_KNIGHT_ERRANT">"2"</Career>
+<Career name="RULES-CARE_PROTAGONIST">"2"</Career>
+<Career name="RULES-CARE_VAGABOND">"2"</Career>
+<Career name="CCOMP-CARE_CARCASSONNE_SHEPHERD">"2"</Career>
+<Career name="CCOMP-CARE_MAN_AT_ARMS">"2"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"2"</Career>
+<Career name="RULES-CARE_VALET">"3"</Career>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"2"</Career>
+<Career name="RULES-CARE_MARINE">"2"</Career>
+<Career name="RULES-CARE_ROGUE">"2"</Career>
+<Career name="RULES-CARE_WATCHMAN">"2"</Career>
+<Career name="RULES-CARE_COACHMAN">"2"</Career>
+<Career name="CCOMP-CARE_MEDIATOR">"2"</Career>
+<Career name="RULES-CARE_SCRIBE">"2"</Career>
+<Career name="RULES-CARE_WOODSMAN">"2"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+<Career name="RULES-CARE_SEAMAN">"2"</Career>
+<Career name="RULES-CARE_ZEALOT">"2"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"94"</Page>
+</Specie>
+<Specie id="KOTG-RACE_MOUSILLON">
+<Description language="ENGLISH">"Human (Mousillon)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename"</NamePattern>
+<NamePattern sex="F">"Forename"</NamePattern>
+<Name part="Forename" sex="F" name="Armengild">"1-5"</Name>
+<Name part="Forename" sex="F" name="Bertha">"6-10"</Name>
+<Name part="Forename" sex="F" name="Chrodegard">"11-15"</Name>
+<Name part="Forename" sex="F" name="Dhuoda">"16-20"</Name>
+<Name part="Forename" sex="F" name="Eleanor">"21-25"</Name>
+<Name part="Forename" sex="F" name="Hrotswitha">"26-30"</Name>
+<Name part="Forename" sex="F" name="Heloise">"31-35"</Name>
+<Name part="Forename" sex="F" name="Isabel">"36-40"</Name>
+<Name part="Forename" sex="F" name="Isolde">"41-45"</Name>
+<Name part="Forename" sex="F" name="Lisseut">"46-50"</Name>
+<Name part="Forename" sex="F" name="Marie">"51-55"</Name>
+<Name part="Forename" sex="F" name="Mathilde">"56-60"</Name>
+<Name part="Forename" sex="F" name="Nimugild">"61-65"</Name>
+<Name part="Forename" sex="F" name="Perlesault">"66-70"</Name>
+<Name part="Forename" sex="F" name="Rhadegund">"71-75"</Name>
+<Name part="Forename" sex="F" name="Rumengild">"76-80"</Name>
+<Name part="Forename" sex="F" name="Sirisgard">"81-85"</Name>
+<Name part="Forename" sex="F" name="Sonengund">"86-90"</Name>
+<Name part="Forename" sex="F" name="Vermengard">"91-95"</Name>
+<Name part="Forename" sex="F" name="Walswitha">"96-100"</Name>
+<Name part="Forename" sex="M" name="Aiden">"1-5"</Name>
+<Name part="Forename" sex="M" name="Aigulf">"6-10"</Name>
+<Name part="Forename" sex="M" name="Bertelis">"11-15"</Name>
+<Name part="Forename" sex="M" name="Carloman">"16-20"</Name>
+<Name part="Forename" sex="M" name="Chrodegang">"21-25"</Name>
+<Name part="Forename" sex="M" name="Ferragus">"26-30"</Name>
+<Name part="Forename" sex="M" name="Hrodbert">"31-35"</Name>
+<Name part="Forename" sex="M" name="Jacen">"36-40"</Name>
+<Name part="Forename" sex="M" name="Louis">"41-45"</Name>
+<Name part="Forename" sex="M" name="Merovech">"46-50"</Name>
+<Name part="Forename" sex="M" name="Odo">"51-55"</Name>
+<Name part="Forename" sex="M" name="Orderic">"56-60"</Name>
+<Name part="Forename" sex="M" name="Panteleon">"61-65"</Name>
+<Name part="Forename" sex="M" name="Piers">"66-70"</Name>
+<Name part="Forename" sex="M" name="Redemund">"71-75"</Name>
+<Name part="Forename" sex="M" name="Roland">"76-80"</Name>
+<Name part="Forename" sex="M" name="Suidbert">"81-85"</Name>
+<Name part="Forename" sex="M" name="Theudis">"86-90"</Name>
+<Name part="Forename" sex="M" name="Waldon">"91-95"</Name>
+<Name part="Forename" sex="M" name="Yonec">"96-100"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_BRETONNIA"</Skill>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_BRETON"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_STRONG_MINDED"</Talent>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"2"</Career>
+<Career name="RULES-CARE_FERRYMAN">"1"</Career>
+<Career name="RULES-CARE_MESSENGER">"2"</Career>
+<Career name="RULES-CARE_SERVANT">"3"</Career>
+<Career name="RULES-CARE_BAILIFF">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"2"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"2"</Career>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"1"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"1"</Career>
+<Career name="RULES-CARE_MINER">"2"</Career>
+<Career name="RULES-CARE_STUDENT">"2"</Career>
+<Career name="RULES-CARE_BOATMAN">"2"</Career>
+<Career name="CCOMP-CARE_GRAIL_PILGRIM">"1"</Career>
+<Career name="RULES-CARE_NOBLE">"2"</Career>
+<Career name="RULES-CARE_THIEF">"2"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_HERRIMAULT">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"2"</Career>
+<Career name="RULES-CARE_THUG">"2"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+<Career name="RULES-CARE_HUNTER">"2"</Career>
+<Career name="RULES-CARE_OUTRIDER">"2"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"2"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"2"</Career>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+<Career name="RULES-CARE_PEASANT">"4"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"2"</Career>
+<Career name="RULES-CARE_BURGHER">"2"</Career>
+<Career name="RULES-CARE_JAILER">"1"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"2"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"2"</Career>
+<Career name="CCOMP-CARE_KNIGHT_ERRANT">"2"</Career>
+<Career name="RULES-CARE_PROTAGONIST">"2"</Career>
+<Career name="RULES-CARE_VAGABOND">"2"</Career>
+<Career name="CCOMP-CARE_CARCASSONNE_SHEPHERD">"2"</Career>
+<Career name="CCOMP-CARE_MAN_AT_ARMS">"2"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"2"</Career>
+<Career name="RULES-CARE_VALET">"3"</Career>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"2"</Career>
+<Career name="RULES-CARE_MARINE">"2"</Career>
+<Career name="RULES-CARE_ROGUE">"2"</Career>
+<Career name="RULES-CARE_WATCHMAN">"2"</Career>
+<Career name="RULES-CARE_COACHMAN">"2"</Career>
+<Career name="CCOMP-CARE_MEDIATOR">"2"</Career>
+<Career name="RULES-CARE_SCRIBE">"2"</Career>
+<Career name="RULES-CARE_WOODSMAN">"2"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+<Career name="RULES-CARE_SEAMAN">"2"</Career>
+<Career name="RULES-CARE_ZEALOT">"2"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"94"</Page>
+</Specie>
+<Specie id="KOTG-RACE_PARRAVON">
+<Description language="ENGLISH">"Human (Parravon)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename"</NamePattern>
+<NamePattern sex="F">"Forename"</NamePattern>
+<Name part="Forename" sex="F" name="Armengild">"1-5"</Name>
+<Name part="Forename" sex="F" name="Bertha">"6-10"</Name>
+<Name part="Forename" sex="F" name="Chrodegard">"11-15"</Name>
+<Name part="Forename" sex="F" name="Dhuoda">"16-20"</Name>
+<Name part="Forename" sex="F" name="Eleanor">"21-25"</Name>
+<Name part="Forename" sex="F" name="Hrotswitha">"26-30"</Name>
+<Name part="Forename" sex="F" name="Heloise">"31-35"</Name>
+<Name part="Forename" sex="F" name="Isabel">"36-40"</Name>
+<Name part="Forename" sex="F" name="Isolde">"41-45"</Name>
+<Name part="Forename" sex="F" name="Lisseut">"46-50"</Name>
+<Name part="Forename" sex="F" name="Marie">"51-55"</Name>
+<Name part="Forename" sex="F" name="Mathilde">"56-60"</Name>
+<Name part="Forename" sex="F" name="Nimugild">"61-65"</Name>
+<Name part="Forename" sex="F" name="Perlesault">"66-70"</Name>
+<Name part="Forename" sex="F" name="Rhadegund">"71-75"</Name>
+<Name part="Forename" sex="F" name="Rumengild">"76-80"</Name>
+<Name part="Forename" sex="F" name="Sirisgard">"81-85"</Name>
+<Name part="Forename" sex="F" name="Sonengund">"86-90"</Name>
+<Name part="Forename" sex="F" name="Vermengard">"91-95"</Name>
+<Name part="Forename" sex="F" name="Walswitha">"96-100"</Name>
+<Name part="Forename" sex="M" name="Aiden">"1-5"</Name>
+<Name part="Forename" sex="M" name="Aigulf">"6-10"</Name>
+<Name part="Forename" sex="M" name="Bertelis">"11-15"</Name>
+<Name part="Forename" sex="M" name="Carloman">"16-20"</Name>
+<Name part="Forename" sex="M" name="Chrodegang">"21-25"</Name>
+<Name part="Forename" sex="M" name="Ferragus">"26-30"</Name>
+<Name part="Forename" sex="M" name="Hrodbert">"31-35"</Name>
+<Name part="Forename" sex="M" name="Jacen">"36-40"</Name>
+<Name part="Forename" sex="M" name="Louis">"41-45"</Name>
+<Name part="Forename" sex="M" name="Merovech">"46-50"</Name>
+<Name part="Forename" sex="M" name="Odo">"51-55"</Name>
+<Name part="Forename" sex="M" name="Orderic">"56-60"</Name>
+<Name part="Forename" sex="M" name="Panteleon">"61-65"</Name>
+<Name part="Forename" sex="M" name="Piers">"66-70"</Name>
+<Name part="Forename" sex="M" name="Redemund">"71-75"</Name>
+<Name part="Forename" sex="M" name="Roland">"76-80"</Name>
+<Name part="Forename" sex="M" name="Suidbert">"81-85"</Name>
+<Name part="Forename" sex="M" name="Theudis">"86-90"</Name>
+<Name part="Forename" sex="M" name="Waldon">"91-95"</Name>
+<Name part="Forename" sex="M" name="Yonec">"96-100"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_BRETONNIA"</Skill>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_BRETON"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_SEASONED_TRAVELLER/RULES-T_SIXTH_SENSE"</Talent>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"2"</Career>
+<Career name="RULES-CARE_FERRYMAN">"1"</Career>
+<Career name="RULES-CARE_MESSENGER">"2"</Career>
+<Career name="RULES-CARE_SERVANT">"3"</Career>
+<Career name="RULES-CARE_BAILIFF">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"2"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"2"</Career>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"1"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"1"</Career>
+<Career name="RULES-CARE_MINER">"2"</Career>
+<Career name="RULES-CARE_STUDENT">"2"</Career>
+<Career name="RULES-CARE_BOATMAN">"2"</Career>
+<Career name="CCOMP-CARE_GRAIL_PILGRIM">"1"</Career>
+<Career name="RULES-CARE_NOBLE">"2"</Career>
+<Career name="RULES-CARE_THIEF">"2"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_HERRIMAULT">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"2"</Career>
+<Career name="RULES-CARE_THUG">"2"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+<Career name="RULES-CARE_HUNTER">"2"</Career>
+<Career name="RULES-CARE_OUTRIDER">"2"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"2"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"2"</Career>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+<Career name="RULES-CARE_PEASANT">"4"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"2"</Career>
+<Career name="RULES-CARE_BURGHER">"2"</Career>
+<Career name="RULES-CARE_JAILER">"1"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"2"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"2"</Career>
+<Career name="CCOMP-CARE_KNIGHT_ERRANT">"2"</Career>
+<Career name="RULES-CARE_PROTAGONIST">"2"</Career>
+<Career name="RULES-CARE_VAGABOND">"2"</Career>
+<Career name="CCOMP-CARE_CARCASSONNE_SHEPHERD">"2"</Career>
+<Career name="CCOMP-CARE_MAN_AT_ARMS">"2"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"2"</Career>
+<Career name="RULES-CARE_VALET">"3"</Career>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"2"</Career>
+<Career name="RULES-CARE_MARINE">"2"</Career>
+<Career name="RULES-CARE_ROGUE">"2"</Career>
+<Career name="RULES-CARE_WATCHMAN">"2"</Career>
+<Career name="RULES-CARE_COACHMAN">"2"</Career>
+<Career name="CCOMP-CARE_MEDIATOR">"2"</Career>
+<Career name="RULES-CARE_SCRIBE">"2"</Career>
+<Career name="RULES-CARE_WOODSMAN">"2"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+<Career name="RULES-CARE_SEAMAN">"2"</Career>
+<Career name="RULES-CARE_ZEALOT">"2"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"94"</Page>
+</Specie>
+<Specie id="KOTG-RACE_QUENELLES">
+<Description language="ENGLISH">"Human (Quenelles)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename"</NamePattern>
+<NamePattern sex="F">"Forename"</NamePattern>
+<Name part="Forename" sex="F" name="Armengild">"1-5"</Name>
+<Name part="Forename" sex="F" name="Bertha">"6-10"</Name>
+<Name part="Forename" sex="F" name="Chrodegard">"11-15"</Name>
+<Name part="Forename" sex="F" name="Dhuoda">"16-20"</Name>
+<Name part="Forename" sex="F" name="Eleanor">"21-25"</Name>
+<Name part="Forename" sex="F" name="Hrotswitha">"26-30"</Name>
+<Name part="Forename" sex="F" name="Heloise">"31-35"</Name>
+<Name part="Forename" sex="F" name="Isabel">"36-40"</Name>
+<Name part="Forename" sex="F" name="Isolde">"41-45"</Name>
+<Name part="Forename" sex="F" name="Lisseut">"46-50"</Name>
+<Name part="Forename" sex="F" name="Marie">"51-55"</Name>
+<Name part="Forename" sex="F" name="Mathilde">"56-60"</Name>
+<Name part="Forename" sex="F" name="Nimugild">"61-65"</Name>
+<Name part="Forename" sex="F" name="Perlesault">"66-70"</Name>
+<Name part="Forename" sex="F" name="Rhadegund">"71-75"</Name>
+<Name part="Forename" sex="F" name="Rumengild">"76-80"</Name>
+<Name part="Forename" sex="F" name="Sirisgard">"81-85"</Name>
+<Name part="Forename" sex="F" name="Sonengund">"86-90"</Name>
+<Name part="Forename" sex="F" name="Vermengard">"91-95"</Name>
+<Name part="Forename" sex="F" name="Walswitha">"96-100"</Name>
+<Name part="Forename" sex="M" name="Aiden">"1-5"</Name>
+<Name part="Forename" sex="M" name="Aigulf">"6-10"</Name>
+<Name part="Forename" sex="M" name="Bertelis">"11-15"</Name>
+<Name part="Forename" sex="M" name="Carloman">"16-20"</Name>
+<Name part="Forename" sex="M" name="Chrodegang">"21-25"</Name>
+<Name part="Forename" sex="M" name="Ferragus">"26-30"</Name>
+<Name part="Forename" sex="M" name="Hrodbert">"31-35"</Name>
+<Name part="Forename" sex="M" name="Jacen">"36-40"</Name>
+<Name part="Forename" sex="M" name="Louis">"41-45"</Name>
+<Name part="Forename" sex="M" name="Merovech">"46-50"</Name>
+<Name part="Forename" sex="M" name="Odo">"51-55"</Name>
+<Name part="Forename" sex="M" name="Orderic">"56-60"</Name>
+<Name part="Forename" sex="M" name="Panteleon">"61-65"</Name>
+<Name part="Forename" sex="M" name="Piers">"66-70"</Name>
+<Name part="Forename" sex="M" name="Redemund">"71-75"</Name>
+<Name part="Forename" sex="M" name="Roland">"76-80"</Name>
+<Name part="Forename" sex="M" name="Suidbert">"81-85"</Name>
+<Name part="Forename" sex="M" name="Theudis">"86-90"</Name>
+<Name part="Forename" sex="M" name="Waldon">"91-95"</Name>
+<Name part="Forename" sex="M" name="Yonec">"96-100"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_BRETONNIA"</Skill>
+<Skill>"RULES-COMP_GOSSIP"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_BRETON"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_GRUDGE_BORN_FURY"</Talent>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"2"</Career>
+<Career name="RULES-CARE_FERRYMAN">"1"</Career>
+<Career name="RULES-CARE_MESSENGER">"2"</Career>
+<Career name="RULES-CARE_SERVANT">"3"</Career>
+<Career name="RULES-CARE_BAILIFF">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"2"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"2"</Career>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"1"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"1"</Career>
+<Career name="RULES-CARE_MINER">"2"</Career>
+<Career name="RULES-CARE_STUDENT">"2"</Career>
+<Career name="RULES-CARE_BOATMAN">"2"</Career>
+<Career name="CCOMP-CARE_GRAIL_PILGRIM">"1"</Career>
+<Career name="RULES-CARE_NOBLE">"2"</Career>
+<Career name="RULES-CARE_THIEF">"2"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="CCOMP-CARE_HERRIMAULT">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"2"</Career>
+<Career name="RULES-CARE_THUG">"2"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"2"</Career>
+<Career name="RULES-CARE_HUNTER">"2"</Career>
+<Career name="RULES-CARE_OUTRIDER">"2"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"2"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"2"</Career>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+<Career name="RULES-CARE_PEASANT">"4"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"2"</Career>
+<Career name="RULES-CARE_BURGHER">"2"</Career>
+<Career name="RULES-CARE_JAILER">"1"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"2"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"2"</Career>
+<Career name="CCOMP-CARE_KNIGHT_ERRANT">"2"</Career>
+<Career name="RULES-CARE_PROTAGONIST">"2"</Career>
+<Career name="RULES-CARE_VAGABOND">"2"</Career>
+<Career name="CCOMP-CARE_CARCASSONNE_SHEPHERD">"2"</Career>
+<Career name="CCOMP-CARE_MAN_AT_ARMS">"2"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"2"</Career>
+<Career name="RULES-CARE_VALET">"3"</Career>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"2"</Career>
+<Career name="RULES-CARE_MARINE">"2"</Career>
+<Career name="RULES-CARE_ROGUE">"2"</Career>
+<Career name="RULES-CARE_WATCHMAN">"2"</Career>
+<Career name="RULES-CARE_COACHMAN">"2"</Career>
+<Career name="CCOMP-CARE_MEDIATOR">"2"</Career>
+<Career name="RULES-CARE_SCRIBE">"2"</Career>
+<Career name="RULES-CARE_WOODSMAN">"2"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+<Career name="RULES-CARE_SEAMAN">"2"</Career>
+<Career name="RULES-CARE_ZEALOT">"2"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"94"</Page>
+</Specie>
+</DATA_SPECIE>
+</DATA_BOOK>

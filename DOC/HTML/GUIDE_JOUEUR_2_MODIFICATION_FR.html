@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Guide du joueur — 2. Faire évoluer un personnage</title><style>
+body{font-family:Segoe UI,Arial,sans-serif;max-width:50rem;margin:2rem auto;padding:0 1rem;
+line-height:1.55;color:#222;background:#fbf7ee}
+h1{color:#7a1212;border-bottom:3px solid #7a1212}
+h2{color:#7a1212;margin-top:2rem}
+table{border-collapse:collapse;margin:1rem 0}
+th,td{border:1px solid #b9a98a;padding:.35rem .6rem;text-align:left;vertical-align:top}
+th{background:#eadfc6}
+code{background:#eee4cd;padding:0 .25rem}
+img{max-width:100%;height:auto;border:1px solid #b9a98a}
+hr{border:0;border-top:1px solid #b9a98a;margin:1.5rem 0}
+em{color:#555}
+:target{background:#fff1b8}
+</style></head><body>
+<h1 id="guide-du-joueur-2-faire-evoluer-un-personnage">Guide du joueur — 2. Faire évoluer un personnage</h1>
+<p><em>Règles WFRP4. Version anglaise : <code>PLAYER_GUIDE_2_MODIFICATION.md</code>.</em></p>
+<p>Pour qui : un joueur dont le personnage est déjà créé et qui veut le faire évoluer, ou un habitué qui cherche un point précis (les fiches par question sont en phase 3).</p>
+<p>Astuce : sur presque tous les boutons et cases à cocher, <strong>F1</strong> affiche une courte explication.</p>
+<hr>
+<h2 id="ouvrir-un-personnage">Ouvrir un personnage</h2>
+<p>Ouvre le personnage depuis le menu principal. La fiche se partage en deux : les <strong>tableaux de la fiche</strong> (caractéristiques, compétences, talents, sorts, équipement) et, sur le côté, une liste de <strong>pages</strong> pour tout ce qui évolue : Attribut, Compétence, Talent, Total expérience (les Xp), Evolution (l'avancement), Historiques, Livre, MJ XP, Corruption, Mutations, Afflictions/Maladies, Ambitions, Groupe, Destin / Résilience, Monnaie et PDF. Selon la version de règles, certaines pages n'apparaissent pas.</p>
+<p><img src="../IMAGES/modif_01_fenetre.png" alt="La fenêtre du personnage avec la liste des pages"></p>
+<p>Deux règles à retenir :</p>
+<ul>
+<li><strong>Rien n'est définitif avant d'avoir cliqué sur Sauve Fiche.</strong> Les changements vivent à l'écran ; <strong>Sauve Fiche</strong> écrit le fichier et ferme la fenêtre. Si l'enregistrement échoue, la fenêtre reste ouverte.
+</li>
+<li>Les livres avec lesquels le personnage a été créé restent attachés à lui. Pour utiliser un élément d'un autre livre (par exemple les talents Momentum), ce livre doit faire partie des livres du personnage.
+</li>
+</ul>
+<hr>
+<a id="xp"></a>
+<h2 id="l-experience-xp">L'expérience (Xp)</h2>
+<p>Sur la page <strong>Total expérience</strong> :</p>
+<ul>
+<li><strong>Xp total</strong> : saisis le total d'Xp gagnés par le personnage, en unités brutes, comme sur la fiche. Les Xp dépensés et restants sont calculés pour toi.
+</li>
+<li><strong>Opt : XP/25</strong> : coche-la si tu comptes les Xp dans la nouvelle unité (total divisé par 25, arrondi vers le bas). Dépensés et restants suivent la même unité.
+</li>
+<li>Les colonnes de <strong>coût en Xp</strong> et de <strong>détail du calcul</strong> peuvent être affichées ou cachées dans les tableaux ; cela ne change que l'affichage.
+</li>
+</ul>
+<p><img src="../IMAGES/modif_02_xp.png" alt="La page Total expérience"></p>
+<hr>
+<a id="advance"></a>
+<h2 id="depenser-ses-xp-l-avancement">Dépenser ses Xp : l'avancement</h2>
+<p>Sur la page <strong>Evolution</strong>, tu décides ce que le personnage fait de ses Xp :</p>
+<ol>
+<li>Dans les tableaux de la fiche, saisis les <strong>avancées</strong> voulues (caractéristiques, compétences, talents). Le coût est calculé d'après la carrière et les avancées déjà achetées.
+</li>
+<li>Choisis ce qui arrive à la carrière :
+<ul>
+<li><strong>Continuer tel quel</strong> : même niveau, même carrière.
+</li>
+<li><strong>Niveau suivant</strong> : le personnage passe au niveau suivant de sa carrière (ou à la carrière suivante).
+</li>
+<li><strong>Changer de métier</strong> : choisis la nouvelle carrière dans la liste (bouton <strong>Sélectionner</strong>).
+</li>
+</ul>
+</li>
+<li>Clique sur <strong>MAJ Fiche</strong> : les avancées et le changement de carrière sont appliqués et les Xp dépensés sont déduits.
+</li>
+</ol>
+<p>À savoir :</p>
+<ul>
+<li>Une carrière dont le premier niveau dépasse 1 (carrière avancée, par exemple le Tisseur de tempêtes) ne se commence pas directement : on y arrive en montant depuis sa carrière parente. Le programme la refuse avec un message.
+</li>
+<li>Le changement de carrière n'est proposé que parmi les carrières de l'espèce et des livres du personnage.
+</li>
+<li><strong>Historiques</strong> garde une ligne par mise à jour : sélectionne une ligne et clique sur le bouton <strong>Voir</strong> pour afficher la fiche dans cet état (vue en lecture seule : les boutons d'équipement disparaissent). C'est seulement pour regarder : tu ne peux pas revenir à cet état.
+</li>
+</ul>
+<p><img src="../IMAGES/modif_03_avancement.png" alt="La page Evolution avec les trois choix"></p>
+<hr>
+<h2 id="specialisations">Spécialisations</h2>
+<p>Une compétence ou un talent à spécialisation (« Savoir (Any) », « Mêlée (Any) ») doit être précisé. Sélectionne la ligne, puis clique sur <strong>+ Spécialisation</strong> pour en ajouter une propre au personnage. La ligne suit ensuite les règles de coût habituelles.</p>
+<hr>
+<a id="equipment"></a>
+<h2 id="l-equipement">L'équipement</h2>
+<p>Les boutons sous le tableau d'équipement ajoutent ce que le personnage porte. Chaque bouton n'apparaît que dans les catégories où il sert : <strong>+Arme</strong> dans Armes, <strong>+Armure</strong> dans Armures, <strong>+Sort</strong> dans Sorts, <strong>+Objet texte</strong> dans Divers, <strong>+Équipement</strong> dans Divers et Montures, <strong>+Familier</strong> dans Montures.</p>
+<table><thead><tr><th>Bouton</th><th>Ajoute</th></tr></thead><tbody>
+<tr><td><strong>+Arme</strong></td><td>une arme</td></tr>
+<tr><td><strong>+Armure</strong></td><td>une pièce d'armure (coche <em>armure simplifiée</em> pour des choix simplifiés)</td></tr>
+<tr><td><strong>+Sort</strong></td><td>un sort à la liste</td></tr>
+<tr><td><strong>+Équipement</strong></td><td>un objet des livres</td></tr>
+<tr><td><strong>+Objet texte</strong></td><td>une ligne de texte libre</td></tr>
+<tr><td><strong>+Objet</strong></td><td>un objet qui n'est dans aucun livre (catégories Armes, Armures et Divers)</td></tr>
+<tr><td><strong>+Familier</strong></td><td>un familier ou une monture</td></tr>
+<tr><td><strong>+Qualité</strong></td><td>une qualité de fabrication sur l'objet sélectionné (arme, armure ou autre)</td></tr>
+<tr><td><strong>-Supprime</strong></td><td>retire l'objet sélectionné (avec confirmation)</td></tr>
+</tbody></table>
+<ul>
+<li>Coche <strong>Munitions</strong> si tu veux que les munitions soient gérées et proposées dans l'équipement.
+</li>
+<li>Le bouton <strong>-Supprime</strong> n'apparaît pas dans la catégorie Sorts : un sort ne peut pas être retiré en WFRP4 (certaines autres règles le permettent). Supprimer un animal rend ses objets portés au personnage.
+</li>
+<li>En règles WFRP1, un sort s'apprend avec <strong>Apprendre un sort</strong> (catégorie Sorts).
+</li>
+</ul>
+<p><img src="../IMAGES/modif_04_equipement.png" alt="Les boutons d&#x27;équipement"></p>
+<hr>
+<a id="corruption"></a>
+<h2 id="corruption-et-mutations">Corruption et mutations</h2>
+<p>Sur la page <strong>Corruption</strong> :</p>
+<ul>
+<li><strong>Ajoute</strong> une ligne à chaque fois que le personnage gagne des points de corruption ; <strong>Supprimer</strong> retire la ligne sélectionnée (avec confirmation). Le compteur indique les points restants avant le prochain test.
+</li>
+<li>Après un test de Corruption raté, le bouton <strong>Mutation</strong> ouvre la liste des mutations. Un des choix permet de <strong>dépenser de la Résilience</strong> plutôt que de subir la mutation, quand de la Résilience est disponible.
+</li>
+<li>Les talents donnés ou retirés par une corruption sont suivis par le programme.
+</li>
+</ul>
+<p>La page <strong>Mutations</strong> liste celles déjà subies (en WFRP1 la page porte un autre nom).</p>
+<p><img src="../IMAGES/modif_05_corruption.png" alt="La page Corruption"></p>
+<hr>
+<a id="afflictions"></a>
+<h2 id="afflictions-et-maladies">Afflictions et maladies</h2>
+<p>Sur la page <strong>Afflictions / Maladies</strong> :</p>
+<ul>
+<li><strong>Ajouter une Affliction</strong> ouvre le catalogue. Certaines Afflictions fixent leur malus par un jet de dé (par exemple « −1d10 Endurance ») : le programme montre le jet et <strong>tu le valides ou le corriges</strong> ; il ne tire jamais en silence. Annuler la fenêtre annule l'ajout.
+</li>
+<li><strong>Ajouter une Maladie</strong> ouvre le catalogue des maladies.
+</li>
+</ul>
+<hr>
+<a id="ambitions"></a>
+<h2 id="ambitions-et-groupe">Ambitions et groupe</h2>
+<ul>
+<li><strong>Ambitions</strong> : ambitions à court et long terme, en texte libre. Double-clique dans le tableau pour modifier.
+</li>
+<li><strong>Groupe</strong> : les biens partagés du groupe. Un groupe est <strong>un seul fichier partagé</strong> (<code>GROUPE_&lt;nom&gt;.xml</code>, à la racine du dossier des personnages). Chaque personnage ne retient que le nom du groupe : tous les membres voient donc les mêmes biens partagés et les mêmes ambitions de groupe (saisies dans la fenêtre du groupe, en lecture seule sur la page Ambitions du personnage). Double-clique sur la page Groupe pour ouvrir la fenêtre du groupe. Un membre ne peut pas quitter le groupe tant qu'un de ses objets est confié à un bien du groupe.
+</li>
+</ul>
+<hr>
+<h2 id="le-mj-et-les-regles">Le MJ et les règles</h2>
+<ul>
+<li>Page <strong>MJ XP</strong> : les Xp que distribue le meneur de jeu ; tu peux y suivre les montants.
+</li>
+<li><strong>Tout est modifiable hors livre officiel</strong> : quand un personnage ou une fiche ne vient pas d'un livre officiel, rien n'est verrouillé. La phase 3 explique comment s'en servir pour des règles maison.
+</li>
+</ul>
+<hr>
+<a id="pdf"></a>
+<h2 id="la-fiche-pdf">La fiche PDF</h2>
+<p>Le bouton <strong>PDF</strong> crée la fiche du personnage avec les valeurs affichées à l'écran. Options (cases sous le bouton) :</p>
+<table><thead><tr><th>Option</th><th>Effet</th></tr></thead><tbody>
+<tr><td><strong>PDF 2 pages (Feldo)</strong></td><td>la fiche de deux pages au lieu de la fiche habituelle</td></tr>
+<tr><td><strong>Sans astérisque</strong></td><td>cache les marques qui renvoient aux notes</td></tr>
+<tr><td><strong>Sans montant</strong></td><td>garde les astérisques mais cache leurs montants</td></tr>
+<tr><td><strong>Style Warhammer</strong></td><td>bandeaux rouges et lignes de parchemin (PDF Feldo)</td></tr>
+<tr><td><strong>Couleur</strong></td><td>PDF en couleur ; décochée = niveaux de gris</td></tr>
+<tr><td><strong>Économie d'encre</strong></td><td>contours seulement, pas d'aplats</td></tr>
+</tbody></table>
+<p><strong>Détails physiques</strong> (âge, taille…) : un bouton ouvre la fenêtre avec un jet du livre de règles ou une saisie libre ; le résultat est recopié sur la fiche.</p>
+<p><img src="../IMAGES/modif_06_pdf.png" alt="Les options du PDF"></p>
+<hr>
+<h2 id="l-option-momentum-wfrp4-wfrp5">L'option Momentum (WFRP4 ↔ WFRP5)</h2>
+<p>Une case sur la page Total expérience remplace les talents du livre de règles (WFRP4) par leurs versions Momentum (WFRP5). Le livre Momentum doit faire partie des livres du personnage, sinon un message te le dit. Détails dans la fiche de la phase 3.</p>
+<hr>
+<h2 id="si-tu-es-bloque">Si tu es bloqué</h2>
+<table><thead><tr><th>Tu n'arrives pas à…</th><th>Que faire</th></tr></thead><tbody>
+<tr><td>changer de carrière</td><td>la carrière est avancée (niveau supérieur à 1) : monte depuis sa carrière parente</td></tr>
+<tr><td>utiliser un talent Momentum</td><td>ajoute le livre Momentum aux livres du personnage</td></tr>
+<tr><td>lire tes Xp dans la bonne unité</td><td>coche ou décoche <strong>Opt : XP/25</strong></td></tr>
+<tr><td>revenir à un état antérieur</td><td>page Historiques, sélectionne la ligne, <strong>Voir</strong></td></tr>
+<tr><td>quitter sans perdre ton travail</td><td>clique sur <strong>Sauve Fiche</strong> : fermer autrement perd les changements non enregistrés (le code ne demande aucune confirmation à la fermeture)</td></tr>
+</tbody></table>
+<hr>
+<h2 id="differences-selon-la-version">Différences selon la version</h2>
+<ul>
+<li><strong>WFRP4 :</strong> ce guide.
+</li>
+<li><strong>WFRP2 / WFRP1 :</strong> même logique (Xp, avancées, changement de carrière). Ce qui change :
+<ul>
+<li><strong>Carrières (les deux) :</strong> pas de tableau de niveaux de carrière et, en WFRP2, pas de ligne « appartenance ». Quitter une carrière compte les exigences en caractéristiques et compétences (et talents en WFRP2) face aux Xp nécessaires ; un message dit ce qui manque ou les Xp qui font défaut.
+</li>
+<li><strong>WFRP2 :</strong> les avancées de compétence se font par pas de <strong>10</strong> (au lieu de 5 en WFRP1) ; la page Mutations propose les <strong>Marques des Dieux</strong> (une entrée par domaine divin) et la <strong>mutation du Chaos</strong> (tirage d1000, du Tome of Corruption).
+</li>
+<li><strong>WFRP1 :</strong>
+<ul>
+<li>Il n'y a <strong>pas de page Talents</strong> ni de tableau de talents : les compétences les remplacent (la liste des pages est plus courte), et les panneaux Résilience et Détermination ne sont pas affichés.
+</li>
+<li>Un sort s'apprend avec <strong>Apprendre un sort</strong>. Passer au niveau suivant d'une carrière de lanceur de sorts est refusé tant qu'il manque les sorts exigés.
+</li>
+<li><strong>Prêtres</strong> (Realm of Divine Magic) : passer au rang suivant exige toutes les prières requises du rang actuel, coûte 100 Xp × le rang visé pour le jet de la Cleric Advance Table, et la divinité juge l'avancement (d100). Des cadeaux peuvent suivre (Xp, un point de Destin, une bénédiction). Un <strong>Initié</strong> choisit un culte et reçoit les quatre prières Petty de départ ; un <strong>Prêtre druidique</strong> de niveau 1 reçoit un familier (d100).
+</li>
+<li>Entrer dans un niveau de carrière magique donne des <strong>points de magie</strong> (jet de dés du livre).
+</li>
+<li>La page Mutations liste les <em>handicaps</em> un par ligne, avec une case « Magicien mauvais ».
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</body></html>

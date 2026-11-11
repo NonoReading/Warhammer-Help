@@ -8,6 +8,12 @@ uses
   Classes, SysUtils, fpPDF, ChargeConstantes, Math, Unitcalcul, Graphics, IntfGraphics, Controls, fpTTF,
   BGRABitmap, BGRABitmapTypes, LclIntF, LazUTF8, FPImage, FPReadPNG, FPWritePNG, FPWriteJPEG;
 
+// Mode --dumppdf : si PdfTrace est cree, chaque texte ecrit par PdfEcrit / PdfCentre y est aussi
+// note (x et y en mm de la page, texte). Nil en usage normal.
+Var
+  PdfTrace: TStringList = nil;
+
+Procedure PdfTraceTexte(X, Y: Single; const Texte: String);
 Procedure PdfEncadre(PdfPage: TPDFPage; X: Single; Y: Single; Bouclier: Boolean; TB1: String; TB2: String; TH: String);
 Procedure PdfCentre(PdfPage: TPDFPage; Min: Single; Max: Single; Y: Single; Texte: String);
 Procedure PdfEcrit(PdfPage: TPDFPage; Min: Single; Max: Single; Y: Single; Texte: String; MinPolice: Integer);
@@ -36,6 +42,10 @@ Function TestPixelZeroZero(Const Filename: String): Boolean;
 Function PdfGaramondChemins(out Italique, Gras, Famille: String): Boolean;
 Procedure PdfPolicesDeRepli;
 Function PdfCheminPolice(Const Fichier: String): String;
+// Supprime les autres PDF du dossier du PDF qu'on vient d'ecrire : seul le dernier est conserve
+// (les XML d'historique permettent de regenerer les anciens). Un PDF ouvert dans une visionneuse
+// ne peut pas etre supprime : il reste alors jusqu'a la prochaine creation.
+Procedure PdfPurgeAnciens(Const Chemin: String);
 
 implementation
 
@@ -73,6 +83,18 @@ Procedure PdfEncadre(PdfPage: TPDFPage; X: Single; Y: Single; Bouclier: Boolean;
       PdfCentre(PdfPage, X-8, X+12, Y+5, TH);
   end;
 
+Procedure PdfTraceTexte(X, Y: Single; const Texte: String);
+  var
+    DefaultFormatSettings: TFormatSettings;
+  begin
+    DefaultFormatSettings := FormatSettings;
+    DefaultFormatSettings.DecimalSeparator := '.';
+    // Y arrive en mm depuis le bas de la page ; la trace le donne depuis le haut (page Letter, 279,4 mm)
+    // pour que le tri lise la fiche de haut en bas.
+    if (PdfTrace <> nil) and (Trim(Texte) <> '') then
+      PdfTrace.Add(Format('haut=%05.1f x=%05.1f %s', [279.4 - Y, X, Texte], DefaultFormatSettings));
+  end;
+
 Function TailleTexte(Texte: String; FontTaille: Integer): TPDFFloat;
   var
     PosTemp:      TPDFFloat;
@@ -96,6 +118,7 @@ Procedure PdfEcrit(PdfPage: TPDFPage; Min: Single; Max: Single; Y: Single; Texte
     Texte2:       String;
 
   BEgin
+    PdfTraceTexte(Min, Y, Texte);
     Diff := (Max - Min) * 1.15;
     PosTemp := TailleTexte(Texte, PdfFontTaille);
     if PosTemp > Diff then
@@ -285,6 +308,7 @@ Procedure PdfCentre(PdfPage: TPDFPage; Min: Single; Max: Single; Y: Single; Text
     lFC:          TFPFontCacheItem;
     PosTemp:      TPDFFloat;
   BEgin
+    PdfTraceTexte(Min, Y, Texte);
     lFC:= gTTFontCache.Find(PdfFamilyName, PdfIsBold, PdfIsItalic);
     PosTemp:= PDFTomm(lFC.TextWidth(Texte, PdfFontTaille));
 
@@ -602,6 +626,24 @@ begin
     Img.Free;
   end;
 end;
+
+Procedure PdfPurgeAnciens(Const Chemin: String);
+  var
+    Dossier: String;
+    Rech: TSearchRec;
+  begin
+    Dossier := ExtractFilePath(Chemin);
+    if FindFirst(Dossier + '*.PDF', faAnyFile, Rech) = 0 then
+      try
+        repeat
+          if (Rech.Attr and faDirectory) = 0 then
+            if CompareText(Rech.Name, ExtractFileName(Chemin)) <> 0 then
+              DeleteFile(Dossier + Rech.Name);
+        until FindNext(Rech) <> 0;
+      finally
+        FindClose(Rech);
+      end;
+  end;
 
 end.
 

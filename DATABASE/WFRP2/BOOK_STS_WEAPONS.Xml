@@ -1,0 +1,1094 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"STSW"</CODE_BOOK>
+<BOOK>"BOOK STS WEAPONS"</BOOK>
+<BOOKNAME>"WFRP WEAPONS AND ARMOUR - STRIKE-TO-STUN - WFRP2"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_ARMING_SWORD">
+<Description language="ENGLISH">"Arming Sword (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"19 gc 10s"</Cost>
+<Encumbrance>"60"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Balanced, Defensive"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_BARDICHE">
+<Description language="ENGLISH">"Bardiche (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"8 gc"</Cost>
+<Encumbrance>"170"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB+2"</Damage>
+<Qualities>"(Fast or Impact), Unbalanced"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_BATTLE_AXE">
+<Description language="ENGLISH">"Battle Axe (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"7 gc"</Cost>
+<Encumbrance>"80"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB+1"</Damage>
+<Qualities>"Unbalanced, Unwieldy"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_BEC_DE_CORBIN">
+<Description language="ENGLISH">"Bec de Corbin (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"13 gc"</Cost>
+<Encumbrance>"140"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB+1"</Damage>
+<Qualities>"Armour Piercing, (Fast or Impact)"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_BILL">
+<Description language="ENGLISH">"Bill (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"7 gc 6s"</Cost>
+<Encumbrance>"150"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB+1"</Damage>
+<Qualities>"Hook, (Fast or Impact)"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_FALCHION">
+<Description language="ENGLISH">"Falchion (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"14 gc"</Cost>
+<Encumbrance>"80"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB+1"</Damage>
+<Qualities>"Slow"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_BUCKLER">
+<Description language="ENGLISH">"Buckler (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"2 gc"</Cost>
+<Encumbrance>"30"</Encumbrance>
+<Group>"RULES-WTYPE2_PARRYING"</Group>
+<Damage>"SB–3"</Damage>
+<Qualities>"Defensive, Off-Hand, Pummelling"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_CESTUS">
+<Description language="ENGLISH">"Cestus (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–4"</Damage>
+<Qualities>"Defensive"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_CLUB">
+<Description language="ENGLISH">"Club (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"60"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–1"</Damage>
+<Qualities>"Pummelling"</Qualities>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_CROWBILL">
+<Description language="ENGLISH">"Crowbill (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"8 gc"</Cost>
+<Encumbrance>"70"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Armour Piercing, Pummelling, Slow"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_CUTLASS">
+<Description language="ENGLISH">"Cutlass (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"17 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Defensive, Precise"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_DAGGER">
+<Description language="ENGLISH">"Dagger (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–2"</Damage>
+<Qualities>"Fast"</Qualities>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_DEMILANCE">
+<Description language="ENGLISH">"Demilance (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"1 gc 10s"</Cost>
+<Encumbrance>"160"</Encumbrance>
+<Group>"RULES-WTYPE2_CAVALRY"</Group>
+<Damage>"SB+1"</Damage>
+<Qualities>"Fast, Impact, Tiring"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_JANBIYA">
+<Description language="ENGLISH">"Janbiya (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"6 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–2"</Damage>
+<Qualities>"Precise"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_FLAIL">
+<Description language="ENGLISH">"Flail (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"120"</Encumbrance>
+<Group>"RULES-WTYPE2_FLAIL"</Group>
+<Damage>"SB+2"</Damage>
+<Qualities>"Fast, Impact, Unbalanced"</Qualities>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_FOIL">
+<Description language="ENGLISH">"Foil (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Group>"RULES-WTYPE2_FENCING"</Group>
+<Damage>"SB–1"</Damage>
+<Qualities>"Balanced, Fast"</Qualities>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_GLAIVE">
+<Description language="ENGLISH">"Glaive (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"8 gc"</Cost>
+<Encumbrance>"160"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB+1"</Damage>
+<Qualities>"Precise, (Fast or Impact)"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_GREAT_AXE">
+<Description language="ENGLISH">"Great Axe (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"22 gc"</Cost>
+<Encumbrance>"200"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB+3"</Damage>
+<Qualities>"Impact, Unbalanced, Unwieldy"</Qualities>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_GREAT_SWORD">
+<Description language="ENGLISH">"Great Sword (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"35 gc"</Cost>
+<Encumbrance>"180"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB+1"</Damage>
+<Qualities>"Balanced, Defensive, Impact"</Qualities>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_HALBERD">
+<Description language="ENGLISH">"Halberd (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"13 gc"</Cost>
+<Encumbrance>"140"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB+1"</Damage>
+<Qualities>"Balanced, (Fast or Impact)"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_HAMMER_WHITE_WOLF">
+<Description language="ENGLISH">"Hammer, White Wolf (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"12 gc"</Cost>
+<Encumbrance>"100"</Encumbrance>
+<Group>"RULES-WTYPE2_WHITE_WOLF"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Impact, Tiring, Unwieldy"</Qualities>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_HATCHET_WOOD">
+<Description language="ENGLISH">"Hatchet, Wood (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"16s"</Cost>
+<Encumbrance>"40"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Unbalanced, Unwieldy"</Qualities>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_HORSEMAN_S_AXE">
+<Description language="ENGLISH">"Horseman's Axe (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"9 gc"</Cost>
+<Encumbrance>"120"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB+1"</Damage>
+<Qualities>"Slow, Unwieldy"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_IMPROVISED">
+<Description language="ENGLISH">"Improvised (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"Varies"</Cost>
+<Encumbrance>"Varies"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–3"</Damage>
+<Qualities>"Varies"</Qualities>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_KHOPESH">
+<Description language="ENGLISH">"Khopesh (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"12 gc"</Cost>
+<Encumbrance>"100"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Slow"</Qualities>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_KNIFE">
+<Description language="ENGLISH">"Knife (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"15s"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–2"</Damage>
+<Qualities>"Unwieldy"</Qualities>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_KNUCKLE_DUSTER">
+<Description language="ENGLISH">"Knuckle Duster (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–3"</Damage>
+<Qualities>"Pummelling"</Qualities>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_LANCE">
+<Description language="ENGLISH">"Lance (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"2 gc 10s"</Cost>
+<Encumbrance>"180"</Encumbrance>
+<Group>"RULES-WTYPE2_CAVALRY"</Group>
+<Damage>"SB+2"</Damage>
+<Qualities>"Fast, Impact, Tiring"</Qualities>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_LONG_AXE">
+<Description language="ENGLISH">"Long Axe (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"9 gc"</Cost>
+<Encumbrance>"170"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB+2"</Damage>
+<Qualities>"Impact, Slow"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_LONGSWORD">
+<Description language="ENGLISH">"Longsword (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"29 gc 5s"</Cost>
+<Encumbrance>"100"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB+1"</Damage>
+<Qualities>"Balanced, (Impact)"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_MACE">
+<Description language="ENGLISH">"Mace (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"9 gc"</Cost>
+<Encumbrance>"80"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Armour Piercing, Pummelling, Unwieldy"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_MAIN_GAUCHE">
+<Description language="ENGLISH">"Main Gauche (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Group>"RULES-WTYPE2_PARRYING"</Group>
+<Damage>"SB–2"</Damage>
+<Qualities>"Defensive, Off-Hand"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_MILITARY_HAMMER">
+<Description language="ENGLISH">"Military Hammer (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"7 gc"</Cost>
+<Encumbrance>"80"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Armour Piercing, Pummelling, Unbalanced"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_MORNINGSTAR">
+<Description language="ENGLISH">"Morningstar (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"14 gc"</Cost>
+<Encumbrance>"80"</Encumbrance>
+<Group>"RULES-WTYPE2_FLAIL"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Fast, Impact, Tiring"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_PARTIZAN">
+<Description language="ENGLISH">"Partizan (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"13 gc"</Cost>
+<Encumbrance>"150"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB+1"</Damage>
+<Qualities>"Defensive, (Fast or Impact)"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_PICK">
+<Description language="ENGLISH">"Pick (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"8 gc 10s"</Cost>
+<Encumbrance>"200"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB+3"</Damage>
+<Qualities>"Armour Piercing, Slow, Unbalanced"</Qualities>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_PIKE">
+<Description language="ENGLISH">"Pike (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"2 gc 16s"</Cost>
+<Encumbrance>"240"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB+2"</Damage>
+<Qualities>"Special, Unwieldy"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_POLEAXE">
+<Description language="ENGLISH">"Poleaxe (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"12 gc"</Cost>
+<Encumbrance>"160"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB+2"</Damage>
+<Qualities>"(Fast or Impact), Unwieldy"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_QUARTERSTAFF">
+<Description language="ENGLISH">"Quarterstaff (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"3s"</Cost>
+<Encumbrance>"80"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–1"</Damage>
+<Qualities>"Defensive, Fast, Pummelling"</Qualities>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_RAPIER">
+<Description language="ENGLISH">"Rapier (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"20 gc"</Cost>
+<Encumbrance>"30"</Encumbrance>
+<Group>"RULES-WTYPE2_FENCING"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Balanced, Defensive, Fast"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SAP">
+<Description language="ENGLISH">"Sap (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"4s"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–3"</Damage>
+<Qualities>"Pummelling, Unwieldy"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SCIMITAR">
+<Description language="ENGLISH">"Scimitar (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"19 gc 10s"</Cost>
+<Encumbrance>"60"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Fast, Precise"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SHIELD_HEATER">
+<Description language="ENGLISH">"Shield, Heater (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"7 gc"</Cost>
+<Encumbrance>"60"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–4"</Damage>
+<Qualities>"Cover, Defensive"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SHIELD_KITE">
+<Description language="ENGLISH">"Shield, Kite (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"7 gc 4s"</Cost>
+<Encumbrance>"80"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–4"</Damage>
+<Qualities>"Cover, Defensive"</Qualities>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SHIELD_LARGE_ROUND">
+<Description language="ENGLISH">"Shield, Large Round (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"9 gc 12s"</Cost>
+<Encumbrance>"100"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–3"</Damage>
+<Qualities>"Cover, Defensive, Slow"</Qualities>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SHIELD_SPIKED">
+<Description language="ENGLISH">"Shield, Spiked (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"5 gc 8s"</Cost>
+<Encumbrance>"60"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–2"</Damage>
+<Qualities>"Armour Piercing, Defensive"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SHIELD_TARGET">
+<Description language="ENGLISH">"Shield, Target (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"4 gc 4s"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–3"</Damage>
+<Qualities>"Defensive, Pummelling"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SHIELD_TOWER_PAVISE">
+<Description language="ENGLISH">"Shield, Tower (Pavise) (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"9 gc 12s"</Cost>
+<Encumbrance>"160"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–5"</Damage>
+<Qualities>"Special, Unbalanced, Unwieldy"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SHORTSWORD">
+<Description language="ENGLISH">"Shortsword (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"14 gc 12s 6d"</Cost>
+<Encumbrance>"40"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–1"</Damage>
+<Qualities>"Balanced, Fast"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SPEAR_ELVEN">
+<Description language="ENGLISH">"Spear, Elven (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"20 gc"</Cost>
+<Encumbrance>"80"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB+2"</Damage>
+<Qualities>"Armour Piercing, Balanced, Fast"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SPEAR_LONG">
+<Description language="ENGLISH">"Spear, Long (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"2 gc 12s 6d"</Cost>
+<Encumbrance>"150"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB+2"</Damage>
+<Qualities>"Armour Piercing, Fast"</Qualities>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SPEAR_SHORT">
+<Description language="ENGLISH">"Spear, Short (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"1 gc 15s"</Cost>
+<Encumbrance>"100"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Fast, Unwieldy"</Qualities>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SICKLE">
+<Description language="ENGLISH">"Sickle (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"2 gc 5s"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–2"</Damage>
+<Qualities>"Unbalanced"</Qualities>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_STILETTO">
+<Description language="ENGLISH">"Stiletto (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"6 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Group>"RULES-WTYPE2_FENCING"</Group>
+<Damage>"SB–2"</Damage>
+<Qualities>"Armour Piercing, Off-Hand, Precise"</Qualities>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SWORD_BREAKER">
+<Description language="ENGLISH">"Sword-breaker (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"5 gc 10s"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Group>"RULES-WTYPE2_PARRYING"</Group>
+<Damage>"SB–2"</Damage>
+<Qualities>"Defensive, Off-Hand, Special"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_TRIDENT">
+<Description language="ENGLISH">"Trident (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"2 gc"</Cost>
+<Encumbrance>"100"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Armour Piercing, Unbalanced"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_WARHAMMER">
+<Description language="ENGLISH">"Warhammer (STS)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"15 gc"</Cost>
+<Encumbrance>"200"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB+2"</Damage>
+<Qualities>"Impact, Pummelling"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_ARQUEBUS_FIREARM">
+<Description language="ENGLISH">"Arquebus (Firearm) (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"100 gc"</Cost>
+<Encumbrance>"80"</Encumbrance>
+<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
+<Damage>"0"</Damage>
+<Range>"24/48"</Range>
+<Reload>"2 Full"</Reload>
+<Qualities>"Gun, Unreliable"</Qualities>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_BLUNDERBUSS">
+<Description language="ENGLISH">"Blunderbuss (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"40 gc"</Cost>
+<Encumbrance>"100"</Encumbrance>
+<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
+<Damage>"-1"</Damage>
+<Range>"16/-"</Range>
+<Reload>"3 Full"</Reload>
+<Qualities>"Gun, Shrapnel, Unreliable"</Qualities>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_BOLA">
+<Description language="ENGLISH">"Bola (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"7s"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Group>"RULES-WTYPE2_ENTANGLING"</Group>
+<Damage>"SB–4"</Damage>
+<Range>"8/16"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Pummelling or Snare"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_BOW_ELF">
+<Description language="ENGLISH">"Bow, Elf (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"60 gc"</Cost>
+<Encumbrance>"40"</Encumbrance>
+<Group>"RULES-WTYPE2_BOW"</Group>
+<Damage>"5"</Damage>
+<Range>"48/96"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"(Armour Piercing or Precise)"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_BOW_KISLEVITE">
+<Description language="ENGLISH">"Bow, Kislevite (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"15 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_BOW"</Group>
+<Damage>"4"</Damage>
+<Range>"34/68"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"(Armour Piercing or Precise)"</Qualities>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_BOW_LONG">
+<Description language="ENGLISH">"Bow, Long (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"15 gc"</Cost>
+<Encumbrance>"60"</Encumbrance>
+<Group>"RULES-WTYPE2_BOW"</Group>
+<Damage>"4"</Damage>
+<Range>"36/72"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"(Armour Piercing or Precise)"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_BOW_HUNTING">
+<Description language="ENGLISH">"Bow, Hunting (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"11 gc"</Cost>
+<Encumbrance>"40"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"3"</Damage>
+<Range>"24/48"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"(Armour Piercing or Precise)"</Qualities>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_CROSSBOW_GOAT_S_FOOT">
+<Description language="ENGLISH">"Crossbow, Goat's Foot (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"16 gc"</Cost>
+<Encumbrance>"120"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"1"</Damage>
+<Range>"30/60"</Range>
+<Reload>"Full"</Reload>
+<Qualities>"(Armour Piercing or Precise), Impact"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_CROSSBOW_CRANEQUIN">
+<Description language="ENGLISH">"Crossbow, Cranequin (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"32 gc"</Cost>
+<Encumbrance>"160"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"2"</Damage>
+<Range>"38/76"</Range>
+<Reload>"1½ Full"</Reload>
+<Qualities>"(Armour Piercing or Precise), Impact"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_CROSSBOW_WINDLASS">
+<Description language="ENGLISH">"Crossbow, Windlass (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"64 gc"</Cost>
+<Encumbrance>"240"</Encumbrance>
+<Group>"RULES-WTYPE2_CROSSBOW"</Group>
+<Damage>"3"</Damage>
+<Range>"40/80"</Range>
+<Reload>"2 Full"</Reload>
+<Qualities>"(Armour Piercing or Precise), Impact"</Qualities>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_CROSSBOW_PISTOL">
+<Description language="ENGLISH">"Crossbow, Pistol (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"12 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_CROSSBOW"</Group>
+<Damage>"3"</Damage>
+<Range>"8/16"</Range>
+<Reload>"Full"</Reload>
+<Qualities>"(Armour Piercing or Precise), Balanced"</Qualities>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_DART">
+<Description language="ENGLISH">"Dart (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"2 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Group>"RULES-WTYPE2_THROWING"</Group>
+<Damage>"SB–2"</Damage>
+<Range>"8/16"</Range>
+<Reload>"Half"</Reload>
+<Qualities>""</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_DUCKFOOT">
+<Description language="ENGLISH">"Duckfoot (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"120 gc"</Cost>
+<Encumbrance>"120"</Encumbrance>
+<Group>"RULES-WTYPE2_ENGINEERING"</Group>
+<Damage>"-1"</Damage>
+<Range>"16/-"</Range>
+<Reload>"4 Full"</Reload>
+<Qualities>"Experimental, Gun, Special"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_DUELLING_PISTOL">
+<Description language="ENGLISH">"Duelling Pistol (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"150 gc"</Cost>
+<Encumbrance>"40"</Encumbrance>
+<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
+<Damage>"0"</Damage>
+<Range>"12/24"</Range>
+<Reload>"2 Full"</Reload>
+<Qualities>"Gun, Unreliable"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_FRANSICA_AXE">
+<Description language="ENGLISH">"Fransica (Axe) (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"40"</Encumbrance>
+<Group>"RULES-WTYPE2_THROWING"</Group>
+<Damage>"SB"</Damage>
+<Range>"8/-"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Precise"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_HARPOON">
+<Description language="ENGLISH">"Harpoon (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"1 gc 6s"</Cost>
+<Encumbrance>"70"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–1"</Damage>
+<Range>"8/16"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Precise"</Qualities>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_HENRICUS_SALUS">
+<Description language="ENGLISH">"Henricus Salus (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"175 gc"</Cost>
+<Encumbrance>"60"</Encumbrance>
+<Group>"RULES-WTYPE2_ENGINEERING"</Group>
+<Damage>"1"</Damage>
+<Range>"8/16"</Range>
+<Reload>"2 Full"</Reload>
+<Qualities>"Experimental, Gun"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_HOCHLAND_LONG_RIFLE">
+<Description language="ENGLISH">"Hochland Long Rifle (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"200 gc"</Cost>
+<Encumbrance>"250"</Encumbrance>
+<Group>"RULES-WTYPE2_ENGINEERING"</Group>
+<Damage>"0"</Damage>
+<Range>"48/96"</Range>
+<Reload>"2 Full"</Reload>
+<Qualities>"Gun, Unreliable"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_IMPROVISED">
+<Description language="ENGLISH">"Improvised (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"Varies"</Cost>
+<Encumbrance>"Varies"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–3"</Damage>
+<Range>"6/-"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Unbalanced"</Qualities>
+<Availability>"RULES-DISPO2_ABUNDANT"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_JAVELIN">
+<Description language="ENGLISH">"Javelin (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"1 gc 5s"</Cost>
+<Encumbrance>"60"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–1"</Damage>
+<Range>"8/16"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Armour Piercing"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_JEZZAIL">
+<Description language="ENGLISH">"Jezzail (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"250 gc"</Cost>
+<Encumbrance>"200"</Encumbrance>
+<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
+<Damage>"0"</Damage>
+<Range>"24/72"</Range>
+<Reload>"2 Full"</Reload>
+<Qualities>"Gun"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_LASSO">
+<Description language="ENGLISH">"Lasso (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"30"</Encumbrance>
+<Group>"RULES-WTYPE2_ENTANGLING"</Group>
+<Damage>"n/a"</Damage>
+<Range>"8/-"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Snare"</Qualities>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_NET_FIGHTING">
+<Description language="ENGLISH">"Net, Fighting (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"1 gc 10s"</Cost>
+<Encumbrance>"80"</Encumbrance>
+<Group>"RULES-WTYPE2_ENTANGLING"</Group>
+<Damage>"n/a"</Damage>
+<Range>"8/-"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Snare"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_PIKE_GUN">
+<Description language="ENGLISH">"Pike Gun (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"80 gc"</Cost>
+<Encumbrance>"250"</Encumbrance>
+<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
+<Damage>"0"</Damage>
+<Range>"8/16"</Range>
+<Reload>"2 Full"</Reload>
+<Qualities>"Gun, Unbalanced, Unreliable"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_PISTOL">
+<Description language="ENGLISH">"Pistol (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"60 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
+<Damage>"0"</Damage>
+<Range>"8/16"</Range>
+<Reload>"2 Full"</Reload>
+<Qualities>"Gun, Unreliable"</Qualities>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_REPEATER_CROSSBOW">
+<Description language="ENGLISH">"Repeater Crossbow (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"120 gc"</Cost>
+<Encumbrance>"150"</Encumbrance>
+<Group>"RULES-WTYPE2_CROSSBOW"</Group>
+<Damage>"4"</Damage>
+<Range>"16/32"</Range>
+<Reload>"1 Full"</Reload>
+<Qualities>"(Armour Piercing or Precise), Special"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_REPEATER_HANDGUN">
+<Description language="ENGLISH">"Repeater Handgun (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"300 gc"</Cost>
+<Encumbrance>"120"</Encumbrance>
+<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
+<Damage>"0"</Damage>
+<Range>"24/48"</Range>
+<Reload>"2 Full"</Reload>
+<Qualities>"Experimental, Gun, Special"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_REPEATER_PISTOL">
+<Description language="ENGLISH">"Repeater Pistol (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"250 gc"</Cost>
+<Encumbrance>"70"</Encumbrance>
+<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
+<Damage>"0"</Damage>
+<Range>"8/16"</Range>
+<Reload>"2 Full"</Reload>
+<Qualities>"Experimental, Gun, Special"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_SLING">
+<Description language="ENGLISH">"Sling (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"2s"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Group>"RULES-WTYPE2_SLING"</Group>
+<Damage>"2"</Damage>
+<Range>"16/32"</Range>
+<Reload>"Half"</Reload>
+<Qualities>""</Qualities>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_STAFF_SLING">
+<Description language="ENGLISH">"Staff Sling (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"6s"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_SLING"</Group>
+<Damage>"3"</Damage>
+<Range>"24/48"</Range>
+<Reload>"Full"</Reload>
+<Qualities>""</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_SWIVEL_GUN">
+<Description language="ENGLISH">"Swivel Gun (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"200 gc"</Cost>
+<Encumbrance>"500"</Encumbrance>
+<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
+<Damage>"4"</Damage>
+<Range>"24/72"</Range>
+<Reload>"4 Full"</Reload>
+<Qualities>"Experimental, Gun"</Qualities>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_TABURI_THROWING_KNIFE">
+<Description language="ENGLISH">"Taburi (Throwing Knife) (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"4 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Group>"RULES-WTYPE2_THROWING"</Group>
+<Damage>"SB–2"</Damage>
+<Range>"12/-"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Balanced"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_THROWING_HAMMER">
+<Description language="ENGLISH">"Throwing Hammer (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"8 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Group>"RULES-WTYPE2_THROWING"</Group>
+<Damage>"SB"</Damage>
+<Range>"8/-"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Pummelling"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_WHIP">
+<Description language="ENGLISH">"Whip (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"15s"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Group>"RULES-WTYPE2_ENTANGLING"</Group>
+<Damage>"SB–4"</Damage>
+<Range>"6/-"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Snare"</Qualities>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_SPEAR_SHORT">
+<Description language="ENGLISH">"Spear, Short (STS)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"1 gc 15s"</Cost>
+<Encumbrance>"100"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–1"</Damage>
+<Range>"7/-"</Range>
+<Reload>"Half"</Reload>
+<Qualities>""</Qualities>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Page>"1"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+</DATA_BOOK>

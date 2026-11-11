@@ -14,6 +14,8 @@ Type
 	NiveauMetier:	Integer;
 	CodeCompetence:	String;
         Livre:          String;
+        // V1 : cout en EP pour acquerir la competence (100, 75 pour Secret Signs), 0 hors V1
+        Cout:           Integer;
 End;
 
   TListMetierCompetence = Specialize TList<StructureMetierCompetence>;
@@ -35,8 +37,8 @@ Var
   PVide:             StructureMetierCompetence;
   Trouve:            Boolean=false;
 Begin
-  if Pos(ValeurSousCompetence, CodeCompetence) > 0 then
-    CodeComp := ExtractStringBefore(CodeCompetence, ValeurSousCompetence)+ValeurGenerique
+  if Pos(SeparateurSpecialisationTalent, CodeCompetence) > 0 then
+    CodeComp := CodeGeneriqueDeduit(CodeCompetence)
   else
     CodeComp := CodeCompetence;
 

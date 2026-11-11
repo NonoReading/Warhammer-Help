@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"CAL"</CODE_BOOK>
+<BOOK>"BOOK COLLECTION OF ANCIENT LORE"</BOOK>
+<BOOKNAME>"COLLECTION OF ANCIENT LORE"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP1"</VERSION>
+<OFFICIAL>"0"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"Warhammer Fantasy Roleplay (c) Copyright Games Workshop Limited 2020. Warhammer Fantasy Roleplay, the Warhammer Fantasy Roleplay logo, GW, Games Workshop, Warhammer, the twin-tailed comet logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likeness thereof, are either (R) or TM, and/or (c) Games Workshop Limited, variably registered around the world, and used under licence. Cubicle 7 Entertainment and the Cubicle 7 Entertainment logo are trademarks of Cubicle 7 Entertainment Limited. All rights reserved."</DISCLAIMER>
+<DATA_SPELL_V1>
+<SpellV1 id="CAL-SPELL_PETTY_SPELLEXTENSION">
+<Description language="ENGLISH">"Spellextension"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Petty"</SpellList>
+<SpellLevel>"RULES-V1LEVEL_P"</SpellLevel>
+<MagicPoints>"2"</MagicPoints>
+<Range>"Personal"</Range>
+<Duration>"D6 x 10 turns"</Duration>
+<Ingredients>"Some glue"</Ingredients>
+<Page>"2"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_PETTY_PETTY_LIGHTNING_BOLT">
+<Description language="ENGLISH">"Petty Lightning Bolt"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Petty"</SpellList>
+<SpellLevel>"RULES-V1LEVEL_P"</SpellLevel>
+<MagicPoints>"1"</MagicPoints>
+<Range>"6 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"A piece of wire"</Ingredients>
+<Page>"2"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_BATTLE_ENCHANTMENT">
+<Description language="ENGLISH">"Enchantment"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"3"</MagicPoints>
+<Range>"5 yards"</Range>
+<Duration>"D3 days"</Duration>
+<Ingredients>"Some pyrites and a Gold Crown"</Ingredients>
+<Page>"2"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_BATTLE_WARD_OF_FORBIDDANCE">
+<Description language="ENGLISH">"Ward of Forbiddance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"6 or 12"</MagicPoints>
+<Range>"0"</Range>
+<Duration>"Permanent or until dispelled or discharged"</Duration>
+<Ingredients>"A 6 inch long bronze rod of half-inch in diameter"</Ingredients>
+<Page>"2"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_BATTLE_PAIN">
+<Description language="ENGLISH">"Pain"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"3"</MagicPoints>
+<Range>"15 yards (hearing)"</Range>
+<Duration>"D10 turns"</Duration>
+<Ingredients>"10 pins, some salt and a little oil"</Ingredients>
+<MagicTest>"RULES-V1YESNO_OUI"</MagicTest>
+<Page>"3"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_BATTLE_MCGUIRES_SMALLRANGED_TELEPORT">
+<Description language="ENGLISH">"McGuire's Smallranged Teleport"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"4"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"1 foot of rope and a boot"</Ingredients>
+<Page>"3"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_BATTLE_INVISIBILITY">
+<Description language="ENGLISH">"Invisibility"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"4"</MagicPoints>
+<Range>"10 yards"</Range>
+<Duration>"1 hour + 1 hour per level"</Duration>
+<Ingredients>"The eyes from a Giant Owl or a Giant Eagle"</Ingredients>
+<Page>"4"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_BATTLE_FIREBREEZE">
+<Description language="ENGLISH">"Firebreeze"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"5"</MagicPoints>
+<Range>"A normal room size, or 10 yards of corridor"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"Gunpowder (1 shot), a ball of sulphur and a drop of oil"</Ingredients>
+<Page>"4"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_BATTLE_CURE_INSANITY">
+<Description language="ENGLISH">"Cure Insanity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"12"</MagicPoints>
+<Range>"0"</Range>
+<Duration>"Permanent"</Duration>
+<Ingredients>"Two white coats and a human skull"</Ingredients>
+<Page>"4"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_BATTLE_FIRESTORM">
+<Description language="ENGLISH">"Firestorm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"10"</MagicPoints>
+<Range>"A large room sector, or 25 yards of corridor"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"One pint of oil, a little phosphorous and gunpowder (3 shots)"</Ingredients>
+<Page>"4"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_BATTLE_DESTROY_MAGICKAL_ITEM">
+<Description language="ENGLISH">"Destroy Magickal Item"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"15"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"A maul and a magical item of some sort"</Ingredients>
+<Page>"5"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_BATTLE_ENTHRALL">
+<Description language="ENGLISH">"Enthrall"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"7"</MagicPoints>
+<Range>"20 yards"</Range>
+<Duration>"Special (see Intelligence table)"</Duration>
+<Ingredients>"4 Gold Crowns and some honey"</Ingredients>
+<MagicTest>"RULES-V1YESNO_OUI"</MagicTest>
+<Page>"5"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_BATTLE_MCBRAINS_TELEPORT_SPECIAL">
+<Description language="ENGLISH">"McBrain's Teleport Special"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"4"</SpellLevel>
+<MagicPoints>"12"</MagicPoints>
+<Range>"500 miles + 100 miles for every 5th magic point expended"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"A Potion of Flying, a piece of down and a pint of Daemon Blood"</Ingredients>
+<Page>"5"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_BATTLE_RESURRECTION">
+<Description language="ENGLISH">"Resurrection"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Battle"</SpellList>
+<SpellLevel>"4"</SpellLevel>
+<MagicPoints>"10"</MagicPoints>
+<Range>"10 yards"</Range>
+<Duration>"Until the being that has been resurrected is called up again"</Duration>
+<Ingredients>""</Ingredients>
+<MagicTest>"RULES-V1YESNO_OUI"</MagicTest>
+<Page>"6"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_NECROMANTIC_RESURRECTION">
+<Description language="ENGLISH">"Resurrection"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Necromantic"</SpellList>
+<SpellLevel>"4"</SpellLevel>
+<MagicPoints>"10"</MagicPoints>
+<Range>"10 yards"</Range>
+<Duration>"Until the being that has been resurrected is called up again"</Duration>
+<Ingredients>""</Ingredients>
+<MagicTest>"RULES-V1YESNO_OUI"</MagicTest>
+<Page>"6"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_DEMONIC_DISPEL_DAEMONIC_PRESENCE">
+<Description language="ENGLISH">"Dispel Daemonic Presence"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Demonic"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"4"</MagicPoints>
+<Range>"24 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"The religious symbol of a Good or neutral deity"</Ingredients>
+<MagicTest>"RULES-V1YESNO_OUI"</MagicTest>
+<Page>"6"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_DEMONIC_SUMMON_LESSER_DAEMON">
+<Description language="ENGLISH">"Summon Lesser Daemon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Demonic"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"1"</MagicPoints>
+<Range>"24 yards"</Range>
+<Duration>"1 hour per level"</Duration>
+<Ingredients>"A symbol of an evil or Chaos deity"</Ingredients>
+<Page>"6"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_DEMONIC_DISPEL_LESSER_DAEMONS">
+<Description language="ENGLISH">"Dispel Lesser Daemons"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Demonic"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"5"</MagicPoints>
+<Range>"24 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"Six hearts from Clerics of Good or Law alignment"</Ingredients>
+<Page>"7"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_DEMONIC_CHANNEL_DAEMONIC_ENERGY">
+<Description language="ENGLISH">"Channel Daemonic Energy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Demonic"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"4"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"The tongue from any Fire Daemon and a part from the brain of a lunatic"</Ingredients>
+<Page>"7"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_DEMONIC_SUMMON_DAEMONIC_PACK">
+<Description language="ENGLISH">"Summon Daemonic Pack"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Demonic"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"8"</MagicPoints>
+<Range>"6 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"The heart of any humanoid creature, torn from the living creature"</Ingredients>
+<Page>"7"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_DEMONIC_SUMMON_POSSESSING_DAEMON">
+<Description language="ENGLISH">"Summon Possessing Daemon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Demonic"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"15"</MagicPoints>
+<Range>"Not applicable"</Range>
+<Duration>"Until killed or exorcised"</Duration>
+<Ingredients>"The living body which the Daemon is to possess"</Ingredients>
+<Page>"8"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_DEMONIC_EXORCISE_POSSESSING_DAEMON">
+<Description language="ENGLISH">"Exorcise Possessing Daemon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Demonic"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"15"</MagicPoints>
+<Range>"24 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>""</Ingredients>
+<Page>"9"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_DEMONIC_SUMMON_GREATER_DAEMON_HORDE">
+<Description language="ENGLISH">"Summon Greater Daemon Horde"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Demonic"</SpellList>
+<SpellLevel>"4"</SpellLevel>
+<MagicPoints>"45 per hour"</MagicPoints>
+<Range>"Not applicable"</Range>
+<Duration>"1 hour"</Duration>
+<Ingredients>"4 hearts from Clerics/Priests of Good or Law alignment, torn from the still living body"</Ingredients>
+<Page>"8"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_DEMONIC_DISPEL_GREATER_DAEMON_HORDE">
+<Description language="ENGLISH">"Dispel Greater Daemon Horde"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Demonic"</SpellList>
+<SpellLevel>"4"</SpellLevel>
+<MagicPoints>"45"</MagicPoints>
+<Range>"24 yards"</Range>
+<Duration>"Instantaneous"</Duration>
+<Ingredients>"The whole body of a Cleric of Good or Law alignment"</Ingredients>
+<Page>"8"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_ELEMENTAL_CREATE_SMALL_THUNDER_CLOUD">
+<Description language="ENGLISH">"Create Small Thunder Cloud"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Elemental"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"2"</MagicPoints>
+<Range>"48 yards"</Range>
+<Duration>"D4+1 hour per level or until dispelled"</Duration>
+<Ingredients>"A drop of water"</Ingredients>
+<Page>"9"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_ILLUSION_IMAGES">
+<Description language="ENGLISH">"Images"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Illusion"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"3"</MagicPoints>
+<Range>"Personal, but up to 4 yards away"</Range>
+<Duration>"Up to one hour, or until dispelled"</Duration>
+<Ingredients>"A piece of silk"</Ingredients>
+<Page>"9"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_ILLUSION_DEADFALL">
+<Description language="ENGLISH">"Deadfall"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Illusion"</SpellList>
+<SpellLevel>"4"</SpellLevel>
+<MagicPoints>"20"</MagicPoints>
+<Range>"Personal"</Range>
+<Duration>"Until triggered"</Duration>
+<Ingredients>"A potion of flying and a hollow metal cube"</Ingredients>
+<MagicTest>"RULES-V1YESNO_OUI"</MagicTest>
+<Page>"9"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_NECROMANTIC_ZONE_OF_STABILITY">
+<Description language="ENGLISH">"Zone of Stability"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Necromantic"</SpellList>
+<SpellLevel>"1"</SpellLevel>
+<MagicPoints>"6 + 2 per 5 extra yards"</MagicPoints>
+<Range>"Base 10 yards in radius + 10 per level"</Range>
+<Duration>"Until dispelled"</Duration>
+<Ingredients>""</Ingredients>
+<Page>"10"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_NECROMANTIC_SUMMON_POLTERGEIST">
+<Description language="ENGLISH">"Summon Poltergeist"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Necromantic"</SpellList>
+<SpellLevel>"2"</SpellLevel>
+<MagicPoints>"5"</MagicPoints>
+<Range>"An area specified by the Necromancer, but no more than 50 x 50 yards"</Range>
+<Duration>"Until dispelled or destroyed"</Duration>
+<Ingredients>""</Ingredients>
+<Page>"10"</Page>
+</SpellV1>
+<SpellV1 id="CAL-SPELL_NECROMANTIC_SUMMON_GUARDIAN_SPIRIT">
+<Description language="ENGLISH">"Summon Guardian Spirit"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<SpellList>"Necromantic"</SpellList>
+<SpellLevel>"3"</SpellLevel>
+<MagicPoints>"12"</MagicPoints>
+<Range>"NA"</Range>
+<Duration>"Until dispelled or destroyed"</Duration>
+<Ingredients>"Grave or skull of a humanoid"</Ingredients>
+<Page>"10"</Page>
+</SpellV1>
+</DATA_SPELL_V1>
+</DATA_BOOK>

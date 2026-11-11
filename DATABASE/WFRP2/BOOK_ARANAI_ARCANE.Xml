@@ -1,0 +1,3038 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"ARAN"</CODE_BOOK>
+<BOOK>"BOOK ARANAI ARCANE"</BOOK>
+<BOOKNAME>"ARANAI S WFRP MAGIC OVERHAUL - ARCANE MAGIC - WFRP2"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"This document is intended to be a completely unofficial addition to Warhammer Fantasy Roleplay 2nd edition, owned by Games Workshop (GW). All relevant trademarks and copyrights are used without per- mission and in no way meant to challenge ownership to them by GW. This document fully recognises said"</DISCLAIMER>
+<DATA_SPELL_V2>
+<SpellV2 id="ARAN-SPEL_DROP">
+<Description language="ENGLISH">"Drop"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A dab of butter"</Ingredient>
+<Page>"7"</Page>
+<Duration>"Instant"</Duration>
+<Range>"24 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_GLOWING_LIGHT">
+<Description language="ENGLISH">"Glowing Light"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A drop of lamp oil"</Ingredient>
+<Page>"7"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_MAGIC_DART">
+<Description language="ENGLISH">"Magic Dart"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A small wooden dart"</Ingredient>
+<Page>"7"</Page>
+<Duration>"Instant"</Duration>
+<Range>"16 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_PHANTOM_SIGHTS">
+<Description language="ENGLISH">"Phantom Sights"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A dab of paint"</Ingredient>
+<Page>"7"</Page>
+<Duration>"(Magic) Days"</Duration>
+<Range>"(12×Magic) Yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_PHANTOM_SMELLS">
+<Description language="ENGLISH">"Phantom Smells"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A small amount of incense"</Ingredient>
+<Page>"7"</Page>
+<Duration>"(Magic) Days"</Duration>
+<Range>"(12×Magic) Yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_PHANTOM_SOUNDS">
+<Description language="ENGLISH">"Phantom Sounds"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A drop of oil"</Ingredient>
+<Page>"8"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"(12×Magic) Yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_ANIMATION">
+<Description language="ENGLISH">"Animation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A sketch of the action you want performed"</Ingredient>
+<Page>"8"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_MARSH_LIGHTS">
+<Description language="ENGLISH">"Marsh Lights"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A firefly"</Ingredient>
+<Page>"8"</Page>
+<Duration>"1 Hour"</Duration>
+<Range>"100 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SLEEP">
+<Description language="ENGLISH">"Sleep"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A piece of down"</Ingredient>
+<Page>"8"</Page>
+<Duration>"1d10 Rounds, min (Magic - 1)"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_AETHYRIC_ARMOUR">
+<Description language="ENGLISH">"Aethyric Armour"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A ring of chainmail"</Ingredient>
+<Page>"9"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CLIMB">
+<Description language="ENGLISH">"Climb"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A daub of glue"</Ingredient>
+<Page>"9"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_DISPEL">
+<Description language="ENGLISH">"Dispel"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A glass bead"</Ingredient>
+<Page>"9"</Page>
+<Duration>"Instant"</Duration>
+<Range>"12 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_ORATION">
+<Description language="ENGLISH">"Oration"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"The throat of a chicken"</Ingredient>
+<Page>"9"</Page>
+<Duration>"Special"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_MANIPULATE">
+<Description language="ENGLISH">"Manipulate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pinch of sand"</Ingredient>
+<Page>"9"</Page>
+<Duration>"Concentration"</Duration>
+<Range>"12 yards or 24 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_PHANTOM_VOICE">
+<Description language="ENGLISH">"Phantom Voice"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A script of the words you wish to create"</Ingredient>
+<Page>"9"</Page>
+<Duration>"Special"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_ANATHEMA">
+<Description language="ENGLISH">"Anathema"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"1 Minute"</CastingTime>
+<Ingredient>"A candle"</Ingredient>
+<Page>"10"</Page>
+<Duration>"1 Week/Magic"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_BIND">
+<Description language="ENGLISH">"Bind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A daub of glue"</Ingredient>
+<Page>"10"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"12 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_BLESSED_WEAPON">
+<Description language="ENGLISH">"Blessed Weapon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A dab of blessed water"</Ingredient>
+<Page>"10"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_MAGIC_LOCK">
+<Description language="ENGLISH">"Magic Lock"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"1 Minute"</CastingTime>
+<Ingredient>"A small blob of grease"</Ingredient>
+<Page>"10"</Page>
+<Duration>"(Magic) Weeks"</Duration>
+<Range>"2 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_MAGIC_ALARM">
+<Description language="ENGLISH">"Magic Alarm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"1 Minute"</CastingTime>
+<Ingredient>"A circle of salt"</Ingredient>
+<Page>"10"</Page>
+<Duration>"Special"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SILENCE">
+<Description language="ENGLISH">"Silence"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"The tongue of a small animal"</Ingredient>
+<Page>"11"</Page>
+<Duration>"(Magic) Rounds"</Duration>
+<Range>"24 yards."</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_TREMOR">
+<Description language="ENGLISH">"Tremor"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A bit of crushed stone"</Ingredient>
+<Page>"11"</Page>
+<Duration>"Instant"</Duration>
+<Range>"12 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_AETHYRIC_JUMP">
+<Description language="ENGLISH">"Aethyric Jump"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A grasshopper"</Ingredient>
+<Page>"11"</Page>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_COMMON_TONGUE">
+<Description language="ENGLISH">"Common Tongue"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"The tongue of a small animal"</Ingredient>
+<Page>"11"</Page>
+<Duration>"(10×Magic) Minutes"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_REPEL_TAINTED">
+<Description language="ENGLISH">"Repel Tainted"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A sprig of witchbane"</Ingredient>
+<Page>"11"</Page>
+<Duration>"(Magic) Rounds"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SAFEGUARD">
+<Description language="ENGLISH">"Safeguard"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A sprig of witchbane"</Ingredient>
+<Page>"12"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SANCTUARY">
+<Description language="ENGLISH">"Sanctuary"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A thin line of salt across each entrance"</Ingredient>
+<Page>"12"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"Special"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SKYWALK">
+<Description language="ENGLISH">"Skywalk"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"An eagle’s feather"</Ingredient>
+<Page>"12"</Page>
+<Duration>"Casting Time"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SUPPRESS_MUTATION">
+<Description language="ENGLISH">"Suppress Mutation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A healing draught"</Ingredient>
+<Page>"12"</Page>
+<Duration>"(3×Magic) Hours"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_VIGILANCE">
+<Description language="ENGLISH">"Vigilance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"1 Minute"</CastingTime>
+<Ingredient>"A small circle of salt"</Ingredient>
+<Page>"12"</Page>
+<Duration>"24 Hours"</Duration>
+<Range>"You; (6×Magic) Yard-Radius"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_VOW">
+<Description language="ENGLISH">"Vow"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Common Magic"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"1 Minute"</CastingTime>
+<Ingredient>"A written text of the vow"</Ingredient>
+<Page>"13"</Page>
+<Duration>"Permanent"</Duration>
+<Range>"2 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_THE_BEAST_BECKONED">
+<Description language="ENGLISH">"The Beast Beckoned"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Beasts)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A lump of sugar"</Ingredient>
+<Page>"14"</Page>
+<Duration>"Instant"</Duration>
+<Range>"(Magic) Miles"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_THE_BEAST_NAMED">
+<Description language="ENGLISH">"The Beast Named"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Beasts)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A lump of sugar"</Ingredient>
+<Page>"14"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CALM_THE_WILD_BEAST">
+<Description language="ENGLISH">"Calm the Wild Beast"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Beasts)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A lump of sugar"</Ingredient>
+<Page>"14"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"48 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CRUELTY_S_DESSERTS">
+<Description language="ENGLISH">"Cruelty’s Desserts"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Beasts)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pinch of bat guano"</Ingredient>
+<Page>"14"</Page>
+<Duration>"Special"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FORM_OF_THE_HUMBLE_RAT">
+<Description language="ENGLISH">"Form of the Humble Rat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Beasts)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A rat pelt"</Ingredient>
+<Page>"14"</Page>
+<Duration>"Permanent"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_THE_BEAST_BROKEN">
+<Description language="ENGLISH">"The Beast Broken"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Beasts)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A lump of sugar"</Ingredient>
+<Page>"15"</Page>
+<Duration>"Instant"</Duration>
+<Range>"12 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_THE_BEAST_MADE_WELL">
+<Description language="ENGLISH">"The Beast Made Well"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Beasts)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A poultice"</Ingredient>
+<Page>"15"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CLAWS_OF_FURY">
+<Description language="ENGLISH">"Claws of Fury"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Beasts)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pinch of a cat’s fur"</Ingredient>
+<Page>"15"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FORM_OF_THE_SOARING_RAVEN">
+<Description language="ENGLISH">"Form of the Soaring Raven"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Beasts)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A raven’s feather"</Ingredient>
+<Page>"15"</Page>
+<Duration>"Permanent"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_LEATHERBANE">
+<Description language="ENGLISH">"Leatherbane"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Beasts)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A vial of powdered bull’s horn"</Ingredient>
+<Page>"15"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_THE_BOAR_S_HIDE">
+<Description language="ENGLISH">"The Boar’s Hide"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Beasts)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A glob of boar fat"</Ingredient>
+<Page>"16"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FORM_OF_THE_RAVENING_WOLF">
+<Description language="ENGLISH">"Form of the Ravening Wolf"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Beasts)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pinch of wolf fur"</Ingredient>
+<Page>"16"</Page>
+<Duration>"Permanent"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_LIONHEART">
+<Description language="ENGLISH">"Lionheart"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Beasts)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pinch of lion fur"</Ingredient>
+<Page>"16"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Allies within 48 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_MASTER_S_VOICE">
+<Description language="ENGLISH">"Master’s Voice"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Beasts)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A lump of sugar"</Ingredient>
+<Page>"16"</Page>
+<Duration>"1 Round"</Duration>
+<Range>"24 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_THE_TALKING_BEAST">
+<Description language="ENGLISH">"The Talking Beast"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Beasts)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Half Action or Free Action"</CastingTime>
+<Ingredient>"The tongue of the animal species you wish to speak"</Ingredient>
+<Page>"16"</Page>
+<Duration>"(Magic) Minutes or Special"</Duration>
+<Range>"24 yards or You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_THE_BEAST_UNLEASHED">
+<Description language="ENGLISH">"The Beast Unleashed"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Beasts)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"2 Full Actions"</CastingTime>
+<Ingredient>"Freshly spilled blood"</Ingredient>
+<Page>"16"</Page>
+<Duration>"Varies"</Duration>
+<Range>"Allies within 12 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_COWERING_BEASTS">
+<Description language="ENGLISH">"Cowering Beasts"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Beasts)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Hair of a cowardly dog"</Ingredient>
+<Page>"17"</Page>
+<Duration>"Varies"</Duration>
+<Range>"(2×Magic) Foes or 1 Foe within 48 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CROW_S_FEAST">
+<Description language="ENGLISH">"Crow’s Feast"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Beasts)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A caged crow"</Ingredient>
+<Page>"17"</Page>
+<Duration>"(Magic/2) Rounds"</Duration>
+<Range>"48 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FANGS_OF_WRATH">
+<Description language="ENGLISH">"Fangs of Wrath"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Beasts)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A vial of snake’s venom"</Ingredient>
+<Page>"17"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FORM_OF_THE_PUISSANT_STEED">
+<Description language="ENGLISH">"Form of the Puissant Steed"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Beasts)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pinch of horse hair"</Ingredient>
+<Page>"17"</Page>
+<Duration>"Permanent"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FORM_OF_THE_RAGING_BEAR">
+<Description language="ENGLISH">"Form of the Raging Bear"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Beasts)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pinch of bear fur"</Ingredient>
+<Page>"17"</Page>
+<Duration>"Permanent"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_REPUGNANT_TRANSFORMATION">
+<Description language="ENGLISH">"Repugnant Transformation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Beasts)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"2 Full Actions"</CastingTime>
+<Ingredient>"The skin of a blue toad"</Ingredient>
+<Page>"18"</Page>
+<Duration>"Permanent (2 Degrees)"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_WINGS_OF_THE_FALCON">
+<Description language="ENGLISH">"Wings of the Falcon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Beasts)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A falcon’s pinion"</Ingredient>
+<Page>"18"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_THE_WINTER_S_LONG_SLUMBER">
+<Description language="ENGLISH">"The Winter’s Long Slumber"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Beasts)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A bear’s tooth"</Ingredient>
+<Page>"18"</Page>
+<Duration>"Special"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FORM_OF_THE_LEGENDARY_DRAGON">
+<Description language="ENGLISH">"Form of the Legendary Dragon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Beasts)"</Lore>
+<CastingNumber>"Magic 6"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A dragon’s scale"</Ingredient>
+<Page>"19"</Page>
+<Duration>"Permanent"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_UNLEASH_THE_PRIMAL_RAGE">
+<Description language="ENGLISH">"Unleash the Primal Rage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Beasts)"</Lore>
+<CastingNumber>"Magic 6"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A vial of bear, boar, falcon, and snake blood"</Ingredient>
+<Page>"19"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_BOON_OF_SHYISH">
+<Description language="ENGLISH">"Boon of Shyish"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Death)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pinch of ashes from a corpse"</Ingredient>
+<Page>"20"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_DEATH_S_MESSENGER">
+<Description language="ENGLISH">"Death’s Messenger"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Death)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A drop of an enemy’s blood"</Ingredient>
+<Page>"20"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_DEATHSIGHT">
+<Description language="ENGLISH">"Deathsight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Death)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pinch of grave dirt"</Ingredient>
+<Page>"20"</Page>
+<Duration>"1 Hour"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_GRIEF_S_END">
+<Description language="ENGLISH">"Grief’s End"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Death)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"An object taken from the deceased"</Ingredient>
+<Page>"20"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Within hearing distance"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_TOMB_ROBBER_S_CURSE">
+<Description language="ENGLISH">"Tomb Robber’s Curse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Death)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"1 Minute"</CastingTime>
+<Ingredient>"A handful of dirt from a voided grave"</Ingredient>
+<Page>"20"</Page>
+<Duration>"1 Year"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_DEATH_S_DOOR">
+<Description language="ENGLISH">"Death’s Door"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Death)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A vial of embalming fluid"</Ingredient>
+<Page>"20"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"24 Yard-Radius"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FINAL_REVELATION">
+<Description language="ENGLISH">"Final Revelation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Death)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Blood from the corpse in question"</Ingredient>
+<Page>"21"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SWIFT_PASSING">
+<Description language="ENGLISH">"Swift Passing"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Death)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A bit of the subject’s blood"</Ingredient>
+<Page>"21"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_TORPOR">
+<Description language="ENGLISH">"Torpor"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Death)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A bit of preserved flesh"</Ingredient>
+<Page>"21"</Page>
+<Duration>"Special"</Duration>
+<Range>"36 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_WARD_AGAINST_ABOMINATION">
+<Description language="ENGLISH">"Ward Against Abomination"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Death)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A handful of salt"</Ingredient>
+<Page>"21"</Page>
+<Duration>"Special"</Duration>
+<Range>"(4×Magic) Yard-Radius"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_ACCEPTANCE_OF_FATE">
+<Description language="ENGLISH">"Acceptance of Fate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Death)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action + Half Action"</CastingTime>
+<Ingredient>"A pinch of grave dirt"</Ingredient>
+<Page>"22"</Page>
+<Duration>"1 Minute"</Duration>
+<Range>"12 Yard-Radius"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_DEATH_S_RELEASE">
+<Description language="ENGLISH">"Death’s Release"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Death)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pinch of salt"</Ingredient>
+<Page>"22"</Page>
+<Duration>"1 Minute"</Duration>
+<Range>"12 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_LIMBWITHER">
+<Description language="ENGLISH">"Limbwither"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Death)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pinch of ashes from a corpse"</Ingredient>
+<Page>"22"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"24 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_REAPING_SCYTHE">
+<Description language="ENGLISH">"Reaping Scythe"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Death)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A small handful of grave dirt"</Ingredient>
+<Page>"22"</Page>
+<Duration>"(Magic) Rounds"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_TIDE_OF_YEARS">
+<Description language="ENGLISH">"Tide of Years"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Death)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pinch of ash from a corpse"</Ingredient>
+<Page>"22"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_DRAIN_LIFE">
+<Description language="ENGLISH">"Drain Life"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Death)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A bit of freshly spilled blood"</Ingredient>
+<Page>"22"</Page>
+<Duration>"Instant"</Duration>
+<Range>"12 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FINAL_WORDS">
+<Description language="ENGLISH">"Final Words"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Death)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A bit of blood from the subject"</Ingredient>
+<Page>"23"</Page>
+<Duration>"Instant"</Duration>
+<Range>"12 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_THE_ICY_GRIP_OF_DEATH">
+<Description language="ENGLISH">"The Icy Grip of Death"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Death)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small handful of grave dirt"</Ingredient>
+<Page>"23"</Page>
+<Duration>"Special"</Duration>
+<Range>"48 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_KNOCKS_OF_THE_DEPARTED">
+<Description language="ENGLISH">"Knocks of the Departed"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Death)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small portion of the subject’s body"</Ingredient>
+<Page>"23"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Special"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_REPOSE">
+<Description language="ENGLISH">"Repose"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Death)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small handful of salt"</Ingredient>
+<Page>"23"</Page>
+<Duration>"(Magic) Years or Instant"</Duration>
+<Range>"Touch or 24 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FACE_THE_INEVITABLE">
+<Description language="ENGLISH">"Face the Inevitable"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Death)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A drop of blood"</Ingredient>
+<Page>"23"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"48 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_LIFE_S_END">
+<Description language="ENGLISH">"Life’s End"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Death)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small glass bead"</Ingredient>
+<Page>"24"</Page>
+<Duration>"Instant"</Duration>
+<Range>"12 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_WIND_OF_DEATH">
+<Description language="ENGLISH">"Wind of Death"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Death)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A couple bone chips"</Ingredient>
+<Page>"24"</Page>
+<Duration>"Instant"</Duration>
+<Range>"48 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_YOUTH_S_BANE">
+<Description language="ENGLISH">"Youth’s Bane"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Death)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A couple bone chips"</Ingredient>
+<Page>"24"</Page>
+<Duration>"Instant"</Duration>
+<Range>"12 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_THE_ANIMUS_IMPRISONED">
+<Description language="ENGLISH">"The Animus Imprisoned"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Death)"</Lore>
+<CastingNumber>"Magic 6"</CastingNumber>
+<CastingTime>"10 Minutes"</CastingTime>
+<Ingredient>"A flagon of embalming fluid"</Ingredient>
+<Page>"24"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SOUL_HARVEST">
+<Description language="ENGLISH">"Soul Harvest"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Death)"</Lore>
+<CastingNumber>"Magic 6"</CastingNumber>
+<CastingTime>"Full Action + Half Action"</CastingTime>
+<Ingredient>"A drop of blood"</Ingredient>
+<Page>"25"</Page>
+<Duration>"Instant"</Duration>
+<Range>"36 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CAUTERIZE">
+<Description language="ENGLISH">"Cauterize"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Fire)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A piece of charcoal"</Ingredient>
+<Page>"26"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_DRAGON_S_CANDLE">
+<Description language="ENGLISH">"Dragon’s Candle"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Fire)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A small handful of kindling"</Ingredient>
+<Page>"26"</Page>
+<Duration>"Special"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FLASHCOOK">
+<Description language="ENGLISH">"Flashcook"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Fire)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pinch of salt"</Ingredient>
+<Page>"26"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SEARING_REBUKE">
+<Description language="ENGLISH">"Searing Rebuke"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Fire)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Free Action"</CastingTime>
+<Ingredient>"—"</Ingredient>
+<Page>"26"</Page>
+<Duration>"Immediate"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SMOKESIGHT">
+<Description language="ENGLISH">"Smokesight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Fire)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pinch of soot"</Ingredient>
+<Page>"26"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_WARMTH">
+<Description language="ENGLISH">"Warmth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Fire)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A small handful of kindling"</Ingredient>
+<Page>"26"</Page>
+<Duration>"24 Hours"</Duration>
+<Range>"(2×Magic) people within 6 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CHOLERIC">
+<Description language="ENGLISH">"Choleric"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Fire)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A thimble of bile"</Ingredient>
+<Page>"27"</Page>
+<Duration>"Variable"</Duration>
+<Range>"12 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CROWN_OF_FIRE">
+<Description language="ENGLISH">"Crown of Fire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Fire)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"1gc"</Ingredient>
+<Page>"27"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FIRES_OF_U_ZHUL">
+<Description language="ENGLISH">"Fires of U’Zhul"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Fire)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A ball of sulphur"</Ingredient>
+<Page>"27"</Page>
+<Duration>"Instant"</Duration>
+<Range>"36 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_RUIN_AND_DESTRUCTION">
+<Description language="ENGLISH">"Ruin and Destruction"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Fire)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A piece of charcoal"</Ingredient>
+<Page>"27"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_TASTE_OF_FIRE">
+<Description language="ENGLISH">"Taste of Fire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Fire)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A peppercorn"</Ingredient>
+<Page>"27"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CURTAIN_OF_FLAME">
+<Description language="ENGLISH">"Curtain of Flame"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Fire)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A thimble of oil"</Ingredient>
+<Page>"28"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"48 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FIREBALL">
+<Description language="ENGLISH">"Fireball"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Fire)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A ball of sulphur"</Ingredient>
+<Page>"28"</Page>
+<Duration>"Instant"</Duration>
+<Range>"48 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FLAMING_SWORD_OF_RHUIN">
+<Description language="ENGLISH">"Flaming Sword of Rhuin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Fire)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pinch of iron filings"</Ingredient>
+<Page>"28"</Page>
+<Duration>"(Magic) Rounds"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_INEXTINGUISHABLE_FLAME">
+<Description language="ENGLISH">"Inextinguishable Flame"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Fire)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A ball of sulphur"</Ingredient>
+<Page>"28"</Page>
+<Duration>"Varies"</Duration>
+<Range>"12 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SHIELD_OF_AQSHY">
+<Description language="ENGLISH">"Shield of Aqshy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Fire)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pinch of charcoal dust"</Ingredient>
+<Page>"28"</Page>
+<Duration>"(5×Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_BREATHE_FIRE">
+<Description language="ENGLISH">"Breathe Fire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Fire)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A thimble of alcoholic spirits"</Ingredient>
+<Page>"29"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"Point blank"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CONSUMING_WRATH">
+<Description language="ENGLISH">"Consuming Wrath"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Fire)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A thimble of bile"</Ingredient>
+<Page>"29"</Page>
+<Duration>"Variable"</Duration>
+<Range>"6 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_HEARTS_OF_FIRE">
+<Description language="ENGLISH">"Hearts of Fire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Fire)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"2 Full Actions"</CastingTime>
+<Ingredient>"A vial with a mixture of blood and oil"</Ingredient>
+<Page>"29"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"You; 30 yard radius"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_HEATSIGHT">
+<Description language="ENGLISH">"Heatsight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Fire)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"2 Full Actions"</CastingTime>
+<Ingredient>"A pinch of soot"</Ingredient>
+<Page>"29"</Page>
+<Duration>"(5×Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_PHLOGISTIC_DEVASTATION">
+<Description language="ENGLISH">"Phlogistic Devastation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Fire)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A piece of charcoal"</Ingredient>
+<Page>"29"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_AQSHY_S_AEGIS">
+<Description language="ENGLISH">"Aqshy’s Aegis"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Fire)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"2 Full Actions"</CastingTime>
+<Ingredient>"A pinch of soot"</Ingredient>
+<Page>"30"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"You; (4×Magic) Yard-Radius"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_BOILING_BLOOD">
+<Description language="ENGLISH">"Boiling Blood"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Fire)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pinch of hot spices"</Ingredient>
+<Page>"30"</Page>
+<Duration>"Special"</Duration>
+<Range>"12 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FIERY_BLAST">
+<Description language="ENGLISH">"Fiery Blast"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Fire)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A ball of sulphur"</Ingredient>
+<Page>"30"</Page>
+<Duration>"Instant"</Duration>
+<Range>"48 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_THE_BURNING_HEAD">
+<Description language="ENGLISH">"The Burning Head"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Fire)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A vial of oil"</Ingredient>
+<Page>"30"</Page>
+<Duration>"(Magic) Rounds"</Duration>
+<Range>"6 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CONFLAGRATION_OF_DOOM">
+<Description language="ENGLISH">"Conflagration of Doom"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Fire)"</Lore>
+<CastingNumber>"Magic 6"</CastingNumber>
+<CastingTime>"At least 1 Full Action"</CastingTime>
+<Ingredient>"A pinch of powdered dragon’s scales"</Ingredient>
+<Page>"31"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"300 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_TOWERING_INFERNO">
+<Description language="ENGLISH">"Towering Inferno"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Fire)"</Lore>
+<CastingNumber>"Magic 6"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A drop of lamp oil"</Ingredient>
+<Page>"31"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"Varies"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_BOON_OF_AZYR">
+<Description language="ENGLISH">"Boon of Azyr"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Heavens)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Free Action"</CastingTime>
+<Ingredient>"—"</Ingredient>
+<Page>"32"</Page>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FICKLE_FORTUNE">
+<Description language="ENGLISH">"Fickle Fortune"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Heavens)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action or Free Action"</CastingTime>
+<Ingredient>"A drop of the subject’s blood"</Ingredient>
+<Page>"32"</Page>
+<Duration>"Special"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_MISFORTUNE">
+<Description language="ENGLISH">"Misfortune"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Heavens)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pinch of fur from a black cat"</Ingredient>
+<Page>"32"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"12 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_OMEN">
+<Description language="ENGLISH">"Omen"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Heavens)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"1 Minute"</CastingTime>
+<Ingredient>"A small handful of feathers"</Ingredient>
+<Page>"32"</Page>
+<Duration>"Special"</Duration>
+<Range>"Nearby Ally"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_POLISH_CLEAN_AND_GLEAM">
+<Description language="ENGLISH">"Polish, Clean, and Gleam"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Heavens)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A small hunk of soap"</Ingredient>
+<Page>"32"</Page>
+<Duration>"Special"</Duration>
+<Range>"24 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_BIRDSPEAK">
+<Description language="ENGLISH">"Birdspeak"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Heavens)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A bird’s tongue"</Ingredient>
+<Page>"33"</Page>
+<Duration>"(10×Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FIRST_PORTENT_OF_AMUL">
+<Description language="ENGLISH">"First Portent of Amul"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Heavens)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A drop of your own blood"</Ingredient>
+<Page>"33"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_LENS_ON_THE_SKY">
+<Description language="ENGLISH">"Lens on the Sky"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Heavens)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pinch of clean sand"</Ingredient>
+<Page>"33"</Page>
+<Duration>"Permanent"</Duration>
+<Range>"—"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_LIGHTNING_BOLT">
+<Description language="ENGLISH">"Lightning Bolt"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Heavens)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pinch of iron shavings"</Ingredient>
+<Page>"33"</Page>
+<Duration>"Instant"</Duration>
+<Range>"36 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_REVELATION">
+<Description language="ENGLISH">"Revelation"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Heavens)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Free Action"</CastingTime>
+<Ingredient>"—"</Ingredient>
+<Page>"33"</Page>
+<Duration>"Instant"</Duration>
+<Range>"12 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CLEAR_SKY">
+<Description language="ENGLISH">"Clear Sky"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Heavens)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Bottled breath of an eagle"</Ingredient>
+<Page>"34"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Within sight"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FORTUNE_S_RENEWAL">
+<Description language="ENGLISH">"Fortune’s Renewal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Heavens)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A drop of the subject’s blood"</Ingredient>
+<Page>"34"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SECOND_PORTENT_OF_AMUL">
+<Description language="ENGLISH">"Second Portent of Amul"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Heavens)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A drop of your own blood"</Ingredient>
+<Page>"34"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_THIRD_PORTENT_OF_AMUL">
+<Description language="ENGLISH">"Third Portent of Amul"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Heavens)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A drop of your own blood"</Ingredient>
+<Page>"34"</Page>
+<Duration>"24 Hours"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_WIND_BLAST">
+<Description language="ENGLISH">"Wind Blast"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Heavens)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Bottled breath of an eagle"</Ingredient>
+<Page>"34"</Page>
+<Duration>"(Magic) Rounds"</Duration>
+<Range>"48 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CURSE_OF_THE_STARS">
+<Description language="ENGLISH">"Curse of the Stars"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Heavens)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"35"</Page>
+<Duration>"(Magic) Days"</Duration>
+<Range>"24 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FINDING_DIVINATION">
+<Description language="ENGLISH">"Finding Divination"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Heavens)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A sketch of the object to be found"</Ingredient>
+<Page>"35"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Indefinite"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_PREMONITION">
+<Description language="ENGLISH">"Premonition"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Heavens)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A drop your own blood"</Ingredient>
+<Page>"35"</Page>
+<Duration>"24 hours"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_PROJECT_SPIRIT">
+<Description language="ENGLISH">"Project Spirit"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Heavens)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"2 Full Actions"</CastingTime>
+<Ingredient>"A scrap from a funerary shroud"</Ingredient>
+<Page>"35"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_WINGS_OF_HEAVEN">
+<Description language="ENGLISH">"Wings of Heaven"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Heavens)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"An eagle’s feather"</Ingredient>
+<Page>"36"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CHAIN_LIGHTNING">
+<Description language="ENGLISH">"Chain Lightning"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Heavens)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pinch of iron shavings"</Ingredient>
+<Page>"36"</Page>
+<Duration>"Instant"</Duration>
+<Range>"36 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FATE_OF_DOOM">
+<Description language="ENGLISH">"Fate of Doom"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Heavens)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"1 Hour"</CastingTime>
+<Ingredient>"A scrap of parchment with the subject’s dooming written on it"</Ingredient>
+<Page>"36"</Page>
+<Duration>"Instant"</Duration>
+<Range>"1 Mile"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SIGNS_IN_THE_STARS">
+<Description language="ENGLISH">"Signs in the Stars"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Heavens)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"2 Full Actions"</CastingTime>
+<Ingredient>"A vial of ink made from eagle’s blood"</Ingredient>
+<Page>"36"</Page>
+<Duration>"Until sunrise"</Duration>
+<Range>"Indefinite"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_STARSHINE">
+<Description language="ENGLISH">"Starshine"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Heavens)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"Full Action and a Half Action"</CastingTime>
+<Ingredient>"A hunk of candle tallow"</Ingredient>
+<Page>"37"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"48 yard radius"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_COMET_OF_CASSANDORA">
+<Description language="ENGLISH">"Comet of Cassandora"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Heavens)"</Lore>
+<CastingNumber>"Magic 6"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pinch of sapphire dust"</Ingredient>
+<Page>"37"</Page>
+<Duration>"Special"</Duration>
+<Range>"120 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_PROPHESY">
+<Description language="ENGLISH">"Prophesy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Heavens)"</Lore>
+<CastingNumber>"Magic 6"</CastingNumber>
+<CastingTime>"6 Hours"</CastingTime>
+<Ingredient>"A Good craftsmanship lens"</Ingredient>
+<Page>"37"</Page>
+<Duration>"Indefinite"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FAT_OF_THE_LAND">
+<Description language="ENGLISH">"Fat of the Land"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Life)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"1 Minute"</CastingTime>
+<Ingredient>"A handful of animal feed"</Ingredient>
+<Page>"38"</Page>
+<Duration>"1 Week"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FERMENT">
+<Description language="ENGLISH">"Ferment"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Life)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A drop of pure water from a spring"</Ingredient>
+<Page>"38"</Page>
+<Duration>"24 hours"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_LEAF_FALL">
+<Description language="ENGLISH">"Leaf Fall"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Life)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A leaf browned by autumn"</Ingredient>
+<Page>"38"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_TREE_DWELLER_S_STEP">
+<Description language="ENGLISH">"Tree-Dweller’s step"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Life)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A dab of sap"</Ingredient>
+<Page>"38"</Page>
+<Duration>"24 Hours"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_THE_WILDS_UNDISTURBED">
+<Description language="ENGLISH">"The Wilds Undisturbed"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Life)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Dirt from the area you’re traversing"</Ingredient>
+<Page>"38"</Page>
+<Duration>"Special"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CURSE_OF_THORNS">
+<Description language="ENGLISH">"Curse of Thorns"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Life)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"The seed of a thorny plant"</Ingredient>
+<Page>"38"</Page>
+<Duration>"(2×Magic) Rounds"</Duration>
+<Range>"36 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_EARTH_BLOOD">
+<Description language="ENGLISH">"Earth Blood"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Life)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"1 - 10 Half Actions"</CastingTime>
+<Ingredient>"A handful of dirt"</Ingredient>
+<Page>"39"</Page>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_TRACK_S_TALE_TOLD">
+<Description language="ENGLISH">"Track’s Tale Told"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Life)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Animal droppings"</Ingredient>
+<Page>"39"</Page>
+<Duration>"Special"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_THE_SKY_TAKES_HEED">
+<Description language="ENGLISH">"The Sky Takes Heed"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Life)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A drop of rainwater"</Ingredient>
+<Page>"39"</Page>
+<Duration>"Instant or (Magic) Minutes"</Duration>
+<Range>"General Vicinity"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SUMMER_HEAT">
+<Description language="ENGLISH">"Summer Heat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Life)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A vial of sweat"</Ingredient>
+<Page>"39"</Page>
+<Duration>"1 Minute"</Duration>
+<Range>"48 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_THE_EARTH_TAKES_HEED">
+<Description language="ENGLISH">"The Earth Takes Heed"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Life)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pinch of quartz dust"</Ingredient>
+<Page>"40"</Page>
+<Duration>"Concentration"</Duration>
+<Range>"36 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FATHER_OF_THORNS">
+<Description language="ENGLISH">"Father of Thorns"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Life)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The seed of a thorny plant"</Ingredient>
+<Page>"40"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"48 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_GEYSER">
+<Description language="ENGLISH">"Geyser"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Life)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A canteen’s worth of water"</Ingredient>
+<Page>"40"</Page>
+<Duration>"Instant and 1 Hour, see text"</Duration>
+<Range>"24 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_VITAL_GROWTH">
+<Description language="ENGLISH">"Vital Growth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Life)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"2+ Full Actions"</CastingTime>
+<Ingredient>"A handful of manure"</Ingredient>
+<Page>"40"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Point Blank"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_VOICE_OF_GHYRAN">
+<Description language="ENGLISH">"Voice of Ghyran"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Life)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"1 Minute"</CastingTime>
+<Ingredient>"A bottle of wine"</Ingredient>
+<Page>"40"</Page>
+<Duration>"Conversation"</Duration>
+<Range>"Special"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_EARTH_GATE">
+<Description language="ENGLISH">"Earth Gate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Life)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small handful of dirt"</Ingredient>
+<Page>"41"</Page>
+<Duration>"Instant"</Duration>
+<Range>"You; (12×Magic) Yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FLESH_OF_CLAY">
+<Description language="ENGLISH">"Flesh of Clay"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Life)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A few flakes of your own skin"</Ingredient>
+<Page>"41"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SPRING_BLOOM">
+<Description language="ENGLISH">"Spring Bloom"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Life)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"10 Minutes"</CastingTime>
+<Ingredient>"A small handful of fertile soil"</Ingredient>
+<Page>"41"</Page>
+<Duration>"Special"</Duration>
+<Range>"Special"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_WINTER_S_FROST">
+<Description language="ENGLISH">"Winter’s Frost"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Life)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A vial of melted snow from a mountain"</Ingredient>
+<Page>"41"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"48 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_WOOD_SHAPE">
+<Description language="ENGLISH">"Wood Shape"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Life)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A handful of leaves"</Ingredient>
+<Page>"41"</Page>
+<Duration>"(3×Magic) Hours"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_GHYRAN_S_VEIL">
+<Description language="ENGLISH">"Ghyran’s Veil"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Life)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"1 Minute"</CastingTime>
+<Ingredient>"A representation of the local area made from natural materials"</Ingredient>
+<Page>"41"</Page>
+<Duration>"Permanent"</Duration>
+<Range>"(Magic) Characters or objects"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_THE_JADE_ROAD">
+<Description language="ENGLISH">"The Jade Road"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Life)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"1 Hour"</CastingTime>
+<Ingredient>"A bit of dirt from your intended destina- tion"</Ingredient>
+<Page>"42"</Page>
+<Duration>"Instant"</Duration>
+<Range>"You and up to (3×Magic) others"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_THE_RAIN_LORD">
+<Description language="ENGLISH">"The Rain Lord"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Life)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"1 Minute"</CastingTime>
+<Ingredient>"A drop of rainwater"</Ingredient>
+<Page>"42"</Page>
+<Duration>"Instant or (Magic) Minutes"</Duration>
+<Range>"General Vicinity"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_THE_WILD_DEMESNE">
+<Description language="ENGLISH">"The Wild Demesne"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Life)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"6 hours"</CastingTime>
+<Ingredient>"A representation of the spell’s area of ef- fect made from natural materials"</Ingredient>
+<Page>"42"</Page>
+<Duration>"Permanent"</Duration>
+<Range>"(Magic) Mile-Radius"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CURE_BLIGHT">
+<Description language="ENGLISH">"Cure Blight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Life)"</Lore>
+<CastingNumber>"Magic 6"</CastingNumber>
+<CastingTime>"10 Minutes"</CastingTime>
+<Ingredient>"A healthy plant"</Ingredient>
+<Page>"42"</Page>
+<Duration>"1 season or Instant"</Duration>
+<Range>"(Magic) Mile-Radius or (2×Magic) Charac- ters"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_MASTER_OF_THE_EARTH">
+<Description language="ENGLISH">"Master of the Earth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Life)"</Lore>
+<CastingNumber>"Magic 6"</CastingNumber>
+<CastingTime>"6 Hours"</CastingTime>
+<Ingredient>"A pinch of quartz dust"</Ingredient>
+<Page>"43"</Page>
+<Duration>"Concentration"</Duration>
+<Range>"(36×Magic) Yards-Radius"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CLEANSING_GLOW">
+<Description language="ENGLISH">"Cleansing Glow"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Light)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A bit of soap"</Ingredient>
+<Page>"44"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CORRUPTION_S_BANE">
+<Description language="ENGLISH">"Corruption’s Bane"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Light)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A dab of lamp oil"</Ingredient>
+<Page>"44"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_DAZZLING_BRIGHTNESS">
+<Description language="ENGLISH">"Dazzling Brightness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Light)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A small glass bead"</Ingredient>
+<Page>"44"</Page>
+<Duration>"(Magic) Rounds"</Duration>
+<Range>"36 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_MOTES_OF_TRUTH">
+<Description language="ENGLISH">"Motes of Truth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Light)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Free Action"</CastingTime>
+<Ingredient>"—"</Ingredient>
+<Page>"44"</Page>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SOLAR_VEIL">
+<Description language="ENGLISH">"Solar Veil"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Light)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A lit torch"</Ingredient>
+<Page>"44"</Page>
+<Duration>"(Magic) Rounds"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CLARITY">
+<Description language="ENGLISH">"Clarity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Light)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A candle"</Ingredient>
+<Page>"44"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_HEALING_OF_HYSH">
+<Description language="ENGLISH">"Healing of Hysh"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Light)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small glass bead"</Ingredient>
+<Page>"45"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_RADIANT_GAZE">
+<Description language="ENGLISH">"Radiant Gaze"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Light)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A dab of lamp oil"</Ingredient>
+<Page>"45"</Page>
+<Duration>"Instant"</Duration>
+<Range>"16 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_RADIANT_WEAPON">
+<Description language="ENGLISH">"Radiant Weapon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Light)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A dab of lamp oil"</Ingredient>
+<Page>"45"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SHIMMERING_CLOAK">
+<Description language="ENGLISH">"Shimmering Cloak"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Light)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A candle"</Ingredient>
+<Page>"45"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_BANISH">
+<Description language="ENGLISH">"Banish"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Light)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A glass bead"</Ingredient>
+<Page>"46"</Page>
+<Duration>"Special"</Duration>
+<Range>"24 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_BLINDING_LIGHT">
+<Description language="ENGLISH">"Blinding Light"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Light)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small glass bead"</Ingredient>
+<Page>"46"</Page>
+<Duration>"(2×Magic) Rounds"</Duration>
+<Range>"48 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_ILLUMINATE_THE_EDIFICE">
+<Description language="ENGLISH">"Illuminate the Edifice"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Light)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A drop of lamp oil"</Ingredient>
+<Page>"46"</Page>
+<Duration>"Permanent"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_LIGHT_OF_PURITY">
+<Description language="ENGLISH">"Light of Purity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Light)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"2 Full Actions"</CastingTime>
+<Ingredient>"A pinch of crushed incense"</Ingredient>
+<Page>"46"</Page>
+<Duration>"Special"</Duration>
+<Range>"Special"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_THE_POWER_OF_TRUTH">
+<Description language="ENGLISH">"The Power of Truth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Light)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action + Half Action"</CastingTime>
+<Ingredient>"A sheet of vellum"</Ingredient>
+<Page>"47"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_EYES_OF_TRUTH">
+<Description language="ENGLISH">"Eyes of Truth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Light)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pinch of crushed incense"</Ingredient>
+<Page>"47"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_ILL_BANE">
+<Description language="ENGLISH">"Ill-Bane"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Light)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A poultice"</Ingredient>
+<Page>"47"</Page>
+<Duration>"Instant"</Duration>
+<Range>"8 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_GUARDIAN_LIGHT">
+<Description language="ENGLISH">"Guardian Light"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Light)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A candle"</Ingredient>
+<Page>"47"</Page>
+<Duration>"(Magic) Rounds"</Duration>
+<Range>"You; (6×Magic) Yard-Radius"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_LIGHT_S_DEMAND">
+<Description language="ENGLISH">"Light’s Demand"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Light)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"2 Full Actions"</CastingTime>
+<Ingredient>"A small handful of salt"</Ingredient>
+<Page>"47"</Page>
+<Duration>"(Magic) Rounds"</Duration>
+<Range>"Point Blank"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_WINDS_OF_INSPIRATION">
+<Description language="ENGLISH">"Winds of Inspiration"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Light)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"(12 - 2×Magic) Minutes"</CastingTime>
+<Ingredient>"A small handful of crushed incense"</Ingredient>
+<Page>"47"</Page>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_DAEMONBANE">
+<Description language="ENGLISH">"Daemonbane"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Light)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"Full Action + Half Action"</CastingTime>
+<Ingredient>"A glass bead"</Ingredient>
+<Page>"48"</Page>
+<Duration>"Instant"</Duration>
+<Range>"48 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_PHA_S_ILLUMINATION">
+<Description language="ENGLISH">"Pha’s Illumination"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Light)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A torch"</Ingredient>
+<Page>"48"</Page>
+<Duration>"(1 + Magic) Rounds"</Duration>
+<Range>"36 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_PILLAR_OF_RADIANCE">
+<Description language="ENGLISH">"Pillar of Radiance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Light)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"Full Action + Half Action"</CastingTime>
+<Ingredient>"A pinch of silver dust"</Ingredient>
+<Page>"48"</Page>
+<Duration>"Instant"</Duration>
+<Range>"48 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SHINING_AEGIS">
+<Description language="ENGLISH">"Shining Aegis"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Light)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"1 Minute"</CastingTime>
+<Ingredient>"A small handful of glass beads"</Ingredient>
+<Page>"48"</Page>
+<Duration>"(2×Magic) Hours"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_BOON_OF_HYSH">
+<Description language="ENGLISH">"Boon of Hysh"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Light)"</Lore>
+<CastingNumber>"Magic 6"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A bandage"</Ingredient>
+<Page>"48"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CLEANSING_FLARE">
+<Description language="ENGLISH">"Cleansing Flare"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Light)"</Lore>
+<CastingNumber>"Magic 6"</CastingNumber>
+<CastingTime>"2 Full Actions"</CastingTime>
+<Ingredient>"A glass orb"</Ingredient>
+<Page>"49"</Page>
+<Duration>"Instant"</Duration>
+<Range>"120 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_GUARD_OF_STEEL">
+<Description language="ENGLISH">"Guard of Steel"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Metal)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A leather strap from a sword"</Ingredient>
+<Page>"50"</Page>
+<Duration>"1 Minute"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_INSCRIPTION">
+<Description language="ENGLISH">"Inscription"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Metal)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A written/drawn depiction of what you would like to inscribe"</Ingredient>
+<Page>"50"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_LAW_OF_APPEARANCE">
+<Description language="ENGLISH">"Law of Appearance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Metal)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A dab of paint"</Ingredient>
+<Page>"50"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_LAW_OF_CRAFTSMANSHIP">
+<Description language="ENGLISH">"Law of Craftsmanship"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Metal)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pinch of soot from a well-used forge"</Ingredient>
+<Page>"50"</Page>
+<Duration>"24 Hours"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_STOKE_THE_FORGE">
+<Description language="ENGLISH">"Stoke the Forge"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Metal)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pinch of soot from a well-used forge"</Ingredient>
+<Page>"50"</Page>
+<Duration>"(15×Magic) Minutes"</Duration>
+<Range>"Special"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CURSE_OF_RUST">
+<Description language="ENGLISH">"Curse of Rust"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Metal)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pinch of salt"</Ingredient>
+<Page>"50"</Page>
+<Duration>"Instant"</Duration>
+<Range>"12 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FAULT_OF_FORM">
+<Description language="ENGLISH">"Fault of Form"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Metal)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Flakes of rust"</Ingredient>
+<Page>"51"</Page>
+<Duration>"Permanent"</Duration>
+<Range>"24 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_LAW_OF_AGE">
+<Description language="ENGLISH">"Law of Age"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Metal)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small chip or fragment of a fossil"</Ingredient>
+<Page>"51"</Page>
+<Duration>"(5×Magic) Minutes"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_LAW_OF_FORM">
+<Description language="ENGLISH">"Law of Form"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Metal)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pinch of iron shavings"</Ingredient>
+<Page>"51"</Page>
+<Duration>"(10×Magic) Minutes"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_LAW_OF_LOGIC">
+<Description language="ENGLISH">"Law of Logic"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Metal)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"(7-Magic) Full Actions"</CastingTime>
+<Ingredient>"A blank piece of paper"</Ingredient>
+<Page>"51"</Page>
+<Duration>"5 Minutes"</Duration>
+<Range>"12 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_ARMOUR_OF_LEAD">
+<Description language="ENGLISH">"Armour of Lead"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Metal)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pinch of soot from a well-used forge"</Ingredient>
+<Page>"52"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"48 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_RIGIDITY_OF_BODY_AND_MIND">
+<Description language="ENGLISH">"Rigidity of Body and Mind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Metal)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pinch of iron shavings"</Ingredient>
+<Page>"52"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SECRET_RUNE">
+<Description language="ENGLISH">"Secret Rune"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Metal)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A written/drawn depiction of what you would like to inscribe"</Ingredient>
+<Page>"52"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch or 6 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SILVER_ARROWS_OF_ARHA">
+<Description language="ENGLISH">"Silver Arrows of Arha"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Metal)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pinch of silver dust"</Ingredient>
+<Page>"52"</Page>
+<Duration>"Instant"</Duration>
+<Range>"48 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_BREACH_THE_UNKNOWN">
+<Description language="ENGLISH">"Breach the Unknown"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Metal)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"1 Minute"</CastingTime>
+<Ingredient>"A blank piece of paper"</Ingredient>
+<Page>"52"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_DIE_AND_CAST">
+<Description language="ENGLISH">"Die and Cast"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Metal)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A handful of a mixture of salt and char- coal dust"</Ingredient>
+<Page>"53"</Page>
+<Duration>"Permanent"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_FOOL_S_GOLD">
+<Description language="ENGLISH">"Fool’s Gold"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Metal)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pinch of pyrite dust"</Ingredient>
+<Page>"53"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_TALE_OF_METAL">
+<Description language="ENGLISH">"Tale of Metal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Metal)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"2 Full Actions"</CastingTime>
+<Ingredient>"A blank piece of paper"</Ingredient>
+<Page>"53"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_TRANSFORMATION_OF_METAL">
+<Description language="ENGLISH">"Transformation of Metal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Metal)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A handful of a mixture of salt and char- coal dust"</Ingredient>
+<Page>"53"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_TRIAL_AND_ERROR">
+<Description language="ENGLISH">"Trial and Error"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Metal)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"An object of Poor craftsmanship"</Ingredient>
+<Page>"53"</Page>
+<Duration>"(Magic) Rounds"</Duration>
+<Range>"12 yard radius"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_ENCHANT_ITEM">
+<Description language="ENGLISH">"Enchant Item"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Metal)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A griffon’s feather"</Ingredient>
+<Page>"54"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_LAW_OF_IMMUTABILITY">
+<Description language="ENGLISH">"Law of Immutability"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Metal)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A steel rod"</Ingredient>
+<Page>"54"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_TRANSMUTATION_OF_THE_UNSTABLE_MIND">
+<Description language="ENGLISH">"Transmutation of the Unstable Mind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Metal)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"10 Minutes"</CastingTime>
+<Ingredient>"A small handful of salt"</Ingredient>
+<Page>"54"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_LAW_OF_GOLD">
+<Description language="ENGLISH">"Law of Gold"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Metal)"</Lore>
+<CastingNumber>"Magic 6"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"1 gc"</Ingredient>
+<Page>"54"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"24 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_MAGNUM_OPUS">
+<Description language="ENGLISH">"Magnum Opus"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Metal)"</Lore>
+<CastingNumber>"Magic 6"</CastingNumber>
+<CastingTime>"At least 10 minutes, see text"</CastingTime>
+<Ingredient>"Complex designs of the object you wish to create"</Ingredient>
+<Page>"54"</Page>
+<Duration>"Special"</Duration>
+<Range>"6 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_BEWILDER">
+<Description language="ENGLISH">"Bewilder"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Shadow)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A splash of ale"</Ingredient>
+<Page>"56"</Page>
+<Duration>"(Magic) Rounds"</Duration>
+<Range>"24 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_GOSSAMER_DISGUISE">
+<Description language="ENGLISH">"Gossamer Disguise"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Shadow)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A spool of thread"</Ingredient>
+<Page>"56"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SHADOWCLOAK">
+<Description language="ENGLISH">"Shadowcloak"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Shadow)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A piece of charcoal"</Ingredient>
+<Page>"56"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SILENT_UTTERANCE">
+<Description language="ENGLISH">"Silent Utterance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Shadow)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Free Action"</CastingTime>
+<Ingredient>"—"</Ingredient>
+<Page>"56"</Page>
+<Duration>"1 Round"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_TAKE_NO_HEED">
+<Description language="ENGLISH">"Take No Heed"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Shadow)"</Lore>
+<CastingNumber>"Magic 1"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A piece of charcoal"</Ingredient>
+<Page>"56"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_DOPPELGANGER">
+<Description language="ENGLISH">"Doppelganger"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Shadow)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Full Action + Half Action"</CastingTime>
+<Ingredient>"A lock of hair from a member of the race you are impersonating"</Ingredient>
+<Page>"57"</Page>
+<Duration>"(10×Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_EYE_OF_THE_BEHOLDER">
+<Description language="ENGLISH">"Eye of the Beholder"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Shadow)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"1 p"</Ingredient>
+<Page>"57"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_ILLUSION">
+<Description language="ENGLISH">"Illusion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Shadow)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A sketch of the desired illusion"</Ingredient>
+<Page>"57"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"48 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_MUTABLE_VISAGE">
+<Description language="ENGLISH">"Mutable Visage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Shadow)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A piece of charcoal"</Ingredient>
+<Page>"57"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SHADOW_OF_DEATH">
+<Description language="ENGLISH">"Shadow of Death"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Shadow)"</Lore>
+<CastingNumber>"Magic 2"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A shard of bone"</Ingredient>
+<Page>"58"</Page>
+<Duration>"1 Minute"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CONFUSION">
+<Description language="ENGLISH">"Confusion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Shadow)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A splash of ale"</Ingredient>
+<Page>"58"</Page>
+<Duration>"(Magic) Rounds"</Duration>
+<Range>"24 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_GREY_CIPHER">
+<Description language="ENGLISH">"Grey Cipher"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Shadow)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A bit of wax from a burned-out candle"</Ingredient>
+<Page>"58"</Page>
+<Duration>"(10×Magic) Minutes"</Duration>
+<Range>"You and up to (2×Magic) others"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_PALL_OF_DARKNESS">
+<Description language="ENGLISH">"Pall of Darkness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Shadow)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"The eye of a small animal"</Ingredient>
+<Page>"58"</Page>
+<Duration>"(Magic) Rounds"</Duration>
+<Range>"48 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SHADOWSTEED">
+<Description language="ENGLISH">"Shadowsteed"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Shadow)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pinch of soot"</Ingredient>
+<Page>"59"</Page>
+<Duration>"Special"</Duration>
+<Range>"4 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SHADOW_KNIFE">
+<Description language="ENGLISH">"Shadow Knife"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Shadow)"</Lore>
+<CastingNumber>"Magic 3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pinch of soot."</Ingredient>
+<Page>"59"</Page>
+<Duration>"Instant"</Duration>
+<Range>"36 Yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_CLOAK_ACTION">
+<Description language="ENGLISH">"Cloak Action"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Shadow)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A sketch of your illusory action"</Ingredient>
+<Page>"59"</Page>
+<Duration>"(Magic) Minutes"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_MOCKERY_OF_DEATH">
+<Description language="ENGLISH">"Mockery of Death"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Shadow)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small handful of bonemeal"</Ingredient>
+<Page>"59"</Page>
+<Duration>"(Magic) Days"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_PHANTASM">
+<Description language="ENGLISH">"Phantasm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Shadow)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Actions + Half Action"</CastingTime>
+<Ingredient>"A sketch of the desired illusion"</Ingredient>
+<Page>"59"</Page>
+<Duration>"(Magic) Hours"</Duration>
+<Range>"72 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SHROUD_OF_INVISIBILITY">
+<Description language="ENGLISH">"Shroud of Invisibility"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Shadow)"</Lore>
+<CastingNumber>"Magic 4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pinch of dust"</Ingredient>
+<Page>"60"</Page>
+<Duration>"(Magic) Rounds"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_DREAD_ASPECT">
+<Description language="ENGLISH">"Dread Aspect"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Shadow)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A shard of bone"</Ingredient>
+<Page>"60"</Page>
+<Duration>"1 Minute"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_LUNACY">
+<Description language="ENGLISH">"Lunacy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Shadow)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A splash of ale"</Ingredient>
+<Page>"60"</Page>
+<Duration>"(Magic) Rounds"</Duration>
+<Range>"36 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_MINDHOLE">
+<Description language="ENGLISH">"Mindhole"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Shadow)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A piece of the character to be forgotten’s body"</Ingredient>
+<Page>"60"</Page>
+<Duration>"Instant"</Duration>
+<Range>"48 yards"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SUBSTANCE_OF_SHADOW">
+<Description language="ENGLISH">"Substance of Shadow"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Shadow)"</Lore>
+<CastingNumber>"Magic 5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A glass figurine of a person"</Ingredient>
+<Page>"60"</Page>
+<Duration>"Special"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_BECOME_THE_MASK">
+<Description language="ENGLISH">"Become the Mask"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Shadow)"</Lore>
+<CastingNumber>"Magic 6"</CastingNumber>
+<CastingTime>"6 Hours"</CastingTime>
+<Ingredient>"A written history of the identity you wish to assume"</Ingredient>
+<Page>"61"</Page>
+<Duration>"(Magic) Years"</Duration>
+<Range>"Special"</Range>
+</SpellV2>
+<SpellV2 id="ARAN-SPEL_SPECTRAL_MIRAGE">
+<Description language="ENGLISH">"Spectral Mirage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore (Shadow)"</Lore>
+<CastingNumber>"Magic 6"</CastingNumber>
+<CastingTime>"2 Full Actions"</CastingTime>
+<Ingredient>"A sketch of the desired illusion"</Ingredient>
+<Page>"61"</Page>
+<Duration>"Permanent"</Duration>
+<Range>"(24×Magic) Yard-Radius"</Range>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SPELL_TALENT>
+<Sort id="ARAN-SPEL_DROP">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_GLOWING_LIGHT">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_MAGIC_DART">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_PHANTOM_SIGHTS">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_PHANTOM_SMELLS">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_PHANTOM_SOUNDS">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_ANIMATION">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_MARSH_LIGHTS">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_SLEEP">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_THE_BOAR_S_HIDE">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_FORM_OF_THE_RAVENING_WOLF">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_LIONHEART">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_MASTER_S_VOICE">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_THE_TALKING_BEAST">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_THE_BEAST_UNLEASHED">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_COWERING_BEASTS">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_CROW_S_FEAST">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_FANGS_OF_WRATH">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_FORM_OF_THE_PUISSANT_STEED">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_FORM_OF_THE_RAGING_BEAR">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_REPUGNANT_TRANSFORMATION">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_WINGS_OF_THE_FALCON">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_THE_WINTER_S_LONG_SLUMBER">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_FORM_OF_THE_LEGENDARY_DRAGON">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_UNLEASH_THE_PRIMAL_RAGE">
+<Talent>"RULES-T_ARCANE_LORE__BEASTS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_ACCEPTANCE_OF_FATE">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_DEATH_S_RELEASE">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_LIMBWITHER">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_REAPING_SCYTHE">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_TIDE_OF_YEARS">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_DRAIN_LIFE">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_FINAL_WORDS">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_THE_ICY_GRIP_OF_DEATH">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_KNOCKS_OF_THE_DEPARTED">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_REPOSE">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_FACE_THE_INEVITABLE">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_LIFE_S_END">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_WIND_OF_DEATH">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_YOUTH_S_BANE">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_THE_ANIMUS_IMPRISONED">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_SOUL_HARVEST">
+<Talent>"RULES-T_ARCANE_LORE__DEATH"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_CURTAIN_OF_FLAME">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_FIREBALL">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_FLAMING_SWORD_OF_RHUIN">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_INEXTINGUISHABLE_FLAME">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_SHIELD_OF_AQSHY">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_BREATHE_FIRE">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_CONSUMING_WRATH">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_HEARTS_OF_FIRE">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_HEATSIGHT">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_PHLOGISTIC_DEVASTATION">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_AQSHY_S_AEGIS">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_BOILING_BLOOD">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_FIERY_BLAST">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_THE_BURNING_HEAD">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_CONFLAGRATION_OF_DOOM">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_TOWERING_INFERNO">
+<Talent>"RULES-T_ARCANE_LORE__FIRE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_CLEAR_SKY">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_FORTUNE_S_RENEWAL">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_SECOND_PORTENT_OF_AMUL">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_THIRD_PORTENT_OF_AMUL">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_WIND_BLAST">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_CURSE_OF_THE_STARS">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_FINDING_DIVINATION">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_PREMONITION">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_PROJECT_SPIRIT">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_WINGS_OF_HEAVEN">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_CHAIN_LIGHTNING">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_FATE_OF_DOOM">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_SIGNS_IN_THE_STARS">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_STARSHINE">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_COMET_OF_CASSANDORA">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_PROPHESY">
+<Talent>"RULES-T_ARCANE_LORE__HEAVENS"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_THE_EARTH_TAKES_HEED">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_FATHER_OF_THORNS">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_GEYSER">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_VITAL_GROWTH">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_VOICE_OF_GHYRAN">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_EARTH_GATE">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_FLESH_OF_CLAY">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_SPRING_BLOOM">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_WINTER_S_FROST">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_WOOD_SHAPE">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_GHYRAN_S_VEIL">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_THE_JADE_ROAD">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_THE_RAIN_LORD">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_THE_WILD_DEMESNE">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_CURE_BLIGHT">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_MASTER_OF_THE_EARTH">
+<Talent>"RULES-T_ARCANE_LORE__LIFE"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_BANISH">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_BLINDING_LIGHT">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_ILLUMINATE_THE_EDIFICE">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_LIGHT_OF_PURITY">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_THE_POWER_OF_TRUTH">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_EYES_OF_TRUTH">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_ILL_BANE">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_GUARDIAN_LIGHT">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_LIGHT_S_DEMAND">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_WINDS_OF_INSPIRATION">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_DAEMONBANE">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_PHA_S_ILLUMINATION">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_PILLAR_OF_RADIANCE">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_SHINING_AEGIS">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_BOON_OF_HYSH">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_CLEANSING_FLARE">
+<Talent>"RULES-T_ARCANE_LORE__LIGHT"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_ARMOUR_OF_LEAD">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_RIGIDITY_OF_BODY_AND_MIND">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_SECRET_RUNE">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_SILVER_ARROWS_OF_ARHA">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_BREACH_THE_UNKNOWN">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_DIE_AND_CAST">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_FOOL_S_GOLD">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_TALE_OF_METAL">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_TRANSFORMATION_OF_METAL">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_TRIAL_AND_ERROR">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_ENCHANT_ITEM">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_LAW_OF_IMMUTABILITY">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_TRANSMUTATION_OF_THE_UNSTABLE_MIND">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_LAW_OF_GOLD">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_MAGNUM_OPUS">
+<Talent>"RULES-T_ARCANE_LORE__METAL"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_CONFUSION">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_GREY_CIPHER">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_PALL_OF_DARKNESS">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_SHADOWSTEED">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_SHADOW_KNIFE">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_CLOAK_ACTION">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_MOCKERY_OF_DEATH">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_PHANTASM">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_SHROUD_OF_INVISIBILITY">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_DREAD_ASPECT">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_LUNACY">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_MINDHOLE">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_SUBSTANCE_OF_SHADOW">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_BECOME_THE_MASK">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+<Sort id="ARAN-SPEL_SPECTRAL_MIRAGE">
+<Talent>"RULES-T_ARCANE_LORE__SHADOW"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+</DATA_BOOK>

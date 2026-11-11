@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"THIS"</CODE_BOOK>
+<BOOK>"BOOK THE THOUSAND ISLAS"</BOOK>
+<BOOKNAME>"THE THOUSAND ISLAS"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"This document is completely unofficial and in no way endorsed by Games Workshop Limited. Warhammer Fantasy Roleplay, the Warhammer Fantasy Roleplay logo, WFRP, Chaos, the Chaos device, the Chaos logo, Citadel, Citadel Device, Darkblade, 'Eavy Metal, Forge World, Games Workshop, Games Workshop logo, Golden Demon, Great Unclean One, GW, the Hammer of Sigmar logo, Horned Rat logo, Keeper of Secrets, Khemri, Khorne, the Khorne logo, Lord of Change, Nurgle, the Nurgle logo, Skaven, the Skaven symbol device, Slaanesh, the Slaanesh logo, Tomb Kings, Tzeentch, the Tzeentch logo, Warhammer, Warhammer World logo, White Dwarf, the White Dwarf logo, and all associated marks, names, races, race insignia, characters, vehicles, locations, units, artifacts, illustrations and images from the Warhammer world are either ®, TM and/or © Copyright Games Workshop Ltd 2000-2008, variably registered in the UK and other countries around the world. Used"</DISCLAIMER>
+<DATA_CAREER>
+<Career id="THIS-CARE_PIRATE">
+<Description language="ENGLISH">"Pirate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, S +10%, T +5%, Ag +5%"</MainProfile>
+<SecondaryProfile>"A +1, W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Common Knowledge (Bretonnia, Estalia, Tilea or the Border Princes), Consume Alcohol, Dodge Blow, Gamble or Trade (Artist, Brewer, Carpenter, Cartographer, Cook, Gunsmith, Merchant, Shipwright or Smith), Intimidate, Row or Sail, Scale Sheer Surface, Speak Language (Breton, Estalian or Tilean), Swim"</Skills>
+<Talents>"Menacing or Swashbuckler, Specialist Weapon Group (Gunpowder or Parrying), Mighty Shot or Street Fighting"</Talents>
+<Trappings>"Light Armour (Leather Jerkin), Buckler or Pistol with Powder and Ammunition for 10 shots, Bottle of Poor Quality Spirits"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_BRETONNIA/RULES-COMP_COMMON_KNOWLEDGE_ESTALIA/RULES-COMP_COMMON_KNOWLEDGE_TILEA/RULES-COMP_COMMON_KNOWLEDGE_THE_BORDER_PRINCES">"1"</Skill>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_GAMBLE/RULES-COMP_TRADE_ARTIST/RULES-COMP_TRADE_BREWER/RULES-COMP_TRADE_CARPENTER/RULES-COMP_TRADE_CARTOGRAPHER/RULES-COMP_TRADE_COOK/RULES-COMP_TRADE_GUNSMITH/RULES-COMP_TRADE_MERCHANT/RULES-COMP_TRADE_SHIPWRIGHT/RULES-COMP_TRADE_SMITH">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_ROW/RULES-COMP_SAIL">"1"</Skill>
+<Skill name="RULES-COMP_SCALE_SHEER_SURFACE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_BRETON/RULES-COMP_SPEAK_LANGUAGE_ESTALIAN/RULES-COMP_SPEAK_LANGUAGE_TILEAN">"1"</Skill>
+<Skill name="RULES-COMP_SWIM">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_MENACING/RULES-T_SWASHBUCKLER">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__GUNPOWDER/RULES-T_SPECIALIST_WEAPON_GROUP__PARRYING">"1"</Talent>
+<Talent name="RULES-T_MIGHTY_SHOT/RULES-T_STREET_FIGHTING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"THIS 17"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="THIS-CARE_PIRATE">"RULES-CARE_DUELLIST"</Link>
+<Link name="THIS-CARE_PIRATE">"RULES-CARE_MARINE"</Link>
+<Link name="THIS-CARE_PIRATE">"RULES-CARE_MATE"</Link>
+<Link name="THIS-CARE_PIRATE">"RULES-CARE_SMUGGLER"</Link>
+<Link name="THIS-CARE_PIRATE">"RULES-CARE_VETERAN"</Link>
+<Link name="THIS-CARE_PIRATE">"CCOMP-CARE_WRECKER"</Link>
+<Link name="RULES-CARE_BOATMAN">"THIS-CARE_PIRATE"</Link>
+<Link name="RULES-CARE_ESTALIAN_DIESTRO">"THIS-CARE_PIRATE"</Link>
+<Link name="RULES-CARE_MARINE">"THIS-CARE_PIRATE"</Link>
+<Link name="RULES-CARE_MERCENARY">"THIS-CARE_PIRATE"</Link>
+<Link name="RULES-CARE_SEAMAN">"THIS-CARE_PIRATE"</Link>
+<Link name="RULES-CARE_THUG">"THIS-CARE_PIRATE"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_SPELL_V2>
+<SpellV2 id="THIS-SPEL_MISTRESS_OF_THE_DEEP">
+<Description language="ENGLISH">"Mistress of the Deep"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"2 Full Actions"</CastingTime>
+<Ingredient>"A Necklace Formed of Coral (+2)"</Ingredient>
+<Page>"31"</Page>
+<Duration>"1 Hour/Magic"</Duration>
+<Range>"12 Yards (6 Squares)"</Range>
+</SpellV2>
+<SpellV2 id="THIS-SPEL_THE_WRITHING_MISTS">
+<Description language="ENGLISH">"The Writhing Mists"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A Vial of Salt Water (+2)"</Ingredient>
+<Page>"31"</Page>
+<Duration>"1 Round/Magic"</Duration>
+<Range>"24 Yards (12 Squares)"</Range>
+</SpellV2>
+<SpellV2 id="THIS-SPEL_CONJURING_A_CREATURE_OF_THE_DEPTHS">
+<Description language="ENGLISH">"Conjuring a Creature of the Depths"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"4 Hours and an additional 1d10 Hours for the creature to arrive"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"31"</Page>
+<RitualType>"Arcane (Although some cults may teach Divine or even Witch Lore variants: Note that some priests take distinct umbrage at wizards summoning any sea monster that they believe is sacred to their god, this is particularly true of the Triton and Megaladon.)"</RitualType>
+<ArcaneLanguage>"Magic (or possibly Arcane Elf)"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>"The caster must be at sea and at least a day's sail from any land."</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="THIS-SPEL_PIRATE_NECROMANCY">
+<Description language="ENGLISH">"Pirate Necromancy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"8 Hours"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"32"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magic"</ArcaneLanguage>
+<MagicMin>"2"</MagicMin>
+<XPCost>"200"</XPCost>
+<Conditions>"This ritual must be cast on a night when Morrslieb is full under an open sky."</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="THIS-EQUI_MISCELLANEA_NORDLANDER_NET">
+<Description language="ENGLISH">"Nordlander Net"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"30 gc"</Cost>
+<Encumbrance>"600"</Encumbrance>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Note>""</Note>
+<Page>"30"</Page>
+</EquipmentV2>
+<EquipmentV2 id="THIS-EQUI_MISCELLANEA_SHIP_S_COMPASS">
+<Description language="ENGLISH">"Ship's Compass"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"40 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Note>""</Note>
+<Page>"30"</Page>
+</EquipmentV2>
+<EquipmentV2 id="THIS-EQUI_MISCELLANEA_WAGENAERS">
+<Description language="ENGLISH">"Wagenaers"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"500 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>""</Note>
+<Page>"30"</Page>
+</EquipmentV2>
+<EquipmentV2 id="THIS-EQUI_MISCELLANEA_WHALEBONE_CHARM">
+<Description language="ENGLISH">"Whalebone Charm"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"25 gc"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Note>""</Note>
+<Page>"30"</Page>
+</EquipmentV2>
+<EquipmentV2 id="THIS-EQUI_SPECIAL_EQUIPMENT_ARTEFACTS_TOTEM_STAFF">
+<Description language="ENGLISH">"Totem Staff"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ARTEFACTS"</SubCategory>
+<Cost>"-"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"26"</Page>
+</EquipmentV2>
+<EquipmentV2 id="THIS-EQUI_SPECIAL_EQUIPMENT_ARTEFACTS_RAPIER_OF_MAXIMILIAN">
+<Description language="ENGLISH">"Rapier of Maximilian"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ARTEFACTS"</SubCategory>
+<Cost>"-"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"27"</Page>
+</EquipmentV2>
+<EquipmentV2 id="THIS-EQUI_SPECIAL_EQUIPMENT_ARTEFACTS_SIGIL_WEAPON">
+<Description language="ENGLISH">"Sigil Weapon"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ARTEFACTS"</SubCategory>
+<Cost>"-"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"27"</Page>
+</EquipmentV2>
+<EquipmentV2 id="THIS-EQUI_SPECIAL_EQUIPMENT_ARTEFACTS_SHIELD_OF_THE_GORGON">
+<Description language="ENGLISH">"Shield of the Gorgon"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ARTEFACTS"</SubCategory>
+<Cost>"-"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"34"</Page>
+</EquipmentV2>
+<EquipmentV2 id="THIS-EQUI_SPECIAL_EQUIPMENT_ARTEFACTS_PISTOLS_OF_KING_DEATH">
+<Description language="ENGLISH">"Pistols of King Death"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ARTEFACTS"</SubCategory>
+<Cost>"-"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"38"</Page>
+</EquipmentV2>
+<EquipmentV2 id="THIS-EQUI_CREATURES_PARROT">
+<Description language="ENGLISH">"Parrot"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"38;0;10;15;38;12;24;8;2;6;1;1;2 (8);0;0;0"</Profile>
+<Skills>"Concealment, Perception +20%"</Skills>
+<Talents>"Mimic"</Talents>
+<SpecialRules>"Flier, Keen Senses"</SpecialRules>
+<Note>""</Note>
+<Page>"30"</Page>
+</EquipmentV2>
+<EquipmentV2 id="THIS-EQUI_CREATURES_SILKY_ANTEATER">
+<Description language="ENGLISH">"Silky Anteater"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"23;0;10;12;30;10;20;5;1;5;1;1;4;0;0;0"</Profile>
+<Skills>"Concealment, Perception +20%, Scale Sheer Surface"</Skills>
+<Talents>"Rover"</Talents>
+<SpecialRules>"Keen Senses, Natural Weapons"</SpecialRules>
+<Note>""</Note>
+<Page>"28"</Page>
+</EquipmentV2>
+<EquipmentV2 id="THIS-EQUI_CREATURES_BLOATED_CORPSE">
+<Description language="ENGLISH">"Bloated Corpse"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;0;35;40;10;0;0;0;1;14;3;4;4;0;0;0"</Profile>
+<Skills>"Row, Sail, Scale Sheer Surface, Swim"</Skills>
+<SpecialRules>"Frightening, Night Vision, Undead, Aquatic, Gaseous Demise, Mindless, Rank, Shambling"</SpecialRules>
+<Note>""</Note>
+<Page>"33"</Page>
+</EquipmentV2>
+<EquipmentV2 id="THIS-EQUI_CREATURES_GORGON">
+<Description language="ENGLISH">"Gorgon"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"41;25;43;43;31;34;56;14;1;17;4;4;4;0;0;0"</Profile>
+<Skills>"Common Knowledge (any one), Concealment, Disguise, Intimidate, Perception, Outdoor Survival, Speak Language (any one)"</Skills>
+<Talents>"Orientation, Rover"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"35"</Page>
+</EquipmentV2>
+<EquipmentV2 id="THIS-EQUI_CREATURES_LUSKAA">
+<Description language="ENGLISH">"Luskaa"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"57;0;82;74;54;23;61;0;10;36;8;7;3;0;0;0"</Profile>
+<Skills>"Concealment, Follow Trail +20%, Perception +10%, Silent Move, Swim +20%"</Skills>
+<Talents>"Frenzy, Strike to Injure, Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"36"</Page>
+</EquipmentV2>
+<EquipmentV2 id="THIS-EQUI_CREATURES_TURTIGON">
+<Description language="ENGLISH">"Turtigon"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"56;0;64;58;15;14;35;0;4;44;6;5;5;0;0;0"</Profile>
+<Skills>"Perception +10%, Swim +20%"</Skills>
+<Talents>"Excellent Vision, Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"37"</Page>
+</EquipmentV2>
+<EquipmentV2 id="THIS-EQUI_CREATURES_ZOMBIE_PARROT">
+<Description language="ENGLISH">"Zombie Parrot"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"33;0;15;20;18;0;0;0;2;8;1;2;2 (8);0;0;0"</Profile>
+<Skills>"Concealment"</Skills>
+<Talents>"Mimic"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"38"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+</DATA_BOOK>

@@ -6,17 +6,17 @@ interface
 
 uses
   PdfUtils,
-  Classes, SysUtils, StrUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, Grids,
-  ComCtrls, StdCtrls, Spin, Buttons, ChargeConstantes, ChargeEspece, GlobalFonts, ChargeRace,
-  ChargeRegle, ChargeTirageMetier, ChargeSigneAstral,
+  Classes, SysUtils, StrUtils, Math, Forms, Controls, Graphics, Dialogs, MessageTest, ExtCtrls, Grids,
+  ComCtrls, StdCtrls, CheckLst, Spin, Buttons, GuideAide, ChargeConstantes,ChargeEspece, GlobalFonts, ChargeRace,
+  ChargeRegle, ChargeTirageMetier, ChargeSigneAstral, WinOptionRegle,
   Types, ChargeMetier, ChargeAttribut, ChargeRaceAttribut, ChargeMetierNiveau,
   ChargeMetierAttribut, UnitCalcul, ChargeRaceTalent, ChargeTalent,
   ChargeTalentCreation, ChargeRaceCompetence, ChargeCompetence, ChargeRaceCreation,
   ChargeMetierCompetence, ChargeArme, ChargeArmure, ChargeTrapping, ChargeMetierEquipement, ChargeClassEquipement, ChargeFabrication,
   WinMetier, WinRaces, ChargeTexte, WinTalent, WinCompetence, ChargeLivre,
   ChargeMetierSousMetier, ChargeMetierRaceChoixMetier, WinSpecialisation,
-  ChargeMetierTalent, ChargePersonnage, BGRABitmap, BGRABitmapTypes, BCButton,
-  BCLabel, WinLanceDe, WinPhysique, ChargeRacePhysique, BCLabelContour;
+  ChargeMetierTalent, ChargePersonnage, WinJetPathologie, BGRABitmap, BGRABitmapTypes, BCButton,
+  BCLabel, WinLanceDe, WinPhysique, ChargeRacePhysique, BCLabelContour, Menus, WinMutation, CreationV1, FenetreApprentissageV1;
 
 type
   { TWinCreations }
@@ -56,6 +56,8 @@ type
     CheckBoxNoble: TCheckBox;
     LabNoble: TEdit;
     ComboBoxRegleNom: TComboBox;
+    // Phase 2.3 : formes (7-1), animaux (7-3) et particularites (7-2) coches ; le tirage coche, la main decoche
+    ClbFamilierForme, ClbFamilierAnimal, ClbFamilierParticularite: TCheckListBox;
     CodesRegleNom: TStringList;   // code de la regle de chaque item du combo (0 = aucune)
     LabPhysiqueResume: TEdit;
     EditRaceResultat: TSpinEdit;
@@ -101,6 +103,7 @@ type
     TabAttributLanceDe: TStringGrid;
     TabCreationHasard: TStringGrid;
     TabLivre: TStringGrid;
+    PanneauRegles: TPanelOptionRegle;
     TabMetier: TStringGrid;
     TabMetierCompetence: TStringGrid;
     TabMetierEquipement: TStringGrid;
@@ -113,6 +116,24 @@ type
     TabSheetLivre: TTabSheet;
     TabSheetMetier: TTabSheet;
     TabSheetNom: TTabSheet;
+    TabSheetClan: TTabSheet;
+    LabClanTexte: TLabel;
+    TabClan: TStringGrid;
+    ButtonClanHasard: TBCButton;
+    EditClanJet: TEdit;
+    TabSheetMutation: TTabSheet;
+    LabMutationTexte: TLabel;
+    LabMutationChoisie: TLabel;
+    ButtonMutationChoix: TBCButton;
+    TabSheetFamilier: TTabSheet;
+    LabFamilierTexte: TLabel;
+    LabFamilierChoisi: TLabel;
+    ButtonFamilierHasard: TBCButton;
+    TabSheetSigne: TTabSheet;
+    TabSheetAppartenance: TTabSheet;
+    LabAppartenanceTexte: TLabel;
+    LabAppartenanceChoisie: TLabel;
+    ButtonAppartenanceChoix: TBCButton;
     TabSheetRace: TTabSheet;
     TabSheetTalent: TTabSheet;
     TabTalent: TStringGrid;
@@ -147,6 +168,7 @@ type
     procedure TabCreationHasardPrepareCanvas(Sender: TObject; aCol,
       aRow: Integer; aState: TGridDrawState);
     procedure TabLivreDblClick({%H-}Sender: TObject);
+    procedure ReglesChangees(Sender: TObject);
     procedure TabMetierCompetenceDblClick({%H-}Sender: TObject);
     procedure TabMetierEquipementDblClick({%H-}Sender: TObject);
     procedure TabRaceCompetenceDblClick({%H-}Sender: TObject);
@@ -171,6 +193,38 @@ type
     procedure MajTexteSigne();
     Function TalentMaxCreation(CodeTalent: String): Integer;
     procedure AjouteTalentSigne();
+    // Phase intermediaire 2.1 (V2) : clan de naissance d'une race qui en declare (Skaven)
+    procedure RemplirGridClan();
+    procedure TabClanClick({%H-}Sender: TObject);
+    procedure ButtonClanHasardClick({%H-}Sender: TObject);
+    procedure EditClanJetChange({%H-}Sender: TObject);
+    procedure SelectionneClan(const Clan: String);
+    procedure AjouteEffetsClan();
+    procedure AjouteEffetsFamilier();
+    procedure AppliqueEffetsListe(Liste: String);
+    // Phase intermediaire 2.2 (V2) : mutation de depart d'une race qui en declare (Mutant)
+    procedure AfficheSeulOnglet(Onglet: TTabSheet; Suffixe, Titre: String);
+    procedure AfficheSousPhaseClan();
+    procedure AfficheSousPhaseMutation();
+    // Phase intermediaire 3.0 (V2) : chance de mutation de depart d'une regle (balise StartingMutation de la regle),
+    // proposee apres le metier ; le joueur lance le d100 ou passe a l'etape suivante
+    function  ChanceMutationRegle(): Integer;
+    procedure AfficheSousPhaseMutationChance();
+    procedure RetireMutationChance();
+    // Phase intermediaire 2.3 (V2) : forme et particularites d'un familier cree
+    procedure AfficheSousPhaseFamilier();
+    procedure ClbFamilierClickCheck(Sender: TObject);
+    procedure MajFamilierDepuisCoches();
+    procedure CocheFamilier(Liste: TCheckListBox; const Nom: String);
+    procedure ButtonFamilierHasardClick({%H-}Sender: TObject);
+    procedure AfficheSousPhaseSigne();
+    procedure MajRecapAttribut();
+    procedure AfficheSousPhaseAppartenance();
+    procedure ButtonAppartenanceChoixClick({%H-}Sender: TObject);
+    procedure MajLibelleAppartenance();
+    procedure ChoisitAppartenance();
+    procedure AcquiertCompetencesAppartenanceV2();
+    procedure ButtonMutationChoixClick({%H-}Sender: TObject);
     procedure ComboBoxSigneSelect({%H-}Sender: TObject);
     procedure ChargeSignesAstraux();
     procedure AppliqueSigneAstral(Indice: Integer);
@@ -190,11 +244,15 @@ type
     procedure TrackBarPointSuppChange({%H-}Sender: TObject);
     procedure UpdateSheetMetier(Hasard: Boolean);
     procedure AfficheImageRace();
+    procedure RemplitTalentsRace();
     procedure ButtonRaceHasardClick({%H-}Sender: TObject);
     procedure ButtonRaceValiderClick({%H-}Sender: TObject);
     procedure RadioButtonRaceHasardClick({%H-}Sender: TObject);
     procedure RadioButtonRaceClick({%H-}Sender: TObject);
     procedure TabRaceResultat(Resul: Integer);
+    // Guide du joueur (GuideAide.pas) : boutons Aide (etape affichee) et ? Question
+    procedure ButtonGuideClick({%H-}Sender: TObject);
+    procedure ButtonQuestionClick({%H-}Sender: TObject);
 
     // Métier
     procedure ChargeTabMetier();
@@ -221,6 +279,15 @@ type
     procedure TabAttributSelectEditor({%H-}Sender: TObject; aCol, {%H-}aRow: Integer;
       var Editor: TWinControl);
     procedure ButtonAttributHasardClick({%H-}Sender: TObject);
+    procedure ButtonClemenceClick({%H-}Sender: TObject);
+    procedure ClemenceChoisie(Sender: TObject);
+    procedure GridAvanceDblClick({%H-}Sender: TObject);
+    procedure RemplirGridAvance();
+    procedure AfficheAvanceGratuiteV1();
+    procedure GridRaceDblClick({%H-}Sender: TObject);
+    procedure RemplirGridRace();
+    function  AvancesGratuitesPossibles(): TStringList;
+    function  NbAvancesGratuites(): Integer;
     procedure UpdateSheetAttribut(Hasard: boolean);
     Procedure CalculTabAttribut(Hasard: Boolean; Affectation: Boolean);
     procedure TabAttributLanceDeEditingDone({%H-}Sender: TObject);
@@ -271,12 +338,52 @@ type
       var Editor: TWinControl);
 
   private
+    EditJetNom:     TEdit;
+    FJetNomSaisi:   Boolean;
+    // V2 : argent de depart de la carriere (phase du materiel)
+    ButtonArgent:   TBCButton;
+    EditArgent:     TEdit;
+    FormuleArgent:  String;
     FEditingCol: Integer;
     FEditingRow: Integer;
-
+    // Phase intermediaire "Background" (Liber Fanatica : DATA_RULE_BACKGROUND, _COUNT, _SKILL_ROLL, _TALENT_ROLL),
+    // creee en code : d100 du background, d10 du nombre de competences/talents, tirages, puis ajout au personnage
+    TabSheetFond:   TTabSheet;
+    GroupBoxFond:   TGroupBox;
+    LabFondTexte:   TLabel;
+    ComboFond:      TComboBox;
+    ComboFond2:     TComboBox;
+    ButtonFondRegle, ButtonFondD10, ButtonFondRelance, ButtonFondIgnore: TBCButton;
+    GridFond:       TStringGrid;
+    CodesFond:      TStringList;   // code de la regle de chaque item des deux combos
+    procedure CreeOngletFond();
+    function  FondActif(): Boolean;
+    procedure AfficheSousPhaseFond();
+    procedure ButtonFondRegleClick(Sender: TObject);
+    procedure ButtonFondD10Click(Sender: TObject);
+    procedure ButtonFondRelanceClick(Sender: TObject);
+    procedure ButtonFondIgnoreClick(Sender: TObject);
+    procedure ComboFondChange(Sender: TObject);
+    procedure GridFondDblClick(Sender: TObject);
+    procedure TireLigneFond(Genre: Char; const Regle: String; Ligne: Integer);
+    function  FondComplet(): Boolean;
+    procedure AppliqueFond();
+    procedure ButtonArgentClick(Sender: TObject);
+    procedure AfficheArgentDepart();
+    procedure EditJetNomChange(Sender: TObject);
+    procedure EditJetNomKeyPress(Sender: TObject; var Key: Char);
+    // V1 : etapes de creation posees sur les onglets (voir CreationV1.pas)
+    procedure PrepareV1();
+    procedure AfficheOngletV1();
+    function  VerifOngletV1(): Boolean;
+    procedure AfficheCompetencesRaceV1();
+    function  CompetenceDeRaceV1(const Code: String): Boolean;
+    function  NbCompetencesRaceV1(): Integer;
 
   public
-
+    // Creation sans ecran (--creer) : deroule les phases avec les boutons Hasard, race et carriere imposees.
+    // Les messages de validation vont dans Rapport au lieu d'ouvrir une fenetre. Vrai si le perso est enregistre.
+    function CreationAuto(const CodeRace, CodeMetier, Nom: String; Rapport: TStrings; const CodeRegle: String = ''): Boolean;
   end;
 
 Const
@@ -297,6 +404,30 @@ var
   // Vrai si le signe astral en cours vient du tirage et n'a pas ete change ensuite : +25 XP
   // (Archives of the Empire II p.39). Un signe choisi a la main ne donne rien.
   SigneTire:                     Boolean = False;
+  SignesCombo:                   array of Integer; // rang du combo (hors « aucun ») -> indice dans ListSigneAstral
+  // Phase intermediaire "2.1" : le numero des phases V4 ne change pas, le clan s'insere apres la race.
+  SousPhaseClan:                 Boolean = False;
+  // Phase intermediaire 2.2 : mutation de depart (apres le clan quand la race a les deux)
+  SousPhaseMutation:             Boolean = False;
+  SousPhaseFamilier:             Boolean = False;
+  // Resultat du tirage du familier : texte (forme, particularites) range dans Personnage.NaissanceV2 et effets a
+  // appliquer a l'enregistrement final (AjouteEffetsFamilier) ; vide tant que rien n'est tire.
+  FamilierTexte:                 String = '';
+  FamilierEffets:                String = '';
+  // Phase intermediaire 3.1 : appartenance (culte, regiment, ordre), apres le choix du metier
+  SousPhaseAppartenance:         Boolean = False;
+  FondIgnore:                    Boolean = False;   // le joueur a passe la phase Background (bouton Ignorer)
+  SousPhaseFond:                 Boolean = False;   // phase intermediaire "Background" (Liber Fanatica), apres la race
+  // Phase intermediaire 4.1 : signe astral, juste apres les caracteristiques (Archives of the Empire II p.39)
+  SousPhaseSigne:                Boolean = False;
+  // Phase intermediaire 3.0 : chance de mutation de depart d'une regle (jet d100 propose apres le metier)
+  SousPhaseMutationChance:       Boolean = False;
+  MutationChanceJet:             Integer = 0;       // 0 = pas encore lance
+  MutationChanceFaite:           Boolean = False;   // etape deja passee pour cette race / cette regle
+  MutationDepartOk:              Boolean = False;
+  MutationDepart:                StructurePersonnageMutation;
+  MutationDepartLibelle:         String = '';
+  ClanChoisi:                    String = '';
 
   // Pour les images
   ColorLoc:                      TColor;
@@ -335,6 +466,9 @@ var
   MetierLibEnCours:              String;
   MetierEnCoursPrincipal:        String;
   LastRandomMetierResultat:      Integer = 0;
+  CodesRegleCombo:               TStringList;     // codes des regles du combo ('' = table par defaut), meme index
+  RaceRegleCombo:                String = '#';    // race pour laquelle le combo a ete rempli
+  DesMetier:                     Integer = 100;   // d100, ou d1000 (table maitre du Career Compendium V2)
   LastCheckMetierResultat:       Integer = 0;
   LastCheckMetierSousMetierResul:Integer = 0;
     // Compétences
@@ -395,7 +529,33 @@ var
 
 implementation
 
+var
+  JetBlessureV2, JetDestinV2, JetMouvementV2: Integer;   // d10 des tables V2 2-2 et 2-3, et du Mouvement en table (familier cree) (0 = pas tire)
+  ClemenceRow: Integer = 0;               // V2 : ligne remplacee par la Clemence de Shallya (0 = non utilisee)
+  ButtonClemence: TBCButton = nil;
+  GridRace: TStringGrid = nil;            // V2 : grille des races de la phase 2 (a la place de la table de tirage)
+  GridAvance: TStringGrid = nil;          // V2 : grille de l'avance gratuite (phase 7)
+  AvanceGratuiteCode: String = '';        // V2 : caracteristique de l'avance gratuite (etape 7 du Core p.14)
+  AvanceGratuiteCode2: String = '';       // V2 : seconde avance gratuite (familier lie : deux avances, Realms of Sorcery p.189)
+  CreationV1Obj: TCreationV1 = nil;       // V1 : caracteristiques, classe, age et competences (onglets Attributs, Metier...)
+
 {$R *.lfm}
+
+var
+  RapportAuto:  TStrings = nil;           // --creer : recueille les messages au lieu de les afficher
+  MessageRecu:  Boolean  = False;
+
+// Remplace Dialogs.ShowMessage dans cette unite : en creation automatique le message est note, pas affiche
+procedure ShowMessage(const Msg: String);
+  begin
+    if RapportAuto <> nil then
+      begin
+        RapportAuto.Add('MESSAGE : ' + Msg);
+        MessageRecu := True;
+      end
+    else
+      Dialogs.ShowMessage(Msg);
+  end;
 
 var
   ChoixAdaptationCle:   String = '';
@@ -424,11 +584,72 @@ end;
 //                                GENERIQUES                                  //
 ////////////////////////////////////////////////////////////////////////////////
 
+// V2 et V1 : pas de table de tirage de la race, une grille des races (double-clic = choisir, Hasard = tirage egal)
+function RaceParGrille(): Boolean;
+  begin
+    Result := (ValVersion = 'WFRP2') or (ValVersion = 'WFRP1');
+  end;
+
+// Libelle d'une ligne de competence : un code "A/B" (choix) n'a pas de fiche, donc pas de
+// libelle ; on affiche alors les libelles des branches ("A / B"), pour que la ligne ne soit pas vide.
+function LibelleCompetenceLigne(const Code: String): String;
+  var
+    Branches: TStringList;
+    Ind:      Integer;
+  begin
+    Result := ChercheCompetence(Code).Libelle;
+    if (Result <> '') or (Pos(SeparateurMulti, Code) = 0) then
+      exit;
+    Branches := TStringList.Create;
+    try
+      Branches.StrictDelimiter := True;
+      Branches.Delimiter       := SeparateurMulti;
+      Branches.DelimitedText   := Code;
+      for Ind := 0 to Branches.Count - 1 do
+        begin
+          if Result <> '' then
+            Result := Result + ' / ';
+          Result := Result + ChercheCompetence(Branches[Ind]).Libelle;
+        end;
+    finally
+      Branches.Free;
+    end;
+  end;
+
+// Etape affichee -> ancre du guide de creation (DOC\HTML, ancres step-N / extras)
+procedure TWinCreations.ButtonGuideClick(Sender: TObject);
+  var
+    Ancre: String;
+  begin
+    if PageEtapes.ActivePage = TabSheetLivre then Ancre := 'step-0'
+    else if PageEtapes.ActivePage = TabSheetRace then Ancre := 'step-1'
+    else if PageEtapes.ActivePage = TabSheetMetier then Ancre := 'step-2'
+    else if PageEtapes.ActivePage = TabSheetAttribut then Ancre := 'step-3'
+    else if PageEtapes.ActivePage = TabSheetTalent then Ancre := 'step-4'
+    else if PageEtapes.ActivePage = TabSheetCompRace then Ancre := 'step-5'
+    else if PageEtapes.ActivePage = TabSheetCompMetier then Ancre := 'step-6'
+    else if PageEtapes.ActivePage = TabSheetEquipement then Ancre := 'step-7'
+    else if PageEtapes.ActivePage = TabSheetNom then Ancre := 'step-8'
+    else Ancre := 'extras';
+    OuvreGuide(GuideCreation, Ancre);
+  end;
+
+procedure TWinCreations.ButtonQuestionClick(Sender: TObject);
+  begin
+    OuvreGuide(GuideQuestions, '');
+  end;
+
 procedure TWinCreations.FormCreate(Sender: TObject);
   var
     Bmp: TBGRABitmap;
+    I: Integer;
+    Flux: TMemoryStream;
   begin
     MiseEnFormeDesChamp(self);
+    CreeBoutonGuide(Self, GetTexteLibelle('RULES-HELP_LAB_GUIDE', 'Help'), 'RULES-HELP_BTN_GUIDE',
+      ClientWidth - 300, 4, 140, @ButtonGuideClick);
+    CreeBoutonGuide(Self, GetTexteLibelle('RULES-HELP_LAB_QUESTION', '? Question'), 'RULES-HELP_BTN_QUESTION',
+      ClientWidth - 150, 4, 140, @ButtonQuestionClick);
     // grilles sans saisie : ligne entiere selectionnee, couleur commune
     SelectionGrilleWarhammer(TabLivre);
     SelectionGrilleWarhammer(TabTalent);
@@ -473,6 +694,7 @@ procedure TWinCreations.FormCreate(Sender: TObject);
     GroupBoxRace.Caption                       := GetTexteLibelle('RULES-LAB_084');
     GroupBoxAttribut.Caption                   := GetTexteLibelle('RULES-LAB_084');
     GroupBoxMetier.Caption                     := GetTexteLibelle('RULES-LAB_084');
+    GroupBoxRegle.Caption                      := GetTexteLibelle('RULES-LAB_618');
     ButtonAttributHasard .Caption              := GetTexteLibelle('RULES-LAB_085');
     ButtonRaceHasard.Caption                   := GetTexteLibelle('RULES-LAB_085');
     ButtonTalentHasard.Caption                 := GetTexteLibelle('RULES-LAB_085');
@@ -496,6 +718,13 @@ procedure TWinCreations.FormCreate(Sender: TObject);
     LabSigne.Text                              := GetTexteLibelle('RULES-LAB_272');
     ButtonSigne.Caption                        := GetTexteLibelle('RULES-LAB_273');
     // Bouton de specialisation du talent generique du signe (Craftsman...), pose en code sous le memo
+    // Les controles du signe quittent l'onglet Nom pour la phase intermediaire 4.1 (memes positions)
+    TabSheetSigne.Caption                      := GetTexteLibelle('RULES-LAB_793');
+    LabSigne.Parent                            := TabSheetSigne;
+    ComboBoxSigne.Parent                       := TabSheetSigne;
+    ButtonSigne.Parent                         := TabSheetSigne;
+    MemoSigne.Parent                           := TabSheetSigne;
+    ButtonSigne.BringToFront;
     MemoSigne.Height                           := MemoSigne.Height - 36;
     ButtonSigneSpe                             := TButton.Create(Self);
     ButtonSigneSpe.Parent                      := MemoSigne.Parent;
@@ -517,7 +746,20 @@ procedure TWinCreations.FormCreate(Sender: TObject);
     ComboBoxRegleNom.Style                     := csDropDownList;
     ComboBoxRegleNom.Visible                   := False;
     CodesRegleNom                              := TStringList.Create;
-    TabSheetNom.OnShow                         := @TabSheetNomShow;
+    CreeOngletFond();
+    TabSheetNom.OnShow                       := @TabSheetNomShow;
+    TabSheetClan.Caption                       := GetTexteLibelle('RULES-LAB_785');
+    LabClanTexte.Caption                       := GetTexteLibelle('RULES-LAB_786');
+    ButtonClanHasard.Caption                   := GetTexteLibelle('RULES-LAB_085');
+    TabSheetMutation.Caption                   := GetTexteLibelle('RULES-LAB_787');
+    LabMutationTexte.Caption                   := GetTexteLibelle('RULES-LAB_788');
+    ButtonMutationChoix.Caption                := GetTexteLibelle('RULES-LAB_789');
+    TabSheetFamilier.Caption                   := GetTexteLibelle('RULES-LAB_795');
+    LabFamilierTexte.Caption                   := GetTexteLibelle('RULES-LAB_796');
+    ButtonFamilierHasard.Caption               := GetTexteLibelle('RULES-LAB_085');
+    TabSheetAppartenance.Caption               := GetTexteLibelle('RULES-LAB_790');
+    LabAppartenanceTexte.Caption               := GetTexteLibelle('RULES-LAB_791');
+    ButtonAppartenanceChoix.Caption            := GetTexteLibelle('RULES-LAB_792');
     RadioButtonRaceHasard.Caption              := GetTexteLibelle('RULES-LAB_085')+' (20xp)';
     RadioButtonMetierHasard.Caption            := GetTexteLibelle('RULES-LAB_085')+' (50xp)';
     RadioButtonAttributHasard.Caption          := GetTexteLibelle('RULES-LAB_085')+' (50xp)';
@@ -542,15 +784,104 @@ procedure TWinCreations.FormCreate(Sender: TObject);
     ButtonMetierCompetenceHasard.BringToFront;
     ButtonMetierEquipementHasard.BringToFront;
     ButtonNomHasard.BringToFront;
+    ButtonClanHasard.BringToFront;
+    LabClanTexte.BringToFront;
+    ButtonMutationChoix.BringToFront;
+    LabMutationTexte.BringToFront;
+    LabMutationChoisie.BringToFront;
+    ButtonFamilierHasard.BringToFront;
+    LabFamilierTexte.BringToFront;
+    LabFamilierChoisi.BringToFront;
+    LabFamilierTexte.Height := 32;
+    LabFamilierChoisi.Top    := 330;
+    LabFamilierChoisi.Height := 100;
+    ClbFamilierForme         := TCheckListBox.Create(Self);
+    ClbFamilierAnimal        := TCheckListBox.Create(Self);
+    ClbFamilierParticularite := TCheckListBox.Create(Self);
+    ClbFamilierForme.SetBounds(8, 48, 320, 270);
+    ClbFamilierAnimal.SetBounds(340, 48, 320, 270);
+    ClbFamilierParticularite.SetBounds(672, 48, 320, 270);
+    // Police noire sur fond blanc : la police du formulaire est blanche (meme reflexe que EditJetNom)
+    ClbFamilierForme.ParentFont            := False;
+    ClbFamilierAnimal.ParentFont           := False;
+    ClbFamilierParticularite.ParentFont    := False;
+    ClbFamilierForme.Font.Color            := clBlack;
+    ClbFamilierAnimal.Font.Color           := clBlack;
+    ClbFamilierParticularite.Font.Color    := clBlack;
+    ClbFamilierForme.Color                 := clWhite;
+    ClbFamilierAnimal.Color                := clWhite;
+    ClbFamilierParticularite.Color         := clWhite;
+    ClbFamilierForme.Parent                := TabSheetFamilier;
+    ClbFamilierAnimal.Parent               := TabSheetFamilier;
+    ClbFamilierParticularite.Parent        := TabSheetFamilier;
+    ClbFamilierForme.OnClickCheck          := @ClbFamilierClickCheck;
+    ClbFamilierAnimal.OnClickCheck         := @ClbFamilierClickCheck;
+    ClbFamilierParticularite.OnClickCheck  := @ClbFamilierClickCheck;
+    ButtonAppartenanceChoix.BringToFront;
+    LabAppartenanceTexte.BringToFront;
+    LabAppartenanceChoisie.BringToFront;
     // Le TShape pose par MiseEnFormeDesChamp sur chaque onglet cache les controles non
     // fenetres (TBCButton) : meme piege que les boutons ci-dessus (CONTEXT.md 4).
     ButtonPhysique.BringToFront;
+    // Jet du de du nom (un jet par morceau de table, separes par /) : saisi, le bouton Nom l'utilise ;
+    // vide ou non retouche, le bouton tire. Meme principe que les jets de WinPhysique.
+    EditJetNom := TEdit.Create(Self);
+    EditJetNom.Parent := ButtonNom.Parent;
+    EditJetNom.SetBounds(ButtonNom.Left + ButtonNom.Width + 8, ButtonNom.Top, 90, 28);
+    EditJetNom.ParentFont := False;
+    EditJetNom.Font.Color := clBlack;
+    EditJetNom.OnChange   := @EditJetNomChange;
+    EditJetNom.OnKeyPress := @EditJetNomKeyPress;
+    EditJetNom.Hint       := GetTexteLibelle('RULES-LAB_749');
+    EditJetNom.ShowHint   := True;
+    FJetNomSaisi          := False;
     ButtonNom.BringToFront;
     ButtonSigne.BringToFront;
 
     KeyPreview := true;
 
+    // Aide F1 (AideContextuelle.pas ; textes RULES-HELP_CREA_xxx)
+    ButtonPhaseSuivante.HelpKeyword              := 'RULES-HELP_CREA_SUIVANT';
+    RadioButtonRaceHasard.HelpKeyword            := 'RULES-HELP_CREA_MODE_HASARD';
+    RadioButtonRaceResultat.HelpKeyword          := 'RULES-HELP_CREA_MODE_RESULTAT';
+    RadioButtonRaceChoix.HelpKeyword             := 'RULES-HELP_CREA_MODE_CHOIX';
+    RadioButtonMetierHasard.HelpKeyword          := 'RULES-HELP_CREA_MODE_HASARD';
+    RadioButtonMetierResultat.HelpKeyword        := 'RULES-HELP_CREA_MODE_RESULTAT';
+    RadioButtonMetierChoix.HelpKeyword           := 'RULES-HELP_CREA_MODE_CHOIX';
+    ButtonRaceHasard.HelpKeyword                 := 'RULES-HELP_CREA_RACE_HASARD';
+    ButtonRaceSelectionner.HelpKeyword           := 'RULES-HELP_CREA_RACE_SELECT';
+    ButtonRaceValider.HelpKeyword                := 'RULES-HELP_CREA_RACE_VALIDE';
+    ButtonMetierHasard.HelpKeyword               := 'RULES-HELP_CREA_METIER_HASARD';
+    ButtonMetierSelectionner.HelpKeyword         := 'RULES-HELP_CREA_METIER_SELECT';
+    ButtonMetierValider.HelpKeyword              := 'RULES-HELP_CREA_METIER_VALIDE';
+    ComboBoxRegle.HelpKeyword                    := 'RULES-HELP_CREA_REGLE';
+    RadioButtonAttributHasard.HelpKeyword        := 'RULES-HELP_CREA_ATTR_HASARD';
+    RadioButtonAttributResultat.HelpKeyword      := 'RULES-HELP_CREA_ATTR_RESULTAT';
+    RadioButtonAttributHasardAffecte.HelpKeyword := 'RULES-HELP_CREA_ATTR_HASARD_AFFECTE';
+    RadioButtonAttributResultatAffecte.HelpKeyword := 'RULES-HELP_CREA_ATTR_RESULTAT_AFFECTE';
+    RadioButtonAttributRepartition.HelpKeyword   := 'RULES-HELP_CREA_ATTR_REPARTITION';
+    ButtonTalentHasard.HelpKeyword               := 'RULES-HELP_CREA_TALENT_HASARD';
+    ButtonRaceCompetenceHasard.HelpKeyword       := 'RULES-HELP_CREA_COMP_HASARD';
+    ButtonMetierCompetenceHasard.HelpKeyword     := 'RULES-HELP_CREA_COMP_HASARD';
+    ButtonMetierEquipementHasard.HelpKeyword     := 'RULES-HELP_CREA_EQUIP_HASARD';
+    ButtonNomHasard.HelpKeyword                  := 'RULES-HELP_CREA_NOM_HASARD';
+
     LivresPersonnages := LivresCharges;
+
+    // Regles optionnelles des livres coches, a droite de la liste des livres : chaque creation
+    // repart avec toutes les regles cochees (le choix ne vaut que pour ce personnage)
+    if Assigned(ReglesDesactiveesCreation) then
+      ReglesDesactiveesCreation.Clear;
+    PanneauRegles              := TPanelOptionRegle.Create(Self, true, 235, 300, 140);
+    PanneauRegles.Parent       := TabSheetLivre;
+    PanneauRegles.Left         := TabLivre.Left + TabLivre.Width + 16;
+    PanneauRegles.Top          := TabLivre.Top;
+    PanneauRegles.Width        := TabSheetLivre.ClientWidth - PanneauRegles.Left - 8;
+    PanneauRegles.Height       := TabLivre.Height;
+    PanneauRegles.Anchors      := [akLeft, akTop, akRight, akBottom];
+    PanneauRegles.FiltreLivres := LivresPersonnages;
+    PanneauRegles.OnChangement := @ReglesChangees;
+    PanneauRegles.Charger();
 
     // Par defaut, chaque selecteur est sur "au hasard" (le bouton Hasard est donc visible)
     // (OnClick coupe : Checked le declencherait avant qu'une race/un metier existe)
@@ -563,9 +894,355 @@ procedure TWinCreations.FormCreate(Sender: TObject);
     RadioButtonRaceHasard.OnClick      := @RadioButtonRaceHasardClick;
     RadioButtonMetierHasard.OnClick    := @RadioButtonMetierHasardClick;
     RadioButtonAttributHasard.OnClick  := @RadioButtonAttributClick;
+    // V2 et V1 : la race se choisit (pas de table de tirage), seuls le choix libre reste
+    if RaceParGrille() then
+      begin
+        RadioButtonRaceHasard.Visible    := false;
+        RadioButtonRaceResultat.Visible  := false;
+        RadioButtonRaceChoix.Checked     := true;
+        // V2 : pas de cout en xp selon la methode (regle propre a V4/V5)
+        for I := 0 to ComponentCount - 1 do
+          if (Components[I] is TRadioButton) and (Pos('xp)', TRadioButton(Components[I]).Caption) > 0) then
+            TRadioButton(Components[I]).Caption :=
+              Trim(Copy(TRadioButton(Components[I]).Caption, 1, LastDelimiter('(', TRadioButton(Components[I]).Caption) - 1));
+        // phase 2 : plus de choix de type, de regles ni de table de tirage ; seul reste le bouton Selectionner
+        GroupBoxRace.Visible             := false;
+        LabRegle.Visible                 := false;
+        ComboRaceCreation.Visible        := false;
+        TabRace.Visible                  := false;
+        // a la place : une grille des races, double-clic = choisir (comme le bouton Selectionner)
+        GridRace := TStringGrid.Create(Self);
+        GridRace.Parent       := TabRace.Parent;
+        GridRace.Left         := TabRace.Left;
+        GridRace.Top          := TabRace.Top;
+        GridRace.Width        := TabRace.Width;
+        GridRace.Height       := 200;
+        GridRace.ColCount     := 4;
+        GridRace.RowCount     := 1;
+        GridRace.FixedCols    := 0;
+        GridRace.ColWidths[0] := 36;
+        GridRace.ColWidths[1] := 0;
+        GridRace.ColWidths[2] := 220;
+        GridRace.ColWidths[3] := 200;
+        GridRace.Cells[2, 0]  := GetTexteLibelle('RULES-LAB_014');
+        GridRace.Cells[3, 0]  := GetTexteLibelle('RULES-LAB_128');
+        GridRace.OnDblClick   := @GridRaceDblClick;
+        StylesTStringGrid(GridRace);
+        // bouton Hasard visible a sa place habituelle (comme les autres phases), tirage egal entre les races
+        ButtonRaceHasard.Visible := True;
+      end;
+    if ValVersion = 'WFRP2' then
+      begin
+        // Clemence de Shallya (Core p.19) : bouton clone de celui du tirage
+        Flux := TMemoryStream.Create;
+        try
+          Flux.WriteComponent(ButtonAttributHasard);
+          Flux.Position := 0;
+          ButtonClemence := TBCButton(TComponentClass(ButtonAttributHasard.ClassType).Create(nil));
+          Flux.ReadComponent(ButtonClemence);
+        finally
+          Flux.Free;
+        end;
+        ButtonClemence.Name    := 'ButtonClemence';
+        ButtonClemence.Parent  := ButtonAttributHasard.Parent;
+        ButtonClemence.Left    := ButtonAttributHasard.Left - ButtonAttributHasard.Width - 16;
+        ButtonClemence.Caption := GetTexteLibelle('RULES-LAB_730');
+        ButtonClemence.OnClick := @ButtonClemenceClick;
+        ButtonClemence.Enabled := false;
+        ButtonClemence.Visible := true;
+        // Argent de depart (phase du materiel) : bouton clone de celui du tirage de materiel, sert d'etiquette
+        // et de jet ; champ a sa droite ; a droite de la grille du materiel
+        Flux := TMemoryStream.Create;
+        try
+          Flux.WriteComponent(ButtonMetierEquipementHasard);
+          Flux.Position := 0;
+          ButtonArgent := TBCButton(TComponentClass(ButtonMetierEquipementHasard.ClassType).Create(nil));
+          Flux.ReadComponent(ButtonArgent);
+        finally
+          Flux.Free;
+        end;
+        ButtonArgent.Name    := 'ButtonArgent';
+        ButtonArgent.Parent  := TabMetierEquipement.Parent;
+        ButtonArgent.SetBounds(TabMetierEquipement.Left + TabMetierEquipement.Width + 16, TabMetierEquipement.Top, 256, 45);
+        ButtonArgent.Caption := GetTexteLibelle('RULES-LAB_750');
+        ButtonArgent.OnClick := @ButtonArgentClick;
+        ButtonArgent.Visible := false;
+        EditArgent := TEdit.Create(Self);
+        EditArgent.Parent     := TabMetierEquipement.Parent;
+        EditArgent.SetBounds(ButtonArgent.Left, ButtonArgent.Top + ButtonArgent.Height + 8, 120, 28);
+        EditArgent.ParentFont := False;
+        EditArgent.Font.Color := clBlack;
+        EditArgent.Visible    := false;
+        // Avance gratuite (Core p.14, etape 7) : grille a droite des competences de carriere (phase 7)
+        GridAvance := TStringGrid.Create(Self);
+        GridAvance.Parent       := TabMetierCompetence.Parent;
+        GridAvance.Left         := TabMetierCompetence.Left + TabMetierCompetence.Width + 16;
+        GridAvance.Top          := TabMetierCompetence.Top;
+        GridAvance.Width        := TabMetierCompetence.Parent.ClientWidth - GridAvance.Left - 8;
+        GridAvance.Height       := 330;
+        GridAvance.ColCount     := 5;
+        GridAvance.RowCount     := 1;
+        GridAvance.FixedCols    := 0;
+        GridAvance.Options      := GridAvance.Options - [goRangeSelect] + [goRowSelect];
+        GridAvance.ColWidths[0] := 36;
+        GridAvance.ColWidths[1] := 140;
+        GridAvance.ColWidths[2] := 70;
+        GridAvance.ColWidths[3] := 70;
+        GridAvance.ColWidths[4] := 120;
+        GridAvance.Cells[1, 0]  := GetTexteLibelle('RULES-LAB_734');
+        GridAvance.Cells[2, 0]  := GetTexteLibelle('RULES-LAB_735');
+        GridAvance.Cells[3, 0]  := GetTexteLibelle('RULES-LAB_736');
+        GridAvance.Cells[4, 0]  := GetTexteLibelle('RULES-LAB_732');
+        GridAvance.OnDblClick   := @GridAvanceDblClick;
+        // meme apparence que les autres grilles (police, fond, ligne choisie rouge et or)
+        StylesTStringGrid(GridAvance);
+        AvanceGratuiteCode := '';
+        AvanceGratuiteCode2 := '';
+        // le compteur x / 40 Pts de la phase 7 n'a plus d'objet en V2
+        ButtonTotalMetierCompetence.Visible := false;
+      end;
     UpdateSheetRace(false);
     UpdateSheetMetier(false);
     UpdateSheetAttribut(false);
+    if ValVersion = 'WFRP1' then
+      PrepareV1();
+  end;
+
+// V1 : les onglets Attributs et Metier perdent leurs controles de V2/V4/V5 et recoivent ceux de CreationV1 ;
+// les caracteristiques passent avant la classe (la classe depend des caracteristiques) et la phase des
+// talents est sautee (en V1 les competences remplacent les talents).
+procedure TWinCreations.PrepareV1();
+  var
+    I: Integer;
+    Texte: String;
+  procedure Vide(Onglet: TTabSheet);
+    var
+      J: Integer;
+    begin
+      for J := 0 to Onglet.ControlCount - 1 do
+        if not (Onglet.Controls[J] is TShape) then
+          Onglet.Controls[J].Visible := False;
+    end;
+  begin
+    Vide(TabSheetAttribut);
+    Vide(TabSheetMetier);
+    // phases : Attributs avant Metier (la liste des libelles suit)
+    TabSheetAttribut.PageIndex := TabSheetMetier.PageIndex;
+    Texte := ListPhase[2];
+    ListPhase[2] := ListPhase[3];
+    ListPhase[3] := Texte;
+    FreeAndNil(CreationV1Obj);   // reste d'une fenetre precedente
+    GridAvance := nil;           // idem : la grille a disparu avec la fenetre precedente
+    Vide(TabSheetCompMetier);
+    Vide(TabSheetEquipement);
+    // nom et physique : seuls le nom, le bouton Physique et son resume servent en V1
+    // (ni signe, ni noblesse, ni hasard : WinPhysique tire la taille) ; le generateur de noms sert
+    // des qu'un livre V1 porte des tables de noms (Apocrypha 2), sans regle de nom
+    Vide(TabSheetNom);
+    LabNomPersonnage.Visible := True;
+    EditNomPersonnag.Visible := True;
+    ButtonNom.Visible        := True;
+    ComboBoxSexeNom.Visible  := True;
+    EditJetNom.Visible       := True;
+    ButtonPhysique.Visible   := True;
+    LabPhysiqueResume.Visible := True;
+    LabPhysiqueResume.Text   := '';
+    // le bouton modele est masque a l'etape des competences (AfficheCompetencesRaceV1) : sans cela,
+    // les boutons copies pour un second personnage naitraient masques
+    ButtonRaceCompetenceHasard.Visible := True;
+    CreationV1Obj := TCreationV1.Create(Self, TabSheetAttribut, TabSheetMetier, TabSheetCompRace, TabSheetCompMetier,
+                                        TabSheetEquipement, ButtonRaceCompetenceHasard);
+    for I := 0 to TabSheetAttribut.ControlCount - 1 do
+      TabSheetAttribut.Controls[I].BringToFront;
+  end;
+
+// V1 : l'onglet qui vient de s'afficher se remplit depuis les choix des etapes precedentes
+procedure TWinCreations.AfficheOngletV1();
+  begin
+    if (PhaseEnCours < 0) or (PhaseEnCours >= PageEtapes.PageCount) then Exit;
+    if PageEtapes.Pages[PhaseEnCours] = TabSheetAttribut then
+      CreationV1Obj.AfficheCaracteristiques()
+    else if PageEtapes.Pages[PhaseEnCours] = TabSheetMetier then
+      CreationV1Obj.AfficheClasses()
+    else if PageEtapes.Pages[PhaseEnCours] = TabSheetCompRace then
+      begin
+        AfficheCompetencesRaceV1();
+        CreationV1Obj.AfficheAgeCompetences();
+      end
+    else if PageEtapes.Pages[PhaseEnCours] = TabSheetCompMetier then
+      CreationV1Obj.AfficheCarrieres()
+    else if PageEtapes.Pages[PhaseEnCours] = TabSheetEquipement then
+      CreationV1Obj.AfficheEquipement()
+    else if PageEtapes.Pages[PhaseEnCours] = TabSheetNom then
+      AfficheAvanceGratuiteV1();
+  end;
+
+// V1 : avance gratuite (Core p.4, etape 11 de la creation) choisie dans le schema de la carriere de base,
+// grille posee sous le nom et le physique ; meme grille et meme double-clic que V2
+procedure TWinCreations.AfficheAvanceGratuiteV1();
+  begin
+    MetierEnCours := CreationV1Obj.CodeCarriere;
+    if GridAvance = nil then
+      begin
+        GridAvance := TStringGrid.Create(Self);
+        GridAvance.Parent       := TabSheetNom;
+        GridAvance.Left         := EditNomPersonnag.Left;
+        GridAvance.Top          := ButtonPhysique.Top + ButtonPhysique.Height + 24;
+        if GridAvance.Top < LabPhysiqueResume.Top + LabPhysiqueResume.Height + 24 then
+          GridAvance.Top := LabPhysiqueResume.Top + LabPhysiqueResume.Height + 24;
+        GridAvance.Width        := 440;
+        GridAvance.Height       := 330;
+        GridAvance.ColCount     := 5;
+        GridAvance.RowCount     := 1;
+        GridAvance.FixedCols    := 0;
+        GridAvance.Options      := GridAvance.Options - [goRangeSelect] + [goRowSelect];
+        GridAvance.ColWidths[0] := 36;
+        GridAvance.ColWidths[1] := 140;
+        GridAvance.ColWidths[2] := 70;
+        GridAvance.ColWidths[3] := 70;
+        GridAvance.ColWidths[4] := 120;
+        GridAvance.Cells[1, 0]  := GetTexteLibelle('RULES-LAB_734');
+        GridAvance.Cells[2, 0]  := GetTexteLibelle('RULES-LAB_735');
+        GridAvance.Cells[3, 0]  := GetTexteLibelle('RULES-LAB_736');
+        GridAvance.Cells[4, 0]  := GetTexteLibelle('RULES-LAB_732');
+        GridAvance.OnDblClick   := @GridAvanceDblClick;
+        StylesTStringGrid(GridAvance);
+        AvanceGratuiteCode  := '';
+        AvanceGratuiteCode2 := '';
+      end;
+    GridAvance.Visible := True;
+    RemplirGridAvance();
+  end;
+
+// V1 : competences de race, toutes acquises d'office (cases du groupe 4 cochees) ; seuls restent les choix « A/B »
+procedure TWinCreations.AfficheCompetencesRaceV1();
+  var
+    CodesCompetenceRace: TStringList;
+    CodeCompetenceRace:  String;
+    I, Nb:               Integer;
+  begin
+    CodesCompetenceRace := CodesRaceEffectifs('S', RegleEnCours(), RaceEnCours);
+    try
+      Nb := CodesCompetenceRace.Count;
+      SetLength(CompetenceRaceStates[4], Nb + 2);
+      SetLength(CompetenceRaceStates[5], Nb + 2);
+      for I := 0 to High(CompetenceRaceStates[4]) do
+        begin
+          CompetenceRaceStates[4, I] := False;
+          CompetenceRaceStates[5, I] := False;
+        end;
+      NbCinq  := 0;
+      NbTrois := 0;
+      NbRaceCompetenceTab        := 0;
+      TabRaceCompetence.RowCount := 1;
+      for CodeCompetenceRace in CodesCompetenceRace do
+        begin
+          Inc(NbRaceCompetenceTab);
+          TabRaceCompetence.RowCount := NbRaceCompetenceTab + 1;
+          TabRaceCompetence.Cells[1, NbRaceCompetenceTab] := CodeCompetenceRace;
+          TabRaceCompetence.Cells[2, NbRaceCompetenceTab] := '';
+          TabRaceCompetence.Cells[3, NbRaceCompetenceTab] := LibelleCompetenceLigne(CodeCompetenceRace);
+          CompetenceRaceStates[4, NbRaceCompetenceTab]    := True;
+        end;
+    finally
+      CodesCompetenceRace.Free;
+    end;
+    TabRaceCompetence.Height := TabRaceCompetence.DefaultRowHeight * TabRaceCompetence.RowCount + 5;
+    AdjustGridColumnsWidth(TabRaceCompetence, TabSheetCompRace.ClientHeight, False, True);
+    TabRaceCompetence.ColWidths[2] := 0;
+    TabRaceCompetence.ColWidths[4] := 0;
+    TabRaceCompetence.ColWidths[5] := 0;
+    ButtonRaceCompetenceHasard.Visible := False;
+    CreationV1Obj.CompetenceDeRace  := @CompetenceDeRaceV1;
+    CreationV1Obj.NbCompetencesRace := @NbCompetencesRaceV1;
+  end;
+
+// Competences de race comptees dans le total des competences initiales (Core p.16) : la premiere est
+// obligatoire, la seconde (au choix) n'est donnee que si le personnage en a deux ou plus.
+function TWinCreations.NbCompetencesRaceV1(): Integer;
+  begin
+    Result := TabRaceCompetence.RowCount - 1;
+  end;
+
+// La race donne-t-elle deja cette competence ? (les choix « A/B » non resolus ne comptent pas)
+function TWinCreations.CompetenceDeRaceV1(const Code: String): Boolean;
+  var
+    I: Integer;
+  begin
+    Result := False;
+    for I := 1 to TabRaceCompetence.RowCount - 1 do
+      if TabRaceCompetence.Cells[1, I] = Code then
+        Exit(True);
+  end;
+
+// V1 : controle de l'onglet que l'on quitte (la phase 0, le choix des livres, reste celle des autres versions)
+function TWinCreations.VerifOngletV1(): Boolean;
+  var
+    I: Integer;
+  begin
+    Result := True;
+    if PageEtapes.Pages[PhaseEnCours] = TabSheetRace then
+      begin
+        Result := RaceEnCours <> '';
+        if not Result then
+          ShowMessage(GetTexteLibelle('RULES-MESS_002'));
+      end
+    else if PageEtapes.Pages[PhaseEnCours] = TabSheetAttribut then
+      begin
+        Result := CreationV1Obj.CaracComplete();
+        if not Result then
+          ShowMessage(GetTexteLibelle('RULES-MESS_004'));
+      end
+    else if PageEtapes.Pages[PhaseEnCours] = TabSheetMetier then
+      begin
+        Result := CreationV1Obj.CodeClasse <> '';
+        if not Result then
+          ShowMessage(GetTexteLibelle('RULES-MESS_003'));
+      end
+    else if PageEtapes.Pages[PhaseEnCours] = TabSheetCompRace then
+      begin
+        for I := 1 to Min(TabRaceCompetence.RowCount - 1, CreationV1Obj.NbCompetencesVoulu()) do
+          if (Pos(ValeurGenerique, TabRaceCompetence.Cells[1, I]) > 0) or
+             (Pos(SeparateurMulti, TabRaceCompetence.Cells[1, I]) > 0) then
+            begin
+              ShowMessage(GetTexteLibelle('RULES-MESS_042'));
+              Exit(False);
+            end;
+        Result := (CreationV1Obj.NbCompetencesVoulu() > 0) and
+                  (CreationV1Obj.NbCompetencesPrises() = CreationV1Obj.NbCompetencesATirer());
+        if not Result then
+          ShowMessage(GetTexteLibelle('RULES-MESS_085'));
+      end
+    else if PageEtapes.Pages[PhaseEnCours] = TabSheetCompMetier then
+      begin
+        Result := CreationV1Obj.CarriereComplete();
+        if not Result then
+          ShowMessage(GetTexteLibelle('RULES-MESS_086'));
+      end
+    else if PageEtapes.Pages[PhaseEnCours] = TabSheetEquipement then
+      begin
+        Result := CreationV1Obj.EquipementComplet();
+        if not Result then
+          ShowMessage(GetTexteLibelle('RULES-MESS_087'));
+      end
+    else if PageEtapes.Pages[PhaseEnCours] = TabSheetNom then
+      begin
+        // meme controle du nom que VerifNom (un espace en bord casserait le dossier du personnage)
+        EditNomPersonnag.Text := Trim(EditNomPersonnag.Text);
+        if EditNomPersonnag.Text = '' then
+          begin
+            ShowMessage(GetTexteLibelle('RULES-MESS_017'));
+            Exit(False);
+          end;
+        if DirectoryExists(GetCurrentDir + ConstCheminPersonnage + EditNomPersonnag.Text) then
+          begin
+            ShowMessage(GetTexteLibelle('RULES-MESS_018'));
+            Exit(False);
+          end;
+        Result := Personnage.Height > 0;
+        if not Result then
+          ShowMessage(GetTexteLibelle('RULES-MESS_088'));
+      end;
   end;
 
 procedure TWinCreations.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
@@ -591,6 +1268,16 @@ procedure TWinCreations.ButtonMetierSelectionnerClick(Sender: TObject);
     FenMetier           := TWinMetiers.Create(Application);
     FenMetier.Position  := poOwnerFormCenter;
     FenMetier.ShowModal;
+
+    // V1 / V2 : on ne commence que dans une carriere de base (Core V2 chapitre III, « All Starting
+    // Careers are Basic Careers »). La carriere avancee reste visible dans la fenetre, seule sa
+    // selection est refusee (meme principe que winpersonnage.pas, changement de carriere).
+    if (ChoixWinMetierRace <> '') and ((ValVersion = 'WFRP2') or (ValVersion = 'WFRP1')) and
+       not EstMetierDeBase(ChoixWinMetierRace) then
+      begin
+        ShowMessage(GetTexteLibelle('RULES-MESS_123'));
+        ChoixWinMetierRace := '';
+      end;
 
     if ChoixWinMetierRace <> '' then
       begin
@@ -679,6 +1366,7 @@ begin
       TabRaceResultat(0);
       AfficheImageRace();
       UpdateSheetRace(true);
+      RemplirGridRace();
     end;
 
   SelectWinRace  := '';
@@ -1191,6 +1879,14 @@ procedure TWinCreations.PhaseSave(NouvellePhase: Integer);
       Personnage.HeightUnit                        := UniteTaille;
       Personnage.HairColors                        := '';
       Personnage.EyeColors                         := '';
+      Personnage.SexeV2                            := '';
+      Personnage.ClasseV1                          := '';
+      Personnage.PoidsV2                           := 0;
+      Personnage.FratrieV2                         := '';
+      Personnage.SigneDistinctifV2                 := '';
+      Personnage.NaissanceV2                       := '';
+      ClanChoisi                                   := '';
+      Personnage.AstreV2                           := '';
       LabPhysiqueResume.Text                       := '';
       // Nouvelle creation : pas de signe astral herite d'une creation precedente
       Personnage.SigneAstral                       := '';
@@ -1198,6 +1894,10 @@ procedure TWinCreations.PhaseSave(NouvellePhase: Integer);
       Personnage.SigneAstralTalent                 := '';
       SigneTire                                    := False;
       ChargeTabMetier();
+      // Mutation de depart (race qui declare StartingMutation, ex. Mutant du Tome of Corruption p.25) :
+      // choisie en phase 2.2 (ChangementPhase), ajoutee apres cet enregistrement.
+      Personnage.Mutations := [];
+      MutationChanceFaite  := False;
       end;
 
     procedure PhaseSaveMetier();
@@ -1222,11 +1922,8 @@ procedure TWinCreations.PhaseSave(NouvellePhase: Integer);
               PersonnageAttribut.Valeur       := StrToIntdef(TabAttribut.Cells[5, IndTab],0);
               Personnage.CreationAttribut     += [PersonnageAttribut];
             end;
-          if IndTab <= 10 then
-              RecapAttribut.Cells[IndTab, 1]               := IntToStr(StrToIntDef(TabAttribut.Cells[6, IndTab], 0)
-                + SigneAstralAttributModif(Personnage.SigneAstral, Personnage.SigneAstralVariante, TabAttribut.Cells[7, IndTab]));
         end;
-      RecapAttribut.visible := true;
+      MajRecapAttribut();
       end;
 
     procedure PhaseSaveTalents();
@@ -1274,7 +1971,11 @@ procedure TWinCreations.PhaseSave(NouvellePhase: Integer);
             begin
               NbRaceComp                                   := NbRaceComp + 1;
               PersonnageCompetence.CodeCompetence          := TabRaceCompetence.Cells[1, IndTab];
-              PersonnageCompetence.Valeur                  := PRace.Point3;
+              // V2 : pas de +3, la competence est acquise une fois (meme convention que les prises de la phase 7)
+              if ValVersion = 'WFRP2' then
+                PersonnageCompetence.Valeur                := 1
+              else
+                PersonnageCompetence.Valeur                := PRace.Point3;
               Personnage.CreationCompetence35              += [PersonnageCompetence];
             end;
           if CompetenceRaceStates[5, IndTab] then
@@ -1311,9 +2012,29 @@ procedure TWinCreations.PhaseSave(NouvellePhase: Integer);
         PCompetence: StructureCompetence;
         PMetierCompetence: StructureMetierCompetence;
         PMetierTalent: StructureMetierTalent;
-        CandidatsAppart: String;
+
       begin
       DebMetierRec := NbRaceComp;
+      // V2 : l'avance gratuite devient une augmentation d'un palier, si la carriere en donne encore
+      // le plafond (le choix a pu etre fait avant un changement de carriere)
+      Personnage.AugmentationAttribut := [];
+      Personnage.AvanceGratuiteAttribut := [];
+      if (ValVersion = 'WFRP2') and (AvanceGratuiteCode <> '')
+         and (PlafondAvanceMetier(MetierEnCours, AvanceGratuiteCode) > 0) then
+        begin
+          PersonnageAttribut.CodeAttribut := AvanceGratuiteCode;
+          PersonnageAttribut.Valeur       := PasAvanceV2(AvanceGratuiteCode);
+          PersonnageAttribut.Bonus        := '';
+          Personnage.AvanceGratuiteAttribut += [PersonnageAttribut];
+        end;
+      if (ValVersion = 'WFRP2') and (AvanceGratuiteCode2 <> '') and (NbAvancesGratuites() >= 2)
+         and (PlafondAvanceMetier(MetierEnCours, AvanceGratuiteCode2) > 0) then
+        begin
+          PersonnageAttribut.CodeAttribut := AvanceGratuiteCode2;
+          PersonnageAttribut.Valeur       := PasAvanceV2(AvanceGratuiteCode2);
+          PersonnageAttribut.Bonus        := '';
+          Personnage.AvanceGratuiteAttribut += [PersonnageAttribut];
+        end;
       for IndTab := 1 to TabMetierCompetence.RowCount - 1 do
         begin
           // ajout si quantité
@@ -1344,6 +2065,11 @@ procedure TWinCreations.PhaseSave(NouvellePhase: Integer);
             PersonnageCompetence.Valeur         := PMetierCompetence.NiveauMetier;
             Personnage.MetierCompetence         += [PersonnageCompetence];
           end;
+
+      // V2 : la competence de l'appartenance (choisie en phase 3.1) est acquise ICI, avant le
+      // recapitulatif, pour qu'elle y figure.
+      if ValVersion = 'WFRP2' then
+        AcquiertCompetencesAppartenanceV2;
 
       IndTab := 0;
       For PersonnageCompetence in Personnage.CreationCompetence40 do
@@ -1376,29 +2102,6 @@ procedure TWinCreations.PhaseSave(NouvellePhase: Integer);
              Personnage.MetierTalent     += [PersonnageTalent];
            end;
 
-      // Entrer dans une carriere ouvre le droit a une APPARTENANCE (regiment, ordre
-      // de chevalerie, culte). A la creation il n'y a pas de garde de niveau : on est
-      // par definition au niveau 1. Rien n'est propose s'il ne reste aucun candidat.
-      // CONTEXT.md 2.44.
-      CandidatsAppart := AppartenancesCandidates(MetierEnCours, Personnage.Race,
-                                                 Personnage.Appartenance);
-      if CandidatsAppart <> '' then
-        begin
-          ChoixWinTypeFichier         := ConstXmlDataCareerBonus;
-          ChoixWinCareerBonus         := CandidatsAppart;
-          // Remise a vide OBLIGATOIRE : fermer la fenetre sans double-cliquer ne
-          // touche pas a SelectWin..., qui garderait sinon une reponse precedente.
-          SelectWinCareerBonus        := '';
-          FenSpecialisation           := TWinSpecialisations.Create(Application);
-          FenSpecialisation.Position  := poOwnerFormCenter;
-          FenSpecialisation.ShowModal;
-          if SelectWinCareerBonus <> '' then
-            if Trim(Personnage.Appartenance) = '' then
-              Personnage.Appartenance := SelectWinCareerBonus
-            else
-              Personnage.Appartenance := Personnage.Appartenance + ',' + SelectWinCareerBonus;
-        end;
-
       // Les APPARTENANCES greffent leurs competences et talents sur la carriere,
       // "as if added to their Career". L'appel vient APRES les deux boucles
       // ci-dessus, qui repartent d'une liste vide : place avant, il serait efface.
@@ -1413,7 +2116,12 @@ procedure TWinCreations.PhaseSave(NouvellePhase: Integer);
         StringsTypeEns: TStringList;
         IndEns: Integer;
       begin
-      ChargeSignesAstraux();
+      // V2 : argent de depart de la carriere dans la bourse (en couronnes d'or)
+      if (ValVersion = 'WFRP2') and Assigned(EditArgent) then
+        if EditArgent.Visible then
+          Personnage.MonnaieCO := StrToIntDef(EditArgent.Text, 0)
+        else
+          Personnage.MonnaieCO := 0;
       for IndTab := 1 to TabMetierEquipement.RowCount - 1 do
         begin
           if Pos(SeparateurEnsemble, TabMetierEquipement.Cells[1, IndTab]) > 0 then
@@ -1466,8 +2174,15 @@ procedure TWinCreations.PhaseSave(NouvellePhase: Integer);
         Xp: Integer;
         directoryPath: String;
       begin
-      AjouteTalentSigne();
-      Xp := XmlCalculXp();
+      if ValVersion = 'WFRP1' then
+        Xp := 0   // V1 : pas encore de calcul d'XP (evolution du personnage a venir dans WinPersonnage)
+      else
+        begin
+          AjouteEffetsClan();
+          AjouteEffetsFamilier();
+          AjouteTalentSigne();
+          Xp := XmlCalculXp();
+        end;
       Personnage.LivresAcceptes:=LivresPersonnages;
       directoryPath := GetCurrentDir+ConstCheminPersonnage+EditNomPersonnag.text;
       // installation neuve : SAVED_CARACTERS\<version> n'existe pas encore (CreateDir n'est pas recursif)
@@ -1487,7 +2202,124 @@ procedure TWinCreations.PhaseSave(NouvellePhase: Integer);
         end;
       end;
 
+    // V1 : le personnage est assemble d'un coup depuis les choix de CreationV1Obj, puis ecrit.
+    // Pas de talents (les competences les remplacent), classe enregistree dans Personnage.ClasseV1,
+    // equipement du livre en texte seulement (pas de lien vers les objets).
+    procedure PhaseSaveCreationV1();
+      var
+        I:     Integer;
+        Codes: TStringList;
+        CodeCulte: String;
+      begin
+      Personnage.CreationAttribut     := [];
+      Personnage.CreationCompetence35 := [];
+      Personnage.CreationCompetence40 := [];
+      Personnage.MetierAncien         := [];
+      Personnage.MetierCompetence     := [];
+      for I := 0 to CreationV1Obj.NbLignes() - 1 do
+        begin
+          PersonnageAttribut.CodeAttribut := CreationV1Obj.LigneCode(I);
+          PersonnageAttribut.Valeur       := CreationV1Obj.LigneValeur(I);
+          Personnage.CreationAttribut     += [PersonnageAttribut];
+        end;
+      // competences de race (acquises d'office, choix « A/B » deja resolus) puis competences de l'age
+      for I := 1 to Min(TabRaceCompetence.RowCount - 1, CreationV1Obj.NbCompetencesVoulu()) do
+        if CompetenceRaceStates[4, I] then
+          begin
+            PersonnageCompetence.CodeCompetence := TabRaceCompetence.Cells[1, I];
+            PersonnageCompetence.Valeur         := 1;
+            Personnage.CreationCompetence35     += [PersonnageCompetence];
+          end;
+      for I := 0 to CreationV1Obj.NbCompetencesPrises() - 1 do
+        begin
+          PersonnageCompetence.CodeCompetence := CreationV1Obj.CodePris(I);
+          PersonnageCompetence.Valeur         := 1;
+          Personnage.CreationCompetence40     += [PersonnageCompetence];
+        end;
+      Personnage.ClasseV1             := CreationV1Obj.CodeClasse;
+      // carriere de base (et metier de l'Artisan)
+      PersonnageMetier.CodeMetier   := CreationV1Obj.CodeCarriere;
+      PersonnageMetier.NiveauMetier := 1;
+      PersonnageMetier.CoutXp       := 0;
+      Personnage.MetierEnCours      := PersonnageMetier;
+      Personnage.MetierAncien       += [PersonnageMetier];
+      // Initiate (Realm of Divine Magic) : choix du culte et quatre prieres Petty de depart
+      if EstInitiateV1(CreationV1Obj.CodeCarriere) then
+        begin
+          CodeCulte := ChoisirCulteV1(Self);
+          if CodeCulte <> '' then
+            begin
+              Personnage.CulteV1 := CodeCulte;
+              ShowMessage(GetTexteLibelle('RULES-MESS_111') + ' ' + ChercheCulteV1(CodeCulte).Libelle + #13#10 +
+                          GetTexteLibelle('RULES-MESS_112') + ' ' +
+                          AccordePrieresInitiateV1(Personnage.SortsV1, ChercheCulteV1(CodeCulte).Libelle));
+            end;
+        end;
+      Codes := TStringList.Create;
+      try
+        CreationV1Obj.CompetencesCarriere(Codes);
+        for I := 0 to Codes.Count - 1 do
+          begin
+            PersonnageCompetence.CodeCompetence := Codes[I];
+            PersonnageCompetence.Valeur         := 1;
+            Personnage.MetierCompetence         += [PersonnageCompetence];
+          end;
+      finally
+        Codes.Free;
+      end;
+      Personnage.MonnaieCO := CreationV1Obj.ArgentDepart();
+      // objets choisis dans la liste de prix : ligne Divers a nom libre (nom et encombrement du livre),
+      // CodeEquipement garde le code EquipmentV1 pour retrouver l'objet (alerte du familier)
+      Personnage.Equipement := [];
+      Codes := TStringList.Create;
+      try
+        CreationV1Obj.ObjetsChoisis(Codes);
+        for I := 0 to Codes.Count - 1 do
+          begin
+            PersonnageEquipement                   := Default(StructurePersonnageEquipement);
+            PersonnageEquipement.TypeEquipement    := TrimRight(TypeEquipDi);
+            PersonnageEquipement.CodeEquipement    := Codes[I];
+            PersonnageEquipement.NomLibre          := ChercheObjetV1(Codes[I]).Libelle;
+            PersonnageEquipement.EncLibre          := StrToIntDef(ChercheObjetV1(Codes[I]).Encombrement, 0);
+            PersonnageEquipement.Quantite          := 1;
+            Personnage.Equipement                  += [PersonnageEquipement];
+          end;
+      finally
+        Codes.Free;
+      end;
+      // avance gratuite : un pas du schema, sans cout en EP
+      Personnage.AvanceGratuiteAttribut := [];
+      if (AvanceGratuiteCode <> '') and (PlafondAvanceMetier(MetierEnCours, AvanceGratuiteCode) > 0) then
+        begin
+          PersonnageAttribut.CodeAttribut := AvanceGratuiteCode;
+          PersonnageAttribut.Valeur       := PasAvance(AvanceGratuiteCode);
+          PersonnageAttribut.Bonus        := '';
+          Personnage.AvanceGratuiteAttribut += [PersonnageAttribut];
+        end;
+      PhaseSaveSauvegarde();
+      end;
+
+    // V1 : l'ordre des onglets n'est pas celui des autres versions ; on enregistre selon l'onglet quitte
+    procedure PhaseSaveV1();
+      begin
+      if NouvellePhase < 1 then Exit;
+      if PageEtapes.Pages[NouvellePhase - 1] = TabSheetRace then
+        begin
+          PhaseSaveRace();
+          CreationV1Obj.ChoisitRace(RaceEnCours);
+        end;
+      // caracteristiques et classe : gardees par CreationV1Obj jusqu'a l'enregistrement du personnage,
+      // qui a lieu en quittant l'onglet du nom
+      if PageEtapes.Pages[NouvellePhase - 1] = TabSheetNom then
+        PhaseSaveCreationV1();
+      end;
+
   Begin
+    if ValVersion = 'WFRP1' then
+      begin
+        PhaseSaveV1();
+        Exit;
+      end;
     // supprimer les éléments des phases suivants
     // NouvellePhase est la phase où l'on ARRIVE : chaque branche enregistre donc le résultat de
     // la phase précédente et efface ce qui vient après.
@@ -1512,6 +2344,102 @@ procedure TWinCreations.PhaseSave(NouvellePhase: Integer);
       8: PhaseSaveEquipements();
       9: PhaseSaveSauvegarde();
       end;
+  end;
+
+// Entrer dans une carriere ouvre le droit a une APPARTENANCE (regiment, ordre de
+// chevalerie, culte). A la creation il n'y a pas de garde de niveau : on est par
+// definition au niveau 1. Rien n'est propose s'il ne reste aucun candidat.
+// CONTEXT.md 2.44.
+procedure TWinCreations.ChoisitAppartenance();
+  var
+    CandidatsAppart: String;
+  begin
+    CandidatsAppart := AppartenancesCandidates(MetierEnCours, Personnage.Race,
+                                               Personnage.Appartenance);
+    if CandidatsAppart <> '' then
+      begin
+        ChoixWinTypeFichier         := ConstXmlDataCareerBonus;
+        ChoixWinCareerBonus         := CandidatsAppart;
+        // Remise a vide OBLIGATOIRE : fermer la fenetre sans double-cliquer ne
+        // touche pas a SelectWin..., qui garderait sinon une reponse precedente.
+        SelectWinCareerBonus        := '';
+        FenSpecialisation           := TWinSpecialisations.Create(Application);
+        FenSpecialisation.Position  := poOwnerFormCenter;
+        FenSpecialisation.ShowModal;
+        if SelectWinCareerBonus <> '' then
+          if Trim(Personnage.Appartenance) = '' then
+            Personnage.Appartenance := SelectWinCareerBonus
+          else
+            Personnage.Appartenance := Personnage.Appartenance + ',' + SelectWinCareerBonus;
+      end;
+  end;
+
+// V2 : la competence d'une appartenance (culte de l'Initiate...) est ACQUISE a la
+// creation, en plus de celles de la carriere. Prises comme dans la grille : la valeur
+// d'une entree = nombre de prises (PdfPersonnageCompetence prend le max des deux listes),
+// donc une competence deja prise s'ajoute (2 prises = +10 %, Skill Mastery, Core p.90).
+procedure TWinCreations.AcquiertCompetencesAppartenanceV2();
+  var
+    Apparts, Codes:  TStringList;
+    Paliers:         TListCareerBonusNiveau;
+    Palier:          StructureCareerBonusNiveau;
+    PerComp:         StructurePersonnageCompetence;
+    IndApp, IndCode, IndPrise: Integer;
+    Prises:          Integer;
+    Trouve:          Boolean;
+  begin
+    if Trim(Personnage.Appartenance) = '' then
+      Exit;
+    Apparts := TStringList.Create;
+    Codes   := TStringList.Create;
+    try
+      ExtractStrings([','], [], PChar(Personnage.Appartenance), Apparts);
+      for IndApp := 0 to Apparts.Count - 1 do
+        begin
+          Paliers := NiveauxDuCareerBonus(Trim(Apparts[IndApp]));
+          try
+            for Palier in Paliers do
+              begin
+                Codes.Clear;
+                if Trim(Palier.ListeCompetence) <> '' then
+                  ExtractStrings([','], [], PChar(Palier.ListeCompetence), Codes);
+                for IndCode := 0 to Codes.Count - 1 do
+                  begin
+                    // un choix "A/B" ou une specialisation a choisir n'est pas acquis ici
+                    if (Pos(SeparateurMulti, Codes[IndCode]) > 0) or (Pos(ValeurGenerique, Codes[IndCode]) > 0) then
+                      continue;
+                    Trouve := False;
+                    for IndPrise := 0 to High(Personnage.CreationCompetence40) do
+                      if CompareRechercheValeur(Personnage.CreationCompetence40[IndPrise].CodeCompetence, Trim(Codes[IndCode])) then
+                        begin
+                          Inc(Personnage.CreationCompetence40[IndPrise].Valeur);
+                          Trouve := True;
+                          break;
+                        end;
+                    if not Trouve then
+                      begin
+                        Prises := 1;
+                        for PerComp in Personnage.CreationCompetence35 do
+                          if CompareRechercheValeur(PerComp.CodeCompetence, Trim(Codes[IndCode])) then
+                            begin
+                              Prises := 2;
+                              break;
+                            end;
+                        PerComp                := Default(StructurePersonnageCompetence);
+                        PerComp.CodeCompetence := Trim(Codes[IndCode]);
+                        PerComp.Valeur         := Prises;
+                        Personnage.CreationCompetence40 += [PerComp];
+                      end;
+                  end;
+              end;
+          finally
+            Paliers.Free;
+          end;
+        end;
+    finally
+      Codes.Free;
+      Apparts.Free;
+    end;
   end;
 
 Procedure TWinCreations.TalentFenetre(Choix: Integer; CodeTalent: String);
@@ -1736,6 +2664,22 @@ procedure TWinCreations.TabLivreDblClick(Sender: TObject);
      for Ind := 1 to TabLivre.RowCount - 1 do
        if TabLivre.Cells[1, Ind] = ConstSelectionne then
          LivresPersonnages := LivresPersonnages + AjouteAccolade(TabLivre.Cells[3, Ind]);
+
+     // les regles proposees suivent les livres coches
+     if Assigned(PanneauRegles) then
+       begin
+         PanneauRegles.FiltreLivres := LivresPersonnages;
+         PanneauRegles.Charger();
+       end;
+     ReglesChangees(nil);
+  end;
+
+// Une regle vient d'etre cochee / decochee, ou un livre ajoute / retire : la liste des regles de
+// tirage proposees pour la race en cours est recalculee.
+procedure TWinCreations.ReglesChangees(Sender: TObject);
+  begin
+    if RaceEnCours <> '' then
+      ChargeComboRegle();
   end;
 
 procedure TWinCreations.TabMetierCompetenceDblClick(Sender: TObject);
@@ -1831,16 +2775,179 @@ procedure TWinCreations.TabTalentDblClick(Sender: TObject);
     TalentFenetre(0, TabTalent.Cells[1, TabTalent.Row]);
   end;
 
+// V2 : la carriere a-t-elle un materiel de depart en donnees (niveau 1) ?
+function MetierAMaterielDepart(const CodeMetier: String): Boolean;
+  var
+    PMetierEquipement: StructureMetierEquipement;
+  begin
+    Result := False;
+    for PMetierEquipement in ListMetierEquipement do
+      if CompareRechercheValeur(PMetierEquipement.CodeMetier, CodeMetier) and (PMetierEquipement.NiveauMetier = 1) then
+        Exit(True);
+  end;
+
 procedure TWinCreations.ChangementPhase(Changement: Integer);
   var
     i: Integer;
     TabSheet: TTabSheet;
+    SautSave: Boolean;
   begin
+    SautSave := False;
     if (PhaseEnCours <> -1) and (Changement > 0) and (not PageEtapesChange()) then
       begin
          Exit;
       end;
-    PhaseSave(PhaseEnCours + changement);
+    if SousPhaseClan then
+      begin
+        // Fin de la phase 2.1 : la race est deja enregistree (PhaseSaveRace), on y ajoute le clan
+        Personnage.NaissanceV2 := ClanChoisi;
+        SousPhaseClan          := False;
+        SautSave               := True;
+        // La race a aussi une mutation de depart : phase 2.2 avant de passer au metier
+        if RaceAMutationDepart(RaceEnCours) then
+          begin
+            AfficheSousPhaseMutation();
+            Exit;
+          end;
+        if RaceATirageFamilier(RaceEnCours) then
+          begin
+            AfficheSousPhaseFamilier();
+            Exit;
+          end;
+        if FondActif() then
+          begin
+            AfficheSousPhaseFond();
+            Exit;
+          end;
+      end
+    else if SousPhaseMutation then
+      begin
+        // Fin de la phase 2.2 : la race est deja enregistree (PhaseSaveRace), on y ajoute la mutation
+        Personnage.Mutations   += [MutationDepart];
+        SousPhaseMutation      := False;
+        SautSave               := True;
+        if RaceATirageFamilier(RaceEnCours) then
+          begin
+            AfficheSousPhaseFamilier();
+            Exit;
+          end;
+        if FondActif() then
+          begin
+            AfficheSousPhaseFond();
+            Exit;
+          end;
+      end
+    else if SousPhaseFamilier then
+      begin
+        // Fin de la phase 2.3 : la race est deja enregistree (PhaseSaveRace), la forme tiree devient le "lieu de
+        // naissance" du familier (affichee sur la fiche) et ses effets sont appliques a l'enregistrement final.
+        Personnage.NaissanceV2 := FamilierTexte;
+        SousPhaseFamilier      := False;
+        SautSave               := True;
+        if FondActif() then
+          begin
+            AfficheSousPhaseFond();
+            Exit;
+          end;
+      end
+    else if SousPhaseFond then
+      begin
+        // Fin de la phase 2.4 (Liber Fanatica) : la race est deja enregistree (PhaseSaveRace) ; le background devient
+        // la regle de tirage de la carriere et ses competences/talents sont ajoutes au personnage.
+        SousPhaseFond          := False;
+        SautSave               := True;
+        AppliqueFond();
+      end
+    else if SousPhaseSigne then
+      begin
+        // Fin de la phase 4.1 : les caracteristiques sont deja enregistrees (PhaseSaveAttributs), le signe
+        // est dans Personnage ; le recapitulatif des caracteristiques prend maintenant son modificateur.
+        SousPhaseSigne         := False;
+        SautSave               := True;
+        MajRecapAttribut();
+      end
+    else if (Changement > 0) and (PhaseEnCours = TabSheetAttribut.PageIndex) and (NbSigneAstralPermis() > 0) then
+      begin
+        // Phase intermediaire 4.1 (toutes versions, seulement si un livre charge porte des signes) :
+        // les caracteristiques sont enregistrees maintenant, puis l'onglet s'affiche a la place des talents.
+        PhaseSave(PhaseEnCours + Changement);
+        AfficheSousPhaseSigne();
+        Exit;
+      end
+    else if SousPhaseMutationChance then
+      begin
+        // Fin de la phase 3.0 : le metier est deja enregistre ; la mutation (si le jet a reussi et qu'elle a ete
+        // choisie) est ajoutee ; l'appartenance (3.1) vient ensuite si le metier en propose une.
+        SousPhaseMutationChance := False;
+        SautSave                := True;
+        if MutationDepartOk then
+          Personnage.Mutations += [MutationDepart];
+        MutationChanceFaite     := True;
+        if AppartenancesCandidates(MetierEnCours, Personnage.Race, Personnage.Appartenance) <> '' then
+          begin
+            AfficheSousPhaseAppartenance();
+            Exit;
+          end;
+      end
+    else if (Changement > 0) and (PhaseEnCours = TabSheetMetier.PageIndex) and (not MutationChanceFaite)
+            and (ChanceMutationRegle() > 0) then
+      begin
+        // Phase intermediaire 3.0 (V2) : le metier est enregistre maintenant, puis l'onglet s'affiche a la place
+        // des competences ; PhaseEnCours reste au metier.
+        PhaseSave(PhaseEnCours + Changement);
+        AfficheSousPhaseMutationChance();
+        Exit;
+      end
+    else if SousPhaseAppartenance then
+      begin
+        // Fin de la phase 3.1 : le metier est deja enregistre (PhaseSaveMetier) et Personnage.Appartenance
+        // a ete remplie par le bouton ; les greffes sont appliquees a la phase des competences du metier.
+        SousPhaseAppartenance  := False;
+        SautSave               := True;
+      end
+    else if (Changement > 0) and (PhaseEnCours = TabSheetMetier.PageIndex)
+            and (AppartenancesCandidates(MetierEnCours, Personnage.Race, Personnage.Appartenance) <> '') then
+      begin
+        // Phase intermediaire 3.1 (toutes versions) : le metier est enregistre maintenant, puis l'onglet
+        // s'affiche a la place des attributs. PhaseEnCours reste au metier.
+        PhaseSave(PhaseEnCours + Changement);
+        AfficheSousPhaseAppartenance();
+        Exit;
+      end
+    else if (ValVersion = 'WFRP2') and (Changement > 0) and (PhaseEnCours = TabSheetRace.PageIndex)
+            and (RaceAClan(RaceEnCours) or RaceAMutationDepart(RaceEnCours) or RaceATirageFamilier(RaceEnCours)
+                 or FondActif()) then
+      begin
+        // Phases intermediaires 2.1 (clan), 2.2 (mutation), 2.3 (familier cree) puis 2.4 (background) : la race est
+        // enregistree maintenant (elle efface la naissance et les mutations), puis l'onglet s'affiche a la place du
+        // metier. PhaseEnCours reste a la race.
+        PhaseSave(PhaseEnCours + Changement);
+        if RaceAClan(RaceEnCours) then
+          AfficheSousPhaseClan()
+        else if RaceAMutationDepart(RaceEnCours) then
+          AfficheSousPhaseMutation()
+        else if RaceATirageFamilier(RaceEnCours) then
+          AfficheSousPhaseFamilier()
+        else
+          AfficheSousPhaseFond();
+        Exit;
+      end;
+    if not SautSave then
+      PhaseSave(PhaseEnCours + changement);
+    // V2 : tant que le materiel de depart d'une carriere n'est pas structure (SUBCHAPTER_ITEM, 5 carrieres
+    // test faites), la phase du materiel est sautee, mais on enregistre quand meme l'arrivee a la suivante.
+    if (ValVersion = 'WFRP2') and (PhaseEnCours + changement = TabSheetEquipement.PageIndex) and (Changement <> 0)
+       and (not MetierAMaterielDepart(MetierEnCours)) then
+      begin
+        Changement := Changement * 2;
+        PhaseSave(PhaseEnCours + changement);
+      end;
+    // V1 : les competences remplacent les talents, la phase des talents est sautee
+    if (ValVersion = 'WFRP1') and (PhaseEnCours + changement = TabSheetTalent.PageIndex) and (Changement <> 0) then
+      begin
+        Changement := Changement * 2;
+        PhaseSave(PhaseEnCours + changement);
+      end;
     // gérer le changement de phase (avant ou arrière) pour activer/désactiver les onglets
     PhaseEnCours := PhaseEnCours + changement;
     if PhaseEnCours < PhaseDebut then PhaseEnCours := PhaseDebut;
@@ -1852,11 +2959,18 @@ procedure TWinCreations.ChangementPhase(Changement: Integer);
         Begin
           TabSheet.TabVisible := true;
           ButtonLibellePhase.Caption := Format(GetTexteLibelle('RULES-LAB_315'), [i+1, PhaseMax+1, ListPhase[i]]);
-          TabSheet.Caption := IntToStr(i+1)+' sur '+IntToStr(PhaseMax+1);
+          TabSheet.Caption := Format(GetTexteLibelle('RULES-LAB_1002'), [i+1, PhaseMax+1]);
         end
       else
         TabSheet.TabVisible := False;
     end;
+    // V2 : la valeur actuelle des caracteristiques n'existe qu'apres la phase 4
+    if RaceParGrille() then
+      RemplirGridRace();
+    if ValVersion = 'WFRP2' then
+      RemplirGridAvance();
+    if ValVersion = 'WFRP1' then
+      AfficheOngletV1();
   end;
 
 procedure TWinCreations.TabMetierEquipementSelectEditor(Sender: TObject; aCol,
@@ -1912,7 +3026,8 @@ Function TWinCreations.PageEtapesChange(): boolean;
     begin
       Vide  := 0;
       for IndTab := 1 to 10 do
-        If TabAttribut.Cells[5, Indtab] = '' then
+        // V2 : seules les caracteristiques a formule de des ont un jet (8 sur 10 lignes)
+        If (TabAttribut.Cells[5, Indtab] = '') and (Pos('+', TabAttribut.Cells[4, Indtab]) > 0) then
           Vide := Vide+1;
 
       if Vide > 0 then
@@ -1955,12 +3070,12 @@ Function TWinCreations.PageEtapesChange(): boolean;
       // races du livre de regles en prennent 3 et 3, le Skink de Lustria 2 et 2
       // (CONTEXT.md 2.15). MESS_013/014 portent un %d, d'ou le Format.
       PRaceNb := ChercheRace(RaceEnCours);
-      if (NbCinq <> PRaceNb.NbPoint5) and (Ok) then
+      if (ValVersion <> 'WFRP2') and (NbCinq <> PRaceNb.NbPoint5) and (Ok) then
         begin
           ShowMessage(Format(GetTexteLibelle('RULES-MESS_013'), [PRaceNb.NbPoint5]));
           Ok := False;
         end;
-      if (NbTrois <> PRaceNb.NbPoint3) and (Ok) then
+      if (ValVersion <> 'WFRP2') and (NbTrois <> PRaceNb.NbPoint3) and (Ok) then
         begin
           ShowMessage(Format(GetTexteLibelle('RULES-MESS_014'), [PRaceNb.NbPoint3]));
           Ok := False;
@@ -1986,7 +3101,7 @@ Function TWinCreations.PageEtapesChange(): boolean;
       IndTab: Integer;
     begin
       Ok := True;
-      if TotalMetierCompetence <> 40 then
+      if (ValVersion <> 'WFRP2') and (TotalMetierCompetence <> 40) then
         begin
           ShowMessage(GetTexteLibelle('RULES-MESS_015'));
           Ok := False;
@@ -2044,8 +3159,58 @@ Function TWinCreations.PageEtapesChange(): boolean;
       result := Ok;
     end;
 
+  // Phase intermediaire 2.1 : un clan doit etre choisi (liste ou tirage)
+  function VerifClan: Boolean;
+    begin
+      Result := ClanChoisi <> '';
+      if not Result then
+        ShowMessage(GetTexteLibelle('RULES-MESS_078'));
+    end;
+
   begin
     Result := True;
+    if SousPhaseClan then
+      begin
+        Result := VerifClan;
+        Exit;
+      end;
+    // Phase 3.1 : l'appartenance reste facultative (comme l'ancienne fenetre, qu'on pouvait fermer)
+    if SousPhaseAppartenance or SousPhaseSigne then
+      Exit;
+    // Phase 3.0 : passer sans lancer le jet (ou apres un echec) est permis ; un jet reussi exige la mutation
+    if SousPhaseMutationChance then
+      begin
+        Result := not ((MutationChanceJet > 0) and (MutationChanceJet <= ChanceMutationRegle()) and (not MutationDepartOk));
+        if not Result then
+          ShowMessage(GetTexteLibelle('RULES-MESS_079'));
+        Exit;
+      end;
+    if SousPhaseMutation then
+      begin
+        Result := MutationDepartOk;
+        if not Result then
+          ShowMessage(GetTexteLibelle('RULES-MESS_079'));
+        Exit;
+      end;
+    if SousPhaseFond then
+      begin
+        Result := FondComplet();
+        if not Result then
+          ShowMessage(GetTexteLibelle('RULES-MESS_108', 'Roll the d10 and settle every choice before continuing.'));
+        Exit;
+      end;
+    if SousPhaseFamilier then
+      begin
+        Result := FamilierTexte <> '';
+        if not Result then
+          ShowMessage(GetTexteLibelle('RULES-MESS_080'));
+        Exit;
+      end;
+    if (ValVersion = 'WFRP1') and (PhaseEnCours > 0) then
+      begin
+        Result := VerifOngletV1();
+        Exit;
+      end;
     case PhaseEnCours of
       0: Result := VerifLivres;
       1: Result := VerifRace;
@@ -2072,24 +3237,55 @@ procedure TWinCreations.ButtonPhysiqueClick(Sender: TObject);
   begin
     PhysiqueCodeRace := Personnage.Race;
     PhysiqueAge      := Personnage.Age;
+    // V1 : age de l'etape des competences (non modifiable ici), taille selon le sexe, ni yeux ni cheveux
+    PhysiqueV1       := ValVersion = 'WFRP1';
+    if PhysiqueV1 then
+      begin
+        PhysiqueCodeRace := ChercheRace(RaceEnCours).Espece;
+        PhysiqueAge      := CreationV1Obj.AgeChoisi();
+      end;
     PhysiqueTaille   := Personnage.Height;
     PhysiqueUnite    := Personnage.HeightUnit;
     PhysiqueYeux     := Personnage.EyeColors;
     PhysiqueCheveux  := Personnage.HairColors;
+    PhysiqueV2        := ValVersion = 'WFRP2';
+    PhysiqueSexeSeul  := (ValVersion <> 'WFRP1') and (ValVersion <> 'WFRP2');
+    PhysiqueFemme     := Personnage.SexeV2 = 'F';
+    PhysiquePoids     := Personnage.PoidsV2;
+    PhysiqueFratrie   := Personnage.FratrieV2;
+    PhysiqueSigne     := Personnage.SigneDistinctifV2;
+    PhysiqueNaissance := Personnage.NaissanceV2;
+    PhysiqueAstre     := Personnage.AstreV2;
     FenPhysique          := TWinPhysique.Create(Application);
     FenPhysique.Position := poOwnerFormCenter;
     try
       FenPhysique.ShowModal;
     finally
       FenPhysique.Free;
+      PhysiqueV1 := False;
     end;
-    if PhysiqueValide then
+    if PhysiqueValide and (ValVersion = 'WFRP1') then
+      begin
+        Personnage.Age        := PhysiqueAge;
+        Personnage.Height     := PhysiqueTaille;
+        Personnage.HeightUnit := PhysiqueUnite;
+        Personnage.SexeV2     := IfThen(PhysiqueFemme, 'F', 'M');
+        LabPhysiqueResume.Text := IntToStr(Personnage.Age) + ' - ' + FormateTaille(Personnage.Height, Personnage.HeightUnit)
+                                     + ' - ' + IfThen(PhysiqueFemme, GetTexteLibelle('RULES-LAB_743'), GetTexteLibelle('RULES-LAB_744'));
+      end
+    else if PhysiqueValide then
       begin
         Personnage.Age        := PhysiqueAge;
         Personnage.Height     := PhysiqueTaille;
         Personnage.HeightUnit := PhysiqueUnite;
         Personnage.EyeColors  := PhysiqueYeux;
         Personnage.HairColors := PhysiqueCheveux;
+        Personnage.SexeV2            := IfThen(PhysiqueFemme, 'F', 'M');
+        Personnage.PoidsV2           := PhysiquePoids;
+        Personnage.FratrieV2         := PhysiqueFratrie;
+        Personnage.SigneDistinctifV2 := PhysiqueSigne;
+        Personnage.NaissanceV2       := PhysiqueNaissance;
+        Personnage.AstreV2           := PhysiqueAstre;
         LabPhysiqueResume.Text := IntToStr(Personnage.Age) + ' - ' + FormateTaille(Personnage.Height, Personnage.HeightUnit)
                                      + ' - ' + Personnage.HairColors + ' - ' + Personnage.EyeColors;
       end;
@@ -2097,16 +3293,34 @@ procedure TWinCreations.ButtonPhysiqueClick(Sender: TObject);
 
 // Generateur de noms de l'ethnie (Rulebook p.38-39, Dwarf Player's Guide p.39) : le resultat
 // remplace le contenu du champ Nom, que le joueur peut ensuite retoucher.
+procedure TWinCreations.EditJetNomChange(Sender: TObject);
+  begin
+    FJetNomSaisi := True;
+  end;
+
+procedure TWinCreations.EditJetNomKeyPress(Sender: TObject; var Key: Char);
+  begin
+    if not (Key in ['0'..'9', '/', #8, #13]) then
+      Key := #0;
+  end;
+
 procedure TWinCreations.ButtonNomClick(Sender: TObject);
   var
-    Nom: String;
+    Nom, Jets: String;
   begin
     if not RaceANoms(Personnage.Race) then
       begin
         ShowMessage(GetTexteLibelle('RULES-LAB_270'));
         Exit;
       end;
-    Nom := TireNom(Personnage.Race, IfThen(ComboBoxSexeNom.ItemIndex = 1, 'F', 'M'), IfThen(ComboBoxRegleNom.ItemIndex > 0, CodesRegleNom[ComboBoxRegleNom.ItemIndex], ''));
+    // Jet saisi a la main : on le rejoue ; sinon tirage, et le champ montre les jets tires.
+    if FJetNomSaisi then
+      Jets := Trim(EditJetNom.Text)
+    else
+      Jets := '';
+    Nom := TireNomJets(Personnage.Race, IfThen(ComboBoxSexeNom.ItemIndex = 1, 'F', 'M'), IfThen(ComboBoxRegleNom.ItemIndex > 0, CodesRegleNom[ComboBoxRegleNom.ItemIndex], ''), Jets);
+    EditJetNom.Text := Jets;
+    FJetNomSaisi    := False;
     if Nom = '' then
       ShowMessage(GetTexteLibelle('RULES-LAB_270'))
     else
@@ -2118,9 +3332,10 @@ procedure TWinCreations.ButtonNomClick(Sender: TObject);
 // +25 XP, comme ButtonSigneClick) avec sa specialisation au hasard s'il accorde un talent generique.
 procedure TWinCreations.ButtonNomHasardClick(Sender: TObject);
   var
-    Nom, Yeux, Cheveux, CodeGenerique: String;
-    Essai, Age, Taille:                Integer;
-    ListOpt:                           TStringList;
+    Nom, Yeux, Cheveux: String;
+    SexeTire:           String;
+    Essai, Age, Taille: Integer;
+    DetailsV2:          StructureDetailsV2;
   begin
     // 1 - nom
     if RaceANoms(Personnage.Race) then
@@ -2137,8 +3352,32 @@ procedure TWinCreations.ButtonNomHasardClick(Sender: TObject);
           EditNomPersonnag.Text := Nom;
       end;
 
-    // 2 - details physiques
-    if TireDetailsPhysiques(Personnage.Race, Age, Taille, Yeux, Cheveux) then
+    // 2 - details physiques (V2 : tables 2-6 a 2-17, sexe tire au hasard)
+    // meme sexe que le nom tire ci-dessus quand la race a des noms, sinon au hasard
+    if RaceANoms(Personnage.Race) then
+      SexeTire := IfThen(ComboBoxSexeNom.ItemIndex = 1, 'F', 'M')
+    else
+      SexeTire := IfThen(Random(2) = 0, 'F', 'M');
+    if (ValVersion = 'WFRP2') and TireDetailsV2(Personnage.Race, SexeTire = 'F', DetailsV2) then
+      begin
+        Personnage.SexeV2      := SexeTire;
+        Personnage.Age         := DetailsV2.Age;
+        Personnage.HeightUnit  := UniteTaille;
+        Personnage.Height      := ConvertitTaille(DetailsV2.Taille, ConstUniteInch, UniteTaille);
+        Personnage.EyeColors   := DetailsV2.Yeux;
+        Personnage.HairColors  := DetailsV2.Cheveux;
+        Personnage.PoidsV2           := DetailsV2.Poids;
+        Personnage.FratrieV2         := IfThen(DetailsV2.Fratrie >= 0, IntToStr(DetailsV2.Fratrie), '');
+        Personnage.SigneDistinctifV2 := DetailsV2.Signe;
+        Personnage.NaissanceV2       := DetailsV2.Naissance;
+        // Un clan choisi en phase 2.1 n'est pas retire par le hasard des details personnels
+        if ClanChoisi <> '' then
+          Personnage.NaissanceV2     := ClanChoisi;
+        Personnage.AstreV2           := DetailsV2.SigneAstral;
+        LabPhysiqueResume.Text := IntToStr(Personnage.Age) + ' - ' + FormateTaille(Personnage.Height, Personnage.HeightUnit)
+                                     + ' - ' + Personnage.HairColors + ' - ' + Personnage.EyeColors;
+      end
+    else if TireDetailsPhysiques(Personnage.Race, Age, Taille, Yeux, Cheveux) then
       begin
         Personnage.Age         := Age;
         Personnage.HeightUnit  := UniteTaille;
@@ -2148,24 +3387,7 @@ procedure TWinCreations.ButtonNomHasardClick(Sender: TObject);
         LabPhysiqueResume.Text := IntToStr(Personnage.Age) + ' - ' + FormateTaille(Personnage.Height, Personnage.HeightUnit)
                                      + ' - ' + Personnage.HairColors + ' - ' + Personnage.EyeColors;
       end;
-
-    // 3 - signe astral (regle optionnelle : rien si aucun livre charge n'en porte)
-    if ListSigneAstral.Count > 0 then
-      begin
-        ButtonSigneClick(nil);
-        CodeGenerique := SigneAstralTalentGenerique(Personnage.SigneAstral, Personnage.SigneAstralVariante);
-        if (CodeGenerique <> '') and (Personnage.SigneAstralTalent = '') then
-          begin
-            ListOpt := ListeTalent(CodeGenerique);
-            try
-              if ListOpt.Count > 0 then
-                Personnage.SigneAstralTalent := ListOpt[Random(ListOpt.Count)];
-            finally
-              ListOpt.Free;
-            end;
-            MajTexteSigne();
-          end;
-      end;
+    // Le signe astral n'est plus tire ici : il a sa phase 4.1 (avant les talents)
   end;
 
 // Remplit le combo des regles de nom avec celles que l'ethnie declare (NameRule) ; masque si elle
@@ -2203,6 +3425,8 @@ procedure TWinCreations.ChargeReglesNom();
 
 procedure TWinCreations.TabSheetNomShow(Sender: TObject);
   begin
+    // V1 : pas de regle de nom, mais le combo doit quand meme avoir son entree 0 (ButtonNomClick lit CodesRegleNom) ;
+    // il reste cache puisque ReglesNomRace ne renvoie rien
     ChargeReglesNom();
   end;
 
@@ -2217,7 +3441,7 @@ procedure TWinCreations.ChargeSignesAstraux();
     IndSel: Integer;
     Actif:  Boolean;
   begin
-    Actif                := ListSigneAstral.Count > 0;
+    Actif                := NbSigneAstralPermis() > 0;
     LabSigne.Visible     := Actif;
     ComboBoxSigne.Visible:= Actif;
     ButtonSigne.Visible  := Actif;
@@ -2229,12 +3453,16 @@ procedure TWinCreations.ChargeSignesAstraux();
     ComboBoxSigne.Items.Clear;
     ComboBoxSigne.Items.Add(GetTexteLibelle('RULES-LAB_274'));
     IndSel := 0;
+    SetLength(SignesCombo, 0);
     for Ind := 0 to ListSigneAstral.Count - 1 do
-      begin
-        ComboBoxSigne.Items.Add(ListSigneAstral[Ind].Libelle);
-        if ListSigneAstral[Ind].CodeSigne = Personnage.SigneAstral then
-          IndSel := Ind + 1;
-      end;
+      if SigneAstralPermis(Ind) then
+        begin
+          SetLength(SignesCombo, Length(SignesCombo) + 1);
+          SignesCombo[High(SignesCombo)] := Ind;
+          ComboBoxSigne.Items.Add(ListSigneAstral[Ind].Libelle);
+          if ListSigneAstral[Ind].CodeSigne = Personnage.SigneAstral then
+            IndSel := Length(SignesCombo);
+        end;
     ComboBoxSigne.ItemIndex := IndSel;   // sans quoi la variante d'un signe deja retenu serait retiree
     AppliqueSigneAstral(IndSel);
   end;
@@ -2243,7 +3471,7 @@ procedure TWinCreations.ChargeSignesAstraux();
 // (Witchling Star) tire son sous-tirage d10 a chaque application.
 procedure TWinCreations.AppliqueSigneAstral(Indice: Integer);
   begin
-    if (Indice <= 0) or (Indice > ListSigneAstral.Count) then
+    if (Indice <= 0) or (Indice > Length(SignesCombo)) then
       begin
         Indice                         := 0;
         Personnage.SigneAstral         := '';
@@ -2253,7 +3481,7 @@ procedure TWinCreations.AppliqueSigneAstral(Indice: Integer);
       end
     else
       begin
-        Personnage.SigneAstral         := ListSigneAstral[Indice - 1].CodeSigne;
+        Personnage.SigneAstral         := ListSigneAstral[SignesCombo[Indice - 1]].CodeSigne;
         // Un signe deja retenu garde sa variante (retour en arriere dans les etapes)
         if not ((Personnage.SigneAstralVariante <> '') and (ComboBoxSigne.ItemIndex = Indice)) then
           Personnage.SigneAstralVariante := SigneAstralTireVariante(Personnage.SigneAstral);
@@ -2310,6 +3538,509 @@ function TWinCreations.TalentMaxCreation(CodeTalent: String): Integer;
           Result := Trunc(Total / 10);
           Break;
         end;
+  end;
+
+// Affiche seul l'onglet d'une phase intermediaire, avec "Phase 2.n sur N - titre" ("2.n" : le premier %d devient %s).
+procedure TWinCreations.AfficheSeulOnglet(Onglet: TTabSheet; Suffixe, Titre: String);
+  var
+    i: Integer;
+  begin
+    for i := 0 to PageEtapes.PageCount - 1 do
+      PageEtapes.Pages[i].TabVisible := (PageEtapes.Pages[i] = Onglet);
+    ButtonLibellePhase.Caption := Format(StringReplace(GetTexteLibelle('RULES-LAB_315'), '%d', '%s', []),
+      [IntToStr(PhaseEnCours + 1) + Suffixe, PhaseMax + 1, Titre]);
+  end;
+
+procedure TWinCreations.AfficheSousPhaseClan();
+  begin
+    SousPhaseClan := True;
+    ClanChoisi    := '';
+    RemplirGridClan();
+    AfficheSeulOnglet(TabSheetClan, '.1', GetTexteLibelle('RULES-LAB_785'));
+  end;
+
+procedure TWinCreations.AfficheSousPhaseSigne();
+  begin
+    SousPhaseSigne := True;
+    ChargeSignesAstraux();
+    AfficheSeulOnglet(TabSheetSigne, '.1', GetTexteLibelle('RULES-LAB_793'));
+  end;
+
+// Recapitulatif des caracteristiques : valeur de creation + modificateur du signe astral retenu
+procedure TWinCreations.MajRecapAttribut();
+  var
+    IndTab: Integer;
+  begin
+    for IndTab := 1 to (TabAttribut.Rowcount-1) do
+      if IndTab <= 10 then
+        RecapAttribut.Cells[IndTab, 1] := IntToStr(StrToIntDef(TabAttribut.Cells[6, IndTab], 0)
+          + SigneAstralAttributModif(Personnage.SigneAstral, Personnage.SigneAstralVariante, TabAttribut.Cells[7, IndTab]));
+    RecapAttribut.Visible := True;
+  end;
+
+procedure TWinCreations.AfficheSousPhaseAppartenance();
+  begin
+    SousPhaseAppartenance := True;
+    MajLibelleAppartenance();
+    AfficheSeulOnglet(TabSheetAppartenance, '.1', GetTexteLibelle('RULES-LAB_790'));
+  end;
+
+// Libelles (pas les codes) des appartenances deja retenues
+procedure TWinCreations.MajLibelleAppartenance();
+  var
+    Codes:   TStringList;
+    Ind:     Integer;
+    Libelle: String;
+  begin
+    Libelle := '';
+    Codes   := TStringList.Create;
+    try
+      ExtractStrings([','], [], PChar(Personnage.Appartenance), Codes);
+      for Ind := 0 to Codes.Count - 1 do
+        begin
+          if Libelle <> '' then
+            Libelle := Libelle + ', ';
+          Libelle := Libelle + ChercheCareerBonus(Trim(Codes[Ind])).Libelle;
+        end;
+    finally
+      Codes.Free;
+    end;
+    LabAppartenanceChoisie.Caption := Libelle;
+  end;
+
+// Meme fenetre de choix qu'avant ; on peut en prendre plusieurs tant qu'il reste des candidats
+procedure TWinCreations.ButtonAppartenanceChoixClick(Sender: TObject);
+  begin
+    ChoisitAppartenance();
+    MajLibelleAppartenance();
+  end;
+
+procedure TWinCreations.AfficheSousPhaseMutation();
+  begin
+    SousPhaseMutation          := True;
+    MutationDepartOk           := False;
+    MutationDepartLibelle      := '';
+    LabMutationChoisie.Caption := '';
+    // l'onglet est partage avec l'etape « chance de mutation » : on remet ses textes d'origine
+    LabMutationTexte.Caption    := GetTexteLibelle('RULES-LAB_788');
+    ButtonMutationChoix.Caption := GetTexteLibelle('RULES-LAB_789');
+    ButtonMutationChoix.Enabled := True;
+    AfficheSeulOnglet(TabSheetMutation, '.2', GetTexteLibelle('RULES-LAB_787'));
+  end;
+
+// Chance (1 a 99) de mutation de depart de la regle choisie ; 0 = aucune (V2 seulement).
+function TWinCreations.ChanceMutationRegle(): Integer;
+  begin
+    Result := 0;
+    if (ValVersion <> 'WFRP2') or (RegleEnCours() = '') then
+      Exit;
+    // Case « chance de mutation de depart » du livre de la regle decochee a l'etape Livre : aucun jet
+    if BasculeCreationActive(ConstCleMutationDepart + ChercheRegle(RegleEnCours()).Livre) then
+      Exit;
+    Result := StrToIntDef(Trim(ChercheRegle(RegleEnCours()).MutationDepart), 0);
+    if (Result < 1) or (Result > 99) then
+      Result := 0;
+  end;
+
+// Phase intermediaire 3.0 : meme onglet que la mutation de depart (2.2), mais le joueur lance d'abord le d100 ;
+// passer a l'etape suivante sans lancer = le MJ ignore la chance (RULES-LAB_1008).
+procedure TWinCreations.AfficheSousPhaseMutationChance();
+  begin
+    SousPhaseMutationChance     := True;
+    MutationChanceJet           := 0;
+    MutationDepartOk            := False;
+    MutationDepartLibelle       := '';
+    LabMutationChoisie.Caption  := '';
+    LabMutationTexte.Caption    := Format(GetTexteLibelle('RULES-LAB_1008'), [ChanceMutationRegle()]);
+    ButtonMutationChoix.Caption := GetTexteLibelle('RULES-LAB_1009');
+    ButtonMutationChoix.Enabled := True;
+    AfficheSeulOnglet(TabSheetMutation, '.1', GetTexteLibelle('RULES-LAB_787'));
+  end;
+
+// Retire du personnage la mutation ajoutee par l'etape 3.0 (regle changee apres coup).
+procedure TWinCreations.RetireMutationChance();
+  var
+    Reste: array of StructurePersonnageMutation;
+    Mut:   StructurePersonnageMutation;
+  begin
+    if not MutationChanceFaite then
+      Exit;
+    if MutationDepartOk then
+      begin
+        Reste := [];
+        for Mut in Personnage.Mutations do
+          if Mut.Code <> MutationDepart.Code then
+            Reste += [Mut];
+        Personnage.Mutations := Reste;
+      end;
+    MutationDepartOk    := False;
+    MutationChanceFaite := False;
+  end;
+
+// Tirage (ou choix) de la mutation de depart : meme fenetre que l'onglet Mutation de WinPersonnage,
+// avec relance Shallya's Mercy ; annuler ou fermer sans choisir ne valide rien.
+procedure TWinCreations.ButtonMutationChoixClick(Sender: TObject);
+  var
+    Mutation: StructurePersonnageMutation;
+    Chance:   Integer;
+    Saisie:   String;
+  begin
+    if SousPhaseMutationChance then
+      begin
+        Chance := ChanceMutationRegle();
+        // un seul jet par passage ; apres un echec le bouton est inactif
+        if MutationChanceJet = 0 then
+          begin
+            // le programme propose un tirage, que le joueur remplace par son propre jet de de (1 a 100, 00 = 100) ;
+            // annuler la saisie ne lance rien
+            Saisie := IntToStr(Random(100) + 1);
+            repeat
+              if not InputQuery(GetTexteLibelle('RULES-LAB_1009'), GetTexteLibelle('RULES-LAB_1012'), Saisie) then
+                Exit;
+              MutationChanceJet := StrToIntDef(Trim(Saisie), 0);
+              if (MutationChanceJet < 1) or (MutationChanceJet > 100) then
+                begin
+                  MutationChanceJet := 0;
+                  ShowMessage(GetTexteLibelle('RULES-LAB_1013'));
+                end;
+            until MutationChanceJet > 0;
+            // le resultat reste affiche dans le texte de l'etape (et pas seulement dans la boite de message)
+            if MutationChanceJet <= Chance then
+              begin
+                LabMutationTexte.Caption := LabMutationTexte.Caption + sLineBreak + sLineBreak
+                                            + Format(GetTexteLibelle('RULES-LAB_1010'), [MutationChanceJet, Chance]);
+                ShowMessage(Format(GetTexteLibelle('RULES-LAB_1010'), [MutationChanceJet, Chance]));
+                ButtonMutationChoix.Caption := GetTexteLibelle('RULES-LAB_789');
+              end
+            else
+              begin
+                LabMutationTexte.Caption := LabMutationTexte.Caption + sLineBreak + sLineBreak
+                                            + Format(GetTexteLibelle('RULES-LAB_1011'), [MutationChanceJet, Chance]);
+                ButtonMutationChoix.Enabled := False;
+                ShowMessage(Format(GetTexteLibelle('RULES-LAB_1011'), [MutationChanceJet, Chance]));
+                Exit;
+              end;
+          end;
+      end;
+    MutationCodeRace             := Personnage.Race;
+    MutationResilienceDisponible := False;
+    MutationLoreDivin            := '';
+    MutationDuChaos              := True;
+    WinMutations                 := TWinMutations.Create(Application);
+    WinMutations.Position        := poOwnerFormCenter;
+    WinMutations.ShowModal;
+    if MutationChoix = 'MUTATION' then
+      begin
+        Mutation := Default(StructurePersonnageMutation);
+        Mutation.Code := MutationCode;
+        // Effet "+Nd10 %" : jet montre et valide ; annuler = pas de mutation retenue.
+        if JetMutationValide(MutationCode, MutationLibelle, Mutation.ValeurAleatoire, Mutation.ValeursEffets) then
+          begin
+            MutationDepart             := Mutation;
+            MutationDepartOk           := True;
+            MutationDepartLibelle      := MutationLibelle;
+            LabMutationChoisie.Caption := MutationLibelle;
+          end;
+      end;
+    MutationChoix   := '';
+    MutationCode    := '';
+    MutationLibelle := '';
+    MutationEffet   := '';
+    MutationDuChaos := False;
+  end;
+
+// Phase intermediaire 2.1 (V2) : liste des clans de la race (table de naissance), colonne 0 = plage du d100.
+procedure TWinCreations.RemplirGridClan();
+  var
+    Clans: TStringList;
+    Ind:   Integer;
+    Barre: Integer;
+  begin
+    Clans := TStringList.Create;
+    try
+      ListeClansRace(RaceEnCours, Clans);
+      TabClan.ColCount        := 2;
+      TabClan.FixedRows       := 1;
+      TabClan.RowCount        := Clans.Count + 1;
+      TabClan.Cells[0, 0]     := 'd100';
+      TabClan.Cells[1, 0]     := GetTexteLibelle('RULES-LAB_785');
+      EditClanJet.Text        := '';
+      TabClan.ColWidths[0]    := 70;
+      TabClan.ColWidths[1]    := 900;
+      for Ind := 0 to Clans.Count - 1 do
+        begin
+          Barre := Pos('|', Clans[Ind]);
+          TabClan.Cells[0, Ind + 1] := Copy(Clans[Ind], 1, Barre - 1);
+          TabClan.Cells[1, Ind + 1] := Copy(Clans[Ind], Barre + 1, MaxInt);
+        end;
+    finally
+      Clans.Free;
+    end;
+  end;
+
+procedure TWinCreations.TabClanClick(Sender: TObject);
+  begin
+    if TabClan.Row >= 1 then
+      ClanChoisi := TabClan.Cells[1, TabClan.Row];
+  end;
+
+// Selectionne le clan dans la grille (ligne surlignee) et le retient.
+procedure TWinCreations.SelectionneClan(const Clan: String);
+  var
+    Ind: Integer;
+  begin
+    for Ind := 1 to TabClan.RowCount - 1 do
+      if TabClan.Cells[1, Ind] = Clan then
+        begin
+          TabClan.Row := Ind;
+          ClanChoisi  := Clan;
+          Break;
+        end;
+  end;
+
+// Tirage au hasard : le jet est affiche dans la zone de saisie (la modifier le remplace).
+procedure TWinCreations.ButtonClanHasardClick(Sender: TObject);
+  var
+    Jet: Integer;
+  begin
+    SelectionneClan(TireClanRace(RaceEnCours, Jet));
+    EditClanJet.OnChange := nil;
+    EditClanJet.Text     := IntToStr(Jet);
+    EditClanJet.OnChange := @EditClanJetChange;
+  end;
+
+// Jet de d100 donne par le joueur (00 = 100) : le clan correspondant est selectionne.
+procedure TWinCreations.EditClanJetChange(Sender: TObject);
+  var
+    Jet: Integer;
+  begin
+    Jet := StrToIntDef(Trim(EditClanJet.Text), -1);
+    if Jet = 0 then
+      Jet := 100;
+    if (Jet >= 1) and (Jet <= 100) then
+      SelectionneClan(ClanRaceParJet(RaceEnCours, Jet));
+  end;
+
+// Effets structures du clan (competences, talents, objets de depart), ajoutes a l'enregistrement final comme
+// ceux du signe astral. Lus d'apres le texte de naissance du personnage : un clan retouche a la main
+// (WinPhysique) qui ne correspond plus a aucune ligne du livre n'a donc aucun effet.
+procedure TWinCreations.AjouteEffetsClan();
+  begin
+    if (ValVersion <> 'WFRP2') or (Personnage.NaissanceV2 = '') then
+      Exit;
+    AppliqueEffetsListe(EffetsNaissanceRace(Personnage.Race, Personnage.NaissanceV2));
+  end;
+
+procedure TWinCreations.AfficheSousPhaseFamilier();
+  begin
+    SousPhaseFamilier         := True;
+    FamilierTexte             := '';
+    FamilierEffets            := '';
+    LabFamilierChoisi.Caption := '';
+    ListeLignesFamilier(RaceEnCours, ConstXmlPhysForme, ClbFamilierForme.Items);
+    ListeLignesFamilier(RaceEnCours, ConstXmlPhysFormeAnimal, ClbFamilierAnimal.Items);
+    ListeLignesFamilier(RaceEnCours, ConstXmlPhysParticularite, ClbFamilierParticularite.Items);
+    AfficheSeulOnglet(TabSheetFamilier, '.3', GetTexteLibelle('RULES-LAB_795'));
+  end;
+
+procedure TWinCreations.CocheFamilier(Liste: TCheckListBox; const Nom: String);
+  var
+    Ind: Integer;
+  begin
+    Ind := Liste.Items.IndexOf(Nom);
+    if Ind >= 0 then
+      Liste.Checked[Ind] := True;
+  end;
+
+// Texte et effets du familier d'apres les coches (formes, animaux de la forme animale, particularites).
+// Aucune forme cochee : rien n'est tire et la phase ne se valide pas.
+procedure TWinCreations.MajFamilierDepuisCoches();
+  var
+    Ind: Integer;
+    Animaux, Nom, Formes, Particularites, Effet: String;
+  begin
+    Animaux := '';
+    for Ind := 0 to ClbFamilierAnimal.Items.Count - 1 do
+      if ClbFamilierAnimal.Checked[Ind] then
+        begin
+          if Animaux <> '' then
+            Animaux := Animaux + ', ';
+          Animaux := Animaux + ClbFamilierAnimal.Items[Ind];
+        end;
+    Formes := '';
+    FamilierEffets := '';
+    for Ind := 0 to ClbFamilierForme.Items.Count - 1 do
+      if ClbFamilierForme.Checked[Ind] then
+        begin
+          Nom := ClbFamilierForme.Items[Ind];
+          Effet := EffetsParticulariteRace(RaceEnCours, Nom);
+          if Effet <> '' then
+            begin
+              if FamilierEffets <> '' then
+                FamilierEffets := FamilierEffets + ';';
+              FamilierEffets := FamilierEffets + Effet;
+            end;
+          if (Animaux <> '') and (Pos('Animalistic', Nom) > 0) then
+            Nom := Nom + ' (' + Animaux + ')';
+          if Formes <> '' then
+            Formes := Formes + ', ';
+          Formes := Formes + Nom;
+        end;
+    Particularites := '';
+    for Ind := 0 to ClbFamilierParticularite.Items.Count - 1 do
+      if ClbFamilierParticularite.Checked[Ind] then
+        begin
+          Nom := ClbFamilierParticularite.Items[Ind];
+          Effet := EffetsParticulariteRace(RaceEnCours, Nom);
+          if Effet <> '' then
+            begin
+              if FamilierEffets <> '' then
+                FamilierEffets := FamilierEffets + ';';
+              FamilierEffets := FamilierEffets + Effet;
+            end;
+          if Particularites <> '' then
+            Particularites := Particularites + ', ';
+          Particularites := Particularites + Nom;
+        end;
+    if Formes = '' then
+      begin
+        FamilierTexte  := '';
+        FamilierEffets := '';
+      end
+    else if Particularites = '' then
+      FamilierTexte := Formes
+    else
+      FamilierTexte := Formes + ' - ' + Particularites;
+    LabFamilierChoisi.Caption := FamilierTexte;
+  end;
+
+procedure TWinCreations.ClbFamilierClickCheck(Sender: TObject);
+  begin
+    MajFamilierDepuisCoches();
+  end;
+
+// Tirage de la forme (7-1, animal 7-3) et des particularites (7-2) : il coche les listes, que la main peut ensuite
+// corriger ; relancer remplace le tirage precedent.
+procedure TWinCreations.ButtonFamilierHasardClick(Sender: TObject);
+  var
+    Formes, Particularites: TStringList;
+    Ind, Parenthese: Integer;
+    Effets, Forme: String;
+  begin
+    Formes         := TStringList.Create;
+    Particularites := TStringList.Create;
+    try
+      TireFamilierV2(RaceEnCours, Formes, Particularites, Effets);
+      ClbFamilierForme.CheckAll(cbUnchecked);
+      ClbFamilierAnimal.CheckAll(cbUnchecked);
+      ClbFamilierParticularite.CheckAll(cbUnchecked);
+      for Ind := 0 to Formes.Count - 1 do
+        begin
+          Forme      := Formes[Ind];
+          Parenthese := Pos(' (', Forme);
+          if Parenthese > 0 then
+            begin
+              CocheFamilier(ClbFamilierAnimal, Copy(Forme, Parenthese + 2, Length(Forme) - Parenthese - 2));
+              Forme := Copy(Forme, 1, Parenthese - 1);
+            end;
+          CocheFamilier(ClbFamilierForme, Forme);
+        end;
+      for Ind := 0 to Particularites.Count - 1 do
+        CocheFamilier(ClbFamilierParticularite, Particularites[Ind]);
+      MajFamilierDepuisCoches();
+    finally
+      Particularites.Free;
+      Formes.Free;
+    end;
+  end;
+
+// Effets de la forme tiree (talents, arme naturelle), ajoutes a l'enregistrement final. Gardes par le texte de naissance :
+// une forme retouchee a la main (WinPhysique) n'a plus d'effet, comme pour le clan.
+procedure TWinCreations.AjouteEffetsFamilier();
+  begin
+    if (ValVersion <> 'WFRP2') or (FamilierTexte = '') or (Personnage.NaissanceV2 <> FamilierTexte) then
+      Exit;
+    AppliqueEffetsListe(FamilierEffets);
+  end;
+
+// Applique une liste d'effets "Genre:CODE;..." (clan, particularite de forme d'un familier) au personnage en creation.
+// Genres : Skill, Talent (Talent:CODE=N pour un talent a niveau), Item (objet de depart, non porte),
+// Natural (arme naturelle : objet toujours porte), Grapple (bonus de lutte, seulement affiche : rien a ecrire ici).
+procedure TWinCreations.AppliqueEffetsListe(Liste: String);
+  var
+    Effets:   TStringList;
+    Ind, Ind2, Niveau: Integer;
+    Genre, Code: String;
+    Trouve:   Boolean;
+    PComp:    StructurePersonnageCompetence;
+    PTalent:  StructurePersonnageTalent;
+    PEquip:   StructurePersonnageEquipement;
+  begin
+    Effets := TStringList.Create;
+    try
+      Effets.Delimiter       := ';';
+      Effets.StrictDelimiter := True;
+      Effets.DelimitedText   := Liste;
+      for Ind := 0 to Effets.Count - 1 do
+        begin
+          Genre := Copy(Effets[Ind], 1, Pos(':', Effets[Ind]) - 1);
+          Code  := Copy(Effets[Ind], Pos(':', Effets[Ind]) + 1, MaxInt);
+          Niveau := 1;
+          if Pos('=', Code) > 0 then
+            begin
+              Niveau := StrToIntDef(Copy(Code, Pos('=', Code) + 1, MaxInt), 1);
+              Code   := Copy(Code, 1, Pos('=', Code) - 1);
+            end;
+          if Code = '' then
+            Continue;
+          Trouve := False;
+          if Genre = 'Skill' then
+            begin
+              for Ind2 := 0 to High(Personnage.CreationCompetence35) do
+                if Personnage.CreationCompetence35[Ind2].CodeCompetence = Code then
+                  Trouve := True;
+              if not Trouve then
+                begin
+                  PComp := Default(StructurePersonnageCompetence);
+                  PComp.CodeCompetence := Code;
+                  PComp.Valeur         := 1;
+                  Personnage.CreationCompetence35 += [PComp];
+                end;
+            end
+          else if Genre = 'Talent' then
+            begin
+              for Ind2 := 0 to High(Personnage.CreationTalent) do
+                if Personnage.CreationTalent[Ind2].CodeTalent = Code then
+                  Trouve := True;
+              if not Trouve then
+                begin
+                  PTalent := Default(StructurePersonnageTalent);
+                  PTalent.CodeTalent := Code;
+                  PTalent.Valeur     := Niveau;
+                  Personnage.CreationTalent += [PTalent];
+                end;
+            end
+          else if (Genre = 'Item') or (Genre = 'Natural') then
+            begin
+              PEquip := Default(StructurePersonnageEquipement);
+              PEquip.CodeEquipement := Code;
+              if ChercheArme(Code).CodeArme <> '' then
+                PEquip.TypeEquipement := TypeEquipWe
+              else if ChercheArmure(Code).CodeArmure <> '' then
+                PEquip.TypeEquipement := TypeEquipAr
+              else
+                PEquip.TypeEquipement := TypeEquipDI;
+              PEquip.QualiteEquipement := QualiteDepuisCode(Code);
+              if PEquip.QualiteEquipement = '' then
+                PEquip.QualiteEquipement := FabricationDuCatalogue(Code, PEquip.TypeEquipement);
+              PEquip.Porte    := Genre = 'Natural';
+              PEquip.Quantite := 1;
+              Personnage.Equipement += [PEquip];
+            end;
+        end;
+    finally
+      Effets.Free;
+    end;
   end;
 
 // Le signe n'existe qu'a la creation (Archives II p.39) : son talent est ecrit dans CreationTalent, comme
@@ -2386,8 +4117,8 @@ procedure TWinCreations.ButtonSigneClick(Sender: TObject);
     Code := TireSigneAstral(Jet);
     if Code = '' then
       Exit;
-    for Ind := 0 to ListSigneAstral.Count - 1 do
-      if ListSigneAstral[Ind].CodeSigne = Code then
+    for Ind := 0 to High(SignesCombo) do
+      if ListSigneAstral[SignesCombo[Ind]].CodeSigne = Code then
         begin
           Personnage.SigneAstralVariante := '';
           Personnage.SigneAstralTalent   := '';
@@ -2511,9 +4242,47 @@ Procedure TWinCreations.ChargeTabRaces(Livre: String='');
     AdjustGridColumnsWidth(TabRace,0,false,false);
   end;
 
+// V2 : jet de l'argent de depart (formule "1d10CO") ; sans objet pour un montant fixe
+procedure TWinCreations.ButtonArgentClick(Sender: TObject);
+  begin
+    if (Pos('d', FormuleArgent) > 0) and not EditArgent.ReadOnly then
+      EditArgent.Text := IntToStr(LanceFormule(Copy(FormuleArgent, 1, Length(FormuleArgent) - 2), False));
+  end;
+
+// V2 : montre l'argent de depart de la carriere choisie (champ et bouton caches s'il n'y en a pas)
+procedure TWinCreations.AfficheArgentDepart();
+  var
+    Base: String;
+    EstDe: Boolean;
+  begin
+    if (ValVersion <> 'WFRP2') or (ButtonArgent = nil) then Exit;
+    FormuleArgent := ArgentDepartMetier(MetierEnCours);
+    ButtonArgent.Visible := FormuleArgent <> '';
+    EditArgent.Visible   := FormuleArgent <> '';
+    if FormuleArgent = '' then Exit;
+    Base  := Copy(FormuleArgent, 1, Length(FormuleArgent) - 2);
+    EstDe := Pos('d', Base) > 0;
+    EditArgent.ReadOnly  := not EstDe;
+    ButtonArgent.Enabled := EstDe;
+    if EstDe then
+      EditArgent.Text := IntToStr(LanceFormule(Base, False))
+    else
+      EditArgent.Text := Base;
+  end;
+
 procedure TWinCreations.ButtonRaceHasardClick(Sender: TObject);
   begin
-       LastRandomRaceResultat := (Random(99) + 1);
+       // V2 et V1 : pas de table de tirage, chaque race de la grille a la meme chance (meme effet qu'un double-clic)
+       if RaceParGrille() then
+         begin
+           if (GridRace <> nil) and (GridRace.RowCount > 1) then
+             begin
+               GridRace.Row := Random(GridRace.RowCount - 1) + 1;
+               GridRaceDblClick(Sender);
+             end;
+           Exit;
+         end;
+       LastRandomRaceResultat := (Random(100) + 1);
        TabRaceResultat(LastRandomRaceResultat);
        AfficheImageRace();
        UpdateSheetRace(true);
@@ -2538,17 +4307,11 @@ var
 Procedure TWinCreations.AfficheImageRace();
   Var
     indTabAttribut:          integer;
-    Talent1:                 String;
-    Multi:                   boolean;
-    NbTalentTab:             Integer;
-    PTalent:                 StructureTalent;
-    PRaceTalent:             StructureRaceTalent;
     PRaceAttribut:           StructureRaceAttribut;
     CheminImage1:            String;
     CheminImage2:            String;
 
   begin
-    NbTalentTab              := 0;
     NbRaceCompetenceTab      := 0;
 
 
@@ -2603,18 +4366,40 @@ Procedure TWinCreations.AfficheImageRace();
              end;
 
     // TALENTS
+    RemplitTalentsRace();
+  end;
 
-    For PRaceTalent in ListRaceTalent do
-      if CompareRechercheValeur(PRaceTalent.CodeRace, RaceEnCours) then
+// Talents de l'ethnie, ou ceux que la regle choisie en phase Metier leur substitue. Appelee a
+// l'affichage de la race ET quand le joueur change de regle (la regle est choisie APRES la race).
+Procedure TWinCreations.RemplitTalentsRace();
+  Var
+    Talent1:                 String;
+    Multi:                   boolean;
+    NbTalentTab:             Integer;
+    PTalent:                 StructureTalent;
+    CodesTalentRace:         TStringList;
+    CodeTalentRace:          String;
+    IndTab:                  Integer;
+  begin
+    NbTalentTab := 0;
+    // une regle qui change les talents ne doit pas laisser ceux de la selection precedente
+    for IndTab := 1 to TabTalent.RowCount - 1 do
+      begin
+        TabTalent.Cells[1, IndTab] := '';
+        TabTalent.Cells[2, IndTab] := '';
+      end;
+    CodesTalentRace := CodesRaceEffectifs('T', RegleEnCours(), RaceEnCours);
+    try
+      For CodeTalentRace in CodesTalentRace do
         Begin
-          Multi   := (pos(SeparateurMulti, PRaceTalent.CodeTalent) > 0);
+          Multi   := (pos(SeparateurMulti, CodeTalentRace) > 0);
           if Multi then
              Begin
-               Talent1 := ExtractStringBefore(PRaceTalent.CodeTalent, SeparateurMulti);
+               Talent1 := ExtractStringBefore(CodeTalentRace, SeparateurMulti);
              end
           else
              begin
-               Talent1 := PRaceTalent.CodeTalent;
+               Talent1 := CodeTalentRace;
              end;
 
              For PTalent in ListTalent do
@@ -2623,10 +4408,16 @@ Procedure TWinCreations.AfficheImageRace();
                     and (not Multi) then
                  begin
                    NbTalentTab                     := NbTalentTab + 1;
+                   // grille dimensionnee a 10 lignes au chargement : le Troglagob (V2) en a 11 sans choix
+                   if NbTalentTab >= TabTalent.RowCount then
+                     TabTalent.RowCount := NbTalentTab + 1;
                    TabTalent.Cells[1, NbTalentTab] := PTalent.CodeTalent;
                    TabTalent.Cells[2, NbTalentTab] := PTalent.Libelle;
                  end;
         end;
+    finally
+      CodesTalentRace.Free;
+    end;
     ReconstruitChoixCreation();
     ButtonTalentHasard.visible   := (Length(ListeChoixCreation) > 0);
     ButtonTalentHasard.BringToFront;
@@ -2718,8 +4509,8 @@ procedure TWinCreations.RadioButtonRaceHasardClick(Sender: TObject);
 procedure TWinCreations.UpdateSheetRace(Hasard: Boolean);
   Begin
     // Au Hasard
-    ButtonRaceHasard.Visible  := RadioButtonRaceHasard.Checked;
-    ButtonRaceHasard.Enabled  := (LastRandomRaceResultat = 0);
+    ButtonRaceHasard.Visible  := RadioButtonRaceHasard.Checked or RaceParGrille();
+    ButtonRaceHasard.Enabled  := (LastRandomRaceResultat = 0) or RaceParGrille();
     ButtonRaceHasard.BringToFront;
 
     // donner le résultat de votre lancé de dé
@@ -2767,33 +4558,395 @@ procedure TWinCreations.TabMetierDrawCell(Sender: TObject; aCol, aRow: Integer;
     TabMetier.Canvas.TextOut(aRect.Left + 2, aRect.Top + 2, TabMetier.Cells[aCol, aRow]);
   end;
 
-// La liste des règles disponibles : la table de tirage par défaut (celle du livre de
-// règles) en premier, puis une ligne par règle optionnelle apportée par un livre chargé.
-// L'index dans le combo suit exactement ListRegle, donc rien à maintenir en parallèle.
+// La liste des règles disponibles pour la RACE EN COURS : la table de tirage par défaut (celle
+// du livre de règles) en premier, puis une ligne par règle optionnelle apportée par un livre
+// chargé ET qui couvre cette race (RegleCouvreRace, le même test que le tirage). CodesRegleCombo
+// suit le combo ligne à ligne. La règle choisie est gardée si elle existe encore pour la race.
 Procedure TWinCreations.ChargeComboRegle();
   Var
-    PRegle: StructureRegle;
+    PRegle:  StructureRegle;
+    Gardee:  String;
+    Ind:     Integer;
   Begin
+    if CodesRegleCombo = nil then
+      CodesRegleCombo := TStringList.Create;
+    Gardee := RegleEnCours();
     ComboBoxRegle.Items.Clear;
+    CodesRegleCombo.Clear;
     ComboBoxRegle.Items.Add(GetTexteLibelle(ConstRulesBook, '', '', true));
+    CodesRegleCombo.Add('');
     For PRegle in ListRegle do
-      ComboBoxRegle.Items.Add(PRegle.Libelle);
-    ComboBoxRegle.ItemIndex := 0;
-    GroupBoxRegle.Visible   := (ListRegle.Count > 0);
+      if RegleConcerneRace(PRegle.CodeRegle, RaceEnCours) and not RegleDesactivee(PRegle.Livre, PRegle.CodeRegle)
+         and (Pos(AjouteAccolade(PRegle.Livre), LivresPersonnages) > 0) then
+        begin
+          ComboBoxRegle.Items.Add(PRegle.Libelle);
+          CodesRegleCombo.Add(PRegle.CodeRegle);
+        end;
+    Ind := CodesRegleCombo.IndexOf(Gardee);
+    if Ind < 0 then
+      Ind := 0;
+    ComboBoxRegle.ItemIndex := Ind;
+    RaceRegleCombo          := RaceEnCours;
+    GroupBoxRegle.Visible   := (CodesRegleCombo.Count > 1);
+  end;
+
+// ---- Phase intermediaire "Background" (Liber Fanatica) -------------------------------------------------
+
+// Vrai si un livre charge porte la table du background pour la race en cours (version V2 seulement).
+function TWinCreations.FondActif(): Boolean;
+  begin
+    Result := (ValVersion = 'WFRP2') and RegleFondDisponible(RaceEnCours);
+  end;
+
+procedure TWinCreations.CreeOngletFond();
+  var
+    Conteneur: TPanel;
+  // Meme mise en page que les autres phases intermediaires (Clan, Appartenance) : libelle blanc en haut, grille a
+  // police noire, boutons clones de ButtonClanHasard (meme style) alignes en bas.
+  function Bouton(X: Integer; const Legende: String; Clic: TNotifyEvent): TBCButton;
+    var
+      Flux: TMemoryStream;
+    begin
+      Flux := TMemoryStream.Create;
+      try
+        Flux.WriteComponent(ButtonClanHasard);
+        Flux.Position := 0;
+        Result := TBCButton(TComponentClass(ButtonClanHasard.ClassType).Create(nil));
+        Flux.ReadComponent(Result);
+      finally
+        Flux.Free;
+      end;
+      Result.Name    := 'ButtonFond' + IntToStr(X);
+      Result.Parent  := TabSheetFond;
+      Result.SetBounds(X, 776, 256, 45);
+      Result.Caption := Legende;
+      Result.OnClick := Clic;
+    end;
+  begin
+    CodesFond                  := TStringList.Create;
+    // Les composants des onglets du formulaire sont styles par MiseAJourUnContenaire (globalfonts.pas) d'apres leur
+    // proprietaire : l'onglet et ses champs appartiennent donc a un conteneur propre, style en bloc a la fin.
+    Conteneur                  := TPanel.Create(Self);
+    Conteneur.Visible          := False;
+    Conteneur.Parent           := Self;
+    TabSheetFond               := TTabSheet.Create(Conteneur);
+    TabSheetFond.PageControl   := PageEtapes;
+    TabSheetFond.Caption       := GetTexteLibelle('RULES-LAB_803', 'Background');
+    TabSheetFond.TabVisible    := False;
+
+    // Cadre "Background" comme le cadre "Regle" de la phase Metier : les deux combos et le jet du d100
+    GroupBoxFond               := TGroupBox.Create(Conteneur);
+    GroupBoxFond.Parent        := TabSheetFond;
+    GroupBoxFond.SetBounds(0, 0, 1000, 110);
+    GroupBoxFond.Caption       := GetTexteLibelle('RULES-LAB_803', 'Background');
+
+    LabFondTexte               := TLabel.Create(Conteneur);
+    LabFondTexte.Parent        := GroupBoxFond;
+    LabFondTexte.SetBounds(12, 60, 970, 20);
+    LabFondTexte.AutoSize      := False;
+
+    ComboFond                  := TComboBox.Create(Conteneur);
+    ComboFond.Parent           := GroupBoxFond;
+    ComboFond.Style            := csDropDownList;
+    ComboFond.SetBounds(12, 24, 480, 28);
+    ComboFond.OnChange         := @ComboFondChange;
+
+    ComboFond2                 := TComboBox.Create(Conteneur);
+    ComboFond2.Parent          := GroupBoxFond;
+    ComboFond2.Style           := csDropDownList;
+    ComboFond2.SetBounds(504, 24, 480, 28);
+    ComboFond2.Visible         := False;
+
+    GridFond                   := TStringGrid.Create(Conteneur);
+    GridFond.Parent            := TabSheetFond;
+    GridFond.SetBounds(0, 120, 1000, 640);
+    GridFond.Anchors           := [akTop, akLeft, akRight, akBottom];
+    GridFond.ColCount          := 5;
+    GridFond.FixedCols         := 0;
+    GridFond.FixedRows         := 1;
+    GridFond.RowCount          := 1;
+    GridFond.Options           := [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect, goSmoothScroll];
+    GridFond.ColWidths[0]      := 0;     // genre (S / T)
+    GridFond.ColWidths[1]      := 0;     // code
+    GridFond.ColWidths[2]      := 800;   // libelle
+    GridFond.ColWidths[3]      := 180;   // jet
+    GridFond.ColWidths[4]      := 0;     // regle de provenance
+    GridFond.Cells[2, 0]       := GetTexteLibelle('RULES-LAB_803', 'Background');
+    GridFond.Cells[3, 0]       := 'd100';
+    GridFond.OnDblClick        := @GridFondDblClick;
+
+    ButtonFondRegle  := Bouton(8,   GetTexteLibelle('RULES-LAB_800', 'Roll background'), @ButtonFondRegleClick);
+    ButtonFondD10    := Bouton(272, GetTexteLibelle('RULES-LAB_805', 'Roll the d10'), @ButtonFondD10Click);
+    ButtonFondRelance := Bouton(536, GetTexteLibelle('RULES-LAB_806', 'Re-roll the line'), @ButtonFondRelanceClick);
+
+    // Mise en forme commune (fond de l'onglet, cadre, listes, grille, libelle), puis les boutons repassent au
+    // premier plan : le fond de l'onglet (TShape en alClient) est cree en dernier et les couvrirait.
+    ButtonFondIgnore := Bouton(800, GetTexteLibelle('RULES-LAB_807', 'Ignore'), @ButtonFondIgnoreClick);
+    ButtonFondIgnore.Width := 192;
+    MiseAJourUnContenaire(Conteneur);
+    ButtonFondRegle.BringToFront;
+    ButtonFondD10.BringToFront;
+    ButtonFondRelance.BringToFront;
+    ButtonFondIgnore.BringToFront;
+  end;
+
+procedure TWinCreations.AfficheSousPhaseFond();
+  var
+    PRegle: StructureRegle;
+  begin
+    SousPhaseFond := True;
+    CodesFond.Clear;
+    ComboFond.Items.Clear;
+    ComboFond2.Items.Clear;
+    for PRegle in ListRegle do
+      if RegleConcerneRace(PRegle.CodeRegle, RaceEnCours) and not RegleDesactivee(PRegle.Livre, PRegle.CodeRegle)
+         and (FondATable(PRegle.CodeRegle, 'S') or FondATable(PRegle.CodeRegle, 'T')) then
+        begin
+          CodesFond.Add(PRegle.CodeRegle);
+          ComboFond.Items.Add(PRegle.Libelle);
+          ComboFond2.Items.Add(PRegle.Libelle);
+        end;
+    if CodesFond.Count > 0 then
+      begin
+        ComboFond.ItemIndex  := 0;
+        ComboFond2.ItemIndex := 0;
+      end;
+    ComboFond2.Visible := False;
+    FondIgnore         := False;
+    GridFond.RowCount  := 1;
+    LabFondTexte.Caption := '';
+    TabSheetFond.Caption := IntToStr(PhaseEnCours + 1) + '.4 sur ' + IntToStr(PhaseMax + 1);
+    AfficheSeulOnglet(TabSheetFond, '.4', GetTexteLibelle('RULES-LAB_803', 'Background'));
+  end;
+
+// Un autre background invalide les tirages deja faits.
+procedure TWinCreations.ComboFondChange(Sender: TObject);
+  begin
+    FondIgnore           := False;
+    GridFond.RowCount    := 1;
+    ComboFond2.Visible   := False;
+    LabFondTexte.Caption := GetTexteLibelle('RULES-LAB_803', 'Background');
+  end;
+
+procedure TWinCreations.ButtonFondRegleClick(Sender: TObject);
+  var
+    Jet, Ind: Integer;
+  begin
+    Jet := Random(100) + 1;
+    Ind := CodesFond.IndexOf(RegleFondTirage(RaceEnCours, Jet));
+    if Ind < 0 then
+      Exit;
+    ComboFond.ItemIndex := Ind;
+    ComboFondChange(nil);
+    LabFondTexte.Caption := GetTexteLibelle('RULES-LAB_803', 'Background') + ' (d100 : ' + IntToStr(Jet) + ')';
+  end;
+
+// Tire une competence ('S') ou un talent ('T') du background Regle et l'ecrit dans la ligne Ligne de la grille,
+// sans reprendre un code deja present (sauf les codes generiques, dont le choix vient apres).
+procedure TWinCreations.TireLigneFond(Genre: Char; const Regle: String; Ligne: Integer);
+  var
+    Code, Libelle: String;
+    Jet, Essai, I: Integer;
+    Doublon: Boolean;
+  begin
+    Essai := 0;
+    repeat
+      Code := FondTire(Regle, Genre, Jet);
+      Doublon := False;
+      if Pos(ValeurGenerique, Code) = 0 then
+        for I := 1 to GridFond.RowCount - 1 do
+          if (I <> Ligne) and (GridFond.Cells[1, I] = Code) then
+            Doublon := True;
+      Inc(Essai);
+    until (Code = '') or (not Doublon) or (Essai >= 50);
+    if Code = '' then
+      Exit;
+    if Genre = 'S' then
+      Libelle := ChercheCompetence(Code).Libelle
+    else
+      Libelle := ChercheTalent(Code).Libelle;
+    GridFond.Cells[0, Ligne] := Genre;
+    GridFond.Cells[1, Ligne] := Code;
+    GridFond.Cells[2, Ligne] := Libelle;
+    GridFond.Cells[3, Ligne] := 'd100 : ' + IntToStr(Jet);
+    GridFond.Cells[4, Ligne] := Regle;
+  end;
+
+// d10 du nombre de competences et de talents. Un 10 demande un second background (choisi ou tire), puis le d10 est
+// relance (un nouveau 10 aussi) ; une competence et un talent viennent alors du second background.
+procedure TWinCreations.ButtonFondD10Click(Sender: TObject);
+  var
+    Jet, NbComp, NbTal, I, Garde, Ind, ExtraS, ExtraT: Integer;
+    Second, A2: Boolean;
+    Regle1, Regle2, Texte, Espece: String;
+  begin
+    if ComboFond.ItemIndex < 0 then
+      Exit;
+    FondIgnore := False;
+    Regle1 := CodesFond[ComboFond.ItemIndex];
+    A2     := False;
+    Garde  := 0;
+    Texte  := '';
+    repeat
+      if not FondTireCompte(Jet, NbComp, NbTal, Second) then
+        Exit;
+      Texte := Texte + 'd10 : ' + IntToStr(Jet) + '  ';
+      if Second then
+        A2 := True;
+      Inc(Garde);
+    until (not Second) or (Garde >= 20);
+    if A2 then
+      begin
+        if not ComboFond2.Visible then
+          begin
+            ComboFond2.Visible := True;
+            Ind := CodesFond.IndexOf(RegleFondTirage(RaceEnCours, Random(100) + 1));
+            if Ind >= 0 then
+              ComboFond2.ItemIndex := Ind;
+          end;
+        Regle2 := CodesFond[ComboFond2.ItemIndex];
+      end
+    else
+      begin
+        ComboFond2.Visible := False;
+        Regle2 := Regle1;
+      end;
+    LabFondTexte.Caption := GetTexteLibelle('RULES-LAB_803', 'Background') + ' - ' + Texte
+                            + IntToStr(NbComp) + ' / ' + IntToStr(NbTal);
+    // Liber Fanatica : l'humain tire une competence et un talent de plus, le halfling une competence OU un talent
+    // (au choix du joueur), au lieu du talent aleatoire du Rulebook. Les lignes en plus viennent du 1er background.
+    ExtraS := 0;
+    ExtraT := 0;
+    Espece := ChercheRace(RaceEnCours).Espece;
+    if CompareRechercheValeur(Espece, 'RULES-SPECIE_HUMAN') then
+      begin
+        ExtraS := 1;
+        ExtraT := 1;
+      end
+    else if CompareRechercheValeur(Espece, 'RULES-SPECIE_HALFLING') then
+      begin
+        // --creer (RapportAuto) : pas de boite, la competence est choisie d'office
+        if (RapportAuto <> nil) or
+           (QuestionDlg('Halfling', 'Un tirage de plus : competence ou talent ?', mtConfirmation,
+                        [mrYes, 'Competence', mrNo, 'Talent'], 0) = mrYes) then
+          ExtraS := 1
+        else
+          ExtraT := 1;
+      end;
+    GridFond.RowCount := 1 + NbComp + NbTal + ExtraS + ExtraT;
+    for I := 1 to NbComp do
+      TireLigneFond('S', IfThen(A2 and (I = NbComp), Regle2, Regle1), I);
+    for I := 1 to NbTal do
+      TireLigneFond('T', IfThen(A2 and (I = NbTal), Regle2, Regle1), NbComp + I);
+    for I := 1 to ExtraS do
+      TireLigneFond('S', Regle1, NbComp + NbTal + I);
+    for I := 1 to ExtraT do
+      TireLigneFond('T', Regle1, NbComp + NbTal + ExtraS + I);
+  end;
+
+// Passe la phase et enchaine sur la suivante : aucun tirage, aucune competence ni talent ajoute, la regle de carriere reste celle par defaut.
+procedure TWinCreations.ButtonFondIgnoreClick(Sender: TObject);
+  begin
+    FondIgnore           := True;
+    ComboFond2.Visible   := False;
+    GridFond.RowCount    := 1;
+    LabFondTexte.Caption := GetTexteLibelle('RULES-LAB_803', 'Background') + ' - ' + GetTexteLibelle('RULES-LAB_807', 'Ignore');
+    ButtonPhaseSuivanteClick(nil);
+  end;
+
+procedure TWinCreations.ButtonFondRelanceClick(Sender: TObject);
+  var
+    L: Integer;
+  begin
+    L := GridFond.Row;
+    if (L < 1) or (L >= GridFond.RowCount) or (GridFond.Cells[0, L] = '') then
+      Exit;
+    TireLigneFond(GridFond.Cells[0, L][1], GridFond.Cells[4, L], L);
+  end;
+
+// Double-clic sur une competence generique ("Common Knowledge (Various)") : choix de la specialisation.
+procedure TWinCreations.GridFondDblClick(Sender: TObject);
+  var
+    L: Integer;
+  begin
+    L := GridFond.Row;
+    if (L < 1) or (L >= GridFond.RowCount) then
+      Exit;
+    if (GridFond.Cells[0, L] = 'S') and (Pos(ValeurGenerique, GridFond.Cells[1, L]) > 0) then
+      begin
+        SelectWinCompetence         := '';
+        ChoixWinTypeFichier         := ConstXmlSousChapitreCompetence;
+        ChoixWinCompetence          := GridFond.Cells[1, L];
+        FenSpecialisation           := TWinSpecialisations.Create(Application);
+        FenSpecialisation.Position  := poOwnerFormCenter;
+        FenSpecialisation.ShowModal;
+        if SelectWinCompetence <> '' then
+          begin
+            GridFond.Cells[1, L] := SelectWinCompetence;
+            GridFond.Cells[2, L] := SelWinLibelle;
+          end;
+      end;
+  end;
+
+// Rien a valider tant que le d10 n'est pas tire et que chaque competence "au choix" n'est pas precisee.
+function TWinCreations.FondComplet(): Boolean;
+  var
+    I: Integer;
+  begin
+    Result := FondIgnore or (GridFond.RowCount > 1);
+    for I := 1 to GridFond.RowCount - 1 do
+      if (GridFond.Cells[1, I] = '') or (Pos(ValeurGenerique, GridFond.Cells[1, I]) > 0)
+         or (Pos(SeparateurMulti, GridFond.Cells[1, I]) > 0) then
+        Result := False;
+  end;
+
+// Fin de la phase : le background retenu devient la regle du tirage de carriere, les competences et talents tires
+// s'ajoutent au personnage (la race vient d'etre enregistree, qui avait vide ces listes).
+procedure TWinCreations.AppliqueFond();
+  var
+    I, Ind: Integer;
+  begin
+    if FondIgnore then
+      Exit;
+    for I := 1 to GridFond.RowCount - 1 do
+      if GridFond.Cells[0, I] = 'S' then
+        begin
+          PersonnageCompetence.CodeCompetence := GridFond.Cells[1, I];
+          PersonnageCompetence.Valeur         := 1;
+          Personnage.CreationCompetence35     += [PersonnageCompetence];
+        end
+      else if GridFond.Cells[0, I] = 'T' then
+        begin
+          PersonnageTalent.CodeTalent         := GridFond.Cells[1, I];
+          PersonnageTalent.Valeur             := 1;
+          Personnage.CreationTalent           += [PersonnageTalent];
+        end;
+    if RaceRegleCombo <> RaceEnCours then
+      ChargeComboRegle();
+    Ind := CodesRegleCombo.IndexOf(CodesFond[ComboFond.ItemIndex]);
+    if Ind >= 0 then
+      begin
+        ComboBoxRegle.ItemIndex := Ind;
+        ComboBoxRegleSelect(nil);
+      end;
   end;
 
 // '' = table de tirage par défaut (celle des SUBCHAPTER_CAREER, livre de règles).
 Function TWinCreations.RegleEnCours(): String;
   Begin
-    if (ComboBoxRegle.ItemIndex <= 0) or (ComboBoxRegle.ItemIndex > ListRegle.Count) then
+    if (CodesRegleCombo = nil) or (ComboBoxRegle.ItemIndex <= 0) or (ComboBoxRegle.ItemIndex >= CodesRegleCombo.Count) then
       Result := ''
     else
-      Result := ListRegle[ComboBoxRegle.ItemIndex - 1].CodeRegle;
+      Result := CodesRegleCombo[ComboBoxRegle.ItemIndex];
   end;
 
 Procedure TWinCreations.ComboBoxRegleSelect(Sender: TObject);
   Begin
+    // la regle change : la mutation de depart eventuellement obtenue avec l'ancienne ne vaut plus
+    RetireMutationChance();
     ChargeTabMetier();
+    // une regle peut remplacer les talents de l'ethnie, deja affiches a la phase Race
+    RemplitTalentsRace();
   end;
 
 Procedure TWinCreations.ChargeTabMetier();
@@ -2804,6 +4957,10 @@ Procedure TWinCreations.ChargeTabMetier();
     Ligne:         StructureTirageMetier;
 
   Begin
+    // la liste des règles dépend de la race : la refaire si elle a changé
+    if RaceRegleCombo <> RaceEnCours then
+      ChargeComboRegle();
+
     IndTabMetier        := 0;
     TabMetier.RowCount  := 1;
 
@@ -2813,6 +4970,8 @@ Procedure TWinCreations.ChargeTabMetier();
     Tirage := TListTirageMetier.Create;
     try
       CalculeTirageMetier(RaceEnCours, RegleEnCours(), Tirage);
+      DesMetier                   := DesDuTirage(Tirage);
+      EditMetierResultat.MaxValue := DesMetier;
       For Ligne in Tirage do
         begin
           PMetier := ChercheMetier(Ligne.CodeMetier);
@@ -2820,7 +4979,7 @@ Procedure TWinCreations.ChargeTabMetier();
           TabMetier.RowCount := TabMetier.RowCount + 1;
           TabMetier.Cells[1, IndTabMetier] := PMetier.CodeMetier;
           TabMetier.Cells[2, IndTabMetier] := PMetier.Libelle;
-          TabMetier.Cells[3, IndTabMetier] := FormateTranche(Ligne.Debut, Ligne.Fin);
+          TabMetier.Cells[3, IndTabMetier] := FormateTranche(Ligne.Debut, Ligne.Fin, DesMetier);
           TabMetier.Cells[5, IndTabMetier] := Format('%.3d', [Ligne.Debut]);
         end;
     finally
@@ -2835,7 +4994,7 @@ Procedure TWinCreations.ChargeTabMetier();
 
 procedure TWinCreations.ButtonMetierHasardClick(Sender: TObject);
   begin
-     LastRandomMetierResultat := (Random(99) + 1);
+     LastRandomMetierResultat := (Random(DesMetier) + 1);
      TabMetierResultat(LastRandomMetierResultat);
      AfficheImageMetier();
      UpdateSheetMetier(true);
@@ -3090,6 +5249,8 @@ Procedure TWinCreations.AfficheImageMetier();
       PCompetence:       StructureCompetence;
       PRaceEntete:       StructureRace;
       PRaceCompetence:   StructureRaceCompetence;
+      CodesCompetenceRace: TStringList;
+      CodeCompetenceRace:  String;
       PMetierCompetence: StructureMetierCompetence;
     begin
       // Compétences de race
@@ -3116,29 +5277,51 @@ Procedure TWinCreations.AfficheImageMetier();
       NbRaceCompetenceTab          := 0;
       TabRaceCompetence.RowCount   := 1;
       NbRaceComp                   := 0;
-      For PRaceCompetence in ListRaceCompetence do
-        if CompareRechercheValeur(PRaceCompetence.CodeRace, RaceEnCours) then
+      // Competences de l'ethnie, ou celles que la regle choisie en phase Metier leur substitue
+      CodesCompetenceRace := CodesRaceEffectifs('S', RegleEnCours(), RaceEnCours);
+      try
+        For CodeCompetenceRace in CodesCompetenceRace do
           Begin
              NbRaceCompetenceTab                             := NbRaceCompetenceTab + 1;
              TabRaceCompetence.RowCount                      := NbRaceCompetenceTab + 1;
-             TabRaceCompetence.Cells[1,NbRaceCompetenceTab]  := PRaceCompetence.CodeCompetence;
-             PCompetence                                     := ChercheCompetence(PRaceCompetence.CodeCompetence);
-             TabRaceCompetence.Cells[3,NbRaceCompetenceTab]  := PCompetence.Libelle;
-             PMetierCompetence                               := ChercheMetierCompetence(MetierEnCours,PRaceCompetence.CodeCompetence);
+             TabRaceCompetence.Cells[1,NbRaceCompetenceTab]  := CodeCompetenceRace;
+             PCompetence                                     := ChercheCompetence(CodeCompetenceRace);
+             TabRaceCompetence.Cells[3,NbRaceCompetenceTab]  := LibelleCompetenceLigne(CodeCompetenceRace);
+             PMetierCompetence                               := ChercheMetierCompetence(MetierEnCours,CodeCompetenceRace);
              if PMetierCompetence.CodeMetier <> '' then
                TabRaceCompetence.Cells[2,NbRaceCompetenceTab]:= IntToStr(PMetierCompetence.NiveauMetier);
           end;
+      finally
+        CodesCompetenceRace.Free;
+      end;
       TabRaceCompetence.Height      := TabRaceCompetence.DefaultRowHeight * TabRaceCompetence.RowCount + 5;
       AdjustGridColumnsWidth(TabRaceCompetence, TabSheetCompRace.ClientHeight, false, true);
+      // V2 : pas de +5/+3, toutes les competences de race sont acquises. Les cases du groupe 4
+      // sont cochees d'office (PhaseSaveCompetencesRace les enregistre) et les deux colonnes
+      // de points sont masquees ; seuls restent les choix "A ou B" (double-clic).
+      if ValVersion = 'WFRP2' then
+        begin
+          for IndTab := 1 to NbRaceCompetenceTab do
+            CompetenceRaceStates[4, IndTab] := True;
+          NbCinq := 0;
+          NbTrois := 0;
+          // colonne R (niveau de carriere de la competence) : sans objet en V2
+          TabRaceCompetence.ColWidths[2] := 0;
+          TabRaceCompetence.ColWidths[4] := 0;
+          TabRaceCompetence.ColWidths[5] := 0;
+        end;
     end;
 
   procedure AfficheCompetencesMetier();
     var
       PCompetence:       StructureCompetence;
-      PRaceCompetence:   StructureRaceCompetence;
       PMetierCompetence: StructureMetierCompetence;
       CodeCompAdapt:     String;
+      CodesRace:         TStringList;
     begin
+      // Competences effectives de l'ethnie (celles que la regle choisie leur substitue, le cas echeant)
+      CodesRace := CodesRaceEffectifs('S', RegleEnCours(), RaceEnCours);
+      try
       // Compétences de Métier
       NbMetierCompetenceTab         := 0;
       TabMetierCompetence.RowCount  := 1;
@@ -3156,7 +5339,7 @@ Procedure TWinCreations.AfficheImageMetier();
                TabMetierCompetence.RowCount := NbMetierCompetenceTab + 1;
                TabMetierCompetence.Cells[1,NbMetierCompetenceTab] := CodeCompAdapt;
                PCompetence                  := ChercheCompetence(CodeCompAdapt);
-               TabMetierCompetence.Cells[3,NbMetierCompetenceTab] := PCompetence.Libelle;
+               TabMetierCompetence.Cells[3,NbMetierCompetenceTab] := LibelleCompetenceLigne(CodeCompAdapt);
 
                if (Pos(ValeurGenerique, PCompetence.CodeCompetence) > 0) or (pos(SeparateurMulti, PCompetence.CodeCompetence) > 0) then
                  begin
@@ -3164,13 +5347,33 @@ Procedure TWinCreations.AfficheImageMetier();
                    TabMetierCompetence.Cells[6,NbMetierCompetenceTab] := PCompetence.CodeCompetence;
                  end;
 
-               PRaceCompetence              := ChercheRaceCompetence(RaceEnCours,CodeCompAdapt);
-               if PRaceCompetence.CodeCompetence <> '' then
+               if CodesRace.IndexOf(CodeCompAdapt) >= 0 then
                   TabMetierCompetence.Cells[2,NbMetierCompetenceTab] := IntToStr(PMetierCompetence.NiveauMetier);
            end;
       TabMetierCompetence.Height          := TabMetierCompetence.DefaultRowHeight * TabMetierCompetence.RowCount + 5;
+      // V2 : pas de 40 points. Chaque competence de carriere est acquise une fois ; si la race
+      // la donne deja, elle est prise deux fois = +10 % (Skill Mastery, Core p.90). La colonne 4
+      // porte ce nombre de prises (1 ou 2), non modifiable.
+      if ValVersion = 'WFRP2' then
+        for IndTab := 1 to NbMetierCompetenceTab do
+          if CodesRace.IndexOf(TabMetierCompetence.Cells[1, IndTab]) >= 0 then
+            TabMetierCompetence.Cells[4, IndTab] := '2'
+          else
+            TabMetierCompetence.Cells[4, IndTab] := '1';
       CalculTotalMetierCompetence();
       AdjustGridColumnsWidth(TabMetierCompetence, TabSheetCompMetier.ClientHeight, false, true);
+      // V2 : tant que les competences de carriere ne sont pas en donnees, la grille reste vide : cachee
+      if ValVersion = 'WFRP2' then
+        TabMetierCompetence.Visible := NbMetierCompetenceTab > 0;
+      // V2 : colonne R sans objet, et la colonne des 40 points devient le nombre de prises
+      if ValVersion = 'WFRP2' then
+        begin
+          TabMetierCompetence.ColWidths[2] := 0;
+          TabMetierCompetence.Columns[3].Title.Caption := GetTexteLibelle('RULES-LAB_737');
+        end;
+      finally
+        CodesRace.Free;
+      end;
     end;
 
   procedure AfficheEquipementMetier();
@@ -3247,6 +5450,7 @@ begin
       AfficheCompetencesRace();
       AfficheCompetencesMetier();
       AfficheEquipementMetier();
+      AfficheArgentDepart();
       AfficheEquipementClasse();
     end;
 end;
@@ -3290,6 +5494,7 @@ procedure TWinCreations.RadioButtonMetierClick(Sender: TObject);
 
 procedure TWinCreations.UpdateSheetMetier(Hasard: Boolean);
   Begin
+    if CreationV1Obj <> nil then Exit;   // V1 : onglet rempli par CreationV1
     // Au Hasard
     ButtonMetierHasard.Visible  := RadioButtonMetierHasard.Checked;
     ButtonMetierHasard.Enabled  := (LastRandomMetierResultat = 0);
@@ -3590,6 +5795,237 @@ procedure TWinCreations.ButtonAttributHasardClick(Sender: TObject);
     UpdateSheetAttribut(true);
   end;
 
+// Clemence de Shallya (Core V2 p.19) : une caracteristique du profil principal est remplacee par la
+// moyenne de la race (base + 11). Le menu liste les 8 caracteristiques tirees avec leur valeur.
+procedure TWinCreations.ButtonClemenceClick(Sender: TObject);
+var
+  MenuCl: TPopupMenu;
+  Item: TMenuItem;
+  I:    Integer;
+  P:    TPoint;
+begin
+  MenuCl := TPopupMenu.Create(Self);
+  for I := 1 to 8 do
+    // seulement les caracteristiques que la moyenne ameliore (valeur < base + 11)
+    if StrToIntDef(TabAttribut.Cells[6, I], 0) <
+       StrToIntDef(Copy(TabAttribut.Cells[4, I], Pos('+', TabAttribut.Cells[4, I]) + 1, 9), 0) + 11 then
+    begin
+      Item         := TMenuItem.Create(MenuCl);
+      Item.Caption := TabAttribut.Cells[3, I] + ' (' + TabAttribut.Cells[6, I] + ' -> ' +
+        IntToStr(StrToIntDef(Copy(TabAttribut.Cells[4, I], Pos('+', TabAttribut.Cells[4, I]) + 1, 9), 0) + 11) + ')';
+      Item.Tag     := I;
+      Item.OnClick := @ClemenceChoisie;
+      MenuCl.Items.Add(Item);
+    end;
+  if MenuCl.Items.Count = 0 then
+    ShowMessage(GetTexteLibelle('RULES-LAB_731'))
+  else
+    begin
+      P := ButtonClemence.ClientToScreen(Point(0, 0));
+      MenuCl.PopUp(P.X, P.Y);
+    end;
+end;
+
+procedure TWinCreations.ClemenceChoisie(Sender: TObject);
+begin
+  ClemenceRow := (Sender as TMenuItem).Tag;
+  CalculTabAttribut(False, True);
+end;
+
+// Avance gratuite V2 : un palier (+5 % en profil principal, +1 en secondaire) dans une caracteristique
+// dont la carriere de depart donne un plafond d'avances (<Advances>). Les bonus SB et TB ne s'avancent pas.
+function TWinCreations.AvancesGratuitesPossibles(): TStringList;
+var
+  PAvance: StructureMetierAvance;
+begin
+  Result := TStringList.Create;
+  for PAvance in ListMetierAvance do
+    if CompareRechercheValeur(PAvance.CodeMetier, MetierEnCours) and (PAvance.Plafond > 0)
+       and (Result.IndexOf(PAvance.CodeAttribut) < 0)
+       and (Pos('_SB', PAvance.CodeAttribut) = 0) and (Pos('_TB', PAvance.CodeAttribut) = 0) then
+      Result.Add(PAvance.CodeAttribut);
+end;
+
+// Nombre d'avances gratuites : un familier lie (ethnie animale de la race Familiar) en a deux, tout
+// autre personnage une seule (le familier cree aussi : Realms of Sorcery p.189).
+function TWinCreations.NbAvancesGratuites(): Integer;
+begin
+  if (Pos('_FAMILIAR_', RaceEnCours) > 0) and (Pos('_CREATED', RaceEnCours) = 0) then
+    Result := 2
+  else
+    Result := 1;
+end;
+
+function LibelleAttributTab(Tab: TStringGrid; Code: String): String;
+var
+  I: Integer;
+begin
+  Result := Code;
+  for I := 1 to Tab.RowCount - 1 do
+    if Tab.Cells[7, I] = Code then
+      Exit(Tab.Cells[3, I]);
+end;
+
+// V2 : une ligne par race des livres choisis, la race en cours est cochee.
+procedure TWinCreations.RemplirGridRace();
+var
+  PRace: StructureRace;
+  N:     Integer;
+  Lignes: TStringList;
+  Champs: TStringArray;
+begin
+  if GridRace = nil then Exit;
+  // lignes triees par libelle de race puis par libelle de livre (cle : libelle #1 livre #1 code)
+  Lignes := TStringList.Create;
+  try
+    Lignes.CaseSensitive := False;
+    for PRace in ListRace do
+      if Pos(AjouteAccolade(PRace.Livre), LivresPersonnages) > 0 then
+        Lignes.Add(PRace.Libelle + #1 + GetTexteLibelle(PRace.Livre, '', '', true) + #1 + PRace.CodeRace);
+    Lignes.Sort;
+    N := 0;
+    for N := 1 to Lignes.Count do
+      begin
+        Champs := Lignes[N - 1].Split([#1]);
+        GridRace.RowCount := N + 1;
+        if Champs[2] = RaceEnCours then
+          GridRace.Cells[0, N] := '✔'
+        else
+          GridRace.Cells[0, N] := '';
+        GridRace.Cells[1, N] := Champs[2];
+        GridRace.Cells[2, N] := Champs[0];
+        GridRace.Cells[3, N] := Champs[1];
+      end;
+    N := Lignes.Count;
+  finally
+    Lignes.Free;
+  end;
+  if N = 0 then
+    GridRace.RowCount := 1;
+  // largeur fixee ici (page affichee) : a la creation la page n'a pas encore sa taille
+  GridRace.ScrollBars    := ssAutoVertical;
+  GridRace.Width         := 520;
+  GridRace.ColWidths[0]  := 36;
+  GridRace.ColWidths[3]  := 200;
+  GridRace.ColWidths[2]  := GridRace.Width - GridRace.ColWidths[0] - GridRace.ColWidths[3] - 24;
+  // remontee en haut de la page (le cadre "Type de choix" est cache en V2) et bornee a la page :
+  // plus haute que la page, l'ascenseur sortait de l'ecran
+  // le bouton Selectionner passe en haut, la grille se met juste dessous
+  ButtonRaceSelectionner.Top := 48;
+  ButtonRaceSelectionner.BringToFront;
+  GridRace.Top           := ButtonRaceSelectionner.Top + ButtonRaceSelectionner.Height + 8;
+  GridRace.Anchors       := [akTop, akLeft, akBottom];
+  // bouton Hasard sous la grille, ancre en bas : il descend avec la page, la grille grandit au-dessus
+  ButtonRaceHasard.Anchors := [akLeft, akBottom];
+  ButtonRaceHasard.Left    := GridRace.Left;
+  ButtonRaceHasard.Top     := TabSheetRace.ClientHeight - ButtonRaceHasard.Height - 8;
+  ButtonRaceHasard.BringToFront;
+  GridRace.Height        := GridRace.DefaultRowHeight * GridRace.RowCount + 5;
+  if GridRace.Height > ButtonRaceHasard.Top - GridRace.Top - 8 then
+    GridRace.Height      := ButtonRaceHasard.Top - GridRace.Top - 8;
+end;
+
+procedure TWinCreations.GridRaceDblClick(Sender: TObject);
+begin
+  if GridRace.Row < 1 then Exit;
+  ChoixWinRace := GridRace.Cells[1, GridRace.Row];
+  if ChoixWinRace <> '' then
+    begin
+      TabRaceResultat(0);
+      AfficheImageRace();
+      UpdateSheetRace(true);
+      RemplirGridRace();
+    end;
+  ChoixWinRace := '';
+end;
+
+// Remplit la grille de l'avance gratuite : une ligne par caracteristique dont la carriere donne un plafond.
+// La valeur actuelle vient de TabAttribut (phase 4), vide si elle n'est pas encore tiree.
+procedure TWinCreations.RemplirGridAvance();
+var
+  Codes:   TStringList;
+  I, J:    Integer;
+  Suffixe: String;
+begin
+  if GridAvance = nil then Exit;
+  Codes := AvancesGratuitesPossibles();
+  try
+    if Codes.IndexOf(AvanceGratuiteCode) < 0 then
+      AvanceGratuiteCode := '';
+    if (Codes.IndexOf(AvanceGratuiteCode2) < 0) or (NbAvancesGratuites() < 2) then
+      AvanceGratuiteCode2 := '';
+    if (AvanceGratuiteCode = '') and (AvanceGratuiteCode2 <> '') then
+      begin
+        AvanceGratuiteCode  := AvanceGratuiteCode2;
+        AvanceGratuiteCode2 := '';
+      end;
+    GridAvance.RowCount := Codes.Count + 1;
+    for I := 0 to Codes.Count - 1 do
+      begin
+        if PasAvance(Codes[I]) >= 5 then Suffixe := ' %' else Suffixe := '';
+        GridAvance.Cells[0, I + 1] := '';
+        GridAvance.Cells[2, I + 1] := '';
+        if ValVersion = 'WFRP1' then
+          begin
+            // V1 : libelle et valeur viennent des lignes de CreationV1Obj, pas de TabAttribut
+            GridAvance.Cells[1, I + 1] := Codes[I];
+            for J := 0 to CreationV1Obj.NbLignes() - 1 do
+              if CreationV1Obj.LigneCode(J) = Codes[I] then
+                begin
+                  GridAvance.Cells[1, I + 1] := CreationV1Obj.LigneLibelle(J);
+                  GridAvance.Cells[2, I + 1] := IntToStr(CreationV1Obj.LigneValeur(J));
+                end;
+          end
+        else
+          begin
+            GridAvance.Cells[1, I + 1] := LibelleAttributTab(TabAttribut, Codes[I]);
+            for J := 1 to TabAttribut.RowCount - 1 do
+              if TabAttribut.Cells[7, J] = Codes[I] then
+                GridAvance.Cells[2, I + 1] := TabAttribut.Cells[6, J];
+          end;
+        GridAvance.Cells[3, I + 1] := '+' + IntToStr(PlafondAvanceMetier(MetierEnCours, Codes[I])) + Suffixe;
+        GridAvance.Cells[4, I + 1] := '+' + IntToStr(PasAvance(Codes[I])) + Suffixe;
+        // le code reste dans l'objet de la ligne, jamais affiche
+        GridAvance.Objects[0, I + 1] := TObject(PtrInt(I));
+        if (Codes[I] = AvanceGratuiteCode) or (Codes[I] = AvanceGratuiteCode2) then
+          GridAvance.Cells[0, I + 1] := '✔';
+      end;
+  finally
+    Codes.Free;
+  end;
+end;
+
+// Double-clic : choisit l'avance de la ligne, ou la retire si elle l'est deja.
+procedure TWinCreations.GridAvanceDblClick(Sender: TObject);
+var
+  Codes: TStringList;
+  Ligne: Integer;
+begin
+  Ligne := GridAvance.Row;
+  if Ligne < 1 then Exit;
+  Codes := AvancesGratuitesPossibles();
+  try
+    if Ligne - 1 >= Codes.Count then Exit;
+    if AvanceGratuiteCode2 = Codes[Ligne - 1] then
+      AvanceGratuiteCode2 := ''
+    else if AvanceGratuiteCode = Codes[Ligne - 1] then
+      begin
+        // retrait de la premiere : la seconde (s'il y en a une) prend sa place
+        AvanceGratuiteCode  := AvanceGratuiteCode2;
+        AvanceGratuiteCode2 := '';
+      end
+    else if AvanceGratuiteCode = '' then
+      AvanceGratuiteCode := Codes[Ligne - 1]
+    else if NbAvancesGratuites() < 2 then
+      AvanceGratuiteCode := Codes[Ligne - 1]
+    else
+      AvanceGratuiteCode2 := Codes[Ligne - 1];
+  finally
+    Codes.Free;
+  end;
+  RemplirGridAvance();
+end;
+
 procedure TWinCreations.CalculTabAttribut(Hasard: Boolean; Affectation: Boolean);
 var
   PartDe:               String;
@@ -3606,6 +6042,7 @@ var
   Car:                  String;
   ColCombo, RowCombo:   Integer;
   BF, BE, BFM:          Integer;
+  Jet:                  PInteger;
 begin
   TotL := 0;
     // vider les colonnes
@@ -3618,7 +6055,8 @@ begin
   For I:= 1 to TabAttribut.RowCount -1 do
     begin
       Ch := TabAttribut.Cells[4, I];
-      if I <= 10 then
+      // V2 : seules 8 caracteristiques se tirent (2d10+...), les suivantes sont fixes
+      if (I <= 10) and (Pos('+', Ch) > 0) then
       // caractéristoqies normales
           begin
             // séparer les dé du bonus
@@ -3642,7 +6080,7 @@ begin
                begin
                  TotalDe    := 0;
                  for J := 1 to NbDe Do
-                   TotalDe := TotalDe + (Random(TypeDe-1) + 1);
+                   TotalDe := TotalDe + (Random(TypeDe) + 1);
                  TabAttributLanceDe.Cells[i, 1] := intToStr(TotalDe);
                end
              else
@@ -3682,6 +6120,9 @@ begin
             begin
               TabAttribut.Cells[5, Index] := TabAttributLanceDe.Cells[ColCombo, 1];
               TabAttribut.Cells[6, Index] := IntToStr(StrToIntDef(TabAttributLanceDe.Cells[Index, 1],0)+ PlusDe);
+              // Clemence de Shallya (V2) : la caracteristique choisie vaut base + 11 (moyenne de 2d10)
+              if (ValVersion = 'WFRP2') and (ClemenceRow = Index) then
+                TabAttribut.Cells[6, Index] := IntToStr(PlusDe + 11);
               if TabAttribut.Cells[7, Index] = ConstCaracE then
                 BE := StrToInt(TabAttribut.Cells[6, Index])
               else if TabAttribut.Cells[7, Index] = ConstCaracF then
@@ -3693,6 +6134,37 @@ begin
      else if TabAttribut.Cells[7, I] = ConstCaracBlessure then
        begin
           TabAttribut.Cells[6, I] := IntToStr(CalculBlessure(Ch, BF, BE, BFM));
+       end
+     else if ValVersion = 'WFRP2' then
+       begin
+         // V2 : bonus = dizaine de la caracteristique ; autres valeurs fixes recopiees
+         // (Blessures et Destin : tables 2-2 et 2-3, pas encore structurees)
+         if TabAttribut.Cells[7, I] = 'RULES-ATTR_SB' then
+           TabAttribut.Cells[6, I] := IntToStr(BF div 10)
+         else if TabAttribut.Cells[7, I] = 'RULES-ATTR_TB' then
+           TabAttribut.Cells[6, I] := IntToStr(BE div 10)
+         else if ((TabAttribut.Cells[7, I] = 'RULES-ATTR_W') or (TabAttribut.Cells[7, I] = 'RULES-ATTR_FP')
+                  or (TabAttribut.Cells[7, I] = 'RULES-ATTR_M'))
+                 and (Pos(':', Ch) > 0) then
+           begin
+             // tables 2-2 / 2-3 (et Mouvement du familier cree) : un d10 par table, tire au Hasard (ou une fois en saisie manuelle)
+             if TabAttribut.Cells[7, I] = 'RULES-ATTR_W' then
+               Jet := @JetBlessureV2
+             else if TabAttribut.Cells[7, I] = 'RULES-ATTR_M' then
+               Jet := @JetMouvementV2
+             else
+               Jet := @JetDestinV2;
+             if Hasard or ((Jet^ = 0) and not RadioButtonAttributHasard.Checked
+                           and not RadioButtonAttributHasardAffecte.Checked) then
+               Jet^ := Random(10) + 1;
+             if Jet^ > 0 then
+               begin
+                 TabAttribut.Cells[5, I] := IntToStr(Jet^);
+                 TabAttribut.Cells[6, I] := IntToStr(ValeurTableD10(Ch, Jet^));
+               end;
+           end
+         else if StrToIntDef(Ch, -1) >= 0 then
+           TabAttribut.Cells[6, I] := Ch;
        end
      else if TabAttribut.Cells[7, I] = ConstCaracDestin then
        begin
@@ -3750,6 +6222,7 @@ procedure TWinCreations.UpdateSheetAttribut(Hasard: boolean);
 Var
   I: Integer;
 Begin
+  if CreationV1Obj <> nil then Exit;   // V1 : onglet rempli par CreationV1
   ButtonAttributHasard.Visible    := (RadioButtonAttributHasard.Checked or RadioButtonAttributHasardAffecte.Checked);
   ButtonAttributHasard.BringToFront;
   ModDesti                        := (RadioButtonAttributHasardAffecte.Checked or RadioButtonAttributResultatAffecte.Checked);
@@ -3760,6 +6233,27 @@ Begin
         (TabAttributLanceDe.Objects[I, 2] as TComboBox).Visible := false;
   TabAttributLanceDe.visible      := true;
   TabAttribut.enabled             := false;
+  if ValVersion = 'WFRP2' then
+    begin
+      // V2 : 8 caracteristiques tirees (pas de D9, D10) et ni Destin/Resilience ni
+      // points supplementaires (Destin = table 2-3)
+      for I := 9 to 10 do
+        begin
+          TabAttributLanceDe.ColWidths[I] := 0;
+          if Assigned(TabAttributLanceDe.Objects[I, 2]) then
+            (TabAttributLanceDe.Objects[I, 2] as TComboBox).Visible := false;
+        end;
+      // le Core impose l'ordre de la table 2-1 : ni affectation libre ni 100 points
+      RadioButtonAttributHasardAffecte.Visible   := false;
+      RadioButtonAttributResultatAffecte.Visible := false;
+      RadioButtonAttributRepartition.Visible     := false;
+      if Assigned(ButtonClemence) then
+        ButtonClemence.Enabled := (ClemenceRow = 0) and (TabAttribut.Cells[6, 1] <> '');
+      TrackBarPointSupp.Visible := false;
+      LabDestin.Visible         := false;
+      LabResilience.Visible     := false;
+      LabPointSupp.Visible      := false;
+    end;
 
   if Hasard then
     begin
@@ -3818,7 +6312,8 @@ procedure TWinCreations.AfficheMetierAutresRegles(Resul: Integer; CodeMetier: St
     try
       Essaie('', GetTexteLibelle(ConstRulesBook, '', '', true));
       For PRegle in ListRegle do
-        Essaie(PRegle.CodeRegle, PRegle.Libelle);
+        if not RegleDesactivee(PRegle.Livre, PRegle.CodeRegle) then
+          Essaie(PRegle.CodeRegle, PRegle.Libelle);
       if Lignes.Count > 0 then
         begin
           Lignes.Insert(0, GetTexteLibelle('RULES-LAB_577'));
@@ -3846,6 +6341,11 @@ procedure TWinCreations.TabMetierResultat(Resul: Integer);
       begin
         Ch := TabMetier.Cells[3, IndTab];
         DebutFin(Ch, Deb, Fin);
+        // d1000 : le livre imprime 1000 sous la forme 000
+        if Deb = 0 then
+          Deb := 1000;
+        if Fin = 0 then
+          Fin := 1000;
         if ChoixWinMetierRace <> '' then
           begin
             if TabMEtier.Cells[1, Indtab] = ChoixWinMetierRace then
@@ -3857,7 +6357,7 @@ procedure TWinCreations.TabMetierResultat(Resul: Integer);
                   Resul := StrToInt(Ch);
               end
             else
-              Deb := 101;
+              Deb := DesMetier + 1;
           end;
 
         if (Deb <= Resul) and (Resul <= Fin) then
@@ -4015,7 +6515,7 @@ end;
 
 procedure TWinCreations.ClickRaceCompetence(aCol, aRow: Integer);
 Begin
-  if (aCol in [4,5]) then
+  if (aCol in [4,5]) and (ValVersion <> 'WFRP2') then
   begin
     CompetenceRaceStates[ACol, ARow] := not CompetenceRaceStates[ACol, ARow];
     TabRaceCompetence.InvalidateCell(ACol, ARow);
@@ -4057,7 +6557,7 @@ procedure TWinCreations.ButtonRaceCompetenceHasardClick(Sender: TObject);
     // le nombre a atteindre vient de l'ethnie (3 et 3 partout, 2 et 2 pour le Skink)
     PRaceNb := ChercheRace(RaceEnCours);
     // vérifier s'il reste des Cing ou trois
-    if (NbCinq < PRaceNb.NbPoint5) or (NbTrois < PRaceNb.NbPoint3) then
+    if (ValVersion <> 'WFRP2') and ((NbCinq < PRaceNb.NbPoint5) or (NbTrois < PRaceNb.NbPoint3)) then
       for IndPass := 1 to 3 do
           for IndTab := 1 to TabRaceCompetence.RowCount-1 do
               if (not CompetenceRaceStates[4, IndTab]) and (not CompetenceRaceStates[5, IndTab]) then
@@ -4258,8 +6758,8 @@ procedure TWinCreations.TabMetierCompetenceDrawCell(Sender: TObject; aCol,
 procedure TWinCreations.TabMetierCompetenceSelectEditor(Sender: TObject; aCol,
   aRow: Integer; var Editor: TWinControl);
   begin
-    // seul la saisie des 40 points est modifiable
-    if (aCol <> 4)  then
+    // seul la saisie des 40 points est modifiable (jamais en V2 : nombre de prises calcule)
+    if (aCol <> 4) or (ValVersion = 'WFRP2') then
       Editor := nil;
   end;
 
@@ -4305,11 +6805,15 @@ procedure TWinCreations.CalculTotalMetierCompetence();
     TotalMetierCompetence                := 0;
     for IndTab := 1 to TabMetierCompetence.RowCount-1 do
       TotalMetierCompetence            := TotalMetierCompetence + StrToIntDef(TabMetierCompetence.Cells[4, IndTab],0);
-    ButtonTotalMetierCompetence.Caption  := IntToStr(TotalMetierCompetence)+' / 40 Pts';
+    if ValVersion = 'WFRP2' then
+      ButtonTotalMetierCompetence.Caption := ''
+    else
+      ButtonTotalMetierCompetence.Caption := IntToStr(TotalMetierCompetence)+' / 40 Pts';
   end;
 
 procedure TWinCreations.ButtonMetierCompetenceHasardClick(Sender: TObject);
   Var
+    Codes:    TStringList;
     IndTab:   Integer;
     NbLignes: Integer;
     Choix:    String;
@@ -4327,6 +6831,24 @@ procedure TWinCreations.ButtonMetierCompetenceHasardClick(Sender: TObject);
             end;
         end;
     // 2 - repartir les 40 points sur 8 lignes au plus (5 chacune s'il y en a 8 ou plus)
+    // (V2 : rien a repartir, les prises sont deja calculees ; l'avance gratuite se tire ici)
+    if ValVersion = 'WFRP2' then
+      begin
+        Codes := AvancesGratuitesPossibles();
+        try
+          if (AvanceGratuiteCode = '') and (Codes.Count > 0) then
+            AvanceGratuiteCode := Codes[Random(Codes.Count)];
+          // seconde avance (familier lie) : une autre caracteristique que la premiere
+          if (NbAvancesGratuites() >= 2) and (AvanceGratuiteCode2 = '') and (Codes.Count > 1) then
+            repeat
+              AvanceGratuiteCode2 := Codes[Random(Codes.Count)];
+            until AvanceGratuiteCode2 <> AvanceGratuiteCode;
+          RemplirGridAvance();
+        finally
+          Codes.Free;
+        end;
+        exit;
+      end;
     NbLignes := TabMetierCompetence.RowCount - 1;
     if NbLignes > 8 then NbLignes := 8;
     if NbLignes > 0 then
@@ -4481,7 +7003,8 @@ Procedure TWinCreations.ReconstruitChoixCreation();
   var
     Sauve:      array of StructureChoixCreation;
     Nouvelle:   StructureChoixCreation;
-    PRaceTalent:StructureRaceTalent;
+    CodesTalentRace: TStringList;
+    CodeTalentRace:  String;
     Ind, Ind2:  Integer;
     Ind3:       Integer;
     ListOpt:    TStringList;
@@ -4492,20 +7015,21 @@ Procedure TWinCreations.ReconstruitChoixCreation();
     ListeChoixCreation := [];
 
     // 2 - racines : talents de race
-    For PRaceTalent in ListRaceTalent do
-      if CompareRechercheValeur(PRaceTalent.CodeRace, RaceEnCours) then
+    CodesTalentRace := CodesRaceEffectifs('T', RegleEnCours(), RaceEnCours);
+    try
+    For CodeTalentRace in CodesTalentRace do
         begin
           // Un TRAIT D'ETHNIE se comporte ici comme un choix entre talents : ses
           // options remplacent la liste des talents. Voir CONTEXT.md 2.41. Les deux
           // fonctions ont le meme contrat - liste toujours creee, a liberer par nous.
-          if ChercheTrait(PRaceTalent.CodeTalent).CodeTrait <> '' then
-            ListOpt := OptionsDuTrait(PRaceTalent.CodeTalent)
+          if ChercheTrait(CodeTalentRace).CodeTrait <> '' then
+            ListOpt := OptionsDuTrait(CodeTalentRace)
           else
-            ListOpt := ListeTalent(PRaceTalent.CodeTalent);
+            ListOpt := ListeTalent(CodeTalentRace);
           if ListOpt.Count > 1 then
             begin
               Nouvelle.Origine    := ConstOrigineRace;
-              Nouvelle.CodeSource := PRaceTalent.CodeTalent;
+              Nouvelle.CodeSource := CodeTalentRace;
               Nouvelle.CodeParent := '';
               Nouvelle.CodeChoisi := '';
               Nouvelle.Aleatoire  := False;
@@ -4513,10 +7037,10 @@ Procedure TWinCreations.ReconstruitChoixCreation();
               Nouvelle.Rang := RangSuivant(Nouvelle.CodeSource, Nouvelle.CodeParent);
               ListeChoixCreation  += [Nouvelle];
             end
-          else if CompareRechercheValeur(PRaceTalent.CodeTalent, TalentGenerique) then
+          else if CompareRechercheValeur(CodeTalentRace, TalentGenerique) then
             begin
               Nouvelle.Origine    := ConstOrigineRace;
-              Nouvelle.CodeSource := PRaceTalent.CodeTalent;
+              Nouvelle.CodeSource := CodeTalentRace;
               Nouvelle.CodeParent := '';
               Nouvelle.CodeChoisi := '';
               Nouvelle.Aleatoire  := True;
@@ -4526,6 +7050,9 @@ Procedure TWinCreations.ReconstruitChoixCreation();
             end;
           ListOpt.Free;
         end;
+    finally
+      CodesTalentRace.Free;
+    end;
 
     // 3 - réinjecter les choix et jets mémorisés
     for Ind := 0 to High(ListeChoixCreation) do
@@ -4794,6 +7321,137 @@ Procedure TWinCreations.AjouteTalentsResolus();
             TabTalent.Cells[2, Lig] := PTalent.Libelle;
           end;
       end;
+  end;
+
+// --creer : meme enchainement que le joueur (boutons Hasard puis Phase suivante), sans fenetre.
+// Pas de details physiques ni de mutation de depart (refuse), appartenance laissee vide.
+function TWinCreations.CreationAuto(const CodeRace, CodeMetier, Nom: String; Rapport: TStrings; const CodeRegle: String = ''): Boolean;
+  var
+    Garde: Integer;
+    Etape: String;
+    IndRegle: Integer;
+    Ind: Integer;
+    Choix: String;
+  begin
+    Result       := False;
+    RapportAuto  := Rapport;
+    MessageRecu  := False;
+    NeedUpdate   := False;
+    try
+      Garde := 0;
+      repeat
+        Inc(Garde);
+        Etape := Format('phase %d', [PhaseEnCours + 1]);
+        if SousPhaseClan then
+          begin
+            Etape := 'clan';
+            ButtonClanHasardClick(nil);
+            Rapport.Add('Clan : ' + ClanChoisi);
+          end
+        else if SousPhaseMutation then
+          begin
+            Rapport.Add('ECHEC : mutation de depart non geree par --creer');
+            Exit;
+          end
+        else if SousPhaseFamilier then
+          begin
+            Etape := 'forme du familier';
+            ButtonFamilierHasardClick(nil);
+            Rapport.Add('Familier : ' + FamilierTexte + ' | effets ' + FamilierEffets);
+          end
+        else if SousPhaseFond then
+          begin
+            Etape := 'background';
+            ButtonFondRegleClick(nil);
+            ButtonFondD10Click(nil);
+            for Ind := 1 to GridFond.RowCount - 1 do
+              if (GridFond.Cells[0, Ind] = 'S') and (Pos(ValeurGenerique, GridFond.Cells[1, Ind]) > 0) then
+                begin
+                  Choix := CompetenceAuHasard(GridFond, GridFond.Cells[1, Ind]);
+                  if Choix <> '' then
+                    begin
+                      GridFond.Cells[1, Ind] := Choix;
+                      GridFond.Cells[2, Ind] := ChercheCompetence(Choix).Libelle;
+                    end;
+                end;
+            Rapport.Add('Background : ' + ComboFond.Text);
+          end
+        else if SousPhaseSigne then
+          begin
+            Etape := 'signe astral';
+            ButtonSigneClick(nil);
+            Rapport.Add('Signe : ' + Personnage.SigneAstral);
+          end
+        else if SousPhaseMutationChance then
+          Etape := 'chance de mutation (passee)'
+        else if SousPhaseAppartenance then
+          Etape := 'appartenance (laissee vide)'
+        else if PhaseEnCours = TabSheetRace.PageIndex then
+          begin
+            ChoixWinRace := CodeRace;
+            TabRaceResultat(0);
+            AfficheImageRace();
+            UpdateSheetRace(true);
+            RemplirGridRace();
+            ChoixWinRace := '';
+            if RaceEnCours <> CodeRace then
+              begin
+                Rapport.Add('ECHEC : race introuvable : ' + CodeRace);
+                Exit;
+              end;
+          end
+        else if PhaseEnCours = TabSheetMetier.PageIndex then
+          begin
+            MetierEnCours    := CodeMetier;
+            MetierLibEnCours := ChercheMetier(CodeMetier).Libelle;
+            if ChercheMetier(CodeMetier).CodeMetier = '' then
+              begin
+                Rapport.Add('ECHEC : carriere introuvable : ' + CodeMetier);
+                Exit;
+              end;
+            // Regle optionnelle demandee (5e parametre de --creer) : meme geste que le joueur dans le combo
+            if CodeRegle <> '' then
+              begin
+                IndRegle := CodesRegleCombo.IndexOf(CodeRegle);
+                if IndRegle < 0 then
+                  begin
+                    Rapport.Add('ECHEC : regle introuvable pour cette ethnie : ' + CodeRegle);
+                    Exit;
+                  end;
+                ComboBoxRegle.ItemIndex := IndRegle;
+                ComboBoxRegleSelect(nil);
+                Rapport.Add('Regle : ' + CodeRegle);
+              end;
+            ChargeImagesNiveau();
+            AfficheImageMetier();
+            UpdateSheetMetier(true);
+          end
+        else if PhaseEnCours = TabSheetAttribut.PageIndex then
+          ButtonAttributHasardClick(nil)
+        else if PhaseEnCours = TabSheetTalent.PageIndex then
+          ButtonTalentHasardClick(nil)
+        else if PhaseEnCours = TabSheetCompRace.PageIndex then
+          ButtonRaceCompetenceHasardClick(nil)
+        else if PhaseEnCours = TabSheetCompMetier.PageIndex then
+          ButtonMetierCompetenceHasardClick(nil)
+        else if PhaseEnCours = TabSheetEquipement.PageIndex then
+          ButtonEquipementHasardClick(nil)
+        else if PhaseEnCours = TabSheetNom.PageIndex then
+          EditNomPersonnag.Text := Nom;
+        Rapport.Add('Fin de : ' + Etape);
+        ChangementPhase(ConstSuivant);
+        if MessageRecu then
+          begin
+            Rapport.Add('ECHEC : validation refusee a : ' + Etape);
+            Exit;
+          end;
+      until NeedUpdate or (Garde > 40);
+      Result := NeedUpdate;
+      if not Result then
+        Rapport.Add('ECHEC : creation non terminee');
+    finally
+      RapportAuto := nil;
+    end;
   end;
 
 end.

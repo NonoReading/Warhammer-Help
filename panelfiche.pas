@@ -15,8 +15,8 @@ unit PanelFiche;
 interface
 
 uses
-  BCLabelContour, Classes, SysUtils, Controls, StdCtrls, ExtCtrls, CheckLst, Forms, Dialogs, DOM, BCButton,
-  ChargeTexte, PanelModificateurs, PanelQualites, GlobalFonts;
+  BCLabelContour, Classes, SysUtils, Controls, StdCtrls, ExtCtrls, CheckLst, Forms, Dialogs, MessageTest, DOM, BCButton,
+  ChargeTexte, PanelModificateurs, PanelQualites, GlobalFonts, SaisieTableau;
 
 type
   // appelee quand l'utilisateur change un champ liste fermee (gfCode) : Balise = balise du champ
@@ -31,9 +31,11 @@ type
   // gfDegats     : formule de degats "+(BATTR_S)+4" saisie en deux champs (bonus d'attribut, valeur fixe)
   // gfCases      : cases a cocher, plusieurs codes ecrits separes par une virgule (Choix = "code=libelle|...")
   // gfQualites   : liste des qualites liees (pas de champ en haut : bloc a droite de la grille)
-  GenreChampFiche = (gfTexte, gfMemo, gfListe, gfCode, gfCodeLibre, gfDegats, gfQualites, gfCases);
+  // gfTableau    : valeur gardee en texte dans le XML, montree en tableau (voir SaisieTableau ; Choix = 'F' + separateur ou 'T',
+  //                puis les libelles des colonnes separes par |)
+  GenreChampFiche = (gfTexte, gfMemo, gfListe, gfCode, gfCodeLibre, gfDegats, gfQualites, gfCases, gfTableau);
   // controle de saisie du texte (applique si le champ n'est pas vide)
-  ControleChampFiche = (cfAucun, cfEntier, cfPrix);
+  ControleChampFiche = (cfAucun, cfEntier, cfPrix, cfEntierSigne);
 
   StructureChampFiche = record
     Balise:      String;   // balise XML de l'element
@@ -46,7 +48,12 @@ type
     Choix:       String;
     Controle:    ControleChampFiche;
     Virtuel:     Boolean;  // affiche mais jamais ecrit dans l'element (l'appelant le range ailleurs)
+    AffichageSeul: Boolean; // jamais modifiable : le champ refuse la selection (le focus passe au suivant)
+    SepCases:    String;   // gfCases : separateur des codes dans le XML ('' = virgule)
+    Groupes:     String;   // conditions d'affichage : blocs lies par '+' (ET), jetons d'un bloc par ',' (OU) ;
+                           // jeton = version (V1, V2, V4, V5) ou nom de groupe (actif des qu'un de ses champs est rempli) ; '' = toujours
   end;
+  TTableauChampsFiche = array of StructureChampFiche;
 
   // Bloc propre a un type d'element, glisse sous les champs (apres la grille) : les effets d'un signe astral.
   // Charge, controle et ecrit en meme temps que la fiche ; les descendants sont dans leur propre unite.
@@ -74,6 +81,7 @@ type
     FQualites: TPanelQualitesLiees;
     FExtra: TPanelExtraFiche;  // bloc facultatif sous la grille ; remis a nil par chaque Definir
     FBoutonValider, FBoutonAnnuler: TBCButton;
+    FModele: TBCButton;  // bouton modele (aspect des boutons des tableaux)
     FOnValider, FOnAnnuler: TNotifyEvent;
     FOnChangementChamp: TChangementChampFiche;
     FOnControler: TControleFiche;
@@ -84,6 +92,8 @@ type
     FBaliseLibre: String;  // champ de cases reste modifiable dans une lecture seule partielle
     FSansGrille: Boolean;  // element sans modificateurs : la grille n'est ni montree ni ecrite
     FVerrous: String;      // codes de cases qu'on ne peut pas decocher, separes par des virgules
+    FOrdre: String;        // ordre des balises du schema (virgules) ; '*Balise' = facultative, retiree de l'element si vide
+    function  IndiceOrdre(const Balise: String; out Facultative: Boolean): Integer;
     procedure SetLectureSeule(Valeur: Boolean);
     procedure AppliquerLectureSeule(Valeur: Boolean; const BaliseLibre: String);
     procedure Vider;
@@ -94,6 +104,7 @@ type
     function  FixeDegats(Indice: Integer): String;
     function  ComposerDegats(Indice: Integer): String;
     function  TexteSaisie(Indice: Integer): String;
+    function  CasesIdentiquesOrigine(Indice: Integer): Boolean;
     function  VersAffichage(const Valeur: String): String;
     function  VersXml(const Texte: String): String;
     procedure ChangementSaisie(Sender: TObject);
@@ -112,6 +123,11 @@ type
     procedure CocherCodes(const Balise, Codes: String);
     // le champ de cette balise n'est plus ecrit dans l'element par Ecrire (il reste lu par ValeurChamp et Signature)
     procedure DeclarerVirtuel(const Balise: String);
+    // Champ jamais modifiable : l'entrer (clic, Tab) est refuse, le focus passe au champ suivant.
+    procedure DeclarerAffichageSeul(const Balise: String);
+    // a appeler apres Definir et avant Charger : les codes du champ de cases de cette balise sont separes par Sep dans le XML
+    procedure DeclarerSeparateurCases(const Balise, Sep: String);
+    procedure EntreeAffichageSeul(Sender: TObject);
     // a appeler apres Definir : cet element ne porte pas de modificateurs (une condition, par exemple)
     procedure MasquerGrille;
     // ces codes (virgules) ne peuvent plus etre decoches dans les champs de cases (une relation portee par un autre livre)
@@ -127,11 +143,20 @@ type
     function  Signature(const Sep: String): String;
     // valeur saisie dans le champ de cette balise ('' si absent), pour un controle propre a l'element
     function  ValeurChamp(const Balise: String): String;
+    // test d'edition : remplace le texte d'un champ texte / memo simple, comme une saisie ; Faux si la fiche n'a pas ce champ
+    function  PoserTexteChamp(const Balise, Valeur: String): Boolean;
     // pose le texte d'un champ simple (gfTexte) ; a appeler apres Charger, pour un champ virtuel
     procedure SetValeurChamp(const Balise, Valeur: String);
+    // memorise la saisie en cours des champs texte / memo / liste (hors cases, grille et bloc extra) : Balises[i] = Valeurs[i]
+    procedure SauverValeurs(Balises, Valeurs: TStringList);
+    // remet ces saisies dans les champs qui existent encore apres une reconstruction de la fiche (a appeler apres Charger)
+    procedure RestaurerValeurs(Balises, Valeurs: TStringList);
     procedure ActiverBoutons(Actif: Boolean);
     // libelle affiche d'un code (gfCode, gfCodeLibre) ; sans fonction, le code lui-meme
     property  LibelleCode: TFonctionLibelle read FLibelleCode write FLibelleCode;
+    // ordre des balises de l'element selon le schema (virgules, '*' devant une balise facultative) ; a poser APRES Definir.
+    // Une balise ajoutee se range a sa place ; une balise facultative laissee vide est retiree (sa seule presence compte).
+    property  OrdreBalises: String read FOrdre write FOrdre;
     // bloc supplementaire de la fiche ; a poser APRES Definir (qui le retire) et avant Charger
     property  Extra: TPanelExtraFiche read FExtra write FExtra;
     // libelle d'une caracteristique RULES-ATTR_x (gfDegats)
@@ -149,15 +174,99 @@ function ChampFiche(const Balise, CodeLibelle: String; Genre: GenreChampFiche = 
   Pleine: Boolean = False; Obligatoire: Boolean = False; Facultatif: Boolean = False;
   AvecLangue: Boolean = True; const Choix: String = ''; Controle: ControleChampFiche = cfAucun): StructureChampFiche;
 
+// Pose les groupes d'affichage d'un champ (ex. 'Magie+V4,V5')
+function EnGroupes(const Champ: StructureChampFiche; const Groupes: String): StructureChampFiche;
+// Retire les champs non visibles pour cette version (V1, V2, V4, V5) ; un champ deja rempli reste visible
+// Forces : groupes (virgules) a rendre actifs meme si aucun de leurs champs n'est rempli
+procedure FiltrerChampsFiche(var Champs: TTableauChampsFiche; Element: TDOMElement; const Version: String;
+  const Forces: String = '');
+
+// Noeud d'une balise de champ ("Specie#2" = 2e balise Specie), nil si absent
+function NoeudDeBalise(Element: TDOMElement; const Spec: String): TDOMNode;
+
 // Entier positif ou nul (champ vide refuse) ; prix : vide, "-", ou suite "nombre + monnaie en majuscules" (5CO, 1CO5PA).
 function EntierPositifFiche(const S: String): Boolean;
 function PrixValideFiche(const S: String): Boolean;
+// Prix ecrit comme le livre : une espace entre les montants ("2PA 6SB"), suffixe « / unite » garde tel quel ("250CO / 5 yards").
+function NormaliserPrixFiche(const S: String): String;
+// Partie du prix a controler : sans espaces ni suffixe « / unite ».
+function MontantPrixFiche(const S: String): String;
 // Decoupe une formule de degats "+(BATTR_S)+5" : code du bonus d'attribut et valeur fixe ; True si un bonus est present.
 function DecouperDegatsFiche(Degats: String; out CodeBonus, Fixe: String): Boolean;
 // Valeur fixe de degats acceptee : vide, "-", ou un entier signe ou non, eventuellement un de ("1d10").
 function DegatsFixeValide(const S: String): Boolean;
 
 implementation
+
+// Un segment de balise : "Tag", "Tag#n" (n-ieme balise de ce nom) ou "." (le parent lui-meme).
+function NoeudSegment(Parent: TDOMNode; const Seg: String): TDOMNode;
+var
+  Base: String;
+  P, N, K: Integer;
+  Fils: TDOMNode;
+begin
+  if Seg = '.' then Exit(Parent);
+  P := Pos('#', Seg);
+  if P = 0 then Exit(Parent.FindNode(Seg));
+  N := StrToIntDef(Copy(Seg, P + 1, MaxInt), 1);
+  Base := Copy(Seg, 1, P - 1);
+  Result := nil;
+  K := 0;
+  Fils := Parent.FirstChild;
+  while Fils <> nil do
+  begin
+    if (Fils.NodeType = ELEMENT_NODE) and (Fils.NodeName = Base) then
+    begin
+      Inc(K);
+      if K = N then Exit(Fils);
+    end;
+    Fils := Fils.NextSibling;
+  end;
+end;
+
+// Balise d'un champ : segments separes par "/" (SUBCHAPTER_ATTR/Attribut#2), suivis si besoin de "@attribut".
+function NoeudDeBalise(Element: TDOMElement; const Spec: String): TDOMNode;
+var
+  Reste: String;
+  P: Integer;
+begin
+  Reste := Spec;
+  if Pos('@', Reste) > 0 then Reste := Copy(Reste, 1, Pos('@', Reste) - 1);
+  Result := Element;
+  while (Result <> nil) and (Reste <> '') do
+  begin
+    P := Pos('/', Reste);
+    if P = 0 then P := Length(Reste) + 1;
+    Result := NoeudSegment(Result, Copy(Reste, 1, P - 1));
+    Reste := Copy(Reste, P + 1, MaxInt);
+  end;
+end;
+
+// Cree les segments qui manquent (a la suite des freres existants) et rend le dernier.
+function CreerNoeudDeBalise(Element: TDOMElement; const Spec: String): TDOMNode;
+var
+  Reste, Seg: String;
+  P: Integer;
+  Suivant: TDOMNode;
+begin
+  Reste := Spec;
+  if Pos('@', Reste) > 0 then Reste := Copy(Reste, 1, Pos('@', Reste) - 1);
+  Result := Element;
+  while Reste <> '' do
+  begin
+    P := Pos('/', Reste);
+    if P = 0 then P := Length(Reste) + 1;
+    Seg := Copy(Reste, 1, P - 1);
+    Reste := Copy(Reste, P + 1, MaxInt);
+    Suivant := NoeudSegment(Result, Seg);
+    if Suivant = nil then
+    begin
+      Suivant := Element.OwnerDocument.CreateElement(Copy(Seg, 1, Pos('#', Seg + '#') - 1));
+      Result.AppendChild(Suivant);
+    end;
+    Result := Suivant;
+  end;
+end;
 
 const
   LargeurFiche = 820;
@@ -179,6 +288,87 @@ begin
   Result.Choix       := Choix;
   Result.Controle    := Controle;
   Result.Virtuel      := False;
+  Result.AffichageSeul := False;
+  Result.Groupes     := '';
+end;
+
+function EnGroupes(const Champ: StructureChampFiche; const Groupes: String): StructureChampFiche;
+begin
+  Result := Champ;
+  Result.Groupes := Groupes;
+end;
+
+function ChampRempliFiche(Element: TDOMElement; const Balise: String): Boolean;
+var
+  N: TDOMNode;
+begin
+  N := Element.FindNode(Balise);
+  Result := (N <> nil) and (Trim(N.TextContent) <> '');
+end;
+
+// Retire des champs ceux dont les groupes ne sont pas remplis pour cette version ; un champ deja rempli dans
+// l'element reste toujours visible (rien de ce qui existe n'est cache).
+procedure FiltrerChampsFiche(var Champs: TTableauChampsFiche; Element: TDOMElement; const Version: String;
+  const Forces: String);
+var
+  Actifs: TStringList;
+  I, J, K, Ecrit: Integer;
+  Blocs, Jetons: TStringList;
+  Visible, BlocOk: Boolean;
+begin
+  Actifs := TStringList.Create;
+  Blocs := TStringList.Create;
+  Jetons := TStringList.Create;
+  try
+    Blocs.Delimiter := '+'; Blocs.StrictDelimiter := True;
+    Jetons.Delimiter := ','; Jetons.StrictDelimiter := True;
+    // groupes forces par l'utilisateur (cases a cocher de la fiche)
+    Jetons.DelimitedText := Forces;
+    for K := 0 to Jetons.Count - 1 do
+      if Trim(Jetons[K]) <> '' then Actifs.Add(UpperCase(Trim(Jetons[K])));
+    // groupes nommes actifs : un de leurs champs est rempli
+    for I := 0 to High(Champs) do
+      if (Champs[I].Groupes <> '') and ChampRempliFiche(Element, Champs[I].Balise) then
+      begin
+        Blocs.DelimitedText := Champs[I].Groupes;
+        for J := 0 to Blocs.Count - 1 do
+        begin
+          Jetons.DelimitedText := Blocs[J];
+          for K := 0 to Jetons.Count - 1 do
+            if not ((Length(Trim(Jetons[K])) = 2) and (UpCase(Trim(Jetons[K])[1]) = 'V')) and
+               (Actifs.IndexOf(UpperCase(Trim(Jetons[K]))) < 0) then Actifs.Add(UpperCase(Trim(Jetons[K])));
+        end;
+      end;
+    Ecrit := 0;
+    for I := 0 to High(Champs) do
+    begin
+      Visible := (Champs[I].Groupes = '') or ChampRempliFiche(Element, Champs[I].Balise);
+      if not Visible then
+      begin
+        Blocs.DelimitedText := Champs[I].Groupes;
+        Visible := True;
+        for J := 0 to Blocs.Count - 1 do
+        begin
+          Jetons.DelimitedText := Blocs[J];
+          BlocOk := False;
+          for K := 0 to Jetons.Count - 1 do
+            if (UpperCase(Trim(Jetons[K])) = UpperCase(Version)) or (Actifs.IndexOf(UpperCase(Trim(Jetons[K]))) >= 0) then
+              BlocOk := True;
+          if not BlocOk then Visible := False;
+        end;
+      end;
+      if Visible then
+      begin
+        Champs[Ecrit] := Champs[I];
+        Inc(Ecrit);
+      end;
+    end;
+    SetLength(Champs, Ecrit);
+  finally
+    Jetons.Free;
+    Blocs.Free;
+    Actifs.Free;
+  end;
 end;
 
 function EntierPositifFiche(const S: String): Boolean;
@@ -194,7 +384,7 @@ function PrixValideFiche(const S: String): Boolean;
 var
   I, Chiffres, Lettres: Integer;
 begin
-  if (S = '') or (S = '-') then Exit(True);
+  if (S = '') or (S = '-') or (S = 'Varies') then Exit(True);  // « Varies » : prix du livre pour la bijouterie
   Result := False;
   I := 1;
   while I <= Length(S) do
@@ -206,6 +396,28 @@ begin
     if (Chiffres = 0) or (Lettres = 0) then Exit;
   end;
   Result := True;
+end;
+
+function MontantPrixFiche(const S: String): String;
+var
+  P: Integer;
+begin
+  P := Pos('/', S);
+  if P > 0 then Result := Copy(S, 1, P - 1) else Result := S;
+  Result := StringReplace(Result, ' ', '', [rfReplaceAll]);
+end;
+
+function NormaliserPrixFiche(const S: String): String;
+var
+  P, K: Integer;
+  Suffixe: String;
+begin
+  P := Pos('/', S);
+  if P > 0 then Suffixe := Trim(Copy(S, P, MaxInt)) else Suffixe := '';
+  Result := MontantPrixFiche(S);
+  for K := Length(Result) downto 2 do
+    if (Result[K] in ['0'..'9']) and (Result[K - 1] in ['A'..'Z']) then Insert(' ', Result, K);
+  if Suffixe <> '' then Result := Result + ' ' + Suffixe;
 end;
 
 function DecouperDegatsFiche(Degats: String; out CodeBonus, Fixe: String): Boolean;
@@ -268,6 +480,7 @@ procedure TPanelFiche.Initialiser(Modele: TBCButton; Grille: TPanelModificateurs
 begin
   FGrille := Grille;
   FQualites := Qualites;
+  FModele := Modele;
   FIdxQual := -1;
   BevelOuter := bvNone;
   Caption := '';
@@ -323,6 +536,7 @@ var
   Pleine: Boolean;
 begin
   Vider;
+  FOrdre := '';
   if FExtra <> nil then FExtra.Visible := False;
   FExtra := nil;
   FVerrous := '';
@@ -359,6 +573,7 @@ begin
     if Champs[I].Genre = gfMemo then H := 70
     else if (Champs[I].Genre = gfCases) and (Pos('|', Champs[I].Choix) = 0) then H := 28
     else if Champs[I].Genre = gfCases then H := 100
+    else if Champs[I].Genre = gfTableau then H := HauteurTableau(Champs[I].Choix)
     else H := 28;
 
     Etiquette := TLabelContour.Create(Self);
@@ -402,12 +617,14 @@ begin
           for J := 0 to TComboBox(Saisie).Items.Count - 1 do
             TComboBox(Saisie).Items[J] := VersAffichage(TComboBox(Saisie).Items[J]);
         end;
+      gfTableau: Saisie := TSaisieTableau.Create(Self);
     else
       Saisie := TEdit.Create(Self);
     end;
     Saisie.Parent := FDefil;
     Saisie.SetBounds(X, Y + 22, L, H);
     FSaisies[I] := Saisie;
+    if Champs[I].Genre = gfTableau then TSaisieTableau(Saisie).Monter(FModele, Champs[I].Choix, X, Y, L, H);
 
     if Champs[I].Genre = gfDegats then
     begin
@@ -516,9 +733,17 @@ begin
     Choix.Delimiter := '|';
     Choix.StrictDelimiter := True;
     Choix.DelimitedText := FChamps[Indice].Choix;
-    Presents.Delimiter := ',';
+    if FChamps[Indice].SepCases <> '' then Presents.Delimiter := FChamps[Indice].SepCases[1]
+    else Presents.Delimiter := ',';
     Presents.StrictDelimiter := True;
     Presents.DelimitedText := Valeur;
+    FOrigine[Indice] := Valeur;
+    // « Body, Left Front Leg, and Right Front Leg » : espaces de bout et « and » initial ignores
+    for I := 0 to Presents.Count - 1 do
+    begin
+      Presents[I] := Trim(Presents[I]);
+      if Pos('and ', Presents[I]) = 1 then Presents[I] := Trim(Copy(Presents[I], 5, MaxInt));
+    end;
     for I := 0 to Choix.Count - 1 do
     begin
       P := Pos('=', Choix[I]);
@@ -639,9 +864,42 @@ begin
   end;
 end;
 
+function TPanelFiche.CasesIdentiquesOrigine(Indice: Integer): Boolean;
+var
+  Presents: TStringList;
+  Liste: TCheckListBox;
+  I, NbCoches: Integer;
+begin
+  Result := True;
+  Liste := TCheckListBox(FSaisies[Indice]);
+  Presents := TStringList.Create;
+  try
+    if FChamps[Indice].SepCases <> '' then Presents.Delimiter := FChamps[Indice].SepCases[1]
+    else Presents.Delimiter := ',';
+    Presents.StrictDelimiter := True;
+    Presents.DelimitedText := FOrigine[Indice];
+    for I := 0 to Presents.Count - 1 do
+    begin
+      Presents[I] := Trim(Presents[I]);
+      if Pos('and ', Presents[I]) = 1 then Presents[I] := Trim(Copy(Presents[I], 5, MaxInt));
+    end;
+    NbCoches := 0;
+    for I := 0 to Liste.Items.Count - 1 do
+      if Liste.Checked[I] then
+      begin
+        Inc(NbCoches);
+        if Presents.IndexOf(Trim(FCodes[Indice][I])) < 0 then Result := False;
+      end;
+    // une valeur d'origine hors liste (code inconnu) n'est pas reconnue : on ne la rend pas telle quelle
+    if NbCoches <> Presents.Count then Result := False;
+  finally
+    Presents.Free;
+  end;
+end;
+
 function TPanelFiche.TexteSaisie(Indice: Integer): String;
 var
-  I: Integer;
+  I, P: Integer;
 begin
   case FChamps[Indice].Genre of
     gfMemo: Result := Trim(TMemo(FSaisies[Indice]).Text);
@@ -655,8 +913,19 @@ begin
       begin
         // un libelle de la liste devient son code, toute autre saisie est gardee telle quelle
         Result := Trim(TComboBox(FSaisies[Indice]).Text);
+        // libelles de la liste compares sans espace final (Description du livre)
         I := TComboBox(FSaisies[Indice]).Items.IndexOf(Result);
+        if I < 0 then
+          for P := 0 to TComboBox(FSaisies[Indice]).Items.Count - 1 do
+            if SameText(Trim(TComboBox(FSaisies[Indice]).Items[P]), Result) then
+            begin
+              I := P;
+              Break;
+            end;
         if I >= 0 then Result := FCodes[Indice][I];
+        // le code retrouve ne differe de la valeur chargee que par la casse (« Two-handed » / « Two-Handed », meme libelle) :
+        // la valeur du livre est rendue telle quelle
+        if (I >= 0) and (FOrigine[Indice] <> '') and SameText(Result, FOrigine[Indice]) then Result := FOrigine[Indice];
       end;
     gfListe:
       begin
@@ -666,16 +935,25 @@ begin
         else Result := VersXml(Result);
       end;
     gfDegats: Result := ComposerDegats(Indice);
-    gfQualites: Result := FQualites.Texte;
+    gfQualites:
+      begin
+        Result := FQualites.Texte;
+        // balise absente ou vide a l'origine et panneau resté vide : on n'ecrit pas de « - » (aucune donnee ne bouge sans saisie)
+        if (Result = '-') and (FOrigine[Indice] = '') then Result := '';
+      end;
     gfCases:
       begin
         Result := '';
         for I := 0 to TCheckListBox(FSaisies[Indice]).Items.Count - 1 do
           if TCheckListBox(FSaisies[Indice]).Checked[I] then
           begin
-            if Result <> '' then Result := Result + ',';
+            if Result <> '' then
+              if FChamps[Indice].SepCases <> '' then Result := Result + FChamps[Indice].SepCases
+              else Result := Result + ',';
             Result := Result + FCodes[Indice][I];
           end;
+        // memes cases cochees qu'au chargement : la valeur d'origine est rendue telle quelle
+        if (FOrigine[Indice] <> '') and CasesIdentiquesOrigine(Indice) then Result := Trim(FOrigine[Indice]);
       end;
   else
     Result := Trim(TEdit(FSaisies[Indice]).Text);
@@ -690,10 +968,26 @@ begin
   FChargement := True;
   for I := 0 to High(FChamps) do
   begin
-    Valeur := ValeurXML(Element.FindNode(FChamps[I].Balise));
+    if Pos('@', FChamps[I].Balise) > 0 then  // "Balise@attribut" : valeur d'un attribut de la balise
+    begin
+      Valeur := '';
+      if NoeudDeBalise(Element, FChamps[I].Balise) <> nil then
+        Valeur := TDOMElement(NoeudDeBalise(Element, FChamps[I].Balise)).GetAttribute(
+          Copy(FChamps[I].Balise, Pos('@', FChamps[I].Balise) + 1, MaxInt));
+    end
+    else
+      Valeur := ValeurXML(NoeudDeBalise(Element, FChamps[I].Balise));
     case FChamps[I].Genre of
-      gfQualites: FQualites.Charger(Valeur);
-      gfCode, gfCodeLibre: RemplirCodes(I, Valeur);
+      gfQualites:
+        begin
+          FOrigine[I] := Valeur;
+          FQualites.Charger(Valeur);
+        end;
+      gfCode, gfCodeLibre:
+        begin
+          FOrigine[I] := Valeur;
+          RemplirCodes(I, Valeur);
+        end;
       gfCases: ChargerCases(I, Valeur);
       gfDegats: ChargerDegats(I, Valeur);
       gfMemo: TMemo(FSaisies[I]).Text := Valeur;
@@ -762,6 +1056,44 @@ begin
     if (FChamps[I].Balise = Balise) and (FSaisies[I] is TEdit) then TEdit(FSaisies[I]).Text := Valeur;
 end;
 
+procedure TPanelFiche.SauverValeurs(Balises, Valeurs: TStringList);
+var
+  I: Integer;
+begin
+  Balises.Clear;
+  Valeurs.Clear;
+  for I := 0 to High(FChamps) do
+    if (FSaisies[I] <> nil) and (FChamps[I].Genre in [gfTexte, gfMemo, gfCode, gfCodeLibre, gfTableau]) then
+    begin
+      Balises.Add(FChamps[I].Balise);
+      Valeurs.Add(TexteSaisie(I));
+    end;
+end;
+
+procedure TPanelFiche.RestaurerValeurs(Balises, Valeurs: TStringList);
+var
+  I, K, P: Integer;
+  V: String;
+begin
+  for I := 0 to High(FChamps) do
+  begin
+    if FSaisies[I] = nil then Continue;
+    K := Balises.IndexOf(FChamps[I].Balise);
+    if K < 0 then Continue;
+    V := Valeurs[K];
+    case FChamps[I].Genre of
+      gfTexte, gfTableau: if FSaisies[I] is TEdit then TEdit(FSaisies[I]).Text := V;
+      gfMemo: TMemo(FSaisies[I]).Text := V;
+      gfCode, gfCodeLibre:
+        begin
+          P := FCodes[I].IndexOf(V);
+          if P >= 0 then TComboBox(FSaisies[I]).ItemIndex := P
+          else if FChamps[I].Genre = gfCodeLibre then TComboBox(FSaisies[I]).Text := V;
+        end;
+    end;
+  end;
+end;
+
 function TPanelFiche.ValeurChamp(const Balise: String): String;
 var
   I: Integer;
@@ -769,6 +1101,19 @@ begin
   Result := '';
   for I := 0 to High(FChamps) do
     if FChamps[I].Balise = Balise then Exit(TexteSaisie(I));
+end;
+
+function TPanelFiche.PoserTexteChamp(const Balise, Valeur: String): Boolean;
+var
+  I: Integer;
+begin
+  Result := False;
+  for I := 0 to High(FChamps) do
+    if (FChamps[I].Balise = Balise) and (FSaisies[I] is TEdit) then
+    begin
+      TEdit(FSaisies[I]).Text := Valeur;
+      Exit(True);
+    end;
 end;
 
 // En lecture seule la liste de cases reste active (son ascenseur doit servir) : on annule simplement le clic.
@@ -786,8 +1131,13 @@ begin
     begin
       if FLectureSeule and (FChamps[I].Balise <> FBaliseLibre) then
         L.Checked[Rang] := not L.Checked[Rang]
-      else if (not L.Checked[Rang]) and (Pos(',' + Trim(FCodes[I][Rang]) + ',', ',' + FVerrous + ',') > 0) then
-        L.Checked[Rang] := True;
+      else
+      begin
+        if (not L.Checked[Rang]) and (Pos(',' + Trim(FCodes[I][Rang]) + ',', ',' + FVerrous + ',') > 0) then
+          L.Checked[Rang] := True;
+        // l'appelant est prevenu d'un changement de case (il peut reconstruire la fiche : a differer cote appelant)
+        if (not FChargement) and Assigned(FOnChangementChamp) then FOnChangementChamp(FChamps[I].Balise);
+      end;
       Exit;
     end;
 end;
@@ -843,6 +1193,36 @@ begin
     if FChamps[I].Balise = Balise then FChamps[I].Virtuel := True;
 end;
 
+procedure TPanelFiche.DeclarerSeparateurCases(const Balise, Sep: String);
+var
+  I: Integer;
+begin
+  for I := 0 to High(FChamps) do
+    if (FChamps[I].Balise = Balise) and (FChamps[I].Genre = gfCases) then FChamps[I].SepCases := Sep;
+end;
+
+procedure TPanelFiche.DeclarerAffichageSeul(const Balise: String);
+var
+  I: Integer;
+begin
+  for I := 0 to High(FChamps) do
+    if FChamps[I].Balise = Balise then
+    begin
+      FChamps[I].AffichageSeul := True;
+      if (I <= High(FSaisies)) and (FSaisies[I] is TEdit) then
+      begin
+        TEdit(FSaisies[I]).ReadOnly := True;
+        TEdit(FSaisies[I]).TabStop := False;
+        TEdit(FSaisies[I]).OnEnter := @EntreeAffichageSeul;
+      end;
+    end;
+end;
+
+procedure TPanelFiche.EntreeAffichageSeul(Sender: TObject);
+begin
+  if Sender is TWinControl then FDefil.SelectNext(TWinControl(Sender), True, True);
+end;
+
 procedure TPanelFiche.CocherCodes(const Balise, Codes: String);
 var
   I, J: Integer;
@@ -896,7 +1276,9 @@ begin
   for I := 0 to High(FSaisies) do
   begin
     if FSaisies[I] = nil then Continue;  // champ gfQualites : pas de controle en haut, le bloc des qualites est a part
-    if FSaisies[I] is TEdit then TEdit(FSaisies[I]).ReadOnly := Valeur
+    if FSaisies[I] is TSaisieTableau then TSaisieTableau(FSaisies[I]).MettreLectureSeule(Valeur and (BaliseLibre <> FChamps[I].Balise))
+    else if (FSaisies[I] is TEdit) and (I <= High(FChamps)) and FChamps[I].AffichageSeul then TEdit(FSaisies[I]).ReadOnly := True
+    else if FSaisies[I] is TEdit then TEdit(FSaisies[I]).ReadOnly := Valeur
     else if FSaisies[I] is TMemo then TMemo(FSaisies[I]).ReadOnly := Valeur
     else if FSaisies[I] is TCheckListBox then FSaisies[I].Enabled := True  // ascenseur actif ; ClicCase annule les clics
     else FSaisies[I].Enabled := not Valeur;
@@ -925,10 +1307,35 @@ begin
   end;
 end;
 
+// Rang de la balise dans l'ordre du schema (-1 si elle n'y est pas) ; Facultative si elle porte '*'.
+function TPanelFiche.IndiceOrdre(const Balise: String; out Facultative: Boolean): Integer;
+var
+  Liste: TStringList;
+  I: Integer;
+begin
+  Result := -1;
+  Facultative := False;
+  Liste := TStringList.Create;
+  try
+    Liste.StrictDelimiter := True;
+    Liste.CommaText := FOrdre;
+    for I := 0 to Liste.Count - 1 do
+      if (Liste[I] = Balise) or (Liste[I] = '*' + Balise) then
+      begin
+        Result := I;
+        Facultative := Liste[I] = '*' + Balise;
+        Exit;
+      end;
+  finally
+    Liste.Free;
+  end;
+end;
+
 function TPanelFiche.Ecrire(Element: TDOMElement; const Langue: String): Boolean;
 var
   I: Integer;
-  Valeur: String;
+  Facult: Boolean;
+  Valeur, MessageTableau: String;
   Noeud, Suivant: TDOMNode;
   Nouveau: TDOMElement;
 begin
@@ -953,6 +1360,15 @@ begin
         Exit;
       end;
     end
+    else if FSaisies[I] is TSaisieTableau then
+    begin
+      // traits : une specialisation ou un nombre exige par le trait doit etre saisi
+      if not TSaisieTableau(FSaisies[I]).Controle(MessageTableau) then
+      begin
+        ShowMessage(MessageTableau);
+        Exit;
+      end;
+    end
     else if (FChamps[I].Controle = cfEntier) and ((Valeur <> '') or FChamps[I].Obligatoire) then
     begin
       if not EntierPositifFiche(Valeur) then
@@ -961,7 +1377,16 @@ begin
         Exit;
       end;
     end
-    else if (FChamps[I].Controle = cfPrix) and not PrixValideFiche(StringReplace(Valeur, ' ', '', [rfReplaceAll])) then
+    else if (FChamps[I].Controle = cfEntierSigne) and ((Valeur <> '') or FChamps[I].Obligatoire) then
+    begin
+      // encombrement negatif (bateau allege) : un « - » devant les chiffres est permis
+      if not EntierPositifFiche(Copy(Valeur, 1 + Ord((Valeur <> '') and (Valeur[1] = '-')), MaxInt)) then
+      begin
+        ShowMessage(Format(GetTexteLibelle('RULES-LAB_438'), [GetTexteLibelle(FChamps[I].CodeLibelle)]));
+        Exit;
+      end;
+    end
+    else if (FChamps[I].Controle = cfPrix) and not PrixValideFiche(MontantPrixFiche(Valeur)) then
     begin
       ShowMessage(GetTexteLibelle('RULES-LAB_439'));
       Exit;
@@ -980,26 +1405,72 @@ begin
   begin
     if FChamps[I].Virtuel then Continue;
     Valeur := TexteSaisie(I);
-    if FChamps[I].Controle = cfPrix then Valeur := StringReplace(Valeur, ' ', '', [rfReplaceAll]);
+    if FChamps[I].Controle = cfPrix then Valeur := NormaliserPrixFiche(Valeur);
     // liste fermee non obligatoire laissee vide : la balise existante n'est pas touchee
     if (FChamps[I].Genre = gfCode) and (Valeur = '') then Continue;
-    Noeud := Element.FindNode(FChamps[I].Balise);
+    if Pos('@', FChamps[I].Balise) > 0 then  // "Balise@attribut" : la balise existe deja (champ place apres elle)
+    begin
+      Noeud := NoeudDeBalise(Element, FChamps[I].Balise);
+      if (Noeud <> nil) and (Valeur <> '') then
+        TDOMElement(Noeud).SetAttribute(Copy(FChamps[I].Balise, Pos('@', FChamps[I].Balise) + 1, MaxInt), VersXml(Valeur));
+      Continue;
+    end;
+    Noeud := NoeudDeBalise(Element, FChamps[I].Balise);
     if Noeud = nil then
     begin
       if FChamps[I].Facultatif and (Valeur = '') then Continue;
-      Nouveau := Element.OwnerDocument.CreateElement(FChamps[I].Balise);
+      if Pos('/', FChamps[I].Balise) > 0 then  // balise dans un sous-chapitre : on cree toute la chaine
+      begin
+        Noeud := CreerNoeudDeBalise(Element, FChamps[I].Balise);
+        if FChamps[I].AvecLangue then TDOMElement(Noeud).SetAttribute('language', Langue);
+        EcrireValeurXML(TDOMElement(Noeud), Valeur);
+        Continue;
+      end;
+      Nouveau := Element.OwnerDocument.CreateElement(Copy(FChamps[I].Balise, 1, Pos('#', FChamps[I].Balise + '#') - 1));  // "Tag#2" : meme balise, repetee
       if FChamps[I].AvecLangue then Nouveau.SetAttribute('language', Langue);
       // avant les modificateurs : le schema les attend apres les champs de l'element
       Suivant := Element.FirstChild;
-      while (Suivant <> nil) and not ((Suivant.NodeType = ELEMENT_NODE) and (Pos('Modif', Suivant.NodeName) = 1)) do
-        Suivant := Suivant.NextSibling;
+      if (FOrdre <> '') and (IndiceOrdre(Nouveau.NodeName, Facult) >= 0) then
+      begin
+        // avant la premiere balise qui vient apres elle dans le schema
+        while (Suivant <> nil) and not ((Suivant.NodeType = ELEMENT_NODE) and (IndiceOrdre(Suivant.NodeName, Facult) > IndiceOrdre(Nouveau.NodeName, Facult))) do
+          Suivant := Suivant.NextSibling;
+      end
+      else if Pos('Modif', Nouveau.NodeName) <> 1 then  // une balise Modif* repetee se range a la suite des autres, dans l'ordre
+        while (Suivant <> nil) and not ((Suivant.NodeType = ELEMENT_NODE) and (Pos('Modif', Suivant.NodeName) = 1)) do
+          Suivant := Suivant.NextSibling
+      else
+        Suivant := nil;
       Element.InsertBefore(Nouveau, Suivant);
       Noeud := Nouveau;
+    end
+    else if (FOrdre <> '') and (Valeur = '') and (IndiceOrdre(Noeud.NodeName, Facult) >= 0) and Facult then
+    begin
+      Noeud.ParentNode.RemoveChild(Noeud);
+      Continue;
     end;
     EcrireValeurXML(TDOMElement(Noeud), Valeur);
   end;
   if not FSansGrille then FGrille.Ecrire(Element);
   if FExtra <> nil then FExtra.Ecrire(Element);
+  // corruptions et qualites : la grille a ecrit les Modify* apres Modifier et Page, le schema les veut avant
+  if (Element.NodeName = 'Corruption') or (Element.NodeName = 'BonusMalus') then
+  begin
+    if Element.NodeName = 'BonusMalus' then
+    begin
+      Noeud := Element.FindNode('Modifier');
+      if Noeud <> nil then Element.AppendChild(Element.RemoveChild(Noeud));
+    end;
+    Noeud := Element.FindNode('Page');
+    if Noeud <> nil then Element.AppendChild(Element.RemoveChild(Noeud));
+  end
+  else
+  begin
+    // Page est la derniere balise des types du schema (sauf SpellV2 / EquipmentV2, ou d'autres balises la suivent) :
+    // la grille (Modify*, ModifBoat...) l'a pu ecrire apres elle
+    Noeud := Element.FindNode('Page');
+    if (Noeud <> nil) and (Noeud.NextSibling <> nil) and (Element.NodeName <> 'SpellV2') and (Element.NodeName <> 'EquipmentV2') then Element.AppendChild(Element.RemoveChild(Noeud));
+  end;
   Result := True;
 end;
 

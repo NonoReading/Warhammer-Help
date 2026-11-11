@@ -2,6 +2,7 @@
 <DATA_BOOK>
 <CODE_BOOK>"DEFT"</CODE_BOOK>
 <BOOK>"BOOK DEFT STEPS LIGHT FINGERS"</BOOK>
+<BOOKNAME>"DEFT STEPS LIGHT FINGERS"</BOOKNAME>
 <language>"ENGLISH"</language>
 <VERSION>"WFRP4"</VERSION>
 <OFFICIAL>"1"</OFFICIAL>
@@ -16,10 +17,10 @@
 </Label>
 </DATA_LABEL>
 <DATA_CAREER>
-<Career id="DEFT-WORK001">
+<Career id="DEFT-WORK_THIEF_PRIEST">
 <Description language="ENGLISH">"Thief-Priest"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPESCAM"</Skill>
+<Skill>"RULES-COMP_SLEIGHT_OF_HAND"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -52,65 +53,65 @@
 <Attribut name="RULES-ATTR_Fel">"2"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPATHL">"1"</Skill>
-  <Skill name="RULES-COMPESCAL">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_RANALD">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPCROCH">"1"</Skill>
-  <Skill name="RULES-COMPPRIERE">"1"</Skill>
-  <Skill name="RULES-COMPESCAM">"1"</Skill>
-  <Skill name="RULES-COMPDISC_URB">"1"</Skill>
-  <Skill name="RULES-COMPCHARM">"2"</Skill>
-  <Skill name="RULES-COMPRESIST">"2"</Skill>
-  <Skill name="RULES-COMPDIVERT_NARRA">"2"</Skill>
-  <Skill name="RULES-COMPLANG_VOL">"2"</Skill>
-  <Skill name="RULES-COMPSIGNES_VOL">"2"</Skill>
-  <Skill name="RULES-COMPSUBOR">"3"</Skill>
-  <Skill name="RULES-COMPCALM">"3"</Skill>
-  <Skill name="RULES-COMPEVAL">"3"</Skill>
-  <Skill name="RULES-COMPRAGOT">"3"</Skill>
-  <Skill name="RULES-COMPCOMM">"4"</Skill>
-  <Skill name="RULES-COMPINTIM">"4"</Skill>
+<Skill name="RULES-COMP_ATHLETICS">"1"</Skill>
+  <Skill name="RULES-COMP_CLIMB">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__RANALD">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_PICK_LOCK">"1"</Skill>
+  <Skill name="RULES-COMP_PRAY">"1"</Skill>
+  <Skill name="RULES-COMP_SLEIGHT_OF_HAND">"1"</Skill>
+  <Skill name="RULES-COMP_STEALTH__URBAN">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM">"2"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"2"</Skill>
+  <Skill name="RULES-COMP_ENTERTAIN__STORYTELLING">"2"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__THIEF">"2"</Skill>
+  <Skill name="RULES-COMP_SECRET_SIGNS__THIEF">"2"</Skill>
+  <Skill name="RULES-COMP_BRIBERY">"3"</Skill>
+  <Skill name="RULES-COMP_COOL">"3"</Skill>
+  <Skill name="RULES-COMP_EVALUATE">"3"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"3"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"4"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0012_RANALD">"1"</Talent>
-  <Talent name="RULES-T0064">"1"</Talent>
-  <Talent name="RULES-T0165">"1"</Talent>
-  <Talent name="RULES-T0002">"1"</Talent>
-  <Talent name="RULES-T0072">"2"</Talent>
-  <Talent name="RULES-T0136_RANALD">"2"</Talent>
-  <Talent name="RULES-T0080_NIGHTPROWLER">"2"</Talent>
-  <Talent name="RULES-T0020">"2"</Talent>
-  <Talent name="RULES-T0022">"3"</Talent>
-  <Talent name="RULES-T0136_CRIM">"3"</Talent>
-  <Talent name="RULES-T0045">"3"</Talent>
-  <Talent name="RULES-T0058">"3"</Talent>
-  <Talent name="RULES-T0038">"4"</Talent>
-  <Talent name="RULES-T0164">"4"</Talent>
-  <Talent name="RULES-T0005">"4"</Talent>
-  <Talent name="RULES-T0043">"4"</Talent>
+<Talent name="RULES-T_BLESS__RANALD">"1"</Talent>
+  <Talent name="RULES-T_FLEE">"1"</Talent>
+  <Talent name="RULES-T_HOLY_VISIONS">"1"</Talent>
+  <Talent name="RULES-T_SUAVE">"1"</Talent>
+  <Talent name="RULES-T_SECRET_IDENTITY">"2"</Talent>
+  <Talent name="RULES-T_ETIQUETTE__RANALD">"2"</Talent>
+  <Talent name="RULES-T_INVOKE__NIGHTPROWLER">"2"</Talent>
+  <Talent name="RULES-T_LUCK">"2"</Talent>
+  <Talent name="RULES-T_ALLEY_CAT">"3"</Talent>
+  <Talent name="RULES-T_ETIQUETTE__CRIM">"3"</Talent>
+  <Talent name="RULES-T_NIMBLE_FINGERED">"3"</Talent>
+  <Talent name="RULES-T_NOSE_FOR_TROUBLE">"3"</Talent>
+  <Talent name="RULES-T_CRIMINAL">"4"</Talent>
+  <Talent name="RULES-T_NIGHT_VISION">"4"</Talent>
+  <Talent name="RULES-T_PURE_SOUL">"4"</Talent>
+  <Talent name="RULES-T_SHADOW">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Discrete Symbol of Ranald">"1"</Item>
-<Item name="RULES-ARMO_03">"1"</Item>
-<Item name="RULES-TRAP_008">"1"</Item>
-<Item name="RULES-TRAP_101 (Thief)">"2"</Item>
-<Item name="RULES-TRAP_150">"2"</Item>
+<Item name="RULES-ARMO_LEATHER_JERKIN">"1"</Item>
+<Item name="RULES-TRAP_SACK">"1"</Item>
+<Item name="RULES-TRAP_TRADE_TOOLS (Thief)">"2"</Item>
+<Item name="RULES-TRAP_ROPE_10_YARDS">"2"</Item>
 <Item name="Book (Ranald)">"2"</Item>
 <Item name="Initiate Apprentice/Lookout">"3"</Item>
 <Item name="Shrine of the Night Prowler">"3"</Item>
-<Item name="RULES-TRAP_017 (Q)">"3"</Item>
-<Item name="RULES-TRAP_024">"4"</Item>
+<Item name="RULES-TRAP_CLOTHING (Q)">"3"</Item>
+<Item name="RULES-TRAP_HOOD_OR_MASK">"4"</Item>
 <Item name="Subordinate Thief-Priests">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>14</Page>
 </Career>
-<Career id="DEFT-WORK002">
+<Career id="DEFT-WORK_GAMBLER_PRIEST">
 <Description language="ENGLISH">"Gambler-Priest"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPPARI"</Skill>
+<Skill>"RULES-COMP_GAMBLE"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -143,51 +144,51 @@
 <Attribut name="RULES-ATTR_Fel">"1"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPCHARM">"1"</Skill>
-  <Skill name="RULES-COMPRESALC">"1"</Skill>
-  <Skill name="RULES-COMPCALM">"1"</Skill>
-  <Skill name="RULES-COMPPARI">"1"</Skill>
-  <Skill name="RULES-COMPRAGOT">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_RANALD">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPPRIERE">"1"</Skill>
-  <Skill name="RULES-COMPESCAM">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"2"</Skill>
-  <Skill name="RULES-COMPDIVERT_NARRA">"2"</Skill>
-  <Skill name="RULES-COMPEVAL">"2"</Skill>
-  <Skill name="RULES-COMPMARCH">"2"</Skill>
-  <Skill name="RULES-COMPINTIM">"2"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"2"</Skill>
-  <Skill name="RULES-COMPSUBOR">"3"</Skill>
-  <Skill name="RULES-COMPLANG_*">"3"</Skill>
-  <Skill name="RULES-COMPCOMM">"4"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+  <Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+  <Skill name="RULES-COMP_COOL">"1"</Skill>
+  <Skill name="RULES-COMP_GAMBLE">"1"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__RANALD">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_PRAY">"1"</Skill>
+  <Skill name="RULES-COMP_SLEIGHT_OF_HAND">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"2"</Skill>
+  <Skill name="RULES-COMP_ENTERTAIN__STORYTELLING">"2"</Skill>
+  <Skill name="RULES-COMP_EVALUATE">"2"</Skill>
+  <Skill name="RULES-COMP_HAGGLE">"2"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"2"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"2"</Skill>
+  <Skill name="RULES-COMP_BRIBERY">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"3"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0012_RANALD">"1"</Talent>
-  <Talent name="RULES-T0020">"1"</Talent>
-  <Talent name="RULES-T0165">"1"</Talent>
-  <Talent name="RULES-T0002">"1"</Talent>
-  <Talent name="RULES-T0160">"2"</Talent>
-  <Talent name="RULES-T0094">"2"</Talent>
-  <Talent name="RULES-T0136_RANALD">"2"</Talent>
-  <Talent name="RULES-T0080_GAMESTER">"2"</Talent>
-  <Talent name="RULES-T0139_*">"3"</Talent>
-  <Talent name="RULES-T0084">"3"</Talent>
-  <Talent name="RULES-T0091">"3"</Talent>
-  <Talent name="RULES-T0046">"3"</Talent>
-  <Talent name="RULES-T0058">"4"</Talent>
-  <Talent name="RULES-T0005">"4"</Talent>
-  <Talent name="RULES-T0117">"4"</Talent>
-  <Talent name="RULES-T0079">"4"</Talent>
-  <Talent name="RULES-T0072">"4"</Talent>
+<Talent name="RULES-T_BLESS__RANALD">"1"</Talent>
+  <Talent name="RULES-T_LUCK">"1"</Talent>
+  <Talent name="RULES-T_HOLY_VISIONS">"1"</Talent>
+  <Talent name="RULES-T_SUAVE">"1"</Talent>
+  <Talent name="RULES-T_CARDSHARP">"2"</Talent>
+  <Talent name="RULES-T_DICEMAN">"2"</Talent>
+  <Talent name="RULES-T_ETIQUETTE__RANALD">"2"</Talent>
+  <Talent name="RULES-T_INVOKE__GAMESTER">"2"</Talent>
+  <Talent name="RULES-T_ACUTE_SENSE__*">"3"</Talent>
+  <Talent name="RULES-T_READ_WRITE">"3"</Talent>
+  <Talent name="RULES-T_FAST_HANDS">"3"</Talent>
+  <Talent name="RULES-T_SUPER_NUMERATE">"3"</Talent>
+  <Talent name="RULES-T_NOSE_FOR_TROUBLE">"4"</Talent>
+  <Talent name="RULES-T_PURE_SOUL">"4"</Talent>
+  <Talent name="RULES-T_SAVVY">"4"</Talent>
+  <Talent name="RULES-T_SCHEMER">"4"</Talent>
+  <Talent name="RULES-T_SECRET_IDENTITY">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Discrete Symbol of Ranald">"1"</Item>
-<Item name="RULES-TRAP_133">"1"</Item>
-<Item name="RULES-TRAP_136">"1"</Item>
-<Item name="RULES-COMB_BASE_*">"2"</Item>
-<Item name="RULES-TRAP_017 (Q)">"2"</Item>
+<Item name="RULES-TRAP_DECK_OF_CARDS">"1"</Item>
+<Item name="RULES-TRAP_DICE">"1"</Item>
+<Item name="RULES-COMP_MELEE__BASIC">"2"</Item>
+<Item name="RULES-TRAP_CLOTHING (Q)">"2"</Item>
 <Item name="Lucky Charm">"2"</Item>
 <Item name="Initiate Apprentice">"3"</Item>
 <Item name="Shrine of Ranald (Portable or Fixed)">"3"</Item>
@@ -196,10 +197,10 @@
 </SUBCHAPTER_ITEM>
 <Page>16</Page>
 </Career>
-<Career id="DEFT-WORK003">
+<Career id="DEFT-WORK_TRICKSTER_PRIEST">
 <Description language="ENGLISH">"Trickster-Priest"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPESCAM"</Skill>
+<Skill>"RULES-COMP_SLEIGHT_OF_HAND"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -232,63 +233,63 @@
 <Attribut name="RULES-ATTR_Fel">"1"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPSUBOR">"1"</Skill>
-  <Skill name="RULES-COMPCHARM">"1"</Skill>
-  <Skill name="RULES-COMPCALM">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPDIVERT_NARRA">"1"</Skill>
-  <Skill name="RULES-COMPRAGOT">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_RANALD">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPPRIERE">"1"</Skill>
-  <Skill name="RULES-COMPESCAM">"1"</Skill>
-  <Skill name="RULES-COMPATHL">"2"</Skill>
-  <Skill name="RULES-COMPDIVERT_INTERP">"2"</Skill>
-  <Skill name="RULES-COMPINTIM">"2"</Skill>
-  <Skill name="RULES-COMPLANG_*">"2"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"2"</Skill>
-  <Skill name="RULES-COMPDISC_*">"2"</Skill>
-  <Skill name="RULES-COMPART_*">"3"</Skill>
-  <Skill name="RULES-COMPESQU">"3"</Skill>
-  <Skill name="RULES-COMPSIGNES_VOL">"3"</Skill>
-  <Skill name="RULES-COMPCOMM">"4"</Skill>
-  <Skill name="RULES-COMPRESALC">"4"</Skill>
+<Skill name="RULES-COMP_BRIBERY">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM">"1"</Skill>
+  <Skill name="RULES-COMP_COOL">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_ENTERTAIN__STORYTELLING">"1"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__RANALD">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_PRAY">"1"</Skill>
+  <Skill name="RULES-COMP_SLEIGHT_OF_HAND">"1"</Skill>
+  <Skill name="RULES-COMP_ATHLETICS">"2"</Skill>
+  <Skill name="RULES-COMP_ENTERTAIN__ACTING">"2"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"2"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"2"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"2"</Skill>
+  <Skill name="RULES-COMP_STEALTH__*">"2"</Skill>
+  <Skill name="RULES-COMP_ART__*">"3"</Skill>
+  <Skill name="RULES-COMP_DODGE">"3"</Skill>
+  <Skill name="RULES-COMP_SECRET_SIGNS__THIEF">"3"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"4"</Skill>
+  <Skill name="RULES-COMP_CONSUME_ALCOHOL">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0012_RANALD">"1"</Talent>
-  <Talent name="RULES-T0099">"1"</Talent>
-  <Talent name="RULES-T0020">"1"</Talent>
-  <Talent name="RULES-T0002">"1"</Talent>
-  <Talent name="RULES-T0165">"2"</Talent>
-  <Talent name="RULES-T0072">"2"</Talent>
-  <Talent name="RULES-T0136_RANALD">"2"</Talent>
-  <Talent name="RULES-T0080_DECEIVER">"2"</Talent>
-  <Talent name="RULES-T0010">"3"</Talent>
-  <Talent name="RULES-T0091">"3"</Talent>
-  <Talent name="RULES-T0093">"3"</Talent>
-  <Talent name="RULES-T0073">"3"</Talent>
-  <Talent name="RULES-T0058">"4"</Talent>
-  <Talent name="RULES-T0109">"4"</Talent>
-  <Talent name="RULES-T0005">"4"</Talent>
-  <Talent name="RULES-T0117">"4"</Talent>
+<Talent name="RULES-T_BLESS__RANALD">"1"</Talent>
+  <Talent name="RULES-T_CAT_TONGUED">"1"</Talent>
+  <Talent name="RULES-T_LUCK">"1"</Talent>
+  <Talent name="RULES-T_SUAVE">"1"</Talent>
+  <Talent name="RULES-T_HOLY_VISIONS">"2"</Talent>
+  <Talent name="RULES-T_SECRET_IDENTITY">"2"</Talent>
+  <Talent name="RULES-T_ETIQUETTE__RANALD">"2"</Talent>
+  <Talent name="RULES-T_INVOKE__DECEIVER">"2"</Talent>
+  <Talent name="RULES-T_BLATHER">"3"</Talent>
+  <Talent name="RULES-T_FAST_HANDS">"3"</Talent>
+  <Talent name="RULES-T_MASTER_OF_DISGUISE">"3"</Talent>
+  <Talent name="RULES-T_MIMIC">"3"</Talent>
+  <Talent name="RULES-T_NOSE_FOR_TROUBLE">"4"</Talent>
+  <Talent name="RULES-T_PUBLIC_SPEAKER">"4"</Talent>
+  <Talent name="RULES-T_PURE_SOUL">"4"</Talent>
+  <Talent name="RULES-T_SAVVY">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Discrete Symbol of Ranald">"1"</Item>
-<Item name="RULES-TRAP_017">"1"</Item>
-<Item name="RULES-TRAP_058">"2"</Item>
-<Item name="RULES-COMB_BASE_*">"2"</Item>
+<Item name="RULES-TRAP_CLOTHING">"1"</Item>
+<Item name="RULES-TRAP_DISGUISE_KIT">"2"</Item>
+<Item name="RULES-COMP_MELEE__BASIC">"2"</Item>
 <Item name="Book (Ranald)">"2"</Item>
 <Item name="Initiate Apprentice">"3"</Item>
 <Item name="Cloak or Coat with Hidden Pockets">"3"</Item>
 <Item name="Subordinate Priests">"4"</Item>
-<Item name="RULES-TRAP_101 (Any)">"4"</Item>
+<Item name="RULES-TRAP_TRADE_TOOLS (Any)">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>20</Page>
 </Career>
-<Career id="DEFT-WORK004">
+<Career id="DEFT-WORK_LIBERATOR_PRIEST">
 <Description language="ENGLISH">"Liberator-Priest"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPCHARM"</Skill>
+<Skill>"RULES-COMP_CHARM"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -321,49 +322,49 @@
 <Attribut name="RULES-ATTR_Fel">"1"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPSUBOR">"1"</Skill>
-  <Skill name="RULES-COMPCHARM">"1"</Skill>
-  <Skill name="RULES-COMPCALM">"1"</Skill>
-  <Skill name="RULES-COMPDIVERT_NARRA">"1"</Skill>
-  <Skill name="RULES-COMPRAGOT">"1"</Skill>
-  <Skill name="RULES-COMPMARCH">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_POLIT">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPPRIERE">"1"</Skill>
-  <Skill name="RULES-COMPATHL">"2"</Skill>
-  <Skill name="RULES-COMPESQU">"2"</Skill>
-  <Skill name="RULES-COMPINTIM">"2"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"2"</Skill>
-  <Skill name="RULES-COMPEVAL">"3"</Skill>
-  <Skill name="RULES-COMPLANG_VOL">"3"</Skill>
-  <Skill name="RULES-COMPCOMM">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_LOCAL">"3"</Skill>
-  <Skill name="RULES-COMPLANG_*">"4"</Skill>
-  <Skill name="RULES-COMPDISC_URB">"4"</Skill>
+<Skill name="RULES-COMP_BRIBERY">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM">"1"</Skill>
+  <Skill name="RULES-COMP_COOL">"1"</Skill>
+  <Skill name="RULES-COMP_ENTERTAIN__STORYTELLING">"1"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+  <Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__POLITICS">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_PRAY">"1"</Skill>
+  <Skill name="RULES-COMP_ATHLETICS">"2"</Skill>
+  <Skill name="RULES-COMP_DODGE">"2"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"2"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"2"</Skill>
+  <Skill name="RULES-COMP_EVALUATE">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__THIEF">"3"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__LOCAL">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"4"</Skill>
+  <Skill name="RULES-COMP_STEALTH__URBAN">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0051">"1"</Talent>
-  <Talent name="RULES-T0012_RANALD">"1"</Talent>
-  <Talent name="RULES-T0165">"1"</Talent>
-  <Talent name="RULES-T0020">"1"</Talent>
-  <Talent name="RULES-T0099">"2"</Talent>
-  <Talent name="RULES-T0084">"2"</Talent>
-  <Talent name="RULES-T0136_RANALD">"2"</Talent>
-  <Talent name="RULES-T0080_PROTECTOR">"2"</Talent>
-  <Talent name="RULES-T0056">"3"</Talent>
-  <Talent name="RULES-T0109">"3"</Talent>
-  <Talent name="RULES-T0079">"3"</Talent>
-  <Talent name="RULES-T0072">"3"</Talent>
-  <Talent name="RULES-T0039">"4"</Talent>
-  <Talent name="RULES-T0142">"4"</Talent>
-  <Talent name="RULES-T0065">"4"</Talent>
-  <Talent name="RULES-T0005">"4"</Talent>
+<Talent name="RULES-T_ARGUMENTATIVE">"1"</Talent>
+  <Talent name="RULES-T_BLESS__RANALD">"1"</Talent>
+  <Talent name="RULES-T_HOLY_VISIONS">"1"</Talent>
+  <Talent name="RULES-T_LUCK">"1"</Talent>
+  <Talent name="RULES-T_CAT_TONGUED">"2"</Talent>
+  <Talent name="RULES-T_READ_WRITE">"2"</Talent>
+  <Talent name="RULES-T_ETIQUETTE__RANALD">"2"</Talent>
+  <Talent name="RULES-T_INVOKE__PROTECTOR">"2"</Talent>
+  <Talent name="RULES-T_IMPASSIONED_ZEAL">"3"</Talent>
+  <Talent name="RULES-T_PUBLIC_SPEAKER">"3"</Talent>
+  <Talent name="RULES-T_SCHEMER">"3"</Talent>
+  <Talent name="RULES-T_SECRET_IDENTITY">"3"</Talent>
+  <Talent name="RULES-T_DISARM">"4"</Talent>
+  <Talent name="RULES-T_GREGARIOUS">"4"</Talent>
+  <Talent name="RULES-T_MASTER_ORATOR">"4"</Talent>
+  <Talent name="RULES-T_PURE_SOUL">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Discrete Symbol of Ranald">"1"</Item>
-<Item name="RULES-ARMO_04">"1"</Item>
-<Item name="RULES-COMB_BASE_*">"2"</Item>
+<Item name="RULES-ARMO_LEATHER_JACK">"1"</Item>
+<Item name="RULES-COMP_MELEE__BASIC">"2"</Item>
 <Item name="Holy Book (Ranald)">"2"</Item>
 <Item name="Initiate Apprentice">"3"</Item>
 <Item name="Shrine of Ranald">"3"</Item>
@@ -373,10 +374,10 @@
 </SUBCHAPTER_ITEM>
 <Page>22</Page>
 </Career>
-<Career id="DEFT-WORK005">
+<Career id="DEFT-WORK_FORGER">
 <Description language="ENGLISH">"Forger"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPART_*"</Skill>
+<Skill>"RULES-COMP_ART__*"</Skill>
 <Class>"RULES-CLASS_ROGU"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -409,63 +410,63 @@
 <Attribut name="RULES-ATTR_Fel">"0"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPART_*">"1"</Skill>
-  <Skill name="RULES-COMPCALM">"1"</Skill>
-  <Skill name="RULES-COMPRESALC">"1"</Skill>
-  <Skill name="RULES-COMPRAGOT">"1"</Skill>
-  <Skill name="RULES-COMPMARCH">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPESCAM">"1"</Skill>
-  <Skill name="RULES-COMPDISC_URB">"1"</Skill>
-  <Skill name="RULES-COMPMETIER_MATART/RULES-COMPMETIER_FORGE">"1"</Skill>
-  <Skill name="RULES-COMPSUBOR">"2"</Skill>
-  <Skill name="RULES-COMPCHARM">"2"</Skill>
-  <Skill name="RULES-COMPEVAL">"2"</Skill>
-  <Skill name="RULES-COMPPARI">"2"</Skill>
-  <Skill name="RULES-COMPSIGNES_VOL">"2"</Skill>
-  <Skill name="RULES-COMPSAVOIR_ART">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_HERAL">"3"</Skill>
-  <Skill name="RULES-COMPRECH">"3"</Skill>
-  <Skill name="RULES-COMPMETIER_*">"3"</Skill>
-  <Skill name="RULES-COMPCOMM">"4"</Skill>
-  <Skill name="RULES-COMPSAVOIR_HIST">"4"</Skill>
+<Skill name="RULES-COMP_ART__*">"1"</Skill>
+  <Skill name="RULES-COMP_COOL">"1"</Skill>
+  <Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+  <Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_SLEIGHT_OF_HAND">"1"</Skill>
+  <Skill name="RULES-COMP_STEALTH__URBAN">"1"</Skill>
+  <Skill name="RULES-COMP_TRADE__ART_SUPPLIES/RULES-COMP_TRADE__BLACKSMITH">"1"</Skill>
+  <Skill name="RULES-COMP_BRIBERY">"2"</Skill>
+  <Skill name="RULES-COMP_CHARM">"2"</Skill>
+  <Skill name="RULES-COMP_EVALUATE">"2"</Skill>
+  <Skill name="RULES-COMP_GAMBLE">"2"</Skill>
+  <Skill name="RULES-COMP_SECRET_SIGNS__THIEF">"2"</Skill>
+  <Skill name="RULES-COMP_LORE__ART">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__HERALDRY">"3"</Skill>
+  <Skill name="RULES-COMP_RESEARCH">"3"</Skill>
+  <Skill name="RULES-COMP_TRADE__*">"3"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"4"</Skill>
+  <Skill name="RULES-COMP_LORE__HISTORY">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0007">"1"</Talent>
-  <Talent name="RULES-T0092_*">"1"</Talent>
-  <Talent name="RULES-T0038">"1"</Talent>
-  <Talent name="RULES-T0106">"1"</Talent>
-  <Talent name="RULES-T0147">"2"</Talent>
-  <Talent name="RULES-T0045">"2"</Talent>
-  <Talent name="RULES-T0084">"2"</Talent>
-  <Talent name="RULES-T0015">"2"</Talent>
-  <Talent name="RULES-T0139_*">"3"</Talent>
-  <Talent name="RULES-T0102">"3"</Talent>
-  <Talent name="RULES-T0117">"3"</Talent>
-  <Talent name="RULES-T0046">"3"</Talent>
-  <Talent name="RULES-T0017">"4"</Talent>
-  <Talent name="RULES-T0090">"4"</Talent>
-  <Talent name="RULES-T0157_*">"4"</Talent>
-  <Talent name="RULES-T0079">"4"</Talent>
+<Talent name="RULES-T_ARTISTIC">"1"</Talent>
+  <Talent name="RULES-T_CRAFTSMAN__*">"1"</Talent>
+  <Talent name="RULES-T_CRIMINAL">"1"</Talent>
+  <Talent name="RULES-T_NUMISMATICS">"1"</Talent>
+  <Talent name="RULES-T_BRIBER">"2"</Talent>
+  <Talent name="RULES-T_NIMBLE_FINGERED">"2"</Talent>
+  <Talent name="RULES-T_READ_WRITE">"2"</Talent>
+  <Talent name="RULES-T_TINKER">"2"</Talent>
+  <Talent name="RULES-T_ACUTE_SENSE__*">"3"</Talent>
+  <Talent name="RULES-T_DEALMAKER">"3"</Talent>
+  <Talent name="RULES-T_SAVVY">"3"</Talent>
+  <Talent name="RULES-T_SUPER_NUMERATE">"3"</Talent>
+  <Talent name="RULES-T_KINGPIN">"4"</Talent>
+  <Talent name="RULES-T_MAGNUM_OPUS">"4"</Talent>
+  <Talent name="RULES-T_MASTER_TRADESMAN__*">"4"</Talent>
+  <Talent name="RULES-T_SCHEMER">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Coin Mould (any currency)">"1"</Item>
-<Item name="RULES-TRAP_101">"1"</Item>
+<Item name="RULES-TRAP_TRADE_TOOLS">"1"</Item>
 <Item name="Calligrapher's Tools">"2"</Item>
 <Item name="Artist's Tools">"3"</Item>
 <Item name="Workshop">"3"</Item>
 <Item name="Charlatan Contact">"3"</Item>
 <Item name="2 Charlatan Subordinates">"4"</Item>
 <Item name="Forged Guild Licence">"4"</Item>
-<Item name="RULES-TRAP_017 (Q)">"4"</Item>
+<Item name="RULES-TRAP_CLOTHING (Q)">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>44</Page>
 </Career>
-<Career id="DEFT-WORK006">
+<Career id="DEFT-WORK_RANGER_PRIEST_OF_TAAL">
 <Description language="ENGLISH">"Ranger-Priest of Taal"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPPROJ_ARC"</Skill>
+<Skill>"RULES-COMP_RANGED__BOW"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -498,51 +499,51 @@
 <Attribut name="RULES-ATTR_Fel">"2"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPATHL">"1"</Skill>
-  <Skill name="RULES-COMPANIM">"1"</Skill>
-  <Skill name="RULES-COMPCALM">"1"</Skill>
-  <Skill name="RULES-COMPRESIST">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_THEO">"1"</Skill>
-  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPPRIERE">"1"</Skill>
-  <Skill name="RULES-COMPPROJ_ARC">"1"</Skill>
-  <Skill name="RULES-COMPGUERI">"2"</Skill>
-  <Skill name="RULES-COMPINTIM">"2"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"2"</Skill>
-  <Skill name="RULES-COMPORIENT">"2"</Skill>
-  <Skill name="RULES-COMPDISC_RURAL">"2"</Skill>
-  <Skill name="RULES-COMPPIST">"2"</Skill>
-  <Skill name="RULES-COMPDRESS_*">"3"</Skill>
-  <Skill name="RULES-COMPLANG_*">"3"</Skill>
-  <Skill name="RULES-COMPDISC_URB">"4"</Skill>
+<Skill name="RULES-COMP_ATHLETICS">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM_ANIMAL">"1"</Skill>
+  <Skill name="RULES-COMP_COOL">"1"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__THEOLOGY">"1"</Skill>
+  <Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_PRAY">"1"</Skill>
+  <Skill name="RULES-COMP_RANGED__BOW">"1"</Skill>
+  <Skill name="RULES-COMP_HEAL">"2"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"2"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"2"</Skill>
+  <Skill name="RULES-COMP_NAVIGATION">"2"</Skill>
+  <Skill name="RULES-COMP_STEALTH__RURAL">"2"</Skill>
+  <Skill name="RULES-COMP_TRACK">"2"</Skill>
+  <Skill name="RULES-COMP_ANIMAL_TRAINING__*">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"3"</Skill>
+  <Skill name="RULES-COMP_STEALTH__URBAN">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0012_TAAL">"1"</Talent>
-  <Talent name="RULES-T0165">"1"</Talent>
-  <Talent name="RULES-T0140">"1"</Talent>
-  <Talent name="RULES-T0105">"1"</Talent>
-  <Talent name="RULES-T0080_TAAL">"2"</Talent>
-  <Talent name="RULES-T0136_TAAL">"2"</Talent>
-  <Talent name="RULES-T0013_*">"2"</Talent>
-  <Talent name="RULES-T0047">"3"</Talent>
-  <Talent name="RULES-T0005">"3"</Talent>
-  <Talent name="RULES-T0129_*">"3"</Talent>
-  <Talent name="RULES-T0151">"3"</Talent>
-  <Talent name="RULES-T0039">"4"</Talent>
-  <Talent name="RULES-T0142">"4"</Talent>
-  <Talent name="RULES-T0065">"4"</Talent>
+<Talent name="RULES-T_BLESS__TAAL">"1"</Talent>
+  <Talent name="RULES-T_HOLY_VISIONS">"1"</Talent>
+  <Talent name="RULES-T_ORIENTATION">"1"</Talent>
+  <Talent name="RULES-T_ROVER">"1"</Talent>
+  <Talent name="RULES-T_INVOKE__TAAL">"2"</Talent>
+  <Talent name="RULES-T_ETIQUETTE__TAAL">"2"</Talent>
+  <Talent name="RULES-T_STRIDER__*">"2"</Talent>
+  <Talent name="RULES-T_HARDY">"3"</Talent>
+  <Talent name="RULES-T_PURE_SOUL">"3"</Talent>
+  <Talent name="RULES-T_RESISTANCE__*">"3"</Talent>
+  <Talent name="RULES-T_SURE_SHOT">"3"</Talent>
+  <Talent name="RULES-T_DISARM">"4"</Talent>
+  <Talent name="RULES-T_GREGARIOUS">"4"</Talent>
+  <Talent name="RULES-T_MASTER_ORATOR">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="RULES-PROJ_ARC_01">"1"</Item>
-<Item name="RULES-TRAP_016">"1"</Item>
-<Item name="RULES-TRAP_028 (Taal)">"1"</Item>
-<Item name="RULES-TRAP_015">"1"</Item>
-<Item name="RULES-TRAP_001">"2"</Item>
-<Item name="RULES-TRAP_125">"2"</Item>
+<Item name="RULES-PROJ_BOW">"1"</Item>
+<Item name="RULES-TRAP_CLOAK">"1"</Item>
+<Item name="RULES-TRAP_RELIGIOUS_SYMBOL (Taal)">"1"</Item>
+<Item name="RULES-TRAP_BOOTS">"1"</Item>
+<Item name="RULES-TRAP_BACKPACK">"2"</Item>
+<Item name="RULES-TRAP_BEDROLL">"2"</Item>
 <Item name="Book (Taal)">"2"</Item>
-<Item name="RULES-COMB_BASE_*">"2"</Item>
+<Item name="RULES-COMP_MELEE__BASIC">"2"</Item>
 <Item name="Initiate Follower">"3"</Item>
 <Item name="Religious Relic">"3"</Item>
 <Item name="Animal Companion">"4"</Item>
@@ -550,10 +551,10 @@
 </SUBCHAPTER_ITEM>
 <Page>86</Page>
 </Career>
-<Career id="DEFT-WORK007">
+<Career id="DEFT-WORK_MULESKINNER">
 <Description language="ENGLISH">"Muleskinner"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPANIM"</Skill>
+<Skill>"RULES-COMP_CHARM_ANIMAL"</Skill>
 <Class>"RULES-CLASS_RANG"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -586,67 +587,67 @@
 <Attribut name="RULES-ATTR_Fel">"0"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPSOINANI">"1"</Skill>
-  <Skill name="RULES-COMPANIM">"1"</Skill>
-  <Skill name="RULES-COMPCOND">"1"</Skill>
-  <Skill name="RULES-COMPRESIST">"1"</Skill>
-  <Skill name="RULES-COMPRAGOT">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_LOCAL">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPPROJ_ENTRAV">"1"</Skill>
-  <Skill name="RULES-COMPCHEV_CHEVAL">"1"</Skill>
-  <Skill name="RULES-COMPDRESS_*">"2"</Skill>
-  <Skill name="RULES-COMPESQU">"2"</Skill>
-  <Skill name="RULES-COMPLANG_*">"2"</Skill>
-  <Skill name="RULES-COMPORIENT">"2"</Skill>
-  <Skill name="RULES-COMPSURVEXT">"2"</Skill>
-  <Skill name="RULES-COMPPROJ_ARC">"2"</Skill>
-  <Skill name="RULES-COMPCALM">"3"</Skill>
-  <Skill name="RULES-COMPINTUI">"3"</Skill>
-  <Skill name="RULES-COMPMETIER_CHARP">"3"</Skill>
-  <Skill name="RULES-COMPDISC_RURAL">"3"</Skill>
-  <Skill name="RULES-COMPMARCH">"4"</Skill>
-  <Skill name="RULES-COMPCOMM">"4"</Skill>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM_ANIMAL">"1"</Skill>
+  <Skill name="RULES-COMP_DRIVE">"1"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"1"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__LOCAL">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_RANGED__ENTANGLING">"1"</Skill>
+  <Skill name="RULES-COMP_RIDE__HORSE">"1"</Skill>
+  <Skill name="RULES-COMP_ANIMAL_TRAINING__*">"2"</Skill>
+  <Skill name="RULES-COMP_DODGE">"2"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"2"</Skill>
+  <Skill name="RULES-COMP_NAVIGATION">"2"</Skill>
+  <Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"2"</Skill>
+  <Skill name="RULES-COMP_RANGED__BOW">"2"</Skill>
+  <Skill name="RULES-COMP_COOL">"3"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"3"</Skill>
+  <Skill name="RULES-COMP_TRADE__CARPENTER">"3"</Skill>
+  <Skill name="RULES-COMP_STEALTH__RURAL">"3"</Skill>
+  <Skill name="RULES-COMP_HAGGLE">"4"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0003">"1"</Talent>
-  <Talent name="RULES-T0024">"1"</Talent>
-  <Talent name="RULES-T0140">"1"</Talent>
-  <Talent name="RULES-T0116">"1"</Talent>
-  <Talent name="RULES-T0074">"2"</Talent>
-  <Talent name="RULES-T0168">"2"</Talent>
-  <Talent name="RULES-T0132_*">"2"</Talent>
-  <Talent name="RULES-T0013_*">"2"</Talent>
-  <Talent name="RULES-T0136_GUILD">"3"</Talent>
-  <Talent name="RULES-T0058">"3"</Talent>
-  <Talent name="RULES-T0025">"3"</Talent>
-  <Talent name="RULES-T0001">"3"</Talent>
-  <Talent name="RULES-T0102">"4"</Talent>
-  <Talent name="RULES-T0053">"4"</Talent>
-  <Talent name="RULES-T0106">"4"</Talent>
-  <Talent name="RULES-T0084">"4"</Talent>
+<Talent name="RULES-T_ANIMAL_AFFINITY">"1"</Talent>
+  <Talent name="RULES-T_CRACK_THE_WHIP">"1"</Talent>
+  <Talent name="RULES-T_ORIENTATION">"1"</Talent>
+  <Talent name="RULES-T_TENACIOUS">"1"</Talent>
+  <Talent name="RULES-T_COOLHEADED">"2"</Talent>
+  <Talent name="RULES-T_SEASONED_TRAVELLER">"2"</Talent>
+  <Talent name="RULES-T_FEARLESS__*">"2"</Talent>
+  <Talent name="RULES-T_STRIDER__*">"2"</Talent>
+  <Talent name="RULES-T_ETIQUETTE__GUILD">"3"</Talent>
+  <Talent name="RULES-T_NOSE_FOR_TROUBLE">"3"</Talent>
+  <Talent name="RULES-T_STOUT_HEARTED">"3"</Talent>
+  <Talent name="RULES-T_TRICK_RIDING">"3"</Talent>
+  <Talent name="RULES-T_DEALMAKER">"4"</Talent>
+  <Talent name="RULES-T_INSPIRING">"4"</Talent>
+  <Talent name="RULES-T_NUMISMATICS">"4"</Talent>
+  <Talent name="RULES-T_READ_WRITE">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="RULES-TRAP_022">"1"</Item>
-<Item name="RULES-TRAP_023">"1"</Item>
-<Item name="RULES-TRAP_017">"1"</Item>
-<Item name="RULES-COMB_ENTRA_01">"1"</Item>
-<Item name="RULES-TRAP_151">"2"</Item>
-<Item name="RULES-TRAP_023 (Q)">"2"</Item>
-<Item name="RULES-TRAP_099">"3"</Item>
+<Item name="RULES-TRAP_GLOVES">"1"</Item>
+<Item name="RULES-TRAP_HAT">"1"</Item>
+<Item name="RULES-TRAP_CLOTHING">"1"</Item>
+<Item name="RULES-COMB_WHIP">"1"</Item>
+<Item name="RULES-TRAP_TENT">"2"</Item>
+<Item name="RULES-TRAP_HAT (Q)">"2"</Item>
+<Item name="RULES-TRAP_MAP">"3"</Item>
 <Item name="Pack Animal">"3"</Item>
-<Item name="RULES-TRAP_017 (Q)">"3"</Item>
-<Item name="RULES-TRAP_116">"3"</Item>
+<Item name="RULES-TRAP_CLOTHING (Q)">"3"</Item>
+<Item name="RULES-TRAP_RIDING_HORSE">"3"</Item>
 <Item name="Caravan">"4"</Item>
 <Item name="Stable of Pack Animals">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>128</Page>
 </Career>
-<Career id="DEFT-WORK008">
+<Career id="DEFT-WORK_GAMEKEEPER">
 <Description language="ENGLISH">"Gamekeeper"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPPROJ_ARC"</Skill>
+<Skill>"RULES-COMP_RANGED__BOW"</Skill>
 <Class>"RULES-CLASS_RANG"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -679,64 +680,64 @@
 <Attribut name="RULES-ATTR_Fel">"0"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPSOINANI">"1"</Skill>
-  <Skill name="RULES-COMPESCAL">"1"</Skill>
-  <Skill name="RULES-COMPRAGOT">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_BETE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPPROJ_ARC">"1"</Skill>
-  <Skill name="RULES-COMPPIEG">"1"</Skill>
-  <Skill name="RULES-COMPDISC_RURAL">"1"</Skill>
-  <Skill name="RULES-COMPATHL">"2"</Skill>
-  <Skill name="RULES-COMPCALM">"2"</Skill>
-  <Skill name="RULES-COMPRESIST">"2"</Skill>
-  <Skill name="RULES-COMPINTUI">"2"</Skill>
-  <Skill name="RULES-COMPSAVOIR_LOCAL">"2"</Skill>
-  <Skill name="RULES-COMPPIST">"2"</Skill>
-  <Skill name="RULES-COMPDRESS_*">"3"</Skill>
-  <Skill name="RULES-COMPORIENT">"3"</Skill>
-  <Skill name="RULES-COMPPROJ_POUDRE">"3"</Skill>
-  <Skill name="RULES-COMPCHEV_CHEVAL">"3"</Skill>
-  <Skill name="RULES-COMPCOMM">"4"</Skill>
-  <Skill name="RULES-COMPSAVOIR_LOI">"4"</Skill>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+  <Skill name="RULES-COMP_CLIMB">"1"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__BEASTS">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_RANGED__BOW">"1"</Skill>
+  <Skill name="RULES-COMP_SET_TRAP">"1"</Skill>
+  <Skill name="RULES-COMP_STEALTH__RURAL">"1"</Skill>
+  <Skill name="RULES-COMP_ATHLETICS">"2"</Skill>
+  <Skill name="RULES-COMP_COOL">"2"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"2"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"2"</Skill>
+  <Skill name="RULES-COMP_LORE__LOCAL">"2"</Skill>
+  <Skill name="RULES-COMP_TRACK">"2"</Skill>
+  <Skill name="RULES-COMP_ANIMAL_TRAINING__*">"3"</Skill>
+  <Skill name="RULES-COMP_NAVIGATION">"3"</Skill>
+  <Skill name="RULES-COMP_RANGED__BLACKPOWDER">"3"</Skill>
+  <Skill name="RULES-COMP_RIDE__HORSE">"3"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"4"</Skill>
+  <Skill name="RULES-COMP_LORE__LAW">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0153">"1"</Talent>
-  <Talent name="RULES-T0105">"1"</Talent>
-  <Talent name="RULES-T0013_*">"1"</Talent>
-  <Talent name="RULES-T0156">"1"</Talent>
-  <Talent name="RULES-T0108">"2"</Talent>
-  <Talent name="RULES-T0098">"2"</Talent>
-  <Talent name="RULES-T0152">"2"</Talent>
-  <Talent name="RULES-T0059">"2"</Talent>
-  <Talent name="RULES-T0149">"3"</Talent>
-  <Talent name="RULES-T0139_*">"3"</Talent>
-  <Talent name="RULES-T0140">"3"</Talent>
-  <Talent name="RULES-T0150">"3"</Talent>
-  <Talent name="RULES-T0102">"4"</Talent>
-  <Talent name="RULES-T0122">"4"</Talent>
-  <Talent name="RULES-T0136_SERV">"4"</Talent>
-  <Talent name="RULES-T0084">"4"</Talent>
+<Talent name="RULES-T_MARKSMAN">"1"</Talent>
+  <Talent name="RULES-T_ROVER">"1"</Talent>
+  <Talent name="RULES-T_STRIDER__*">"1"</Talent>
+  <Talent name="RULES-T_TRAPPER">"1"</Talent>
+  <Talent name="RULES-T_HUNTER_S_EYE">"2"</Talent>
+  <Talent name="RULES-T_MENACING">"2"</Talent>
+  <Talent name="RULES-T_SHARPSHOOTER">"2"</Talent>
+  <Talent name="RULES-T_STRIKE_TO_STUN">"2"</Talent>
+  <Talent name="RULES-T_ACCURATE_SHOT">"3"</Talent>
+  <Talent name="RULES-T_ACUTE_SENSE__*">"3"</Talent>
+  <Talent name="RULES-T_ORIENTATION">"3"</Talent>
+  <Talent name="RULES-T_FAST_SHOT">"3"</Talent>
+  <Talent name="RULES-T_DEALMAKER">"4"</Talent>
+  <Talent name="RULES-T_COMMANDING_PRESENCE">"4"</Talent>
+  <Talent name="RULES-T_ETIQUETTE__SERV">"4"</Talent>
+  <Talent name="RULES-T_READ_WRITE">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="RULES-TRAP_023">"1"</Item>
+<Item name="RULES-TRAP_HAT">"1"</Item>
 <Item name="Bow and Arrow (12)">"1"</Item>
-<Item name="RULES-COMB_BASE_*">"1"</Item>
-<Item name="RULES-TRAP_023 (Q)">"2"</Item>
+<Item name="RULES-COMP_MELEE__BASIC">"1"</Item>
+<Item name="RULES-TRAP_HAT (Q)">"2"</Item>
 <Item name="Hunting Suit">"2"</Item>
-<Item name="RULES-PROJ_POUDRE_03">"3"</Item>
-<Item name="RULES-TRAP_116">"3"</Item>
+<Item name="RULES-PROJ_BLUNDERBUSS">"3"</Item>
+<Item name="RULES-TRAP_RIDING_HORSE">"3"</Item>
 <Item name="Estate Cottage">"4"</Item>
-<Item name="RULES-TRAP_017 (Q)">"4"</Item>
+<Item name="RULES-TRAP_CLOTHING (Q)">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>138</Page>
 </Career>
-<Career id="DEFT-WORK009">
+<Career id="DEFT-WORK_POACHER">
 <Description language="ENGLISH">"Poacher"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPPIEG"</Skill>
+<Skill>"RULES-COMP_SET_TRAP"</Skill>
 <Class>"RULES-CLASS_ROGU"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -769,64 +770,64 @@
 <Attribut name="RULES-ATTR_Fel">"0"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPSUBOR">"1"</Skill>
-  <Skill name="RULES-COMPESCAL">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPMARCH">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_BETE">"1"</Skill>
-  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPPROJ_FROND">"1"</Skill>
-  <Skill name="RULES-COMPPIEG">"1"</Skill>
-  <Skill name="RULES-COMPDISC_RURAL">"1"</Skill>
-  <Skill name="RULES-COMPATHL">"2"</Skill>
-  <Skill name="RULES-COMPCALM">"2"</Skill>
-  <Skill name="RULES-COMPRESIST">"2"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"2"</Skill>
-  <Skill name="RULES-COMPPROJ_ARC">"2"</Skill>
-  <Skill name="RULES-COMPPIST">"2"</Skill>
-  <Skill name="RULES-COMPSOINANI">"3"</Skill>
-  <Skill name="RULES-COMPDRESS_*">"3"</Skill>
-  <Skill name="RULES-COMPORIENT">"3"</Skill>
-  <Skill name="RULES-COMPCHEV_CHEVAL">"3"</Skill>
-  <Skill name="RULES-COMPINTIM">"4"</Skill>
-  <Skill name="RULES-COMPSAVOIR_LOI">"4"</Skill>
+<Skill name="RULES-COMP_BRIBERY">"1"</Skill>
+  <Skill name="RULES-COMP_CLIMB">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__BEASTS">"1"</Skill>
+  <Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_RANGED__SLING">"1"</Skill>
+  <Skill name="RULES-COMP_SET_TRAP">"1"</Skill>
+  <Skill name="RULES-COMP_STEALTH__RURAL">"1"</Skill>
+  <Skill name="RULES-COMP_ATHLETICS">"2"</Skill>
+  <Skill name="RULES-COMP_COOL">"2"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"2"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"2"</Skill>
+  <Skill name="RULES-COMP_RANGED__BOW">"2"</Skill>
+  <Skill name="RULES-COMP_TRACK">"2"</Skill>
+  <Skill name="RULES-COMP_ANIMAL_CARE">"3"</Skill>
+  <Skill name="RULES-COMP_ANIMAL_TRAINING__*">"3"</Skill>
+  <Skill name="RULES-COMP_NAVIGATION">"3"</Skill>
+  <Skill name="RULES-COMP_RIDE__HORSE">"3"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"4"</Skill>
+  <Skill name="RULES-COMP_LORE__LAW">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0113">"1"</Talent>
-  <Talent name="RULES-T0064">"1"</Talent>
-  <Talent name="RULES-T0013_*">"1"</Talent>
-  <Talent name="RULES-T0156">"1"</Talent>
-  <Talent name="RULES-T0108">"2"</Talent>
-  <Talent name="RULES-T0153">"2"</Talent>
-  <Talent name="RULES-T0105">"2"</Talent>
-  <Talent name="RULES-T0152">"2"</Talent>
-  <Talent name="RULES-T0149">"3"</Talent>
-  <Talent name="RULES-T0139_*">"3"</Talent>
-  <Talent name="RULES-T0038">"3"</Talent>
-  <Talent name="RULES-T0150">"3"</Talent>
-  <Talent name="RULES-T0147">"4"</Talent>
-  <Talent name="RULES-T0102">"4"</Talent>
-  <Talent name="RULES-T0017">"4"</Talent>
-  <Talent name="RULES-T0098">"4"</Talent>
+<Talent name="RULES-T_FISHERMAN">"1"</Talent>
+  <Talent name="RULES-T_FLEE">"1"</Talent>
+  <Talent name="RULES-T_STRIDER__*">"1"</Talent>
+  <Talent name="RULES-T_TRAPPER">"1"</Talent>
+  <Talent name="RULES-T_HUNTER_S_EYE">"2"</Talent>
+  <Talent name="RULES-T_MARKSMAN">"2"</Talent>
+  <Talent name="RULES-T_ROVER">"2"</Talent>
+  <Talent name="RULES-T_SHARPSHOOTER">"2"</Talent>
+  <Talent name="RULES-T_ACCURATE_SHOT">"3"</Talent>
+  <Talent name="RULES-T_ACUTE_SENSE__*">"3"</Talent>
+  <Talent name="RULES-T_CRIMINAL">"3"</Talent>
+  <Talent name="RULES-T_FAST_SHOT">"3"</Talent>
+  <Talent name="RULES-T_BRIBER">"4"</Talent>
+  <Talent name="RULES-T_DEALMAKER">"4"</Talent>
+  <Talent name="RULES-T_KINGPIN">"4"</Talent>
+  <Talent name="RULES-T_MENACING">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="RULES-TRAP_016">"1"</Item>
+<Item name="RULES-TRAP_CLOAK">"1"</Item>
 <Item name="Rod and Line">"1"</Item>
 <Item name="Selection of Animal Traps">"1"</Item>
-<Item name="RULES-PROJ_FROND_01">"1"</Item>
-<Item name="RULES-TRAP_125">"2"</Item>
-<Item name="RULES-PROJ_ARC_01">"2"</Item>
-<Item name="RULES-TRAP_151">"2"</Item>
-<Item name="DEFT-TRAP_11/DEFT-TRAP_12/DEFT-TRAP_13/DEFT-TRAP_14/DEFT-TRAP_15">"3"</Item>
-<Item name="RULES-COMB_BASE_*(Q)">"3"</Item>
-<Item name="RULES-TRAP_116">"4"</Item>
+<Item name="RULES-PROJ_STAFF_SLING">"1"</Item>
+<Item name="RULES-TRAP_BEDROLL">"2"</Item>
+<Item name="RULES-PROJ_BOW">"2"</Item>
+<Item name="RULES-TRAP_TENT">"2"</Item>
+<Item name="DEFT-TRAP_HOCHLAND_LOCKHUND/DEFT-TRAP_NORDLANDER_BAMSE/DEFT-TRAP_GROOTSCHER_MARSH_HOUND/DEFT-TRAP_DOVE_HAWK/DEFT-TRAP_ARABYAN_REDHAWK">"3"</Item>
+<Item name="RULES-COMP_MELEE__BASIC(Q)">"3"</Item>
+<Item name="RULES-TRAP_RIDING_HORSE">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>140</Page>
 </Career>
 </DATA_CAREER>
 <DATA_TRAPPING>
-<Trapping id="DEFT-TRAP_01">
+<Trapping id="DEFT-TRAP_BAG_OF_TARRABETH_SEED">
 <Description language="ENGLISH">"Bag of Tarrabeth Seed"</Description>
 <Theme>"RULES-LAB_288"</Theme>
 <Availability>"RULES-DISPO_LIMITED"</Availability>
@@ -834,7 +835,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>32</Page>
 </Trapping>
-<Trapping id="DEFT-TRAP_02">
+<Trapping id="DEFT-TRAP_BAG_OF_SOOT">
 <Description language="ENGLISH">"Bag of Soot"</Description>
 <Theme>"RULES-LAB_288"</Theme>
 <Availability>"RULES-DISPO_COMMON"</Availability>
@@ -842,7 +843,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>32</Page>
 </Trapping>
-<Trapping id="DEFT-TRAP_03">
+<Trapping id="DEFT-TRAP_CALTROPS">
 <Description language="ENGLISH">"Caltrops (12)"</Description>
 <Theme>"RULES-LAB_288"</Theme>
 <Availability>"RULES-DISPO_RARE"</Availability>
@@ -850,7 +851,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>32</Page>
 </Trapping>
-<Trapping id="DEFT-TRAP_04">
+<Trapping id="DEFT-TRAP_CRAMPONS">
 <Description language="ENGLISH">"Crampons (2)"</Description>
 <Theme>"RULES-LAB_288"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -858,7 +859,7 @@
 <Encumbrance>"1"</Encumbrance>
 <Page>32</Page>
 </Trapping>
-<Trapping id="DEFT-TRAP_05">
+<Trapping id="DEFT-TRAP_GLASS_CUTTER">
 <Description language="ENGLISH">"Glass Cutter"</Description>
 <Theme>"RULES-LAB_288"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -866,7 +867,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>32</Page>
 </Trapping>
-<Trapping id="DEFT-TRAP_06">
+<Trapping id="DEFT-TRAP_PERISCOPE">
 <Description language="ENGLISH">"Periscope"</Description>
 <Theme>"RULES-LAB_288"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -874,7 +875,7 @@
 <Encumbrance>"1"</Encumbrance>
 <Page>32</Page>
 </Trapping>
-<Trapping id="DEFT-TRAP_07">
+<Trapping id="DEFT-TRAP_SMOKE_BOMB">
 <Description language="ENGLISH">"Smoke Bomb"</Description>
 <Theme>"RULES-LAB_288"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -882,7 +883,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>32</Page>
 </Trapping>
-<Trapping id="DEFT-TRAP_08">
+<Trapping id="DEFT-TRAP_TELESCOPIC_POLE">
 <Description language="ENGLISH">"Telescopic Pole"</Description>
 <Theme>"RULES-LAB_288"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -890,7 +891,7 @@
 <Encumbrance>"1"</Encumbrance>
 <Page>32</Page>
 </Trapping>
-<Trapping id="DEFT-TRAP_09">
+<Trapping id="DEFT-TRAP_THIN_JIMMY">
 <Description language="ENGLISH">"Thin Jimmy"</Description>
 <Theme>"RULES-LAB_288"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -898,7 +899,7 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>32</Page>
 </Trapping>
-<Trapping id="DEFT-TRAP_10">
+<Trapping id="DEFT-TRAP_HUNTER_S_GARB">
 <Description language="ENGLISH">"Hunter's Garb"</Description>
 <Theme>"RULES-LAB_191"</Theme>
 <Availability>"RULES-DISPO_RARE"</Availability>
@@ -906,7 +907,7 @@
 <Encumbrance>"2"</Encumbrance>
 <Page>132</Page>
 </Trapping>
-<Trapping id="DEFT-TRAP_11">
+<Trapping id="DEFT-TRAP_HOCHLAND_LOCKHUND">
 <Description language="ENGLISH">"Hochland Lockhund"</Description>
 <Theme>"RULES-LAB_260"</Theme>
 <AnimalProfile>"4 30 0 20 30 35 25 0 15 10 15 5"</AnimalProfile>
@@ -915,7 +916,7 @@
 <Price>"2CO"</Price>
 <Page>133</Page>
 </Trapping>
-<Trapping id="DEFT-TRAP_12">
+<Trapping id="DEFT-TRAP_NORDLANDER_BAMSE">
 <Description language="ENGLISH">"Nordlander Bamse"</Description>
 <Theme>"RULES-LAB_260"</Theme>
 <AnimalProfile>"5 25 0 20 20 30 20 0 12 10 20 6"</AnimalProfile>
@@ -924,7 +925,7 @@
 <Price>"4CO"</Price>
 <Page>132</Page>
 </Trapping>
-<Trapping id="DEFT-TRAP_13">
+<Trapping id="DEFT-TRAP_GROOTSCHER_MARSH_HOUND">
 <Description language="ENGLISH">"Grootscher Marsh Hound"</Description>
 <Theme>"RULES-LAB_260"</Theme>
 <AnimalProfile>"4 30 0 30 30 35 15 0 15 10 15 10"</AnimalProfile>
@@ -933,7 +934,7 @@
 <Price>"5CO"</Price>
 <Page>133</Page>
 </Trapping>
-<Trapping id="DEFT-TRAP_14">
+<Trapping id="DEFT-TRAP_DOVE_HAWK">
 <Description language="ENGLISH">"Dove Hawk"</Description>
 <Theme>"RULES-LAB_260"</Theme>
 <AnimalProfile>"2 35 0 15 25 25 35 0 10 20 5 6"</AnimalProfile>
@@ -943,7 +944,7 @@
 <Encumbrance>"1"</Encumbrance>
 <Page>132</Page>
 </Trapping>
-<Trapping id="DEFT-TRAP_15">
+<Trapping id="DEFT-TRAP_ARABYAN_REDHAWK">
 <Description language="ENGLISH">"Arabyan Redhawk"</Description>
 <Theme>"RULES-LAB_260"</Theme>
 <AnimalProfile>"2 40 0 22 35 30 30 0 12 30 5 8"</AnimalProfile>
@@ -961,7 +962,7 @@
 <Target>"1"</Target>
 <Duration>"Fellowship Bonus Minutes"</Duration>
 <Range>"Fellowship Yards"</Range>
-<Talent>"RULES-T0080_NIGHTPROWLER"</Talent>
+<Talent>"RULES-T_INVOKE__NIGHTPROWLER"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>18</Page>
@@ -972,7 +973,7 @@
 <Target>"You"</Target>
 <Duration>"Fellowship Bonus Rounds"</Duration>
 <Range>"Fellowship Bonus Yards"</Range>
-<Talent>"RULES-T0080_NIGHTPROWLER"</Talent>
+<Talent>"RULES-T_INVOKE__NIGHTPROWLER"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>18</Page>
@@ -983,7 +984,7 @@
 <Target>"Area of Effect"</Target>
 <Duration>"Fellowship Bonus Hours"</Duration>
 <Range>"Fellowship Bonus Miles"</Range>
-<Talent>"RULES-T0080_NIGHTPROWLER"</Talent>
+<Talent>"RULES-T_INVOKE__NIGHTPROWLER"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>18</Page>
@@ -994,7 +995,7 @@
 <Target>"Area of Effect"</Target>
 <Duration>"Fellowship Bonus Rounds"</Duration>
 <Range>"Agility Bonus yards"</Range>
-<Talent>"RULES-T0080_NIGHTPROWLER"</Talent>
+<Talent>"RULES-T_INVOKE__NIGHTPROWLER"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>18</Page>
@@ -1005,7 +1006,7 @@
 <Target>"You"</Target>
 <Duration>"SL Hours (minimum 1)"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0080_NIGHTPROWLER"</Talent>
+<Talent>"RULES-T_INVOKE__NIGHTPROWLER"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>18</Page>
@@ -1016,7 +1017,7 @@
 <Target>"You"</Target>
 <Duration>"Fellowship Bonus Minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0080_NIGHTPROWLER"</Talent>
+<Talent>"RULES-T_INVOKE__NIGHTPROWLER"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>18</Page>
@@ -1027,7 +1028,7 @@
 <Target>"You"</Target>
 <Duration>"Fellowship Bonus Hours"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0080_NIGHTPROWLER"</Talent>
+<Talent>"RULES-T_INVOKE__NIGHTPROWLER"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>18</Page>
@@ -1038,7 +1039,7 @@
 <Target>"Fellowship Bonus Allies"</Target>
 <Duration>"Fellowship Bonus Rounds"</Duration>
 <Range>"Fellowship Bonus Yards"</Range>
-<Talent>"RULES-T0080_GAMESTER"</Talent>
+<Talent>"RULES-T_INVOKE__GAMESTER"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>19</Page>
@@ -1049,7 +1050,7 @@
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Fellowship Bonus Yards"</Range>
-<Talent>"RULES-T0080_GAMESTER"</Talent>
+<Talent>"RULES-T_INVOKE__GAMESTER"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>19</Page>
@@ -1060,7 +1061,7 @@
 <Target>"You"</Target>
 <Duration>"Instant"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0080_GAMESTER"</Talent>
+<Talent>"RULES-T_INVOKE__GAMESTER"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>19</Page>
@@ -1071,7 +1072,7 @@
 <Target>"1"</Target>
 <Duration>"Fellowship Bonus Minutes"</Duration>
 <Range>"Fellowship Bonus Yards"</Range>
-<Talent>"RULES-T0080_GAMESTER"</Talent>
+<Talent>"RULES-T_INVOKE__GAMESTER"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>19</Page>
@@ -1082,7 +1083,7 @@
 <Target>"You"</Target>
 <Duration>"Fellowship Bonus Hours"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0080_GAMESTER"</Talent>
+<Talent>"RULES-T_INVOKE__GAMESTER"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>19</Page>
@@ -1093,7 +1094,7 @@
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"Fellowship Bonus Yards"</Range>
-<Talent>"RULES-T0080_GAMESTER"</Talent>
+<Talent>"RULES-T_INVOKE__GAMESTER"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>19</Page>
@@ -1104,7 +1105,7 @@
 <Target>"You"</Target>
 <Duration>"Fellowship Bonus Rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0080_DECEIVER"</Talent>
+<Talent>"RULES-T_INVOKE__DECEIVER"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>24</Page>
@@ -1115,7 +1116,7 @@
 <Target>"1"</Target>
 <Duration>"1 Round"</Duration>
 <Range>"24 yards"</Range>
-<Talent>"RULES-T0080_DECEIVER"</Talent>
+<Talent>"RULES-T_INVOKE__DECEIVER"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>24</Page>
@@ -1126,7 +1127,7 @@
 <Target>"You"</Target>
 <Duration>"Instant"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0080_DECEIVER"</Talent>
+<Talent>"RULES-T_INVOKE__DECEIVER"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>24</Page>
@@ -1137,7 +1138,7 @@
 <Target>"1"</Target>
 <Duration>"Fellowship Bonus Rounds"</Duration>
 <Range>"12 yards"</Range>
-<Talent>"RULES-T0080_DECEIVER"</Talent>
+<Talent>"RULES-T_INVOKE__DECEIVER"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>24</Page>
@@ -1148,7 +1149,7 @@
 <Target>"You"</Target>
 <Duration>"Fellowship Bonus Hours"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0080_DECEIVER"</Talent>
+<Talent>"RULES-T_INVOKE__DECEIVER"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>24</Page>
@@ -1159,7 +1160,7 @@
 <Target>"1"</Target>
 <Duration>"Fellowship Bonus Rounds"</Duration>
 <Range>"24 Yards"</Range>
-<Talent>"RULES-T0080_PROTECTOR"</Talent>
+<Talent>"RULES-T_INVOKE__PROTECTOR"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>25</Page>
@@ -1170,7 +1171,7 @@
 <Target>"1"</Target>
 <Duration>"Gold Tier Days +SL (see text)"</Duration>
 <Range>"24 yards"</Range>
-<Talent>"RULES-T0080_PROTECTOR"</Talent>
+<Talent>"RULES-T_INVOKE__PROTECTOR"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>25</Page>
@@ -1181,7 +1182,7 @@
 <Target>"1"</Target>
 <Duration>"Fellowship Bonus Hours"</Duration>
 <Range>"24 Yards"</Range>
-<Talent>"RULES-T0080_PROTECTOR"</Talent>
+<Talent>"RULES-T_INVOKE__PROTECTOR"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>25</Page>
@@ -1192,7 +1193,7 @@
 <Target>"You"</Target>
 <Duration>"Fellowship Bonus Rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0080_PROTECTOR"</Talent>
+<Talent>"RULES-T_INVOKE__PROTECTOR"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>25</Page>
@@ -1203,7 +1204,7 @@
 <Target>"Area of Effect (Fellowship yards)"</Target>
 <Duration>"Fellowship Bonus Rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0080_PROTECTOR"</Talent>
+<Talent>"RULES-T_INVOKE__PROTECTOR"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>25</Page>
@@ -1214,7 +1215,7 @@
 <Target>"1"</Target>
 <Duration>"Fellowship Bonus Months"</Duration>
 <Range>"Sight"</Range>
-<Talent>"RULES-T0080_PROTECTOR"</Talent>
+<Talent>"RULES-T_INVOKE__PROTECTOR"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>25</Page>
@@ -1225,7 +1226,7 @@
 <Target>"1"</Target>
 <Duration>"Fellowship Bonus +3 rounds"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0080_TAAL"</Talent>
+<Talent>"RULES-T_INVOKE__TAAL"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>88</Page>
@@ -1236,7 +1237,7 @@
 <Target>"Area of Effect"</Target>
 <Duration>"Fellowship Bonus Rounds"</Duration>
 <Range>"Fellowship yards"</Range>
-<Talent>"RULES-T0080_TAAL"</Talent>
+<Talent>"RULES-T_INVOKE__TAAL"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>88</Page>
@@ -1247,7 +1248,7 @@
 <Target>"Special"</Target>
 <Duration>"Permanent"</Duration>
 <Range>"Touch"</Range>
-<Talent>"RULES-T0080_TAAL"</Talent>
+<Talent>"RULES-T_INVOKE__TAAL"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>88</Page>
@@ -1258,7 +1259,7 @@
 <Target>"Area of Effect"</Target>
 <Duration>"Fellowship Bonus Rounds"</Duration>
 <Range>"Fellowship yards"</Range>
-<Talent>"RULES-T0080_TAAL"</Talent>
+<Talent>"RULES-T_INVOKE__TAAL"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>88</Page>
@@ -1269,7 +1270,7 @@
 <Target>"1"</Target>
 <Duration>"Fellowship Bonus rounds"</Duration>
 <Range>"Fellowship Bonus yards"</Range>
-<Talent>"RULES-T0080_TAAL"</Talent>
+<Talent>"RULES-T_INVOKE__TAAL"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>88</Page>
@@ -1280,7 +1281,7 @@
 <Target>"You"</Target>
 <Duration>"Fellowship rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0080_TAAL"</Talent>
+<Talent>"RULES-T_INVOKE__TAAL"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>88</Page>
@@ -1291,7 +1292,7 @@
 <Target>"Area of Effect"</Target>
 <Duration>"Fellowship Bonus rounds"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0080_TAAL"</Talent>
+<Talent>"RULES-T_INVOKE__TAAL"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>88</Page>
@@ -1302,7 +1303,7 @@
 <Target>"You"</Target>
 <Duration>"See Text"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0080_TAAL"</Talent>
+<Talent>"RULES-T_INVOKE__TAAL"</Talent>
 <Level>""</Level>
 <TypSpell>"Miracle"</TypSpell>
 <Page>88</Page>

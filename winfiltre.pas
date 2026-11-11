@@ -6,7 +6,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Grids,
   BCButton, ChargeTexte, ChargeConstantes, GlobalFonts, ChargeEspece,
-  ChargeTalent, ChargeAttribut, XmlExportImport, UnitCalcul, ChargeLivre, BCLabelContour;
+  ChargeTalent, ChargeAttribut, XmlExportImport, UnitCalcul, ChargeLivre, ChargeSort, BCLabelContour;
 
 type
 
@@ -30,6 +30,8 @@ type
     procedure ChargeGroupe();
     procedure ChargeTalent(SortSeul: Boolean);
     procedure ChargeAttribut();
+    procedure ChargeLoreV2();
+    procedure ChargeListesV2();
     procedure FormCreate({%H-}Sender: TObject);
     procedure TabAttributDblClick(Sender: TObject);
     procedure TabAttributMouseDown(Sender: TObject; Button: TMouseButton;
@@ -47,6 +49,9 @@ type
     procedure TabTalentMouseDown({%H-}Sender: TObject; {%H-}Button: TMouseButton;
       {%H-}Shift: TShiftState; X, Y: Integer);
   private
+    CaseBase: TCheckBox;   // creee a l'execution (filtre des carrieres V1 / V2), pas dans le .lfm
+    EtiquetteBase: TLabelContour;
+    procedure EtiquetteBaseClick({%H-}Sender: TObject);
 
   public
 
@@ -58,6 +63,11 @@ var
 implementation
 
 {$R *.lfm}
+
+procedure TWinFiltre.EtiquetteBaseClick(Sender: TObject);
+begin
+  CaseBase.Checked := not CaseBase.Checked;
+end;
 
 procedure TWinFiltre.ChargeLivre();
   var
@@ -108,6 +118,9 @@ procedure TWinFiltre.ChargeLivre();
       FindClose(searchResult);
     end;
 
+    // lignes de remplissage (10 au depart) retirees : elles montaient en tete au tri et comptaient
+    // comme "non coche" dans ButtonValiderClick
+    TabLivre.RowCount := i + 1;
     TabLivre.SortColRow(true,4);
 
   end;
@@ -140,6 +153,7 @@ procedure TWinFiltre.ChargeRace();
           TabRace.Cells[2, IndTab]   := PEspece.Libelle;
           TabRace.Cells[3, IndTab]   := PEspece.CodeEspece;
     end;
+    TabRace.RowCount := IndTab + 1;
 
   end;
 
@@ -176,14 +190,14 @@ procedure TWinFiltre.ChargeTalent(SortSeul: Boolean);
       for PTalent in ListTalent do
         if (PTalent.Magie <> ConstMagieAucune)
             or ((PTalent.ModeSort <> '') and (PTalent.ModeSort <> ConstModeSortAucun)) then
-          FamilleSort.Add(ExtractStringBefore(PTalent.CodeTalent, ValeurSousCompetence));
+          FamilleSort.Add(RadicalTalent(PTalent.CodeTalent));
 
     for PTalent in ListTalent do
       begin
         if (pos(ValeurGenerique,PTalent.CodeTalent) = 0)
             and (pos(SeparateurMulti,PTalent.CodeTalent) = 0) then
-          if (not SortSeul and (pos(ValeurSousCompetence,PTalent.CodeTalent) = 0))
-              or (SortSeul and (FamilleSort.IndexOf(ExtractStringBefore(PTalent.CodeTalent, ValeurSousCompetence)) >= 0)) then
+          if (not SortSeul and (CodeFamilleTalent(PTalent.CodeTalent) = ''))
+              or (SortSeul and (FamilleSort.IndexOf(RadicalTalent(PTalent.CodeTalent)) >= 0)) then
             begin
               Inc(IndTab);
               if TabTalent.RowCount <= IndTab then
@@ -195,8 +209,98 @@ procedure TWinFiltre.ChargeTalent(SortSeul: Boolean);
             end;
     end;
     FamilleSort.Free;
+    TabTalent.RowCount := IndTab + 1;
     TabTalent.SortColRow(true,2);
 
+  end;
+
+// Sorts WFRP2 : pas de talent de sort, le filtre porte sur le Lore (TypeSort, grille Talent reutilisee)
+// et sur les listes de sorts (champ SpellLists, grille Groupe reutilisee).
+procedure TWinFiltre.ChargeLoreV2();
+  var
+    IndTab:  Integer = 0;
+    PSort:   StructureSort;
+    Vus:     TStringList;
+  begin
+    LabelTalent.Caption         := GetTexteLibelle('RULES-LAB_018');
+
+    TabTalent.Clear;
+    TabTalent.ColCount         := 4;
+    TabTalent.RowCount         := 1;
+    TabTalent.ColWidths[0]     := 0;
+    TabTalent.ColWidths[1]     := 20;
+    TabTalent.Cells[2, 0]      := GetTexteLibelle('RULES-LAB_014');
+    TabTalent.ColWidths[2]     := 230;
+    TabTalent.ColWidths[3]     := 0;
+
+    Vus := TStringList.Create;
+    try
+      for PSort in ListSort do
+        if (PSort.TypeSort <> '') and (Pos(ValeurGenerique, PSort.CodeSort) = 0)
+            and (Vus.IndexOf(PSort.TypeSort) < 0) then
+          begin
+            Vus.Add(PSort.TypeSort);
+            Inc(IndTab);
+            TabTalent.RowCount := IndTab + 1;
+            if VerifieFiltre(PSort.TypeSort, SelectWinTalent) then
+              TabTalent.Cells[1, IndTab] := ConstSelectionne;
+            TabTalent.Cells[2, IndTab]   := GetTexteLibelle(PSort.TypeSort);
+            TabTalent.Cells[3, IndTab]   := PSort.TypeSort;
+          end;
+    finally
+      Vus.Free;
+    end;
+    TabTalent.SortColRow(true,2);
+  end;
+
+procedure TWinFiltre.ChargeListesV2();
+  var
+    IndTab:  Integer = 0;
+    PSort:   StructureSort;
+    Vus:     TStringList;
+    Noms:    TStringList;
+    Ind:     Integer;
+    Nom:     String;
+  begin
+    LabelGroupe.Caption         := GetTexteLibelle('RULES-LAB_757');
+
+    TabGroupe.Clear;
+    TabGroupe.ColCount         := 4;
+    TabGroupe.RowCount         := 1;
+    TabGroupe.ColWidths[0]     := 0;
+    TabGroupe.ColWidths[1]     := 20;
+    TabGroupe.Cells[2, 0]      := GetTexteLibelle('RULES-LAB_014');
+    TabGroupe.ColWidths[2]     := 230;
+    TabGroupe.ColWidths[3]     := 0;
+
+    Vus  := TStringList.Create;
+    Noms := TStringList.Create;
+    try
+      for PSort in ListSort do
+        if PSort.ListesSorts <> '' then
+          begin
+            Noms.Clear;
+            ExtractStrings([','], [' '], PChar(PSort.ListesSorts), Noms);
+            for Ind := 0 to Noms.Count - 1 do
+              begin
+                Nom := Trim(Noms[Ind]);
+                if (Nom <> '') and (Vus.IndexOf(Nom) < 0) then
+                  begin
+                    Vus.Add(Nom);
+                    Inc(IndTab);
+                    TabGroupe.RowCount := IndTab + 1;
+                    if VerifieFiltre(Nom, SelectWinGroupe) then
+                      TabGroupe.Cells[1, IndTab] := ConstSelectionne;
+                    TabGroupe.Cells[2, IndTab]   := Nom;
+                    TabGroupe.Cells[3, IndTab]   := Nom;
+                  end;
+              end;
+          end;
+    finally
+      Noms.Free;
+      Vus.Free;
+    end;
+    TabGroupe.SortColRow(true,2);
   end;
 
 procedure TWinFiltre.ChargeGroupe();
@@ -327,6 +431,8 @@ begin
   else
     NbNon := 0;
 
+  ChoixWinBase := Assigned(CaseBase) and CaseBase.Checked;
+
   ChoixWinAttribut := '';
   if tabAttribut.Visible then
     For Ind := 1 to (tabAttribut.RowCount-1) do
@@ -352,6 +458,26 @@ Var
   SortSeul:  Boolean = False;
   PosX:      Integer = 10;
 begin
+  // Carrieres V1 / V2 : case « carrieres de base seulement » (balise Basic), a droite du bouton Valider.
+  // Creee AVANT MiseEnFormeDesChamp pour que son etiquette prenne le style des titres (le texte d'une
+  // case a cocher themee reste noir sur le fond noir de la fenetre).
+  if (WinFiltreAppelant = ConstXmlWork) and ((ValVersion = 'WFRP2') or (ValVersion = 'WFRP1')) then
+    begin
+      CaseBase            := TCheckBox.Create(Self);
+      CaseBase.Parent     := Self;
+      CaseBase.Caption    := '';
+      CaseBase.Left       := ButtonValider.Left + ButtonValider.Width + 20;
+      CaseBase.Top        := ButtonValider.Top + 14;
+      CaseBase.Checked    := SelectWinBase;
+      EtiquetteBase            := TLabelContour.Create(Self);
+      EtiquetteBase.Parent     := Self;
+      EtiquetteBase.Caption    := GetTexteLibelle('RULES-LAB_FILTRE_BASE');
+      EtiquetteBase.Font.Color := clWhite;
+      EtiquetteBase.Font.Height:= -27;
+      EtiquetteBase.Left       := CaseBase.Left + 28;
+      EtiquetteBase.Top        := ButtonValider.Top + 4;
+      EtiquetteBase.OnClick    := @EtiquetteBaseClick;
+    end;
   MiseEnFormeDesChamp(self);
   // grilles sans saisie : ligne entiere selectionnee, couleur commune
   SelectionGrilleWarhammer(TabTalent);
@@ -374,6 +500,7 @@ begin
     begin
       SortSeul := True;
       AffTalent:= True;
+      AffGroupe:= (ValVersion = 'WFRP2');      // listes de sorts (V2 seulement)
     end;
 
   if AffLivre then
@@ -402,7 +529,10 @@ begin
 
   if AffGroupe then
     begin
-      ChargeGroupe();
+      if SortSeul then
+        ChargeListesV2()
+      else
+        ChargeGroupe();
       LabelGroupe.visible    := true;
       TabGroupe.visible := true;
       TabGroupe.Enabled := true;
@@ -414,7 +544,10 @@ begin
 
   if AffTalent then
     begin
-      ChargeTalent(SortSeul);
+      if SortSeul and (ValVersion = 'WFRP2') then
+        ChargeLoreV2()
+      else
+        ChargeTalent(SortSeul);
       LabelTalent.visible    := true;
       TabTalent.visible := true;
       TabTalent.Enabled := true;

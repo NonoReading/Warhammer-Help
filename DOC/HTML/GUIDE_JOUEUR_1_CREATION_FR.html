@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Guide du joueur — 1. Créer un personnage</title><style>
+body{font-family:Segoe UI,Arial,sans-serif;max-width:50rem;margin:2rem auto;padding:0 1rem;
+line-height:1.55;color:#222;background:#fbf7ee}
+h1{color:#7a1212;border-bottom:3px solid #7a1212}
+h2{color:#7a1212;margin-top:2rem}
+table{border-collapse:collapse;margin:1rem 0}
+th,td{border:1px solid #b9a98a;padding:.35rem .6rem;text-align:left;vertical-align:top}
+th{background:#eadfc6}
+code{background:#eee4cd;padding:0 .25rem}
+img{max-width:100%;height:auto;border:1px solid #b9a98a}
+hr{border:0;border-top:1px solid #b9a98a;margin:1.5rem 0}
+em{color:#555}
+:target{background:#fff1b8}
+</style></head><body>
+<h1 id="guide-du-joueur-1-creer-un-personnage">Guide du joueur — 1. Créer un personnage</h1>
+<p><em>Règles WFRP4. Version anglaise : <code>PLAYER_GUIDE_1_CREATION.md</code>.</em></p>
+<p>Pour qui : un joueur qui découvre le programme, et un habitué qui veut retrouver un point précis (les fiches par question sont dans la phase 3).</p>
+<hr>
+<h2 id="avant-de-commencer-la-version-de-regles">Avant de commencer : la version de règles</h2>
+<p>La version (WFRP1, WFRP2, WFRP4) se choisit <strong>avant</strong> de créer le personnage, et elle ne change plus ensuite. Un personnage de WFRP1 ne peut pas devenir un personnage de WFRP4 : les caractéristiques, les carrières et les compétences ne correspondent pas. Si tu changes d'avis, crée un nouveau personnage.</p>
+<p>Seule exception : entre WFRP4 et la variante Momentum (WFRP5), voir la fiche « Option Momentum » (phase 3).</p>
+<hr>
+<h2 id="le-parcours-en-bref">Le parcours en bref</h2>
+<p>La création se fait en <strong>étapes qui se suivent</strong>, dans cet ordre. Le bouton <strong>Étape suivante</strong> n'avance que si l'étape en cours est complète ; sinon un message te dit ce qui manque.</p>
+<table><thead><tr><th>Étape</th><th>Onglet</th><th>Ce qu'on fait</th></tr></thead><tbody>
+<tr><td>0</td><td>Livres</td><td>choisir les livres utilisés</td></tr>
+<tr><td>1</td><td>Race</td><td>choisir la race</td></tr>
+<tr><td>2</td><td>Métier</td><td>choisir la carrière</td></tr>
+<tr><td>3</td><td>Attribut</td><td>fixer les caractéristiques</td></tr>
+<tr><td>4</td><td>Talent</td><td>choisir les talents</td></tr>
+<tr><td>5</td><td>Compétence de race</td><td>répartir les points de compétences de race</td></tr>
+<tr><td>6</td><td>Compétence de métier</td><td>répartir les points de compétences de carrière</td></tr>
+<tr><td>7</td><td>Équipement</td><td>choisir l'équipement de départ</td></tr>
+<tr><td>8</td><td>Nom</td><td>donner un nom, puis enregistrer</td></tr>
+</tbody></table>
+<p>En plus, selon la race et les livres choisis, <strong>des étapes supplémentaires peuvent s'intercaler</strong> (clan, mutation de départ, background, signe astral, appartenance, forme du familier). Elles sont décrites plus bas.</p>
+<p><img src="../IMAGES/creation_01_livre.png" alt="La fenêtre de création, étape Livres, avec le bouton « Étape suivante »"></p>
+<hr>
+<h2 id="step-0">Étape 0 — Les livres</h2>
+<p>Tu vois la liste des livres actifs (ceux choisis dans le menu principal). Tu ne peux qu'en <strong>retirer</strong> pour ce personnage : décoche ceux que tu ne veux pas utiliser.</p>
+<p>Pourquoi c'est important : les livres cochés ici décident des races, des carrières, des talents et de l'équipement proposés pendant toute la création, et ils sont mémorisés avec le personnage.</p>
+<ul>
+<li><strong>Au moins un livre doit rester coché</strong>, sinon tu ne peux pas passer à l'étape suivante.
+</li>
+<li>Si tu veux utiliser les talents Momentum plus tard, garde le livre Momentum coché.
+</li>
+</ul>
+<p><img src="../IMAGES/creation_02_livres_coches.png" alt="La liste des livres cochés"></p>
+<hr>
+<h2 id="step-1">Étape 1 — La race</h2>
+<p>Trois façons de choisir, chacune avec un coût ou un gain d'expérience de départ :</p>
+<table><thead><tr><th>Mode</th><th>Ce que tu fais</th><th>Xp</th></tr></thead><tbody>
+<tr><td><strong>Au hasard</strong></td><td>le programme tire la race</td><td>20 Xp</td></tr>
+<tr><td><strong>Donnez le résultat de votre lancé</strong></td><td>tu lances le dé toi-même et tu saisis le résultat</td><td>20 Xp</td></tr>
+<tr><td><strong>Au choix</strong></td><td>tu prends la race que tu veux</td><td>0 Xp</td></tr>
+</tbody></table>
+<p>Passe à l'<strong>étape suivante</strong> quand tu es satisfait. Le chiffre est le nombre de Xp que le personnage <strong>gagne</strong> pour avoir laissé faire le hasard (règle du Rulebook) ; il s'ajoute aux Xp de départ.</p>
+<p>Certaines races ouvrent des étapes en plus :</p>
+<ul>
+<li><strong>Skaven :</strong> choix du <strong>clan</strong> (par la liste ou par tirage).
+</li>
+<li><strong>Mutant :</strong> tirage de la <strong>mutation de départ</strong>.
+</li>
+<li><strong>Races avec background</strong> (surtout WFRP2) : étape <strong>Background</strong>, avec un d10 à lancer.
+</li>
+</ul>
+<p><img src="../IMAGES/creation_03_race.png" alt="Onglet Race avec les trois modes"></p>
+<hr>
+<h2 id="step-2">Étape 2 — Le métier (carrière)</h2>
+<p>Même principe qu'à l'étape 1 :</p>
+<table><thead><tr><th>Mode</th><th>Xp</th></tr></thead><tbody>
+<tr><td>Au hasard</td><td>50 Xp</td></tr>
+<tr><td>Donnez le résultat de votre lancé</td><td>50 Xp</td></tr>
+<tr><td>Au choix</td><td>0 Xp</td></tr>
+</tbody></table>
+<p>Points particuliers :</p>
+<ul>
+<li><strong>Sous-métier :</strong> certains tirages demandent un second jet pour départager deux carrières proches (exemple : l'Apothicaire et l'Alchimiste mondain). Un bouton <strong>Sélectionner</strong> apparaît alors.
+</li>
+<li><strong>Métier de remplacement :</strong> pour quelques races, le livre propose de remplacer la carrière tirée par une autre.
+</li>
+<li><strong>Appartenance :</strong> pour certaines carrières (par exemple le Soldat), tu choisis un régiment ou une appartenance. C'est facultatif.
+</li>
+<li><strong>Règle de tirage :</strong> si un livre propose une table de tirage différente pour ta race, une liste de règles apparaît.
+</li>
+</ul>
+<p><img src="../IMAGES/creation_04_metier.png" alt="Onglet Métier avec la table de tirage"></p>
+<hr>
+<h2 id="step-3">Étape 3 — Les caractéristiques (attributs)</h2>
+<p>Cinq façons de procéder :</p>
+<table><thead><tr><th>Mode</th><th>Ce que tu fais</th><th>Xp</th></tr></thead><tbody>
+<tr><td><strong>Au hasard</strong></td><td>tirage automatique, valeurs fixées</td><td>50 Xp</td></tr>
+<tr><td><strong>Donnez le résultat de votre lancé</strong></td><td>tu saisis tes propres jets</td><td>50 Xp</td></tr>
+<tr><td><strong>Au hasard et affectez</strong></td><td>tirage automatique, mais tu décides quelle valeur va à quelle caractéristique</td><td>25 Xp</td></tr>
+<tr><td><strong>Donnez vos lancés de dé et affectez</strong></td><td>tes jets, que tu répartis</td><td>25 Xp</td></tr>
+<tr><td><strong>Répartissez 100 points</strong></td><td>tu distribues 100 points toi-même</td><td>0 Xp</td></tr>
+</tbody></table>
+<p>À savoir :</p>
+<ul>
+<li>Chaque caractéristique = <strong>2d10 + la base de la race</strong>.
+</li>
+<li>En mode « répartissez 100 points », le total doit faire <strong>exactement 100</strong>, sinon le passage à l'étape suivante est refusé.
+</li>
+<li>Les points de <strong>Destin</strong> et de <strong>Résilience</strong> sont des points en plus à répartir entre les deux.
+</li>
+<li>Les <strong>Blessures</strong> sont calculées à partir des caractéristiques ; tu n'as rien à saisir.
+</li>
+</ul>
+<p><img src="../IMAGES/creation_05_attribut.png" alt="Onglet Attribut avec les cinq modes"></p>
+<hr>
+<h2 id="step-4">Étape 4 — Les talents</h2>
+<p>Les talents de départ viennent de la race. Quand un talent propose un choix (« A ou B » ou « X (n'importe quel…) »), <strong>tu dois trancher</strong> : tant qu'un choix reste ouvert, tu ne peux pas continuer.</p>
+<p>Un bouton <strong>Au hasard</strong> tire un talent quand la race le prévoit.</p>
+<p><img src="../IMAGES/creation_06_talent.png" alt="Onglet Talent avec une ligne de choix"></p>
+<hr>
+<h2 id="step-5">Étape 5 — Les compétences de race</h2>
+<p>Ta race t'accorde des compétences à répartir. Dans le livre de règles, la plupart des races prennent <strong>3 compétences à +5 et 3 compétences à +3</strong> (le Skink de Lustria en prend 2 et 2).</p>
+<ul>
+<li>Le programme <strong>refuse de continuer</strong> tant que ces nombres ne sont pas exactement respectés.
+</li>
+<li>Une compétence « à spécialisation » (par exemple une langue) doit être précisée avant de passer.
+</li>
+<li><strong>Au hasard</strong> répartit pour toi.
+</li>
+</ul>
+<p><img src="../IMAGES/creation_07_comp_race.png" alt="Onglet Compétence de race"></p>
+<hr>
+<h2 id="step-6">Étape 6 — Les compétences de métier</h2>
+<p>Tu répartis <strong>40 points</strong> entre les compétences de ta carrière (en WFRP2, cette règle ne s'applique pas). Le compteur affiche « n / 40 Pts » ; il faut exactement 40.</p>
+<p><img src="../IMAGES/creation_08_comp_metier.png" alt="Onglet Compétence de métier, avec le compteur « n / 40 Pts »"></p>
+<hr>
+<h2 id="step-7">Étape 7 — L'équipement</h2>
+<p>L'équipement de départ vient de ta carrière. Certaines lignes demandent un <strong>choix</strong> : tant qu'une ligne reste à choisir, l'étape ne se valide pas. Un bouton <strong>Au hasard</strong> choisit pour toi.</p>
+<p>Tu peux aussi saisir ton <strong>argent de départ</strong> (en couronnes d'or).</p>
+<p><img src="../IMAGES/creation_09_equipement.png" alt="Onglet Équipement"></p>
+<hr>
+<h2 id="step-8">Étape 8 — Le nom et la fin</h2>
+<ul>
+<li>Donne un <strong>nom</strong> au personnage, ou clique sur <strong>Lancer un nom</strong> pour en tirer un.
+</li>
+<li>Le nom ne doit pas être vide, ne doit pas déjà exister, et les espaces au début et à la fin sont retirés.
+</li>
+<li><strong>Détails physiques</strong> (âge, taille…) : un bouton ouvre la même fenêtre que sur la fiche, avec un tirage selon le Rulebook ou une saisie libre.
+</li>
+</ul>
+<p>Quand tout est complet, le personnage est enregistré avec ses livres, et tu peux l'ouvrir pour le faire évoluer (voir <strong>2. Modifier un personnage</strong>).</p>
+<p><img src="../IMAGES/creation_10_nom.png" alt="Onglet Nom"></p>
+<hr>
+<a id="extras"></a>
+<h2 id="etapes-en-plus-selon-la-race-et-les-livres">Étapes en plus, selon la race et les livres</h2>
+<table><thead><tr><th>Étape</th><th>Quand elle apparaît</th><th>Ce qu'on fait</th></tr></thead><tbody>
+<tr><td><strong>Clan</strong></td><td>race Skaven</td><td>choisir un clan par la liste ou par tirage</td></tr>
+<tr><td><strong>Mutation de départ</strong></td><td>race Mutant</td><td>tirer la mutation (bouton « Tirer la mutation »)</td></tr>
+<tr><td><strong>Background</strong></td><td>règles de background (surtout WFRP2)</td><td>lancer le d10, régler chaque choix</td></tr>
+<tr><td><strong>Signe astral</strong></td><td>livre qui le prévoit (Archives of the Empire II)</td><td>tirer un signe ; il modifie des caractéristiques, donne un talent et rapporte <strong>25 Xp</strong></td></tr>
+<tr><td><strong>Appartenance</strong></td><td>certaines carrières (régiments, etc.)</td><td>choisir l'appartenance — facultatif</td></tr>
+<tr><td><strong>Forme du familier</strong></td><td>carrière qui donne un familier</td><td>choisir ou tirer sa forme</td></tr>
+</tbody></table>
+<p>Exemple, l'étape <strong>Signe astral</strong> (bouton « Tirer un signe » ou choix dans la liste) :</p>
+<p><img src="../IMAGES/creation_11_signe_astral.png" alt="Étape Signe astral"></p>
+<hr>
+<h2 id="si-tu-es-bloque-les-messages-les-plus-frequents">Si tu es bloqué : les messages les plus fréquents</h2>
+<table><thead><tr><th>Tu ne peux pas continuer parce que…</th><th>Ce qu'il faut faire</th></tr></thead><tbody>
+<tr><td>aucun livre n'est coché</td><td>recoche au moins un livre (étape 0)</td></tr>
+<tr><td>aucune race / aucun métier</td><td>fais ton choix (ou clique sur <strong>Randomly</strong>), puis passe à l'<strong>étape suivante</strong></td></tr>
+<tr><td>une caractéristique n'a pas de jet</td><td>tire ou saisis tous les jets</td></tr>
+<tr><td>le total des 100 points n'est pas 100</td><td>corrige la répartition</td></tr>
+<tr><td>un choix de talent reste ouvert</td><td>tranche chaque ligne « A / B »</td></tr>
+<tr><td>le nombre de compétences de race est faux</td><td>respecte « 3 à +5 et 3 à +3 » (ou ce que dit le message)</td></tr>
+<tr><td>le total des compétences de métier n'est pas 40</td><td>ajuste jusqu'à 40</td></tr>
+<tr><td>un choix d'équipement reste ouvert</td><td>choisis ou clique sur <strong>Au hasard</strong></td></tr>
+<tr><td>le nom est vide ou déjà pris</td><td>change le nom</td></tr>
+</tbody></table>
+<hr>
+<h2 id="differences-selon-la-version">Différences selon la version</h2>
+<ul>
+<li><strong>WFRP4 :</strong> ce guide.
+</li>
+<li><strong>WFRP2 :</strong> pas de répartition de 40 points en compétences de métier, ni de nombre imposé de compétences de race ; les tables de background (Liber Fanatica) et les tables de métier des livres annexes sont plus présentes.
+</li>
+<li><strong>WFRP1</strong> (Rulebook p.14-18) : les étapes suivent l'ordre de la première édition et l'étape des Talents n'existe pas (les compétences remplacent les talents).  1. <strong>Livres</strong>, puis <strong>Espèce</strong>, comme d'habitude.
+<ol>
+<li>Les <strong>caractéristiques</strong> viennent <em>avant</em> la classe, car la classe en dépend. Pour chaque ligne, tu choisis : tirer les dés, donner ton résultat de dés, ou choisir la valeur ; en mode tirage, un double-clic relance seulement la ligne sélectionnée. Une case applique la règle d'<em>intelligence supérieure</em> si les livres chargés la proposent.
+</li>
+<li><strong>Classe</strong> (Académique, Guerrier, Rôdeur, Voyou) : seules les classes dont les exigences sont remplies sont proposées (une espèce peut remplacer une exigence, par exemple le Voyou elfe). Choisis, ou laisse le hasard en tirer une parmi les permises.
+</li>
+<li><strong>Âge et compétences de départ</strong> : tire l'âge (ou saisis-le) ; le nombre de compétences est un d4 plus un modificateur d'âge. Les compétences que donne ton espèce comptent dans ce total ; le hasard (table d100) complète le reste, un doublon étant relancé. Choix libre : double-clic sur une compétence de la table. Double-clic sur une compétence choisie pour la retirer.
+</li>
+<li><strong>Carrière de base</strong>, d'après la table de la classe et ton espèce (d100). Pour la classe Artisan il faut aussi un <strong>métier</strong> (seconde table d100). Une case remplace le tableau Académique par la version révisée quand le livre Realms of Sorcery est chargé.
+</li>
+<li><strong>Équipement</strong> : les textes du livre pour la classe et la carrière, puis une liste de prix où un double-clic ajoute un objet (autant d'exemplaires que tu veux). L'argent se tire d'après la formule du livre (par exemple 3D6 Couronnes d'or) ou se saisit.
+</li>
+<li><strong>Nom</strong>, avec le bouton <strong>Détails physiques</strong> (l'âge est celui fixé à l'étape 4 ; la taille dépend du sexe ; ni yeux ni cheveux).
+</li>
+</ol>
+</li>
+</ul>
+</body></html>

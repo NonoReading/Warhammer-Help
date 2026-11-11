@@ -49,6 +49,9 @@ Procedure AjouteRaceMetierSource(Forme: Integer; Livre, CodeRace, CodeMetier, Ch
 
 implementation
 
+type
+  TEnsembleCodes = specialize TDictionary<String, Byte>;
+
 Procedure AjouteRaceMetierSource(Forme: Integer; Livre, CodeRace, CodeMetier, Chance: String);
   var
     PSource: StructureRaceMetierSource;
@@ -95,18 +98,23 @@ Procedure AjouteRaceMetierSiAbsent(Livre, CodeRace, CodeMetier: String);
 // (2) propager l'accessibilité entre ethnies d'une même race.
 Procedure CompleteRaceMetierParEspece;
   var
-    Existant:     TStringList;
+    Existant:     TEnsembleCodes;
     AvecTirage:   TStringList;
     Donneur:      TStringList;
     NbInitial:    Integer;
     Ind:          Integer;
     PSource:      StructureRaceMetier;
     PNouveau:     StructureRaceMetier;
-    PRaceSource:  StructureRace;
     PRaceCible:   StructureRace;
     EspeceSource: String;
     Cle:          String;
     CleEspece:    String;
+    NbRaces:      Integer;
+    IndRace:      Integer;
+    IndCache:     Integer;
+    IndTrouve:    Integer;
+    CacheCode:    TStringList;
+    RaceCode, RaceCodeCourt, RaceEspeceCourt: array of String;
 
   // Normalisation identique à DecoupeCodeValeur (UnitCalcul), mais en local : passer par
   // CompareRechercheValeur écraserait les variables globales CodeValeur/CodeRecherche,
@@ -120,14 +128,34 @@ Procedure CompleteRaceMetierParEspece;
     end;
 
   begin
-    Existant   := TStringList.Create;
+    Existant   := TEnsembleCodes.Create;
     AvecTirage := TStringList.Create;
     Donneur    := TStringList.Create;
+    CacheCode  := TStringList.Create;
+    CacheCode.Sorted := True;
     try
-      Existant.Sorted     := True;
-      Existant.Duplicates := dupIgnore;
+      // CaseSensitive avant Sorted : la comparaison insensible a la casse est celle de la
+      // locale Windows (lente) et IndexOf est appele des dizaines de milliers de fois ;
+      // les codes sont ecrits avec une casse unique.
+      AvecTirage.CaseSensitive := True;
+      CacheCode.CaseSensitive := True;
       For PSource in ListRaceMetier do
-        Existant.Add(PSource.CodeRace + '|' + PSource.CodeMetier);
+        Existant.AddOrSetValue(PSource.CodeRace + '|' + PSource.CodeMetier, 1);
+
+      // Codes de ListRace calcules une fois : les boucles ci-dessous parcouraient toute la
+      // liste (copie de l'enregistrement + CodeSansLivre) pour CHAQUE entree de
+      // ListRaceMetier, ce qui coutait 300 a 500 ms au demarrage.
+      NbRaces := ListRace.Count;
+      SetLength(RaceCode, NbRaces);
+      SetLength(RaceCodeCourt, NbRaces);
+      SetLength(RaceEspeceCourt, NbRaces);
+      For Ind := 0 to NbRaces - 1 do
+        begin
+          PRaceCible          := ListRace[Ind];
+          RaceCode[Ind]       := PRaceCible.CodeRace;
+          RaceCodeCourt[Ind]  := CodeSansLivre(PRaceCible.CodeRace);
+          RaceEspeceCourt[Ind] := CodeSansLivre(PRaceCible.Espece);
+        end;
 
       // ---- Phase 1 : développer les entrées qui ciblent une RACE ----
       // DATA_CAREER_SPECIE accepte, comme DATA_CAREER_ROLL, un code de RACE
@@ -143,17 +171,18 @@ Procedure CompleteRaceMetierParEspece;
           PSource := ListRaceMetier[Ind];
           if ChercheEspece(PSource.CodeRace).CodeEspece = '' then
             continue;
-          For PRaceCible in ListRace do
-            if CodeSansLivre(PRaceCible.Espece) = CodeSansLivre(PSource.CodeRace) then
+          CleEspece := CodeSansLivre(PSource.CodeRace);
+          For IndRace := 0 to NbRaces - 1 do
+            if RaceEspeceCourt[IndRace] = CleEspece then
               begin
-                Cle := PRaceCible.CodeRace + '|' + PSource.CodeMetier;
-                if Existant.IndexOf(Cle) < 0 then
+                Cle := RaceCode[IndRace] + '|' + PSource.CodeMetier;
+                if not Existant.ContainsKey(Cle) then
                   begin
                     PNouveau          := PSource;
-                    PNouveau.CodeRace := PRaceCible.CodeRace;
+                    PNouveau.CodeRace := RaceCode[IndRace];
                     ListRaceMetier.Add(PNouveau);
                     inc(NbRaceMetier);
-                    Existant.Add(Cle);
+                    Existant.AddOrSetValue(Cle, 1);
                   end;
               end;
           ListRaceMetier.Delete(Ind);
@@ -208,43 +237,62 @@ Procedure CompleteRaceMetierParEspece;
           if PSource.Chance = SeparateurChance then
             continue;
 
-          PRaceSource  := ChercheRace(PSource.CodeRace);
-          EspeceSource := CodeSansLivre(PRaceSource.Espece);
+          // Espece de la race source : un seul ChercheRace par code distinct (il parcourait
+          // ListRace avec CompareRechercheValeur pour chacune des milliers d'entrees).
+          IndCache := CacheCode.IndexOf(PSource.CodeRace);
+          if IndCache < 0 then
+            begin
+              IndRace := -1;
+              For IndTrouve := 0 to NbRaces - 1 do
+                if CompareRechercheValeur(RaceCode[IndTrouve], PSource.CodeRace) then
+                  begin
+                    IndRace := IndTrouve;
+                    break;
+                  end;
+              IndCache := CacheCode.AddObject(PSource.CodeRace, TObject(PtrInt(IndRace + 1)));
+            end;
+          IndRace := PtrInt(CacheCode.Objects[IndCache]) - 1;
+          if IndRace >= 0 then
+            EspeceSource := RaceEspeceCourt[IndRace]
+          else
+            EspeceSource := '';
           if EspeceSource = '' then
             continue;
 
-          For PRaceCible in ListRace do
+          CleEspece := CodeSansLivre(PSource.CodeRace);
+          For IndRace := 0 to NbRaces - 1 do
             begin
-              if CodeSansLivre(PRaceCible.CodeRace) = CodeSansLivre(PSource.CodeRace) then
+              if RaceEspeceCourt[IndRace] <> EspeceSource then
                 continue;
-              if CodeSansLivre(PRaceCible.Espece) <> EspeceSource then
+              if RaceCodeCourt[IndRace] = CleEspece then
                 continue;
 
-              Cle := PRaceCible.CodeRace + '|' + PSource.CodeMetier;
+              Cle := RaceCode[IndRace] + '|' + PSource.CodeMetier;
               // garde-fou anti-doublon : ChargerLivre peut être rappelée sans vider les listes
-              if Existant.IndexOf(Cle) >= 0 then
+              if Existant.ContainsKey(Cle) then
                 continue;
 
               PNouveau          := PSource;
-              PNouveau.CodeRace := PRaceCible.CodeRace;
+              PNouveau.CodeRace := RaceCode[IndRace];
               // L'ethnie cible n'a pas de table à elle ET la source est l'ethnie de
               // référence de la race : on lui transmet la fourchette telle quelle, donc
               // sa vraie table de tirage. Dans tous les autres cas on garde le
               // comportement d'origine, 'X' = éligible hors tirage.
-              if (AvecTirage.IndexOf(CodeSansLivre(PRaceCible.CodeRace)) < 0)
-                 and (Donneur.Values[CodeSansLivre(PRaceCible.Espece)] = CodeSansLivre(PSource.CodeRace)) then
+              if (AvecTirage.IndexOf(RaceCodeCourt[IndRace]) < 0)
+                 and (Donneur.Values[RaceEspeceCourt[IndRace]] = CleEspece) then
                 PNouveau.Chance := PSource.Chance
               else
                 PNouveau.Chance := 'X';
               ListRaceMetier.Add(PNouveau);
               inc(NbRaceMetier);
-              Existant.Add(Cle);
+              Existant.AddOrSetValue(Cle, 1);
             end;
         end;
     finally
       Existant.Free;
       AvecTirage.Free;
       Donneur.Free;
+      CacheCode.Free;
     end;
   end;
 

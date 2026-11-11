@@ -10,6 +10,7 @@ uses
   Unitcalcul, ChargeRace, ChargeMetier, ChargeAttribut, ChargeCompetence,
   ChargeTalent, ChargeArme, ChargeArmure, ChargeArmureSimplifie,
   ChargeTalentCompetenceModif,
+  ChargeMetierTalent,
   ChargeSort, ChargeCorruptionTable, ChargeTrapping,
   ChargeCorruptionCompetenceModif, ChargeCorruptionTalent, ChargeSigneAstral,
   ChargeCorruptionEquipement, ChargeArmureBonusTalent, ChargeArmeBonusTalent,
@@ -101,10 +102,13 @@ Type
      Multiplicateur:        Integer;  // rang du talent, niveau de la qualite de fabrication, 1 sinon
      NiveauAtteint:         Integer;  // palier atteint (CareerBonus) ; ignore pour les autres sources
      ValeurAleatoire:       Integer;  // valeur tiree (Affliction) ; ignoree pour les autres sources
+     ValeursEffets:         String;   // jets par attribut d'une mutation a plusieurs effets aleatoires ("code=valeur;...")
      IgnoreFiltre:          Boolean;  // provisoire : les fabrications comptent les effets conditionnels
      Groupe:                Integer;  // rang de la piece d'equipement qui porte la source (0 = aucune) : sert au maximum par piece (bouclier)
   end;
   TArraySourceModif = array of StructureSourceModif;
+  TArrayEntiersAleatoires = array of Integer;
+  TArrayCodesAleatoires   = array of String;
 
 Type
   // historique de corruption : Montant positif = corruption gagnée, négatif = perdue/purifiée
@@ -122,6 +126,12 @@ Type
   // précise (perte de mutation, rare mais prévue par le livre).
   StructurePersonnageMutation    = Record
      Code:                  String;
+     // Jet Nd10 valide a la prise pour une mutation a <ModifyCaracAleatoire> (Tome of Corruption,
+     // ex. "+1d10 % Agility"), deja signe ; 0 sinon. Une prise = une entree, donc un jet par prise.
+     ValeurAleatoire:       Integer;
+     // Mutation a PLUSIEURS <ModifyCaracAleatoire> : un jet par attribut, "code=valeur;code=valeur"
+     // (valeurs deja signees). Vide = un seul jet, dans ValeurAleatoire.
+     ValeursEffets:         String;
   end;
 
 Type
@@ -224,10 +234,33 @@ Type
      // d'un DATA_TRAPPING de livre. Vide = aucun. Injecte dans les listes au chargement.
      ObjetsPropres:              String;
      Age:                     Integer;
-     Height:                     Integer;
+     // V1 : points de magie gagnes aux niveaux des carrieres magiques (0 = aucun)
+     PointsMagie:                Integer;
+     // V1 : alignement choisi (RULES-V1ALIGN_xxx), '' = standard de la race ; points de folie (0 = aucun)
+     AlignementV1:               String;
+     FolieV1:                    Integer;
+     // V1 : bloc Background de la feuille, saisie libre
+     NaissanceV1, ParentsV1, FamilleV1: String;
+     // V1 : handicaps des magiciens "CODE=stade;CODE=stade" et marque mauvais / chaotique (Wizard)
+     HandicapsV1:                String;
+     FamilierV1:                 String;   // code du familier du Druidic Priest (RULES-FAMILIAR_xxx), '' si aucun
+     MagicienMauvaisV1:          Boolean;
+     ClasseV1:                   String;   // code de la classe V1 (DATA_CLASS_V1), '' si fiche anterieure
+     CulteV1:                    String;   // code du culte de l'Initiate / Priest (DATA_CULT_V1, WRDM-CULT_xxx), '' si aucun
+     // V1 : sorts appris "CODE|source|cout;CODE|source|cout" et tentatives ratees "CODE|source|Int;..." (voir chargemetierattribut.pas)
+     SortsV1:                    String;
+     EchecsSortsV1:              String;
+     Height:                  Integer;
      HeightUnit:                 String;    // unite de Height : CM ou INCH (absente = INCH, anciennes fiches)
      HairColors:                 String;
      EyeColors:                  String;
+     // Sous-bloc V2 (details personnels du Core V2, vide/0 pour un personnage V4/V5)
+     PoidsV2:                    Integer;   // livres, 0 = non defini
+     SexeV2:                     String;    // 'F' ou 'M', vide = non defini (fiches anterieures)
+     FratrieV2:                  String;    // nombre de freres et soeurs, vide = non tire
+     SigneDistinctifV2:          String;
+     NaissanceV2:                String;
+     AstreV2:                    String;    // libelle du signe astral V2 (sans effet sur les caracteristiques)
      AmbitionCourt:              String;    // saisie libre, panneau Ambitions du PDF
      AmbitionLong:               String;    // saisie libre, panneau Ambitions du PDF
      AmbitionGroupeCourt:        String;    // saisie libre, ambitions du groupe/de la Party
@@ -254,6 +287,11 @@ Type
      // principe que CreationCompetence35, mais champ separe : source differente, jamais
      // melangee). Vide si le personnage n'a fait aucun choix de ce type.
      CompetenceAppartenance:     array of StructurePersonnageCompetence;
+     // V2 : avance gratuite de creation (une seule, ecrite par la phase 7 de WinCreation).
+     // Valeur = pas de l'avance (+5 principal, +1 secondaire). Compte dans le total de la
+     // caracteristique mais JAMAIS dans le cout en XP ; les avances achetees restent dans
+     // AugmentationAttribut.
+     AvanceGratuiteAttribut:     array of StructurePersonnageAttribut;
      // Talents dont les effets sont lies a une carriere+niveau precis, fige a l'octroi -
      // voir StructurePersonnageTalentCarriereRequise. Vide si aucun talent de ce genre.
      TalentCarriereRequise:      array of StructurePersonnageTalentCarriereRequise;
@@ -278,8 +316,13 @@ Type
   // Lecture allegee de Personnage.GroupeId depuis un fichier, sans charger toute la fiche
   // (CONTEXT.md 2.100).
   function PersonnageGroupeIdFichier(const FileName: String): String;
+  function PersonnageResumeFichier(const FileName: String; out Personnage: StructurePersonnage): Boolean;
   function PersonnageLivre(ListeLivre: String; Livre: String): string;
   Function PersonnageTalentAsterisque(var Personnage:StructurePersonnage; CodeTalent: String): Integer;
+  // Option Momentum : remplace, dans tous les talents du personnage (crees, achetes, menu de carriere,
+  // couts d'Xp, talents lies a une carriere), le code V4 RULES-T_xxx par MOMENTUM-T_xxx (Momentum vrai)
+  // ou l'inverse. Les talents sans equivalent dans l'autre livre ne changent pas.
+  Procedure PersonnageTalentsMomentum(var Personnage: StructurePersonnage; Momentum: Boolean);
   // Effets à delta pur des mutations obtenues (CONTEXT.md §2.7, étape 8) - somme, pour un code
   // d'attribut/compétence donné, tous les <ModifyCarac>/<ModifySkill> des mutations présentes
   // dans Personnage.Mutations. Ce sont ici de vrais modificateurs additionnés au Total
@@ -291,6 +334,16 @@ Type
   // - meme principe que PersonnagePathologieEffetTexte plus bas, ajout du 27/09/2026 a la
   // demande de Nono (initialement fait pour Affliction/Disease seulement, etendu ici).
   Function PersonnageMutationEffetTexte(PersonnageMutation: StructurePersonnageMutation): String;
+  Function PersonnageMutationFaceAleatoire(Code: String; out CodeAttribut: String; out Signe: Integer): Integer;
+  // Tous les <ModifyCaracAleatoire> du catalogue pour la mutation Code (face totale signee, attribut) :
+  // un jet a montrer par entree. Listes paralleles, vides si la mutation n'en porte pas.
+  Procedure PersonnageMutationEffetsAleatoires(Code: String; out Faces: TArrayEntiersAleatoires; out Attributs: TArrayCodesAleatoires);
+  // Jet d'une mutation pour l'attribut Cible : valeur de ValeursEffets si renseignee, sinon ValeurAleatoire.
+  Function MutationValeurEffet(ValeurAleatoire: Integer; ValeursEffets, Cible: String): Integer;
+  // Libelle de race a afficher : celui de la race, suivi de "(Mutant)" si le personnage a gagne une mutation
+  // (Tome of Corruption p.25). Etiquette seule : Personnage.Race reste la race d'origine, qui pilote
+  // les caracteristiques (Mouvement, Blessures...).
+  Function PersonnageRaceLibelle(Personnage: StructurePersonnage; LibelleRace: String): String;
   // Meme principe que PersonnageMutationAttributModif ci-dessus, mais pour les effets
   // permanents chiffrables des Afflictions/Maladies possedees (Personnage.Pathologies) -
   // ajout du 27/09/2026, a la demande de Nono. CodeSource = StructureAffliction.Code /
@@ -377,6 +430,11 @@ Type
   // ces qualites doivent etre recreables via Fabrication, pas figees en XML sur une arme).
   Function PersonnageArmeBonusTalent(Personnage: StructurePersonnage): TArrayPersonnageTalent;
   Function PersonnageTalentsOctroyes(Personnage: StructurePersonnage): TArrayPersonnageTalent;
+  // Niveau de carriere (1 a 4) auquel la carriere en cours propose ce talent, ou -1 si elle ne
+  // le propose pas. Meme regle que la colonne niveau de WinPersonnage (NiveauMetierTalentMax) :
+  // meme code, ou meme radical (livre + code coupe au premier '_'), sur chaque branche d'un
+  // choix "A/B", apres Adapting Careers.
+  Function PersonnageTalentNiveauMetier(const Personnage: StructurePersonnage; CodeTalent: String): Integer;
   Function PersonnageTalentArmureModif(Personnage: StructurePersonnage; CodeLocalisation: String): Integer;
   // Même principe que PersonnageMutationAttributModif, mais sur les <ModifyCarac> déclarés
   // directement sur un TALENT (DATA_TALENT) plutôt que sur une mutation. Ajoutée le
@@ -404,6 +462,8 @@ Type
   // tous les paliers d'une appartenance sans filtrer, l'ecran/le PDF filtrant ensuite par le
   // Valeur tague sur MetierCompetence/MetierTalent), un bonus d'ATTRIBUT est additionne
   // directement au Total et ne peut pas se permettre ce flou.
+  // V1 : competences gratuites du familier du Druidic Priest (premiere au niveau 1, seconde au niveau 2), separees par ';'
+  Function CompetencesFamilierV1(Personnage: StructurePersonnage): String;
   Function PersonnageNiveauDansMetier(Personnage: StructurePersonnage; CodeMetier: String): Integer;
   // Même principe que PersonnageTalentAttributModif, mais sur les <ModifyCarac> déclarés dans
   // un palier de DATA_CAREER_BONUS - n'additionne un modificateur que si le personnage a
@@ -423,6 +483,8 @@ Type
   // PersonnageCareerBonusModificateur depuis le 11/09/2026 (branchement CareerBonus sur le
   // moteur generique).
   Function PersonnageCareerBonusCompetenceModif(Personnage: StructurePersonnage; CodeCompetence: String): Integer;
+  // V2 : valeur de l'avance gratuite de creation sur cette caracteristique (0 si aucune).
+  Function PersonnageAvanceGratuite(Personnage: StructurePersonnage; CodeAttribut: String): Integer;
   // Pendant "par type d'arme" des deux precedents - ajoute le 07/09/2026 : le palier Knight ne
   // bonifie que CERTAINES armes d'une meme competence ("+10 CC avec les lances, les epees a
   // deux mains ou les boucliers", pas tout Melee (Cavalry)/Melee (2 mains)/Melee (Base)).
@@ -486,11 +548,13 @@ Type
   // en est le cas ModifArmour. Rune of Fortitude (+10 Endurance par rune). 20/09/2026.
   Function PersonnageFabricationModificateur(Personnage: StructurePersonnage; TypeModif, Cible: String): Integer;
   Function PersonnageSourcesModif(Personnage: StructurePersonnage): TArraySourceModif;
-  Function PersonnageModificateurUnique(Personnage: StructurePersonnage; TypeModif, Cible: String; Filtre: String = ''; SansFabrication: Boolean = False; MaxParPiece: Boolean = False): Integer;
+  Function PersonnageModificateurUnique(Personnage: StructurePersonnage; TypeModif, Cible: String; Filtre: String = ''; SansFabrication: Boolean = False; MaxParPiece: Boolean = False; SeulementFabrication: Boolean = False): Integer;
   // Mains : une arme est a distance si son code porte le prefixe EquipementCT. Deux budgets
   // separes (contact / distance, jamais utilises ensemble). Nombre de mains = base + ModifyHands.
   Function ArmeEstADistance(CodeArme: String): Boolean;
   Function PersonnageNombreMains(Personnage: StructurePersonnage): Integer;
+  // V1 : alignement de la fiche (code RULES-V1ALIGN_xxx) ; a defaut, le standard de la race (Bon pour les Elfes, Neutre pour les autres)
+  Function PersonnageAlignementV1(Personnage: StructurePersonnage): String;
   Function PersonnageMainsUtilisees(Personnage: StructurePersonnage; ADistance: Boolean): Integer;
   Function PersonnageMainsDepassees(Personnage: StructurePersonnage): Boolean;
   Function PersonnageCompetenceModificateur(Personnage: StructurePersonnage; CodeCompetence: String): Integer;
@@ -501,6 +565,9 @@ Type
   Function PersonnageArmureBonusCompetenceModifPortee(Personnage: StructurePersonnage; CodeCompetence: String): Integer;
 
 implementation
+
+uses
+  ChargeMetierAttribut;
 
 ////////////////////////////////////////////////////////////////////////////////
 //                                 XML                                        //
@@ -555,6 +622,51 @@ begin
     if Assigned(PlayerNode) and (PlayerNode.NodeName = ConstXmlPersonnage) then
       if Assigned(PlayerNode.FindNode(ConstXmlGroupeId)) then
         Result := RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlGroupeId).TextContent));
+  finally
+    XMLDoc.Free;
+  end;
+end;
+
+// Lecture allegee pour la liste du menu (ChargerPersonnages) : seulement metier, niveau, race,
+// XP et livres obligatoires, sans construire toute la fiche (la lecture complete de chaque
+// personnage rendait le demarrage long). Rend False si la fiche a un bloc d'objets propres :
+// il faut alors la charger en entier (l'injection de ces objets conditionne chercheMetier).
+function PersonnageResumeFichier(const FileName: String; out Personnage: StructurePersonnage): Boolean;
+var
+  XMLDoc:     TXMLDocument;
+  PlayerNode: TDOMNode;
+  Metier:     StructurePersonnageMetier;
+
+  function Texte(const Balise: String): String;
+    var
+      N: TDOMNode;
+    begin
+      N := PlayerNode.FindNode(Balise);
+      if Assigned(N) then
+        Result := RemoveQuotes(UTF8Encode(N.TextContent))
+      else
+        Result := '';
+    end;
+
+begin
+  Result := False;
+  XMLDoc := TXMLDocument.Create;
+  try
+    ReadXMLFile(XMLDoc, FileName);
+    PlayerNode := XMLDoc.DocumentElement;
+    if Assigned(PlayerNode) and (PlayerNode.NodeName = ConstXmlPersonnage) then
+      if not Assigned(PlayerNode.FindNode(ConstXmlObjetsPropres)) then
+        begin
+          Personnage.XpTotal            := StrToIntDef(Texte(ConstXmlXp), 0);
+          Personnage.XpActuel           := StrToIntDef(Texte(ConstXmlXpCurrent), 0);
+          Metier.CodeMetier             := Texte(ConstXmlWork);
+          Metier.NiveauMetier           := StrToIntDef(Texte(ConstXmlNvWork), 0);
+          Personnage.MetierEnCours      := Metier;
+          Personnage.Race               := Texte(ConstXmlRace);
+          Personnage.LivresObligatoires := StringReplace(Texte(ConstXmlLibelleLivre),
+                                             AjouteAccolade(ConstLivreObjetsPropres), '', [rfReplaceAll]);
+          Result := True;
+        end;
   finally
     XMLDoc.Free;
   end;
@@ -849,10 +961,55 @@ var
         ListeLivres:= PersonnageLivre(ListeLivres, ChercheSigneAstral(Personnage.SigneAstral).Livre);
       XMLContent.Add(XmlCommentaire(PRace.Libelle));
       XMLContent.Add(XmlLigne(ConstXmlAge, IntToStr(Personnage.Age)));
+      if Personnage.PointsMagie > 0 then
+        XMLContent.Add(XmlLigne(ConstXmlMagicPoints, IntToStr(Personnage.PointsMagie)));
+      if Personnage.AlignementV1 <> '' then
+        XMLContent.Add(XmlLigne(ConstXmlAlignmentPerso, Personnage.AlignementV1));
+      if Personnage.FolieV1 > 0 then
+        XMLContent.Add(XmlLigne(ConstXmlInsanityPoints, IntToStr(Personnage.FolieV1)));
+      if Personnage.NaissanceV1 <> '' then
+        XMLContent.Add(XmlLigne(ConstXmlBirthPlaceV1, Personnage.NaissanceV1));
+      if Personnage.ParentsV1 <> '' then
+        XMLContent.Add(XmlLigne(ConstXmlParentsJobV1, Personnage.ParentsV1));
+      if Personnage.FamilleV1 <> '' then
+        XMLContent.Add(XmlLigne(ConstXmlFamilyMembersV1, Personnage.FamilleV1));
+      if Personnage.HandicapsV1 <> '' then
+        XMLContent.Add(XmlLigne(ConstXmlDisabilitiesV1, Personnage.HandicapsV1));
+      if Personnage.FamilierV1 <> '' then
+        XMLContent.Add(XmlLigne(ConstXmlFamiliarV1, Personnage.FamilierV1));
+      if Personnage.SortsV1 <> '' then
+        XMLContent.Add(XmlLigne(ConstXmlSpellsLearnedV1, Personnage.SortsV1));
+      if Personnage.EchecsSortsV1 <> '' then
+        XMLContent.Add(XmlLigne(ConstXmlSpellFailuresV1, Personnage.EchecsSortsV1));
+      if Personnage.MagicienMauvaisV1 then
+        XMLContent.Add(XmlLigne(ConstXmlEvilWizardV1, '1'));
+      if Personnage.ClasseV1 <> '' then
+        XMLContent.Add(XmlLigne(ConstXmlClasseV1, Personnage.ClasseV1));
+      if Personnage.CulteV1 <> '' then
+        XMLContent.Add(XmlLigne(ConstXmlCulteV1, Personnage.CulteV1));
       XMLContent.Add(XmlLigne(ConstXmlHeight, IntToStr(Personnage.Height)));
       XMLContent.Add(XmlLigne(ConstXmlHeightUnit, Personnage.HeightUnit));
       XMLContent.Add(XmlLigne(ConstXmlHairColors, Personnage.HairColors));
       XMLContent.Add(XmlLigne(ConstXmlEyeColors, Personnage.EyeColors));
+      // Sous-bloc V2 : ecrit seulement si une donnee existe (les fiches V4/V5 restent inchangees)
+      if (Personnage.SexeV2 <> '') or (Personnage.PoidsV2 <> 0) or (Personnage.FratrieV2 <> '') or (Personnage.SigneDistinctifV2 <> '')
+         or (Personnage.NaissanceV2 <> '') or (Personnage.AstreV2 <> '') then
+        begin
+          XMLContent.Add(XmlDebut(ConstXmlFicheV2));
+          if Personnage.SexeV2 <> '' then
+            XMLContent.Add(XmlLigne(ConstXmlFicheSexe, Personnage.SexeV2));
+          if Personnage.PoidsV2 <> 0 then
+            XMLContent.Add(XmlLigne(ConstXmlFichePoids, IntToStr(Personnage.PoidsV2)));
+          if Personnage.FratrieV2 <> '' then
+            XMLContent.Add(XmlLigne(ConstXmlFicheFratrie, Personnage.FratrieV2));
+          if Personnage.SigneDistinctifV2 <> '' then
+            XMLContent.Add(XmlLigne(ConstXmlFicheSigneDistinctif, Personnage.SigneDistinctifV2));
+          if Personnage.NaissanceV2 <> '' then
+            XMLContent.Add(XmlLigne(ConstXmlFicheNaissance, Personnage.NaissanceV2));
+          if Personnage.AstreV2 <> '' then
+            XMLContent.Add(XmlLigne(ConstXmlFicheAstreV2, Personnage.AstreV2));
+          XMLContent.Add(XmlFin(ConstXmlFicheV2));
+        end;
       XMLContent.Add(XmlLigne(ConstXmlAmbitionCourt, Personnage.AmbitionCourt));
       XMLContent.Add(XmlLigne(ConstXmlAmbitionLong, Personnage.AmbitionLong));
       XMLContent.Add(XmlLigne(ConstXmlAmbitionGroupeCourt, Personnage.AmbitionGroupeCourt));
@@ -1184,8 +1341,17 @@ var
           begin
             PCorruptionTable.Code := '';
             PCorruptionTable := ChercheCorruptionTable(PersonnageMutation.Code);
-            XMLContent.Add(XmlLigneDonnee(ConstXmlItem,
-              CodeNormalise(PersonnageMutation.Code, PCorruptionTable.Livre), ''));
+            if PersonnageMutation.ValeursEffets <> '' then
+              XMLContent.Add(XmlLigneDonnee(ConstXmlItem,
+                CodeNormalise(PersonnageMutation.Code, PCorruptionTable.Livre), '',
+                ' valeursEffets="' + PersonnageMutation.ValeursEffets + '"'))
+            else if PersonnageMutation.ValeurAleatoire <> 0 then
+              XMLContent.Add(XmlLigneDonnee(ConstXmlItem,
+                CodeNormalise(PersonnageMutation.Code, PCorruptionTable.Livre), '',
+                ' valeurAleatoire="' + IntToStr(PersonnageMutation.ValeurAleatoire) + '"'))
+            else
+              XMLContent.Add(XmlLigneDonnee(ConstXmlItem,
+                CodeNormalise(PersonnageMutation.Code, PCorruptionTable.Livre), ''));
             if (PCorruptionTable.Code <> '') then
               XMLContent.Add(XmlCommentaire(PCorruptionTable.Libelle));
           end;
@@ -1248,6 +1414,7 @@ var
   procedure EcritFin;
   var
   PersonnageCompetence:   StructurePersonnageCompetence;
+  PersonnageAttribut:     StructurePersonnageAttribut;
   PersonnageXpAttribut:   StructurePersonnageXpAttribut;
   PersonnageXpCompetence: StructurePersonnageXpCompetence;
   PersonnageXpTalent:     StructurePersonnageXpTalent;
@@ -1340,6 +1507,18 @@ var
           XMLContent.Add(XmlCommentaire(PCompetence.Libelle));
         end;
       XMLContent.Add(XmlFin(ConstXmlSousChapitreCompAppartenance));
+
+      // Avance gratuite de creation V2 (champ dedie, voir StructurePersonnage).
+      XMLContent.Add(XmlDebut(ConstXmlSousChapitreAvanceGratuite));
+      for PersonnageAttribut in Personnage.AvanceGratuiteAttribut do
+        begin
+          PAttribut := ChercheAttribut(PersonnageAttribut.CodeAttribut);
+          XMLContent.Add(XmlLigneDonnee(ConstXmlCarac,
+            XmlCreeCodeLivre(PAttribut.Livre, PersonnageAttribut.CodeAttribut),
+            IntToStr(PersonnageAttribut.Valeur)));
+          XMLContent.Add(XmlCommentaire(PAttribut.Libelle));
+        end;
+      XMLContent.Add(XmlFin(ConstXmlSousChapitreAvanceGratuite));
   end;
 
 begin
@@ -1415,9 +1594,14 @@ var
     Personnage.XpCoutCompetence     := [];
     Personnage.XpCoutTalent         := [];
     Personnage.CompetenceAppartenance := [];
+    Personnage.AvanceGratuiteAttribut := [];
 
     Personnage.NomPersonnage        := RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlName).TextContent));
     Personnage.XpTotal              := StrToIntDef(RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlXp).TextContent)),0);
+    // Le record n'est pas remis a zero : sans balise Xp25 (perso ancien, V1 / V2), Xp25Total gardait
+    // une valeur au hasard (32763 constate sur la page Xp). Valeur par defaut = Xp / 25, comme a l'ecriture.
+    Personnage.Xp25Total              := Personnage.XpTotal div 25;
+    Personnage.XpActuel               := 0;
     if Assigned(PlayerNode.FindNode(ConstXmlXp25Total)) then
       Personnage.Xp25Total            := StrToIntDef(RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlXp25Total).TextContent)),0);
     if Assigned(PlayerNode.FindNode(ConstXmlXpCurrent)) then
@@ -1483,8 +1667,62 @@ var
           end;
       end;
 
+    // Avance gratuite de creation V2 : balise absente des fiches anterieures, tableau vide.
+    SubChapterNode := PlayerNode.FindNode(ConstXmlSousChapitreAvanceGratuite);
+    if Assigned(SubChapterNode) then
+      begin
+        Node := SubChapterNode.FirstChild;
+        while Assigned(Node) do
+          begin
+            if Node.NodeName = ConstXmlCarac then
+              begin
+                PersonnageAttribut.CodeAttribut  := RemoveQuotes(UTF8Encode(Node.Attributes.GetNamedItem(ConstXmlData).NodeValue));
+                PersonnageAttribut.Valeur        := StrToIntDef(RemoveQuotes(UTF8Encode(Node.TextContent)),0);
+                Personnage.AvanceGratuiteAttribut += [PersonnageAttribut];
+              end;
+            Node := Node.NextSibling;
+          end;
+      end;
+
     if Assigned(PlayerNode.FindNode(ConstXmlAge)) then
       Personnage.Age                := StrToInt(RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlAge).TextContent)));
+    Personnage.PointsMagie        := 0;
+    if Assigned(PlayerNode.FindNode(ConstXmlMagicPoints)) then
+      Personnage.PointsMagie      := StrToIntDef(RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlMagicPoints).TextContent)), 0);
+    Personnage.AlignementV1       := '';
+    if Assigned(PlayerNode.FindNode(ConstXmlAlignmentPerso)) then
+      Personnage.AlignementV1     := RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlAlignmentPerso).TextContent));
+    Personnage.FolieV1            := 0;
+    if Assigned(PlayerNode.FindNode(ConstXmlInsanityPoints)) then
+      Personnage.FolieV1          := StrToIntDef(RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlInsanityPoints).TextContent)), 0);
+    Personnage.NaissanceV1        := '';
+    if Assigned(PlayerNode.FindNode(ConstXmlBirthPlaceV1)) then
+      Personnage.NaissanceV1      := RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlBirthPlaceV1).TextContent));
+    Personnage.ParentsV1          := '';
+    if Assigned(PlayerNode.FindNode(ConstXmlParentsJobV1)) then
+      Personnage.ParentsV1        := RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlParentsJobV1).TextContent));
+    Personnage.FamilleV1          := '';
+    if Assigned(PlayerNode.FindNode(ConstXmlFamilyMembersV1)) then
+      Personnage.FamilleV1        := RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlFamilyMembersV1).TextContent));
+    Personnage.HandicapsV1        := '';
+    if Assigned(PlayerNode.FindNode(ConstXmlDisabilitiesV1)) then
+      Personnage.HandicapsV1      := RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlDisabilitiesV1).TextContent));
+    Personnage.FamilierV1         := '';
+    if Assigned(PlayerNode.FindNode(ConstXmlFamiliarV1)) then
+      Personnage.FamilierV1       := RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlFamiliarV1).TextContent));
+    Personnage.SortsV1            := '';
+    if Assigned(PlayerNode.FindNode(ConstXmlSpellsLearnedV1)) then
+      Personnage.SortsV1          := RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlSpellsLearnedV1).TextContent));
+    Personnage.EchecsSortsV1      := '';
+    if Assigned(PlayerNode.FindNode(ConstXmlSpellFailuresV1)) then
+      Personnage.EchecsSortsV1    := RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlSpellFailuresV1).TextContent));
+    Personnage.MagicienMauvaisV1  := Assigned(PlayerNode.FindNode(ConstXmlEvilWizardV1));
+    Personnage.ClasseV1           := '';
+    if Assigned(PlayerNode.FindNode(ConstXmlClasseV1)) then
+      Personnage.ClasseV1         := RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlClasseV1).TextContent));
+    Personnage.CulteV1            := '';
+    if Assigned(PlayerNode.FindNode(ConstXmlCulteV1)) then
+      Personnage.CulteV1          := RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlCulteV1).TextContent));
     // Fiche sans <HeightUnit> : taille enregistree en pouces (avant l'unite par fiche)
     Personnage.HeightUnit         := ConstUniteInch;
     if Assigned(PlayerNode.FindNode(ConstXmlHeight)) then
@@ -1495,6 +1733,29 @@ var
       Personnage.HairColors         := RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlHairColors).TextContent));
     if Assigned(PlayerNode.FindNode(ConstXmlEyeColors)) then
       Personnage.EyeColors          := RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlEyeColors).TextContent));
+    // Sous-bloc V2 facultatif
+    Personnage.SexeV2               := '';
+    Personnage.PoidsV2              := 0;
+    Personnage.FratrieV2            := '';
+    Personnage.SigneDistinctifV2    := '';
+    Personnage.NaissanceV2          := '';
+    Personnage.AstreV2              := '';
+    if Assigned(PlayerNode.FindNode(ConstXmlFicheV2)) then
+      with PlayerNode.FindNode(ConstXmlFicheV2) do
+        begin
+          if Assigned(FindNode(ConstXmlFicheSexe)) then
+            Personnage.SexeV2           := RemoveQuotes(UTF8Encode(FindNode(ConstXmlFicheSexe).TextContent));
+          if Assigned(FindNode(ConstXmlFichePoids)) then
+            Personnage.PoidsV2          := StrToIntDef(RemoveQuotes(UTF8Encode(FindNode(ConstXmlFichePoids).TextContent)), 0);
+          if Assigned(FindNode(ConstXmlFicheFratrie)) then
+            Personnage.FratrieV2        := RemoveQuotes(UTF8Encode(FindNode(ConstXmlFicheFratrie).TextContent));
+          if Assigned(FindNode(ConstXmlFicheSigneDistinctif)) then
+            Personnage.SigneDistinctifV2 := RemoveQuotes(UTF8Encode(FindNode(ConstXmlFicheSigneDistinctif).TextContent));
+          if Assigned(FindNode(ConstXmlFicheNaissance)) then
+            Personnage.NaissanceV2      := RemoveQuotes(UTF8Encode(FindNode(ConstXmlFicheNaissance).TextContent));
+          if Assigned(FindNode(ConstXmlFicheAstreV2)) then
+            Personnage.AstreV2          := RemoveQuotes(UTF8Encode(FindNode(ConstXmlFicheAstreV2).TextContent));
+        end;
     if Assigned(PlayerNode.FindNode(ConstXmlAmbitionCourt)) then
       Personnage.AmbitionCourt      := RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlAmbitionCourt).TextContent));
     if Assigned(PlayerNode.FindNode(ConstXmlAmbitionLong)) then
@@ -1896,7 +2157,13 @@ var
           begin
             if (ItemNode.NodeType = ELEMENT_NODE) then
               begin
-                PersonnageMutation.Code := RemoveQuotes(UTF8Encode(ItemNode.Attributes.GetNamedItem(ConstXmlData).NodeValue));
+                PersonnageMutation.Code            := RemoveQuotes(UTF8Encode(ItemNode.Attributes.GetNamedItem(ConstXmlData).NodeValue));
+                PersonnageMutation.ValeurAleatoire := 0;
+                if Assigned(ItemNode.Attributes.GetNamedItem('valeurAleatoire')) then
+                  PersonnageMutation.ValeurAleatoire := StrToIntDef(UTF8Encode(ItemNode.Attributes.GetNamedItem('valeurAleatoire').NodeValue), 0);
+                PersonnageMutation.ValeursEffets := '';
+                if Assigned(ItemNode.Attributes.GetNamedItem('valeursEffets')) then
+                  PersonnageMutation.ValeursEffets := UTF8Encode(ItemNode.Attributes.GetNamedItem('valeursEffets').NodeValue);
                 Personnage.Mutations    += [PersonnageMutation];
               end;
             ItemNode := ItemNode.NextSibling;
@@ -2273,9 +2540,9 @@ Procedure PersonnageAppliqueTalentsCompetences(var Personnage: StructurePersonna
   begin
     Result := False;
     for PT in Personnage.CreationTalent do
-      if (PT.Valeur > 0) and CompareRechercheValeur(PT.CodeTalent, CodeTalent) then Exit(True);
+      if (PT.Valeur > 0) and MemeTalent(PT.CodeTalent, CodeTalent) then Exit(True);
     for PT in Personnage.AugmentationTalent do
-      if (PT.Valeur > 0) and CompareRechercheValeur(PT.CodeTalent, CodeTalent) then Exit(True);
+      if (PT.Valeur > 0) and MemeTalent(PT.CodeTalent, CodeTalent) then Exit(True);
   end;
 var
   Modif:  StructureModificateur;
@@ -2302,6 +2569,22 @@ begin
       PC.Valeur         := Modif.Facteur;
       Personnage.MetierCompetence += [PC];
     end;
+end;
+
+Procedure PersonnageTalentsMomentum(var Personnage: StructurePersonnage; Momentum: Boolean);
+var
+  Ind: Integer;
+begin
+  for Ind := 0 to High(Personnage.CreationTalent) do
+    Personnage.CreationTalent[Ind].CodeTalent := CodeTalentVersion(Personnage.CreationTalent[Ind].CodeTalent, Momentum);
+  for Ind := 0 to High(Personnage.AugmentationTalent) do
+    Personnage.AugmentationTalent[Ind].CodeTalent := CodeTalentVersion(Personnage.AugmentationTalent[Ind].CodeTalent, Momentum);
+  for Ind := 0 to High(Personnage.MetierTalent) do
+    Personnage.MetierTalent[Ind].CodeTalent := CodeTalentVersion(Personnage.MetierTalent[Ind].CodeTalent, Momentum);
+  for Ind := 0 to High(Personnage.XpCoutTalent) do
+    Personnage.XpCoutTalent[Ind].CodeTalent := CodeTalentVersion(Personnage.XpCoutTalent[Ind].CodeTalent, Momentum);
+  for Ind := 0 to High(Personnage.TalentCarriereRequise) do
+    Personnage.TalentCarriereRequise[Ind].CodeTalent := CodeTalentVersion(Personnage.TalentCarriereRequise[Ind].CodeTalent, Momentum);
 end;
 
 Function PersonnageTalentAsterisque(var Personnage:StructurePersonnage; CodeTalent: String): Integer;
@@ -2431,6 +2714,9 @@ end;
 Function PersonnageMutationAttributModif(Personnage: StructurePersonnage; CodeAttribut: String): Integer;
   begin
     Result := PersonnageMutationModificateur(Personnage, ConstXmlModifieAttribut, CodeAttribut);
+    // V1 : malus chiffres des handicaps des magiciens (meme ligne que les mutations, ecran et PDF)
+    if Personnage.HandicapsV1 <> '' then
+      Result := Result + MalusHandicapsV1(Personnage.HandicapsV1, CodeAttribut);
   end;
 
 Function PersonnageMutationModificateur(Personnage: StructurePersonnage; TypeModif, Cible: String; Filtre: String = ''): Integer;
@@ -2447,7 +2733,89 @@ Function PersonnageMutationModificateur(Personnage: StructurePersonnage; TypeMod
            and CompareRechercheValeur(ListModificateur[indiceModif].Cible, Cible)
            and ((Trim(ListModificateur[indiceModif].Filtre) = '')
                 or CompareRechercheValeur(ListModificateur[indiceModif].Filtre, Filtre)) then
-          Result := Result + ListModificateur[indiceModif].Facteur;
+          if ListModificateur[indiceModif].Aleatoire then
+            Result := Result + MutationValeurEffet(PersonnageMutation.ValeurAleatoire, PersonnageMutation.ValeursEffets, ListModificateur[indiceModif].Cible)
+          else
+            Result := Result + ListModificateur[indiceModif].Facteur;
+  end;
+
+// Valeur du jet pour l'attribut Cible dans "code=valeur;code=valeur" ; a defaut (mutation a un seul
+// jet, ou attribut absent de la liste) ValeurAleatoire.
+Function MutationValeurEffet(ValeurAleatoire: Integer; ValeursEffets, Cible: String): Integer;
+  var
+    Liste: TStringList;
+    Ind:   Integer;
+    Paire: String;
+  begin
+    Result := ValeurAleatoire;
+    if ValeursEffets = '' then
+      Exit;
+    Liste := TStringList.Create;
+    try
+      ExtractStrings([';'], [], PChar(ValeursEffets), Liste);
+      for Ind := 0 to Liste.Count - 1 do
+        begin
+          Paire := Liste[Ind];
+          if (Pos('=', Paire) > 0) and CompareRechercheValeur(Copy(Paire, 1, Pos('=', Paire) - 1), Cible) then
+            begin
+              Result := StrToIntDef(Copy(Paire, Pos('=', Paire) + 1, Length(Paire)), ValeurAleatoire);
+              Exit;
+            end;
+        end;
+    finally
+      Liste.Free;
+    end;
+  end;
+
+Procedure PersonnageMutationEffetsAleatoires(Code: String; out Faces: TArrayEntiersAleatoires; out Attributs: TArrayCodesAleatoires);
+  var
+    indiceModif: Integer;
+  begin
+    Faces     := nil;
+    Attributs := nil;
+    for indiceModif := 0 to (ListModificateur.Count - 1) do
+      if (ListModificateur[indiceModif].TypeSource = SourceModifMutation)
+         and ListModificateur[indiceModif].Aleatoire
+         and CompareRechercheValeur(ListModificateur[indiceModif].CodeSource, Code) then
+        begin
+          SetLength(Faces, Length(Faces) + 1);
+          SetLength(Attributs, Length(Attributs) + 1);
+          Faces[High(Faces)]         := ListModificateur[indiceModif].Facteur;
+          Attributs[High(Attributs)] := ListModificateur[indiceModif].Cible;
+        end;
+  end;
+
+// Face totale (10 x nombre de des, ex. 20 pour 2d10), attribut et signe (+1 gain, -1 perte) du
+// <ModifyCaracAleatoire> d'une mutation du catalogue ; 0 si elle n'en porte pas. Ne tire rien :
+// le jet est valide par Nono (WinJetPathologie), puis range dans PersonnageMutation.ValeurAleatoire.
+Function PersonnageMutationFaceAleatoire(Code: String; out CodeAttribut: String; out Signe: Integer): Integer;
+  var
+    indiceModif: Integer;
+  begin
+    Result       := 0;
+    CodeAttribut := '';
+    Signe        := 1;
+    for indiceModif := 0 to (ListModificateur.Count - 1) do
+      if (ListModificateur[indiceModif].TypeSource = SourceModifMutation)
+         and ListModificateur[indiceModif].Aleatoire
+         and CompareRechercheValeur(ListModificateur[indiceModif].CodeSource, Code) then
+        begin
+          Result       := Abs(ListModificateur[indiceModif].Facteur);
+          if ListModificateur[indiceModif].Facteur < 0 then Signe := -1;
+          CodeAttribut := ListModificateur[indiceModif].Cible;
+          break;
+        end;
+  end;
+
+Function PersonnageRaceLibelle(Personnage: StructurePersonnage; LibelleRace: String): String;
+  var
+    PRaceMutant: StructureRace;
+  begin
+    Result := LibelleRace;
+    if (Length(Personnage.Mutations) = 0) or (Personnage.Race = 'TOC-RACE_MUTANT') then Exit;
+    PRaceMutant := ChercheRace('TOC-RACE_MUTANT');
+    if PRaceMutant.Libelle <> '' then
+      Result := LibelleRace + ' (' + PRaceMutant.Libelle + ')';
   end;
 
 Function PersonnageMutationEffetTexte(PersonnageMutation: StructurePersonnageMutation): String;
@@ -2471,15 +2839,21 @@ Function PersonnageMutationEffetTexte(PersonnageMutation: StructurePersonnageMut
 
   begin
     Result := '';
-    // <ModifyCarac> : montant fixe + attribut vise.
+    // <ModifyCarac> : montant fixe ou jet + attribut vise ; plusieurs effets = separes par une virgule.
     for indiceModif := 0 to (ListModificateur.Count - 1) do
       if (ListModificateur[indiceModif].TypeSource = SourceModifMutation)
            and (ListModificateur[indiceModif].TypeModif = ConstXmlModifieAttribut)
          and CompareRechercheValeur(ListModificateur[indiceModif].CodeSource, PersonnageMutation.Code) then
         begin
-          Result := AvecSigne(ListModificateur[indiceModif].Facteur) + ' ' + ChercheAttribut(ListModificateur[indiceModif].Cible).Libelle;
-          Exit;
+          if Result <> '' then
+            Result := Result + ', ';
+          if ListModificateur[indiceModif].Aleatoire then
+            Result := Result + AvecSigne(MutationValeurEffet(PersonnageMutation.ValeurAleatoire, PersonnageMutation.ValeursEffets, ListModificateur[indiceModif].Cible)) + ' ' + ChercheAttribut(ListModificateur[indiceModif].Cible).Libelle
+          else
+            Result := Result + AvecSigne(ListModificateur[indiceModif].Facteur) + ' ' + ChercheAttribut(ListModificateur[indiceModif].Cible).Libelle;
         end;
+    if Result <> '' then
+      Exit;
     // <ModifySkill> : montant fixe + competence visee.
     for indiceModif := 0 to (ListModificateur.Count - 1) do
       if (ListModificateur[indiceModif].TypeSource = SourceModifMutation)
@@ -2710,6 +3084,30 @@ Function PersonnageNiveauDansMetier(Personnage: StructurePersonnage; CodeMetier:
           Result := Personnage.MetierAncien[IndMetier].NiveauMetier;
   end;
 
+Function CompetencesFamilierV1(Personnage: StructurePersonnage): String;
+  var
+    PFamilier: StructureFamilierV1;
+    Niveau:    Integer;
+    IndMetier: Integer;
+  begin
+    Result := '';
+    if Personnage.FamilierV1 = '' then
+      Exit;
+    PFamilier := ChercheFamilierV1(Personnage.FamilierV1);
+    // niveau le plus haut atteint comme Druidic Priest (V1 : un code de carriere par niveau)
+    Niveau := 0;
+    if TableAvancementPretreV1(Personnage.MetierEnCours.CodeMetier) = 'DRUID' then
+      Niveau := NiveauCarriereV1(Personnage.MetierEnCours.CodeMetier);
+    for IndMetier := 0 to High(Personnage.MetierAncien) do
+      if (TableAvancementPretreV1(Personnage.MetierAncien[IndMetier].CodeMetier) = 'DRUID') and
+         (NiveauCarriereV1(Personnage.MetierAncien[IndMetier].CodeMetier) > Niveau) then
+        Niveau := NiveauCarriereV1(Personnage.MetierAncien[IndMetier].CodeMetier);
+    if Niveau >= 1 then
+      Result := PFamilier.Comp1;
+    if Niveau >= 2 then
+      Result := Result + ';' + PFamilier.Comp2;
+  end;
+
 Function PersonnageCareerBonusAttributModif(Personnage: StructurePersonnage; CodeAttribut: String): Integer;
   begin
     Result := PersonnageCareerBonusModificateur(Personnage, ConstXmlModifieAttribut, CodeAttribut);
@@ -2753,6 +3151,16 @@ Function PersonnageCareerBonusModificateur(Personnage: StructurePersonnage; Type
       Appartenances.Free;
     end;
   end;
+
+Function PersonnageAvanceGratuite(Personnage: StructurePersonnage; CodeAttribut: String): Integer;
+var
+  PAttribut: StructurePersonnageAttribut;
+begin
+  Result := 0;
+  for PAttribut in Personnage.AvanceGratuiteAttribut do
+    if CompareRechercheValeur(PAttribut.CodeAttribut, CodeAttribut) then
+      Result := Result + PAttribut.Valeur;
+end;
 
 Function PersonnageCareerBonusCompetenceModif(Personnage: StructurePersonnage; CodeCompetence: String): Integer;
   begin
@@ -3050,7 +3458,8 @@ Function PersonnageSourcesModif(Personnage: StructurePersonnage): TArraySourceMo
     Rang:                 Integer;
 
   procedure Ajouter(const TypeSource, CodeSource: String; Multiplicateur: Integer = 1;
-                    NiveauAtteint: Integer = 0; ValeurAleatoire: Integer = 0; IgnoreFiltre: Boolean = False; Groupe: Integer = 0);
+                    NiveauAtteint: Integer = 0; ValeurAleatoire: Integer = 0; IgnoreFiltre: Boolean = False; Groupe: Integer = 0;
+                    ValeursEffets: String = '');
     begin
       if Nb >= Length(Sources) then
         SetLength(Sources, Nb * 2 + 16);
@@ -3059,6 +3468,7 @@ Function PersonnageSourcesModif(Personnage: StructurePersonnage): TArraySourceMo
       Sources[Nb].Multiplicateur  := Multiplicateur;
       Sources[Nb].NiveauAtteint   := NiveauAtteint;
       Sources[Nb].ValeurAleatoire := ValeurAleatoire;
+      Sources[Nb].ValeursEffets   := ValeursEffets;
       Sources[Nb].IgnoreFiltre    := IgnoreFiltre;
       Sources[Nb].Groupe          := Groupe;
       Inc(Nb);
@@ -3075,7 +3485,7 @@ Function PersonnageSourcesModif(Personnage: StructurePersonnage): TArraySourceMo
       Ajouter(SourceModifTalent, PersonnageTalent.CodeTalent, PersonnageTalent.Valeur);
 
     for PersonnageMutation in Personnage.Mutations do
-      Ajouter(SourceModifMutation, PersonnageMutation.Code);
+      Ajouter(SourceModifMutation, PersonnageMutation.Code, 1, 0, PersonnageMutation.ValeurAleatoire, False, 0, PersonnageMutation.ValeursEffets);
 
     for PersonnagePathologie in Personnage.Pathologies do
       if PersonnagePathologie.TypeChapitre = ConstXmlChapitreAffliction then
@@ -3193,7 +3603,7 @@ Function PersonnageSourcesModif(Personnage: StructurePersonnage): TArraySourceMo
 
 // Somme des modificateurs (TypeModif, Cible[, Filtre]) de tous les elements possedes : un seul
 // parcours de ListModificateur par source, quel que soit le type d'element.
-Function PersonnageModificateurUnique(Personnage: StructurePersonnage; TypeModif, Cible: String; Filtre: String = ''; SansFabrication: Boolean = False; MaxParPiece: Boolean = False): Integer;
+Function PersonnageModificateurUnique(Personnage: StructurePersonnage; TypeModif, Cible: String; Filtre: String = ''; SansFabrication: Boolean = False; MaxParPiece: Boolean = False; SeulementFabrication: Boolean = False): Integer;
   var
     Sources:   TArraySourceModif;
     Source:    StructureSourceModif;
@@ -3207,7 +3617,8 @@ Function PersonnageModificateurUnique(Personnage: StructurePersonnage; TypeModif
     Totaux  := nil;
     Sources := PersonnageSourcesModif(Personnage);
     for Source in Sources do
-      if not (SansFabrication and (Source.TypeSource = SourceModifFabrication)) then
+      if not (SansFabrication and (Source.TypeSource = SourceModifFabrication))
+         and not (SeulementFabrication and (Source.TypeSource <> SourceModifFabrication)) then
       for IndModif := 0 to ListModificateur.Count - 1 do
         begin
           Entree := ListModificateur[IndModif];
@@ -3232,7 +3643,7 @@ Function PersonnageModificateurUnique(Personnage: StructurePersonnage; TypeModif
           if (Source.TypeSource = SourceModifCareerBonus) and (Entree.Niveau > Source.NiveauAtteint) then
             continue;
           if Entree.Aleatoire then
-            Apport := Source.ValeurAleatoire
+            Apport := MutationValeurEffet(Source.ValeurAleatoire, Source.ValeursEffets, Entree.Cible)
           else
             Apport := Entree.Facteur * Source.Multiplicateur;
           if MaxParPiece and (Source.Groupe > 0) then
@@ -3255,6 +3666,16 @@ Function ArmeEstADistance(CodeArme: String): Boolean;
   begin
     Result := Pos(EquipementCT, CodeArme) > 0;
   end;
+
+Function PersonnageAlignementV1(Personnage: StructurePersonnage): String;
+begin
+  if Personnage.AlignementV1 <> '' then
+    Result := Personnage.AlignementV1
+  else if Pos('ELF', Personnage.Race) > 0 then
+    Result := 'RULES-V1ALIGN_GOOD'
+  else
+    Result := 'RULES-V1ALIGN_NEUTRAL';
+end;
 
 Function PersonnageNombreMains(Personnage: StructurePersonnage): Integer;
   begin
@@ -3307,7 +3728,7 @@ Function PersonnageCompetenceModificateur(Personnage: StructurePersonnage; CodeC
           CodeGenerique := PCompetence.CodeGenerique
         else
           begin
-            CodeGenerique := ExtractStringBefore(PCompetence.CodeCompetence, ValeurSousCompetence) + ValeurGenerique;
+            CodeGenerique := CodeGeneriqueDeduit(PCompetence.CodeCompetence);
             for PGenerique in ListCompetence do
               if CodeSansLivre(PGenerique.CodeCompetence) = CodeSansLivre(CodeGenerique) then
                 begin
@@ -3326,6 +3747,9 @@ Function PersonnageCompetenceModificateur(Personnage: StructurePersonnage; CodeC
 
     if AttributCompetence = '' then
       Exit;
+    // Qualites d'armes PORTEES ("+10% Fellowship Tests") : seules les sources de fabrication,
+    // mutations et afflictions ayant leurs listes dediees ci-dessous.
+    Result := Result + PersonnageModificateurUnique(Personnage, ConstXmlModifieCompetenceAttribut, AttributCompetence, '', False, False, True);
     for PersonnageMutation in Personnage.Mutations do
       for IndModif := 0 to (ListCorruptionCompetenceAttributModif.Count - 1) do
         if CompareRechercheValeur(ListCorruptionCompetenceAttributModif[IndModif].CodeCorruption, PersonnageMutation.Code)
@@ -3465,7 +3889,7 @@ Function PersonnageMutationCompetenceModif(Personnage: StructurePersonnage; Code
           CodeGenerique := PCompetence.CodeGenerique
         else
           begin
-            CodeGenerique := ExtractStringBefore(PCompetence.CodeCompetence, ValeurSousCompetence) + ValeurGenerique;
+            CodeGenerique := CodeGeneriqueDeduit(PCompetence.CodeCompetence);
             for PGenerique in ListCompetence do
               if CodeSansLivre(PGenerique.CodeCompetence) = CodeSansLivre(CodeGenerique) then
                 begin
@@ -3512,18 +3936,48 @@ Function PersonnageMutationTalent(Personnage: StructurePersonnage): TArrayPerson
     PersonnageMutation: StructurePersonnageMutation;
     indiceModif:        Integer;
     PTalent:             StructurePersonnageTalent;
+    PCorruptionTable:    StructureCorruptionTable;
+    TotalPeur:           Integer;
+    Peur:                Integer;
   begin
-    Result := [];
+    Result    := [];
+    TotalPeur := 0;
     for PersonnageMutation in Personnage.Mutations do
-      for indiceModif := 0 to (ListCorruptionTalent.Count - 1) do
-        if CompareRechercheValeur(ListCorruptionTalent[indiceModif].CodeCorruption, PersonnageMutation.Code) then
-          begin
-            PTalent.CodeTalent := ListCorruptionTalent[indiceModif].CodeTalent;
-            PTalent.Valeur     := 1;
-            PTalent.Asterisque := 0;
-            PTalent.Source     := PersonnageMutation.Code;
-            Result             += [PTalent];
-          end;
+      begin
+        for indiceModif := 0 to (ListCorruptionTalent.Count - 1) do
+          if CompareRechercheValeur(ListCorruptionTalent[indiceModif].CodeCorruption, PersonnageMutation.Code) then
+            begin
+              PTalent.CodeTalent := ListCorruptionTalent[indiceModif].CodeTalent;
+              PTalent.Valeur     := 1;
+              PTalent.Asterisque := 0;
+              PTalent.Source     := PersonnageMutation.Code;
+              Result             += [PTalent];
+            end;
+        // Points de peur du Tome of Corruption (p.26) : somme des mutations du Chaos ; seuls les
+        // entiers simples comptent ("Varies", "0-1", "1/2/3" restent a l'appreciation du MJ).
+        for PCorruptionTable in ListCorruptionTable do
+          if (PCorruptionTable.TypeCorruption = CorruptionMutation)
+             and (PCorruptionTable.Code = PersonnageMutation.Code)
+             and TryStrToInt(PCorruptionTable.Peur, Peur) and (Peur > 0) then
+            TotalPeur += Peur;
+      end;
+    // 1 Menacing, 2 a 4 Unsettling, 5 a 9 Frightening, 10 et plus Terrifying : le plus haut remplace les autres.
+    PTalent.CodeTalent := '';
+    if TotalPeur >= 10 then PTalent.CodeTalent := 'RULES-T_TERRIFYING'
+    else if TotalPeur >= 5 then PTalent.CodeTalent := 'RULES-T_FRIGHTENING'
+    else if TotalPeur >= 2 then PTalent.CodeTalent := 'RULES-T_UNSETTLING'
+    else if TotalPeur = 1 then PTalent.CodeTalent := 'RULES-T_MENACING';
+    if PTalent.CodeTalent <> '' then
+      begin
+        PTalent.Valeur     := 1;
+        PTalent.Asterisque := 0;
+        PTalent.Source     := CorruptionMutation;
+        Result             += [PTalent];
+      end;
+    // Option Momentum : ces talents sont calcules, pas stockes, donc suivent la version choisie ici
+    if (Pos(AjouteAccolade(ConstXmlOptionMomentum), Personnage.Options) > 0) and LivreMomentumCharge() and VerifieFiltre(ConstFiltreLivreMomentum,Personnage.LivresAcceptes) then
+      for indiceModif := 0 to High(Result) do
+        Result[indiceModif].CodeTalent := CodeTalentVersion(Result[indiceModif].CodeTalent, True);
   end;
 
 Function PersonnageTalentEstBarre(Personnage: StructurePersonnage; CodeTalent: String): Boolean;
@@ -3751,6 +4205,53 @@ Function PersonnageArmeBonusTalent(Personnage: StructurePersonnage): TArrayPerso
       Alternatives.Free;
       Liste.Free;
     end;
+  end;
+
+// Radical d'un talent a specialisation : voir RadicalTalent dans chargetalent.pas (le code de sa
+// famille sans '_*', RULES-T_BLESS_SIGMAR -> RULES-T_BLESS ; un talent sans famille est son propre radical).
+
+// Le talent de carriere peut etre un CHOIX "A/B" (RULES-T0161/NATIO-T0015_*) : chaque branche
+// est testee, avec les deux regles habituelles (meme code, ou meme radical).
+Function TalentCarriereCorrespond(CodeCarriere, CodeLigne: String): Boolean;
+  var
+    Branches: TStringList;
+    IndBr:    Integer;
+  begin
+    Result := False;
+    Branches := TStringList.Create;
+    try
+      Branches.StrictDelimiter := True;
+      Branches.Delimiter       := SeparateurMulti;
+      Branches.DelimitedText   := CodeCarriere;
+      for IndBr := 0 to Branches.Count - 1 do
+        if MemeTalent(Branches[IndBr], CodeLigne)
+           or MemeTalent(RadicalTalent(Branches[IndBr]), RadicalTalent(CodeLigne)) then
+          begin
+            Result := True;
+            Break;
+          end;
+    finally
+      Branches.Free;
+    end;
+  end;
+
+Function PersonnageTalentNiveauMetier(const Personnage: StructurePersonnage; CodeTalent: String): Integer;
+  var
+    PMetierTalent: StructureMetierTalent;
+    CodeMetier:    String;
+  begin
+    Result     := -1;
+    CodeMetier := Personnage.MetierEnCours.CodeMetier;
+    for PMetierTalent in ListMetierTalent do
+      if CompareRechercheValeur(PMetierTalent.CodeMetier, CodeMetier) then
+        // Adapting Careers : le talent substitue remplace le code brut de la carriere.
+        if TalentCarriereCorrespond(AdapterElement(CodeMetier, Personnage.Race, Personnage.ChoixAdaptation,
+                                    PMetierTalent.NiveauMetier, ConstXmlTalent, PMetierTalent.CodeTalent),
+                                    CodeTalent) then
+          begin
+            Result := PMetierTalent.NiveauMetier;
+            Break;
+          end;
   end;
 
 // Tous les talents accordes automatiquement (mutation, qualite d'armure, qualite d'arme ou

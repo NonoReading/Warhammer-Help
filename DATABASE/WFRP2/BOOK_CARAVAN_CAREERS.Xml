@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"CARA"</CODE_BOOK>
+<BOOK>"BOOK CARAVAN CAREERS"</BOOK>
+<BOOKNAME>"CARAVAN CAREERS"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_CAREER>
+<Career id="CARA-CARE_CARAVAN_GUARD">
+<Description language="ENGLISH">"Caravan Guard"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +5%, S +5%, T +10%, Ag +5%, WP +5%"</MainProfile>
+<SecondaryProfile>"A +1, W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_WP">"5"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Animal Care or Swim, Common Knowledge (The Wasteland or Tilea), Dodge Blow, Drive or Row, Gossip or Haggle, Outdoor Survival or Gamble, Perception, Ride"</Skills>
+<Talents>"Seasoned Traveller, Strike Mighty Blow or Sixth Sense, Strike to Injure or Hardy"</Talents>
+<Trappings>"Shield, Medium Armour (Mail Shirt), Warm Coat, Riding Horse"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE/RULES-COMP_SWIM">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_THE_WASTELAND/RULES-COMP_COMMON_KNOWLEDGE_TILEA">"1"</Skill>
+<Skill name="RULES-COMP_DODGE_BLOW">"1"</Skill>
+<Skill name="RULES-COMP_DRIVE/RULES-COMP_ROW">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP/RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_OUTDOOR_SURVIVAL/RULES-COMP_GAMBLE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_SEASONED_TRAVELLER">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW/RULES-T_SIXTH_SENSE">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE/RULES-T_HARDY">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"CARA 1"</Source>
+</Career>
+<Career id="CARA-CARE_CARAVAN_MASTER">
+<Description language="ENGLISH">"Caravan Master"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +10%, S +5%, T +10%, Ag +10%, Int +15%, WP +10%, Fel +15%"</MainProfile>
+<SecondaryProfile>"A +1, W +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+</Advances>
+<Skills>"Animal Care, Common Knowledge (any two of: The Wasteland, Tilea, Kislev or Bretonnia), Command, Drive or Row, Gossip, Haggle, Intimidate, Navigation, Perception, Read/Write, Ride or Swim, Sail or Outdoor Survival"</Skills>
+<Talents>"Orientation or Super Numerate, Seasoned Traveller, Street Fighting, Streetwise or Very Resilient"</Talents>
+<Trappings>"Hand Weapon, Medium Armour (Mail Shirt and Leather Jack), Ledgers and writing kit, 25 gc"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ANY_TWO_OF_THE_WASTELAND/RULES-COMP_COMMON_KNOWLEDGE_TILEA/RULES-COMP_COMMON_KNOWLEDGE_KISLEV/RULES-COMP_COMMON_KNOWLEDGE_BRETONNIA">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_DRIVE/RULES-COMP_ROW">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_RIDE/RULES-COMP_SWIM">"1"</Skill>
+<Skill name="RULES-COMP_SAIL/RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ORIENTATION/RULES-T_SUPER_NUMERATE">"1"</Talent>
+<Talent name="RULES-T_SEASONED_TRAVELLER">"1"</Talent>
+<Talent name="RULES-T_STREET_FIGHTING">"1"</Talent>
+<Talent name="RULES-T_STREETWISE/RULES-T_VERY_RESILIENT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"CARA 1"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="CARA-CARE_CARAVAN_GUARD">"RULES-CARE_BODYGUARD"</Link>
+<Link name="CARA-CARE_CARAVAN_GUARD">"CARA-CARE_CARAVAN_MASTER"</Link>
+<Link name="CARA-CARE_CARAVAN_GUARD">"RULES-CARE_MARINE"</Link>
+<Link name="CARA-CARE_CARAVAN_GUARD">"RULES-CARE_MERCENARY"</Link>
+<Link name="CARA-CARE_CARAVAN_GUARD">"RULES-CARE_OUTRIDER"</Link>
+<Link name="CARA-CARE_CARAVAN_GUARD">"RULES-CARE_ROADWARDEN"</Link>
+<Link name="CARA-CARE_CARAVAN_GUARD">"RULES-CARE_SERGEANT"</Link>
+<Link name="CARA-CARE_CARAVAN_GUARD">"RULES-CARE_VETERAN"</Link>
+<Link name="RULES-CARE_BODYGUARD">"CARA-CARE_CARAVAN_GUARD"</Link>
+<Link name="RULES-CARE_KISLEVITE_KOSSAR">"CARA-CARE_CARAVAN_GUARD"</Link>
+<Link name="RULES-CARE_MILITIAMAN">"CARA-CARE_CARAVAN_GUARD"</Link>
+<Link name="CCOMP-CARE_MULESKINNER">"CARA-CARE_CARAVAN_GUARD"</Link>
+<Link name="RULES-CARE_OUTRIDER">"CARA-CARE_CARAVAN_GUARD"</Link>
+<Link name="RULES-CARE_ROADWARDEN">"CARA-CARE_CARAVAN_GUARD"</Link>
+<Link name="RULES-CARE_SOLDIER">"CARA-CARE_CARAVAN_GUARD"</Link>
+<Link name="RULES-CARE_WATCHMAN">"CARA-CARE_CARAVAN_GUARD"</Link>
+<Link name="CARA-CARE_CARAVAN_MASTER">"RULES-CARE_BURGHER"</Link>
+<Link name="CARA-CARE_CARAVAN_MASTER">"RULES-CARE_EXPLORER"</Link>
+<Link name="CARA-CARE_CARAVAN_MASTER">"RULES-CARE_FENCE"</Link>
+<Link name="CARA-CARE_CARAVAN_MASTER">"RULES-CARE_GUILD_MASTER"</Link>
+<Link name="CARA-CARE_CARAVAN_MASTER">"RULES-CARE_MERCENARY"</Link>
+<Link name="CARA-CARE_CARAVAN_MASTER">"RULES-CARE_MERCHANT"</Link>
+<Link name="CARA-CARE_CARAVAN_MASTER">"RULES-CARE_NAVIGATOR"</Link>
+<Link name="CARA-CARE_CARAVAN_MASTER">"RULES-CARE_SCOUT"</Link>
+<Link name="CARA-CARE_CARAVAN_MASTER">"RULES-CARE_SMUGGLER"</Link>
+<Link name="RULES-CARE_BOATMAN">"CARA-CARE_CARAVAN_MASTER"</Link>
+<Link name="RULES-CARE_BURGHER">"CARA-CARE_CARAVAN_MASTER"</Link>
+<Link name="RULES-CARE_COACHMAN">"CARA-CARE_CARAVAN_MASTER"</Link>
+<Link name="RULES-CARE_FERRYMAN">"CARA-CARE_CARAVAN_MASTER"</Link>
+<Link name="RULES-CARE_MARINE">"CARA-CARE_CARAVAN_MASTER"</Link>
+<Link name="RULES-CARE_MERCENARY">"CARA-CARE_CARAVAN_MASTER"</Link>
+<Link name="CCOMP-CARE_MULESKINNER">"CARA-CARE_CARAVAN_MASTER"</Link>
+<Link name="RULES-CARE_NAVIGATOR">"CARA-CARE_CARAVAN_MASTER"</Link>
+<Link name="RULES-CARE_TRADESMAN">"CARA-CARE_CARAVAN_MASTER"</Link>
+<Link name="RULES-CARE_SCOUT">"CARA-CARE_CARAVAN_MASTER"</Link>
+<Link name="RULES-CARE_VETERAN">"CARA-CARE_CARAVAN_MASTER"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_ANY_TWO_OF_THE_WASTELAND">
+<Description language="ENGLISH">"Common Knowledge (any two of: The Wasteland)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+</DATA_BOOK>

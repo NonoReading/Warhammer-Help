@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"LICH"</CODE_BOOK>
+<BOOK>"BOOK LICHE"</BOOK>
+<BOOKNAME>"LICHE - WFRP2"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"This document is completely unofficial and in no way endorsed by Games Workshop Limited. Warhammer Fantasy Roleplay, the Warhammer Fantasy Roleplay logo, WFRP, Chaos, the Chaos device, the Chaos logo, Citadel, Citadel Device, Darkblade, 'Eavy Metal, Forge World, Games Workshop, Games Workshop logo, Golden Demon, Great Unclean One, GW, the Hammer of Sigmar logo, Horned Rat logo, Keeper of Secrets, Khemri, Khorne, the Khorne logo, Lord of Change, Nurgle, the Nurgle logo, Skaven, the Skaven symbol device, Slaanesh, the Slaanesh logo, Tomb Kings, Tzeentch, the Tzeentch logo, Warhammer, Warhammer World logo, White Dwarf, the White Dwarf logo, and all associated marks, names, races, race insignia, characters, vehicles, locations, units, artefacts, illustrations and images from the Warhammer world are either ®, TM and/or © Copyright Games Workshop Ltd 2000-2016, variably registered in the UK and other countries around the world. Used without"</DISCLAIMER>
+<DATA_TALENT>
+<Talent id="LICH-T_AURA_OF_COMMAND">
+<Description language="ENGLISH">"Aura of Command"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"5"</Page>
+</Talent>
+<Talent id="LICH-T_CLAWS_OF_DEATH">
+<Description language="ENGLISH">"Claws of Death"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"5"</Page>
+</Talent>
+<Talent id="LICH-T_CURSE">
+<Description language="ENGLISH">"Curse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"5"</Page>
+</Talent>
+<Talent id="LICH-T_DARK_EMPATHY">
+<Description language="ENGLISH">"Dark Empathy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"5"</Page>
+</Talent>
+<Talent id="LICH-T_DAY_WALKER">
+<Description language="ENGLISH">"Day Walker"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"5"</Page>
+</Talent>
+<Talent id="LICH-T_DEATHSIGHT">
+<Description language="ENGLISH">"Deathsight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"5"</Page>
+</Talent>
+<Talent id="LICH-T_DOMINATION">
+<Description language="ENGLISH">"Domination"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"5"</Page>
+</Talent>
+<Talent id="LICH-T_ENHANCED_NECROMANCY">
+<Description language="ENGLISH">"Enhanced Necromancy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"6"</Page>
+</Talent>
+<Talent id="LICH-T_ETHEREAL_SHADOW">
+<Description language="ENGLISH">"Ethereal Shadow"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"6"</Page>
+</Talent>
+<Talent id="LICH-T_FARSIGHT">
+<Description language="ENGLISH">"Farsight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"6"</Page>
+</Talent>
+<Talent id="LICH-T_FLAMMABLE">
+<Description language="ENGLISH">"Flammable"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"6"</Page>
+</Talent>
+<Talent id="LICH-T_HATE_SUNLIGHT">
+<Description language="ENGLISH">"Hate Sunlight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"6"</Page>
+</Talent>
+<Talent id="LICH-T_IMMUNITY_TO_NORMAL_WEAPONS">
+<Description language="ENGLISH">"Immunity to Normal Weapons"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"6"</Page>
+</Talent>
+<Talent id="LICH-T_LORD_OF_THE_EARTH">
+<Description language="ENGLISH">"Lord of the Earth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"7"</Page>
+</Talent>
+<Talent id="LICH-T_LORD_OF_THE_SKY">
+<Description language="ENGLISH">"Lord of the Sky"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"7"</Page>
+</Talent>
+<Talent id="LICH-T_MASTERY_OVER_FLESH">
+<Description language="ENGLISH">"Mastery Over Flesh"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"7"</Page>
+</Talent>
+<Talent id="LICH-T_RAGE">
+<Description language="ENGLISH">"Rage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"7"</Page>
+</Talent>
+<Talent id="LICH-T_SPEED_OF_ASP">
+<Description language="ENGLISH">"Speed of Asp"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"7"</Page>
+</Talent>
+<Talent id="LICH-T_TERRIBLE_BLOWS">
+<Description language="ENGLISH">"Terrible Blows"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"7"</Page>
+</Talent>
+<Talent id="LICH-T_UNDEAD_STAMINA">
+<Description language="ENGLISH">"Undead Stamina"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"7"</Page>
+</Talent>
+<Talent id="LICH-T_UNDEAD_STRENGTH">
+<Description language="ENGLISH">"Undead Strength"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"7"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_CAREER>
+<Career id="LICH-CARE_MORTUARY_HIEROPHANT_INITIATE">
+<Description language="ENGLISH">"Mortuary Hierophant Initiate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"Ag +5%, Int +10%, WP +15%, Fel +5%"</MainProfile>
+<SecondaryProfile>"W +2, Mag +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_Mag">"1"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Magic), Academic Knowledge (Theology), Channelling, Magical Sense, Perception or Search, Read/Write, Speak Arcane Language (High Nehekharan), Speak Language (any one)"</Skills>
+<Talents>"Aethyric Attunement or Fast Hands, Petty Magic (Divine), Savvy or Very Resilient"</Talents>
+<Trappings>"Religious Symbol, Robes"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION/RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_HIGH_NEHEKHARAN">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_FAST_HANDS">"1"</Talent>
+<Talent name="RULES-T_PETTY_MAGIC__DIVINE">"1"</Talent>
+<Talent name="RULES-T_SAVVY/RULES-T_VERY_RESILIENT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"LICH 11"</Source>
+</Career>
+<Career id="LICH-CARE_MORTUARY_HIEROPHANT_PRIEST">
+<Description language="ENGLISH">"Mortuary Hierophant Priest"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, T +5%, Ag +10%, Int +20%, WP +25%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +3, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Genealogy/Heraldry), Academic Knowledge (Magic), Academic Knowledge (Necromancy), Academic Knowledge (Spirits), Academic Knowledge (any one), Channelling, Charm or Intimidate, Command or Gossip, Common Knowledge (any one), Heal, Magical Sense, Read/Write, Speak Arcane Language (High Nehekharan), Speak Language (any one), Trade (Mummification)"</Skills>
+<Talents>"Arcane Lore (Death) or Arcane Lore (Light) or Dark Lore (Necromancy), Aethyric Attunement or Dark Magic, Lesser Magic (any two), Meditation or Mighty Missile, Public Speaking"</Talents>
+<Trappings>"Grimoire, Writing Kit, Mummification Tools"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_GENEALOGY/RULES-COMP_ACADEMIC_KNOWLEDGE_HERALDRY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_NECROMANCY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_SPIRITS">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND/RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_HIGH_NEHEKHARAN">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_MUMMIFICATION">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ARCANE_LORE__DEATH/RULES-T_ARCANE_LORE__LIGHT/RULES-T_DARK_LORE__NECROMANCY">"1"</Talent>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_DARK_MAGIC">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_MEDITATION/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"LICH 11"</Source>
+</Career>
+<Career id="LICH-CARE_MORTUARY_MASTER_HIEROPHANT">
+<Description language="ENGLISH">"Mortuary Master Hierophant"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, T +10%, Ag +15%, Int +30%, WP +35%, Fel +15%"</MainProfile>
+<SecondaryProfile>"W +4, Mag +3"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"35"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_Mag">"3"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Magic), Academic Knowledge (Necromancy), Academic Knowledge (Spirits), Academic Knowledge (Theology), Academic Knowledge (any one), Channelling, Charm or Intimidate, Command or Gossip, Common Knowledge (any one), Heal, Magical Sense, Read/Write, Speak Arcane Language (High Nehekharan), Speak Arcane Language (Daemonic or Elementalism), Speak Language (any one), Trade (Mummification)"</Skills>
+<Talents>"Lesser Magic (any two), Master Orator, Mighty Missile or Meditation, Strong-minded"</Talents>
+<Trappings>"Good Quality Robes, Two Magic Items"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_NECROMANCY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_SPIRITS">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND/RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_HIGH_NEHEKHARAN">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_DAEMONIC/RULES-COMP_SPEAK_ARCANE_LANGUAGE_ELEMENTALISM">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_MUMMIFICATION">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_MASTER_ORATOR">"1"</Talent>
+<Talent name="RULES-T_MIGHTY_MISSILE/RULES-T_MEDITATION">"1"</Talent>
+<Talent name="RULES-T_STRONG_MINDED">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"LICH 12"</Source>
+</Career>
+<Career id="LICH-CARE_MORTUARY_HIGH_HIEROPHANT">
+<Description language="ENGLISH">"Mortuary High Hierophant"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +15%, S +5%, T +15%, Ag +20%, Int +35%, WP +40%, Fel +20%"</MainProfile>
+<SecondaryProfile>"W +5, Mag +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"35"</Advance>
+<Advance name="RULES-ATTR_WP">"40"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+<Advance name="RULES-ATTR_W">"5"</Advance>
+<Advance name="RULES-ATTR_Mag">"4"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Necromancy), Academic Knowledge (Spirits), Academic Knowledge (Theology), Academic Knowledge (any two), Charm, Intimidate, Command, Gossip, Common Knowledge (any two), Heal, Prepare Poison, Speak Arcane Language (Daemonic or Elementalism), Speak Language (any two), Trade (Mummification)"</Skills>
+<Talents>"Etiquette, Fast Hands or Meditation, Lesser Magic (any two), Stout-hearted"</Talents>
+<Trappings>"Good Quality Robes, Three Magic Items"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_NECROMANCY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_SPIRITS">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISON">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_DAEMONIC/RULES-COMP_SPEAK_ARCANE_LANGUAGE_ELEMENTALISM">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_MUMMIFICATION">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ETIQUETTE">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_MEDITATION">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_STOUT_HEARTED">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"LICH 12"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="LICH-CARE_MORTUARY_HIEROPHANT_INITIATE">"LICH-CARE_MORTUARY_HIEROPHANT_PRIEST"</Link>
+<Link name="CCOMP-CARE_APOTHECARY">"LICH-CARE_MORTUARY_HIEROPHANT_INITIATE"</Link>
+<Link name="CCOMP-CARE_ASTROLOGER">"LICH-CARE_MORTUARY_HIEROPHANT_INITIATE"</Link>
+<Link name="RULES-CARE_COURTIER">"LICH-CARE_MORTUARY_HIEROPHANT_INITIATE"</Link>
+<Link name="RULES-CARE_NOBLE">"LICH-CARE_MORTUARY_HIEROPHANT_INITIATE"</Link>
+<Link name="RULES-CARE_POLITICIAN">"LICH-CARE_MORTUARY_HIEROPHANT_INITIATE"</Link>
+<Link name="RULES-CARE_SCHOLAR">"LICH-CARE_MORTUARY_HIEROPHANT_INITIATE"</Link>
+<Link name="RULES-CARE_SCRIBE">"LICH-CARE_MORTUARY_HIEROPHANT_INITIATE"</Link>
+<Link name="RULES-CARE_STUDENT">"LICH-CARE_MORTUARY_HIEROPHANT_INITIATE"</Link>
+<Link name="LICH-CARE_MORTUARY_HIEROPHANT_PRIEST">"LICH-CARE_MORTUARY_MASTER_HIEROPHANT"</Link>
+<Link name="LICH-CARE_MORTUARY_MASTER_HIEROPHANT">"LICH-CARE_MORTUARY_HIGH_HIEROPHANT"</Link>
+<Link name="LICH-CARE_MORTUARY_HIGH_HIEROPHANT">"RULES-CARE_NOBLE"</Link>
+<Link name="LICH-CARE_MORTUARY_HIGH_HIEROPHANT">"RULES-CARE_POLITICIAN"</Link>
+<Link name="CCOMP-CARE_EMBALMER">"LICH-CARE_MORTUARY_HIEROPHANT_INITIATE"</Link>
+<Link name="NDM-CARE_EMBALMER">"LICH-CARE_MORTUARY_HIEROPHANT_INITIATE"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_SPELL_V2>
+<SpellV2 id="LICH-SPEL_DRAIN_LIFE">
+<Description language="ENGLISH">"Drain Life"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"4 hours"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"10"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"High Nehekharan"</ArcaneLanguage>
+<MagicMin>"2"</MagicMin>
+<XPCost>"200"</XPCost>
+<Conditions>"must have the Dark Lore (Necromancy) or Dark Lore (Nagash) Talent"</Conditions>
+<Consequences>"if you fail the Casting Roll your body becomes 10 years older physically"</Consequences>
+</SpellV2>
+<SpellV2 id="LICH-SPEL_UNLIFE_OF_NAGASH">
+<Description language="ENGLISH">"Unlife of Nagash"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"2 hours to prepare the body or person, then 2 hours to cast the Ritual"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"10"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"High Nehekharan"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"400"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="LICH-EQUI_MAGIC_ITEMS_SOUL_DRAINING_DAGGERS_OF_NAGASH">
+<Description language="ENGLISH">"Soul Draining Daggers of Nagash"</Description>
+<Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
+<Note>""</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMP_SPEAK_ARCANE_LANGUAGE_HIGH_NEHEKHARAN">
+<Description language="ENGLISH">"Speak Arcane Language (High Nehekharan)"</Description>
+<Generique>"RULES-COMP_SPEAK_ARCANE_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_TRADE_MUMMIFICATION">
+<Description language="ENGLISH">"Trade (Mummification)"</Description>
+<Generique>"RULES-COMP_TRADE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ELEMENTALISM">
+<Description language="ENGLISH">"Speak Arcane Language (Elementalism)"</Description>
+<Generique>"RULES-COMP_SPEAK_ARCANE_LANGUAGE_*"</Generique>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="RULES-T_ARCANE_LORE__DEATH">
+<Description language="ENGLISH">"Arcane Lore (Death)"</Description>
+<Generique>"RULES-T_ARCANE_LORE__*"</Generique>
+</Talent>
+<Talent id="RULES-T_ARCANE_LORE__LIGHT">
+<Description language="ENGLISH">"Arcane Lore (Light)"</Description>
+<Generique>"RULES-T_ARCANE_LORE__*"</Generique>
+</Talent>
+<Talent id="RULES-T_DARK_LORE__NECROMANCY">
+<Description language="ENGLISH">"Dark Lore (Necromancy)"</Description>
+<Generique>"RULES-T_DARK_LORE__*"</Generique>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+</DATA_BOOK>

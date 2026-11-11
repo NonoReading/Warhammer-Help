@@ -86,6 +86,10 @@ uses XmlExportImport;
 
 {$R *.lfm}
 
+const
+  // colonne du code de l'objet : la derniere, il est long et ne sert qu'a retrouver la fiche
+  ColCode = 8;
+
 function EstThemeAnimauxVehicules(const Theme: String): Boolean;
 begin
   Result := (Theme = ThemeAnimauxVehicules) or (Theme = ThemeMontures)
@@ -121,14 +125,14 @@ begin
   LabSaison.Caption    := GetTexteLibelle('RULES-LAB_239');
 
   // colonnes fixees par le .lfm (ColCount = 9) : seuls les titres sont poses ici
-  TabEquip.Cells[1, 0] := GetTexteLibelle('RULES-LAB_001');
-  TabEquip.Cells[2, 0] := GetTexteLibelle('RULES-LAB_201');
-  TabEquip.Cells[3, 0] := GetTexteLibelle('RULES-LAB_002');
-  TabEquip.Cells[4, 0] := GetTexteLibelle('RULES-LAB_054');
-  TabEquip.Cells[5, 0] := GetTexteLibelle('RULES-LAB_055');
-  TabEquip.Cells[6, 0] := GetTexteLibelle('RULES-LAB_185');
-  TabEquip.Cells[7, 0] := GetTexteLibelle('RULES-LAB_056');
-  TabEquip.Cells[8, 0] := GetTexteLibelle('RULES-LAB_128');
+  TabEquip.Cells[1, 0] := GetTexteLibelle('RULES-LAB_201');
+  TabEquip.Cells[2, 0] := GetTexteLibelle('RULES-LAB_002');
+  TabEquip.Cells[3, 0] := GetTexteLibelle('RULES-LAB_054');
+  TabEquip.Cells[4, 0] := GetTexteLibelle('RULES-LAB_055');
+  TabEquip.Cells[5, 0] := GetTexteLibelle('RULES-LAB_185');
+  TabEquip.Cells[6, 0] := GetTexteLibelle('RULES-LAB_056');
+  TabEquip.Cells[7, 0] := GetTexteLibelle('RULES-LAB_128');
+  TabEquip.Cells[ColCode, 0] := GetTexteLibelle('RULES-LAB_001');
   TabEquip.ColWidths[0] := 20;
 
   // tableau des fabrications posees sur l'objet (InherentCraftsmanship) : nom, texte complet
@@ -231,15 +235,15 @@ begin
           Inc(Ind);
           if TabEquip.RowCount <= Ind then
             TabEquip.RowCount := Ind + 1;
-          TabEquip.Cells[1, Ind] := PTrapping.CodeTrapping;
           if PTrapping.Theme <> '' then
-            TabEquip.Cells[2, Ind] := GetTexteLibelle(PTrapping.Theme);
-          TabEquip.Cells[3, Ind] := PTrapping.Libelle;
-          TabEquip.Cells[4, Ind] := TraduirePrix(PTrapping.Prix);
-          TabEquip.Cells[5, Ind] := IntToStr(PTrapping.Encombrement);
-          TabEquip.Cells[6, Ind] := IntToStr(PTrapping.Capacite);
-          TabEquip.Cells[7, Ind] := ReplaceTexteLibelle(PTrapping.Disponibilite);
-          TabEquip.Cells[8, Ind] := GetTexteLibelle(PTrapping.Livre, '', '', true);
+            TabEquip.Cells[1, Ind] := GetTexteLibelle(PTrapping.Theme);
+          TabEquip.Cells[2, Ind] := PTrapping.Libelle;
+          TabEquip.Cells[3, Ind] := TraduirePrix(PTrapping.Prix);
+          TabEquip.Cells[4, Ind] := IntToStr(PTrapping.Encombrement);
+          TabEquip.Cells[5, Ind] := IntToStr(PTrapping.Capacite);
+          TabEquip.Cells[6, Ind] := ReplaceTexteLibelle(PTrapping.Disponibilite);
+          TabEquip.Cells[7, Ind] := GetTexteLibelle(PTrapping.Livre, '', '', true);
+          TabEquip.Cells[ColCode, Ind] := PTrapping.CodeTrapping;
         end;
     AdjustGridColumnsWidth(TabEquip, Self.Height, false, false);
     // la procedure agrandit la grille a la largeur de ses colonnes : on la remet a sa place
@@ -260,29 +264,31 @@ end;
 procedure TWinEquipements.TabEquipSelection(Sender: TObject; aCol, aRow: Integer);
 begin
   if EnRemplissage or (aRow < 1) or (aRow >= TabEquip.RowCount) then exit;
-  AffLib.Text    := TabEquip.Cells[3, aRow];
-  ButtonFiche.Visible := (ChercheTrapping(TabEquip.Cells[1, aRow]).ProfilAnimal <> '')
-    or (ChercheTrapping(TabEquip.Cells[1, aRow]).ProfilBateau <> '')
-    or (ChercheTrapping(TabEquip.Cells[1, aRow]).ProfilVehicule <> '');
-  AffPrix.Text   := TabEquip.Cells[4, aRow];
-  AffEnc.Text    := TabEquip.Cells[5, aRow];
-  AffCap.Text    := TabEquip.Cells[6, aRow];
-  AffDispo.Text  := TabEquip.Cells[7, aRow];
-  AffLivre.Text  := TabEquip.Cells[8, aRow];
+  AffLib.Text    := TabEquip.Cells[2, aRow];
+  ButtonFiche.Visible := (ChercheTrapping(TabEquip.Cells[ColCode, aRow]).ProfilAnimal <> '')
+    or (ChercheTrapping(TabEquip.Cells[ColCode, aRow]).ProfilBateau <> '')
+    or (ChercheTrapping(TabEquip.Cells[ColCode, aRow]).ProfilVehicule <> '')
+    or (ChercheTrapping(TabEquip.Cells[ColCode, aRow]).ProfilV2 <> '')
+    or (ChercheTrapping(TabEquip.Cells[ColCode, aRow]).FicheV2 <> '');
+  AffPrix.Text   := TabEquip.Cells[3, aRow];
+  AffEnc.Text    := TabEquip.Cells[4, aRow];
+  AffCap.Text    := TabEquip.Cells[5, aRow];
+  AffDispo.Text  := TabEquip.Cells[6, aRow];
+  AffLivre.Text  := TabEquip.Cells[7, aRow];
   LabCap.Visible := AffCap.Text <> '0';
   AffCap.Visible := AffCap.Text <> '0';
   // l'acheteur prefere n'est pas dans la grille : lu dans le catalogue, affiche seulement s'il existe
-  AffAcheteur.Text    := GetTexteLibelle(ChercheTrapping(TabEquip.Cells[1, aRow]).Acheteur);
+  AffAcheteur.Text    := GetTexteLibelle(ChercheTrapping(TabEquip.Cells[ColCode, aRow]).Acheteur);
   LabAcheteur.Visible := AffAcheteur.Text <> '';
   AffAcheteur.Visible := AffAcheteur.Text <> '';
   // localite et saison (herbes) : meme regle, affichees seulement si le catalogue les porte
-  AffLocalite.Text    := TraduireListeLibelles(ChercheTrapping(TabEquip.Cells[1, aRow]).Localite);
+  AffLocalite.Text    := TraduireListeLibelles(ChercheTrapping(TabEquip.Cells[ColCode, aRow]).Localite);
   LabLocalite.Visible := AffLocalite.Text <> '';
   AffLocalite.Visible := AffLocalite.Text <> '';
-  AffSaison.Text      := TraduireListeLibelles(ChercheTrapping(TabEquip.Cells[1, aRow]).Saison);
+  AffSaison.Text      := TraduireListeLibelles(ChercheTrapping(TabEquip.Cells[ColCode, aRow]).Saison);
   LabSaison.Visible   := AffSaison.Text <> '';
   AffSaison.Visible   := AffSaison.Text <> '';
-  AfficheFabrications(ChercheTrapping(TabEquip.Cells[1, aRow]).Fabrication);
+  AfficheFabrications(ChercheTrapping(TabEquip.Cells[ColCode, aRow]).Fabrication);
 end;
 
 // Fabrications d'origine de l'objet ("CODE niveau, CODE niveau"), meme lecture que WinArmor.
@@ -334,7 +340,7 @@ procedure TWinEquipements.TabEquipDblClick(Sender: TObject);
 begin
   if (SelectWinTrapping <> '') and (TabEquip.Row > 0) then
     begin
-      ChoixWinTrapping := TabEquip.Cells[1, TabEquip.Row];
+      ChoixWinTrapping := TabEquip.Cells[ColCode, TabEquip.Row];
       Close;
     end;
 end;
@@ -347,7 +353,7 @@ end;
 procedure TWinEquipements.ButtonFicheClick(Sender: TObject);
 begin
   if (TabEquip.Row > 0) and (TabEquip.Row < TabEquip.RowCount) then
-    AfficheFicheAnimal(ChercheTrapping(TabEquip.Cells[1, TabEquip.Row]));
+    AfficheFicheAnimal(ChercheTrapping(TabEquip.Cells[ColCode, TabEquip.Row]));
 end;
 
 procedure TWinEquipements.ButtonFiltreClick(Sender: TObject);

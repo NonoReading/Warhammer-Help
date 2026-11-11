@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"TRAD"</CODE_BOOK>
+<BOOK>"BOOK TRADES OLD WORLD"</BOOK>
+<BOOKNAME>"TRADES OF THE OLD WORLD"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_TALENT>
+<Talent id="TRAD-T_MASTER_CRAFTSMAN">
+<Description language="ENGLISH">"Master Craftsman"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"11"</Page>
+</Talent>
+<Talent id="TRAD-T_FAST_LEARNER">
+<Description language="ENGLISH">"Fast Learner"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"11"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_CAREER>
+<Career id="TRAD-CARE_MASTER_ARTISAN">
+<Description language="ENGLISH">"Master Artisan"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, S +10%, T +10%, Ag +25%, Int +20%, WP +15%, Fel +25%"</MainProfile>
+<SecondaryProfile>"W +5"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"25"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"25"</Advance>
+<Advance name="RULES-ATTR_W">"5"</Advance>
+</Advances>
+<Skills>"Evaluate, Command, Gossip, Haggle, Perception, Secret Language (Guild Tongue), Speak Language (any two), Trade (any three)"</Skills>
+<Talents>"Public Speaking or Super Numerate"</Talents>
+<Trappings>"Best Clothes, Best Trade Tools, Business, 250 GCs, d10 Hangers on"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_GUILD_TONGUE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_PUBLIC_SPEAKING/RULES-T_SUPER_NUMERATE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"TRAD 14"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="TRAD-CARE_MASTER_ARTISAN">"RULES-CARE_COURTIER"</Link>
+<Link name="TRAD-CARE_MASTER_ARTISAN">"RULES-CARE_DEMAGOGUE"</Link>
+<Link name="TRAD-CARE_MASTER_ARTISAN">"RULES-CARE_GUILD_MASTER"</Link>
+<Link name="TRAD-CARE_MASTER_ARTISAN">"RULES-CARE_POLITICIAN"</Link>
+<Link name="RULES-CARE_ARTISAN">"TRAD-CARE_MASTER_ARTISAN"</Link>
+<Link name="RULES-CARE_ENGINEER">"TRAD-CARE_MASTER_ARTISAN"</Link>
+</DATA_CAREER_LINK_V2>
+</DATA_BOOK>

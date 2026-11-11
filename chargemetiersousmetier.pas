@@ -37,7 +37,8 @@ function TexteMetierSousMetier(CodeMetier: String; ListeLivre: String):String;
   begin
     if AvecSousMetier = true then
       For PMetierSousMetier in ListMetierSousMetier do
-        if CompareRechercheValeur(PMetierSousMetier.CodeMetier, CodeMetier) and VerifieFiltre(PMetierSousMetier.Livre, ListeLivre) then
+        if CompareRechercheValeur(PMetierSousMetier.CodeMetier, CodeMetier) and VerifieFiltre(PMetierSousMetier.Livre, ListeLivre)
+           and not BasculeCreationActive(ConstCleSousMetier + PMetierSousMetier.Livre) then
           begin
             if Texte = '' then Texte := SeparateurRetourLigne + SeparateurRetourLigne + GetTexteLibelle('RULES-LAB_127') + ' : ';
             String2     := TStringList.Create;
@@ -63,7 +64,8 @@ function ResultMetierSousMetier(CodeMetier: String; ValDe: Integer; ListeLivre: 
   begin
     if AvecSousMetier = true then
       For PMetierSousMetier in ListMetierSousMetier do
-        if CompareRechercheValeur(PMetierSousMetier.CodeMetier, CodeMetier) and VerifieFiltre(PMetierSousMetier.Livre, ListeLivre) then
+        if CompareRechercheValeur(PMetierSousMetier.CodeMetier, CodeMetier) and VerifieFiltre(PMetierSousMetier.Livre, ListeLivre)
+           and not BasculeCreationActive(ConstCleSousMetier + PMetierSousMetier.Livre) then
           begin
             DebutFin(PMetierSousMetier.Chance, Deb, Fin);
             if (ValDe >= Deb) and (ValDe <= Fin) then

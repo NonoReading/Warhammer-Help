@@ -154,6 +154,19 @@ du talent generique, exactement comme les 8 Lores du Rulebook.
 </DATA_CAREER>
 ```
 
+### Equipement generique d'une carriere (« une arme au choix »)
+
+Une ligne `Item` de `SUBCHAPTER_ITEM` peut etre un objet precis ou un choix. Trois formes pour les armes :
+
+| Ligne `Item name=` | Sens pour le joueur | Condition |
+|---|---|---|
+| code d'une arme (`RULES-COMB_SWORD`) | cette arme | la fiche `Weapon` existe |
+| code de competence de combat (`RULES-COMP_MELEE__BASIC`, `RULES-COMP_RANGED__BOW`) | une arme de cette competence | les armes portent cette competence dans leur `Skill` ; les munitions sont exclues |
+| `..._*` de competence (`RULES-COMP_MELEE__*`) | une arme de n'importe quelle specialisation de cette famille | idem |
+| `RULES-COMB_*` / `RULES-PROJ_*` (ancien joker) | n'importe quelle arme (corps a corps / tir), choisie par prefixe de code | exige une fiche `Weapon id="RULES-COMB_*"` : son `Description` est le libelle affiche (« Melee Weapon (Any) ») ; a ne creer que si aucune competence ne convient |
+
+Preferer le code de competence : le libelle vient de la competence et aucune fiche factice n'est a creer. Dans WinLivre le choix se fait dans une liste de libelles ; le code reste dans le XML (la liste ne propose pas encore la forme `__*`, qui se saisit a la main pour l'instant).
+
 ## Autres blocs deja rencontres (a detailler ici la prochaine fois qu'on les utilise)
 
 `DATA_WEAPON`, `DATA_ARMOR`, `DATA_TRAPPING`, `DATA_CAREER_SPECIE` (rattacher une
@@ -244,3 +257,7 @@ Voir les annotations `xs:documentation` de `SCHEMA_WFRP4.xsd` et `SCHEMA_COMMON.
   (DATA_RACE, DATA_RULE, DATA_CAREER_ROLL, DATA_CAREER_SPECIE, DATA_TALENT,
   DATA_CAREER, DATA_SPELL - tous utilises avec commentaires inline dans les livres existants).
 - WinLivre ne sait pas editer `DATA_SPELL_TALENT` : saisie XML a la main uniquement.
+
+## BOOKNAME
+
+Tout nouveau livre porte `<BOOKNAME>` (nom d affichage sans BOOK, sous `<BOOK>` dans l en-tete). `<BOOK>` reste la CLE des personnages, de l INI et des Text ; BOOKNAME n est lu que par XmlNomAffichageLivre, en repli quand aucun libelle traduit n existe (grille Livres du menu, racine de WinLivre).

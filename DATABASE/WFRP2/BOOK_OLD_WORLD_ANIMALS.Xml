@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"OWAN"</CODE_BOOK>
+<BOOK>"BOOK OLD WORLD ANIMALS"</BOOK>
+<BOOKNAME>"WFRP2 OLD WORLD ANIMALS"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"This document is completely unofficial and in no way endorsed by Games Workshop Limited. Warhammer Fantasy Roleplay, the Warhammer Fantasy Roleplay logo, WFRP, Chaos, the Chaos device, the Chaos logo, Citadel, Citadel Device, Darkblade, 'Eavy Metal, Forge World, Games Workshop, Games Workshop logo, Golden Demon, Great Unclean One, GW, the Hammer of Sigmar logo, Horned Rat logo, Keeper of Secrets, Khemri, Khorne, the Khorne logo, Lord of Change, Nurgle, the Nurgle logo, Skaven, the Skaven symbol device, Slaanesh, the Slaanesh logo, Tomb Kings, Tzeentch, the Tzeentch logo, Warhammer, Warhammer World logo, White Dwarf, the White Dwarf logo, and all associated marks, names, races, race insignia, characters, vehicles, locations, units, artefacts, illustrations and images from the Warhammer world are either ®, TM and/or © Copyright Games Workshop Ltd 2000-2016, variably registered in the UK and other countries around the world. Used without"</DISCLAIMER>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_BAT_NORMAL">
+<Description language="ENGLISH">"Bat, Normal"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"24;0;5;10;18;10;10;0;1;2;0;1;1;0;0;0"</Profile>
+<Skills>"Dodge Blow (Ag +20), Outdoor Survival (Int +20), Perception (Int), Silent Move (Ag)"</Skills>
+<SpecialRules>"Animal Survival Instinct, Flier, Keen Senses, Night Hearing"</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_BEAR_LARGE_ICE_POLAR_BEAR_NORTHERN_GRIZZLY">
+<Description language="ENGLISH">"Bear, Large (Ice/Polar Bear, Northern Grizzly)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"39;0;59;53;30;14;35;0;2;28;5;5;4;0;0;0"</Profile>
+<Skills>"Concealment (Ag +20), Follow Trail (Int), Intimidate (S +10), Outdoor Survival (Int +20), Perception (Int +10), Scale Sheer Surfaces (S), Swim (S +20)"</Skills>
+<Talents>"Bear Hug, Strike Mighty Blow, Strike to Injure"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_BEAR_MEDIUM_BROWN">
+<Description language="ENGLISH">"Bear, Medium (Brown)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"38;0;52;47;25;14;25;0;2;20;5;4;4;0;0;0"</Profile>
+<Skills>"Outdoor Survival (Int +20), Perception (Int), Scale Sheer Surfaces (S +10), Swim (S +20)"</Skills>
+<Talents>"Bear Hug, Strike Mighty Blow, Strike to Injure"</Talents>
+<SpecialRules>"Animal Survival Instinct, Keen Senses, Natural Weapons (Claws), Thick Skin, Unsettling"</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_BIRD_BIRD_OF_PREY_FALCON_HAWK_OWL_BUZZARD">
+<Description language="ENGLISH">"Bird, Bird of Prey (Falcon, Hawk, Owl, Buzzard)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"38;0;10;10;38;12;24;0;2;6;1;1;1;0;0;0"</Profile>
+<Skills>"Dodge Blow (while flying) (Ag), Navigation (Int +20), Outdoor Survival (Int +20), Perception (Int +20), Silent Move (Ag)"</Skills>
+<Talents>"Orientation, Strike to Injure"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_BIRD_CHICKEN">
+<Description language="ENGLISH">"Bird, Chicken"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"10;0;8;8;50;10;12;0;1;2;0;0;1;0;0;0"</Profile>
+<Skills>"Outdoor Survival (Int), Perception (Int)"</Skills>
+<SpecialRules>"Animal Survival Instinct, Hoverer, Keen Senses, Very Small Attack"</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_BIRD_EAGLE">
+<Description language="ENGLISH">"Bird, Eagle"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"38;0;20;20;38;12;24;0;1;8;2;2;1;0;0;0"</Profile>
+<Skills>"Navigation (Ag +20), Outdoor Survival (Int +20), Perception (Int +20, Silent Move (Ag)"</Skills>
+<Talents>"Orientation, Strike to Injure"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_BIRD_GAME_BIRDS_MALLARD_DUCK_GOOSE_PHEASANT_PEAFOWL_PEACOCK">
+<Description language="ENGLISH">"Bird, Game Birds (Mallard/Duck, Goose, Pheasant, Peafowl/Peacock)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"15;0;10;10;40;10;18;0;1;4;1;1;1;0;0;0"</Profile>
+<Skills>"Dodge Blow (while flying) (Ag), Navigation (Int +20), Outdoor Survival (Int +20), Perception (Int +20), Silent Move (Ag), Swim (only for swimming birds) (S +20)"</Skills>
+<Talents>"Orientation"</Talents>
+<SpecialRules>"Animal Survival Instinct, Flier, Keen Senses, Swimmer"</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_BIRD_MEDIUM_RAVEN_ALBATROSS_SEAGULL_TURKEY_PELICAN">
+<Description language="ENGLISH">"Bird, Medium (Raven, Albatross, Seagull, Turkey, Pelican)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"38;0;16;20;38;12;24;0;1;4;1;2;1;0;0;0"</Profile>
+<Skills>"Dodge Blow (while flying) (Ag), Navigation (Int +10), Outdoor Survival (Int +20), Perception (Int +20), Silent Move (Ag)"</Skills>
+<Talents>"Orientation"</Talents>
+<SpecialRules>"Animal Survival Instinct, Flier, Keen Senses"</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_BIRD_SMALL_SONGBIRDS_PIGEON">
+<Description language="ENGLISH">"Bird, Small (Songbirds, Pigeon)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"10;0;5;5;50;10;12;0;1;4;0;0;1;0;0;0"</Profile>
+<Skills>"Dodge Blow (while flying) (Ag +20), Navigation (Int +10), Outdoor Survival (Int +20), Perception (Int +20), Silent Move (Ag)"</Skills>
+<Talents>"Orientation"</Talents>
+<SpecialRules>"Animal Survival Instinct, Flier, Keen Senses, Very Small Attack"</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_BOAR_GIANT_WARTHOG_RAZORBACK">
+<Description language="ENGLISH">"Boar, Giant (Warthog, Razorback)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"33;0;36;42;30;14;15;0;1;15;3;4;7;0;0;0"</Profile>
+<Skills>"Follow Trail (Int), Outdoor Survival (Int +20), Perception (Int), Silent Move (Ag), Swim (S)"</Skills>
+<Talents>"Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_BOAR_NORMAL">
+<Description language="ENGLISH">"Boar, Normal"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"32;0;30;40;30;14;15;0;1;12;3;4;7;0;0;0"</Profile>
+<Skills>"Follow Trail (Int), Outdoor Survival (Int +20), Perception (Int), Silent Move (Ag +10), Swim (S)"</Skills>
+<Talents>"Strike Mighty Blow"</Talents>
+<SpecialRules>"Animal Survival Instinct, Keen Senses, Natural Weapons (Tusks), Night Vision, Thick Skin"</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_BULL_OX">
+<Description language="ENGLISH">"Bull (Ox)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"33;0;45;46;30;10;20;0;1;18;4;4;6;0;0;0"</Profile>
+<Skills>"Outdoor Survival (Int), Perception (Int), Swim (S)"</Skills>
+<Talents>"Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_COW">
+<Description language="ENGLISH">"Cow"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"15;0;40;41;25;10;10;0;1;13;4;4;6;0;0;0"</Profile>
+<Skills>"Outdoor Survival (Int), Perception (Int), Swim (S)"</Skills>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_DEER_WHITE_TAILED_REINDEER">
+<Description language="ENGLISH">"Deer (White Tailed, Reindeer)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;0;31;35;35;10;10;0;1;12;3;3;7;0;0;0"</Profile>
+<Skills>"Outdoor Survival (Int +20), Perception (Int), Silent Move (Ag +20), Swim (S +10)"</Skills>
+<SpecialRules>"Animal Survival Instinct, Domestic Reindeer, Flee!, Horns, Keen Senses"</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_DOG_NORMAL_HUNTING_HERD">
+<Description language="ENGLISH">"Dog, Normal (Hunting, Herd)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;0;21;21;30;14;30;0;1;6;2;2;6;0;0;0"</Profile>
+<Skills>"Follow Trail (Int +20), Outdoor Survival (Int), Perception (Int +20), Silent Move (Ag), Swim (S)"</Skills>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_DOG_THE_BRETONNIAN_TRUFFLE_HOUND">
+<Description language="ENGLISH">"Dog, The Bretonnian Truffle Hound"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"35;0;32;32;35;14;43;0;1;8;3;3;6;0;0;0"</Profile>
+<Skills>"Follow Trail (Int +20), Outdoor Survival (Int), Perception (Int +20), Silent Move (Ag), Swim (S)"</Skills>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_DOG_WAR">
+<Description language="ENGLISH">"Dog, War"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"41;0;32;38;30;14;43;0;1;10;3;3;6;0;0;0"</Profile>
+<Skills>"Follow Trail (Int +10), Outdoor Survival (Int), Perception (Int +20), Silent Move (Ag), Swim (S)"</Skills>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_DOLPHIN">
+<Description language="ENGLISH">"Dolphin"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"30;0;34;34;40;16;40;0;1;10;3;3;10;0;0;0"</Profile>
+<Skills>"Navigation (Int +20), Outdoor Survival (Int +20), Perception (Int +10), Silent Move (Ag +10), Swim (S +20)"</Skills>
+<Talents>"Orientation"</Talents>
+<SpecialRules>"Animal Survival Instinct, Aquatic, Flee!, Keen Senses, Night Vision, Swimmer"</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_ELK_GREAT_NORTHERN_ELK_OBLAST_ELK">
+<Description language="ENGLISH">"Elk (Great Northern Elk, Oblast Elk)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"33;0;36;40;30;10;12;0;1;18;3;4;7;0;0;0"</Profile>
+<Skills>"Concealment (Int), Outdoor Survival (Int +20), Perception (Int +20), Silent Move (Ag +10), Swim (S)"</Skills>
+<Talents>"Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_FELINE_COMMON_CAT">
+<Description language="ENGLISH">"Feline, Common Cat"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;0;10;10;40;12;10;0;1;4;1;1;6;0;0;0"</Profile>
+<Skills>"Dodge Blow (Ag +10), Concealment (Ag), Outdoor Survival (Int), Perception (Int +10), Scale Sheer Surfaces (S +20), Shadowing (Ag +10), Silent Move (Ag +20), Swim (S +10)"</Skills>
+<Talents>"Alley Cat"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_FELINE_GREAT_FOREST_CAT_COUGAR_PUMA">
+<Description language="ENGLISH">"Feline, Great Forest Cat (Cougar, Puma)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"35;0;30;40;40;12;30;0;3;18;3;4;8;0;0;0"</Profile>
+<Skills>"Concealment (Ag), Dodge Blow (Ag), Outdoor Survival (Int +20), Perception (Int +10), Scale Sheer Surfaces (S +20), Shadowing (Ag +10), Silent Move (Ag +20), Swim (S +10)"</Skills>
+<Talents>"Rover"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_FELINE_LYNX">
+<Description language="ENGLISH">"Feline, Lynx"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"32;0;28;28;40;12;20;0;2;10;2;2;7;0;0;0"</Profile>
+<Skills>"Dodge Blow (Ag), Concealment (Ag), Outdoor Survival (Int +20), Perception (Int +10), Scale Sheer Surfaces (S +20), Silent Move (Ag +20), Swim (S +20)"</Skills>
+<Talents>"Rover"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_FROG_TOAD">
+<Description language="ENGLISH">"Frog/Toad"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"10;0;3;5;20;5;10;0;1;1;0;0;1;0;0;0"</Profile>
+<Skills>"Dodge Blow (Ag +10), Outdoor Survival (Int +20), Perception (Int +10), Scale Sheer Surfaces (S +20), Silent Move (Ag +20), Swim (S +20)"</Skills>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_HORSE_SMALL_DONKEY_ASS_MULE">
+<Description language="ENGLISH">"Horse, Small (Donkey/Ass, Mule)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"30;0;36;38;30;11;15;0;1;12;3;3;6;0;0;0"</Profile>
+<Skills>"Outdoor Survival (Int), Perception (Int), Silent Move (Ag), Swim (S)"</Skills>
+<SpecialRules>"Acute Hearing, Animal Survival Instinct, Dray Animal, Hooves, Keen Senses, Mule"</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_HORSE_PONY">
+<Description language="ENGLISH">"Horse, Pony"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;0;35;35;35;10;10;0;1;12;3;3;6;0;0;0"</Profile>
+<Skills>"Outdoor Survival (Int), Perception (Int), Silent Move (Ag), Swim (S)"</Skills>
+<SpecialRules>"Acute Hearing, Animal Survival Instinct, Dray Animal, Hooves, Keen Senses"</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_HORSE_DRAFT_OR_PACK">
+<Description language="ENGLISH">"Horse, Draft or Pack"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;0;42;35;30;10;10;0;1;12;4;3;8;0;0;0"</Profile>
+<Skills>"Outdoor Survival (Int), Perception (Int), Silent Move (Ag), Swim (S)"</Skills>
+<SpecialRules>"Acute Hearing, Animal Survival Instinct, Dray Animal, Hooves, Keen Senses"</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_HORSE_RIDING_NORMAL_KISLEVITE">
+<Description language="ENGLISH">"Horse, Riding (Normal, Kislevite)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;0;38;38;30;10;10;0;1;12;3;3;8;0;0;0"</Profile>
+<Skills>"Outdoor Survival (Int), Perception (Int), Silent Move (Ag), Swim (S)"</Skills>
+<Talents>"Stout-Hearted"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_HORSE_LIGHT_WARHORSE_COURSERS_KISLEVITE">
+<Description language="ENGLISH">"Horse, Light Warhorse (Coursers, Kislevite)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"30;0;40;40;30;10;10;0;1;16;4;4;8;0;0;0"</Profile>
+<Skills>"Outdoor Survival (Int), Perception (Int), Silent Move (Ag), Swim (S)"</Skills>
+<Talents>"Stout-Hearted, Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_HORSE_MEDIUM_WARHORSE_DESTRIERS">
+<Description language="ENGLISH">"Horse, Medium Warhorse (Destriers)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"30;0;45;45;30;10;10;0;1;18;4;4;8;0;0;0"</Profile>
+<Skills>"Outdoor Survival (Int), Perception (Int), Silent Move (Ag), Swim (S)"</Skills>
+<Talents>"Stout-Hearted, Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_HORSE_HEAVY_WARHORSE_BRETONNIAN_CHARGER">
+<Description language="ENGLISH">"Horse, Heavy Warhorse (Bretonnian Charger)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"35;0;45;45;30;10;10;0;1;18;4;4;9;0;0;0"</Profile>
+<Skills>"Outdoor Survival (Int), Perception (Int), Swim (S)"</Skills>
+<Talents>"Stout-Hearted, Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_LIZARD_SMALL">
+<Description language="ENGLISH">"Lizard, Small"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"20;0;12;20;25;5;20;0;1;4;1;2;3;0;0;0"</Profile>
+<Skills>"Concealment (Ag +20), Dodge Blow (Ag +20), Outdoor Survival (Int +20), Perception (Int), Scale Sheer Surfaces (S +20), Silent Move (Ag +20), Swim (S +20)"</Skills>
+<Talents>"Rover"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_OCTOPUS_GIANT_DEVIL_FISH">
+<Description language="ENGLISH">"Octopus, Giant “Devil Fish”"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"35;0;64;66;54;14;46;0;4;18;6;6;6;0;0;0"</Profile>
+<Skills>"Concealment (Ag +20), Outdoor Survival (Int +20), Perception (Int +10), Swim (S +20)"</Skills>
+<Talents>"Strike to Injure, Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_PIG">
+<Description language="ENGLISH">"Pig"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"23;0;36;42;30;14;15;0;1;11;3;4;6;0;0;0"</Profile>
+<Skills>"Outdoor Survival (Int), Perception (Int), Swim (S)"</Skills>
+<SpecialRules>"Animal Survival Instinct, Keen Senses, Night Vision, Tusks"</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_RACCOON_OR_BANDIT">
+<Description language="ENGLISH">"Raccoon or Bandit"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"20;0;15;25;35;12;20;0;1;6;1;2;5;0;0;0"</Profile>
+<Skills>"Outdoor Survival (Int +20), Perception (Int), Scale Sheer Surfaces (S +20), Silent Move (Ag +20), Sleight of Hand (Ag +20), Swim (S +20)"</Skills>
+<Talents>"Rover"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_RODENTS_MUSTELIDS_BADGER">
+<Description language="ENGLISH">"Rodents &amp; Mustelids, Badger"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;0;20;25;30;12;20;0;1;6;2;2;5;0;0;0"</Profile>
+<Skills>"Follow Trail (Int +10), Outdoor Survival (Int +20), Perception (Int), Scale Sheer Surfaces (S +10), Silent Move (Ag +20)"</Skills>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_RODENTS_MUSTELIDS_BEAVER">
+<Description language="ENGLISH">"Rodents &amp; Mustelids, Beaver"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"22;0;20;25;35;10;30;0;1;8;2;2;2;0;0;0"</Profile>
+<Skills>"Concealment (Ag +10), Outdoor Survival (Int +20), Perception (Int), Silent Move (Ag +10), Swim (S +20)"</Skills>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_RODENTS_MUSTELIDS_RABBIT">
+<Description language="ENGLISH">"Rodents &amp; Mustelids, Rabbit"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"15;0;8;8;40;10;10;0;1;4;0;0;6;0;0;0"</Profile>
+<Skills>"Concealment (Ag), Dodge Blow (Ag +10), Outdoor Survival (Int +20), Perception (Int +10), Silent Move (Ag +20)"</Skills>
+<Talents>"Rover"</Talents>
+<SpecialRules>"Animal Survival Instinct, Flee!, Keen Senses, Night Vision, Very Small Attack"</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_RODENTS_MUSTELIDS_RAT">
+<Description language="ENGLISH">"Rodents &amp; Mustelids, Rat"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"16;0;10;10;14;14;10;0;1;4;1;1;2;0;0;0"</Profile>
+<Skills>"Dodge Blow (Ag +20), Outdoor Survival (Int +20), Perception (Int), Scale Sheer Surfaces (S +20), Silent Move (Ag +20), Swim (S +20)"</Skills>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_RODENTS_MUSTELIDS_SABLE">
+<Description language="ENGLISH">"Rodents &amp; Mustelids, Sable"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"20;0;15;20;35;12;20;0;1;6;1;2;6;0;0;0"</Profile>
+<Skills>"Follow Trail (Int +10), Outdoor Survival (Int +20), Perception (Int), Scale Sheer Surfaces (S +20), Silent Move (Ag +20), Swim (S +20)"</Skills>
+<SpecialRules>"Animal Survival Instinct, Keen Senses, Natural Weapons (Fangs &amp; Claws), Night Vision"</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_RODENTS_MUSTELIDS_SKUNK_OR_STINKERS">
+<Description language="ENGLISH">"Rodents &amp; Mustelids, Skunk or Stinkers"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"20;0;15;15;30;12;20;0;1;4;1;1;5;0;0;0"</Profile>
+<Skills>"Outdoor Survival (Int +20), Perception (Int), Scale Sheer Surfaces (S +20), Silent Move (Ag +10), Swim (S +20)"</Skills>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_RODENTS_MUSTELIDS_OTHER_FERRET_MARTEN_MINK_SQUIRREL_WEASEL">
+<Description language="ENGLISH">"Rodents &amp; Mustelids, Other (Ferret, Marten, Mink, Squirrel, Weasel)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"20;0;15;15;30;12;20;0;1;4;1;1;5;0;0;0"</Profile>
+<Skills>"Concealment (Ag +10), Dodge Blow (Ag +10), Outdoor Survival (Int +20), Perception (Int), Scale Sheer Surfaces (S +20), Silent Move (Ag +20)"</Skills>
+<Talents>"Rover"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_SEAL">
+<Description language="ENGLISH">"Seal"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;0;30;30;30;12;25;0;1;10;3;3;1;0;0;0"</Profile>
+<Skills>"Follow Trail (Int +10), Outdoor Survival (Int +20), Perception (Int +10), Silent Move (Ag +10), Swim (S +20)"</Skills>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_SHARK_GREAT_WHITE">
+<Description language="ENGLISH">"Shark, Great White"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"55;0;53;50;40;5;50;0;2;20;5;5;9;0;0;0"</Profile>
+<Skills>"Follow Trail (Int +20), Outdoor Survival (Int +20), Perception (Int +10), Silent Move (Ag), Swim (S +20)"</Skills>
+<Talents>"Strike to Injure, Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_SHARK_MAKO">
+<Description language="ENGLISH">"Shark, Mako"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"32;0;40;40;40;5;25;0;1;12;4;4;10;0;0;0"</Profile>
+<Skills>"Follow Trail (Int +20), Outdoor Survival (Int +20), Perception (Int +10), Silent Move (Ag +10), Swim (S +20)"</Skills>
+<Talents>"Strike to Injure, Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_SHEEP_FAMILY_DOMESTIC_SHEEP_GOAT">
+<Description language="ENGLISH">"Sheep Family, Domestic (Sheep, Goat)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"15;0;18;20;40;10;20;0;1;6;1;2;6;0;0;0"</Profile>
+<Skills>"Outdoor Survival (Int), Perception (Int)"</Skills>
+<SpecialRules>"Animal Survival Instinct, Flee!, Goat Horns, Keen Senses, Night Vision"</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_SHEEP_FAMILY_WILD_MOUNTAIN_GOAT_BIG_HORN_RAM">
+<Description language="ENGLISH">"Sheep Family, Wild (Mountain Goat, Big Horn, Ram)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"36;0;35;30;40;10;20;0;1;11;3;3;6;0;0;0"</Profile>
+<Skills>"Outdoor Survival (Int +20), Perception (Int), Scale Sheer Surfaces (S +20), Silent Move (Ag)"</Skills>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_SNAKE_VIPER">
+<Description language="ENGLISH">"Snake, Viper"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;0;10;5;40;8;10;0;1;2;1;0;2;0;0;0"</Profile>
+<Skills>"Outdoor Survival (Int +20), Perception (Int), Scale Sheer Surfaces (S +20), Silent Move (Ag +20), Swim (S +20)"</Skills>
+<SpecialRules>"Animal Survival Instinct, Bite, Climber, Mild Venom, Swimmer, Very Small Attack"</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_SQUID_GIANT_SEA_DEMON">
+<Description language="ENGLISH">"Squid, Giant “Sea Demon”"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"55;0;84;86;44;14;56;0;10;28;8;8;12;0;0;0"</Profile>
+<Skills>"Navigation (Int +20), Outdoor Survival (Int +20), Perception (Int +10), Swim (S +20)"</Skills>
+<Talents>"Orientation, Strike to Injure, Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_WALRUS">
+<Description language="ENGLISH">"Walrus"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"33;0;50;50;30;10;25;0;2;20;5;5;1;0;0;0"</Profile>
+<Skills>"Follow Trail (Int), Outdoor Survival (Int +20), Perception (Int +10), Silent Move (Ag +10), Swim (S +20)"</Skills>
+<Talents>"Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_WHALE_KILLER_ORCA">
+<Description language="ENGLISH">"Whale, Killer (Orca)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"69;0;60;65;35;14;44;0;2;26;6;6;10;0;0;0"</Profile>
+<Skills>"Navigation (Int +20), Outdoor Survival (Int +20), Perception (Int +10), Swim (S +20)"</Skills>
+<Talents>"Orientation, Strike to Injure, Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_WHALE_SPERM_CACHALOT">
+<Description language="ENGLISH">"Whale, Sperm (Cachalot)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"69;0;70;75;35;14;44;0;2;40;7;7;10;0;0;0"</Profile>
+<Skills>"Navigation (Int +20), Outdoor Survival (Int +20), Perception (Int +10), Swim (S +20)"</Skills>
+<Talents>"Orientation, Strike to Injure, Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_WILD_CANINE_FOX">
+<Description language="ENGLISH">"Wild Canine, Fox"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"20;0;18;18;35;14;30;0;1;6;1;1;6;0;0;0"</Profile>
+<Skills>"Concealment (Ag +10), Dodge Blow (Ag), Follow Trail (Int), Outdoor Survival (Int +20), Perception (Int), Silent Move (Ag +10), Swim (Int +20)"</Skills>
+<Talents>"Rover"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_WILD_CANINE_WOLF">
+<Description language="ENGLISH">"Wild Canine, Wolf"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"32;0;30;30;40;14;25;0;1;10;3;3;6;0;0;0"</Profile>
+<Skills>"Follow Trail (Int +20), Outdoor Survival (Int +20), Perception (Int +10), Silent Move (Ag +10), Swim (Int +10)"</Skills>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="OWAN-EQUI_CREATURES_WOLVERINE">
+<Description language="ENGLISH">"Wolverine"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"32;0;40;45;25;14;25;0;2;16;4;4;4;0;0;0"</Profile>
+<Skills>"Follow Trail (Int), Outdoor Survival (Int +20), Perception (Int), Scale Sheer Surfaces (S +10), Silent Move (Ag), Swim (S)"</Skills>
+<Talents>"Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+</DATA_BOOK>

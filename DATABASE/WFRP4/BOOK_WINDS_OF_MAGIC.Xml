@@ -2,6 +2,7 @@
 <DATA_BOOK>
 <CODE_BOOK>"WINDS"</CODE_BOOK>
 <BOOK>"BOOK WINDS OF MAGIC"</BOOK>
+<BOOKNAME>"WINDS OF MAGIC"</BOOKNAME>
 <language>"ENGLISH"</language>
 <VERSION>"WFRP4"</VERSION>
 <OFFICIAL>"1"</OFFICIAL>
@@ -16,13 +17,13 @@
 </Label>
 </DATA_LABEL>
 <DATA_SKILL>
-<Skill id="WINDS-COMPPSYCHOM">
+<Skill id="WINDS-COMP_PSYCHOMETRY">
 <Attribut>"RULES-ATTR_Int"</Attribut>
 <Description language="ENGLISH">"Psychometry"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Page>47</Page>
 </Skill>
-<Skill id="WINDS-COMPAUGURY">
+<Skill id="WINDS-COMP_AUGURY">
 <Attribut>"RULES-ATTR_Int"</Attribut>
 <Description language="ENGLISH">"Augury"</Description>
 <Explanation language="ENGLISH">""</Explanation>
@@ -30,7 +31,7 @@
 </Skill>
 </DATA_SKILL>
 <DATA_TALENT>
-<Talent id="WINDS-T0176_*">
+<Talent id="WINDS-T_SUFFUSE_WITH__*">
 <Description language="ENGLISH">"Suffuse With (Any)"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -39,7 +40,7 @@
 <Test language="ENGLISH">"See Text"</Test>
 <Page>186</Page>
 </Talent>
-<Talent id="WINDS-T0177">
+<Talent id="WINDS-T_MAGICAL_ASSISTANT">
 <Description language="ENGLISH">"Magical Assistant"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -50,49 +51,49 @@
 </Talent>
 </DATA_TALENT>
 <DATA_TALENT_SPECIALIZATION>
-<Talent id="WINDS-T0176_FEU">
+<Talent id="WINDS-T_SUFFUSE_WITH__FEU">
 <Description language="ENGLISH">"Suffuse With (Aqshy)"</Description>
-<Generique>"WINDS-T0176_*"</Generique>
+<Generique>"WINDS-T_SUFFUSE_WITH__*"</Generique>
 <Page>186</Page>
 </Talent>
-<Talent id="WINDS-T0176_CIEUX">
+<Talent id="WINDS-T_SUFFUSE_WITH__CIEUX">
 <Description language="ENGLISH">"Suffuse With (Azyr)"</Description>
-<Generique>"WINDS-T0176_*"</Generique>
+<Generique>"WINDS-T_SUFFUSE_WITH__*"</Generique>
 <Page>186</Page>
 </Talent>
-<Talent id="WINDS-T0176_METAL">
+<Talent id="WINDS-T_SUFFUSE_WITH__METAL">
 <Description language="ENGLISH">"Suffuse With (Chamon)"</Description>
-<Generique>"WINDS-T0176_*"</Generique>
+<Generique>"WINDS-T_SUFFUSE_WITH__*"</Generique>
 <Page>186</Page>
 </Talent>
-<Talent id="WINDS-T0176_NECRO">
+<Talent id="WINDS-T_SUFFUSE_WITH__NECRO">
 <Description language="ENGLISH">"Suffuse With (Dhar)"</Description>
-<Generique>"WINDS-T0176_*"</Generique>
+<Generique>"WINDS-T_SUFFUSE_WITH__*"</Generique>
 <Page>186</Page>
 </Talent>
-<Talent id="WINDS-T0176_BETE">
+<Talent id="WINDS-T_SUFFUSE_WITH__BETE">
 <Description language="ENGLISH">"Suffuse With (Ghur)"</Description>
-<Generique>"WINDS-T0176_*"</Generique>
+<Generique>"WINDS-T_SUFFUSE_WITH__*"</Generique>
 <Page>186</Page>
 </Talent>
-<Talent id="WINDS-T0176_VIE">
+<Talent id="WINDS-T_SUFFUSE_WITH__VIE">
 <Description language="ENGLISH">"Suffuse With (Ghyran)"</Description>
-<Generique>"WINDS-T0176_*"</Generique>
+<Generique>"WINDS-T_SUFFUSE_WITH__*"</Generique>
 <Page>186</Page>
 </Talent>
-<Talent id="WINDS-T0176_LUMIERE">
+<Talent id="WINDS-T_SUFFUSE_WITH__LUMIERE">
 <Description language="ENGLISH">"Suffuse With (Hysh)"</Description>
-<Generique>"WINDS-T0176_*"</Generique>
+<Generique>"WINDS-T_SUFFUSE_WITH__*"</Generique>
 <Page>186</Page>
 </Talent>
-<Talent id="WINDS-T0176_MORT">
+<Talent id="WINDS-T_SUFFUSE_WITH__MORT">
 <Description language="ENGLISH">"Suffuse With (Shyish)"</Description>
-<Generique>"WINDS-T0176_*"</Generique>
+<Generique>"WINDS-T_SUFFUSE_WITH__*"</Generique>
 <Page>186</Page>
 </Talent>
-<Talent id="WINDS-T0176_OMBRE">
+<Talent id="WINDS-T_SUFFUSE_WITH__OMBRE">
 <Description language="ENGLISH">"Suffuse With (Ulgu)"</Description>
-<Generique>"WINDS-T0176_*"</Generique>
+<Generique>"WINDS-T_SUFFUSE_WITH__*"</Generique>
 <Page>186</Page>
 </Talent>
 </DATA_TALENT_SPECIALIZATION>
@@ -113,67 +114,67 @@
 <DATA_CAREER_SPECIE>
   <Entry>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="WINDS-WORK85">"X"</Career>
+<Career name="WINDS-WORK_ALCHEMIST">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="WINDS-WORK87">"X"</Career>
+<Career name="WINDS-WORK_ASTROMANCER">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="WINDS-WORK86">"X"</Career>
+<Career name="WINDS-WORK_DRUID">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="WINDS-WORK84">"X"</Career>
+<Career name="WINDS-WORK_HIEROPHANT">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="WINDS-WORK82">"X"</Career>
+<Career name="WINDS-WORK_MAGISTER_VIGILANT">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="WINDS-WORK81">"X"</Career>
+<Career name="WINDS-WORK_MUNDANE_ALCHEMIST">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="WINDS-WORK90">"X"</Career>
+<Career name="WINDS-WORK_PYROMANCER">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="WINDS-WORK88">"X"</Career>
+<Career name="WINDS-WORK_SHADOWMANCER">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="WINDS-WORK91">"X"</Career>
+<Career name="WINDS-WORK_SHAMAN">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="WINDS-WORK89">"X"</Career>
+<Career name="WINDS-WORK_SPIRITER">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="WINDS-WORK83">"X"</Career>
+<Career name="WINDS-WORK_SCRYER">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="WINDS-WORK80">"X"</Career>
+<Career name="WINDS-WORK_BEADLE">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="WINDS-WORK81">"X"</Career>
+<Career name="WINDS-WORK_MUNDANE_ALCHEMIST">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="WINDS-WORK80">"X"</Career>
+<Career name="WINDS-WORK_BEADLE">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="WINDS-WORK81">"X"</Career>
+<Career name="WINDS-WORK_MUNDANE_ALCHEMIST">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="WINDS-WORK80">"X"</Career>
+<Career name="WINDS-WORK_BEADLE">"X"</Career>
   </Entry>
 </DATA_CAREER_SPECIE>
 <DATA_SPECIE>
@@ -199,29 +200,29 @@
 <Attribut name="RULES-ATTR_Move">"4"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill>"RULES-COMPATHL"</Skill>
-  <Skill>"RULES-COMPESCAL"</Skill>
-  <Skill>"RULES-COMPCALM"</Skill>
-  <Skill>"RULES-COMPESQU"</Skill>
-  <Skill>"RULES-COMPRESIST"</Skill>
-  <Skill>"RULES-COMPINTIM"</Skill>
-  <Skill>"RULES-COMPCOMB_BASE"</Skill>
-  <Skill>"RULES-COMPCOMB_ESCR"</Skill>
-  <Skill>"RULES-COMPCOMB_FLEAU"</Skill>
-  <Skill>"RULES-COMPCOMB_PARAD"</Skill>
-  <Skill>"RULES-COMPCOMB_2M"</Skill>
-  <Skill>"RULES-COMPPRECEP"</Skill>
+<Skill>"RULES-COMP_ATHLETICS"</Skill>
+  <Skill>"RULES-COMP_CLIMB"</Skill>
+  <Skill>"RULES-COMP_COOL"</Skill>
+  <Skill>"RULES-COMP_DODGE"</Skill>
+  <Skill>"RULES-COMP_ENDURANCE"</Skill>
+  <Skill>"RULES-COMP_INTIMIDATE"</Skill>
+  <Skill>"RULES-COMP_MELEE__BASIC"</Skill>
+  <Skill>"RULES-COMP_MELEE__FENCING"</Skill>
+  <Skill>"RULES-COMP_MELEE__FLAIL"</Skill>
+  <Skill>"RULES-COMP_MELEE__PARRY"</Skill>
+  <Skill>"RULES-COMP_MELEE__TWO_HANDED"</Skill>
+  <Skill>"RULES-COMP_PERCEPTION"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent>"RULES-T0132_LARGER/RULES-T0132_SMALLER"</Talent>
-  <Talent>"RULES-T0127/RULES-T0158"</Talent>
-  <Talent>"RULES-T0170"</Talent>
-  <Talent>"RULES-T0035"</Talent>
-  <Talent>"WINDS-T0176_*"</Talent>
-  <Talent>"RULES-T0159/RULES-T0067"</Talent>
+<Talent>"RULES-T_FEARLESS__LARGER/RULES-T_FEARLESS__SMALLER"</Talent>
+  <Talent>"RULES-T_LIGHTNING_REFLEXES/RULES-T_VERY_STRONG"</Talent>
+  <Talent>"RULES-T_SMALL"</Talent>
+  <Talent>"RULES-T_STURDY"</Talent>
+  <Talent>"WINDS-T_SUFFUSE_WITH__*"</Talent>
+  <Talent>"RULES-T_VERY_RESILIENT/RULES-T_WARRIOR_BORN"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_CAREER>
-<Career name="WINDS-WORK102">"100"</Career>
+<Career name="WINDS-WORK_COMBAT_FAMILIAR">"100"</Career>
   </SUBCHAPTER_CAREER>
 <Page>188</Page>
 </Specie>
@@ -247,29 +248,29 @@
 <Attribut name="RULES-ATTR_Move">"4"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill>"RULES-COMPATHL"</Skill>
-  <Skill>"RULES-COMPFOCAL_*"</Skill>
-  <Skill>"RULES-COMPESQU"</Skill>
-  <Skill>"RULES-COMPINTUI"</Skill>
-  <Skill>"RULES-COMPSAVOIR_MAGIE"</Skill>
-  <Skill>"RULES-COMPCOMB_BASE"</Skill>
-  <Skill>"RULES-COMPPRECEP"</Skill>
-  <Skill>"RULES-COMPLANG_CLASS"</Skill>
-  <Skill>"RULES-COMPLANG_MAG"</Skill>
-  <Skill>"RULES-COMPDISC_URB"</Skill>
-  <Skill>"RULES-COMPDISC_RURAL"</Skill>
-  <Skill>"RULES-COMPRECH"</Skill>
+<Skill>"RULES-COMP_ATHLETICS"</Skill>
+  <Skill>"RULES-COMP_CHANNELLING__*"</Skill>
+  <Skill>"RULES-COMP_DODGE"</Skill>
+  <Skill>"RULES-COMP_INTUITION"</Skill>
+  <Skill>"RULES-COMP_LORE__MAGIC"</Skill>
+  <Skill>"RULES-COMP_MELEE__BASIC"</Skill>
+  <Skill>"RULES-COMP_PERCEPTION"</Skill>
+  <Skill>"RULES-COMP_LANGUAGE__CLASSICAL"</Skill>
+  <Skill>"RULES-COMP_LANGUAGE__MAGICK"</Skill>
+  <Skill>"RULES-COMP_STEALTH__URBAN"</Skill>
+  <Skill>"RULES-COMP_STEALTH__RURAL"</Skill>
+  <Skill>"RULES-COMP_RESEARCH"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent>"RULES-T0089"</Talent>
-  <Talent>"RULES-T0084"</Talent>
-  <Talent>"RULES-T0137"</Talent>
-  <Talent>"RULES-T0117/RULES-T0074"</Talent>
-  <Talent>"RULES-T0170"</Talent>
-  <Talent>"WINDS-T0176_*"</Talent>
+<Talent>"RULES-T_PETTY_MAGIC"</Talent>
+  <Talent>"RULES-T_READ_WRITE"</Talent>
+  <Talent>"RULES-T_SECOND_SIGHT"</Talent>
+  <Talent>"RULES-T_SAVVY/RULES-T_COOLHEADED"</Talent>
+  <Talent>"RULES-T_SMALL"</Talent>
+  <Talent>"WINDS-T_SUFFUSE_WITH__*"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_CAREER>
-<Career name="WINDS-WORK103">"100"</Career>
+<Career name="WINDS-WORK_SPELL_FAMILIAR">"100"</Career>
   </SUBCHAPTER_CAREER>
 <Page>188</Page>
 </Specie>
@@ -295,36 +296,36 @@
 <Attribut name="RULES-ATTR_Move">"4"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill>"RULES-COMPATHL"</Skill>
-  <Skill>"RULES-COMPESQU"</Skill>
-  <Skill>"RULES-COMPINTUI"</Skill>
-  <Skill>"RULES-COMPSAVOIR_MAGIE"</Skill>
-  <Skill>"RULES-COMPCOMB_BASE"</Skill>
-  <Skill>"RULES-COMPPRECEP"</Skill>
-  <Skill>"RULES-COMPLANG_CLASS"</Skill>
-  <Skill>"RULES-COMPDISC_URB"</Skill>
-  <Skill>"RULES-COMPDISC_RURAL"</Skill>
-  <Skill>"RULES-COMPRECH"</Skill>
+<Skill>"RULES-COMP_ATHLETICS"</Skill>
+  <Skill>"RULES-COMP_DODGE"</Skill>
+  <Skill>"RULES-COMP_INTUITION"</Skill>
+  <Skill>"RULES-COMP_LORE__MAGIC"</Skill>
+  <Skill>"RULES-COMP_MELEE__BASIC"</Skill>
+  <Skill>"RULES-COMP_PERCEPTION"</Skill>
+  <Skill>"RULES-COMP_LANGUAGE__CLASSICAL"</Skill>
+  <Skill>"RULES-COMP_STEALTH__URBAN"</Skill>
+  <Skill>"RULES-COMP_STEALTH__RURAL"</Skill>
+  <Skill>"RULES-COMP_RESEARCH"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent>"RULES-T0084"</Talent>
-  <Talent>"RULES-T0137"</Talent>
-  <Talent>"RULES-T0117/RULES-T0074"</Talent>
-  <Talent>"RULES-T0170"</Talent>
-  <Talent>"WINDS-T0176_*"</Talent>
-  <Talent>"WINDS-T0177"</Talent>
+<Talent>"RULES-T_READ_WRITE"</Talent>
+  <Talent>"RULES-T_SECOND_SIGHT"</Talent>
+  <Talent>"RULES-T_SAVVY/RULES-T_COOLHEADED"</Talent>
+  <Talent>"RULES-T_SMALL"</Talent>
+  <Talent>"WINDS-T_SUFFUSE_WITH__*"</Talent>
+  <Talent>"WINDS-T_MAGICAL_ASSISTANT"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_CAREER>
-<Career name="WINDS-WORK104">"100"</Career>
+<Career name="WINDS-WORK_POWER_FAMILIAR">"100"</Career>
   </SUBCHAPTER_CAREER>
 <Page>182</Page>
 </Specie>
 </DATA_SPECIE>
 <DATA_CAREER>
-<Career id="WINDS-WORK80">
+<Career id="WINDS-WORK_BEADLE">
 <Description language="ENGLISH">"Beadle"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPPRECEP"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
 <Class>"RULES-CLASS_WARR"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -357,64 +358,64 @@
 <Attribut name="RULES-ATTR_Fel">"4"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPRESALC">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPRESIST">"1"</Skill>
-  <Skill name="RULES-COMPPARI">"1"</Skill>
-  <Skill name="RULES-COMPRAGOT">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPDISC_URB">"1"</Skill>
-  <Skill name="RULES-COMPMETIER_CHARP">"1"</Skill>
-  <Skill name="RULES-COMPATHL">"2"</Skill>
-  <Skill name="RULES-COMPCHARM">"2"</Skill>
-  <Skill name="RULES-COMPCALM">"2"</Skill>
-  <Skill name="RULES-COMPINTIM">"2"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"2"</Skill>
-  <Skill name="RULES-COMPPROJ_POUDRE">"2"</Skill>
-  <Skill name="RULES-COMPDIVERT_NARRA">"3"</Skill>
-  <Skill name="RULES-COMPGUERI">"3"</Skill>
-  <Skill name="RULES-COMPCOMB_*">"3"</Skill>
-  <Skill name="RULES-COMPPIST">"3"</Skill>
-  <Skill name="RULES-COMPCOMM">"4"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
+<Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"1"</Skill>
+  <Skill name="RULES-COMP_GAMBLE">"1"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_STEALTH__URBAN">"1"</Skill>
+  <Skill name="RULES-COMP_TRADE__CARPENTER">"1"</Skill>
+  <Skill name="RULES-COMP_ATHLETICS">"2"</Skill>
+  <Skill name="RULES-COMP_CHARM">"2"</Skill>
+  <Skill name="RULES-COMP_COOL">"2"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"2"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"2"</Skill>
+  <Skill name="RULES-COMP_RANGED__BLACKPOWDER">"2"</Skill>
+  <Skill name="RULES-COMP_ENTERTAIN__STORYTELLING">"3"</Skill>
+  <Skill name="RULES-COMP_HEAL">"3"</Skill>
+  <Skill name="RULES-COMP_MELEE__*">"3"</Skill>
+  <Skill name="RULES-COMP_TRACK">"3"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"4"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0094">"1"</Talent>
-  <Talent name="RULES-T0084">"1"</Talent>
-  <Talent name="RULES-T0117">"1"</Talent>
-  <Talent name="RULES-T0067">"1"</Talent>
-  <Talent name="RULES-T0104">"2"</Talent>
-  <Talent name="RULES-T0136_ERUD">"2"</Talent>
-  <Talent name="RULES-T0128">"2"</Talent>
-  <Talent name="RULES-T0037">"2"</Talent>
-  <Talent name="RULES-T0051">"3"</Talent>
-  <Talent name="RULES-T0132_INTRU">"3"</Talent>
-  <Talent name="RULES-T0098">"3"</Talent>
-  <Talent name="RULES-T0025">"3"</Talent>
-  <Talent name="RULES-T0049">"4"</Talent>
-  <Talent name="RULES-T0109">"4"</Talent>
-  <Talent name="RULES-T0002">"4"</Talent>
-  <Talent name="RULES-T0076">"4"</Talent>
+<Talent name="RULES-T_DICEMAN">"1"</Talent>
+  <Talent name="RULES-T_READ_WRITE">"1"</Talent>
+  <Talent name="RULES-T_SAVVY">"1"</Talent>
+  <Talent name="RULES-T_WARRIOR_BORN">"1"</Talent>
+  <Talent name="RULES-T_CAROUSER">"2"</Talent>
+  <Talent name="RULES-T_ETIQUETTE__ERUD">"2"</Talent>
+  <Talent name="RULES-T_REVERSAL">"2"</Talent>
+  <Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"2"</Talent>
+  <Talent name="RULES-T_ARGUMENTATIVE">"3"</Talent>
+  <Talent name="RULES-T_FEARLESS__INTRU">"3"</Talent>
+  <Talent name="RULES-T_MENACING">"3"</Talent>
+  <Talent name="RULES-T_STOUT_HEARTED">"3"</Talent>
+  <Talent name="RULES-T_FRIGHTENING">"4"</Talent>
+  <Talent name="RULES-T_PUBLIC_SPEAKER">"4"</Talent>
+  <Talent name="RULES-T_SUAVE">"4"</Talent>
+  <Talent name="RULES-T_UNSHAKABLE">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Uniform in the Colours of the Faculty">"1"</Item>
-<Item name="RULES-PROJ_POUDRE_04/RULES-PROJ_POUDRE_03">"2"</Item>
-<Item name="RULES-MUNI_06">"2"</Item>
+<Item name="RULES-PROJ_PISTOL/RULES-PROJ_BLUNDERBUSS">"2"</Item>
+<Item name="RULES-MUNI_BULLET_AND_POWDER">"2"</Item>
   <Item name="Sleeved">"2"</Item>
-<Item name="RULES-ARMO_07">"2"</Item>
-<Item name="RULES-ARMO_11">"3"</Item>
+<Item name="RULES-ARMO_MAIL_SHIRT">"2"</Item>
+<Item name="RULES-ARMO_HELM">"3"</Item>
 <Item name="Master Key to the Faculty">"3"</Item>
-<Item name="RULES-ARMO_05">"4"</Item>
+<Item name="RULES-ARMO_BREASTPLATE">"4"</Item>
 <Item name="Crew of beadles">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>36</Page>
 </Career>
-<Career id="WINDS-WORK81">
+<Career id="WINDS-WORK_MUNDANE_ALCHEMIST">
 <Description language="ENGLISH">"Mundane Alchemist"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPMETIER_ALCHEMIST"</Skill>
+<Skill>"RULES-COMP_TRADE__ALCHEMIST"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -447,56 +448,56 @@
 <Attribut name="RULES-ATTR_Fel">"0"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPCHARM">"1"</Skill>
-  <Skill name="RULES-COMPRESALC">"1"</Skill>
-  <Skill name="RULES-COMPRAGOT">"1"</Skill>
-  <Skill name="RULES-COMPMARCH">"1"</Skill>
-  <Skill name="RULES-COMPLANG_CLASS">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_CHIM">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_GEOL">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_SCIENC">"1"</Skill>
-  <Skill name="RULES-COMPMETIER_ALCHEMIST">"1"</Skill>
-  <Skill name="RULES-COMPMETIER_EMPOI">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"2"</Skill>
-  <Skill name="RULES-COMPSAVOIR_MEDICINE">"2"</Skill>
-  <Skill name="RULES-COMPLANG_GUILD">"2"</Skill>
-  <Skill name="RULES-COMPPRECEP">"2"</Skill>
-  <Skill name="RULES-COMPRECH">"2"</Skill>
-  <Skill name="RULES-COMPSIGNES_GUILD">"2"</Skill>
-  <Skill name="RULES-COMPCOND">"3"</Skill>
-  <Skill name="RULES-COMPLANG_*">"3"</Skill>
-  <Skill name="RULES-COMPCOMM">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"3"</Skill>
-  <Skill name="RULES-COMPFOCAL_METAL">"4"</Skill>
-  <Skill name="RULES-COMPCHEV_CHEVAL">"4"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+  <Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+  <Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__CLASSICAL">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__CHEMISTRY">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__GEOLOGY">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__SCIENCE">"1"</Skill>
+  <Skill name="RULES-COMP_TRADE__ALCHEMIST">"1"</Skill>
+  <Skill name="RULES-COMP_TRADE__POISONER">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"2"</Skill>
+  <Skill name="RULES-COMP_LORE__MEDICINE">"2"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__GUILDER">"2"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"2"</Skill>
+  <Skill name="RULES-COMP_RESEARCH">"2"</Skill>
+  <Skill name="RULES-COMP_SECRET_SIGNS__GUILDER">"2"</Skill>
+  <Skill name="RULES-COMP_DRIVE">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"3"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"3"</Skill>
+  <Skill name="RULES-COMP_CHANNELLING__CHAMON">"4"</Skill>
+  <Skill name="RULES-COMP_RIDE__HORSE">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0031">"1"</Talent>
-  <Talent name="RULES-T0092_ALCHEMIST">"1"</Talent>
-  <Talent name="RULES-T0084">"1"</Talent>
-  <Talent name="RULES-T0117">"1"</Talent>
-  <Talent name="RULES-T0146">"2"</Talent>
-  <Talent name="RULES-T0038">"2"</Talent>
-  <Talent name="RULES-T0136_GUILD">"2"</Talent>
-  <Talent name="RULES-T0045">"2"</Talent>
-  <Talent name="RULES-T0040">"3"</Talent>
-  <Talent name="RULES-T0157_ALCHEMIST">"3"</Talent>
-  <Talent name="RULES-T0089">"3"</Talent>
-  <Talent name="RULES-T0137">"3"</Talent>
-  <Talent name="RULES-T0088_METAL">"4"</Talent>
-  <Talent name="RULES-T0157_EMP">"4"</Talent>
-  <Talent name="RULES-T0129_POIS">"4"</Talent>
-  <Talent name="RULES-T0134_ALCHEMIST">"4"</Talent>
+<Talent name="RULES-T_CONCOCT">"1"</Talent>
+  <Talent name="RULES-T_CRAFTSMAN__ALCHEMIST">"1"</Talent>
+  <Talent name="RULES-T_READ_WRITE">"1"</Talent>
+  <Talent name="RULES-T_SAVVY">"1"</Talent>
+  <Talent name="RULES-T_BOOKISH">"2"</Talent>
+  <Talent name="RULES-T_CRIMINAL">"2"</Talent>
+  <Talent name="RULES-T_ETIQUETTE__GUILD">"2"</Talent>
+  <Talent name="RULES-T_NIMBLE_FINGERED">"2"</Talent>
+  <Talent name="RULES-T_DETECT_ARTEFACT">"3"</Talent>
+  <Talent name="RULES-T_MASTER_TRADESMAN__ALCHEMIST">"3"</Talent>
+  <Talent name="RULES-T_PETTY_MAGIC">"3"</Talent>
+  <Talent name="RULES-T_SECOND_SIGHT">"3"</Talent>
+  <Talent name="RULES-T_ARCANE_MAGIC__METAL">"4"</Talent>
+  <Talent name="RULES-T_MASTER_TRADESMAN__EMP">"4"</Talent>
+  <Talent name="RULES-T_RESISTANCE__POIS">"4"</Talent>
+  <Talent name="RULES-T_SAVANT__ALCHEMIST">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Book (Blank)">"1"</Item>
-<Item name="RULES-ARMO_03">"1"</Item>
-<Item name="RULES-TRAP_073">"1"</Item>
+<Item name="RULES-ARMO_LEATHER_JERKIN">"1"</Item>
+<Item name="RULES-TRAP_PESTLE_AMP_MORTAR">"1"</Item>
 <Item name="Test Tubes and Alembic">"1"</Item>
 <Item name="Tripod">"1"</Item>
-<Item name="RULES-TRAP_087">"1"</Item>
+<Item name="RULES-TRAP_WRITING_KIT">"1"</Item>
 <Item name="Guild License">"2"</Item>
-<Item name="RULES-TRAP_101">"2"</Item>
+<Item name="RULES-TRAP_TRADE_TOOLS">"2"</Item>
 <Item name="Apprentice">"3"</Item>
 <Item name="Book (Alchemy)">"3"</Item>
 <Item name="Laboratory">"3"</Item>
@@ -505,10 +506,10 @@
 </SUBCHAPTER_ITEM>
 <Page>38</Page>
 </Career>
-<Career id="WINDS-WORK82">
+<Career id="WINDS-WORK_MAGISTER_VIGILANT">
 <Description language="ENGLISH">"Magister Vigilant"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPPRECEP"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -541,60 +542,60 @@
 <Attribut name="RULES-ATTR_Fel">"0"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPFOCAL_*">"1"</Skill>
-  <Skill name="RULES-COMPCHARM">"1"</Skill>
-  <Skill name="RULES-COMPCALM">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPLANG_MAG">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_MAGIE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_HAST">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPCHARM">"2"</Skill>
-  <Skill name="RULES-COMPRAGOT">"2"</Skill>
-  <Skill name="RULES-COMPINTIM">"2"</Skill>
-  <Skill name="RULES-COMPLANG_BATAIL">"2"</Skill>
-  <Skill name="RULES-COMPCROCH">"2"</Skill>
-  <Skill name="RULES-COMPRECH">"2"</Skill>
-  <Skill name="RULES-COMPORIENT">"3"</Skill>
-  <Skill name="RULES-COMPSIGNES_*">"3"</Skill>
-  <Skill name="RULES-COMPESCAM">"3"</Skill>
-  <Skill name="RULES-COMPDISC_URB">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
-  <Skill name="RULES-COMPPIEG">"4"</Skill>
+<Skill name="RULES-COMP_CHANNELLING__*">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM">"1"</Skill>
+  <Skill name="RULES-COMP_COOL">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__MAGICK">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__MAGIC">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__POLEARM">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM">"2"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"2"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"2"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__BATTLE">"2"</Skill>
+  <Skill name="RULES-COMP_PICK_LOCK">"2"</Skill>
+  <Skill name="RULES-COMP_RESEARCH">"2"</Skill>
+  <Skill name="RULES-COMP_NAVIGATION">"3"</Skill>
+  <Skill name="RULES-COMP_SECRET_SIGNS__*">"3"</Skill>
+  <Skill name="RULES-COMP_SLEIGHT_OF_HAND">"3"</Skill>
+  <Skill name="RULES-COMP_STEALTH__URBAN">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"4"</Skill>
+  <Skill name="RULES-COMP_SET_TRAP">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0115">"1"</Talent>
-  <Talent name="RULES-T0089">"1"</Talent>
-  <Talent name="RULES-T0084">"1"</Talent>
-  <Talent name="RULES-T0137">"1"</Talent>
-  <Talent name="RULES-T0088_*">"2"</Talent>
-  <Talent name="RULES-T0010">"2"</Talent>
-  <Talent name="RULES-T0091">"2"</Talent>
-  <Talent name="RULES-T0098">"2"</Talent>
-  <Talent name="RULES-T0048">"3"</Talent>
-  <Talent name="RULES-T0117">"3"</Talent>
-  <Talent name="RULES-T0043">"3"</Talent>
-  <Talent name="RULES-T0141">"3"</Talent>
-  <Talent name="RULES-T0022">"4"</Talent>
-  <Talent name="RULES-T0049">"4"</Talent>
-  <Talent name="RULES-T0167">"4"</Talent>
-  <Talent name="RULES-T0058">"4"</Talent>
+<Talent name="RULES-T_MAGICAL_SENSE">"1"</Talent>
+  <Talent name="RULES-T_PETTY_MAGIC">"1"</Talent>
+  <Talent name="RULES-T_READ_WRITE">"1"</Talent>
+  <Talent name="RULES-T_SECOND_SIGHT">"1"</Talent>
+  <Talent name="RULES-T_ARCANE_MAGIC__*">"2"</Talent>
+  <Talent name="RULES-T_BLATHER">"2"</Talent>
+  <Talent name="RULES-T_FAST_HANDS">"2"</Talent>
+  <Talent name="RULES-T_MENACING">"2"</Talent>
+  <Talent name="RULES-T_BREAK_AND_ENTER">"3"</Talent>
+  <Talent name="RULES-T_SAVVY">"3"</Talent>
+  <Talent name="RULES-T_SHADOW">"3"</Talent>
+  <Talent name="RULES-T_SIXTH_SENSE">"3"</Talent>
+  <Talent name="RULES-T_ALLEY_CAT">"4"</Talent>
+  <Talent name="RULES-T_FRIGHTENING">"4"</Talent>
+  <Talent name="RULES-T_IRON_WILL">"4"</Talent>
+  <Talent name="RULES-T_NOSE_FOR_TROUBLE">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Disguise">"1"</Item>
 <Item name="Grimoire">"1"</Item>
 <Item name="Magical Licence">"2"</Item>
 <Item name="Magical Item">"3"</Item>
-<Item name="RULES-TRAP_029">"4"</Item>
+<Item name="RULES-TRAP_ROBES">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>41</Page>
 </Career>
-<Career id="WINDS-WORK83">
+<Career id="WINDS-WORK_SCRYER">
 <Description language="ENGLISH">"Scryer"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPPRECEP"</Skill>
+<Skill>"RULES-COMP_PERCEPTION"</Skill>
 <Class>"RULES-CLASS_PEAS"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -627,50 +628,50 @@
 <Attribut name="RULES-ATTR_Fel">"1"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_LOCAL">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
-  <Skill name="RULES-COMPORIENT">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="WINDS-COMPPSYCHOM">"1"</Skill>
-  <Skill name="RULES-COMPESCAM">"1"</Skill>
-  <Skill name="RULES-COMPDISC_RURAL">"1"</Skill>
-  <Skill name="RULES-COMPSUBOR">"2"</Skill>
-  <Skill name="RULES-COMPCALM">"2"</Skill>
-  <Skill name="RULES-COMPRESIST">"2"</Skill>
-  <Skill name="RULES-COMPRAGOT">"2"</Skill>
-  <Skill name="RULES-COMPMARCH">"2"</Skill>
-  <Skill name="RULES-COMPINTIM">"2"</Skill>
-  <Skill name="RULES-COMPCHARM">"3"</Skill>
-  <Skill name="RULES-COMPEVAL">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_HIST">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_POLIT">"3"</Skill>
-  <Skill name="RULES-COMPDIVERT_NARRA">"4"</Skill>
-  <Skill name="RULES-COMPCOMM">"4"</Skill>
+<Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__LOCAL">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+  <Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="WINDS-COMP_PSYCHOMETRY">"1"</Skill>
+  <Skill name="RULES-COMP_SLEIGHT_OF_HAND">"1"</Skill>
+  <Skill name="RULES-COMP_STEALTH__RURAL">"1"</Skill>
+  <Skill name="RULES-COMP_BRIBERY">"2"</Skill>
+  <Skill name="RULES-COMP_COOL">"2"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"2"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"2"</Skill>
+  <Skill name="RULES-COMP_HAGGLE">"2"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"2"</Skill>
+  <Skill name="RULES-COMP_CHARM">"3"</Skill>
+  <Skill name="RULES-COMP_EVALUATE">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__HISTORY">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__POLITICS">"3"</Skill>
+  <Skill name="RULES-COMP_ENTERTAIN__STORYTELLING">"4"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0078">"1"</Talent>
-  <Talent name="RULES-T0020">"1"</Talent>
-  <Talent name="RULES-T0140">"1"</Talent>
-  <Talent name="RULES-T0137">"1"</Talent>
-  <Talent name="RULES-T0074">"2"</Talent>
-  <Talent name="RULES-T0038">"2"</Talent>
-  <Talent name="RULES-T0117">"2"</Talent>
-  <Talent name="RULES-T0141">"2"</Talent>
-  <Talent name="RULES-T0136_NOBLE">"3"</Talent>
-  <Talent name="RULES-T0098">"3"</Talent>
-  <Talent name="RULES-T0058">"3"</Talent>
-  <Talent name="RULES-T0123">"3"</Talent>
-  <Talent name="RULES-T0122">"4"</Talent>
-  <Talent name="RULES-T0049">"4"</Talent>
-  <Talent name="RULES-T0115">"4"</Talent>
-  <Talent name="RULES-T0107">"4"</Talent>
+<Talent name="RULES-T_BENEATH_NOTICE">"1"</Talent>
+  <Talent name="RULES-T_LUCK">"1"</Talent>
+  <Talent name="RULES-T_ORIENTATION">"1"</Talent>
+  <Talent name="RULES-T_SECOND_SIGHT">"1"</Talent>
+  <Talent name="RULES-T_COOLHEADED">"2"</Talent>
+  <Talent name="RULES-T_CRIMINAL">"2"</Talent>
+  <Talent name="RULES-T_SAVVY">"2"</Talent>
+  <Talent name="RULES-T_SIXTH_SENSE">"2"</Talent>
+  <Talent name="RULES-T_ETIQUETTE__NOBLE">"3"</Talent>
+  <Talent name="RULES-T_MENACING">"3"</Talent>
+  <Talent name="RULES-T_NOSE_FOR_TROUBLE">"3"</Talent>
+  <Talent name="RULES-T_WELL_PREPARED">"3"</Talent>
+  <Talent name="RULES-T_COMMANDING_PRESENCE">"4"</Talent>
+  <Talent name="RULES-T_FRIGHTENING">"4"</Talent>
+  <Talent name="RULES-T_MAGICAL_SENSE">"4"</Talent>
+  <Talent name="RULES-T_STRONG_MINDED">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="RULES-TRAP_001+RULES-TRAP_151">"1"</Item>
-<Item name="RULES-COMB_BASE_10">"1"</Item>
+<Item name="RULES-TRAP_BACKPACK+RULES-TRAP_TENT">"1"</Item>
+<Item name="RULES-COMB_DAGGER">"1"</Item>
 <Item name="Practical Outdoor Clothing">"1"</Item>
 <Item name="Permanent Abode">"2"</Item>
 <Item name="Respectable Clothing">"3"</Item>
@@ -679,10 +680,10 @@
 </SUBCHAPTER_ITEM>
 <Page>43</Page>
 </Career>
-<Career id="WINDS-WORK84">
+<Career id="WINDS-WORK_HIEROPHANT">
 <Description language="ENGLISH">"Hierophant"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPLANG_MAG"</Skill>
+<Skill>"RULES-COMP_LANGUAGE__MAGICK"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -715,66 +716,66 @@
 <Attribut name="RULES-ATTR_Fel">"4"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPFOCAL_LUMIERE">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPDIVERT_CHANT">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPLANG_MAG">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_MAGIE">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_NEHEKHARA">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_HAST">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPCHARM">"2"</Skill>
-  <Skill name="RULES-COMPCALM">"2"</Skill>
-  <Skill name="RULES-COMPRAGOT">"2"</Skill>
-  <Skill name="RULES-COMPLANG_*">"2"</Skill>
-  <Skill name="RULES-COMPCOMM">"2"</Skill>
-  <Skill name="RULES-COMPSAVOIR_GUERRE">"2"</Skill>
-  <Skill name="RULES-COMPEVAL">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_DEMO">"3"</Skill>
-  <Skill name="RULES-COMPRECH">"3"</Skill>
-  <Skill name="RULES-COMPCHEV_CHEVAL">"3"</Skill>
-  <Skill name="RULES-COMPLANG_*">"4"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
+<Skill name="RULES-COMP_CHANNELLING__HYSH">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_ENTERTAIN__SINGING">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__MAGICK">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__MAGIC">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__NEHEKHARA">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__POLEARM">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM">"2"</Skill>
+  <Skill name="RULES-COMP_COOL">"2"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"2"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"2"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"2"</Skill>
+  <Skill name="RULES-COMP_LORE__WARFARE">"2"</Skill>
+  <Skill name="RULES-COMP_EVALUATE">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__DAEMONOLOGY">"3"</Skill>
+  <Skill name="RULES-COMP_RESEARCH">"3"</Skill>
+  <Skill name="RULES-COMP_RIDE__HORSE">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"4"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0071">"1"</Talent>
-  <Talent name="RULES-T0089">"1"</Talent>
-  <Talent name="RULES-T0084">"1"</Talent>
-  <Talent name="RULES-T0137">"1"</Talent>
-  <Talent name="RULES-T0088_LUMIERE">"2"</Talent>
-  <Talent name="RULES-T0040">"2"</Talent>
-  <Talent name="RULES-T0117">"2"</Talent>
-  <Talent name="RULES-T0141">"2"</Talent>
-  <Talent name="RULES-T0096">"3"</Talent>
-  <Talent name="RULES-T0042">"3"</Talent>
-  <Talent name="RULES-T0115">"3"</Talent>
-  <Talent name="RULES-T0155">"3"</Talent>
-  <Talent name="RULES-T0163">"4"</Talent>
-  <Talent name="RULES-T0167">"4"</Talent>
-  <Talent name="RULES-T0098">"4"</Talent>
-  <Talent name="RULES-T0129_CHAOS">"4"</Talent>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"1"</Talent>
+  <Talent name="RULES-T_PETTY_MAGIC">"1"</Talent>
+  <Talent name="RULES-T_READ_WRITE">"1"</Talent>
+  <Talent name="RULES-T_SECOND_SIGHT">"1"</Talent>
+  <Talent name="RULES-T_ARCANE_MAGIC__LUMIERE">"2"</Talent>
+  <Talent name="RULES-T_DETECT_ARTEFACT">"2"</Talent>
+  <Talent name="RULES-T_SAVVY">"2"</Talent>
+  <Talent name="RULES-T_SIXTH_SENSE">"2"</Talent>
+  <Talent name="RULES-T_DUAL_WIELDER">"3"</Talent>
+  <Talent name="RULES-T_INSTINCTIVE_DICTION">"3"</Talent>
+  <Talent name="RULES-T_MAGICAL_SENSE">"3"</Talent>
+  <Talent name="RULES-T_TOWER_OF_MEMORIES">"3"</Talent>
+  <Talent name="RULES-T_COMBAT_AWARE">"4"</Talent>
+  <Talent name="RULES-T_IRON_WILL">"4"</Talent>
+  <Talent name="RULES-T_MENACING">"4"</Talent>
+  <Talent name="RULES-T_RESISTANCE__CHAOS">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Candle with Holder">"1"</Item>
 <Item name="Grimoire">"1"</Item>
 <Item name="Staff">"1"</Item>
 <Item name="Magical Licence">"2"</Item>
-<Item name="RULES-TRAP_029">"2"</Item>
+<Item name="RULES-TRAP_ROBES">"2"</Item>
 <Item name="Acolyte Apprentice">"3"</Item>
 <Item name="Magical Item">"3"</Item>
-<Item name="RULES-TRAP_029">"3"</Item>
+<Item name="RULES-TRAP_ROBES">"3"</Item>
 <Item name="Elaborate Robes">"4"</Item>
 <Item name="Library (Magic)">"4"</Item>
 <Item name="Study">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>56</Page>
 </Career>
-<Career id="WINDS-WORK85">
+<Career id="WINDS-WORK_ALCHEMIST">
 <Description language="ENGLISH">"Alchemist"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPLANG_MAG"</Skill>
+<Skill>"RULES-COMP_LANGUAGE__MAGICK"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -807,67 +808,67 @@
 <Attribut name="RULES-ATTR_Fel">"4"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPFOCAL_METAL">"1"</Skill>
-  <Skill name="RULES-COMPEVAL">"1"</Skill>
-  <Skill name="RULES-COMPMARCH">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPLANG_MAG">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_MAGIE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_HAST">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPMETIER_ALCHEMIST">"1"</Skill>
-  <Skill name="RULES-COMPCHARM">"2"</Skill>
-  <Skill name="RULES-COMPCALM">"2"</Skill>
-  <Skill name="RULES-COMPINTIM">"2"</Skill>
-  <Skill name="RULES-COMPSAVOIR_METAL">"2"</Skill>
-  <Skill name="RULES-COMPRECH">"2"</Skill>
-  <Skill name="RULES-COMPMETIER_FORGE/RULES-COMPMETIER_GOLDSMITH/RULES-COMPMETIER_ING">"2"</Skill>
-  <Skill name="RULES-COMPSAVOIR_ING">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_SCIENC">"3"</Skill>
-  <Skill name="RULES-COMPCHEV_CHEVAL">"3"</Skill>
-  <Skill name="RULES-COMPMETIER_ING">"3"</Skill>
-  <Skill name="RULES-COMPLANG_KHAZ">"4"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
+<Skill name="RULES-COMP_CHANNELLING__CHAMON">"1"</Skill>
+  <Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+  <Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__MAGICK">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__MAGIC">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__POLEARM">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_TRADE__ALCHEMIST">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM">"2"</Skill>
+  <Skill name="RULES-COMP_COOL">"2"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"2"</Skill>
+  <Skill name="RULES-COMP_LORE__METALLURGY">"2"</Skill>
+  <Skill name="RULES-COMP_RESEARCH">"2"</Skill>
+  <Skill name="RULES-COMP_TRADE__BLACKSMITH/RULES-COMP_TRADE__GOLDSMITH/RULES-COMP_TRADE__ENGINEER">"2"</Skill>
+  <Skill name="RULES-COMP_LORE__ENGINEERING">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__SCIENCE">"3"</Skill>
+  <Skill name="RULES-COMP_RIDE__HORSE">"3"</Skill>
+  <Skill name="RULES-COMP_TRADE__ENGINEER">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__KHAZALID">"4"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0071">"1"</Talent>
-  <Talent name="RULES-T0089">"1"</Talent>
-  <Talent name="RULES-T0084">"1"</Talent>
-  <Talent name="RULES-T0137">"1"</Talent>
-  <Talent name="RULES-T0088_METAL">"2"</Talent>
-  <Talent name="RULES-T0051">"2"</Talent>
-  <Talent name="RULES-T0040">"2"</Talent>
-  <Talent name="RULES-T0141">"2"</Talent>
-  <Talent name="RULES-T0146">"3"</Talent>
-  <Talent name="RULES-T0092_FORGE/RULES-T0092_GOLDSMITH/RULES-T0092_INGE">"3"</Talent>
-  <Talent name="RULES-T0042">"3"</Talent>
-  <Talent name="RULES-T0115">"3"</Talent>
-  <Talent name="RULES-T0049">"4"</Talent>
-  <Talent name="RULES-T0167">"4"</Talent>
-  <Talent name="RULES-T0087">"4"</Talent>
-  <Talent name="RULES-T0101">"4"</Talent>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"1"</Talent>
+  <Talent name="RULES-T_PETTY_MAGIC">"1"</Talent>
+  <Talent name="RULES-T_READ_WRITE">"1"</Talent>
+  <Talent name="RULES-T_SECOND_SIGHT">"1"</Talent>
+  <Talent name="RULES-T_ARCANE_MAGIC__METAL">"2"</Talent>
+  <Talent name="RULES-T_ARGUMENTATIVE">"2"</Talent>
+  <Talent name="RULES-T_DETECT_ARTEFACT">"2"</Talent>
+  <Talent name="RULES-T_SIXTH_SENSE">"2"</Talent>
+  <Talent name="RULES-T_BOOKISH">"3"</Talent>
+  <Talent name="RULES-T_CRAFTSMAN__FORGE/RULES-T_CRAFTSMAN__GOLDSMITH/RULES-T_CRAFTSMAN__INGE">"3"</Talent>
+  <Talent name="RULES-T_INSTINCTIVE_DICTION">"3"</Talent>
+  <Talent name="RULES-T_MAGICAL_SENSE">"3"</Talent>
+  <Talent name="RULES-T_FRIGHTENING">"4"</Talent>
+  <Talent name="RULES-T_IRON_WILL">"4"</Talent>
+  <Talent name="RULES-T_WAR_WIZARD">"4"</Talent>
+  <Talent name="RULES-T_WEALTHY">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Grimoire">"1"</Item>
 <Item name="Staff">"1"</Item>
 <Item name="Magical Licence">"2"</Item>
 <Item name="Portable Alchemical Laboratory">"2"</Item>
-<Item name="RULES-TRAP_029">"2"</Item>
+<Item name="RULES-TRAP_ROBES">"2"</Item>
 <Item name="Alchemist Apprentice">"3"</Item>
-<Item name="RULES-TRAP_112">"3"</Item>
+<Item name="RULES-TRAP_LIGHT_WARHORSE">"3"</Item>
 <Item name="Magical Item">"3"</Item>
-<Item name="RULES-TRAP_029">"3"</Item>
+<Item name="RULES-TRAP_ROBES">"3"</Item>
 <Item name="Elaborate Robes">"4"</Item>
 <Item name="Library (Engineering, Magic, or Science)">"4"</Item>
 <Item name="Workshop (Engineering or Magic)">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>68</Page>
 </Career>
-<Career id="WINDS-WORK86">
+<Career id="WINDS-WORK_DRUID">
 <Description language="ENGLISH">"Druid"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPLANG_MAG"</Skill>
+<Skill>"RULES-COMP_LANGUAGE__MAGICK"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -900,68 +901,68 @@
 <Attribut name="RULES-ATTR_Fel">"3"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPFOCAL_VIE">"1"</Skill>
-  <Skill name="RULES-COMPANIM">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPLANG_MAG">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_MAGIE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_HAST">"1"</Skill>
-  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPCHARM">"2"</Skill>
-  <Skill name="RULES-COMPRAGOT">"2"</Skill>
-  <Skill name="RULES-COMPINTIM">"2"</Skill>
-  <Skill name="RULES-COMPLANG_*">"2"</Skill>
-  <Skill name="RULES-COMPLANG_BATAIL">"2"</Skill>
-  <Skill name="RULES-COMPORIENT">"2"</Skill>
-  <Skill name="RULES-COMPSOINANI">"3"</Skill>
-  <Skill name="RULES-COMPEVAL">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_PLANT">"3"</Skill>
-  <Skill name="RULES-COMPCHEV_CHEVAL">"3"</Skill>
-  <Skill name="RULES-COMPLANG_*">"4"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
+<Skill name="RULES-COMP_CHANNELLING__GHYRAN">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM_ANIMAL">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__MAGICK">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__MAGIC">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__POLEARM">"1"</Skill>
+  <Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM">"2"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"2"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"2"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"2"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__BATTLE">"2"</Skill>
+  <Skill name="RULES-COMP_NAVIGATION">"2"</Skill>
+  <Skill name="RULES-COMP_ANIMAL_CARE">"3"</Skill>
+  <Skill name="RULES-COMP_EVALUATE">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__PLANTS">"3"</Skill>
+  <Skill name="RULES-COMP_RIDE__HORSE">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"4"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0071">"1"</Talent>
-  <Talent name="RULES-T0089">"1"</Talent>
-  <Talent name="RULES-T0084">"1"</Talent>
-  <Talent name="RULES-T0137">"1"</Talent>
-  <Talent name="RULES-T0088_VIE">"2"</Talent>
-  <Talent name="RULES-T0040">"2"</Talent>
-  <Talent name="RULES-T0091">"2"</Talent>
-  <Talent name="RULES-T0141">"2"</Talent>
-  <Talent name="RULES-T0042">"3"</Talent>
-  <Talent name="RULES-T0115">"3"</Talent>
-  <Talent name="RULES-T0098">"3"</Talent>
-  <Talent name="RULES-T0105">"3"</Talent>
-  <Talent name="RULES-T0163">"4"</Talent>
-  <Talent name="RULES-T0049">"4"</Talent>
-  <Talent name="RULES-T0167">"4"</Talent>
-  <Talent name="RULES-T0087">"4"</Talent>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"1"</Talent>
+  <Talent name="RULES-T_PETTY_MAGIC">"1"</Talent>
+  <Talent name="RULES-T_READ_WRITE">"1"</Talent>
+  <Talent name="RULES-T_SECOND_SIGHT">"1"</Talent>
+  <Talent name="RULES-T_ARCANE_MAGIC__VIE">"2"</Talent>
+  <Talent name="RULES-T_DETECT_ARTEFACT">"2"</Talent>
+  <Talent name="RULES-T_FAST_HANDS">"2"</Talent>
+  <Talent name="RULES-T_SIXTH_SENSE">"2"</Talent>
+  <Talent name="RULES-T_INSTINCTIVE_DICTION">"3"</Talent>
+  <Talent name="RULES-T_MAGICAL_SENSE">"3"</Talent>
+  <Talent name="RULES-T_MENACING">"3"</Talent>
+  <Talent name="RULES-T_ROVER">"3"</Talent>
+  <Talent name="RULES-T_COMBAT_AWARE">"4"</Talent>
+  <Talent name="RULES-T_FRIGHTENING">"4"</Talent>
+  <Talent name="RULES-T_IRON_WILL">"4"</Talent>
+  <Talent name="RULES-T_WAR_WIZARD">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Copper Sickle">"1"</Item>
 <Item name="Grimoire">"1"</Item>
 <Item name="Staff">"1"</Item>
 <Item name="Magical Licence">"2"</Item>
-<Item name="RULES-TRAP_029">"2"</Item>
+<Item name="RULES-TRAP_ROBES">"2"</Item>
 <Item name="Silver Sickle">"2"</Item>
 <Item name="Apprentice">"3"</Item>
 <Item name="Gold Sickle">"3"</Item>
 <Item name="Magical Item">"3"</Item>
-<Item name="RULES-TRAP_029">"3"</Item>
+<Item name="RULES-TRAP_ROBES">"3"</Item>
 <Item name="Elaborate Rboes">"4"</Item>
 <Item name="Garden retreat">"4"</Item>
 <Item name="Library (Magic)">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>80</Page>
 </Career>
-<Career id="WINDS-WORK87">
+<Career id="WINDS-WORK_ASTROMANCER">
 <Description language="ENGLISH">"Astromancer"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPLANG_MAG"</Skill>
+<Skill>"RULES-COMP_LANGUAGE__MAGICK"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -994,46 +995,46 @@
 <Attribut name="RULES-ATTR_Fel">"4"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="WINDS-COMPAUGURY">"1"</Skill>
-  <Skill name="RULES-COMPFOCAL_CIEUX">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPDIVERT_VOYAN">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPLANG_MAG">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_MAGIE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_HAST">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPCALM">"2"</Skill>
-  <Skill name="RULES-COMPRAGOT">"2"</Skill>
-  <Skill name="RULES-COMPINTIM">"2"</Skill>
-  <Skill name="RULES-COMPLANG_BATAIL">"2"</Skill>
-  <Skill name="RULES-COMPSAVOIR_ASTRONOMY">"2"</Skill>
-  <Skill name="RULES-COMPRECH">"2"</Skill>
-  <Skill name="RULES-COMPEVAL">"3"</Skill>
-  <Skill name="RULES-COMPORIENT">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_PROPH">"3"</Skill>
-  <Skill name="RULES-COMPCHEV_CHEVAL">"3"</Skill>
-  <Skill name="RULES-COMPLANG_*">"4"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
+<Skill name="WINDS-COMP_AUGURY">"1"</Skill>
+  <Skill name="RULES-COMP_CHANNELLING__AZYR">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_ENTERTAIN__FORTUNE_TELLING">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__MAGICK">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__MAGIC">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__POLEARM">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_COOL">"2"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"2"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"2"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__BATTLE">"2"</Skill>
+  <Skill name="RULES-COMP_LORE__ASTRONOMY">"2"</Skill>
+  <Skill name="RULES-COMP_RESEARCH">"2"</Skill>
+  <Skill name="RULES-COMP_EVALUATE">"3"</Skill>
+  <Skill name="RULES-COMP_NAVIGATION">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__PROPHECY">"3"</Skill>
+  <Skill name="RULES-COMP_RIDE__HORSE">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"4"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0071">"1"</Talent>
-  <Talent name="RULES-T0089">"1"</Talent>
-  <Talent name="RULES-T0084">"1"</Talent>
-  <Talent name="RULES-T0137">"1"</Talent>
-  <Talent name="RULES-T0088_CIEUX">"2"</Talent>
-  <Talent name="RULES-T0040">"2"</Talent>
-  <Talent name="RULES-T0140">"2"</Talent>
-  <Talent name="RULES-T0141">"2"</Talent>
-  <Talent name="RULES-T0042">"3"</Talent>
-  <Talent name="RULES-T0115">"3"</Talent>
-  <Talent name="RULES-T0168">"3"</Talent>
-  <Talent name="RULES-T0123">"3"</Talent>
-  <Talent name="RULES-T0049">"4"</Talent>
-  <Talent name="RULES-T0167">"4"</Talent>
-  <Talent name="RULES-T0164">"4"</Talent>
-  <Talent name="RULES-T0087">"4"</Talent>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"1"</Talent>
+  <Talent name="RULES-T_PETTY_MAGIC">"1"</Talent>
+  <Talent name="RULES-T_READ_WRITE">"1"</Talent>
+  <Talent name="RULES-T_SECOND_SIGHT">"1"</Talent>
+  <Talent name="RULES-T_ARCANE_MAGIC__CIEUX">"2"</Talent>
+  <Talent name="RULES-T_DETECT_ARTEFACT">"2"</Talent>
+  <Talent name="RULES-T_ORIENTATION">"2"</Talent>
+  <Talent name="RULES-T_SIXTH_SENSE">"2"</Talent>
+  <Talent name="RULES-T_INSTINCTIVE_DICTION">"3"</Talent>
+  <Talent name="RULES-T_MAGICAL_SENSE">"3"</Talent>
+  <Talent name="RULES-T_SEASONED_TRAVELLER">"3"</Talent>
+  <Talent name="RULES-T_WELL_PREPARED">"3"</Talent>
+  <Talent name="RULES-T_FRIGHTENING">"4"</Talent>
+  <Talent name="RULES-T_IRON_WILL">"4"</Talent>
+  <Talent name="RULES-T_NIGHT_VISION">"4"</Talent>
+  <Talent name="RULES-T_WAR_WIZARD">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Grimoire">"1"</Item>
@@ -1041,23 +1042,23 @@
 <Item name="Starwatcher’s Handbook">"1"</Item>
 <Item name="Ceremonial Telescope">"2"</Item>
 <Item name="Magical Licence">"2"</Item>
-<Item name="RULES-TRAP_029">"2"</Item>
+<Item name="RULES-TRAP_ROBES">"2"</Item>
 <Item name="Sextant">"2"</Item>
 <Item name="Apprentice">"3"</Item>
 <Item name="Expensive Orrery or Armillary Sphere">"3"</Item>
-<Item name="RULES-TRAP_112">"3"</Item>
+<Item name="RULES-TRAP_LIGHT_WARHORSE">"3"</Item>
 <Item name="Magical Item">"3"</Item>
-<Item name="RULES-TRAP_029">"3"</Item>
+<Item name="RULES-TRAP_ROBES">"3"</Item>
 <Item name="Elaborate Robes">"4"</Item>
 <Item name="Library (Magic)">"4"</Item>
 <Item name="Tower or Mauntain Observatory">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>92</Page>
 </Career>
-<Career id="WINDS-WORK88">
+<Career id="WINDS-WORK_SHADOWMANCER">
 <Description language="ENGLISH">"Shadowmancer"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPLANG_MAG"</Skill>
+<Skill>"RULES-COMP_LANGUAGE__MAGICK"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -1090,57 +1091,57 @@
 <Attribut name="RULES-ATTR_Fel">"1"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPFOCAL_OMBRE">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPLANG_MAG">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_MAGIE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_HAST">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPSIGNES_GRIS">"1"</Skill>
-  <Skill name="RULES-COMPDISC_URB">"1"</Skill>
-  <Skill name="RULES-COMPCHARM">"2"</Skill>
-  <Skill name="RULES-COMPCALM">"2"</Skill>
-  <Skill name="RULES-COMPDIVERT_INTERP">"2"</Skill>
-  <Skill name="RULES-COMPRAGOT">"2"</Skill>
-  <Skill name="RULES-COMPINTIM">"2"</Skill>
-  <Skill name="RULES-COMPLANG_*">"2"</Skill>
-  <Skill name="RULES-COMPEVAL">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_POLIT">"3"</Skill>
-  <Skill name="RULES-COMPRECH">"3"</Skill>
-  <Skill name="RULES-COMPCHEV_CHEVAL">"3"</Skill>
-  <Skill name="RULES-COMPLANG_*">"4"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
+<Skill name="RULES-COMP_CHANNELLING__ULGU">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__MAGICK">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__MAGIC">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__POLEARM">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_SECRET_SIGNS__GREY_ORDER">"1"</Skill>
+  <Skill name="RULES-COMP_STEALTH__URBAN">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM">"2"</Skill>
+  <Skill name="RULES-COMP_COOL">"2"</Skill>
+  <Skill name="RULES-COMP_ENTERTAIN__ACTING">"2"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"2"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"2"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"2"</Skill>
+  <Skill name="RULES-COMP_EVALUATE">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__POLITICS">"3"</Skill>
+  <Skill name="RULES-COMP_RESEARCH">"3"</Skill>
+  <Skill name="RULES-COMP_RIDE__HORSE">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"4"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0071">"1"</Talent>
-  <Talent name="RULES-T0089">"1"</Talent>
-  <Talent name="RULES-T0084">"1"</Talent>
-  <Talent name="RULES-T0137">"1"</Talent>
-  <Talent name="RULES-T0088_OMBRE">"2"</Talent>
-  <Talent name="RULES-T0040">"2"</Talent>
-  <Talent name="RULES-T0091">"2"</Talent>
-  <Talent name="RULES-T0141">"2"</Talent>
-  <Talent name="RULES-T0010">"3"</Talent>
-  <Talent name="RULES-T0042">"3"</Talent>
-  <Talent name="RULES-T0115">"3"</Talent>
-  <Talent name="RULES-T0073">"3"</Talent>
-  <Talent name="RULES-T0072">"4"</Talent>
-  <Talent name="RULES-T0043">"4"</Talent>
-  <Talent name="RULES-T0155">"4"</Talent>
-  <Talent name="RULES-T0087">"4"</Talent>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"1"</Talent>
+  <Talent name="RULES-T_PETTY_MAGIC">"1"</Talent>
+  <Talent name="RULES-T_READ_WRITE">"1"</Talent>
+  <Talent name="RULES-T_SECOND_SIGHT">"1"</Talent>
+  <Talent name="RULES-T_ARCANE_MAGIC__OMBRE">"2"</Talent>
+  <Talent name="RULES-T_DETECT_ARTEFACT">"2"</Talent>
+  <Talent name="RULES-T_FAST_HANDS">"2"</Talent>
+  <Talent name="RULES-T_SIXTH_SENSE">"2"</Talent>
+  <Talent name="RULES-T_BLATHER">"3"</Talent>
+  <Talent name="RULES-T_INSTINCTIVE_DICTION">"3"</Talent>
+  <Talent name="RULES-T_MAGICAL_SENSE">"3"</Talent>
+  <Talent name="RULES-T_MIMIC">"3"</Talent>
+  <Talent name="RULES-T_SECRET_IDENTITY">"4"</Talent>
+  <Talent name="RULES-T_SHADOW">"4"</Talent>
+  <Talent name="RULES-T_TOWER_OF_MEMORIES">"4"</Talent>
+  <Talent name="RULES-T_WAR_WIZARD">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Grimoire">"1"</Item>
-<Item name="RULES-TRAP_016">"1"</Item>
+<Item name="RULES-TRAP_CLOAK">"1"</Item>
 <Item name="Staff">"1"</Item>
 <Item name="Magical Licence">"2"</Item>
-<Item name="RULES-TRAP_029">"2"</Item>
+<Item name="RULES-TRAP_ROBES">"2"</Item>
 <Item name="Apprentice">"3"</Item>
-<Item name="RULES-TRAP_112">"3"</Item>
+<Item name="RULES-TRAP_LIGHT_WARHORSE">"3"</Item>
 <Item name="Magical Item">"3"</Item>
-<Item name="RULES-TRAP_029">"3"</Item>
+<Item name="RULES-TRAP_ROBES">"3"</Item>
 <Item name="Apprentice">"4"</Item>
 <Item name="Elaborate Robes">"4"</Item>
 <Item name="Library (Magic)">"4"</Item>
@@ -1149,10 +1150,10 @@
 </SUBCHAPTER_ITEM>
 <Page>104</Page>
 </Career>
-<Career id="WINDS-WORK89">
+<Career id="WINDS-WORK_SPIRITER">
 <Description language="ENGLISH">"Spiriter"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPLANG_MAG"</Skill>
+<Skill>"RULES-COMP_LANGUAGE__MAGICK"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -1185,67 +1186,67 @@
 <Attribut name="RULES-ATTR_Fel">"0"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPFOCAL_MORT">"1"</Skill>
-  <Skill name="RULES-COMPCALM">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPINTIM">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPLANG_MAG">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_MAGIE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_HAST">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPART_GRAV">"2"</Skill>
-  <Skill name="RULES-COMPRESIST">"2"</Skill>
-  <Skill name="RULES-COMPEVAL">"2"</Skill>
-  <Skill name="RULES-COMPLANG_BATAIL">"2"</Skill>
-  <Skill name="RULES-COMPSAVOIR_UNDEAD">"2"</Skill>
-  <Skill name="RULES-COMPRECH">"2"</Skill>
-  <Skill name="RULES-COMPSOINANI">"3"</Skill>
-  <Skill name="RULES-COMPCOMM">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_GUERRE">"3"</Skill>
-  <Skill name="RULES-COMPCHEV_CHEVAL">"3"</Skill>
-  <Skill name="RULES-COMPLANG_*">"4"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
+<Skill name="RULES-COMP_CHANNELLING__SHYISH">"1"</Skill>
+  <Skill name="RULES-COMP_COOL">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__MAGICK">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__MAGIC">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__POLEARM">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_ART__ENGRAVING">"2"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"2"</Skill>
+  <Skill name="RULES-COMP_EVALUATE">"2"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__BATTLE">"2"</Skill>
+  <Skill name="RULES-COMP_LORE__UNDEAD">"2"</Skill>
+  <Skill name="RULES-COMP_RESEARCH">"2"</Skill>
+  <Skill name="RULES-COMP_ANIMAL_CARE">"3"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__WARFARE">"3"</Skill>
+  <Skill name="RULES-COMP_RIDE__HORSE">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"4"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0071">"1"</Talent>
-  <Talent name="RULES-T0089">"1"</Talent>
-  <Talent name="RULES-T0084">"1"</Talent>
-  <Talent name="RULES-T0137">"1"</Talent>
-  <Talent name="RULES-T0088_MORT">"2"</Talent>
-  <Talent name="RULES-T0040">"2"</Talent>
-  <Talent name="RULES-T0091">"2"</Talent>
-  <Talent name="RULES-T0141">"2"</Talent>
-  <Talent name="RULES-T0042">"3"</Talent>
-  <Talent name="RULES-T0115">"3"</Talent>
-  <Talent name="RULES-T0098">"3"</Talent>
-  <Talent name="RULES-T0129_MALA/RULES-T0129_POIS">"3"</Talent>
-  <Talent name="RULES-T0163">"4"</Talent>
-  <Talent name="RULES-T0049">"4"</Talent>
-  <Talent name="RULES-T0167">"4"</Talent>
-  <Talent name="RULES-T0087">"4"</Talent>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"1"</Talent>
+  <Talent name="RULES-T_PETTY_MAGIC">"1"</Talent>
+  <Talent name="RULES-T_READ_WRITE">"1"</Talent>
+  <Talent name="RULES-T_SECOND_SIGHT">"1"</Talent>
+  <Talent name="RULES-T_ARCANE_MAGIC__MORT">"2"</Talent>
+  <Talent name="RULES-T_DETECT_ARTEFACT">"2"</Talent>
+  <Talent name="RULES-T_FAST_HANDS">"2"</Talent>
+  <Talent name="RULES-T_SIXTH_SENSE">"2"</Talent>
+  <Talent name="RULES-T_INSTINCTIVE_DICTION">"3"</Talent>
+  <Talent name="RULES-T_MAGICAL_SENSE">"3"</Talent>
+  <Talent name="RULES-T_MENACING">"3"</Talent>
+  <Talent name="RULES-T_RESISTANCE__MALA/RULES-T_RESISTANCE__POIS">"3"</Talent>
+  <Talent name="RULES-T_COMBAT_AWARE">"4"</Talent>
+  <Talent name="RULES-T_FRIGHTENING">"4"</Talent>
+  <Talent name="RULES-T_IRON_WILL">"4"</Talent>
+  <Talent name="RULES-T_WAR_WIZARD">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Grimoire">"1"</Item>
 <Item name="Staff of Petrified Wood">"1"</Item>
 <Item name="Magical Licence">"2"</Item>
-<Item name="RULES-TRAP_029">"2"</Item>
+<Item name="RULES-TRAP_ROBES">"2"</Item>
 <Item name="Scythe">"2"</Item>
 <Item name="Apprentice">"3"</Item>
-<Item name="RULES-TRAP_112">"3"</Item>
+<Item name="RULES-TRAP_LIGHT_WARHORSE">"3"</Item>
 <Item name="Magical Item">"3"</Item>
-<Item name="RULES-TRAP_029">"3"</Item>
+<Item name="RULES-TRAP_ROBES">"3"</Item>
 <Item name="Elaborate Robes">"4"</Item>
 <Item name="Library (Magic)">"4"</Item>
 <Item name="Workshop (Magic)">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>116</Page>
 </Career>
-<Career id="WINDS-WORK90">
+<Career id="WINDS-WORK_PYROMANCER">
 <Description language="ENGLISH">"Pyromancer"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPLANG_MAG"</Skill>
+<Skill>"RULES-COMP_LANGUAGE__MAGICK"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -1278,60 +1279,60 @@
 <Attribut name="RULES-ATTR_Fel">"4"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPFOCAL_FEU">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPINTIM">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPLANG_BATAIL">"1"</Skill>
-  <Skill name="RULES-COMPLANG_MAG">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_MAGIE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_HAST">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPCHARM">"2"</Skill>
-  <Skill name="RULES-COMPCALM">"2"</Skill>
-  <Skill name="RULES-COMPCOMM">"2"</Skill>
-  <Skill name="RULES-COMPSAVOIR_GUERRE">"2"</Skill>
-  <Skill name="RULES-COMPRAGOT">"2"</Skill>
-  <Skill name="RULES-COMPLANG_*">"2"</Skill>
-  <Skill name="RULES-COMPSOINANI">"3"</Skill>
-  <Skill name="RULES-COMPEVAL">"3"</Skill>
-  <Skill name="RULES-COMPRECH">"3"</Skill>
-  <Skill name="RULES-COMPCHEV_CHEVAL">"3"</Skill>
-  <Skill name="RULES-COMPLANG_*">"4"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
+<Skill name="RULES-COMP_CHANNELLING__AQSHY">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__BATTLE">"1"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__MAGICK">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__MAGIC">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__POLEARM">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM">"2"</Skill>
+  <Skill name="RULES-COMP_COOL">"2"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"2"</Skill>
+  <Skill name="RULES-COMP_LORE__WARFARE">"2"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"2"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"2"</Skill>
+  <Skill name="RULES-COMP_ANIMAL_CARE">"3"</Skill>
+  <Skill name="RULES-COMP_EVALUATE">"3"</Skill>
+  <Skill name="RULES-COMP_RESEARCH">"3"</Skill>
+  <Skill name="RULES-COMP_RIDE__HORSE">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"4"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0071">"1"</Talent>
-  <Talent name="RULES-T0089">"1"</Talent>
-  <Talent name="RULES-T0084">"1"</Talent>
-  <Talent name="RULES-T0137">"1"</Talent>
-  <Talent name="RULES-T0088_FEU">"2"</Talent>
-  <Talent name="RULES-T0040">"2"</Talent>
-  <Talent name="RULES-T0091">"2"</Talent>
-  <Talent name="RULES-T0141">"2"</Talent>
-  <Talent name="RULES-T0096">"3"</Talent>
-  <Talent name="RULES-T0042">"3"</Talent>
-  <Talent name="RULES-T0115">"3"</Talent>
-  <Talent name="RULES-T0098">"3"</Talent>
-  <Talent name="RULES-T0163">"4"</Talent>
-  <Talent name="RULES-T0049">"4"</Talent>
-  <Talent name="RULES-T0167">"4"</Talent>
-  <Talent name="RULES-T0087">"4"</Talent>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"1"</Talent>
+  <Talent name="RULES-T_PETTY_MAGIC">"1"</Talent>
+  <Talent name="RULES-T_READ_WRITE">"1"</Talent>
+  <Talent name="RULES-T_SECOND_SIGHT">"1"</Talent>
+  <Talent name="RULES-T_ARCANE_MAGIC__FEU">"2"</Talent>
+  <Talent name="RULES-T_DETECT_ARTEFACT">"2"</Talent>
+  <Talent name="RULES-T_FAST_HANDS">"2"</Talent>
+  <Talent name="RULES-T_SIXTH_SENSE">"2"</Talent>
+  <Talent name="RULES-T_DUAL_WIELDER">"3"</Talent>
+  <Talent name="RULES-T_INSTINCTIVE_DICTION">"3"</Talent>
+  <Talent name="RULES-T_MAGICAL_SENSE">"3"</Talent>
+  <Talent name="RULES-T_MENACING">"3"</Talent>
+  <Talent name="RULES-T_COMBAT_AWARE">"4"</Talent>
+  <Talent name="RULES-T_FRIGHTENING">"4"</Talent>
+  <Talent name="RULES-T_IRON_WILL">"4"</Talent>
+  <Talent name="RULES-T_WAR_WIZARD">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="First Key of Secrets">"1"</Item>
 <Item name="Grimoire">"1"</Item>
 <Item name="Staff">"1"</Item>
 <Item name="Magical Licence">"2"</Item>
-<Item name="RULES-TRAP_029">"2"</Item>
+<Item name="RULES-TRAP_ROBES">"2"</Item>
 <Item name="Second and Third Keys of Secrets">"2"</Item>
 <Item name="Sword">"2"</Item>
 <Item name="Apprentice">"3"</Item>
 <Item name="Fourth and Fifth Keys of Secrets">"3"</Item>
-<Item name="RULES-TRAP_112">"3"</Item>
+<Item name="RULES-TRAP_LIGHT_WARHORSE">"3"</Item>
 <Item name="Magical Item">"3"</Item>
-<Item name="RULES-TRAP_029">"3"</Item>
+<Item name="RULES-TRAP_ROBES">"3"</Item>
 <Item name="Apprentice">"4"</Item>
 <Item name="Elaborate Robes">"4"</Item>
 <Item name="Library (Magic)">"4"</Item>
@@ -1340,10 +1341,10 @@
 </SUBCHAPTER_ITEM>
 <Page>128</Page>
 </Career>
-<Career id="WINDS-WORK91">
+<Career id="WINDS-WORK_SHAMAN">
 <Description language="ENGLISH">"Shaman"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPLANG_MAG"</Skill>
+<Skill>"RULES-COMP_LANGUAGE__MAGICK"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -1376,65 +1377,65 @@
 <Attribut name="RULES-ATTR_Fel">"0"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPSOINANI">"1"</Skill>
-  <Skill name="RULES-COMPFOCAL_BETE">"1"</Skill>
-  <Skill name="RULES-COMPCALM">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPLANG_MAG">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_MAGIE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_HAST">"1"</Skill>
-  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPDRESS_*">"2"</Skill>
-  <Skill name="RULES-COMPANIM">"2"</Skill>
-  <Skill name="RULES-COMPSAVOIR_BETE">"2"</Skill>
-  <Skill name="RULES-COMPPROJ_ARC">"2"</Skill>
-  <Skill name="RULES-COMPDISC_RURAL">"2"</Skill>
-  <Skill name="RULES-COMPPIST">"2"</Skill>
-  <Skill name="RULES-COMPORIENT">"3"</Skill>
-  <Skill name="RULES-COMPRECH">"3"</Skill>
-  <Skill name="RULES-COMPCHEV_CHEVAL">"3"</Skill>
-  <Skill name="RULES-COMPSIGNES_AMBER">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
-  <Skill name="RULES-COMPCOMM">"4"</Skill>
+<Skill name="RULES-COMP_ANIMAL_CARE">"1"</Skill>
+  <Skill name="RULES-COMP_CHANNELLING__GHUR">"1"</Skill>
+  <Skill name="RULES-COMP_COOL">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__MAGICK">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__MAGIC">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__POLEARM">"1"</Skill>
+  <Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_ANIMAL_TRAINING__*">"2"</Skill>
+  <Skill name="RULES-COMP_CHARM_ANIMAL">"2"</Skill>
+  <Skill name="RULES-COMP_LORE__BEASTS">"2"</Skill>
+  <Skill name="RULES-COMP_RANGED__BOW">"2"</Skill>
+  <Skill name="RULES-COMP_STEALTH__RURAL">"2"</Skill>
+  <Skill name="RULES-COMP_TRACK">"2"</Skill>
+  <Skill name="RULES-COMP_NAVIGATION">"3"</Skill>
+  <Skill name="RULES-COMP_RESEARCH">"3"</Skill>
+  <Skill name="RULES-COMP_RIDE__HORSE">"3"</Skill>
+  <Skill name="RULES-COMP_SECRET_SIGNS__AMBER_ORDER">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"4"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0071">"1"</Talent>
-  <Talent name="RULES-T0089">"1"</Talent>
-  <Talent name="RULES-T0084">"1"</Talent>
-  <Talent name="RULES-T0137">"1"</Talent>
-  <Talent name="RULES-T0088_BETE">"2"</Talent>
-  <Talent name="RULES-T0074">"2"</Talent>
-  <Talent name="RULES-T0091">"2"</Talent>
-  <Talent name="RULES-T0141">"2"</Talent>
-  <Talent name="RULES-T0003">"3"</Talent>
-  <Talent name="RULES-T0042">"3"</Talent>
-  <Talent name="RULES-T0115">"3"</Talent>
-  <Talent name="RULES-T0098">"3"</Talent>
-  <Talent name="RULES-T0049">"4"</Talent>
-  <Talent name="RULES-T0167">"4"</Talent>
-  <Talent name="RULES-T0127">"4"</Talent>
-  <Talent name="RULES-T0087">"4"</Talent>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"1"</Talent>
+  <Talent name="RULES-T_PETTY_MAGIC">"1"</Talent>
+  <Talent name="RULES-T_READ_WRITE">"1"</Talent>
+  <Talent name="RULES-T_SECOND_SIGHT">"1"</Talent>
+  <Talent name="RULES-T_ARCANE_MAGIC__BETE">"2"</Talent>
+  <Talent name="RULES-T_COOLHEADED">"2"</Talent>
+  <Talent name="RULES-T_FAST_HANDS">"2"</Talent>
+  <Talent name="RULES-T_SIXTH_SENSE">"2"</Talent>
+  <Talent name="RULES-T_ANIMAL_AFFINITY">"3"</Talent>
+  <Talent name="RULES-T_INSTINCTIVE_DICTION">"3"</Talent>
+  <Talent name="RULES-T_MAGICAL_SENSE">"3"</Talent>
+  <Talent name="RULES-T_MENACING">"3"</Talent>
+  <Talent name="RULES-T_FRIGHTENING">"4"</Talent>
+  <Talent name="RULES-T_IRON_WILL">"4"</Talent>
+  <Talent name="RULES-T_LIGHTNING_REFLEXES">"4"</Talent>
+  <Talent name="RULES-T_WAR_WIZARD">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Grimoire (often in the form of enscribed bones or teeth)">"1"</Item>
 <Item name="Staff">"1"</Item>
 <Item name="Magical Licence">"2"</Item>
-<Item name="RULES-TRAP_029">"2"</Item>
+<Item name="RULES-TRAP_ROBES">"2"</Item>
 <Item name="Apprentice">"3"</Item>
 <Item name="Magical Item">"3"</Item>
-<Item name="RULES-TRAP_029">"3"</Item>
+<Item name="RULES-TRAP_ROBES">"3"</Item>
 <Item name="Conclave of Shamans">"4"</Item>
 <Item name="Elaborate Robes">"4"</Item>
 <Item name="Shamanic Lair">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>140</Page>
 </Career>
-<Career id="WINDS-WORK102">
+<Career id="WINDS-WORK_COMBAT_FAMILIAR">
 <Description language="ENGLISH">"Combat Familiar"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPCOMB_*"</Skill>
+<Skill>"RULES-COMP_MELEE__*"</Skill>
 <Class>"RULES-CLASS_WARR"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -1467,59 +1468,59 @@
 <Attribut name="RULES-ATTR_Fel">"0"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPATHL">"1"</Skill>
-  <Skill name="RULES-COMPESCAL">"1"</Skill>
-  <Skill name="RULES-COMPCALM">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPRESIST">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPLANG_BATAIL">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_*">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPINTIM">"2"</Skill>
-  <Skill name="RULES-COMPSAVOIR_GUERRE">"2"</Skill>
-  <Skill name="RULES-COMPCOMB_*">"2"</Skill>
-  <Skill name="RULES-COMPCHEV_CHEVAL">"2"</Skill>
-  <Skill name="RULES-COMPDISC_RURAL/RULES-COMPDISC_URB">"2"</Skill>
-  <Skill name="RULES-COMPPARI">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_HERAL">"3"</Skill>
-  <Skill name="RULES-COMPCOMB_*">"3"</Skill>
-  <Skill name="RULES-COMPDISC_RURAL/RULES-COMPDISC_URB">"3"</Skill>
-  <Skill name="RULES-COMPCOMM">"4"</Skill>
-  <Skill name="RULES-COMPCOMB_*">"4"</Skill>
+<Skill name="RULES-COMP_ATHLETICS">"1"</Skill>
+  <Skill name="RULES-COMP_CLIMB">"1"</Skill>
+  <Skill name="RULES-COMP_COOL">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__BATTLE">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__*">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_INTIMIDATE">"2"</Skill>
+  <Skill name="RULES-COMP_LORE__WARFARE">"2"</Skill>
+  <Skill name="RULES-COMP_MELEE__*">"2"</Skill>
+  <Skill name="RULES-COMP_RIDE__HORSE">"2"</Skill>
+  <Skill name="RULES-COMP_STEALTH__RURAL/RULES-COMP_STEALTH__URBAN">"2"</Skill>
+  <Skill name="RULES-COMP_GAMBLE">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__HERALDRY">"3"</Skill>
+  <Skill name="RULES-COMP_MELEE__*">"3"</Skill>
+  <Skill name="RULES-COMP_STEALTH__RURAL/RULES-COMP_STEALTH__URBAN">"3"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"4"</Skill>
+  <Skill name="RULES-COMP_MELEE__*">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0004">"1"</Talent>
-  <Talent name="RULES-T0011">"1"</Talent>
-  <Talent name="RULES-T0044">"1"</Talent>
-  <Talent name="RULES-T0067">"1"</Talent>
-  <Talent name="RULES-T0028">"2"</Talent>
-  <Talent name="RULES-T0050">"2"</Talent>
-  <Talent name="RULES-T0130">"2"</Talent>
-  <Talent name="RULES-T0158">"2"</Talent>
-  <Talent name="RULES-T0096">"3"</Talent>
-  <Talent name="RULES-T0063">"3"</Talent>
-  <Talent name="RULES-T0008">"3"</Talent>
-  <Talent name="RULES-T0075">"3"</Talent>
-  <Talent name="RULES-T0095">"4"</Talent>
-  <Talent name="RULES-T0037">"4"</Talent>
-  <Talent name="RULES-T0060">"4"</Talent>
-  <Talent name="RULES-T0059">"4"</Talent>
+<Talent name="RULES-T_AMBIDEXTROUS">"1"</Talent>
+  <Talent name="RULES-T_BEAT_BLADE">"1"</Talent>
+  <Talent name="RULES-T_DISTRACT">"1"</Talent>
+  <Talent name="RULES-T_WARRIOR_BORN">"1"</Talent>
+  <Talent name="RULES-T_COMBAT_REFLEXES">"2"</Talent>
+  <Talent name="RULES-T_IMPLACABLE">"2"</Talent>
+  <Talent name="RULES-T_RIPOSTE">"2"</Talent>
+  <Talent name="RULES-T_VERY_STRONG">"2"</Talent>
+  <Talent name="RULES-T_DUAL_WIELDER">"3"</Talent>
+  <Talent name="RULES-T_FRENZY">"3"</Talent>
+  <Talent name="RULES-T_FURIOUS_ASSAULT">"3"</Talent>
+  <Talent name="RULES-T_RELENTLESS">"3"</Talent>
+  <Talent name="RULES-T_COMBAT_MASTER">"4"</Talent>
+  <Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"4"</Talent>
+  <Talent name="RULES-T_STRIKE_TO_INJURE">"4"</Talent>
+  <Talent name="RULES-T_STRIKE_TO_STUN">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="RULES-ARMO_10">"1"</Item>
-<Item name="RULES-ARMO_11">"1"</Item>
-<Item name="RULES-ARMO_13">"1"</Item>
-<Item name="RULES-ARMO_14">"1"</Item>
+<Item name="RULES-ARMO_BRACERS">"1"</Item>
+<Item name="RULES-ARMO_HELM">"1"</Item>
+<Item name="RULES-ARMO_PLATE_LEGGINGS">"1"</Item>
+<Item name="RULES-ARMO_BREASTPLATE_PLATE">"1"</Item>
 <Item name="RULES-COMB_*">"1"</Item>
 <Item name="RULES-COMB_*">"1"</Item>
 </SUBCHAPTER_ITEM>
 <Page>188</Page>
 </Career>
-<Career id="WINDS-WORK103">
+<Career id="WINDS-WORK_SPELL_FAMILIAR">
 <Description language="ENGLISH">"Spell Familiar"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPSAVOIR_MAGIE"</Skill>
+<Skill>"RULES-COMP_LORE__MAGIC"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -1552,57 +1553,57 @@
 <Attribut name="RULES-ATTR_Fel">"4"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPFOCAL_*">"1"</Skill>
-  <Skill name="RULES-COMPCALM">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPRAGOT">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPLANG_MAG">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_MAGIE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPDISC_RURAL/RULES-COMPDISC_URB">"1"</Skill>
-  <Skill name="RULES-COMPCHARM">"2"</Skill>
-  <Skill name="RULES-COMPLANG_*">"2"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"2"</Skill>
-  <Skill name="RULES-COMPCOMB_HAST">"2"</Skill>
-  <Skill name="RULES-COMPRECH">"2"</Skill>
-  <Skill name="RULES-COMPCHEV_CHEVAL">"2"</Skill>
-  <Skill name="RULES-COMPEVAL">"3"</Skill>
-  <Skill name="RULES-COMPLANG_*">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"3"</Skill>
-  <Skill name="RULES-COMPESCAM">"3"</Skill>
-  <Skill name="RULES-COMPLANG_*">"4"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
+<Skill name="RULES-COMP_CHANNELLING__*">"1"</Skill>
+  <Skill name="RULES-COMP_COOL">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__MAGICK">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__MAGIC">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_STEALTH__RURAL/RULES-COMP_STEALTH__URBAN">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM">"2"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"2"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"2"</Skill>
+  <Skill name="RULES-COMP_MELEE__POLEARM">"2"</Skill>
+  <Skill name="RULES-COMP_RESEARCH">"2"</Skill>
+  <Skill name="RULES-COMP_RIDE__HORSE">"2"</Skill>
+  <Skill name="RULES-COMP_EVALUATE">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"3"</Skill>
+  <Skill name="RULES-COMP_SLEIGHT_OF_HAND">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"4"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0071">"1"</Talent>
-  <Talent name="RULES-T0074">"1"</Talent>
-  <Talent name="RULES-T0117">"1"</Talent>
-  <Talent name="RULES-T0137">"1"</Talent>
-  <Talent name="RULES-T0088_*">"2"</Talent>
-  <Talent name="RULES-T0042">"2"</Talent>
-  <Talent name="RULES-T0020">"2"</Talent>
-  <Talent name="RULES-T0141">"2"</Talent>
-  <Talent name="RULES-T0146">"3"</Talent>
-  <Talent name="RULES-T0040">"3"</Talent>
-  <Talent name="RULES-T0058">"3"</Talent>
-  <Talent name="RULES-T0110">"3"</Talent>
-  <Talent name="RULES-T0091">"4"</Talent>
-  <Talent name="RULES-T0049">"4"</Talent>
-  <Talent name="RULES-T0087">"4"</Talent>
-  <Talent name="RULES-T0143">"4"</Talent>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"1"</Talent>
+  <Talent name="RULES-T_COOLHEADED">"1"</Talent>
+  <Talent name="RULES-T_SAVVY">"1"</Talent>
+  <Talent name="RULES-T_SECOND_SIGHT">"1"</Talent>
+  <Talent name="RULES-T_ARCANE_MAGIC__*">"2"</Talent>
+  <Talent name="RULES-T_INSTINCTIVE_DICTION">"2"</Talent>
+  <Talent name="RULES-T_LUCK">"2"</Talent>
+  <Talent name="RULES-T_SIXTH_SENSE">"2"</Talent>
+  <Talent name="RULES-T_BOOKISH">"3"</Talent>
+  <Talent name="RULES-T_DETECT_ARTEFACT">"3"</Talent>
+  <Talent name="RULES-T_NOSE_FOR_TROUBLE">"3"</Talent>
+  <Talent name="RULES-T_PERFECT_PITCH">"3"</Talent>
+  <Talent name="RULES-T_FAST_HANDS">"4"</Talent>
+  <Talent name="RULES-T_FRIGHTENING">"4"</Talent>
+  <Talent name="RULES-T_WAR_WIZARD">"4"</Talent>
+  <Talent name="RULES-T_WITCH">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Grimoire">"1"</Item>
-<Item name="UPINA-COMB_BASE_14">"1"</Item>
+<Item name="UPINA-COMB_DAGGER">"1"</Item>
 </SUBCHAPTER_ITEM>
 <Page>188</Page>
 </Career>
-<Career id="WINDS-WORK104">
+<Career id="WINDS-WORK_POWER_FAMILIAR">
 <Description language="ENGLISH">"Power Familiar"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPSAVOIR_MAGIE"</Skill>
+<Skill>"RULES-COMP_LORE__MAGIC"</Skill>
 <Class>"RULES-CLASS_ACAD"</Class>
 <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -1635,1747 +1636,1747 @@
 <Attribut name="RULES-ATTR_Fel">"4"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPCALM">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPRAGOT">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPSAVOIR_MAGIE">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_BASE">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPDISC_RURAL/RULES-COMPDISC_URB">"1"</Skill>
-  <Skill name="RULES-COMPCHARM">"2"</Skill>
-  <Skill name="RULES-COMPLANG_*">"2"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"2"</Skill>
-  <Skill name="RULES-COMPCOMB_HAST">"2"</Skill>
-  <Skill name="RULES-COMPRECH">"2"</Skill>
-  <Skill name="RULES-COMPCHEV_CHEVAL">"2"</Skill>
-  <Skill name="RULES-COMPEVAL">"3"</Skill>
-  <Skill name="RULES-COMPLANG_*">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"3"</Skill>
-  <Skill name="RULES-COMPESCAM">"3"</Skill>
-  <Skill name="RULES-COMPLANG_*">"4"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
+<Skill name="RULES-COMP_COOL">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_LORE__MAGIC">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_STEALTH__RURAL/RULES-COMP_STEALTH__URBAN">"1"</Skill>
+  <Skill name="RULES-COMP_CHARM">"2"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"2"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"2"</Skill>
+  <Skill name="RULES-COMP_MELEE__POLEARM">"2"</Skill>
+  <Skill name="RULES-COMP_RESEARCH">"2"</Skill>
+  <Skill name="RULES-COMP_RIDE__HORSE">"2"</Skill>
+  <Skill name="RULES-COMP_EVALUATE">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"3"</Skill>
+  <Skill name="RULES-COMP_SLEIGHT_OF_HAND">"3"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"4"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0071">"1"</Talent>
-  <Talent name="RULES-T0074">"1"</Talent>
-  <Talent name="RULES-T0117">"1"</Talent>
-  <Talent name="RULES-T0137">"1"</Talent>
-  <Talent name="RULES-T0042">"2"</Talent>
-  <Talent name="RULES-T0020">"2"</Talent>
-  <Talent name="RULES-T0141">"2"</Talent>
-  <Talent name="RULES-T0146">"3"</Talent>
-  <Talent name="RULES-T0040">"3"</Talent>
-  <Talent name="RULES-T0058">"3"</Talent>
-  <Talent name="RULES-T0110">"3"</Talent>
-  <Talent name="RULES-T0091">"4"</Talent>
-  <Talent name="RULES-T0049">"4"</Talent>
-  <Talent name="RULES-T0087">"4"</Talent>
-  <Talent name="RULES-T0143">"4"</Talent>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"1"</Talent>
+  <Talent name="RULES-T_COOLHEADED">"1"</Talent>
+  <Talent name="RULES-T_SAVVY">"1"</Talent>
+  <Talent name="RULES-T_SECOND_SIGHT">"1"</Talent>
+  <Talent name="RULES-T_INSTINCTIVE_DICTION">"2"</Talent>
+  <Talent name="RULES-T_LUCK">"2"</Talent>
+  <Talent name="RULES-T_SIXTH_SENSE">"2"</Talent>
+  <Talent name="RULES-T_BOOKISH">"3"</Talent>
+  <Talent name="RULES-T_DETECT_ARTEFACT">"3"</Talent>
+  <Talent name="RULES-T_NOSE_FOR_TROUBLE">"3"</Talent>
+  <Talent name="RULES-T_PERFECT_PITCH">"3"</Talent>
+  <Talent name="RULES-T_FAST_HANDS">"4"</Talent>
+  <Talent name="RULES-T_FRIGHTENING">"4"</Talent>
+  <Talent name="RULES-T_WAR_WIZARD">"4"</Talent>
+  <Talent name="RULES-T_WITCH">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="Grimoire">"1"</Item>
-<Item name="UPINA-COMB_BASE_14">"1"</Item>
+<Item name="UPINA-COMB_DAGGER">"1"</Item>
 </SUBCHAPTER_ITEM>
 <Page>182</Page>
 </Career>
 </DATA_CAREER>
 <DATA_SPELL>
-<Sort id="WINDS-COLOR_85">
+<Sort id="WINDS-COLOR_ABULLA_S_SNARE">
 <Description language="ENGLISH">"Abulla’s Snare"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>62</Page>
 </Sort>
-<Sort id="WINDS-COLOR_86">
+<Sort id="WINDS-COLOR_ASSAULT_OF_STONE">
 <Description language="ENGLISH">"Assault of Stone"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"12"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>62</Page>
 </Sort>
-<Sort id="WINDS-COLOR_90">
+<Sort id="WINDS-COLOR_CREVASSE">
 <Description language="ENGLISH">"Crevasse"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>62</Page>
 </Sort>
-<Sort id="WINDS-COLOR_92">
+<Sort id="WINDS-COLOR_DAZZLING_BRIGHTNESS">
 <Description language="ENGLISH">"Dazzling Brightness"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE ((BATTR_WP) yards)"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>63</Page>
 </Sort>
-<Sort id="WINDS-COLOR_93">
+<Sort id="WINDS-COLOR_DRIVING_INTENT">
 <Description language="ENGLISH">"Driving Intent"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>63</Page>
 </Sort>
-<Sort id="WINDS-COLOR_95">
+<Sort id="WINDS-COLOR_ERECT_THE_EDIFICE">
 <Description language="ENGLISH">"Erect the Edifice"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Special"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>63</Page>
 </Sort>
-<Sort id="WINDS-COLOR_96">
+<Sort id="WINDS-COLOR_EYES_OF_VOLANS">
 <Description language="ENGLISH">"Eyes of Volans"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>63</Page>
 </Sort>
-<Sort id="WINDS-COLOR_97">
+<Sort id="WINDS-COLOR_HANDS_OF_KARKORA">
 <Description language="ENGLISH">"Hands of Karkora"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE ((BATTR_WP) yards)"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>64</Page>
 </Sort>
-<Sort id="WINDS-COLOR_98">
+<Sort id="WINDS-COLOR_ILLUMINATE_THE_EDIFICE">
 <Description language="ENGLISH">"Illuminate the Edifice"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 (maximum)"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>64</Page>
 </Sort>
-<Sort id="WINDS-COLOR_99">
+<Sort id="WINDS-COLOR_LIGHT_OF_PURITY">
 <Description language="ENGLISH">"Light of Purity"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 (maximum)"</Target>
 <Duration>"Special"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>64</Page>
 </Sort>
-<Sort id="WINDS-COLOR_100">
+<Sort id="WINDS-COLOR_MEISSNER_S_INSTANTANEOUS_LIBRARIAN">
 <Description language="ENGLISH">"Meissner’s Instantaneous Librarian"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>64</Page>
 </Sort>
-<Sort id="WINDS-COLOR_102">
+<Sort id="WINDS-COLOR_ORB_OF_HYSH">
 <Description language="ENGLISH">"Orb of Hysh"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>64</Page>
 </Sort>
-<Sort id="WINDS-COLOR_103">
+<Sort id="WINDS-COLOR_PERFECT_COMPREHENSION">
 <Description language="ENGLISH">"Perfect Comprehension"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>65</Page>
 </Sort>
-<Sort id="WINDS-COLOR_105">
+<Sort id="WINDS-COLOR_PIERCE_THE_VEIL">
 <Description language="ENGLISH">"Pierce the Veil"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>65</Page>
 </Sort>
-<Sort id="WINDS-COLOR_106">
+<Sort id="WINDS-COLOR_SHIMMERING_CLOAK">
 <Description language="ENGLISH">"Shimmering Cloak"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>65</Page>
 </Sort>
-<Sort id="WINDS-COLOR_108">
+<Sort id="WINDS-COLOR_TIME_AMOK">
 <Description language="ENGLISH">"Time Amok"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (ATTR_WP yards)"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_LUMIERE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__LUMIERE"</Talent>
 <Level>"11"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>65</Page>
 </Sort>
-<Sort id="WINDS-COLOR_109">
+<Sort id="WINDS-COLOR_ARMOUR_OF_TIN">
 <Description language="ENGLISH">"Armour of Tin"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE ((BATTR_WP) yards)"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>74</Page>
 </Sort>
-<Sort id="WINDS-COLOR_110">
+<Sort id="WINDS-COLOR_BREACH_THE_UNKNOWN">
 <Description language="ENGLISH">"Breach the Unknown"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>74</Page>
 </Sort>
-<Sort id="WINDS-COLOR_112">
+<Sort id="WINDS-COLOR_CURSE_OF_RUST">
 <Description language="ENGLISH">"Curse of Rust"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 object of 1 Encumbrance"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>74</Page>
 </Sort>
-<Sort id="WINDS-COLOR_114">
+<Sort id="WINDS-COLOR_FAULT_OF_FORM">
 <Description language="ENGLISH">"Fault of Form"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 weapon"</Target>
 <Duration>"Initiative Bonus rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>75</Page>
 </Sort>
-<Sort id="WINDS-COLOR_118">
+<Sort id="WINDS-COLOR_GEHENNA_S_GOLDEN_GLOBE">
 <Description language="ENGLISH">"Gehenna’s Golden Globe"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (2 x (BATTR_WP) yards)"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"13"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>75</Page>
 </Sort>
-<Sort id="WINDS-COLOR_119">
+<Sort id="WINDS-COLOR_GILDED_CAGE">
 <Description language="ENGLISH">"Gilded Cage"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE ((BATTR_WP) yards)"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>75</Page>
 </Sort>
-<Sort id="WINDS-COLOR_121">
+<Sort id="WINDS-COLOR_GOLDEN_TOUCH">
 <Description language="ENGLISH">"Golden Touch"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"ATTR_WP x 1d10 minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>75</Page>
 </Sort>
-<Sort id="WINDS-COLOR_122">
+<Sort id="WINDS-COLOR_GOLDSTEEL_SHIELDING">
 <Description language="ENGLISH">"Goldsteel Shielding"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE ((BATTR_WP) yards)"</Target>
 <Duration>"ATTR_WP minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"10"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>76</Page>
 </Sort>
-<Sort id="WINDS-COLOR_123">
+<Sort id="WINDS-COLOR_INSCRIPTION">
 <Description language="ENGLISH">"Inscription"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Special"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>76</Page>
 </Sort>
-<Sort id="WINDS-COLOR_124">
+<Sort id="WINDS-COLOR_KNOT_UNTIED">
 <Description language="ENGLISH">"Knot Untied"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>76</Page>
 </Sort>
-<Sort id="WINDS-COLOR_125">
+<Sort id="WINDS-COLOR_METAL_MENDED">
 <Description language="ENGLISH">"Metal Mended"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 object"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>76</Page>
 </Sort>
-<Sort id="WINDS-COLOR_126">
+<Sort id="WINDS-COLOR_METEORIC_IRONCLAD">
 <Description language="ENGLISH">"Meteoric Ironclad"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE ((BATTR_WP) yards)"</Target>
 <Duration>"1 round"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>76</Page>
 </Sort>
-<Sort id="WINDS-COLOR_128">
+<Sort id="WINDS-COLOR_PRISMATIC_REFRACTION_OF_HABERMAS">
 <Description language="ENGLISH">"Prismatic Refraction of Habermas"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"1 round"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>77</Page>
 </Sort>
-<Sort id="WINDS-COLOR_129">
+<Sort id="WINDS-COLOR_PUCHTA_S_SILVER_COMPASS">
 <Description language="ENGLISH">"Puchta’s Silver Compass"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 compass"</Target>
 <Duration>"ATTR_WP minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>77</Page>
 </Sort>
-<Sort id="WINDS-COLOR_130">
+<Sort id="WINDS-COLOR_REPLICATION_OF_LEVORG">
 <Description language="ENGLISH">"Replication of Levorg"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"1d10 hours"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>77</Page>
 </Sort>
-<Sort id="WINDS-COLOR_132">
+<Sort id="WINDS-COLOR_TRIAL_AND_ERROR">
 <Description language="ENGLISH">"Trial and Error"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_METAL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__METAL"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>77</Page>
 </Sort>
-<Sort id="WINDS-COLOR_133">
+<Sort id="WINDS-COLOR_ALMANAC">
 <Description language="ENGLISH">"Almanac"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"1 day"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_VIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>86</Page>
 </Sort>
-<Sort id="WINDS-COLOR_135">
+<Sort id="WINDS-COLOR_DWELLERS_BELOW">
 <Description language="ENGLISH">"Dwellers Below"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE ((BATTR_WP) yards)"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_VIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE"</Talent>
 <Level>"13"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>86</Page>
 </Sort>
-<Sort id="WINDS-COLOR_139">
+<Sort id="WINDS-COLOR_FLESH_OF_STONE">
 <Description language="ENGLISH">"Flesh of Stone"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"ATTR_WP minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_VIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>87</Page>
 </Sort>
-<Sort id="WINDS-COLOR_141">
+<Sort id="WINDS-COLOR_GARDENER_S_WARCRY">
 <Description language="ENGLISH">"Gardener’s Warcry"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (ATTR_WP yards)"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_VIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>87</Page>
 </Sort>
-<Sort id="WINDS-COLOR_142">
+<Sort id="WINDS-COLOR_GEYSER">
 <Description language="ENGLISH">"Geyser"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE ((BATTR_WP) yards)"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_VIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE"</Talent>
 <Level>"38"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>87</Page>
 </Sort>
-<Sort id="WINDS-COLOR_143">
+<Sort id="WINDS-COLOR_INVIGORATING_CHANT">
 <Description language="ENGLISH">"Invigorating Chant"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Fellowship Bonus yards)"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_VIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>87</Page>
 </Sort>
-<Sort id="WINDS-COLOR_144">
+<Sort id="WINDS-COLOR_JADE_CASKET">
 <Description language="ENGLISH">"Jade Casket"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_VIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>87</Page>
 </Sort>
-<Sort id="WINDS-COLOR_145">
+<Sort id="WINDS-COLOR_LEAF_FALL">
 <Description language="ENGLISH">"Leaf Fall"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_VIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>88</Page>
 </Sort>
-<Sort id="WINDS-COLOR_146">
+<Sort id="WINDS-COLOR_LEYFINDING">
 <Description language="ENGLISH">"Leyfinding"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_VIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>88</Page>
 </Sort>
-<Sort id="WINDS-COLOR_149">
+<Sort id="WINDS-COLOR_NATURE_S_WHISPER">
 <Description language="ENGLISH">"Nature’s Whisper"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"Fellowship Bonus minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_VIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>88</Page>
 </Sort>
-<Sort id="WINDS-COLOR_150">
+<Sort id="WINDS-COLOR_PARANOTH_S_PATHWAY">
 <Description language="ENGLISH">"Paranoth’s Pathway"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"ATTR_WP minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_VIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>88</Page>
 </Sort>
-<Sort id="WINDS-COLOR_152">
+<Sort id="WINDS-COLOR_SPIRAL_STAIR">
 <Description language="ENGLISH">"Spiral Stair"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_VIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>89</Page>
 </Sort>
-<Sort id="WINDS-COLOR_153">
+<Sort id="WINDS-COLOR_VAUNTED_TRANSMOGRIFICATION_OF_COLCHIS">
 <Description language="ENGLISH">"Vaunted Transmogrification of Colchis"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (ATTR_WP yards)"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_VIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>89</Page>
 </Sort>
-<Sort id="WINDS-COLOR_154">
+<Sort id="WINDS-COLOR_VERDANT_APOTHEOSIS">
 <Description language="ENGLISH">"Verdant Apotheosis"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE ((BATTR_WP) yards)"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_VIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE"</Talent>
 <Level>"16"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>89</Page>
 </Sort>
-<Sort id="WINDS-COLOR_155">
+<Sort id="WINDS-COLOR_VITAL_GROWTH">
 <Description language="ENGLISH">"Vital Growth"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_VIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>89</Page>
 </Sort>
-<Sort id="WINDS-COLOR_156">
+<Sort id="WINDS-COLOR_WOOD_SHAPE">
 <Description language="ENGLISH">"Wood Shape"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_VIE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__VIE"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>89</Page>
 </Sort>
-<Sort id="WINDS-COLOR_157">
+<Sort id="WINDS-COLOR_AZURE_BLADES">
 <Description language="ENGLISH">"Azure Blades"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_CIEUX"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>98</Page>
 </Sort>
-<Sort id="WINDS-COLOR_160">
+<Sort id="WINDS-COLOR_CURSE_OF_FATE">
 <Description language="ENGLISH">"Curse of Fate"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"1 day"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_CIEUX"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>99</Page>
 </Sort>
-<Sort id="WINDS-COLOR_161">
+<Sort id="WINDS-COLOR_DIVINATION">
 <Description language="ENGLISH">"Divination"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_CIEUX"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>99</Page>
 </Sort>
-<Sort id="WINDS-COLOR_162">
+<Sort id="WINDS-COLOR_ENEMY_FORESEEN">
 <Description language="ENGLISH">"Enemy Foreseen"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_CIEUX"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>99</Page>
 </Sort>
-<Sort id="WINDS-COLOR_163">
+<Sort id="WINDS-COLOR_FANTASTIC_FORESIGHT">
 <Description language="ENGLISH">"Fantastic Foresight"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"1 round"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_CIEUX"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>99</Page>
 </Sort>
-<Sort id="WINDS-COLOR_165">
+<Sort id="WINDS-COLOR_FATE_ILLUMINATED">
 <Description language="ENGLISH">"Fate Illuminated"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_CIEUX"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>99</Page>
 </Sort>
-<Sort id="WINDS-COLOR_166">
+<Sort id="WINDS-COLOR_LENS_ON_THE_SKY">
 <Description language="ENGLISH">"Lens on the Sky"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"Initiative Bonus minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_CIEUX"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>100</Page>
 </Sort>
-<Sort id="WINDS-COLOR_167">
+<Sort id="WINDS-COLOR_LET_THE_FOUR_WINDS_BLOW">
 <Description language="ENGLISH">"Let the Four Winds Blow!"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"4 x AoE ((BATTR_WP) yards)"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_CIEUX"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>100</Page>
 </Sort>
-<Sort id="WINDS-COLOR_168">
+<Sort id="WINDS-COLOR_MISTRAL_FROM_THE_STRATOSPHERE">
 <Description language="ENGLISH">"Mistral From the Stratosphere"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE ((BATTR_WP) yards)"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_CIEUX"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>100</Page>
 </Sort>
-<Sort id="WINDS-COLOR_169">
+<Sort id="WINDS-COLOR_MYSTIC_MIRROR">
 <Description language="ENGLISH">"Mystic Mirror"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 (maximum)"</Target>
 <Duration>"Fellowship Bonus rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_CIEUX"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>100</Page>
 </Sort>
-<Sort id="WINDS-COLOR_170">
+<Sort id="WINDS-COLOR_POLISH_AND_GLEAN">
 <Description language="ENGLISH">"Polish and Glean"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 object"</Target>
 <Duration>"Initiative Bonus minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_CIEUX"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX"</Talent>
 <Level>"1"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>100</Page>
 </Sort>
-<Sort id="WINDS-COLOR_171">
+<Sort id="WINDS-COLOR_PROJECT_SPIRIT">
 <Description language="ENGLISH">"Project Spirit"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"Toughness Bonus hours"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_CIEUX"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>100</Page>
 </Sort>
-<Sort id="WINDS-COLOR_172">
+<Sort id="WINDS-COLOR_SAPPHIRE_ARCH">
 <Description language="ENGLISH">"Sapphire Arch"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"1 round"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_CIEUX"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>100</Page>
 </Sort>
-<Sort id="WINDS-COLOR_174">
+<Sort id="WINDS-COLOR_STARSHINE">
 <Description language="ENGLISH">"Starshine"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_CIEUX"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>101</Page>
 </Sort>
-<Sort id="WINDS-COLOR_175">
+<Sort id="WINDS-COLOR_STORM_OF_SHEMTEK">
 <Description language="ENGLISH">"Storm of Shemtek"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"2 x Initiative Bonus or Initiative Bonus"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_CIEUX"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX"</Talent>
 <Level>"11"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>101</Page>
 </Sort>
-<Sort id="WINDS-COLOR_180">
+<Sort id="WINDS-COLOR_THORSEN_S_THUNDERSTORM">
 <Description language="ENGLISH">"Thorsen’s Thunderstorm"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (2 x (BATTR_WP) yards)"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_CIEUX"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__CIEUX"</Talent>
 <Level>"11"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>101</Page>
 </Sort>
-<Sort id="WINDS-COLOR_181">
+<Sort id="WINDS-COLOR_BEWILDER">
 <Description language="ENGLISH">"Bewilder"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>110</Page>
 </Sort>
-<Sort id="WINDS-COLOR_182">
+<Sort id="WINDS-COLOR_BLACK_HORRORS">
 <Description language="ENGLISH">"Black Horrors"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE ((BATTR_WP) yards)"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>110</Page>
 </Sort>
-<Sort id="WINDS-COLOR_183">
+<Sort id="WINDS-COLOR_BRIDGE_OF_SHADOWS">
 <Description language="ENGLISH">"Bridge of Shadows"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE ((BATTR_WP) yards)"</Target>
 <Duration>"1 round"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>110</Page>
 </Sort>
-<Sort id="WINDS-COLOR_185">
+<Sort id="WINDS-COLOR_DANCE_OF_DESPAIR">
 <Description language="ENGLISH">"Dance of Despair"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"13"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>110</Page>
 </Sort>
-<Sort id="WINDS-COLOR_186">
+<Sort id="WINDS-COLOR_DEEP_POCKETS">
 <Description language="ENGLISH">"Deep Pockets"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>111</Page>
 </Sort>
-<Sort id="WINDS-COLOR_188">
+<Sort id="WINDS-COLOR_GRAND_ILLUSION">
 <Description language="ENGLISH">"Grand Illusion"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Initiative Bonus yards)"</Target>
 <Duration>"ATTR_WP minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"14"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>111</Page>
 </Sort>
-<Sort id="WINDS-COLOR_189">
+<Sort id="WINDS-COLOR_GREY_WINGS">
 <Description language="ENGLISH">"Grey Wings"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 (maximum)"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>111</Page>
 </Sort>
-<Sort id="WINDS-COLOR_190">
+<Sort id="WINDS-COLOR_HORN_OF_ANDAR">
 <Description language="ENGLISH">"Horn of Andar"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"ATTR_WP minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>111</Page>
 </Sort>
-<Sort id="WINDS-COLOR_191">
+<Sort id="WINDS-COLOR_HUSH">
 <Description language="ENGLISH">"Hush"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 with AoE ((BATTR_WP) yards)"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>111</Page>
 </Sort>
-<Sort id="WINDS-COLOR_194">
+<Sort id="WINDS-COLOR_MUTABLE_VISAGE">
 <Description language="ENGLISH">"Mutable Visage"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>112</Page>
 </Sort>
-<Sort id="WINDS-COLOR_196">
+<Sort id="WINDS-COLOR_PIT_OF_TARNUS">
 <Description language="ENGLISH">"Pit of Tarnus"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE ((BATTR_WP) yards)"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>112</Page>
 </Sort>
-<Sort id="WINDS-COLOR_197">
+<Sort id="WINDS-COLOR_RIBAULD_S_RETROACTIVE_ILLUSION">
 <Description language="ENGLISH">"Ribauld’s Retroactive Illusion"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"11"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>112</Page>
 </Sort>
-<Sort id="WINDS-COLOR_198">
+<Sort id="WINDS-COLOR_SHADOW_GROVE">
 <Description language="ENGLISH">"Shadow Grove"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (Initiative yards)"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>112</Page>
 </Sort>
-<Sort id="WINDS-COLOR_202">
+<Sort id="WINDS-COLOR_SUBSTANCE_OF_SHADOW">
 <Description language="ENGLISH">"Substance of Shadow"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Special"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>113</Page>
 </Sort>
-<Sort id="WINDS-COLOR_203">
+<Sort id="WINDS-COLOR_TRAITOR_OF_TARN">
 <Description language="ENGLISH">"Traitor of Tarn"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"ATTR_WP minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"12"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>113</Page>
 </Sort>
-<Sort id="WINDS-COLOR_204">
+<Sort id="WINDS-COLOR_WANDERING_SHADOW">
 <Description language="ENGLISH">"Wandering Shadow"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>113</Page>
 </Sort>
-<Sort id="WINDS-COLOR_205">
+<Sort id="WINDS-COLOR_ACCEPTANCE_OF_FATE">
 <Description language="ENGLISH">"Acceptance of Fate"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>122</Page>
 </Sort>
-<Sort id="WINDS-COLOR_206">
+<Sort id="WINDS-COLOR_AMARANTH">
 <Description language="ENGLISH">"Amaranth"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>122</Page>
 </Sort>
-<Sort id="WINDS-COLOR_207">
+<Sort id="WINDS-COLOR_ANIMUS_IMPRISONED">
 <Description language="ENGLISH">"Animus Imprisoned"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Special"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"12"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>122</Page>
 </Sort>
-<Sort id="WINDS-COLOR_208">
+<Sort id="WINDS-COLOR_ASHES_AND_DUST">
 <Description language="ENGLISH">"Ashes and Dust"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (2 x (BATTR_WP) yards)"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"9"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>122</Page>
 </Sort>
-<Sort id="WINDS-COLOR_210">
+<Sort id="WINDS-COLOR_COMPEL_SPIRITS">
 <Description language="ENGLISH">"Compel Spirits"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE ((BATTR_WP) yards)"</Target>
 <Duration>"Until sunrise"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>123</Page>
 </Sort>
-<Sort id="WINDS-COLOR_211">
+<Sort id="WINDS-COLOR_CRYSTAL_MAZE">
 <Description language="ENGLISH">"Crystal Maze"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE ((BATTR_WP) yards)"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"13"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>123</Page>
 </Sort>
-<Sort id="WINDS-COLOR_212">
+<Sort id="WINDS-COLOR_DEATH_S_RELEASE">
 <Description language="ENGLISH">"Death’s Release"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"3 rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>123</Page>
 </Sort>
-<Sort id="WINDS-COLOR_214">
+<Sort id="WINDS-COLOR_FATE_OF_BJUNA">
 <Description language="ENGLISH">"Fate of Bjuna"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE ((BATTR_WP) yards)"</Target>
 <Duration>"Fellowship Bonus rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>123</Page>
 </Sort>
-<Sort id="WINDS-COLOR_215">
+<Sort id="WINDS-COLOR_IYRTU_S_EMBRACE">
 <Description language="ENGLISH">"Iyrtu’s Embrace"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"1 round"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>124</Page>
 </Sort>
-<Sort id="WINDS-COLOR_216">
+<Sort id="WINDS-COLOR_LIMBWITHER">
 <Description language="ENGLISH">"Limbwither"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) minutes or days"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>124</Page>
 </Sort>
-<Sort id="WINDS-COLOR_220">
+<Sort id="WINDS-COLOR_SHYISH_UNCOVERED">
 <Description language="ENGLISH">"Shyish Uncovered"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"Initiative Bonus minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>124</Page>
 </Sort>
-<Sort id="WINDS-COLOR_222">
+<Sort id="WINDS-COLOR_SPEED_OF_LYKOS">
 <Description language="ENGLISH">"Speed of Lykos"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"1 round"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>124</Page>
 </Sort>
-<Sort id="WINDS-COLOR_225">
+<Sort id="WINDS-COLOR_TASTE_OF_DEATH">
 <Description language="ENGLISH">"Taste of Death"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 + AoE (Special)"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>125</Page>
 </Sort>
-<Sort id="WINDS-COLOR_226">
+<Sort id="WINDS-COLOR_TELEPATHY">
 <Description language="ENGLISH">"Telepathy"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"1"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>125</Page>
 </Sort>
-<Sort id="WINDS-COLOR_227">
+<Sort id="WINDS-COLOR_TIDE_OF_YEARS">
 <Description language="ENGLISH">"Tide of Years"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>125</Page>
 </Sort>
-<Sort id="WINDS-COLOR_228">
+<Sort id="WINDS-COLOR_WILD_KIN_OF_ZAND_OX">
 <Description language="ENGLISH">"Wild Kin of Zand ox"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>125</Page>
 </Sort>
-<Sort id="WINDS-COLOR_230">
+<Sort id="WINDS-COLOR_BODY_OF_FIRE">
 <Description language="ENGLISH">"Body of Fire"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"Toughness Bonus minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>134</Page>
 </Sort>
-<Sort id="WINDS-COLOR_231">
+<Sort id="WINDS-COLOR_BOILING_BLOOD">
 <Description language="ENGLISH">"Boiling Blood"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"1 round"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>134</Page>
 </Sort>
-<Sort id="WINDS-COLOR_232">
+<Sort id="WINDS-COLOR_BURNING_HEAD">
 <Description language="ENGLISH">"Burning Head"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>134</Page>
 </Sort>
-<Sort id="WINDS-COLOR_233">
+<Sort id="WINDS-COLOR_CAPTIVATING_FLAME">
 <Description language="ENGLISH">"Captivating Flame"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 fire"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>134</Page>
 </Sort>
-<Sort id="WINDS-COLOR_235">
+<Sort id="WINDS-COLOR_CHOLERIC">
 <Description language="ENGLISH">"Choleric"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) hours, days, or weeks"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>135</Page>
 </Sort>
-<Sort id="WINDS-COLOR_239">
+<Sort id="WINDS-COLOR_FLAMESTORM">
 <Description language="ENGLISH">"Flamestorm"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>135</Page>
 </Sort>
-<Sort id="WINDS-COLOR_241">
+<Sort id="WINDS-COLOR_FORGE_OF_TARNUS">
 <Description language="ENGLISH">"Forge of Tarnus"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 Forge"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>136</Page>
 </Sort>
-<Sort id="WINDS-COLOR_243">
+<Sort id="WINDS-COLOR_IGNITE">
 <Description language="ENGLISH">"Ignite"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>136</Page>
 </Sort>
-<Sort id="WINDS-COLOR_244">
+<Sort id="WINDS-COLOR_INEXTINGUISHABLE_FLAME">
 <Description language="ENGLISH">"Inextinguishable Flame"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 fire"</Target>
 <Duration>"(BATTR_WP) hours, days, weeks, or months"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>136</Page>
 </Sort>
-<Sort id="WINDS-COLOR_245">
+<Sort id="WINDS-COLOR_KINDLEFLAME">
 <Description language="ENGLISH">"Kindleflame"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE ((BATTR_WP) yards)"</Target>
 <Duration>"1 round"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>136</Page>
 </Sort>
-<Sort id="WINDS-COLOR_246">
+<Sort id="WINDS-COLOR_KINDRED_OF_THE_HEARTH">
 <Description language="ENGLISH">"Kindred of the Hearth"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Special"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>136</Page>
 </Sort>
-<Sort id="WINDS-COLOR_247">
+<Sort id="WINDS-COLOR_MAGMA_STORM">
 <Description language="ENGLISH">"Magma Storm"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (2 x (BATTR_WP) yards)"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"13"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>136</Page>
 </Sort>
-<Sort id="WINDS-COLOR_249">
+<Sort id="WINDS-COLOR_SANGUINE_SWORDS">
 <Description language="ENGLISH">"Sanguine Swords"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>137</Page>
 </Sort>
-<Sort id="WINDS-COLOR_250">
+<Sort id="WINDS-COLOR_TASTE_OF_FIRE">
 <Description language="ENGLISH">"Taste of Fire"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 pot, jug or flask"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>137</Page>
 </Sort>
-<Sort id="WINDS-COLOR_251">
+<Sort id="WINDS-COLOR_WITHERING_HEAT">
 <Description language="ENGLISH">"Withering Heat"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>137</Page>
 </Sort>
-<Sort id="WINDS-COLOR_252">
+<Sort id="WINDS-COLOR_YGETHMOR_S_FLAMING_BLIZZARD">
 <Description language="ENGLISH">"Ygethmor’s Flaming Blizzard"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (ATTR_WP yards)"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"12"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>137</Page>
 </Sort>
-<Sort id="WINDS-COLOR_254">
+<Sort id="WINDS-COLOR_AMBER_TRANCE">
 <Description language="ENGLISH">"Amber Trance"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>146</Page>
 </Sort>
-<Sort id="WINDS-COLOR_255">
+<Sort id="WINDS-COLOR_AWAKENING_OF_THE_WOOD">
 <Description language="ENGLISH">"Awakening of the Wood"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (ATTR_WP yards)"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>146</Page>
 </Sort>
-<Sort id="WINDS-COLOR_259">
+<Sort id="WINDS-COLOR_BEAST_UNBROKEN">
 <Description language="ENGLISH">"Beast Unbroken"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>147</Page>
 </Sort>
-<Sort id="WINDS-COLOR_260">
+<Sort id="WINDS-COLOR_CURSE_OF_ANRAHEIR">
 <Description language="ENGLISH">"Curse of Anraheir"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE ((BATTR_WP) yards)"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>147</Page>
 </Sort>
-<Sort id="WINDS-COLOR_261">
+<Sort id="WINDS-COLOR_EYES_OF_THE_PACK">
 <Description language="ENGLISH">"Eyes of the Pack"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"ATTR_WP minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"3"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>147</Page>
 </Sort>
-<Sort id="WINDS-COLOR_263">
+<Sort id="WINDS-COLOR_FOLLOW_SCENT">
 <Description language="ENGLISH">"Follow Scent"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"Initiative minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>148</Page>
 </Sort>
-<Sort id="WINDS-COLOR_265">
+<Sort id="WINDS-COLOR_HUNTER_S_MOONS">
 <Description language="ENGLISH">"Hunter’s Moons"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (ATTR_WP yards)"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>148</Page>
 </Sort>
-<Sort id="WINDS-COLOR_266">
+<Sort id="WINDS-COLOR_MERCIW_S_MONSTROUS_REGIMENT">
 <Description language="ENGLISH">"Merciw’s Monstrous Regiment"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE ((BATTR_WP) yards)"</Target>
 <Duration>"Strength Bonus rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"13"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>148</Page>
 </Sort>
-<Sort id="WINDS-COLOR_267">
+<Sort id="WINDS-COLOR_MUSK_SPRAY">
 <Description language="ENGLISH">"Musk Spray"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>148</Page>
 </Sort>
-<Sort id="WINDS-COLOR_268">
+<Sort id="WINDS-COLOR_QUICK_PASSAGE">
 <Description language="ENGLISH">"Quick Passage"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>148</Page>
 </Sort>
-<Sort id="WINDS-COLOR_269">
+<Sort id="WINDS-COLOR_SUMMON_MOUNT">
 <Description language="ENGLISH">"Summon Mount"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>148</Page>
 </Sort>
-<Sort id="WINDS-COLOR_271">
+<Sort id="WINDS-COLOR_THE_OX_STANDS">
 <Description language="ENGLISH">"The Ox Stands"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE (ATTR_WP yards)"</Target>
 <Duration>"(BATTR_WP) Rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"5"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>149</Page>
 </Sort>
-<Sort id="WINDS-COLOR_272">
+<Sort id="WINDS-COLOR_TRANSFORMATION_OF_KADON">
 <Description language="ENGLISH">"Transformation of Kadon"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You or 1 (maximum)"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"14"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>149</Page>
 </Sort>
-<Sort id="WINDS-COLOR_273">
+<Sort id="WINDS-COLOR_VENGEFUL_HOOD">
 <Description language="ENGLISH">"Vengeful Hood"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"2 x (BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"7"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>149</Page>
 </Sort>
-<Sort id="WINDS-COLOR_274">
+<Sort id="WINDS-COLOR_WINTER_COAT">
 <Description language="ENGLISH">"Winter Coat"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
 <Duration>"(BATTR_WP) hours"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>149</Page>
 </Sort>
-<Sort id="WINDS-COLOR_275">
+<Sort id="WINDS-COLOR_WRITHING_WORM">
 <Description language="ENGLISH">"Writhing Worm"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"(BATTR_WP) rounds"</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Domain Magic"</TypSpell>
 <Page>149</Page>
 </Sort>
-<Sort id="WINDS-ARCAN_31">
+<Sort id="WINDS-ARCAN_BELLIGERENCE_OF_THE_BLOODMARSH">
 <Description language="ENGLISH">"Belligerence of the Bloodmarsh"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Any 1 Fenbeast"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(BATTR_WP) yards"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>26</Page>
 </Sort>
-<Sort id="WINDS-ARCAN_24">
+<Sort id="WINDS-ARCAN_COLLAPSE_CONSTRUCT">
 <Description language="ENGLISH">"Collapse Construct"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Any 1 Construct"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(BATTR_WP) yards"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"6"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>26</Page>
 </Sort>
-<Sort id="WINDS-ARCAN_25">
+<Sort id="WINDS-ARCAN_DECIPHER_CURSE">
 <Description language="ENGLISH">"Decipher Curse"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Any item"</Target>
 <Duration>"Instant"</Duration>
 <Range>"ATTR_WP yards"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>26</Page>
 </Sort>
-<Sort id="WINDS-ARCAN_26">
+<Sort id="WINDS-ARCAN_DISRUPT_MAGIC">
 <Description language="ENGLISH">"Disrupt Magic"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
 <Duration>"Instant"</Duration>
 <Range>"ATTR_WP yards"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"8"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>26</Page>
 </Sort>
-<Sort id="WINDS-ARCAN_27">
+<Sort id="WINDS-ARCAN_FLY_INFESTED_ROTWEED">
 <Description language="ENGLISH">"Fly-Infested Rotweed"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Any 1 Fenbeast"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"(BATTR_WP) yards"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>26</Page>
 </Sort>
-<Sort id="WINDS-ARCAN_28">
+<Sort id="WINDS-ARCAN_LIFEBLOOM_SILT">
 <Description language="ENGLISH">"Lifebloom Silt"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"Any 1 Fenbeast"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"(BATTR_WP) yards"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>26</Page>
 </Sort>
-<Sort id="WINDS-ARCAN_29">
+<Sort id="WINDS-ARCAN_SILENCE">
 <Description language="ENGLISH">"Silence"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"AoE ((BATTR_WP) Yards)"</Target>
 <Duration>"(BATTR_WP) minutes"</Duration>
 <Range>"You"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"4"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>27</Page>
 </Sort>
-<Sort id="WINDS-ARCAN_30">
+<Sort id="WINDS-ARCAN_SUCCOUR_MAGICAL_SERVANT">
 <Description language="ENGLISH">"Succour Magical Servant"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"One of your Familiars"</Target>
 <Duration>"Instant"</Duration>
 <Range>"(BATTR_WP) yards"</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"2"</Level>
 <TypSpell>"Arcane Magic"</TypSpell>
 <Page>27</Page>
 </Sort>
-<Sort id="WINDS-RITUAL_01">
+<Sort id="WINDS-RITUAL_BIND_MONSTROUS_BEAST">
 <Description language="ENGLISH">"Bind Monstrous Beast"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>""</Target>
 <Duration>""</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"Equal to the Beast’s Wounds"</Level>
 <TypSpell>"Ritual"</TypSpell>
 <XpFixed>"400"</XpFixed>
 <Page>28</Page>
 </Sort>
-<Sort id="WINDS-RITUAL_02">
+<Sort id="WINDS-RITUAL_BIND_SPIRIT_WITHIN_POWER_STONE">
 <Description language="ENGLISH">"Bind Spirit Within Power Stone"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>""</Target>
 <Duration>""</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_BETE,RULES-T0088_MORT,RULES-T0088_FEU,RULES-T0088_CIEUX,RULES-T0088_METAL,RULES-T0088_VIE,RULES-T0088_LUMIERE,RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE,RULES-T_ARCANE_MAGIC__MORT,RULES-T_ARCANE_MAGIC__FEU,RULES-T_ARCANE_MAGIC__CIEUX,RULES-T_ARCANE_MAGIC__METAL,RULES-T_ARCANE_MAGIC__VIE,RULES-T_ARCANE_MAGIC__LUMIERE,RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"32"</Level>
 <TypSpell>"Ritual"</TypSpell>
 <XpFixed>"600"</XpFixed>
 <Page>28</Page>
 </Sort>
-<Sort id="WINDS-RITUAL_03">
+<Sort id="WINDS-RITUAL_CARVE_OGHAM_STONE">
 <Description language="ENGLISH">"Carve Ogham Stone"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>""</Target>
 <Duration>""</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"50"</Level>
 <TypSpell>"Ritual"</TypSpell>
 <XpFixed>"450"</XpFixed>
 <Page>28</Page>
 </Sort>
-<Sort id="WINDS-RITUAL_04">
+<Sort id="WINDS-RITUAL_CREATE_POWER_STONE">
 <Description language="ENGLISH">"Create Power Stone"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>""</Target>
 <Duration>""</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_BETE,RULES-T0088_MORT,RULES-T0088_FEU,RULES-T0088_CIEUX,RULES-T0088_METAL,RULES-T0088_VIE,RULES-T0088_LUMIERE,RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE,RULES-T_ARCANE_MAGIC__MORT,RULES-T_ARCANE_MAGIC__FEU,RULES-T_ARCANE_MAGIC__CIEUX,RULES-T_ARCANE_MAGIC__METAL,RULES-T_ARCANE_MAGIC__VIE,RULES-T_ARCANE_MAGIC__LUMIERE,RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"64"</Level>
 <TypSpell>"Ritual"</TypSpell>
 <XpFixed>"400"</XpFixed>
 <Page>28</Page>
 </Sort>
-<Sort id="WINDS-RITUAL_05">
+<Sort id="WINDS-RITUAL_CONJURATION_OF_THE_BLOODY_HIDESMAN">
 <Description language="ENGLISH">"Conjuration of the Bloody Hidesman"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>""</Target>
 <Duration>""</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_BETE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE"</Talent>
 <Level>"85"</Level>
 <TypSpell>"Ritual"</TypSpell>
 <XpFixed>"500"</XpFixed>
 <Page>29</Page>
 </Sort>
-<Sort id="WINDS-RITUAL_06">
+<Sort id="WINDS-RITUAL_CONJURATION_OF_THE_INCARNATE_ELEMENTAL_OF_DEATH">
 <Description language="ENGLISH">"Conjuration of the Incarnate Elemental of Death"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>""</Target>
 <Duration>""</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"90"</Level>
 <TypSpell>"Ritual"</TypSpell>
 <XpFixed>"500"</XpFixed>
 <Page>29</Page>
 </Sort>
-<Sort id="WINDS-RITUAL_07">
+<Sort id="WINDS-RITUAL_CONJURATION_OF_JACK_O_CINDERS">
 <Description language="ENGLISH">"Conjuration of Jack O’ Cinders"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>""</Target>
 <Duration>""</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_FEU"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__FEU"</Talent>
 <Level>"85"</Level>
 <TypSpell>"Ritual"</TypSpell>
 <XpFixed>"500"</XpFixed>
 <Page>30</Page>
 </Sort>
-<Sort id="WINDS-RITUAL_08">
+<Sort id="WINDS-RITUAL_CORRUPT_WAYSTONE">
 <Description language="ENGLISH">"Corrupt Waystone"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>""</Target>
 <Duration>""</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_MAGIE,RULES-T0088_SORCEL,RULES-T0088_DEMON,RULES-T0088_NECRO"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MAGIE,RULES-T_ARCANE_MAGIC__SORCEL,RULES-T_ARCANE_MAGIC__DEMON,RULES-T_ARCANE_MAGIC__NECRO"</Talent>
 <Level>"60"</Level>
 <TypSpell>"Ritual"</TypSpell>
 <XpFixed>"450"</XpFixed>
 <Page>30</Page>
 </Sort>
-<Sort id="WINDS-RITUAL_09">
+<Sort id="WINDS-RITUAL_CREATE_CONSTRUCT">
 <Description language="ENGLISH">"Create Construct"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>""</Target>
 <Duration>""</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"60"</Level>
 <TypSpell>"Ritual"</TypSpell>
 <XpFixed>"400"</XpFixed>
 <Page>30</Page>
 </Sort>
-<Sort id="WINDS-RITUAL_10">
+<Sort id="WINDS-RITUAL_CREATE_FAMILIAR">
 <Description language="ENGLISH">"Create Familiar"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>""</Target>
 <Duration>""</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"45"</Level>
 <TypSpell>"Ritual"</TypSpell>
 <XpFixed>"250"</XpFixed>
 <Page>31</Page>
 </Sort>
-<Sort id="WINDS-RITUAL_11">
+<Sort id="WINDS-RITUAL_CREATE_WAYSTONE_PROPERTY">
 <Description language="ENGLISH">"Create Waystone Property"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>""</Target>
 <Duration>""</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"40"</Level>
 <TypSpell>"Ritual"</TypSpell>
 <XpFixed>"300"</XpFixed>
 <Page>32</Page>
 </Sort>
-<Sort id="WINDS-RITUAL_12">
+<Sort id="WINDS-RITUAL_CURSECRAFT">
 <Description language="ENGLISH">"Cursecraft"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>""</Target>
 <Duration>""</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"50 (25)"</Level>
 <TypSpell>"Ritual"</TypSpell>
 <XpFixed>"200"</XpFixed>
 <Page>32</Page>
 </Sort>
-<Sort id="WINDS-RITUAL_13">
+<Sort id="WINDS-RITUAL_IMBUE_STAFF">
 <Description language="ENGLISH">"Imbue Staff"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>""</Target>
 <Duration>""</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_BETE,RULES-T0088_MORT,RULES-T0088_FEU,RULES-T0088_CIEUX,RULES-T0088_METAL,RULES-T0088_VIE,RULES-T0088_LUMIERE,RULES-T0088_OMBRE"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__BETE,RULES-T_ARCANE_MAGIC__MORT,RULES-T_ARCANE_MAGIC__FEU,RULES-T_ARCANE_MAGIC__CIEUX,RULES-T_ARCANE_MAGIC__METAL,RULES-T_ARCANE_MAGIC__VIE,RULES-T_ARCANE_MAGIC__LUMIERE,RULES-T_ARCANE_MAGIC__OMBRE"</Talent>
 <Level>"35"</Level>
 <TypSpell>"Ritual"</TypSpell>
 <XpFixed>"100"</XpFixed>
 <Page>32</Page>
 </Sort>
-<Sort id="WINDS-RITUAL_14">
+<Sort id="WINDS-RITUAL_INVOCATE_DAEMON">
 <Description language="ENGLISH">"Invocate Daemon"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>""</Target>
 <Duration>""</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_DEMON"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__DEMON"</Talent>
 <Level>"The Daemon’s Willpower"</Level>
 <TypSpell>"Ritual"</TypSpell>
 <XpFixed>"400"</XpFixed>
 <Page>32</Page>
 </Sort>
-<Sort id="WINDS-RITUAL_15">
+<Sort id="WINDS-RITUAL_MATERIALISE_THE_LIVING_SWAMP">
 <Description language="ENGLISH">"Materialise the Living Swamp"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>""</Target>
 <Duration>""</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_MORT,RULES-T0088_VIE,RULES-T0088_OMBRE,RULES-T0088_MAGIE,RULES-T0088_SORCEL"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT,RULES-T_ARCANE_MAGIC__VIE,RULES-T_ARCANE_MAGIC__OMBRE,RULES-T_ARCANE_MAGIC__MAGIE,RULES-T_ARCANE_MAGIC__SORCEL"</Talent>
 <Level>"40"</Level>
 <TypSpell>"Ritual"</TypSpell>
 <XpFixed>"400"</XpFixed>
 <Page>33</Page>
 </Sort>
-<Sort id="WINDS-RITUAL_16">
+<Sort id="WINDS-RITUAL_REMOVE_CURSE">
 <Description language="ENGLISH">"Remove Curse"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>""</Target>
 <Duration>""</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_*"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__*"</Talent>
 <Level>"40"</Level>
 <TypSpell>"Ritual"</TypSpell>
 <XpFixed>"200"</XpFixed>
 <Page>33</Page>
 </Sort>
-<Sort id="WINDS-RITUAL_17">
+<Sort id="WINDS-RITUAL_THE_CROSSED_SCYTHES">
 <Description language="ENGLISH">"The Crossed Scythes"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>""</Target>
 <Duration>""</Duration>
 <Range>""</Range>
-<Talent>"RULES-T0088_MORT"</Talent>
+<Talent>"RULES-T_ARCANE_MAGIC__MORT"</Talent>
 <Level>"Willpower of the entity"</Level>
 <TypSpell>"Ritual"</TypSpell>
 <XpFixed>"400"</XpFixed>
@@ -3384,40 +3385,40 @@
 </DATA_SPELL>
 <DATA_CAREER_SUBCHOICE>
 <Choice>
-<Career>"RULES-WORK02"</Career>
-<Alternative name="RULES-WORK02">"01-75"</Alternative>
+<Career>"RULES-WORK_APOTHECARY"</Career>
+<Alternative name="RULES-WORK_APOTHECARY">"01-75"</Alternative>
 </Choice>
 <Choice>
-<Career>"RULES-WORK02"</Career>
-<Alternative name="WINDS-WORK81">"76-100"</Alternative>
+<Career>"RULES-WORK_APOTHECARY"</Career>
+<Alternative name="WINDS-WORK_MUNDANE_ALCHEMIST">"76-100"</Alternative>
 </Choice>
 <Choice>
-<Career>"RULES-WORK58"</Career>
-<Alternative name="RULES-WORK58/WINDS-WORK84/WINDS-WORK85/WINDS-WORK86/WINDS-WORK87/WINDS-WORK88/WINDS-WORK89/WINDS-WORK90/WINDS-WORK91">"01-95"</Alternative>
+<Career>"RULES-WORK_WIZARD"</Career>
+<Alternative name="RULES-WORK_WIZARD/WINDS-WORK_HIEROPHANT/WINDS-WORK_ALCHEMIST/WINDS-WORK_DRUID/WINDS-WORK_ASTROMANCER/WINDS-WORK_SHADOWMANCER/WINDS-WORK_SPIRITER/WINDS-WORK_PYROMANCER/WINDS-WORK_SHAMAN">"01-95"</Alternative>
 </Choice>
 <Choice>
-<Career>"RULES-WORK58"</Career>
-<Alternative name="WINDS-WORK82">"96-100"</Alternative>
+<Career>"RULES-WORK_WIZARD"</Career>
+<Alternative name="WINDS-WORK_MAGISTER_VIGILANT">"96-100"</Alternative>
 </Choice>
 <Choice>
-<Career>"RULES-WORK41"</Career>
-<Alternative name="RULES-WORK41">"01-90"</Alternative>
+<Career>"RULES-WORK_MYSTIC"</Career>
+<Alternative name="RULES-WORK_MYSTIC">"01-90"</Alternative>
 </Choice>
 <Choice>
-<Career>"RULES-WORK41"</Career>
-<Alternative name="WINDS-WORK83">"91-100"</Alternative>
+<Career>"RULES-WORK_MYSTIC"</Career>
+<Alternative name="WINDS-WORK_SCRYER">"91-100"</Alternative>
 </Choice>
 <Choice>
-<Career>"RULES-WORK27"</Career>
-<Alternative name="RULES-WORK27">"01-75"</Alternative>
+<Career>"RULES-WORK_GUARD"</Career>
+<Alternative name="RULES-WORK_GUARD">"01-75"</Alternative>
 </Choice>
 <Choice>
-<Career>"RULES-WORK27"</Career>
-<Alternative name="WINDS-WORK80">"76-100"</Alternative>
+<Career>"RULES-WORK_GUARD"</Career>
+<Alternative name="WINDS-WORK_BEADLE">"76-100"</Alternative>
 </Choice>
 </DATA_CAREER_SUBCHOICE>
 <DATA_TRAPPING>
-<Trapping id="WINDS-TRAP_001">
+<Trapping id="WINDS-TRAP_PRACTICAL_ROBES">
 <Description language="ENGLISH">"Practical Robes"</Description>
 <Theme>"RULES-LAB_313"</Theme>
 <Availability>"RULES-DISPO_RARE"</Availability>
@@ -3426,7 +3427,7 @@
 <InherentCraftsmanship>"WINDS-ROBE_01 1"</InherentCraftsmanship>
 <Page>151</Page>
 </Trapping>
-<Trapping id="WINDS-TRAP_002">
+<Trapping id="WINDS-TRAP_STANDARD_ROBES">
 <Description language="ENGLISH">"Standard Robes"</Description>
 <Theme>"RULES-LAB_313"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -3435,7 +3436,7 @@
 <InherentCraftsmanship>"WINDS-ROBE_02 1"</InherentCraftsmanship>
 <Page>151</Page>
 </Trapping>
-<Trapping id="WINDS-TRAP_003">
+<Trapping id="WINDS-TRAP_ELABORATE_ROBES">
 <Description language="ENGLISH">"Elaborate Robes"</Description>
 <Theme>"RULES-LAB_313"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -3444,7 +3445,7 @@
 <InherentCraftsmanship>"WINDS-ROBE_03 1"</InherentCraftsmanship>
 <Page>151</Page>
 </Trapping>
-<Trapping id="WINDS-TRAP_004">
+<Trapping id="WINDS-TRAP_ENCHANTED_STAFF">
 <Description language="ENGLISH">"Enchanted Staff"</Description>
 <Theme>"RULES-LAB_313"</Theme>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
@@ -3461,7 +3462,7 @@
 <Short language="ENGLISH">"+1 SL to Channelling Tests"</Short>
 <Max>"1"</Max>
 <Applies>Misc</Applies>
-<ModifyTestSL name="RULES-COMPFOCAL_*">1</ModifyTestSL>
+<ModifyTestSL name="RULES-COMP_CHANNELLING__*">1</ModifyTestSL>
 <Modifier>""</Modifier>
 <Page>151</Page>
 </Craftsmanship>
@@ -3471,7 +3472,7 @@
 <Short language="ENGLISH">"+2 SL to Channelling Tests"</Short>
 <Max>"1"</Max>
 <Applies>Misc</Applies>
-<ModifyTestSL name="RULES-COMPFOCAL_*">2</ModifyTestSL>
+<ModifyTestSL name="RULES-COMP_CHANNELLING__*">2</ModifyTestSL>
 <Modifier>""</Modifier>
 <Page>151</Page>
 </Craftsmanship>
@@ -3481,7 +3482,7 @@
 <Short language="ENGLISH">"+3 SL to Channelling Tests"</Short>
 <Max>"1"</Max>
 <Applies>Misc</Applies>
-<ModifyTestSL name="RULES-COMPFOCAL_*">3</ModifyTestSL>
+<ModifyTestSL name="RULES-COMP_CHANNELLING__*">3</ModifyTestSL>
 <Modifier>""</Modifier>
 <Page>151</Page>
 </Craftsmanship>

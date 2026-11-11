@@ -11,7 +11,7 @@ unit WinObjetPropre;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Dialogs, DOM, XMLRead, XMLWrite, BCButton,
+  Classes, SysUtils, Forms, Controls, Dialogs, MessageTest, DOM, XMLRead, XMLWrite, BCButton,
   ChargeArmeBonus, ChargeArmureBonus, PanelFiche, PanelModificateurs, PanelQualites, ChargeConstantes, ChargeTexte, ChargeCompetence, GlobalFonts;
 
 // Ouvre la fiche. Balise = Trapping, Weapon, Armor ou BonusMalus (qualite). Fragment = contenu de
@@ -188,8 +188,14 @@ begin
   Radical := Parent;
   P := Pos('-', Radical);
   if P > 0 then Radical := Copy(Radical, P + 1, Length(Radical));
-  P := Pos('_', Radical);
-  if P > 0 then Radical := Copy(Radical, 1, P - 1);
+  // un nom de talent contient des '_' (RULES-T_BLESS_* -> T_BLESS) : on retire le '_*' final de la generique
+  if (Length(Radical) > 2) and (Copy(Radical, Length(Radical) - 1, 2) = '_*') then
+    Radical := Copy(Radical, 1, Length(Radical) - 2)
+  else
+    begin
+      P := Pos('_', Radical);
+      if P > 0 then Radical := Copy(Radical, 1, P - 1);
+    end;
   Result := CodeSuivant(Fragment, 'PERSO-' + Radical + '_');
   if EstTalent then Balise := 'Talent' else Balise := 'Skill';
   Echappe := StringReplace(Trim(Nom), '&', '&amp;', [rfReplaceAll]);
@@ -579,8 +585,7 @@ begin
           begin
             // les groupes (Melee (Basic)...) sont des specialisations : pas de filtre SousCompetence
             Code := ListCompetence[I].CodeCompetence;
-            P := Pos('-COMP', Code);
-            if (P = 0) or ((Pos('COMB_', Code) <= P) and (Pos('PROJ_', Code) <= P)) then Continue;
+            if (Pos('-COMP_MELEE__', Code) = 0) and (Pos('-COMP_RANGED__', Code) = 0) then Continue;
             if (Copy(Code, Length(Code), 1) = '*') or (Pos('/', Code) > 0) then Continue;
             Tri.Add(ListCompetence[I].Libelle + #1 + Code);
           end;

@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"DWRL"</CODE_BOOK>
+<BOOK>"BOOK DWARF RELIGION"</BOOK>
+<BOOKNAME>"LOST IN TRANSLATION - GOING UNDERGROUND SERVANTS OF THE ANCESTORS - WFRP2"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"The Lost in Translation (LiT) series is intended to be a completely unofficial addition to Warhammer Fantasy RolePlay owned by Games Workshop (GW). All relevant trademarks and copyrights are used without permission and in no way meant to challenge ownership to them by"</DISCLAIMER>
+<DATA_TALENT>
+<Talent id="DWRL-T_FURY_OF_THE_ANCESTOR_GODS">
+<Description language="ENGLISH">"Fury of the Ancestor Gods"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"15"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="RULES-T_DIVINE_LORE__GRUNGNI">
+<Description language="ENGLISH">"Divine Lore (Grungni)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"15"</Page>
+</Talent>
+<Talent id="RULES-T_DIVINE_LORE__GAZUL">
+<Description language="ENGLISH">"Divine Lore (Gazul)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"15"</Page>
+</Talent>
+<Talent id="RULES-T_DIVINE_LORE__GRIMNIR">
+<Description language="ENGLISH">"Divine Lore (Grimnir)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"15"</Page>
+</Talent>
+<Talent id="RULES-T_DIVINE_LORE__MORGRIM">
+<Description language="ENGLISH">"Divine Lore (Morgrim)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"15"</Page>
+</Talent>
+<Talent id="RULES-T_DIVINE_LORE__SMEDNIR">
+<Description language="ENGLISH">"Divine Lore (Smednir)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"15"</Page>
+</Talent>
+<Talent id="RULES-T_DIVINE_LORE__VALAYA">
+<Description language="ENGLISH">"Divine Lore (Valaya)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+<Page>"15"</Page>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+<DATA_SPELL_V2>
+<SpellV2 id="DWRL-SPEL_OBSCURE_PATH">
+<Description language="ENGLISH">"Obscure Path"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grungni"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A piece of pumice (+1)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_SPHERE_OF_STONE">
+<Description language="ENGLISH">"Sphere of Stone"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grungni"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Handful of pebbles (+1)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_ONE_WITH_THE_STONE">
+<Description language="ENGLISH">"One with the Stone"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grungni"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Fistful of stone dust (+1)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_LOCATE_ORE">
+<Description language="ENGLISH">"Locate Ore"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grungni"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"One minute"</CastingTime>
+<Ingredient>"Piece of lodestone (+1)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_SHAPE_STONE">
+<Description language="ENGLISH">"Shape Stone"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grungni"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Two Full Actions"</CastingTime>
+<Ingredient>"Piece of clay (+1)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_ERECT_STONE_TOWER">
+<Description language="ENGLISH">"Erect Stone Tower"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grungni"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Three Full Actions"</CastingTime>
+<Ingredient>"Two stones (+1)"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_PRESERVE_THE_DEAD">
+<Description language="ENGLISH">"Preserve the Dead"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Gazul"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"Three small stones (+1)"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_SEVER_NECROMANTIC_BONDS">
+<Description language="ENGLISH">"Sever Necromantic Bonds"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Gazul"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Small knife (+1)"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_DISMISS_SPIRIT">
+<Description language="ENGLISH">"Dismiss Spirit"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Gazul"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Three feathers (+1)"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_GHOSTBANE_WEAPON">
+<Description language="ENGLISH">"Ghostbane Weapon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Gazul"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A silk veil (+2)"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_RETRIBUTION">
+<Description language="ENGLISH">"Retribution"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Gazul"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A vial of water blessed by a priest (+1)"</Ingredient>
+<Page>"17"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_GAZUL_S_PROTECTION">
+<Description language="ENGLISH">"Gazul's Protection"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Gazul"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"1 hour"</CastingTime>
+<Ingredient>"A piece of granite (+1)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_REDUCE_FEAR">
+<Description language="ENGLISH">"Reduce Fear"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grimnir"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Wood or metal token with Grimnir's rune inscribed upon it (+1)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_ENHANCE_STRENGTH">
+<Description language="ENGLISH">"Enhance Strength"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grimnir"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A lead ingot (+1)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_GRIMNIR_S_BLESSING">
+<Description language="ENGLISH">"Grimnir's Blessing"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grimnir"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Small wooden axe (+1)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_FRENZIED_ATTACK">
+<Description language="ENGLISH">"Frenzied Attack"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grimnir"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A piece of lodestone (+2)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_CAUSE_TERROR">
+<Description language="ENGLISH">"Cause Terror"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grimnir"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A piece of sulphur (+2)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_IMMUNITY_TO_TERROR">
+<Description language="ENGLISH">"Immunity to Terror"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Grimnir"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Three one-inch diameter iron discs (+2)"</Ingredient>
+<Page>"18"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_EXTEND_RANGE">
+<Description language="ENGLISH">"Extend Range"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morgrim"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A one-inch diameter metallic disk (+1)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_IMPROVE_ACCURACY">
+<Description language="ENGLISH">"Improve Accuracy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morgrim"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"An arrow head (+1)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_STRENGTHEN_MISSILE">
+<Description language="ENGLISH">"Strengthen Missile"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morgrim"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pinch of iron shavings (+1)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_MARKSMAN">
+<Description language="ENGLISH">"Marksman"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morgrim"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small one-inch long lodestone (+1)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_DOUBLE_RANGE">
+<Description language="ENGLISH">"Double Range"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morgrim"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A two-inch diameter metallic disk (+1)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_SEEK_TARGET">
+<Description language="ENGLISH">"Seek Target"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Morgrim"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Three full actions"</CastingTime>
+<Ingredient>"A three-inch long piece of lodestone (+2)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_SET_AFLAME">
+<Description language="ENGLISH">"Set Aflame"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Smednir"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pinch of sulphur (+1)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_STRENGTHEN_ARM">
+<Description language="ENGLISH">"Strengthen Arm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Smednir"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"An iron shaving (+1)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_HEAT_METAL">
+<Description language="ENGLISH">"Heat Metal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Smednir"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pinch of ash (+1)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_REPAIR_METAL">
+<Description language="ENGLISH">"Repair Metal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Smednir"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A piece of iron (+1)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_SHARPEN_EDGE">
+<Description language="ENGLISH">"Sharpen Edge"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Smednir"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Whetstone (+1)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_IMMUNITY_TO_FIRE">
+<Description language="ENGLISH">"Immunity to Fire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Smednir"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A shard of obsidian (+2)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_EXTRACT_POISON">
+<Description language="ENGLISH">"Extract Poison"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Valaya"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Crushed garnet (+1)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_VALAYA_S_TOUCH">
+<Description language="ENGLISH">"Valaya's Touch"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Valaya"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A spider's web (+1)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_RESTORE_HEALTH">
+<Description language="ENGLISH">"Restore Health"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Valaya"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A drop of ale (+1)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_PROTECT_HEARTH_AND_HOME">
+<Description language="ENGLISH">"Protect Hearth and Home"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Valaya"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A sheaf of barley (+1)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_REINVIGORATE_FOOD_AND_DRINK">
+<Description language="ENGLISH">"Reinvigorate Food and Drink"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Valaya"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Three full actions"</CastingTime>
+<Ingredient>"Three drops of blessed ale (+1)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="DWRL-SPEL_RESTORE_SANITY">
+<Description language="ENGLISH">"Restore Sanity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Valaya"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"30 minutes"</CastingTime>
+<Ingredient>"A pint of blessed ale (+1)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SPELL_TALENT>
+<Sort id="DWRL-SPEL_OBSCURE_PATH">
+<Talent>"RULES-T_DIVINE_LORE__GRUNGNI"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_SPHERE_OF_STONE">
+<Talent>"RULES-T_DIVINE_LORE__GRUNGNI"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_ONE_WITH_THE_STONE">
+<Talent>"RULES-T_DIVINE_LORE__GRUNGNI"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_LOCATE_ORE">
+<Talent>"RULES-T_DIVINE_LORE__GRUNGNI"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_SHAPE_STONE">
+<Talent>"RULES-T_DIVINE_LORE__GRUNGNI"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_ERECT_STONE_TOWER">
+<Talent>"RULES-T_DIVINE_LORE__GRUNGNI"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_PRESERVE_THE_DEAD">
+<Talent>"RULES-T_DIVINE_LORE__GAZUL"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_SEVER_NECROMANTIC_BONDS">
+<Talent>"RULES-T_DIVINE_LORE__GAZUL"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_DISMISS_SPIRIT">
+<Talent>"RULES-T_DIVINE_LORE__GAZUL"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_GHOSTBANE_WEAPON">
+<Talent>"RULES-T_DIVINE_LORE__GAZUL"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_RETRIBUTION">
+<Talent>"RULES-T_DIVINE_LORE__GAZUL"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_GAZUL_S_PROTECTION">
+<Talent>"RULES-T_DIVINE_LORE__GAZUL"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_REDUCE_FEAR">
+<Talent>"RULES-T_DIVINE_LORE__GRIMNIR"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_ENHANCE_STRENGTH">
+<Talent>"RULES-T_DIVINE_LORE__GRIMNIR"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_GRIMNIR_S_BLESSING">
+<Talent>"RULES-T_DIVINE_LORE__GRIMNIR"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_FRENZIED_ATTACK">
+<Talent>"RULES-T_DIVINE_LORE__GRIMNIR"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_CAUSE_TERROR">
+<Talent>"RULES-T_DIVINE_LORE__GRIMNIR"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_IMMUNITY_TO_TERROR">
+<Talent>"RULES-T_DIVINE_LORE__GRIMNIR"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_EXTEND_RANGE">
+<Talent>"RULES-T_DIVINE_LORE__MORGRIM"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_IMPROVE_ACCURACY">
+<Talent>"RULES-T_DIVINE_LORE__MORGRIM"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_STRENGTHEN_MISSILE">
+<Talent>"RULES-T_DIVINE_LORE__MORGRIM"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_MARKSMAN">
+<Talent>"RULES-T_DIVINE_LORE__MORGRIM"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_DOUBLE_RANGE">
+<Talent>"RULES-T_DIVINE_LORE__MORGRIM"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_SEEK_TARGET">
+<Talent>"RULES-T_DIVINE_LORE__MORGRIM"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_SET_AFLAME">
+<Talent>"RULES-T_DIVINE_LORE__SMEDNIR"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_STRENGTHEN_ARM">
+<Talent>"RULES-T_DIVINE_LORE__SMEDNIR"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_HEAT_METAL">
+<Talent>"RULES-T_DIVINE_LORE__SMEDNIR"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_REPAIR_METAL">
+<Talent>"RULES-T_DIVINE_LORE__SMEDNIR"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_SHARPEN_EDGE">
+<Talent>"RULES-T_DIVINE_LORE__SMEDNIR"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_IMMUNITY_TO_FIRE">
+<Talent>"RULES-T_DIVINE_LORE__SMEDNIR"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_EXTRACT_POISON">
+<Talent>"RULES-T_DIVINE_LORE__VALAYA"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_VALAYA_S_TOUCH">
+<Talent>"RULES-T_DIVINE_LORE__VALAYA"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_RESTORE_HEALTH">
+<Talent>"RULES-T_DIVINE_LORE__VALAYA"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_PROTECT_HEARTH_AND_HOME">
+<Talent>"RULES-T_DIVINE_LORE__VALAYA"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_REINVIGORATE_FOOD_AND_DRINK">
+<Talent>"RULES-T_DIVINE_LORE__VALAYA"</Talent>
+</Sort>
+<Sort id="DWRL-SPEL_RESTORE_SANITY">
+<Talent>"RULES-T_DIVINE_LORE__VALAYA"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_RUNE_OF_LIGHT">
+<Description language="ENGLISH">"Rune of Light"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"22"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_SPECIAL"</RuneType>
+<InscriptionNumber>"6"</InscriptionNumber>
+<Empowerment>"3"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>""</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_RUNE_OF_ENCHANTMENT">
+<Description language="ENGLISH">"Rune of Enchantment"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"22"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_WEAPON"</RuneType>
+<InscriptionNumber>"6"</InscriptionNumber>
+<Empowerment>"3"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"Same as permanent, but only lasts 1D10 rounds."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_RUNE_OF_PRESERVATION">
+<Description language="ENGLISH">"Rune of Preservation"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"22"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_SPECIAL"</RuneType>
+<InscriptionNumber>"6"</InscriptionNumber>
+<Empowerment>"3"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"Rarely used, as the temporary rune only lasts until dawn of the following day."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_RUNE_OF_WARNING">
+<Description language="ENGLISH">"Rune of Warning"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"22"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_TALISMANIC"</RuneType>
+<InscriptionNumber>"7"</InscriptionNumber>
+<Empowerment>"3"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"As permanent, but it only provides one warning."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_RUNE_OF_WATER">
+<Description language="ENGLISH">"Rune of Water"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"22"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_SPECIAL"</RuneType>
+<InscriptionNumber>"7"</InscriptionNumber>
+<Empowerment>"3"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>""</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_RUNE_OF_ENEMY_DETECTION">
+<Description language="ENGLISH">"Rune of Enemy Detection"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"22"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_TALISMANIC"</RuneType>
+<InscriptionNumber>"8"</InscriptionNumber>
+<Empowerment>"3"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"The temporary rune fades after it first detects an enemy."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_RUNE_OF_FARSEEING">
+<Description language="ENGLISH">"Rune of Farseeing"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"23"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_SPECIAL"</RuneType>
+<InscriptionNumber>"8"</InscriptionNumber>
+<Empowerment>"4"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"Like permanent, but it only lasts until dawn of the following day."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_RUNE_OF_RESTORATION">
+<Description language="ENGLISH">"Rune of Restoration"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"23"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_TALISMANIC"</RuneType>
+<InscriptionNumber>"8"</InscriptionNumber>
+<Empowerment>"3"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"The rune can be painted on the skin of an injured Dwarf, restoring 1D10 W."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_RUNE_OF_SIGNALLING">
+<Description language="ENGLISH">"Rune of Signalling"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"23"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_SPECIAL"</RuneType>
+<InscriptionNumber>"8"</InscriptionNumber>
+<Empowerment>"4"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"The temporary rune remains active until dawn of the following day."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_RUNE_OF_ALARM">
+<Description language="ENGLISH">"Rune of Alarm"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"23"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_TALISMANIC"</RuneType>
+<InscriptionNumber>"10"</InscriptionNumber>
+<Empowerment>"4"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"As permanent, but will only set off an alarm once."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_RUNE_OF_SLOWNESS">
+<Description language="ENGLISH">"Rune of Slowness"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"23"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_TALISMANIC"</RuneType>
+<InscriptionNumber>"10"</InscriptionNumber>
+<Empowerment>"4"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"Same as permanent, but only lasts 1D10+2 rounds."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_RUNE_OF_WARMTH">
+<Description language="ENGLISH">"Rune of Warmth"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"23"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_TALISMANIC"</RuneType>
+<InscriptionNumber>"10"</InscriptionNumber>
+<Empowerment>"4"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"The temporary version can only be used once."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_RUNE_OF_COMMUNICATION">
+<Description language="ENGLISH">"Rune of Communication"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"24"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_TALISMANIC"</RuneType>
+<InscriptionNumber>"12"</InscriptionNumber>
+<Empowerment>"4"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"As permanent, but it only lasts until dawn of the following day."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_RUNE_OF_OPENING">
+<Description language="ENGLISH">"Rune of Opening"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"24"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_TALISMANIC"</RuneType>
+<InscriptionNumber>"12"</InscriptionNumber>
+<Empowerment>"4"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"-"</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_RUNE_OF_PURIFICATION">
+<Description language="ENGLISH">"Rune of Purification"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"24"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_SPECIAL"</RuneType>
+<InscriptionNumber>"12"</InscriptionNumber>
+<Empowerment>"5"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>""</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_RUNE_OF_HEALING">
+<Description language="ENGLISH">"Rune of Healing"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"24"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_TALISMANIC"</RuneType>
+<InscriptionNumber>"14"</InscriptionNumber>
+<Empowerment>"5"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"As permanent, but lasts 1D10 minutes."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_RUNE_OF_LOCKING">
+<Description language="ENGLISH">"Rune of Locking"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"24"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_TALISMANIC"</RuneType>
+<InscriptionNumber>"14"</InscriptionNumber>
+<Empowerment>"4"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"As permanent, but only lasts until the next full moon of Mannslieb."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_RUNE_OF_SILENCE">
+<Description language="ENGLISH">"Rune of Silence"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"24-25"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_TALISMANIC"</RuneType>
+<InscriptionNumber>"14"</InscriptionNumber>
+<Empowerment>"5"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"The rune can only be used once for a duration of 1D10 minutes."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_RUNE_OF_PASSAGE">
+<Description language="ENGLISH">"Rune of Passage"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"25"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_TALISMANIC"</RuneType>
+<InscriptionNumber>"16"</InscriptionNumber>
+<Empowerment>"5"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"As permanent, but can only be used once."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_RUNE_OF_VERMINKILL">
+<Description language="ENGLISH">"Rune of Verminkill"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"25"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_SPECIAL"</RuneType>
+<InscriptionNumber>"16"</InscriptionNumber>
+<Empowerment>"5"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"Same as permanent, but remains active until dawn of the following day."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_MASTER_RUNE_OF_GRIMNIR">
+<Description language="ENGLISH">"Master Rune of Grimnir"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"25"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE"</RuneType>
+<InscriptionNumber>"22"</InscriptionNumber>
+<Empowerment>"8"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"As permanent, but can only be used once."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_MASTER_RUNE_OF_GRUNGNI">
+<Description language="ENGLISH">"Master Rune of Grungni"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"25"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE"</RuneType>
+<InscriptionNumber>"22"</InscriptionNumber>
+<Empowerment>"8"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"As permanent, but can only be used once."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_MASTER_RUNE_OF_GAZUL">
+<Description language="ENGLISH">"Master Rune of Gazul"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"25-26"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_WEAPON"</RuneType>
+<InscriptionNumber>"22"</InscriptionNumber>
+<Empowerment>"8"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"As permanent, but can only be used once."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_MASTER_RUNE_OF_MORGRIM">
+<Description language="ENGLISH">"Master Rune of Morgrim"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"26"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE"</RuneType>
+<InscriptionNumber>"16"</InscriptionNumber>
+<Empowerment>"8"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"As permanent, but can only be used once."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_MASTER_RUNE_OF_SMEDNIR">
+<Description language="ENGLISH">"Master Rune of Smednir"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"26"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE"</RuneType>
+<InscriptionNumber>"16"</InscriptionNumber>
+<Empowerment>"8"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"As permanent, but can only be used once."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_MASTER_RUNE_OF_THUNGNI">
+<Description language="ENGLISH">"Master Rune of Thungni"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"26"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE"</RuneType>
+<InscriptionNumber>"18"</InscriptionNumber>
+<Empowerment>"8"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"As permanent, but can only be used once."</TemporaryEffect>
+</EquipmentV2>
+<EquipmentV2 id="DWRL-EQUI_RUNES_MASTER_RUNE_OF_VALAYA">
+<Description language="ENGLISH">"Master Rune of Valaya"</Description>
+<Category>"RULES-EQCAT2_RUNES"</Category>
+<SubCategory>"RULES-EQCAT2_DIVINE_RUNES"</SubCategory>
+<Page>"26"</Page>
+<RuneType>"RULES-V2RUNE_DIVINE_TALISMANIC"</RuneType>
+<InscriptionNumber>"22"</InscriptionNumber>
+<Empowerment>"8"</Empowerment>
+<PermanentEffect>""</PermanentEffect>
+<TemporaryEffect>"As permanent, but can only be used once."</TemporaryEffect>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+</DATA_BOOK>

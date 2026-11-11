@@ -1,0 +1,1142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"OWB"</CODE_BOOK>
+<BOOK>"BOOK OLD WORLD BESTIARY"</BOOK>
+<BOOKNAME>"OLD WORLD BESTIARY"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"1"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_TALENT>
+<Talent id="OWB-T_ETHEREAL">
+<Description language="ENGLISH">"Ethereal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"77"</Page>
+</Talent>
+<Talent id="OWB-T_UNSTOPPABLE_BLOWS">
+<Description language="ENGLISH">"Unstoppable Blows"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"78"</Page>
+</Talent>
+<Talent id="OWB-T_WILL_OF_IRON">
+<Description language="ENGLISH">"Will of Iron"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"78"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_SPELL_V2>
+<SpellV2 id="OWB-SPEL_SPIRIT_STAFF">
+<Description language="ENGLISH">"Spirit Staff"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Spirits"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A drop of blood (+1)"</Ingredient>
+<Page>"81"</Page>
+</SpellV2>
+<SpellV2 id="OWB-SPEL_FIRE_OF_VENGEANCE">
+<Description language="ENGLISH">"Fire of Vengeance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Spirits"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"2 copper coins (+1)"</Ingredient>
+<Page>"81"</Page>
+</SpellV2>
+<SpellV2 id="OWB-SPEL_SPIRITS_VOICE">
+<Description language="ENGLISH">"Spirits’ Voice"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Spirits"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A charm with your tribe’s symbol (+1)"</Ingredient>
+<Page>"81"</Page>
+</SpellV2>
+<SpellV2 id="OWB-SPEL_DEFEAT_DISEASE_SPIRIT">
+<Description language="ENGLISH">"Defeat Disease Spirit"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Spirits"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A cupful of freshly melted snow (+2)"</Ingredient>
+<Page>"81"</Page>
+</SpellV2>
+<SpellV2 id="OWB-SPEL_MESSAGE_OF_DOOM">
+<Description language="ENGLISH">"Message of Doom"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Spirits"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A crude doll of the target (+2)"</Ingredient>
+<Page>"81"</Page>
+</SpellV2>
+<SpellV2 id="OWB-SPEL_SPIRIT_SHIELD">
+<Description language="ENGLISH">"Spirit Shield"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Spirits"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"The tusk of a Wild Boar (+2)"</Ingredient>
+<Page>"81"</Page>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SPELL_TALENT>
+<Sort id="OWB-SPEL_SPIRIT_STAFF">
+<Talent>"RULES-T_DIVINE_LORE__SPIRITS"</Talent>
+</Sort>
+<Sort id="OWB-SPEL_FIRE_OF_VENGEANCE">
+<Talent>"RULES-T_DIVINE_LORE__SPIRITS"</Talent>
+</Sort>
+<Sort id="OWB-SPEL_SPIRITS_VOICE">
+<Talent>"RULES-T_DIVINE_LORE__SPIRITS"</Talent>
+</Sort>
+<Sort id="OWB-SPEL_DEFEAT_DISEASE_SPIRIT">
+<Talent>"RULES-T_DIVINE_LORE__SPIRITS"</Talent>
+</Sort>
+<Sort id="OWB-SPEL_MESSAGE_OF_DOOM">
+<Talent>"RULES-T_DIVINE_LORE__SPIRITS"</Talent>
+</Sort>
+<Sort id="OWB-SPEL_SPIRIT_SHIELD">
+<Talent>"RULES-T_DIVINE_LORE__SPIRITS"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+<DATA_CAREER>
+<Career id="OWB-CARE_APPRENTICE_SHAMAN">
+<Description language="ENGLISH">"Apprentice Shaman"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, T +5%, Ag +5%, Int +10%, WP +10%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +2, Mag +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_Mag">"1"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Theology), Channelling, Charm, Common Knowledge (any one), Gossip, Heal, Magical Sense, Perception, Performer (Dancer, Singer), Ride, Speak Arcane Language (Magick or Daemonic), Speak Language (any one)"</Skills>
+<Talents>"Petty Magic (Hedge), Public Speaking, Strike to Injure or Strike to Stun"</Talents>
+<Trappings>"Kettle, Instrument"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Kettle">"1"</Item>
+<Item name="Instrument">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_DANCER/RULES-COMP_PERFORMER_SINGER">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK/RULES-COMP_SPEAK_ARCANE_LANGUAGE_DAEMONIC">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_PETTY_MAGIC__HEDGE">"1"</Talent>
+<Talent name="RULES-T_PUBLIC_SPEAKING">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE/RULES-T_STRIKE_TO_STUN">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"OWB 80"</Source>
+</Career>
+<Career id="OWB-CARE_SHAMAN">
+<Description language="ENGLISH">"Shaman"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, S +5%, T +10%, Ag +10%, Int +15%, WP +20%, Fel +15%"</MainProfile>
+<SecondaryProfile>"W +4, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (any one), Academic Knowledge (Theology), Channelling, Charm, Common Knowledge (any two), Gossip, Heal, Intimidate, Magical Sense, Perception, Performer (Dancer, Singer, Storyteller), Ride, Speak Arcane Language (Daemonic or Magick), Speak Language (any one)"</Skills>
+<Talents>"Aethyric Attunement or Meditation, Fast Hands, Divine Lore (Spirits), Master Orator"</Talents>
+<Trappings>"Mirror"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Mirror">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_DANCER/RULES-COMP_PERFORMER_SINGER/RULES-COMP_PERFORMER_STORYTELLER">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_DAEMONIC/RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_MEDITATION">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS">"1"</Talent>
+<Talent name="RULES-T_DIVINE_LORE__SPIRITS">"1"</Talent>
+<Talent name="RULES-T_MASTER_ORATOR">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"OWB 80"</Source>
+</Career>
+<Career id="OWB-CARE_SHAMAN_LORD">
+<Description language="ENGLISH">"Shaman Lord"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +15%, S +10%, T +15%, Ag +15%, Int +20%, WP +25%, Fel +20%"</MainProfile>
+<SecondaryProfile>"A +1, W +6, Mag +3"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+<Advance name="RULES-ATTR_Mag">"3"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (any two), Academic Knowledge (Theology), Channelling, Charm, Common Knowledge (any two), Gossip, Heal, Intimidate, Magical Sense, Perception, Performer (Dancer, Singer, Storyteller), Ride, Speak Arcane Language (Daemonic or Magick), Speak Language (any two)"</Skills>
+<Talents>"Aethyric Attunement or Meditation, Fearless, Lesser Magic (any two), Mighty Missile, Strong-minded"</Talents>
+<Trappings>"Magic item"</Trappings>
+<SUBCHAPTER_ITEM>
+<Item name="Magic item">"1"</Item>
+</SUBCHAPTER_ITEM>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_PERFORMER_DANCER/RULES-COMP_PERFORMER_SINGER/RULES-COMP_PERFORMER_STORYTELLER">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_DAEMONIC/RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_MEDITATION">"1"</Talent>
+<Talent name="RULES-T_FEARLESS">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="RULES-T_STRONG_MINDED">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"OWB 81"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="OWB-CARE_APPRENTICE_SHAMAN">"OWB-CARE_SHAMAN"</Link>
+<Link name="OWB-CARE_APPRENTICE_SHAMAN">"RULES-CARE_SNEAK"</Link>
+<Link name="OWB-CARE_SHAMAN">"RULES-CARE_BRUTE"</Link>
+<Link name="OWB-CARE_SHAMAN">"OWB-CARE_SHAMAN_LORD"</Link>
+<Link name="OWB-CARE_SHAMAN">"RULES-CARE_SNEAK"</Link>
+<Link name="OWB-CARE_SHAMAN_LORD">"RULES-CARE_CHIEF"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="OWB-EQUI_MOUNTS_CHAOS_STEED">
+<Description language="ENGLISH">"Chaos Steed"</Description>
+<Category>"RULES-EQCAT2_MOUNTS"</Category>
+<Profile>"38;0;49;45;30;10;16;0;1;18;4;4;8;0;0;0"</Profile>
+<Skills>"Perception +10%, Swim"</Skills>
+<Talents>"Acute Hearing, Keen Senses, Natural Weapons, Strike Mighty Blow, Strike to Injure"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_MOUNTS_DAEMONIC_MOUNT">
+<Description language="ENGLISH">"Daemonic Mount"</Description>
+<Category>"RULES-EQCAT2_MOUNTS"</Category>
+<Profile>"41;0;58;59;34;13;38;10;2;28;5;5;8;0;0;0"</Profile>
+<Skills>"Perception +10%, Swim"</Skills>
+<Talents>"Acute Hearing, Daemonic Aura, Keen Senses, Natural Weapons, Night Vision, Strike Mighty Blow, Strike to Injure, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_MOUNTS_DESTRIER">
+<Description language="ENGLISH">"Destrier"</Description>
+<Category>"RULES-EQCAT2_MOUNTS"</Category>
+<Profile>"30;0;45;45;30;10;10;0;1;18;4;4;8;0;0;0"</Profile>
+<Skills>"Perception +10%, Swim"</Skills>
+<Talents>"Acute Hearing, Keen Senses, Natural Weapons, Strike Mighty Blow"</Talents>
+<Note>""</Note>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_MOUNTS_ELVEN_STEED">
+<Description language="ENGLISH">"Elven Steed"</Description>
+<Category>"RULES-EQCAT2_MOUNTS"</Category>
+<Profile>"36;0;43;41;42;10;10;20;1;16;4;4;9;0;0;0"</Profile>
+<Skills>"Dodge Blow, Perception +20%, Swim"</Skills>
+<Talents>"Acute Hearing, Excellent Vision, Keen Senses, Natural Weapons, Strike Mighty Blow"</Talents>
+<Note>""</Note>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_MOUNTS_LIGHT_WARHORSE">
+<Description language="ENGLISH">"Light Warhorse"</Description>
+<Category>"RULES-EQCAT2_MOUNTS"</Category>
+<Profile>"30;0;40;40;30;10;10;0;1;14;4;4;8;0;0;0"</Profile>
+<Skills>"Perception +10%, Swim"</Skills>
+<Talents>"Acute Hearing, Keen Senses, Natural Weapons, Strike Mighty Blow"</Talents>
+<Note>""</Note>
+<Page>"122"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_MOUNTS_NIGHTMARE">
+<Description language="ENGLISH">"Nightmare"</Description>
+<Category>"RULES-EQCAT2_MOUNTS"</Category>
+<Profile>"24;0;40;40;25;–;–;–;1;14;4;4;8;0;0;0"</Profile>
+<Skills>"None"</Skills>
+<Talents>"Natural Weapons, Night Vision, Strike Mighty Blow, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_MOUNTS_PONY">
+<Description language="ENGLISH">"Pony"</Description>
+<Category>"RULES-EQCAT2_MOUNTS"</Category>
+<Profile>"25;0;35;35;35;10;10;0;0;12;3;3;6;0;0;0"</Profile>
+<Skills>"Perception, Swim"</Skills>
+<Talents>"Acute Hearing, Keen Senses"</Talents>
+<Note>""</Note>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_MOUNTS_RIDING_HORSE">
+<Description language="ENGLISH">"Riding Horse"</Description>
+<Category>"RULES-EQCAT2_MOUNTS"</Category>
+<Profile>"25;0;38;38;30;10;10;0;0;12;3;3;8;0;0;0"</Profile>
+<Skills>"Perception +10%, Swim"</Skills>
+<Talents>"Acute Hearing, Keen Senses"</Talents>
+<Note>""</Note>
+<Page>"123"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_ANIMALS_SMALL_PREY_ANIMAL">
+<Description language="ENGLISH">"Small Prey Animal"</Description>
+<Category>"RULES-EQCAT2_ANIMALS"</Category>
+<Profile>"25;0;6;4;38;10;10;0;1;2;0;0;6;0;0;0"</Profile>
+<Skills>"Perception +20%"</Skills>
+<Talents>"Flee!, Keen Senses"</Talents>
+<Note>""</Note>
+<Page>"124"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_ANIMALS_LARGE_PREY_ANIMAL">
+<Description language="ENGLISH">"Large Prey Animal"</Description>
+<Category>"RULES-EQCAT2_ANIMALS"</Category>
+<Profile>"33;0;36;38;30;6;10;0;1;17;3;3;7;0;0;0"</Profile>
+<Skills>"Perception +20%"</Skills>
+<Talents>"Keen Senses, Natural Weapons"</Talents>
+<Note>""</Note>
+<Page>"124"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_ANIMALS_SMALL_RAPTOR">
+<Description language="ENGLISH">"Small Raptor"</Description>
+<Category>"RULES-EQCAT2_ANIMALS"</Category>
+<Profile>"36;0;10;10;35;11;20;0;2;6;1;1;2 (8);0;0;0"</Profile>
+<Skills>"Perception +20%"</Skills>
+<Talents>"Excellent Vision, Flier, Keen Senses"</Talents>
+<Note>""</Note>
+<Page>"124"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_ANIMALS_SNAKE">
+<Description language="ENGLISH">"Snake"</Description>
+<Category>"RULES-EQCAT2_ANIMALS"</Category>
+<Profile>"33;0;10;14;30;6;18;0;1;5;1;1;3;0;0;0"</Profile>
+<Skills>"Perception +20%"</Skills>
+<Talents>"Natural Weapons"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"124"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_BANSHEE">
+<Description language="ENGLISH">"Banshee"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"31;0;31;31;46;25;48;32;2;18;3;3;6;0;0;0"</Profile>
+<Skills>"Concealment +20%, Perception +20%, Speak Language (any one)"</Skills>
+<Talents>"Ethereal, Frightening, Night Vision, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"82"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_BESTIGOR">
+<Description language="ENGLISH">"Bestigor"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"45;25;41;47;37;25;35;27;1;14;4;4;5;0;0;0"</Profile>
+<Skills>"Command, Concealment, Dodge Blow, Follow Trail, Intimidate +10%, Outdoor Survival, Perception, Shadowing, Silent Move, Speak Language (Dark Tongue)"</Skills>
+<Talents>"Keen Senses, Menacing, Rover, Specialist Weapon Group (Two-handed), Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"82"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_CENTIGOR">
+<Description language="ENGLISH">"Centigor"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"43;31;44;45;24;24;30;25;2;14;4;4;8;0;0;0"</Profile>
+<Skills>"Consume Alcohol, Follow Trail +10%, Intimidate, Outdoor Survival, Perception, Shadowing, Speak Language (Dark Tongue)"</Skills>
+<Talents>"Keen Senses, Menacing, Natural Weapons, Specialist Weapon Group (Cavalry, Throwing)"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"83"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_GOR">
+<Description language="ENGLISH">"Gor"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"40;25;35;44;35;26;25;25;1;12;3;4;5;0;0;0"</Profile>
+<Skills>"Concealment, Follow Trail, Intimidate, Outdoor Survival, Perception, Shadowing, Silent Move, Speak Language (Dark Tongue)"</Skills>
+<Talents>"Keen Senses, Menacing, Rover"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"83"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_UNGOR_AND_BRAY">
+<Description language="ENGLISH">"Ungor and Bray"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"30;21;31;35;30;24;24;20;1;10;3;3;5;0;0;0"</Profile>
+<Skills>"Concealment, Follow Trail, Outdoor Survival, Perception, Shadowing, Silent Move, Speak Language (Dark Tongue)"</Skills>
+<Talents>"Keen Senses, Rover"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"84"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_CHAOS_DWARF">
+<Description language="ENGLISH">"Chaos Dwarf"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"41;31;31;41;21;31;31;21;1;12;3;4;3;0;0;0"</Profile>
+<Skills>"Common Knowledge (Dwarfs), Drive, Haggle, Perception, Search, Speak Language (Khazalid), Speak Language (Reikspiel), Trade (Gunsmith)"</Skills>
+<Talents>"Disarm, Dwarfcraft, Master Gunner, Night Vision, Specialist Weapon Group (Gunpowder), Stout- hearted, Strike to Stun, Sturdy"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"85"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_BULL_CENTAUR">
+<Description language="ENGLISH">"Bull Centaur"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"45;31;41;45;30;30;36;21;2;16;4;4;8;0;0;0"</Profile>
+<Skills>"Common Knowledge (Dwarfs), Intimidate +10%, Perception, Speak Language (Khazalid)"</Skills>
+<Talents>"Night Vision, Specialist Weapon Group (Two-handed), Stout-hearted, Strike to Injure, Sturdy, Wrestling"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"86"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_CHAOS_MARAUDER">
+<Description language="ENGLISH">"Chaos Marauder"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"41;33;36;37;34;28;37;24;1;11;3;3;4;0;3;0"</Profile>
+<Skills>"Animal Care, Common Knowledge (Norsca or Chaos Wastes), Follow Trail, Navigation, Outdoor Survival, Perception, Ride +10% or Sail +10%, Search, Speak Language (Norse or Tribal) Armour Warriors. It is a dark gift from the Ruinous Powers, and melds power of Chaos. It is heavy armour and provides 5 Armour the wearer’s body it is much less encumbering (Enc. 250). of any Critical Hits suffered by 1. Chaos spellcasters can cast"</Skills>
+<Talents>"Orientation, Specialist Weapon Group (Cavalry, Flail, or Two-handed), Strike to Injure Special Abilities: • Chaos Mutation: There is a 25% chance a Chaos Marauder has a single Chaos Mutation. Roll on Table 2-1: Expanded Chaos Mutations to generate it if present and modify stats as appropriate."</Talents>
+<Note>""</Note>
+<Page>"86"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_CHAOS_WARRIOR">
+<Description language="ENGLISH">"Chaos Warrior"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"51;35;44;43;39;38;44;31;1;14;4;4;4;0;6;0"</Profile>
+<Skills>"Animal Care, Command, Common Knowledge (Norsca +10% or Chaos Wastes +10%), Follow Trail, Intimidate +10%, Navigation, Outdoor Survival +10%, Perception +10%, Ride +20% or Sail +20%, Search, Speak Language (Norse or Tribal) Daemon Daemons can come in as many forms as the vile imaginations of common types which scholars have identified, used again and in mind. Five of these, grouped by the Chaos God to which they far the most likely to be encountered by Player Characters, since or are almost unimaginably powerful. These remaining Daemons, in the forthcoming Chaos sourcebook."</Skills>
+<Talents>"Orientation, Specialist Weapon Group (Cavalry, Flail, Two-handed), Strike to Injure, Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"87"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_BLOODLETTER_OF_KHORNE">
+<Description language="ENGLISH">"Bloodletter of Khorne"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"50;0;51;34;48;48;48;10;2;12;5;3 (5);4;0;0;0"</Profile>
+<Skills>"Dodge Blow, Perception, Speak Arcane Language (Daemonic), Speak Language (Dark Tongue)"</Skills>
+<Talents>"Daemonic Aura, Frenzy, Frightening, Natural Weapons, Night Vision, Resistance to Magic, Specialist Weapon Group (Two-handed), Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"88"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_CHAOS_FURY">
+<Description language="ENGLISH">"Chaos Fury"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"35;0;41;36;44;30;42;15;1;12;4;3 (5);4 (6);0;0;0"</Profile>
+<Skills>"Dodge Blow, Perception, Speak Arcane Language (Daemonic), Speak Language (Dark Tongue)"</Skills>
+<Talents>"Ambidextrous, Daemonic Aura, Flier, Frightening, Natural Weapons, Night Vision, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"88"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_DAEMONETTES_OF_SLAANESH">
+<Description language="ENGLISH">"Daemonettes of Slaanesh"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"44;0;40;37;52;31;40;55;2;12;4;3 (5);5;0;0;0"</Profile>
+<Skills>"Charm +20%, Dodge Blow, Gossip +20%, Night Vision, Perception, Performer (Dancer), Speak Arcane Language (Daemonic), Speak Language (Dark Tongue), Speak Language (any two), Torture"</Skills>
+<Talents>"Ambidextrous, Daemonic Aura, Frightening, Natural Weapons, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"89"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_HORRORS_OF_TZEENTCH">
+<Description language="ENGLISH">"Horrors of Tzeentch"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"42;0;33;35;36;45;60;15;1;12;3;3 (5);4;1-3;0;0"</Profile>
+<Skills>"Channelling +20%, Dodge Blow, Perception, Speak Arcane Language (Daemonic), Speak Language (Dark Tongue)"</Skills>
+<Talents>"Ambidextrous, Daemonic Aura, Frightening, Natural Weapons, Night Vision, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"89"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_PLAGUEBEARER_OF_NURGLE">
+<Description language="ENGLISH">"Plaguebearer of Nurgle"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"45;0;41;47;40;30;44;11;1;12;4;4 (6);4;0;0;0"</Profile>
+<Skills>"Dodge Blow, Perception, Speak Arcane Language (Daemonic), Speak Language (Dark Tongue)"</Skills>
+<Talents>"Ambidextrous, Daemonic Aura, Frightening, Natural Weapons, Night Vision, Strike to Injure, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"90"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_DIRE_WOLF">
+<Description language="ENGLISH">"Dire Wolf"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"35;0;41;35;18;–;–;–;1;10;4;3;9;0;0;0"</Profile>
+<Skills>"None"</Skills>
+<Talents>"Frightening, Natural Weapons, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"91"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_DRAGON">
+<Description language="ENGLISH">"Dragon"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"59;0;65;68;30;47;89;34;6;55;6;6;6 (8);0;0;0"</Profile>
+<Skills>"Academic Knowledge (History) +20%, Charm, Command +20%, Common Knowledge (Dragons +20%, Dwarfs, Elves +10%), Evaluate +10%, Gossip, Intimidate +20%, Perception +20%, Scale Sheer Surface +10%, Search, Speak Language (any four)"</Skills>
+<Talents>"Excellent Vision, Flier, Night Vision, Scales (5), Strike Mighty Blow, Strike to Injure, Strike to Stun, Strong-minded, Terrifying, Unstoppable Blows"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"92"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_DRAGON_OGRE">
+<Description language="ENGLISH">"Dragon Ogre"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"48;22;55;48;28;38;48;20;3;34;5;4;7;0;0;0"</Profile>
+<Skills>"Academic Knowledge (History) +20%, Command, Common Knowledge (Chaos Wastes), Intimidate +20%, Outdoor Survival, Perception +20%, Scale Sheer Surface +10%, Speak Language (Dark Tongue), Speak Language (any two)"</Skills>
+<Talents>"Frightening, Natural Weapons, Night Vision, Resistance to Poison, Scales (2), Specialist Weapon Group (Two-handed) Strong-minded"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"92"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_DRYAD">
+<Description language="ENGLISH">"Dryad"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"48;24;47;49;60;53;34;65;2;16;4;4;5;0;0;0"</Profile>
+<Skills>"Charm, Concealment +10%, Common Knowledge (Elves), Dodge Blow, Follow Trail, Gossip, Heal, Intimidate, Navigation, Outdoor Survival, Perception +10%, Scale Sheer Surface, Secret Language (Ranger Tongue), Silent Move +10%, Speak Language (Eltharin, Malla-room-ba-larin)"</Skills>
+<Talents>"Ambidextrous, Natural Weapons, Rover, Strike to Stun, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"92"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_ELVEN_CORSAIRS">
+<Description language="ENGLISH">"Elven Corsairs"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"41;44;34;31;48;31;36;30;1;11;3;3;5;0;0;0"</Profile>
+<Skills>"Common Knowledge (Elves), Dodge Blow, Intimidate, Navigation, Outdoor Survival, Perception, Row, Sail, Scale Sheer Surface, Search, Speak Language (Eltharin), Specialist Weapon Group (Crossbow), Swim, Torture"</Skills>
+<Talents>"Coolheaded, Excellent Vision, Lightning Reflexes, Night Vision, Warrior Born"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"93"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_FENBEAST">
+<Description language="ENGLISH">"Fenbeast"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"38;0;52;58;16;–;–;–;3;32;5;5;6;0;0;0"</Profile>
+<Skills>"None"</Skills>
+<Talents>"Frightening, Natural Weapons, Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"94"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_GHOUL">
+<Description language="ENGLISH">"Ghoul"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"32;0;37;45;34;18;31;5;2;11;3;4;4;0;6;0"</Profile>
+<Skills>"Concealment, Perception, Outdoor Survival, Scale Sheer Surface, Search, Silent Move, Shadowing, Speak Language (Reikspiel)"</Skills>
+<Talents>"Fearless, Frightening, Natural Weapons, Night Vision, Rover"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"94"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_GIANT">
+<Description language="ENGLISH">"Giant"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"33;25;69;59;18;14;24;14;5;48;6;5;6;0;0;0"</Profile>
+<Skills>"Consume Alcohol, Intimidate, Outdoor Survival, Perception, Scale Sheer Surface, Speak Language (Grumbarth, Goblin Tongue)"</Skills>
+<Talents>"Lightning Parry, Natural Weapons, Terrifying, Strike Mighty Blow, Strike to Injure, Strike to Stun, Unstoppable Blows, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"95"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_GIANT_RAT">
+<Description language="ENGLISH">"Giant Rat"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;0;31;30;42;14;18;5;1;7;3;3;6;0;0;0"</Profile>
+<Skills>"Concealment, Perception +10%, Silent Move, Swim +10%"</Skills>
+<Talents>"Keen Senses, Natural Weapons, Night Vision"</Talents>
+<Note>""</Note>
+<Page>"96"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_GIANT_SPIDER">
+<Description language="ENGLISH">"Giant Spider"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"38;0;41;44;60;15;35;5;2;25;4;4;6;0;0;0"</Profile>
+<Skills>"Concealment +10%, Perception +10%, Silent Move +10%"</Skills>
+<Talents>"Frightening, Keen Senses, Natural Weapons, Night Vision"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"96"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_GIANT_WOLF">
+<Description language="ENGLISH">"Giant Wolf"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"36;0;35;37;36;18;35;10;1;12;3;3;9;0;0;0"</Profile>
+<Skills>"Concealment, Follow Trails, Perception +10%, Silent Move, Swim"</Skills>
+<Talents>"Keen Senses, Natural Weapons, Night Vision"</Talents>
+<Note>""</Note>
+<Page>"97"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_GOBLIN_AND_NIGHT_GOBLIN">
+<Description language="ENGLISH">"Goblin and Night Goblin"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;30;30;30;25;25;30;20;1;8;3;3;4;0;0;0"</Profile>
+<Skills>"Common Knowledge (Greenskins), Concealment, Outdoor Survival, Perception, Ride or Swim, Silent Move, Scale Sheer Surface, Speak Language (Goblin Tongue)"</Skills>
+<Talents>"Night Vision"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"97"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_GREAT_EAGLE">
+<Description language="ENGLISH">"Great Eagle"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"65;0;44;43;52;38;43;25;2;26;4;4;2 (10);0;0;0"</Profile>
+<Skills>"Dodge Blow, Navigation +10%, Perception +20%,"</Skills>
+<Talents>"Excellent Vision, Fearless, Flier, Keen Senses, Natural Weapons, Night Vision, Strike Mighty Blow, Strike to Injure"</Talents>
+<Note>""</Note>
+<Page>"98"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_GRIFFON">
+<Description language="ENGLISH">"Griffon"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"50;0;58;51;52;15;66;10;4;48;5;5;6 (9);0;0;0"</Profile>
+<Skills>"Perception +10%"</Skills>
+<Talents>"Flier, Natural Weapons, Night Vision, Strike Mighty Blow, Strike to Injure, Terrifying, Will of Iron"</Talents>
+<Note>""</Note>
+<Page>"98"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_HARPY">
+<Description language="ENGLISH">"Harpy"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"41;25;42;44;27;14;52;10;1;12;4;4;4 (6);0;0;0"</Profile>
+<Skills>"Dodge Blow, Perception, Speak Language (Dark Tongue)"</Skills>
+<Talents>"Flier, Keen Senses, Natural Weapons, Night Vision, Strike Mighty Blow"</Talents>
+<Note>""</Note>
+<Page>"99"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_HIPPOGRIFF">
+<Description language="ENGLISH">"Hippogriff"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"40;0;50;51;49;15;43;10;4;42;5;5;6 (8);0;0;0"</Profile>
+<Skills>"Dodge Blow, Perception +10%"</Skills>
+<Talents>"Flier, Keen Senses, Natural Weapons, Night Vision, Strike Mighty Blow, Terrifying, Will of Iron"</Talents>
+<Note>""</Note>
+<Page>"99"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_HOBGOBLIN">
+<Description language="ENGLISH">"Hobgoblin"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"31;36;33;37;29;25;27;20;1;10;3;3;4;0;0;0"</Profile>
+<Skills>"Animal Care, Common Knowledge (Greenskins), Concealment, Outdoor Survival, Perception, Prepare Poison +10%, Ride +10%, Silent Move, Scale Sheer Surface, Speak Language (Goblin Tongue)"</Skills>
+<Talents>"Mighty Shot, Night Vision, Rapid Reload, Rover, Trick Riding"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"100"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_HYDRA">
+<Description language="ENGLISH">"Hydra"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"42;0;52;56;30;14;24;15;5;50;5;5;6;0;0;0"</Profile>
+<Skills>"Perception +20%, Scale Sheer Surface +10%, Search"</Skills>
+<Talents>"Keen Senses, Night Vision, Scales (3), Strike Mighty Blow, Strike to Injure, Terrifying, Unstoppable Blows, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"100"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_MANTICORE">
+<Description language="ENGLISH">"Manticore"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"54;0;55;57;48;16;43;15;4;38;5;5;6 (8);0;0;0"</Profile>
+<Skills>"Perception +10%"</Skills>
+<Talents>"Flier, Natural Weapons, Night Vision, Strike Mighty Blow, Strike to Injure, Terrifying, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"101"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_MINOTAUR">
+<Description language="ENGLISH">"Minotaur"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"42;25;48;46;38;18;24;16;2;26;4;4;6;0;0;0"</Profile>
+<Skills>"Follow Trail, Intimidate +20%, Outdoor Survival, Perception, Speak Language (Dark Tongue)"</Skills>
+<Talents>"Frightening, Keen Senses, Specialist Weapon Group (Two-handed), Strike Mighty Blow, Strike to Injure"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"101"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_MUMMY">
+<Description language="ENGLISH">"Mummy"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"45;33;42;56;24;43;89;20;3;32;4;5;4;0;0;0"</Profile>
+<Skills>"Academic Knowledge (Genealogy/Heraldry, History +10%, Necromancy +10%), Evaluate, Perception, Read/ Write +20%, Ride +10%, Speak Language (Nehekharan)"</Skills>
+<Talents>"Frightening, Night Vision, Specialist Weapon Group (Flail, Great Weapon), Strike to Stun, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"102"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_MUTANT">
+<Description language="ENGLISH">"Mutant"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"31;31;31;31;31;31;31;31;1;11;3;3;4;0;0;0"</Profile>
+<Skills>"Animal Care, Concealment, Outdoor Survival, Perception, Silent Move, Speak Language (Dark Tongue or Reikspiel)"</Skills>
+<Talents>"Flee!"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"102"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_OGRE">
+<Description language="ENGLISH">"Ogre"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"31;21;46;45;24;22;35;20;3;24;4;4;6;0;0;0"</Profile>
+<Skills>"Common Knowledge (Ogres), Consume Alcohol, Gamble, Perception, Search, Speak Language (Grumbarth, Reikspield or Tilean)"</Skills>
+<Talents>"Disarm, Fearless, Frightening, Specialist Weapon Group (Two-handed), Street Fighting, Strike Mighty Blow"</Talents>
+<Note>""</Note>
+<Page>"103"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_BLACK_ORC">
+<Description language="ENGLISH">"Black Orc"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"42;30;44;45;26;26;40;25;1;13;4;4;4;0;0;0"</Profile>
+<Skills>"Command +20%, Common Knowledge (Greenskins) +10%, Intimidate +10%, Outdoor Survival, Perception +10%, Ride, Swim, Scale Sheer Surface, Speak Language (Goblin Tongue), Swim, Torture"</Skills>
+<Talents>"Menacing, Night Vision, Specialist Weapon Group (Two-handed), Street Fighting, Strike Mighty Blow, Strike to Injure, Strike to Stun"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"103"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_COMMON_ORC">
+<Description language="ENGLISH">"Common Orc"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"35;35;35;45;25;25;30;20;1;12;3;4;4;0;0;0"</Profile>
+<Skills>"Common Knowledge (Greenskins) +10%, Intimidate, Outdoor Survival, Perception, Ride or Swim, Scale Sheer Surface, Speak Language (Goblin Tongue), Torture"</Skills>
+<Talents>"Menacing, Night Vision, Street Fighting, Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"104"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_SAVAGE_ORC">
+<Description language="ENGLISH">"Savage Orc"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"35;35;38;45;25;24;30;20;1;12;3;4 (6);4;0;0;0"</Profile>
+<Skills>"Common Knowledge (Greenskins) +10%, Intimidate, Outdoor Survival, Perception, Ride or Swim, Scale Sheer Surface, Speak Language (Goblin Tongue), Torture"</Skills>
+<Talents>"Frenzy, Menacing, Night Vision, Street Fighting, Strike Mighty Blow"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"104"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_PEGASI">
+<Description language="ENGLISH">"Pegasi"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"33;0;47;45;41;15;38;15;2;18;4;4;8 (10);0;0;0"</Profile>
+<Skills>"Perception +10%"</Skills>
+<Talents>"Acute Hearing, Flier, Keen Senses, Natural Weapons, Strike Mighty Blow"</Talents>
+<Note>""</Note>
+<Page>"105"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_RAT_OGRE">
+<Description language="ENGLISH">"Rat Ogre"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"36;0;54;47;25;12;17;10;3;28;5;4;6;0;0;0"</Profile>
+<Skills>"Dodge Blow, Intimidate +10%, Perception, Scale Sheer Surface"</Skills>
+<Talents>"Fearless, Frightening, Natural Weapons, Night Vision, Strike Mighty Blow, Strike to Injure"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"105"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_CLANRAT">
+<Description language="ENGLISH">"Clanrat"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"30;25;30;30;40;25;25;15;1;9;3;3;5;0;0;0"</Profile>
+<Skills>"Common Knowledge (Skaven) +10%, Concealment, Outdoor Survival, Perception, Scale Sheer Surface, Silent Move, Speak Language (Queekish), Swim"</Skills>
+<Talents>"Night Vision, Specialist Weapon Group (Sling), Tunnel Rat"</Talents>
+<Note>""</Note>
+<Page>"106"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_CLAN_ESHIN_NIGHT_RUNNER">
+<Description language="ENGLISH">"Clan Eshin Night Runner"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"33;31;30;33;43;26;25;15;1;9;3;3;6;0;0;0"</Profile>
+<Skills>"Common Knowledge (Skaven) +10%, Concealment +10%, Dodge Blow, Navigation +10%, Outdoor Survival, Perception +10%, Scale Sheer Surface, Silent Move +10%, Speak Language (Queekish), Swim"</Skills>
+<Talents>"Fleet Footed, Night Vision, Orientation, Rover, Specialist Weapon Group (Sling, Throwing), Tunnel Rat"</Talents>
+<Note>""</Note>
+<Page>"106"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_CLAN_MOULDER_PACKMASTER">
+<Description language="ENGLISH">"Clan Moulder Packmaster"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"32;25;32;33;40;27;29;22;1;10;3;3;5;0;0;0"</Profile>
+<Skills>"Animal Training +20%, Command +20%, Common Knowledge (Skaven) +10%, Concealment, Outdoor Survival, Perception +10%, Scale Sheer Surface, Silent Move, Speak Language (Queekish), Swim"</Skills>
+<Talents>"Night Vision, Specialist Weapon Group (Entangling), Tunnel Rat"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"107"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_CLAN_PESTILENS_PLAGUE_MONK">
+<Description language="ENGLISH">"Clan Pestilens Plague Monk"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"34;25;30;41;40;25;29;20;1;11;3;4;5;0;0;0"</Profile>
+<Skills>"Academic Knowledge (Theology) +10%, Common Knowledge (Skaven) +10%, Concealment, Dodge Blow, Outdoor Survival, Perception, Scale Sheer Surface, Silent Move, Speak Language (Queekish), Swim"</Skills>
+<Talents>"Fearless, Frenzy, Night Vision, Resistance to Disease, Tunnel Rat"</Talents>
+<Note>""</Note>
+<Page>"107"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_CLAN_SKRYRE_SKIRMISHER">
+<Description language="ENGLISH">"Clan Skryre Skirmisher"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"30;35;30;30;44;32;28;15;1;10;3;3;5;0;0;0"</Profile>
+<Skills>"Academic Knowledge (Engineering), Common Knowledge (Skaven) +10%, Concealment, Outdoor Survival, Perception, Scale Sheer Surface, Silent Move, Speak Language (Queekish), Swim"</Skills>
+<Talents>"Master Gunner, Night Vision, Rapid Reload, Specialist Weapon Group (Gunpowder), Tunnel Rat"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"108"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_SKELETON">
+<Description language="ENGLISH">"Skeleton"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;20;30;30;25;–;–;–;1;10;3;3;4;0;0;0"</Profile>
+<Skills>"None"</Skills>
+<Talents>"Frightening, Night Vision, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"108"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_SQUIG">
+<Description language="ENGLISH">"Squig"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"42;0;53;35;56;5;22;5;2;10;5;3;1-10;0;0;0"</Profile>
+<Skills>"Dodge Blow"</Skills>
+<Talents>"Natural Weapons, Night Vision, Unsettling, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"108"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_SNOTLING">
+<Description language="ENGLISH">"Snotling"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"15;0;12;15;30;12;10;10;1;4;1;1;4;0;0;0"</Profile>
+<Skills>"Concealment, Outdoor Survival, Perception, Scale Sheer Surface, Speak Language (Goblin Tongue)"</Skills>
+<Talents>"Fearless, Night Vision"</Talents>
+<Note>""</Note>
+<Page>"109"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_GHOST">
+<Description language="ENGLISH">"Ghost"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;0;30;30;42;31;18;30;1;15;3;3;6;0;0;0"</Profile>
+<Skills>"Concealment +20%, Gossip, Perception +20%, Speak Language (any one)"</Skills>
+<Talents>"Ethereal, Frightening, Night Vision, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"109"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_POLTERGEIST">
+<Description language="ENGLISH">"Poltergeist"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"22;0;30;30;45;31;18;30;1;14;3;3;6;0;0;0"</Profile>
+<Skills>"Charm, Concealment +20%, Perception +20%, Speak Language (any one)"</Skills>
+<Talents>"Ethereal, Frightening, Night Vision, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"110"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_SPECTRE">
+<Description language="ENGLISH">"Spectre"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"42;0;40;43;42;18;18;30;2;20;4;4;6;0;0;0"</Profile>
+<Skills>"Concealment +20%, Perception +20%, Speak Language (any one)"</Skills>
+<Talents>"Ethereal, Frightening, Night Vision, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"110"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_TREEMEN">
+<Description language="ENGLISH">"Treemen"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"81;33;64;72;22;66;75;38;4;46;6;7;6;0;0;0"</Profile>
+<Skills>"Concealment, Common Knowledge (Elves), Follow Trail +20%, Intimidate, Navigation, Outdoor Survival+20%, Perception +20%, Scale Sheer Surface, Secret Language (Ranger Tongue), Speak Language (Eltharin, Malla-room-ba-larin +10%)"</Skills>
+<Talents>"Ambidextrous, Frightening, Lightning Parry, Natural Weapons, Night Vision, Strike Mighty Blow, Strike to Stun, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"110"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_COMMON_TROLL">
+<Description language="ENGLISH">"Common Troll"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"37;15;51;48;20;18;27;10;3;30;5;4;6;0;0;0"</Profile>
+<Skills>"Intimidate, Perception, Scale Sheer Surface or Swim, Speak Language (Goblin Tongue)"</Skills>
+<Talents>"Fearless, Frightening, Natural Weapons, Night Vision, Specialist Weapon Group (Two-handed)"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"111"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_CHAOS_TROLL">
+<Description language="ENGLISH">"Chaos Troll"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"39;15;54;48;20;18;27;10;4;32;5;4;6;0;0;0"</Profile>
+<Skills>"Intimidate, Perception, Scale Sheer Surface or Swim, Speak Language (Dark Tongue, Goblin Tongue)"</Skills>
+<Talents>"Fearless, Frightening, Natural Weapons, Night Vision, Specialist Weapon Group (Two-handed)"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"112"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_RIVER_TROLL">
+<Description language="ENGLISH">"River Troll"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"36;15;51;44;22;18;27;10;3;29;5;4;6;0;0;0"</Profile>
+<Skills>"Intimidate, Perception, Scale Sheer Surface, Speak Language (Goblin Tongue), Swim +10%"</Skills>
+<Talents>"Fearless, Frightening, Natural Weapons, Night Vision, Specialist Weapon Group (Two-handed)"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"112"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_STONE_TROLL">
+<Description language="ENGLISH">"Stone Troll"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"38;15;51;49;18;18;30;10;3;32;5;4;6;0;0;0"</Profile>
+<Skills>"Intimidate, Perception, Scale Sheer Surface +20%, Speak Language (Goblin Tongue)"</Skills>
+<Talents>"Fearless, Frightening, Natural Weapons, Night Vision, Specialist Weapon Group (Two-handed)"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"113"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_UNICORN">
+<Description language="ENGLISH">"Unicorn"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"52;0;40;46;43;25;60;31;2;23;4;4;8;0;0;0"</Profile>
+<Skills>"Dodge Blow, Follow Trail +20%, Perception +20%, Swim"</Skills>
+<Talents>"Acute Hearing, Fearless, Keen Senses, Natural Weapons, Night Vision"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"113"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_VAMPIRE_BAT">
+<Description language="ENGLISH">"Vampire Bat"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"33;0;31;30;34;18;25;10;2;16;3;3;2 (8);0;0;0"</Profile>
+<Skills>"Dodge Blow, Perception +20%"</Skills>
+<Talents>"Flier, Frightening, Keen Senses, Natural Weapons, Strike Mighty Blow, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"113"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_BLOOD_DRAGON">
+<Description language="ENGLISH">"Blood Dragon"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"68;45;64;65;68;40;70;51;3;22;6;6;6;1;0;0"</Profile>
+<Skills>"Academic Knowledge (Genealogy/Heraldry, History, Strategy/Tactics), Charm, Command +10%, Common Knowledge (any three), Dodge Blow +10%, Evaluate, Intimidate, Gossip, Magical Sense, Perception, Ride +10%, Scale Sheer Surface, Search, Speak Language (any three), Torture"</Skills>
+<Talents>"Disarm, Frightening, Keen Senses, Lightning Parry, Natural Weapons, Night Vision, Specialist Weapon Group (Cavalry, Two-handed), Strike Mighty Blow, Strike to Injure, Strike to Stun, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"114"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_CARSTEIN">
+<Description language="ENGLISH">"Carstein"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"65;42;62;63;66;45;70;65;2;21;6;6;6;1;0;0"</Profile>
+<Skills>"Academic Knowledge (Genealogy/Heraldry, History, Necromancy), Charm +10%, Channelling, Command +10%, Common Knowledge (any three), Dodge Blow, Evaluate, Gossip +10%, Intimidate, Magical Sense, Perception, Ride, Scale Sheer Surface, Search, Shadowing, Speak Arcane Language (Magick), Speak Language (any three), Torture"</Skills>
+<Talents>"Dark Magic, Disarm, Frightening, Keen Senses, Master Orator, Natural Weapons, Night Vision, Petty Magic (Arcane), Public Speaking, Schemer, Specialist Weapon Group (Fencing, Parrying), Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"115"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_LAHMIAN">
+<Description language="ENGLISH">"Lahmian"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"61;40;60;60;69;48;70;69;2;20;6;6;6;1;0;0"</Profile>
+<Skills>"Academic Knowledge (the Arts, Genealogy/Heraldry, History, Necromancy, Philosophy), Charm +20%, Channelling, Command, Common Knowledge (any three), Concealment, Disguise +20%, Dodge Blow, Evaluate +20%, Gossip +20%, Haggle +20%, Magical Sense, Perception +10%, Performer (any two), Prepare Poison +10%, Read/Write, Ride, Search, Shadowing, Silent Move, Speak Arcane Language (Magick), Speak Language (any three), Torture"</Skills>
+<Talents>"Dark Magic, Etiquette, Frightening, Keen Senses, Natural Weapons, Night Vision, Petty Magic (Arcane), Public Speaking, Quick Draw, Schemer, Specialist Weapon Group (Parrying), Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"116"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_NECRARCH">
+<Description language="ENGLISH">"Necrarch"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"51;41;61;65;62;58;75;15;2;20;6;6;6;2;0;0"</Profile>
+<Skills>"Academic Knowledge (Astronomy +10%, Genealogy/Heraldry, History, Magic +10%, Necromancy +10%), Charm, Channelling +10%, Command, Common Knowledge (any three), Concealment, Dodge Blow, Evaluate, Magical Sense, Perception, Prepare Poison +10%, Read/Write +10%, Ride, Search, Shadowing, Sleight of Hand, Silent Move, Speak Arcane Language (Magick) +10%, Speak Language (any four), Torture"</Skills>
+<Talents>"Aethyric Attunement, Dark Lore (Necromancy), Dark Magic, Fast Hands, Keen Senses, Lesser Magic (Dispel, Magic Lock), Meditation, Natural Weapons, Night Vision, Petty Magic (Arcane), Terrifying, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"116"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_STRIGOI">
+<Description language="ENGLISH">"Strigoi"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"63;31;67;66;65;39;67;17;2;24;6;6;6;1;0;0"</Profile>
+<Skills>"Command, Common Knowledge (any one), Concealment +10%, Dodge Blow, Magical Sense, Perception +10%, Search, Shadowing +10%, Silent Move +10%, Speak Language (any two), Torture"</Skills>
+<Talents>"Frenzy, Frightening, Keen Senses, Natural Weapons, Night Vision, Rover, Strike Mighty Blow, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"117"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_WARHAWK">
+<Description language="ENGLISH">"Warhawk"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"42;0;39;36;53;15;37;18;1;15;3;3;2 (8);0;0;0"</Profile>
+<Skills>"Dodge, Perception +10%"</Skills>
+<Talents>"Excellent Vision, Flier, Keen Senses, Natural Weapons"</Talents>
+<Note>""</Note>
+<Page>"118"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_WERECREATURE_BEAST_FORM">
+<Description language="ENGLISH">"Werecreature (beast form)"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"+10;-;+10;+10;+20;-10;-10;-20;+1;+5;-;-;+1;-;-;-"</Profile>
+<Skills>"Concealment, Follow Trails, Perception, Silent Move, Swim"</Skills>
+<Talents>"Keen Senses, Natural Weapons, Night Vision, Unsettling"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"118"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_CHILD_OF_ULRIC">
+<Description language="ENGLISH">"Child of Ulric"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"46;0;45;47;36;18;35;10;2;12;4;4;9;0;0;0"</Profile>
+<Skills>"Concealment, Follow Trails, Perception +10%, Silent Move, Swim"</Skills>
+<Talents>"Keen Senses, Natural Weapons, Night Vision"</Talents>
+<Note>""</Note>
+<Page>"118"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_WIGHT">
+<Description language="ENGLISH">"Wight"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"40;35;45;45;30;25;35;20;1;15;4;4;4;0;0;0"</Profile>
+<Skills>"Perception, Speak Language (Classical)"</Skills>
+<Talents>"Frightening, Night Vision, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"118"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_WILD_BOAR">
+<Description language="ENGLISH">"Wild Boar"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"33;0;36;42;30;14;15;10;1;15;3;4;7;0;0;0"</Profile>
+<Skills>"Follow Trail, Perception, Swim"</Skills>
+<Talents>"Keen Senses, Natural Weapons, Night Vision"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"119"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_WRAITH">
+<Description language="ENGLISH">"Wraith"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"38;0;35;42;31;44;64;25;2;20;3;4;6;0;0;0"</Profile>
+<Skills>"Academic Knowledge (Magic +10%, Necromancy +10%), Concealment +20%, Perception +20%, Speak Arcane Language (Magick), Speak Language (any two)"</Skills>
+<Talents>"Ethereal, Natural Weapons, Night Vision, Specialist Weapon Group (Two-handed), Terrifying, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"119"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_WYVERN">
+<Description language="ENGLISH">"Wyvern"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"51;0;64;56;32;20;40;15;2;44;6;5;4 (8);0;0;0"</Profile>
+<Skills>"Perception +10%"</Skills>
+<Talents>"Flier, Natural Weapons, Night Vision, Scales (4), Strike Mighty Blow, Strike to Injure, Terrifying, Will of Iron, Unstoppable Blows"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"120"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_CREATURES_ZOMBIE">
+<Description language="ENGLISH">"Zombie"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"25;0;35;35;10;–;–;–;1;12;3;3;4;0;0;0"</Profile>
+<Skills>"None"</Skills>
+<Talents>"Frightening, Night Vision, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"121"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_TABLES_2_1">
+<Description language="ENGLISH">"Table 2-1: Expanded Chaos Mutations"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"79"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_TABLES_AP_1">
+<Description language="ENGLISH">"Table AP-1: Biped Hit Locations"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"125"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_TABLES_AP_2">
+<Description language="ENGLISH">"Table AP-2: Winged Biped Hit Locations"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"125"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_TABLES_AP_3">
+<Description language="ENGLISH">"Table AP-3: Quadruped Hit Locations"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"125"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_TABLES_AP_4">
+<Description language="ENGLISH">"Table AP-4: Winged Quadruped Hit Locations"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"125"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_TABLES_AP_5">
+<Description language="ENGLISH">"Table AP-5: Humanoid Quadruped Hit Locations"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"125"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_TABLES_AP_6">
+<Description language="ENGLISH">"Table AP-6: Avian Hit Locations"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"125"</Page>
+</EquipmentV2>
+<EquipmentV2 id="OWB-EQUI_TABLES_AP_7">
+<Description language="ENGLISH">"Table AP-7: Critical Effects—Wing"</Description>
+<Category>"RULES-EQCAT2_TABLES"</Category>
+<Note>""</Note>
+<Page>"126"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="RULES-T_DIVINE_LORE__SPIRITS">
+<Description language="ENGLISH">"Divine Lore (Spirits)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+</DATA_BOOK>

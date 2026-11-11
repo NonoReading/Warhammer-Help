@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"SOTS"</CODE_BOOK>
+<BOOK>"BOOK SORCERERS OF THE SOUTH"</BOOK>
+<BOOKNAME>"SORCERERS OF THE SOUTH"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"This is a completely unofficial, fan-written supplement for Warhammer Fantasy Roleplay 2nd Edition. All relevant trademarks and copyrights are used without permission and in no way intended to challenge their ownership by Fantasy Flight Games and Games Workshop. Warhammer Fantasy Roleplay © Games Workshop Limited 1986, 2005. This edition © Games Workshop Limited 2012. Games Workshop, Warhammer, Warhammer Fantasy Roleplay, the foregoing marks’ respective logos and all associated marks, logos, places, names, creatures, races and race insignia/devices/logos/symbols, vehicles, locations, weapons, units and"</DISCLAIMER>
+<DATA_TALENT>
+<Talent id="SOTS-T_INTAGLIO">
+<Description language="ENGLISH">"Intaglio"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"16"</Page>
+</Talent>
+<Talent id="SOTS-T_CHIAROSCURO">
+<Description language="ENGLISH">"Chiaroscuro"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"16"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_CAREER>
+<Career id="SOTS-CARE_TILEAN_RAGAZZO">
+<Description language="ENGLISH">"Tilean Ragazzo"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"Ag +5%, Int +15%, WP +10%, Fel +5%"</MainProfile>
+<SecondaryProfile>"W +2, Mag +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_Mag">"1"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Tilean Magick), Channelling, Magic Sense, Perception, Read/Write, Speak Arcane Language (Tilean Magick), Speak Language (Classical), Academic Knowledge (Any), Gossip, Speak Language (Any), Trade (Any), Heal, Common Knowledge (Tilea)"</Skills>
+<Talents>"Aethyric Attunement, Fast Hands, Savvy, Suave, Chiaroscuro, Petty Magic (Arcane)"</Talents>
+<Trappings>"Robes, Writing set, Familiar"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_TILEAN_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_TILEAN_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_CLASSICAL">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_*">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_TILEA">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS">"1"</Talent>
+<Talent name="RULES-T_SAVVY">"1"</Talent>
+<Talent name="RULES-T_SUAVE">"1"</Talent>
+<Talent name="SOTS-T_CHIAROSCURO">"1"</Talent>
+<Talent name="RULES-T_PETTY_MAGIC__ARCANE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"SOTS 47"</Source>
+</Career>
+<Career id="SOTS-CARE_TILEAN_TIFOSI">
+<Description language="ENGLISH">"Tilean Tifosi"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +5%, T +5%, Ag +15%, Int +15%, WP +15%, Fel +20%"</MainProfile>
+<SecondaryProfile>"A +1, W +3, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Tilean Magick), Channelling, Magic Sense, Perception, Read/Write, Speak Arcane Language (Tilean Magick), Speak Language (Classical), Academic Knowledge (Any), Gossip, Speak Language (Any), Trade (Any), Speak Arcane Language (Any), Secret Language (Any), Ride, Command, Navigation, Heal, Common Knowledge (Any two)"</Skills>
+<Talents>"Chiaroscuro, Intaglio, Dark Lore (Necromancy), Arcane Lore (Any), Lesser Magic (Any four), Linguistics, Seasoned Traveller"</Talents>
+<Trappings>"1 magic item, printed book, 1 set Best clothes, 3 potions, Familiar"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_TILEAN_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_TILEAN_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_CLASSICAL">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="SOTS-T_CHIAROSCURO">"1"</Talent>
+<Talent name="SOTS-T_INTAGLIO">"1"</Talent>
+<Talent name="RULES-T_DARK_LORE__NECROMANCY">"1"</Talent>
+<Talent name="RULES-T_ARCANE_LORE__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_LINGUISTICS">"1"</Talent>
+<Talent name="RULES-T_SEASONED_TRAVELLER">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"SOTS 47"</Source>
+</Career>
+<Career id="SOTS-CARE_TILEAN_MAESTRO">
+<Description language="ENGLISH">"Tilean Maestro"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +5%, S +5%, T +5%, Ag +5%, Int +10%, WP +30%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +4, Mag +6"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"30"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_Mag">"6"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Tilean Magick), Channelling, Magic Sense, Perception, Read/Write, Speak Arcane Language (Tilean Magick), Speak Language (Classical), Academic Knowledge (Any), Gossip, Speak Language (Any), Trade (Any), Speak Arcane Language (Any), Secret Language (Any), Ride, Command, Navigation, Heal, Intimidate, Common Knowledge (Any two)"</Skills>
+<Talents>"Arcane Lore (Any three), Schemer, Suave, Strong-minded, Intaglio"</Talents>
+<Trappings>"Three magic items, Grimoire, 2 sets Best quality clothes, 500 gc, 5 followers, Familiar, 8 potions"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_TILEAN_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_TILEAN_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_CLASSICAL">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ARCANE_LORE__*">"1"</Talent>
+<Talent name="RULES-T_ARCANE_LORE__*">"1"</Talent>
+<Talent name="RULES-T_ARCANE_LORE__*">"1"</Talent>
+<Talent name="RULES-T_SCHEMER">"1"</Talent>
+<Talent name="RULES-T_SUAVE">"1"</Talent>
+<Talent name="RULES-T_STRONG_MINDED">"1"</Talent>
+<Talent name="SOTS-T_INTAGLIO">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"SOTS 48"</Source>
+</Career>
+<Career id="SOTS-CARE_ESTALIAN_MEMBER">
+<Description language="ENGLISH">"Estalian Member"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +5%, T +5%, Ag +15%, Int +15%, WP +15%, Fel +20%"</MainProfile>
+<SecondaryProfile>"A +1, W +3, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Estalian Magick), Channelling, Magic Sense, Perception, Read/Write, Speak Arcane Language (Estalian Magick), Speak Language (Classical), Academic Knowledge (Any), Gossip, Speak Language (Any), Trade (Any), Speak Arcane Language (Any), Secret Language (Any), Ride, Command, Navigation, Heal, Intimidate, Common Knowledge (Any two), Specialist Weapon Group (Fencing)"</Skills>
+<Talents>"Arcane Lore (Any three), Schemer, Suave, Strong-minded"</Talents>
+<Trappings>"1 Icon, 1 set Good quality clothes, 10 gc"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ESTALIAN_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ESTALIAN_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_CLASSICAL">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ARCANE_LORE__*">"1"</Talent>
+<Talent name="RULES-T_ARCANE_LORE__*">"1"</Talent>
+<Talent name="RULES-T_ARCANE_LORE__*">"1"</Talent>
+<Talent name="RULES-T_SCHEMER">"1"</Talent>
+<Talent name="RULES-T_SUAVE">"1"</Talent>
+<Talent name="RULES-T_STRONG_MINDED">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__FENCING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"SOTS 48"</Source>
+</Career>
+<Career id="SOTS-CARE_ESTALIAN_PRINCIPAL">
+<Description language="ENGLISH">"Estalian Principal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, BS +5%, S +5%, T +5%, Ag +5%, Int +10%, WP +30%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +4, Mag +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"30"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_Mag">"4"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Estalian Magick), Channelling, Magic Sense, Perception, Read/Write, Speak Arcane Language (Estalian Magick), Speak Language (Classical), Academic Knowledge (Theology), Gossip, Speak Language (Any), Trade (Any), Speak Arcane Language (Any), Secret Language (Any), Ride, Command, Navigation, Heal, Intimidate, Common Knowledge (Any two), Specialist Weapon Group (Parrying)"</Skills>
+<Talents>"Arcane Lore (Any three), Strong-minded"</Talents>
+<Trappings>"1 Icon, Grimoire, 1 set Best quality clothes, 100 gc, 5 followers"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ESTALIAN_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ESTALIAN_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_CLASSICAL">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ARCANE_LORE__*">"1"</Talent>
+<Talent name="RULES-T_ARCANE_LORE__*">"1"</Talent>
+<Talent name="RULES-T_ARCANE_LORE__*">"1"</Talent>
+<Talent name="RULES-T_STRONG_MINDED">"1"</Talent>
+<Talent name="RULES-T_SPECIALIST_WEAPON_GROUP__PARRYING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"SOTS 49"</Source>
+</Career>
+<Career id="SOTS-CARE_ESTALIAN_DIRECTOR">
+<Description language="ENGLISH">"Estalian Director"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +30%, BS +5%, S +5%, T +5%, Ag +5%, Int +10%, WP +30%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +5, Mag +6"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"30"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"30"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"5"</Advance>
+<Advance name="RULES-ATTR_Mag">"6"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Estalian Magick), Academic Knowledge (Theology), Channelling, Magic Sense, Perception, Read/Write, Speak Arcane Language (Estalian Magick), Speak Language (Classical), Academic Knowledge (Any), Gossip, Speak Language (Any), Speak Arcane Language (Any), Secret Language (Any), Ride, Command, Navigation, Heal, Intimidate, Common Knowledge (Any two)"</Skills>
+<Talents>"Arcane Lore (Any three), Schemer, Suave"</Talents>
+<Trappings>"1 magic item, 2 Icons, 2 Grimoires, 2 Holy weapons, 2 sets Best quality clothes, 500 gc, 15 followers"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ESTALIAN_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ESTALIAN_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_CLASSICAL">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ARCANE_LORE__*">"1"</Talent>
+<Talent name="RULES-T_ARCANE_LORE__*">"1"</Talent>
+<Talent name="RULES-T_ARCANE_LORE__*">"1"</Talent>
+<Talent name="RULES-T_SCHEMER">"1"</Talent>
+<Talent name="RULES-T_SUAVE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"SOTS 49"</Source>
+</Career>
+<Career id="SOTS-CARE_ARABYAN_VIZIER">
+<Description language="ENGLISH">"Arabyan Vizier"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +30%, BS +5%, S +5%, T +5%, Ag +5%, Int +20%, WP +30%, Fel +10%"</MainProfile>
+<SecondaryProfile>"A +1, W +5, Mag +6"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"30"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"30"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_A">"1"</Advance>
+<Advance name="RULES-ATTR_W">"5"</Advance>
+<Advance name="RULES-ATTR_Mag">"6"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Arabyan Magick), Channelling, Magic Sense, Perception, Read/Write, Speak Arcane Language (Arabyan Magick), Speak Language (Classical), Academic Knowledge (Any), Gossip, Speak Language (Any), Trade (Any), Speak Arcane Language (Any), Secret Language (Any), Ride, Command, Navigation, Heal, Intimidate, Common Knowledge (Any two), Surgery, Hypnotism, Prepare Poison, Torture"</Skills>
+<Talents>"Arcane Lore (Any three), Dark Lore, Frightening, Menacing, Meditation, Schemer, Suave"</Talents>
+<Trappings>"1 magic item, Bound Jinn, 2 Grimoires, 2 sets Best quality clothes, 500 gc, 10 slaves"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ARABYAN_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ARABYAN_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_CLASSICAL">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_NAVIGATION">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_HYPNOTISM">"1"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISON">"1"</Skill>
+<Skill name="RULES-COMP_TORTURE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ARCANE_LORE__*">"1"</Talent>
+<Talent name="RULES-T_ARCANE_LORE__*">"1"</Talent>
+<Talent name="RULES-T_ARCANE_LORE__*">"1"</Talent>
+<Talent name="RULES-T_DARK_LORE__*">"1"</Talent>
+<Talent name="RULES-T_FRIGHTENING">"1"</Talent>
+<Talent name="RULES-T_MENACING">"1"</Talent>
+<Talent name="RULES-T_MEDITATION">"1"</Talent>
+<Talent name="RULES-T_SCHEMER">"1"</Talent>
+<Talent name="RULES-T_SUAVE">"1"</Talent>
+<Talent name="RULES-T_SURGERY">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"SOTS 50"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="SOTS-CARE_TILEAN_RAGAZZO">"SOTS-CARE_TILEAN_TIFOSI"</Link>
+<Link name="SOTS-CARE_TILEAN_RAGAZZO">"RULES-CARE_HEDGE_WIZARD"</Link>
+<Link name="SOTS-CARE_TILEAN_RAGAZZO">"RULES-CARE_INITIATE"</Link>
+<Link name="SOTS-CARE_TILEAN_RAGAZZO">"RULES-CARE_SCHOLAR"</Link>
+<Link name="SOTS-CARE_TILEAN_RAGAZZO">"RULES-CARE_STUDENT"</Link>
+<Link name="SOTS-CARE_TILEAN_RAGAZZO">"RULES-CARE_SCRIBE"</Link>
+<Link name="RULES-CARE_HEDGE_WIZARD">"SOTS-CARE_TILEAN_RAGAZZO"</Link>
+<Link name="SOTS-CARE_TILEAN_TIFOSI">"SOTS-CARE_TILEAN_MAESTRO"</Link>
+<Link name="SOTS-CARE_TILEAN_TIFOSI">"RULES-CARE_MERCENARY"</Link>
+<Link name="SOTS-CARE_TILEAN_TIFOSI">"RULES-CARE_BURGHER"</Link>
+<Link name="SOTS-CARE_TILEAN_TIFOSI">"CCOMP-CARE_AMBASSADOR"</Link>
+<Link name="SOTS-CARE_TILEAN_TIFOSI">"RULES-CARE_EXPLORER"</Link>
+<Link name="SOTS-CARE_TILEAN_TIFOSI">"RULES-CARE_SCHOLAR"</Link>
+<Link name="SOTS-CARE_TILEAN_TIFOSI">"RULES-CARE_NOBLE"</Link>
+<Link name="SOTS-CARE_TILEAN_MAESTRO">"CCOMP-CARE_AMBASSADOR"</Link>
+<Link name="SOTS-CARE_TILEAN_MAESTRO">"RULES-CARE_EXPLORER"</Link>
+<Link name="SOTS-CARE_TILEAN_MAESTRO">"RULES-CARE_SCHOLAR"</Link>
+<Link name="SOTS-CARE_TILEAN_MAESTRO">"RULES-CARE_GUILD_MASTER"</Link>
+<Link name="SOTS-CARE_TILEAN_MAESTRO">"RULES-CARE_NOBLE_LORD"</Link>
+<Link name="SOTS-CARE_TILEAN_MAESTRO">"RULES-CARE_POLITICIAN"</Link>
+<Link name="SOTS-CARE_ESTALIAN_MEMBER">"RULES-CARE_SCHOLAR"</Link>
+<Link name="SOTS-CARE_ESTALIAN_MEMBER">"SOTS-CARE_ESTALIAN_PRINCIPAL"</Link>
+<Link name="SOTS-CARE_ESTALIAN_MEMBER">"RULES-CARE_INITIATE"</Link>
+<Link name="SOTS-CARE_ESTALIAN_PRINCIPAL">"CCOMP-CARE_AMBASSADOR"</Link>
+<Link name="SOTS-CARE_ESTALIAN_PRINCIPAL">"RULES-CARE_EXPLORER"</Link>
+<Link name="SOTS-CARE_ESTALIAN_PRINCIPAL">"RULES-CARE_SCHOLAR"</Link>
+<Link name="SOTS-CARE_ESTALIAN_PRINCIPAL">"RULES-CARE_INITIATE"</Link>
+<Link name="SOTS-CARE_ESTALIAN_PRINCIPAL">"RULES-CARE_POLITICIAN"</Link>
+<Link name="SOTS-CARE_ESTALIAN_DIRECTOR">"RULES-CARE_SCHOLAR"</Link>
+<Link name="SOTS-CARE_ESTALIAN_DIRECTOR">"RULES-CARE_NOBLE_LORD"</Link>
+<Link name="SOTS-CARE_ESTALIAN_DIRECTOR">"RULES-CARE_POLITICIAN"</Link>
+<Link name="SOTS-CARE_ESTALIAN_PRINCIPAL">"SOTS-CARE_ESTALIAN_DIRECTOR"</Link>
+<Link name="SOTS-CARE_ARABYAN_VIZIER">"RULES-CARE_SCHOLAR"</Link>
+<Link name="SOTS-CARE_ARABYAN_VIZIER">"RULES-CARE_NOBLE_LORD"</Link>
+<Link name="SOTS-CARE_ARABYAN_VIZIER">"RULES-CARE_POLITICIAN"</Link>
+<Link name="RULES-CARE_APPRENTICE_WIZARD">"SOTS-CARE_TILEAN_RAGAZZO"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMP_ACADEMIC_KNOWLEDGE_TILEAN_MAGICK">
+<Description language="ENGLISH">"Academic Knowledge (Tilean Magick)"</Description>
+<Generique>"RULES-COMP_ACADEMIC_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_ARCANE_LANGUAGE_TILEAN_MAGICK">
+<Description language="ENGLISH">"Speak Arcane Language (Tilean Magick)"</Description>
+<Generique>"RULES-COMP_SPEAK_ARCANE_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_ACADEMIC_KNOWLEDGE_ESTALIAN_MAGICK">
+<Description language="ENGLISH">"Academic Knowledge (Estalian Magick)"</Description>
+<Generique>"RULES-COMP_ACADEMIC_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ESTALIAN_MAGICK">
+<Description language="ENGLISH">"Speak Arcane Language (Estalian Magick)"</Description>
+<Generique>"RULES-COMP_SPEAK_ARCANE_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_ACADEMIC_KNOWLEDGE_ARABYAN_MAGICK">
+<Description language="ENGLISH">"Academic Knowledge (Arabyan Magick)"</Description>
+<Generique>"RULES-COMP_ACADEMIC_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ARABYAN_MAGICK">
+<Description language="ENGLISH">"Speak Arcane Language (Arabyan Magick)"</Description>
+<Generique>"RULES-COMP_SPEAK_ARCANE_LANGUAGE_*"</Generique>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="RULES-T_DARK_LORE__NECROMANCY">
+<Description language="ENGLISH">"Dark Lore (Necromancy)"</Description>
+<Generique>"RULES-T_DARK_LORE__*"</Generique>
+</Talent>
+<Talent id="RULES-T_ARCANE_LORE__ILLUSIONE">
+<Description language="ENGLISH">"Arcane Lore (Illusione)"</Description>
+<Generique>"RULES-T_ARCANE_LORE__*"</Generique>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+<DATA_SPELL_V2>
+<SpellV2 id="SOTS-SPEL_GESSO">
+<Description language="ENGLISH">"Gesso"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"See below"</CastingNumber>
+<CastingTime>"See below"</CastingTime>
+<Ingredient>"Elderwood paintbrush, handmade by the mage with the hair of a Maestro Magician (+1)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_ILLUSIONE">
+<Description language="ENGLISH">"Illusione"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A paper mask of the creature or person to be impersonated (+1)"</Ingredient>
+<Page>"33"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_CAMOUFLAGE_ILLUSIONE">
+<Description language="ENGLISH">"Camouflage Illusione"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Silvered mirror (+1)"</Ingredient>
+<Page>"33"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_GLAMOUR">
+<Description language="ENGLISH">"Glamour"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small glass mirror (+1)"</Ingredient>
+<Page>"34"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_DECEPTION">
+<Description language="ENGLISH">"Deception"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A two headed silver coin (+1)"</Ingredient>
+<Page>"34"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_VENTRILOQUIST">
+<Description language="ENGLISH">"Ventriloquist"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Ear ring in the shape of an open mouth. (+1)"</Ingredient>
+<Page>"34"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_BEWILDER">
+<Description language="ENGLISH">"Bewilder"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A glass of red wine (+1)"</Ingredient>
+<Page>"34"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_CAMOUFLAGE_AREA">
+<Description language="ENGLISH">"Camouflage Area"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A watercolour paintbox (+1)"</Ingredient>
+<Page>"35"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_ILLUSORY_FEATURE">
+<Description language="ENGLISH">"Illusory Feature"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A sculpture of the individual to be changed."</Ingredient>
+<Page>"35"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_GEMINI">
+<Description language="ENGLISH">"Gemini"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"vials of caster's blood (+1)"</Ingredient>
+<Page>"35"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_CLOAK_ACTIVITY">
+<Description language="ENGLISH">"Cloak Activity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A black silk scarf (+1)"</Ingredient>
+<Page>"36"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_SHROUD_OF_INVISIBILITY">
+<Description language="ENGLISH">"Shroud of Invisibility"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"1 and Half action"</CastingTime>
+<Ingredient>"A shroud at least 100 years old from a tomb of a Wizard. (+2)"</Ingredient>
+<Page>"36"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_HALLUCINATE">
+<Description language="ENGLISH">"Hallucinate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A model of the desired creature cast in lead. (+1)"</Ingredient>
+<Page>"36"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_MINOR_EIDOLON">
+<Description language="ENGLISH">"Minor Eidolon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small bronze mirror (+2)"</Ingredient>
+<Page>"36"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_BANISH_ILLUSIONE">
+<Description language="ENGLISH">"Banish Illusione"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A prism of Tilean warpstone crystal glass (+1)"</Ingredient>
+<Page>"37"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_FANTASMA">
+<Description language="ENGLISH">"Fantasma"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Grave cloth (+2)"</Ingredient>
+<Page>"37"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_IL_GRAN_ILLUSIONE">
+<Description language="ENGLISH">"Il Gran Illusione"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Two Actions"</CastingTime>
+<Ingredient>"Leather Mask (+1)"</Ingredient>
+<Page>"38"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_LEGIONE_INFERNALE">
+<Description language="ENGLISH">"Legione Infernale"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Two Actions"</CastingTime>
+<Ingredient>"Skull of a wizard of Journeyman status (+3)"</Ingredient>
+<Page>"38"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_DESTROY_ILLUSION">
+<Description language="ENGLISH">"Destroy Illusion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A Tilean warpstone crystal glass prism (+3)"</Ingredient>
+<Page>"38"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_RIGODOON">
+<Description language="ENGLISH">"Rigodoon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"25"</CastingNumber>
+<CastingTime>"Two Actions"</CastingTime>
+<Ingredient>"Map and painting of buildings (+1)"</Ingredient>
+<Page>"39"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_ILLUSIONARY_WOODS">
+<Description language="ENGLISH">"Illusionary Woods"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"25"</CastingNumber>
+<CastingTime>"Two Actions"</CastingTime>
+<Ingredient>"Small model trees (+1)"</Ingredient>
+<Page>"39"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_LEGIONE_FANTASM">
+<Description language="ENGLISH">"Legione Fantasm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"25"</CastingNumber>
+<CastingTime>"Two Actions"</CastingTime>
+<Ingredient>"Small painted lead model figures of the troops desired by the caster (+2)"</Ingredient>
+<Page>"39"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_CONFOUND_FOE">
+<Description language="ENGLISH">"Confound Foe"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"25"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"An hourglass with crushed diamonds instead of sand, value 100 GCs (+3)"</Ingredient>
+<Page>"40"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_ILLUSIONE_IMPERIALE">
+<Description language="ENGLISH">"Illusione Imperiale"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"25"</CastingNumber>
+<CastingTime>"Two Actions"</CastingTime>
+<Ingredient>"A Tilean Warpstone glass crystal prism (+3)"</Ingredient>
+<Page>"40"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_CONFUSION_UNIVERSALE">
+<Description language="ENGLISH">"Confusion Universale"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"30"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Skull of a Master Wizard (+3)"</Ingredient>
+<Page>"40"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_OCCULTA">
+<Description language="ENGLISH">"Occulta"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusione"</Lore>
+<CastingNumber>"30"</CastingNumber>
+<CastingTime>"one and half actions"</CastingTime>
+<Ingredient>"Pitch from the mummy case of a Nehekharan (+2)"</Ingredient>
+<Page>"41"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_BLESSING_OF_FURY">
+<Description language="ENGLISH">"Blessing of Fury"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine, Myrmidia)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A polished ball of copper engraved with a Holy Symbol (+1)"</Ingredient>
+<Page>"41"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_BLESSING_OF_MYRMIDIA">
+<Description language="ENGLISH">"Blessing of Myrmidia"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine, Myrmidia)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"An eagle's eye stone (+1)"</Ingredient>
+<Page>"41"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_MYSTIC_SHIELD_OF_LIGHT">
+<Description language="ENGLISH">"Mystic Shield of light"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine, Myrmidia)"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Coin sized Polished copper Icon shaped as shield with Holy Emblem.(+1)"</Ingredient>
+<Page>"42"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_PREPARE_VESSEL">
+<Description language="ENGLISH">"Prepare Vessel"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"n/a"</CastingNumber>
+<CastingTime>"1 day"</CastingTime>
+<Ingredient>"Item, inscribed with Jinn's true name, written in the Viziers' blood."</Ingredient>
+<Page>"43"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_BIND_JINN">
+<Description language="ENGLISH">"Bind Jinn"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Djinn)"</Lore>
+<CastingNumber>"See below"</CastingNumber>
+<CastingTime>"See below"</CastingTime>
+<Ingredient>"Human sacrifice (+5) and a prepared artefact (+1)"</Ingredient>
+<Page>"43"</Page>
+</SpellV2>
+<SpellV2 id="SOTS-SPEL_ENSLAVE_ELEMENTAL">
+<Description language="ENGLISH">"Enslave Elemental"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Arcane Lore"</Lore>
+<CastingNumber>"Variable"</CastingNumber>
+<CastingTime>"Variable"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"44"</Page>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SPELL_TALENT>
+<Sort id="SOTS-SPEL_ILLUSIONE">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_CAMOUFLAGE_ILLUSIONE">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_GLAMOUR">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_DECEPTION">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_VENTRILOQUIST">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_BEWILDER">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_CAMOUFLAGE_AREA">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_ILLUSORY_FEATURE">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_GEMINI">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_CLOAK_ACTIVITY">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_SHROUD_OF_INVISIBILITY">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_HALLUCINATE">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_MINOR_EIDOLON">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_BANISH_ILLUSIONE">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_FANTASMA">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_IL_GRAN_ILLUSIONE">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_LEGIONE_INFERNALE">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_DESTROY_ILLUSION">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_RIGODOON">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_ILLUSIONARY_WOODS">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_LEGIONE_FANTASM">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_CONFOUND_FOE">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_ILLUSIONE_IMPERIALE">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_CONFUSION_UNIVERSALE">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+<Sort id="SOTS-SPEL_OCCULTA">
+<Talent>"RULES-T_ARCANE_LORE__ILLUSIONE"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="SOTS-EQUI_CREATURES_SLAVE_ELEMENTAL">
+<Description language="ENGLISH">"Slave Elemental"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"80;80;50;90;50;70;70;5;9;50;5;9;5;0;0;0"</Profile>
+<Skills>"Perception, Speak Arcane Language (Elemental), Speak Language (Nehekharan)"</Skills>
+<Talents>"Ambidextrous, Natural Weapons, Will of Iron, Frightening"</Talents>
+<Note>""</Note>
+<Page>"45"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+</DATA_BOOK>

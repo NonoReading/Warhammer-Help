@@ -2,6 +2,7 @@
 <DATA_BOOK>
 <CODE_BOOK>"WARDA"</CODE_BOOK>
 <BOOK>"BOOK WOOD ELF WARDANCER"</BOOK>
+<BOOKNAME>"WOOD ELF WARDANCER"</BOOKNAME>
 <language>"ENGLISH"</language>
 <VERSION>"WFRP4"</VERSION>
 <OFFICIAL>"2"</OFFICIAL>
@@ -16,14 +17,14 @@
 </Label>
 </DATA_LABEL>
 <DATA_SKILL_SPECIALIZATION>
-<Skill id="RULES-COMPSIGNES_WOODELF">
+<Skill id="RULES-COMP_SECRET_SIGNS__WOOD_ELVES">
 <Description language="ENGLISH">"Secret Signs (Wood Elves)"</Description>
-<Generique>"RULES-COMPSIGNES_*"</Generique>
+<Generique>"RULES-COMP_SECRET_SIGNS__*"</Generique>
 <Page>129</Page>
 </Skill>
   </DATA_SKILL_SPECIALIZATION>
 <DATA_TALENT>
-<Talent id="WARDA-T0001">
+<Talent id="WARDA-T_TALISMANIC_TATTOOS">
 <Description language="ENGLISH">"Talismanic Tattoos"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -32,7 +33,7 @@
 <Test language="ENGLISH">""</Test>
 <Page>2</Page>
 </Talent>
-<Talent id="WARDA-T0002">
+<Talent id="WARDA-T_SHADOW_DANCES_OF_LOEC">
 <Description language="ENGLISH">"Shadow Dances of Loec"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -43,10 +44,10 @@
 </Talent>
   </DATA_TALENT>
 <DATA_CAREER>
-<Career id="WARDA-WORK001">
+<Career id="WARDA-WORK_WOOD_ELF_WARDANCER">
 <Description language="ENGLISH">"Wood Elf Wardancer"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPCOMB_*"</Skill>
+<Skill>"RULES-COMP_MELEE__*"</Skill>
   <Class>"RULES-CLASS_RANG"</Class>
   <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -79,51 +80,51 @@
 <Attribut name="RULES-ATTR_Fel">"4"</Attribut>
 </SUBCHAPTER_ATTR>
   <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPATHL">"1"</Skill>
-  <Skill name="RULES-COMPESQU">"1"</Skill>
-  <Skill name="RULES-COMPRESIST">"1"</Skill>
-  <Skill name="RULES-COMPINTUI">"1"</Skill>
-  <Skill name="RULES-COMPCOMB_*">"1"</Skill>
-  <Skill name="RULES-COMPREPRES_DANS">"1"</Skill>
-  <Skill name="RULES-COMPDISC_RURAL">"1"</Skill>
-  <Skill name="RULES-COMPSURVEXT">"1"</Skill>
-  <Skill name="RULES-COMPCALM">"2"</Skill>
-  <Skill name="RULES-COMPCOMB_PARAD">"2"</Skill>
-  <Skill name="RULES-COMPSIGNES_WOODELF">"2"</Skill>
-  <Skill name="RULES-COMPESCAM">"2"</Skill>
-  <Skill name="RULES-COMPPIST">"2"</Skill>
-  <Skill name="RULES-COMPPRECEP">"2"</Skill>
-  <Skill name="RULES-COMPCHARM">"3"</Skill>
-  <Skill name="RULES-COMPDIVERT_NARRA">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_HIST">"3"</Skill>
-  <Skill name="RULES-COMPMUSIC_*">"3"</Skill>
-  <Skill name="RULES-COMPCOMM">"4"</Skill>
-  <Skill name="RULES-COMPSAVOIR_*">"4"</Skill>
+<Skill name="RULES-COMP_ATHLETICS">"1"</Skill>
+  <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"1"</Skill>
+  <Skill name="RULES-COMP_INTUITION">"1"</Skill>
+  <Skill name="RULES-COMP_MELEE__*">"1"</Skill>
+  <Skill name="RULES-COMP_PERFORM__DANCING">"1"</Skill>
+  <Skill name="RULES-COMP_STEALTH__RURAL">"1"</Skill>
+  <Skill name="RULES-COMP_OUTDOOR_SURVIVAL">"1"</Skill>
+  <Skill name="RULES-COMP_COOL">"2"</Skill>
+  <Skill name="RULES-COMP_MELEE__PARRY">"2"</Skill>
+  <Skill name="RULES-COMP_SECRET_SIGNS__WOOD_ELVES">"2"</Skill>
+  <Skill name="RULES-COMP_SLEIGHT_OF_HAND">"2"</Skill>
+  <Skill name="RULES-COMP_TRACK">"2"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"2"</Skill>
+  <Skill name="RULES-COMP_CHARM">"3"</Skill>
+  <Skill name="RULES-COMP_ENTERTAIN__STORYTELLING">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__HISTORY">"3"</Skill>
+  <Skill name="RULES-COMP_PLAY__*">"3"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"4"</Skill>
+  <Skill name="RULES-COMP_LORE__*">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0004">"1"</Talent>
-  <Talent name="RULES-T0096">"1"</Talent>
-  <Talent name="RULES-T0112">"1"</Talent>
-  <Talent name="WARDA-T0001">"1"</Talent>
-  <Talent name="RULES-T0028">"2"</Talent>
-  <Talent name="RULES-T0162">"2"</Talent>
-  <Talent name="RULES-T0025">"2"</Talent>
-  <Talent name="WARDA-T0002">"2"</Talent>
-  <Talent name="RULES-T0095">"3"</Talent>
-  <Talent name="RULES-T0168">"3"</Talent>
-  <Talent name="RULES-T0037">"3"</Talent>
-  <Talent name="RULES-T0130">"3"</Talent>
-  <Talent name="RULES-T0061">"4"</Talent>
-  <Talent name="RULES-T0132_*">"4"</Talent>
-  <Talent name="RULES-T0008">"4"</Talent>
-  <Talent name="RULES-T0062">"4"</Talent>
+<Talent name="RULES-T_AMBIDEXTROUS">"1"</Talent>
+  <Talent name="RULES-T_DUAL_WIELDER">"1"</Talent>
+  <Talent name="RULES-T_STEP_ASIDE">"1"</Talent>
+  <Talent name="WARDA-T_TALISMANIC_TATTOOS">"1"</Talent>
+  <Talent name="RULES-T_COMBAT_REFLEXES">"2"</Talent>
+  <Talent name="RULES-T_FLEET_FOOTED">"2"</Talent>
+  <Talent name="RULES-T_STOUT_HEARTED">"2"</Talent>
+  <Talent name="WARDA-T_SHADOW_DANCES_OF_LOEC">"2"</Talent>
+  <Talent name="RULES-T_COMBAT_MASTER">"3"</Talent>
+  <Talent name="RULES-T_SEASONED_TRAVELLER">"3"</Talent>
+  <Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"3"</Talent>
+  <Talent name="RULES-T_RIPOSTE">"3"</Talent>
+  <Talent name="RULES-T_CAREFUL_STRIKE">"4"</Talent>
+  <Talent name="RULES-T_FEARLESS__*">"4"</Talent>
+  <Talent name="RULES-T_FURIOUS_ASSAULT">"4"</Talent>
+  <Talent name="RULES-T_REACTION_STRIKE">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="RULES-COMB_BASE_*">"1"</Item>
-<Item name="RULES-COMB_BASE_*">"1"</Item>
+<Item name="RULES-COMP_MELEE__BASIC">"1"</Item>
+<Item name="RULES-COMP_MELEE__BASIC">"1"</Item>
   <Item name="buckskins">"1"</Item>
 <Item name="war paint">"1"</Item>
-<Item name="WARDA-COMB_BASE_001/ARCH1-COMB_BASE_25">"2"</Item>
+<Item name="WARDA-COMB_ASRAI_WAR_BLADE/ARCH1-COMB_EONIR_WAR_BLADE">"2"</Item>
   <Item name="elven girdle">"2"</Item>
 <Item name="buckskins">"2"</Item>
 <Item name="tall tales and a storytellers finesse">"3"</Item>
@@ -135,19 +136,19 @@
 <DATA_CAREER_SPECIE>
   <Entry>
 <Specie>"RULES-SPECIE_WELF"</Specie>
-<Career name="WARDA-WORK001">"X"</Career>
+<Career name="WARDA-WORK_WOOD_ELF_WARDANCER">"X"</Career>
   </Entry>
 </DATA_CAREER_SPECIE>
 <DATA_WEAPON>
-<Weapon id="WARDA-COMB_BASE_001">
+<Weapon id="WARDA-COMB_ASRAI_WAR_BLADE">
 <Description language="ENGLISH">"Asrai War Blade"</Description>
-<Skill>"RULES-COMPCOMB_BASE"</Skill>
+<Skill>"RULES-COMP_MELEE__BASIC"</Skill>
 <Damage>"+(BATTR_S)+3"</Damage>
 <Availability>"RULES-DISPO_RARE"</Availability>
 <Reach>"RULES-WEAPR_MID"</Reach>
 <Price>"3CO"</Price>
 <Encumbrance>"1"</Encumbrance>
-<Quality>"RULES-WEAPB14"</Quality>
+<Quality>"RULES-WEAPB_PRECISE"</Quality>
 <Hand>"1"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>1</Page>

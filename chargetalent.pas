@@ -71,8 +71,122 @@ function ChercheTalent(CodeTalent :String): StructureTalent;
 function ListeTalent(CodeTalent :String): TStringList;
 function LibelleTalent(CodeTalent :String): String;
 function CodeTalentGenerique(PTalent: StructureTalent): String;
+function CodeFamilleTalent(const Code: String): String;
+// Version Momentum (WFRP5) ou normale (WFRP4) d'un code de talent : bascule MOMENTUM-xxx <-> RULES-xxx
+// si le talent existe dans l'autre livre, sinon renvoie le code tel quel.
+function CodeTalentVersion(const Code: String; Momentum: Boolean): String;
+// Vrai si le livre Momentum est charge (au moins un de ses talents est dans ListTalent).
+function LivreMomentumCharge: Boolean;
+function RadicalTalent(const Code: String): String;
+procedure OublieFamillesTalent;
 
 implementation
+
+// Famille (code generique '..._*') dont ce code est une specialisation, '' si ce n'en est pas une.
+// Le nom d'un talent contient lui-meme des '_' (RULES-T_BLESS_SIGMAR) : on ne peut plus couper au
+// premier. On essaie chaque '_' de gauche a droite et on retient le premier prefixe dont le code
+// generique est DECLARE (RULES-T, puis RULES-T_BLESS -> RULES-T_BLESS_*). Chantier codes a nom,
+// 24/10/2026.
+var
+  // Codes generiques ('..._*') declares, tries : CodeFamilleTalent est appelee par ChercheTalent, donc tres
+  // souvent. Reconstruit quand le nombre de talents change, ou apres OublieFamillesTalent (rechargement).
+  Generiques:       TStringList;
+  GeneriquesCompte: Integer = -1;
+
+procedure OublieFamillesTalent;
+Begin
+  GeneriquesCompte := -1;
+End;
+
+function CodeFamilleTalent(const Code: String): String;
+var
+  P:       Integer;
+  Cand:    String;
+  PTalent: StructureTalent;
+Begin
+  Result := '';
+  if (Code = '') or (Pos(ValeurGenerique, Code) > 0) or (Pos(SeparateurMulti, Code) > 0) then
+    Exit;
+  // Format actuel (V4, V5) : la specialisation est reconnue a son '__', la famille est ce qui precede.
+  P := Pos(SeparateurSpecialisationTalent, Code);
+  if P > 0 then
+    Exit(Copy(Code, 1, P - 1) + ValeurGeneriqueTalent);
+  // Ancien format (V2) : '_' simple, la famille est cherchee parmi les generiques declares.
+  if GeneriquesCompte <> ListTalent.Count then
+    begin
+      Generiques.Clear;
+      for PTalent in ListTalent do
+        if (Pos(ValeurGenerique, PTalent.CodeTalent) > 0) and (Pos(SeparateurMulti, PTalent.CodeTalent) = 0) then
+          Generiques.Add(PTalent.CodeTalent);
+      GeneriquesCompte := ListTalent.Count;
+    end;
+  for P := 1 to Length(Code) do
+    if Code[P] = ValeurSousCompetence then
+      begin
+        Cand := Copy(Code, 1, P - 1) + ValeurGenerique;
+        if Generiques.IndexOf(Cand) >= 0 then
+          Exit(Cand);
+      end;
+End;
+
+function LivreMomentumCharge: Boolean;
+var
+  PTalent: StructureTalent;
+Begin
+  for PTalent in ListTalent do
+    if Copy(PTalent.CodeTalent, 1, Length(ConstCodeLivreMomentum) + 1) = ConstCodeLivreMomentum + '-' then
+      Exit(True);
+  Result := False;
+End;
+
+function CodeTalentVersion(const Code: String; Momentum: Boolean): String;
+var
+  Cle, Cible, Source: String;
+  PTalent:            StructureTalent;
+Begin
+  Result := Code;
+  if (Code = '') or (Pos(SeparateurMulti, Code) > 0) or (Pos(ValeurGenerique, Code) > 0) then
+    Exit;
+  Cle := CodeSansLivre(Code);
+  if Cle = Code then
+    Exit;
+  if Momentum then
+    begin
+      Source := 'RULES-';
+      Cible  := ConstCodeLivreMomentum + '-' + Cle;
+    end
+  else
+    begin
+      Source := ConstCodeLivreMomentum + '-';
+      Cible  := 'RULES-' + Cle;
+    end;
+  if Copy(Code, 1, Length(Source)) <> Source then
+    Exit;
+  // Le code d'arrivee doit exister, sinon (livre non charge, talent sans equivalent) on ne touche a rien.
+  for PTalent in ListTalent do
+    if PTalent.CodeTalent = Cible then
+      Exit(Cible);
+End;
+
+// Radical : le code de la famille sans son '_*' (RULES-T_BLESS_SIGMAR et RULES-T_BLESS_* donnent
+// RULES-T_BLESS) ; un talent sans famille est son propre radical.
+function RadicalTalent(const Code: String): String;
+var
+  Fam: String;
+Begin
+  if Pos(ValeurGenerique, Code) > 0 then
+    Fam := Code
+  else
+    Fam := CodeFamilleTalent(Code);
+  if Fam = '' then
+    Result := Code
+  else if Copy(Fam, Length(Fam) - 2, 3) = ValeurGeneriqueTalent then
+    Result := Copy(Fam, 1, Length(Fam) - 3)
+  else if Copy(Fam, Length(Fam) - 1, 2) = ValeurGenerique then
+    Result := Copy(Fam, 1, Length(Fam) - 2)
+  else
+    Result := Fam;
+End;
 
 function ChercheTalent(CodeTalent :String): StructureTalent;
 var
@@ -97,22 +211,44 @@ Begin
           Result := PTalent;
           break;
         end;
+  // Codes a nom (24/10/2026) : l'identite d'un talent est ce qui suit le premier '-' (T_WILL_OF_IRON), le
+  // prefixe n'est que le livre. Repli seulement si la recherche exacte n'a rien donne : un talent cree dans
+  // un livre non charge est retrouve par sa cle dans un autre livre.
+  if (Result.CodeTalent = '') and (CodeTalent <> '') then
+    begin
+      code := CodeSansLivre(CodeTalent);
+      for PTalent in ListTalent do
+        if CodeSansLivre(PTalent.CodeTalent) = code then
+          begin
+            Result := PTalent;
+            break;
+          end;
+      if Result.CodeTalent = '' then
+        for PTalent in ListTalentPerso do
+          if CodeSansLivre(PTalent.CodeTalent) = code then
+            begin
+              Result := PTalent;
+              break;
+            end;
+    end;
   // Corrige le 15/09/2026 (A FAIRE.txt) : testait PTalent.Resume, la variable de BOUCLE, qui
   // garde le DERNIER element de ListTalent si rien ne matche (pas de break) - le repli vers
   // le generique ne se declenchait alors que par hasard (dernier talent de la liste a Resume
   // vide). Result reste bien vide (Default ligne 78) dans ce cas, donc Result.Resume est le
   // test correct, y compris pour une specialisation NON trouvee.
-  if Result.Resume = '' then
-    if Pos(ValeurGenerique, CodeTalent) = 0 then
-      if Pos(ValeurSousCompetence, CodeTalent) > 0 then
+  code := '';
+  if (Result.Resume = '') and (Pos(ValeurGenerique, CodeTalent) = 0) then
+    begin
+      // Lien explicite (CONTEXT.md 2.67) prioritaire sur la deduction par radical - seul
+      // repli quand <Generique> n'est pas renseigne (donnee pas encore migree, ou
+      // specialisation sans generique '_*' identifiee).
+      if Result.CodeGenerique <> '' then
+        code := Result.CodeGenerique
+      else
+        code := CodeFamilleTalent(CodeTalent);
+    end;
+  if code <> '' then
         begin
-          // Lien explicite (CONTEXT.md 2.67) prioritaire sur la deduction par radical - seul
-          // repli quand <Generique> n'est pas renseigne (donnee pas encore migree, ou
-          // specialisation sans generique '_*' identifiee).
-          if Result.CodeGenerique <> '' then
-            code        := Result.CodeGenerique
-          else
-            code        := ExtractStringBefore(CodeTalent, ValeurSousCompetence) + ValeurGenerique;
           PTalent       := ChercheTalent(Code);
           Result.Resume := PTalent.Resume;
           // L'acces aux sorts est declare sur l'entree generique (T0012_*, T0080_*, T0088_*) :
@@ -222,12 +358,15 @@ Begin
   // quand <Generique> n'est pas renseigne.
   if PTalent.CodeGenerique <> '' then
     Result := PTalent.CodeGenerique
-  else if Pos(ValeurSousCompetence, PTalent.CodeTalent) > 0 then
-    Result := ExtractStringBefore(PTalent.CodeTalent, ValeurSousCompetence) + ValeurGenerique;
+  else if CodeFamilleTalent(PTalent.CodeTalent) <> '' then
+    Result := CodeFamilleTalent(PTalent.CodeTalent);
 end;
 
 initialization
   ListTalentPerso := TListTalent.Create;
+  Generiques := TStringList.Create;
+  Generiques.Sorted := True;
+  Generiques.Duplicates := dupIgnore;
 
 end.
 

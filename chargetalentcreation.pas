@@ -42,6 +42,9 @@ Function TalentDejaPossede(Code: String; Deja: TStringList): Boolean;
 
 implementation
 
+uses
+  ChargeRace;
+
 Function DescriptionTalent(CodeTalent: String; CodeRace: String): String;
   var
     Lib:             String;
@@ -102,6 +105,8 @@ Procedure CalculeTirageTalent(CodeRace: String; Tirage: TListTirageTalent);
     Entrees:         array of StructureEntree;
     NbEntrees:       Integer;
     PTalentCreation: StructureTalentCreation;
+    PRace:           StructureRace;
+    Espece:          String;
     Fourchettes:     Boolean;
     Deb, Fin:        Integer;
     Total, Cumul:    Integer;
@@ -127,10 +132,20 @@ Procedure CalculeTirageTalent(CodeRace: String; Tirage: TListTirageTalent);
   begin
     Tirage.Clear;
     NbEntrees := 0;
-    // 1 - table spécifique à la race, 2 - repli sur la table générique du RULESBOOK
+    // 1 - table spécifique à la race, 2 - repli sur la table générique du RULESBOOK, 3 - repli sur la
+    // table d'une autre ethnie de la même race (provinces humaines V2 du Career Compendium : la V2
+    // n'a pas de table générique)
     Collecte(CodeRace);
     if NbEntrees = 0 then
       Collecte(ConstCodeRaceCreationGenerique);
+    if NbEntrees = 0 then
+      begin
+        Espece := Trim(ChercheRace(CodeRace).Espece);
+        if Espece <> '' then
+          For PRace in ListRace do
+            if (NbEntrees = 0) and CompareRechercheValeur(PRace.Espece, Espece) then
+              Collecte(PRace.CodeRace);
+      end;
     if NbEntrees = 0 then
       exit;
 

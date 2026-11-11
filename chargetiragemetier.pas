@@ -40,7 +40,11 @@ Procedure CalculeTirageMetier(CodeRace, CodeRegle: String; Tirage: TListTirageMe
 // par la fourchette calculée. Calculer UN Tirage pour toute la liste affichée : le recalculer
 // à chaque ligne figerait l'écran (constaté dans WinRace le 02/10/2026).
 Function ChanceLigneTirage(Tirage: TListTirageMetier; CodeMetier, ChanceBrute: String): String;
-Function FormateTranche(Debut, Fin: Integer): String;
+// Des = 100 (d100 : "01-03", 100) ou 1000 (d1000 de l'appendice II du Career Compendium V2 :
+// "001-015", et 1000 s'imprime "000" comme dans le livre).
+Function FormateTranche(Debut, Fin: Integer; Des: Integer = 100): String;
+// Dé d'un Tirage calculé : 1000 si une borne dépasse 100, sinon 100.
+Function DesDuTirage(Tirage: TListTirageMetier): Integer;
 // Clé de tri alphabétique (minuscules, sans accents), partagée avec ChargeTalentCreation.
 Function CleTri(Texte: String): String;
 // Libelle d'une classe (code CLASS_xxx) dans la langue des donnees, voir l'implementation.
@@ -99,10 +103,44 @@ Function LibelleClasse(Code: String): String;
       Result := GetTexteLibelle(Code);
   end;
 
-Function FormateTranche(Debut, Fin: Integer): String;
+// A doit-il venir apres B ? Ordre alphabetique, sauf qu'un nom compose avec un trait d'union precede
+// le nom simple qui le commence (Sea of Claws p.63 imprime Sailor-Priest of Manann avant Sailor).
+Function CleApres(A, B: String): Boolean;
+  var
+    Court: Integer;
+  begin
+    Result := A > B;
+    if (Length(A) <> Length(B)) then
+      begin
+        Court := Length(A);
+        if Length(B) < Court then Court := Length(B);
+        if Copy(A, 1, Court) = Copy(B, 1, Court) then
+          begin
+            // l'un est le debut de l'autre : si le plus long continue par « - », il passe d'abord
+            if (Length(A) > Court) and (A[Court + 1] = '-') then
+              Result := False
+            else if (Length(B) > Court) and (B[Court + 1] = '-') then
+              Result := True;
+          end;
+      end;
+  end;
+
+Function DesDuTirage(Tirage: TListTirageMetier): Integer;
+  var
+    Ligne: StructureTirageMetier;
+  begin
+    Result := 100;
+    For Ligne in Tirage do
+      if Ligne.Fin > 100 then
+        Result := 1000;
+  end;
+
+Function FormateTranche(Debut, Fin: Integer; Des: Integer = 100): String;
   function Un(V: Integer): String;
     begin
-      if V >= 100 then
+      if Des >= 1000 then
+        Result := Format('%.3d', [V mod 1000])
+      else if V >= 100 then
         Result := '100'
       else
         Result := Format('%.2d', [V]);
@@ -127,6 +165,7 @@ Procedure CalculeTirageMetier(CodeRace, CodeRegle: String; Tirage: TListTirageMe
     ClasseRegle:  String;
     Poids:        Integer;
     Total, Cumul: Integer;
+    Des:          Integer;
     Ind, Jnd:     Integer;
     Tmp:          StructureEntreeTirage;
     Ligne:        StructureTirageMetier;
@@ -184,6 +223,10 @@ Procedure CalculeTirageMetier(CodeRace, CodeRegle: String; Tirage: TListTirageMe
                 begin
                   if ClasseRegle <> '' then
                     Ajoute(PRegleMetier.CodeMetier, Poids, ClasseRegle)
+                  else if Pos('CAREER_CHART_', Regle) > 0 then
+                    // tableau V1 (RULES-RULE_CAREER_CHART_<CLASSE>) : ordre alphabetique simple
+                    // du livre, meme si un metier d une autre classe y figure (Gnomes : Prospector, Rat Catcher)
+                    Ajoute(PRegleMetier.CodeMetier, Poids, '')
                   else
                     Ajoute(PRegleMetier.CodeMetier, Poids, ChercheMetier(PRegleMetier.CodeMetier).LibelleGroupe);
                 end;
@@ -210,7 +253,7 @@ Procedure CalculeTirageMetier(CodeRace, CodeRegle: String; Tirage: TListTirageMe
       begin
         Tmp := Entrees[Ind];
         Jnd := Ind - 1;
-        While (Jnd >= 0) and (Entrees[Jnd].Cle > Tmp.Cle) do
+        While (Jnd >= 0) and CleApres(Entrees[Jnd].Cle, Tmp.Cle) do
           begin
             Entrees[Jnd + 1] := Entrees[Jnd];
             Dec(Jnd);
@@ -224,14 +267,19 @@ Procedure CalculeTirageMetier(CodeRace, CodeRegle: String; Tirage: TListTirageMe
     if Total <= 0 then
       exit;
 
-    // cumul des poids, ramené à 100 quand la table ne totalise pas 100 (d10, d20...)
+    // cumul des poids, ramené à 100 quand la table ne totalise pas 100 (d10, d20...) ;
+    // une table de 1000 reste un d1000 (appendice II du Career Compendium V2)
+    if Total = 1000 then
+      Des := 1000
+    else
+      Des := 100;
     Cumul := 0;
     For Ind := 0 to NbEntrees - 1 do
       begin
         Ligne.CodeMetier := Entrees[Ind].CodeMetier;
-        Ligne.Debut      := (Cumul * 100) div Total + 1;
+        Ligne.Debut      := (Cumul * Des) div Total + 1;
         Cumul            := Cumul + Entrees[Ind].Poids;
-        Ligne.Fin        := (Cumul * 100) div Total;
+        Ligne.Fin        := (Cumul * Des) div Total;
         if Ligne.Fin < Ligne.Debut then
           Ligne.Fin := Ligne.Debut;
         Tirage.Add(Ligne);
@@ -244,15 +292,17 @@ Procedure CalculeTirageMetier(CodeRace, CodeRegle: String; Tirage: TListTirageMe
 Function ChanceLigneTirage(Tirage: TListTirageMetier; CodeMetier, ChanceBrute: String): String;
   var
     Ligne: StructureTirageMetier;
+    Des:   Integer;
   begin
     Result := ChanceBrute;
     if StrToIntDef(ChanceBrute, 0) <= 0 then
       exit;
     Result := '';
+    Des    := DesDuTirage(Tirage);
     For Ligne in Tirage do
       if CompareRechercheValeur(Ligne.CodeMetier, CodeMetier) then
         begin
-          Result := FormateTranche(Ligne.Debut, Ligne.Fin);
+          Result := FormateTranche(Ligne.Debut, Ligne.Fin, Des);
           break;
         end;
   end;

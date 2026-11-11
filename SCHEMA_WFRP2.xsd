@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SCHEMA_WFRP2.xsd
+  Schema de DATABASE/WFRP2/*.Xml (WFRP V2). Cree le 15/10/2026 (CONTEXT.md 2.122).
+  Le 16/10/2026 (CONTEXT.md 2.123, decision de mutualiser) il INCLUT SCHEMA_COMMON.xsd :
+  les donnees V2 qui ont la meme forme qu en V4 (caracteristiques, competences, talents)
+  utilisent les blocs V4 (DATA_ATTRIBUT, DATA_SKILL, DATA_TALENT) ; ici ne restent que les
+  ajouts propres a la V2 (carriere a un niveau, sorts, equipement, races).
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <xs:include schemaLocation="SCHEMA_COMMON.xsd"/>
+
+  <xs:complexType name="CareerV2Type">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Explanation" type="LangString"/>
+      <!-- Profils en texte tel que le livre : gains non nuls seulement ("WS +5%, Ag +5%"), "-" si aucun. -->
+      <xs:element name="MainProfile" type="xs:string"/>
+      <xs:element name="SecondaryProfile" type="xs:string"/>
+      <!-- Schema d avances en donnees (16/10/2026) : une ligne par gain non nul des deux profils, name =
+           caracteristique (RULES-ATTR_*), valeur telle que le livre (5 = +5 %, 2 = +2 Blessures). -->
+      <xs:element name="Advances" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Advance" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:simpleContent>
+                  <xs:extension base="xs:string">
+                    <xs:attribute name="name" type="xs:string" use="required"/>
+                  </xs:extension>
+                </xs:simpleContent>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!-- Listes en texte simple, tel que le livre les donne ("A or B" conserve). -->
+      <!-- Absentes quand le livre n en donne pas (Daemon Prince, carrieres sans materiel) : controle du 10/11/2026. -->
+      <xs:element name="Skills" type="xs:string" minOccurs="0"/>
+      <xs:element name="Talents" type="xs:string" minOccurs="0"/>
+      <xs:element name="Trappings" type="xs:string" minOccurs="0"/>
+      <!-- Materiel de depart structure (forme V4 : Item name=code ou texte, niveau "1", quantite facultative), saisi pour quelques carrieres : structurer_trappings_v2.py. -->
+      <!-- Argent de depart en pieces (formule en couronnes d or : "15CO", "1d10CO"), a la place des lignes "15 gc" du materiel. -->
+      <xs:element name="StartMoney" type="xs:string" minOccurs="0"/>
+      <xs:element name="SUBCHAPTER_ITEM" type="SubchapterItem" minOccurs="0"/>
+      <!-- Competences et talents de carriere en codes (structurer_carrieres_v2.py) : Skill/Talent name=code ("A/B" choix, "CODE_*" a choisir), valeur "1". -->
+      <xs:element name="SUBCHAPTER_SKILL" type="SubchapterSkill" minOccurs="0"/>
+      <xs:element name="SUBCHAPTER_TALENT" type="SubchapterTalent" minOccurs="0"/>
+      <!-- Ni entrees ni sorties dans la carriere : les liens entre carrieres sont dans DATA_CAREER_LINK_V2. -->
+      <!-- "1" pour les 60 carrieres de BASE du Core (Table 3-2) ; absent sinon. -->
+      <xs:element name="Basic" type="xs:string" minOccurs="0"/>
+      <!-- Livre d'origine d'une carriere reimprimee dans le Career Compendium : "ToS 194". -->
+      <xs:element name="Source" type="xs:string" minOccurs="0"/>
+      <xs:element name="Page" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataCareerV2Type">
+    <xs:sequence>
+      <xs:element name="Career" type="CareerV2Type" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- LIEN « CARRIERE 1 > CARRIERE 2 » (meme principe qu en V1) : on passe de la carriere name (code) a celle dont le code est la valeur. Entrees = liens qui arrivent, sorties = liens qui partent. Un lien est range dans le livre qui apporte la carriere la plus recente. -->
+  <xs:complexType name="CareerLinkV2Type">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="name" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="DataCareerLinkV2Type">
+    <xs:sequence>
+      <xs:element name="Link" type="CareerLinkV2Type" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Competence V2 (Core, chapitre IV) : tout en texte. Description = nom, Explanation = texte du livre. -->
+  <!-- Competence V2 : forme V4 (SkillType) plus RelatedTalents, propre a la V2. Les talents V2
+       utilisent TalentType de SCHEMA_COMMON.xsd tel quel. -->
+  <xs:complexType name="SkillV2Type">
+    <xs:sequence>
+      <!-- Vide pour une competence sans caracteristique fixe (Trade Various) : WinLivre n ecrit pas la balise vide. -->
+      <xs:element name="Attribut" type="PlainString" minOccurs="0"/>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Explanation" type="LangString" minOccurs="0"/>
+      <xs:element name="Basic" type="PlainString" minOccurs="0"/>
+      <xs:element name="RelatedTalents" type="PlainString" minOccurs="0"/>
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataSkillV2Type">
+    <xs:sequence>
+      <xs:element name="Skill" type="SkillV2Type" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SpellV2Type">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Explanation" type="LangString"/>
+      <xs:element name="Lore" type="xs:string"/>
+      <xs:element name="CastingNumber" type="xs:string"/>
+      <xs:element name="CastingTime" type="xs:string"/>
+      <xs:element name="Ingredient" type="xs:string"/>
+      <xs:element name="Page" type="xs:string" minOccurs="0"/>
+      <xs:element name="SpellLists" type="xs:string" minOccurs="0"/>
+      <!-- Tome of Salvation : duree, portee et culte (vide pour les prieres de tous les pretres) -->
+      <xs:element name="Duration" type="xs:string" minOccurs="0"/>
+      <xs:element name="Range" type="xs:string" minOccurs="0"/>
+      <xs:element name="Cult" type="xs:string" minOccurs="0"/>
+      <!-- Rituels (Lore "Rituals") : champs propres a la fiche d un rituel -->
+      <xs:element name="RitualType" type="xs:string" minOccurs="0"/>
+      <xs:element name="ArcaneLanguage" type="xs:string" minOccurs="0"/>
+      <xs:element name="MagicMin" type="xs:string" minOccurs="0"/>
+      <xs:element name="XPCost" type="xs:string" minOccurs="0"/>
+      <xs:element name="Conditions" type="xs:string" minOccurs="0"/>
+      <xs:element name="Consequences" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataSpellV2Type">
+    <xs:sequence>
+      <xs:element name="SpellV2" type="SpellV2Type" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="EquipmentV2Type">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Category" type="xs:string"/>
+      <xs:element name="SubCategory" type="xs:string" minOccurs="0"/>
+      <xs:element name="Cost" type="xs:string" minOccurs="0"/>
+      <xs:element name="CostWeek" type="xs:string" minOccurs="0"/>
+      <xs:element name="Share" type="xs:string" minOccurs="0"/>
+      <xs:element name="Encumbrance" type="xs:string" minOccurs="0"/>
+      <xs:element name="Group" type="xs:string" minOccurs="0"/>
+      <xs:element name="Damage" type="xs:string" minOccurs="0"/>
+      <xs:element name="Range" type="xs:string" minOccurs="0"/>
+      <xs:element name="Reload" type="xs:string" minOccurs="0"/>
+      <xs:element name="Qualities" type="xs:string" minOccurs="0"/>
+      <xs:element name="Locations" type="xs:string" minOccurs="0"/>
+      <xs:element name="ArmourPoints" type="xs:string" minOccurs="0"/>
+      <xs:element name="Availability" type="xs:string" minOccurs="0"/>
+      <xs:element name="Profile" type="xs:string" minOccurs="0"/>
+      <xs:element name="Skills" type="xs:string" minOccurs="0"/>
+      <xs:element name="Talents" type="xs:string" minOccurs="0"/>
+      <xs:element name="SpecialRules" type="xs:string" minOccurs="0"/>
+      <xs:element name="Note" type="xs:string" minOccurs="0"/>
+      <xs:element name="Page" type="xs:string" minOccurs="0"/>
+      <!-- Potions (Realms of Sorcery) : fabrication -->
+      <xs:element name="LagTime" type="xs:string" minOccurs="0"/>
+      <xs:element name="Volatility" type="xs:string" minOccurs="0"/>
+      <xs:element name="IngredientCost" type="xs:string" minOccurs="0"/>
+      <xs:element name="IngredientLocale" type="xs:string" minOccurs="0"/>
+      <xs:element name="IngredientDifficulty" type="xs:string" minOccurs="0"/>
+      <xs:element name="CreationDifficulty" type="xs:string" minOccurs="0"/>
+      <xs:element name="CreationTime" type="xs:string" minOccurs="0"/>
+      <!-- Objets magiques (Realms of Sorcery) -->
+      <xs:element name="AcademicKnowledge" type="xs:string" minOccurs="0"/>
+      <xs:element name="Powers" type="xs:string" minOccurs="0"/>
+      <xs:element name="SideEffects" type="xs:string" minOccurs="0"/>
+      <xs:element name="History" type="xs:string" minOccurs="0"/>
+      <!-- Runes (Realms of Sorcery, chapitre VIII) -->
+      <xs:element name="RuneType" type="xs:string" minOccurs="0"/>
+      <xs:element name="InscriptionNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="Empowerment" type="xs:string" minOccurs="0"/>
+      <xs:element name="PermanentEffect" type="xs:string" minOccurs="0"/>
+      <xs:element name="TemporaryEffect" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataEquipmentV2Type">
+    <xs:sequence>
+      <xs:element name="EquipmentV2" type="EquipmentV2Type" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Marques des Dieux (Tome of Salvation, regle optionnelle p.242-247) : mutations divines, meme
+       principe que DATA_CORRUPTION_TABLE_PHYSICAL/MENTAL de la V4, mais une table PAR DIEU. Lore = le
+       lore divin (libelle RULES-SPELLV2_LORE_OF_*), il designe la table du personnage via son talent
+       Divine Lore. Les effets chiffres et permanents sont des ModifyCarac ; le reste est en texte. -->
+  <xs:complexType name="DivineMarkEntryType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Explanation" type="LangString"/>
+      <xs:element name="Lore" type="xs:string"/>
+      <xs:group ref="ModificateursEffets" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="Page" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataCorruptionTableDivineType">
+    <xs:sequence>
+      <xs:element name="Corruption" type="DivineMarkEntryType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Plage D100 -> code d une marque, pour un lore divin donne. -->
+  <xs:complexType name="DivineMarkChanceType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="lore" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="DataCorruptionDivineChanceType">
+    <xs:sequence>
+      <xs:element name="Chance" type="DivineMarkChanceType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Mutations du Chaos (Tome of Corruption, chapitre III, table 3-1 p.28-29) : un seul tirage D1000.
+       Description = nom, Explanation = texte de la mutation, Fear = points de peur (texte : "1", "0-1",
+       "1/2/3", "Varies"), MutationType = "Single" ou "Multiple N" (nombre de prises), Variations = variantes
+       et sous-tables en texte, Cosmetic = "1" pour une mutation purement esthetique. Les effets chiffres
+       sans de restent a lire en ModifyCarac (pas encore remplis). -->
+  <xs:complexType name="MutationEntryType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Explanation" type="LangString"/>
+      <xs:element name="Fear" type="xs:string"/>
+      <xs:element name="MutationType" type="xs:string" minOccurs="0"/>
+      <xs:element name="MutationBase" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="fr">Mutation a effets differents selon le numero de la prise (Growth, Shrink) : les entrees de rang 2, 3... portent le code de la mutation de base ici. Elles ne figurent PAS dans la table de chance ; leur ordre dans le livre donne le rang (la 1re entree liee = 2e prise). A la prise N, le personnage recoit l'entree de rang N ; les effets des prises se cumulent.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Variations" type="LangString" minOccurs="0"/>
+      <xs:element name="Cosmetic" type="xs:string" minOccurs="0"/>
+      <xs:group ref="ModificateursEffets" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="Page" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataCorruptionTableMutationType">
+    <xs:sequence>
+      <xs:element name="Corruption" type="MutationEntryType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Plage D1000 (attribut name, "001-005") -> code d une mutation. Attribut lore optionnel : absent pour la
+       table 3-1, nom du dieu (Khorne, Nurgle, Slaanesh, Tzeentch) pour les tables 3-2 a 3-5 (plages d100). -->
+  <xs:complexType name="MutationChanceType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="lore" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="DataCorruptionMutationChanceType">
+    <xs:sequence>
+      <xs:element name="Chance" type="MutationChanceType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="DATA_BOOK">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CODE_BOOK" type="xs:string"/>
+        <xs:element name="BOOK" type="xs:string"/>
+        <xs:element name="BOOKNAME" type="xs:string" minOccurs="0"/>
+        <xs:element name="language" type="xs:string"/>
+        <xs:element name="VERSION" type="xs:string"/>
+        <xs:element name="OFFICIAL" type="xs:string"/>
+        <xs:element name="COMPLETE" type="xs:string"/>
+        <xs:element name="DISCLAIMER" type="xs:string" minOccurs="0"/>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="DATA_CAREER" type="DataCareerV2Type"/>
+          <xs:element name="DATA_CAREER_LINK_V2" type="DataCareerLinkV2Type"/>
+          <xs:element name="DATA_ATTRIBUT" type="DataAttributType"/>
+          <xs:element name="DATA_SKILL" type="DataSkillV2Type"/>
+          <xs:element name="DATA_SKILL_SPECIALIZATION" type="DataSkillSpecializationType"/>
+          <xs:element name="DATA_TALENT" type="DataTalentType"/>
+          <xs:element name="DATA_TALENT_SPECIALIZATION" type="DataTalentSpecializationType"/>
+          <xs:element name="DATA_SPELL_V2" type="DataSpellV2Type"/>
+          <xs:element name="DATA_SPELL_TALENT" type="DataSpellTalentType"/>
+          <xs:element name="DATA_EQUIPMENT_V2" type="DataEquipmentV2Type"/>
+          <xs:element name="DATA_WEAPON_BONUS" type="DataWeaponBonusType"/>
+          <xs:element name="DATA_WEAPON" type="DataWeaponType"/>
+          <xs:element name="DATA_ARMOR" type="DataArmorType"/>
+          <xs:element name="DATA_SPECIE" type="DataSpecieType"/>
+          <xs:element name="DATA_RACE" type="DataRaceType"/>
+          <xs:element name="DATA_RANDOM_TALENT" type="DataRandomTalentType"/>
+          <xs:element name="DATA_PERSONAL_TABLE" type="DataPersonalTableType"/>
+          <xs:element name="DATA_RULE" type="DataRuleType"/>
+          <xs:element name="DATA_RULE_SPECIE" type="DataRuleSpecieType"/>
+          <xs:element name="DATA_RULE_BACKGROUND" type="DataRuleBackgroundType"/>
+          <xs:element name="DATA_RULE_BACKGROUND_COUNT" type="DataRuleBackgroundCountType"/>
+          <xs:element name="DATA_RULE_SKILL_ROLL" type="DataRuleSkillRollType"/>
+          <xs:element name="DATA_RULE_TALENT_ROLL" type="DataRuleTalentRollType"/>
+          <xs:element name="DATA_CAREER_ROLL" type="DataCareerRollType"/>
+          <xs:element name="DATA_CAREER_BONUS" type="DataCareerBonusType"/>
+          <xs:element name="DATA_CORRUPTION_TABLE_DIVINE" type="DataCorruptionTableDivineType"/>
+          <xs:element name="DATA_CORRUPTION_DIVINE_CHANCE" type="DataCorruptionDivineChanceType"/>
+          <xs:element name="DATA_CORRUPTION_TABLE_MUTATION" type="DataCorruptionTableMutationType"/>
+          <xs:element name="DATA_CORRUPTION_MUTATION_CHANCE" type="DataCorruptionMutationChanceType"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

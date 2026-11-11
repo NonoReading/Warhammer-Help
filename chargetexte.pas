@@ -24,8 +24,11 @@ Var
 function ChercheTexte(CodeTexte :String): StructureTexte;
 Function GetTexteLibelle(CodeTexte :String; Lib: String = ''; Sep: String = ''; Livre: boolean = false): String;
 Function GetAllTexteLibelle(CodeTexte :String): String;
+Function LibelleValeurLivre(const Valeur: String): String;
 Function ReplaceTexteLibelle(CodeTexte :String): String;
 Function TraduirePrix(Prix: String): String;
+// « RULES-V1MOD_DAMAGE -2; RULES-V1MOD_PARRY +20 » -> « Damage -2; Parry +20 » (langue courante)
+function LibelleModifsCombatV1(const Texte: String): String;
 
 implementation
 
@@ -66,6 +69,14 @@ Function ReplaceTexteLibelle(CodeTexte :String): String;
     Result := Res;
   end;
 
+// Donnee a choisir d'un livre V1 / V2 pour l'affichage : code « RULES-... » -> libelle traduit ;
+// mot du livre ou chiffre (niveau de sort 1 a 5) -> tel quel.
+Function LibelleValeurLivre(const Valeur: String): String;
+  begin
+    if Copy(Valeur, 1, 6) = 'RULES-' then Result := GetTexteLibelle(Valeur, Valeur)
+    else Result := Valeur;
+  end;
+
 Function GetAllTexteLibelle(CodeTexte :String): String;
   Var
     strings:   TStringList;
@@ -89,6 +100,7 @@ Function GetTexteLibelle(CodeTexte :String; Lib: String = ''; Sep: String = ''; 
     PTexte:   StructureTexte;
     PLivre:   StructureLivre;
     Cherche:  String;
+    Source:   String;
     Res:      String;
     EndTexte: String;
     strings:  TStringList;
@@ -121,9 +133,17 @@ Function GetTexteLibelle(CodeTexte :String; Lib: String = ''; Sep: String = ''; 
           Res := CodeTexte
         else
           begin
+            // Pas de libelle traduit : nom d'affichage du livre (<BOOKNAME>) s'il existe, sinon le
+            // code remis en forme (BOOK GREEN IZ BEST -> Book Green Iz Best).
+            // Dans les deux cas : premiere lettre de chaque mot en majuscule, le reste en minuscule.
+            PLivre := ChercheLivreLibelle(CodeTexte);
+            if RechercheTrouve and (PLivre.NomAffichage <> '') then
+              Source := PLivre.NomAffichage
+            else
+              Source := CodeTexte;
             res := '';
             strings     := TStringList.Create;
-            ExtractStrings([' '], [], PChar(CodeTexte), Strings);
+            ExtractStrings([' '], [], PChar(Source), Strings);
             for Ind := 0 to Strings.Count -1 do
               begin
                 if res <> '' then
@@ -205,5 +225,31 @@ Function TraduirePrix(Prix: String): String;
       Morceaux.Free;
     end;
   end;
+
+function LibelleModifsCombatV1(const Texte: String): String;
+var
+  Lignes: TStringList;
+  I, P: Integer;
+  L: String;
+begin
+  Result := '';
+  Lignes := TStringList.Create;
+  try
+    Lignes.Delimiter := ';';
+    Lignes.StrictDelimiter := True;
+    Lignes.DelimitedText := Texte;
+    for I := 0 to Lignes.Count - 1 do
+    begin
+      L := Trim(Lignes[I]);
+      P := Pos(' ', L);
+      if (Copy(L, 1, 6) = 'RULES-') and (P > 0) then
+        L := GetTexteLibelle(Copy(L, 1, P - 1), Copy(L, 1, P - 1)) + Copy(L, P, MaxInt);
+      if Result <> '' then Result := Result + '; ';
+      Result := Result + L;
+    end;
+  finally
+    Lignes.Free;
+  end;
+end;
 
 end.

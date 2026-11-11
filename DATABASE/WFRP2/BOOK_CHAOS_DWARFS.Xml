@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"CDWF"</CODE_BOOK>
+<BOOK>"BOOK CHAOS DWARFS"</BOOK>
+<BOOKNAME>"CHAOS DWARFS - FROM THE DARKNESS"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_SPELL_V2>
+<SpellV2 id="CDWF-SPEL_MAGIC_FLAME">
+<Description language="ENGLISH">"Magic Flame"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hashut"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Piece of Charcoal or wood chip (+1)"</Ingredient>
+</SpellV2>
+<SpellV2 id="CDWF-SPEL_ENVELOPING_DARKNESS">
+<Description language="ENGLISH">"Enveloping Darkness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hashut"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Pinch of ash (+1)"</Ingredient>
+</SpellV2>
+<SpellV2 id="CDWF-SPEL_MAGMA_POOL">
+<Description language="ENGLISH">"Magma Pool"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hashut"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Piece of obsidian (+1)"</Ingredient>
+</SpellV2>
+<SpellV2 id="CDWF-SPEL_BANDS_OF_EBONY">
+<Description language="ENGLISH">"Bands of Ebony"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hashut"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A vial of black sludge from the River Ruin (+2)"</Ingredient>
+</SpellV2>
+<SpellV2 id="CDWF-SPEL_FIST_OF_FIRE">
+<Description language="ENGLISH">"Fist of Fire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hashut"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A piece of flint (+1)"</Ingredient>
+</SpellV2>
+<SpellV2 id="CDWF-SPEL_FLAMING_HIDE">
+<Description language="ENGLISH">"Flaming Hide"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hashut"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Fistful of charcoal (+1)"</Ingredient>
+</SpellV2>
+<SpellV2 id="CDWF-SPEL_FLAMES_OF_AZGORH">
+<Description language="ENGLISH">"Flames of Azgorh"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hashut"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Sulphurous rock (+1)"</Ingredient>
+</SpellV2>
+<SpellV2 id="CDWF-SPEL_SHARDS_OF_OBSIDIAN">
+<Description language="ENGLISH">"Shards of Obsidian"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hashut"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Sliver of obsidian (+1)"</Ingredient>
+</SpellV2>
+<SpellV2 id="CDWF-SPEL_ASH_CLOUD">
+<Description language="ENGLISH">"Ash Cloud"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hashut"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Fistful of volcanic ash (+1)"</Ingredient>
+</SpellV2>
+<SpellV2 id="CDWF-SPEL_DOOMROAR">
+<Description language="ENGLISH">"Doomroar"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hashut"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A bull's horn (+1)"</Ingredient>
+</SpellV2>
+<SpellV2 id="CDWF-SPEL_LAVA_STORM">
+<Description language="ENGLISH">"Lava Storm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hashut"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Dust of a 50GC valued fire opal (+2)"</Ingredient>
+</SpellV2>
+<SpellV2 id="CDWF-SPEL_SHADOW_BULL_OF_HASHUT">
+<Description language="ENGLISH">"Shadow Bull of Hashut"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hashut"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Vial of tar (+1)"</Ingredient>
+</SpellV2>
+<SpellV2 id="CDWF-SPEL_ERUPTION">
+<Description language="ENGLISH">"Eruption"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hashut"</Lore>
+<CastingNumber>"30"</CastingNumber>
+<CastingTime>"Two full actions"</CastingTime>
+<Ingredient>"Fistful of pumice rock (+1)"</Ingredient>
+</SpellV2>
+<SpellV2 id="CDWF-SPEL_SORCERER_PRIEST_S_CURSE">
+<Description language="ENGLISH">"Sorcerer-Priest's Curse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Hashut"</Lore>
+<CastingNumber>"30"</CastingNumber>
+<CastingTime>"Two full actions"</CastingTime>
+<Ingredient>"A fist-size chunk of quartz (+2)"</Ingredient>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SPELL_TALENT>
+<Sort id="CDWF-SPEL_MAGIC_FLAME">
+<Talent>"RULES-T_DARK_LORE__CHAOS_DWARF"</Talent>
+</Sort>
+<Sort id="CDWF-SPEL_ENVELOPING_DARKNESS">
+<Talent>"RULES-T_DARK_LORE__CHAOS_DWARF"</Talent>
+</Sort>
+<Sort id="CDWF-SPEL_MAGMA_POOL">
+<Talent>"RULES-T_DARK_LORE__CHAOS_DWARF"</Talent>
+</Sort>
+<Sort id="CDWF-SPEL_BANDS_OF_EBONY">
+<Talent>"RULES-T_DARK_LORE__CHAOS_DWARF"</Talent>
+</Sort>
+<Sort id="CDWF-SPEL_FIST_OF_FIRE">
+<Talent>"RULES-T_DARK_LORE__CHAOS_DWARF"</Talent>
+</Sort>
+<Sort id="CDWF-SPEL_FLAMING_HIDE">
+<Talent>"RULES-T_DARK_LORE__CHAOS_DWARF"</Talent>
+</Sort>
+<Sort id="CDWF-SPEL_FLAMES_OF_AZGORH">
+<Talent>"RULES-T_DARK_LORE__CHAOS_DWARF"</Talent>
+</Sort>
+<Sort id="CDWF-SPEL_SHARDS_OF_OBSIDIAN">
+<Talent>"RULES-T_DARK_LORE__CHAOS_DWARF"</Talent>
+</Sort>
+<Sort id="CDWF-SPEL_ASH_CLOUD">
+<Talent>"RULES-T_DARK_LORE__CHAOS_DWARF"</Talent>
+</Sort>
+<Sort id="CDWF-SPEL_DOOMROAR">
+<Talent>"RULES-T_DARK_LORE__CHAOS_DWARF"</Talent>
+</Sort>
+<Sort id="CDWF-SPEL_LAVA_STORM">
+<Talent>"RULES-T_DARK_LORE__CHAOS_DWARF"</Talent>
+</Sort>
+<Sort id="CDWF-SPEL_SHADOW_BULL_OF_HASHUT">
+<Talent>"RULES-T_DARK_LORE__CHAOS_DWARF"</Talent>
+</Sort>
+<Sort id="CDWF-SPEL_ERUPTION">
+<Talent>"RULES-T_DARK_LORE__CHAOS_DWARF"</Talent>
+</Sort>
+<Sort id="CDWF-SPEL_SORCERER_PRIEST_S_CURSE">
+<Talent>"RULES-T_DARK_LORE__CHAOS_DWARF"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="CDWF-EQUI_CREATURES_SHADOW_BULL_OF_HASHUT">
+<Description language="ENGLISH">"Shadow Bull of Hashut"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"50;0;44;44;40;89;89;0;2;30;4;4;7;0;0;0"</Profile>
+<Skills>"Perception"</Skills>
+<Talents>"Daemonic Aura, Frightening, Keen Senses, Natural Weapons, Night Vision, Will of Iron"</Talents>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="CDWF-EQUI_CREATURES_BOAR_CENTAUR">
+<Description language="ENGLISH">"Boar Centaur"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"45;31;41;45;30;30;36;21;2;16;4;4;8;0;0;0"</Profile>
+<Skills>"Common Knowledge (Chaos Dwarf), Follow Trail, Intimidate +10%, Perception, Speak Language (Dark Tongue)"</Skills>
+<Talents>"Keen Senses, Natural Weapons, Night Vision, Specialist Weapon Group (Two- Handed), Stout-Hearted, Strike to Injure, Sturdy, Wrestling"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="CDWF-EQUI_CREATURES_BULL_CENTAUR">
+<Description language="ENGLISH">"Bull Centaur"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"45;31;41;45;30;30;36;21;2;16;4;4;8;0;0;0"</Profile>
+<Skills>"Common Knowledge (Chaos Dwarf), Intimidate +10%, Perception, Speak Language (Khazalid)"</Skills>
+<Talents>"Night Vision, Specialist Weapon Group (Two-Handed), Stout-Hearted, Strike to Injure, Sturdy, Wrestling"</Talents>
+<SpecialRules>"Armoured Torso: Bull Centaurs usually wear armour on the head, arms, and torso."</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="CDWF-EQUI_CREATURES_GREAT_TAURUS">
+<Description language="ENGLISH">"Great Taurus"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"57;0;63;63;70;14;66;0;4;40;6;6;6;0;0;0"</Profile>
+<Skills>"Perception +10%"</Skills>
+<Talents>"Flier, Frightening, Natural Weapons, Night Vision, Strike Mighty Blow, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+<EquipmentV2 id="CDWF-EQUI_CREATURES_LAMMASU">
+<Description language="ENGLISH">"Lammasu"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"57;0;63;73;60;29;66;0;3;40;6;7;6;0;0;0"</Profile>
+<Skills>"Perception +10%"</Skills>
+<Talents>"Flier, Frightening, Natural Weapons, Night Vision, Strike Mighty Blow, Will of Iron"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+</DATA_BOOK>

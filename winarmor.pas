@@ -267,7 +267,15 @@ var
     if TabArmor.RowCount > 1 then
       begin
         TabArmor.Row := 1;
-        TabArmorSelection(TabArmor, 1, 1);
+        // armure demandee par le double-clic de WinPersonnage : on se place dessus
+        if VoirWinArmure <> '' then
+          for IndTab := 1 to TabArmor.RowCount - 1 do
+            if TabArmor.Cells[1, IndTab] = VoirWinArmure then
+              begin
+                TabArmor.Row := IndTab;
+                Break;
+              end;
+        TabArmorSelection(TabArmor, 1, TabArmor.Row);
       end;
 
     KeyPreview := true;

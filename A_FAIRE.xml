@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AFaire xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="SCHEMA_A_FAIRE.xsd">
+  <Item id="WINLIVRE-ENCART-BRANCHES" section="WINLIVRE" etat="ouvert">
+    <Texte>Encart explicatif sous l arbre de WinLivre (09/11/2026, suite 63) : FAIT (MemoEncartBranche, TNodeInfo.Chapitre, RULES-HELP_BRANCHE_ plus balise du chapitre, ~60 textes FR / EN), compile OK, TESTE ET VALIDE PAR NONO (09/11, encart, ordre de l arbre, branches cachees). RESTE : (1) relire les textes rediges d apres le nom de la branche (adaptations et bonus de carriere, second jet, regles par ethnie, tables personnelles, tirage de talents, magie et pretres V1) ; (2) branches sans encart : Races / Attributs d une ethnie, sous-branches de noeuds sans balise (Specie traits de WinCreation...) ; (3) FAIT : ordre actuel de l arbre valide par Nono (11/11), rien a deplacer. (4) FAIT, verifie dans le code le 10/11 (ChapitreReserveRulebook).</Texte>
+  </Item>
+  <Item id="MOMENTUM-TRAITS-SANS-EQUIVALENT" section="MOTEUR" etat="ouvert">
+    <Texte>Option Momentum (talents WFRP5 en WFRP4, BOOK_MOMENTUM.Xml, 15 talents, case sur la page Xp de WinPersonnage). Trait de creature donne par une corruption / mutation SANS equivalent V5 : Bite, Fear, Grim, Tail, Tongue citent Momentum en V5 mais n existent pas sous ce code en V4 (formes generiques BITE_RATING, etc.), donc le personnage garde la version V4. A faire un jour : si le cas se presente, ajouter une table de correspondance V4 vers V5 (le code V4 generique pointe vers le talent V5) ou creer le talent V5 sous le code V4 existant. A noter aussi : la comparaison V4 / V5 ne porte que sur les textes anglais des talents (pas les sorts ni les qualites d arme), et la conversion des talents de corruption lit l option ENREGISTREE (case cochee non enregistree = V4 jusqu a l enregistrement). Ajoute le 08/11/2026.</Texte>
+  </Item>
+  <Item id="AIDE-CONTEXTUELLE-F1" section="MOTEUR" etat="ouvert">
+    <Texte>Aide F1 FAITE et testee par Nono (aidecontextuelle.pas ; WinPersonnage, WinCreation, WinLivre ; textes RULES-HELP_xxx). RESTE au fil de l eau : poser des HelpKeyword sur les autres controles de WinCreation et les fiches de WinLivre. Option : icone « ? » a cote des options obscures ; format riche (HTML / Markdown) si besoin. Lie a GUIDE-JOUEUR-ET-BOUTONS-AIDE.</Texte>
+  </Item>
+  <Item id="TESTER-TOUT-ISOLE" section="MOTEUR" etat="ouvert">
+    <Texte>RELANCE le 12/11/2026 : compilation OK, 0 echec sur toutes les regles de creation (V1 1482, V2 1679, V4 1333 cas), 0 ecart sur V1 / V2 / V4. FAIT 08/11/2026 : tester_tout.py et tester_winlivre_v1.py passent par TRAVAIL/lancer_isole.py (INI.TXT du projet intact), WFRP5 ecarte par defaut (--versions pour l inclure, Rulebook V5 = 1867 ecarts connus) ; V1 / V2 / V4 a 0 ecart. RESTE : a verifier a l ecran par Nono (corrections du 08/11/2026) : categorie « Runes » d un livre V2, choix A/B des competences et talents d un niveau de carriere, benedictions de Nations of Mankind, groupes de talents generiques V2 (Flier (Any)), tables Signe distinctif / Signe astral du Rulebook V2.</Texte>
+  </Item>
+  <Item id="INDICATEUR-CHARGEMENT" section="MOTEUR" etat="ouvert">
+    <Texte>Demande de Nono (31/10) : avec tous les livres V1 et V2 le demarrage (et le changement de version / de langue) devient long sans rien a l ecran. A faire : prevenir l utilisateur qu un chargement est en cours (fenetre ou bandeau « Chargement... » avec barre de progression ou nom du livre en cours, curseur sablier, Application.ProcessMessages au fil de la lecture des XML dans warhammersource.pas), applique au demarrage des 3 programmes et a la bascule de Version / Interface / langue. D abord mesurer ce qui est lent (lecture XML, validation, construction des listes) avant de concevoir. FAIT 01/11 pour le MENU (unite indicateurchargement.pas, barre livres + personnages, bascule version / langue comprise ; demarrage 2078 -&gt; 859 ms). RESTE : brancher la barre dans WinPersonnage et WinLivre (ouverture lente ?), a mesurer d abord ; poste restant au menu : ChargerImage ~140 ms.</Texte>
+  </Item>
+  <Item id="MENU-IMAGES-AUTRES-VERSIONS" section="MOTEUR" etat="ouvert">
+    <Texte>Logo et bandeaux du menu par version : code fait, images faites pour WFRP1 (PICTURES\WFRP1\MENU\) et WFRP2 (01/11/2026, PICTURES\WFRP2\MENU\ : logo = titre de la couverture du Rulebook V2, bandeaux composes avec les images de DATABASE\WFRP2\PICTURES\SPECIE et CLASS ; script bandeaux_v2.py en scratchpad ; a voir a l ecran par Nono). WFRP5 : logo seul (PICTURES\WFRP5\MENU\LOGO1.png = logo Warhammer + « V5 » dore a droite, marge transparente a gauche pour ne pas passer sous la liste Version ; script logo_v5.py ; valide par Nono 01/11/2026), les bandeaux restent BACK. A faire : eventuellement WFRP4 (meme titre que la V5, seul le fond de couverture differe) et les bandeaux de la V5, ou WFRP4 / WFRP5 (ils gardent PICTURES\BACK). Fichiers a deposer dans PICTURES\&lt;Version&gt;\MENU\ : LOGO1.png, BUTTON_SPECIES.png, BUTTON_CLASS.png, BUTTON_SKILL.png, BUTTON_TALENT.png (1000x250, cadre rouge, fond 25,25,25 ; script de composition : scratchpad bandeaux_v1.py a recopier dans le projet si besoin). Logo V1 : fond vert de couverture non retire, a detourer si Nono le veut.</Texte>
+  </Item>
+  <Item id="MATERIAU-ARMURE-OS" section="MOTEUR" etat="ouvert">
+    <Texte>Ajouter un materiau d armure Os (liste fixe MateriauxArmure de winlivre.pas et winobjetpropre.pas, plus RULES-ARMOT_BONE dans les deux INTERFACE) pour convertir Bone Armour (COTO, 2 points, casque 3) en vraie fiche Armor ; il est en Special Equipment en attendant.</Texte>
+  </Item>
+  <Item id="RELEASE-PROCHAINES-VERSIONS" section="MOTEUR" etat="ouvert">
+    <Texte>Recompiler, zipper le dossier WarhammerHelp/ (sortie de publier_depot_public.py + exe), POST /releases puis asset (procedure : Log.txt 15/10/2026).</Texte>
+  </Item>
+  <Item id="CREER-AUTO-EXTENSIONS" section="MOTEUR" etat="ouvert">
+    <Texte>--creer (creation automatique, Log 18/10/2026) : prototype fait. A etendre au besoin : details physiques (age, taille), mutation de depart (race Mutant), choix de l appartenance, choix du signe astral generique, parametres pour imposer un clan ou un choix A/B ; tester sur V4/V5 (seul WFRP2 essaye). Les persos Auto Mighty et Auto Chosen peuvent etre supprimes.</Texte>
+  </Item>
+  <Item id="CORBEILLE" section="MOTEUR" etat="ouvert">
+    <Texte>Nono vide SAVED_CARACTERS/_CORBEILLE_PDF/ (environ 12 Go : anciens PDF, textes en double, dossiers de verification) quand il est sur de ne plus en avoir besoin.</Texte>
+  </Item>
+  <Item id="ARBRES-RACE-METIER" section="MOTEUR" etat="ouvert">
+    <Texte>TreeViewRace (winraces.pas) et TreeViewMetier1 (winmetier.pas) sont des TTreeView LCL : colonnes simulees par StringOfChar('.') + AdvancedCustomDrawItem. Alternative : VirtualTreeView (colonnes reelles, OnPaintText). Paquet virtualtreeview_package RETIRE du projet le 11/10/2026 (aucune unite ne l'utilisait) ; a remettre si la conversion est decidee. Reformuler le besoin avant de concevoir.</Texte>
+  </Item>
+  <Item id="MODIFICATEURS-DEGATS-DE-SORT" section="MOTEUR" etat="ouvert">
+    <Texte>Facultatif : champ Degats au sort + colonne Effet du PDF (la cible SORT existe, Holy Hatred WFRP4 la porte, rien ne l affiche). Holy Hatred WFRP5 (+2 Blessures, Max 1) reste du texte.</Texte>
+  </Item>
+  <Item id="MODIFICATEURS-CONDITIONS" section="MOTEUR" etat="ouvert">
+    <Texte>La nature (Kind) des conditions est stockee, aucun code ne la lit (PDF d information, plus tard).</Texte>
+  </Item>
+  <Item id="MODIFICATEURS-CONDITIONNELS" section="MOTEUR" etat="ouvert">
+    <Texte>Non affiches au PDF : talent, mutation, ModifyCarac conditionnels ; le schema WeaponBonusType n accepte aucun effet conditionnel.</Texte>
+  </Item>
+  <Item id="EFFETS-HORS-TABLE" section="MOTEUR" etat="ouvert">
+    <Texte>Encumbrance, RangeBonus, Talent, WeaponQuality, AlternateWeapon affiches en texte dans la grille ; les ajouter a TypesEffet donnerait un affichage unique (facultatif).</Texte>
+  </Item>
+  <Item id="V1-V2" section="MOTEUR" etat="ouvert">
+    <Texte>BUT (Nono) : integrer aussi WFRP V1 et V2, V2 d abord, V1 plus tard. ETAT 10/11/2026 : V1 FINIE (creation WinCreation, evolution WinPersonnage, magie, equipement des carrieres, PDF, WinLivre, captures des guides : tout teste par Nono). Restes V2 dans les items V2-*, LIENS-CARRIERES-V2 et WINLIVRE-V2. Historique : voir CONTEXT.md / CONTEXT_ARCHIVE.md. Hors Core V2, laisses en texte dans les carrieres du Compendium : Runecraft, Rune (any N), Master Rune, Witch Lore (Hag/Hedge/Ice), Virtue of Knighthood / Chivalry / the Quest, Grail Virtue, Witchcraft, Focussed Strike, Incantation ; "Fast" et "Two-handed*" (Warrior Priest), "Charm Animal" (Scout). Ces noms ne sont definis nulle part dans le Compendium (livres de regles a part : Realms of Sorcery, Knights of the Grail...) : rien a coder tant que Nono n a pas tranche. Erreurs du livre laissees : Evaluate (Deepwatcher), Public Speaking (Seer).</Texte>
+  </Item>
+  <Item id="LIENS-CARRIERES-V2" section="MOTEUR" etat="ouvert">
+    <Texte>Liens entre carrieres V1 ET V2 : FAIT (06/11/2026, 68e partie suites 5 et 6 : DATA_CAREER_LINK_V1 / V2 par livre, 4366 liens V2). WinMetier V2 VERIFIE A L ECRAN PAR NONO (06/11/2026). 153 NOMS V2 -&gt; 14 (TRAVAIL\convertir_liens_carrieres_v2.py : noms compares sans espaces / tirets / apostrophes, alias verifies dans les TXT, quatre dieux pour Cult Acolyte / Magus, doublon = meme livre puis RULES- ; origine lue dans HEAD~1), 4457 liens ; les 14 restants sont des carrieres que les livres citent sans les definir (Ormazd, Mariner, Norse Urn Foreseer...), laisses sans lien. RESTE : (1) FAIT 09/11 : creation d un personnage V2 testee par Nono, (2) V1 FAIT (06/11/2026) : 70 noms non resolus -&gt; 5 (convertir_liens_carrieres_v1.py : alias Grey Seer / Runesmith / Priest rangs, conditions d entree ignorees, decoupage sans casser les parentheses, origine lue dans d9a9a6d), 1088 liens ; les 5 restants (Council Warlord, Scrounge, Gunsmith, Bombardier, Loremaster) sont cites sans fiche dans les livres, (3) OPTION : cases a cocher entrees / sorties par carriere dans WinLivre V1 et V2, qui liraient et ecriraient la table de liens (liens d un autre livre affiches coches et verrouilles) ; panelcarrierescoches.pas n est plus utilise par les carrieres V2.</Texte>
+  </Item>
+  <Item id="WINLIVRE-V2" section="WINLIVRE" etat="a_tester">
+    <Texte>10/11/2026 : Nono valide a l ecran ce que WinLivre affiche pour la V2 ; test auto WFRP2 a 0 ecart sur les 60 livres, types V2 ajoutes au test (NT_COMPETENCE_V2, NT_TALENT_V2). RESTE facultatif : export complet depuis la fenetre sur un livre WFRP2 ; OrdreBalises des sorts, equipements et carrieres V2 alignes sur SCHEMA_WFRP2.xsd le 10/11 (StartMoney de la carriere passe avant SUBCHAPTER_ITEM) ; le test ne compare pas l ordre, qui ne joue que pour une balise ajoutee : a verifier par Nono en ajoutant une balise. Historique : Log.txt 60e a 66e parties.</Texte>
+  </Item>
+  <Item id="TESTS-AUTO-SCHEMA-WINLIVRE" section="MOTEUR" etat="ouvert">
+    <Texte>Tests automatiques cote Claude (demande de Nono 10/11/2026). FAIT : tester_winlivre_v1.py WFRP1 / WFRP2 / WFRP4 --xsd (XML ecrit par WinLivre valide contre le schema : 0 erreur, 0 ecart) et --edit (saisie dans chaque fiche, ajout / retrait de ligne de grille) ; tester_tout.py lance aussi les regles de creation ; cas de creation V4 generes depuis les livres (tables de metier 779, sousmetier 60, choixmetier 14, bonus de niveau 134, blessures rares 6, appartenances 138), tous a 0 echec ; regles de genre : pas de donnee V4. Fiches neuves (sort, fabrication, carriere V4) verifiees a l ecran par Nono (suite 83). RESTE : rien d obligatoire ; V5 laisse de cote (decision Nono). Detail : Log.txt suites 72 a 85.</Texte>
+  </Item>
+  <Item id="WINLIVRE-TOUTES-LES-DONNEES" section="MOTEUR" etat="ouvert">
+    <Texte>QUAND (decision de Nono, 18/10/2026) : chantier a part, a faire APRES que TOUS les livres (officiels et fan) auront ete saisis ; ne pas le lancer avant. Tables de mutations par dieu du Tome of Corruption (lore) : a inclure dans l audit. PRINCIPE (Nono, 18/10/2026) : valable pour TOUS les livres (V2, V4, V5...), pas seulement V2. WinLivre sert a CREER un livre. TOUTES les donnees d un livre doivent apparaitre dans son treeview, et c est ce qui est affiche/saisi dans la fenetre qui doit servir a l export. Sinon le test "lire les livres dans WinLivre puis comparer l export" a ZERO valeur : il ne verifie que la couche de chargement, pas l edition. Constat : la section DATA_CORRUPTION_TABLE_MUTATION (mutations du Tome of Corruption, lue par xmlexportimport.pas:5923) n a AUCUNE branche dans l arbre (winlivre.pas:2947 ne charge que Corruption physique/mentale) ; seul le catalogue du menu principal (winmutationcatalogue.pas) les montre. AUDIT 10/11 (suite 81, TRAVAIL\audit_sections_data.py -> SECTIONS_DATA.txt) : les 4 versions comptent ~110 sections DATA_* ; TOUTES ont une branche dans l arbre (les 5 tables V1 par ChargerBrancheLignesV1, les mutations / divin V2 par NT_CORRUPTION_V2 : le « Constat » ci-dessus est PERIME). RESTE (3) : faire passer l export par les donnees de la fenetre, et dire section par section si elle est EDITABLE (fiche editable / consultation seule / generique). A FAIRE : (1) audit : lister toutes les sections DATA_* presentes dans TOUS les livres (toutes versions) et dire pour chacune si l arbre WinLivre l affiche ET l edite ; (2) ajouter les branches manquantes, Mutations d abord (Effet, Variations, Fear, MutationType, Page) ; (3) faire passer l export par les donnees de la fenetre, pas par le chargement seul.</Texte>
+  </Item>
+  <Item id="V2-CAREER-EXPANSION" section="LIVRES" etat="en_cours">
+    <Texte>Livres de fans et extensions V2. SAISIS ET VALIDES : LEOPOI (BOOK_LEOPOI : ethnies Dark Elf / Half-Orc, sorts hedge / haut elfe / orque / magie alternative / non humain / pretre, carrieres Cleric ; wfrp_careers et career_dark_elf = doublons), Career Expansion 2.2 (JCE, 65 carrieres, valide 19/10), Unofficial Tome of Careers (UTOC, 121 carrieres dont 13 a la main, annexes II et III : 2 competences et 26 talents), Grognard (GROG, 23 carrieres), Liber Fanatica (LFAN, clos 11/11). Advanced skills et trades clos sans saisie (regles de MJ). DISCLAIMER V2 FAIT (11/11, 35 livres, teste par Nono). RESTE : (1) 9 livres sans disclaimer faute de bloc propre : Academics Handbook, Liber Fanatica, Spears of the Maiden, Swords of the South (colonnes melangees dans le TXT, a copier a la main depuis le PDF), Araby Sand and Gold, Caravan Careers, Handrich et Ranald, Hedge Magic, Trades of the Old World (pas de texte legal trouve) ; (2) a decider par Nono : choix d une divinite du Dwarf Initiate (texte seulement), Specialist Weapon Group (Explosive) du Dwarf Pilot ; (3) UTOC : 3 choix competence-ou-talent restent en texte ; (4) a trier, probablement ignores : foreignlands_equipment, bestiary (criticals, insanities, illustrations = MJ) ; (5) Expansion : talents et traits du chapitre III non utilises, chapitre IV et suivants du PDF non lus ; (6) priest LEOPOI : tables de sous-cultes et textes de culte en texte. Methode : extraire_career_expansion_v2.py --inserer "NOM" (une carriere a la fois), structurer_carrieres_v2.py --expansion / --tome / --grognard / --leopoi, structurer_sorties_v2.py (restaurer BOOK_TOME_OF_CORRUPTION.Xml par git checkout : il le reecrit en LF), valider_corpus.py. Detail : Log.txt, scripts dans TRAVAIL.</Texte>
+  </Item>
+  <Item id="CODES-NORMALISATION" section="LIVRES" etat="en_cours">
+    <Texte>Normaliser les codes de TOUTES les donnees sur LIVRE-TYPE_CODE[__*|__SPEC] (demande de Nono, 24/10/2026). Talents, competences, qualites d arme WEAPB, armures et qualites ARMO / ARMOB, munitions MUNI, armes COMB / PROJ et sorts (liste conservee : COLOR_NOM, ARCAN_NOM...) faits pour V4 / V5 et valides par Nono (voir Log.txt). Restent, un type a la fois (script de migration + valider_corpus + dumppdf), selon audit_codes_types_WFRP4.txt : carrieres WORK numerotees (868 references), TRAP_001, LAB, CORMEN / CORPHY ; 3 references de sorts sans fiche a corriger (GRIM-WILD_20, SEAOF-BENED_020 et _021) ; V2 non converti ; commentaires Pascal citant NATIO-ARMOB_16 a mettre a jour. Mettre a jour DOCUMENTATION/BUSINESS_LOGIC.md et DATA_STRUCTURE_XML.md (exemples RULES-COMPCOMB_HAST encore a l ancien format) et SCHEMA_COMMON.xsd.</Texte>
+  </Item>
+  <Item id="V2-RACES-REGIONS" section="LIVRES" etat="en_cours">
+    <Texte>19/10/2026 : Races and Regional Options (Jackdays, Kalevala), BOOK_RACES_REGIONS.Xml (code JRR, dans INI.TXT), extraire_races_regions_v2.py. LOT 1 FAIT, A VOIR par Nono dans WinLivre : chapitre II, 31 talents et traits en texte seulement (Explanation + page) ; les effets (points de caracteristique a repartir, bonus de competences, taille) restent dans le texte, rien de calcule. LOT 2 FAIT ET TESTE par Nono dans WinCreation le 19/10/2026 (ComboBoxRegle de l humain) : 40 cultures HUMAINES du chapitre III en 40 regles JRR-RULE_* + DATA_RULE_SPECIE sous RULES-SPECIE_HUMAN (une regle remplace competences et talents, comme Ice Queen), Home Environment (4 precisions) et Provincial Expertise (precision libre, ou nommee : Averland...) comme talents a precision JRR-T_*_*, 17 specialisations de competence et 20 de talent creees ; recoupements gardes (python extraire_races_regions_v2.py --recoupements : Kislev Gospodar et Ungol, Tilean, Estalian, Araby, Bretonnian, Border Princes, Norse, Marienburger ; la liste des livres concernes est une supposition a verifier) ; LIGNES SPECIAL FAITES le 11/11/2026, COMPILE OK, V2 64 livres a 0 ecart, A TESTER PAR NONO A L ECRAN (Races and Regional Options : balise StartingMutation sur la REGLE, 6 regles : Hung 25, Kurgan 25, Norse 20, Skeggi 2, Norse Dwarfs 5, Chaos Dwarfs 25 ; etape 3.1 apres le metier dans WinCreation V2 : bouton « Lancer le d100 » (fenetre qui propose un tirage, remplacable par le jet reel du joueur, RULES-LAB_1012 / 1013), jet reussi = fenetre de tirage de mutation existante, passer sans lancer = le MJ ignore la chance ; RULES-LAB_1008 a 1011 ; ChanceMutationRegle / AfficheSousPhaseMutationChance dans wincreation.pas) ; Ulfwerenar (10 % Norse, 1 % Skeggi) ABANDONNE (aucune race / creature pour cela). NOTE ESTALIAN FAITE (11/11/2026, A TESTER : talent « Fencing/RULES-T* » = Fencing ou un talent aleatoire, en plus du talent aleatoire existant = 2 talents au total) ; NOTE SYLVANIE = ambiance sans effet, laissee en texte (decision Nono). NON GERE : les points de caracteristique des traits. LOT 2b FAIT ET VALIDE (19 cultures nains, halflings, elfes en regles sous leur race). LOT 3 FAIT ET VALIDE PAR NONO (19/10/2026) : ethnies Humain Barbare et Halfling Sauvage (profils du chapitre I, listes copiees de la race de base), races ENTIERES Ogre (JRR-SPECIE_OGRE : deux ethnies Ogre Kingdoms et Ogre Wanderer, taille Jackdays, poids/cheveux/yeux/age/fratrie Imperial Ogres, naissance et noms Tin Star, carrieres de depart Tin Star pour Kingdoms et Imperial Ogres O-3 pour Wanderer) et Gnome (JRR-SPECIE_GNOME, taille seule). RAVAGER FAIT ET VALIDE PAR NONO (carriere de base JRR-CARE_RAVAGER, table Kingdoms 14 %). POINT (5) FAIT (19/10/2026, A TESTER : les 12 cultures barbares sont aussi rattachees a l ethnie JRR-RACE_HUMAN_BARBARIAN, Biloko et Wayarhui a JRR-RACE_HALFLING_SAVAGE, en plus de leur race de base ; 127 entrees DATA_RULE_SPECIE). POINT (4) ABANDONNE PAR NONO (19/10/2026) : taille (Racial Size Level), capacite de charge et talents de depart facultatifs du chapitre I n ont pas de champ dans les donnees. RATTACHEMENT (5) VALIDE PAR NONO. POINT (3) FAIT ET VALIDE PAR NONO (19/10/2026) : ethnie Kingdoms = profil, competences et talents Tin Star (S40 T40 A1 M5 W13-16, talent Acute Sense of Smell ajoute, Menacing, Night Vision, Stout-Hearted ; les listes de culture Jackdays de Kingdoms ne servent plus) ; Wanderer = profil Imperial Ogres (S30 T30 A3 M6 W19-28), listes Jackdays gardees. Pages sources "3" non verifiees. GNOME CLOS (11/11/2026) : seule source jouable = Races and Regional Options p.37 (competences, talents, Home Environment, deja saisis) ; Defenders of the Forest et El Valle Eterno ne donnent que du decor ; carrieres = celles du Halfling a poids egal (hypothese), poids / age / yeux / cheveux / noms absents faute de Warpstone 30 (hors corpus). Rien d autre a saisir.</Texte>
+  </Item>
+  <Item id="V2-TOC-RESTES" section="LIVRES" etat="ouvert">
+    <Texte>Tome of Corruption (livre clos) : points mineurs a reprendre un jour. Relecture du 18/10/2026 faite sur Additional Eye (table des emplacements), Blood Substitution (table), Short Legs, Extra Ears, Radiant Skin, pieds de page colles dans 6 entrees. Pieds de page "talogue of Change" colles dans le texte : tous nettoyes le 18/10/2026 (fragments de colonnes retires, tables de Flatulence et de Brightly Patterned Skin recollees). Mutations a explication longue relues le 18/10/2026 (Growth, Breathe Fire, Fits, Irrational Fear, Limb Transference, Were, Rearranged Face, Strange Voice, Crown of Flesh, Minor Cosmetic Change corriges ; autres tables deja correctes). RELU le 25/10/2026 (verifier_toc_tables_mutations.py) : Extra Limb conforme ; tables 3-1 a 3-5 conformes au TXT (170 / 52 / 58 / 59 / 72 entrees lues, seul ecart : TOC-MUTA_SCALES renomme « Scaly Skin », nom du glossaire, de l index et des tables 3-4 / 3-5 ; la table 3-1 ecrit « Scales ») ; plus aucun ## dans le XML, Aspiring Champion propre. RESTES EN TEXTE, DECISION 25/10/2026 (Nono d accord, rien d autre a saisir) : mutations Mechanoid, Trails of Slime, Boneless, Atrophy, Crossbreed, Extra Joints (relues une par une : tables d100, choix du MJ, moitie de caracteristique ou caracteristique mise a 0, pas de regle fixe calculable sur la fiche) ; octogrammes, marchandage, dangers de familier (p.220-222), tables 17-7 a 17-9 (tables de MJ du rituel gabarit Call Daemon) ; la table 17-10 est deja saisie en talents TOC-T_FAMILIAR_* ; Good Craftsmanship Flail (fabrication Best/Good/Poor des armes). Les 78 qualites d armes : voir V2-TOC-EFFETS-QUALITES.</Texte>
+  </Item>
+  <Item id="TALENTS-MEMETALENT" section="LIVRES" etat="ouvert">
+    <Texte>Talents communs a plusieurs livres : codes V4 / V5 convertis en codes a nom (24/10/2026, voir CONTEXT.md ligne 3 et Log.txt). Reste : (1) MemeTalent branche (24/10/2026 : talent possede, barre, PDF, anti-doublon de resynchronisation ; 25/10/2026 : TalentCarriereCorrespond, COMPILE OK, a tester par Nono : carriere d un livre exigeant un talent possede via un autre livre) ; wincreation.pas 3754 volontairement non converti ; les ~92 comparaisons de CodeTalent du Pascal ne sont pas toutes concernees, beaucoup servent a l affichage ou a l export. (2) V2 : 7 homonymes distingues par une cle propre (25/10/2026, migrer_homonymes_talents_v2.py, valide par Nono) ; Art of Silent Death CHR / UTOC compare le 25/10/2026 : meme talent (BF-3, armure non doublee), cle commune gardee. (3) V2 : les specialisations a « * » au milieu sont converties en « __ » (24/10/2026, migrer_etoile_milieu_talents_v2.py) ; restent a l ancien format LESSER_MAGIC, PETTY_MAGIC, LANGUAGE, SIGNS, WITCH_LORE. (4) Test de Nono dans l appli, V4 et V5.</Texte>
+  </Item>
+  <Item id="V2-TOC-EFFETS-QUALITES" section="LIVRES" etat="ouvert">
+    <Texte>Tome of Corruption : transcrire en donnees les effets des 78 qualites TOC-WEAPQ_* quand c'est possible (bonus de caracteristique, talent donne, qualite d'arme, Armour Points : ex. Might +30% F, Immunity +20% E, Protection +1 PA, Howling talent Frightening). Les effets conditionnels ou aleatoires restent en texte. Idem pour Chaos Armour (+5% E, 5 PA). Modele : ModifyAccurate / ModifArmour de WeaponBonusType, a etendre si besoin. CADRE le 17/10/2026 avec Nono : le programme CALCULE sur la fiche (caracteristique, PA, talent du porteur, visible au PDF) ; regle unique : arme PORTEE = effet actif ; les cas "pendant l attaque", "une fois par jour", aleatoires restent en texte. Piste : reutiliser le moteur generique ChargeModificateur (ModifyCarac deja somme pour les fabrications, ex. Rune of Fortitude, pdfpersonnage.pas ~2914) en ajoutant ModifyCarac/ModifArmour a WeaponBonusType et en sommant les qualites des armes portees ; verifier avant de coder si le calcul des attributs lit deja les qualites d arme. LOT 1 FAIT 17/10/2026 (11 effets chiffres surs saisis, schema etendu, --dump TestToC conforme ; PDF V2 (PdfPersonnageV2) CORRIGE et VERIFIE le 17/10/2026 sur TestToC (caracteristiques S 30, E 20, CM 10, A 1, W 5 ; PA +1 par zone ; degats SB+1 ; TestV2 inchange) ; VERIFIE le 18/10/2026 par --dumpecran et PDF (TestToC, arme portee a 7 qualites) : S 47, E 42, CM 43, A 2, W 14, SB/TB 4, PA 2/2/2/2/1/1 (tete, corps, bras, jambes), degats SB+1, ecran = PDF ; talents octroyes (Frightening/Hoverer/Flier/Frenzy) et Flight +2 M (4 -&gt; 6) VERIFIES le 18/10/2026 sur TestToC2 (cree, arme Howling+Levitation+Flight+Savage), ecran et PDF concordent ; lot 1 complet ; QUALITES COMPOSEES FAITES le 18/10/2026 (Parry, Piercing, Vicious, Deflection-Defensive : balise WeaponQuality dans WeaponBonusType, lue dans StructureArmeBonus.QualitesAccordees, ajoutee par FabricationQualitesArme/ArmeAjouteQualites sans doublon, fiche PDF V2 incluse ; donnees dans EFFETS de extraire_armurerie_corruption_v2.py ; compile, valider_corpus 92, PDF TestToC2 conforme) ; restent en texte : Chainsword, Tooth of Tzeentch, Lashing, parade de projectiles de Deflection ; WinLivre n edite pas encore cette balise (chantier WINLIVRE-TOUTES-LES-DONNEES), Command/Cool/Deathlust/Enchanted FAIT 17/10/2026 (ModifySkillAttribut Fel/WP/WS +10, lu pour les armes portees par PersonnageCompetenceModificateur ; dump et PDF TestToC verifies ; test brut de caracteristique non affiche, la fiche n a pas de case), talents octroyes FAIT 17/10/2026 (Howling/Levitation/Flight/Savage : balise Talent dans WeaponBonusType, lue dans ListArmeBonusTalent, PDF V2 liste les talents octroyes ; a voir dans la grille Talents de WinPersonnage ; Frenzy deja possede = +1 A non fait), Flight +2 Mouvement FAIT 17/10/2026 (ModifyCarac RULES-ATTR_M, valider_corpus 80 valides, a voir sur le PDF/WinPersonnage), Swiftness (+1d10 Initiative : jet) et Savage conditionnel a Frenzy (+1 A) : TRANCHE le 18/10/2026 par Nono, restent en texte (conditionnels) ; PROTECTION CONTRE LA RELANCE FAITE 17/10/2026 : dict EFFETS dans extraire_armurerie_corruption_v2.py, relance --inserer testee, 14 lignes d effet conservees, valider_corpus 80 valides). INVENTAIRE FAIT 17/10/2026 : le calcul LIT DEJA les qualites des armes portees (PersonnageSourcesModif, chargepersonnage.pas ~3261 : ListeBonus de l arme =&gt; sources, EquipementCompte = porte ; PersonnageModificateurUnique somme ModifyCarac/ModifArmour ; source WeaponBonus deja ecrite a l export, xmlexportimport.pas:1295) ; il manque la DONNEE (aucune des 78 ne porte de modificateur) et peut-etre ModifyCarac dans le choix de WeaponBonusType (SCHEMA_COMMON.xsd:683, a verifier avec le chargeur). Classement approximatif : ~17 chiffrables toujours actifs (Might +30 F, Strength +10 F, Immunity +20 E, Resilience +10 E, Impunity +5 W, Intelligence +10 Int, Will +10 WP, Leadership +10 Fel, Ferocity +1 A, Swiftness +1d10 I, Protection +1 PA partout, Wounding +1 degat, Enchanted +10 CC, Flight Mouvement +2, et Command/Cool/Deathlust +10 aux tests : modificateur de competence ou de test, a trancher) ; 3-4 talents donnes (Howling Frightening, Levitation Hoverer, Flight Flier, Savage Frenzy : mecanisme de talent octroye a verifier) ; ~7 qualites composees (Chainsword, Deflection, Parry, Piercing, Vicious, Lashing, Tooth of Tzeentch) ; ~7 conditionnels (Hate, Relic, Slaying, Hacking, Disenchantment, Coward, Bewitched : texte d information au PDF via Filtre if=) ; ~44 restent en texte (effets sur la cible, aleatoires, sorts).</Texte>
+  </Item>
+  <Item id="CHAMPS-PAR-VERSION" section="LIVRES" etat="ouvert">
+    <Texte>Idee de Nono (17/10/2026), A REFORMULER AVANT TOUTE CONCEPTION : definir, pour chaque fenetre, les champs affiches selon la version (V2 / V4 / V5) au lieu de les masquer champ par champ dans le code. Constat : WinSpell superpose Portee/Temps et Duree/Listes (champs V2 poses a la meme place que ceux de V4, masques quand vides) ; les fenetres ont des champs propres a une version (Cult, SpellLists, Temps, Ingredient en V2). Questions : une table par fenetre (champ, versions, position) lue au demarrage, ou une mise en page par version ? quelles fenetres d abord ? Voir aussi V2-FILTRE-SORTS. DIRECTION CHOISIE avec Nono (17/10/2026) : champs communs sur la fiche, un panneau (TPanel sans bordure, ParentColor) par famille de version pour les champs propres, V1 = un panneau de plus ; TPageControl ecarte (fond gris repeint par page). PILOTE WinSpell FAIT, compile et valide par Nono en V2 et V4 (affichage ; le filtre Lore/liste et le style des champs du panneau ne sont pas confirmes) : PanelV4 (Cible) et PanelV2 (Temps, Ingredient, Listes, Culte), choisis dans FormCreate selon ValVersion. A verifier : MiseEnFormeDesChamp atteint-il les champs dans un panneau ? ; ensuite generaliser fenetre par fenetre. AUDIT 17/10/2026 (hors Personnage, Races, Especes) : aucune autre fenetre n a de champs V2 superposes. WinAnimal compose sa fiche en code (etiquettes, grilles a colonnes V2), WinMutation masque des composants en mode marque divine, WinMetier adapte ses colonnes ; weapon, armor, equipement, competence, talent, fabrication, groupe, catalogues n ont aucun test de version (donnees V2 mises en forme V4). Donc panneaux a faire AU CAS PAR CAS, quand une fenetre recoit un champ propre a une version (candidats : WinWeapon/WinArmor si on veut afficher le groupe d arme et les dispos V2 en champs ; WinLivre a part). Competences et talents : meme fiche en V2 et V4, rien a faire sauf nouveau champ.</Texte>
+  </Item>
+  <Item id="V2-WINCREATION" section="MOTEUR" etat="ouvert">
+    <Texte>Limite connue : la phase 7 compare a la race avant la resolution des A/B de race.</Texte>
+  </Item>
+  <Item id="EXE-STRIP" section="MOTEUR" etat="ouvert">
+    <Texte>Apres lazbuild ou Shift+F9, l exe sort non reduit (135 Mo) : lancer strip.exe a la main ; comprendre pourquoi ExecuteAfter n a pas tourne. Lie : le strip apres compilation (WarhammerHelp.lpi, ExecuteAfter) empeche le debogueur de l IDE, le retirer temporairement pour deboguer.</Texte>
+  </Item>
+  <Item id="PDF-FELDO-STYLE-WARHAMMER" section="MOTEUR" etat="ouvert">
+    <Texte>ECARTES par Nono, ne pas reproposer : filigrane d aigle et sceau, cases a cocher Chance/Determination, signets PDF (fpPDF ne sait faire que des signets par page).</Texte>
+  </Item>
+  <Item id="IMAGES-DROITS" section="MOTEUR" etat="ouvert">
+    <Texte>RESTE : GitHub peut garder les anciens objets accessibles par URL de commit (support GitHub ou depot recree) ; sauvegardes locales dans Sauvegardes/ (bundles et anciens .git) a supprimer quand Nono est sur.</Texte>
+  </Item>
+  <Item id="IMAGES-PICTURES-DEFAULT" section="MOTEUR" etat="ouvert">
+    <Texte>Fonds BACK/FRONT du PDF de personnage NON remplaces (decision de Nono : il s imprime sur la feuille officielle). A confirmer : une archive d images perso a part, ou non.</Texte>
+  </Item>
+  <Item id="LIVRES-DE-FAN-DEPOT-PUBLIC" section="MOTEUR" etat="ouvert">
+    <Texte>Seuls les livres de la liste blanche LIVRES_COMPLETS (generer_donnees_sans_licence.py : BOOK_PERSO) gardent leur texte ; les autres sont vides (droits d auteur). Pour en publier un : accord de son auteur, a noter dans Log.txt.</Texte>
+  </Item>
+  <Item id="DOCUMENTATION-DES-LIVRES" section="MOTEUR" etat="ouvert">
+    <Texte>Reste sans explication : DATA_SPELL, DATA_WEAPON, DATA_ARMOR, DATA_CRAFTMANSHIP, DATA_STARSIGN, DATA_DISEASE, DATA_AFFLICTION, DATA_CORRUPTION_*, DATA_OPTION_RULE, DATA_RULE, et SCHEMA_TRADUCTION.xsd. Methode : prendre un livre existant et chercher ce que XSD + GABARIT ne couvrent pas.</Texte>
+  </Item>
+  <Item id="DONNEES-SANS-LICENCE" section="MOTEUR" etat="ouvert">
+    <Texte>A confirmer par Nono dans les livres : Gromril x4 (70 ou 128), Reckoner's Log (74 ou 96), Simple weapon (Any), Zweihander, Nails/Arrow/Halberd WFRP5 (245/243/247, hors des tableaux de trappings), Cavalry/Flail/Pistol (294/295 ou 296/298). Le sommaire (ex. Nations p.3-4 pour les 18 races) n est pas lu. Distribution : nom/proprietaire du depot public, livres de fans sous CC, police de titre libre proche de Caslon (Libre Caslon, IM Fell : declarer leur nom de famille, voir CONTEXT), gardes de repli EB Garamond a tester par Nono, relire CONTEXT.md/Log.txt avant publication. Preference tableau/liste/index codee dans remplir_pages.py. Voir aussi [PAGE].</Texte>
+  </Item>
+  <Item id="BILAN-DU-CODE" section="MOTEUR" etat="ouvert">
+    <Texte>Un jour : dire a Nono quel % du code actuel reste de ce qu il a ecrit lui-meme (git blame -w -M -C ligne par ligne, par auteur humain / commits de l audit ; a lire avec prudence car les decoupages et renommages de l audit deplacent des lignes).</Texte>
+  </Item>
+  <Item id="GREEN-IZ-BEST" section="MOTEUR" etat="ouvert">
+    <Texte>Confrontation des 5 ethnies au PDF non faite (livre de fan).</Texte>
+  </Item>
+  <Item id="PRIX" section="MOTEUR" etat="ouvert">
+    <Texte>Grappling Hook (RULES-TRAP, V5) : "1 GC -/10", seul 1CO garde, "-/10" peut etre une collision avec la colonne de description. Prix "Varies" (RULES-TRAP_025/058, _096/130) en texte. Tri par valeur / calcul de bourse : il faudrait un parseur.</Texte>
+  </Item>
+  <Item id="NATIONS-OF-MANKIND" section="MOTEUR" etat="ouvert">
+    <Texte>Les 18 Explanation d ethnies sont redigees, pas tirees du livre (aide facultative) ; relecture generale abandonnee, Wissenland corrige le 12/11/2026 (Estalie retiree des frontieres).Lore Attribute et Ingredients du Lore of Ice et du Lore of the Desert sans endroit ou aller (pas d entite domaine).</Texte>
+  </Item>
+  <Item id="EQUIPEMENTS-V4" section="EQUIPEMENT" etat="ouvert">
+    <Texte>175 objets au catalogue, 197 lignes de carriere rattachees sur 582 ; le reste au cas par cas par Nono. A tester en jeu : chargement V4.</Texte>
+  </Item>
+  <Item id="EQUIPEMENTS-V4-AUTRES-LIVRES" section="EQUIPEMENT" etat="ouvert">
+    <Texte>RESTE : lignes a nom approchant (pluriel, qualificatif, variantes) et composees, livre par livre ; Unofficial Grimoire non touche. Restent en texte : montures a choix, winged saddle, Tamed Badger with Saddle/Tack, spyglass/sextant, plate/mail armor, breastplate (05 ou 14 ?), Staff/Sword/Warhorse ambigus, robes a qualificatif, unites, batiments, personnes, livres et grimoires.</Texte>
+  </Item>
+  <Item id="NATIONS-OF-MANKIND-EQUIPEMENT" section="EQUIPEMENT" etat="ouvert">
+    <Texte>Tranche le 12/11/2026 par Nono : "best/highest/very high quality X" et "symbol of rank" restent en texte libre ; "quality breastplate" (Paymaster niveau 4) = RULES-ARMO_BREASTPLATE (Q), fait. Armes generiques converties le 12/11/2026 (6 lignes : melee (any) x2 en RULES-COMP_MELEE__* (Q), ranged (any), quality gun (any) en BLACKPOWDER (Q), great weapon en TWO_HANDED). Decision Nono : armures en ensemble (mail / plate / lamellar / samurai armor) et lignes a « ou » restent en texte libre. TESTE PAR NONO a l ecran (12/11/2026) = OK.</Texte>
+  </Item>
+  <Item id="EQUIPEMENT-DE-CARRIERE" section="EQUIPEMENT" etat="ouvert">
+    <Texte>Le passage de niveau V4 ne porte aucune quantite ; l arbre de winmetier.pas n affiche pas la quantite par branche. Faible priorite (CONTEXT.md 2.77).</Texte>
+  </Item>
+  <Item id="LIEN-METIER-RACES" section="EQUIPEMENT" etat="ouvert">
+    <Texte>Migrer au fil de l eau les autres livres vers &lt;Specie&gt; dans &lt;Career&gt; ; export WinMetier non adapte (WinLivre le remplacera).</Texte>
+  </Item>
+  <Item id="BASE-LIGNES-A-ALTERNATIVES" section="EQUIPEMENT" etat="ouvert">
+    <Texte>BUT (Nono) : construire le libelle d apres les multi-choix (A/B) au lieu de creer une specialite pour l affichage ; se debarrasser des lignes de style RULES-T0025/RULES-T0159 (deux codes separes par / dans une valeur) : recenser ou, ce qui les lit (CompareRechercheValeur, SeparateurMulti), ce qu un remplacement casserait. A concevoir avant de toucher aux XML.</Texte>
+  </Item>
+  <Item id="WINLIVRE-EDITION" section="WINLIVRE" etat="ouvert">
+    <Texte>FAIT (05/11, a tester) : creation d ethnie par version (CreerEthnie : codes d attributs V1 / V2 / V4, Rule + Wounds + FatePoints en V1, Page). TABLES DE NOMS (10/11, COMPILE OK, a tester) : une ethnie V4 neuve (sans SUBCHAPTER_NAMES) tombait sur la fiche generique, sans panneau de noms (vu sur capture de Nono) ; AfficherFicheEthnie ne prend la fiche generique que pour les livres V1 / V2 ; le bloc est ecrit AVANT Page (panelnoms.pas). RESTE : etendre ConfirmerAbandonModifs aux nouveaux ecrans modifiables, brancher le snapshot (PrendreSnapshotFiche) sur tout nouvel ecran modifiable, jetons (ATTR_xx) et parseur partage (facultatif).</Texte>
+  </Item>
+  <Item id="WINLIVRE-CREATION-PAR-VERSION" section="WINLIVRE" etat="ouvert">
+    <Texte>Les boutons « Nouveau » ecrivent une structure V4 quelle que soit la version (comparaison du 05/11, TRAVAIL\balises_par_version.py CHAPITRE ELEMENT). FAIT : ethnie (V1 / V2 / V4, ethnie V1 sans sous-branche = a tester), carriere V2 (teste OK par Nono). FAIT AUSSI (05/11) : talent V2 et competence V2 (testes OK), arme V2 (COMB_V2_ / PROJ_V2_, Type / Price / Page, boite sans groupe d arme mais case « arme de tir » ; libelle RULES-LAB_ARME_TIR_V2 traduit EN / FR le 10/11 ; NON TESTE). Sort V2 : sans objet (bouton absent de la branche V2). FAIT (suite 79, COMPILE OK, a tester) : carriere V4 ecrit maintenant Page (le champ Skill de carriere n est lu par aucun code, 191 carrieres sur 255 seulement : non ajoute). RESTE : FICHES GENERIQUES V1 / V2 / V4 (arme, armure, equipement) : VERIFIE 10/11 (suite 79) DEJA FAIT dans ChampsGeneriques (winlivre.pas) : listes a libelles Availability / Type / Skill / Reach / Location, Quality V4 en panneau a lignes ; inventaire TRAVAIL\valeurs_par_balise.py WFRP4 : les seules balises V4 a valeurs fermees (Applies, Availability, Class, Location, ModifySkill, Season, TypSpell) ont toutes leur liste ou leurs cases, NamePattern est une formule (reste libre) ; NON VERIFIES A L ECRAN : armure, trapping, qualite, maladie, signe astral, autres boutons. Libelles RULES-ATTR_Ld / Cl non affiches dans un livre V1 neuf (cause non trouvee).</Texte>
+  </Item>
+  <Item id="WINLIVRE-LISTES-CODES" section="WINLIVRE" etat="ouvert">
+    <Texte>Listes deroulantes traduites pour les champs a valeurs fermees (V1 et V2 faits, voir Log.txt suite 37). RESTE : (1) fiches generiques V4 arme / armure / equipement : listes pour les champs a code, qualites en tableau ; (2) Locations V2 FAIT en cases a cocher (suite 38) ; (3) autres balises a inventorier avec python TRAVAIL\valeurs_par_balise.py WFRP4 ; (4) relancer les livres complets (V1 11, V2 70, V4 24) ; (5) « Two-handed » sans entree propre dans la liste (meme libelle que « Two-Handed », valeur d origine conservee).</Texte>
+  </Item>
+  <Item id="WINLIVRE-EDITION-2" section="WINLIVRE" etat="ouvert">
+    <Texte>Le libelle de revision n est pas repris dans le nom du fichier archive de HISTORIQUE (a decider). TRAVAIL\ garde ses versions (purge manuelle).</Texte>
+  </Item>
+  <Item id="WINLIVRE-LIVRES-OFFICIELS" section="WINLIVRE" etat="ouvert">
+    <Texte>A TESTER : Update sur le Rulebook anglais. A VERIFIER : ecrans d ethnie/carriere editables ou non dans un livre officiel ; type de sort officiel.</Texte>
+  </Item>
+  <Item id="WINLIVRE-LISTES-LOCALES" section="WINLIVRE" etat="ouvert">
+    <Texte>Limite connue : ouvrir un autre livre apres un Update laisse l ebauche dans les listes du processus.</Texte>
+  </Item>
+  <Item id="WINLIVRE-ENREGISTREMENT" section="WINLIVRE" etat="ouvert">
+    <Texte>(d) isolation par echange de pointeurs : a decider seulement si le retrait direct pose probleme. Ne PAS vider ListeOptionDesactiveeParLivre/ListeLivreParVersion/ListeFichiersLivres.</Texte>
+  </Item>
+  <Item id="WINLIVRE-FICHE-DE-SORT" section="WINLIVRE" etat="ouvert">
+    <Texte>FAIT 10/11 : champ SpellTypes deja sur la fiche de talent (groupe Magie) ; audit_spelltypes.py lit maintenant les &lt;SpellTypes&gt; des livres (1108 sorts conformes, 0 ecart ; l ancienne table en dur ne servait plus, les codes ayant change). RESTE : Petty Magic (V5) absent de TypesSortXml (winlivre.pas) si la creation de sorts V5 est voulue (V5 laisse de cote).</Texte>
+  </Item>
+  <Item id="WINLIVRE-SORTS-COHERENCE-TYPE-TALENT" section="WINLIVRE" etat="ouvert">
+    <Texte>Un seul groupe de talents par sort ; une regle stricte type-&gt;talent serait fausse (High Magic T0190 passe partout). A decider : avertissement avec table des familles par type EN DONNEES (balise &lt;SpellTypes&gt;). 19 Blessing sans &lt;Talent&gt; (DATA_SPELL_TALENT). RESTE un type a la fois avec test de Nono : talents/competences, armures simplifiees (33), petites tables techniques (46 a 52), tables de valeurs (53), probablement en affichage seul. Armures rapides (type 33) non traitees.</Texte>
+  </Item>
+  <Item id="WINLIVRE-OPTIONS" section="WINLIVRE" etat="ouvert">
+    <Texte>Option de regle en affichage seul (liee a du code Pascal). Fenetre unique regroupant options de livre et de personnage : non demandee en detail.</Texte>
+  </Item>
+  <Item id="CONTROLE-DE-COHERENCE" section="CONTROLE" etat="ouvert">
+    <Texte>controle_coherence.py + hook pre-commit en --strict (11/10/2026, 0 reference pendante). RESTE : passe equivalente dans WinLivre a cote des compteurs R et W (optionnel). Le hook (.git/hooks/pre-commit) n est pas versionne : le recreer si le depot est reclone.</Texte>
+  </Item>
+  <Item id="AUDIT-DE-CODE-SUITE" section="CONTROLE" etat="ouvert">
+    <Texte>Voir CONTEXT.md, point de reprise du 11/10/2026 : wincreation.pas (3 routines &gt;280 l), PdfPersonnageCreation, TMenu.FormCreate ; tests a l ecran des lots sans filet.</Texte>
+  </Item>
+  <Item id="EXPORT-XML" section="CONTROLE" etat="ouvert">
+    <Texte>xmlexportimport.pas : une table fille a code nu perd ses lignes en silence (sain aujourd hui, croisement lu/ecrit fait le 11/10/2026 : 44 balises DATA_ symetriques). Le controle_coherence.py signale desormais toute balise DATA_ inconnue du programme ; a relancer apres tout import de livre.</Texte>
+  </Item>
+  <Item id="AFFICHAGE-NOUVELLE-NATURE-DE-DONNEE" section="CONTROLE" etat="ouvert">
+    <Texte>Trois endroits aiguillent sur la FORME du code : branche "choix unique" de WinRaces, bascule de ChargeSpecialisation, routage par Node.Parent.Text. A relire avant le prochain ajout du meme genre.</Texte>
+  </Item>
+  <Item id="VERIFICATION-DE-MASSE" section="CONTROLE" etat="ouvert">
+    <Texte>Outil : python verifier_libelles.py [WFRP4|WFRP5] [--casse]. TRIE le 12/11/2026 : WFRP4 23 introuvables sur 4546, TOUS VERIFIES DANS LES LIVRES = faux positifs (armures de Lustria deduites de la regle « Lustrian Armour = cuir +1 ENC », suffixe « (A3) » d Archives III, tableau « Dragon Armour » du High Elf Player s Guide, BonusMalus de Nations of Mankind = etiquettes de la colonne penalite) ; WFRP5 1 non revu. Faux positifs connus = regiments NATIO-REGIM_*, NATIO-RACE_H*, Mark of the &lt;dieu&gt;, variantes de bateaux, Spear Chukka Bolt / Rock Lobber Stone, libelles en casse de titre voulus. Un libelle introuvable n est pas une erreur : aller voir le livre.</Texte>
+  </Item>
+  <Item id="PDF" section="INTERFACE" etat="ouvert">
+    <Texte>Points de Destin et de Resilience en PDF (cases cochees) : non demande.</Texte>
+  </Item>
+  <Item id="PDF-STRUCTURES" section="INTERFACE" etat="ouvert">
+    <Texte>PdfPersonnageCompetence/Attribut sans code/libelle/carac liee : a revoir si un futur appelant en a besoin.</Texte>
+  </Item>
+  <Item id="WINLANCEDES" section="INTERFACE" etat="ouvert">
+    <Texte>Popup cablee au seul TalentAleatoire.</Texte>
+  </Item>
+  <Item id="GRILLES" section="INTERFACE" etat="ouvert">
+    <Texte>Appliquer GridAjouteColonne aux nouvelles grilles (mode Columns, OnPrepareCanvas) pour supprimer les indices en dur. Piege : ColCount d une grille a Columns leve EGridException ; GridAjouteColonne dans un constructeur double les colonnes.</Texte>
+  </Item>
+  <Item id="AJUSTEPOSITIONTABLES" section="INTERFACE" etat="ouvert">
+    <Texte>A tester : (1) cocher/decocher CheckBoxDestinResilience et CheckBoxXp plusieurs fois (ScaleDpi=false pose le 18/08) ; (2) PremierAjustage est GLOBALE, deux fiches ouvertes peuvent heriter du mauvais facteur ; (3) redimensionnement de TabCompetence a verifier a l ecran.</Texte>
+  </Item>
+  <Item id="ANCRAGE-LCL" section="INTERFACE" etat="ouvert">
+    <Texte>Prototype AnchorSide/BorderSpacing sur Age/Taille/Cheveux/Yeux avant d etendre. Piege : ancrages dans le mauvais ordre ou en boucle.</Texte>
+  </Item>
+  <Item id="ONGLETS" section="INTERFACE" etat="ouvert">
+    <Texte>WinPersonnage a trop d onglets : regrouper par categorie (Fiche/Progression/Journal/Reference) ; a concevoir avant de toucher au .lfm.</Texte>
+  </Item>
+  <Item id="PROTOCOLE-FORMULAIRES" section="INTERFACE" etat="ouvert">
+    <Texte>Variables globales (ChoixWinTalent, SelectWinTalent...) : proprietes de fiche plus sures, pas urgent.</Texte>
+  </Item>
+  <Item id="DIVERS-CODE" section="INTERFACE" etat="ouvert">
+    <Texte>(VerifieRecherche deplacee dans UnitCalcul le 12/10/2026, compile) ChargeImageNiveau/ColorList locales a WinPersonnage ; le menu des livres retrouve le fichier par le libelle (renommer les XML casserait le lien) ; entrees fantomes &lt;Skill id="RULES-COMPCOMB_2M/COMPCOMB_FLEAU"&gt; : construire le libelle a la volee avec "ou".</Texte>
+  </Item>
+  <Item id="NAMING" section="INTERFACE" etat="ouvert">
+    <Texte>Piege de nommage franco-anglais (ColAtt*/ConstCarac*) : a resurveiller si de nouvelles variables courtes apparaissent.</Texte>
+  </Item>
+  <Item id="V2-CULTES" section="CONCEPTION" etat="ouvert">
+    <Texte>Decision : pas de bloc DATA_CULT, on reutilise DATA_CAREER_BONUS. Etape 2 ABANDONNEE (Nono, 16/10/2026) : options du Pretre (Compendium p.245) en texte, car la greffe ecrit dans MetierTalent que le PDF V2 imprime comme talents POSSEDES ; il faudrait d abord distinguer talent de carriere possede / apprenable en V2 (autre chantier). A reprendre avec ce chantier ; condition meme culte = niveau 2 du meme CareerBonus. Autres livres V2 : cultes du Dwarf Player's Guide p.133-142 sur le modele du bonus d Initiate.</Texte>
+  </Item>
+  <Item id="REGLES-GENERALISEES" section="CONCEPTION" etat="ouvert">
+    <Texte>RESTE a examiner, une table a la fois : tirage de talent EN ATTENTE (decision Nono 10/10/2026, aucun besoin reel : seuls le Rulebook et Green Iz Best portent des tirages ; piege : les entrees de plusieurs livres pour une meme ethnie s ADDITIONNENT et sont renormalisees en silence, chargetalentcreation.pas CalculeTirageTalent ; si besoin, meme modele Remove/Replace que l equipement de classe), tirage de corruption (premiere plage de tous les livres, voir [TIRAGE DE CORRUPTION]). Cibles de retrait limitees a celles du Rulebook.</Texte>
+  </Item>
+  <Item id="NIVEAUX-ALTERNATIFS-D-UN-METIER" section="CONCEPTION" etat="ouvert">
+    <Texte>Cas Axefighter (DWARF-WORK23) = niveau 2 de remplacement du Soldier, metier a part avec &lt;Parent&gt; et un seul &lt;Level id="2"&gt; (CONTEXT.md 2.24) ; 18 metiers ainsi (15 Dwarf, 3 High Elf). Option A (variantes dans le metier, memorisees par le personnage : risque eleve) ; option B recommandee (garder &lt;Parent&gt;, WinLivre presente et cree la variante DANS le metier parent, aucun changement WinPersonnage/PDF). A trancher : besoin de creer (livres de fan) ou d editer l existant. Rien a coder avant.</Texte>
+  </Item>
+  <Item id="TIRAGE-DE-CORRUPTION" section="CONCEPTION" etat="ouvert">
+    <Texte>Lecture seule (winlivre.pas ~568) ; CorruptionTableResultat prend la PREMIERE plage de TOUS les livres, la table d un livre de fan serait ignoree. Ne rien faire tant qu aucun livre ne le demande ; si besoin : (a) un livre remplace la table du Rulebook ou (b) tirage secondaire declare ; puis grille Debut/Fin/Mutation avec controle 1-100.</Texte>
+  </Item>
+  <Item id="LIVRES-DE-TRADUCTION" section="CONCEPTION" etat="ouvert">
+    <Texte>Script generique ajouter_traductions_manquantes.py (aujourd hui EN/FR du Rulebook en dur) : livre source, cible et langue en parametres. Idee, non concue.</Texte>
+  </Item>
+  <Item id="VERSIONS" section="CONCEPTION" etat="ouvert">
+    <Texte>Calcul des changements entre deux versions, gestion des versions et traductions : CONTEXT.md 2.3 (conception arretee le 10/08, non demarre). Up in Arms (mises a jour de competences, option "competences") rattache.</Texte>
+  </Item>
+  <Item id="CALCUL-DECLARATIF" section="CONCEPTION" etat="ouvert">
+    <Texte>Idee de fond de Nono : donnees calculees du personnage en graphe de dependances, hierarchie de classes Pascal (pas de mini-langage XML). Partir de pdfpersonnage.pas. Pieges : ordre d evaluation et boucles, deux moteurs qui cohabitent.</Texte>
+  </Item>
+  <Item id="FONCTIONNALITES-NON-CONCUES" section="CONCEPTION" etat="ouvert">
+    <Texte>Verifier les "au choix" et les afficher dans une couleur distincte ; reduction de 5 Xp valable seulement si la competence est dans la carriere ; editeurs internes (competence, talent, race, metier) ; explications integrees au logiciel ; colonnes de niveau pour talents/competences ; ABOUT des livres facultatifs ; generer un XML de traduction a part en extrayant les elements language=.</Texte>
+  </Item>
+  <Item id="WINFABRICATION" section="CONCEPTION" etat="ouvert">
+    <Texte>Aucune notion de livre (ni champ ni filtre) : chantier lourd (CONTEXT.md 2.69).</Texte>
+  </Item>
+  <Item id="FABRICATION-SANS-MOTEUR" section="CONCEPTION" etat="ouvert">
+    <Texte>Effets d objets magiques (Archives II p.64-67, Winds of Magic) : acces a un sort precis, portee/duree de sort, ignorer un Miscast/Swirling Winds/Condition, convertir des Blessures en SL de Cast : aucun code tant que Nono n en a pas besoin. Restent du TEXTE : effets visant un ADVERSAIRE, conditionnes au type de creature, ou narratifs a usage unique.</Texte>
+  </Item>
+  <Item id="REGIMENTS-OF-RENOWN" section="CONCEPTION" etat="ouvert">
+    <Texte>Trappings non modelises : aucun mecanisme ne greffe un objet via une appartenance ; regle narrative du palier 3 non modelisee. A mener seulement si Nono en a besoin.</Texte>
+  </Item>
+  <Item id="GROUPE" section="CONCEPTION" etat="ouvert">
+    <Texte>Jamais demande en pratique : fiche/profil du bien de groupe sur WinPersonnage/PDF ; "(groupe)" en lecture seule lors du partage ; identifiant de bien unique par personnage.</Texte>
+  </Item>
+  <Item id="OBJET-CREE-SUR-PLACE" section="CONCEPTION" etat="ouvert">
+    <Texte>Copie d un objet propre vers un livre : non voulue en v1.</Texte>
+  </Item>
+  <Item id="PSYCHOLOGIES" section="CONCEPTION" etat="ouvert">
+    <Texte>Prejudice Bretonnians/Tileans non modelisees (decision Nono) ; a rouvrir quand d autres psychologies arriveront.</Texte>
+  </Item>
+  <Item id="METHODE" section="LIVRES" etat="ouvert">
+    <Texte>Un seul livre a la fois (inventaire : CONTEXT.md 2.36). Un comptage de "Career Path" compte aussi les PNJ et la prose : sortir le contexte avant de classer un livre. L absence de copyright ne prouve pas qu un livre soit officiel.</Texte>
+  </Item>
+  <Item id="HIGH-ELF-PLAYER-S-GUIDE" section="LIVRES" etat="ouvert">
+    <Texte>COMPLETE=1 (20/09/2026). RESTE : High Magic sans ligne Max dans le livre (coquille, valeur dans CONTEXT.md 2.25) ; ADAPTING CAREERS p.60-62, a valider par Nono : trappings (Artisan/Merchant/Wizard/Cavalryman), facultatives (Pit Fighter, Seaman : question Oui/Non), options Up in Arms (Artillerist, Light Cavalry niveau 4) ; non portes : intitule Exalted Maker, restriction Soldier, quantite des 10 Arrows ; carrieres marquees d une * p.59 non portees.</Texte>
+  </Item>
+  <Item id="TEMPLE-OF-SPITE" section="LIVRES" etat="ouvert">
+    <Texte>COMPLETE=0, V4 et V5. Hors perimetre pour l instant : "Sorceress Pacts", ethnie Dark Elves, trait de navire special, 8 "Gifts of Khaine".</Texte>
+  </Item>
+  <Item id="NAGGAROTH" section="LIVRES" etat="ouvert">
+    <Texte>Carriere de Bete = systeme des Henchmen (Rulebook p.309, absent de la base) : hors perimetre, reouvrable si on modelise les Henchmen.</Texte>
+  </Item>
+  <Item id="FRANCAIS-01" section="FRANCAIS" etat="gele">
+    <Texte>172 &lt;Description&gt; et 13 &lt;Test&gt; du fichier francais portent un espace parasite (liste regenerable).</Texte>
+  </Item>
+  <Item id="FRANCAIS-02" section="FRANCAIS" etat="gele">
+    <Texte>Libelles restes en ANGLAIS : Bless/Invoke (Handrich, Solkan), Blessed by Stromfels, Invoke Stromfels (Predators), Etiquette (Beastmen), Craftsman (Alchemist) ; RULES-T0088_KHAINE et _DARK volontairement en anglais des deux cotes.</Texte>
+  </Item>
+  <Item id="FRANCAIS-03" section="FRANCAIS" etat="gele">
+    <Texte>Convention Bless/Invoke : francais "Beni de Sigmar (Empire)" / "Invocation de Sigmar (Empire)" vs anglais "Bless (Sigmar)" / "Invoke (Sigmar)" ; decision de traduction.</Texte>
+  </Item>
+  <Item id="FRANCAIS-04" section="FRANCAIS" etat="gele">
+    <Texte>RULES-T0088_TZEENTCH "Arcane Lore (Tzeentch)" cote francais vs "Arcane Magic (X)" anglais.</Texte>
+  </Item>
+  <Item id="FRANCAIS-05" section="FRANCAIS" etat="gele">
+    <Texte>&lt;Short&gt; de RULES-WEAPB06 et _07 INVERSES cote francais (corrige cote anglais le 28/08).</Texte>
+  </Item>
+  <Item id="FRANCAIS-06" section="FRANCAIS" etat="gele">
+    <Texte>BOOK_RULESBOOK_FRANCAIS.Xml n a ni DATA_NATION ni NATIONALITY ; Nations of Mankind sans traduction.</Texte>
+  </Item>
+  <Item id="FRANCAIS-07" section="FRANCAIS" etat="gele">
+    <Texte>"Armurier" pour les DEUX cotes de RULES-COMPMETIER_ARMU/T0092_ARMU/T0157_ARMU, jamais "Gunsmith".</Texte>
+  </Item>
+  <Item id="FRANCAIS-08" section="FRANCAIS" etat="gele">
+    <Texte>256 noms de niveau de carriere encore en anglais. MECANISME FAIT 09/11/2026 (balise DescriptionFeminine, repli sur Description, sexe V4/V5 dans WinPhysique, teste par Nono sur Nations of Mankind). RESTE : traduire les 256 noms avec leurs deux formes au degel ; afficher la forme feminine dans les catalogues (WinMetier, pdfmetier.pas) ; WinLivre edite DescriptionFeminine depuis le 10/11/2026 (colonne « Nom feminin » de la grille des niveaux).</Texte>
+  </Item>
+  <Item id="FRANCAIS-09" section="FRANCAIS" etat="gele">
+    <Texte>7 degres de Taille (T0SIZ_*) : Little -&gt; Menu et Small -&gt; Petit sont un pari, a verifier au degel.</Texte>
+  </Item>
+  <Item id="IMAGES-CARRIERES-SANS-ILLUSTRATION" section="LIVRES" etat="ouvert">
+    <Texte>GRIM-WORK136 (Druidic Priest, classe PEAS) et GRIM-WORK137 (Elementalist, classe RANG) : vraies carrieres a 4 niveaux sans image dans DATABASE\WFRP4\PICTURES\CLASS. Les 15 DWARF-WORK11 a 25 sont des variantes de niveau (Parent), pas a illustrer. Chantier des images de carriere a mener avec celui des classes (blasons maison deja faits, 11/10/2026).</Texte>
+  </Item>
+  <Item id="SANS-LICENCE-DONNEES" section="SANS_LICENCE" etat="ouvert">
+    <Texte>Attributs du Rulebook WFRP5 : pas de texte source dans PDF_TEXTE, pages a saisir par Nono ; affichage vide sous l option ; ajouter &lt;Page&gt; au schema si l on veut une mention.</Texte>
+  </Item>
+  <Item id="SANS-LICENCE-AUTRES-TEXTES" section="SANS_LICENCE" etat="ouvert">
+    <Texte>Verifier a l'ecran les textes de livre restants (WinPersonnage, notes, sous-metiers TexteMetierSousMetier) ; le nom interne ImagesDefautSeul est a renommer si Nono veut.</Texte>
+  </Item>
+  <Item id="V2-RESTES-EQUIP-COMP" section="CONCEPTION" etat="ouvert">
+    <Texte>Restes apres test valide (25/10/2026) de V2-COMPETENCES et V2-EQUIPEMENT-DE-DEPART : formation speciale du MJ a 200 XP (Core p.380) EN PLACE EN V4 SEULEMENT (option GM XP : ligne {Add}, colonnes Cost / Real cost) ; en V2 les talents n ont volontairement ni hors carriere ni {Add} (winpersonnage.pas, apres AugmentationTalentsCarriere), FAIT 09/11 (decide par Nono) : ligne {Add} ajoutee aux talents V2 (competences V2 l ont deja), cout reel x2 sur ces lignes seulement (marque AJOUT-MJ, colonne Work), TESTE ET VALIDE par Nono 09/11 ;ligne facultative a exclure d un futur controle de fin de carriere ; fabrication Best/Good/Poor Craftsmanship en texte ; "Any N weapons" FAIT 09/11/2026 (jokers RULES-COMB_V2_* / RULES-PROJ_V2_* au Rulebook V2, ligne « COMB/PROJ » repetee N fois pour Veteran 2, Champion 6, Compendium 1 ; « Best Craftsmanship » du Champion = suffixe (Q) sur les 6 lignes joker, TESTE ET VALIDE par Nono 09/11 (Rulebook V2 seulement) ; TESTE ET VALIDE par Nono 09/11) ;munitions en choix ABANDONNE (Nono 09/11 : munitions donnees quel que soit le choix d arme) ; malus -20 pour cent du groupe d arme au PDF V2 ABANDONNE (Nono 09/11 : pas de champ groupe sur les armes V2, le joueur applique le malus lui-meme).</Texte>
+  </Item>
+</AFaire>

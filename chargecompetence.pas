@@ -21,6 +21,8 @@ type
         // lu depuis <Generique> quand present (CONTEXT.md 2.67). Vide si non renseigne
         // (competence non specialisee, ou specialisation sans generique '_*' identifiee).
         CodeGenerique:                 string;
+        // WFRP1 : une ligne par <Bonus> (cible, valeur), vide hors V1
+        BonusTexte:                    string;
     end;
 
   TListCompetence = Specialize TList<StructureCompetence>;
@@ -35,8 +37,52 @@ var
   SpecialisationComp: string;
 
 function ChercheCompetence(CodeCompetence :String): StructureCompetence;
+function CodeGeneriqueDeduit(const Code: String): String;
+function FamilleCompetence(const Code: String): String;
+function CodeGeneriqueDe(const PCompetence: StructureCompetence): String;
 
 implementation
+
+// Code du generique d'une specialisation : le lien <Generique> de la fiche, a defaut le code deduit ('' si la
+// competence n'est pas une specialisation).
+function CodeGeneriqueDe(const PCompetence: StructureCompetence): String;
+Begin
+  if not PCompetence.SousCompetence then
+    Result := ''
+  else if PCompetence.CodeGenerique <> '' then
+    Result := PCompetence.CodeGenerique
+  else
+    Result := CodeGeneriqueDeduit(PCompetence.CodeCompetence);
+End;
+
+// Competences V4 / V5 (24/10/2026, comme les talents) : specialisation RULES-COMP_LORE__BEASTS, generique
+// RULES-COMP_LORE__*. Repli quand <Generique> n'est pas renseigne : famille = ce qui precede le '__'.
+// Ancien format (V2) : radical avant le premier '_'.
+function CodeGeneriqueDeduit(const Code: String): String;
+var
+  P: Integer;
+Begin
+  P := Pos(SeparateurSpecialisationTalent, Code);
+  if P > 0 then
+    Result := Copy(Code, 1, P + Length(SeparateurSpecialisationTalent) - 1) + '*'
+  else
+    Result := ExtractStringBefore(Code, ValeurSousCompetence) + ValeurGenerique;
+End;
+
+// Famille d'un code de competence, generique ou specialisation : RULES-COMP_LORE__BEASTS et RULES-COMP_LORE__*
+// donnent RULES-COMP_LORE ; une competence sans specialisation est sa propre famille.
+function FamilleCompetence(const Code: String): String;
+var
+  P: Integer;
+Begin
+  P := Pos(SeparateurSpecialisationTalent, Code);
+  if P > 0 then
+    Result := Copy(Code, 1, P - 1)
+  else if Copy(Code, Length(Code) - 1, 2) = ValeurGenerique then
+    Result := Copy(Code, 1, Length(Code) - 2)
+  else
+    Result := Code;
+End;
 
 function CountOccurrences(const str, subStr: string): Integer;
 var

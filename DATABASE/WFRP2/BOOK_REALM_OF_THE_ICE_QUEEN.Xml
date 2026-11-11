@@ -1,0 +1,2108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"RIQ"</CODE_BOOK>
+<BOOK>"BOOK REALM OF THE ICE QUEEN"</BOOK>
+<BOOKNAME>"REALM OF THE ICE QUEEN"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"1"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_SPELL_V2>
+<SpellV2 id="RIQ-SPEL_BLESSING_OF_DAZH">
+<Description language="ENGLISH">"Blessing of Dazh"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A firebird’s feather (+1)"</Ingredient>
+<Page>"113"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch (You)"</Range>
+<Cult>"Dazhinyi"</Cult>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_BLESSING_OF_FIRE">
+<Description language="ENGLISH">"Blessing of Fire"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A fistful of hearth ash (+1)"</Ingredient>
+<Page>"113"</Page>
+<Duration>"1 hour (special)"</Duration>
+<Range>"2 yards (1 square)"</Range>
+<Cult>"Dazhinyi"</Cult>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_CHARMED">
+<Description language="ENGLISH">"Charmed"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Hag)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A drop of your blood (+1)"</Ingredient>
+<Page>"113"</Page>
+<Duration>"1 minute (6 rounds) (special)"</Duration>
+<Range>"Touch (You)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_CURSE">
+<Description language="ENGLISH">"Curse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Hag)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A fingernail from the victim (+1)"</Ingredient>
+<Page>"113"</Page>
+<Duration>"1 day"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_RESIST_CORRUPTION">
+<Description language="ENGLISH">"Resist Corruption"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Hag)"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Spittle (+1)"</Ingredient>
+<Page>"113"</Page>
+<Duration>"1 hour"</Duration>
+<Range>"2 yards (1 square)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_CHILL">
+<Description language="ENGLISH">"Chill"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Ice)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"An ice ball (+1)"</Ingredient>
+<Page>"114"</Page>
+<Duration>"1 day"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_WINTER_WALK">
+<Description language="ENGLISH">"Winter Walk"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Ice)"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A snow shoe (+1)"</Ingredient>
+<Page>"114"</Page>
+<Duration>"1 hour"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_BLESSING_OF_STORM_S_APPROACH">
+<Description language="ENGLISH">"Blessing of Storm’s Approach"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Wood from a lightning-struck tree (+1)"</Ingredient>
+<Page>"114"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"48 yards (24 squares)"</Range>
+<Cult>"Torinyi"</Cult>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_BLESSING_OF_TOR">
+<Description language="ENGLISH">"Blessing of Tor"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A silver Torinyi amulet (+1)"</Ingredient>
+<Page>"114"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch"</Range>
+<Cult>"Torinyi"</Cult>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_BLESSING_OF_THE_LICKED_PAW">
+<Description language="ENGLISH">"Blessing of the Licked Paw"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Bear saliva (+1)"</Ingredient>
+<Page>"114"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch (You)"</Range>
+<Cult>"Ursunyi"</Cult>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_BLESSING_OF_URSUN">
+<Description language="ENGLISH">"Blessing of Ursun"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Divine)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A fresh fish (+1)"</Ingredient>
+<Page>"114"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"Touch (You)"</Range>
+<Cult>"Ursunyi"</Cult>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_GHOST_SHIELD">
+<Description language="ENGLISH">"Ghost Shield"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A circle of salt (+2)"</Ingredient>
+<Page>"114"</Page>
+<Duration>"1 hour/Magic (special)"</Duration>
+<Range>"4 yards (2 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_GLAMOUR">
+<Description language="ENGLISH">"Glamour"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A winter rose (+2)"</Ingredient>
+<Page>"115"</Page>
+<Duration>"1 hour/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_TAP">
+<Description language="ENGLISH">"Tap"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"1d10 minutes"</CastingTime>
+<Ingredient>"A vial of purified or blessed water (+2)"</Ingredient>
+<Page>"115"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_BANISH_SPIRIT">
+<Description language="ENGLISH">"Banish Spirit"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"An elk’s internal organs (+2)"</Ingredient>
+<Page>"115"</Page>
+<SpellLists>"Koldunja"</SpellLists>
+<Duration>"Permanent"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_VAZILA">
+<Description language="ENGLISH">"Vazila"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A horse shoe (+1)"</Ingredient>
+<Page>"115"</Page>
+<Duration>"1 hour/Magic"</Duration>
+<Range>"100 yards (50 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_CLEANSE_BODY">
+<Description language="ENGLISH">"Cleanse Body"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A fistful of fish guts (+2)"</Ingredient>
+<Page>"115"</Page>
+<SpellLists>"Znarkharja"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_CLEANSE_SOUL">
+<Description language="ENGLISH">"Cleanse Soul"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A cup of bear’s urine (+3)"</Ingredient>
+<Page>"116"</Page>
+<SpellLists>"Znarkharja"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_COMMAND_SPIRIT">
+<Description language="ENGLISH">"Command Spirit"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A fox’s brain (+2)"</Ingredient>
+<Page>"116"</Page>
+<SpellLists>"Koldunja"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_CURSED_PLEDGE">
+<Description language="ENGLISH">"Cursed Pledge"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"An item personal to the target (+2)"</Ingredient>
+<Page>"116"</Page>
+<SpellLists>"Koldunja, Vorozheja, Znarkharja"</SpellLists>
+<Duration>"Immediate (or until the deed is completed)"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_DENY_SPIRIT">
+<Description language="ENGLISH">"Deny Spirit"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A newt’s spine (+2)"</Ingredient>
+<Page>"116"</Page>
+<SpellLists>"Koldunja, Vorozheja, Znarkharja"</SpellLists>
+<Duration>"Permanent"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_FORM_OF_THE_ANCIENT_WIDOW">
+<Description language="ENGLISH">"Form of the Ancient Widow"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<CastingNumber>"26"</CastingNumber>
+<CastingTime>"3 full actions"</CastingTime>
+<Ingredient>"Two fistfuls of Kislevite earth soaked in your fresh blood (+3)"</Ingredient>
+<Page>"117"</Page>
+<SpellLists>"Koldunja"</SpellLists>
+<Duration>"Special"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_FORTUNE_TOLD">
+<Description language="ENGLISH">"Fortune Told"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"1 hour"</CastingTime>
+<Ingredient>"An item directly applicable to the question asked (+2)"</Ingredient>
+<Page>"117"</Page>
+<SpellLists>"Vorozheja"</SpellLists>
+<Duration>"Special"</Duration>
+<Range>"Special"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_GREATER_CURSE">
+<Description language="ENGLISH">"Greater Curse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"An item personal to the target (+2)"</Ingredient>
+<Page>"117"</Page>
+<SpellLists>"Koldunja, Vorozheja, Znarkharja"</SpellLists>
+<Duration>"Immediate"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_HAG_S_CURSE">
+<Description language="ENGLISH">"Hag’s Curse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A lock of the target’s hair (+1)"</Ingredient>
+<Page>"117"</Page>
+<SpellLists>"Vorozheja"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_HAUNTING">
+<Description language="ENGLISH">"Haunting"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A fist-sized item from the target location (+2)"</Ingredient>
+<Page>"118"</Page>
+<SpellLists>"Koldunja, Vorozheja, Znarkharja"</SpellLists>
+<Duration>"Ingredient"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_LUCKY_CLAW">
+<Description language="ENGLISH">"Lucky Claw"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A three-legged dog’s claw (+2)"</Ingredient>
+<Page>"118"</Page>
+<SpellLists>"Vorozheja"</SpellLists>
+<Duration>"1 hour/Magic (or when used)"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_PAST_REVEALED">
+<Description language="ENGLISH">"Past Revealed"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"3 full actions"</CastingTime>
+<Ingredient>"An item directly applicable to the question asked (+2)"</Ingredient>
+<Page>"118"</Page>
+<SpellLists>"Vorozheja"</SpellLists>
+<Duration>"Special"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_RESIST_CHAOS">
+<Description language="ENGLISH">"Resist Chaos"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A snowy owl’s gizzard (+2)"</Ingredient>
+<Page>"118"</Page>
+<SpellLists>"Znarkharja"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_SUMMON_SPIRIT">
+<Description language="ENGLISH">"Summon Spirit"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"As determined by the GM for the type of spirit summoned (+2)"</Ingredient>
+<Page>"118"</Page>
+<SpellLists>"Koldunja"</SpellLists>
+<Duration>"1d10 minutes"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_WHISPERS_OF_TAINT">
+<Description language="ENGLISH">"Whispers of Taint"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"The hand of a worshipper of the Dark Gods (+2)"</Ingredient>
+<Page>"119"</Page>
+<SpellLists>"Znarkharja"</SpellLists>
+<Duration>"1 hour/Magic"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_BITING_WIND">
+<Description language="ENGLISH">"Biting Wind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<CastingNumber>"23"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A white dragon’s fang (+3)"</Ingredient>
+<Page>"119"</Page>
+<SpellLists>"Ley Witch"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"36 yards (18 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_BLIZZARD">
+<Description language="ENGLISH">"Blizzard"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A snow flake (+2)"</Ingredient>
+<Page>"119"</Page>
+<SpellLists>"Oblast Witch, Ley Witch"</SpellLists>
+<Duration>"1 round/Magic"</Duration>
+<Range>"Special"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_CHILL_VOICE">
+<Description language="ENGLISH">"Chill Voice"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A tongue carved of ice (+1)"</Ingredient>
+<Page>"119"</Page>
+<SpellLists>"Khan-Queen"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_CRYSTAL_CLOAK">
+<Description language="ENGLISH">"Crystal Cloak"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"An ermine (+2)"</Ingredient>
+<Page>"119"</Page>
+<SpellLists>"Khan-Queen, Ley Witch"</SpellLists>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_DEATH_FROST">
+<Description language="ENGLISH">"Death Frost"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<CastingNumber>"25"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A chip of stone from Urszebya (+3)"</Ingredient>
+<Page>"119"</Page>
+<SpellLists>"Ley Witch"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_FROST_BLADE">
+<Description language="ENGLISH">"Frost Blade"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A yard-long icicle (+2)"</Ingredient>
+<Page>"119"</Page>
+<SpellLists>"Khan-Queen, Ley Witch"</SpellLists>
+<Duration>"1 round/Magic (special)"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_FORM_OF_THE_FROSTFIEND">
+<Description language="ENGLISH">"Form of the Frostfiend"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<CastingNumber>"27"</CastingNumber>
+<CastingTime>"3 full actions"</CastingTime>
+<Ingredient>"A Frostfiend’s claw (+3)"</Ingredient>
+<Page>"120"</Page>
+<SpellLists>"Khan-Queen, Oblast Witch"</SpellLists>
+<Duration>"Special"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_HAILSTORM">
+<Description language="ENGLISH">"Hailstorm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A hailstone (+2)"</Ingredient>
+<Page>"120"</Page>
+<SpellLists>"Ley Witch"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"18 yards (9 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_HAWKS_OF_MISKA">
+<Description language="ENGLISH">"Hawks of Miska"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A crystal hawk (+2)"</Ingredient>
+<Page>"120"</Page>
+<SpellLists>"Khan-Queen"</SpellLists>
+<Duration>"Special"</Duration>
+<Range>"36 yards (18 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_ICE_MAIDEN_S_KISS">
+<Description language="ENGLISH">"Ice Maiden’s Kiss"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A handful of snow (+2)"</Ingredient>
+<Page>"120"</Page>
+<SpellLists>"Khan-Queen, Oblast Witch"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"Cone template"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_ICE_SHEET">
+<Description language="ENGLISH">"Ice Sheet"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A one-foot-square sheet of ice (+2)"</Ingredient>
+<Page>"120"</Page>
+<SpellLists>"Oblast Witch"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_PERMAFROST">
+<Description language="ENGLISH">"Permafrost"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A frozen chunk of tundra (+2)"</Ingredient>
+<Page>"120"</Page>
+<SpellLists>"Oblast Witch, Ley Witch"</SpellLists>
+<Duration>"1 day/Magic"</Duration>
+<Range>"48 yards (24 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_SHARDSTORM">
+<Description language="ENGLISH">"Shardstorm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A handful of ice (+2)"</Ingredient>
+<Page>"121"</Page>
+<SpellLists>"Khan-Queen, Oblast Witch"</SpellLists>
+<Duration>"Instant"</Duration>
+<Range>"48 yards (24 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_SHOIKA_S_CALL">
+<Description language="ENGLISH">"Shoika’s Call"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A handful of icicles (+2)"</Ingredient>
+<Page>"121"</Page>
+<SpellLists>"Khan-Queen"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"36 yards (18 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_WALK_THE_ENDLESS_STEPPE">
+<Description language="ENGLISH">"Walk the Endless Steppe"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A ball of frozen bear fat (+2)"</Ingredient>
+<Page>"121"</Page>
+<SpellLists>"Oblast Witch"</SpellLists>
+<Duration>"1 day/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_WALL_OF_ICE">
+<Description language="ENGLISH">"Wall of Ice"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A foot-long slab of ice (+2)"</Ingredient>
+<Page>"121"</Page>
+<SpellLists>"Oblast Witch, Ley Witch"</SpellLists>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_BRILLIANCE">
+<Description language="ENGLISH">"Brilliance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Dazh"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A Dazhinyi holy symbol (+2)"</Ingredient>
+<Page>"121"</Page>
+<Duration>"Instant"</Duration>
+<Range>"6 yards (3 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_DAZH_SZHEG">
+<Description language="ENGLISH">"Dazh Szheg!"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Dazh"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A gold magnifying glass (+2)"</Ingredient>
+<Page>"122"</Page>
+<Duration>"Instant"</Duration>
+<Range>"18 yards (9 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_DANCE_OF_THE_ALARI">
+<Description language="ENGLISH">"Dance of the Alari"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Dazh"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A gilded lodestone (+1)"</Ingredient>
+<Page>"122"</Page>
+<Duration>"1 hour/Magic"</Duration>
+<Range>"1 league (3 miles)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_ROUSE_THE_COALS">
+<Description language="ENGLISH">"Rouse the Coals"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Dazh"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A lump of coal (+1)"</Ingredient>
+<Page>"122"</Page>
+<Duration>"Instant"</Duration>
+<Range>"2 yards (1 square)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_SACRED_GUEST">
+<Description language="ENGLISH">"Sacred Guest"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Dazh"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A Dazhinyi prayer parchment (+1)"</Ingredient>
+<Page>"122"</Page>
+<Duration>"Special"</Duration>
+<Range>"Special"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_WREATH_OF_FLAME">
+<Description language="ENGLISH">"Wreath of Flame"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Dazh"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A flame carved of gold (+2)"</Ingredient>
+<Page>"122"</Page>
+<Duration>"1 round/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_CALL_OF_TOR">
+<Description language="ENGLISH">"Call of Tor"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Tor"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A Torinyi holy symbol (+2)"</Ingredient>
+<Page>"122"</Page>
+<Duration>"1 round"</Duration>
+<Range>"1 mile"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_CLEAVE_THE_SKY">
+<Description language="ENGLISH">"Cleave the Sky"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Tor"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A vial of blessed rainwater (+2)"</Ingredient>
+<Page>"122"</Page>
+<Duration>"1 day/Magic"</Duration>
+<Range>"1 league (3 miles)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_DO_TOR">
+<Description language="ENGLISH">"Do Tor!"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Tor"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A silver lightning bolt (+1)"</Ingredient>
+<Page>"122"</Page>
+<Duration>"Instant"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_INCOMING_STORM">
+<Description language="ENGLISH">"Incoming Storm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Tor"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A Torinyi prayer parchment (+1)"</Ingredient>
+<Page>"123"</Page>
+<Duration>"5 minutes/Magic"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_THUNDER_OF_WAR">
+<Description language="ENGLISH">"Thunder of War"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Tor"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Actions"</CastingTime>
+<Ingredient>"A silver-plated cymbal (+2)"</Ingredient>
+<Page>"123"</Page>
+<Duration>"Instant"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_TOR_S_FURY">
+<Description language="ENGLISH">"Tor’s Fury"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Tor"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A whetstone (+1)"</Ingredient>
+<Page>"123"</Page>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_FATHER_BEAR">
+<Description language="ENGLISH">"Father Bear"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ursun"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A bear’s tongue (+1)"</Ingredient>
+<Page>"123"</Page>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"12 yards (24 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_GROWLING_FURY">
+<Description language="ENGLISH">"Growling Fury"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ursun"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A claw from a bear killed by trapping (+1)"</Ingredient>
+<Page>"123"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_SKIN_OF_THE_ICE_BEAR">
+<Description language="ENGLISH">"Skin of the Ice Bear"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ursun"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"An Ice Bear’s canine (+1)"</Ingredient>
+<Page>"123"</Page>
+<Duration>"1 minute (6 rounds)/Magic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_UNYIELDING_URSUN">
+<Description language="ENGLISH">"Unyielding Ursun"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ursun"</Lore>
+<CastingNumber>"21"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"An ice bear’s pelt (+3)"</Ingredient>
+<Page>"123"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"36 yards (18 squares)"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_URSINE_STRENGTH">
+<Description language="ENGLISH">"Ursine Strength"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ursun"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A bear’s rib (+1)"</Ingredient>
+<Page>"123"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="RIQ-SPEL_WINTER_S_SLEEP">
+<Description language="ENGLISH">"Winter’s Sleep"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Ursun"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A snowball (+2)"</Ingredient>
+<Page>"123"</Page>
+<Duration>"1d10 rounds (per target)"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SPELL_TALENT>
+<Sort id="RIQ-SPEL_BLESSING_OF_DAZH">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_BLESSING_OF_FIRE">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_BLESSING_OF_STORM_S_APPROACH">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_BLESSING_OF_TOR">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_BLESSING_OF_THE_LICKED_PAW">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_BLESSING_OF_URSUN">
+<Talent>"RULES-T_PETTY_MAGIC__DIVINE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_CHARMED">
+<Talent>"RULES-T_PETTY_MAGIC__HAG"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_CURSE">
+<Talent>"RULES-T_PETTY_MAGIC__HAG"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_RESIST_CORRUPTION">
+<Talent>"RULES-T_PETTY_MAGIC__HAG"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_CHILL">
+<Talent>"RULES-T_PETTY_MAGIC__ICE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_WINTER_WALK">
+<Talent>"RULES-T_PETTY_MAGIC__ICE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_BANISH_SPIRIT">
+<Talent>"RULES-T_WITCH_LORE__HAG"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_CLEANSE_BODY">
+<Talent>"RULES-T_WITCH_LORE__HAG"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_CLEANSE_SOUL">
+<Talent>"RULES-T_WITCH_LORE__HAG"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_COMMAND_SPIRIT">
+<Talent>"RULES-T_WITCH_LORE__HAG"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_CURSED_PLEDGE">
+<Talent>"RULES-T_WITCH_LORE__HAG"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_DENY_SPIRIT">
+<Talent>"RULES-T_WITCH_LORE__HAG"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_FORM_OF_THE_ANCIENT_WIDOW">
+<Talent>"RULES-T_WITCH_LORE__HAG"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_FORTUNE_TOLD">
+<Talent>"RULES-T_WITCH_LORE__HAG"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_GREATER_CURSE">
+<Talent>"RULES-T_WITCH_LORE__HAG"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_HAG_S_CURSE">
+<Talent>"RULES-T_WITCH_LORE__HAG"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_HAUNTING">
+<Talent>"RULES-T_WITCH_LORE__HAG"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_LUCKY_CLAW">
+<Talent>"RULES-T_WITCH_LORE__HAG"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_PAST_REVEALED">
+<Talent>"RULES-T_WITCH_LORE__HAG"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_RESIST_CHAOS">
+<Talent>"RULES-T_WITCH_LORE__HAG"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_SUMMON_SPIRIT">
+<Talent>"RULES-T_WITCH_LORE__HAG"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_WHISPERS_OF_TAINT">
+<Talent>"RULES-T_WITCH_LORE__HAG"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_BITING_WIND">
+<Talent>"RULES-T_WITCH_LORE__ICE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_BLIZZARD">
+<Talent>"RULES-T_WITCH_LORE__ICE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_CHILL_VOICE">
+<Talent>"RULES-T_WITCH_LORE__ICE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_CRYSTAL_CLOAK">
+<Talent>"RULES-T_WITCH_LORE__ICE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_DEATH_FROST">
+<Talent>"RULES-T_WITCH_LORE__ICE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_FROST_BLADE">
+<Talent>"RULES-T_WITCH_LORE__ICE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_FORM_OF_THE_FROSTFIEND">
+<Talent>"RULES-T_WITCH_LORE__ICE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_HAILSTORM">
+<Talent>"RULES-T_WITCH_LORE__ICE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_HAWKS_OF_MISKA">
+<Talent>"RULES-T_WITCH_LORE__ICE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_ICE_MAIDEN_S_KISS">
+<Talent>"RULES-T_WITCH_LORE__ICE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_ICE_SHEET">
+<Talent>"RULES-T_WITCH_LORE__ICE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_PERMAFROST">
+<Talent>"RULES-T_WITCH_LORE__ICE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_SHARDSTORM">
+<Talent>"RULES-T_WITCH_LORE__ICE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_SHOIKA_S_CALL">
+<Talent>"RULES-T_WITCH_LORE__ICE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_WALK_THE_ENDLESS_STEPPE">
+<Talent>"RULES-T_WITCH_LORE__ICE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_WALL_OF_ICE">
+<Talent>"RULES-T_WITCH_LORE__ICE"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_BRILLIANCE">
+<Talent>"RULES-T_DIVINE_LORE__DAZH"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_DAZH_SZHEG">
+<Talent>"RULES-T_DIVINE_LORE__DAZH"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_DANCE_OF_THE_ALARI">
+<Talent>"RULES-T_DIVINE_LORE__DAZH"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_ROUSE_THE_COALS">
+<Talent>"RULES-T_DIVINE_LORE__DAZH"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_SACRED_GUEST">
+<Talent>"RULES-T_DIVINE_LORE__DAZH"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_WREATH_OF_FLAME">
+<Talent>"RULES-T_DIVINE_LORE__DAZH"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_CALL_OF_TOR">
+<Talent>"RULES-T_DIVINE_LORE__TOR"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_CLEAVE_THE_SKY">
+<Talent>"RULES-T_DIVINE_LORE__TOR"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_DO_TOR">
+<Talent>"RULES-T_DIVINE_LORE__TOR"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_INCOMING_STORM">
+<Talent>"RULES-T_DIVINE_LORE__TOR"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_THUNDER_OF_WAR">
+<Talent>"RULES-T_DIVINE_LORE__TOR"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_TOR_S_FURY">
+<Talent>"RULES-T_DIVINE_LORE__TOR"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_FATHER_BEAR">
+<Talent>"RULES-T_DIVINE_LORE__URSUN"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_GROWLING_FURY">
+<Talent>"RULES-T_DIVINE_LORE__URSUN"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_SKIN_OF_THE_ICE_BEAR">
+<Talent>"RULES-T_DIVINE_LORE__URSUN"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_UNYIELDING_URSUN">
+<Talent>"RULES-T_DIVINE_LORE__URSUN"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_URSINE_STRENGTH">
+<Talent>"RULES-T_DIVINE_LORE__URSUN"</Talent>
+</Sort>
+<Sort id="RIQ-SPEL_WINTER_S_SLEEP">
+<Talent>"RULES-T_DIVINE_LORE__URSUN"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+<DATA_TALENT>
+<Talent id="RIQ-T_BEAR_HUG">
+<Description language="ENGLISH">"Bear Hug"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"134"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="RIQ-T_PROVINCIAL_EXPERTISE__EASTERN_KISLEV">
+<Description language="ENGLISH">"Provincial Expertise (Eastern Kislev)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="RIQ-T_PROVINCIAL_EXPERTISE__SOUTHERN_KISLEV">
+<Description language="ENGLISH">"Provincial Expertise (Southern Kislev)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="RIQ-T_PROVINCIAL_EXPERTISE__NORTHERN_KISLEV">
+<Description language="ENGLISH">"Provincial Expertise (Northern Kislev)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="RIQ-T_PROVINCIAL_EXPERTISE__WESTERN_KISLEV">
+<Description language="ENGLISH">"Provincial Expertise (Western Kislev)"</Description>
+<Generique>"JRR-T_PROVINCIAL_EXPERTISE__*"</Generique>
+</Talent>
+<Talent id="RULES-T_WITCH_LORE__HAG">
+<Description language="ENGLISH">"Witch Lore (Hag)"</Description>
+<Generique>"SOE-T_WITCH_LORE__*"</Generique>
+</Talent>
+<Talent id="RULES-T_WITCH_LORE__ICE">
+<Description language="ENGLISH">"Witch Lore (Ice)"</Description>
+<Generique>"SOE-T_WITCH_LORE__*"</Generique>
+</Talent>
+<Talent id="RULES-T_PETTY_MAGIC__HAG">
+<Description language="ENGLISH">"Petty Magic (Hag)"</Description>
+<Generique>"RULES-T_PETTY_MAGIC__*"</Generique>
+</Talent>
+<Talent id="RULES-T_PETTY_MAGIC__ICE">
+<Description language="ENGLISH">"Petty Magic (Ice)"</Description>
+<Generique>"RULES-T_PETTY_MAGIC__*"</Generique>
+</Talent>
+<Talent id="RULES-T_DIVINE_LORE__DAZH">
+<Description language="ENGLISH">"Divine Lore (Dazh)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+</Talent>
+<Talent id="RULES-T_DIVINE_LORE__TOR">
+<Description language="ENGLISH">"Divine Lore (Tor)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+</Talent>
+<Talent id="RULES-T_DIVINE_LORE__URSUN">
+<Description language="ENGLISH">"Divine Lore (Ursun)"</Description>
+<Generique>"RULES-T_DIVINE_LORE__*"</Generique>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+<DATA_CORRUPTION_TABLE_DIVINE>
+<Corruption name="RIQ-MARK_HAG_01">
+<Description language="ENGLISH">"Emaciated"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<ModifyCaracAleatoire name="RULES-ATTR_T">-10</ModifyCaracAleatoire>
+<Page>"111"</Page>
+</Corruption>
+<Corruption name="RIQ-MARK_HAG_02">
+<Description language="ENGLISH">"Club Foot"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<ModifyCarac name="RULES-ATTR_M">-1</ModifyCarac>
+<Page>"111"</Page>
+</Corruption>
+<Corruption name="RIQ-MARK_HAG_03">
+<Description language="ENGLISH">"Palsy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<Page>"111"</Page>
+</Corruption>
+<Corruption name="RIQ-MARK_HAG_04">
+<Description language="ENGLISH">"Hoarse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<Page>"111"</Page>
+</Corruption>
+<Corruption name="RIQ-MARK_HAG_05">
+<Description language="ENGLISH">"Popping Bones"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<Page>"111"</Page>
+</Corruption>
+<Corruption name="RIQ-MARK_HAG_06">
+<Description language="ENGLISH">"Aged"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<Page>"111"</Page>
+</Corruption>
+<Corruption name="RIQ-MARK_HAG_07">
+<Description language="ENGLISH">"Spirit Companion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<Page>"112"</Page>
+</Corruption>
+<Corruption name="RIQ-MARK_HAG_08">
+<Description language="ENGLISH">"Wise"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<ModifySkill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">+5</ModifySkill>
+<Page>"112"</Page>
+</Corruption>
+<Corruption name="RIQ-MARK_HAG_09">
+<Description language="ENGLISH">"Long-Lived"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<Page>"112"</Page>
+</Corruption>
+<Corruption name="RIQ-MARK_HAG_10">
+<Description language="ENGLISH">"Marked by the Spirits"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Hag)"</Lore>
+<Page>"112"</Page>
+</Corruption>
+<Corruption name="RIQ-MARK_ICE_01">
+<Description language="ENGLISH">"Frosty"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<ModifyCarac name="RULES-ATTR_Fel">-5</ModifyCarac>
+<Page>"112"</Page>
+</Corruption>
+<Corruption name="RIQ-MARK_ICE_02">
+<Description language="ENGLISH">"Pyrophobe"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<Page>"112"</Page>
+</Corruption>
+<Corruption name="RIQ-MARK_ICE_03">
+<Description language="ENGLISH">"Rimed"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<Page>"112"</Page>
+</Corruption>
+<Corruption name="RIQ-MARK_ICE_04">
+<Description language="ENGLISH">"Seasonal"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<Page>"112"</Page>
+</Corruption>
+<Corruption name="RIQ-MARK_ICE_05">
+<Description language="ENGLISH">"Snowy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<Page>"112"</Page>
+</Corruption>
+<Corruption name="RIQ-MARK_ICE_06">
+<Description language="ENGLISH">"Glacial"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<Page>"112"</Page>
+</Corruption>
+<Corruption name="RIQ-MARK_ICE_07">
+<Description language="ENGLISH">"Unfeeling"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<Page>"112"</Page>
+</Corruption>
+<Corruption name="RIQ-MARK_ICE_08">
+<Description language="ENGLISH">"Icy Stare"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<Page>"112"</Page>
+</Corruption>
+<Corruption name="RIQ-MARK_ICE_09">
+<Description language="ENGLISH">"Frozen Heart"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<Page>"112"</Page>
+</Corruption>
+<Corruption name="RIQ-MARK_ICE_10">
+<Description language="ENGLISH">"Marked by Kislev"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Witch Lore (Ice)"</Lore>
+<Page>"112"</Page>
+</Corruption>
+</DATA_CORRUPTION_TABLE_DIVINE>
+<DATA_CORRUPTION_DIVINE_CHANCE>
+<Chance name="01-10" lore="Witch Lore (Hag)">"RIQ-MARK_HAG_01"</Chance>
+<Chance name="11-20" lore="Witch Lore (Hag)">"RIQ-MARK_HAG_02"</Chance>
+<Chance name="21-30" lore="Witch Lore (Hag)">"RIQ-MARK_HAG_03"</Chance>
+<Chance name="31-40" lore="Witch Lore (Hag)">"RIQ-MARK_HAG_04"</Chance>
+<Chance name="41-50" lore="Witch Lore (Hag)">"RIQ-MARK_HAG_05"</Chance>
+<Chance name="51-60" lore="Witch Lore (Hag)">"RIQ-MARK_HAG_06"</Chance>
+<Chance name="61-70" lore="Witch Lore (Hag)">"RIQ-MARK_HAG_07"</Chance>
+<Chance name="71-80" lore="Witch Lore (Hag)">"RIQ-MARK_HAG_08"</Chance>
+<Chance name="81-90" lore="Witch Lore (Hag)">"RIQ-MARK_HAG_09"</Chance>
+<Chance name="91-00" lore="Witch Lore (Hag)">"RIQ-MARK_HAG_10"</Chance>
+<Chance name="01-10" lore="Witch Lore (Ice)">"RIQ-MARK_ICE_01"</Chance>
+<Chance name="11-20" lore="Witch Lore (Ice)">"RIQ-MARK_ICE_02"</Chance>
+<Chance name="21-30" lore="Witch Lore (Ice)">"RIQ-MARK_ICE_03"</Chance>
+<Chance name="31-40" lore="Witch Lore (Ice)">"RIQ-MARK_ICE_04"</Chance>
+<Chance name="41-50" lore="Witch Lore (Ice)">"RIQ-MARK_ICE_05"</Chance>
+<Chance name="51-60" lore="Witch Lore (Ice)">"RIQ-MARK_ICE_06"</Chance>
+<Chance name="61-70" lore="Witch Lore (Ice)">"RIQ-MARK_ICE_07"</Chance>
+<Chance name="71-80" lore="Witch Lore (Ice)">"RIQ-MARK_ICE_08"</Chance>
+<Chance name="81-90" lore="Witch Lore (Ice)">"RIQ-MARK_ICE_09"</Chance>
+<Chance name="91-00" lore="Witch Lore (Ice)">"RIQ-MARK_ICE_10"</Chance>
+</DATA_CORRUPTION_DIVINE_CHANCE>
+<DATA_WEAPON>
+<Weapon id="RIQ-COMB_V2_BERDYSH">
+<Description language="ENGLISH">"Berdysh"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"20CO"</Price>
+<Encumbrance>"100"</Encumbrance>
+<Quality>"RULES-WEAPQ_FAST,RULES-WEAPQ_IMPACT,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Page>"96"</Page>
+</Weapon>
+<Weapon id="RIQ-PROJ_V2_KISLEVITE_HORSE_BOW">
+<Description language="ENGLISH">"Kislevite Horse Bow"</Description>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Reach>"34/68"</Reach>
+<Price>"20CO"</Price>
+<Encumbrance>"75"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Page>"96"</Page>
+</Weapon>
+<Weapon id="RIQ-PROJ_V2_KISLEVITE_SHORT_BOW">
+<Description language="ENGLISH">"Kislevite Short Bow"</Description>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Reach>"16/32"</Reach>
+<Price>"10CO"</Price>
+<Encumbrance>"65"</Encumbrance>
+<Quality>"RULES-WEAPQ_PRECISE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Page>"96"</Page>
+</Weapon>
+</DATA_WEAPON>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="RIQ-EQUI_MELEE_WEAPONS_BERDYSH">
+<Description language="ENGLISH">"Berdysh"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"20 gc"</Cost>
+<Encumbrance>"100"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Fast, Impact, Tiring"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Note>""</Note>
+<Page>"96"</Page>
+</EquipmentV2>
+<EquipmentV2 id="RIQ-EQUI_MISSILE_WEAPONS_KISLEVITE_HORSE_BOW">
+<Description language="ENGLISH">"Bow (Kislevite Horse)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"20 gc"</Cost>
+<Encumbrance>"75"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"3"</Damage>
+<Range>"34/68"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"None"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Note>""</Note>
+<Page>"96"</Page>
+</EquipmentV2>
+<EquipmentV2 id="RIQ-EQUI_MISSILE_WEAPONS_KISLEVITE_SHORT_BOW">
+<Description language="ENGLISH">"Bow (Kislevite Short)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"65"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"3"</Damage>
+<Range>"16/32"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Precise"</Qualities>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Note>""</Note>
+<Page>"96"</Page>
+</EquipmentV2>
+<EquipmentV2 id="RIQ-EQUI_MISSILE_WEAPONS_AMMUNITION_ARROW_ARMOUR_PIERCING">
+<Description language="ENGLISH">"Arrow (Armour Piercing)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<SubCategory>"RULES-EQCAT2_AMMUNITION"</SubCategory>
+<Cost>"5 p"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Qualities>"Armour Piercing"</Qualities>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Note>""</Note>
+<Page>"96"</Page>
+</EquipmentV2>
+<EquipmentV2 id="RIQ-EQUI_MISSILE_WEAPONS_AMMUNITION_ARROW_INCENDIARY">
+<Description language="ENGLISH">"Arrow (Incendiary)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<SubCategory>"RULES-EQCAT2_AMMUNITION"</SubCategory>
+<Cost>"4 p"</Cost>
+<Encumbrance>"3"</Encumbrance>
+<Damage>"-1"</Damage>
+<Reload>"+Half"</Reload>
+<Qualities>"Special"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Note>""</Note>
+<Page>"96"</Page>
+</EquipmentV2>
+<EquipmentV2 id="RIQ-EQUI_MISSILE_WEAPONS_AMMUNITION_ARROW_SCREAMER">
+<Description language="ENGLISH">"Arrow (Screamer)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<SubCategory>"RULES-EQCAT2_AMMUNITION"</SubCategory>
+<Cost>"6 p"</Cost>
+<Encumbrance>"3"</Encumbrance>
+<Damage>"-2"</Damage>
+<Qualities>"Special"</Qualities>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Note>""</Note>
+<Page>"96"</Page>
+</EquipmentV2>
+<EquipmentV2 id="RIQ-EQUI_LIVESTOCK_HERD_DOG">
+<Description language="ENGLISH">"Herd Dog"</Description>
+<Category>"RULES-EQCAT2_LIVESTOCK"</Category>
+<Cost>"3 gc"</Cost>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Note>""</Note>
+<Page>"96"</Page>
+</EquipmentV2>
+<EquipmentV2 id="RIQ-EQUI_MOUNTS_KISLEVITE_HORSE">
+<Description language="ENGLISH">"Horse (Kislevite)"</Description>
+<Category>"RULES-EQCAT2_MOUNTS"</Category>
+<Cost>"70 gc"</Cost>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Profile>"WS 25, BS 0, S 37 (3), T 42 (4), Ag 29, Int 10, WP 15, Fel 0; Attacks 1, Movement 8, Wounds 14"</Profile>
+<Skills>"Perception (Int +10), Swim (S)"</Skills>
+<Talents>"Acute Hearing"</Talents>
+<SpecialRules>"Keen Senses"</SpecialRules>
+<Note>""</Note>
+<Page>"96"</Page>
+</EquipmentV2>
+<EquipmentV2 id="RIQ-EQUI_MOUNTS_KISLEVITE_WARHORSE">
+<Description language="ENGLISH">"Warhorse (Kislevite)"</Description>
+<Category>"RULES-EQCAT2_MOUNTS"</Category>
+<Cost>"280 gc"</Cost>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Profile>"WS 32, BS 0, S 37 (3), T 48 (4), Ag 35, Int 10, WP 15, Fel 0; Attacks 1, Movement 8, Wounds 16"</Profile>
+<Skills>"Perception (Int +10), Swim (S)"</Skills>
+<Talents>"Acute Hearing, Strike Mighty Blow"</Talents>
+<SpecialRules>"Keen Senses, Natural Weapons (Hoofs)"</SpecialRules>
+<Note>""</Note>
+<Page>"97"</Page>
+</EquipmentV2>
+<EquipmentV2 id="RIQ-EQUI_MISCELLANEA_KIBITKA">
+<Description language="ENGLISH">"Kibitka"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"2 gc"</Cost>
+<Encumbrance>"150"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Note>""</Note>
+<Page>"97"</Page>
+</EquipmentV2>
+<EquipmentV2 id="RIQ-EQUI_FOOD_AND_DRINK_KOUMISS_SKIN">
+<Description language="ENGLISH">"Koumiss, Skin"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"6 p"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Note>""</Note>
+<Page>"97"</Page>
+</EquipmentV2>
+<EquipmentV2 id="RIQ-EQUI_FOOD_AND_DRINK_KVAS_BOTTLE">
+<Description language="ENGLISH">"Kvas, Bottle"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"10 p"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Note>""</Note>
+<Page>"97"</Page>
+</EquipmentV2>
+<EquipmentV2 id="RIQ-EQUI_LIVESTOCK_TRAINED_BEAR">
+<Description language="ENGLISH">"Trained Bear"</Description>
+<Category>"RULES-EQCAT2_LIVESTOCK"</Category>
+<Cost>"400 gc"</Cost>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Note>""</Note>
+<Page>"97"</Page>
+</EquipmentV2>
+<EquipmentV2 id="RIQ-EQUI_SPECIAL_EQUIPMENT_WINGED_BANNER">
+<Description language="ENGLISH">"Winged Banner"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<Cost>"12 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Qualities>"Special"</Qualities>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Note>""</Note>
+<Page>"97"</Page>
+</EquipmentV2>
+<EquipmentV2 id="RIQ-EQUI_SPECIAL_EQUIPMENT_WINGED_BANNER_SCREAMER">
+<Description language="ENGLISH">"Winged Banner (Screamer)"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<Cost>"14 gc"</Cost>
+<Encumbrance>"55"</Encumbrance>
+<Qualities>"Special"</Qualities>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Note>""</Note>
+<Page>"97"</Page>
+</EquipmentV2>
+<EquipmentV2 id="RIQ-EQUI_CLOTHING_WINTER_CLOTHING">
+<Description language="ENGLISH">"Winter Clothing"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"45"</Encumbrance>
+<Qualities>"Special"</Qualities>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Note>""</Note>
+<Page>"97"</Page>
+</EquipmentV2>
+<EquipmentV2 id="RIQ-EQUI_MISCELLANEA_YURTA">
+<Description language="ENGLISH">"Yurta"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"10 s"</Cost>
+<Encumbrance>"30"</Encumbrance>
+<Note>""</Note>
+<Page>"97"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+<DATA_SPECIE>
+<Specie id="RIQ-RACE_GOSPODAR">
+<Description language="ENGLISH">"Human (Gospodar)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename"</NamePattern>
+<NamePattern sex="M">"Forename Surname"</NamePattern>
+<NamePattern sex="M">"Forename Forename:F+'syn'"</NamePattern>
+<NamePattern sex="M">"Forename Forename:F+'syn' Surname"</NamePattern>
+<NamePattern sex="F">"Forename"</NamePattern>
+<NamePattern sex="F">"Forename Surname"</NamePattern>
+<NamePattern sex="F">"Forename Forename:F+'doch'"</NamePattern>
+<NamePattern sex="F">"Forename Forename:F+'doch' Surname"</NamePattern>
+<Name part="Forename" sex="M" name="Aleksandr">"1-2"</Name>
+<Name part="Forename" sex="M" name="Alexei">"3-4"</Name>
+<Name part="Forename" sex="M" name="Anastas">"5-6"</Name>
+<Name part="Forename" sex="M" name="Antal">"7-8"</Name>
+<Name part="Forename" sex="M" name="Beledni">"9-10"</Name>
+<Name part="Forename" sex="M" name="Boris">"11-12"</Name>
+<Name part="Forename" sex="M" name="Boroda">"13-14"</Name>
+<Name part="Forename" sex="M" name="Borodyn">"15-16"</Name>
+<Name part="Forename" sex="M" name="Chagin">"17-18"</Name>
+<Name part="Forename" sex="M" name="Dazhja">"19-20"</Name>
+<Name part="Forename" sex="M" name="Demitirji">"21-22"</Name>
+<Name part="Forename" sex="M" name="Dmirov">"23-24"</Name>
+<Name part="Forename" sex="M" name="Douko">"25-26"</Name>
+<Name part="Forename" sex="M" name="Fyodor">"27-28"</Name>
+<Name part="Forename" sex="M" name="Gaspar">"29-30"</Name>
+<Name part="Forename" sex="M" name="Igyor">"31-32"</Name>
+<Name part="Forename" sex="M" name="Ivan">"33-34"</Name>
+<Name part="Forename" sex="M" name="Kazimir">"35-36"</Name>
+<Name part="Forename" sex="M" name="Kubah">"37-38"</Name>
+<Name part="Forename" sex="M" name="Kvetlai">"39-40"</Name>
+<Name part="Forename" sex="M" name="Lukyan">"41-42"</Name>
+<Name part="Forename" sex="M" name="Madorin">"43-44"</Name>
+<Name part="Forename" sex="M" name="Makari">"45-46"</Name>
+<Name part="Forename" sex="M" name="Maksim">"47-48"</Name>
+<Name part="Forename" sex="M" name="Mikhail">"49-50"</Name>
+<Name part="Forename" sex="M" name="Mitri">"51-52"</Name>
+<Name part="Forename" sex="M" name="Nicolai">"53-54"</Name>
+<Name part="Forename" sex="M" name="Novgo">"55-56"</Name>
+<Name part="Forename" sex="M" name="Oleg">"57-58"</Name>
+<Name part="Forename" sex="M" name="Pavel">"59-60"</Name>
+<Name part="Forename" sex="M" name="Ptor">"61-62"</Name>
+<Name part="Forename" sex="M" name="Pyotr">"63-64"</Name>
+<Name part="Forename" sex="M" name="Radii">"65-66"</Name>
+<Name part="Forename" sex="M" name="Sevhim">"67-68"</Name>
+<Name part="Forename" sex="M" name="Silvestr">"69-70"</Name>
+<Name part="Forename" sex="M" name="Stepan">"71-72"</Name>
+<Name part="Forename" sex="M" name="Sorca">"73-74"</Name>
+<Name part="Forename" sex="M" name="Tordimir">"75-76"</Name>
+<Name part="Forename" sex="M" name="Ursuni">"77-78"</Name>
+<Name part="Forename" sex="M" name="Vaja">"79-80"</Name>
+<Name part="Forename" sex="M" name="Valantyn">"81-82"</Name>
+<Name part="Forename" sex="M" name="Valery">"83-84"</Name>
+<Name part="Forename" sex="M" name="Vassily">"85-86"</Name>
+<Name part="Forename" sex="M" name="Viktor">"87-88"</Name>
+<Name part="Forename" sex="M" name="Vitali">"89-90"</Name>
+<Name part="Forename" sex="M" name="Vladimir">"91-92"</Name>
+<Name part="Forename" sex="M" name="Vlasi">"93-94"</Name>
+<Name part="Forename" sex="M" name="Yarogni">"95-96"</Name>
+<Name part="Forename" sex="M" name="Yuri">"97-98"</Name>
+<Name part="Forename" sex="M" name="Yvgeni">"99-100"</Name>
+<Name part="Forename" sex="F" name="Aleksandra">"1-2"</Name>
+<Name part="Forename" sex="F" name="Anastasia">"3-4"</Name>
+<Name part="Forename" sex="F" name="Bela">"5-6"</Name>
+<Name part="Forename" sex="F" name="Beledna">"7-8"</Name>
+<Name part="Forename" sex="F" name="Chagina">"9-10"</Name>
+<Name part="Forename" sex="F" name="Darya">"11-12"</Name>
+<Name part="Forename" sex="F" name="Dazhia">"13-14"</Name>
+<Name part="Forename" sex="F" name="Devora">"15-16"</Name>
+<Name part="Forename" sex="F" name="Elena">"17-18"</Name>
+<Name part="Forename" sex="F" name="Evdokiya">"19-20"</Name>
+<Name part="Forename" sex="F" name="Evelina">"21-22"</Name>
+<Name part="Forename" sex="F" name="Fyodorya">"23-24"</Name>
+<Name part="Forename" sex="F" name="Irina">"25-26"</Name>
+<Name part="Forename" sex="F" name="Irisa">"27-28"</Name>
+<Name part="Forename" sex="F" name="Ivana">"29-30"</Name>
+<Name part="Forename" sex="F" name="Kazimira">"31-32"</Name>
+<Name part="Forename" sex="F" name="Katarina">"33-34"</Name>
+<Name part="Forename" sex="F" name="Lubova">"35-36"</Name>
+<Name part="Forename" sex="F" name="Lukyana">"37-38"</Name>
+<Name part="Forename" sex="F" name="Lusha">"39-40"</Name>
+<Name part="Forename" sex="F" name="Makrina">"41-42"</Name>
+<Name part="Forename" sex="F" name="Matryona">"43-44"</Name>
+<Name part="Forename" sex="F" name="Minodora">"45-46"</Name>
+<Name part="Forename" sex="F" name="Militsa">"47-48"</Name>
+<Name part="Forename" sex="F" name="Mikhaila">"49-50"</Name>
+<Name part="Forename" sex="F" name="Mishka">"51-52"</Name>
+<Name part="Forename" sex="F" name="Natalya">"53-54"</Name>
+<Name part="Forename" sex="F" name="Nadyezhda">"55-56"</Name>
+<Name part="Forename" sex="F" name="Nicolja">"57-58"</Name>
+<Name part="Forename" sex="F" name="Olga">"59-60"</Name>
+<Name part="Forename" sex="F" name="Orlenda">"61-62"</Name>
+<Name part="Forename" sex="F" name="Pavla">"63-64"</Name>
+<Name part="Forename" sex="F" name="Svetlana">"65-66"</Name>
+<Name part="Forename" sex="F" name="Talika">"67-68"</Name>
+<Name part="Forename" sex="F" name="Tamara">"69-70"</Name>
+<Name part="Forename" sex="F" name="Tatiana">"71-72"</Name>
+<Name part="Forename" sex="F" name="Torlana">"73-74"</Name>
+<Name part="Forename" sex="F" name="Tornaida">"75-76"</Name>
+<Name part="Forename" sex="F" name="Tsvetkova">"77-78"</Name>
+<Name part="Forename" sex="F" name="Ursola">"79-80"</Name>
+<Name part="Forename" sex="F" name="Ursuka">"81-82"</Name>
+<Name part="Forename" sex="F" name="Warvara">"83-84"</Name>
+<Name part="Forename" sex="F" name="Valentyna">"85-86"</Name>
+<Name part="Forename" sex="F" name="Vasalisa">"87-88"</Name>
+<Name part="Forename" sex="F" name="Viktoria">"89-90"</Name>
+<Name part="Forename" sex="F" name="Yelena">"91-92"</Name>
+<Name part="Forename" sex="F" name="Yevgenya">"93-94"</Name>
+<Name part="Forename" sex="F" name="Yuliania">"95-96"</Name>
+<Name part="Forename" sex="F" name="Yurina">"97-98"</Name>
+<Name part="Forename" sex="F" name="Zoya">"99-100"</Name>
+<Name part="Surname" name="Aisenyev">"1-2"</Name>
+<Name part="Surname" name="Aznabaev">"3-4"</Name>
+<Name part="Surname" name="Bondarenko">"5-6"</Name>
+<Name part="Surname" name="Bukosky">"7-8"</Name>
+<Name part="Surname" name="Chekatilo">"9-10"</Name>
+<Name part="Surname" name="Chzov">"11-12"</Name>
+<Name part="Surname" name="Dazhdalev">"13-14"</Name>
+<Name part="Surname" name="Dzamvin">"15-16"</Name>
+<Name part="Surname" name="Ekomov">"17-18"</Name>
+<Name part="Surname" name="Eltsov">"19-20"</Name>
+<Name part="Surname" name="Fedokova">"21-22"</Name>
+<Name part="Surname" name="Filypov">"23-24"</Name>
+<Name part="Surname" name="Gavrilov">"25-26"</Name>
+<Name part="Surname" name="Golitsyn">"27-28"</Name>
+<Name part="Surname" name="Harkovsyn">"29-30"</Name>
+<Name part="Surname" name="Iltchenko">"31-32"</Name>
+<Name part="Surname" name="Ipatiev">"33-34"</Name>
+<Name part="Surname" name="Jakov">"35-36"</Name>
+<Name part="Surname" name="Jelavic">"37-38"</Name>
+<Name part="Surname" name="Kostina">"39-40"</Name>
+<Name part="Surname" name="Krasnyi">"41-42"</Name>
+<Name part="Surname" name="Kudrov">"43-44"</Name>
+<Name part="Surname" name="Lebedyenko">"45-46"</Name>
+<Name part="Surname" name="Lyakhova">"47-48"</Name>
+<Name part="Surname" name="Moroshkyn">"49-50"</Name>
+<Name part="Surname" name="Mozorov">"51-52"</Name>
+<Name part="Surname" name="Nikodoch">"53-54"</Name>
+<Name part="Surname" name="Novosi">"55-56"</Name>
+<Name part="Surname" name="Olgavnuka">"57-58"</Name>
+<Name part="Surname" name="Ovinko">"59-60"</Name>
+<Name part="Surname" name="Polursunov">"61-62"</Name>
+<Name part="Surname" name="Pronin">"63-64"</Name>
+<Name part="Surname" name="Putortin">"65-66"</Name>
+<Name part="Surname" name="Rebikov">"67-68"</Name>
+<Name part="Surname" name="Rybkin">"69-70"</Name>
+<Name part="Surname" name="Shalaev">"71-72"</Name>
+<Name part="Surname" name="Skvortskov">"73-74"</Name>
+<Name part="Surname" name="Synsov">"75-76"</Name>
+<Name part="Surname" name="Taalychev">"77-78"</Name>
+<Name part="Surname" name="Tereskovna">"79-80"</Name>
+<Name part="Surname" name="Tyurin">"81-82"</Name>
+<Name part="Surname" name="Ulrikov">"83-84"</Name>
+<Name part="Surname" name="Uritsdo">"85-86"</Name>
+<Name part="Surname" name="Vdovyn">"87-88"</Name>
+<Name part="Surname" name="Verepaev">"89-90"</Name>
+<Name part="Surname" name="Wuloshyn">"91-92"</Name>
+<Name part="Surname" name="Yakushkin">"93-94"</Name>
+<Name part="Surname" name="Zakarova">"95-96"</Name>
+<Name part="Surname" name="Zinoviev">"97-98"</Name>
+<Name part="Surname" name="Zubov">"99-100"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_KISLEV"</Skill>
+<Skill>"RULES-COMP_CONSUME_ALCOHOL"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KISLEVARIN"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T*"</Talent>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"2"</Career>
+<Career name="CCOMP-CARE_APPRENTICE_WITCH">"2"</Career>
+<Career name="RULES-CARE_BAILIFF">"2"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"2"</Career>
+<Career name="CCOMP-CARE_BEAR_TAMER">"2"</Career>
+<Career name="RULES-CARE_BOATMAN">"2"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"1"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"2"</Career>
+<Career name="RULES-CARE_BURGHER">"3"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"2"</Career>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"1"</Career>
+<Career name="CCOMP-CARE_CHEKIST">"2"</Career>
+<Career name="RULES-CARE_COACHMAN">"1"</Career>
+<Career name="CCOMP-CARE_DROVER">"2"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+<Career name="RULES-CARE_FERRYMAN">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"1"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"1"</Career>
+<Career name="RULES-CARE_HEDGE_WIZARD">"2"</Career>
+<Career name="CCOMP-CARE_HORSE_COPER">"2"</Career>
+<Career name="RULES-CARE_HUNTER">"2"</Career>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+<Career name="RULES-CARE_JAILER">"2"</Career>
+<Career name="RULES-CARE_KISLEVITE_KOSSAR">"3"</Career>
+<Career name="RULES-CARE_MARINE">"1"</Career>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"2"</Career>
+<Career name="RULES-CARE_MINER">"2"</Career>
+<Career name="RULES-CARE_NOBLE">"2"</Career>
+<Career name="RULES-CARE_OUTLAW">"2"</Career>
+<Career name="RULES-CARE_OUTRIDER">"2"</Career>
+<Career name="RULES-CARE_PEASANT">"2"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"2"</Career>
+<Career name="RULES-CARE_PROTAGONIST">"2"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"2"</Career>
+<Career name="RULES-CARE_ROGUE">"2"</Career>
+<Career name="RULES-CARE_SCRIBE">"2"</Career>
+<Career name="RULES-CARE_SEAMAN">"1"</Career>
+<Career name="RULES-CARE_SERVANT">"2"</Career>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+<Career name="CCOMP-CARE_STRELTSI">"2"</Career>
+<Career name="RULES-CARE_STUDENT">"2"</Career>
+<Career name="RULES-CARE_THIEF">"2"</Career>
+<Career name="RULES-CARE_THUG">"2"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"2"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"2"</Career>
+<Career name="RULES-CARE_TRADESMAN">"2"</Career>
+<Career name="RULES-CARE_VAGABOND">"2"</Career>
+<Career name="RULES-CARE_VALET">"2"</Career>
+<Career name="RULES-CARE_WATCHMAN">"2"</Career>
+<Career name="RULES-CARE_WOODSMAN">"2"</Career>
+<Career name="RULES-CARE_ZEALOT">"2"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"89"</Page>
+</Specie>
+<Specie id="RIQ-RACE_UNGOL">
+<Description language="ENGLISH">"Human (Ungol)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<SUBCHAPTER_ATTR>
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_S">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_T">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Ag">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Int">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
+<Attribut name="RULES-ATTR_A">"1"</Attribut>
+<Attribut name="RULES-ATTR_M">"4"</Attribut>
+<Attribut name="RULES-ATTR_Mag">"0"</Attribut>
+<Attribut name="RULES-ATTR_IP">"0"</Attribut>
+<Attribut name="RULES-ATTR_W">"1-3: 10; 4-6: 11; 7-9: 12; 10: 13"</Attribut>
+<Attribut name="RULES-ATTR_FP">"1-4: 2; 5-7: 3; 8-10: 3"</Attribut>
+</SUBCHAPTER_ATTR>
+<SUBCHAPTER_NAMES>
+<NamePattern sex="M">"Forename"</NamePattern>
+<NamePattern sex="M">"UngolName"</NamePattern>
+<NamePattern sex="F">"Forename"</NamePattern>
+<NamePattern sex="F">"UngolName"</NamePattern>
+<Name part="Forename" sex="M" name="Aleksandr">"1-2"</Name>
+<Name part="Forename" sex="M" name="Alexei">"3-4"</Name>
+<Name part="Forename" sex="M" name="Anastas">"5-6"</Name>
+<Name part="Forename" sex="M" name="Antal">"7-8"</Name>
+<Name part="Forename" sex="M" name="Beledni">"9-10"</Name>
+<Name part="Forename" sex="M" name="Boris">"11-12"</Name>
+<Name part="Forename" sex="M" name="Boroda">"13-14"</Name>
+<Name part="Forename" sex="M" name="Borodyn">"15-16"</Name>
+<Name part="Forename" sex="M" name="Chagin">"17-18"</Name>
+<Name part="Forename" sex="M" name="Dazhja">"19-20"</Name>
+<Name part="Forename" sex="M" name="Demitirji">"21-22"</Name>
+<Name part="Forename" sex="M" name="Dmirov">"23-24"</Name>
+<Name part="Forename" sex="M" name="Douko">"25-26"</Name>
+<Name part="Forename" sex="M" name="Fyodor">"27-28"</Name>
+<Name part="Forename" sex="M" name="Gaspar">"29-30"</Name>
+<Name part="Forename" sex="M" name="Igyor">"31-32"</Name>
+<Name part="Forename" sex="M" name="Ivan">"33-34"</Name>
+<Name part="Forename" sex="M" name="Kazimir">"35-36"</Name>
+<Name part="Forename" sex="M" name="Kubah">"37-38"</Name>
+<Name part="Forename" sex="M" name="Kvetlai">"39-40"</Name>
+<Name part="Forename" sex="M" name="Lukyan">"41-42"</Name>
+<Name part="Forename" sex="M" name="Madorin">"43-44"</Name>
+<Name part="Forename" sex="M" name="Makari">"45-46"</Name>
+<Name part="Forename" sex="M" name="Maksim">"47-48"</Name>
+<Name part="Forename" sex="M" name="Mikhail">"49-50"</Name>
+<Name part="Forename" sex="M" name="Mitri">"51-52"</Name>
+<Name part="Forename" sex="M" name="Nicolai">"53-54"</Name>
+<Name part="Forename" sex="M" name="Novgo">"55-56"</Name>
+<Name part="Forename" sex="M" name="Oleg">"57-58"</Name>
+<Name part="Forename" sex="M" name="Pavel">"59-60"</Name>
+<Name part="Forename" sex="M" name="Ptor">"61-62"</Name>
+<Name part="Forename" sex="M" name="Pyotr">"63-64"</Name>
+<Name part="Forename" sex="M" name="Radii">"65-66"</Name>
+<Name part="Forename" sex="M" name="Sevhim">"67-68"</Name>
+<Name part="Forename" sex="M" name="Silvestr">"69-70"</Name>
+<Name part="Forename" sex="M" name="Stepan">"71-72"</Name>
+<Name part="Forename" sex="M" name="Sorca">"73-74"</Name>
+<Name part="Forename" sex="M" name="Tordimir">"75-76"</Name>
+<Name part="Forename" sex="M" name="Ursuni">"77-78"</Name>
+<Name part="Forename" sex="M" name="Vaja">"79-80"</Name>
+<Name part="Forename" sex="M" name="Valantyn">"81-82"</Name>
+<Name part="Forename" sex="M" name="Valery">"83-84"</Name>
+<Name part="Forename" sex="M" name="Vassily">"85-86"</Name>
+<Name part="Forename" sex="M" name="Viktor">"87-88"</Name>
+<Name part="Forename" sex="M" name="Vitali">"89-90"</Name>
+<Name part="Forename" sex="M" name="Vladimir">"91-92"</Name>
+<Name part="Forename" sex="M" name="Vlasi">"93-94"</Name>
+<Name part="Forename" sex="M" name="Yarogni">"95-96"</Name>
+<Name part="Forename" sex="M" name="Yuri">"97-98"</Name>
+<Name part="Forename" sex="M" name="Yvgeni">"99-100"</Name>
+<Name part="Forename" sex="F" name="Aleksandra">"1-2"</Name>
+<Name part="Forename" sex="F" name="Anastasia">"3-4"</Name>
+<Name part="Forename" sex="F" name="Bela">"5-6"</Name>
+<Name part="Forename" sex="F" name="Beledna">"7-8"</Name>
+<Name part="Forename" sex="F" name="Chagina">"9-10"</Name>
+<Name part="Forename" sex="F" name="Darya">"11-12"</Name>
+<Name part="Forename" sex="F" name="Dazhia">"13-14"</Name>
+<Name part="Forename" sex="F" name="Devora">"15-16"</Name>
+<Name part="Forename" sex="F" name="Elena">"17-18"</Name>
+<Name part="Forename" sex="F" name="Evdokiya">"19-20"</Name>
+<Name part="Forename" sex="F" name="Evelina">"21-22"</Name>
+<Name part="Forename" sex="F" name="Fyodorya">"23-24"</Name>
+<Name part="Forename" sex="F" name="Irina">"25-26"</Name>
+<Name part="Forename" sex="F" name="Irisa">"27-28"</Name>
+<Name part="Forename" sex="F" name="Ivana">"29-30"</Name>
+<Name part="Forename" sex="F" name="Kazimira">"31-32"</Name>
+<Name part="Forename" sex="F" name="Katarina">"33-34"</Name>
+<Name part="Forename" sex="F" name="Lubova">"35-36"</Name>
+<Name part="Forename" sex="F" name="Lukyana">"37-38"</Name>
+<Name part="Forename" sex="F" name="Lusha">"39-40"</Name>
+<Name part="Forename" sex="F" name="Makrina">"41-42"</Name>
+<Name part="Forename" sex="F" name="Matryona">"43-44"</Name>
+<Name part="Forename" sex="F" name="Minodora">"45-46"</Name>
+<Name part="Forename" sex="F" name="Militsa">"47-48"</Name>
+<Name part="Forename" sex="F" name="Mikhaila">"49-50"</Name>
+<Name part="Forename" sex="F" name="Mishka">"51-52"</Name>
+<Name part="Forename" sex="F" name="Natalya">"53-54"</Name>
+<Name part="Forename" sex="F" name="Nadyezhda">"55-56"</Name>
+<Name part="Forename" sex="F" name="Nicolja">"57-58"</Name>
+<Name part="Forename" sex="F" name="Olga">"59-60"</Name>
+<Name part="Forename" sex="F" name="Orlenda">"61-62"</Name>
+<Name part="Forename" sex="F" name="Pavla">"63-64"</Name>
+<Name part="Forename" sex="F" name="Svetlana">"65-66"</Name>
+<Name part="Forename" sex="F" name="Talika">"67-68"</Name>
+<Name part="Forename" sex="F" name="Tamara">"69-70"</Name>
+<Name part="Forename" sex="F" name="Tatiana">"71-72"</Name>
+<Name part="Forename" sex="F" name="Torlana">"73-74"</Name>
+<Name part="Forename" sex="F" name="Tornaida">"75-76"</Name>
+<Name part="Forename" sex="F" name="Tsvetkova">"77-78"</Name>
+<Name part="Forename" sex="F" name="Ursola">"79-80"</Name>
+<Name part="Forename" sex="F" name="Ursuka">"81-82"</Name>
+<Name part="Forename" sex="F" name="Warvara">"83-84"</Name>
+<Name part="Forename" sex="F" name="Valentyna">"85-86"</Name>
+<Name part="Forename" sex="F" name="Vasalisa">"87-88"</Name>
+<Name part="Forename" sex="F" name="Viktoria">"89-90"</Name>
+<Name part="Forename" sex="F" name="Yelena">"91-92"</Name>
+<Name part="Forename" sex="F" name="Yevgenya">"93-94"</Name>
+<Name part="Forename" sex="F" name="Yuliania">"95-96"</Name>
+<Name part="Forename" sex="F" name="Yurina">"97-98"</Name>
+<Name part="Forename" sex="F" name="Zoya">"99-100"</Name>
+<Name part="UngolName" name="Anatai">"1-2"</Name>
+<Name part="UngolName" name="Artzyn">"3-4"</Name>
+<Name part="UngolName" name="Baichu">"5-6"</Name>
+<Name part="UngolName" name="Belgutai">"7-8"</Name>
+<Name part="UngolName" name="Chaglyn">"9-10"</Name>
+<Name part="UngolName" name="Chamuka">"11-12"</Name>
+<Name part="UngolName" name="Dazhyn">"13-14"</Name>
+<Name part="UngolName" name="Dorben">"15-16"</Name>
+<Name part="UngolName" name="Eiyi">"17-18"</Name>
+<Name part="UngolName" name="Erdai">"19-20"</Name>
+<Name part="UngolName" name="Ghazan">"21-22"</Name>
+<Name part="UngolName" name="Gurban">"23-24"</Name>
+<Name part="UngolName" name="Gyulk">"25-26"</Name>
+<Name part="UngolName" name="Hurdin">"27-28"</Name>
+<Name part="UngolName" name="Hyalgin">"29-30"</Name>
+<Name part="UngolName" name="Inalchin">"31-32"</Name>
+<Name part="UngolName" name="Isukin">"33-34"</Name>
+<Name part="UngolName" name="Jaran">"35-36"</Name>
+<Name part="UngolName" name="Jalyv">"37-38"</Name>
+<Name part="UngolName" name="Juchin">"39-40"</Name>
+<Name part="UngolName" name="Khardu">"41-42"</Name>
+<Name part="UngolName" name="Khavai">"43-44"</Name>
+<Name part="UngolName" name="Maikin">"45-46"</Name>
+<Name part="UngolName" name="Mochir">"47-48"</Name>
+<Name part="UngolName" name="Nasan">"49-50"</Name>
+<Name part="UngolName" name="Negan">"51-52"</Name>
+<Name part="UngolName" name="Nevniz">"53-54"</Name>
+<Name part="UngolName" name="Noga">"55-56"</Name>
+<Name part="UngolName" name="Nyvena">"57-58"</Name>
+<Name part="UngolName" name="Ogulai">"59-60"</Name>
+<Name part="UngolName" name="Osul">"61-62"</Name>
+<Name part="UngolName" name="Puntseg">"63-64"</Name>
+<Name part="UngolName" name="Shirleg">"65-66"</Name>
+<Name part="UngolName" name="Suren">"67-68"</Name>
+<Name part="UngolName" name="Syrtak">"69-70"</Name>
+<Name part="UngolName" name="Tabani">"71-72"</Name>
+<Name part="UngolName" name="Torus">"73-74"</Name>
+<Name part="UngolName" name="Tuli">"75-76"</Name>
+<Name part="UngolName" name="Tumen">"77-78"</Name>
+<Name part="UngolName" name="Tymuder">"79-80"</Name>
+<Name part="UngolName" name="Tylik">"81-82"</Name>
+<Name part="UngolName" name="Tzarin">"83-84"</Name>
+<Name part="UngolName" name="Ulagan">"85-86"</Name>
+<Name part="UngolName" name="Unegen">"87-88"</Name>
+<Name part="UngolName" name="Vachir">"89-90"</Name>
+<Name part="UngolName" name="Vechil">"91-92"</Name>
+<Name part="UngolName" name="Vechkin">"93-94"</Name>
+<Name part="UngolName" name="Yurin">"95-96"</Name>
+<Name part="UngolName" name="Yusin">"97-98"</Name>
+<Name part="UngolName" name="Yveg">"99-100"</Name>
+</SUBCHAPTER_NAMES>
+<SUBCHAPTER_SKILL>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_KISLEV"</Skill>
+<Skill>"RULES-COMP_RIDE"</Skill>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KISLEVARIN/RULES-COMP_SPEAK_LANGUAGE_UNGOL_INT"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent>"RULES-T_VERY_RESILIENT"</Talent>
+<Talent>"RULES-T*"</Talent>
+</SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-CARE_AGITATOR">"2"</Career>
+<Career name="RULES-CARE_BAILIFF">"1"</Career>
+<Career name="RULES-CARE_BARBER_SURGEON">"1"</Career>
+<Career name="CCOMP-CARE_BEAR_TAMER">"2"</Career>
+<Career name="RULES-CARE_BOATMAN">"2"</Career>
+<Career name="RULES-CARE_BODYGUARD">"2"</Career>
+<Career name="RULES-CARE_BONE_PICKER">"3"</Career>
+<Career name="RULES-CARE_BOUNTY_HUNTER">"2"</Career>
+<Career name="RULES-CARE_BURGHER">"1"</Career>
+<Career name="RULES-CARE_CAMP_FOLLOWER">"3"</Career>
+<Career name="RULES-CARE_CHARCOAL_BURNER">"2"</Career>
+<Career name="CCOMP-CARE_CHEKIST">"1"</Career>
+<Career name="RULES-CARE_COACHMAN">"1"</Career>
+<Career name="CCOMP-CARE_DROVER">"2"</Career>
+<Career name="RULES-CARE_ENTERTAINER">"2"</Career>
+<Career name="RULES-CARE_FERRYMAN">"1"</Career>
+<Career name="RULES-CARE_FISHERMAN">"2"</Career>
+<Career name="RULES-CARE_GRAVE_ROBBER">"2"</Career>
+<Career name="RULES-CARE_HEDGE_WIZARD">"2"</Career>
+<Career name="CCOMP-CARE_HORSE_COPER">"2"</Career>
+<Career name="RULES-CARE_HUNTER">"3"</Career>
+<Career name="RULES-CARE_INITIATE">"2"</Career>
+<Career name="RULES-CARE_JAILER">"2"</Career>
+<Career name="RULES-CARE_KISLEVITE_KOSSAR">"2"</Career>
+<Career name="RULES-CARE_MARINE">"1"</Career>
+<Career name="RULES-CARE_MERCENARY">"2"</Career>
+<Career name="RULES-CARE_MILITIAMAN">"2"</Career>
+<Career name="RULES-CARE_MINER">"3"</Career>
+<Career name="RULES-CARE_NOBLE">"1"</Career>
+<Career name="RULES-CARE_OUTLAW">"3"</Career>
+<Career name="RULES-CARE_OUTRIDER">"3"</Career>
+<Career name="RULES-CARE_PEASANT">"4"</Career>
+<Career name="RULES-CARE_PIT_FIGHTER">"2"</Career>
+<Career name="RULES-CARE_PROTAGONIST">"2"</Career>
+<Career name="RULES-CARE_RAT_CATCHER">"2"</Career>
+<Career name="RULES-CARE_ROGUE">"2"</Career>
+<Career name="RULES-CARE_SCRIBE">"1"</Career>
+<Career name="RULES-CARE_SEAMAN">"1"</Career>
+<Career name="RULES-CARE_SERVANT">"2"</Career>
+<Career name="RULES-CARE_SMUGGLER">"2"</Career>
+<Career name="CCOMP-CARE_STEPPES_NOMAD">"4"</Career>
+<Career name="CCOMP-CARE_STRELTSI">"1"</Career>
+<Career name="RULES-CARE_STUDENT">"1"</Career>
+<Career name="RULES-CARE_THIEF">"2"</Career>
+<Career name="RULES-CARE_THUG">"2"</Career>
+<Career name="RULES-CARE_TOLL_KEEPER">"1"</Career>
+<Career name="RULES-CARE_TOMB_ROBBER">"1"</Career>
+<Career name="RULES-CARE_TRADESMAN">"2"</Career>
+<Career name="RULES-CARE_VAGABOND">"1"</Career>
+<Career name="RULES-CARE_VALET">"1"</Career>
+<Career name="RULES-CARE_WATCHMAN">"1"</Career>
+<Career name="CCOMP-CARE_WISE_WOMAN">"2"</Career>
+<Career name="RULES-CARE_WOODSMAN">"2"</Career>
+<Career name="RULES-CARE_ZEALOT">"1"</Career>
+</SUBCHAPTER_CAREER>
+<Page>"89"</Page>
+</Specie>
+</DATA_SPECIE>
+<DATA_RULE>
+<Rule id="RIQ-RULE_EAST">""</Rule>
+<Rule id="RIQ-RULE_NORTH">""</Rule>
+<Rule id="RIQ-RULE_SOUTH">""</Rule>
+<Rule id="RIQ-RULE_WEST">""</Rule>
+</DATA_RULE>
+<DATA_RULE_SPECIE>
+<Entry>
+<Rule>"RIQ-RULE_EAST"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_KISLEV"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_EAST"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Skill>"RULES-COMP_CONSUME_ALCOHOL"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_EAST"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KISLEVARIN"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_EAST"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Talent>"RIQ-T_PROVINCIAL_EXPERTISE__EASTERN_KISLEV"</Talent>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_EAST"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Talent>"RULES-T_WARRIOR_BORN"</Talent>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_EAST"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_EAST"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_KISLEV"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_EAST"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Skill>"RULES-COMP_RIDE/RULES-COMP_TRADE_MINER"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_EAST"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KISLEVARIN/RULES-COMP_SPEAK_LANGUAGE_UNGOL_INT"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_EAST"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Talent>"RIQ-T_PROVINCIAL_EXPERTISE__EASTERN_KISLEV"</Talent>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_EAST"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Talent>"RULES-T_VERY_RESILIENT"</Talent>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_EAST"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_NORTH"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_KISLEV"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_NORTH"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Skill>"RULES-COMP_CONSUME_ALCOHOL/RULES-COMP_INTIMIDATE"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_NORTH"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KISLEVARIN"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_NORTH"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Talent>"RULES-T_MENACING/RULES-T_WARRIOR_BORN"</Talent>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_NORTH"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Talent>"RIQ-T_PROVINCIAL_EXPERTISE__NORTHERN_KISLEV"</Talent>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_NORTH"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_NORTH"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Skill>"RULES-COMP_ANIMAL_CARE/RULES-COMP_RIDE"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_NORTH"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_KISLEV/RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_NORTH"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KISLEVARIN/RULES-COMP_SPEAK_LANGUAGE_UNGOL_INT"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_NORTH"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Talent>"RIQ-T_PROVINCIAL_EXPERTISE__NORTHERN_KISLEV"</Talent>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_NORTH"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Talent>"RULES-T_VERY_RESILIENT"</Talent>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_NORTH"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_SOUTH"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Skill>"RULES-COMP_COMMAND/RULES-COMP_HAGGLE"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_SOUTH"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_KISLEV"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_SOUTH"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Skill>"RULES-COMP_CONSUME_ALCOHOL"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_SOUTH"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KISLEVARIN"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_SOUTH"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Talent>"RIQ-T_PROVINCIAL_EXPERTISE__SOUTHERN_KISLEV"</Talent>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_SOUTH"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_SOUTH"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Skill>"RULES-COMP_ANIMAL_CARE/RULES-COMP_GOSSIP"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_SOUTH"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_KISLEV"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_SOUTH"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KISLEVITE"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_SOUTH"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Talent>"RIQ-T_PROVINCIAL_EXPERTISE__SOUTHERN_KISLEV"</Talent>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_SOUTH"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Talent>"RULES-T_VERY_RESILIENT"</Talent>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_SOUTH"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_WEST"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_KISLEV"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_WEST"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Skill>"RULES-COMP_CONSUME_ALCOHOL"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_WEST"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Skill>"RULES-COMP_INTIMIDATE/RULES-COMP_SPEAK_LANGUAGE_KISLEVARIN"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_WEST"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Talent>"RIQ-T_PROVINCIAL_EXPERTISE__WESTERN_KISLEV"</Talent>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_WEST"</Rule>
+<Specie>"RIQ-RACE_GOSPODAR"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_WEST"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Skill>"RULES-COMP_ANIMAL_CARE/RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_WEST"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Skill>"RULES-COMP_COMMON_KNOWLEDGE_KISLEV"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_WEST"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Skill>"RULES-COMP_SPEAK_LANGUAGE_KISLEVARIN"</Skill>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_WEST"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Talent>"RIQ-T_PROVINCIAL_EXPERTISE__WESTERN_KISLEV"</Talent>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_WEST"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Talent>"RULES-T_VERY_RESILIENT"</Talent>
+</Entry>
+<Entry>
+<Rule>"RIQ-RULE_WEST"</Rule>
+<Specie>"RIQ-RACE_UNGOL"</Specie>
+<Talent>"RULES-T*"</Talent>
+</Entry>
+</DATA_RULE_SPECIE>
+</DATA_BOOK>

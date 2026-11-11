@@ -151,23 +151,20 @@ begin
     if TabSpe.ColCount < 2 then
       begin
         TabSpe.ColCount        := 1;
-        GridAjouteColonne(TabSpe, GetTexteLibelle('RULES-LAB_001'), 20);
+        GridAjouteColonne(TabSpe, GetTexteLibelle('RULES-LAB_001'), 0);
         GridAjouteColonne(TabSpe, GetTexteLibelle('RULES-LAB_006'), 250);
       end;
     TabSpe.RowCount        := 2;
     TabSpe.ColWidths[0]    := 20;
 
-    if Pos(ValeurSousCompetence, SelectWinTalent) > 0 then
-      begin
-        // Lien explicite (CONTEXT.md 2.67) prioritaire sur la deduction par radical, qui
-        // gardait le prefixe de livre de SelectWinTalent au lieu de celui de la generique -
-        // seul repli quand <Generique> n'est pas renseigne.
-        PTalent := ChercheTalent(SelectWinTalent);
-        if PTalent.CodeGenerique <> '' then
-          SelectWinTalent := PTalent.CodeGenerique
-        else
-          SelectWinTalent := ExtractStringBefore(SelectWinTalent, ValeurSousCompetence) + ValeurGenerique;
-      end;
+    // Lien explicite (CONTEXT.md 2.67) prioritaire sur la deduction par radical, qui
+    // gardait le prefixe de livre de SelectWinTalent au lieu de celui de la generique -
+    // seul repli quand <Generique> n'est pas renseigne.
+    PTalent := ChercheTalent(SelectWinTalent);
+    if PTalent.CodeGenerique <> '' then
+      SelectWinTalent := PTalent.CodeGenerique
+    else if CodeFamilleTalent(SelectWinTalent) <> '' then
+      SelectWinTalent := CodeFamilleTalent(SelectWinTalent);
 
     For PTalent in ListTalent do
       begin
@@ -175,6 +172,11 @@ begin
           Accord := false
         else
           Accord := true;
+        // Option Momentum du personnage : une seule version de chaque talent concerne est proposee
+        if Accord and (SelectWinMomentum = 1) and (Copy(PTalent.CodeTalent, 1, Length(ConstCodeLivreMomentum) + 1) = ConstCodeLivreMomentum + '-') then
+          Accord := false;
+        if Accord and (SelectWinMomentum = 2) and (CodeTalentVersion(PTalent.CodeTalent, True) <> PTalent.CodeTalent) then
+          Accord := false;
         if Accord and (PTalent.SousTalent = false) and VerifieFiltre(PTalent.Livre, FiltreLivre) then
             Begin
               Inc(IndTab);
@@ -285,6 +287,7 @@ var
   PMetier:         StructureMetier;
   Ind:             Integer;
   PTalent:         StructureTalent;
+  PrefixeGenerique: String;
 
 begin
     // renseigner les données
@@ -328,10 +331,14 @@ begin
     Ind := 0;
     if Pos(ValeurGenerique, AffCode.Text) > 0 then
       begin
+        // Prefixe COMPLET de la generique, sans le livre et sans l'etoile : T0001_ en V4, mais
+        // T_VIRTUE_OF_KNIGHTHOOD_ en V2 (le radical "avant le premier _" y vaudrait T, donc tous
+        // les talents).
+        PrefixeGenerique := ExtractStringBefore(CodeSansLivre(AffCode.Text), '*');
         For PTalent in ListTalent do
-          // Meme radical SANS le livre : une specialisation de talent peut venir d'un livre
-          // different de son talent generique (meme piege que wincompetence.pas).
-          if (PTalent.CodeTalent <> AffCode.Text) and (ExtractStringBefore(CodeSansLivre(Ptalent.CodeTalent),ValeurSousCompetence) = ExtractStringBefore(CodeSansLivre(AffCode.Text),ValeurSousCompetence)) then
+          // Sans le livre : une specialisation de talent peut venir d'un livre different de son
+          // talent generique (meme piege que wincompetence.pas). <Generique> renseigne fait foi.
+          if (PTalent.CodeTalent <> AffCode.Text) and ((PTalent.CodeGenerique = AffCode.Text) or (Pos(PrefixeGenerique, CodeSansLivre(PTalent.CodeTalent)) = 1)) then
             begin
               Inc(Ind);
               if Ind = TabSpe.RowCount then

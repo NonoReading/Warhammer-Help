@@ -146,6 +146,11 @@
           <xs:documentation xml:lang="fr">Plancher du temps de rechargement (name = RELOAD).</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="ModifyGrapple" type="ModificateurEffetType">
+        <xs:annotation>
+          <xs:documentation xml:lang="fr">Bonus en pour cent aux tests de lutte (name = GRAPPLE). Charge et affiche seulement, jamais calcule.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="ModifyHands" type="ModificateurEffetType">
         <xs:annotation>
           <xs:documentation xml:lang="fr">Nombre de mains necessaires (name = HANDS ; -1 = une main de moins).</xs:documentation>
@@ -301,6 +306,19 @@
     <Generique>, le bug cible par cette tache), seule l'ORDRE et le nombre exact
     d'occurrences des champs obligatoires ne sont plus verifies par le XSD pour ce bloc.
   -->
+  <!--
+    GROUPES D'AFFICHAGE DE LA FICHE TALENT DANS WINLIVRE (12/11/2026, A_FAIRE WINLIVRE-FICHES-GROUPES).
+    Le XSD ne pilote rien dans WinLivre : les groupes sont poses en dur (winlivre.pas, EnGroupes). Ils ne
+    changent pas le XML, seulement les champs montres a l'ecran ; un champ deja rempli reste toujours visible.
+      Magie   : Magic, SpellTypes, XpMultiplier, XpFloor, XpDivisor, XpFree, SpellMode (rare : 5 a 7 talents par version)
+      Niveau  : GrantAt, LoseAt (2 occurrences, Nations of Mankind)
+      Moteur  : bloc Effet (Engine effect)
+      V4,V5   : PDF (absent en V2, balise toujours vide en V5), Trait (79 talents V4, 62 V5, jamais en V2)
+    Les trois cases « familles » de la fiche (Magie, Moteur, Niveau) montrent un groupe meme vide.
+    Memes principes pour les autres fiches : Competence (Basic V1,V2,V4 ; RelatedTalents V2) ; Trapping V4
+    (groupes Animal, Vehicule, Commerce, Qualite) ; Carriere V4 / V5 (groupes Espece, Variante) ; Ethnie
+    (Rattachement V4,V5 : Nationality, PictureLevel ; Recit V2 : Background, RoleplayingHints).
+  -->
   <xs:complexType name="TalentType">
     <xs:choice minOccurs="1" maxOccurs="unbounded">
       <xs:element name="Description" type="LangString"/>
@@ -440,12 +458,13 @@
   <xs:complexType name="SortType">
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
-      <xs:element name="Explanation" type="LangString"/>
-      <xs:element name="Target" type="PlainString"/>
-      <xs:element name="Duration" type="PlainString"/>
-      <xs:element name="Range" type="PlainString"/>
-      <xs:element name="Talent" type="PlainString"/>
-      <xs:element name="Level" type="PlainString"/>
+      <xs:element name="Explanation" type="LangString" minOccurs="0"/>
+      <!-- Vides quand le livre n'en donne pas (rituel, benediction) : WinLivre n'ecrit pas les balises vides. -->
+      <xs:element name="Target" type="PlainString" minOccurs="0"/>
+      <xs:element name="Duration" type="PlainString" minOccurs="0"/>
+      <xs:element name="Range" type="PlainString" minOccurs="0"/>
+      <xs:element name="Talent" type="PlainString" minOccurs="0"/>
+      <xs:element name="Level" type="PlainString" minOccurs="0"/>
       <xs:element name="TypSpell" type="PlainString"/>
       <xs:element name="XpFixed" type="PlainString" minOccurs="0"/>
       <xs:element name="CULTE" type="PlainString" minOccurs="0"/>
@@ -507,6 +526,8 @@
   <xs:complexType name="CareerLevelType">
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
+      <!-- Forme feminine du nom du niveau (optionnelle). Absente = Description sert aux deux sexes. -->
+      <xs:element name="DescriptionFeminine" type="LangString" minOccurs="0"/>
       <xs:element name="Salary" type="PlainString"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required"/>
@@ -645,7 +666,7 @@
   <xs:complexType name="WeaponType">
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
-      <xs:element name="Skill" type="PlainString"/>
+      <xs:element name="Skill" type="PlainString" minOccurs="0"/>
       <xs:element name="Damage" type="PlainString"/>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="Availability" type="PlainString"/>
@@ -680,13 +701,15 @@
       <xs:element name="Explanation" type="LangString"/>
       <xs:element name="Short" type="LangString"/>
       <!-- Effet de la qualite en donnees (03/10/2026) : Accurate, Reload, Salvo ; Shield = ModifArmour sur l'emplacement RULES-ARMOL_SHIELD (04/10/2026). -->
+      <!-- 17/10/2026 : tout le groupe ModificateursEffets (ModifyCarac, ModifyDamage...) remplace les quatre balises isolees : une qualite d'arme PORTEE modifie le porteur (Might +30 F, Protection +1 PA). -->
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ModifyAccurate" type="OptionallyNamedString"/>
-        <xs:element name="ModifArmour" type="OptionallyNamedString"/>
-        <xs:element name="ModifyReloadRate" type="OptionallyNamedString"/>
-        <xs:element name="ModifyReloadMin" type="OptionallyNamedString"/>
+        <xs:group ref="ModificateursEffets"/>
         <!-- Valeur obligatoire (04/10/2026) : "1" = une arme qui cite cette qualite doit donner un niveau (Reload 3, Salvo 1d10). -->
         <xs:element name="NeedsValue" type="PlainString"/>
+        <!-- 17/10/2026 : talent accorde au porteur de l'arme (ListArmeBonusTalent, comme la fabrication Of Rigor Wroth). -->
+        <xs:element name="Talent" type="PlainString"/>
+        <!-- 18/10/2026 : qualites d'arme accordees par cette qualite (codes separes par des virgules, ex. Parry = Balanced + Defensive) ; affichees dans la colonne Qualites de l'arme PORTEE (FabricationQualitesArme). -->
+        <xs:element name="WeaponQuality" type="PlainString"/>
       </xs:choice>
       <xs:element name="Modifier" type="PlainString"/>
           <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
@@ -713,7 +736,7 @@
   <xs:complexType name="CraftsmanshipType">
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
-      <xs:element name="Explanation" type="LangString"/>
+      <xs:element name="Explanation" type="LangString" minOccurs="0"/>
       <xs:element name="Short" type="LangString"/>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="Applies" type="PlainString"/>
@@ -775,6 +798,9 @@
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
       <xs:element name="Generique" type="PlainString" minOccurs="0"/>
+      <!-- Attribut propre a la specialisation, seulement s'il differe de celui de la mere
+           (ex. Trade (Cook) = Int en V2 : Trade (Various) n'a pas d'attribut). -->
+      <xs:element name="Attribut" type="PlainString" minOccurs="0"/>
       <xs:element name="Basic" type="PlainString" minOccurs="0"/>
           <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
       <xs:element name="Page" type="PlainString" minOccurs="0"/>
@@ -843,6 +869,31 @@
         <xs:element name="Eye" type="NamedString"/>
         <xs:element name="Hair" type="NamedString"/>
         <xs:element name="NamePattern" type="PlainString"/>
+        <!-- V2 (Core, tables 2-6 a 2-17) : taille par sexe en pouces ("50+1d10"), puis tables d100 / d10 :
+             Weight name=livres, AgeRoll name=annees, Siblings name=nombre, Birthplace name=lieu,
+             BirthplaceSettlement name=type de lieu (humain), contenu = plage du de. BirthplaceHuman = plage
+             qui renvoie au tirage de naissance humain. -->
+        <xs:element name="HeightFemale" type="PlainString"/>
+        <xs:element name="HeightMale" type="PlainString"/>
+        <xs:element name="Weight" type="NamedString"/>
+        <xs:element name="AgeRoll" type="NamedString"/>
+        <xs:element name="Siblings" type="NamedString"/>
+        <xs:element name="Birthplace" type="NamedString"/>
+        <xs:element name="BirthplaceSettlement" type="NamedString"/>
+        <xs:element name="BirthplaceHuman" type="PlainString"/>
+        <!-- Effets d'un lieu de naissance (clan Skaven, Children of the Horned Rat) : name = meme nom que
+             la ligne Birthplace, contenu = liste "Skill:CODE;Talent:CODE;Item:CODE" separee par des
+             points-virgules. -->
+        <xs:element name="BirthplaceEffect" type="NamedString"/>
+        <!-- Effets d'une particularite de forme (familiers, Realms of Sorcery tables 7-1 et 7-2) : name = ligne de
+             la table, contenu = liste "Talent:CODE[=N];Natural:CODE;Grapple:N" (Natural = arme naturelle toujours
+             portee, Grapple = bonus de lutte en pour cent, affiche seulement). -->
+        <xs:element name="OddityEffect" type="NamedString"/>
+        <!-- Familiers (Realms of Sorcery) : tables tirables, name = ligne, contenu = plage d100 :
+             Form = table 7-1 (forme), FormAnimal = 7-3 (animal), Oddity = 7-2 (particularites). -->
+        <xs:element name="Form" type="NamedString"/>
+        <xs:element name="FormAnimal" type="NamedString"/>
+        <xs:element name="Oddity" type="NamedString"/>
       </xs:choice>
     </xs:sequence>
   </xs:complexType>
@@ -947,6 +998,13 @@
         <xs:element name="Explanation" type="LangString"/>
         <xs:element name="Ethnic" type="PlainString"/>
         <xs:element name="Nationality" type="PlainString"/>
+        <!-- V2 (18/10/2026) : "Oui" = l'ethnie recoit une mutation de depart (Mutant, Tome of Corruption p.25) ; declenche la phase 2.2 de WinCreation. -->
+        <xs:element name="StartingMutation" type="PlainString"/>
+        <!-- Propres a la V2 (16/10/2026) : Background et RoleplayingHints = textes du livre ; Wounds et FatePoints = tables de d10 par plage ("1-3: 11; 4-6: 12; ..."), tables 2-2 et 2-3 du Core. -->
+        <xs:element name="Background" type="PlainString"/>
+        <xs:element name="RoleplayingHints" type="PlainString"/>
+        <xs:element name="Wounds" type="PlainString"/>
+        <xs:element name="FatePoints" type="PlainString"/>
         <xs:element name="SUBCHAPTER_ATTR" type="SubchapterAttr"/>
         <xs:element name="Talent" type="PlainString"/>
         <xs:element name="SUBCHAPTER_TALENT" type="SubchapterTalentPlain"/>
@@ -994,6 +1052,29 @@
   <xs:complexType name="DataRaceType">
     <xs:sequence>
       <xs:element name="Race" type="RaceType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ===================== DATA_PERSONAL_TABLE (V2) ===================== -->
+  <!-- Tables de details personnels communes a toutes les races (Core V2 : signes distinctifs 2-10, signe astral 2-12).
+       Entry name = resultat, detail = signification (signe astral), contenu = plage d100 ("01-05"). -->
+  <xs:complexType name="PersonalEntryType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="detail" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="PersonalTableType">
+    <xs:sequence>
+      <xs:element name="Entry" type="PersonalEntryType" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="DataPersonalTableType">
+    <xs:sequence>
+      <xs:element name="Table" type="PersonalTableType" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
@@ -1120,6 +1201,199 @@
   <xs:complexType name="DataLabelType">
     <xs:sequence>
       <xs:element name="Label" type="LabelType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Regles de tirage des carrieres (DATA_RULE, DATA_CAREER_ROLL) : deplacees de SCHEMA_WFRP4.xsd le 16/10/2026,
+       partagees avec la V2 (table maitre du Career Compendium). -->
+  <!-- DATA_CAREER_ROLL : Entry repete, pas d'id sur le wrapper (confirme le 28/09/2026). -->
+  <xs:complexType name="CareerRollEntryType">
+    <xs:sequence>
+      <xs:element name="Rule" type="PlainString"/>
+      <xs:element name="Specie" type="PlainString"/>
+      <xs:element name="Career" type="NamedString"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DataCareerRollType">
+      <xs:annotation>
+        <xs:documentation xml:lang="fr">TABLE DE TIRAGE D100 DES CARRIERES POUR UNE REGLE (pas pour une ethnie). Une Entry = une carriere dans la colonne d'une ethnie ou race : Rule = code d'une regle (DATA_RULE) qui REMPLACE la table de base, Specie = ethnie OU race (une race vaut pour toutes ses ethnies), Career name = carriere ; la valeur est une CHANCE : un entier = poids (nombre de valeurs de d100 occupees, les bornes 01-03 etc. se deduisent en classant les carrieres par classe puis par libelle), "X" = eligible mais hors tirage. Pas d'id sur le wrapper. Les fourchettes ne se saisissent jamais : voir ChargeTirageMetier.pas. Commentaire XML entre deux Entry : tolere.</xs:documentation>
+      </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Entry" type="CareerRollEntryType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_RULE -->
+  <xs:complexType name="RuleType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <!-- Ce que la regle implique pour la creation (12/11/2026) : texte montre au joueur dans la fenetre des
+           regles optionnelles, pour qu'il la coche ou la decoche en connaissance de cause. Traductible. -->
+      <xs:element name="Explanation" type="LangString" minOccurs="0"/>
+      <!-- Classe de base remplacee par une regle PARTIELLE (Seafarer) ; absente = regle totale -->
+      <xs:element name="Class" type="xs:string" minOccurs="0"/>
+      <!-- Chance (en pour cent, 1 a 99) de commencer le jeu avec une mutation : la creation propose un jet d100
+           apres le metier (Races and Regional Options, lignes Special). -->
+      <xs:element name="StartingMutation" type="PlainString" minOccurs="0"/>
+          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataRuleType">
+    <xs:sequence>
+      <xs:element name="Rule" type="RuleType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_RULE_SPECIE (19/10/2026) : competences et talents qu'une regle (DATA_RULE) donne a une
+       ethnie EN REMPLACEMENT des siens. Une Entry = une competence OU un talent. Specie = ethnie ou
+       race (l'ethnie prime). Si une regle porte au moins une Skill pour l'ethnie, elle remplace tout le
+       bloc competences de l'ethnie ; idem pour Talent. Une valeur peut etre "A/B" (au choix) ou
+       "RULES-T*", comme dans SUBCHAPTER_SKILL / SUBCHAPTER_TALENT. Cas : variantes regionales de
+       Realm of the Ice Queen. Pas d'id sur le wrapper. -->
+  <xs:complexType name="RuleSpecieEntryType">
+    <xs:sequence>
+      <xs:element name="Rule" type="PlainString"/>
+      <xs:element name="Specie" type="PlainString"/>
+      <xs:choice>
+        <xs:element name="Skill" type="PlainString"/>
+        <xs:element name="Talent" type="PlainString"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DataRuleSpecieType">
+    <xs:sequence>
+      <xs:element name="Entry" type="RuleSpecieEntryType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_RULE_BACKGROUND (19/10/2026) : table qui TIRE le background (une DATA_RULE) d'une ethnie ou
+       race. Une Entry = une ethnie (Specie) x une regle (Rule name = code de la regle de background,
+       valeur = poids dans le d100) ; la somme des poids d'une ethnie vaut 100. Meme principe que
+       DATA_CAREER_ROLL (poids, pas de fourchettes) : un multiple de 10 des elfes/nains qui renvoie a un
+       autre background s'ecrit par des poids, pas par un cas particulier. Cas : Liber Fanatica
+       (Character Backgrounds). Pas d'id sur le wrapper. -->
+  <xs:complexType name="RuleBackgroundEntryType">
+    <xs:sequence>
+      <xs:element name="Specie" type="PlainString"/>
+      <xs:element name="Rule" type="NamedString"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DataRuleBackgroundType">
+    <xs:sequence>
+      <xs:element name="Entry" type="RuleBackgroundEntryType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_RULE_BACKGROUND_COUNT (19/10/2026) : le d10 qui donne le nombre de competences et de talents du
+       background. Weight = nombre de faces du d10 couvertes par l'entree (la somme vaut 10). Une Entry sans
+       Skills ni Talents = resultat qui demande un SECOND background (Liber Fanatica : 10). -->
+  <xs:complexType name="RuleBackgroundCountEntryType">
+    <xs:sequence>
+      <xs:element name="Weight" type="PlainString"/>
+      <xs:element name="Skills" type="PlainString" minOccurs="0"/>
+      <xs:element name="Talents" type="PlainString" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DataRuleBackgroundCountType">
+    <xs:sequence>
+      <xs:element name="Entry" type="RuleBackgroundCountEntryType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_RULE_SKILL_ROLL / DATA_RULE_TALENT_ROLL (19/10/2026) : table d100 des competences (ou talents)
+       d'un background. Entry = Rule (le background) + Skill (ou Talent) name=<code> valeur=<poids> ; code
+       generique "..._*" = le joueur choisit la specialisation. Meme principe de poids que DATA_CAREER_ROLL. -->
+  <xs:complexType name="RuleSkillRollEntryType">
+    <xs:sequence>
+      <xs:element name="Rule" type="PlainString"/>
+      <xs:element name="Skill" type="NamedString"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DataRuleSkillRollType">
+    <xs:sequence>
+      <xs:element name="Entry" type="RuleSkillRollEntryType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RuleTalentRollEntryType">
+    <xs:sequence>
+      <xs:element name="Rule" type="PlainString"/>
+      <xs:element name="Talent" type="NamedString"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DataRuleTalentRollType">
+    <xs:sequence>
+      <xs:element name="Entry" type="RuleTalentRollEntryType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!-- DATA_CAREER_BONUS : deplace de SCHEMA_WFRP4.xsd le 16/10/2026, partage avec la V2 (cultes de l'Initiate).
+       Specie vide = aucune condition d'origine. -->
+  <!--
+    DATA_CAREER_BONUS (1 echantillon) : Level porte un id propre (ex: "..._1"), contenu
+    variable (Order + choix libre parmi SkillChoice/SpecialRule/ModifySkill/ModifyCarac/
+    Skill/ModifyWeapon). Meme note de prudence que DATA_CAREER_ADAPTATION.
+  -->
+  <xs:complexType name="CareerBonusLevelType">
+    <xs:sequence>
+      <xs:element name="Order" type="PlainString"/>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SkillChoice" type="SkillChoiceType"/>
+        <xs:element name="SpecialRule" type="OptionallyNamedString"/>
+        <xs:element name="ModifySkill" type="xs:anyType"/>
+        <xs:group ref="ModificateursEffets"/>
+        <xs:element name="Skill" type="xs:anyType"/>
+        <xs:element name="Talent" type="xs:anyType"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <!-- <SkillChoice Count="3" Value="5"/> (element vide, attributs seulement). -->
+  <xs:complexType name="SkillChoiceType">
+    <xs:attribute name="Count" type="xs:string" use="optional"/>
+    <xs:attribute name="Value" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <!-- <ModifyWeapon name="..." skill="...">+10</ModifyWeapon> : skill= optionnel, precise
+       la competence quand l'arme visee en a plusieurs. -->
+  <xs:complexType name="ModifyWeaponType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="skill" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="CareerBonusType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Career" type="PlainString"/>
+      <!-- Vide quand le bonus vaut pour toutes les ethnies : WinLivre n ecrit pas la balise vide. -->
+      <xs:element name="Specie" type="PlainString" minOccurs="0"/>
+      <xs:element name="Talent" type="PlainString" minOccurs="0"/>
+      <xs:element name="Level" type="CareerBonusLevelType" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataCareerBonusType">
+      <xs:annotation>
+        <xs:documentation xml:lang="fr">GREFFON DE DONNEES SUR UNE CARRIERE, selon l'appartenance du personnage (ex. regiments de l'Empire, Nations of Mankind p.6-7 : "treated as if added to their career"). Conditions : Specie (l'ethnie, ex. une province) ET Career (la carriere du Rulebook, ex. Soldier) ; quand elles sont reunies, chaque Level ajoute des competences/talents au niveau Order de la carriere. Dans un Level, &lt;Skill&gt;/&lt;Talent&gt; vides ("") = rien a ce palier ; "A/B" = un choix entre deux ; Level id = &lt;id du bonus&gt;_&lt;numero&gt;. Voir CONTEXT.md 2.44. Un commentaire XML est tolere entre deux CareerBonus mais pas a l'interieur d'une entree.</xs:documentation>
+      </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CareerBonus" type="CareerBonusType" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 

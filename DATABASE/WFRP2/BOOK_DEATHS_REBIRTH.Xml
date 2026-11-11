@@ -1,0 +1,1006 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"DREB"</CODE_BOOK>
+<BOOK>"BOOK DEATHS REBIRTH"</BOOK>
+<BOOKNAME>"DEATH'S REBIRTH"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"This document is completely unofficial and in no way endorsed by Games Workshop Limited. WARHAMMER FANTASY ROLEPLAY, THE WARHAMMER FANTASY ROLEPLAY LOGO, WFRP, CHAOS, THE CHAOS DEVICE, THE CHAOS LOGO, CITADEL, CITADEL DEVICE, DARKBLADE, 'EAVY METAL, FORGE WORLD, GAMES WORKSHOP, GAMES WORKSHOP LOGO, GOLDEN DEMON, GREAT UNCLEAN ONE, GW, THE HAMMER OF SIGMAR LOGO, HORNED RAT LOGO, KEEPER OF SECRETS, KHEMRI, KHORNE, THE KHORNE LOGO, LORD OF CHANGE, NURGLE, THE NURGLE LOGO, SKAVEN, THE SKAVEN SYMBOL DEVICE, SLAANESH, THE SLAANESH LOGO, TOMB KINGS, TZEENTCH, THE TZEENTCH LOGO, WARHAMMER, WARHAMMER WORLD LOGO, WHITE DWARF, THE WHITE DWARF"</DISCLAIMER>
+<DATA_TALENT>
+<Talent id="DREB-T_ACUPUNCTURE">
+<Description language="ENGLISH">"Acupuncture"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"32"</Page>
+</Talent>
+<Talent id="DREB-T_MASTER_OF_THE_DEAD">
+<Description language="ENGLISH">"Master of the Dead"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"36"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_CAREER>
+<Career id="DREB-CARE_LORE_SEEKER">
+<Description language="ENGLISH">"Lore Seeker"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"Ag +5%, Int +10%, WP +10%, Fel +5%"</MainProfile>
+<SecondaryProfile>"W +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_W">"1"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Ancient Prophecy), Academic Knowledge (Theology), Charm or Gossip, Read/Write, Search, Secret Signs (Cult of Nagash), Speak Language (any 1), Speak Language (Nehekharan)"</Skills>
+<Talents>"Linguistics or Savvy"</Talents>
+<Trappings>"Heretical Lore"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ANCIENT_PROPHECY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_SIGNS_CULT_OF_NAGASH">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ANY_1">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_NEHEKHARAN">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_LINGUISTICS/RULES-T_SAVVY">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"DREB 30"</Source>
+</Career>
+<Career id="DREB-CARE_CABALIST">
+<Description language="ENGLISH">"Cabalist"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, T +5%, Ag +10%, Int +20%, WP +20%, Fel +15%"</MainProfile>
+<SecondaryProfile>"W +3, Mag +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_Mag">"1"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Ancient Prophecy), Academic Knowledge (Theology), Channeling, Charm or Gossip, Common Knowledge (any 1), Magical Sense or Perception, Read/Write, Search, Secret Signs (Cult of the Dead), Speak Arcane Language (High Nehekharan), Speak Language (any 2), Speak Language (Nehekharan)"</Skills>
+<Talents>"Linguistics or Seasoned Traveler, Petty Magic (Nagash)"</Talents>
+<Trappings>"Prophetic writings pertaining to Nagash"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ANCIENT_PROPHECY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ANY_1">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE/RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_SIGNS_CULT_OF_THE_DEAD">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_HIGH_NEHEKHARAN">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ANY_2">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_NEHEKHARAN">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_LINGUISTICS/RULES-T_SEASONED_TRAVELLER">"1"</Talent>
+<Talent name="RULES-T_PETTY_MAGIC__NAGASH">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"DREB 30"</Source>
+</Career>
+<Career id="DREB-CARE_DEATH_PRIEST">
+<Description language="ENGLISH">"Death Priest"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, T +10%, Ag +15%, Int +30%, WP +30%, Fel +25%"</MainProfile>
+<SecondaryProfile>"W +5, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"30"</Advance>
+<Advance name="RULES-ATTR_Fel">"25"</Advance>
+<Advance name="RULES-ATTR_W">"5"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Ancient Prophecy), Academic Knowledge (any 2), Charm or Gossip, Command or Intimidate, Common Knowledge (any 2), Evaluate or Haggle, Magical Sense or Perception, Read/Write, Search, Secret Signs (Cult of the Dead), Speak Arcane Language (High Nehekharan), Speak Language (any 3), Speak Language (Nehekharan)"</Skills>
+<Talents>"Aethyric Attunement or Meditation, Dark Lore (Nagash), Dark Magic, Fast Hands or Mighty Missile, Lesser Magic (any 2), Linguistics or Menacing"</Talents>
+<Trappings>"Fragments from one of the Nine Books of Nagash"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ANCIENT_PROPHECY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ANY_2">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ANY_2">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE/RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE/RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_SIGNS_CULT_OF_THE_DEAD">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_HIGH_NEHEKHARAN">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ANY_3">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_NEHEKHARAN">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_MEDITATION">"1"</Talent>
+<Talent name="RULES-T_DARK_LORE__NAGASH">"1"</Talent>
+<Talent name="RULES-T_DARK_MAGIC">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__ANY_2">"1"</Talent>
+<Talent name="RULES-T_LINGUISTICS/RULES-T_MENACING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"DREB 31"</Source>
+</Career>
+<Career id="DREB-CARE_CHOSEN_ONE">
+<Description language="ENGLISH">"Chosen One"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, T +15%, Ag +20%, Int +40%, WP +35%, Fel +30%"</MainProfile>
+<SecondaryProfile>"W +7, Mag +3"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"40"</Advance>
+<Advance name="RULES-ATTR_WP">"35"</Advance>
+<Advance name="RULES-ATTR_Fel">"30"</Advance>
+<Advance name="RULES-ATTR_W">"7"</Advance>
+<Advance name="RULES-ATTR_Mag">"3"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (any 4), Charm or Intimidate, Command, Common Knowledge (any 3), Evaluate or Gossip, Magical Sense or Perception, Read/Write, Search, Secret Signs (Cult of the Dead), Speak Arcane Language (any 1), Speak Arcane Language (High Nehekharan), Speak Language (any 4)"</Skills>
+<Talents>"Aethyric Attunement or Meditation, Dark Lore (Nagash), Fast Hands or Mighty Missile, Lesser Magic (any 2), Linguistics or Unsettling"</Talents>
+<Trappings>"A copy of one of the Nine Books of Nagash"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ANY_4">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMAND">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ANY_3">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE/RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE/RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_SIGNS_CULT_OF_THE_DEAD">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ANY_1">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_HIGH_NEHEKHARAN">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_ANY_4">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_MEDITATION">"1"</Talent>
+<Talent name="RULES-T_DARK_LORE__NAGASH">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__ANY_2">"1"</Talent>
+<Talent name="RULES-T_LINGUISTICS/RULES-T_UNSETTLING">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"DREB 31"</Source>
+</Career>
+<Career id="DREB-CARE_HARVESTER">
+<Description language="ENGLISH">"Harvester"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, S +5%, Int +10%, WP +10%, Fel +15%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"10"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Anatomy), Charm or Intimidate, Common Knowledge (any 1), Heal, Read/Write, Torture"</Skills>
+<Talents>"Acupuncture, Menacing or Suave, Strike to Injure or Surgery"</Talents>
+<Trappings>"Surgical knives, Torture devices"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ANATOMY">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ANY_1">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_TORTURE">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="DREB-T_ACUPUNCTURE">"1"</Talent>
+<Talent name="RULES-T_MENACING/RULES-T_SUAVE">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE/RULES-T_SURGERY">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"DREB 32"</Source>
+</Career>
+<Career id="DREB-CARE_BLOOD_BINDER">
+<Description language="ENGLISH">"Blood Binder"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, S +15%, T +5%, Ag +5%, Int +15%, WP +20%, Fel +25%"</MainProfile>
+<SecondaryProfile>"W +4, Mag +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"15"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"15"</Advance>
+<Advance name="RULES-ATTR_WP">"20"</Advance>
+<Advance name="RULES-ATTR_Fel">"25"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_Mag">"1"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Anatomy), Channeling, Charm or Intimidate, Common Knowledge (any 1), Heal, Prepare Poison, Read/Write, Speak Arcane Language (Daemonic), Torture, Trade (Apothecary)"</Skills>
+<Talents>"Menacing or Suave, Petty Magic (Blood), Strike to Injure or Surgery, Strike Mighty Blow or Strike to Stun"</Talents>
+<Trappings>"Alchemical lab, 1 Blood Alchemy formula, Trade Tools (Apothecary), Surgical knives"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ANATOMY">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ANY_1">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISON">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_DAEMONIC">"1"</Skill>
+<Skill name="RULES-COMP_TORTURE">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_APOTHECARY">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_MENACING/RULES-T_SUAVE">"1"</Talent>
+<Talent name="RULES-T_PETTY_MAGIC__BLOOD">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE/RULES-T_SURGERY">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW/RULES-T_STRIKE_TO_STUN">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"DREB 32"</Source>
+</Career>
+<Career id="DREB-CARE_BLOOD_REAPER">
+<Description language="ENGLISH">"Blood Reaper"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +20%, S +25%, T +10%, Ag +10%, Int +20%, WP +30%, Fel +35%"</MainProfile>
+<SecondaryProfile>"W +6, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"20"</Advance>
+<Advance name="RULES-ATTR_S">"25"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"30"</Advance>
+<Advance name="RULES-ATTR_Fel">"35"</Advance>
+<Advance name="RULES-ATTR_W">"6"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Anatomy), Channeling, Charm or Intimidate, Common Knowledge (any 2), Heal, Prepare Poison, Read/Write, Sense Magic, Speak Arcane Language (Daemonic), Torture, Trade (Apothecary)"</Skills>
+<Talents>"Aethyric Attunement or Dark Magic, Lesser Magic (any 2), Menacing or Suave, Strike to Injure or Surgery, Strike Mighty Blow or Strike to Stun, Witchcraft"</Talents>
+<Trappings>"Alchemical Lab, 3 Blood Alchemy formulas, Trade Tools (Apothecary), Surgical knives"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ANATOMY">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_ANY_2">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_PREPARE_POISON">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_DAEMONIC">"1"</Skill>
+<Skill name="RULES-COMP_TORTURE">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_APOTHECARY">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_DARK_MAGIC">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__ANY_2">"1"</Talent>
+<Talent name="RULES-T_MENACING/RULES-T_SUAVE">"1"</Talent>
+<Talent name="RULES-T_STRIKE_TO_INJURE/RULES-T_SURGERY">"1"</Talent>
+<Talent name="RULES-T_STRIKE_MIGHTY_BLOW/RULES-T_STRIKE_TO_STUN">"1"</Talent>
+<Talent name="ROS-T_WITCHCRAFT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"DREB 32"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="DREB-CARE_LORE_SEEKER">"DREB-CARE_CABALIST"</Link>
+<Link name="DREB-CARE_LORE_SEEKER">"DPTH-CARE_DREG"</Link>
+<Link name="DREB-CARE_LORE_SEEKER">"CCOMP-CARE_STRIGANY_MYSTIC"</Link>
+<Link name="DREB-CARE_LORE_SEEKER">"RULES-CARE_STUDENT"</Link>
+<Link name="RULES-CARE_SCHOLAR">"DREB-CARE_LORE_SEEKER"</Link>
+<Link name="DREB-CARE_CABALIST">"DREB-CARE_DEATH_PRIEST"</Link>
+<Link name="DREB-CARE_CABALIST">"DPTH-CARE_NECROMANCER"</Link>
+<Link name="DREB-CARE_CABALIST">"RULES-CARE_SCHOLAR"</Link>
+<Link name="DREB-CARE_DEATH_PRIEST">"DREB-CARE_CHOSEN_ONE"</Link>
+<Link name="DREB-CARE_DEATH_PRIEST">"DPTH-CARE_MORTIFACTOR"</Link>
+<Link name="DREB-CARE_DEATH_PRIEST">"RULES-CARE_SCHOLAR"</Link>
+<Link name="DREB-CARE_CHOSEN_ONE">"DPTH-CARE_UNDYING_ONE"</Link>
+<Link name="DREB-CARE_HARVESTER">"RULES-CARE_BARBER_SURGEON"</Link>
+<Link name="DREB-CARE_HARVESTER">"RULES-CARE_INTERROGATOR"</Link>
+<Link name="DREB-CARE_HARVESTER">"CCOMP-CARE_STRIGANY_MYSTIC"</Link>
+<Link name="CCOMP-CARE_APOTHECARY">"DREB-CARE_HARVESTER"</Link>
+<Link name="RULES-CARE_ASSASSIN">"DREB-CARE_HARVESTER"</Link>
+<Link name="RULES-CARE_BARBER_SURGEON">"DREB-CARE_HARVESTER"</Link>
+<Link name="RULES-CARE_PHYSICIAN">"DREB-CARE_HARVESTER"</Link>
+<Link name="DREB-CARE_BLOOD_BINDER">"DREB-CARE_BLOOD_REAPER"</Link>
+<Link name="DREB-CARE_BLOOD_BINDER">"RULES-CARE_PHYSICIAN"</Link>
+<Link name="DREB-CARE_BLOOD_BINDER">"CCOMP-CARE_STRIGANY_MYSTIC"</Link>
+<Link name="DREB-CARE_HARVESTER">"DREB-CARE_BLOOD_BINDER"</Link>
+<Link name="DREB-CARE_BLOOD_REAPER">"RULES-CARE_ASSASSIN"</Link>
+<Link name="DREB-CARE_BLOOD_REAPER">"DPTH-CARE_NECROMANCER"</Link>
+<Link name="DPTH-CARE_DREG">"DREB-CARE_LORE_SEEKER"</Link>
+<Link name="UTOC-CARE_DREG">"DREB-CARE_LORE_SEEKER"</Link>
+<Link name="CCOMP-CARE_STRIGANY_MYSTIC">"DREB-CARE_LORE_SEEKER"</Link>
+<Link name="NDM-CARE_STRIGANY_MYSTIC">"DREB-CARE_LORE_SEEKER"</Link>
+<Link name="CCOMP-CARE_STRIGANY_MYSTIC">"DREB-CARE_HARVESTER"</Link>
+<Link name="NDM-CARE_STRIGANY_MYSTIC">"DREB-CARE_HARVESTER"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_SPELL_V2>
+<SpellV2 id="DREB-SPEL_ANKH_RAM">
+<Description language="ENGLISH">"Ankh'ram"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Nagash)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"1 hour"</CastingTime>
+<Ingredient>"Golden bracelet"</Ingredient>
+<Page>"6"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_THE_OPEN_DOOR">
+<Description language="ENGLISH">"The Open Door"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Nagash)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"Birth Name of the target corpse"</Ingredient>
+<Page>"6"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_BLOOD_PROXY">
+<Description language="ENGLISH">"Blood Proxy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Blood)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"1 Wound of your own blood (+1)"</Ingredient>
+<Page>"8"</Page>
+<Duration>"Your next spell"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_BLOODFEAST">
+<Description language="ENGLISH">"Bloodfeast"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Blood)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"None"</Ingredient>
+<Page>"8"</Page>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_BLOOD_PURGE">
+<Description language="ENGLISH">"Blood Purge"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Blood)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A fresh human heart (+1)"</Ingredient>
+<Page>"8"</Page>
+<Duration>"Instant"</Duration>
+<Range>"6 yards (3 squares)"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_CLOT">
+<Description language="ENGLISH">"Clot"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Blood)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A bandage (+1)"</Ingredient>
+<Page>"8"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_DAEMONVEIN">
+<Description language="ENGLISH">"Daemonvein"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Blood)"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A vial of congealed blood (+1)"</Ingredient>
+<Page>"8"</Page>
+<Duration>"1 round / Magic Characteristic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_EYE_HEMORRHAGE">
+<Description language="ENGLISH">"Eye Hemorrhage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Blood)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A popped eyeball (+1)"</Ingredient>
+<Page>"9"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_INCANTATION_OF_REAPING">
+<Description language="ENGLISH">"Incantation of Reaping"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"None"</Ingredient>
+<Page>"9"</Page>
+<Duration>"Special, see below"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_WEEPING_WOUNDS">
+<Description language="ENGLISH">"Weeping Wounds"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lesser Magic"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A vial of poisoned blood (+2)"</Ingredient>
+<Page>"9"</Page>
+<Duration>"1 round / Magic Characteristic"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_AETHYRIC_RESERVOIR">
+<Description language="ENGLISH">"Aethyric Reservoir"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"21"</CastingNumber>
+<CastingTime>"20 minutes per victim to be scribed, 1 hour per victim to be tortured and sacrificed. When the last victim is sacrificed the ritual is concluded."</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"9"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Daemonic"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_AETHYRIC_CONDUIT">
+<Description language="ENGLISH">"Aethyric Conduit"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nagash"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Pinch of Warpstone (+3)"</Ingredient>
+<Page>"18"</Page>
+<Duration>"Your next spell"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_AKHU_S_SURRENDER">
+<Description language="ENGLISH">"Akhu's Surrender"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nagash"</Lore>
+<CastingNumber>"30"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Speak the victims birth name (+3)"</Ingredient>
+<Page>"18"</Page>
+<Duration>"Instant"</Duration>
+<Range>"6 yards (3 squares)"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_ARISE">
+<Description language="ENGLISH">"Arise"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nagash"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"1 half action per corpse"</CastingTime>
+<Ingredient>"Dust from a grave (+1)"</Ingredient>
+<Page>"18"</Page>
+<Duration>"Instant"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_AVOID_DESTRUCTION">
+<Description language="ENGLISH">"Avoid Destruction"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nagash"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A miniature golden locust (+2)"</Ingredient>
+<Page>"18"</Page>
+<Duration>"1 minute / Magic Characteristic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_AWAKEN_WIGHT_GENERAL">
+<Description language="ENGLISH">"Awaken Wight General"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nagash"</Lore>
+<CastingNumber>"30"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"The blood of a priest of Usirian (+3)"</Ingredient>
+<Page>"18"</Page>
+<Duration>"Instant"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_COMMAND_SPIRIT">
+<Description language="ENGLISH">"Command Spirit"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nagash"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A piece of stone from a desecrated sarcophagus (+2)"</Ingredient>
+<Page>"19"</Page>
+<Duration>"Permanent"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_CORPSE_BLAST">
+<Description language="ENGLISH">"Corpse Blast"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nagash"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Cracked bones (+1)"</Ingredient>
+<Page>"19"</Page>
+<Duration>"Instant"</Duration>
+<Range>"48 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_CURSE_OF_THE_DEAD">
+<Description language="ENGLISH">"Curse of the Dead"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nagash"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"A Necromancer's hand (+2)"</Ingredient>
+<Page>"19"</Page>
+<Duration>"Instant"</Duration>
+<Range>"Touch"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_DEATH_GRIP">
+<Description language="ENGLISH">"Death Grip"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nagash"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Half action"</CastingTime>
+<Ingredient>"Skeletal hand (+2)"</Ingredient>
+<Page>"19"</Page>
+<Duration>"1 round / Magic Characteristic"</Duration>
+<Range>"48 yards (24 squares)"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_DHAR_S_BLESSING">
+<Description language="ENGLISH">"Dhar's Blessing"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nagash"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"1 full action per Wound healed"</CastingTime>
+<Ingredient>"Blood of a newborn child (+2)"</Ingredient>
+<Page>"19"</Page>
+<Duration>"Instant"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_FLIGHT_OF_THE_SCARABS">
+<Description language="ENGLISH">"Flight of the Scarabs"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nagash"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"Golden Scarab pendant (+3)"</Ingredient>
+<Page>"19"</Page>
+<Duration>"Special, see below"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_GREAT_ARISING">
+<Description language="ENGLISH">"Great Arising"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nagash"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"Dust of a Mummy (+3)"</Ingredient>
+<Page>"20"</Page>
+<Duration>"Instant"</Duration>
+<Range>"48 yards (24 squares)"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_ICY_MIASMA_OF_DEATH">
+<Description language="ENGLISH">"Icy Miasma of Death"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nagash"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Pinch of Warpstone dust (+2)"</Ingredient>
+<Page>"20"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"You (large template)"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_PESTILENCE">
+<Description language="ENGLISH">"Pestilence"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nagash"</Lore>
+<CastingNumber>"28"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A scarab husk (+3)"</Ingredient>
+<Page>"20"</Page>
+<Duration>"1 round / Magic Characteristic"</Duration>
+<Range>"Cone template"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_SKULL_GUARDIAN">
+<Description language="ENGLISH">"Skull Guardian"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nagash"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"A Tomb Blade (+2)"</Ingredient>
+<Page>"20"</Page>
+<Duration>"1 minute / Magic Characteristic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_SHADOW_OF_THE_DEAD">
+<Description language="ENGLISH">"Shadow of the Dead"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nagash"</Lore>
+<CastingNumber>"28"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"Scarab swarm (+3)"</Ingredient>
+<Page>"20"</Page>
+<Duration>"1 minute / Magic Characteristic"</Duration>
+<Range>"You (see description)"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_SPECTRAL_FORM">
+<Description language="ENGLISH">"Spectral Form"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nagash"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"Dust from a Spirit's corpse (+2)"</Ingredient>
+<Page>"20"</Page>
+<Duration>"1 hour / Magic Characteristic"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_TERRIFYING_GAZE">
+<Description language="ENGLISH">"Terrifying Gaze"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nagash"</Lore>
+<CastingNumber>"32"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Eye of a liche (+3)"</Ingredient>
+<Page>"21"</Page>
+<Duration>"Instant"</Duration>
+<Range>"24 yards (12 squares)"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_UNYIELDING_KHA">
+<Description language="ENGLISH">"Unyielding Kha"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nagash"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Full action"</CastingTime>
+<Ingredient>"Bronze shield (+3)"</Ingredient>
+<Page>"21"</Page>
+<Duration>"1 minute (6 rounds)"</Duration>
+<Range>"You"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_WINDS_OF_DECAY">
+<Description language="ENGLISH">"Winds of Decay"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nagash"</Lore>
+<CastingNumber>"26"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A handful of sand from Nehekhara"</Ingredient>
+<Page>"21"</Page>
+<Duration>"Instant"</Duration>
+<Range>"48 yards (24 squares)"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_WIGHT_S_AWAKENING">
+<Description language="ENGLISH">"Wight's Awakening"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Nagash"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"2 full actions"</CastingTime>
+<Ingredient>"A circlet of iron quenched in human blood (+3)"</Ingredient>
+<Page>"21"</Page>
+<Duration>"Instant"</Duration>
+<Range>"12 yards (6 squares)"</Range>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_BLOOD_PLAGUE">
+<Description language="ENGLISH">"Blood Plague"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"2 hours"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"22"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"High Nehekharan"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>"You must have the Dark Lore (Nagash) Talent to perform this ritual."</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_CREEPING_DEAD">
+<Description language="ENGLISH">"Creeping Dead"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"1 hour"</CastingTime>
+<Ingredient>"The skull of a Liche Priest and a fist sized chunk of Warpstone"</Ingredient>
+<Page>"22"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"High Nehekharan"</ArcaneLanguage>
+<MagicMin>"4"</MagicMin>
+<XPCost>"400"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_RESURRECTION">
+<Description language="ENGLISH">"Resurrection"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"23"</CastingNumber>
+<CastingTime>"8 hours"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"22"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"High Nehekharan"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="DREB-SPEL_ROLLING_DARKNESS">
+<Description language="ENGLISH">"Rolling Darkness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"1 hour"</CastingTime>
+<Ingredient>"A pound of Warpstone dust"</Ingredient>
+<Page>"23"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"High Nehekharan"</ArcaneLanguage>
+<MagicMin>"2"</MagicMin>
+<XPCost>"200"</XPCost>
+<Conditions>"You must have the Dark Lore (Nagash) Talent to perform this ritual."</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SPELL_TALENT>
+<Sort id="DREB-SPEL_ANKH_RAM">
+<Talent>"RULES-T_PETTY_MAGIC__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_THE_OPEN_DOOR">
+<Talent>"RULES-T_PETTY_MAGIC__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_BLOOD_PROXY">
+<Talent>"RULES-T_PETTY_MAGIC__BLOOD"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_BLOODFEAST">
+<Talent>"RULES-T_PETTY_MAGIC__BLOOD"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_BLOOD_PURGE">
+<Talent>"RULES-T_PETTY_MAGIC__BLOOD"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_CLOT">
+<Talent>"RULES-T_PETTY_MAGIC__BLOOD"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_DAEMONVEIN">
+<Talent>"RULES-T_PETTY_MAGIC__BLOOD"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_EYE_HEMORRHAGE">
+<Talent>"RULES-T_PETTY_MAGIC__BLOOD"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_AETHYRIC_CONDUIT">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_AKHU_S_SURRENDER">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_ARISE">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_AVOID_DESTRUCTION">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_AWAKEN_WIGHT_GENERAL">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_COMMAND_SPIRIT">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_CORPSE_BLAST">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_CURSE_OF_THE_DEAD">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_DEATH_GRIP">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_DHAR_S_BLESSING">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_FLIGHT_OF_THE_SCARABS">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_GREAT_ARISING">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_ICY_MIASMA_OF_DEATH">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_PESTILENCE">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_SKULL_GUARDIAN">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_SHADOW_OF_THE_DEAD">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_SPECTRAL_FORM">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_TERRIFYING_GAZE">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_UNYIELDING_KHA">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_WINDS_OF_DECAY">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_WIGHT_S_AWAKENING">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_BLOOD_PLAGUE">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_CREEPING_DEAD">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_RESURRECTION">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+<Sort id="DREB-SPEL_ROLLING_DARKNESS">
+<Talent>"RULES-T_DARK_LORE__NAGASH"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMP_ACADEMIC_KNOWLEDGE_ANCIENT_PROPHECY">
+<Description language="ENGLISH">"Academic Knowledge (Ancient Prophecy)"</Description>
+<Generique>"RULES-COMP_ACADEMIC_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SECRET_SIGNS_CULT_OF_NAGASH">
+<Description language="ENGLISH">"Secret Signs (Cult of Nagash)"</Description>
+<Generique>"RULES-COMP_SECRET_SIGNS_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_ANY_1">
+<Description language="ENGLISH">"Speak Language (any 1)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_NEHEKHARAN">
+<Description language="ENGLISH">"Speak Language (Nehekharan)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_ANY_1">
+<Description language="ENGLISH">"Common Knowledge (any 1)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SECRET_SIGNS_CULT_OF_THE_DEAD">
+<Description language="ENGLISH">"Secret Signs (Cult of the Dead)"</Description>
+<Generique>"RULES-COMP_SECRET_SIGNS_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_ARCANE_LANGUAGE_HIGH_NEHEKHARAN">
+<Description language="ENGLISH">"Speak Arcane Language (High Nehekharan)"</Description>
+<Generique>"RULES-COMP_SPEAK_ARCANE_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_ANY_2">
+<Description language="ENGLISH">"Speak Language (any 2)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_ACADEMIC_KNOWLEDGE_ANY_2">
+<Description language="ENGLISH">"Academic Knowledge (any 2)"</Description>
+<Generique>"RULES-COMP_ACADEMIC_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_ANY_2">
+<Description language="ENGLISH">"Common Knowledge (any 2)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_ANY_3">
+<Description language="ENGLISH">"Speak Language (any 3)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_ACADEMIC_KNOWLEDGE_ANY_4">
+<Description language="ENGLISH">"Academic Knowledge (any 4)"</Description>
+<Generique>"RULES-COMP_ACADEMIC_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_COMMON_KNOWLEDGE_ANY_3">
+<Description language="ENGLISH">"Common Knowledge (any 3)"</Description>
+<Generique>"RULES-COMP_COMMON_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ANY_1">
+<Description language="ENGLISH">"Speak Arcane Language (any 1)"</Description>
+<Generique>"RULES-COMP_SPEAK_ARCANE_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SPEAK_LANGUAGE_ANY_4">
+<Description language="ENGLISH">"Speak Language (any 4)"</Description>
+<Generique>"RULES-COMP_SPEAK_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_ACADEMIC_KNOWLEDGE_ANATOMY">
+<Description language="ENGLISH">"Academic Knowledge (Anatomy)"</Description>
+<Generique>"RULES-COMP_ACADEMIC_KNOWLEDGE_*"</Generique>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="RULES-T_PETTY_MAGIC__NAGASH">
+<Description language="ENGLISH">"Petty Magic (Nagash)"</Description>
+<Generique>"RULES-T_PETTY_MAGIC__*"</Generique>
+</Talent>
+<Talent id="RULES-T_DARK_LORE__NAGASH">
+<Description language="ENGLISH">"Dark Lore (Nagash)"</Description>
+<Generique>"RULES-T_DARK_LORE__*"</Generique>
+</Talent>
+<Talent id="RULES-T_LESSER_MAGIC__ANY_2">
+<Description language="ENGLISH">"Lesser Magic (any 2)"</Description>
+<Generique>"RULES-T_LESSER_MAGIC__*"</Generique>
+</Talent>
+<Talent id="RULES-T_PETTY_MAGIC__BLOOD">
+<Description language="ENGLISH">"Petty Magic (Blood)"</Description>
+<Generique>"RULES-T_PETTY_MAGIC__*"</Generique>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="DREB-EQUI_CREATURES_BONE_GIANT">
+<Description language="ENGLISH">"Bone Giant"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"43;0;69;59;18;0;0;0;5;52;6;5;6;0;0;0"</Profile>
+<Talents>"Lightning Parry, Natural Weapons, Night Vision, Strike Mighty Blow, Sturdy, Terrifying, Undead, Unstoppable Blows"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"35"</Page>
+</EquipmentV2>
+<EquipmentV2 id="DREB-EQUI_CREATURES_LICHE_PRIEST">
+<Description language="ENGLISH">"Liche Priest"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"56;35;47;52;57;78;83;52;2;33;4;5;4;4;0;0"</Profile>
+<Skills>"Academic Knowledge (Nehekhara +20%, Magic +20%, Necromancy +20%, Theology +20%), Channeling +20%, Charm, Common Knowledge (Araby, Border Princes, Nehekhara +20%, Southlands), Gossip, Heal +20%, Intimidate +20%, Magical Sense +20%, Perception, Read/Write +20%, Ride, Search, Speak Arcane Language (High Nehekharan +20%, Magick +20%), Speak Language (Arabyan +20%, Classical +20%, Nehekharan +20%), Trade (Apothecary +20%, Embalmer +20%)"</Skills>
+<Talents>"Aethyric Attunement, Dark Lore (Nagash), Dark Magic, Fast Hands, Keen Senses, Lesser Magic (any 6), Master of the Dead, Meditation, Mighty Missile, Night Vision, Petty Magic (Nagash), Strong-minded, Surgery, Terrifying, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"35"</Page>
+</EquipmentV2>
+<EquipmentV2 id="DREB-EQUI_CREATURES_SKELETAL_STEED">
+<Description language="ENGLISH">"Skeletal Steed"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"20;0;35;32;25;0;0;0;1;12;3;3;8;0;0;0"</Profile>
+<Talents>"Frightening, Natural Weapons, Strike Mighty Blow, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"36"</Page>
+</EquipmentV2>
+<EquipmentV2 id="DREB-EQUI_CREATURES_TOMB_HERALD">
+<Description language="ENGLISH">"Tomb Herald"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"84;72;65;76;68;45;52;45;3;42;6;7;5;0;0;0"</Profile>
+<Skills>"Academic Knowledge (Strategy/Tactics +20%), Charm, Command +20%, Common Knowledge (Araby, Border Princes, Nehekhara), Dodge Blow +20%, Drive +20%, Gossip, Intimidate +20%, Perception +20%, Read/Write, Ride +20%, Search, Secret Language (Battle Tongue +20%), Speak Language (Classical, Nehekharan)"</Skills>
+<Talents>"Ambidextrous, Acute Hearing, Disarm, Fleet Footed, Lightning Parry, Lightning Reflexes, Keen Senses, Natural Weapons, Night Vision, Quick Draw, Sixth Sense, Specialist Weapon Group (any 3), Strike Mighty Blow, Strike to Injure, Strike to Stun, Sturdy, Terrifying, Undead, Very Resilient, Very Strong, Warrior Born"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"37"</Page>
+</EquipmentV2>
+<EquipmentV2 id="DREB-EQUI_CREATURES_TOMB_KING">
+<Description language="ENGLISH">"Tomb King"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"52;43;45;36;54;68;72;78;2;38;4;3;4;0;0;0"</Profile>
+<Skills>"Academic Knowledge (Genealogy/Heraldry +20%, History +20%, Law +20%, Strategy/Tactics +20%, Theology +20%), Charm +20%, Command +20%, Common Knowledge (Araby, Border Princes, Nehekhara +20%), Dodge Blow, Drive, Gossip +20%, Haggle +20%, Intimidate +20%, Perception +10%, Read/Write +20%, Ride, Secret Language (Battle Tongue +10%), Speak Language (Arabyan +10%, Classical +10%, Nehekharan +10%)"</Skills>
+<Talents>"Dealmaker, Etiquette, Master Orator, Night Vision, Public Speaking, Quick Draw, Savvy, Schemer, Specialist Weapon Group (Flail), Strike Mighty Blow, Suave, Super Numerate, Terrifying, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"38"</Page>
+</EquipmentV2>
+<EquipmentV2 id="DREB-EQUI_CREATURES_TOMB_SCORPION">
+<Description language="ENGLISH">"Tomb Scorpion"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"41;0;57;60;32;0;0;0;3;46;5;6;7;0;0;0"</Profile>
+<Skills>"Ambidextrous"</Skills>
+<Talents>"Frightening, Natural Weapons, Strike Mighty Blow, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"38"</Page>
+</EquipmentV2>
+<EquipmentV2 id="DREB-EQUI_CREATURES_USHABTI">
+<Description language="ENGLISH">"Ushabti"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"46;0;62;54;25;0;0;0;3;32;6;5;5;0;0;0"</Profile>
+<Talents>"Natural Weapons, Night Vision, Specialist Weapon Group (Two-handed Weapon), Strike Mighty Blow, Strike to Injure, Terrifying"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"39"</Page>
+</EquipmentV2>
+<EquipmentV2 id="DREB-EQUI_CREATURES_WIGHT_GENERAL">
+<Description language="ENGLISH">"Wight General"</Description>
+<Category>"RULES-EQCAT2_CREATURES"</Category>
+<Profile>"50;35;45;45;35;35;55;20;2;18;4;4;4;0;0;0"</Profile>
+<Skills>"Academic Knowledge (Strategy/Tactics), Perception, Read/Write, Speak Language (Nehekharan)"</Skills>
+<Talents>"Frightening, Night Vision, Undead"</Talents>
+<SpecialRules>""</SpecialRules>
+<Note>""</Note>
+<Page>"39"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+</DATA_BOOK>

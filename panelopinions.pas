@@ -11,7 +11,7 @@ unit PanelOpinions;
 interface
 
 uses
-  BCLabelContour, Classes, SysUtils, Controls, StdCtrls, ExtCtrls, Grids, Dialogs, DOM, BCButton,
+  BCLabelContour, Classes, SysUtils, Controls, StdCtrls, ExtCtrls, Grids, Dialogs, MessageTest, DOM, BCButton,
   ChargeTexte, GlobalFonts, PanelModificateurs, PanelFiche;
 
 type
@@ -222,7 +222,14 @@ begin
   end;
   if FGrille.RowCount < 2 then Exit;
   Bloc := Doc.CreateElement('OPINIONS');
-  Element.AppendChild(Bloc);
+  // le schema place Page en dernier : le bloc se range avant elle
+  Suivant := Element.FirstChild;
+  while (Suivant <> nil) and not ((Suivant.NodeType = ELEMENT_NODE) and (Suivant.NodeName = 'Page')) do
+    Suivant := Suivant.NextSibling;
+  if Suivant <> nil then
+    Element.InsertBefore(Bloc, Suivant)
+  else
+    Element.AppendChild(Bloc);
   for R := 1 to FGrille.RowCount - 1 do
   begin
     E := Doc.CreateElement('Opinion');

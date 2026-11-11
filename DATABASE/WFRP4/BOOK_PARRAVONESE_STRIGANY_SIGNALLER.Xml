@@ -2,6 +2,7 @@
 <DATA_BOOK>
 <CODE_BOOK>"PARRA"</CODE_BOOK>
 <BOOK>"BOOK PARRAVONESE STRIGANY SIGNALLER"</BOOK>
+<BOOKNAME>"PARRAVONESE STRIGANY SIGNALLER"</BOOKNAME>
 <language>"ENGLISH"</language>
 <VERSION>"WFRP4"</VERSION>
 <OFFICIAL>"2"</OFFICIAL>
@@ -16,29 +17,29 @@
 </Label>
 </DATA_LABEL>
 <DATA_SKILL_SPECIALIZATION>
-<Skill id="RULES-COMPLANG_STRIG">
+<Skill id="RULES-COMP_LANGUAGE__STRIGANY">
 <Description language="ENGLISH">"Language (Strigany)"</Description>
-<Generique>"RULES-COMPLANG_*"</Generique>
+<Generique>"RULES-COMP_LANGUAGE__*"</Generique>
 <Page>124</Page>
 </Skill>
-  <Skill id="RULES-COMPSAVOIR_PARRAV">
+  <Skill id="RULES-COMP_LORE__PARRAVON">
 <Description language="ENGLISH">"Lore (Parravon)"</Description>
-<Generique>"RULES-COMPSAVOIR_*"</Generique>
+<Generique>"RULES-COMP_LORE__*"</Generique>
 <Page>126</Page>
 </Skill>
-  <Skill id="RULES-COMPMETIER_SIGNAL">
+  <Skill id="RULES-COMP_TRADE__SIGNALLER">
 <Description language="ENGLISH">"Trade (Signaller)"</Description>
-<Generique>"RULES-COMPMETIER_*"</Generique>
+<Generique>"RULES-COMP_TRADE__*"</Generique>
 <Page>128</Page>
 </Skill>
-<Skill id="RULES-COMPSIGNES_SEMAPH">
+<Skill id="RULES-COMP_SECRET_SIGNS__SEMAPHORE_CIPHER">
 <Description language="ENGLISH">"Secret Signs (Semaphore Cipher)"</Description>
-<Generique>"RULES-COMPSIGNES_*"</Generique>
+<Generique>"RULES-COMP_SECRET_SIGNS__*"</Generique>
 <Page>129</Page>
 </Skill>
   </DATA_SKILL_SPECIALIZATION>
 <DATA_TALENT>
-<Talent id="PARRA-T0001">
+<Talent id="PARRA-T_BLOOD_OF_STRYGOS">
 <Description language="ENGLISH">"Blood of Strygos"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -71,85 +72,85 @@
 <Attribut name="RULES-ATTR_Move">"4"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill>"RULES-COMPSOINANI"</Skill>
-  <Skill>"RULES-COMPESCAL"</Skill>
-  <Skill>"RULES-COMPCALM"</Skill>
-  <Skill>"RULES-COMPRAGOT"</Skill>
-  <Skill>"RULES-COMPCOMM"</Skill>
-  <Skill>"RULES-COMPINTUI"</Skill>
-  <Skill>"RULES-COMPLANG_BRET"</Skill>
-  <Skill>"RULES-COMPSAVOIR_HERAL"</Skill>
-  <Skill>"RULES-COMPSAVOIR_PARRAV"</Skill>
-  <Skill>"RULES-COMPCOMB_BASE"</Skill>
-  <Skill>"RULES-COMPCHEV_*"</Skill>
-  <Skill>"RULES-COMPPROJ_ARC"</Skill>
+<Skill>"RULES-COMP_ANIMAL_CARE"</Skill>
+  <Skill>"RULES-COMP_CLIMB"</Skill>
+  <Skill>"RULES-COMP_COOL"</Skill>
+  <Skill>"RULES-COMP_GOSSIP"</Skill>
+  <Skill>"RULES-COMP_LEADERSHIP"</Skill>
+  <Skill>"RULES-COMP_INTUITION"</Skill>
+  <Skill>"RULES-COMP_LANGUAGE__BRETONNIAN"</Skill>
+  <Skill>"RULES-COMP_LORE__HERALDRY"</Skill>
+  <Skill>"RULES-COMP_LORE__PARRAVON"</Skill>
+  <Skill>"RULES-COMP_MELEE__BASIC"</Skill>
+  <Skill>"RULES-COMP_RIDE__*"</Skill>
+  <Skill>"RULES-COMP_RANGED__BOW"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent>"RULES-T0171"</Talent>
-  <Talent>"RULES-T0103/RULES-T0078"</Talent>
-  <Talent>"RULES-T0168"</Talent>
+<Talent>"RULES-T_DOOMED"</Talent>
+  <Talent>"RULES-T_NOBLE_BLOOD/RULES-T_BENEATH_NOTICE"</Talent>
+  <Talent>"RULES-T_SEASONED_TRAVELLER"</Talent>
   <Talent>"RULES-T*"</Talent>
   <Talent>"RULES-T*"</Talent>
   </SUBCHAPTER_TALENT>
   <SUBCHAPTER_CAREER>
-<Career name="RULES-WORK02">"1"</Career>
-  <Career name="RULES-WORK33">"1"</Career>
-  <Career name="RULES-WORK45">"1"</Career>
-  <Career name="RULES-WORK36">"1"</Career>
-  <Career name="RULES-WORK49">"1"</Career>
-  <Career name="RULES-WORK23">"1"</Career>
-  <Career name="RULES-WORK58">"1"</Career>
-  <Career name="RULES-WORK01">"3"</Career>
-  <Career name="RULES-WORK03">"3"</Career>
-  <Career name="RULES-WORK37">"2"</Career>
-  <Career name="RULES-WORK21">"1"</Career>
-  <Career name="RULES-WORK34">"2"</Career>
-  <Career name="RULES-WORK52">"1"</Career>
-  <Career name="RULES-WORK07">"1"</Career>
-  <Career name="RULES-WORK39">"1"</Career>
-  <Career name="RULES-WORK15">"1"</Career>
-  <Career name="RULES-WORK04">"1"</Career>
-  <Career name="RULES-WORK18">"1"</Career>
-  <Career name="RULES-WORK20">"4"</Career>
-  <Career name="RULES-WORK44">"3"</Career>
-  <Career name="RULES-WORK56">"3"</Career>
-  <Career name="RULES-WORK24">"3"</Career>
-  <Career name="RULES-WORK32">"2"</Career>
-  <Career name="RULES-WORK05">"3"</Career>
-  <Career name="RULES-WORK59">"1"</Career>
-  <Career name="RULES-WORK29">"1"</Career>
-  <Career name="RULES-WORK10">"2"</Career>
-  <Career name="RULES-WORK40">"2"</Career>
-  <Career name="RULES-WORK41">"1"</Career>
-  <Career name="RULES-WORK19">"1"</Career>
-  <Career name="RULES-WORK63">"6"</Career>
-  <Career name="RULES-WORK11">"1"</Career>
-  <Career name="RULES-WORK13">"1"</Career>
-  <Career name="RULES-WORK55">"2"</Career>
-  <Career name="RULES-WORK38">"1"</Career>
-  <Career name="RULES-WORK14">"2"</Career>
-  <Career name="RULES-WORK47">"1"</Career>
-  <Career name="RULES-WORK06">"2"</Career>
-  <Career name="RULES-WORK43">"2"</Career>
-  <Career name="RULES-WORK46">"1"</Career>
-  <Career name="RULES-WORK25">"2"</Career>
-  <Career name="RULES-WORK16">"1"</Career>
-  <Career name="RULES-WORK17">"1"</Career>
-  <Career name="RULES-WORK42">"1"</Career>
-  <Career name="RULES-WORK22">"2"</Career>
-  <Career name="RULES-WORK09">"1"</Career>
-  <Career name="RULES-WORK53">"1"</Career>
-  <Career name="RULES-WORK48">"1"</Career>
-  <Career name="RULES-WORK30">"5"</Career>
-  <Career name="RULES-WORK51">"1"</Career>
-  <Career name="RULES-WORK64">"2"</Career>
-  <Career name="RULES-WORK60">"1"</Career>
-  <Career name="RULES-WORK08">"1"</Career>
-  <Career name="RULES-WORK27">"1"</Career>
-  <Career name="RULES-WORK12">"7"</Career>
-  <Career name="RULES-WORK28">"1"</Career>
-  <Career name="RULES-WORK61">"1"</Career>
-  <Career name="RULES-WORK57">"1"</Career>
+<Career name="RULES-WORK_APOTHECARY">"1"</Career>
+  <Career name="RULES-WORK_LAWYER">"1"</Career>
+  <Career name="RULES-WORK_NUN">"1"</Career>
+  <Career name="RULES-WORK_PHYSICIAN">"1"</Career>
+  <Career name="RULES-WORK_PRIEST">"1"</Career>
+  <Career name="RULES-WORK_SCHOLAR">"1"</Career>
+  <Career name="RULES-WORK_WIZARD">"1"</Career>
+  <Career name="RULES-WORK_AGITATOR">"3"</Career>
+  <Career name="RULES-WORK_ARTISAN">"3"</Career>
+  <Career name="RULES-WORK_BEGGAR">"2"</Career>
+  <Career name="RULES-WORK_INVESTIGATOR">"1"</Career>
+  <Career name="RULES-WORK_MERCHANT">"2"</Career>
+  <Career name="RULES-WORK_RAT_CATCHER">"1"</Career>
+  <Career name="RULES-WORK_TOWNSMAN">"1"</Career>
+  <Career name="RULES-WORK_WATCHMAN">"1"</Career>
+  <Career name="RULES-WORK_ADVISOR">"1"</Career>
+  <Career name="RULES-WORK_ARTIST">"1"</Career>
+  <Career name="RULES-WORK_DUELLIST">"1"</Career>
+  <Career name="RULES-WORK_ENVOY">"4"</Career>
+  <Career name="RULES-WORK_NOBLE">"3"</Career>
+  <Career name="RULES-WORK_SERVANT">"3"</Career>
+  <Career name="RULES-WORK_SPY">"3"</Career>
+  <Career name="RULES-WORK_WARDEN">"2"</Career>
+  <Career name="RULES-WORK_BAILIFF">"3"</Career>
+  <Career name="RULES-WORK_HEDGE_WITCH">"1"</Career>
+  <Career name="RULES-WORK_HERBALIST">"1"</Career>
+  <Career name="RULES-WORK_HUNTER">"2"</Career>
+  <Career name="RULES-WORK_MINER">"2"</Career>
+  <Career name="RULES-WORK_MYSTIC">"1"</Career>
+  <Career name="RULES-WORK_SCOUT">"1"</Career>
+  <Career name="RULES-WORK_VILLAGER">"6"</Career>
+  <Career name="RULES-WORK_BOUNTY_HUNTER">"1"</Career>
+  <Career name="RULES-WORK_COACHMAN">"1"</Career>
+  <Career name="RULES-WORK_ENTERTAINER">"2"</Career>
+  <Career name="RULES-WORK_MESSENGER">"1"</Career>
+  <Career name="RULES-WORK_PEDLAR">"2"</Career>
+  <Career name="RULES-WORK_ROAD_WARDEN">"1"</Career>
+  <Career name="RULES-WORK_BOATMAN">"2"</Career>
+  <Career name="RULES-WORK_HUFFER">"2"</Career>
+  <Career name="RULES-WORK_RIVERWARDEN">"1"</Career>
+  <Career name="RULES-WORK_RIVERWOMAN">"2"</Career>
+  <Career name="RULES-WORK_SMUGGLER">"1"</Career>
+  <Career name="RULES-WORK_STEVEDORE">"1"</Career>
+  <Career name="RULES-WORK_WRECKER">"1"</Career>
+  <Career name="RULES-WORK_BAWD">"2"</Career>
+  <Career name="RULES-WORK_CHARLATAN">"1"</Career>
+  <Career name="RULES-WORK_FENCE">"1"</Career>
+  <Career name="RULES-WORK_GRAVE_ROBBER">"1"</Career>
+  <Career name="RULES-WORK_OUTLAW">"5"</Career>
+  <Career name="RULES-WORK_RACKETEER">"1"</Career>
+  <Career name="RULES-WORK_THIEF">"2"</Career>
+  <Career name="RULES-WORK_WITCH">"1"</Career>
+  <Career name="RULES-WORK_CAVALRYMAN">"1"</Career>
+  <Career name="RULES-WORK_GUARD">"1"</Career>
+  <Career name="RULES-WORK_KNIGHT">"7"</Career>
+  <Career name="RULES-WORK_PIT_FIGHTER">"1"</Career>
+  <Career name="RULES-WORK_PROTAGONIST">"1"</Career>
+  <Career name="RULES-WORK_SOLDIER">"1"</Career>
   </SUBCHAPTER_CAREER>
 <Page>1</Page>
 </Specie>
@@ -175,94 +176,94 @@
 <Attribut name="RULES-ATTR_Move">"4"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill>"RULES-COMPSOINANI"</Skill>
-  <Skill>"RULES-COMPCHARM"</Skill>
-  <Skill>"RULES-COMPRESALC"</Skill>
-  <Skill>"RULES-COMPCOND"</Skill>
-  <Skill>"RULES-COMPEVAL"</Skill>
-  <Skill>"RULES-COMPRAGOT"</Skill>
-  <Skill>"RULES-COMPMARCH"</Skill>
-  <Skill>"RULES-COMPLANG_STRIG"</Skill>
-  <Skill>"RULES-COMPSAVOIR_REIKLAND"</Skill>
-  <Skill>"RULES-COMPCOMB_BASE"</Skill>
-  <Skill>"RULES-COMPRAMER"</Skill>
-  <Skill>"RULES-COMPNATA"</Skill>
+<Skill>"RULES-COMP_ANIMAL_CARE"</Skill>
+  <Skill>"RULES-COMP_CHARM"</Skill>
+  <Skill>"RULES-COMP_CONSUME_ALCOHOL"</Skill>
+  <Skill>"RULES-COMP_DRIVE"</Skill>
+  <Skill>"RULES-COMP_EVALUATE"</Skill>
+  <Skill>"RULES-COMP_GOSSIP"</Skill>
+  <Skill>"RULES-COMP_HAGGLE"</Skill>
+  <Skill>"RULES-COMP_LANGUAGE__STRIGANY"</Skill>
+  <Skill>"RULES-COMP_LORE__REIKLAND"</Skill>
+  <Skill>"RULES-COMP_MELEE__BASIC"</Skill>
+  <Skill>"RULES-COMP_ROW"</Skill>
+  <Skill>"RULES-COMP_SWIM"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent>"RULES-T0171"</Talent>
-  <Talent>"RULES-T0168"</Talent>
-  <Talent>"RULES-T0105"</Talent>
+<Talent>"RULES-T_DOOMED"</Talent>
+  <Talent>"RULES-T_SEASONED_TRAVELLER"</Talent>
+  <Talent>"RULES-T_ROVER"</Talent>
   <Talent>"RULES-T*"</Talent>
   <Talent>"RULES-T*"</Talent>
-  <Talent>"PARRA-T0001"</Talent>
+  <Talent>"PARRA-T_BLOOD_OF_STRYGOS"</Talent>
   </SUBCHAPTER_TALENT>
   <SUBCHAPTER_CAREER>
-<Career name="RULES-WORK02">"3"</Career>
-  <Career name="RULES-WORK33">"1"</Career>
-  <Career name="RULES-WORK45">"1"</Career>
-  <Career name="RULES-WORK36">"1"</Career>
-  <Career name="RULES-WORK49">"1"</Career>
-  <Career name="RULES-WORK23">"1"</Career>
-  <Career name="RULES-WORK58">"1"</Career>
-  <Career name="RULES-WORK01">"2"</Career>
-  <Career name="RULES-WORK03">"2"</Career>
-  <Career name="RULES-WORK37">"2"</Career>
-  <Career name="RULES-WORK21">"1"</Career>
-  <Career name="RULES-WORK34">"2"</Career>
-  <Career name="RULES-WORK52">"1"</Career>
-  <Career name="RULES-WORK07">"1"</Career>
-  <Career name="RULES-WORK39">"1"</Career>
-  <Career name="RULES-WORK15">"1"</Career>
-  <Career name="RULES-WORK04">"2"</Career>
-  <Career name="RULES-WORK18">"1"</Career>
-  <Career name="RULES-WORK20">"1"</Career>
-  <Career name="RULES-WORK56">"1"</Career>
-  <Career name="RULES-WORK24">"1"</Career>
-  <Career name="RULES-WORK32">"1"</Career>
-  <Career name="RULES-WORK05">"1"</Career>
-  <Career name="RULES-WORK59">"2"</Career>
-  <Career name="RULES-WORK29">"4"</Career>
-  <Career name="RULES-WORK10">"2"</Career>
-  <Career name="RULES-WORK40">"1"</Career>
-  <Career name="RULES-WORK41">"5"</Career>
-  <Career name="RULES-WORK19">"3"</Career>
-  <Career name="RULES-WORK63">"2"</Career>
-  <Career name="RULES-WORK11">"1"</Career>
-  <Career name="RULES-WORK13">"1"</Career>
-  <Career name="RULES-WORK55">"4"</Career>
-  <Career name="RULES-WORK26">"1"</Career>
-  <Career name="RULES-WORK38">"1"</Career>
-  <Career name="RULES-WORK14">"3"</Career>
-  <Career name="RULES-WORK47">"1"</Career>
-  <Career name="RULES-WORK06">"2"</Career>
-  <Career name="RULES-WORK43">"2"</Career>
-  <Career name="RULES-WORK46">"1"</Career>
-  <Career name="RULES-WORK25">"3"</Career>
-  <Career name="RULES-WORK16">"3"</Career>
-  <Career name="RULES-WORK17">"3"</Career>
-  <Career name="RULES-WORK42">"2"</Career>
-  <Career name="RULES-WORK22">"2"</Career>
-  <Career name="RULES-WORK09">"3"</Career>
-  <Career name="RULES-WORK53">"2"</Career>
-  <Career name="RULES-WORK48">"1"</Career>
-  <Career name="RULES-WORK30">"2"</Career>
-  <Career name="RULES-WORK51">"2"</Career>
-  <Career name="RULES-WORK64">"2"</Career>
-  <Career name="RULES-WORK60">"1"</Career>
-  <Career name="RULES-WORK08">"2"</Career>
-  <Career name="RULES-WORK27">"1"</Career>
-  <Career name="RULES-WORK28">"2"</Career>
-  <Career name="RULES-WORK61">"2"</Career>
-  <Career name="RULES-WORK57">"1"</Career>
+<Career name="RULES-WORK_APOTHECARY">"3"</Career>
+  <Career name="RULES-WORK_LAWYER">"1"</Career>
+  <Career name="RULES-WORK_NUN">"1"</Career>
+  <Career name="RULES-WORK_PHYSICIAN">"1"</Career>
+  <Career name="RULES-WORK_PRIEST">"1"</Career>
+  <Career name="RULES-WORK_SCHOLAR">"1"</Career>
+  <Career name="RULES-WORK_WIZARD">"1"</Career>
+  <Career name="RULES-WORK_AGITATOR">"2"</Career>
+  <Career name="RULES-WORK_ARTISAN">"2"</Career>
+  <Career name="RULES-WORK_BEGGAR">"2"</Career>
+  <Career name="RULES-WORK_INVESTIGATOR">"1"</Career>
+  <Career name="RULES-WORK_MERCHANT">"2"</Career>
+  <Career name="RULES-WORK_RAT_CATCHER">"1"</Career>
+  <Career name="RULES-WORK_TOWNSMAN">"1"</Career>
+  <Career name="RULES-WORK_WATCHMAN">"1"</Career>
+  <Career name="RULES-WORK_ADVISOR">"1"</Career>
+  <Career name="RULES-WORK_ARTIST">"2"</Career>
+  <Career name="RULES-WORK_DUELLIST">"1"</Career>
+  <Career name="RULES-WORK_ENVOY">"1"</Career>
+  <Career name="RULES-WORK_SERVANT">"1"</Career>
+  <Career name="RULES-WORK_SPY">"1"</Career>
+  <Career name="RULES-WORK_WARDEN">"1"</Career>
+  <Career name="RULES-WORK_BAILIFF">"1"</Career>
+  <Career name="RULES-WORK_HEDGE_WITCH">"2"</Career>
+  <Career name="RULES-WORK_HERBALIST">"4"</Career>
+  <Career name="RULES-WORK_HUNTER">"2"</Career>
+  <Career name="RULES-WORK_MINER">"1"</Career>
+  <Career name="RULES-WORK_MYSTIC">"5"</Career>
+  <Career name="RULES-WORK_SCOUT">"3"</Career>
+  <Career name="RULES-WORK_VILLAGER">"2"</Career>
+  <Career name="RULES-WORK_BOUNTY_HUNTER">"1"</Career>
+  <Career name="RULES-WORK_COACHMAN">"1"</Career>
+  <Career name="RULES-WORK_ENTERTAINER">"4"</Career>
+  <Career name="RULES-WORK_FLAGELLANT">"1"</Career>
+  <Career name="RULES-WORK_MESSENGER">"1"</Career>
+  <Career name="RULES-WORK_PEDLAR">"3"</Career>
+  <Career name="RULES-WORK_ROAD_WARDEN">"1"</Career>
+  <Career name="RULES-WORK_BOATMAN">"2"</Career>
+  <Career name="RULES-WORK_HUFFER">"2"</Career>
+  <Career name="RULES-WORK_RIVERWARDEN">"1"</Career>
+  <Career name="RULES-WORK_RIVERWOMAN">"3"</Career>
+  <Career name="RULES-WORK_SMUGGLER">"3"</Career>
+  <Career name="RULES-WORK_STEVEDORE">"3"</Career>
+  <Career name="RULES-WORK_WRECKER">"2"</Career>
+  <Career name="RULES-WORK_BAWD">"2"</Career>
+  <Career name="RULES-WORK_CHARLATAN">"3"</Career>
+  <Career name="RULES-WORK_FENCE">"2"</Career>
+  <Career name="RULES-WORK_GRAVE_ROBBER">"1"</Career>
+  <Career name="RULES-WORK_OUTLAW">"2"</Career>
+  <Career name="RULES-WORK_RACKETEER">"2"</Career>
+  <Career name="RULES-WORK_THIEF">"2"</Career>
+  <Career name="RULES-WORK_WITCH">"1"</Career>
+  <Career name="RULES-WORK_CAVALRYMAN">"2"</Career>
+  <Career name="RULES-WORK_GUARD">"1"</Career>
+  <Career name="RULES-WORK_PIT_FIGHTER">"2"</Career>
+  <Career name="RULES-WORK_PROTAGONIST">"2"</Career>
+  <Career name="RULES-WORK_SOLDIER">"1"</Career>
   </SUBCHAPTER_CAREER>
 <Page>1</Page>
 </Specie>
 </DATA_SPECIE>
 <DATA_CAREER>
-<Career id="PARRA-WORK001">
+<Career id="PARRA-WORK_SIGNALLER">
 <Description language="ENGLISH">"Signaller"</Description>
 <Explanation language="ENGLISH">""</Explanation>
-<Skill>"RULES-COMPMETIER_SIGNAL"</Skill>
+<Skill>"RULES-COMP_TRADE__SIGNALLER"</Skill>
   <Class>"RULES-CLASS_RANG"</Class>
   <SUBCHAPTER_LEVEL>
 <Level id="1">
@@ -295,61 +296,61 @@
 <Attribut name="RULES-ATTR_Fel">"4"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill name="RULES-COMPESCAL">"1"</Skill>
-  <Skill name="RULES-COMPRESALC">"1"</Skill>
-  <Skill name="RULES-COMPCALM">"1"</Skill>
-  <Skill name="RULES-COMPRESIST">"1"</Skill>
-  <Skill name="RULES-COMPPARI">"1"</Skill>
-  <Skill name="RULES-COMPPRECEP">"1"</Skill>
-  <Skill name="RULES-COMPSIGNES_SEMAPH">"1"</Skill>
-  <Skill name="RULES-COMPMETIER_SIGNAL">"1"</Skill>
-  <Skill name="RULES-COMPSOINANI">"2"</Skill>
-  <Skill name="RULES-COMPDRESS_PIGEON">"2"</Skill>
-  <Skill name="RULES-COMPDIVERT_NARRA">"2"</Skill>
-  <Skill name="RULES-COMPSAVOIR_LOCAL">"2"</Skill>
-  <Skill name="RULES-COMPPROJ_ARB">"2"</Skill>
-  <Skill name="RULES-COMPLANG_BATAIL">"2"</Skill>
-  <Skill name="RULES-COMPLANG_*">"3"</Skill>
-  <Skill name="RULES-COMPSAVOIR_ING">"3"</Skill>
-  <Skill name="RULES-COMPPROJ_POUDRE">"3"</Skill>
-  <Skill name="RULES-COMPMETIER_ING">"3"</Skill>
-  <Skill name="RULES-COMPCOMM">"4"</Skill>
-  <Skill name="RULES-COMPRECH">"4"</Skill>
+<Skill name="RULES-COMP_CLIMB">"1"</Skill>
+  <Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
+  <Skill name="RULES-COMP_COOL">"1"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"1"</Skill>
+  <Skill name="RULES-COMP_GAMBLE">"1"</Skill>
+  <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+  <Skill name="RULES-COMP_SECRET_SIGNS__SEMAPHORE_CIPHER">"1"</Skill>
+  <Skill name="RULES-COMP_TRADE__SIGNALLER">"1"</Skill>
+  <Skill name="RULES-COMP_ANIMAL_CARE">"2"</Skill>
+  <Skill name="RULES-COMP_ANIMAL_TRAINING__PIGEON">"2"</Skill>
+  <Skill name="RULES-COMP_ENTERTAIN__STORYTELLING">"2"</Skill>
+  <Skill name="RULES-COMP_LORE__LOCAL">"2"</Skill>
+  <Skill name="RULES-COMP_RANGED__CROSSBOW">"2"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__BATTLE">"2"</Skill>
+  <Skill name="RULES-COMP_LANGUAGE__*">"3"</Skill>
+  <Skill name="RULES-COMP_LORE__ENGINEERING">"3"</Skill>
+  <Skill name="RULES-COMP_RANGED__BLACKPOWDER">"3"</Skill>
+  <Skill name="RULES-COMP_TRADE__ENGINEER">"3"</Skill>
+  <Skill name="RULES-COMP_LEADERSHIP">"4"</Skill>
+  <Skill name="RULES-COMP_RESEARCH">"4"</Skill>
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent name="RULES-T0139_VUE">"1"</Talent>
-  <Talent name="RULES-T0144">"1"</Talent>
-  <Talent name="RULES-T0081">"1"</Talent>
-  <Talent name="RULES-T0084">"1"</Talent>
-  <Talent name="RULES-T0004">"2"</Talent>
-  <Talent name="RULES-T0164">"2"</Talent>
-  <Talent name="RULES-T0045">"2"</Talent>
-  <Talent name="RULES-T0155">"2"</Talent>
-  <Talent name="RULES-T0094">"3"</Talent>
-  <Talent name="RULES-T0136_SOLD">"3"</Talent>
-  <Talent name="RULES-T0046">"3"</Talent>
-  <Talent name="RULES-T0015">"3"</Talent>
-  <Talent name="RULES-T0082">"4"</Talent>
-  <Talent name="RULES-T0109">"4"</Talent>
-  <Talent name="RULES-T0079">"4"</Talent>
-  <Talent name="RULES-T0157_INGE">"4"</Talent>
+<Talent name="RULES-T_ACUTE_SENSE__VUE">"1"</Talent>
+  <Talent name="RULES-T_CATFALL">"1"</Talent>
+  <Talent name="RULES-T_SPEEDREADER">"1"</Talent>
+  <Talent name="RULES-T_READ_WRITE">"1"</Talent>
+  <Talent name="RULES-T_AMBIDEXTROUS">"2"</Talent>
+  <Talent name="RULES-T_NIGHT_VISION">"2"</Talent>
+  <Talent name="RULES-T_NIMBLE_FINGERED">"2"</Talent>
+  <Talent name="RULES-T_TOWER_OF_MEMORIES">"2"</Talent>
+  <Talent name="RULES-T_DICEMAN">"3"</Talent>
+  <Talent name="RULES-T_ETIQUETTE__SOLD">"3"</Talent>
+  <Talent name="RULES-T_SUPER_NUMERATE">"3"</Talent>
+  <Talent name="RULES-T_TINKER">"3"</Talent>
+  <Talent name="RULES-T_LINGUISTICS">"4"</Talent>
+  <Talent name="RULES-T_PUBLIC_SPEAKER">"4"</Talent>
+  <Talent name="RULES-T_SCHEMER">"4"</Talent>
+  <Talent name="RULES-T_MASTER_TRADESMAN__INGE">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="RULES-TRAP_085">"1"</Item>
-  <Item name="RULES-TRAP_150">"1"</Item>
-  <Item name="RULES-TRAP_034">"1"</Item>
-  <Item name="RULES-PROJ_ARB_01">"2"</Item>
-  <Item name="RULES-MUNI_01">"2"</Item>
-  <Item name="RULES-TRAP_133/RULES-TRAP_136">"2"</Item>
-  <Item name="RULES-TRAP_087">"2"</Item>
-  <Item name="RULES-TRAP_090">"3"</Item>
-  <Item name="PARRA-TRAP_001">"3"</Item>
-  <Item name="PARRA-TRAP_003">"3"</Item>
-  <Item name="RULES-TRAP_101">"3"</Item>
-  <Item name="RULES-TRAP_034 (Q)">"4"</Item>
-  <Item name="PARRA-TRAP_002">"4"</Item>
-  <Item name="PARRA-TRAP_003">"4"</Item>
-  <Item name="RULES-TRAP_099">"4"</Item>
+<Item name="RULES-TRAP_TELESCOPE">"1"</Item>
+  <Item name="RULES-TRAP_ROPE_10_YARDS">"1"</Item>
+  <Item name="RULES-TRAP_UNIFORM">"1"</Item>
+  <Item name="RULES-PROJ_CROSSBOW">"2"</Item>
+  <Item name="RULES-MUNI_BOLT">"2"</Item>
+  <Item name="RULES-TRAP_DECK_OF_CARDS/RULES-TRAP_DICE">"2"</Item>
+  <Item name="RULES-TRAP_WRITING_KIT">"2"</Item>
+  <Item name="RULES-TRAP_BOOK_CRYPTOGRAPHY">"3"</Item>
+  <Item name="PARRA-TRAP_SIGNAL_TOWER">"3"</Item>
+  <Item name="PARRA-TRAP_SYMBOL_OF_RANK">"3"</Item>
+  <Item name="RULES-TRAP_TRADE_TOOLS">"3"</Item>
+  <Item name="RULES-TRAP_UNIFORM (Q)">"4"</Item>
+  <Item name="PARRA-TRAP_SIGNAL_TOWER_LINE">"4"</Item>
+  <Item name="PARRA-TRAP_SYMBOL_OF_RANK">"4"</Item>
+  <Item name="RULES-TRAP_MAP">"4"</Item>
   </SUBCHAPTER_ITEM>
 <Page>2</Page>
 </Career>
@@ -357,31 +358,31 @@
 <DATA_CAREER_SPECIE>
   <Entry>
 <Specie>"RULES-SPECIE_HUMAN"</Specie>
-<Career name="PARRA-WORK001">"X"</Career>
+<Career name="PARRA-WORK_SIGNALLER">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_DWARF"</Specie>
-<Career name="PARRA-WORK001">"X"</Career>
+<Career name="PARRA-WORK_SIGNALLER">"X"</Career>
   </Entry>
 <Entry>
 <Specie>"RULES-SPECIE_HALFLING"</Specie>
-<Career name="PARRA-WORK001">"X"</Career>
+<Career name="PARRA-WORK_SIGNALLER">"X"</Career>
   </Entry>
 </DATA_CAREER_SPECIE>
 <DATA_TRAPPING>
-  <Trapping id="PARRA-TRAP_001">
+  <Trapping id="PARRA-TRAP_SIGNAL_TOWER">
 <Description language="ENGLISH">"Signal Tower"</Description>
 <Theme>"RULES-LAB_193"</Theme>
 <Encumbrance>"0"</Encumbrance>
 <Page>2</Page>
 </Trapping>
-<Trapping id="PARRA-TRAP_002">
+<Trapping id="PARRA-TRAP_SIGNAL_TOWER_LINE">
 <Description language="ENGLISH">"Signal Tower Line"</Description>
 <Theme>"RULES-LAB_193"</Theme>
 <Encumbrance>"0"</Encumbrance>
 <Page>2</Page>
 </Trapping>
-<Trapping id="PARRA-TRAP_003">
+<Trapping id="PARRA-TRAP_SYMBOL_OF_RANK">
 <Description language="ENGLISH">"Symbol of Rank"</Description>
 <Theme>"RULES-LAB_193"</Theme>
 <Encumbrance>"0"</Encumbrance>

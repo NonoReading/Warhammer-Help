@@ -5,11 +5,11 @@ unit WinPersonnage;
 interface
 
 uses
-  PdfUtils,
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  Grids, ComCtrls, Menus, LCLIntf, Spin, MaskEdit, Math, BGRABitmap, BGRABitmapTypes,
-  BCButton, BCLabel, BCLabelContour, PanelReserve, ChargeConstantes, ChargeEspece, ChargeRace, ChargeRaceAttribut,
-  UnitCalcul, ChargeMetier, ChargeMetierAttribut, ChargeTalent, ChargeSigneAstral,
+  PdfUtils, AideContextuelle,
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, MessageTest, ExtCtrls, StdCtrls,
+  Grids, ComCtrls, Menus, Buttons, LCLIntf, Spin, MaskEdit, Math, StrUtils, BGRABitmap, BGRABitmapTypes,
+  BCButton, BCLabel, BCLabelContour, PanelReserve, ChargeConstantes, ChargeEspece, ChargeRace, ChargeRacePhysique, ChargeRaceAttribut,
+  UnitCalcul, ChargeMetier, ChargeMetierAttribut, ChargeCoutXp, FenetreApprentissageV1,ChargeTalent, ChargeSigneAstral,
   ChargeMetierTalent, ChargeMetierNiveau, ChargeCompetence, ChargeLivre,
   ChargeAttributAugmentation, ChargeAttribut, ChargeCompetenceAugmentation,
   GlobalFonts, ChargeArme, ChargeArmure, ChargeTrapping, ChargeMetierEquipement,
@@ -19,7 +19,7 @@ uses
   ChargeMetierCompetence, PdfPersonnage, Types, WinMutation, ChargeCorruptionTable,
   ChargeRaceMetier, WinChoixCompetenceAppartenance, WinAnimal, WinPhysique,
   ChargeAffliction, ChargeDisease, WinAfflictionCatalogue, WinDiseaseCatalogue,
-  WinJetPathologie, WinAmbition, WinGroupe, ChargeGroupe, WinObjetPropre, XmlExportImport;
+  GuideAide, WinJetPathologie, WinAmbition, WinGroupe, ChargeGroupe, WinObjetPropre, XmlExportImport;
 type
 
   StructureXpEtat = record
@@ -38,22 +38,29 @@ type
     ButtonEquipement: TBCButton;
     ButtonTexte: TBCButton;
     ButtonObjet: TBCButton;  // cree dans FormCreate (copie de ButtonTexte) : +Objet propre au personnage
+    ButtonFamilier: TBCButton;  // cree dans FormCreate (copie de ButtonTexte) : +Familier (categorie Montures)
+    ButtonApprendreSort: TBCButton;   // V1 : cree dans FormCreate (copie de ButtonTexte) : apprendre un sort (categorie Sorts)
     ButtonSpecCompetence: TBCButton;  // +Specialisation propre, page Competence (visible sur une ligne a choisir)
     ButtonSpecTalent: TBCButton;      // idem, page Talent
     ButtonPhysique: TBCButton;
     CheckBoxSansAsterisque: TCheckBox;   // onglet PDF : cree dans FormCreate
+    CheckBoxMauvais:        TCheckBox;   // onglet Handicaps (V1) : magicien mauvais / chaotique, cree dans FormCreate
+    LabMauvais:             TLabelContour;
     CheckBoxSansMontant:    TCheckBox;
     CheckBoxStylePdf:       TCheckBox;   // onglet PDF : habillage Warhammer du PDF Feldo
     CheckBoxCouleurPdf:     TCheckBox;   // idem : en couleurs (decoche = niveaux de gris)
     CheckBoxEconomiePdf:    TCheckBox;   // idem : economie d'encre (sans fonds pleins)
     LabEconomiePdf:         TLabelContour;
     LabCouleurPdf:          TLabelContour;
+    CheckBoxMomentum:       TCheckBox;   // option : talents Momentum (WFRP5) a la place des talents WFRP4
+    LabMomentum:            TEdit;
     LabSansAsterisque:      TLabelContour;
     LabSansMontant:         TLabelContour;
     LabStylePdf:            TLabelContour;
     PageMonnaie: TPage;  // creee dans FormCreate : monnaie du personnage (CO/PA/SB)
     PagePdf: TPage;      // creee dans FormCreate : options propres au PDF (PDF Feldo 2p...)
-    PageReserve: TPage;  // creee dans FormCreate : registres de Destin, de Resilience et de Resolution
+    // V1 : deux onglets propres, entre Monnaie et PDF (absents de la liste dans les autres versions)
+    PageAlignementV1, PageHistoriqueV1: TPage;    PageReserve: TPage;  // creee dans FormCreate : registres de Destin, de Resilience et de Resolution
     PanelDestin, PanelResilience, PanelResolve: TPanelReserve;
     ComboBoxNvMetier: TComboBox;
     EditHairColors: TEdit;
@@ -180,6 +187,12 @@ type
   procedure ButtonEquipementClick({%H-}Sender: TObject);
   procedure ButtonTexteClick({%H-}Sender: TObject);
   procedure ButtonObjetClick({%H-}Sender: TObject);
+  procedure ButtonFamilierClick({%H-}Sender: TObject);
+  procedure ButtonApprendreSortClick({%H-}Sender: TObject);
+  procedure AjouteLigneEpPerdus(Montant: Integer);
+  function  JetPretreV1(const CodeMetier: String; out Ligne: StructureAvancementPretreV1): Boolean;
+  function ChoisitFamilier(): String;
+  procedure OuvreFamilier(const Nom: String);
   procedure ButtonSpecialisationClick(Sender: TObject);
   procedure MajBoutonsSpecialisation(LigneComp, LigneTal: Integer);
   procedure MajBoutonsSpecialisationDiffere({%H-}Data: PtrInt);
@@ -195,8 +208,10 @@ type
   procedure ButtonQuitterClick({%H-}Sender: TObject);
   procedure ButtonRaceSelectionnerClick({%H-}Sender: TObject);
   procedure ButtonSortClick({%H-}Sender: TObject);
+  procedure CheckBoxMomentumChange(Sender: TObject);
   procedure CheckBoxXpDiv25Change(Sender: TObject);
   procedure CheckBoxXpDiv25Click(Sender: TObject);
+  procedure CheckBoxMauvaisClick(Sender: TObject);
   procedure CheckBoxSansAsterisqueClick(Sender: TObject);
   procedure CheckBoxStylePdfClick(Sender: TObject);
   procedure ComboBoxNvMetierChange({%H-}Sender: TObject);
@@ -214,6 +229,9 @@ type
   procedure Label1Click(Sender: TObject);
   procedure PageExperienceChange({%H-}Sender: TObject);
   procedure ListBoxExperienceClick({%H-}Sender: TObject);
+  // Guide du joueur (GuideAide.pas) : boutons Aide (page affichee) et ? Question
+  procedure ButtonGuideClick({%H-}Sender: TObject);
+  procedure ButtonQuestionClick({%H-}Sender: TObject);
   procedure RadioButtonRASChange({%H-}Sender: TObject);
   procedure RadioButtonSuivantChange({%H-}Sender: TObject);
   procedure StaticTextPersonnageClick(Sender: TObject);
@@ -259,6 +277,7 @@ type
   procedure TabAugmentationAttributSelectEditor({%H-}Sender: TObject; aCol,
     aRow: Integer; var Editor: TWinControl);
   Procedure AttributInit();
+  function CoutAvanceAttribut(Code: String; De, Vers: Integer): Integer;
   Procedure TabAugmentationAttributCalcul(ARow: Integer; var Value: string);
 
   // Compétences
@@ -275,6 +294,11 @@ type
     {%H-}aRow: Integer; var Editor: TWinControl);
   procedure TabMutationClick(Sender: TObject);
   procedure TabMutationDblClick({%H-}Sender: TObject);
+  // Marques des Dieux (WFRP2) : menu contextuel de l'onglet Mutation, une entree par lore divin
+  // dont un livre charge fournit une table (DATA_CORRUPTION_TABLE_DIVINE).
+  procedure TabMutationPopup({%H-}Sender: TObject);
+  procedure MenuMarqueDivineClick(Sender: TObject);
+  procedure MenuMutationChaosClick(Sender: TObject);
   procedure TabPathologieClick(Sender: TObject);
   procedure TabPathologieDblClick({%H-}Sender: TObject);
   procedure ButtonPathologieAjouteAfflictionClick({%H-}Sender: TObject);
@@ -303,6 +327,10 @@ type
   Procedure SortAffiche();
 
   // Expérience
+  // pages du TNotebook dans l'ordre des entrees de ListBoxExperience (certaines pages sont absentes de la liste selon la version)
+  procedure AjouteItemPage(Page: TPage);
+  function PageDeItem(Item: Integer): Integer;
+  function ItemDePage(Page: Integer): Integer;
   procedure CalculAvancement();
   function  CalculExperience(TypeXp: String; Gratuit: Integer; Total: Integer; Code:String): Integer;
   function  CalculXpEtat(): StructureXpEtat;
@@ -310,6 +338,13 @@ type
   procedure CalculTotaux();
   function AjusteDetailsCalcul(): Boolean;
   procedure CalculXpNecessaire(ChangementClasse: Boolean);
+  procedure CompteExigences(Grille: TStringGrid; Ligne: Integer);
+  function CarriereParSortie(): Boolean;
+  function ColonneDestin(): Integer;
+  function CarriereDejaSuivie(Code: String): Boolean;
+  function EstSortieListee(Code: String): Boolean;
+  function CarriereReservee(Code: String): Boolean;
+  function CarriereInterditeRace(Code: String): Boolean;
   Function CalculXpMj(TypeDonnee: String; CodeDonnee:String): Integer;
   Function CalculOptionXpDiv25(Xp: Integer): Integer;
   Function CalculOptionXpDiv25Inverse(Xp: Integer): Integer;
@@ -418,13 +453,22 @@ type
     ReservesChargement: Boolean;  // vrai pendant le remplissage des registres : pas d'effet sur les attributs
     DestinApplique, ResilienceApplique: Integer;  // somme des lignes deja repercutee sur CreationAttribut
     // Monnaie du personnage (CO/PA/SB), creee par code dans AjustePositionTables.
+    PagesDeLaListe: array of Integer;   // rang de page de chaque entree de ListBoxExperience
     EditMonnaie: array[0..2] of TEdit;
     LabMonnaie:  array[0..2] of TLabel;
+    // V1 : alignement (liste fixe) et points de folie, sous la monnaie, visibles en WFRP1 seulement
+    ComboAlignementV1: TComboBox;
+    LabAlignementV1, LabFolieV1: TLabel;
+    EditFolieV1: TEdit;
+    // V1 : bloc Background de la feuille (lieu de naissance, profession des parents, famille), texte libre
+    EditHistoriqueV1: array[0..2] of TEdit;
+    LabHistoriqueV1:  array[0..2] of TLabel;
     procedure PlaceChampsMonnaie();
     procedure PersonnageVoisinClick(Sender: TObject);
 
   public
-
+    // --dumpecran : contenu des grilles et champs une fois le personnage charge (sans afficher la fenetre)
+    procedure DumpEcran(Sortie: TStrings);
   end;
 
 var
@@ -477,6 +521,17 @@ var
   ColAttDestin:   Integer =12;
   ColAttResil:    Integer =13;
   ColAttBlessure: Integer =14;
+  // Profil secondaire V2 (colonnes masquees en V4) : A, W, SB, TB, M, Mag, IP, FP
+  ColAttSecDebut: Integer =15;
+  ColAttSecFin:   Integer =22;
+  CodesSecondaireV2: array[0..7] of String = ('RULES-ATTR_A', 'RULES-ATTR_W', 'RULES-ATTR_SB', 'RULES-ATTR_TB',
+                                              'RULES-ATTR_M', 'RULES-ATTR_Mag', 'RULES-ATTR_IP', 'RULES-ATTR_FP');
+  // Profil V1 dans l'ordre du livre ; le rang 0 a 9 va aux colonnes 2 a 11, le rang 10 a 13 aux colonnes 15 a 18
+  CodesProfilV1: array[0..13] of String = ('RULES-ATTR_M', 'RULES-ATTR_WS', 'RULES-ATTR_BS', 'RULES-ATTR_S',
+                                           'RULES-ATTR_T', 'RULES-ATTR_W', 'RULES-ATTR_I', 'RULES-ATTR_A',
+                                           'RULES-ATTR_Dex', 'RULES-ATTR_Ld', 'RULES-ATTR_Int', 'RULES-ATTR_Cl',
+                                           'RULES-ATTR_WP', 'RULES-ATTR_Fel');
+  ColAttDestinV1: Integer =19;
   // compétences
   ColCompCode:    Integer = 1;
   ColCompImage:   Integer = 2;
@@ -545,6 +600,7 @@ var
   ColAugmCompWork:   Integer =11;
   ColAugmCompReel:   Integer =12;
   ColAugmCompTri:    Integer =13;
+  ColAugmCompMax:    Integer =14;   // V2 : niveau atteignable a cette validation
   // Position gardee d'un personnage a l'autre (fleches < >, PersonnageVoisinClick) : page de
   // PageExperience et categorie d'equipement. -1 = rien a restaurer (premiere ouverture).
   PageVoisinSauvee:      Integer = -1;
@@ -700,17 +756,55 @@ begin
     Result := '';
 end;
 
+// V1 : jet d100 de la table d'avancement du Cleric / Druidic Priest (tire, modifiable dans la boite) ;
+// vrai si le resultat est ADVANCE. Ligne rend la ligne de la table, pour les cadeaux.
+function JetAvancementPretreV1(const Table: String; out Ligne: StructureAvancementPretreV1): Boolean;
+var
+  Jet:    Integer;
+  Saisie: String;
+begin
+  Jet    := LanceFormule('1D100', False);
+  Saisie := IntToStr(Jet);
+  if InputQuery(GetTexteLibelle('RULES-MESS_100'), '', Saisie) then
+    Jet := StrToIntDef(Saisie, Jet);
+  Ligne := AvancementPretreDuJetV1(Table, Jet);
+  ShowMessage('d100 = ' + IntToStr(Jet) + ' : ' + Ligne.Explication);
+  Result := Ligne.Resultat = 'ADVANCE';
+end;
+
 procedure TWinPersonnages.ButtonAugmentationClick(Sender: TObject);
 Var
   XpDispo:          Integer;
   CarriereComplete: Boolean;
   MaxNiveau:        Integer;
+  V2Carriere:       Boolean;
+  DesGain:          String;
+  Gain:             Integer;
+  TableHandicap:    String;
+  CodeHandicap:     String;
+  Jet:              Integer;
+  Stade:            Integer;
+  TablePretre:      String;
+  LignePretre:      StructureAvancementPretreV1;
+  CadeauEP:         Integer;
+  Saisie:           String;
+  Familier:         StructureFamilierV1;
+  CodeCulte:        String;
 begin
   // calculs XP disponible et état carrière
   XpDispo          := (StrToIntDef(extractnumbers(tabExperience.Cells[ColXpDonnee,LigXpRestant]),0) - StrToIntDef(extractnumbers(tabExperience.Cells[ColXpDonnee,LigXpCout]),0));
   CarriereComplete := ((TabAvancement.Cells[2,1] = CouleurOk) and (TabAvancement.Cells[2,2] = CouleurOk) and (TabAvancement.Cells[2,3] = CouleurOk));
+  // V2 : une carriere n'a qu'un niveau, "Carriere suivante" (sortie listee, 100 XP) et "Autre
+  // carriere" (carriere de base hors sorties, 200 XP) entrent toutes deux dans une NOUVELLE
+  // carriere au niveau 1. On ne bloque pas une carriere inachevee : le joueur decide.
+  V2Carriere       := CarriereParSortie() and (radiobuttonsuivant.Checked or radiobuttonChanger.Checked);
   // calcul Xp, Métier, Nv en changement de carrière
-  if radiobuttonsuivant.Checked and CarriereComplete then
+  if V2Carriere then
+    begin
+      NvMetier := NvMetierChoisi;
+      NvNiveau := '1';
+    end
+  else if radiobuttonsuivant.Checked and CarriereComplete then
     begin
       // Combo visible = ce niveau ouvre sur plusieurs carrieres, c'est elle qui designe
       // laquelle. Combo cachee = aucune bifurcation, on continue dans la carriere en cours,
@@ -744,21 +838,38 @@ begin
   MaxNiveau        := ChercheMaxMetierNiveau(CarriereDeSuite());
 
   // tests
-  if radiobuttonsuivant.Checked and (MaxNiveau > 0) and (StrToIntDef(MetierNvEnCours, 0) >= MaxNiveau) then
+  if radiobuttonsuivant.Checked and (not CarriereParSortie()) and (MaxNiveau > 0) and (StrToIntDef(MetierNvEnCours, 0) >= MaxNiveau) then
     ShowMEssage(GetTexteLibelle('RULES-MESS_043'))
   // Combo visible et rien de selectionne : le joueur n'a pas dit vers quelle carriere il
   // monte. On ne choisit pas a sa place - continuer dans la carriere en cours est une
   // decision, pas un defaut.
-  else if radiobuttonsuivant.Checked and ComboBoxNvMetier.Visible and (ComboBoxNvMetier.ItemIndex < 0) then
+  else if radiobuttonsuivant.Checked and (not CarriereParSortie()) and ComboBoxNvMetier.Visible and (ComboBoxNvMetier.ItemIndex < 0) then
     ShowMEssage(GetTexteLibelle('RULES-MESS_058'))
+  else if (ValVersion = 'WFRP1') and radiobuttonsuivant.Checked and SortsInsuffisantsV1(Personnage) then
+    ShowMessage(GetTexteLibelle('RULES-MESS_099'))
+  // V1 : passer au rang de Priest suivant exige toutes les prieres Required du rang en cours (Realm of Divine Magic p.188+)
+  else if (ValVersion = 'WFRP1') and (NvMetier <> '') and (TableAvancementPretreV1(NvMetier) = 'PRIEST') and
+          (RangClercV1(MetierEnCours) <> '') and
+          (PriereExigeeManquanteV1(Personnage.CulteV1, RangClercV1(MetierEnCours), Personnage.SortsV1) <> '') then
+    ShowMessage(GetTexteLibelle('RULES-MESS_117') + ' ' +
+                ChercheSort(PriereExigeeManquanteV1(Personnage.CulteV1, RangClercV1(MetierEnCours), Personnage.SortsV1)).Libelle)
   else if (XpDispo < 0) then
     ShowMEssage(GetTexteLibelle('RULES-MESS_025'))
   else if StrToIntDef(EditTotalXp.Text,0) < StrToIntDef(tabExperience.Cells[ColXpDonnee,LigXpTotal],0) then
     ShowMEssage(GetTexteLibelle('RULES-MESS_026'))
-  else if radiobuttonChanger.Checked and (NvMetier = '') then
+  else if (radiobuttonChanger.Checked or V2Carriere) and (NvMetier = '') then
     ShowMEssage(GetTexteLibelle('RULES-MESS_027'))
+  // V2 aussi : une sortie listee (100 XP) se prend quand on a FINI la carriere (Core). Seule "Autre
+  // carriere" (200 XP) permet de partir sans l'avoir finie.
   else if radiobuttonsuivant.Checked and Not CarriereComplete then
-    ShowMEssage(GetTexteLibelle('RULES-MESS_028'))
+    begin
+      if CarriereParSortie() then
+        ShowMEssage(GetTexteLibelle('RULES-MESS_071'))
+      else
+        ShowMEssage(GetTexteLibelle('RULES-MESS_028'));
+    end
+  else if V2Carriere and (XpDispo < EditNeedRealXp.Value) then
+    ShowMEssage(GetTexteLibelle('RULES-MESS_030')+IntToStr(EditNeedRealXp.Value))
   else if radiobuttonsuivant.Checked and CarriereComplete and (XpDispo < EditNeedRealXp.Value) then
     ShowMEssage(GetTexteLibelle('RULES-MESS_029')+IntToStr(EditNeedRealXp.Value))
   else if radiobuttonChanger.Checked and CarriereComplete and (XpDispo < EditNeedRealXp.Value)  then
@@ -774,8 +885,87 @@ begin
   // directe sur la colonne le rend inutile.
   else if RechercherDansColonne(TabAugmentationTalent, ConstArbreAuChoix, ColAugmTalSort) <> -1 then
     ShowMEssage(GetTexteLibelle('RULES-MESS_033'))
+  // V1 : le jet sur la Cleric Advance Table de Realm of Divine Magic coute 100 EP x le rang vise, en plus du changement de carriere
+  else if (ValVersion = 'WFRP1') and (NvMetier <> '') and (CoutJetPretreV1(NvMetier) > 0) and
+          (XpDispo < CoutJetPretreV1(NvMetier) + EditNeedRealXp.Value) then
+    ShowMessage(GetTexteLibelle('RULES-MESS_118') + ' ' + IntToStr(CoutJetPretreV1(NvMetier) + EditNeedRealXp.Value))
+  // V1 : Cleric / Druidic Priest, la divinite juge l'avancement (d100) ; hors ADVANCE le niveau est refuse
+  else if (ValVersion = 'WFRP1') and (NvMetier <> '') and (TableAvancementPretreV1(NvMetier) <> '') and
+          (not JetPretreV1(NvMetier, LignePretre)) then
+    ShowMessage(GetTexteLibelle('RULES-MESS_101'))
   else
     begin
+      // V1 : cadeaux de la divinite (EP, point de Destin, benediction a noter)
+      if (ValVersion = 'WFRP1') and (NvMetier <> '') and (TableAvancementPretreV1(NvMetier) <> '') then
+        begin
+          CadeauEP := 0;
+          if LignePretre.CadeauEP then
+            begin
+              CadeauEP := LanceFormule('1D10', False) * 10;
+              EditTotalXp.Text := IntToStr(StrToIntDef(EditTotalXp.Text, 0) + CadeauEP);
+            end;
+          if (CadeauEP > 0) or (LignePretre.Destin > 0) or LignePretre.Benediction then
+            ShowMessage(GetTexteLibelle('RULES-MESS_102') + ' ' + IntToStr(CadeauEP) + ' EP, ' +
+                        IntToStr(LignePretre.Destin) + ' Fate' + IfThen(LignePretre.Benediction, ', Blessing', ''));
+        end;
+      // V1 : le Druidic Priest niveau 1 recoit un familier (d100 sur la table, modifiable dans la boite)
+      if (ValVersion = 'WFRP1') and (NvMetier <> '') and (TableAvancementPretreV1(NvMetier) = 'DRUID') and
+         (NiveauCarriereV1(NvMetier) = 1) then
+        begin
+          Jet    := LanceFormule('1D100', False);
+          Saisie := IntToStr(Jet);
+          if InputQuery(GetTexteLibelle('RULES-MESS_103'), '', Saisie) then
+            Jet := StrToIntDef(Saisie, Jet);
+          Familier := FamilierDuJetV1(Jet);
+          if Familier.Code <> '' then
+            begin
+              Personnage.FamilierV1 := Familier.Code;
+              ShowMessage(GetTexteLibelle('RULES-MESS_104') + ' ' + Familier.Animal + ' [d100 = ' + IntToStr(Jet) + ']');
+            end;
+        end;
+      // V1 : l'Initiate (Realm of Divine Magic) choisit son culte et recoit les quatre prieres Petty de depart
+      if (ValVersion = 'WFRP1') and EstInitiateV1(NvMetier) then
+        begin
+          CodeCulte := ChoisirCulteV1(Self);
+          if CodeCulte <> '' then
+            begin
+              Personnage.CulteV1 := CodeCulte;
+              ShowMessage(GetTexteLibelle('RULES-MESS_111') + ' ' + ChercheCulteV1(CodeCulte).Libelle + #13#10 +
+                          GetTexteLibelle('RULES-MESS_112') + ' ' +
+                          AccordePrieresInitiateV1(Personnage.SortsV1, ChercheCulteV1(CodeCulte).Libelle));
+            end;
+        end;
+      // V1 : entrer dans un niveau de carriere magique donne des points de magie (jet des des du livre)
+      if (ValVersion = 'WFRP1') and (NvMetier <> '') then
+        begin
+          DesGain := DesGainMagieV1(ChercheRace(RaceEnCours).Espece, NvMetier);
+          if DesGain <> '' then
+            begin
+              Gain := LanceFormule(DesGain, False);
+              Personnage.PointsMagie := Personnage.PointsMagie + Gain;
+              ShowMessage(GetTexteLibelle('RULES-MESS_089') + ' +' + IntToStr(Gain) + ' (' + DesGain + ') = ' + IntToStr(Personnage.PointsMagie));
+            end;
+          // un handicap par niveau pour le Demonologist, le Necromancer et le magicien mauvais / chaotique
+          TableHandicap := TableHandicapV1(NvMetier, Personnage.MagicienMauvaisV1);
+          if TableHandicap <> '' then
+            begin
+              CodeHandicap := '';
+              if NiveauCarriereV1(NvMetier) = 1 then
+                CodeHandicap := HandicapAutoV1(TableHandicap);
+              if CodeHandicap <> '' then
+                begin
+                  Stade := AjouteHandicapV1(Personnage.HandicapsV1, CodeHandicap);
+                  ShowMessage(GetTexteLibelle('RULES-MESS_090') + ' ' + ChercheHandicapV1(CodeHandicap).Libelle + ' (' + IntToStr(Stade) + ')');
+                end;
+              Jet          := LanceFormule('1D100', False);
+              CodeHandicap := HandicapDuJetV1(TableHandicap, Jet);
+              if CodeHandicap <> '' then
+                begin
+                  Stade := AjouteHandicapV1(Personnage.HandicapsV1, CodeHandicap);
+                  ShowMessage(GetTexteLibelle('RULES-MESS_090') + ' ' + ChercheHandicapV1(CodeHandicap).Libelle + ' (' + IntToStr(Stade) + ') [d100 = ' + IntToStr(Jet) + ']');
+                end;
+            end;
+        end;
       AjouteEquipementNiveau();
       MajTables();
     end;
@@ -876,8 +1066,17 @@ begin
   TabAttribut.RowHeights[LigAttTalent]   := Hauteur;
   AjusteDetailsCalcul();
 
-  TabAttribut.ColWidths[ColAttDestin]  := Largeur;
-  TabAttribut.ColWidths[ColAttResil]   := Largeur;
+  // Destin et Resilience n'existent pas en V2 (FP et W sont dans le profil secondaire)
+  if ValVersion = 'WFRP2' then
+    begin
+      TabAttribut.ColWidths[ColAttDestin]  := 0;
+      TabAttribut.ColWidths[ColAttResil]   := 0;
+    end
+  else
+    begin
+      TabAttribut.ColWidths[ColAttDestin]  := Largeur;
+      TabAttribut.ColWidths[ColAttResil]   := Largeur;
+    end;
 
   TabTalent.ColWidths[9]               := Largeur;
   TabTalent.ColWidths[10]              := Largeur;
@@ -984,6 +1183,7 @@ procedure TWinPersonnages.CheckBoxXpChange(Sender: TObject);
 procedure TWinPersonnages.FormClose(Sender: TObject;
   var CloseAction: TCloseAction);
 begin
+  SelectWinMomentum := 0;
   if FVerrouPerso <> 0 then
     begin
       CloseHandle(FVerrouPerso);
@@ -1033,6 +1233,14 @@ begin
   PhysiqueUnite    := Personnage.HeightUnit;
   PhysiqueYeux     := EditEyeColors.Text;
   PhysiqueCheveux  := EditHairColors.Text;
+  PhysiqueV2        := ValVersion = 'WFRP2';
+  PhysiqueSexeSeul  := (ValVersion <> 'WFRP1') and (ValVersion <> 'WFRP2');
+  PhysiqueFemme     := Personnage.SexeV2 = 'F';
+  PhysiquePoids     := Personnage.PoidsV2;
+  PhysiqueFratrie   := Personnage.FratrieV2;
+  PhysiqueSigne     := Personnage.SigneDistinctifV2;
+  PhysiqueNaissance := Personnage.NaissanceV2;
+  PhysiqueAstre     := Personnage.AstreV2;
   FenPhysique          := TWinPhysique.Create(Application);
   FenPhysique.Position := poOwnerFormCenter;
   try
@@ -1047,6 +1255,17 @@ begin
       Personnage.HeightUnit := PhysiqueUnite;
       EditEyeColors.Text  := PhysiqueYeux;
       EditHairColors.Text := PhysiqueCheveux;
+      if PhysiqueSexeSeul then
+        Personnage.SexeV2 := IfThen(PhysiqueFemme, 'F', 'M');
+      if PhysiqueV2 then
+        begin
+          Personnage.SexeV2            := IfThen(PhysiqueFemme, 'F', 'M');
+          Personnage.PoidsV2           := PhysiquePoids;
+          Personnage.FratrieV2         := PhysiqueFratrie;
+          Personnage.SigneDistinctifV2 := PhysiqueSigne;
+          Personnage.NaissanceV2       := PhysiqueNaissance;
+          Personnage.AstreV2           := PhysiqueAstre;
+        end;
     end;
 end;
 
@@ -1197,6 +1416,128 @@ procedure TWinPersonnages.ButtonTexteClick(Sender: TObject);
     RafraichitTabEquipementAffichage();
   end;
 
+// Liste des personnages familiers sauvegardes (race Familiar, autre que celui-ci) dans une petite
+// fenetre de choix. Renvoie le nom du personnage, '' si annule ou si aucun familier n'existe.
+function TWinPersonnages.ChoisitFamilier(): String;
+  var
+    Rech:    TSearchRec;
+    Fichier: String;
+    Perso:   StructurePersonnage;
+    Fen:     TForm;
+    Liste:   TListBox;
+    Ok:      TBitBtn;
+    Annule:  TBitBtn;
+  begin
+    Result := '';
+    Fen    := TForm.CreateNew(Self);
+    try
+      Fen.Caption     := GetTexteLibelle('RULES-LAB_798');
+      Fen.Position    := poOwnerFormCenter;
+      Fen.BorderStyle := bsDialog;
+      Fen.ClientWidth := 360;
+      Fen.ClientHeight:= 340;
+      Liste := TListBox.Create(Fen);
+      Liste.Parent := Fen;
+      Liste.SetBounds(8, 8, 344, 280);
+      if FindFirst(GetCurrentDir + ConstCheminPersonnage + '*', faDirectory, Rech) = 0 then
+        begin
+          repeat
+            if ((Rech.Attr and faDirectory) <> 0) and (Rech.Name <> '.') and (Rech.Name <> '..')
+               and (Rech.Name <> NomPersonnage) then
+              begin
+                Fichier := PersonnageXmlFichierActuel(GetCurrentDir + ConstCheminPersonnage + Rech.Name);
+                if Fichier <> '' then
+                  begin
+                    Perso := PersonnageXmlChargement(Fichier);
+                    if Pos('_FAMILIAR_', Perso.Race) > 0 then
+                      Liste.Items.Add(Rech.Name);
+                  end;
+              end;
+          until FindNext(Rech) <> 0;
+          FindClose(Rech);
+        end;
+      if Liste.Items.Count = 0 then
+        begin
+          ShowMessage(GetTexteLibelle('RULES-MESS_081'));
+          exit;
+        end;
+      Liste.ItemIndex := 0;
+      Ok := TBitBtn.Create(Fen);
+      Ok.Parent := Fen;
+      Ok.Kind   := bkOK;
+      Ok.SetBounds(8, 300, 100, 30);
+      Annule := TBitBtn.Create(Fen);
+      Annule.Parent := Fen;
+      Annule.Kind   := bkCancel;
+      Annule.SetBounds(252, 300, 100, 30);
+      if (Fen.ShowModal = mrOK) and (Liste.ItemIndex >= 0) then
+        Result := Liste.Items[Liste.ItemIndex];
+    finally
+      Fen.Free;
+    end;
+  end;
+
+// +Familier : ligne de la categorie Montures qui designe un personnage familier (code FAMILIER-<N>),
+// sans encombrement. Le nom du personnage est stocke comme nom libre de la ligne.
+procedure TWinPersonnages.ButtonFamilierClick(Sender: TObject);
+  var
+    Nom:   String;
+    N:     Integer;
+    Ligne: Integer;
+  begin
+    Nom := ChoisitFamilier();
+    if Nom = '' then exit;
+    N := 1;
+    while RechercherDansColonne(TabEquipement, PrefixeEquipementFamilier + IntToStr(N), 2) >= 0 do
+      Inc(N);
+    TabEquipement.RowCount := TabEquipement.RowCount + 1;
+    Ligne := TabEquipement.RowCount - 1;
+    TabEquipement.Cells[0, Ligne]  := '+';
+    TabEquipement.Cells[1, Ligne]  := IntToStr(TabEquipement.RowCount);
+    TabEquipement.Cells[2, Ligne]  := PrefixeEquipementFamilier + IntToStr(N);
+    TabEquipement.Cells[3, Ligne]  := TypeEquipDI;
+    TabEquipement.Cells[4, Ligne]  := Nom;
+    TabEquipement.Cells[9, Ligne]  := '1';
+    TabEquipement.Cells[13, Ligne] := Nom;
+    TabEquipement.Cells[14, Ligne] := '0';
+    AdjustGridColumnsWidth(TabEquipement, 0, false, false);
+    RafraichitTabEquipementAffichage();
+  end;
+
+// Ouvre la fiche d'un personnage dans une deuxieme fenetre (comme Menu.FormActivate). Refuse si
+// ce personnage est deja ouvert (mutex) ou si sa fiche a disparu.
+procedure TWinPersonnages.OuvreFamilier(const Nom: String);
+  var
+    Poignee: PtrUInt;
+    Ouvert:  Boolean;
+    Ancien:  String;
+    Fen:     TWinPersonnages;
+  begin
+    if PersonnageXmlFichierActuel(GetCurrentDir + ConstCheminPersonnage + Nom) = '' then
+      begin
+        ShowMessage(GetTexteLibelle('RULES-MESS_082'));
+        exit;
+      end;
+    Poignee := MutexPersonnage(Nom, Ouvert);
+    if Poignee <> 0 then CloseHandle(Poignee);
+    if Ouvert then
+      begin
+        ShowMessage(GetTexteLibelle('RULES-MESS_083'));
+        exit;
+      end;
+    // NomPersonnage n'est lu que par le FormCreate de la nouvelle fenetre : on le rend ensuite
+    // a cette fenetre-ci (voisin precedent/suivant et Donner s'en servent).
+    Ancien                := NomPersonnage;
+    NomPersonnage         := Nom;
+    try
+      Fen                 := TWinPersonnages.Create(Application);
+    finally
+      NomPersonnage       := Ancien;
+    end;
+    Fen.Position          := poOwnerFormCenter;
+    Fen.Show;
+  end;
+
 // Libelle d'un objet propre deja injecte dans les listes, selon son type (arme, armure, divers).
 function TWinPersonnages.LibelleObjetPropre(const Balise, Code: String): String;
   begin
@@ -1210,6 +1551,123 @@ function TWinPersonnages.LibelleObjetPropre(const Balise, Code: String): String;
 
 // +Objet : cree un objet propre du type de la categorie affichee (armes, armures, divers), le range
 // dans la fiche, l'injecte dans les listes et ajoute sa ligne d'equipement.
+// V1 : fenetre d'apprentissage ; chaque sort appris devient une ligne d'equipement "+" dont la colonne 5 porte
+// les EP (comptes comme une augmentation en attente par CalculXpEtat, puis depenses une fois enregistres)
+procedure TWinPersonnages.ButtonApprendreSortClick(Sender: TObject);
+  var
+    Nouveaux: TStringList;
+    Oublies:  TStringList;
+    XpEtat:   StructureXpEtat;
+    Code:     String;
+    Reste:    String;
+    Item:     String;
+    Champs:   TStringArray;
+    PSort:    StructureSort;
+    Ligne:    Integer;
+    EpPerdus: Integer;
+  begin
+    if not (PeutApprendreSortsV1(Personnage) or PeutPetitionnerV1(Personnage)) then
+      begin
+        ShowMessage(GetTexteLibelle('RULES-MESS_098'));
+        Exit;
+      end;
+    Nouveaux := TStringList.Create;
+    Oublies  := TStringList.Create;
+    try
+      XpEtat := CalculXpEtat();
+      if PeutPetitionnerV1(Personnage) then
+        begin
+          // V1 : Initiate / Priest, les prieres se demandent au dieu ; les EP d'une petition sans priere sont perdus
+          EpPerdus := 0;
+          PetitionPrieresV1(Self, @Personnage, XpEtat.Restante - XpEtat.Augmentation, Nouveaux, EpPerdus);
+          if EpPerdus > 0 then
+            AjouteLigneEpPerdus(EpPerdus);
+        end
+      else
+        ApprendreSortV1(Self, @Personnage, StrToIntDef(TabAttribut.Cells[ColAttSecDebut, LigAttTotal], 0),
+          XpEtat.Restante - XpEtat.Augmentation, Nouveaux, Oublies);
+      // sorts oublies : leur ligne d'equipement disparait
+      for Code in Oublies do
+        for Ligne := TabEquipement.RowCount - 1 downto 1 do
+          if TabEquipement.Cells[2, Ligne] = Code then
+            TabEquipement.DeleteRow(Ligne);
+      if Oublies.Count > 0 then
+        begin
+          RafraichitTabEquipementAffichage();
+          CalculTableExperience();
+        end;
+      for Code in Nouveaux do
+        begin
+          if Oublies.IndexOf(Code) >= 0 then Continue;
+          PSort := ChercheSort(Code);
+          Reste := Personnage.SortsV1;
+          while Reste <> '' do
+            begin
+              Item   := ElementSuivantV1(Reste);
+              Champs := Item.Split('|');
+              if (Length(Champs) >= 3) and (Champs[0] = Code) then
+                Break;
+              Champs := nil;
+            end;
+          TabEquipement.RowCount := TabEquipement.RowCount + 1;
+          Ligne := TabEquipement.RowCount - 1;
+          TabEquipement.Cells[0, Ligne] := '+';
+          TabEquipement.Cells[1, Ligne] := IntToStr(TabEquipement.RowCount);
+          TabEquipement.Cells[2, Ligne] := PSort.CodeSort;
+          TabEquipement.Cells[3, Ligne] := PSort.TypeSort;
+          TabEquipement.Cells[4, Ligne] := PSort.Libelle;
+          if Length(Champs) >= 3 then
+            TabEquipement.Cells[5, Ligne] := Champs[2]
+          else
+            TabEquipement.Cells[5, Ligne] := '0';
+        end;
+      if Nouveaux.Count > 0 then
+        begin
+          AdjustGridColumnsWidth(TabEquipement, 0, false, false);
+          RafraichitTabEquipementAffichage();
+          CalculTableExperience();
+        end;
+    finally
+      Nouveaux.Free;
+      Oublies.Free;
+    end;
+  end;
+
+// V1 : EP depenses sans rien obtenir (petition sans priere, jet sur la Cleric Advance Table) : ligne Divers a nom libre
+// dont la colonne 5 porte les EP, comptes comme une augmentation en attente
+procedure TWinPersonnages.AjouteLigneEpPerdus(Montant: Integer);
+  var
+    N:     Integer;
+    Ligne: Integer;
+  begin
+    N := 1;
+    while RechercherDansColonne(TabEquipement, PrefixeEquipementTexte + IntToStr(N), 2) >= 0 do
+      Inc(N);
+    TabEquipement.RowCount := TabEquipement.RowCount + 1;
+    Ligne := TabEquipement.RowCount - 1;
+    TabEquipement.Cells[0, Ligne]  := '+';
+    TabEquipement.Cells[1, Ligne]  := IntToStr(TabEquipement.RowCount);
+    TabEquipement.Cells[2, Ligne]  := PrefixeEquipementTexte + IntToStr(N);
+    TabEquipement.Cells[3, Ligne]  := TypeEquipDI;
+    TabEquipement.Cells[4, Ligne]  := GetTexteLibelle('RULES-LAB_866');
+    TabEquipement.Cells[5, Ligne]  := IntToStr(Montant);
+    TabEquipement.Cells[9, Ligne]  := '1';
+    TabEquipement.Cells[13, Ligne] := GetTexteLibelle('RULES-LAB_866');
+    TabEquipement.Cells[14, Ligne] := '0';
+    AdjustGridColumnsWidth(TabEquipement, 0, false, false);
+    RafraichitTabEquipementAffichage();
+    CalculTableExperience();
+  end;
+
+// V1 : jet sur la table d'avancement du carriere ; pour un Priest de Realm of Divine Magic, le jet coute d'abord
+// ses EP (perdus quel que soit le resultat)
+function TWinPersonnages.JetPretreV1(const CodeMetier: String; out Ligne: StructureAvancementPretreV1): Boolean;
+  begin
+    if CoutJetPretreV1(CodeMetier) > 0 then
+      AjouteLigneEpPerdus(CoutJetPretreV1(CodeMetier));
+    Result := JetAvancementPretreV1(TableAvancementPretreV1(CodeMetier), Ligne);
+  end;
+
 procedure TWinPersonnages.ButtonObjetClick(Sender: TObject);
   var
     Code:    String;
@@ -1511,7 +1969,11 @@ procedure TWinPersonnages.StringGridCorruptionEditingDone(Sender: TObject);
 // pour le bouton Mutation). La Resolution a pour maximum la Resilience : si celle-ci baisse, elle baisse aussi.
 procedure TWinPersonnages.MajReserves();
   begin
-    PanelDestin.SetMaximum(StrToIntDef(TabAttribut.Cells[ColAttDestin, LigAttTotal], 0));
+    // V1 : seul le Destin existe (colonne propre a la grille V1), la grille n'a ni Resilience ni Resolution
+    PanelDestin.SetMaximum(StrToIntDef(TabAttribut.Cells[ColonneDestin(), LigAttTotal], 0));
+    PanelResilience.Visible := ValVersion <> 'WFRP1';
+    PanelResolve.Visible    := ValVersion <> 'WFRP1';
+    if ValVersion = 'WFRP1' then Exit;
     PanelResilience.SetMaximum(StrToIntDef(TabAttribut.Cells[ColAttResil, LigAttTotal], 0));
     PanelResolve.SetMaximum(StrToIntDef(TabAttribut.Cells[ColAttResil, LigAttTotal], 0));
   end;
@@ -1550,7 +2012,15 @@ procedure TWinPersonnages.AppliqueRegistre(Panel: TPanelReserve; const CodeAttri
 
 procedure TWinPersonnages.RegistreDestinChange(Sender: TObject);
   begin
-    AppliqueRegistre(PanelDestin, ConstCaracDestin, ColAttDestin, DestinApplique);
+    AppliqueRegistre(PanelDestin, ConstCaracDestin, ColonneDestin(), DestinApplique);
+  end;
+
+function TWinPersonnages.ColonneDestin(): Integer;
+  begin
+    if ValVersion = 'WFRP1' then
+      Result := ColAttDestinV1
+    else
+      Result := ColAttDestin;
   end;
 
 procedure TWinPersonnages.RegistreResilienceChange(Sender: TObject);
@@ -1567,9 +2037,41 @@ procedure TWinPersonnages.AfficheMutations();
     PersonnageMutation: StructurePersonnageMutation;
     PCorruptionTable:   StructureCorruptionTable;
     IndLig:             Integer;
+    Reste:              String;
+    Item:               String;
   begin
     TabMutation.RowCount := 1;
     IndLig := 0;
+    // V1 : une ligne par handicap (colonne 1 = stade, 2 = libelle, 3 = code)
+    CheckBoxMauvais.Visible := (ValVersion = 'WFRP1');
+    LabMauvais.Visible      := (ValVersion = 'WFRP1');
+    if ValVersion = 'WFRP1' then
+      begin
+        LabMauvais.Caption      := GetTexteLibelle('RULES-LAB_844');
+        CheckBoxMauvais.Checked := Personnage.MagicienMauvaisV1;
+        // le familier du Druidic Priest en premiere ligne (code 'FAMILIER' en colonne 3)
+        if Personnage.FamilierV1 <> '' then
+          begin
+            IndLig := IndLig + 1;
+            TabMutation.RowCount         := IndLig + 1;
+            TabMutation.Cells[1, IndLig] := GetTexteLibelle('RULES-FAMDIET_FAMILIAR');
+            TabMutation.Cells[2, IndLig] := ChercheFamilierV1(Personnage.FamilierV1).Animal;
+            TabMutation.Cells[3, IndLig] := 'FAMILIER';
+          end;
+        Reste := Personnage.HandicapsV1;
+        while Reste <> '' do
+          begin
+            Item := ElementSuivantV1(Reste);
+            if Pos('=', Item) = 0 then Continue;
+            IndLig := IndLig + 1;
+            TabMutation.RowCount         := IndLig + 1;
+            TabMutation.Cells[1, IndLig] := GetTexteLibelle('RULES-LAB_843') + ' ' + Copy(Item, Pos('=', Item) + 1, 3);
+            TabMutation.Cells[2, IndLig] := ChercheHandicapV1(Copy(Item, 1, Pos('=', Item) - 1)).Libelle;
+            TabMutation.Cells[3, IndLig] := Copy(Item, 1, Pos('=', Item) - 1);
+          end;
+        MemoMutationEffet.Text := '';
+        Exit;
+      end;
     for PersonnageMutation in Personnage.Mutations do
       begin
         PCorruptionTable := ChercheCorruptionTable(PersonnageMutation.Code);
@@ -1587,11 +2089,59 @@ procedure TWinPersonnages.AfficheMutations();
 procedure TWinPersonnages.TabMutationClick(Sender: TObject);
   var
     PCorruptionTable: StructureCorruptionTable;
+    PHandicap:        StructureHandicapV1;
+    PFamilier:        StructureFamilierV1;
+    Mots:             TStringList;
+    Texte:            String;
+    IndMot:           Integer;
+    Stade:            Integer;
   begin
     if (TabMutation.Row < 1) then Exit;
 
+    if ValVersion = 'WFRP1' then
+      begin
+        // ligne du familier : competences gratuites, armure, armes interdites, lieux, regime
+        if TabMutation.Cells[3, TabMutation.Row] = 'FAMILIER' then
+          begin
+            PFamilier := ChercheFamilierV1(Personnage.FamilierV1);
+            Mots      := TStringList.Create;
+            try
+              ExtractStrings([';'], [], PChar(CompetencesFamilierV1(Personnage)), Mots);
+              Texte := '';
+              for IndMot := 0 to Mots.Count - 1 do
+                Texte := Texte + IfThen(Texte <> '', ', ', '') + ChercheCompetence(Mots[IndMot]).Libelle;
+            finally
+              Mots.Free;
+            end;
+            MemoMutationEffet.Text :=
+              GetTexteLibelle('RULES-FAMDIET_SKILLS') + ' : ' + Texte + LineEnding +
+              GetTexteLibelle('RULES-FAMDIET_ARMOUR') + ' : ' + PFamilier.Armure +
+                IfThen(PFamilier.Bouclier, ' + ' + GetTexteLibelle('RULES-FAMDIET_SHIELD'), '') + LineEnding +
+              GetTexteLibelle('RULES-FAMDIET_FORBIDDEN') + ' : ' + PFamilier.ArmesInterdites + LineEnding +
+              GetTexteLibelle('RULES-FAMDIET_PLACES') + ' : ' + PFamilier.Lieux + LineEnding +
+              GetTexteLibelle('RULES-FAMDIET_DIET') + ' : ' + GetTexteLibelle('RULES-FAMDIET_' + PFamilier.Regime);
+            // alerte (sans blocage) : objets de la liste de prix que le personnage possede et que le familier interdit
+            Texte := '';
+            for IndMot := 1 to TabEquipement.RowCount - 1 do
+              if ObjetInterditFamilierV1(PFamilier, TabEquipement.Cells[2, IndMot]) then
+                Texte := Texte + IfThen(Texte <> '', ', ', '') + TabEquipement.Cells[4, IndMot];
+            if Texte <> '' then
+              MemoMutationEffet.Text := MemoMutationEffet.Text + LineEnding + LineEnding
+                + GetTexteLibelle('RULES-MESS_107') + ' ' + Texte;
+            Exit;
+          end;
+        // effet du handicap au stade atteint (les malus de caracteristiques en tete)
+        Stade := StrToIntDef(Copy(TabMutation.Cells[1, TabMutation.Row], Length(TabMutation.Cells[1, TabMutation.Row]), 1), 1);
+        if (Stade < 1) or (Stade > 3) then Stade := 1;
+        PHandicap := ChercheHandicapV1(TabMutation.Cells[3, TabMutation.Row]);
+        MemoMutationEffet.Text := PHandicap.Texte[Stade];
+        if PHandicap.Modif[Stade] <> '' then
+          MemoMutationEffet.Text := MemoMutationEffet.Text + LineEnding + StringReplace(StringReplace(PHandicap.Modif[Stade], 'RULES-ATTR_', '', [rfReplaceAll]), ';', '  ', [rfReplaceAll]);
+        Exit;
+      end;
+
     PCorruptionTable       := ChercheCorruptionTable(TabMutation.Cells[3, TabMutation.Row]);
-    MemoMutationEffet.Text := TexteOuPageMutation(PCorruptionTable.Effet, PCorruptionTable.Livre, PCorruptionTable.Code);
+    MemoMutationEffet.Text := TexteEntreeMutation(PCorruptionTable);
   end;
 
 // Retrait d'une mutation - premiere fois que Personnage.Mutations peut se retrecir. Ce qu'elle
@@ -1605,7 +2155,7 @@ procedure TWinPersonnages.TabMutationDblClick(Sender: TObject);
     IndSupp:        Integer;
     LibelleMutation: String;
   begin
-    if (TabMutation.Row < 1) then Exit;
+    if (TabMutation.Row < 1) or (ValVersion = 'WFRP1') then Exit;
 
     Reponse := MessageDlg(GetTexteLibelle('RULES-MESS_060'), mtConfirmation, mbYesNo, 0);
     if Reponse <> mrYes then Exit;
@@ -1962,6 +2512,8 @@ procedure TWinPersonnages.ButtonCorruptionMutationClick(Sender: TObject);
 
     MutationCodeRace             := Personnage.Race;
     MutationResilienceDisponible := (ResilienceTotale > 0);
+    MutationLoreDivin            := '';
+    MutationDuChaos              := False;
 
     WinMutations           := TWinMutations.Create(Application);
     WinMutations.Position  := poOwnerFormCenter;
@@ -1995,7 +2547,9 @@ procedure TWinPersonnages.ButtonCorruptionMutationClick(Sender: TObject);
         StringGridCorruption.Cells[1, StringGridCorruption.RowCount - 1] := IntToStr(-Lost);
         StringGridCorruption.Cells[2, StringGridCorruption.RowCount - 1] := GetTexteLibelle('RULES-LAB_170');
 
-        PersonnageMutation.Code := MutationCode;
+        PersonnageMutation.Code            := MutationCode;
+        PersonnageMutation.ValeurAleatoire := 0;
+        PersonnageMutation.ValeursEffets   := '';
         Personnage.Mutations    += [PersonnageMutation];
         AfficheMutations();
       end;
@@ -2006,6 +2560,163 @@ procedure TWinPersonnages.ButtonCorruptionMutationClick(Sender: TObject);
     MutationCode  := '';
     MutationLibelle := '';
     MutationEffet   := '';
+  end;
+
+// Menu contextuel de l'onglet Mutation : une entree "Marque divine : Lore of X" par lore divin qui a
+// une table chargee. Le lore est garde dans Hint (le libelle est traduit, pas utilisable comme cle).
+procedure TWinPersonnages.TabMutationPopup(Sender: TObject);
+  var
+    MenuPop:          TPopupMenu;
+    Item:             TMenuItem;
+    PCorruptionTable: StructureCorruptionTable;
+    Lores:            TStringList;
+    PCorruptionChance: StructureCorruptionChance;
+    Dieux:            String;
+  begin
+    MenuPop := TabMutation.PopupMenu;
+    MenuPop.Items.Clear;
+    Lores := TStringList.Create;
+    try
+      for PCorruptionTable in ListCorruptionTable do
+        if (PCorruptionTable.TypeCorruption = CorruptionDivine) and (PCorruptionTable.Lore <> '')
+           and (Lores.IndexOf(PCorruptionTable.Lore) < 0) then
+          begin
+            Lores.Add(PCorruptionTable.Lore);
+            Item         := TMenuItem.Create(MenuPop);
+            // Witch Lore (Hag) / (Ice) : marques de sorciere, meme mecanisme que les marques divines.
+            if Pos('Witch Lore', PCorruptionTable.Lore) = 1 then
+              Item.Caption := GetTexteLibelle('RULES-LAB_799')
+            else
+              Item.Caption := GetTexteLibelle('RULES-LAB_780');
+            Item.Caption := Item.Caption + ' : '
+                            + GetTexteLibelle('RULES-SPELLV2_' + UpperCase(StringReplace(StringReplace(StringReplace(
+                                PCorruptionTable.Lore, ' ', '_', [rfReplaceAll]), '(', '', [rfReplaceAll]), ')', '', [rfReplaceAll])));
+            Item.Hint    := PCorruptionTable.Lore;
+            Item.OnClick := @MenuMarqueDivineClick;
+            MenuPop.Items.Add(Item);
+          end;
+    finally
+      Lores.Free;
+    end;
+
+    // Mutation du Chaos (Tome of Corruption) : une entree si un livre charge fournit la table.
+    for PCorruptionTable in ListCorruptionTable do
+      if PCorruptionTable.TypeCorruption = CorruptionMutation then
+        begin
+          Item         := TMenuItem.Create(MenuPop);
+          Item.Caption := GetTexteLibelle('RULES-LAB_782');
+          Item.OnClick := @MenuMutationChaosClick;
+          MenuPop.Items.Add(Item);
+          break;
+        end;
+
+    // Tables 3-2 a 3-5 (Khorne, Nurgle, Slaanesh, Tzeentch) : une entree par dieu ayant des lignes <Chance lore>.
+    Dieux := '|';
+    for PCorruptionChance in ListCorruptionChance do
+      if (PCorruptionChance.TypeCorruption = CorruptionMutation) and (PCorruptionChance.Lore <> '')
+         and (Pos('|' + PCorruptionChance.Lore + '|', Dieux) = 0) then
+        begin
+          Dieux        := Dieux + PCorruptionChance.Lore + '|';
+          Item         := TMenuItem.Create(MenuPop);
+          Item.Caption := GetTexteLibelle('RULES-LAB_782') + ' : ' + PCorruptionChance.Lore;
+          Item.Hint    := PCorruptionChance.Lore;
+          Item.OnClick := @MenuMutationChaosClick;
+          MenuPop.Items.Add(Item);
+        end;
+  end;
+
+// Mutation du Chaos (Tome of Corruption, WFRP2) : meme fenetre, tirage D1000 (MutationDuChaos). Comme la
+// marque divine, aucune corruption n'est comptee : seule la mutation est ajoutee au personnage.
+procedure TWinPersonnages.MenuMutationChaosClick(Sender: TObject);
+  var
+    PersonnageMutation: StructurePersonnageMutation;
+    PCorruptionTable:   StructureCorruptionTable;
+    Max, Prises:        Integer;
+    Annule:             Boolean;
+  begin
+    MutationCodeRace             := Personnage.Race;
+    MutationResilienceDisponible := False;
+    MutationLoreDivin            := '';
+    MutationDuChaos              := True;
+    MutationDieuChaos            := (Sender as TMenuItem).Hint;   // '' = Table 3-1, sinon table du dieu
+
+    WinMutations           := TWinMutations.Create(Application);
+    WinMutations.Position  := poOwnerFormCenter;
+    WinMutations.ShowModal;
+
+    if MutationChoix = 'MUTATION' then
+      begin
+        // "Single" = une prise, "Multiple N" = N prises au plus, "Multiple" seul = sans limite.
+        Max := 0;
+        Prises := 0;
+        Annule := False;
+        for PCorruptionTable in ListCorruptionTable do
+          if (PCorruptionTable.TypeCorruption = CorruptionMutation) and (PCorruptionTable.Code = MutationCode) then
+            begin
+              // mot (« Multiple 3 ») ou code (« RULES-V2MUT_MULTIPLE_3 ») : meme cle « MULTIPLE_3 »
+              if Copy(CleValeurLivre(PCorruptionTable.TypeMutation), 1, 6) = 'SINGLE' then Max := 1
+              else Max := StrToIntDef(Trim(Copy(CleValeurLivre(PCorruptionTable.TypeMutation), 10, 10)), 0);
+              break;
+            end;
+        for PersonnageMutation in Personnage.Mutations do
+          if MutationCodeBase(PersonnageMutation.Code) = MutationCode then Prises += 1;
+
+        if (Max > 0) and (Prises >= Max) then
+          ShowMessage(GetTexteLibelle('RULES-MESS_076'))
+        else
+          begin
+            // Growth, Shrink : la Nieme prise recoit l'entree de rang N (effets propres a la prise).
+            PersonnageMutation.Code            := MutationCodePourPrise(MutationCode, Prises);
+            PersonnageMutation.ValeurAleatoire := 0;
+            PersonnageMutation.ValeursEffets   := '';
+            // Effet "+Nd10 %" (<ModifyCaracAleatoire>) : le jet est montre a Nono et valide/corrige
+            // par lui (WinJetPathologie), jamais tire en silence ; annuler annule la prise.
+            Annule := not JetMutationValide(PersonnageMutation.Code, MutationLibelle, PersonnageMutation.ValeurAleatoire, PersonnageMutation.ValeursEffets);
+            if not Annule then
+              begin
+                Personnage.Mutations += [PersonnageMutation];
+                AfficheMutations();
+                CalculTotaux();
+              end;
+          end;
+      end;
+
+    MutationChoix   := '';
+    MutationCode    := '';
+    MutationLibelle := '';
+    MutationEffet   := '';
+    MutationDuChaos := False;
+    MutationDieuChaos := '';
+  end;
+
+// Marque divine : meme fenetre que la mutation de corruption, en mode "dieu" (MutationLoreDivin). Aucune
+// corruption n'est comptee (pas de ligne dans l'historique) : seule la mutation est ajoutee au personnage.
+procedure TWinPersonnages.MenuMarqueDivineClick(Sender: TObject);
+  var
+    PersonnageMutation: StructurePersonnageMutation;
+  begin
+    MutationCodeRace             := Personnage.Race;
+    MutationResilienceDisponible := False;
+    MutationLoreDivin            := (Sender as TMenuItem).Hint;
+
+    WinMutations           := TWinMutations.Create(Application);
+    WinMutations.Position  := poOwnerFormCenter;
+    WinMutations.ShowModal;
+
+    if MutationChoix = 'MUTATION' then
+      begin
+        PersonnageMutation.Code            := MutationCode;
+        PersonnageMutation.ValeurAleatoire := 0;
+        PersonnageMutation.ValeursEffets   := '';
+        Personnage.Mutations    += [PersonnageMutation];
+        AfficheMutations();
+      end;
+
+    MutationChoix     := '';
+    MutationCode      := '';
+    MutationLibelle   := '';
+    MutationEffet     := '';
+    MutationLoreDivin := '';
   end;
 
 procedure TWinPersonnages.ButtonRaceSelectionnerClick(Sender: TObject);
@@ -2038,6 +2749,33 @@ procedure TWinPersonnages.ButtonRaceSelectionnerClick(Sender: TObject);
       begin
         ShowMessage(GetTexteLibelle('RULES-MESS_057') + IntToStr(ChercheMinMetierNiveau(ChoixWinMetierRace)));
         ChoixWinMetierRace := '';
+      end;
+
+    // V2 : "Autre carriere" = une carriere de BASE qui n'est pas une sortie listee, pas deja suivie
+    // et pas l'une des quatre reservees (Core, "Career Exit Options").
+    if CarriereParSortie() and (ChoixWinMetierRace <> '') then
+      begin
+        if not EstMetierDeBase(ChoixWinMetierRace) then
+          begin
+            ShowMessage(GetTexteLibelle('RULES-MESS_067'));
+            ChoixWinMetierRace := '';
+          end
+        else if CarriereDejaSuivie(ChoixWinMetierRace) or CompareRechercheValeur(ChoixWinMetierRace, MetierEnCours) or
+                EstSortieListee(ChoixWinMetierRace) then
+          begin
+            ShowMessage(GetTexteLibelle('RULES-MESS_068'));
+            ChoixWinMetierRace := '';
+          end
+        else if (ValVersion = 'WFRP2') and CarriereReservee(ChoixWinMetierRace) then
+          begin
+            ShowMessage(GetTexteLibelle('RULES-MESS_069'));
+            ChoixWinMetierRace := '';
+          end
+        else if CarriereInterditeRace(ChoixWinMetierRace) then
+          begin
+            ShowMessage(GetTexteLibelle('RULES-MESS_070'));
+            ChoixWinMetierRace := '';
+          end;
       end;
 
     if ChoixWinMetierRace <> '' then
@@ -2332,6 +3070,24 @@ begin
   CalculTableExperience();
 end;
 
+procedure TWinPersonnages.CheckBoxMomentumChange(Sender: TObject);
+begin
+  // sans le livre Momentum l'option n'aurait aucun effet : on prévient et on décoche
+  // (livre charge ET livre Momentum dans les livres du personnage, liste vide = tous les livres)
+  if CheckBoxMomentum.Checked and not (LivreMomentumCharge() and VerifieFiltre(ConstFiltreLivreMomentum, Personnage.LivresAcceptes)) then
+    begin
+    ShowMessage(GetTexteLibelle('RULES-MESS_121'));
+    CheckBoxMomentum.OnChange := nil;
+    CheckBoxMomentum.Checked := False;
+    CheckBoxMomentum.OnChange := @CheckBoxMomentumChange;
+    end;
+  // filtre des listes de talents (WinTalent) : une seule version de chaque talent Momentum
+  if CheckBoxMomentum.Checked and LivreMomentumCharge() and VerifieFiltre(ConstFiltreLivreMomentum, Personnage.LivresAcceptes) then
+    SelectWinMomentum := 2
+  else
+    SelectWinMomentum := 1;
+end;
+
 procedure TWinPersonnages.CheckBoxXpDiv25Change(Sender: TObject);
 begin
   CalculXpGlobal(CheckBoxXpDiv25.Checked);
@@ -2342,6 +3098,11 @@ procedure TWinPersonnages.CheckBoxStylePdfClick(Sender: TObject);
 begin
   CheckBoxCouleurPdf.Enabled  := CheckBoxStylePdf.Checked;
   CheckBoxEconomiePdf.Enabled := CheckBoxStylePdf.Checked;
+end;
+
+procedure TWinPersonnages.CheckBoxMauvaisClick(Sender: TObject);
+begin
+  Personnage.MagicienMauvaisV1 := CheckBoxMauvais.Checked;
 end;
 
 procedure TWinPersonnages.CheckBoxSansAsterisqueClick(Sender: TObject);
@@ -2363,13 +3124,24 @@ procedure TWinPersonnages.CalculXpNecessaire(ChangementClasse: Boolean);
   Begin
     if RadioButtonSuivant.checked or RadioButtonChanger.checked then
       begin
-        if RadioButtonSuivant.checked then
+        // V2 : sortie listee 100 XP, carriere de base hors sorties 200 XP, pas de cout de classe
+        if ValVersion = 'WFRP2' then
+          XpNeed := IfThen(RadioButtonSuivant.checked, ConstXpChangerMetier, ConstXpChangerMetierIncomplet)
+        // V1 : sortie listee ou carriere de base de la meme classe 100 EP, autre classe 200 EP
+        else if ValVersion = 'WFRP1' then
+          begin
+            XpNeed := IfThen(RadioButtonSuivant.checked or (not ChangementClasse), ConstXpChangerMetier, ConstXpChangerMetierIncomplet);
+            // niveau d'une carriere magique : le cout d'entree du livre remplace les 100 / 200 EP
+            if (NvMetierChoisi <> '') and (CoutEntreeMetier(NvMetierChoisi) > 0) then
+              XpNeed := CoutEntreeMetier(NvMetierChoisi);
+          end
+        else if RadioButtonSuivant.checked then
           XpNeed := ConstXpNouveauNiveau
         else if ((TabAvancement.Cells[2,1] = CouleurOk) and (TabAvancement.Cells[2,2] = CouleurOk) and (TabAvancement.Cells[2,3] = CouleurOk)) then
           XpNeed := ConstXpChangerMetier
         else
           XpNeed := ConstXpChangerMetierIncomplet;
-        if ChangementClasse then
+        if ChangementClasse and (not CarriereParSortie()) then
           XpNeed := XpNeed + ConstXpChangerClasse;
         EditNeedRealXp.MinValue  := 0;
         XpNeed:= CalculOptionXpDiv25(XpNeed);
@@ -2437,6 +3209,56 @@ Procedure TWinPersonnages.MarqueNiveauEnCours();
       TabNiveau.Cells[0, Ligne] := ConstSelectionne;
   end;
 
+// V1 et V2 : une carriere n'a pas de niveaux a monter, on passe d'une carriere a la suivante
+// (sortie listee, ou autre carriere de base) et on entre toujours au niveau 1.
+function TWinPersonnages.CarriereParSortie(): Boolean;
+  begin
+    Result := (ValVersion = 'WFRP2') or (ValVersion = 'WFRP1');
+  end;
+
+// V2 : la carriere a-t-elle deja ete suivie (historique des carrieres de la fiche) ?
+function TWinPersonnages.CarriereDejaSuivie(Code: String): Boolean;
+  var
+    Ind: Integer;
+  begin
+    Result := false;
+    for Ind := 1 to TabCarriere.RowCount - 1 do
+      if CompareRechercheValeur(TabCarriere.Cells[1, Ind], Code) then
+        Exit(true);
+  end;
+
+// V2 : le code est-il une sortie listee de la carriere en cours ou d'une carriere deja suivie ?
+function TWinPersonnages.EstSortieListee(Code: String): Boolean;
+  var
+    Ind: Integer;
+  begin
+    Result := EstSortieMetier(MetierEnCours, Code);
+    for Ind := 1 to TabCarriere.RowCount - 1 do
+      if EstSortieMetier(TabCarriere.Cells[1, Ind], Code) then
+        Result := true;
+  end;
+
+// V2 : l'ethnie du personnage est-elle indisponible ('-') pour cette carriere (carriere reservee
+// a une autre race, donnee des ethnies, interdire_carrieres_v2.py) ?
+function TWinPersonnages.CarriereInterditeRace(Code: String): Boolean;
+  var
+    PRaceMetier: StructureRaceMetier;
+  begin
+    Result := false;
+    for PRaceMetier in ListRaceMetier do
+      if CompareRechercheValeur(PRaceMetier.CodeRace, RaceEnCours) and
+         CompareRechercheValeur(PRaceMetier.CodeMetier, Code) and
+         (PRaceMetier.Chance = SeparateurChance) then
+        Exit(true);
+  end;
+
+// V2 : les quatre carrieres qu'on ne prend pas par la voie des 200 XP (Core, "Career Exit Options").
+function TWinPersonnages.CarriereReservee(Code: String): Boolean;
+  begin
+    Result := (Pos('ESTALIAN_DIESTRO', Code) > 0) or (Pos('KISLEVITE_KOSSAR', Code) > 0) or
+              (Pos('NORSE_BERSERKER', Code) > 0) or (Copy(Code, Length(Code) - 4, 5) = '_NOBLE');
+  end;
+
 // Une seule entree = pas de bifurcation. La combo reste alors cachee et le comportement
 // d'origine s'applique mot pour mot.
 //
@@ -2449,6 +3271,7 @@ Procedure TWinPersonnages.ListeNvMetier(Codes: TStringList);
     PMetier:    StructureMetier;
     NiveauVise: Integer;
     Base:       String;
+    PMetierSortie: StructureMetierSortie;
 
   // Le metier est-il ouvert a l'ethnie du personnage ? Un 'X' compte : il veut dire
   // "eligible hors tirage", ce qui est exactement le cas d'une carriere avancee. Seul
@@ -2472,6 +3295,19 @@ Procedure TWinPersonnages.ListeNvMetier(Codes: TStringList);
     Codes.Clear;
     if Trim(MetierEnCours) = '' then
       Exit;
+    // V2 : les sorties listees de la carriere en cours ET de chacune des carrieres deja suivies,
+    // sauf celles deja suivies (Core, "Career Exit Options").
+    if CarriereParSortie() then
+      begin
+        for PMetierSortie in ListMetierSortie do
+          if (CompareRechercheValeur(PMetierSortie.CodeMetier, MetierEnCours) or CarriereDejaSuivie(PMetierSortie.CodeMetier)) and
+             (not CarriereDejaSuivie(PMetierSortie.CodeSortie)) and
+             (not CompareRechercheValeur(PMetierSortie.CodeSortie, MetierEnCours)) and
+             (not CarriereInterditeRace(PMetierSortie.CodeSortie)) and
+             (Codes.IndexOf(PMetierSortie.CodeSortie) < 0) then
+            Codes.Add(PMetierSortie.CodeSortie);
+        Exit;
+      end;
     NiveauVise := StrToIntDef(MetierNvEnCours, 0) + 1;
     if NiveauVise < 2 then
       Exit;
@@ -2502,7 +3338,7 @@ Procedure TWinPersonnages.ChargeComboNvMetier();
     Codes := TStringList.Create;
     try
       ListeNvMetier(Codes);
-      if Codes.Count < 2 then
+      if Codes.Count < IfThen(CarriereParSortie(), 1, 2) then
         Exit;
       for Ind := 0 to Codes.Count - 1 do
         ComboBoxNvMetier.Items.Add(ChercheMetier(Codes[Ind]).Libelle);
@@ -2531,8 +3367,11 @@ procedure TWinPersonnages.ComboBoxNvMetierChange(Sender: TObject);
       if ComboBoxNvMetier.ItemIndex < Codes.Count then
         begin
           NvMetierChoisi := Codes[ComboBoxNvMetier.ItemIndex];
-          ChargerMetierEquipement(NvMetierChoisi, StrToIntDef(MetierNvEnCours, 0) + 1);
+          ChargerMetierEquipement(NvMetierChoisi, IfThen(CarriereParSortie(), 1, StrToIntDef(MetierNvEnCours, 0) + 1));
           TabEquipementAffiche();
+          // V1 : le cout d'entree depend de la carriere choisie
+          if ValVersion = 'WFRP1' then
+            CalculXpNecessaire(false);
         end;
     finally
       Codes.Free;
@@ -2624,7 +3463,39 @@ Procedure TWinPersonnages.SortAffiche();
     TabSort.Top    := TabAugmentationTalent.Top + TabAugmentationTalent.Height + 10;
   end;
 
+// V2 : une avance coute 100 XP, de +5 sur le profil principal ou +1 sur le secondaire ;
+// V4 : table de CalculExperience.
+function TWinPersonnages.CoutAvanceAttribut(Code: String; De, Vers: Integer): Integer;
+begin
+  if AvanceParSchema() then
+    Result := 100 * ((Vers - De) div PasAvance(Code))
+  else
+    Result := CalculExperience(ConstXmlCarac, De, Vers, '');
+end;
+
+// Jet de d10 (Blessures, Destin V2) enregistre a la creation pour cet attribut, 0 si absent.
+function JetV2Creation(Pers: StructurePersonnage; Code: String): Integer;
+var
+  PAtt: StructurePersonnageAttribut;
+begin
+  Result := 0;
+  for PAtt in Pers.CreationAttribut do
+    if CodeSansLivre(PAtt.CodeAttribut) = CodeSansLivre(Code) then
+      Exit(PAtt.Valeur);
+end;
+
+// Colonne de TabAttribut du Rang-ieme attribut du profil V1 (0 a 9 : colonnes 2 a 11, 10 a 13 : colonnes 15 a 18)
+function ColonneProfilV1(Rang: Integer): Integer;
+begin
+  if Rang <= 9 then
+    Result := ColAttCC + Rang
+  else
+    Result := ColAttSecDebut + Rang - 10;
+end;
+
 Procedure TWinPersonnages.AttributInit();
+  var
+    I: Integer;
   Begin
     tabAttribut.Cells[ColAttCC, LigAttCode]      := ConstCaracCC;
     tabAttribut.Cells[ColAttCT, LigAttCode]      := ConstCaracCT;
@@ -2639,6 +3510,18 @@ Procedure TWinPersonnages.AttributInit();
     tabAttribut.Cells[ColAttDestin, LigAttCode]  := ConstCaracDestin;
     tabAttribut.Cells[ColAttResil, LigAttCode]   := ConstCaracResil;
     tabAttribut.Cells[ColAttBlessure, LigAttCode]:= ConstCaracBlessure;
+    for I := 0 to 7 do
+      tabAttribut.Cells[ColAttSecDebut + I, LigAttCode] := CodesSecondaireV2[I];
+    // V1 : les 14 caracteristiques du livre dans l'ordre du profil (colonnes 2 a 11 puis 15 a 18),
+    // Destin en derniere colonne ; les colonnes 12 a 14 (Destin, Resilience, Blessures de V4) restent vides.
+    if ValVersion = 'WFRP1' then
+      begin
+        for I := ColAttCC to ColAttSecFin do
+          tabAttribut.Cells[I, LigAttCode] := '';
+        for I := 0 to High(CodesProfilV1) do
+          tabAttribut.Cells[ColonneProfilV1(I), LigAttCode] := CodesProfilV1[I];
+        tabAttribut.Cells[ColAttDestinV1, LigAttCode] := ConstCaracDestin;
+      end;
   end;
 
 procedure TWinPersonnages.InitialisationImages();
@@ -2700,7 +3583,7 @@ begin
   TabAttribut.Options          := TabAttribut.Options + [goEditing, goAlwaysShowEditor];
   TabAttribut.ColCount         := 1;
   TabAttribut.RowCount         := 17;
-  For I := 0 to 13 do
+  For I := 0 to ColAttSecFin - 1 do
     begin
       if TabAttribut.Columns.Count <= I then
         TabAttribut.Columns.Add;
@@ -2718,6 +3601,8 @@ begin
   TabAttribut.ColWidths[ColAttDestin]  := 0;
   TabAttribut.ColWidths[ColAttResil]   := 0;
   TabAttribut.ColWidths[ColAttBlessure]:= 0;
+  for I := ColAttSecDebut to ColAttSecFin do
+    TabAttribut.ColWidths[I]           := 0;
 
   TabAttribut.Cells[ColAttLib, LigAttRace]    := GetTexteLibelle('RULES-LAB_042');
   TabAttribut.Cells[ColAttLib, LigAttLance]   := GetTexteLibelle('RULES-LAB_022');
@@ -2824,6 +3709,13 @@ begin
   TabCompetence.ColWidths[ColCompBonus]   := 50;
   TabCompetence.Cells[ColCompTotal, 0]    := GetTexteLibelle('RULES-LAB_021');
   TabCompetence.ColWidths[ColCompTotal]   := 50;
+  // V1 : une competence est acquise ou non, sans caracteristique ni bonus chiffre
+  if ValVersion = 'WFRP1' then
+    begin
+      TabCompetence.ColWidths[ColCompCarac] := 0;
+      TabCompetence.ColWidths[ColCompAtt]   := 0;
+      TabCompetence.ColWidths[ColCompBonus] := 0;
+    end;
   TabCompetence.Cells[ColCompStat, 0]     := 'Stat';
   TabCompetence.ColWidths[ColCompStat]    := 0;
   TabCompetence.Cells[ColCompXp, 0]       := GetTexteLibelle('RULES-LAB_035');
@@ -2918,7 +3810,7 @@ begin
 
   // Mise en forme du tableau des augmentation de Compétences
   TabAugmentationCompetence.Options                      := TabAugmentationCompetence.Options + [goEditing, goAlwaysShowEditor];
-  TabAugmentationCompetence.ColCount                     := 14;
+  TabAugmentationCompetence.ColCount                     := 15;
   TabAugmentationCompetence.RowCount                     := 11;
   TabAugmentationCompetence.ColWidths[0]                 := 20;
   TabAugmentationCompetence.ColWidths[ColAugmCompCode]   := 0;
@@ -2945,6 +3837,8 @@ begin
   TabAugmentationCompetence.ColWidths[ColAugmCompReel]   := 50;
   TabAugmentationCompetence.Cells[ColAugmCompTri, 0]     := 'Tri';
   TabAugmentationCompetence.ColWidths[ColAugmCompTri]    := 0;
+  TabAugmentationCompetence.Cells[ColAugmCompMax, 0]     := 'Max';
+  TabAugmentationCompetence.ColWidths[ColAugmCompMax]    := 0;
 
   // Mise en forme du tableau des ajout des talents
   TabAugmentationTalent.Options                     := TabAugmentationTalent.Options + [goEditing, goAlwaysShowEditor];
@@ -3014,6 +3908,8 @@ begin
   TabMutation.Cells[2, 0]    := GetTexteLibelle('RULES-LAB_002');
   TabMutation.ColWidths[2]   := 300;
   TabMutation.ColWidths[3]   := 0;
+  TabMutation.PopupMenu         := TPopupMenu.Create(Self);
+  TabMutation.PopupMenu.OnPopup := @TabMutationPopup;
   MemoMutationEffet.ReadOnly := True;
 
   // Onglet commun Afflictions/Maladies (ajout du 27/09/2026, a la demande de Nono) - meme
@@ -3236,6 +4132,11 @@ procedure TWinPersonnages.FormCreate(Sender: TObject);
     I:         Integer;
     Fleche:    TButton;
   begin
+    // Guide du joueur : boutons en haut a droite (GuideAide.pas)
+    CreeBoutonGuide(Self, GetTexteLibelle('RULES-HELP_LAB_GUIDE', 'Help'), 'RULES-HELP_BTN_GUIDE',
+      ClientWidth - 300, 4, 140, @ButtonGuideClick);
+    CreeBoutonGuide(Self, GetTexteLibelle('RULES-HELP_LAB_QUESTION', '? Question'), 'RULES-HELP_BTN_QUESTION',
+      ClientWidth - 150, 4, 140, @ButtonQuestionClick);
     // +Objet : bouton copie de +Texte (objet propre au personnage, WinObjetPropre)
     ButtonObjet         := TBCButtonContour.Create(Self);
     ButtonObjet.Assign(ButtonTexte);
@@ -3243,6 +4144,20 @@ procedure TWinPersonnages.FormCreate(Sender: TObject);
     ButtonObjet.Anchors := [];
     ButtonObjet.SetBounds(ButtonTexte.Left, ButtonTexte.Top, ButtonTexte.Width, ButtonTexte.Height);
     ButtonObjet.OnClick := @ButtonObjetClick;
+    // Apprendre un sort (V1) : meme modele, categorie Sorts
+    ButtonApprendreSort         := TBCButtonContour.Create(Self);
+    ButtonApprendreSort.Assign(ButtonTexte);
+    ButtonApprendreSort.Parent  := ButtonTexte.Parent;
+    ButtonApprendreSort.Anchors := [];
+    ButtonApprendreSort.SetBounds(ButtonTexte.Left, ButtonTexte.Top, ButtonTexte.Width, ButtonTexte.Height);
+    ButtonApprendreSort.OnClick := @ButtonApprendreSortClick;
+    // +Familier : meme modele, categorie Montures
+    ButtonFamilier         := TBCButtonContour.Create(Self);
+    ButtonFamilier.Assign(ButtonTexte);
+    ButtonFamilier.Parent  := ButtonTexte.Parent;
+    ButtonFamilier.Anchors := [];
+    ButtonFamilier.SetBounds(ButtonTexte.Left, ButtonTexte.Top, ButtonTexte.Width, ButtonTexte.Height);
+    ButtonFamilier.OnClick := @ButtonFamilierClick;
     // +Specialisation : un bouton par page d'augmentation, visible seulement sur une ligne dont le
     // choix de specialisation n'est pas encore fait (MajBoutonsSpecialisation)
     ButtonSpecCompetence         := TBCButtonContour.Create(Self);
@@ -3285,6 +4200,11 @@ procedure TWinPersonnages.FormCreate(Sender: TObject);
     // Onglet Monnaie : les trois champs CO/PA/SB (crees par PlaceChampsMonnaie) y sont poses
     PageExperience.Pages.Add(GetTexteLibelle('RULES-LAB_694'));
     PageMonnaie := TPage(PageExperience.Page[PageExperience.PageCount - 1]);
+    // Onglets V1 : Alignement / Folie, puis Historique (Background de la feuille)
+    PageExperience.Pages.Add(GetTexteLibelle('RULES-LAB_1000'));
+    PageAlignementV1 := TPage(PageExperience.Page[PageExperience.PageCount - 1]);
+    PageExperience.Pages.Add(GetTexteLibelle('RULES-LAB_1001'));
+    PageHistoriqueV1 := TPage(PageExperience.Page[PageExperience.PageCount - 1]);
     // Onglet PDF : derniere page, apres Reserves. Les options d'impression y sont regroupees ;
     // la case PDF Feldo 2p y est deplacee (elle etait a cote du bouton PDF).
     PageExperience.Pages.Add(GetTexteLibelle('RULES-LAB_691'));
@@ -3296,6 +4216,16 @@ procedure TWinPersonnages.FormCreate(Sender: TObject);
     LabelPdfFeldo2p.Anchors    := [akTop, akLeft];
     LabelPdfFeldo2p.SetBounds(CheckBoxPdfFeldo2p.Left + CheckBoxPdfFeldo2p.Width + 4, 16, LabelPdfFeldo2p.Width, LabelPdfFeldo2p.Height);
     // Asterisques : deux options, cacher le tout ou seulement les montants (voir pdfpersonnage.pas)
+    CheckBoxMauvais                := TCheckBox.Create(Self);
+    CheckBoxMauvais.Parent         := TabSheetMutation;
+    CheckBoxMauvais.SetBounds(21, 330, CheckBoxPdfFeldo2p.Width, CheckBoxPdfFeldo2p.Height);
+    CheckBoxMauvais.OnClick        := @CheckBoxMauvaisClick;
+    CheckBoxMauvais.Visible        := False;
+    LabMauvais                     := TLabelContour.Create(Self);
+    LabMauvais.Parent              := TabSheetMutation;
+    LabMauvais.Font.Color          := clWhite;
+    LabMauvais.SetBounds(CheckBoxMauvais.Left + CheckBoxMauvais.Width + 4, 330, 380, 20);
+    LabMauvais.Visible             := False;
     CheckBoxSansAsterisque         := TCheckBox.Create(Self);
     CheckBoxSansAsterisque.Parent  := PagePdf;
     CheckBoxSansAsterisque.SetBounds(16, 48, CheckBoxPdfFeldo2p.Width, CheckBoxPdfFeldo2p.Height);
@@ -3335,6 +4265,21 @@ procedure TWinPersonnages.FormCreate(Sender: TObject);
     LabStylePdf.Parent             := PagePdf;
     LabStylePdf.Font.Color         := clWhite;
     LabStylePdf.SetBounds(CheckBoxStylePdf.Left + CheckBoxStylePdf.Width + 4, 112, 400, 20);
+    // Option Momentum, page Xp sous l'option XP/25 (talents WFRP5 a la place des talents WFRP4)
+    CheckBoxMomentum               := TCheckBox.Create(Self);
+    CheckBoxMomentum.Parent        := CheckBoxXpDiv25.Parent;
+    CheckBoxMomentum.SetBounds(8, 96, CheckBoxXpDiv25.Width, CheckBoxXpDiv25.Height);
+    CheckBoxMomentum.OnChange      := @CheckBoxMomentumChange;
+    CheckBoxMomentum.HelpKeyword   := 'RULES-HELP_MOMENTUM';   // aide F1 (AideContextuelle.pas)
+    CheckBoxXpDiv25.HelpKeyword    := 'RULES-HELP_XP_DIV25';
+    EditTotalXp.HelpKeyword        := 'RULES-HELP_XP_TOTAL';
+    EditTotalXp25.HelpKeyword      := 'RULES-HELP_XP_TOTAL25';
+    LabMomentum                    := TEdit.Create(Self);
+    LabMomentum.Parent             := CheckBoxXpDiv25.Parent;
+    LabMomentum.SetBounds(32, 88, 360, LabelXpDiv25.Height);
+    LabMomentum.Enabled            := False;
+    LabMomentum.Alignment          := taCenter;
+    LabMomentum.Text               := GetTexteLibelle('RULES-LAB_987');
     // Grilles sans edition (livres, MJ XP, mutations, pathologies, ambitions, groupe) : ligne entiere
     // selectionnee, meme couleur que les fenetres de choix, visible meme sans le focus
     SelectionGrilleWarhammer(TabLivre);
@@ -3439,6 +4384,7 @@ Procedure TWinPersonnages.AfficheImageRace();
     CheminImage1:   String;
     CheminImage2:   String;
     IndTabAttribut: Integer;
+    IndCol:         Integer;
     IndSauve:       Integer;
     PRaceAttribut:  StructureRaceAttribut;
   begin
@@ -3473,6 +4419,29 @@ Procedure TWinPersonnages.AfficheImageRace();
 
     // ATTRIBUTS
     IndTabAttribut := 1;
+    // V2 : colonne retrouvee par CODE (la liste de la race n'a ni I ni Dex), seules les valeurs
+    // numeriques ou "formule+base" comptent ; W et FP (tables de d10) viennent du jet.
+    // V1 : la valeur enregistree a la creation est deja le total du jet et de la base de la race,
+    // la ligne Race reste vide.
+    if ValVersion = 'WFRP1' then
+      begin
+      end
+    else if ValVersion = 'WFRP2' then
+      begin
+        for PRaceAttribut in ListRaceAttribut do
+          if CompareRechercheValeur(PRaceAttribut.CodeRace, RaceEnCours) then
+            for IndCol := ColAttCC to ColAttSecFin do
+              if CodeSansLivre(TabAttribut.Cells[IndCol, LigAttCode]) = CodeSansLivre(PRaceAttribut.CodeAttribut) then
+                begin
+                  if CountOccurrences(PRaceAttribut.CalculRace,'+') > 0 then
+                    TabAttribut.Cells[IndCol, LigAttRace] := ExtractStringAfter(PRaceAttribut.CalculRace,'+')
+                  else if StrToIntDef(PRaceAttribut.CalculRace, -1) >= 0 then
+                    TabAttribut.Cells[IndCol, LigAttRace] := PRaceAttribut.CalculRace
+                  else
+                    TabAttribut.Cells[IndCol, LigAttRace] := '';
+                end;
+      end
+    else
     for PRaceAttribut in ListRaceAttribut do
       if CompareRechercheValeur(PRaceAttribut.CodeRace, RaceEnCours) and (IndTabAttribut < ColAttBlessure) then
         begin
@@ -3509,10 +4478,15 @@ Procedure TWinPersonnages.AfficheImageRace();
     TabSheetEvolution.Caption                  := GetTexteLibelle('RULES-LAB_105');
     TabSheetHistorique.Caption                 := GetTexteLibelle('RULES-LAB_036');
     TabSheetCorruption.Caption                 := GetTexteLibelle('RULES-LAB_156');
-    TabSheetMutation.Caption                   := GetTexteLibelle('RULES-LAB_172');
+    // V1 : l'onglet Mutation porte les handicaps des magiciens
+    if ValVersion = 'WFRP1' then
+      TabSheetMutation.Caption                 := GetTexteLibelle('RULES-LAB_842')
+    else
+      TabSheetMutation.Caption                 := GetTexteLibelle('RULES-LAB_172');
     TabSheetPathologie.Caption                 := GetTexteLibelle('RULES-LAB_296')+'/'+GetTexteLibelle('RULES-LAB_281');
     ButtonCorruptionAjoute.Caption             := '+'+GetTexteLibelle('RULES-LAB_164');
     ButtonCorruptionSupprime.Caption           := '-'+GetTexteLibelle('RULES-LAB_165');
+    ButtonCorruptionMutation.Caption           := GetTexteLibelle('RULES-LAB_1003');
     ButtonRaceSelectionner.Caption             := GetTexteLibelle('RULES-LAB_004');
     ButtonHistorique.Caption                   := GetTexteLibelle('RULES-LAB_107');
     ButtonArme.Caption                         := '+'+GetTexteLibelle('RULES-LAB_063');
@@ -3521,14 +4495,63 @@ Procedure TWinPersonnages.AfficheImageRace();
     ButtonEquipement.Caption                   := '+'+GetTexteLibelle('RULES-LAB_202');
     ButtonTexte.Caption                        := '+'+GetTexteLibelle('RULES-LAB_644');
     ButtonObjet.Caption                        := '+'+GetTexteLibelle('RULES-LAB_648');
+    ButtonFamilier.Caption                     := '+'+GetTexteLibelle('RULES-LAB_797');
+    ButtonApprendreSort.Caption                := GetTexteLibelle('RULES-LAB_845');
     ButtonSpecCompetence.Caption               := '+'+GetTexteLibelle('RULES-LAB_689');
     ButtonSpecTalent.Caption                   := '+'+GetTexteLibelle('RULES-LAB_689');
     LabTabNiveau.Caption                       := GetTexteLibelle('RULES-LAB_019');
     RadioButtonRAS.Caption                     := GetTexteLibelle('RULES-LAB_113');
-    RadioButtonSuivant.Caption                 := GetTexteLibelle('RULES-LAB_114');
-    RadioButtonChanger.Caption                 := GetTexteLibelle('RULES-LAB_115');
+    if CarriereParSortie() then
+      begin
+        RadioButtonSuivant.Caption               := GetTexteLibelle('RULES-LAB_755');
+        RadioButtonChanger.Caption               := GetTexteLibelle('RULES-LAB_756');
+      end
+    else
+      begin
+        RadioButtonSuivant.Caption               := GetTexteLibelle('RULES-LAB_114');
+        RadioButtonChanger.Caption               := GetTexteLibelle('RULES-LAB_115');
+      end;
     ButtonFabrication.Caption                  := '+'+GetTexteLibelle('RULES-LAB_125');
     ButtonDelete.Caption                       := '-'+GetTexteLibelle('RULES-LAB_126');
+    // Aide F1 des boutons (AideContextuelle.pas ; textes RULES-HELP_BTN_xxx)
+    ButtonAugmentation.HelpKeyword             := 'RULES-HELP_BTN_MAJ';
+    ButtonSauvegarde.HelpKeyword               := 'RULES-HELP_BTN_SAUVE';
+    ButtonPdf.HelpKeyword                      := 'RULES-HELP_BTN_PDF';
+    ButtonHistorique.HelpKeyword               := 'RULES-HELP_BTN_HISTORIQUE';
+    ButtonPhysique.HelpKeyword                 := 'RULES-HELP_BTN_PHYSIQUE';
+    ButtonArme.HelpKeyword                     := 'RULES-HELP_BTN_ARME';
+    ButtonArmure.HelpKeyword                   := 'RULES-HELP_BTN_ARMURE';
+    ButtonSort.HelpKeyword                     := 'RULES-HELP_BTN_SORT';
+    ButtonEquipement.HelpKeyword               := 'RULES-HELP_BTN_EQUIPEMENT';
+    ButtonTexte.HelpKeyword                    := 'RULES-HELP_BTN_TEXTE';
+    ButtonObjet.HelpKeyword                    := 'RULES-HELP_BTN_OBJET';
+    ButtonFamilier.HelpKeyword                 := 'RULES-HELP_BTN_FAMILIER';
+    ButtonApprendreSort.HelpKeyword            := 'RULES-HELP_BTN_APPRENDRE_SORT';
+    ButtonSpecCompetence.HelpKeyword           := 'RULES-HELP_BTN_SPEC';
+    ButtonSpecTalent.HelpKeyword               := 'RULES-HELP_BTN_SPEC';
+    ButtonFabrication.HelpKeyword              := 'RULES-HELP_BTN_QUALITE';
+    ButtonDelete.HelpKeyword                   := 'RULES-HELP_BTN_SUPPRIME';
+    ButtonRaceSelectionner.HelpKeyword         := 'RULES-HELP_BTN_CARRIERE';
+    ButtonCorruptionAjoute.HelpKeyword         := 'RULES-HELP_BTN_CORRUPTION_AJOUTE';
+    ButtonCorruptionSupprime.HelpKeyword       := 'RULES-HELP_BTN_CORRUPTION_SUPPRIME';
+    ButtonCorruptionMutation.HelpKeyword       := 'RULES-HELP_BTN_MUTATION';
+    ButtonPathologieAjouteAffliction.HelpKeyword := 'RULES-HELP_BTN_AFFLICTION';
+    ButtonPathologieAjouteDisease.HelpKeyword  := 'RULES-HELP_BTN_MALADIE';
+    // Aide F1 des cases a cocher et des choix de carriere
+    CheckBoxCalcul.HelpKeyword                 := 'RULES-HELP_CASE_CALCUL';
+    CheckBoxXp.HelpKeyword                     := 'RULES-HELP_CASE_XP';
+    CheckBoxQuickArmor.HelpKeyword             := 'RULES-HELP_CASE_ARMURE_SIMPLE';
+    CheckBoxMunition.HelpKeyword               := 'RULES-HELP_CASE_MUNITION';
+    CheckBoxMauvais.HelpKeyword                := 'RULES-HELP_CASE_MAUVAIS';
+    CheckBoxPdfFeldo2p.HelpKeyword             := 'RULES-HELP_CASE_PDF_2P';
+    CheckBoxSansAsterisque.HelpKeyword         := 'RULES-HELP_CASE_SANS_ASTERISQUE';
+    CheckBoxSansMontant.HelpKeyword            := 'RULES-HELP_CASE_SANS_MONTANT';
+    CheckBoxStylePdf.HelpKeyword               := 'RULES-HELP_CASE_STYLE_PDF';
+    CheckBoxCouleurPdf.HelpKeyword             := 'RULES-HELP_CASE_COULEUR_PDF';
+    CheckBoxEconomiePdf.HelpKeyword            := 'RULES-HELP_CASE_ECONOMIE_PDF';
+    RadioButtonRAS.HelpKeyword                 := 'RULES-HELP_RADIO_RAS';
+    RadioButtonSuivant.HelpKeyword             := 'RULES-HELP_RADIO_SUIVANT';
+    RadioButtonChanger.HelpKeyword             := 'RULES-HELP_RADIO_CHANGER';
     LabPorteAide.Caption                       := GetTexteLibelle('RULES-LAB_259');
     LabelNeedTheoXp.caption                    := GetTexteLibelle('RULES-LAB_131');
     LabelNeedRealXp.Caption                    := GetTexteLibelle('RULES-LAB_132');
@@ -3540,25 +4563,39 @@ Procedure TWinPersonnages.AfficheImageRace();
     // page en changeant de langue.
     IndSauve := ListBoxExperience.ItemIndex;
     ListBoxExperience.Items.Clear;
-    ListBoxExperience.Items.Add(TabSheetAttribut.Caption);
-    ListBoxExperience.Items.Add(TabSheetCompetence.Caption);
-    ListBoxExperience.Items.Add(TabSheetTalent.Caption);
-    ListBoxExperience.Items.Add(TabSheetXP.Caption);
-    ListBoxExperience.Items.Add(TabSheetEvolution.Caption);
-    ListBoxExperience.Items.Add(TabSheetHistorique.Caption);
-    ListBoxExperience.Items.Add(TabSheetLivre.Caption);
-    ListBoxExperience.Items.Add(TabSheetMjCost.Caption);
-    ListBoxExperience.Items.Add(TabSheetCorruption.Caption);
-    ListBoxExperience.Items.Add(TabSheetMutation.Caption);
-    ListBoxExperience.Items.Add(TabSheetPathologie.Caption);
-    ListBoxExperience.Items.Add(TabSheetAmbition.Caption);
-    ListBoxExperience.Items.Add(TabSheetGroupe.Caption);
+    SetLength(PagesDeLaListe, 0);
+    AjouteItemPage(TabSheetAttribut);
+    AjouteItemPage(TabSheetCompetence);
+    // V1 : pas de talents, ni de corruption ni d'ambitions (regles de la V4) : ces entrees disparaissent de la liste
+    if ValVersion <> 'WFRP1' then
+      AjouteItemPage(TabSheetTalent);
+    AjouteItemPage(TabSheetXP);
+    AjouteItemPage(TabSheetEvolution);
+    AjouteItemPage(TabSheetHistorique);
+    AjouteItemPage(TabSheetLivre);
+    AjouteItemPage(TabSheetMjCost);
+    if ValVersion <> 'WFRP1' then
+      AjouteItemPage(TabSheetCorruption);
+    AjouteItemPage(TabSheetMutation);
+    AjouteItemPage(TabSheetPathologie);
+    if ValVersion <> 'WFRP1' then
+      AjouteItemPage(TabSheetAmbition);
+    AjouteItemPage(TabSheetGroupe);
     PageReserve.Caption                        := GetTexteLibelle('RULES-LAB_654');
-    ListBoxExperience.Items.Add(PageReserve.Caption);
+    if ValVersion <> 'WFRP1' then   // V1 : registres de Destin / Resilience / Resolution de la V4, sans objet
+      AjouteItemPage(PageReserve);
     PageMonnaie.Caption                        := GetTexteLibelle('RULES-LAB_694');
-    ListBoxExperience.Items.Add(PageMonnaie.Caption);
+    AjouteItemPage(PageMonnaie);
+    PageAlignementV1.Caption                   := GetTexteLibelle('RULES-LAB_1000');
+    PageHistoriqueV1.Caption                   := GetTexteLibelle('RULES-LAB_1001');
+    if ValVersion = 'WFRP1' then
+      begin
+        AjouteItemPage(PageAlignementV1);
+        AjouteItemPage(PageHistoriqueV1);
+      end;
     PagePdf.Caption                            := GetTexteLibelle('RULES-LAB_691');
-    ListBoxExperience.Items.Add(PagePdf.Caption);
+    if ValVersion <> 'WFRP1' then   // V1 : les options d'impression de cet onglet servent aux fiches V4 / V5
+      AjouteItemPage(PagePdf);
     LabSansAsterisque.Caption                  := GetTexteLibelle('RULES-LAB_692');
     LabSansMontant.Caption                     := GetTexteLibelle('RULES-LAB_693');
     LabStylePdf.Caption                        := GetTexteLibelle('RULES-LAB_695');
@@ -3567,10 +4604,10 @@ Procedure TWinPersonnages.AfficheImageRace();
     ListBoxExperience.ItemIndex                := IndSauve;
     LabQuickArmor.Caption                      := GetTexteLibelle('RULES-LAB_149');
     LabMunition.Caption                        := GetTexteLibelle('RULES-LAB_643');
-    LabAge.Caption                             := GetTexteLibelle('RULES-PDF_MAIN4_AGE');
-    LabHeight.Caption                          := GetTexteLibelle('RULES-PDF_MAIN4_HEIGHT');
-    LabHairColors.Caption                      := GetTexteLibelle('RULES-PDF_MAIN4_HAIR');
-    LabEyeColors.Caption                       := GetTexteLibelle('RULES-PDF_MAIN4_EYES');
+    LabAge.Caption                             := GetTexteLibelle('RULES-LAB_751');
+    LabHeight.Caption                          := GetTexteLibelle('RULES-LAB_752');
+    LabHairColors.Caption                      := GetTexteLibelle('RULES-LAB_753');
+    LabEyeColors.Caption                       := GetTexteLibelle('RULES-LAB_754');
     ButtonPhysique.Caption                     := GetTexteLibelle('RULES-LAB_266');
 
     ButtonHistorique.BringToFront;
@@ -3853,11 +4890,13 @@ procedure TWinPersonnages.CalculTotaux();
     Personnage.AugmentationAttribut := [];
     // Les indices sont des COLONNES (une par caracteristique) : ColCount, pas RowCount. Les deux
     // valaient 15 jusqu'a l'ajout de LigAttSigne, d'ou un decalage qui ne se voyait pas.
+    // La cellule Augmented = avances achetees + avance gratuite de creation V2 : seule la
+    // difference va dans AugmentationAttribut (la gratuite reste dans sa liste).
     For IndAugm := 1 to TabAttribut.ColCount - 1 do
-      if StrToIntDef(TabAttribut.Cells[IndAugm, LigAttBonus],0) > 0 then
+      if StrToIntDef(TabAttribut.Cells[IndAugm, LigAttBonus],0) - PersonnageAvanceGratuite(Personnage, TabAttribut.Cells[IndAugm, LigAttCode]) > 0 then
         begin
           PersonnageAttribut.CodeAttribut  := TabAttribut.Cells[IndAugm, LigAttCode];
-          PersonnageAttribut.Valeur        := StrToIntDef(TabAttribut.Cells[IndAugm, LigAttBonus],0);
+          PersonnageAttribut.Valeur        := StrToIntDef(TabAttribut.Cells[IndAugm, LigAttBonus],0) - PersonnageAvanceGratuite(Personnage, PersonnageAttribut.CodeAttribut);
           Personnage.AugmentationAttribut  += [PersonnageAttribut];
         end;
 
@@ -3868,7 +4907,9 @@ procedure TWinPersonnages.CalculTotaux();
     // et meme forme que le resync deja fait avant sauvegarde (winpersonnage.pas ~l.4892).
     Personnage.AugmentationCompetence := [];
     For IndAugm := 1 to TabCompetence.Rowcount - 1 do
-      if StrToIntDef(TabCompetence.Cells[ColCompWork, IndAugm],0) > 0 then
+      // V2 : une competence achetee au niveau 0 (acquise, sans bonus) a la cellule "0", pas vide
+      if (StrToIntDef(TabCompetence.Cells[ColCompWork, IndAugm],0) > 0) or
+         ((ValVersion = 'WFRP2') and (TabCompetence.Cells[ColCompWork, IndAugm] <> '')) then
         begin
           PersonnageCompetence.CodeCompetence := TabCompetence.Cells[ColCompCode, IndAugm];
           PersonnageCompetence.Valeur         := StrToIntDef(TabCompetence.Cells[ColCompWork, IndAugm],0);
@@ -3898,7 +4939,7 @@ procedure TWinPersonnages.CalculTotaux();
           PersonnageTalent.Valeur        := StrToIntDef(TabTalent.Cells[ColTalNbAugm, IndAugm],0);
           PersonnageTalent.Asterisque    := 0;
           for IndOld := 0 to high(OldAugmentationTalent) do
-            if CompareRechercheValeur(OldAugmentationTalent[IndOld].CodeTalent, PersonnageTalent.CodeTalent) then
+            if MemeTalent(OldAugmentationTalent[IndOld].CodeTalent, PersonnageTalent.CodeTalent) then
               begin
                 PersonnageTalent.Asterisque := OldAugmentationTalent[IndOld].Asterisque;
                 break;
@@ -3922,7 +4963,8 @@ procedure TWinPersonnages.CalculTotaux();
         PersonnageEquipement.NomLibre       := TabEquipement.Cells[13, IndAugm];
         PersonnageEquipement.EncLibre       := StrToIntDef(TabEquipement.Cells[14, IndAugm], 0);
         PersonnageEquipement.PortePar       := TabEquipement.Cells[11, IndAugm];
-        If TalentSort(TabEquipement.Cells[2, IndAugm]).CodeTalent <> ''
+        If (TalentSort(TabEquipement.Cells[2, IndAugm]).CodeTalent <> '')
+           or (Pos(PrefixeTypeSortV1, TabEquipement.Cells[3, IndAugm]) = 1)
            then
           begin
             PersonnageEquipement.TypeEquipement    := TypeEquipSp;
@@ -3976,8 +5018,25 @@ procedure TWinPersonnages.CalculTotaux();
         // detail affiche a l'ecran, desormais complet (Career/Objet inclus ci-dessus) donc
         // Initial + Augmented = Current.
         DonneeAttribut := PdfPersonnageAttribut(Personnage, TabAttribut.Cells[IndCol, LigAttCode], Bonus);
+        // V2 : Blessures et Destin, PdfPersonnageAttribut convertit lui-meme le jet de d10 par la
+        // table de la race (plus de correction ici : elle comptait la valeur de la table deux fois).
         TabAttribut.Cells[IndCol, LigAttTotal]:= IntToStr(DonneeAttribut.Total);
       end;
+    // V2 : bonus de Force et d'Endurance = dizaine du total (pas de ligne de creation)
+    if ValVersion = 'WFRP2' then
+      for IndCol := ColAttSecDebut to ColAttSecFin do
+        begin
+          if CodeSansLivre(TabAttribut.Cells[IndCol, LigAttCode]) = 'ATTR_SB' then
+            begin
+              TabAttribut.Cells[IndCol, LigAttBase]  := IntToStr(StrToIntDef(TabAttribut.Cells[ColAttF, LigAttBase], 0) div 10);
+              TabAttribut.Cells[IndCol, LigAttTotal] := IntToStr(StrToIntDef(TabAttribut.Cells[ColAttF, LigAttTotal], 0) div 10);
+            end
+          else if CodeSansLivre(TabAttribut.Cells[IndCol, LigAttCode]) = 'ATTR_TB' then
+            begin
+              TabAttribut.Cells[IndCol, LigAttBase]  := IntToStr(StrToIntDef(TabAttribut.Cells[ColAttE, LigAttBase], 0) div 10);
+              TabAttribut.Cells[IndCol, LigAttTotal] := IntToStr(StrToIntDef(TabAttribut.Cells[ColAttE, LigAttTotal], 0) div 10);
+            end;
+        end;
 
     // Compétences
     for IndLig := 1 to TabCompetence.RowCount-1 do
@@ -3986,7 +5045,8 @@ procedure TWinPersonnages.CalculTotaux();
           begin
             TabAtt := TabAttribut.Cells[IndCol, LigAttcode];
             TabComp:= TabCompetence.Cells[ColCompStat, IndLig];
-            if CompareRechercheValeur(TabComp, TabAtt) then
+            // une competence V1 n'a pas de caracteristique : un code vide ne designe aucune colonne
+            if (TabComp <> '') and CompareRechercheValeur(TabComp, TabAtt) then
               begin
                 TabCompetence.Cells[ColCompAtt, IndLig] := TabAttribut.Cells[IndCol, LigAttTotal];
                 break
@@ -4004,6 +5064,14 @@ procedure TWinPersonnages.CalculTotaux();
         // coût Xp / combien de compétences ont été augmentées) - un effet de mutation n'est
         // pas un avancement acheté, il ne doit compter que dans le Total. Signalé par Nono le
         // 17/08/2026 (même souci repéré côté PDF, corrigé en même temps dans pdfpersonnage.pas).
+        // V2 : 35/40 portent des prises (1 = acquise = 0 %, 2 = +10 %), la plus grande des deux
+        if ValVersion = 'WFRP2' then
+          TabCompetence.Cells[ColCompBonus, IndLig] := IntToStr(
+                                                              10 * Max(0, Max(StrToIntDef(TabCompetence.Cells[ColComp35, IndLig],0),
+                                                                              StrToIntDef(TabCompetence.Cells[ColComp40, IndLig],0)) - 1) +
+                                                              StrToIntDef(TabCompetence.Cells[ColCompWork, IndLig],0) +
+                                                              StrToIntDef(TabCompetence.Cells[ColCompAppartenance, IndLig],0))
+        else
         TabCompetence.Cells[ColCompBonus, IndLig] := IntToStr(StrToIntDef(TabCompetence.Cells[ColComp35, IndLig],0) +
                                                               StrToIntDef(TabCompetence.Cells[ColComp40, IndLig],0) +
                                                               StrToIntDef(TabCompetence.Cells[ColCompWork, IndLig],0) +
@@ -4066,17 +5134,25 @@ var
   Nouveau: Integer = 0;
   aRow:    Integer = 0;
   aCol:    Integer = 0;
+  Pas:     Integer;
   Value:   String;
 begin
   TabAugmentationAttribut.MouseToCell(X, Y, ACol, ARow);
   if (aRow > 0) and ((aCol = colAugmAttPlus5) or (aCol = ColAugmAttMoins5)) then
     begin
       Nouveau := StrToIntDef(TabAugmentationAttribut.Cells[ColAugmAttNouveau, ARow],0);
+       Pas := 5;
+       if AvanceParSchema() then
+         Pas := PasAvance(TabAugmentationAttribut.Cells[1, ARow]);
        if aCol = colAugmAttPlus5 then
-         Nouveau += 5
+         begin
+           // V1 et V2 : plafond du schema d'avances de la carriere
+           if (not AvanceParSchema()) or (Nouveau + Pas <= PlafondAvanceMetier(MetierEnCours, TabAugmentationAttribut.Cells[1, ARow])) then
+             Nouveau += Pas;
+         end
        else if aCol = colAugmAttMoins5 then
-         if (Nouveau - 5) >= StrToIntDef(TabAugmentationAttribut.Cells[ColAugmAttActuel, ARow],0) then
-           Nouveau -= 5;
+         if (Nouveau - Pas) >= StrToIntDef(TabAugmentationAttribut.Cells[ColAugmAttActuel, ARow],0) then
+           Nouveau -= Pas;
        Value := IntToStr(Nouveau);
        TabAugmentationAttributCalcul(ARow, Value);
        if Value = '0' then
@@ -4125,20 +5201,43 @@ procedure TWinPersonnages.TabAugmentationCompetenceMouseDown(Sender: TObject;
     Nouveau: Integer = 0;
     aRow:    Integer = 0;
     aCol:    Integer = 0;
+    Pas:     Integer;
     Value:   String;
   begin
     TabAugmentationCompetence.MouseToCell(X, Y, ACol, ARow);
+    // V2 : un choix "A / B" non resolu ne s'augmente pas, ni une competence hors carriere
+    if (ValVersion = 'WFRP2') and (aRow > 0) and
+       ((TabAugmentationCompetence.Cells[ColAugmCompSpe, ARow] = GetTexteLibelle(ConstLabSelSpe)) or
+        ((TabAugmentationCompetence.Cells[2, ARow] = CouleurKo) and (Copy(TabAugmentationCompetence.Cells[ColAugmCompTri, ARow], 1, 1) <> '2'))) then
+      Exit;
+    // V1 : un clic sur + ou - coche ou decoche l'achat (une competence deja acquise ne bouge pas)
+    if (ValVersion = 'WFRP1') and (aRow > 0) and ((aCol = colAugmCompPlus5) or (aCol = ColAugmCompMoins5)) then
+      begin
+        if TabAugmentationCompetence.Cells[ColAugmCompActuel, ARow] = '' then
+          begin
+            if aCol = colAugmCompPlus5 then Value := '1' else Value := '';
+            TabAugmentationCompetenceCalcul(ARow, Value);
+            TabAugmentationCompetence.Cells[ColAugmCompNouveau, ARow] := Value;
+            CalculTableExperience();
+          end;
+        Exit;
+      end;
     if (aRow > 0) and ((aCol = colAugmCompPlus5) or (aCol = ColAugmCompMoins5)) then
       begin
-        Nouveau := StrToIntDef(TabAugmentationCompetence.Cells[ColAugmCompNouveau, ARow],0);
+        if (ValVersion = 'WFRP2') and (TabAugmentationCompetence.Cells[ColAugmCompNouveau, ARow] = '') then
+          Nouveau := -10
+        else
+          Nouveau := StrToIntDef(TabAugmentationCompetence.Cells[ColAugmCompNouveau, ARow],0);
+         if ValVersion = 'WFRP2' then Pas := 10 else Pas := 5;
          if aCol = colAugmCompPlus5 then
-           Nouveau += 5
+           Nouveau += Pas
          else if aCol = colAugmCompMoins5 then
-           if (Nouveau - 5) >= StrToIntDef(TabAugmentationCompetence.Cells[ColAugmCompActuel, ARow],0) then
-             Nouveau -= 5;
+           if (Nouveau - Pas) >= IfThen((ValVersion = 'WFRP2') and (TabAugmentationCompetence.Cells[ColAugmCompActuel, ARow] = ''),
+                                        -10, StrToIntDef(TabAugmentationCompetence.Cells[ColAugmCompActuel, ARow],0)) then
+             Nouveau -= Pas;
          Value := IntToStr(Nouveau);
          TabAugmentationCompetenceCalcul(ARow, Value);
-         if Value = '0' then
+         if (Value = '0') and (ValVersion <> 'WFRP2') then
            Value := '';
          TabAugmentationCompetence.Cells[ColAugmCompNouveau, ARow] := Value;
          CalculTableExperience();
@@ -4151,6 +5250,10 @@ procedure TWinPersonnages.TabAugmentationCompetenceDblClick(Sender: TObject);
     PCompetence: StructureCompetence;
     Value:       String;
     Ind2:        Integer;
+    Branches:    TStringList;
+    PBranche:    StructureCompetence;
+    LigBranche:  Integer;
+    Ind3:        Integer;
   begin
     if (TabAugmentationCompetence.Col = ColAugmCompSpe) and (TabAugmentationCompetence.Cells[ColAugmCompSpe, TabAugmentationCompetence.Row] = GetTexteLibelle(ConstLabSelSpe))  then
       begin
@@ -4191,12 +5294,59 @@ procedure TWinPersonnages.TabAugmentationCompetenceDblClick(Sender: TObject);
             TabAugmentationCompetence.Cells[ColAugmCompCode, TabAugmentationCompetence.Row] := SelectWinCompetence;
 
             // C - propager au tableau métier (persistance)
-            for Ind2 := 0 to High(Personnage.MetierCompetence) do
-              if Personnage.MetierCompetence[Ind2].CodeCompetence = ChoixWinCompetence then
-                begin
-                  Personnage.MetierCompetence[Ind2].CodeCompetence := SelectWinCompetence;
-                  break;
-                end;
+            // V2 : non, la carriere garde son choix "A / B" brut (resolu a l'affichage), sinon
+            // les autres branches disparaissent a la sauvegarde.
+            if ValVersion <> 'WFRP2' then
+              for Ind2 := 0 to High(Personnage.MetierCompetence) do
+                if Personnage.MetierCompetence[Ind2].CodeCompetence = ChoixWinCompetence then
+                  begin
+                    Personnage.MetierCompetence[Ind2].CodeCompetence := SelectWinCompetence;
+                    break;
+                  end;
+
+            // V2 : la competence choisie existait deja en ligne hors carriere (ex. Gossip de la race) : on retire le doublon
+            if ValVersion = 'WFRP2' then
+              for Ind3 := TabAugmentationCompetence.RowCount - 1 downto 1 do
+                if (Ind3 <> TabAugmentationCompetence.Row) and (TabAugmentationCompetence.Cells[ColAugmCompCode, Ind3] = SelectWinCompetence)
+                   and (TabAugmentationCompetence.Cells[2, Ind3] = CouleurKo) then
+                  TabAugmentationCompetence.DeleteRow(Ind3);
+
+            // D - V2 : les autres branches du choix "A / B" deviennent des lignes FACULTATIVES
+            // (Core p.28 : on en achete au moins une, l'autre est a 100 XP au choix). Elles ne
+            // comptent pas pour finir la carriere (pastille grise).
+            if (ValVersion = 'WFRP2') and (Pos(SeparateurMulti, ChoixWinCompetence) > 0) then
+              begin
+                Branches := ListeMetierCompetence(ChoixWinCompetence);
+                for Ind2 := 0 to Branches.Count - 1 do
+                  if Branches[Ind2] <> SelectWinCompetence then
+                    begin
+                      PBranche := ChercheCompetence(Branches[Ind2]);
+                      if PBranche.CodeCompetence = '' then continue;
+                      Trouve := False;
+                      for Ind3 := 1 to TabAugmentationCompetence.RowCount - 1 do
+                        if TabAugmentationCompetence.Cells[ColAugmCompCode, Ind3] = PBranche.CodeCompetence then
+                          Trouve := True;
+                      if Trouve then continue;
+                      LigBranche := TabAugmentationCompetence.RowCount;
+                      TabAugmentationCompetence.RowCount := LigBranche + 1;
+                      TabAugmentationCompetence.Cells[ColAugmCompCode, LigBranche]    := PBranche.CodeCompetence;
+                      TabAugmentationCompetence.Cells[ColAugmCompLib, LigBranche]     := PBranche.Libelle;
+                      // Tri '2' = facultative : pastille grise, cout normal (pas hors carriere)
+                      TabAugmentationCompetence.Cells[ColAugmCompTri, LigBranche]     := '2' + PBranche.Libelle;
+                      TabAugmentationCompetence.Cells[2, LigBranche]                  := CouleurKo;
+                      TabAugmentationCompetence.Cells[ColAugmCompMoins5, LigBranche]  := '-';
+                      TabAugmentationCompetence.Cells[ColAugmCompPlus5, LigBranche]   := '+';
+                      TabAugmentationCompetence.RowHeights[LigBranche]                := TabAugmentationCompetence.DefaultRowHeight;
+                      for Ind3 := 1 to TabCompetence.RowCount - 1 do
+                        if TabCompetence.Cells[ColCompCode, Ind3] = PBranche.CodeCompetence then
+                          begin
+                            TabAugmentationCompetence.Cells[ColAugmCompActuel, LigBranche]  := TabCompetence.Cells[ColCompBonus, Ind3];
+                            TabAugmentationCompetence.Cells[ColAugmCompNouveau, LigBranche] := TabCompetence.Cells[ColCompBonus, Ind3];
+                            break;
+                          end;
+                    end;
+                Branches.Free;
+              end;
           end;
       end
     else if (TabAugmentationCompetence.Col = ColAugmCompLib) and (TabAugmentationCompetence.Cells[ColAugmCompLib, TabAugmentationCompetence.Row] = GetTexteLibelle(ConstLabAdd))  then
@@ -4249,6 +5399,8 @@ procedure TWinPersonnages.TabAugmentationTalentDblClick(Sender: TObject);
     Trouve:   Boolean = false;
     NbMaxGen: Integer;
     DejaPris: Boolean;
+    ListAutres: TStringList;
+    PSuiv:    StructureTalent;
   begin
     if (TabAugmentationTalent.Col = ColAugmTalSpe) and (TabAugmentationTalent.Cells[ColAugmTalSpe, TabAugmentationTalent.Row] = GetTexteLibelle(ConstLabSelSpe))  then
       begin
@@ -4261,17 +5413,17 @@ procedure TWinPersonnages.TabAugmentationTalentDblClick(Sender: TObject);
         // code generique lui-meme, au cas ou une ligne serait restee non specialisee). Un
         // seul consommateur aujourd'hui, code en dur comme le fut le SkillChoice du
         // Reiksguard avant lui (2.51). CONTEXT.md 2.78.
-        if ChoixWinTalent = 'NATIO-T0002_*' then
+        if ChoixWinTalent = 'NATIO-T_GRAIL_VIRTUE__*' then
           begin
             ChoixWinVertuGrail := '';
             for Ind := 1 to TabTalent.RowCount - 1 do
-              if (Pos('NATIO-T0001_', TabTalent.Cells[ColTalCode, Ind]) = 1) and
-                 (TabTalent.Cells[ColTalCode, Ind] <> 'NATIO-T0001_*') then
+              if (Pos('NATIO-T_KNIGHTLY_VIRTUE__', TabTalent.Cells[ColTalCode, Ind]) = 1) and
+                 (TabTalent.Cells[ColTalCode, Ind] <> 'NATIO-T_KNIGHTLY_VIRTUE__*') then
                 begin
                   if ChoixWinVertuGrail <> '' then
                     ChoixWinVertuGrail := ChoixWinVertuGrail + ',';
-                  ChoixWinVertuGrail := ChoixWinVertuGrail + 'NATIO-T0002_' +
-                                        ExtractStringAfter(TabTalent.Cells[ColTalCode, Ind], 'NATIO-T0001_');
+                  ChoixWinVertuGrail := ChoixWinVertuGrail + 'NATIO-T_GRAIL_VIRTUE__' +
+                                        ExtractStringAfter(TabTalent.Cells[ColTalCode, Ind], 'NATIO-T_KNIGHTLY_VIRTUE__');
                 end;
             if ChoixWinVertuGrail = '' then
               begin
@@ -4324,6 +5476,32 @@ procedure TWinPersonnages.TabAugmentationTalentDblClick(Sender: TObject);
             // B - le choix devient le code de référence de la ligne
             TabAugmentationTalent.Cells[ColAugmTalCode, TabAugmentationTalent.Row] := SelectWinTalent;
 
+            // V2 : le choix "A / B" resolu, les AUTRES branches restent acquerables (Core,
+            // "Skill and Talent Options") : une ligne chacune, tout de suite.
+            if (ValVersion = 'WFRP2') and (Pos(SeparateurMulti, ChoixWinTalent) > 0) then
+              begin
+                ListAutres := ListeTalent(ChoixWinTalent);
+                for Ind2 := 0 to ListAutres.Count - 1 do
+                  if ListAutres[Ind2] <> SelectWinTalent then
+                    begin
+                      Trouve := false;
+                      for Ind := 1 to TabAugmentationTalent.RowCount - 1 do
+                        if TabAugmentationTalent.Cells[ColAugmTalCode, Ind] = ListAutres[Ind2] then
+                          Trouve := true;
+                      PSuiv := ChercheTalent(ListAutres[Ind2]);
+                      if Trouve or (PSuiv.CodeTalent = '') then continue;
+                      TabAugmentationTalent.RowCount := TabAugmentationTalent.RowCount + 1;
+                      Ind := TabAugmentationTalent.RowCount - 1;
+                      TabAugmentationTalent.Cells[2, Ind]              := CouleurKo;
+                      TabAugmentationTalent.Cells[ColAugmTalCode, Ind] := PSuiv.CodeTalent;
+                      TabAugmentationTalent.Cells[ColAugmTalLib, Ind]  := PSuiv.Libelle;
+                      if Pos(ValeurGenerique, PSuiv.CodeTalent) > 0 then
+                        TabAugmentationTalent.Cells[ColAugmTalSpe, Ind] := GetTexteLibelle(ConstLabSelSpe);
+                    end;
+                ListAutres.Free;
+                Trouve := false;
+              end;
+
             // C - propager au tableau métier (persistance) - SAUF pour un talent
             // generique a plusieurs prises distinctes (Max>1) : le remplacer figerait la
             // carriere sur cette seule Vertu et empecherait d'en reprendre une autre a la
@@ -4331,7 +5509,8 @@ procedure TWinPersonnages.TabAugmentationTalentDblClick(Sender: TObject);
             // Personnage.MetierTalent pour que la case carriere reste proposable (elle est
             // retrouvee et comptee separement via une ligne dediee dans TabTalent, voir
             // MajTables). CONTEXT.md 2.78, prises multiples.
-            if not (TryStrToInt(ChercheTalent(ChoixWinTalent).MaxiTalent, NbMaxGen) and (NbMaxGen > 1)) then
+            // V2 : la carriere garde son choix "A / B" brut, la resolution se fait a l'affichage.
+            if (ValVersion <> 'WFRP2') and not (TryStrToInt(ChercheTalent(ChoixWinTalent).MaxiTalent, NbMaxGen) and (NbMaxGen > 1)) then
               for Ind2 := 0 to High(Personnage.MetierTalent) do
                 if Personnage.MetierTalent[Ind2].CodeTalent = ChoixWinTalent then
                   begin
@@ -4401,6 +5580,10 @@ procedure TWinPersonnages.TabAugmentationTalentDblClick(Sender: TObject);
                 PTalent                                                                := ChercheTalent(SelectWinTalent);
                 TabAugmentationTalent.Cells[ColAugmTalCode, TabAugmentationTalent.Row] := PTalent.CodeTalent;
                 TabAugmentationTalent.Cells[ColAugmtalLib, TabAugmentationTalent.Row]  := PTalent.Libelle;
+                // V2 : formation speciale du MJ (Core p.380), cout reel x2 ; la marque distingue cette ligne
+                // des autres lignes grises V2 (autre branche d'un choix A / B, Flee!) qui coutent le prix normal
+                if ValVersion = 'WFRP2' then
+                  TabAugmentationTalent.Cells[ColAugmTalWork, TabAugmentationTalent.Row] := 'AJOUT-MJ';
                 AugmentationAjouteXpMj(ConstXmlTalent);
               end;
           end;
@@ -4509,6 +5692,14 @@ begin
   CheckBoxCouleurPdf.Enabled     := CheckBoxStylePdf.Checked;
   CheckBoxEconomiePdf.Checked    := Pos(AjouteAccolade(ConstXmlOptionPdfEconomie), Personnage.Options) > 0;
   CheckBoxEconomiePdf.Enabled    := CheckBoxStylePdf.Checked;
+  CheckBoxMomentum.Checked       := Pos(AjouteAccolade(ConstXmlOptionMomentum), Personnage.Options) > 0;
+  CheckBoxMomentumChange(CheckBoxMomentum);
+  // V1 : l'option XP/25 (V4) et les talents Momentum (V5) n'existent pas, on ne les montre pas
+  CheckBoxXpDiv25.Visible  := ValVersion <> 'WFRP1';
+  LabelXpDiv25.Visible     := ValVersion <> 'WFRP1';
+  EditTotalXp25.Visible    := ValVersion <> 'WFRP1';
+  CheckBoxMomentum.Visible := ValVersion <> 'WFRP1';
+  LabMomentum.Visible      := ValVersion <> 'WFRP1';
 
   // nom du joueur
   PersonnageNom.Caption     := Personnage.NomPersonnage;
@@ -4519,6 +5710,11 @@ begin
   EditMonnaie[0].Text       := IntToStr(Personnage.MonnaieCO);
   EditMonnaie[1].Text       := IntToStr(Personnage.MonnaiePA);
   EditMonnaie[2].Text       := IntToStr(Personnage.MonnaieSB);
+  ComboAlignementV1.ItemIndex := IndexAlignementV1(PersonnageAlignementV1(Personnage));
+  EditFolieV1.Text          := IntToStr(Personnage.FolieV1);
+  EditHistoriqueV1[0].Text  := Personnage.NaissanceV1;
+  EditHistoriqueV1[1].Text  := Personnage.ParentsV1;
+  EditHistoriqueV1[2].Text  := Personnage.FamilleV1;
   EditHairColors.Text       := Personnage.HairColors;
   EditEyeColors.Text        := Personnage.EyeColors;
   // Signe astral (Archives of the Empire II) : lecture seule, choisi a la creation.
@@ -4559,11 +5755,13 @@ var
   PRace:                 StructureRace;
   PMetier:               StructureMetier;
   PAttribut:             StructureAttribut;
+  Col:                   Integer;
+  IndCol:                Integer;
 begin
   // Race
   RaceEnCours               := Personnage.Race;
   PRace                     := ChercheRace(RaceEnCours);
-  LibRace.Caption           := PRace.Libelle;
+  LibRace.Caption           := PersonnageRaceLibelle(Personnage, PRace.Libelle);
   AfficheImageRace();
 
   // Metier
@@ -4572,6 +5770,9 @@ begin
   MetierNvEnCours  := IntToStr(PersonnageMetier.NiveauMetier);
   PMetier          := ChercheMetier(MetierEnCours);
   LibMetier.Caption:= PMetier.Libelle;
+  // V1 : la classe enregistree a la creation suit le metier
+  if (ValVersion = 'WFRP1') and (LibelleClasseV1(Personnage.ClasseV1) <> '') then
+    LibMetier.Caption := PMetier.Libelle + ' (' + LibelleClasseV1(Personnage.ClasseV1) + ')';
   // Appartenance (regiment, ordre de chevalerie, culte) - CONTEXT.md 2.44. Simple
   // affichage en lecture, la liste elle-meme se construit dans MajTables.
   LibAppartenance.Caption := LibelleAppartenances(Personnage.Appartenance);
@@ -4584,12 +5785,67 @@ begin
   AfficheImageMetier();
 
   // Attributs
+  // Colonne retrouvee par CODE (ligne LigAttCode, cablee en V4) : en V2 la liste n'a ni I ni
+  // Dex, un remplissage par rang decalait toutes les colonnes suivantes. Un code sans colonne
+  // (V2 : A, W, SB, TB, M, Mag, IP, FP) est ignore ; en V4, repli sur le rang d'avant.
+  PhysiqueV2 := ValVersion = 'WFRP2';
+  if ValVersion = 'WFRP1' then
+    begin
+      // colonnes sans code = masquees, colonnes d'un code V1 = visibles, titre d'apres le code
+      for IndCol := ColAttCC to ColAttSecFin do
+        begin
+          if TabAttribut.Cells[IndCol, LigAttCode] = '' then
+            TabAttribut.ColWidths[IndCol] := 0
+          else
+            begin
+              TabAttribut.ColWidths[IndCol]            := 53;
+              TabAttribut.Columns[IndCol-1].Title.Caption := ChercheAttribut(TabAttribut.Cells[IndCol, LigAttCode]).Resume;
+            end;
+        end;
+      TabAttribut.Width := 22 + 100 + 15 * 53 + 6;
+    end
+  else if PhysiqueV2 then
+    begin
+      TabAttribut.ColWidths[ColAttI]   := 0;
+      TabAttribut.ColWidths[ColAttDex] := 0;
+      for IndCol := ColAttSecDebut to ColAttSecFin do
+        TabAttribut.ColWidths[IndCol]  := 40;
+      TabAttribut.Width                := 22 + 100 + 8 * 53 + 8 * 40 + 6;
+    end
+  else
+    begin
+      TabAttribut.ColWidths[ColAttI]   := 53;
+      TabAttribut.ColWidths[ColAttDex] := 53;
+      for IndCol := ColAttSecDebut to ColAttSecFin do
+        TabAttribut.ColWidths[IndCol]  := 0;
+    end;
+  // Titres de toutes les colonnes d'apres leur code : seuls W et FP sont enregistres a la creation
+  if PhysiqueV2 then
+    for IndCol := ColAttCC to ColAttSecFin do
+      if TabAttribut.Cells[IndCol, LigAttCode] <> '' then
+        TabAttribut.Columns[IndCol-1].Title.Caption := ChercheAttribut(TabAttribut.Cells[IndCol, LigAttCode]).Resume;
   for PersonnageAttribut in Personnage.CreationAttribut do
     begin
       Inc(Nb);
-      PAttribut                               := ChercheAttribut(PersonnageAttribut.CodeAttribut);
-      TabAttribut.Columns[Nb-1].Title.Caption := PAttribut.Resume;
-      TabAttribut.Cells[Nb, LigAttLance]      := IntToStr(PersonnageAttribut.Valeur);
+      Col := 0;
+      for IndCol := ColAttCC to TabAttribut.ColCount - 1 do
+        if CodeSansLivre(TabAttribut.Cells[IndCol, LigAttCode]) = CodeSansLivre(PersonnageAttribut.CodeAttribut) then
+          Col := IndCol;
+      // V1 : les fiches enregistrees avant la correction portent le Destin sous le code 'FATE'
+      if (Col = 0) and (ValVersion = 'WFRP1') and (CodeSansLivre(PersonnageAttribut.CodeAttribut) = 'FATE') then
+        Col := ColAttDestinV1;
+      if (Col = 0) and not PhysiqueV2 and (ValVersion <> 'WFRP1') then
+        Col := Nb;
+      if Col > 0 then
+        begin
+          PAttribut                               := ChercheAttribut(PersonnageAttribut.CodeAttribut);
+          TabAttribut.Columns[Col-1].Title.Caption := PAttribut.Resume;
+          // V2 : Blessures et Destin sont stockes en jet de d10, la table de la race donne la valeur
+          if PhysiqueV2 and ((CodeSansLivre(PersonnageAttribut.CodeAttribut) = 'ATTR_W') or (CodeSansLivre(PersonnageAttribut.CodeAttribut) = 'ATTR_FP')) then
+            TabAttribut.Cells[Col, LigAttLance]   := IntToStr(ValeurTableD10(ChercheRaceAttribut(Personnage.Race, PersonnageAttribut.CodeAttribut).CalculRace, PersonnageAttribut.Valeur))
+          else
+            TabAttribut.Cells[Col, LigAttLance]   := IntToStr(PersonnageAttribut.Valeur);
+        end;
     end;
 end;
 
@@ -4611,6 +5867,9 @@ begin
   // Lire les compétences de la sous-section COMP
   for PersonnageCompetence in Personnage.CreationCompetence35 do
     begin
+      // Choix A/B non resolu (code 'A/B') : pas une competence, rien a afficher (V2).
+      if Pos('/', PersonnageCompetence.CodeCompetence) > 0 then
+        continue;
       Lig  := FindRowByText(TabCompetence, PersonnageCompetence.CodeCompetence, ColCompCode);
       if Lig = -1 then
         begin
@@ -4633,6 +5892,9 @@ begin
   // Lire les compétences de la sous-section COMP
   for PersonnageCompetence in Personnage.CreationCompetence40 do
     begin
+      // Choix A/B non resolu (code 'A/B') : pas une competence, rien a afficher (V2).
+      if Pos('/', PersonnageCompetence.CodeCompetence) > 0 then
+        continue;
       Lig  := FindRowByText(TabCompetence, PersonnageCompetence.CodeCompetence, ColCompCode);
       if Lig = -1 then
         begin
@@ -4681,7 +5943,7 @@ begin
       PTalent                         := ChercheTalent(TabTalent.Cells[ColTalCode, NbTalent]);
       TabTalent.Cells[ColTalLib, NbTalent]    := PTalent.Libelle;
       if PTalent.SousTalent then
-        PTalent                       := ChercheTalent(Copy(PTalent.CodeTalent, 1, Pos('_', PTalent.CodeTalent) - 1)+'_*');
+        PTalent                       := ChercheTalent(CodeTalentGenerique(PTalent));
       TabTalent.Cells[ColTalMax, NbTalent]    := Ptalent.MaxiTalent;
       end;
 
@@ -4724,6 +5986,14 @@ begin
       if CompareRechercheValeur(PersonnageAttribut.CodeAttribut, TabAttribut.Cells[IndTab, LigAttCode]) then
         TabAttribut.Cells[IndTab, LigAttBonus] := IntToStr(PersonnageAttribut.Valeur);
 
+  // V2 : avance gratuite de creation, ajoutee a la cellule Augmented (total des avances) ;
+  // le cout en XP la retranche (CalculXpEtat, Gratuit) et la sauvegarde ne l'ecrit pas dans
+  // AugmentationAttribut (voir les resynchronisations de Personnage.AugmentationAttribut).
+  For PersonnageAttribut in Personnage.AvanceGratuiteAttribut do
+    For IndTab := 1 to TabAttribut.ColCount - 1 do
+      if CompareRechercheValeur(PersonnageAttribut.CodeAttribut, TabAttribut.Cells[IndTab, LigAttCode]) then
+        TabAttribut.Cells[IndTab, LigAttBonus] := IntToStr(StrToIntDef(TabAttribut.Cells[IndTab, LigAttBonus], 0) + PersonnageAttribut.Valeur);
+
   // compétence
   For PersonnageCompetence in Personnage.AugmentationCompetence do
     begin
@@ -4747,6 +6017,10 @@ begin
     For PersonnageTalent in Personnage.AugmentationTalent do
       begin
         Lig  := FindRowByText(TabTalent, PersonnageTalent.CodeTalent, 1);
+        // V4 / V5 : meme talent d'un autre livre = meme ligne (cle commune). Pas en V2 : 25 cles communes
+        // a des talents differents.
+        if (Lig = -1) and (ValVersion <> 'WFRP2') then
+          Lig := FindRowByCleTalent(TabTalent, PersonnageTalent.CodeTalent, 1);
         if Lig = -1 then
           begin
             NbTalent            := NbTalent + 1;
@@ -4763,7 +6037,7 @@ begin
           PTalent                    := ChercheTalent(TabTalent.Cells[ColTalCode, Lig]);
           TabTalent.Cells[ColTalLib, Lig]    := PTalent.Libelle;
           if PTalent.SousTalent then
-            PTalent                  := ChercheTalent(Copy(PTalent.CodeTalent, 1, Pos('_', PTalent.CodeTalent) - 1)+'_*');
+            PTalent                  := ChercheTalent(CodeTalentGenerique(PTalent));
           TabTalent.Cells[ColTalMax, Lig]    := Ptalent.MaxiTalent;
           TabTalent.Cells[ColTalXp, Lig]    := IntToStr(CalculExperience(ConstXmlTalent, 0, StrToIntDef(TabTalent.Cells[ColTalNbAugm, Lig],0), PersonnageTalent.CodeTalent));
         end;
@@ -4778,6 +6052,8 @@ begin
   For PersonnageTalent in PersonnageTalentsOctroyes(Personnage) do
     begin
       Lig  := FindRowByText(TabTalent, PersonnageTalent.CodeTalent, 1);
+      if (Lig = -1) and (ValVersion <> 'WFRP2') then
+        Lig := FindRowByCleTalent(TabTalent, PersonnageTalent.CodeTalent, 1);
       if Lig = -1 then
         begin
           NbTalent            := NbTalent + 1;
@@ -4789,7 +6065,7 @@ begin
       PTalent                          := ChercheTalent(TabTalent.Cells[ColTalCode, Lig]);
       TabTalent.Cells[ColTalLib, Lig]  := PTalent.Libelle;
       if PTalent.SousTalent then
-        PTalent                       := ChercheTalent(Copy(PTalent.CodeTalent, 1, Pos('_', PTalent.CodeTalent) - 1)+'_*');
+        PTalent                       := ChercheTalent(CodeTalentGenerique(PTalent));
       TabTalent.Cells[ColTalMax, Lig]  := Ptalent.MaxiTalent;
     end;
 
@@ -5038,6 +6314,34 @@ begin
   TalentAsterisc();
 end;
 
+procedure TWinPersonnages.DumpEcran(Sortie: TStrings);
+  var
+    I, R, C:  Integer;
+    Grille:   TStringGrid;
+    Ligne:    String;
+  begin
+    for I := 0 to ComponentCount - 1 do
+      begin
+        if Components[I] is TStringGrid then
+          begin
+            Grille := TStringGrid(Components[I]);
+            for R := 0 to Grille.RowCount - 1 do
+              begin
+                Ligne := '';
+                for C := 0 to Grille.ColCount - 1 do
+                  if Grille.Cells[C, R] <> '' then
+                    Ligne := Ligne + ' [' + IntToStr(C) + ']=' + StringReplace(Grille.Cells[C, R], LineEnding, '/', [rfReplaceAll]);
+                if Ligne <> '' then
+                  Sortie.Add(Grille.Name + ' L' + IntToStr(R) + ':' + Ligne);
+              end;
+          end
+        else if (Components[I] is TEdit) and (TEdit(Components[I]).Text <> '') then
+          Sortie.Add(Components[I].Name + ' = ' + TEdit(Components[I]).Text)
+        else if (Components[I] is TLabel) and (TLabel(Components[I]).Caption <> '') then
+          Sortie.Add(Components[I].Name + ' = ' + TLabel(Components[I]).Caption);
+      end;
+  end;
+
 procedure TWinPersonnages.XmlChargePersonnage(const FileName: string);
 begin
   XmlChargePersonnageGeneral(FileName);
@@ -5084,7 +6388,7 @@ Procedure TWinPersonnages.TalentAsterisc();
                         // Radicaux compares SANS le prefixe de livre : la reference du talent
                         // et la competence de la fiche peuvent venir de deux livres differents
                         // (meme piege que winspecialisation.pas/wincompetence.pas).
-                        if ExtractStringBefore(CodeSansLivre(tabCompetence.Cells[ColCompCode, IndA]),'_') = ExtractStringBefore(CodeSansLivre(Strings[IndS]), '_') then
+                        if FamilleCompetence(CodeSansLivre(tabCompetence.Cells[ColCompCode, IndA])) = FamilleCompetence(CodeSansLivre(Strings[IndS])) then
                           begin
                             Acc := false;
                             // Strings[IndS] (le "COMPXXX" du <PDF> du talent) ne porte jamais de
@@ -5127,73 +6431,16 @@ end;
 
 procedure TWinPersonnages.NiveauMetierTalentMax();
   var
-    aRow:            Integer;
-    IndAttribut:     Integer;
-    PMetierTalent:   StructureMetierTalent;
-
-  // Le talent de carriere peut etre un CHOIX "A/B" (ex. RULES-T0161/NATIO-T0015_* : Slayer ou
-  // Mark of the Gods, Norscan Mercenary). Le code brut ne ressemble alors a aucun talent
-  // possede : on teste chaque branche, avec les deux regles habituelles (meme code, ou meme
-  // radical a la specialisation pres). Sans cela un Mark of the Eagle n'etait jamais compte
-  // dans l'avancement. 20/09/2026.
-  // Radical d'un talent a specialisation : le code AVEC son livre, coupe au premier '_'
-  // (RULES-T0012_ANIMAL -> RULES-T0012). Garder le livre est necessaire : T0012 existe aussi dans
-  // DWARF et NATIO (21 radicaux partages), et les cinq premiers caracteres du code sans livre
-  // confondaient ces talents. Un code sans '_' (RULES-T*) est son propre radical.
-  function RadicalTalent(Code: String): String;
-    var
-      P: Integer;
-    begin
-      P := Pos('_', Code);
-      if P > 0 then
-        Result := Copy(Code, 1, P - 1)
-      else
-        Result := Code;
-    end;
-
-  function TalentCarriereCorrespond(CodeCarriere, CodeLigne: String): Boolean;
-    var
-      Branches: TStringList;
-      IndBr:    Integer;
-    begin
-      Result := False;
-      Branches                 := TStringList.Create;
-      try
-        Branches.StrictDelimiter := True;
-        Branches.Delimiter       := SeparateurMulti;
-        Branches.DelimitedText   := CodeCarriere;
-        for IndBr := 0 to Branches.Count - 1 do
-          if CompareRechercheValeur(Branches[IndBr], CodeLigne)
-             or (RadicalTalent(Branches[IndBr]) = RadicalTalent(CodeLigne)) then
-            begin
-              Result := True;
-              Break;
-            end;
-      finally
-        Branches.Free;
-      end;
-    end;
-
+    aRow:        Integer;
+    IndAttribut: Integer;
+    NiveauTal:   Integer;
   begin
     for aRow := 1 to TabTalent.RowCount-1 do
     begin
-      // Niveau talent
-      For PMetierTalent in ListMetierTalent do
-        if CompareRechercheValeur(PMetierTalent.CodeMetier, MetierEnCours) then
-          begin
-            // Second test : meme talent a la specialisation pres (T0012_* contre T0012_ANIMAL).
-            // Les cinq premiers caracteres sont le radical. On redecoupe les deux codes ici au
-            // lieu de relire CodeValeur / CodeRecherche, les globales laissees par l'appel de
-            // gauche : meme resultat, mais sans dependre de cet etat partage. CONTEXT.md 2.49.
-            // Adapting Careers : le talent substitue remplace le code brut de la carriere (20/09/2026).
-            if TalentCarriereCorrespond(AdapterElement(MetierEnCours, Personnage.Race, Personnage.ChoixAdaptation, PMetierTalent.NiveauMetier,
-                                        ConstXmlTalent, PMetierTalent.CodeTalent),
-                                        TabTalent.Cells[ColTalCode, ARow]) then
-              begin
-                TabTalent.Cells[2, Arow] := IntToStr(PMetierTalent.NiveauMetier);
-                Break;
-              end
-          end;
+      // Niveau talent : regle partagee avec --dump (PersonnageTalentNiveauMetier, chargepersonnage.pas)
+      NiveauTal := PersonnageTalentNiveauMetier(Personnage, TabTalent.Cells[ColTalCode, aRow]);
+      if NiveauTal >= 0 then
+        TabTalent.Cells[2, aRow] := IntToStr(NiveauTal);
 
       // Max
       if TabTalent.Cells[ColTalMax, aRow] <> '1' then
@@ -5275,7 +6522,7 @@ begin
          and (PMetierNiveau.NiveauMetier = IndNv) then
         begin
           TabNiveau.Cells[2, IndNv - NvMin + 1] := IntToStr(PMetierNiveau.NiveauMetier);
-          TabNiveau.Cells[3, IndNv - NvMin + 1] := PMetierNiveau.Libelle;
+          TabNiveau.Cells[3, IndNv - NvMin + 1] := LibelleNiveauSelonSexe(PMetierNiveau, Personnage.SexeV2);
           break;
         end;
 end;
@@ -5291,12 +6538,14 @@ Procedure TwinPersonnages.TabAugmentationAttributCalcul(ARow: Integer; var Value
       begin
         // Appliquer les limites minimale et maximale
         ValeurMin := StrToIntDef(TabAugmentationAttribut.Cells[ColAugmAttActuel, ARow],0);
+        if AvanceParSchema() then
+          ValeurMax := Max(ValeurMin, PlafondAvanceMetier(MetierEnCours, TabAugmentationAttribut.Cells[1, ARow]));
         CellValue := Min(Max(CellValue, ValeurMin), ValeurMax);
         // Formater la valeur avec un nombre de décimales spécifié
         if StrToIntDef(Value,0) >= ValeurMin then
           begin
             Value := IntToStr(CellValue);
-            Xp    := CalculExperience(ConstXmlCarac, StrToIntDef(TabAugmentationAttribut.Cells[ColAugmAttActuel, aRow],0), CellValue, '');
+            Xp    := CoutAvanceAttribut(TabAugmentationAttribut.Cells[1, aRow], StrToIntDef(TabAugmentationAttribut.Cells[ColAugmAttActuel, aRow],0), CellValue);
             if Xp > 0 then
               TabAugmentationAttribut.Cells[ColAugmAttCout, aRow] := IntToStr(Xp)
             else
@@ -5336,7 +6585,7 @@ begin
       CellValue := Min(Max(StrToIntDef(TabAugmentationAttribut.Cells[ColAugmAttNouveau, PreviousRowIndexA],0), ValeurMin), ValeurMax);
       // Formater la valeur avec un nombre de décimales spécifié
       TabAugmentationAttribut.Cells[ColAugmAttNouveau, PreviousRowIndexA] := IntToStr(CellValue);
-      Xp    := CalculExperience(ConstXmlCarac, StrToIntDef(TabAugmentationAttribut.Cells[ColAugmAttActuel, PreviousRowIndexA ],0), StrToIntDef(TabAugmentationAttribut.Cells[ColAugmAttNouveau, PreviousRowIndexA ],0), '');
+      Xp    := CoutAvanceAttribut(TabAugmentationAttribut.Cells[1, PreviousRowIndexA], StrToIntDef(TabAugmentationAttribut.Cells[ColAugmAttActuel, PreviousRowIndexA ],0), StrToIntDef(TabAugmentationAttribut.Cells[ColAugmAttNouveau, PreviousRowIndexA ],0));
       if Xp > 0 then
         TabAugmentationAttribut.Cells[ColAugmAttCout, PreviousRowIndexA ] := IntToStr(Xp)
       else
@@ -5365,6 +6614,54 @@ procedure TWinPersonnages.TabAugmentationCompetenceCalcul(ARow: Integer; var Val
     ValeurMax: Integer = 99;
     Xp:        Integer = 0;
   begin
+    // V1 : acquise ('1') ou non (''), une seule fois, au cout lu dans la carriere
+    if ValVersion = 'WFRP1' then
+      begin
+        if TabAugmentationCompetence.Cells[ColAugmCompActuel, ARow] <> '' then
+          Value := TabAugmentationCompetence.Cells[ColAugmCompActuel, ARow]
+        else if Value <> '1' then
+          Value := '';
+        if (Value = '1') and (TabAugmentationCompetence.Cells[ColAugmCompActuel, ARow] = '') then
+          begin
+            Xp := ChercheMetierCompetence(MetierEnCours, TabAugmentationCompetence.Cells[ColAugmCompCode, ARow]).Cout;
+            if Xp <= 0 then Xp := 100;
+          end;
+        if Xp > 0 then
+          TabAugmentationCompetence.Cells[ColAugmCompCout, ARow] := IntToStr(Xp)
+        else
+          TabAugmentationCompetence.Cells[ColAugmCompCout, ARow] := '';
+        TabAugmentationCompetence.Cells[ColAugmCompReel, ARow] := IntToStr(Xp);
+        CalculTableExperience();
+        CalculAvancement();
+        Exit;
+      end;
+    // V2 : case vide = competence non possedee (niveau -10), puis 0 = acquise, 10, 20 ;
+    // chaque palier coute 100 XP (Skill Mastery, Core p.90)
+    if ValVersion = 'WFRP2' then
+      begin
+        if TabAugmentationCompetence.Cells[ColAugmCompActuel, ARow] = '' then
+          ValeurMin := -10
+        else
+          ValeurMin := StrToIntDef(TabAugmentationCompetence.Cells[ColAugmCompActuel, ARow], 0);
+        if not TryStrToInt(Value, CellValue) then CellValue := -10;
+        // hors carriere : pas d'augmentation
+        if (TabAugmentationCompetence.Cells[2, ARow] = CouleurKo) and (Copy(TabAugmentationCompetence.Cells[ColAugmCompTri, ARow], 1, 1) <> '2') then CellValue := ValeurMin;
+        // un seul palier par validation : +20 % seulement si on est deja a +10 %
+        CellValue := ValeurMin + ((Min(Max(CellValue, ValeurMin), Min(20, ValeurMin + 10)) - ValeurMin) div 10) * 10;
+        Xp := CalculExperience(ConstXmlCompetence, ValeurMin, CellValue, '');
+        if CellValue = -10 then Value := '' else Value := IntToStr(CellValue);
+        if Xp > 0 then
+          TabAugmentationCompetence.Cells[ColAugmCompCout, ARow] := IntToStr(Xp)
+        else
+          TabAugmentationCompetence.Cells[ColAugmCompCout, ARow] := '';
+        if (TabAugmentationCompetence.Cells[2, ARow] = CouleurKo) and (Copy(TabAugmentationCompetence.Cells[ColAugmCompTri, ARow], 1, 1) <> '2') then
+          TabAugmentationCompetence.Cells[ColAugmCompReel, ARow] := IntToStr(Xp * 2)
+        else
+          TabAugmentationCompetence.Cells[ColAugmCompReel, ARow] := IntToStr(Xp);
+        CalculTableExperience();
+        CalculAvancement();
+        Exit;
+      end;
     // Vérifier si la cellule en cours d'édition contient une valeur numérique valide
     if TryStrToInt(Value, CellValue) then
     begin
@@ -5380,7 +6677,7 @@ procedure TWinPersonnages.TabAugmentationCompetenceCalcul(ARow: Integer; var Val
             TabAugmentationCompetence.Cells[ColAugmCompCout, aRow] := IntToStr(Xp)
           else
             TabAugmentationCompetence.Cells[ColAugmCompCout, aRow] := '';
-          if TabAugmentationCompetence.Cells[2, ARow] = CouleurKo then
+          if (TabAugmentationCompetence.Cells[2, ARow] = CouleurKo) and (Copy(TabAugmentationCompetence.Cells[ColAugmCompTri, ARow], 1, 1) <> '2') then
             TabAugmentationCompetence.Cells[ColAugmCompReel, aRow]   := IntToStr(Xp * 2)
           else
             TabAugmentationCompetence.Cells[ColAugmCompReel, aRow]   := IntToStr(Xp);
@@ -5407,10 +6704,20 @@ var
   ValeurMin: Integer = 0;
   ValeurMax: Integer = 99;
   Xp:        Integer = 0;
+  Value2:    String;
 begin
   MajBoutonsSpecialisation(aRow, 0);
   if (aCol = ColAugmCompNouveau) and (PreviousRowIndexC > 0) then
     begin
+      if AvanceParSchema() then
+        begin
+          CellValue := PreviousRowIndexC;
+          Value2 := TabAugmentationCompetence.Cells[ColAugmCompNouveau, CellValue];
+          TabAugmentationCompetenceCalcul(CellValue, Value2);
+          TabAugmentationCompetence.Cells[ColAugmCompNouveau, CellValue] := Value2;
+          PreviousRowIndexC := aRow;
+          Exit;
+        end;
       // Appliquer les limites minimale et maximale
       ValeurMin := StrToIntDef(TabAugmentationCompetence.Cells[ColAugmCompActuel, PreviousRowIndexC],0);
       CellValue := Min(Max(StrToIntDef(TabAugmentationCompetence.Cells[ColAugmCompNouveau, PreviousRowIndexC],0), ValeurMin), ValeurMax);
@@ -5421,7 +6728,7 @@ begin
         TabAugmentationCompetence.Cells[ColAugmCompCout, PreviousRowIndexC ] := IntToStr(Xp)
       else
         TabAugmentationCompetence.Cells[ColAugmCompCout, PreviousRowIndexC ] := '';
-      if TabAugmentationCompetence.Cells[2, ARow] = CouleurKo then
+      if (TabAugmentationCompetence.Cells[2, ARow] = CouleurKo) and (Copy(TabAugmentationCompetence.Cells[ColAugmCompTri, ARow], 1, 1) <> '2') then
         TabAugmentationCompetence.Cells[ColAugmCompReel, PreviousRowIndexC]   := IntToStr(StrToIntDef(TabAugmentationCompetence.Cells[ColAugmCompCout, PreviousRowIndexC],0) * 2)
       else
         TabAugmentationCompetence.Cells[ColAugmCompReel, PreviousRowIndexC]   := IntToStr(StrToIntDef(TabAugmentationCompetence.Cells[ColAugmCompCout, PreviousRowIndexC],0));
@@ -5572,10 +6879,14 @@ procedure TWinPersonnages.TabAugmentationTalentCalcul(ARow: Integer; var Value: 
       else
         TabAugmentationTalent.Cells[ColAugmTalCout, aRow] := '';
       // calcul cout réel (x2)
-      if TabAugmentationTalent.Cells[2, ARow] = CouleurKo then
-        TabAugmentationTalent.Cells[ColAugmTalReel, aRow]   := IntToStr(StrToIntDef(TabAugmentationTalent.Cells[ColAugmTalCout, aRow],0) * 2)
+      // (regle dans ChargeCoutXp.CoutReelTalent, testee sans ecran)
+      Xp := CoutReelTalent(StrToIntDef(TabAugmentationTalent.Cells[ColAugmTalCout, aRow], 0),
+                           TabAugmentationTalent.Cells[2, ARow] = CouleurKo,
+                           TabAugmentationTalent.Cells[ColAugmTalWork, ARow] = 'AJOUT-MJ');
+      if Xp > 0 then
+        TabAugmentationTalent.Cells[ColAugmTalReel, aRow] := IntToStr(Xp)
       else
-        TabAugmentationTalent.Cells[ColAugmTalReel, aRow] := TabAugmentationTalent.Cells[ColAugmTalCout, aRow];
+        TabAugmentationTalent.Cells[ColAugmTalReel, aRow] := '';
     end;
     CalculTableExperience();
   end;
@@ -5622,10 +6933,14 @@ begin
     else
       TabAugmentationTalent.Cells[ColAugmTalCout, PreviousRowIndexT ] := '';
     // calcul cout réel (x2)
-    if TabAugmentationTalent.Cells[2, ARow] = CouleurKo then
-      TabAugmentationTalent.Cells[ColAugmTalReel, PreviousRowIndexT]   := IntToStr(StrToIntDef(TabAugmentationTalent.Cells[ColAugmTalCout, PreviousRowIndexT],0) * 2)
+    // (couleur et marque de la ligne quittee, PreviousRowIndexT ; corrige le 10/11 : on testait la ligne d'arrivee ARow)
+    Xp := CoutReelTalent(StrToIntDef(TabAugmentationTalent.Cells[ColAugmTalCout, PreviousRowIndexT], 0),
+                         TabAugmentationTalent.Cells[2, PreviousRowIndexT] = CouleurKo,
+                         TabAugmentationTalent.Cells[ColAugmTalWork, PreviousRowIndexT] = 'AJOUT-MJ');
+    if Xp > 0 then
+      TabAugmentationTalent.Cells[ColAugmTalReel, PreviousRowIndexT] := IntToStr(Xp)
     else
-      TabAugmentationTalent.Cells[ColAugmTalReel, PreviousRowIndexT] := TabAugmentationTalent.Cells[ColAugmTalCout, PreviousRowIndexT];
+      TabAugmentationTalent.Cells[ColAugmTalReel, PreviousRowIndexT] := '';
     PreviousRowIndexT := aRow;
     CalculTableExperience();
   end;
@@ -5852,9 +7167,18 @@ begin
 procedure TWinPersonnages.PlaceChampsMonnaie();
   const
     Libelles: array[0..2] of String = ('RULES-LAB_222', 'RULES-LAB_223', 'RULES-LAB_224');
+    LibellesHistorique: array[0..2] of String = ('RULES-LAB_741', 'RULES-LAB_998', 'RULES-LAB_999');
     LargeurEdit = 80;
   var
     i, Y, LargeurLib: Integer;
+
+    // largeur reelle du texte d'un libelle (police du libelle, marge de 8 px)
+    function LargeurTexteLib(Lab: TLabel): Integer;
+      begin
+        Canvas.Font.Assign(Lab.Font);
+        Result := Max(Lab.Width, Canvas.TextWidth(Lab.Caption) + 8);
+      end;
+
   begin
     LargeurLib := 0;
     for i := 0 to 2 do
@@ -5879,6 +7203,88 @@ procedure TWinPersonnages.PlaceChampsMonnaie();
         EditMonnaie[i].SetBounds(16 + LargeurLib + 8, Y, LargeurEdit, EditMonnaie[i].Height);
         Y := Y + EditMonnaie[i].Height + 8;
       end;
+
+    // V1 : alignement et points de folie (codes dans l'ordre du livre : Chaos - Evil - Neutral - Good - Law)
+    if ComboAlignementV1 = nil then
+      begin
+        ComboAlignementV1            := TComboBox.Create(Self);
+        ComboAlignementV1.Parent     := PageAlignementV1;
+        ComboAlignementV1.Style      := csDropDownList;
+        LabAlignementV1              := TLabelContour.Create(Self);
+        LabAlignementV1.Parent       := PageAlignementV1;
+        LabAlignementV1.Font.Color   := clWhite;
+        EditFolieV1                  := TEdit.Create(Self);
+        EditFolieV1.Parent           := PageAlignementV1;
+        EditFolieV1.NumbersOnly      := True;
+        EditFolieV1.Text             := '0';
+        LabFolieV1                   := TLabelContour.Create(Self);
+        LabFolieV1.Parent            := PageAlignementV1;
+        LabFolieV1.Font.Color        := clWhite;
+      end;
+    LabAlignementV1.Caption := GetTexteLibelle('RULES-LAB_872');
+    LabFolieV1.Caption      := GetTexteLibelle('RULES-ATTR_IP');
+    ComboAlignementV1.Items.Clear;
+    for i := 0 to High(CodesAlignementV1) do
+      ComboAlignementV1.Items.Add(GetTexteLibelle(CodesAlignementV1[i]));
+    // onglet Psychologie : une colonne de champs a droite du libelle le plus large
+    // (largeur mesuree sur le texte : celle du libelle n'est pas encore calculee a ce stade)
+    LargeurLib := Max(LargeurTexteLib(LabAlignementV1), LargeurTexteLib(LabFolieV1));
+    Y := 16;
+    LabAlignementV1.SetBounds(16, Y + 3, LabAlignementV1.Width, LabAlignementV1.Height);
+    ComboAlignementV1.SetBounds(16 + LargeurLib + 8, Y, 140, ComboAlignementV1.Height);
+    Y := Y + ComboAlignementV1.Height + 8;
+    LabFolieV1.SetBounds(16, Y + 3, LabFolieV1.Width, LabFolieV1.Height);
+    EditFolieV1.SetBounds(16 + LargeurLib + 8, Y, LargeurEdit, EditFolieV1.Height);
+
+    // Background V1 : trois zones de texte libre sous la folie
+    for i := 0 to 2 do
+      begin
+        if EditHistoriqueV1[i] = nil then
+          begin
+            EditHistoriqueV1[i]        := TEdit.Create(Self);
+            EditHistoriqueV1[i].Parent := PageHistoriqueV1;
+            LabHistoriqueV1[i]         := TLabelContour.Create(Self);
+            LabHistoriqueV1[i].Parent  := PageHistoriqueV1;
+            LabHistoriqueV1[i].Font.Color := clWhite;
+          end;
+        LabHistoriqueV1[i].Caption := GetTexteLibelle(LibellesHistorique[i]);
+      end;
+    LargeurLib := 0;
+    for i := 0 to 2 do
+      if LargeurTexteLib(LabHistoriqueV1[i]) > LargeurLib then LargeurLib := LargeurTexteLib(LabHistoriqueV1[i]);
+    Y := 16;
+    for i := 0 to 2 do
+      begin
+        LabHistoriqueV1[i].SetBounds(16, Y + 3, LabHistoriqueV1[i].Width, LabHistoriqueV1[i].Height);
+        EditHistoriqueV1[i].SetBounds(16 + LargeurLib + 8, Y, 300, EditHistoriqueV1[i].Height);
+        Y := Y + EditHistoriqueV1[i].Height + 8;
+      end;
+  end;
+
+// AutoSizeColumn (AdjustGridColumnsWidth) mesure l'entete avec la police de la grille, alors que
+// TabDrawCell la dessine en Arial 10 gras : l'entete est coupee (ex. "Description" du tableau
+// Carriere). Elargit chaque colonne visible a la plus grande largeur entre l'entete (police
+// reelle) et ce que la grille avait deja calcule pour ses donnees, puis la grille elle-meme.
+procedure ElargitSelonEntete(Grid: TStringGrid);
+  var
+    Col:   Integer;
+    Larg:  Integer;
+    Ajout: Integer = 0;
+  begin
+    Grid.Canvas.Font.Name  := ConstPoliceArial;
+    Grid.Canvas.Font.Size  := 10;
+    Grid.Canvas.Font.Style := [fsBold];
+    for Col := 1 to Grid.ColCount - 1 do
+      if Grid.ColWidths[Col] <> 0 then
+        begin
+          Larg := Grid.Canvas.TextWidth(Grid.Cells[Col, 0]) + 16;
+          if Larg > Grid.ColWidths[Col] then
+            begin
+              Ajout := Ajout + Larg - Grid.ColWidths[Col];
+              Grid.ColWidths[Col] := Larg;
+            end;
+        end;
+    Grid.Width := Grid.Width + Ajout;
   end;
 
 procedure TWinPersonnages.AjustePositionTables();
@@ -5907,12 +7313,40 @@ procedure TWinPersonnages.AjustePositionTables();
     AdjustGridColumnsWidth(TabAttribut, 9999, false, false, false, 0, 0, ssnone, false);
     AdjustGridColumnsWidth(TabTalent, 9999, false, false, true, 0, 0, ssautoboth, false);
     AdjustGridColumnsWidth(TabCarriere, 9999, false, false, true, 0, 0, ssautoboth, false);
+    // V2 : pas de niveau de carriere (un seul), ni de tableau des niveaux, ni d'appartenance
+    if (ValVersion = 'WFRP2') and (TabCarriere.ColWidths[2] <> 0) then
+      begin
+        TabCarriere.Width        := TabCarriere.Width - TabCarriere.ColWidths[2];
+        TabCarriere.ColWidths[2] := 0;
+      end;
+    LabTabNiveau.Visible       := (ValVersion <> 'WFRP2') and (ValVersion <> 'WFRP1');
+    TabNiveau.Visible          := (ValVersion <> 'WFRP2') and (ValVersion <> 'WFRP1');
+    LabelAppartenance.Visible  := ValVersion <> 'WFRP2';
+    LibAppartenance.Visible    := ValVersion <> 'WFRP2';
+    ElargitSelonEntete(TabCarriere);
     AdjustGridColumnsWidth(TabCompetence, 9999, false, false, true, 0, 0, ssautoboth, false);
     AdjustGridColumnsWidth(TabNiveau, 9999, false, false, true, 0, 0, ssautoboth, false);
+    // V1 : pas de talents, la ligne est cachee avant le calcul de la hauteur de la grille
+    if ValVersion = 'WFRP1' then
+      TabAvancement.RowHeights[3] := 0;
     AdjustGridColumnsWidth(TabAvancement, 9999, false, false, true, 0, 0, ssautoboth, false);
+    if ValVersion = 'WFRP1' then
+      TabAvancement.ScrollBars := ssNone;
     AdjustGridColumnsWidth(TabExperience, 9999, false, false, true, 0, 0, ssautoboth, false);
     AdjustGridColumnsWidth(TabEquipement, 9999, false, false, true, 0, 0, ssautoboth, false);
     AdjustGridColumnsWidth(TabAugmentationAttribut, PageExperience.Height - 40, false, false, true, 0, 0, ssautoboth, false);
+    if ValVersion = 'WFRP2' then TabAugmentationCompetence.ColWidths[ColAugmCompMax] := 50;
+    // V1 : une avance vaut +10 ou +1 selon la caracteristique, une competence est acquise ou non :
+    // les colonnes de pas s'appellent simplement - et +
+    if ValVersion = 'WFRP1' then
+      begin
+        TabAugmentationAttribut.Cells[ColAugmAttMoins5, 0]    := '-';
+        TabAugmentationAttribut.Cells[ColAugmAttPlus5, 0]     := '+';
+        TabAugmentationCompetence.Cells[ColAugmCompMoins5, 0] := '-';
+        TabAugmentationCompetence.Cells[ColAugmCompPlus5, 0]  := '+';
+        // pas de niveau en V1 : la colonne dit seulement ce que sera la competence ("New" comme pour les caracteristiques)
+        TabAugmentationCompetence.Cells[ColAugmCompNouveau, 0] := GetTexteLibelle('RULES-LAB_017');
+      end;
     AdjustGridColumnsWidth(TabAugmentationCompetence, PageExperience.Height - 40, false, false, true, 0, 0, ssautoboth, false);
     AdjustGridColumnsWidth(TabAugmentationTalent, PageExperience.Height - 40, false, false, true, 0, 0, ssautoboth, false);
     AdjustGridColumnsWidth(TabHistorique, PageExperience.Height - 40, false, false, true, 0, 0, ssautoboth, false);
@@ -5981,7 +7415,14 @@ procedure TWinPersonnages.AjustePositionTables();
     TabCompetence.Top         := TabTalent.Top;
 
       // colonne Compétences
-    TabCompetence.left        := TabTalent.left + TabTalent.Width + 40;
+    // V1 : pas de talents (leurs effets sont dans les competences) : tableau et titre caches,
+    // les competences prennent leur place
+    TabTalent.Visible         := ValVersion <> 'WFRP1';
+    LabTabTalent.Visible      := ValVersion <> 'WFRP1';
+    if ValVersion = 'WFRP1' then
+      TabCompetence.left      := TabTalent.left
+    else
+      TabCompetence.left      := TabTalent.left + TabTalent.Width + 40;
     LabTabCompetence.Left     := TabCompetence.left;
 
     if (TabCompetence.left + TabCompetence.Width) > (TabAttribut.left + TabAttribut.Width) then
@@ -6033,12 +7474,21 @@ procedure TWinPersonnages.AjustePositionTables();
     ListBoxEquipementCategorie.Left    := ListBoxExperience.Left;
     ListBoxEquipementCategorie.Top     := TabEquipement.Top;
     ListBoxEquipementCategorie.Width   := 130;
-    ListBoxEquipementCategorie.Height  := TabEquipement.Height;
+    // La liste des categories garde toujours sa taille maximale (toutes ses entrees visibles),
+    // quel que soit le nombre d'objets du personnage.
+    if ListBoxEquipementCategorie.ItemHeight > 0 then
+      ListBoxEquipementCategorie.Height := ListBoxEquipementCategorie.Items.Count * ListBoxEquipementCategorie.ItemHeight + 6
+    else
+      ListBoxEquipementCategorie.Height := ListBoxEquipementCategorie.Items.Count * (ListBoxEquipementCategorie.Canvas.TextHeight('Wg') + 2) + 6;
 
     TabEquipementAffichage.Left   := ListBoxEquipementCategorie.Left + ListBoxEquipementCategorie.Width + 8;
     TabEquipementAffichage.Top    := TabEquipement.Top;
     TabEquipementAffichage.Width  := TabEquipement.Width - ListBoxEquipementCategorie.Width - 8;
-    TabEquipementAffichage.Height := TabEquipement.Height;
+    // Toujours la taille maximale : jusqu'au bas de la fenetre (meme marge de 20 que PageExperience a droite),
+    // quel que soit le nombre d'objets du personnage.
+    TabEquipementAffichage.Height := Self.ClientHeight - TabEquipementAffichage.Top - 20;
+    if TabEquipementAffichage.Height < 100 then
+      TabEquipementAffichage.Height := 100;
 
     ButtonArme.left           := TabEquipementAffichage.left + TabEquipementAffichage.Width + 10;
     ButtonArmure.left         := ButtonArme.left;
@@ -6048,7 +7498,9 @@ procedure TWinPersonnages.AjustePositionTables();
     ButtonEquipement.left     := ButtonArme.left;
     ButtonTexte.left          := ButtonArme.left;
     ButtonObjet.left          := ButtonArme.left;
-    CheckBoxQuickArmor.left   := ButtonArme.left;
+    ButtonFamilier.left       := ButtonArme.left;
+    ButtonApprendreSort.left  := ButtonArme.left;
+    CheckBoxQuickArmor.left  := ButtonArme.left;
     LabQuickArmor.left        := CheckBoxQuickArmor.left + CheckBoxQuickArmor.Width + 10;
     CheckBoxMunition.left     := ButtonArme.left;
     LabMunition.left          := CheckBoxMunition.left + CheckBoxMunition.Width + 10;
@@ -6066,6 +7518,9 @@ procedure TWinPersonnages.AjustePositionTables();
     ButtonTexte.Top           := ButtonEquipement.Top + ButtonEquipement.Height + 10;
     // meme place que +Sort (categorie Sorts) : les deux ne sont jamais visibles ensemble
     ButtonObjet.Top           := ButtonSort.Top;
+    ButtonFamilier.Top        := ButtonTexte.Top;
+    // meme place que +Equipement (categories Armes / Divers) : jamais visibles ensemble
+    ButtonApprendreSort.Top   := ButtonEquipement.Top;
     // Texte d'aide : sous le titre LabEquipement, au-dessus du tableau (decale vers le bas).
     LabPorteAide.Left         := LabEquipement.Left;
     LabPorteAide.Top          := LabEquipement.Top + LabEquipement.Height + 5;
@@ -6100,8 +7555,8 @@ begin
   // Synchronise la liste laterale sur la page reellement active (PageIndex change
   // aussi par du code, pas seulement par clic dans la liste - CodesFittingGrille etc.
   // n'existent pas ici, mais d'autres ecrans font PageExperience.PageIndex := ... direct).
-  if ListBoxExperience.ItemIndex <> PageExperience.PageIndex then
-    ListBoxExperience.ItemIndex := PageExperience.PageIndex;
+  if ListBoxExperience.ItemIndex <> ItemDePage(PageExperience.PageIndex) then
+    ListBoxExperience.ItemIndex := ItemDePage(PageExperience.PageIndex);
   MajReserves();
   // le bouton +Specialisation suit la page active, quelle que soit la facon dont elle a change
   MajBoutonsSpecialisation(0, 0);
@@ -6123,6 +7578,59 @@ begin
     end;
 end;
 
+// Ajoute l'entree d'une page a la liste et memorise son rang dans le TNotebook
+procedure TWinPersonnages.AjouteItemPage(Page: TPage);
+begin
+  ListBoxExperience.Items.Add(Page.Caption);
+  SetLength(PagesDeLaListe, Length(PagesDeLaListe) + 1);
+  PagesDeLaListe[High(PagesDeLaListe)] := Page.PageIndex;
+end;
+
+// Rang de la page du TNotebook pour une entree de la liste (certaines pages n'ont pas d'entree selon la version)
+function TWinPersonnages.PageDeItem(Item: Integer): Integer;
+begin
+  if (Item >= 0) and (Item <= High(PagesDeLaListe)) then
+    Result := PagesDeLaListe[Item]
+  else
+    Result := Item;
+end;
+
+// Entree de la liste pour une page, -1 si la page n'a pas d'entree dans cette version
+function TWinPersonnages.ItemDePage(Page: Integer): Integer;
+var
+  I: Integer;
+begin
+  Result := -1;
+  for I := 0 to High(PagesDeLaListe) do
+    if PagesDeLaListe[I] = Page then
+      Exit(I);
+end;
+
+// Page de droite affichee -> ancre du guide de modification (DOC\HTML)
+procedure TWinPersonnages.ButtonGuideClick(Sender: TObject);
+var
+  Page, Ancre: String;
+begin
+  Ancre := '';
+  if ListBoxExperience.ItemIndex >= 0 then
+    begin
+    Page := ListBoxExperience.Items[ListBoxExperience.ItemIndex];
+    if Page = TabSheetXP.Caption then Ancre := 'xp'
+    else if (Page = TabSheetEvolution.Caption) or (Page = TabSheetAttribut.Caption)
+         or (Page = TabSheetCompetence.Caption) or (Page = TabSheetTalent.Caption) then Ancre := 'advance'
+    else if (Page = TabSheetCorruption.Caption) or (Page = TabSheetMutation.Caption) then Ancre := 'corruption'
+    else if Page = TabSheetPathologie.Caption then Ancre := 'afflictions'
+    else if (Page = TabSheetAmbition.Caption) or (Page = TabSheetGroupe.Caption) then Ancre := 'ambitions'
+    else if Page = PagePdf.Caption then Ancre := 'pdf';
+    end;
+  OuvreGuide(GuideModification, Ancre);
+end;
+
+procedure TWinPersonnages.ButtonQuestionClick(Sender: TObject);
+begin
+  OuvreGuide(GuideQuestions, '');
+end;
+
 procedure TWinPersonnages.ListBoxExperienceClick(Sender: TObject);
 begin
   // TNotebook n'a pas d'evenement OnPageChanged publie dans cette LCL (OnChange y est
@@ -6130,9 +7638,9 @@ begin
   // changement de PageIndex, contrairement a TPageControl.OnChange - appel direct,
   // necessaire pour la synchro de la liste ET le repaint force (24/09/2026).
   // ECHEC egalement (voir PageExperienceChange ci-dessus) : symptome inchange.
-  if (ListBoxExperience.ItemIndex >= 0) and (ListBoxExperience.ItemIndex <> PageExperience.PageIndex) then
+  if (ListBoxExperience.ItemIndex >= 0) and (PageDeItem(ListBoxExperience.ItemIndex) <> PageExperience.PageIndex) then
     begin
-      PageExperience.PageIndex := ListBoxExperience.ItemIndex;
+      PageExperience.PageIndex := PageDeItem(ListBoxExperience.ItemIndex);
       PageExperienceChange(Self);
     end;
   MajBoutonsSpecialisation(0, 0);
@@ -6149,7 +7657,7 @@ end;
 
 procedure TWinPersonnages.TabEquipementAffiche();
   begin
-      TabMetierEquipement.visible := ( (RadioButtonSuivant.checked) or (RadioButtonChanger.Checked) );
+      TabMetierEquipement.visible := ( (RadioButtonSuivant.checked) or (RadioButtonChanger.Checked) ) and (not CarriereParSortie());
   end;
 
 // Seule la colonne Quantite (9) est saisissable, et seulement sur un objet Divers ou une
@@ -6172,7 +7680,7 @@ procedure TWinPersonnages.TabEquipementSelectEditor(Sender: TObject; aCol, aRow:
         if (not Editable) and (TrimRight(TabEquipementAffichage.Cells[3, aRow]) = TrimRight(TypeEquipWe)) then
           begin
             PArme    := ChercheArme(Code);
-            Editable := (Pos('COMPPROJ_LANC', PArme.CodeCompetence) > 0) and (PArme.Encombrement = 0);
+            Editable := (Pos('COMP_RANGED__THROWING', PArme.CodeCompetence) > 0) and (PArme.Encombrement = 0);
           end;
       end;
     if not Editable then
@@ -6192,6 +7700,12 @@ procedure TWinPersonnages.TabEquipementDblClick(Sender: TObject);
     if (LigneTexte > 0) and (Pos(ConstPrefixeObjetPropre, TabEquipement.Cells[2, LigneTexte]) = 1) then
       begin
         if EquipementModifiable then ModifierObjetPropre(LigneTexte);
+        exit;
+      end;
+    // Ligne Familier : le double-clic ouvre la fiche du personnage designe.
+    if (LigneTexte > 0) and (Pos(PrefixeEquipementFamilier, TabEquipement.Cells[2, LigneTexte]) = 1) then
+      begin
+        OuvreFamilier(TabEquipement.Cells[13, LigneTexte]);
         exit;
       end;
     // Objet de texte pur : le double-clic modifie son nom et son encombrement.
@@ -6221,7 +7735,31 @@ procedure TWinPersonnages.TabEquipementDblClick(Sender: TObject);
         AfficheFicheAnimal(PTrapping, -1, CodesFittingGrille(TabEquipement.Cells[10, TabEquipement.Row]));
       end
     else if PTrapping.ProfilVehicule <> '' then
-      AfficheFicheAnimal(PTrapping);
+      AfficheFicheAnimal(PTrapping)
+    else if (LigneTexte > 0) and (ChercheObjetV1(TabEquipement.Cells[2, LigneTexte]).Code = '') then
+      begin
+        // arme / armure du catalogue : la fiche s'ouvre en consultation, sur l'objet (objets V1 exclus)
+        SelectWinLivre := '';
+        case CategorieEquipementLigne(LigneTexte) of
+          1: begin
+               VoirWinArme        := TabEquipement.Cells[2, LigneTexte];
+               SelectWinArmeCompetences := '';
+               FenArme            := TWinWeapons.Create(Application);
+               VoirWinArme        := '';
+               FenArme.Position   := poOwnerFormCenter;
+               FenArme.Show;
+             end;
+          2: begin
+               VoirWinArmure      := TabEquipement.Cells[2, LigneTexte];
+               SelectWinQuickArmor := TrimRight(TabEquipement.Cells[3, LigneTexte]) = TrimRight(TypeEquipArS);
+               FenArmure          := TWinArmors.Create(Application);
+               VoirWinArmure      := '';
+               SelectWinQuickArmor := False;
+               FenArmure.Position := poOwnerFormCenter;
+               FenArmure.Show;
+             end;
+        end;
+      end;
   end;
 
 function TWinPersonnages.LigneEstAnimal(Ligne: Integer): Boolean;
@@ -6238,10 +7776,12 @@ function TWinPersonnages.LigneEstAnimal(Ligne: Integer): Boolean;
 function TWinPersonnages.CategorieEquipementLigne(Ligne: Integer): Integer;
   var
     Typ: String;
+    PObjetV1: StructureObjetV1;
   begin
-    if LigneEstAnimal(Ligne) then
+    if LigneEstAnimal(Ligne) or (Pos(PrefixeEquipementFamilier, TabEquipement.Cells[2, Ligne]) = 1) then
       Result := 0
-    else if TalentSort(TabEquipement.Cells[2, Ligne]).CodeTalent <> '' then
+    else if (TalentSort(TabEquipement.Cells[2, Ligne]).CodeTalent <> '') or
+            (Pos(PrefixeTypeSortV1, TabEquipement.Cells[3, Ligne]) = 1) then
       Result := 4
     else
       begin
@@ -6251,7 +7791,17 @@ function TWinPersonnages.CategorieEquipementLigne(Ligne: Integer): Integer;
         else if (Typ = TrimRight(TypeEquipAr)) or (Typ = TrimRight(TypeEquipArS)) then
           Result := 2
         else
-          Result := 3;
+          begin
+            Result := 3;
+            // objet V1 de la liste de prix (type enregistre Divers, nom libre) : l'onglet suit la
+            // categorie du livre (arme, armure) ; le type enregistre ne change pas
+            PObjetV1 := ChercheObjetV1(TabEquipement.Cells[2, Ligne]);
+            if PObjetV1.Code <> '' then
+              begin
+                if ValeurLivreEgale(PObjetV1.Categorie, 'WEAPON') then Result := 1
+                else if ValeurLivreEgale(PObjetV1.Categorie, 'ARMOUR') then Result := 2;
+              end;
+          end;
       end;
   end;
 
@@ -6290,6 +7840,10 @@ procedure TWinPersonnages.RafraichitTabEquipementAffichage();
           Inc(IndAffiche);
           TabEquipementAffichage.RowCount := IndAffiche + 1;
           TabEquipementAffichage.Rows[IndAffiche].Assign(TabEquipement.Rows[Ligne]);
+          // Un sort garde son type sous forme de code (RULES-SPELLV2_..., sauvegarde) : on
+          // affiche le libelle, comme WinSpells (GetTexteLibelle(PSort.TypeSort)).
+          if Categorie = 4 then
+            TabEquipementAffichage.Cells[3, IndAffiche] := GetTexteLibelle(TabEquipement.Cells[3, Ligne]);
         end;
 
     // Largeur des colonnes ajustee au contenu REELLEMENT affiche (la categorie filtree),
@@ -6313,7 +7867,9 @@ procedure TWinPersonnages.RafraichitTabEquipementAffichage();
     ButtonEquipement.Visible  := EquipementModifiable and ((Categorie = 0) or (Categorie = 3));
     ButtonTexte.Visible       := EquipementModifiable and (Categorie = 3);
     ButtonObjet.Visible       := EquipementModifiable and (Categorie in [1, 2, 3]);
+    ButtonFamilier.Visible    := EquipementModifiable and (Categorie = 0);
     ButtonSort.Visible        := EquipementModifiable and (Categorie = 4);
+    ButtonApprendreSort.Visible := EquipementModifiable and (Categorie = 4) and (ValVersion = 'WFRP1');
     // Fabrication et Suppression ne s'appliquent jamais a un sort (ButtonFabricationClick/
     // ButtonDeleteClick le refusent deja par le test TalentSort).
     ButtonFabrication.Visible := EquipementModifiable and (Categorie <> 4);
@@ -6814,7 +8370,10 @@ procedure TWinPersonnages.TabEquipementSelectCell(Sender: TObject; aCol,
 
 procedure TWinPersonnages.RadioButtonSuivantChange(Sender: TObject);
 begin
-  ChargerMetierEquipement(MetierEnCours, StrToInt(MetierNvEnCours) + 1);
+  if CarriereParSortie() then
+    ChargerMetierEquipement('', 0)
+  else
+    ChargerMetierEquipement(MetierEnCours, StrToInt(MetierNvEnCours) + 1);
   NvMetierChoisi := '';
   ChargeComboNvMetier();
   TabEquipementAffiche();
@@ -6852,7 +8411,11 @@ procedure TWinPersonnages.CalculAvancement();
            Nb := Nb +1;
     For Ind := 1 to TabAugmentationAttribut.RowCount-1 do
       if TabAugmentationAttribut.Cells[2, ind] <> CouleurKo then
-        if StrToIntDef(TabAugmentationAttribut.Cells[ColAugmAttNouveau, Ind],0) >= Val then
+        // V2 : vert = plafond d'avances de la carriere atteint, rouge = pas encore
+        if (AvanceParSchema() and
+            (StrToIntDef(TabAugmentationAttribut.Cells[ColAugmAttNouveau, Ind],0) >=
+             PlafondAvanceMetier(MetierEnCours, TabAugmentationAttribut.Cells[1, Ind]))) or
+           ((not AvanceParSchema()) and (StrToIntDef(TabAugmentationAttribut.Cells[ColAugmAttNouveau, Ind],0) >= Val)) then
           TabAugmentationAttribut.Cells[2, ind] := CouleurOk
         else
           TabAugmentationAttribut.Cells[2, ind] := CouleurNot;
@@ -6862,6 +8425,24 @@ procedure TWinPersonnages.CalculAvancement();
       TabAvancement.Cells[2, 1] := CouleurNot
     else
       TabAvancement.Cells[2, 1] := CouleurOk;
+
+    // V2 : colonne Max = niveau atteignable a cette validation (un palier de +10 %, plafond +20 %)
+    if ValVersion = 'WFRP2' then
+      begin
+        TabAugmentationCompetence.ColWidths[ColAugmCompMax] := 50;
+        for Ind := 1 to TabAugmentationCompetence.RowCount-1 do
+          if (TabAugmentationCompetence.Cells[2, Ind] = CouleurKo) and (Copy(TabAugmentationCompetence.Cells[ColAugmCompTri, Ind], 1, 1) <> '2') then
+            TabAugmentationCompetence.Cells[ColAugmCompMax, Ind] := ''
+          else if TabAugmentationCompetence.Cells[ColAugmCompActuel, Ind] = '' then
+            TabAugmentationCompetence.Cells[ColAugmCompMax, Ind] := '0'
+          else
+            TabAugmentationCompetence.Cells[ColAugmCompMax, Ind] :=
+              IntToStr(Min(20, StrToIntDef(TabAugmentationCompetence.Cells[ColAugmCompActuel, Ind], 0) + 10));
+        // la largeur de la grille est calculee sur les colonnes visibles : la recalculer
+        AdjustGridColumnsWidth(TabAugmentationCompetence, PageExperience.Height - 40, false, false, true, 0, 0, ssautoboth, false);
+      end
+    else
+      TabAugmentationCompetence.ColWidths[ColAugmCompMax] := 0;
 
     // Compétences
     Nb := 0;
@@ -6874,7 +8455,9 @@ procedure TWinPersonnages.CalculAvancement();
       end;
     For Ind := 1 to TabAugmentationCompetence.RowCount-1 do
       if TabAugmentationCompetence.Cells[2, ind] <> CouleurKo then
-        if StrToIntDef(TabAugmentationCompetence.Cells[ColAugmCompNouveau, Ind],0) >= Val then
+        // V2 : vert = la competence est au moins acquise (niveau 0 ou plus), rouge = case vide
+        if (AvanceParSchema() and (TabAugmentationCompetence.Cells[ColAugmCompNouveau, Ind] <> '')) or
+           ((not AvanceParSchema()) and (StrToIntDef(TabAugmentationCompetence.Cells[ColAugmCompNouveau, Ind],0) >= Val)) then
           TabAugmentationCompetence.Cells[2, ind] := CouleurOk
         else
           TabAugmentationCompetence.Cells[2, ind] := CouleurNot;
@@ -6901,87 +8484,60 @@ procedure TWinPersonnages.CalculAvancement();
     else
       TabAvancement.Cells[2, 3] := CouleurOk;
 
+    // V2 : "Theo" = ce que la carriere en cours demande (une ligne des grilles d'augmentation par
+    // exigence, une branche A / B comptant pour une, les lignes grises facultatives exclues),
+    // "Real" = les lignes deja vertes. Les talents de race n'entrent pas dans le compte.
+    if ValVersion = 'WFRP2' then
+      begin
+        CompteExigences(TabAugmentationAttribut, 1);
+        CompteExigences(TabAugmentationCompetence, 2);
+        CompteExigences(TabAugmentationTalent, 3);
+      end
+    // V1 : meme decompte pour les caracteristiques et les competences de la carriere, pas de talents
+    else if ValVersion = 'WFRP1' then
+      begin
+        CompteExigences(TabAugmentationAttribut, 1);
+        CompteExigences(TabAugmentationCompetence, 2);
+        TabAvancement.Cells[4, 3] := '0';
+        TabAvancement.Cells[5, 3] := '0';
+        TabAvancement.Cells[2, 3] := CouleurOk;
+        TabAvancement.RowHeights[3] := 0;
+        // la grille garde la hauteur de 4 lignes : la recaler sur les lignes visibles, sans ascenseur
+        TabAvancement.ScrollBars := ssNone;
+        TabAvancement.Height     := TabAvancement.GridHeight + 4;
+        TabAvancement.Width      := TabAvancement.GridWidth + 4;
+      end;
+  end;
+
+// V2 : remplit une ligne de TabAvancement depuis les pastilles d'une grille d'augmentation.
+procedure TWinPersonnages.CompteExigences(Grille: TStringGrid; Ligne: Integer);
+  var
+    Ind:  Integer;
+    Theo: Integer = 0;
+    Real: Integer = 0;
+  begin
+    for Ind := 1 to Grille.RowCount - 1 do
+      if Grille.Cells[2, Ind] = CouleurOk then
+        begin
+          Inc(Theo);
+          Inc(Real);
+        end
+      else if Grille.Cells[2, Ind] = CouleurNot then
+        Inc(Theo);
+    TabAvancement.Cells[4, Ligne] := IntToStr(Theo);
+    TabAvancement.Cells[5, Ligne] := IntToStr(Real);
+    if Real < Theo then
+      TabAvancement.Cells[2, Ligne] := CouleurNot
+    else
+      TabAvancement.Cells[2, Ligne] := CouleurOk;
   end;
 
 function TWinPersonnages.CalculExperience(TypeXp: String; Gratuit: Integer; Total: Integer; Code: String): Integer;
   var
-    Xp:                      Integer =0;
-    AffecteBonus:            Integer;
-    AffecteGratuit:          Integer;
-    RestantBonus:            Integer;
-    RestantGratuit:          Integer;
-    Min:                     Integer = 0;
-    Max:                     Integer = 5;
-    PAttributAugmentation:   StructureAttributAugmentation;
-    PCompetenceAugmentation: StructureCompetenceAugmentation;
-    i:                       Integer;
+    Xp: Integer;
   begin
-    if TypeXp = ConstXmlTalent then
-      Begin
-        if Total > Gratuit then
-          begin
-            for i := gratuit to (Total-1) do
-      	      Xp := Xp + 100 + (100 * i);
-          end;
-      end
-    else
-        begin
-        // calcul du restant total
-        RestantGratuit := Gratuit;
-        RestantBonus   := Total - RestantGratuit;
-
-        //boucle 5 par 5
-        While (RestantBonus > 0) or (RestantGratuit > 0) do
-          Begin
-            // calculer l'affectation en gratuit
-	    If RestantGratuit > 0 then
-              begin
-	        if RestantGratuit >= 5 then
-	            AffecteGratuit := 5
-	        else
-	            AffecteGratuit := RestantGratuit;
-                RestantGratuit     := RestantGratuit - AffecteGratuit;
-              end
-            else
-              AffecteGratuit := 0;
-
-            // calculer l'affectation en payant
-            If AffecteGratuit < 5 then
-              begin
-	        if RestantBonus <= (5 - AffecteGratuit) then
-	            AffecteBonus   := RestantBonus
-	        else
-	            AffecteBonus   := 5;
-	        RestantBonus       := RestantBonus - AffecteBonus;
-              end
-	    else
-	       AffecteBonus := 0;
-
-            // calcul le coût en XP
-            if AffecteBonus > 0 then
-              begin
-                case TypeXp Of
-                  ConstXmlCarac:
-                    begin
-                      PAttributAugmentation := ChercheAttributAugmentation(Min, Max);
-                      Xp := Xp + (AffecteBonus * PAttributAugmentation.Cout);
-                    end;
-                  ConstXmlCompetence:
-                    begin
-                      PCompetenceAugmentation := ChercheCompetenceAugmentation(Min, Max);
-                      Xp := Xp + (AffecteBonus * PCompetenceAugmentation.Cout);
-                    end;
-                end;
-              end;
-
-            // augmenter les bornes
-            if Min = 0 then
-              Min := 1;
-            Min := Min + 5;
-            Max := Max + 5;
-          end;
-    end;
-
+    // cout de base (table V4, talents, regles V1 / V2) : ChargeCoutXp, testable sans ecran
+    Xp := CoutXpBase(TypeXp, Gratuit, Total, Code);
     // augmentation Xp MJ et Talent
     if Code <> '' then
       case TypeXp Of
@@ -7011,7 +8567,8 @@ function TWinPersonnages.CalculXpEtat(): StructureXpEtat;
       begin
         if TabAttribut.Cells[Ind, LigAttBonus] <> '' then
           begin
-            Gratuit  := 0;
+            // V2 : l'avance gratuite de creation est dans la cellule mais ne coute rien
+            Gratuit  := PersonnageAvanceGratuite(Personnage, TabAttribut.Cells[Ind, LigAttCode]);
             Total    := StrToInt(TabAttribut.Cells[Ind, LigAttBonus]);
             Xp       := CalculExperience(ConstXmlCarac, Gratuit, Total, TabAttribut.Cells[Ind, LigAttCode]);
             if Xp = 0 then
@@ -7025,10 +8582,28 @@ function TWinPersonnages.CalculXpEtat(): StructureXpEtat;
 
       end;
 
+    // Compétences V1 : acquise ou non ; une competence achetee (ColCompWork) coute le prix de la carriere
+    if ValVersion = 'WFRP1' then
+      For Ind := 1 to TabCompetence.RowCount-1 do
+        begin
+          Xp := 0;
+          if StrToIntDef(TabCompetence.Cells[ColCompWork, Ind], 0) > 0 then
+            begin
+              Xp := ChercheMetierCompetence(MetierEnCours, TabCompetence.Cells[ColCompCode, Ind]).Cout;
+              if Xp <= 0 then Xp := 100;
+            end;
+          if Xp = 0 then
+            TabCompetence.Cells[ColCompXp, Ind] := ''
+          else
+            begin
+              TabCompetence.Cells[ColCompXp, Ind] := IntToStr(Xp);
+              Result.Depense := Result.Depense + Xp;
+            end;
+        end;
     // Compétences
     For Ind := 1 to TabCompetence.RowCount-1 do
       begin
-        if TabCompetence.Cells[ColCompBonus, Ind] <> '' then
+        if (ValVersion <> 'WFRP1') and (TabCompetence.Cells[ColCompBonus, Ind] <> '') then
           begin
             Gratuit   := StrToIntDef(TabCompetence.Cells[ColComp35, Ind],0) +
                          StrToIntDef(TabCompetence.Cells[ColComp40, Ind],0) +
@@ -7148,8 +8723,29 @@ Procedure TWinPersonnages.ChargeAugmentation();
         PAttribut: StructureAttribut;
       begin
         TabAugmentationAttribut.RowCount := StrToInt(MetierNvEnCours) + 3;
+        // V2 : la carriere definit les avances possibles (profil principal ET secondaire) ;
+        // rien hors du schema d'avances.
+        if AvanceParSchema() then
+          begin
+            For Ind := 2 to ColAttSecFin do
+              if (TabAttribut.ColWidths[Ind] > 0) and (PlafondAvanceMetier(MetierEnCours, TabAttribut.Cells[Ind, LigAttCode]) > 0) then
+                begin
+                  NbC := NbC + 1;
+                  if TabAugmentationAttribut.RowCount <= NbC then
+                    TabAugmentationAttribut.RowCount := TabAugmentationAttribut.RowCount + 1;
+                  TabAugmentationAttribut.Cells[1, NbC] := TabAttribut.Cells[Ind, LigAttCode];
+                  PAttribut := ChercheAttribut(TabAttribut.Cells[Ind, LigAttCode]);
+                  TabAugmentationAttribut.Cells[ColAugmAttCode, NbC]   := PAttribut.Resume;
+                  TabAugmentationAttribut.Cells[ColAugmAttActuel, NbC] := TabAttribut.Cells[ind, LigAttBonus];
+                  TabAugmentationAttribut.Cells[ColAugmAttNouveau, NbC]:= TabAttribut.Cells[ind, LigAttBonus];
+                  TabAugmentationAttribut.Cells[ColAugmAttMoins5, NbC] := '-';
+                  TabAugmentationAttribut.Cells[ColAugmAttPlus5, NbC]  := '+';
+                end;
+            Exit;
+          end;
         For Ind := 2 to 11 do
-          if (StrToIntDef(TabAttribut.Cells[Ind, LigAttImage],0) > 0) and (StrToIntDef(TabAttribut.Cells[Ind, LigAttImage],0) <= StrToInt(MetierNvEnCours)) then
+          // Colonne masquee (V2 : I et Dex) : pas d'attribut a augmenter
+          if (TabAttribut.ColWidths[Ind] > 0) and (StrToIntDef(TabAttribut.Cells[Ind, LigAttImage],0) > 0) and (StrToIntDef(TabAttribut.Cells[Ind, LigAttImage],0) <= StrToInt(MetierNvEnCours)) then
             begin
               NbC := NbC + 1;
               if TabAugmentationAttribut.RowCount <= NbC then
@@ -7164,7 +8760,7 @@ Procedure TWinPersonnages.ChargeAugmentation();
             end;
         // Attribut hors carrière
         For Ind := 2 to 11 do
-          if (StrToIntDef(TabAttribut.Cells[Ind, LigAttImage],0) = 0) or (StrToIntDef(TabAttribut.Cells[Ind, LigAttImage],0) > StrToInt(MetierNvEnCours)) then
+          if (TabAttribut.ColWidths[Ind] > 0) and ((StrToIntDef(TabAttribut.Cells[Ind, LigAttImage],0) = 0) or (StrToIntDef(TabAttribut.Cells[Ind, LigAttImage],0) > StrToInt(MetierNvEnCours))) then
             begin
               NbC := NbC + 1;
               if TabAugmentationAttribut.RowCount <= NbC then
@@ -7188,6 +8784,9 @@ Procedure TWinPersonnages.ChargeAugmentation();
         ListBranche: TStringList;
         IndBranche: Integer;
         LibBranche: String;
+        NbAvant, LigC, IndCp, IndMc: Integer;
+        CodeBrut, Choisi: String;
+        PBr: StructureCompetence;
       begin
         For PersonnageCompetence in Personnage.MetierCompetence do
           begin
@@ -7247,6 +8846,67 @@ Procedure TWinPersonnages.ChargeAugmentation();
                 TabAugmentationCompetence.Cells[ColAugmCompPlus5, NbC] := '+';
               end;
           end;
+
+        // V2 : un choix "A / B" dont une branche est DEJA possedee (ex. Gossip donne par la race)
+        // est resolu d'office sur cette branche ; les autres branches deviennent des lignes
+        // facultatives grises (Core p.28) et la competence possedee ne reste pas en double.
+        if ValVersion = 'WFRP2' then
+          begin
+            NbAvant := NbC;
+            for LigC := 1 to NbAvant do
+              if Pos(SeparateurMulti, TabAugmentationCompetence.Cells[ColAugmCompCode, LigC]) > 0 then
+                begin
+                  CodeBrut   := TabAugmentationCompetence.Cells[ColAugmCompCode, LigC];
+                  ListBranche := ListeMetierCompetence(CodeBrut);
+                  Choisi := '';
+                  IndMc  := 0;
+                  for IndBranche := 0 to ListBranche.Count - 1 do
+                    if Choisi = '' then
+                      for IndCp := 1 to TabCompetence.RowCount - 1 do
+                        if TabCompetence.Cells[ColCompCode, IndCp] = ListBranche[IndBranche] then
+                          begin
+                            Choisi := ListBranche[IndBranche];
+                            IndMc  := IndCp;
+                            break;
+                          end;
+                  if Choisi <> '' then
+                    begin
+                      TabAugmentationCompetence.Cells[ColAugmCompCode, LigC]    := Choisi;
+                      TabAugmentationCompetence.Cells[ColAugmCompLib, LigC]     := TabCompetence.Cells[ColCompLib, IndMc];
+                      TabAugmentationCompetence.Cells[ColAugmCompSpe, LigC]     := GetTexteLibelle('RULES-LAB_130');
+                      TabAugmentationCompetence.Cells[ColAugmCompSpeSel, LigC]  := Choisi;
+                      TabAugmentationCompetence.Cells[ColAugmCompTri, LigC]     := '0' + TabCompetence.Cells[ColCompLib, IndMc];
+                      TabAugmentationCompetence.Cells[2, LigC]                  := TabCompetence.Cells[ColCompImage, IndMc];
+                      TabAugmentationCompetence.Cells[ColAugmCompActuel, LigC]  := TabCompetence.Cells[ColCompBonus, IndMc];
+                      TabAugmentationCompetence.Cells[ColAugmCompNouveau, LigC] := TabCompetence.Cells[ColCompBonus, IndMc];
+                      TabAugmentationCompetence.RowHeights[LigC]                := TabAugmentationCompetence.DefaultRowHeight;
+                      // la carriere garde son choix brut : les autres branches survivent a la sauvegarde
+                      for IndBranche := 0 to ListBranche.Count - 1 do
+                        if ListBranche[IndBranche] <> Choisi then
+                          begin
+                            PBr := ChercheCompetence(ListBranche[IndBranche]);
+                            if PBr.CodeCompetence = '' then continue;
+                            NbC := NbC + 1;
+                            if TabAugmentationCompetence.RowCount <= NbC then
+                              TabAugmentationCompetence.RowCount := TabAugmentationCompetence.RowCount + 1;
+                            TabAugmentationCompetence.Cells[ColAugmCompCode, NbC]    := PBr.CodeCompetence;
+                            TabAugmentationCompetence.Cells[ColAugmCompLib, NbC]     := PBr.Libelle;
+                            TabAugmentationCompetence.Cells[ColAugmCompTri, NbC]     := '2' + PBr.Libelle;
+                            TabAugmentationCompetence.Cells[2, NbC]                  := CouleurKo;
+                            TabAugmentationCompetence.Cells[ColAugmCompMoins5, NbC]  := '-';
+                            TabAugmentationCompetence.Cells[ColAugmCompPlus5, NbC]   := '+';
+                            for IndCp := 1 to TabCompetence.RowCount - 1 do
+                              if TabCompetence.Cells[ColCompCode, IndCp] = PBr.CodeCompetence then
+                                begin
+                                  TabAugmentationCompetence.Cells[ColAugmCompActuel, NbC]  := TabCompetence.Cells[ColCompBonus, IndCp];
+                                  TabAugmentationCompetence.Cells[ColAugmCompNouveau, NbC] := TabCompetence.Cells[ColCompBonus, IndCp];
+                                  break;
+                                end;
+                          end;
+                    end;
+                  ListBranche.Free;
+                end;
+          end;
       end;
 
     // Competences hors carriere, tri puis hauteurs de ligne ; NbC continue le compte du bloc precedent.
@@ -7255,7 +8915,9 @@ Procedure TWinPersonnages.ChargeAugmentation();
         Ind, Ind2: Integer;
         Trouve: Boolean;
       begin
+        // V2 : seules les competences de la carriere sont listees (les autres sont bloquees)
         For Ind2 :=1 to TabCompetence.RowCount - 1 do
+          if not AvanceParSchema() then
           begin
             Trouve := False;
             For Ind := 1 to TabAugmentationCompetence.RowCount - 1 do
@@ -7305,6 +8967,8 @@ Procedure TWinPersonnages.ChargeAugmentation();
         ListBranche: TStringList;
         IndBranche: Integer;
         LibBranche: String;
+        NbAvant, LigT, IndTb: Integer;
+        Choisi: String;
       begin
         For PersonnageTalent in Personnage.MetierTalent do
           if PersonnageTalent.Valeur = StrToInt(MetierNvEnCours) then
@@ -7359,8 +9023,15 @@ Procedure TWinPersonnages.ChargeAugmentation();
                  // cotes et TOUS les talents se seraient equivalus (constate le 05/09/2026 : la
                  // grille d'augmentation affichait quatre fois le meme talent). Avec le '_'
                  // ajoute, un code sans specialite se compare en entier.
-                 else if (Copy(TabTalent.Cells[ColTalCode, IndT], 1, Pos('_', TabTalent.Cells[ColTalCode, IndT] + '_')) =
-                          Copy(PersonnageTalent.CodeTalent, 1, Pos('_', PersonnageTalent.CodeTalent + '_'))) then
+                 // V2 : les codes sont RULES-T_NOM (le '_' suit le prefixe, pas le numero), donc
+                 // le "parent jusqu'au premier '_'" valait RULES-T_ pour TOUS les talents et
+                 // une seule ligne de TabTalent ecrasait toutes celles de la carriere. En V2 le
+                 // parent est le code generique (RULES-T_NOM_*) sans son '*'.
+                 else if ((ValVersion <> 'WFRP2') and
+                          (RadicalTalent(TabTalent.Cells[ColTalCode, IndT]) = RadicalTalent(PersonnageTalent.CodeTalent))) or
+                         ((ValVersion = 'WFRP2') and (Pos(ValeurGenerique, PersonnageTalent.CodeTalent) > 0) and
+                          (Pos(Copy(PersonnageTalent.CodeTalent, 1, Length(PersonnageTalent.CodeTalent) - 1),
+                               TabTalent.Cells[ColTalCode, IndT]) = 1)) then
                    begin
                      TabAugmentationTalent.Cells[ColAugmTalCode, NbC]   := TabTalent.Cells[ColTalCode, IndT];
                      TabAugmentationTalent.Cells[ColAugmTalLib, NbC]    := TabTalent.Cells[ColTalLib, IndT];
@@ -7370,6 +9041,61 @@ Procedure TWinPersonnages.ChargeAugmentation();
                    end;
                end;
            end;
+
+        // V2 : un choix "A / B" dont une branche est DEJA possedee est resolu sur cette branche
+        // a l'affichage seulement (la carriere garde son choix brut, aucun changement de
+        // carriere) ; les autres branches deviennent des lignes facultatives qu'on peut
+        // acquerir aussi, comme les competences "A / B".
+        if ValVersion = 'WFRP2' then
+          begin
+            NbAvant := NbC;
+            for LigT := 1 to NbAvant do
+              if Pos(SeparateurMulti, TabAugmentationTalent.Cells[ColAugmTalCode, LigT]) > 0 then
+                begin
+                  ListBranche := ListeTalent(TabAugmentationTalent.Cells[ColAugmTalCode, LigT]);
+                  Choisi := '';
+                  IndTb  := 0;
+                  for IndBranche := 0 to ListBranche.Count - 1 do
+                    if Choisi = '' then
+                      for IndT := 1 to TabTalent.RowCount - 1 do
+                        if TabTalent.Cells[ColTalCode, IndT] = ListBranche[IndBranche] then
+                          begin
+                            Choisi := ListBranche[IndBranche];
+                            IndTb  := IndT;
+                            break;
+                          end;
+                  if Choisi <> '' then
+                    begin
+                      TabAugmentationTalent.Cells[ColAugmTalCode, LigT]    := Choisi;
+                      TabAugmentationTalent.Cells[ColAugmTalLib, LigT]     := TabTalent.Cells[ColTalLib, IndTb];
+                      TabAugmentationTalent.Cells[ColAugmTalSpe, LigT]     := '';
+                      TabAugmentationTalent.Cells[ColAugmTalActuel, LigT]  := TabTalent.Cells[ColTalNb, IndTb];
+                      TabAugmentationTalent.Cells[ColAugmTalNouveau, LigT] := TabTalent.Cells[ColTalNb, IndTb];
+                      TabAugmentationTalent.RowHeights[LigT]               := TabAugmentationTalent.DefaultRowHeight;
+                      for IndBranche := 0 to ListBranche.Count - 1 do
+                        if ListBranche[IndBranche] <> Choisi then
+                          begin
+                            PTalent := ChercheTalent(ListBranche[IndBranche]);
+                            if PTalent.CodeTalent = '' then continue;
+                            NbC := NbC + 1;
+                            TabAugmentationTalent.RowCount := TabAugmentationTalent.RowCount + 1;
+                            TabAugmentationTalent.Cells[2, NbC]              := CouleurKo;
+                            TabAugmentationTalent.Cells[ColAugmTalCode, NbC] := PTalent.CodeTalent;
+                            TabAugmentationTalent.Cells[ColAugmTalLib, NbC]  := PTalent.Libelle;
+                            if Pos(ValeurGenerique, PTalent.CodeTalent) > 0 then
+                              TabAugmentationTalent.Cells[ColAugmTalSpe, NbC] := GetTexteLibelle(ConstLabSelSpe);
+                            for IndT := 1 to TabTalent.RowCount - 1 do
+                              if TabTalent.Cells[ColTalCode, IndT] = PTalent.CodeTalent then
+                                begin
+                                  TabAugmentationTalent.Cells[ColAugmTalActuel, NbC]  := TabTalent.Cells[ColTalNb, IndT];
+                                  TabAugmentationTalent.Cells[ColAugmTalNouveau, NbC] := TabTalent.Cells[ColTalNb, IndT];
+                                  break;
+                                end;
+                          end;
+                    end;
+                  ListBranche.Free;
+                end;
+          end;
       end;
 
     // Talents hors carriere.
@@ -7401,6 +9127,37 @@ Procedure TWinPersonnages.ChargeAugmentation();
           end;
       end;
 
+    // Tome of Corruption p.25 : un personnage qui a une mutation (ou de race Mutant) peut acheter Flee!
+    // a tout moment, hors carriere. Ligne facultative grise (CouleurKo), cout V2 habituel.
+    procedure AugmentationTalentMutant;
+      const
+        CodeFlee = 'RULES-T_FLEE';
+      var
+        Ind:    Integer;
+        PTalent: StructureTalent;
+      begin
+        if (Length(Personnage.Mutations) = 0) and (Personnage.Race <> 'TOC-RACE_MUTANT') then Exit;
+        for Ind := 1 to TabAugmentationTalent.RowCount - 1 do
+          if TabAugmentationTalent.Cells[ColAugmTalCode, Ind] = CodeFlee then Exit;
+        PTalent := ChercheTalent(CodeFlee);
+        if PTalent.CodeTalent = '' then Exit;
+        NbC := NbC + 1;
+        TabAugmentationTalent.RowCount                     := TabAugmentationTalent.RowCount + 1;
+        TabAugmentationTalent.Cells[2, NbC]                := CouleurKo;
+        TabAugmentationTalent.Cells[ColAugmTalCode, NbC]   := CodeFlee;
+        TabAugmentationTalent.Cells[ColAugmTalLib, NbC]    := PTalent.Libelle;
+        TabAugmentationTalent.Cells[ColAugmTalSpe, NbC]    := '';
+        TabAugmentationTalent.Cells[ColAugmTalActuel, NbC] := '0';
+        TabAugmentationTalent.Cells[ColAugmTalNouveau, NbC]:= '0';
+        for Ind := 1 to TabTalent.RowCount - 1 do
+          if TabTalent.Cells[ColTalCode, Ind] = CodeFlee then
+            begin
+              TabAugmentationTalent.Cells[ColAugmTalActuel, NbC]  := TabTalent.Cells[ColTalNb, Ind];
+              TabAugmentationTalent.Cells[ColAugmTalNouveau, NbC] := TabTalent.Cells[ColTalNb, Ind];
+              break;
+            end;
+      end;
+
   Begin
     // Attributs
     NbC := 0;
@@ -7424,10 +9181,21 @@ Procedure TWinPersonnages.ChargeAugmentation();
     TabAugmentationTalent.RowCount := 1;
     NbC := 0;
     AugmentationTalentsCarriere;
-    // Talents hors carrière
-    AugmentationTalentsHorsCarriere;
-    // Compétence Ajout nouvelle
-    AugmentationAjouteXpMj(ConstXmlTalent);
+    // V2 : un talent ne s'achete que dans la liste de la carriere en cours (pas de talent hors
+    // carriere), sauf Flee! pour un Mutant (Tome of Corruption) et la formation speciale du MJ
+    // (Core p.380, 200 xp au lieu de 100) : ligne <ajouter>, comme les competences (decide 09/11/2026).
+    if ValVersion = 'WFRP2' then
+      begin
+        AugmentationTalentMutant;
+        AugmentationAjouteXpMj(ConstXmlTalent);
+      end
+    else
+      begin
+        // Talents hors carrière
+        AugmentationTalentsHorsCarriere;
+        // Compétence Ajout nouvelle
+        AugmentationAjouteXpMj(ConstXmlTalent);
+      end;
 
     // Expérience
     EditTotalXp.text   := IntToStr(Personnage.XpTotal);
@@ -7702,6 +9470,10 @@ procedure TWinPersonnages.MajTablesEvolutionCarriere();
     DejaLie:                  Boolean;
     IndTalCar:                Integer;
     NbLiensGardes:            Integer;
+    JetMetier:                Integer;
+    SaisieMetier:             String;
+    PMetierArtisan:           StructureArtisanMetier;
+    ListeCompMetier:          TStringList;
   begin
     // évolution de carrière
       if RadioButtonSuivant.checked or RadioButtonChanger.checked then
@@ -7746,6 +9518,32 @@ procedure TWinPersonnages.MajTablesEvolutionCarriere();
                     Personnage.MetierCompetence         += [PersonnageCompetence];
                   end;
 
+              // V1 : l'Artisan (et son apprenti) tire un metier au d100 ; ses competences s'ajoutent a la carriere
+              if (ValVersion = 'WFRP1') and ((CodeSansLivre(NvMetier) = 'WORK_ARTISAN') or (CodeSansLivre(NvMetier) = 'WORK_ARTISANS_APPRENTICE')) then
+                begin
+                  JetMetier := LanceFormule('1D100', False);
+                  SaisieMetier := IntToStr(JetMetier);
+                  if InputQuery(GetTexteLibelle('RULES-MESS_109'), '', SaisieMetier) then
+                    JetMetier := StrToIntDef(SaisieMetier, JetMetier);
+                  PMetierArtisan := MetierArtisanDuJetV1(JetMetier);
+                  if PMetierArtisan.CodeMetier <> '' then
+                    begin
+                      ListeCompMetier := TStringList.Create;
+                      try
+                        ExtractStrings([','], [' '], PChar(PMetierArtisan.Competences), ListeCompMetier);
+                        for IndApp := 0 to ListeCompMetier.Count - 1 do
+                          begin
+                            PersonnageCompetence.CodeCompetence := ListeCompMetier[IndApp];
+                            PersonnageCompetence.Valeur         := 1;
+                            Personnage.MetierCompetence         += [PersonnageCompetence];
+                          end;
+                      finally
+                        ListeCompMetier.Free;
+                      end;
+                      ShowMessage(PMetierArtisan.Libelle + ' [d100 = ' + IntToStr(JetMetier) + ']');
+                    end;
+                end;
+
               Personnage.MetierTalent := [];
               for PMetierTalent in ListMetierTalent do
                 if CompareRechercheValeur(PMetierTalent.CodeMetier, NvMetier) then
@@ -7766,6 +9564,9 @@ procedure TWinPersonnages.MajTablesEvolutionCarriere();
                     PersonnageTalent.Valeur     := PMetierTalent.NiveauMetier;
                     Personnage.MetierTalent     += [PersonnageTalent];
                   end;
+              // Option Momentum : le menu de la nouvelle carriere suit la version choisie (V5 si cochee)
+              if CheckBoxMomentum.Checked and LivreMomentumCharge() and VerifieFiltre(ConstFiltreLivreMomentum,Personnage.LivresAcceptes) then
+                PersonnageTalentsMomentum(Personnage, True);
 
               // Entrer dans une carriere ouvre le droit a une APPARTENANCE (regiment,
               // ordre de chevalerie, culte). Le choix est REDEMANDE a chaque entree en
@@ -7936,23 +9737,40 @@ procedure TWinPersonnages.MajTablesPersonnage();
         Personnage.MonnaiePA := StrToIntDef(EditMonnaie[1].Text, 0);
         Personnage.MonnaieSB := StrToIntDef(EditMonnaie[2].Text, 0);
       end;
+    if (ComboAlignementV1 <> nil) and (ValVersion = 'WFRP1') then
+      begin
+        // memorise seulement un choix different du standard de la race (balise omise sinon)
+        Avant := '';
+        if ComboAlignementV1.ItemIndex >= 0 then
+          Avant := CodesAlignementV1[ComboAlignementV1.ItemIndex];
+        Personnage.AlignementV1 := '';
+        if Avant <> PersonnageAlignementV1(Personnage) then
+          Personnage.AlignementV1 := Avant;
+        Personnage.FolieV1 := StrToIntDef(EditFolieV1.Text, 0);
+        Personnage.NaissanceV1 := Trim(EditHistoriqueV1[0].Text);
+        Personnage.ParentsV1   := Trim(EditHistoriqueV1[1].Text);
+        Personnage.FamilleV1   := Trim(EditHistoriqueV1[2].Text);
+      end;
     Personnage.HairColors := EditHairColors.Text;
     Personnage.EyeColors  := EditEyeColors.Text;
 
     // Maj personnage Attribut
     Personnage.AugmentationAttribut := [];
+    // Cellule Augmented = achetees + avance gratuite V2 : on n'enregistre que les achetees.
     For Ind := 1 to TabAttribut.ColCount - 1 do
-      if StrToIntDef(TabAttribut.Cells[Ind, LigAttBonus],0) > 0 then
+      if StrToIntDef(TabAttribut.Cells[Ind, LigAttBonus],0) - PersonnageAvanceGratuite(Personnage, TabAttribut.Cells[Ind, LigAttCode]) > 0 then
         begin
           PersonnageAttribut.CodeAttribut  := TabAttribut.Cells[Ind, LigAttCode];
-          PersonnageAttribut.Valeur        := StrToIntDef(TabAttribut.Cells[Ind, LigAttBonus],0);
+          PersonnageAttribut.Valeur        := StrToIntDef(TabAttribut.Cells[Ind, LigAttBonus],0) - PersonnageAvanceGratuite(Personnage, PersonnageAttribut.CodeAttribut);
           Personnage.AugmentationAttribut  += [PersonnageAttribut];
         end;
 
     // Maj personnage Compétences
     Personnage.AugmentationCompetence := [];
     For Ind := 1 to TabCompetence.Rowcount - 1 do
-      if StrToIntDef(TabCompetence.Cells[ColCompWork, Ind],0) > 0 then
+      // V2 : une competence achetee au niveau 0 (acquise, sans bonus) a la cellule "0", pas vide
+      if (StrToIntDef(TabCompetence.Cells[ColCompWork, Ind],0) > 0) or
+         ((ValVersion = 'WFRP2') and (TabCompetence.Cells[ColCompWork, Ind] <> '')) then
         begin
           PersonnageCompetence.CodeCompetence := TabCompetence.Cells[ColCompCode, Ind];
           PersonnageCompetence.Valeur         := StrToIntDef(TabCompetence.Cells[ColCompWork, Ind],0);
@@ -7977,7 +9795,7 @@ procedure TWinPersonnages.MajTablesPersonnage();
           PersonnageTalent.Valeur        := StrToIntDef(TabTalent.Cells[ColTalNbAugm, Ind],0);
           PersonnageTalent.Asterisque    := 0;
           for IndOld := 0 to high(OldAugmentationTalent) do
-            if CompareRechercheValeur(OldAugmentationTalent[IndOld].CodeTalent, PersonnageTalent.CodeTalent) then
+            if MemeTalent(OldAugmentationTalent[IndOld].CodeTalent, PersonnageTalent.CodeTalent) then
               begin
                 PersonnageTalent.Asterisque := OldAugmentationTalent[IndOld].Asterisque;
                 break;
@@ -8001,7 +9819,8 @@ procedure TWinPersonnages.MajTablesPersonnage();
         PersonnageEquipement.NomLibre       := TabEquipement.Cells[13, Ind];
         PersonnageEquipement.EncLibre       := StrToIntDef(TabEquipement.Cells[14, Ind], 0);
         PersonnageEquipement.PortePar       := TabEquipement.Cells[11, Ind];
-        If TalentSort(TabEquipement.Cells[2, Ind]).CodeTalent <> ''
+        If (TalentSort(TabEquipement.Cells[2, Ind]).CodeTalent <> '')
+           or (Pos(PrefixeTypeSortV1, TabEquipement.Cells[3, Ind]) = 1)
            then
           begin
             PersonnageEquipement.TypeEquipement    := TypeEquipSp;
@@ -8124,6 +9943,16 @@ function TWinPersonnages.XmlSauvegarde(): Boolean;
     ContenuPrecedent, ContenuNouveau: TStringList;
   begin
     Result := False;
+
+    // Option Momentum (validee a l'enregistrement) : la case decide de la version de TOUS les talents
+    // du personnage. Livre absent : on previent et on ne touche a aucun code.
+    Personnage.Options := StringReplace(Personnage.Options, AjouteAccolade(ConstXmlOptionMomentum), '', [rfReplaceAll]);
+    if CheckBoxMomentum.Checked then
+      Personnage.Options += AjouteAccolade(ConstXmlOptionMomentum);
+    if CheckBoxMomentum.Checked and not (LivreMomentumCharge() and VerifieFiltre(ConstFiltreLivreMomentum,Personnage.LivresAcceptes)) then
+      ShowMessage(GetTexteLibelle('RULES-LAB_988'))
+    else
+      PersonnageTalentsMomentum(Personnage, CheckBoxMomentum.Checked);
 
     // Maj personnage Corruption
     Personnage.Corruption := [];
@@ -8254,6 +10083,13 @@ Procedure TWinPersonnages.ChargerMetierEquipement(CodeMetier: String; NiveauMeti
     PTrapping:             StructureTrapping;
     I, J:                  Integer;
   begin
+  // V2 : on ne recoit pas le materiel de la nouvelle carriere, on doit l'avoir acquis avant (Core,
+  // Trappings) : jamais de liste a proposer.
+  if CarriereParSortie() then
+    begin
+      CodeMetier   := '';
+      NiveauMetier := 0;
+    end;
   // RAZ
   for I := 1 to TabMetierEquipement.RowCount -1 do
     For J := 1 to TabMetierEquipement.ColCount -1 do

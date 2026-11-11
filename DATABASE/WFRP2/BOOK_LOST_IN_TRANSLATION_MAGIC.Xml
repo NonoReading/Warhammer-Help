@@ -1,0 +1,2384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"LITM"</CODE_BOOK>
+<BOOK>"BOOK LOST IN TRANSLATION MAGIC"</BOOK>
+<BOOKNAME>"LOST IN TRANSLATION - WHERE HAS ALL THE MAGIC GONE - WFRP2"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"The Lost in Translation (LiT) series is intended to be a completely unofficial addition to Warhammer Fantasy RolePlay owned by Games Workshop (GW). All relevant trademarks and copyrights are used without permission and in no way meant to challenge ownership to them by GW. LiT fully recognises"</DISCLAIMER>
+<DATA_TALENT>
+<Talent id="LITM-T_WIZARD_MAGIC">
+<Description language="ENGLISH">"Wizard Magic"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"18"</Page>
+</Talent>
+<Talent id="LITM-T_ILLUSION_MAGIC">
+<Description language="ENGLISH">"Illusion Magic"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"33"</Page>
+</Talent>
+<Talent id="LITM-T_ALCHEMY_MAGIC">
+<Description language="ENGLISH">"Alchemy Magic"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>"42"</Page>
+</Talent>
+</DATA_TALENT>
+<DATA_TALENT_SPECIALIZATION>
+<Talent id="RULES-T_ARCANE_LORE__TREE_SONGS">
+<Description language="ENGLISH">"Arcane Lore (Tree Songs)"</Description>
+<Generique>"RULES-T_ARCANE_LORE__*"</Generique>
+<Page>"37"</Page>
+</Talent>
+</DATA_TALENT_SPECIALIZATION>
+<DATA_SKILL>
+<Skill id="RULES-COMP_PREPARE_ALCHEMICAL_COMPOUND_*">
+<Attribut>"RULES-ATTR_Int"</Attribut>
+<Description language="ENGLISH">"Prepare Alchemical Compound (Various)"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<RelatedTalents>""</RelatedTalents>
+<Page>"42"</Page>
+</Skill>
+</DATA_SKILL>
+<DATA_SKILL_SPECIALIZATION>
+<Skill id="RULES-COMP_PREPARE_ALCHEMICAL_COMPOUND_ACIDS_AND_ALKALIS">
+<Description language="ENGLISH">"Prepare Alchemical Compound (Acids and Alkalis)"</Description>
+<Generique>"RULES-COMP_PREPARE_ALCHEMICAL_COMPOUND_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_PREPARE_ALCHEMICAL_COMPOUND_COMBUSTIBLES">
+<Description language="ENGLISH">"Prepare Alchemical Compound (Combustibles)"</Description>
+<Generique>"RULES-COMP_PREPARE_ALCHEMICAL_COMPOUND_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_PREPARE_ALCHEMICAL_COMPOUND_DYES_AND_PIGMENTS">
+<Description language="ENGLISH">"Prepare Alchemical Compound (Dyes and Pigments)"</Description>
+<Generique>"RULES-COMP_PREPARE_ALCHEMICAL_COMPOUND_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_PREPARE_ALCHEMICAL_COMPOUND_ELIXIRS_AND_POTIONS">
+<Description language="ENGLISH">"Prepare Alchemical Compound (Elixirs and Potions)"</Description>
+<Generique>"RULES-COMP_PREPARE_ALCHEMICAL_COMPOUND_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_PREPARE_ALCHEMICAL_COMPOUND_PESTICIDES_AND_FUNGICIDES">
+<Description language="ENGLISH">"Prepare Alchemical Compound (Pesticides and Fungicides)"</Description>
+<Generique>"RULES-COMP_PREPARE_ALCHEMICAL_COMPOUND_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_PREPARE_ALCHEMICAL_COMPOUND_POISONS">
+<Description language="ENGLISH">"Prepare Alchemical Compound (Poisons)"</Description>
+<Generique>"RULES-COMP_PREPARE_ALCHEMICAL_COMPOUND_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_PREPARE_ALCHEMICAL_COMPOUND_SOAP">
+<Description language="ENGLISH">"Prepare Alchemical Compound (Soap)"</Description>
+<Generique>"RULES-COMP_PREPARE_ALCHEMICAL_COMPOUND_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_ACADEMIC_KNOWLEDGE_ALCHEMY">
+<Description language="ENGLISH">"Academic Knowledge (Alchemy)"</Description>
+<Generique>"RULES-COMP_ACADEMIC_KNOWLEDGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SECRET_LANGUAGE_ALCHEMIST">
+<Description language="ENGLISH">"Secret Language (Alchemist)"</Description>
+<Generique>"RULES-COMP_SECRET_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SECRET_LANGUAGE_ALCHEMY">
+<Description language="ENGLISH">"Secret Language (Alchemy)"</Description>
+<Generique>"RULES-COMP_SECRET_LANGUAGE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_TRADE_ALCHEMIST">
+<Description language="ENGLISH">"Trade (Alchemist)"</Description>
+<Generique>"RULES-COMP_TRADE_*"</Generique>
+</Skill>
+<Skill id="RULES-COMP_SECRET_SIGNS_WIZARD">
+<Description language="ENGLISH">"Secret Signs (Wizard)"</Description>
+<Generique>"RULES-COMP_SECRET_SIGNS_*"</Generique>
+</Skill>
+</DATA_SKILL_SPECIALIZATION>
+<DATA_CAREER>
+<Career id="LITM-CARE_ALCHEMIST_APPRENTICE">
+<Description language="ENGLISH">"Alchemist Apprentice"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"Ag +5%, Int +10%, WP +15%"</MainProfile>
+<SecondaryProfile>"W +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Alchemy), Academic Knowledge (any one), Evaluate, Haggle, Perception, Read/Write, Search, Secret Language (Alchemist), Speak Language (Classical)"</Skills>
+<Talents>"Acute Hearing, Savvy, Super Numerate"</Talents>
+<Trappings>"Quarter Staff, Backpack, Leather Flask"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ALCHEMY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_HAGGLE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_ALCHEMIST">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_CLASSICAL">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_ACUTE_HEARING">"1"</Talent>
+<Talent name="RULES-T_SAVVY">"1"</Talent>
+<Talent name="RULES-T_SUPER_NUMERATE">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"LITM 7"</Source>
+</Career>
+<Career id="LITM-CARE_APPRENTICE_WIZARD">
+<Description language="ENGLISH">"Apprentice Wizard"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"Ag +5%, Int +10%, WP +15%, Fel +5%"</MainProfile>
+<SecondaryProfile>"W +2, Mag +1"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_Ag">"5"</Advance>
+<Advance name="RULES-ATTR_Int">"10"</Advance>
+<Advance name="RULES-ATTR_WP">"15"</Advance>
+<Advance name="RULES-ATTR_Fel">"5"</Advance>
+<Advance name="RULES-ATTR_W">"2"</Advance>
+<Advance name="RULES-ATTR_Mag">"1"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Magic), Channelling, Magical Sense, Perception, Read/Write, Search, Speak Arcane Language (Magick), Speak Language (Classical)"</Skills>
+<Talents>"Aethyric Attunement or Fast Hands, Petty Magic (Arcane), Savvy or Very Resilient"</Talents>
+<Trappings>"Quarter Staff, Backpack, Printed Book"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_CLASSICAL">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_FAST_HANDS">"1"</Talent>
+<Talent name="RULES-T_PETTY_MAGIC__ARCANE">"1"</Talent>
+<Talent name="RULES-T_SAVVY/RULES-T_VERY_RESILIENT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Basic>"1"</Basic>
+<Source>"LITM 7"</Source>
+</Career>
+<Career id="LITM-CARE_ALCHEMIST">
+<Description language="ENGLISH">"Alchemist"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, S +10%, T +10%, Ag +35%, Int +35%, WP +30%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +3, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_S">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"35"</Advance>
+<Advance name="RULES-ATTR_Int">"35"</Advance>
+<Advance name="RULES-ATTR_WP">"30"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Alchemy), Academic Knowledge (any three), Channelling, Evaluate, Gossip, Heal, Magical Sense, Perception, Prepare Alchemical Compound (any two), Read/Write, Search, Secret Language (Alchemy), Speak Language (Classical), Trade (Alchemist)"</Skills>
+<Talents>"Aethyric Attunement, Acute Hearing, Alchemy Magic, Coolheaded, Dealmaker, Meditation, Lesser Magic (any one), Petty Magic (Arcane), Resistance to Poison, Savvy, Strong-minded, Super Numerate, Very Resilient"</Talents>
+<Trappings>"Trade Tools (Alchemist)"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_ALCHEMY">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_EVALUATE">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_HEAL">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
+<Skill name="RULES-COMP_PREPARE_ALCHEMICAL_COMPOUND_*">"1"</Skill>
+<Skill name="RULES-COMP_PREPARE_ALCHEMICAL_COMPOUND_*">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SEARCH">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_LANGUAGE_ALCHEMY">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_CLASSICAL">"1"</Skill>
+<Skill name="RULES-COMP_TRADE_ALCHEMIST">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"1"</Talent>
+<Talent name="RULES-T_ACUTE_HEARING">"1"</Talent>
+<Talent name="LITM-T_ALCHEMY_MAGIC">"1"</Talent>
+<Talent name="RULES-T_COOLHEADED">"1"</Talent>
+<Talent name="RULES-T_DEALMAKER">"1"</Talent>
+<Talent name="RULES-T_MEDITATION">"1"</Talent>
+<Talent name="RULES-T_LESSER_MAGIC__*">"1"</Talent>
+<Talent name="RULES-T_PETTY_MAGIC__ARCANE">"1"</Talent>
+<Talent name="RULES-T_RESISTANCE_TO_POISON">"1"</Talent>
+<Talent name="RULES-T_SAVVY">"1"</Talent>
+<Talent name="RULES-T_STRONG_MINDED">"1"</Talent>
+<Talent name="RULES-T_SUPER_NUMERATE">"1"</Talent>
+<Talent name="RULES-T_VERY_RESILIENT">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"LITM 8"</Source>
+</Career>
+<Career id="LITM-CARE_ILLUSIONIST">
+<Description language="ENGLISH">"Illusionist"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, T +5%, Ag +10%, Int +20%, WP +25%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +3, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"10"</Advance>
+<Advance name="RULES-ATTR_Int">"20"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Magic), Academic Knowledge (any one), Channelling, Charm or Disguise, Common Knowledge (any two), Gossip, Magical Sense, Read/Write, Ride or Swim, Secret Signs (Wizard), Speak Arcane Language (Magick), Speak Language (any two)"</Skills>
+<Talents>"Aethyric Attunement or Dark Magic, Fast Hands or Very Resilient, Illusion Magic, Meditation or Mighty Missile, Wizard Magic"</Talents>
+<Trappings>"Quarter Staff, Healing Poultice"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_DISGUISE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_RIDE/RULES-COMP_SWIM">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_SIGNS_WIZARD">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_DARK_MAGIC">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="LITM-T_ILLUSION_MAGIC">"1"</Talent>
+<Talent name="RULES-T_MEDITATION/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="LITM-T_WIZARD_MAGIC">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"LITM 8"</Source>
+</Career>
+<Career id="LITM-CARE_ILLUSIONIST_EMERITUS">
+<Description language="ENGLISH">"Illusionist Emeritus"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +15%, S +5%, T +15%, Ag +20%, Int +35%, WP +40%, Fel +20%"</MainProfile>
+<SecondaryProfile>"W +5, Mag +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"35"</Advance>
+<Advance name="RULES-ATTR_WP">"40"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+<Advance name="RULES-ATTR_W">"5"</Advance>
+<Advance name="RULES-ATTR_Mag">"4"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Magic), Academic Knowledge (any three), Channelling, Charm or Intimidate, Common Knowledge (any three), Magical Sense, Read/Write, Speak Arcane Language (Magick), Speak Arcane Language (Arcane Elf or Daemonic), Speak Language (any four)"</Skills>
+<Talents>"Aethyric Attunement or Mighty Missile, Dark Magic or Meditation, Fast Hands or Hardy, Illusion Magic, Wizard Magic"</Talents>
+<Trappings>"Hand Weapon, Wizard's Staff (disguised in the Empire) or Medallion of their Order, D5 Grimoires"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ARCANE_ELF/RULES-COMP_SPEAK_ARCANE_LANGUAGE_DAEMONIC">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="RULES-T_DARK_MAGIC/RULES-T_MEDITATION">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_HARDY">"1"</Talent>
+<Talent name="LITM-T_ILLUSION_MAGIC">"1"</Talent>
+<Talent name="LITM-T_WIZARD_MAGIC">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"LITM 9"</Source>
+</Career>
+<Career id="LITM-CARE_JOURNEYMAN_WIZARD">
+<Description language="ENGLISH">"Journeyman Wizard"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +5%, BS +5%, T +5%, Ag +15%, Int +30%, WP +25%, Fel +10%"</MainProfile>
+<SecondaryProfile>"W +3, Mag +2"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"5"</Advance>
+<Advance name="RULES-ATTR_BS">"5"</Advance>
+<Advance name="RULES-ATTR_T">"5"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"25"</Advance>
+<Advance name="RULES-ATTR_Fel">"10"</Advance>
+<Advance name="RULES-ATTR_W">"3"</Advance>
+<Advance name="RULES-ATTR_Mag">"2"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Magic), Academic Knowledge (any one), Channelling, Charm or Intimidate, Common Knowledge (any two), Gossip, Magical Sense, Read/Write, Ride or Swim, Secret Signs (Wizard), Speak Arcane Language (Magick), Speak Language (any two)"</Skills>
+<Talents>"Aethyric Attunement or Dark Magic, Fast Hands or Very Resilient, Meditation or Mighty Missile, Wizard Magic"</Talents>
+<Trappings>"Grimoire, Writing Kit"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_RIDE/RULES-COMP_SWIM">"1"</Skill>
+<Skill name="RULES-COMP_SECRET_SIGNS_WIZARD">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_DARK_MAGIC">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_VERY_RESILIENT">"1"</Talent>
+<Talent name="RULES-T_MEDITATION/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="LITM-T_WIZARD_MAGIC">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"LITM 9"</Source>
+</Career>
+<Career id="LITM-CARE_MASTER_ILLUSIONIST">
+<Description language="ENGLISH">"Master Illusionist"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, T +10%, Ag +15%, Int +30%, WP +35%, Fel +15%"</MainProfile>
+<SecondaryProfile>"W +4, Mag +3"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"35"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_Mag">"3"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Magic), Academic Knowledge (any two), Channelling, Charm or Intimidate, Common Knowledge (any two), Gossip or Ride, Magical Sense, Read/Write, Speak Arcane Language (Magick), Speak Arcane Language (Arcane Elf or Daemonic), Speak Language (any three)"</Skills>
+<Talents>"Aethyric Attunement or Meditation, Dark Magic or Strong-minded, Fast Hands or Mighty Missile, Illusion Magic, Wizard Magic"</Talents>
+<Trappings>"Hand Weapon, Wizard's Staff (disguised in the Empire) or Medallion of their Order, D2 Grimoires"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP/RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ARCANE_ELF/RULES-COMP_SPEAK_ARCANE_LANGUAGE_DAEMONIC">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_MEDITATION">"1"</Talent>
+<Talent name="RULES-T_DARK_MAGIC/RULES-T_STRONG_MINDED">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="LITM-T_ILLUSION_MAGIC">"1"</Talent>
+<Talent name="LITM-T_WIZARD_MAGIC">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"LITM 10"</Source>
+</Career>
+<Career id="LITM-CARE_MASTER_WIZARD">
+<Description language="ENGLISH">"Master Wizard"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +10%, BS +10%, T +10%, Ag +15%, Int +30%, WP +35%, Fel +15%"</MainProfile>
+<SecondaryProfile>"W +4, Mag +3"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"10"</Advance>
+<Advance name="RULES-ATTR_BS">"10"</Advance>
+<Advance name="RULES-ATTR_T">"10"</Advance>
+<Advance name="RULES-ATTR_Ag">"15"</Advance>
+<Advance name="RULES-ATTR_Int">"30"</Advance>
+<Advance name="RULES-ATTR_WP">"35"</Advance>
+<Advance name="RULES-ATTR_Fel">"15"</Advance>
+<Advance name="RULES-ATTR_W">"4"</Advance>
+<Advance name="RULES-ATTR_Mag">"3"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Magic), Academic Knowledge (any two), Channelling, Charm or Intimidate, Common Knowledge (any two), Gossip or Ride, Magical Sense, Read/Write, Speak Arcane Language (Magick), Speak Arcane Language (Arcane Elf or Daemonic), Speak Language (any three)"</Skills>
+<Talents>"Aethyric Attunement or Meditation, Dark Magic or Strong-minded, Fast Hands or Mighty Missile, Wizard Magic"</Talents>
+<Trappings>"Hand Weapon, Wizard's Staff (disguised in the Empire) or Medallion of their Order, D2 Grimoires"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_GOSSIP/RULES-COMP_RIDE">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ARCANE_ELF/RULES-COMP_SPEAK_ARCANE_LANGUAGE_DAEMONIC">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_MEDITATION">"1"</Talent>
+<Talent name="RULES-T_DARK_MAGIC/RULES-T_STRONG_MINDED">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="LITM-T_WIZARD_MAGIC">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"LITM 10"</Source>
+</Career>
+<Career id="LITM-CARE_WIZARD_LORD">
+<Description language="ENGLISH">"Wizard Lord"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<MainProfile>"WS +15%, BS +15%, S +5%, T +15%, Ag +20%, Int +35%, WP +40%, Fel +20%"</MainProfile>
+<SecondaryProfile>"W +5, Mag +4"</SecondaryProfile>
+<Advances>
+<Advance name="RULES-ATTR_WS">"15"</Advance>
+<Advance name="RULES-ATTR_BS">"15"</Advance>
+<Advance name="RULES-ATTR_S">"5"</Advance>
+<Advance name="RULES-ATTR_T">"15"</Advance>
+<Advance name="RULES-ATTR_Ag">"20"</Advance>
+<Advance name="RULES-ATTR_Int">"35"</Advance>
+<Advance name="RULES-ATTR_WP">"40"</Advance>
+<Advance name="RULES-ATTR_Fel">"20"</Advance>
+<Advance name="RULES-ATTR_W">"5"</Advance>
+<Advance name="RULES-ATTR_Mag">"4"</Advance>
+</Advances>
+<Skills>"Academic Knowledge (Magic), Academic Knowledge (any three), Channelling, Charm or Intimidate, Common Knowledge (any three), Magical Sense, Read/Write, Speak Arcane Language (Magick), Speak Arcane Language (Arcane Elf or Daemonic), Speak Language (any four)"</Skills>
+<Talents>"Aethyric Attunement or Mighty Missile, Dark Magic or Meditation, Fast Hands or Hardy, Wizard Magic"</Talents>
+<Trappings>"Hand Weapon, Wizard's Staff (disguised in the Empire) or Medallion of their Order, D5 Grimoires"</Trappings>
+<SUBCHAPTER_SKILL>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_CHANNELLING">"1"</Skill>
+<Skill name="RULES-COMP_CHARM/RULES-COMP_INTIMIDATE">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_COMMON_KNOWLEDGE_*">"1"</Skill>
+<Skill name="RULES-COMP_MAGICAL_SENSE">"1"</Skill>
+<Skill name="RULES-COMP_READ_WRITE">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_MAGICK">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_ARCANE_LANGUAGE_ARCANE_ELF/RULES-COMP_SPEAK_ARCANE_LANGUAGE_DAEMONIC">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+<Skill name="RULES-COMP_SPEAK_LANGUAGE_*">"1"</Skill>
+</SUBCHAPTER_SKILL>
+<SUBCHAPTER_TALENT>
+<Talent name="RULES-T_AETHYRIC_ATTUNEMENT/RULES-T_MIGHTY_MISSILE">"1"</Talent>
+<Talent name="RULES-T_DARK_MAGIC/RULES-T_MEDITATION">"1"</Talent>
+<Talent name="RULES-T_FAST_HANDS/RULES-T_HARDY">"1"</Talent>
+<Talent name="LITM-T_WIZARD_MAGIC">"1"</Talent>
+</SUBCHAPTER_TALENT>
+<Source>"LITM 11"</Source>
+</Career>
+</DATA_CAREER>
+<DATA_CAREER_LINK_V2>
+<Link name="LITM-CARE_ALCHEMIST_APPRENTICE">"LITM-CARE_ALCHEMIST"</Link>
+<Link name="LITM-CARE_ALCHEMIST_APPRENTICE">"RULES-CARE_APPRENTICE_WIZARD"</Link>
+<Link name="LITM-CARE_ALCHEMIST_APPRENTICE">"RULES-CARE_INITIATE"</Link>
+<Link name="LITM-CARE_ALCHEMIST_APPRENTICE">"RULES-CARE_SCHOLAR"</Link>
+<Link name="LITM-CARE_APPRENTICE_WIZARD">"LITM-CARE_ALCHEMIST_APPRENTICE"</Link>
+<Link name="RULES-CARE_BURGHER">"LITM-CARE_ALCHEMIST_APPRENTICE"</Link>
+<Link name="RULES-CARE_HEDGE_WIZARD">"LITM-CARE_ALCHEMIST_APPRENTICE"</Link>
+<Link name="RULES-CARE_PEASANT">"LITM-CARE_ALCHEMIST_APPRENTICE"</Link>
+<Link name="RULES-CARE_SCRIBE">"LITM-CARE_ALCHEMIST_APPRENTICE"</Link>
+<Link name="RULES-CARE_STUDENT">"LITM-CARE_ALCHEMIST_APPRENTICE"</Link>
+<Link name="LITM-CARE_APPRENTICE_WIZARD">"RULES-CARE_JOURNEYMAN_WIZARD"</Link>
+<Link name="LITM-CARE_APPRENTICE_WIZARD">"RULES-CARE_SCHOLAR"</Link>
+<Link name="LITM-CARE_APPRENTICE_WIZARD">"RULES-CARE_SCRIBE"</Link>
+<Link name="LITM-CARE_ALCHEMIST">"LITM-CARE_APPRENTICE_WIZARD"</Link>
+<Link name="LITM-CARE_ALCHEMIST_APPRENTICE">"LITM-CARE_APPRENTICE_WIZARD"</Link>
+<Link name="RULES-CARE_HEDGE_WIZARD">"LITM-CARE_APPRENTICE_WIZARD"</Link>
+<Link name="RULES-CARE_SCHOLAR">"LITM-CARE_APPRENTICE_WIZARD"</Link>
+<Link name="RULES-CARE_SCRIBE">"LITM-CARE_APPRENTICE_WIZARD"</Link>
+<Link name="RULES-CARE_STUDENT">"LITM-CARE_APPRENTICE_WIZARD"</Link>
+<Link name="LITM-CARE_ALCHEMIST">"RULES-CARE_APPRENTICE_WIZARD"</Link>
+<Link name="LITM-CARE_ALCHEMIST">"RULES-CARE_CHARLATAN"</Link>
+<Link name="LITM-CARE_ALCHEMIST">"RULES-CARE_SCHOLAR"</Link>
+<Link name="LITM-CARE_ILLUSIONIST">"LITM-CARE_ALCHEMIST"</Link>
+<Link name="LITM-CARE_ILLUSIONIST">"RULES-CARE_CHARLATAN"</Link>
+<Link name="LITM-CARE_ILLUSIONIST">"RULES-CARE_ENTERTAINER"</Link>
+<Link name="LITM-CARE_ILLUSIONIST">"LITM-CARE_MASTER_ILLUSIONIST"</Link>
+<Link name="LITM-CARE_ILLUSIONIST">"RULES-CARE_SCHOLAR"</Link>
+<Link name="LITM-CARE_JOURNEYMAN_WIZARD">"LITM-CARE_ILLUSIONIST"</Link>
+<Link name="LITM-CARE_ILLUSIONIST_EMERITUS">"RULES-CARE_EXPLORER"</Link>
+<Link name="LITM-CARE_ILLUSIONIST_EMERITUS">"RULES-CARE_GUILD_MASTER"</Link>
+<Link name="LITM-CARE_ILLUSIONIST_EMERITUS">"RULES-CARE_POLITICIAN"</Link>
+<Link name="LITM-CARE_ILLUSIONIST_EMERITUS">"RULES-CARE_SCHOLAR"</Link>
+<Link name="LITM-CARE_MASTER_ILLUSIONIST">"LITM-CARE_ILLUSIONIST_EMERITUS"</Link>
+<Link name="LITM-CARE_JOURNEYMAN_WIZARD">"LITM-CARE_ALCHEMIST"</Link>
+<Link name="LITM-CARE_JOURNEYMAN_WIZARD">"RULES-CARE_MASTER_WIZARD"</Link>
+<Link name="LITM-CARE_JOURNEYMAN_WIZARD">"RULES-CARE_MERCHANT"</Link>
+<Link name="LITM-CARE_JOURNEYMAN_WIZARD">"RULES-CARE_SCHOLAR"</Link>
+<Link name="LITM-CARE_APPRENTICE_WIZARD">"LITM-CARE_JOURNEYMAN_WIZARD"</Link>
+<Link name="LITM-CARE_MASTER_ILLUSIONIST">"RULES-CARE_CHARLATAN"</Link>
+<Link name="LITM-CARE_MASTER_ILLUSIONIST">"RULES-CARE_EXPLORER"</Link>
+<Link name="LITM-CARE_MASTER_ILLUSIONIST">"RULES-CARE_MERCHANT"</Link>
+<Link name="LITM-CARE_MASTER_ILLUSIONIST">"RULES-CARE_POLITICIAN"</Link>
+<Link name="LITM-CARE_MASTER_ILLUSIONIST">"RULES-CARE_SCHOLAR"</Link>
+<Link name="LITM-CARE_MASTER_WIZARD">"RULES-CARE_EXPLORER"</Link>
+<Link name="LITM-CARE_MASTER_WIZARD">"RULES-CARE_MERCHANT"</Link>
+<Link name="LITM-CARE_MASTER_WIZARD">"RULES-CARE_SCHOLAR"</Link>
+<Link name="LITM-CARE_MASTER_WIZARD">"RULES-CARE_WIZARD_LORD"</Link>
+<Link name="LITM-CARE_JOURNEYMAN_WIZARD">"LITM-CARE_MASTER_WIZARD"</Link>
+<Link name="LITM-CARE_WIZARD_LORD">"RULES-CARE_EXPLORER"</Link>
+<Link name="LITM-CARE_WIZARD_LORD">"RULES-CARE_GUILD_MASTER"</Link>
+<Link name="LITM-CARE_WIZARD_LORD">"RULES-CARE_SCHOLAR"</Link>
+<Link name="LITM-CARE_MASTER_WIZARD">"LITM-CARE_WIZARD_LORD"</Link>
+</DATA_CAREER_LINK_V2>
+<DATA_SPELL_V2>
+<SpellV2 id="LITM-SPEL_BLOT">
+<Description language="ENGLISH">"Blot"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A small piece of blotting paper (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CURE_BOILS">
+<Description language="ENGLISH">"Cure Boils"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A small bar of soap (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_DANGER_SENSE">
+<Description language="ENGLISH">"Danger Sense"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"The shoulder-blades of a hedgehog (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_DARK_SIGHT">
+<Description language="ENGLISH">"Dark Sight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"The eyes of an owl (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_FIND">
+<Description language="ENGLISH">"Find"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A lamb's tail (+1)"</Ingredient>
+<Page>"13"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_LESSER_CURSE">
+<Description language="ENGLISH">"Lesser Curse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Hair, fingernail, etc. from the victim (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_REMOVE_LESSER_CURSE">
+<Description language="ENGLISH">"Remove Lesser Curse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"None"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_WEAKEN_POISON">
+<Description language="ENGLISH">"Weaken Poison"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pint of water (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ZONE_OF_COLD">
+<Description language="ENGLISH">"Zone of Cold"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A lit torch (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ZONE_OF_SILENCE">
+<Description language="ENGLISH">"Zone of Silence"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A ball of wax (+1)"</Ingredient>
+<Page>"14"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ZONE_OF_WARMTH">
+<Description language="ENGLISH">"Zone of Warmth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"3"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A piece of animal fur (+1)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_GIFT_OF_TONGUES">
+<Description language="ENGLISH">"Gift of Tongues"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"The tongue of any creature (+1)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_KNOCK_DOWN">
+<Description language="ENGLISH">"Knock Down"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Small ebony stick ending in a carved fist (+1)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_OPEN">
+<Description language="ENGLISH">"Open"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A small silver key (+1)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_REINFORCE_DOOR">
+<Description language="ENGLISH">"Reinforce Door"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small lock (+1)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_STEALTH">
+<Description language="ENGLISH">"Stealth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A dry leaf (+1)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ZONE_OF_FRIENDLINESS">
+<Description language="ENGLISH">"Zone of Friendliness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A glass of spirits (+1)"</Ingredient>
+<Page>"15"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ZONE_OF_TASTINESS">
+<Description language="ENGLISH">"Zone of Tastiness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A toffee apple (+1)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ZONE_OF_WINDLESSNESS">
+<Description language="ENGLISH">"Zone of Windlessness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A dandelion with seeds attached (+1)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_SHARP_EYES">
+<Description language="ENGLISH">"Sharp Eyes"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Petty Magic (Arcane)"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"The eyes of a hawk (+1)"</Ingredient>
+<Page>"16"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_MOVE">
+<Description language="ENGLISH">"Move"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A small fan (+1)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_AETHYRIC_ARMOUR">
+<Description language="ENGLISH">"Aethyric Armour"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A link of chainmail (+1)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_BLESSED_WEAPON">
+<Description language="ENGLISH">"Blessed Weapon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A dab of blessed water (+1)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CURE_LIGHT_INJURY">
+<Description language="ENGLISH">"Cure Light Injury"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A piece of lint (+1)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_DISPIRIT">
+<Description language="ENGLISH">"Dispirit"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A carved miniature wooden heart, which is snapped in two as the spell is cast (+1)"</Ingredient>
+<Page>"19"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_MAGIC_LOCK">
+<Description language="ENGLISH">"Magic Lock"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"7"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A small key (+1)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CAUSE_ANIMOSITY">
+<Description language="ENGLISH">"Cause Animosity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Any part of a dead goblin (+2)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_DETECT_MAGIC">
+<Description language="ENGLISH">"Detect Magic"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A leaf from an ash or hawthorn tree (+1)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ENTHUSE">
+<Description language="ENGLISH">"Enthuse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A miniature cast iron heart (+2)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_FLEETFOOT">
+<Description language="ENGLISH">"Fleetfoot"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Two seeds of Vigiwort and the sinews of a horse's leg (+2)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_IGNITE_MISSILES">
+<Description language="ENGLISH">"Ignite Missiles"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A drop of oil and a pinch of sulphur (+2)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_IMMUNITY_FROM_POISON">
+<Description language="ENGLISH">"Immunity from Poison"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The tail of a scorpion (+1)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_MAGIC_ALARM">
+<Description language="ENGLISH">"Magic Alarm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"1 minute"</CastingTime>
+<Ingredient>"A small brass bell (+1)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_SLOWFOOT">
+<Description language="ENGLISH">"Slowfoot"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"An infusion of sleeping herbs and a fragment of tortoise shell (+1)"</Ingredient>
+<Page>"20"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_LUCK">
+<Description language="ENGLISH">"Luck"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A rabbit's foot (+1)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_SLIPPERY_GROUND">
+<Description language="ENGLISH">"Slippery Ground"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A drop of oil (+1)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_WILT_WEAPON">
+<Description language="ENGLISH">"Wilt Weapon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"9"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small clay model of a weapon and a vial of pure, clear water (+2)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_LIGHTNING_BOLT">
+<Description language="ENGLISH">"Lightning Bolt"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A tuning fork (+1)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_SILENCE">
+<Description language="ENGLISH">"Silence"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A gag (+1)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_WARD_AREA">
+<Description language="ENGLISH">"Ward Area"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Two Full Actions"</CastingTime>
+<Ingredient>"Crumpled paper (+1)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ZONE_OF_FIRELESSNESS">
+<Description language="ENGLISH">"Zone of Firelessness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A damp squib or tinderbox (+1)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_SKYWALK">
+<Description language="ENGLISH">"Skywalk"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"11"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"An eagle's feather (+2)"</Ingredient>
+<Page>"21"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CAUSE_HATRED">
+<Description language="ENGLISH">"Cause Hatred"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Blood from a giant spider (+3)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CONVERSE_BY_CANDLELIGHT">
+<Description language="ENGLISH">"Converse by Candlelight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A copper wire (+1)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_FIRE_BALL">
+<Description language="ENGLISH">"Fire Ball"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A ball of sulphur (+2)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_FLIGHT">
+<Description language="ENGLISH">"Flight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Wing feather of a bird of prey (+2)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_HAMMERHAND">
+<Description language="ENGLISH">"Hammerhand"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small silver hammer (+2)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_HOLD_FLIGHT">
+<Description language="ENGLISH">"Hold Flight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The jawbone of a mule (+1)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_STEAL_MIND">
+<Description language="ENGLISH">"Steal Mind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A phial of pure alcohol (+1)"</Ingredient>
+<Page>"22"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_STRENGTH_OF_COMBAT">
+<Description language="ENGLISH">"Strength of Combat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The scalp of a giant (+3)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_DISPEL">
+<Description language="ENGLISH">"Dispel"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"13"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small silver hammer (+2)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_BREAK_WEAPON">
+<Description language="ENGLISH">"Break Weapon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small wooden model of the weapon, broken when the spell is cast (+1)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CAUSE_FRENZY">
+<Description language="ENGLISH">"Cause Frenzy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A lock of hair from a chaos beastman (+3)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CAUSE_PANIC">
+<Description language="ENGLISH">"Cause Panic"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The tooth of a dragon (+3)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_MYSTIC_MIST">
+<Description language="ENGLISH">"Mystic Mist"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A ball of cotton wool (+1)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_RALLY">
+<Description language="ENGLISH">"Rally"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Blood from the heart of a lion (+3)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_WIND_BLAST">
+<Description language="ENGLISH">"Wind Blast"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"An animal bladder (+1)"</Ingredient>
+<Page>"23"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ZONE_OF_SANCTUARY">
+<Description language="ENGLISH">"Zone of Sanctuary"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small silver pentagram (+2)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ZONE_OF_STEADFASTNESS">
+<Description language="ENGLISH">"Zone of Steadfastness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"1 pint of dragon's blood (+3)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ANIMATE_SWORD">
+<Description language="ENGLISH">"Animate Sword"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A sword (+1)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ARROW_STORM">
+<Description language="ENGLISH">"Arrow Storm"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A quiver of up to 12 arrows (+1)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_MAGICAL_MIGHT">
+<Description language="ENGLISH">"Magical Might"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Any non-magical combat weapon (+1)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_SMASH">
+<Description language="ENGLISH">"Smash"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"15"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A lock of hair from a giant (+3)"</Ingredient>
+<Page>"24"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ARROW_INVULNERABILITY">
+<Description language="ENGLISH">"Arrow Invulnerability"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A turtle or tortoise shell (+1)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_BLOCK_MEMORY">
+<Description language="ENGLISH">"Block Memory"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A blindfold (+1)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CAUSE_FEAR">
+<Description language="ENGLISH">"Cause Fear"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The skull of any creature 10 foot tall (+3)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_FLAME_CURSE">
+<Description language="ENGLISH">"Flame Curse"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Any part of a dragon (+3)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_STEAL_MAGICAL_POWER">
+<Description language="ENGLISH">"Steal Magical Power"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small amber jar (+2)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CAUSE_COWARDLY_FLIGHT">
+<Description language="ENGLISH">"Cause Cowardly Flight"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The blood of any daemon (+3)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CAUSE_STUPIDITY">
+<Description language="ENGLISH">"Cause Stupidity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The brain of a giant (+3)"</Ingredient>
+<Page>"25"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CLOAK_OF_DARKNESS">
+<Description language="ENGLISH">"Cloak of Darkness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A pinch of soot and the wings of a bat (+2)"</Ingredient>
+<Page>"26"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_MENTAL_DUEL">
+<Description language="ENGLISH">"Mental Duel"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Two miniature swords, one of gold and one of jet (+3)"</Ingredient>
+<Page>"26"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_WARD_OF_FORBIDDING">
+<Description language="ENGLISH">"Ward of Forbidding"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A 6 inch long bronze rod of 1/2 inch diameter (+2)"</Ingredient>
+<Page>"26"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CAUSE_INSTABILITY">
+<Description language="ENGLISH">"Cause Instability"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The hand of a necromancer or daemonologist (+3)"</Ingredient>
+<Page>"26"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CORRODE">
+<Description language="ENGLISH">"Corrode"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A piece of iron and a drop of water (+2)"</Ingredient>
+<Page>"27"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CURSE_OF_ARROW_ATTRACTION">
+<Description language="ENGLISH">"Curse of Arrow Attraction"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A magical arrow (+3)"</Ingredient>
+<Page>"27"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ENFEEBLE">
+<Description language="ENGLISH">"Enfeeble"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A drop of mouse blood (+1)"</Ingredient>
+<Page>"27"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_PIT_OF_DESPAIR">
+<Description language="ENGLISH">"Pit of Despair"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A trowel (+1)"</Ingredient>
+<Page>"27"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CREATE_SCRYING_WINDOW">
+<Description language="ENGLISH">"Create Scrying Window"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small glass globe (+2)"</Ingredient>
+<Page>"27"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_DISPEL_MAGIC">
+<Description language="ENGLISH">"Dispel Magic"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Two Full Actions"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"27"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_MAGIC_BRIDGE">
+<Description language="ENGLISH">"Magic Bridge"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Two Full Actions"</CastingTime>
+<Ingredient>"A twig from an oak tree (+1)"</Ingredient>
+<Page>"28"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_SENSE_OF_THE_GREEN">
+<Description language="ENGLISH">"Sense of the Green"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A compass (+2)"</Ingredient>
+<Page>"28"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_SUBVERT_WEAPON">
+<Description language="ENGLISH">"Subvert Weapon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small silver weapon (+2)"</Ingredient>
+<Page>"28"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ACCELERATE_TIME">
+<Description language="ENGLISH">"Accelerate Time"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A minute-glass filled with diamond dust (+3)"</Ingredient>
+<Page>"28"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_AURA_OF_INVULNERABILITY">
+<Description language="ENGLISH">"Aura of Invulnerability"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A piece of dragon hide, at least 6 inches by 6 inches (+3)"</Ingredient>
+<Page>"28"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CHANGE_ALLEGIANCE">
+<Description language="ENGLISH">"Change Allegiance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The heart of a doppelganger (+3)"</Ingredient>
+<Page>"28"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_SHARPEN_WEAPON">
+<Description language="ENGLISH">"Sharpen Weapon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Any edged or pointed weapon (+1)"</Ingredient>
+<Page>"29"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_BLAST">
+<Description language="ENGLISH">"Blast"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Gunpowder, equivalent for 10 shots (+2)"</Ingredient>
+<Page>"29"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CURE_SEVERE_WOUND">
+<Description language="ENGLISH">"Cure Severe Wound"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The pituitary gland of a troll (+3)"</Ingredient>
+<Page>"29"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ENCHANT_WEAPON">
+<Description language="ENGLISH">"Enchant Weapon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Any weapon (+1)"</Ingredient>
+<Page>"29"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_STRENGTH_OF_MIND">
+<Description language="ENGLISH">"Strength of Mind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"29"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_FOETID_CLOUD">
+<Description language="ENGLISH">"Foetid Cloud"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"26"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Entrails of a skunk and a cabbage leaf (+2)"</Ingredient>
+<Page>"29"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_REVERSE_SPELL">
+<Description language="ENGLISH">"Reverse Spell"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"26"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A silvered mirror (+2)"</Ingredient>
+<Page>"29"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ZONE_OF_MISSILE_PROTECTION">
+<Description language="ENGLISH">"Zone of Missile Protection"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"26"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small model shield (+1)"</Ingredient>
+<Page>"30"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_DRAIN_MAGIC">
+<Description language="ENGLISH">"Drain Magic"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"28"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Any magical wand, wrapped around with copper wire (+3)"</Ingredient>
+<Page>"30"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_STAND_STILL">
+<Description language="ENGLISH">"Stand Still"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"28"</CastingNumber>
+<CastingTime>"Two Full Actions"</CastingTime>
+<Ingredient>"The eyes of a basilisk (+3)"</Ingredient>
+<Page>"30"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ZONE_OF_MAGICAL_IMMUNITY">
+<Description language="ENGLISH">"Zone of Magical Immunity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"28"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A sphere of glass containing 3 drops of daemon blood (+3)"</Ingredient>
+<Page>"30"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_SHRIVELLING">
+<Description language="ENGLISH">"Shrivelling"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Wizardry"</Lore>
+<CastingNumber>"30"</CastingNumber>
+<CastingTime>"Two Full Actions"</CastingTime>
+<Ingredient>"Dried tendon from an Undead creature (+3)"</Ingredient>
+<Page>"31"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ASSUME_ILLUSIONARY_APPEARANCE">
+<Description language="ENGLISH">"Assume Illusionary Appearance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A mask of the creature or person to be impersonated (+1)"</Ingredient>
+<Page>"33"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CAMOUFLAGE_ILLUSION">
+<Description language="ENGLISH">"Camouflage Illusion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A silvered mirror (+1)"</Ingredient>
+<Page>"34"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_GLAMOUR">
+<Description language="ENGLISH">"Glamour"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A small mirror (+1)"</Ingredient>
+<Page>"34"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_BEWILDER">
+<Description language="ENGLISH">"Bewilder"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A splash of ale (+1)"</Ingredient>
+<Page>"34"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CAMOUFLAGE_AREA">
+<Description language="ENGLISH">"Camouflage Area"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pint of chameleon blood (+2)"</Ingredient>
+<Page>"34"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CLONE_IMAGE">
+<Description language="ENGLISH">"Clone Image"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Small manikins of the caster (+2)"</Ingredient>
+<Page>"34"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_BANISH_ILLUSION">
+<Description language="ENGLISH">"Banish Illusion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A magnifying glass (+1)"</Ingredient>
+<Page>"34"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ILLUSORY_FEATURE">
+<Description language="ENGLISH">"Illusory Feature"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A carved wooden nose (+1)"</Ingredient>
+<Page>"34"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_SIMPLE_DECEPTION">
+<Description language="ENGLISH">"Simple Deception"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A knotted silk handkerchief (+1)"</Ingredient>
+<Page>"34"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CLOAK_ACTIVITY">
+<Description language="ENGLISH">"Cloak Activity"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A piece of woollen fleece (+1)"</Ingredient>
+<Page>"35"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_GHOSTLY_APPEARANCE">
+<Description language="ENGLISH">"Ghostly Appearance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"The shroud from an undead creature (+3)"</Ingredient>
+<Page>"35"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_HALLUCINATE">
+<Description language="ENGLISH">"Hallucinate"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A piece of clay worked into a model of the desired creature (+1)"</Ingredient>
+<Page>"35"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ILLUSION_OF_MIGHTY_APPEARANCE">
+<Description language="ENGLISH">"Illusion of Mighty Appearance"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Mask (+1)"</Ingredient>
+<Page>"35"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_LESSER_EIDOLON">
+<Description language="ENGLISH">"Lesser Eidolon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A small brass model of the desired terrain (+2)"</Ingredient>
+<Page>"35"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ILLUSIONARY_ENEMY">
+<Description language="ENGLISH">"Illusionary Enemy"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A dried chameleon and the skull of a goblin (+3)"</Ingredient>
+<Page>"35"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_THROW_VOICE">
+<Description language="ENGLISH">"Throw Voice"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"14"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Two ears made of wax (+1)"</Ingredient>
+<Page>"36"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ILLUSIONARY_BUILDINGS">
+<Description language="ENGLISH">"Illusionary Buildings"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Small models of buildings (+1)"</Ingredient>
+<Page>"36"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ILLUSIONARY_WOODS">
+<Description language="ENGLISH">"Illusionary Woods"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Small model trees (+1)"</Ingredient>
+<Page>"36"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_SHROUD_OF_INVISIBILITY">
+<Description language="ENGLISH">"Shroud of Invisibility"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A gossamer shroud (+2)"</Ingredient>
+<Page>"36"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ILLUSIONARY_ARMY">
+<Description language="ENGLISH">"Illusionary Army"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"Small model figures of the troops desired by the caster (+2)"</Ingredient>
+<Page>"36"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CONFOUND_FOE">
+<Description language="ENGLISH">"Confound Foe"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"22"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"An hourglass with crushed diamonds instead of sand, value 100 GC (+3)"</Ingredient>
+<Page>"36"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_DESTROY_ILLUSION">
+<Description language="ENGLISH">"Destroy Illusion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A crystal prism (+3)"</Ingredient>
+<Page>"36"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ILLUSION">
+<Description language="ENGLISH">"Illusion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"One full and a half action"</CastingTime>
+<Ingredient>"A crystal prism (+3)"</Ingredient>
+<Page>"37"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_UNIVERSAL_CONFUSION">
+<Description language="ENGLISH">"Universal Confusion"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"27"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"The eyes of a chimera (+3)"</Ingredient>
+<Page>"37"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ILLUSION_OF_DARKNESS">
+<Description language="ENGLISH">"Illusion of Darkness"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"28"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A ball of pitch (+2)"</Ingredient>
+<Page>"37"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_TELEPORT">
+<Description language="ENGLISH">"Teleport"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Illusion"</Lore>
+<CastingNumber>"28"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A potion of flying or the hand of a daemon (+3)"</Ingredient>
+<Page>"37"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_FIND_PLANT">
+<Description language="ENGLISH">"Find Plant"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Tree Songs"</Lore>
+<CastingNumber>"4"</CastingNumber>
+<CastingTime>"Six full actions"</CastingTime>
+<Ingredient>"A freshly plucked hazel dowsing rod (+1)"</Ingredient>
+<Page>"37"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_SPLINTER_WEAPON">
+<Description language="ENGLISH">"Splinter Weapon"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Tree Songs"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Six full actions"</CastingTime>
+<Ingredient>"A woodworm (+1)"</Ingredient>
+<Page>"37"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_VERDANT_TRACKING">
+<Description language="ENGLISH">"Verdant Tracking"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Tree Songs"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Six full actions"</CastingTime>
+<Ingredient>"A small wooden hunting horn (+1)"</Ingredient>
+<Page>"38"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_WHISPERING_LEAVES">
+<Description language="ENGLISH">"Whispering Leaves"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Tree Songs"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Six full actions"</CastingTime>
+<Ingredient>"An autumn leaf, to be crumbled in the hand (+1)"</Ingredient>
+<Page>"38"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ANGER_OF_THE_WOODS">
+<Description language="ENGLISH">"Anger of the Woods"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Tree Songs"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Six full actions"</CastingTime>
+<Ingredient>"A handful of nuts (+1)"</Ingredient>
+<Page>"38"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_BRIDGE_OF_VINES">
+<Description language="ENGLISH">"Bridge of Vines"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Tree Songs"</Lore>
+<CastingNumber>"10"</CastingNumber>
+<CastingTime>"Six full actions"</CastingTime>
+<Ingredient>"A tendril from a vine or creeper (+1)"</Ingredient>
+<Page>"38"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CARPET_OF_MOULD">
+<Description language="ENGLISH">"Carpet of Mould"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Tree Songs"</Lore>
+<CastingNumber>"12"</CastingNumber>
+<CastingTime>"Six full actions"</CastingTime>
+<Ingredient>"A rotten fruit (+1)"</Ingredient>
+<Page>"38"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_SPLINTER_MISSILE">
+<Description language="ENGLISH">"Splinter Missile"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Tree Songs"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Six full actions"</CastingTime>
+<Ingredient>"An arrow, to be broken when the song is sung (+1)"</Ingredient>
+<Page>"39"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_TREEFORM">
+<Description language="ENGLISH">"Treeform"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Tree Songs"</Lore>
+<CastingNumber>"16"</CastingNumber>
+<CastingTime>"Six full actions"</CastingTime>
+<Ingredient>"The sprouting seed of the tree to be turned into (+2)"</Ingredient>
+<Page>"39"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_HAUNTED_FOREST">
+<Description language="ENGLISH">"Haunted Forest"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Tree Songs"</Lore>
+<CastingNumber>"17"</CastingNumber>
+<CastingTime>"Six full actions"</CastingTime>
+<Ingredient>"The root of a 100-year-old tree uprooted in a gale (+3)"</Ingredient>
+<Page>"39"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_FALSE_DRYAD">
+<Description language="ENGLISH">"False Dryad"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Tree Songs"</Lore>
+<CastingNumber>"18"</CastingNumber>
+<CastingTime>"Six full actions"</CastingTime>
+<Ingredient>"A twig from a tree inhabited by a Dryad (+3)"</Ingredient>
+<Page>"39"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_HEART_OF_THE_TREE">
+<Description language="ENGLISH">"Heart of the Tree"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Tree Songs"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Six full actions"</CastingTime>
+<Ingredient>"A small carved statue of the caster (+2)"</Ingredient>
+<Page>"40"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_VITAL_SURGE">
+<Description language="ENGLISH">"Vital Surge"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Tree Songs"</Lore>
+<CastingNumber>"20"</CastingNumber>
+<CastingTime>"Six full actions"</CastingTime>
+<Ingredient>"A handful of soil from an Elf settlement (+2)"</Ingredient>
+<Page>"40"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_SHAPE_THE_GROWING_PLANT">
+<Description language="ENGLISH">"Shape the Growing Plant"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Tree Songs"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"Six full actions"</CastingTime>
+<Ingredient>"A seed or nut of the plant to be affected (+1)"</Ingredient>
+<Page>"40"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_ESSENCE_OF_AIR">
+<Description language="ENGLISH">"Essence of Air"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Alchemy"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"An animal bladder (+1)"</Ingredient>
+<Page>"43"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_HEAT">
+<Description language="ENGLISH">"Heat"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Alchemy"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A candle (+1)"</Ingredient>
+<Page>"43"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_PRESSURE">
+<Description language="ENGLISH">"Pressure"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Alchemy"</Lore>
+<CastingNumber>"5"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A handful of powdered granite (+1)"</Ingredient>
+<Page>"44"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CHANNELLED_SHOCK">
+<Description language="ENGLISH">"Channelled Shock"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Alchemy"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"Wood from a lightning struck tree (+2)"</Ingredient>
+<Page>"43"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_COOL">
+<Description language="ENGLISH">"Cool"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Alchemy"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A wet cloth (+1)"</Ingredient>
+<Page>"44"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CREATE_VACUUM">
+<Description language="ENGLISH">"Create Vacuum"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Alchemy"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A hollow animal-horn (+1)"</Ingredient>
+<Page>"44"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_FREEZE">
+<Description language="ENGLISH">"Freeze"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Alchemy"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A piece of ice (+1)"</Ingredient>
+<Page>"44"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_IMPERVIOUS_HAND">
+<Description language="ENGLISH">"Impervious Hand"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Alchemy"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A pair of leather gloves (+1)"</Ingredient>
+<Page>"44"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_MAINTAIN_TEMPERATURE">
+<Description language="ENGLISH">"Maintain Temperature"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Alchemy"</Lore>
+<CastingNumber>"6"</CastingNumber>
+<CastingTime>"Half Action"</CastingTime>
+<Ingredient>"A small woolly scarf (+1)"</Ingredient>
+<Page>"44"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_HARDEN_CONTAINER">
+<Description language="ENGLISH">"Harden Container"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Lore of Alchemy"</Lore>
+<CastingNumber>"8"</CastingNumber>
+<CastingTime>"Full Action"</CastingTime>
+<Ingredient>"A handful of sand (+1)"</Ingredient>
+<Page>"44"</Page>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CONJURE_SERVITOR">
+<Description language="ENGLISH">"Conjure Servitor"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"28"</CastingNumber>
+<CastingTime>"16 hours"</CastingTime>
+<Ingredient>"Any combination of pieces of metal, wood, leather, string and bits of odds and ends"</Ingredient>
+<Page>"31"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"400"</XPCost>
+<Conditions>"A large room with no interruption"</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CREATE_MAGICAL_CIRCLE">
+<Description language="ENGLISH">"Create Magical Circle"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"10 plus the Casting Number of the spell to be held by the magical circle"</CastingNumber>
+<CastingTime>"15 minutes"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"31"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"250"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CREATE_MAGICAL_PENTAGRAM">
+<Description language="ENGLISH">"Create Magical Pentagram"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"24"</CastingNumber>
+<CastingTime>"15 minutes"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"32"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"350"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+<SpellV2 id="LITM-SPEL_CREATE_MAGICAL_SQUARE">
+<Description language="ENGLISH">"Create Magical Square"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Lore>"Rituals"</Lore>
+<CastingNumber>"14 plus the Casting Number of the spell to be held by the magic square"</CastingNumber>
+<CastingTime>"15 minutes"</CastingTime>
+<Ingredient>""</Ingredient>
+<Page>"32-33"</Page>
+<RitualType>"RULES-V2RITUAL_ARCANE"</RitualType>
+<ArcaneLanguage>"Magick"</ArcaneLanguage>
+<MagicMin>"3"</MagicMin>
+<XPCost>"300"</XPCost>
+<Conditions>""</Conditions>
+<Consequences>""</Consequences>
+</SpellV2>
+</DATA_SPELL_V2>
+<DATA_SPELL_TALENT>
+<Sort id="LITM-SPEL_BLOT">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CURE_BOILS">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_DANGER_SENSE">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_DARK_SIGHT">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_FIND">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_LESSER_CURSE">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_REMOVE_LESSER_CURSE">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_WEAKEN_POISON">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ZONE_OF_COLD">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ZONE_OF_SILENCE">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ZONE_OF_WARMTH">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_GIFT_OF_TONGUES">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_KNOCK_DOWN">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_OPEN">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_REINFORCE_DOOR">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_STEALTH">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ZONE_OF_FRIENDLINESS">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ZONE_OF_TASTINESS">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ZONE_OF_WINDLESSNESS">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_SHARP_EYES">
+<Talent>"RULES-T_PETTY_MAGIC__ARCANE"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_MOVE">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_AETHYRIC_ARMOUR">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_BLESSED_WEAPON">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CURE_LIGHT_INJURY">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_DISPIRIT">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_MAGIC_LOCK">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CAUSE_ANIMOSITY">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_DETECT_MAGIC">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ENTHUSE">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_FLEETFOOT">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_IGNITE_MISSILES">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_IMMUNITY_FROM_POISON">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_MAGIC_ALARM">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_SLOWFOOT">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_LUCK">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_SLIPPERY_GROUND">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_WILT_WEAPON">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_LIGHTNING_BOLT">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_SILENCE">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_WARD_AREA">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ZONE_OF_FIRELESSNESS">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_SKYWALK">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CAUSE_HATRED">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CONVERSE_BY_CANDLELIGHT">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_FIRE_BALL">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_FLIGHT">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_HAMMERHAND">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_HOLD_FLIGHT">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_STEAL_MIND">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_STRENGTH_OF_COMBAT">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_DISPEL">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_BREAK_WEAPON">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CAUSE_FRENZY">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CAUSE_PANIC">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_MYSTIC_MIST">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_RALLY">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_WIND_BLAST">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ZONE_OF_SANCTUARY">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ZONE_OF_STEADFASTNESS">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ANIMATE_SWORD">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ARROW_STORM">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_MAGICAL_MIGHT">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_SMASH">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ARROW_INVULNERABILITY">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_BLOCK_MEMORY">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CAUSE_FEAR">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_FLAME_CURSE">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_STEAL_MAGICAL_POWER">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CAUSE_COWARDLY_FLIGHT">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CAUSE_STUPIDITY">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CLOAK_OF_DARKNESS">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_MENTAL_DUEL">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_WARD_OF_FORBIDDING">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CAUSE_INSTABILITY">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CORRODE">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CURSE_OF_ARROW_ATTRACTION">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ENFEEBLE">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_PIT_OF_DESPAIR">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CREATE_SCRYING_WINDOW">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_DISPEL_MAGIC">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_MAGIC_BRIDGE">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_SENSE_OF_THE_GREEN">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_SUBVERT_WEAPON">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ACCELERATE_TIME">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_AURA_OF_INVULNERABILITY">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CHANGE_ALLEGIANCE">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_SHARPEN_WEAPON">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_BLAST">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CURE_SEVERE_WOUND">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ENCHANT_WEAPON">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_STRENGTH_OF_MIND">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_FOETID_CLOUD">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_REVERSE_SPELL">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ZONE_OF_MISSILE_PROTECTION">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_DRAIN_MAGIC">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_STAND_STILL">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ZONE_OF_MAGICAL_IMMUNITY">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_SHRIVELLING">
+<Talent>"LITM-T_WIZARD_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ASSUME_ILLUSIONARY_APPEARANCE">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CAMOUFLAGE_ILLUSION">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_GLAMOUR">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_BEWILDER">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CAMOUFLAGE_AREA">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CLONE_IMAGE">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_BANISH_ILLUSION">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ILLUSORY_FEATURE">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_SIMPLE_DECEPTION">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CLOAK_ACTIVITY">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_GHOSTLY_APPEARANCE">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_HALLUCINATE">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ILLUSION_OF_MIGHTY_APPEARANCE">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_LESSER_EIDOLON">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ILLUSIONARY_ENEMY">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_THROW_VOICE">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ILLUSIONARY_BUILDINGS">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ILLUSIONARY_WOODS">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_SHROUD_OF_INVISIBILITY">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ILLUSIONARY_ARMY">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CONFOUND_FOE">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_DESTROY_ILLUSION">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ILLUSION">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_UNIVERSAL_CONFUSION">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ILLUSION_OF_DARKNESS">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_TELEPORT">
+<Talent>"LITM-T_ILLUSION_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_FIND_PLANT">
+<Talent>"RULES-T_ARCANE_LORE__TREE_SONGS"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_SPLINTER_WEAPON">
+<Talent>"RULES-T_ARCANE_LORE__TREE_SONGS"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_VERDANT_TRACKING">
+<Talent>"RULES-T_ARCANE_LORE__TREE_SONGS"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_WHISPERING_LEAVES">
+<Talent>"RULES-T_ARCANE_LORE__TREE_SONGS"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ANGER_OF_THE_WOODS">
+<Talent>"RULES-T_ARCANE_LORE__TREE_SONGS"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_BRIDGE_OF_VINES">
+<Talent>"RULES-T_ARCANE_LORE__TREE_SONGS"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CARPET_OF_MOULD">
+<Talent>"RULES-T_ARCANE_LORE__TREE_SONGS"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_SPLINTER_MISSILE">
+<Talent>"RULES-T_ARCANE_LORE__TREE_SONGS"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_TREEFORM">
+<Talent>"RULES-T_ARCANE_LORE__TREE_SONGS"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_HAUNTED_FOREST">
+<Talent>"RULES-T_ARCANE_LORE__TREE_SONGS"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_FALSE_DRYAD">
+<Talent>"RULES-T_ARCANE_LORE__TREE_SONGS"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_HEART_OF_THE_TREE">
+<Talent>"RULES-T_ARCANE_LORE__TREE_SONGS"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_VITAL_SURGE">
+<Talent>"RULES-T_ARCANE_LORE__TREE_SONGS"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_SHAPE_THE_GROWING_PLANT">
+<Talent>"RULES-T_ARCANE_LORE__TREE_SONGS"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_ESSENCE_OF_AIR">
+<Talent>"LITM-T_ALCHEMY_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_HEAT">
+<Talent>"LITM-T_ALCHEMY_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_PRESSURE">
+<Talent>"LITM-T_ALCHEMY_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CHANNELLED_SHOCK">
+<Talent>"LITM-T_ALCHEMY_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_COOL">
+<Talent>"LITM-T_ALCHEMY_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_CREATE_VACUUM">
+<Talent>"LITM-T_ALCHEMY_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_FREEZE">
+<Talent>"LITM-T_ALCHEMY_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_IMPERVIOUS_HAND">
+<Talent>"LITM-T_ALCHEMY_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_MAINTAIN_TEMPERATURE">
+<Talent>"LITM-T_ALCHEMY_MAGIC"</Talent>
+</Sort>
+<Sort id="LITM-SPEL_HARDEN_CONTAINER">
+<Talent>"LITM-T_ALCHEMY_MAGIC"</Talent>
+</Sort>
+</DATA_SPELL_TALENT>
+</DATA_BOOK>

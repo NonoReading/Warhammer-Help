@@ -1,0 +1,2773 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"HUCU"</CODE_BOOK>
+<BOOK>"BOOK HUGELSTEINS CURIOSITIES"</BOOK>
+<BOOKNAME>"HUGELSTEIN'S CURIOSITIES - SPECIAL AND RARE ITEMS - WFRP2"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"DISCLAIMER: This document and its content are completely unofficial and in no way endorsed by Games Workshop Limited. Warhammer Fantasy Roleplay, the Warhammer Fantasy Roleplay logo, WFRP, Chaos, the Chaos device, the Chaos logo, Citadel, Citadel Device, Darkblade, ‘Eavy Metal, Forge World, Games Workshop, Games Workshop logo, Golden Demon, Great Unclean One, GW, the Hammer of Sigmar logo, Horned Rat logo, Keeper of Secrets, Khemri, Khorne, the Khorne logo, Lord of Change, Nurgle, the Nurgle logo, Skaven, the Skaven symbol device, Slaanesh, the Slaanesh logo, Tomb Kings, Tzeentch, the Tzeentch logo, Warhammer, Warhammer World logo, White Dwarf, the White Dwarf logo, and all associated marks, names, races, race insignia, characters, vehicles, loca- tions, units, artefacts, illustrations and images from the Warhammer world are either ®, TM and/or © Copyright Games Workshop Ltd 2000-2008, variably regis- tered in the UK and other countries around the world. Used without permission. No challenge to their status intended. All Rights Reserved to their respective owners."</DISCLAIMER>
+<DATA_EQUIPMENT_V2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_BLACK_MACE_HC">
+<Description language="ENGLISH">"Black Mace (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>""</Qualities>
+<Availability>"-"</Availability>
+<Note>"Spiked head, enamelled black; the enamel flakes off in combat."</Note>
+<Page>"4"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_DEAD_EYE_S_MAIN_GAUCHE_HC">
+<Description language="ENGLISH">"Dead-Eye's Main Gauche (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"15 gc"</Cost>
+<Encumbrance>"12"</Encumbrance>
+<Group>"RULES-WTYPE2_PARRYING"</Group>
+<Damage>"SB–3"</Damage>
+<Qualities>"Craftsmanship Good, Defensive"</Qualities>
+<Availability>"-"</Availability>
+<Note>"From Dead-Eye Pierre's Deadly Duo; with its scabbard."</Note>
+<Page>"4"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_DEAD_EYE_S_RAPIER_HC">
+<Description language="ENGLISH">"Dead-Eye's Rapier (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"60 gc"</Cost>
+<Encumbrance>"33"</Encumbrance>
+<Group>"RULES-WTYPE2_FENCING"</Group>
+<Damage>"SB–1"</Damage>
+<Qualities>"Craftsmanship Good, Fast"</Qualities>
+<Availability>"-"</Availability>
+<Note>"From Dead-Eye Pierre's Deadly Duo; with its scabbard."</Note>
+<Page>"4"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_IMPERIAL_GREATSWORD_HC">
+<Description language="ENGLISH">"Imperial Greatsword (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"70 gc"</Cost>
+<Encumbrance>"180"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Craftsmanship Good, Impact, Slow"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Unused sword of the Carroburg Greatswords, with scabbard."</Note>
+<Page>"4"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_IMPERIAL_BROADSWORD_HC">
+<Description language="ENGLISH">"Imperial Broadsword (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"30 gc"</Cost>
+<Encumbrance>"45"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Standard side arm of the Carroburg Greatswords, with scabbard."</Note>
+<Page>"4"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_DRAGON_TRIDENT_HC">
+<Description language="ENGLISH">"Dragon Trident (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"80 gc"</Cost>
+<Encumbrance>"85"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB–1"</Damage>
+<Qualities>"Craftsmanship Poor, Defensive, Impact, Tiring"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Dragon Trident of Lung Wai-Toh: nine blades on a bronze head, in fact made in Marienburg."</Note>
+<Page>"4"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_JADE_KNIFE_HC">
+<Description language="ENGLISH">"Jade Knife (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"50 gc"</Cost>
+<Encumbrance>"8"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–3"</Damage>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Jade Knife of Lustria; the handle is jadeite, more an artefact than a weapon."</Note>
+<Page>"5"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_KHOPESH_HC">
+<Description language="ENGLISH">"Khopesh (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"15 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>""</Qualities>
+<Availability>"-"</Availability>
+<Note>"Arched one-handed sword of Araby, old enough to be an antique."</Note>
+<Page>"5"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_MIDDENHAMMER_HC">
+<Description language="ENGLISH">"Middenhammer (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"40 gc"</Cost>
+<Encumbrance>"220"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Armour Piercing or Impact, Slow"</Qualities>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"5"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_FAHR_S_LONGSWORD_HC">
+<Description language="ENGLISH">"Fahr's Longsword (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"22 gc"</Cost>
+<Encumbrance>"45"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Worn but well-balanced, gold filigree and sapphires; comes with the Fahr family scabbard."</Note>
+<Page>"5"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_RANALD_PRIEST_S_DAGGER_HC">
+<Description language="ENGLISH">"Ranald Priest's Dagger (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"8 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–3"</Damage>
+<Qualities>"Craftsmanship Best, Special"</Qualities>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"6"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_RANALD_PRIEST_S_DAGGER_THROWN_HC">
+<Description language="ENGLISH">"Ranald Priest's Dagger (thrown) (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"8 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Group>"RULES-WTYPE2_THROWING"</Group>
+<Damage>"SB–3"</Damage>
+<Range>"4/8"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Craftsmanship Best, Special"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Same dagger thrown; see Ranald Priest's Dagger."</Note>
+<Page>"6"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_SIGMARITE_WHIP_HC">
+<Description language="ENGLISH">"Sigmarite Whip (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"40 gc"</Cost>
+<Encumbrance>"65"</Encumbrance>
+<Group>"RULES-WTYPE2_ENTANGLING"</Group>
+<Damage>"SB"</Damage>
+<Range>"4/-"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Craftsmanship Good, Snare"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Chain whip with hammer-shaped links, handle engraved with a two-tailed comet."</Note>
+<Page>"6"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_SINGING_SWORD_HC">
+<Description language="ENGLISH">"Singing Sword (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"35 gc"</Cost>
+<Encumbrance>"45"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Pierced pommel whistles when swung; can be muffled with cotton wadding."</Note>
+<Page>"6"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_VERENA_S_GAVEL_HC">
+<Description language="ENGLISH">"Verena's Gavel (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"30 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"6"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_WAR_ENDER_HC">
+<Description language="ENGLISH">"War Ender (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"100 gc"</Cost>
+<Encumbrance>"70"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB+1"</Damage>
+<Qualities>"Craftsmanship Best"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Dwarf axe usable in one or both hands; keeps its edge after many battles."</Note>
+<Page>"6"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_BLADED_BOW_MELEE_HC">
+<Description language="ENGLISH">"Bladed Bow (melee) (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"30 gc"</Cost>
+<Encumbrance>"200"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Craftsmanship Poor, Slow"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Orc bow with a serrated blade at each end."</Note>
+<Page>"8"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_BLADED_BOW_RANGED_HC">
+<Description language="ENGLISH">"Bladed Bow (ranged) (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"30 gc"</Cost>
+<Encumbrance>"200"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"3"</Damage>
+<Range>"20/40"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Craftsmanship Poor"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Fires standard arrows."</Note>
+<Page>"8"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_HALFLING_BOW_HC">
+<Description language="ENGLISH">"Halfling Bow (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"25 gc"</Cost>
+<Encumbrance>"70"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"3"</Damage>
+<Range>"16/32"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Cathayan bow, nothing to do with Halflings; fires sling ammunition."</Note>
+<Page>"8"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_LUSTRIAN_BLOWGUN_HC">
+<Description language="ENGLISH">"Lustrian Blowgun (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"50 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Group>"RULES-WTYPE2_BLOWGUN"</Group>
+<Range>"12/16"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Craftsmanship Good, Special"</Qualities>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"8"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_MILITARY_CROSSBOW_HC">
+<Description language="ENGLISH">"Military Crossbow (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"80 gc"</Cost>
+<Encumbrance>"105"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"4"</Damage>
+<Range>"30/60"</Range>
+<Reload>"Full"</Reload>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Imperial army crossbow with the serial numbers filed off."</Note>
+<Page>"8"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_SLAYER_S_CROSSBOW_HC">
+<Description language="ENGLISH">"Slayer's Crossbow (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"500 gc"</Cost>
+<Encumbrance>"180"</Encumbrance>
+<Group>"RULES-WTYPE2_CROSSBOW"</Group>
+<Damage>"3"</Damage>
+<Range>"8/16"</Range>
+<Reload>"Free"</Reload>
+<Qualities>"Craftsmanship Good, Armour Piercing, Special"</Qualities>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"8"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_COACHMAN_S_BLUNDERBUSS_HC">
+<Description language="ENGLISH">"Coachman's Blunderbuss (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"30 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
+<Damage>"4"</Damage>
+<Range>"16/-"</Range>
+<Reload>"3 Full"</Reload>
+<Qualities>"Craftsmanship Poor, Experimental, Shrapnel, Special"</Qualities>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"11"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_ESTALIAN_NOBLE_S_PISTOL_MELEE_HC">
+<Description language="ENGLISH">"Estalian Noble's Pistol (melee) (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"675 gc"</Cost>
+<Encumbrance>"32"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–3"</Damage>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"11"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_ESTALIAN_NOBLE_S_PISTOL_RANGED_HC">
+<Description language="ENGLISH">"Estalian Noble's Pistol (ranged) (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"675 gc"</Cost>
+<Encumbrance>"32"</Encumbrance>
+<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
+<Damage>"4"</Damage>
+<Range>"8/16"</Range>
+<Reload>"2 Full"</Reload>
+<Qualities>"Craftsmanship Good, Impact, Unreliable, Special"</Qualities>
+<Availability>"-"</Availability>
+<Note>"See the melee entry for the spike."</Note>
+<Page>"11"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_GAMBLER_S_PISTOL_HC">
+<Description language="ENGLISH">"Gambler's Pistol (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"80 gc"</Cost>
+<Encumbrance>"25"</Encumbrance>
+<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
+<Damage>"4"</Damage>
+<Range>"8/16"</Range>
+<Reload>"2 Full"</Reload>
+<Qualities>"Craftsmanship Poor, Impact, Unreliable"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Pair of playing cards scratched into the handle."</Note>
+<Page>"11"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_DWARF_LONG_GUN_HC">
+<Description language="ENGLISH">"Dwarf Long Gun (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"975 gc"</Cost>
+<Encumbrance>"27"</Encumbrance>
+<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
+<Damage>"4"</Damage>
+<Range>"26/52"</Range>
+<Reload>"2 Full"</Reload>
+<Qualities>"Craftsmanship Good, Armour Piercing, Impact, Unreliable, Special"</Qualities>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"11"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_IMPERIAL_BOARDING_GUN_HC">
+<Description language="ENGLISH">"Imperial Boarding Gun (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"600 gc"</Cost>
+<Encumbrance>"75"</Encumbrance>
+<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
+<Damage>"5"</Damage>
+<Range>"24/-"</Range>
+<Reload>"14 Full"</Reload>
+<Qualities>"Impact, Experimental, Shrapnel, Special"</Qualities>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"11"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_REPEATER_HANDGUN_HC">
+<Description language="ENGLISH">"Repeater Handgun (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"300 gc"</Cost>
+<Encumbrance>"30"</Encumbrance>
+<Group>"RULES-WTYPE2_ENGINEER"</Group>
+<Damage>"4"</Damage>
+<Range>"24/48"</Range>
+<Reload>"Free"</Reload>
+<Qualities>"Experimental, Special"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Use the standard reload rules for repeater handguns, WFRP p.111."</Note>
+<Page>"12"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_RUEGGER_S_PISTOL_HC">
+<Description language="ENGLISH">"Ruegger's Pistol (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"250 gc"</Cost>
+<Encumbrance>"25"</Encumbrance>
+<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
+<Damage>"4"</Damage>
+<Range>"8/16"</Range>
+<Reload>"2 Full"</Reload>
+<Qualities>"Impact, Unreliable"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Duelling pistol in a varnished case with powder, jam-rod, cleaning kit and 6 lead balls."</Note>
+<Page>"12"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_BASTARD_SWORD_HC">
+<Description language="ENGLISH">"Bastard Sword (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"12 gc"</Cost>
+<Encumbrance>"150"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Craftsmanship Poor, Slow (one-handed) or Impact &amp; Slow (two-handed)"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_BILL_HOOK_HC">
+<Description language="ENGLISH">"Bill Hook (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"16 gc"</Cost>
+<Encumbrance>"170"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Fast or Impact &amp; Slow"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_BRASS_HILTED_CUTLASS_HC">
+<Description language="ENGLISH">"Brass-hilted Cutlass (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"12 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>""</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_BRASS_KNUCKLES_HC">
+<Description language="ENGLISH">"Brass Knuckles (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–3"</Damage>
+<Qualities>"Pummelling"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 2 pairs."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_BROADSWORD_HC">
+<Description language="ENGLISH">"Broadsword (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"9 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>""</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 3."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_CAVALRY_SPEAR_HC">
+<Description language="ENGLISH">"Cavalry Spear (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"18 gc"</Cost>
+<Encumbrance>"75"</Encumbrance>
+<Group>"RULES-WTYPE2_CAVALRY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Fast &amp; Impact &amp; Tiring"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 2."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_CLAYMORE_HC">
+<Description language="ENGLISH">"Claymore (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"30 gc"</Cost>
+<Encumbrance>"150"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Slow (one-handed) or Impact &amp; Slow (two-handed)"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_CROW_HEADED_MACE_HC">
+<Description language="ENGLISH">"Crow-headed Mace (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"8 gc"</Cost>
+<Encumbrance>"55"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>""</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_DAGGERS_KNIVES_HC">
+<Description language="ENGLISH">"Daggers &amp; Knives (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–3"</Damage>
+<Qualities>""</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 2d10."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_FLAIL_HC">
+<Description language="ENGLISH">"Flail (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"15 gc"</Cost>
+<Encumbrance>"95"</Encumbrance>
+<Group>"RULES-WTYPE2_FLAIL"</Group>
+<Damage>"SB+1"</Damage>
+<Qualities>"Impact &amp; Tiring"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 2."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_IMPERIAL_HAMMER_HC">
+<Description language="ENGLISH">"Imperial Hammer (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"11 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>""</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_IMPERIAL_PAVISE_HC">
+<Description language="ENGLISH">"Imperial Pavise (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"20 gc"</Cost>
+<Encumbrance>"120"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Qualities>"Special (see Old World Armoury p.32)"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_INFANTRY_HALBERD_HC">
+<Description language="ENGLISH">"Infantry Halberd (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"15 gc"</Cost>
+<Encumbrance>"175"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Fast or Impact &amp; Slow"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 2."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_LANCE_HC">
+<Description language="ENGLISH">"Lance (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"40 gc"</Cost>
+<Encumbrance>"100"</Encumbrance>
+<Group>"RULES-WTYPE2_CAVALRY"</Group>
+<Damage>"SB+1"</Damage>
+<Qualities>"Fast &amp; Impact &amp; Tiring"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 2."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_LARGE_SHIELD_HC">
+<Description language="ENGLISH">"Large Shield (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"30 gc"</Cost>
+<Encumbrance>"45"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–2"</Damage>
+<Qualities>"Craftsmanship Good, Defensive"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 2."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_LEAF_BLADED_BROADSWORD_HC">
+<Description language="ENGLISH">"Leaf-bladed Broadsword (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"35 gc"</Cost>
+<Encumbrance>"45"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_LONGSWORD_HC">
+<Description language="ENGLISH">"Longsword (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"11 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>""</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 2."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_MARLINSPIKE_HC">
+<Description language="ENGLISH">"Marlinspike (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"45"</Encumbrance>
+<Group>"RULES-WTYPE2_PARRYING"</Group>
+<Damage>"SB–1"</Damage>
+<Qualities>"Balanced"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 2."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_MEAT_HOOK_HC">
+<Description language="ENGLISH">"Meat Hook (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"10s"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–3"</Damage>
+<Qualities>"Craftsmanship Poor, Pummelling"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_NORSCAN_GREAT_AXE_HC">
+<Description language="ENGLISH">"Norscan Great Axe (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"60 gc"</Cost>
+<Encumbrance>"90"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Craftsmanship Good, Impact &amp; Slow"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_PIKE_HC">
+<Description language="ENGLISH">"Pike (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"17 gc"</Cost>
+<Encumbrance>"200"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Fast &amp; Special (see Old World Armoury p.32)"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 2."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_PIT_FIGHTER_S_HALBERD_HC">
+<Description language="ENGLISH">"Pit Fighter's Halberd (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"50 gc"</Cost>
+<Encumbrance>"155"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Craftsmanship Good, Fast or Impact &amp; Slow"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_QUARTERSTAFF_HC">
+<Description language="ENGLISH">"Quarterstaff (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"2s"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–2"</Damage>
+<Qualities>"Defensive &amp; Pummelling"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1d10."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_ROUND_SHIELD_HC">
+<Description language="ENGLISH">"Round Shield (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"8 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–2"</Damage>
+<Qualities>"Defensive"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1d10."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_RUSTED_PICK_AXE_HC">
+<Description language="ENGLISH">"Rusted Pick-axe (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"4 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Craftsmanship Poor"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_SMALLSWORD_HC">
+<Description language="ENGLISH">"Smallsword (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"30 gc"</Cost>
+<Encumbrance>"35"</Encumbrance>
+<Group>"RULES-WTYPE2_FENCING"</Group>
+<Damage>"SB–1"</Damage>
+<Qualities>"Craftsmanship Good, Precise"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_SHORTSWORD_HC">
+<Description language="ENGLISH">"Shortsword (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"8 gc"</Cost>
+<Encumbrance>"40"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–1"</Damage>
+<Qualities>""</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 3."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_SPEAR_HC">
+<Description language="ENGLISH">"Spear (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"8 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Fast"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1d10."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_ULRICAN_WARHAMMER_HC">
+<Description language="ENGLISH">"Ulrican Warhammer (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"13 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>""</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_UNRIMMED_SHIELD_HC">
+<Description language="ENGLISH">"Unrimmed Shield (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–2"</Damage>
+<Qualities>"Craftsmanship Poor, Special (see Old World Armoury p.32)"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 3."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_VOULGE_HC">
+<Description language="ENGLISH">"Voulge (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"13 gc"</Cost>
+<Encumbrance>"180"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Fast or Impact &amp; Slow"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_WOODEN_CLUB_HC">
+<Description language="ENGLISH">"Wooden Club (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Craftsmanship Poor"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 3."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_WOODEN_LANCE_HC">
+<Description language="ENGLISH">"Wooden Lance (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"20 gc"</Cost>
+<Encumbrance>"100"</Encumbrance>
+<Group>"RULES-WTYPE2_CAVALRY"</Group>
+<Damage>"SB+1"</Damage>
+<Qualities>"Craftsmanship Poor, Fast &amp; Impact &amp; Tiring"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1d10."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_WOODEN_STAFF_HC">
+<Description language="ENGLISH">"Wooden Staff (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"1s"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–2"</Damage>
+<Qualities>"Craftsmanship Poor, Defensive &amp; Pummelling"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1d10."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_WOODSMAN_S_AXE_HC">
+<Description language="ENGLISH">"Woodsman's Axe (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"200"</Encumbrance>
+<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Craftsmanship Poor, Impact &amp; Slow"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 2."</Note>
+<Page>"7"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_BOLA_HC">
+<Description language="ENGLISH">"Bola (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"8s"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Group>"RULES-WTYPE2_ENTANGLING"</Group>
+<Damage>"1"</Damage>
+<Range>"8/16"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Snare"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 2."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_BORDERMAN_S_BOW_HC">
+<Description language="ENGLISH">"Borderman's Bow (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"40 gc"</Cost>
+<Encumbrance>"60"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Range>"24/48"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_BULLWHIP_HC">
+<Description language="ENGLISH">"Bullwhip (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"2 gc"</Cost>
+<Encumbrance>"40"</Encumbrance>
+<Group>"RULES-WTYPE2_ENTANGLING"</Group>
+<Damage>"SB–4"</Damage>
+<Range>"6/-"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Fast &amp; Snare"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 4."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_COMPETITION_BOW_HC">
+<Description language="ENGLISH">"Competition Bow (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"30 gc"</Cost>
+<Encumbrance>"60"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"2"</Damage>
+<Range>"30/60"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_CREAKY_LONGBOW_HC">
+<Description language="ENGLISH">"Creaky Longbow (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"8 gc"</Cost>
+<Encumbrance>"90"</Encumbrance>
+<Group>"RULES-WTYPE2_LONGBOW"</Group>
+<Damage>"3"</Damage>
+<Range>"30/60"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Craftsmanship Poor, Armour Piercing"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 2."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_FARMER_S_BOW_HC">
+<Description language="ENGLISH">"Farmer's Bow (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"8 gc"</Cost>
+<Encumbrance>"80"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"3"</Damage>
+<Range>"24/48"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Craftsmanship Poor"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 4."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_HALFLING_STAFF_SLING_HC">
+<Description language="ENGLISH">"Halfling Staff Sling (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"18 gc"</Cost>
+<Encumbrance>"45"</Encumbrance>
+<Group>"RULES-WTYPE2_SLING"</Group>
+<Damage>"4"</Damage>
+<Range>"24/48"</Range>
+<Reload>"Full"</Reload>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_HUNTING_BOW_HC">
+<Description language="ENGLISH">"Hunting Bow (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"11 gc"</Cost>
+<Encumbrance>"80"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"3"</Damage>
+<Range>"24/48"</Range>
+<Reload>"Half"</Reload>
+<Qualities>""</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 3."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_JAVELIN_HC">
+<Description language="ENGLISH">"Javelin (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"20s"</Cost>
+<Encumbrance>"30"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB–1"</Damage>
+<Range>"8/16"</Range>
+<Reload>"Half"</Reload>
+<Qualities>""</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 6."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_KISLEVIAN_SHORTBOW_HC">
+<Description language="ENGLISH">"Kislevian Shortbow (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"12 gc"</Cost>
+<Encumbrance>"80"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"3"</Damage>
+<Range>"24/48"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Craftsmanship Poor"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_LASSO_HC">
+<Description language="ENGLISH">"Lasso (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Group>"RULES-WTYPE2_ENTANGLING"</Group>
+<Range>"8/-"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Snare"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 4."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_MULESKINNER_S_WHIP_HC">
+<Description language="ENGLISH">"Muleskinner's Whip (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"7 gc"</Cost>
+<Encumbrance>"35"</Encumbrance>
+<Group>"RULES-WTYPE2_ENTANGLING"</Group>
+<Damage>"SB–4"</Damage>
+<Range>"6/-"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Craftsmanship Good, Fast &amp; Snare"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 2."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_OUTLAW_S_CROSSBOW_HC">
+<Description language="ENGLISH">"Outlaw's Crossbow (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"11 gc"</Cost>
+<Encumbrance>"120"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"3"</Damage>
+<Range>"30/60"</Range>
+<Reload>"Full"</Reload>
+<Qualities>"Craftsmanship Poor"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 2."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_ROPE_NET_HC">
+<Description language="ENGLISH">"Rope Net (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"2 gc"</Cost>
+<Encumbrance>"60"</Encumbrance>
+<Group>"RULES-WTYPE2_ENTANGLING"</Group>
+<Range>"4/8"</Range>
+<Reload>"Full"</Reload>
+<Qualities>"Snare"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 4."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_SHORTBOW_HC">
+<Description language="ENGLISH">"Shortbow (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"9 gc"</Cost>
+<Encumbrance>"80"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"3"</Damage>
+<Range>"24/48"</Range>
+<Reload>"Half"</Reload>
+<Qualities>""</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 3."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_SLING_HC">
+<Description language="ENGLISH">"Sling (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"4 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Group>"RULES-WTYPE2_SLING"</Group>
+<Damage>"3"</Damage>
+<Range>"16/32"</Range>
+<Reload>"Half"</Reload>
+<Qualities>""</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 5."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_SMALLBOW_HC">
+<Description language="ENGLISH">"Smallbow (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"35"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"3"</Damage>
+<Range>"20/40"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Craftsmanship Poor"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_STAFF_SLING_HC">
+<Description language="ENGLISH">"Staff Sling (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_SLING"</Group>
+<Damage>"4"</Damage>
+<Range>"24/48"</Range>
+<Reload>"Full"</Reload>
+<Qualities>""</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 3."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_TARGETEER_S_BOW_HC">
+<Description language="ENGLISH">"Targeteer's Bow (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"35 gc"</Cost>
+<Encumbrance>"70"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"3"</Damage>
+<Range>"24/48"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_THROWING_HAMMER_HC">
+<Description language="ENGLISH">"Throwing Hammer (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"13 gc"</Cost>
+<Encumbrance>"35"</Encumbrance>
+<Group>"RULES-WTYPE2_THROWING"</Group>
+<Damage>"SB–2"</Damage>
+<Range>"8/-"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 3."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_THROWING_KNIFE_HC">
+<Description language="ENGLISH">"Throwing Knife (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Group>"RULES-WTYPE2_THROWING"</Group>
+<Damage>"SB–3"</Damage>
+<Range>"6/12"</Range>
+<Reload>"Half"</Reload>
+<Qualities>""</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 5."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_WAR_QUOITS_HC">
+<Description language="ENGLISH">"War Quoits (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"25"</Encumbrance>
+<Group>"RULES-WTYPE2_THROWING"</Group>
+<Damage>"SB–2"</Damage>
+<Range>"6/12"</Range>
+<Reload>"Full"</Reload>
+<Qualities>""</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 12."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_WATCHMAN_S_CROSSBOW_HC">
+<Description language="ENGLISH">"Watchman's Crossbow (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"27 gc"</Cost>
+<Encumbrance>"120"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"4"</Damage>
+<Range>"30/60"</Range>
+<Reload>"Full"</Reload>
+<Qualities>""</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_WEIGHTED_NET_HC">
+<Description language="ENGLISH">"Weighted Net (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"55"</Encumbrance>
+<Group>"RULES-WTYPE2_ENTANGLING"</Group>
+<Range>"4/8"</Range>
+<Reload>"Full"</Reload>
+<Qualities>"Craftsmanship Good, Snare"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 2."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_YEW_LONGBOW_HC">
+<Description language="ENGLISH">"Yew Longbow (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"17 gc"</Cost>
+<Encumbrance>"90"</Encumbrance>
+<Group>"RULES-WTYPE2_LONGBOW"</Group>
+<Damage>"3"</Damage>
+<Range>"30/60"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Armour Piercing"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 2."</Note>
+<Page>"9"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_BUCKLER_DAGMARSSEN_S_GEAR_HC">
+<Description language="ENGLISH">"Buckler (Dagmarssen's Gear) (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"7 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Group>"RULES-WTYPE2_PARRYING"</Group>
+<Damage>"SB–4"</Damage>
+<Qualities>"Craftsmanship Good, Defensive, Pummelling"</Qualities>
+<Availability>"-"</Availability>
+<Page>"15"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_MORNING_STAR_DAGMARSSEN_S_GEAR_HC">
+<Description language="ENGLISH">"Morning Star (Dagmarssen's Gear) (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"50 gc"</Cost>
+<Encumbrance>"55"</Encumbrance>
+<Group>"RULES-WTYPE2_FLAIL"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Craftsmanship Good, Impact, Tiring"</Qualities>
+<Availability>"-"</Availability>
+<Page>"15"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_SHORT_SWORD_DAGMARSSEN_S_GEAR_HC">
+<Description language="ENGLISH">"Short Sword (Dagmarssen's Gear) (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"28 gc"</Cost>
+<Encumbrance>"45"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Page>"15"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_BOLA_BOUNTY_HUNTER_S_PACK_HC">
+<Description language="ENGLISH">"Bola (Bounty Hunter's Pack) (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"5s"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Group>"RULES-WTYPE2_ENTANGLING"</Group>
+<Damage>"1"</Damage>
+<Range>"8/16"</Range>
+<Reload>"Half"</Reload>
+<Qualities>"Snare"</Qualities>
+<Availability>"-"</Availability>
+<Page>"15"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_WEIGHTED_NET_BOUNTY_HUNTER_S_PACK_HC">
+<Description language="ENGLISH">"Weighted Net (Bounty Hunter's Pack) (HC)"</Description>
+<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
+<Cost>"2 gc"</Cost>
+<Encumbrance>"60"</Encumbrance>
+<Group>"RULES-WTYPE2_ENTANGLING"</Group>
+<Range>"4/8"</Range>
+<Reload>"Full"</Reload>
+<Qualities>"Snare"</Qualities>
+<Availability>"-"</Availability>
+<Page>"15"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_ZEALOT_S_FLAIL_ZEALOT_S_LOT_HC">
+<Description language="ENGLISH">"Zealot's Flail (Zealot's Lot) (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"15 gc"</Cost>
+<Encumbrance>"95"</Encumbrance>
+<Group>"RULES-WTYPE2_FLAIL"</Group>
+<Damage>"SB+1"</Damage>
+<Qualities>"Impact, Tiring"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Twin-tailed comet carved into the wooden staff."</Note>
+<Page>"16"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_BRONZE_SWORD_HC">
+<Description language="ENGLISH">"Bronze Sword (HC)"</Description>
+<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
+<Cost>"35 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Group>"RULES-WTYPE2_ORDINARY"</Group>
+<Damage>"SB"</Damage>
+<Qualities>"Craftsmanship Poor"</Qualities>
+<Availability>"-"</Availability>
+<Note>"From before the time of Sigmar, by its looks; treat as a hand weapon. Shop stock: 1."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_COMMON_ARROW_ARROW_HC">
+<Description language="ENGLISH">"Common Arrow (arrow) (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"2p"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Craftsmanship Poor"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Arrow. Shop stock: 100."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_FARMER_S_ARROW_HC">
+<Description language="ENGLISH">"Farmer's Arrow (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"5p"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Availability>"-"</Availability>
+<Note>"Arrow. Shop stock: 100."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_HUNTER_S_CHOICE_HC">
+<Description language="ENGLISH">"Hunter's Choice (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"1s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Arrow. Shop stock: 80."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_TARGETEER_S_FAVOURITE_HC">
+<Description language="ENGLISH">"Targeteer's Favourite (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"5s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Craftsmanship Best"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Arrow. Shop stock: 20."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_TRAINING_LONG_HC">
+<Description language="ENGLISH">"Training Long (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"3p"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Craftsmanship Poor"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Longbow arrow. Shop stock: 40."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_COMMON_LONG_HC">
+<Description language="ENGLISH">"Common Long (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"6p"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Availability>"-"</Availability>
+<Note>"Longbow arrow. Shop stock: 100."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_MILITARY_LONG_HC">
+<Description language="ENGLISH">"Military Long (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"1s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Longbow arrow. Shop stock: 60."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_SHOW_STOPPER_HC">
+<Description language="ENGLISH">"Show-stopper (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"6s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Craftsmanship Best"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Longbow arrow. Shop stock: 10."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_RECLAIMED_BOLT_HC">
+<Description language="ENGLISH">"Reclaimed Bolt (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"6p"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Craftsmanship Poor"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Crossbow bolt. Shop stock: 80."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_CHEAP_BOLT_HC">
+<Description language="ENGLISH">"Cheap Bolt (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"1s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Availability>"-"</Availability>
+<Note>"Crossbow bolt. Shop stock: 40."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_MILITARY_BOLT_HC">
+<Description language="ENGLISH">"Military Bolt (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"3s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Crossbow bolt. Shop stock: 20."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_TILEAN_TRUEFIRE_HC">
+<Description language="ENGLISH">"Tilean Truefire (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"10s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Craftsmanship Best"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Crossbow bolt. Shop stock: 10."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_IRREGULAR_BULLET_HC">
+<Description language="ENGLISH">"Irregular (bullet) (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"5p"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Craftsmanship Poor"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Bullet. Shop stock: 20."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_MILITARY_BULLET_HC">
+<Description language="ENGLISH">"Military Bullet (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"1s"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Availability>"-"</Availability>
+<Note>"Bullet. Shop stock: 10."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_PURE_LEAD_HC">
+<Description language="ENGLISH">"Pure Lead (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"5s"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Bullet. Shop stock: 10."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_SILVER_BULLET_HC">
+<Description language="ENGLISH">"Silver Bullet (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Craftsmanship Best"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Bullet. Shop stock: 5."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_BLUNDERBUSS_SHRAPNEL_HC">
+<Description language="ENGLISH">"Blunderbuss Shrapnel (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"2p"</Cost>
+<Encumbrance>"4"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Craftsmanship Poor"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Blunderbuss ammunition. Shop stock: 10."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_BLUNDERBUSS_PELLETS_HC">
+<Description language="ENGLISH">"Blunderbuss Pellets (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"6p"</Cost>
+<Encumbrance>"4"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Availability>"-"</Availability>
+<Note>"Blunderbuss ammunition. Shop stock: 10."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_BLUNDERBUSS_BALL_HC">
+<Description language="ENGLISH">"Blunderbuss Ball (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"1s"</Cost>
+<Encumbrance>"4"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Blunderbuss ammunition. Shop stock: 5."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_BLUNDERBUSS_DEER_SHOT_HC">
+<Description language="ENGLISH">"Blunderbuss Deer Shot (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"3s"</Cost>
+<Encumbrance>"4"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Craftsmanship Best"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Blunderbuss ammunition. Shop stock: 5."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_ROUGH_STONES_HC">
+<Description language="ENGLISH">"Rough Stones (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"1p"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Craftsmanship Poor"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Sling ammunition. Shop stock: 10."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_POLISHED_STONES_HC">
+<Description language="ENGLISH">"Polished Stones (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"1p"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Availability>"-"</Availability>
+<Note>"Sling ammunition. Shop stock: 100."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_STEEL_SLINGSHOT_HC">
+<Description language="ENGLISH">"Steel Slingshot (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"2p"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Sling ammunition. Shop stock: 50."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_SILVER_SLINGSHOT_HC">
+<Description language="ENGLISH">"Silver Slingshot (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"1s"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Craftsmanship Best"</Qualities>
+<Availability>"-"</Availability>
+<Note>"Sling ammunition. Shop stock: 10."</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_BRETONNIAN_BARBS_HC">
+<Description language="ENGLISH">"Bretonnian Barbs (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"5s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Craftsmanship Good"</Qualities>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_SWEAR_RUNE_BULLETS_HC">
+<Description language="ENGLISH">"Swear Rune Bullets (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Group>"RULES-WTYPE2_AMMUNITION"</Group>
+<Qualities>"Craftsmanship Best"</Qualities>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"10"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_GUNPOWDER_SHOT_HC">
+<Description language="ENGLISH">"Gunpowder, shot (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"3s"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"12"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_SPECIAL_EQUIPMENT_POISONS_MORR_S_MASK_HC">
+<Description language="ENGLISH">"Morr's Mask (HC)"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_POISONS"</SubCategory>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"12"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_SPECIAL_EQUIPMENT_ARMOUR_SETS_DRAGON_SLAYER_S_ARMOUR">
+<Description language="ENGLISH">"Full Suit (Dragon Slayer's Armour) (HC)"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ARMOUR_SETS"</SubCategory>
+<Cost>"100 gc"</Cost>
+<Encumbrance>"280"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"13"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_SPECIAL_EQUIPMENT_ARMOUR_SETS_REIKLAND_UNIFORM">
+<Description language="ENGLISH">"Full Suit (Reikland Uniform) (HC)"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ARMOUR_SETS"</SubCategory>
+<Cost>"125 gc"</Cost>
+<Encumbrance>"150"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"13"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_SPECIAL_EQUIPMENT_ARMOUR_SETS_SERGEANT_MULLER_S_ARMOUR">
+<Description language="ENGLISH">"Full Suit (Sergeant Muller's Armour) (HC)"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ARMOUR_SETS"</SubCategory>
+<Cost>"130 gc"</Cost>
+<Encumbrance>"160"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"14"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_SPECIAL_EQUIPMENT_ARMOUR_SETS_VILAS_TUFFINO_S_ARMOUR">
+<Description language="ENGLISH">"Full Suit (Vilas Tuffino's Armour) (HC)"</Description>
+<Category>"RULES-EQCAT2_SPECIAL_EQUIPMENT"</Category>
+<SubCategory>"RULES-EQCAT2_ARMOUR_SETS"</SubCategory>
+<Cost>"200 gc"</Cost>
+<Encumbrance>"25"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"14"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_CARRYING_EQUIPMENT_BACKPACK_BOUNTY_HUNTER_S_PACK_HC">
+<Description language="ENGLISH">"Backpack (Bounty Hunter's Pack) (HC)"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"-"</Availability>
+<Page>"15"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_TOOLS_IRONS_AND_PLIERS_BOUNTY_HUNTER_S_PACK_HC">
+<Description language="ENGLISH">"Irons and Pliers (Bounty Hunter's Pack) (HC)"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"30"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"For torture and interrogation."</Note>
+<Page>"15"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_TOOLS_MANACLES_BOUNTY_HUNTER_S_PACK_HC">
+<Description language="ENGLISH">"Manacles (Bounty Hunter's Pack) (HC)"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 2."</Note>
+<Page>"15"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_WANTED_POSTERS_AND_BOUNTY_RECEIPTS_BOUNTY_HUNTER_S_PACK_HC">
+<Description language="ENGLISH">"Wanted Posters and Bounty Receipts (Bounty Hunter's Pack) (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"1s"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"-"</Availability>
+<Page>"15"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_CARRYING_EQUIPMENT_SCROLL_CASE_BOUNTY_HUNTER_S_PACK_HC">
+<Description language="ENGLISH">"Scroll Case (Bounty Hunter's Pack) (HC)"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"10s"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"-"</Availability>
+<Page>"15"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_TOOLS_COIN_MAKING_KIT_HC">
+<Description language="ENGLISH">"Coin Making Kit (HC)"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"60 gc"</Cost>
+<Encumbrance>"150"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"15"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_LETTER_WRITING_KIT_HC">
+<Description language="ENGLISH">"Letter Writing Kit (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"15 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"15"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_CARRYING_EQUIPMENT_MAGISTER_S_SATCHEL_HC">
+<Description language="ENGLISH">"Magister's Satchel (HC)"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"4 gc"</Cost>
+<Encumbrance>"7"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"16"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_CLOTHING_NECKLACE_WITH_HAMMER_PENDANT_ZEALOT_S_LOT_HC">
+<Description language="ENGLISH">"Necklace with Hammer Pendant (Zealot's Lot) (HC)"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"-"</Availability>
+<Page>"16"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_SIGMAR_THE_CONQUEROR_ZEALOT_S_LOT_HC">
+<Description language="ENGLISH">"Sigmar the Conqueror (Zealot's Lot) (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"30 gc"</Cost>
+<Encumbrance>"200"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"16"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_THE_COMET_COMETH_ZEALOT_S_LOT_HC">
+<Description language="ENGLISH">"The Comet Cometh (Zealot's Lot) (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"100"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"16"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_CLOTHING_UNIFORM_REIKLAND_UNIFORM_HC">
+<Description language="ENGLISH">"Uniform (Reikland Uniform) (HC)"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"50 gc"</Cost>
+<Encumbrance>"15"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"13"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_CARRYING_EQUIPMENT_LARGE_POUCH_REIKLAND_UNIFORM_HC">
+<Description language="ENGLISH">"Large Pouch (Reikland Uniform) (HC)"</Description>
+<Category>"RULES-EQCAT2_CARRYING_EQUIPMENT"</Category>
+<Cost>"2 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Good. Good brown leather embossed with a Griffon."</Note>
+<Page>"13"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_10_YARD_BANNER_HC">
+<Description language="ENGLISH">"10 Yard Banner (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"100"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. Unmarked white fabric banner 1 yard by 10 yards."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_AGITATOR_S_SPEECH_HC">
+<Description language="ENGLISH">"Agitator's Speech (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"10s"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. Impassioned speech listing the faults of Imperial Dwarfs."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_ANCIENT_REMEAN_STATUES_HC">
+<Description language="ENGLISH">"Ancient Remean Statues (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"100 gc"</Cost>
+<Encumbrance>"1200"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_ARABYAN_CARPET_HC">
+<Description language="ENGLISH">"Arabyan Carpet (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Good. Shop stock: 5. Fine rugs and carpets 2 yards by 3 yards."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_CLOTHING_ARMOURED_CODPIECE_HC">
+<Description language="ENGLISH">"Armoured Codpiece (HC)"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"2 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. Steel-plated and anything but comfortable."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_BAG_OF_COGS_HC">
+<Description language="ENGLISH">"Bag of Cogs (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Good. Shop stock: 5. Velvet bag containing assorted small brass cogs."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_BAG_OF_ORC_TEETH_HC">
+<Description language="ENGLISH">"Bag of Orc Teeth (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"10p"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Poor. Shop stock: 1. Disgusting trophies from the Storm of Chaos."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_BONE_WALKING_STICK_HC">
+<Description language="ENGLISH">"Bone Walking Stick (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"10s"</Cost>
+<Encumbrance>"30"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. From the leg of some very large but unclassifiable beast."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_FOOD_AND_DRINK_BOTTLE_OF_60_YEAR_BRANDY_HC">
+<Description language="ENGLISH">"Bottle of 60-Year Brandy (HC)"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"30 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Good. Shop stock: 4. You'd swear it tasted only 50 years old though."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_BOX_OF_FALSE_EYES_HC">
+<Description language="ENGLISH">"Box of False Eyes (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. 40 false eyes of various qualities and materials, in a small wooden box."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_FOOD_AND_DRINK_BOX_OF_MOOTLEAF_CIGARS_HC">
+<Description language="ENGLISH">"Box of Mootleaf Cigars (HC)"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Good. Shop stock: 1. Most potent leaf in the Empire, so swears Alvin."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_BOX_OF_RINGS_HC">
+<Description language="ENGLISH">"Box of Rings (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 5. About 100 cheap rings of metal, stone, bone and wood."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_BRETONNIAN_CHAMBER_POT_HC">
+<Description language="ENGLISH">"Bretonnian Chamber Pot (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"10s"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. With the face of the Bretonnian king painted on."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_TOOLS_BROKEN_GIN_TRAP_HC">
+<Description language="ENGLISH">"Broken Gin Trap (HC)"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"1s"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Poor. Shop stock: 1. All the parts are there, but it needs some repairing."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_TOOLS_CARTOGRAPHY_KIT_HC">
+<Description language="ENGLISH">"Cartography Kit (HC)"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"150 gc"</Cost>
+<Encumbrance>"15"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Good. Shop stock: 1. Complete map making kit in a handy case."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_CATHAY_VASE_HC">
+<Description language="ENGLISH">"Cathay Vase (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"300 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_CLOCKWORK_KNIGHT_HC">
+<Description language="ENGLISH">"Clockwork Knight (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"750 gc"</Cost>
+<Encumbrance>"2000"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MUSICAL_INSTRUMENTS_COACH_HORN_HC">
+<Description language="ENGLISH">"Coach Horn (HC)"</Description>
+<Category>"RULES-EQCAT2_MUSICAL_INSTRUMENTS"</Category>
+<Cost>"8 gc"</Cost>
+<Encumbrance>"30"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. Bearing the insignia of Ratchett Lines."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_COLLECTION_OF_RUBBINGS_HC">
+<Description language="ENGLISH">"Collection of Rubbings (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. Loose-leaf charcoal rubbings taken from standing stones."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_COLOURED_INKS_SET_HC">
+<Description language="ENGLISH">"Coloured Inks Set (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"50 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. 10 phials of common coloured inks."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_CLOTHING_CORPSE_HANDLER_MASK_HC">
+<Description language="ENGLISH">"Corpse Handler Mask (HC)"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. Beaked mask stuffed with herbs."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_CRATE_OF_WEDGES_HC">
+<Description language="ENGLISH">"Crate of Wedges (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"500"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. Large wooden box of 250 wooden wedges."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_DAMSELS_FAVOUR_HC">
+<Description language="ENGLISH">"Damsels' Favour (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"5s"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Good. Shop stock: 1. Silk handkerchief monogrammed by a Bretonnian witch."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_DOOM_S_ROCKING_HORSE_HC">
+<Description language="ENGLISH">"Doom's Rocking Horse (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"200"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. Grotesque plaything made of real horse bones."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_DRAGON_EGG_HC">
+<Description language="ENGLISH">"Dragon Egg (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"30 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. Very odd, carefully hollowed egg of unknown origin."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_FLASK_OF_ULTHUAN_SAND_HC">
+<Description language="ENGLISH">"Flask of Ulthuan Sand (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. Handful of sweet-smelling pink sand and seashells."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_FRAMED_EMPIRE_MAP_HC">
+<Description language="ENGLISH">"Framed Empire Map (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"100 gc"</Cost>
+<Encumbrance>"100"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. Detailed oil painting of the Empire, 4 feet wide by 3 feet high."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_CLOTHING_GINGER_WIG_HC">
+<Description language="ENGLISH">"Ginger Wig (HC)"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_JAR_OF_LEECHES_HC">
+<Description language="ENGLISH">"Jar of Leeches (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"2s"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. There are always jars of leeches in these sorts of places."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_CLOTHING_JUGGLER_COSTUME_HC">
+<Description language="ENGLISH">"Juggler Costume (HC)"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"7 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. Particolour outfit with bells and things."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_MARIENBURGER_RECIPE_HC">
+<Description language="ENGLISH">"Marienburger Recipe (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"6p"</Cost>
+<Encumbrance>"-"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. Scroll containing a recipe for ‘lightly spiced herring sausage'."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_FOOD_AND_DRINK_MIDDENLAND_MOONSHINE_HC">
+<Description language="ENGLISH">"Middenland Moonshine (HC)"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"400"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Poor. Shop stock: 2. Four-gallon casks of cheap spirits; highly flammable."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_MINUTE_GLASS_HC">
+<Description language="ENGLISH">"Minute Glass (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. Tiny hourglass runs out in just one minute."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_CLOTHING_MONKFISH_HAT_HC">
+<Description language="ENGLISH">"Monkfish Hat (HC)"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"1s"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Poor. Shop stock: 1. Hat made from a monkfish."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_MONSTROUS_TURTLE_SHELL_HC">
+<Description language="ENGLISH">"Monstrous Turtle Shell (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"35 gc"</Cost>
+<Encumbrance>"1000"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. Measuring three yards in length, a true wonder."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_NIPPON_COIN_STRING_HC">
+<Description language="ENGLISH">"Nippon Coin String (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"20 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. A few coins of gold and silver with holes through them."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_ORC_SKIN_DRUM_HC">
+<Description language="ENGLISH">"Orc Skin Drum (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"45"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_OGRE_BELLY_PLATE_HC">
+<Description language="ENGLISH">"Ogre Belly Plate (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"20 gc"</Cost>
+<Encumbrance>"1000"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Poor. Shop stock: 1. Enormous metal bowl."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MUSICAL_INSTRUMENTS_PAINTED_LUTE_HC">
+<Description language="ENGLISH">"Painted Lute (HC)"</Description>
+<Category>"RULES-EQCAT2_MUSICAL_INSTRUMENTS"</Category>
+<Cost>"200 gc"</Cost>
+<Encumbrance>"25"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Good. Shop stock: 1. Gaudy decorations and a twangy tone."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_TOOLS_PAIR_OF_OPERA_GLASSES_HC">
+<Description language="ENGLISH">"Pair of Opera Glasses (HC)"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"50 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Good. Shop stock: 1. Tiny glasses with about x2 magnification."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_CLOTHING_PAIR_OF_SIX_FINGERED_GLOVES_HC">
+<Description language="ENGLISH">"Pair of Six-fingered Gloves (HC)"</Description>
+<Category>"RULES-EQCAT2_CLOTHING"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Good. Shop stock: 1. Kid gloves for mutants with fashion sense."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_PAIR_OF_TEN_SIDED_DICE_HC">
+<Description language="ENGLISH">"Pair of Ten-sided Dice (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"1 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. Where there would be zeroes, there Xs."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_FOOD_AND_DRINK_PICKLED_REIK_EELS_HC">
+<Description language="ENGLISH">"Pickled Reik Eels (HC)"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"1s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 2. One-gallon bottle of slithery treats."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MUSICAL_INSTRUMENTS_QUARQ_HORN_HC">
+<Description language="ENGLISH">"Quarq Horn (HC)"</Description>
+<Category>"RULES-EQCAT2_MUSICAL_INSTRUMENTS"</Category>
+<Cost>"100 gc"</Cost>
+<Encumbrance>"25"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Good. Shop stock: 1. Hunting horn taken from a mythical creature."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_FOOD_AND_DRINK_SACK_OF_SMELLY_SOAPS_HC">
+<Description language="ENGLISH">"Sack of Smelly Soaps (HC)"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"1s"</Cost>
+<Encumbrance>"30"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. Ten one-pound slabs of soap in a waxed bag."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_SCROLLS_OF_PARCHMENT_HC">
+<Description language="ENGLISH">"Scrolls of Parchment (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"20 gc"</Cost>
+<Encumbrance>"100"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 4. Good writing parchment in rolls, 2 feet wide by 12 feet long."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_SET_OF_LEAD_MINIATURES_HC">
+<Description language="ENGLISH">"Set of Lead Miniatures (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"30 gc"</Cost>
+<Encumbrance>"100"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_SHIP_IN_A_BOTTLE_HC">
+<Description language="ENGLISH">"Ship in a Bottle (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_SILVER_SNUFF_BOX_HC">
+<Description language="ENGLISH">"Silver Snuff Box (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"20 gc"</Cost>
+<Encumbrance>"1"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Best. Shop stock: 1. Emblazoned with the defunct crest of the Westerland."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_SHRUNKEN_HEADS_OF_LUSTRIA_HC">
+<Description language="ENGLISH">"Shrunken Heads of Lustria (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Poor. Shop stock: 6. Crude artefacts of a savage tribe."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_SKIN_OF_A_ZEBRA_HC">
+<Description language="ENGLISH">"Skin of a Zebra (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"20 gc"</Cost>
+<Encumbrance>"50"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Good. Shop stock: 1. Handsome hide of an exotic striped beast."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_TAXIDERMY_MYSTERY_HC">
+<Description language="ENGLISH">"Taxidermy Mystery (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"5 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. Small stuffed creature that utterly defies classification."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_TOOLS_TELESCOPE_HC">
+<Description language="ENGLISH">"Telescope (HC)"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"300 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Good. Shop stock: 1. Its square barrel suggests its was made by a Dwarf."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_TOOLS_TILEAN_MAGNIFYING_GLASS_HC">
+<Description language="ENGLISH">"Tilean Magnifying Glass (HC)"</Description>
+<Category>"RULES-EQCAT2_TOOLS"</Category>
+<Cost>"250 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Good. Shop stock: 1. Ground from blue glass."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_TINY_BIRDCAGES_HC">
+<Description language="ENGLISH">"Tiny Birdcages (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"6 gc"</Cost>
+<Encumbrance>"100"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 3. Perfect for housing up to 2 small birds."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_TWO_HEADED_PIGLET_FOETUS_HC">
+<Description language="ENGLISH">"Two-headed Piglet Foetus (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"2 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 1. Mutant swine preserved in a pickling jar."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_UNREADABLE_BOOKS_HC">
+<Description language="ENGLISH">"Unreadable Books (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"1s"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 6. Novels so horrible even Alvin passed on them."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_WARSHIP_FIGUREHEAD_HC">
+<Description language="ENGLISH">"Warship Figurehead (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"30 gc"</Cost>
+<Encumbrance>"500"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Poor. Shop stock: 1. Wooden prow of the decommissioned ship Lady Julia."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_WOODEN_ALPHABET_HC">
+<Description language="ENGLISH">"Wooden Alphabet (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"10s"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Poor. Shop stock: 1. Bag of carved letters for teaching literacy."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_FOOD_AND_DRINK_WORST_BEER_IN_THE_EMPIRE_HC">
+<Description language="ENGLISH">"Worst Beer in the Empire (HC)"</Description>
+<Category>"RULES-EQCAT2_FOOD_AND_DRINK"</Category>
+<Cost>"2 gc"</Cost>
+<Encumbrance>"400"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Craftsmanship Poor. Shop stock: 8. Four-gallon casks of an aging vile brew."</Note>
+<Page>"17"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_MISCELLANEA_SPARE_WHEELS_HC">
+<Description language="ENGLISH">"Spare Wheels (HC)"</Description>
+<Category>"RULES-EQCAT2_MISCELLANEA"</Category>
+<Cost>"3 gc"</Cost>
+<Encumbrance>"200"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>"Shop stock: 10. 'Trust me, you're going to need them.'"</Note>
+<Page>"20"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_COMPLETE_HISTORY_OF_THE_WORLD_HC">
+<Description language="ENGLISH">"Complete History of the World (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"80 gc"</Cost>
+<Encumbrance>"100"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"18"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_ESTATE_ECONOMY_HC">
+<Description language="ENGLISH">"Estate &amp; Economy (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"20 gc"</Cost>
+<Encumbrance>"60"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"18"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_FRAHM_S_SYMPHONIES_HC">
+<Description language="ENGLISH">"Frahm's Symphonies (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"5"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"18"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_SCIENCES_FOR_THE_COLLEGIATE_HC">
+<Description language="ENGLISH">"Sciences for the Collegiate (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"50 gc"</Cost>
+<Encumbrance>"80"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"18"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_GRIMWALD_S_BATTLEFIELD_LESSONS_HC">
+<Description language="ENGLISH">"Grimwald's Battlefield Lessons (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"170 gc"</Cost>
+<Encumbrance>"120"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"18"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_HUNGRY_GRUBBER_S_MOOTLAND_RECIPES_HC">
+<Description language="ENGLISH">"Hungry Grubber's Mootland Recipes (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"15 gc"</Cost>
+<Encumbrance>"40"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"18"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_IMPERIAL_ALMANAC_2517_IC_EDITION_HC">
+<Description language="ENGLISH">"Imperial Almanac, 2517 IC Edition (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"25 gc"</Cost>
+<Encumbrance>"60"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"18"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_MARIENBURG_INDEPENDENT_RECENT_ISSUE_HC">
+<Description language="ENGLISH">"Marienburg Independent, recent issue (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"2s"</Cost>
+<Encumbrance>"2"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"18"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_ODRIC_S_PERILOUS_BEASTS_HC">
+<Description language="ENGLISH">"Odric's Perilous Beasts (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"60 gc"</Cost>
+<Encumbrance>"80"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"18"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_PFIELER_S_HUMAN_SINEWS_FIBRES_HC">
+<Description language="ENGLISH">"Pfieler's Human Sinews &amp; Fibres (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"100 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"18"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_SAGA_OF_WERNER_FLAMEFIST_HC">
+<Description language="ENGLISH">"Saga of Werner Flamefist (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"10 gc"</Cost>
+<Encumbrance>"20"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"18"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_SYMBOLS_OF_THE_ANCIENTS_HC">
+<Description language="ENGLISH">"Symbols of the Ancients (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"30 gc"</Cost>
+<Encumbrance>"10"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"18"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_READING_AND_WRITING_USURPERS_OF_ULRIC_HC">
+<Description language="ENGLISH">"Usurpers of Ulric (HC)"</Description>
+<Category>"RULES-EQCAT2_READING_AND_WRITING"</Category>
+<Cost>"125 gc"</Cost>
+<Encumbrance>"100"</Encumbrance>
+<Availability>"-"</Availability>
+<Note>""</Note>
+<Page>"18"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_VEHICLES_FARMERS_CARTS_HC">
+<Description language="ENGLISH">"Farmers' Carts (HC)"</Description>
+<Category>"RULES-EQCAT2_VEHICLES"</Category>
+<Cost>"40 gc"</Cost>
+<Availability>"-"</Availability>
+<Profile>"3;4;20"</Profile>
+<Note>""</Note>
+<Page>"20"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_VEHICLES_MESSENGER_S_COACH_HC">
+<Description language="ENGLISH">"Messenger's Coach (HC)"</Description>
+<Category>"RULES-EQCAT2_VEHICLES"</Category>
+<Cost>"500 gc"</Cost>
+<Availability>"-"</Availability>
+<Profile>"4;5;60"</Profile>
+<Note>""</Note>
+<Page>"20"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_VEHICLES_WAGON_HC">
+<Description language="ENGLISH">"Wagon (HC)"</Description>
+<Category>"RULES-EQCAT2_VEHICLES"</Category>
+<Cost>"100 gc"</Cost>
+<Availability>"-"</Availability>
+<Profile>"3;4;30"</Profile>
+<Note>"Sturdy wooden cart pulled by four horses. Standard statistics."</Note>
+<Page>"20"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_VEHICLES_GUARANTEED_CATCH_HC">
+<Description language="ENGLISH">"Guaranteed Catch (HC)"</Description>
+<Category>"RULES-EQCAT2_VEHICLES"</Category>
+<Cost>"75 gc"</Cost>
+<Encumbrance>"1000"</Encumbrance>
+<Availability>"-"</Availability>
+<Profile>"3;4;10"</Profile>
+<Note>"Rowing boat. Standard statistics of the Old World Armoury p.87."</Note>
+<Page>"20"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_VEHICLES_NUTHATCH_HC">
+<Description language="ENGLISH">"Nuthatch (HC)"</Description>
+<Category>"RULES-EQCAT2_VEHICLES"</Category>
+<Cost>"1,000 gc"</Cost>
+<Availability>"-"</Availability>
+<Profile>"3;8;100"</Profile>
+<Note>""</Note>
+<Page>"20"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_VEHICLES_RESPECT_HC">
+<Description language="ENGLISH">"Respect (HC)"</Description>
+<Category>"RULES-EQCAT2_VEHICLES"</Category>
+<Cost>"400 gc"</Cost>
+<Availability>"-"</Availability>
+<Profile>"4;4;60"</Profile>
+<Note>""</Note>
+<Page>"20"</Page>
+</EquipmentV2>
+<EquipmentV2 id="HUCU-EQUI_VEHICLES_SOLITUDE_HC">
+<Description language="ENGLISH">"Solitude (HC)"</Description>
+<Category>"RULES-EQCAT2_VEHICLES"</Category>
+<Cost>"700 gc"</Cost>
+<Availability>"-"</Availability>
+<Profile>"3;5;76"</Profile>
+<Note>""</Note>
+<Page>"20"</Page>
+</EquipmentV2>
+</DATA_EQUIPMENT_V2>
+<DATA_ARMOR>
+<Armor id="HUCU-ARMO_V2_PLATE_ARMORED_BELT_POOR_COUNTS_AS_PLATE_DRAGON_SLAYER_S_ARMOUR_HC">
+<Description language="ENGLISH">"Armored Belt, Poor, counts as plate (Dragon Slayer's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"25CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>"13"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_SOFTLEATHER_LEATHER_JACK_POOR_DRAGON_SLAYER_S_ARMOUR_HC">
+<Description language="ENGLISH">"Leather Jack, Poor (Dragon Slayer's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"10CO"</Price>
+<Encumbrance>"60"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY,RULES-ARMOL_ARM"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTLEATHER"</Type>
+<Page>"13"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_SOFTLEATHER_LEATHER_LEGGINGS_POOR_DRAGON_SLAYER_S_ARMOUR_HC">
+<Description language="ENGLISH">"Leather Leggings, Poor (Dragon Slayer's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"5CO"</Price>
+<Encumbrance>"25"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTLEATHER"</Type>
+<Page>"13"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_MAIL_MAIL_SHIRT_POOR_DRAGON_SLAYER_S_ARMOUR_HC">
+<Description language="ENGLISH">"Mail Shirt, Poor (Dragon Slayer's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"25CO"</Price>
+<Encumbrance>"75"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>"13"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_MAIL_PARTIAL_MAIL_LEGGINGS_POOR_DRAGON_SLAYER_S_ARMOUR_HC">
+<Description language="ENGLISH">"Partial Mail Leggings, Poor (Dragon Slayer's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"10CO"</Price>
+<Encumbrance>"35"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>"13"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_PLATE_PIECEMEAL_CUISSE_GREAVES_POOR_DRAGON_SLAYER_S_ARMOUR_HC">
+<Description language="ENGLISH">"Piecemeal Cuisse &amp; Greaves, Poor (Dragon Slayer's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"20CO"</Price>
+<Encumbrance>"25"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>"13"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_PLATE_PIECEMEAL_VAMBRACE_POOR_COUNTS_AS_PLATE_DRAGON_SLAYER_S_ARMOUR_HC">
+<Description language="ENGLISH">"Piecemeal Vambrace, Poor, counts as plate (Dragon Slayer's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"20CO"</Price>
+<Encumbrance>"25"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_ARM"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>"13"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_SOFTLEATHER_LEATHER_JACK_REIKLAND_UNIFORM_HC">
+<Description language="ENGLISH">"Leather Jack (Reikland Uniform) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"10CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY,RULES-ARMOL_ARM"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTLEATHER"</Type>
+<Page>"13"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_SOFTLEATHER_LEATHER_SKULLCAP_REIKLAND_UNIFORM_HC">
+<Description language="ENGLISH">"Leather Skullcap (Reikland Uniform) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"3CO"</Price>
+<Encumbrance>"9"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_HEAD"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTLEATHER"</Type>
+<Page>"13"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_MAIL_MAIL_SHIRT_REIKLAND_UNIFORM_HC">
+<Description language="ENGLISH">"Mail Shirt (Reikland Uniform) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"60CO"</Price>
+<Encumbrance>"60"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>"13"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_PLATE_POT_HELM_REIKLAND_UNIFORM_HC">
+<Description language="ENGLISH">"Pot Helm (Reikland Uniform) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"30CO"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_HEAD"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>"13"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_SOFTLEATHER_LEATHER_LEGGINGS_SERGEANT_MULLER_S_ARMOUR_HC">
+<Description language="ENGLISH">"Leather Leggings (Sergeant Muller's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"10CO"</Price>
+<Encumbrance>"20"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTLEATHER"</Type>
+<Page>"14"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_PLATE_PLATE_LEGGINGS_SERGEANT_MULLER_S_ARMOUR_HC">
+<Description language="ENGLISH">"Plate Leggings (Sergeant Muller's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"60CO"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>"14"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_SOFTLEATHER_LEATHER_JACK_SERGEANT_MULLER_S_ARMOUR_HC">
+<Description language="ENGLISH">"Leather Jack (Sergeant Muller's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"10CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY,RULES-ARMOL_ARM"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTLEATHER"</Type>
+<Page>"14"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_PLATE_BREASTPLATE_SERGEANT_MULLER_S_ARMOUR_HC">
+<Description language="ENGLISH">"Breastplate (Sergeant Muller's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"60CO"</Price>
+<Encumbrance>"75"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>"14"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_SOFTLEATHER_STUDDED_JACK_SERGIO_DOMINGUEZ_S_ARMOUR_HC">
+<Description language="ENGLISH">"Studded Jack (Sergio Dominguez's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"45CO"</Price>
+<Encumbrance>"100"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY,RULES-ARMOL_ARM"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTLEATHER"</Type>
+<Page>"14"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_SOFTLEATHER_STUDDED_LEGGINGS_SERGIO_DOMINGUEZ_S_ARMOUR_HC">
+<Description language="ENGLISH">"Studded Leggings (Sergio Dominguez's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"30CO"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTLEATHER"</Type>
+<Page>"14"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_SOFTLEATHER_STUDDED_SKULLCAP_SERGIO_DOMINGUEZ_S_ARMOUR_HC">
+<Description language="ENGLISH">"Studded Skullcap (Sergio Dominguez's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"10CO"</Price>
+<Encumbrance>"20"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_HEAD"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTLEATHER"</Type>
+<Page>"14"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_PLATE_BREASTPLATE_VILAS_TUFFINO_S_ARMOUR_HC">
+<Description language="ENGLISH">"Breastplate (Vilas Tuffino's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"70CO"</Price>
+<Encumbrance>"75"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>"14"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_SOFTLEATHER_LEATHER_JACK_GOOD_VILAS_TUFFINO_S_ARMOUR_HC">
+<Description language="ENGLISH">"Leather Jack, Good (Vilas Tuffino's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"35CO"</Price>
+<Encumbrance>"45"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY,RULES-ARMOL_ARM"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTLEATHER"</Type>
+<Page>"14"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_SOFTLEATHER_LEATHER_LEGGINGS_VILAS_TUFFINO_S_ARMOUR_HC">
+<Description language="ENGLISH">"Leather Leggings (Vilas Tuffino's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"10CO"</Price>
+<Encumbrance>"20"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTLEATHER"</Type>
+<Page>"14"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_SOFTLEATHER_LEATHER_SKULLCAP_GOOD_VILAS_TUFFINO_S_ARMOUR_HC">
+<Description language="ENGLISH">"Leather Skullcap, Good (Vilas Tuffino's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"10CO"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_HEAD"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTLEATHER"</Type>
+<Page>"14"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_MAIL_MAIL_COIF_VILAS_TUFFINO_S_ARMOUR_HC">
+<Description language="ENGLISH">"Mail Coif (Vilas Tuffino's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"20CO"</Price>
+<Encumbrance>"30"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_HEAD"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>"14"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_PLATE_OPEN_FACED_HELMET_VILAS_TUFFINO_S_ARMOUR_HC">
+<Description language="ENGLISH">"Open-Faced Helmet (Vilas Tuffino's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"30CO"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_HEAD"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>"14"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_PLATE_PLATE_BRACER_RIGHT_ARM_ONLY_VILAS_TUFFINO_S_ARMOUR_HC">
+<Description language="ENGLISH">"Plate Bracer, right arm only (Vilas Tuffino's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"30CO"</Price>
+<Encumbrance>"15"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_ARM"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>"14"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_PLATE_PLATE_THIGH_GUARD_RIGHT_LEG_ONLY_VILAS_TUFFINO_S_ARMOUR_HC">
+<Description language="ENGLISH">"Plate Thigh Guard, right leg only (Vilas Tuffino's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"35CO"</Price>
+<Encumbrance>"20"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>"14"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_PLATE_FUR_TRIMMED_HELMET_DAGMARSSEN_S_GEAR_HC">
+<Description language="ENGLISH">"Fur-Trimmed Helmet (Dagmarssen's Gear) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"24CO"</Price>
+<Encumbrance>"38"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_HEAD"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>"15"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_SOFTLEATHER_LEATHER_COIF_DAGMARSSEN_S_GEAR_HC">
+<Description language="ENGLISH">"Leather Coif (Dagmarssen's Gear) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"2CO"</Price>
+<Encumbrance>"9"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_HEAD"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTLEATHER"</Type>
+<Page>"15"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_SOFTLEATHER_STUDDED_LEATHER_LEGGINGS_DAGMARSSEN_S_GEAR_HC">
+<Description language="ENGLISH">"Studded Leather Leggings (Dagmarssen's Gear) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"24CO"</Price>
+<Encumbrance>"38"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTLEATHER"</Type>
+<Page>"15"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_SOFTLEATHER_FULL_SUIT_SERGIO_DOMINGUEZ_S_ARMOUR_HC">
+<Description language="ENGLISH">"Full Suit (Sergio Dominguez's Armour) (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"75CO"</Price>
+<Encumbrance>"150"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_HEAD,RULES-ARMOL_BODY,RULES-ARMOL_ARM,RULES-ARMOL_LEG"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_SOFTLEATHER"</Type>
+<Page>"14"</Page>
+</Armor>
+<Armor id="HUCU-ARMO_V2_PLATE_BRONZE_CHEST_PLATE_GOOD_HC">
+<Description language="ENGLISH">"Bronze Chest Plate, Good (HC)"</Description>
+<Availability>"-"</Availability>
+<Price>"90CO"</Price>
+<Encumbrance>"30"</Encumbrance>
+<Quality>""</Quality>
+<Location>"RULES-ARMOL_BODY"</Location>
+<ArmorPoint>"1"</ArmorPoint>
+<Type>"RULES-ARMOT_PLATE"</Type>
+<Page>"17"</Page>
+</Armor>
+</DATA_ARMOR>
+</DATA_BOOK>
