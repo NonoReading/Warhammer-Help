@@ -112,15 +112,36 @@ end;
 // Journal des anomalies de lecture et d ecriture XML : fichier XML_ERREURS.txt a la racine,
 // une ligne par anomalie. Dans une application graphique un WriteLn ne va nulle part : sans
 // ce journal, un export ou un import en erreur ne laissait aucune trace.
+//
+// Taille bornee : au premier signalement de chaque processus, un journal de plus de 1 Mo est
+// recommence (le menu, WinPersonnage et WinLivre ecrivent dans le meme fichier, on ne le vide donc
+// pas a chaque demarrage, sans quoi l un effacerait les anomalies de l autre).
 Procedure XmlSignale(Const Message: String);
+const
+  TailleMaxJournal = 1048576;
+{$J+}
+  JournalVerifie: Boolean = False;
+{$J-}
 var
   F:      TextFile;
   Chemin: String;
+  Rech:   TSearchRec;
+  Recommencer: Boolean;
 begin
   Chemin := GetCurrentDir + DirectorySeparator + 'XML_ERREURS.txt';
+  Recommencer := False;
+  if not JournalVerifie then
+    begin
+      JournalVerifie := True;
+      if FindFirst(Chemin, faAnyFile, Rech) = 0 then
+        begin
+          Recommencer := Rech.Size > TailleMaxJournal;
+          FindClose(Rech);
+        end;
+    end;
   try
     AssignFile(F, Chemin);
-    if FileExists(Chemin) then
+    if FileExists(Chemin) and not Recommencer then
       Append(F)
     else
       Rewrite(F);
@@ -150,6 +171,16 @@ begin
       Exit;
     end;
   Result := UTF8Encode(Attr.NodeValue);
+end;
+
+// Attribut facultatif (ex. detail d une Entry, name d une balise physique a contenu seul) : '' sans le
+// signaler au journal quand il manque.
+Function XmlAttributFacultatif(Node: TDOMNode; Const Nom: String): String;
+begin
+  Result := '';
+  if (Node = nil) or (Node.Attributes = nil) or (Node.Attributes.GetNamedItem(Nom) = nil) then
+    Exit;
+  Result := RemoveQuotes(UTF8Encode(Node.Attributes.GetNamedItem(Nom).NodeValue));
 end;
 
 Function XmlAttribut(Node: TDOMNode; Const Nom: String): String;
@@ -579,6 +610,8 @@ Procedure EcritSkill(XMLContent: TStringList; Livre: String; Langue: String);
           XmlContent.Add(XmlLigneLangue(ConstXmlExplanation, Langue, PCompetence.Description));
           if PCompetence.DeBase then
             XmlContent.Add(XmlLigne(ConstXmlDeBase, ConstVrai));
+          if PCompetence.SpecLibre then
+            XmlContent.Add(XmlLigne(ConstXmlSpecLibre, ConstVrai));
           XmlContent.Add(XmlFinCode(ConstXmlCompetence));
         end;
     if Fist = false then
@@ -645,6 +678,8 @@ Procedure EcritTalent(XMLContent: TStringList; Livre: String; Langue: String);
           // ecrite seulement si vraie : les ~700 talents ordinaires ne portent pas la balise
           if PTalent.Trait then
             XmlContent.Add(XmlLigne(ConstXmlTrait, ConstVrai));
+          if PTalent.SpecLibre then
+            XmlContent.Add(XmlLigne(ConstXmlSpecLibre, ConstVrai));
           if PTalent.Magie > 0 then
             XmlContent.Add(XmlLigne(ConstXmlMagie, IntToStr(PTalent.Magie)));
           if PTalent.ModeSort <> '' then
@@ -659,7 +694,8 @@ Procedure EcritTalent(XMLContent: TStringList; Livre: String; Langue: String);
           // A l'interieur du bloc, les deux entiers sont ecrits meme a 0 : 0 y est une
           // valeur (plancher nul), pas une absence.
           if (PTalent.XpMultiplicateur <> 0) or (PTalent.XpPlancher <> 0) or
-             (PTalent.XpDiviseur <> '') or (PTalent.XpOfferts <> '') or (PTalent.XpGroupe <> '') then
+             (PTalent.XpDiviseur <> '') or (PTalent.XpOfferts <> '') or (PTalent.XpGroupe <> '') or
+             (PTalent.XpDecalage <> 0) then
             begin
               XmlContent.Add(XmlLigne(ConstXmlXpMultiplicateur, IntToStr(PTalent.XpMultiplicateur)));
               XmlContent.Add(XmlLigne(ConstXmlXpPlancher, IntToStr(PTalent.XpPlancher)));
@@ -669,6 +705,8 @@ Procedure EcritTalent(XMLContent: TStringList; Livre: String; Langue: String);
                 XmlContent.Add(XmlLigne(ConstXmlXpOfferts, PTalent.XpOfferts));
               if PTalent.XpGroupe <> '' then
                 XmlContent.Add(XmlLigne(ConstXmlXpGroupe, PTalent.XpGroupe));
+              if PTalent.XpDecalage <> 0 then
+                XmlContent.Add(XmlLigne(ConstXmlXpDecalage, IntToStr(PTalent.XpDecalage)));
             end;
           XmlContent.Add(XmlLigneLangue(ConstXmlTest, Langue, PTalent.Tests));
           XmlAjouteModificateurs(XmlContent, SourceModifTalent, PTalent.CodeTalent, Langue);
@@ -988,6 +1026,8 @@ Procedure EcritSpecie(XMLContent: TStringList; Livre: String; Langue: String);
     PMetier:            StructureMetier;
     PAttribut:          StructureAttribut;
     Fist:               Boolean;
+    ListeFixes:         TStringList;
+    IndFixe:            Integer;
   begin
     Fist := true;
     For PRace In ListRace do
@@ -1016,6 +1056,21 @@ Procedure EcritSpecie(XMLContent: TStringList; Livre: String; Langue: String);
             XmlContent.Add(XmlLigne(ConstXmlNbSkill5, IntToStr(PRace.NbPoint5)));
           if PRace.NbPoint3 <> 3 then
             XmlContent.Add(XmlLigne(ConstXmlNbSkill3, IntToStr(PRace.NbPoint3)));
+          // competences acquises d'office (V5 : langues de depart)
+          if PRace.CompetencesFixes <> '' then
+            begin
+              ListeFixes := TStringList.Create;
+              try
+                ListeFixes.Delimiter     := ';';
+                ListeFixes.StrictDelimiter := True;
+                ListeFixes.DelimitedText := PRace.CompetencesFixes;
+                for IndFixe := 0 to ListeFixes.Count - 1 do
+                  XmlContent.Add(XmlLigneDonnee(ConstXmlFixedSkill, ListeFixes.Names[IndFixe],
+                                                ListeFixes.ValueFromIndex[IndFixe]));
+              finally
+                ListeFixes.Free;
+              end;
+            end;
           // Idem : ecrit seulement si l'ethnie designe son propre dossier d'icones
           // de niveau, pour ne pas alourdir les dizaines d'ethnies qui prennent NIV.
           if PRace.DossierNiveau <> '' then
@@ -2557,7 +2612,7 @@ Procedure LitArmuresBonusNoeud(NodeNv1: TDOMNode; Livre, LangueDef: String; var 
                 PArmureBonus.NeedsValue := RemoveQuotes(UTF8Encode(Node.TextContent));
               ConstXmlTalent:
                 begin
-                  // Talent accorde par une qualite d'objet (ex. NATIO-ARMOB_16 "Fear"
+                  // Talent accorde par une qualite d'objet (ex. NATIO-ARMOB_FEAR "Fear"
                   // -> RULES-T0049 "Frightening", Skull Trophies), cas par cas dans le
                   // XML - meme chantier "traits de creature" que ConstXmlTalent sous
                   // <Corruption> plus haut.
@@ -3284,6 +3339,7 @@ Procedure LitDataSkill(BookNode: TDOMNode; Livre, LangueDef: String; var Langue:
             PCompetence.Livre          := Livre;
             PCompetence.SousCompetence := False;
             PCompetence.DeBase         := False;
+            PCompetence.SpecLibre      := False;
             PCompetence.CodeAttribut   := '';
             PCompetence.Description    := '';
             PCompetence.BonusTexte     := '';
@@ -3294,6 +3350,8 @@ Procedure LitDataSkill(BookNode: TDOMNode; Livre, LangueDef: String; var Langue:
             while Assigned(Node) do
               begin
                 case Node.NodeName of
+                  ConstXmlSpecLibre:
+                    PCompetence.SpecLibre := (RemoveQuotes(UTF8Encode(Node.TextContent)) = ConstVrai);
                   ConstXmlBonusV1:
                     begin
                       if PCompetence.BonusTexte <> '' then
@@ -3429,6 +3487,7 @@ Procedure LitDataTalent(BookNode: TDOMNode; Livre, LangueDef: String; var Langue
             PTalent.Livre          := Livre;
             PTalent.SousTalent     := false;
             PTalent.Trait          := false;
+            PTalent.SpecLibre      := false;
             // Champs de texte remis a vide : la structure est reutilisee d'un talent au suivant
             PTalent.Resume         := '';
             PTalent.Description    := '';
@@ -3447,6 +3506,7 @@ Procedure LitDataTalent(BookNode: TDOMNode; Livre, LangueDef: String; var Langue
             PTalent.XpDiviseur       := '';
             PTalent.XpOfferts        := '';
             PTalent.XpGroupe         := '';
+            PTalent.XpDecalage       := 0;
             PTalent.OctroiCarriere   := '';
             PTalent.RetraitCarriere  := '';
             PTalent.CodeTalent     := XmlAttribut(NodeNv2, ConstXmlId);
@@ -3494,6 +3554,8 @@ Procedure LitDataTalent(BookNode: TDOMNode; Livre, LangueDef: String; var Langue
                     PTalent.RetraitCarriere   := RemoveQuotes(UTF8Encode(Node.TextContent));
                   ConstXmlTrait:
                     PTalent.Trait             := (RemoveQuotes(UTF8Encode(Node.TextContent)) = ConstVrai);
+                  ConstXmlSpecLibre:
+                    PTalent.SpecLibre         := (RemoveQuotes(UTF8Encode(Node.TextContent)) = ConstVrai);
                   ConstXmlMagie:
                     PTalent.Magie             := StrToIntDef(RemoveQuotes(UTF8Encode(Node.TextContent)), 0);
                   ConstXmlModeSort:
@@ -3513,6 +3575,8 @@ Procedure LitDataTalent(BookNode: TDOMNode; Livre, LangueDef: String; var Langue
                     PTalent.XpOfferts         := RemoveQuotes(UTF8Encode(Node.TextContent));
                   ConstXmlXpGroupe:
                     PTalent.XpGroupe          := RemoveQuotes(UTF8Encode(Node.TextContent));
+                  ConstXmlXpDecalage:
+                    PTalent.XpDecalage        := StrToIntDef(RemoveQuotes(UTF8Encode(Node.TextContent)), 0);
                   ConstXmlTest:
                     begin
                       PTalent.Tests           := RemoveQuotes(UTF8Encode(Node.TextContent));
@@ -3582,6 +3646,7 @@ Procedure LitDataTalentSpe(BookNode: TDOMNode; Livre, LangueDef: String; var Lan
         While Assigned(NodeNv2) do
           begin
             PTalent.Livre             := Livre;
+            PTalent.SpecLibre         := False;
             PTalent.SousTalent        := True;
             PTalent.Trait             := false;
             PTalent.Magie             := 0;
@@ -3595,6 +3660,7 @@ Procedure LitDataTalentSpe(BookNode: TDOMNode; Livre, LangueDef: String; var Lan
             PTalent.XpDiviseur        := '';
             PTalent.XpOfferts         := '';
             PTalent.XpGroupe          := '';
+            PTalent.XpDecalage        := 0;
             PTalent.OctroiCarriere    := '';
             PTalent.RetraitCarriere   := '';
             PTalent.Description       := '';
@@ -3697,7 +3763,7 @@ Procedure LitDataTablePersonnelle(BookNode: TDOMNode; Livre, LangueDef: String);
                 PTable.Livre     := Livre;
                 PTable.CodeTable := XmlAttribut(NodeNv2, ConstXmlId);
                 PTable.Libelle   := XmlAttribut(Node, ConstXmlData);
-                PTable.Detail    := XmlAttribut(Node, ConstXmlDetail);
+                PTable.Detail    := XmlAttributFacultatif(Node, ConstXmlDetail);
                 PTable.Plage     := RemoveQuotes(UTF8Encode(Node.TextContent));
                 if LangueDef = ConstAnglais then
                   ListTablePersonnelle.Add(PTable);
@@ -3814,7 +3880,7 @@ Procedure LitDataEspece(BookNode: TDOMNode; Livre, LangueDef: String; var Langue
                                 PRaceDetailV2.Livre   := Livre;
                                 PRaceDetailV2.CodeRace := PEspece.CodeEspece;
                                 PRaceDetailV2.Table   := NodeNv4.NodeName;
-                                PRaceDetailV2.Libelle := XmlAttribut(NodeNv4, ConstXmlData);
+                                PRaceDetailV2.Libelle := XmlAttributFacultatif(NodeNv4, ConstXmlData);
                                 PRaceDetailV2.Plage   := RemoveQuotes(UTF8Encode(NodeNv4.TextContent));
                                 if LangueDef = ConstAnglais then
                                   ListRaceDetailV2.Add(PRaceDetailV2);
@@ -3902,10 +3968,7 @@ Procedure LitDataSpecie(BookNode: TDOMNode; Livre, LangueDef: String; var Langue
     NodeNv1:           TDOMNode;
     NodeNv2:           TDOMNode;
     NodeNv3:           TDOMNode;
-    Node:              TDOMNode;
     PRace:             StructureRace;
-    IndRaceExistante:  Integer;
-    IndBoucleRace:     Integer;
     PRaceAttribut:     StructureRaceAttribut;
     PRaceNom:          StructureRaceNom;
     PRaceNomModele:    StructureRaceNomModele;
@@ -3914,6 +3977,198 @@ Procedure LitDataSpecie(BookNode: TDOMNode; Livre, LangueDef: String; var Langue
     PRaceTalent:       StructureRaceTalent;
     PRaceMetier:       StructureRaceMetier;
     PTraduction:       StructureTraduction;
+  procedure LitCaracs;
+    var
+      Node: TDOMNode;
+    begin
+      Node := XmlElement(NodeNv3.FirstChild);
+      while Assigned(Node) do
+        begin
+          case Node.NodeName of
+             ConstXmlCarac:
+               begin
+                 PRaceAttribut.Livre        := Livre;
+                 PRaceAttribut.CodeRace     := PRace.CodeRace;
+                 PRaceAttribut.CodeAttribut := XmlAttribut(Node, ConstXmlData);
+                 PRaceAttribut.CalculRace   := RemoveQuotes(UTF8Encode(Node.TextContent));
+                  if LangueDef = ConstAnglais then
+                    begin
+                     ListRaceAttribut.add(PRaceAttribut);
+                     inc(NbRaceAttribut);
+                    end;
+               end;
+          end;
+          Node := XmlElement(Node.NextSibling);
+        end;
+    end;
+
+  procedure LitNoms;
+    var
+      Node: TDOMNode;
+    begin
+      Node := XmlElement(NodeNv3.FirstChild);
+      while Assigned(Node) do
+        begin
+          case Node.NodeName of
+            ConstXmlNom:
+              begin
+                PRaceNom := Default(StructureRaceNom);
+                PRaceNom.Livre    := Livre;
+                PRaceNom.CodeRace := PRace.CodeRace;
+                PRaceNom.Libelle  := XmlAttribut(Node, ConstXmlData);
+                PRaceNom.Plage    := RemoveQuotes(UTF8Encode(Node.TextContent));
+                if Assigned(Node.Attributes.GetNamedItem(ConstXmlNomPartie)) then
+                  PRaceNom.Partie := XmlAttributBrut(Node, ConstXmlNomPartie);
+                if Assigned(Node.Attributes.GetNamedItem(ConstXmlNomSexe)) then
+                  PRaceNom.Sexe := XmlAttributBrut(Node, ConstXmlNomSexe);
+                if LangueDef = ConstAnglais then
+                  begin
+                    ListRaceNom.Add(PRaceNom);
+                    Inc(NbRaceNom);
+                  end;
+              end;
+            ConstXmlNomModele:
+              begin
+                PRaceNomModele := Default(StructureRaceNomModele);
+                PRaceNomModele.Livre    := Livre;
+                PRaceNomModele.CodeRace := PRace.CodeRace;
+                PRaceNomModele.Modele   := RemoveQuotes(UTF8Encode(Node.TextContent));
+                if Assigned(Node.Attributes.GetNamedItem(ConstXmlNomSexe)) then
+                  PRaceNomModele.Sexe := XmlAttributBrut(Node, ConstXmlNomSexe);
+                if Assigned(Node.Attributes.GetNamedItem(ConstXmlNomRegle)) then
+                  PRaceNomModele.Regle := XmlAttributBrut(Node, ConstXmlNomRegle);
+                if LangueDef = ConstAnglais then
+                  begin
+                    ListRaceNomModele.Add(PRaceNomModele);
+                    Inc(NbRaceNomModele);
+                  end;
+              end;
+            ConstXmlNomRegleDecl:
+              begin
+                PRaceNomRegle := Default(StructureRaceNomRegle);
+                PRaceNomRegle.Livre    := Livre;
+                PRaceNomRegle.CodeRace := PRace.CodeRace;
+                PRaceNomRegle.Libelle  := RemoveQuotes(UTF8Encode(Node.TextContent));
+                if Assigned(Node.Attributes.GetNamedItem(ConstXmlNomRegleCode)) then
+                  PRaceNomRegle.Code := XmlAttributBrut(Node, ConstXmlNomRegleCode);
+                if (LangueDef = ConstAnglais) and (PRaceNomRegle.Code <> '') then
+                  ListRaceNomRegle.Add(PRaceNomRegle);
+              end;
+          end;
+          Node := XmlElement(Node.NextSibling);
+        end;
+    end;
+
+  procedure LitCompetences;
+    var
+      Node: TDOMNode;
+    begin
+      Node := XmlElement(NodeNv3.FirstChild);
+      while Assigned(Node) do
+        begin
+          case Node.NodeName of
+             ConstXmlCompetence:
+               begin
+                 PRaceCompetence.Livre          := Livre;
+                 PRaceCompetence.CodeRace       := PRace.CodeRace;
+                 PRaceCompetence.CodeCompetence := RemoveQuotes(UTF8Encode(Node.TextContent));
+                  if LangueDef = ConstAnglais then
+                    begin
+                     ListRaceCompetence.add(PRaceCompetence);
+                     inc(NbRaceCompetence);
+                    end;
+               end;
+          end;
+          Node := XmlElement(Node.NextSibling);
+        end;
+    end;
+
+  procedure LitTalents;
+    var
+      Node: TDOMNode;
+    begin
+      Node := XmlElement(NodeNv3.FirstChild);
+      while Assigned(Node) do
+        begin
+          case Node.NodeName of
+             ConstXmlTalent:
+               begin
+                 PRaceTalent.Livre          := Livre;
+                 PRaceTalent.CodeRace       := PRace.CodeRace;
+                 PRaceTalent.CodeTalent     := RemoveQuotes(UTF8Encode(Node.TextContent));
+                  if LangueDef = ConstAnglais then
+                    begin
+                     ListRaceTalent.add(PRaceTalent);
+                     inc(NbRaceTalent);
+                    end;
+               end;
+          end;
+          Node := XmlElement(Node.NextSibling);
+        end;
+    end;
+
+  procedure LitMetiers;
+    var
+      Node: TDOMNode;
+    begin
+      Node := XmlElement(NodeNv3.FirstChild);
+      while Assigned(Node) do
+        begin
+          case Node.NodeName of
+             ConstXmlWork:
+               begin
+                 PRaceMetier.Livre        := Livre;
+                 PRaceMetier.CodeRace     := PRace.CodeRace;
+                 PRaceMetier.CodeMetier   := XmlAttribut(Node, ConstXmlData);
+                 PRaceMetier.Chance       := RemoveQuotes(UTF8Encode(Node.TextContent));
+                  if LangueDef = ConstAnglais then
+                    begin
+                     AjouteRaceMetierSource(FormeRaceMetierBlocEspece, Livre, PRaceMetier.CodeRace, PRaceMetier.CodeMetier, PRaceMetier.Chance);
+                     ListRaceMetier.add(PRaceMetier);
+                     inc(NbRaceMetier);
+                    end;
+               end;
+          end;
+          Node := XmlElement(Node.NextSibling);
+        end;
+    end;
+
+  procedure EnregistreRace;
+    var
+      IndRaceExistante: Integer;
+      IndBoucleRace: Integer;
+    begin
+     // Ne pas recréer une ligne de race si ce CodeRace existe déjà ET
+     // porte déjà un libellé (cas d'un livre qui ne fait qu'ajouter des
+     // données - ex. SUBCHAPTER_CAREER - sur une race définie ailleurs,
+     // sans redéclarer Description/SUBCHAPTER_ATTR/etc.)
+     //
+     // L'ordre de chargement des livres n'est PAS garanti (CONTEXT.md
+     // §2.9) : si le livre qui pose un stub minimal (juste l'id +
+     // SUBCHAPTER_CAREER, cas ci-dessus) se charge AVANT celui qui
+     // définit vraiment la race, ChercheRace() trouverait ce stub et la
+     // vraie définition (Libelle/Description/etc.) serait perdue pour
+     // toujours si on se contentait de sauter l'ajout. On remplace donc
+     // un stub (Libelle vide) par la définition complète dès qu'elle
+     // arrive, quel que soit l'ordre - releve le 14/09/2026 en ajoutant
+     // le rattachement Norsca/Tilee des carrieres Nations of Mankind.
+     IndRaceExistante := -1;
+     For IndBoucleRace := 0 to ListRace.Count - 1 do
+       if ListRace[IndBoucleRace].CodeRace = PRace.CodeRace then
+         begin
+           IndRaceExistante := IndBoucleRace;
+           break;
+         end;
+     if IndRaceExistante < 0 then
+       begin
+        ListRace.add(PRace);
+        inc(NbRace);
+        Inc(LivreNbrace);
+       end
+     else if (ListRace[IndRaceExistante].Libelle = '') and (PRace.Libelle <> '') then
+       ListRace[IndRaceExistante] := PRace;
+    end;
+
   begin
     NodeNv1 := BookNode.FindNode(ConstXmlDataSpecie);
     if Assigned(NodeNv1) then
@@ -3927,6 +4182,7 @@ Procedure LitDataSpecie(BookNode: TDOMNode; Livre, LangueDef: String; var Langue
             PRace.Point5   := 5;
             PRace.NbPoint3 := 3;
             PRace.NbPoint5 := 3;
+            PRace.CompetencesFixes := '';
             // Record local reutilise d'une ethnie a l'autre : sans cette remise
             // a zero, une ethnie sans balise <PictureLevel> heriterait du dossier
             // de la precedente (meme piege que les fonctions Cherche*, cf 2.17).
@@ -3959,6 +4215,13 @@ Procedure LitDataSpecie(BookNode: TDOMNode; Livre, LangueDef: String; var Langue
                     PRace.NbPoint5 := StrToIntDef(RemoveQuotes(UTF8Encode(NodeNv3.TextContent)), 3);
                   ConstXmlNbSkill3:
                     PRace.NbPoint3 := StrToIntDef(RemoveQuotes(UTF8Encode(NodeNv3.TextContent)), 3);
+                  ConstXmlFixedSkill:
+                    begin
+                      if PRace.CompetencesFixes <> '' then
+                        PRace.CompetencesFixes := PRace.CompetencesFixes + ';';
+                      PRace.CompetencesFixes := PRace.CompetencesFixes + XmlAttribut(NodeNv3, 'name')
+                                                + '=' + RemoveQuotes(UTF8Encode(NodeNv3.TextContent));
+                    end;
                   ConstXmlPictureLevel:
                     PRace.DossierNiveau       := RemoveQuotes(UTF8Encode(NodeNv3.TextContent));
                   ConstXmlEthnic:
@@ -3972,182 +4235,21 @@ Procedure LitDataSpecie(BookNode: TDOMNode; Livre, LangueDef: String; var Langue
                   ConstXmlRuleV1:
                     PRace.RegleV1             := RemoveQuotes(UTF8Encode(NodeNv3.TextContent));
                   ConstXmlSousChapitreCarac:
-                    begin
-                      Node := XmlElement(NodeNv3.FirstChild);
-                      while Assigned(Node) do
-                        begin
-                          case Node.NodeName of
-                             ConstXmlCarac:
-                               begin
-                                 PRaceAttribut.Livre        := Livre;
-                                 PRaceAttribut.CodeRace     := PRace.CodeRace;
-                                 PRaceAttribut.CodeAttribut := XmlAttribut(Node, ConstXmlData);
-                                 PRaceAttribut.CalculRace   := RemoveQuotes(UTF8Encode(Node.TextContent));
-                                  if LangueDef = ConstAnglais then
-                                    begin
-                                     ListRaceAttribut.add(PRaceAttribut);
-                                     inc(NbRaceAttribut);
-                                    end;
-                               end;
-                          end;
-                          Node := XmlElement(Node.NextSibling);
-                        end;
-                    end;
+                    LitCaracs;
                   ConstXmlSousChapitreNoms:
-                    begin
-                      Node := XmlElement(NodeNv3.FirstChild);
-                      while Assigned(Node) do
-                        begin
-                          case Node.NodeName of
-                            ConstXmlNom:
-                              begin
-                                PRaceNom := Default(StructureRaceNom);
-                                PRaceNom.Livre    := Livre;
-                                PRaceNom.CodeRace := PRace.CodeRace;
-                                PRaceNom.Libelle  := XmlAttribut(Node, ConstXmlData);
-                                PRaceNom.Plage    := RemoveQuotes(UTF8Encode(Node.TextContent));
-                                if Assigned(Node.Attributes.GetNamedItem(ConstXmlNomPartie)) then
-                                  PRaceNom.Partie := XmlAttributBrut(Node, ConstXmlNomPartie);
-                                if Assigned(Node.Attributes.GetNamedItem(ConstXmlNomSexe)) then
-                                  PRaceNom.Sexe := XmlAttributBrut(Node, ConstXmlNomSexe);
-                                if LangueDef = ConstAnglais then
-                                  begin
-                                    ListRaceNom.Add(PRaceNom);
-                                    Inc(NbRaceNom);
-                                  end;
-                              end;
-                            ConstXmlNomModele:
-                              begin
-                                PRaceNomModele := Default(StructureRaceNomModele);
-                                PRaceNomModele.Livre    := Livre;
-                                PRaceNomModele.CodeRace := PRace.CodeRace;
-                                PRaceNomModele.Modele   := RemoveQuotes(UTF8Encode(Node.TextContent));
-                                if Assigned(Node.Attributes.GetNamedItem(ConstXmlNomSexe)) then
-                                  PRaceNomModele.Sexe := XmlAttributBrut(Node, ConstXmlNomSexe);
-                                if Assigned(Node.Attributes.GetNamedItem(ConstXmlNomRegle)) then
-                                  PRaceNomModele.Regle := XmlAttributBrut(Node, ConstXmlNomRegle);
-                                if LangueDef = ConstAnglais then
-                                  begin
-                                    ListRaceNomModele.Add(PRaceNomModele);
-                                    Inc(NbRaceNomModele);
-                                  end;
-                              end;
-                            ConstXmlNomRegleDecl:
-                              begin
-                                PRaceNomRegle := Default(StructureRaceNomRegle);
-                                PRaceNomRegle.Livre    := Livre;
-                                PRaceNomRegle.CodeRace := PRace.CodeRace;
-                                PRaceNomRegle.Libelle  := RemoveQuotes(UTF8Encode(Node.TextContent));
-                                if Assigned(Node.Attributes.GetNamedItem(ConstXmlNomRegleCode)) then
-                                  PRaceNomRegle.Code := XmlAttributBrut(Node, ConstXmlNomRegleCode);
-                                if (LangueDef = ConstAnglais) and (PRaceNomRegle.Code <> '') then
-                                  ListRaceNomRegle.Add(PRaceNomRegle);
-                              end;
-                          end;
-                          Node := XmlElement(Node.NextSibling);
-                        end;
-                    end;
+                    LitNoms;
                   ConstXmlSousChapitreCompetence:
-                    begin
-                      Node := XmlElement(NodeNv3.FirstChild);
-                      while Assigned(Node) do
-                        begin
-                          case Node.NodeName of
-                             ConstXmlCompetence:
-                               begin
-                                 PRaceCompetence.Livre          := Livre;
-                                 PRaceCompetence.CodeRace       := PRace.CodeRace;
-                                 PRaceCompetence.CodeCompetence := RemoveQuotes(UTF8Encode(Node.TextContent));
-                                  if LangueDef = ConstAnglais then
-                                    begin
-                                     ListRaceCompetence.add(PRaceCompetence);
-                                     inc(NbRaceCompetence);
-                                    end;
-                               end;
-                          end;
-                          Node := XmlElement(Node.NextSibling);
-                        end;
-                    end;
+                    LitCompetences;
                   ConstXmlSousChapitreTalent:
-                    begin
-                      Node := XmlElement(NodeNv3.FirstChild);
-                      while Assigned(Node) do
-                        begin
-                          case Node.NodeName of
-                             ConstXmlTalent:
-                               begin
-                                 PRaceTalent.Livre          := Livre;
-                                 PRaceTalent.CodeRace       := PRace.CodeRace;
-                                 PRaceTalent.CodeTalent     := RemoveQuotes(UTF8Encode(Node.TextContent));
-                                  if LangueDef = ConstAnglais then
-                                    begin
-                                     ListRaceTalent.add(PRaceTalent);
-                                     inc(NbRaceTalent);
-                                    end;
-                               end;
-                          end;
-                          Node := XmlElement(Node.NextSibling);
-                        end;
-                    end;
+                    LitTalents;
                   ConstXmlSousChapitreMetier:
-                    begin
-                      Node := XmlElement(NodeNv3.FirstChild);
-                      while Assigned(Node) do
-                        begin
-                          case Node.NodeName of
-                             ConstXmlWork:
-                               begin
-                                 PRaceMetier.Livre        := Livre;
-                                 PRaceMetier.CodeRace     := PRace.CodeRace;
-                                 PRaceMetier.CodeMetier   := XmlAttribut(Node, ConstXmlData);
-                                 PRaceMetier.Chance       := RemoveQuotes(UTF8Encode(Node.TextContent));
-                                  if LangueDef = ConstAnglais then
-                                    begin
-                                     AjouteRaceMetierSource(FormeRaceMetierBlocEspece, Livre, PRaceMetier.CodeRace, PRaceMetier.CodeMetier, PRaceMetier.Chance);
-                                     ListRaceMetier.add(PRaceMetier);
-                                     inc(NbRaceMetier);
-                                    end;
-                               end;
-                          end;
-                          Node := XmlElement(Node.NextSibling);
-                        end;
-                    end;
+                    LitMetiers;
                 end;
 
                 NodeNv3 := XmlElement(NodeNv3.NextSibling);
               end;
              if LangueDef = ConstAnglais then
-               begin
-                // Ne pas recréer une ligne de race si ce CodeRace existe déjà ET
-                // porte déjà un libellé (cas d'un livre qui ne fait qu'ajouter des
-                // données - ex. SUBCHAPTER_CAREER - sur une race définie ailleurs,
-                // sans redéclarer Description/SUBCHAPTER_ATTR/etc.)
-                //
-                // L'ordre de chargement des livres n'est PAS garanti (CONTEXT.md
-                // §2.9) : si le livre qui pose un stub minimal (juste l'id +
-                // SUBCHAPTER_CAREER, cas ci-dessus) se charge AVANT celui qui
-                // définit vraiment la race, ChercheRace() trouverait ce stub et la
-                // vraie définition (Libelle/Description/etc.) serait perdue pour
-                // toujours si on se contentait de sauter l'ajout. On remplace donc
-                // un stub (Libelle vide) par la définition complète dès qu'elle
-                // arrive, quel que soit l'ordre - releve le 14/09/2026 en ajoutant
-                // le rattachement Norsca/Tilee des carrieres Nations of Mankind.
-                IndRaceExistante := -1;
-                For IndBoucleRace := 0 to ListRace.Count - 1 do
-                  if ListRace[IndBoucleRace].CodeRace = PRace.CodeRace then
-                    begin
-                      IndRaceExistante := IndBoucleRace;
-                      break;
-                    end;
-                if IndRaceExistante < 0 then
-                  begin
-                   ListRace.add(PRace);
-                   inc(NbRace);
-                   Inc(LivreNbrace);
-                  end
-                else if (ListRace[IndRaceExistante].Libelle = '') and (PRace.Libelle <> '') then
-                  ListRace[IndRaceExistante] := PRace;
-               end;
+               EnregistreRace;
 
             // Un stub (juste l'id + SUBCHAPTER_CAREER, race definie dans un
             // autre livre) n'a pas de Libelle a traduire : l'enregistrer ici
@@ -4195,12 +4297,9 @@ Procedure LitDataSpecieCreation(BookNode: TDOMNode; Livre, LangueDef: String);
 
 Procedure LitDataCareer(BookNode: TDOMNode; Livre, LangueDef: String; var Langue: String);
   var
-    QuantiteAttr:       String;
     NodeNv1:            TDOMNode;
     NodeNv2:            TDOMNode;
     NodeNv3:            TDOMNode;
-    NodeNv4:            TDOMNode;
-    Node:               TDOMNode;
     PRaceMetier:        StructureRaceMetier;
     PMetier:            StructureMetier;
     PMetierNiveau:      StructureMetierNiveau;
@@ -4208,8 +4307,6 @@ Procedure LitDataCareer(BookNode: TDOMNode; Livre, LangueDef: String; var Langue
     PMetierAvance:      StructureMetierAvance;
     PMetierSortie:      StructureMetierSortie;
     PMetierBase:        StructureMetierBase;
-    ListeSorties:       TStringList;
-    IndSortie:          Integer;
     PMetierArgent:      StructureMetierArgent;
     PMetierTalent:      StructureMetierTalent;
     PMetiercompetence:  StructureMetierCompetence;
@@ -4218,6 +4315,283 @@ Procedure LitDataCareer(BookNode: TDOMNode; Livre, LangueDef: String; var Langue
     PTraductionNv2:     StructureTraduction;
     LangueNv2:          String;
     EstV1:              Boolean;
+  procedure LitRaces;
+    var
+      Node: TDOMNode;
+    begin
+      Node := XmlElement(NodeNv3.FirstChild);
+      while Assigned(Node) do
+        begin
+          case Node.NodeName of
+             ConstXmlRace:
+               begin
+                 PRaceMetier.Livre          := Livre;
+                 PRaceMetier.CodeMetier     := PMetier.CodeMetier;
+                 PRaceMetier.CodeRace       := XmlAttribut(Node, ConstXmlData);
+                 PRaceMetier.Chance         := RemoveQuotes(UTF8Encode(Node.TextContent));
+
+                 if LangueDef = ConstAnglais then
+                   begin
+                     AjouteRaceMetierSource(FormeRaceMetierSousChapitre, Livre, PRaceMetier.CodeRace, PRaceMetier.CodeMetier, PRaceMetier.Chance);
+                     ListRaceMetier.add(PRaceMetier);
+                     inc(NbRaceMetier);
+                   end;
+               end;
+          end;
+          Node := XmlElement(Node.NextSibling);
+        end;
+    end;
+
+  procedure LitEquipements;
+    var
+      Node: TDOMNode;
+      QuantiteAttr: String;
+      IndSortie: Integer;
+    begin
+      // V1 : les Item (codes, "A/B" = choix) remplacent les lignes de texte tirees
+      // de Trappings, qui precede ce bloc dans la carriere (sinon doublons).
+      if EstV1 and (LangueDef = ConstAnglais) then
+        for IndSortie := ListMetierEquipement.Count - 1 downto 0 do
+          if (ListMetierEquipement[IndSortie].Livre = Livre)
+             and (ListMetierEquipement[IndSortie].CodeMetier = PMetier.CodeMetier) then
+            begin
+              ListMetierEquipement.Delete(IndSortie);
+              Dec(NbMetierEquipement);
+            end;
+      Node := XmlElement(NodeNv3.FirstChild);
+      while Assigned(Node) do
+        begin
+          case Node.NodeName of
+             ConstXmlEquipement:
+               begin
+                 PMetierEquipement.Livre          := Livre;
+                 PMetierEquipement.CodeMetier     := PMetier.CodeMetier;
+                 PMetierEquipement.Equipement     := XmlAttribut(Node, ConstXmlData);
+                 PMetierEquipement.NiveauMetier   := StrToIntDef(RemoveQuotes(UTF8Encode(Node.TextContent)),0);
+                 // Liste "2/1/1" = une quantite par branche du choix, gardee
+                 // brute ; un nombre seul reste dans Quantite.
+                 PMetierEquipement.Quantite       := 1;
+                 PMetierEquipement.QuantiteListe  := '';
+                 if Assigned(Node.Attributes.GetNamedItem(ConstXmlEquipementQuantite)) then
+                   begin
+                     QuantiteAttr := XmlAttributBrut(Node, ConstXmlEquipementQuantite);
+                     if Pos(SeparateurMulti, QuantiteAttr) > 0 then
+                       PMetierEquipement.QuantiteListe := QuantiteAttr
+                     else
+                       PMetierEquipement.Quantite      := StrToIntDef(QuantiteAttr, 1);
+                   end;
+
+                 if LangueDef = ConstAnglais then
+                   begin
+                     PMetierEquipement.TypeEquipement := GetTypeMetierEquipement(PMetierEquipement.Equipement);
+                     ListMetierEquipement.add(PMetierEquipement);
+                     inc(NbMetierEquipement);
+                   end;
+               end;
+          end;
+          Node := XmlElement(Node.NextSibling);
+        end;
+    end;
+
+  procedure LitTalents;
+    var
+      Node: TDOMNode;
+    begin
+      Node := XmlElement(NodeNv3.FirstChild);
+      while Assigned(Node) do
+        begin
+          case Node.NodeName of
+             ConstXmlTalent:
+               begin
+                 PMetierTalent.Livre          := Livre;
+                 PMetierTalent.CodeMetier     := PMetier.CodeMetier;
+                 PMetierTalent.CodeTalent     := XmlAttribut(Node, ConstXmlData);
+                 PMetierTalent.NiveauMetier   := StrToIntDef(RemoveQuotes(UTF8Encode(Node.TextContent)),0);
+                  if LangueDef = ConstAnglais then
+                    begin
+                     ListMetierTalent.add(PMetierTalent);
+                     inc(NbMetierTalent);
+                    end;
+               end;
+          end;
+          Node := XmlElement(Node.NextSibling);
+        end;
+    end;
+
+  procedure LitCompetences;
+    var
+      Node: TDOMNode;
+    begin
+      Node := XmlElement(NodeNv3.FirstChild);
+      while Assigned(Node) do
+        begin
+          case Node.NodeName of
+             ConstXmlCompetence:
+               begin
+                 PMetierCompetence.Livre          := Livre;
+                 PMetierCompetence.CodeMetier     := PMetier.CodeMetier;
+                 PMetierCompetence.CodeCompetence := XmlAttribut(Node, ConstXmlData);
+                 // V1 : pas de niveaux, la valeur est la chance en % (CONTEXT.md, V1)
+                 // V1 : la valeur du livre est le cout en EP de la competence
+                 if EstV1 then
+                   begin
+                     PMetierCompetence.NiveauMetier := 1;
+                     PMetierCompetence.Cout         := StrToIntDef(RemoveQuotes(UTF8Encode(Node.TextContent)),100);
+                   end
+                 else
+                   begin
+                     PMetierCompetence.NiveauMetier := StrToIntDef(RemoveQuotes(UTF8Encode(Node.TextContent)),0);
+                     PMetierCompetence.Cout         := 0;
+                   end;
+                  if LangueDef = ConstAnglais then
+                    begin
+                     ListMetierCompetence.add(PMetierCompetence);
+                     inc(NbMetierCompetence);
+                    end;
+               end;
+          end;
+          Node := XmlElement(Node.NextSibling);
+        end;
+    end;
+
+  procedure LitCaracs;
+    var
+      Node: TDOMNode;
+    begin
+      Node := XmlElement(NodeNv3.FirstChild);
+      while Assigned(Node) do
+        begin
+          case Node.NodeName of
+             ConstXmlCarac:
+               begin
+                 PMetierAttribut.Livre        := Livre;
+                 PMetierAttribut.CodeMetier   := PMetier.CodeMetier;
+                 PMetierAttribut.CodeAttribut := XmlAttribut(Node, ConstXmlData);
+                 PMetierAttribut.NiveauMetier := StrToIntDef(RemoveQuotes(UTF8Encode(Node.TextContent)),0);
+                  if LangueDef = ConstAnglais then
+                    begin
+                     ListMetierAttribut.add(PMetierAttribut);
+                     inc(NbMetierAttribut);
+                    end;
+               end;
+          end;
+          Node := XmlElement(Node.NextSibling);
+        end;
+    end;
+
+  procedure LitAvances;
+    var
+      Node: TDOMNode;
+    begin
+      Node := XmlElement(NodeNv3.FirstChild);
+      while Assigned(Node) do
+        begin
+          if (Node.NodeName = ConstXmlAdvance) and (LangueDef = ConstAnglais) then
+            begin
+              PMetierAvance.Livre        := Livre;
+              PMetierAvance.CodeMetier   := PMetier.CodeMetier;
+              PMetierAvance.CodeAttribut := XmlAttribut(Node, ConstXmlData);
+              PMetierAvance.Plafond      := StrToIntDef(RemoveQuotes(UTF8Encode(Node.TextContent)), 0);
+              ListMetierAvance.Add(PMetierAvance);
+            end;
+          Node := XmlElement(Node.NextSibling);
+        end;
+    end;
+
+  procedure LitTrappingsV1;
+    var
+      ListeSorties: TStringList;
+      IndSortie: Integer;
+    begin
+      ListeSorties := TStringList.Create;
+      try
+        ExtractStrings([';'], [' '], PChar(RemoveQuotes(UTF8Encode(NodeNv3.TextContent))), ListeSorties);
+        for IndSortie := 0 to ListeSorties.Count - 1 do
+          if ListeSorties[IndSortie] <> 'None' then
+            begin
+              PMetierEquipement.Livre          := Livre;
+              PMetierEquipement.CodeMetier     := PMetier.CodeMetier;
+              PMetierEquipement.Equipement     := ListeSorties[IndSortie];
+              PMetierEquipement.NiveauMetier   := 1;
+              PMetierEquipement.Quantite       := 1;
+              PMetierEquipement.QuantiteListe  := '';
+              PMetierEquipement.TypeEquipement := TypeEquipDI;
+              ListMetierEquipement.add(PMetierEquipement);
+              inc(NbMetierEquipement);
+            end;
+      finally
+        ListeSorties.Free;
+      end;
+    end;
+
+  procedure LitSorties;
+    var
+      ListeSorties: TStringList;
+      IndSortie: Integer;
+    begin
+      ListeSorties := TStringList.Create;
+      try
+        ExtractStrings([','], [' '], PChar(RemoveQuotes(UTF8Encode(NodeNv3.TextContent))), ListeSorties);
+        for IndSortie := 0 to ListeSorties.Count - 1 do
+          begin
+            PMetierSortie.Livre      := Livre;
+            PMetierSortie.CodeMetier := PMetier.CodeMetier;
+            PMetierSortie.CodeSortie := ListeSorties[IndSortie];
+            ListMetierSortie.Add(PMetierSortie);
+          end;
+      finally
+        ListeSorties.Free;
+      end;
+    end;
+
+  procedure LitNiveaux;
+    var
+      NodeNv4, Node: TDOMNode;
+    begin
+      NodeNv4 := XmlElement(NodeNv3.FirstChild);
+      while Assigned(NodeNv4) do
+        begin
+          case NodeNv4.NodeName of
+             ConstXmlNvWork:
+               begin
+                 PMetierNiveau.NiveauMetier := StrToIntDef(XmlAttribut(NodeNv4, ConstXmlId),0);
+                 PMetierNiveau.Livre        := Livre;
+                 PMetierNiveau.CodeMetier   := PMetier.CodeMetier;
+                 PMetierNiveau.LibelleFeminin := '';
+                 PTraductionNv2             := InitTrad(ConstPMetierNiveau, PMetierNiveau.CodeMetier + ' ' + IntToStr(PMetierNiveau.NiveauMetier), '', PMetierNiveau.Livre);
+                 Node := XmlElement(NodeNv4.FirstChild);
+                 while Assigned(Node) do
+                   begin
+                     case Node.NodeName of
+                        ConstXmlDescription:
+                          begin
+                            PMetierNiveau.Libelle  := RemoveQuotes(UTF8Encode(Node.TextContent));
+                            LangueNv2              := XmlAttribut(Node, ConstXmlLanguage);
+                            PTraductionNv2.Libelle := PMetierNiveau.Libelle;
+                          end;
+                        ConstXmlDescriptionFeminine:
+                          begin
+                            PMetierNiveau.LibelleFeminin := RemoveQuotes(UTF8Encode(Node.TextContent));
+                            PTraductionNv2.Feminin       := PMetierNiveau.LibelleFeminin;
+                          end;
+                        ConstXmlSalaire:
+                          PMetierNiveau.SalaireMetier := RemoveQuotes(UTF8Encode(Node.TextContent));
+                     end;
+                     Node := XmlElement(Node.NextSibling);
+                   end;
+                  if LangueDef = ConstAnglais then
+                    begin
+                      ListMetierNiveau.Add(PMetierNiveau);
+                      Inc(NbMetierNiveau);
+                    end;
+
+                 AddTrad(PTraductionNv2, LangueNv2);
+               end;
+          end;
+          NodeNv4 := XmlElement(NodeNv4.NextSibling);
+        end;
+    end;
+
   begin
     EstV1   := False;
     NodeNv1 := BookNode.FindNode(ConstXmlDataCareer);
@@ -4274,50 +4648,7 @@ Procedure LitDataCareer(BookNode: TDOMNode; Livre, LangueDef: String; var Langue
                         AjouteRaceMetierSiAbsent(Livre, RemoveQuotes(UTF8Encode(NodeNv3.TextContent)), PMetier.CodeMetier);
                       end;
                   ConstXmlSousChapitreNiveau:
-                    begin
-                      NodeNv4 := XmlElement(NodeNv3.FirstChild);
-                      while Assigned(NodeNv4) do
-                        begin
-                          case NodeNv4.NodeName of
-                             ConstXmlNvWork:
-                               begin
-                                 PMetierNiveau.NiveauMetier := StrToIntDef(XmlAttribut(NodeNv4, ConstXmlId),0);
-                                 PMetierNiveau.Livre        := Livre;
-                                 PMetierNiveau.CodeMetier   := PMetier.CodeMetier;
-                                 PMetierNiveau.LibelleFeminin := '';
-                                 PTraductionNv2             := InitTrad(ConstPMetierNiveau, PMetierNiveau.CodeMetier + ' ' + IntToStr(PMetierNiveau.NiveauMetier), '', PMetierNiveau.Livre);
-                                 Node := XmlElement(NodeNv4.FirstChild);
-                                 while Assigned(Node) do
-                                   begin
-                                     case Node.NodeName of
-                                        ConstXmlDescription:
-                                          begin
-                                            PMetierNiveau.Libelle  := RemoveQuotes(UTF8Encode(Node.TextContent));
-                                            LangueNv2              := XmlAttribut(Node, ConstXmlLanguage);
-                                            PTraductionNv2.Libelle := PMetierNiveau.Libelle;
-                                          end;
-                                        ConstXmlDescriptionFeminine:
-                                          begin
-                                            PMetierNiveau.LibelleFeminin := RemoveQuotes(UTF8Encode(Node.TextContent));
-                                            PTraductionNv2.Feminin       := PMetierNiveau.LibelleFeminin;
-                                          end;
-                                        ConstXmlSalaire:
-                                          PMetierNiveau.SalaireMetier := RemoveQuotes(UTF8Encode(Node.TextContent));
-                                     end;
-                                     Node := XmlElement(Node.NextSibling);
-                                   end;
-                                  if LangueDef = ConstAnglais then
-                                    begin
-                                      ListMetierNiveau.Add(PMetierNiveau);
-                                      Inc(NbMetierNiveau);
-                                    end;
-
-                                 AddTrad(PTraductionNv2, LangueNv2);
-                               end;
-                          end;
-                          NodeNv4 := XmlElement(NodeNv4.NextSibling);
-                        end;
-                    end;
+                    LitNiveaux;
                   ConstXmlArgentDepart:
                     if LangueDef = ConstAnglais then
                       begin
@@ -4327,46 +4658,10 @@ Procedure LitDataCareer(BookNode: TDOMNode; Livre, LangueDef: String; var Langue
                         ListMetierArgent.Add(PMetierArgent);
                       end;
                   ConstXmlExitCodes:
-                    if LangueDef = ConstAnglais then
-                      begin
-                        ListeSorties := TStringList.Create;
-                        try
-                          ExtractStrings([','], [' '], PChar(RemoveQuotes(UTF8Encode(NodeNv3.TextContent))), ListeSorties);
-                          for IndSortie := 0 to ListeSorties.Count - 1 do
-                            begin
-                              PMetierSortie.Livre      := Livre;
-                              PMetierSortie.CodeMetier := PMetier.CodeMetier;
-                              PMetierSortie.CodeSortie := ListeSorties[IndSortie];
-                              ListMetierSortie.Add(PMetierSortie);
-                            end;
-                        finally
-                          ListeSorties.Free;
-                        end;
-                      end;
+                    if LangueDef = ConstAnglais then LitSorties;
                   ConstXmlTrappingsV1:
                     // V1 : equipement en texte, un element par ";" (pas de fiche d objet : affiche tel quel)
-                    if EstV1 and (LangueDef = ConstAnglais) then
-                      begin
-                        ListeSorties := TStringList.Create;
-                        try
-                          ExtractStrings([';'], [' '], PChar(RemoveQuotes(UTF8Encode(NodeNv3.TextContent))), ListeSorties);
-                          for IndSortie := 0 to ListeSorties.Count - 1 do
-                            if ListeSorties[IndSortie] <> 'None' then
-                              begin
-                                PMetierEquipement.Livre          := Livre;
-                                PMetierEquipement.CodeMetier     := PMetier.CodeMetier;
-                                PMetierEquipement.Equipement     := ListeSorties[IndSortie];
-                                PMetierEquipement.NiveauMetier   := 1;
-                                PMetierEquipement.Quantite       := 1;
-                                PMetierEquipement.QuantiteListe  := '';
-                                PMetierEquipement.TypeEquipement := TypeEquipDI;
-                                ListMetierEquipement.add(PMetierEquipement);
-                                inc(NbMetierEquipement);
-                              end;
-                        finally
-                          ListeSorties.Free;
-                        end;
-                      end;
+                    if EstV1 and (LangueDef = ConstAnglais) then LitTrappingsV1;
                   ConstXmlBasic:
                     if LangueDef = ConstAnglais then
                       begin
@@ -4375,168 +4670,17 @@ Procedure LitDataCareer(BookNode: TDOMNode; Livre, LangueDef: String; var Langue
                         ListMetierBase.Add(PMetierBase);
                       end;
                   ConstXmlAdvances, ConstXmlAdvanceSchemeV1:
-                    begin
-                      Node := XmlElement(NodeNv3.FirstChild);
-                      while Assigned(Node) do
-                        begin
-                          if (Node.NodeName = ConstXmlAdvance) and (LangueDef = ConstAnglais) then
-                            begin
-                              PMetierAvance.Livre        := Livre;
-                              PMetierAvance.CodeMetier   := PMetier.CodeMetier;
-                              PMetierAvance.CodeAttribut := XmlAttribut(Node, ConstXmlData);
-                              PMetierAvance.Plafond      := StrToIntDef(RemoveQuotes(UTF8Encode(Node.TextContent)), 0);
-                              ListMetierAvance.Add(PMetierAvance);
-                            end;
-                          Node := XmlElement(Node.NextSibling);
-                        end;
-                    end;
+                    LitAvances;
                   ConstXmlSousChapitreCarac:
-                    begin
-                      Node := XmlElement(NodeNv3.FirstChild);
-                      while Assigned(Node) do
-                        begin
-                          case Node.NodeName of
-                             ConstXmlCarac:
-                               begin
-                                 PMetierAttribut.Livre        := Livre;
-                                 PMetierAttribut.CodeMetier   := PMetier.CodeMetier;
-                                 PMetierAttribut.CodeAttribut := XmlAttribut(Node, ConstXmlData);
-                                 PMetierAttribut.NiveauMetier := StrToIntDef(RemoveQuotes(UTF8Encode(Node.TextContent)),0);
-                                  if LangueDef = ConstAnglais then
-                                    begin
-                                     ListMetierAttribut.add(PMetierAttribut);
-                                     inc(NbMetierAttribut);
-                                    end;
-                               end;
-                          end;
-                          Node := XmlElement(Node.NextSibling);
-                        end;
-                    end;
+                    LitCaracs;
                   ConstXmlSousChapitreCompetence:
-                    begin
-                      Node := XmlElement(NodeNv3.FirstChild);
-                      while Assigned(Node) do
-                        begin
-                          case Node.NodeName of
-                             ConstXmlCompetence:
-                               begin
-                                 PMetierCompetence.Livre          := Livre;
-                                 PMetierCompetence.CodeMetier     := PMetier.CodeMetier;
-                                 PMetierCompetence.CodeCompetence := XmlAttribut(Node, ConstXmlData);
-                                 // V1 : pas de niveaux, la valeur est la chance en % (CONTEXT.md, V1)
-                                 // V1 : la valeur du livre est le cout en EP de la competence
-                                 if EstV1 then
-                                   begin
-                                     PMetierCompetence.NiveauMetier := 1;
-                                     PMetierCompetence.Cout         := StrToIntDef(RemoveQuotes(UTF8Encode(Node.TextContent)),100);
-                                   end
-                                 else
-                                   begin
-                                     PMetierCompetence.NiveauMetier := StrToIntDef(RemoveQuotes(UTF8Encode(Node.TextContent)),0);
-                                     PMetierCompetence.Cout         := 0;
-                                   end;
-                                  if LangueDef = ConstAnglais then
-                                    begin
-                                     ListMetierCompetence.add(PMetierCompetence);
-                                     inc(NbMetierCompetence);
-                                    end;
-                               end;
-                          end;
-                          Node := XmlElement(Node.NextSibling);
-                        end;
-                    end;
+                    LitCompetences;
                   ConstXmlSousChapitreTalent:
-                    begin
-                      Node := XmlElement(NodeNv3.FirstChild);
-                      while Assigned(Node) do
-                        begin
-                          case Node.NodeName of
-                             ConstXmlTalent:
-                               begin
-                                 PMetierTalent.Livre          := Livre;
-                                 PMetierTalent.CodeMetier     := PMetier.CodeMetier;
-                                 PMetierTalent.CodeTalent     := XmlAttribut(Node, ConstXmlData);
-                                 PMetierTalent.NiveauMetier   := StrToIntDef(RemoveQuotes(UTF8Encode(Node.TextContent)),0);
-                                  if LangueDef = ConstAnglais then
-                                    begin
-                                     ListMetierTalent.add(PMetierTalent);
-                                     inc(NbMetierTalent);
-                                    end;
-                               end;
-                          end;
-                          Node := XmlElement(Node.NextSibling);
-                        end;
-                    end;
+                    LitTalents;
                   ConstXmlSousChapitreEquipement:
-                    begin
-                      // V1 : les Item (codes, "A/B" = choix) remplacent les lignes de texte tirees
-                      // de Trappings, qui precede ce bloc dans la carriere (sinon doublons).
-                      if EstV1 and (LangueDef = ConstAnglais) then
-                        for IndSortie := ListMetierEquipement.Count - 1 downto 0 do
-                          if (ListMetierEquipement[IndSortie].Livre = Livre)
-                             and (ListMetierEquipement[IndSortie].CodeMetier = PMetier.CodeMetier) then
-                            begin
-                              ListMetierEquipement.Delete(IndSortie);
-                              Dec(NbMetierEquipement);
-                            end;
-                      Node := XmlElement(NodeNv3.FirstChild);
-                      while Assigned(Node) do
-                        begin
-                          case Node.NodeName of
-                             ConstXmlEquipement:
-                               begin
-                                 PMetierEquipement.Livre          := Livre;
-                                 PMetierEquipement.CodeMetier     := PMetier.CodeMetier;
-                                 PMetierEquipement.Equipement     := XmlAttribut(Node, ConstXmlData);
-                                 PMetierEquipement.NiveauMetier   := StrToIntDef(RemoveQuotes(UTF8Encode(Node.TextContent)),0);
-                                 // Liste "2/1/1" = une quantite par branche du choix, gardee
-                                 // brute ; un nombre seul reste dans Quantite.
-                                 PMetierEquipement.Quantite       := 1;
-                                 PMetierEquipement.QuantiteListe  := '';
-                                 if Assigned(Node.Attributes.GetNamedItem(ConstXmlEquipementQuantite)) then
-                                   begin
-                                     QuantiteAttr := XmlAttributBrut(Node, ConstXmlEquipementQuantite);
-                                     if Pos(SeparateurMulti, QuantiteAttr) > 0 then
-                                       PMetierEquipement.QuantiteListe := QuantiteAttr
-                                     else
-                                       PMetierEquipement.Quantite      := StrToIntDef(QuantiteAttr, 1);
-                                   end;
-
-                                 if LangueDef = ConstAnglais then
-                                   begin
-                                     PMetierEquipement.TypeEquipement := GetTypeMetierEquipement(PMetierEquipement.Equipement);
-                                     ListMetierEquipement.add(PMetierEquipement);
-                                     inc(NbMetierEquipement);
-                                   end;
-                               end;
-                          end;
-                          Node := XmlElement(Node.NextSibling);
-                        end;
-                    end;
+                    LitEquipements;
                   ConstXmlSousChapitreRace:
-                    begin
-                      Node := XmlElement(NodeNv3.FirstChild);
-                      while Assigned(Node) do
-                        begin
-                          case Node.NodeName of
-                             ConstXmlRace:
-                               begin
-                                 PRaceMetier.Livre          := Livre;
-                                 PRaceMetier.CodeMetier     := PMetier.CodeMetier;
-                                 PRaceMetier.CodeRace       := XmlAttribut(Node, ConstXmlData);
-                                 PRaceMetier.Chance         := RemoveQuotes(UTF8Encode(Node.TextContent));
-
-                                 if LangueDef = ConstAnglais then
-                                   begin
-                                     AjouteRaceMetierSource(FormeRaceMetierSousChapitre, Livre, PRaceMetier.CodeRace, PRaceMetier.CodeMetier, PRaceMetier.Chance);
-                                     ListRaceMetier.add(PRaceMetier);
-                                     inc(NbRaceMetier);
-                                   end;
-                               end;
-                          end;
-                          Node := XmlElement(Node.NextSibling);
-                        end;
-                    end;
+                    LitRaces;
                 end;
 
                 NodeNv3 := XmlElement(NodeNv3.NextSibling);
@@ -5061,383 +5205,435 @@ Procedure LitDataSkillRollV1(BookNode: TDOMNode; LangueDef: String);
     PPriereCulte:  StructurePriereCulteV1;
     PObjet:        StructureObjetV1;
     PApprent: StructureApprentissageSortV1;
-    Stade:    Integer;
     Texte:    String;
+
+    procedure LitTiragesComp;
+      begin
+      NodeNv1 := BookNode.FindNode(ConstXmlDataSkillRollV1);
+      if Assigned(NodeNv1) then
+        begin
+          NodeNv2 := XmlElement(NodeNv1.FirstChild);
+          while Assigned(NodeNv2) do
+            begin
+              PTirage := Default(StructureTirageCompV1);
+              NodeNv3 := XmlElement(NodeNv2.FirstChild);
+              while Assigned(NodeNv3) do
+                begin
+                  Texte := RemoveQuotes(UTF8Encode(NodeNv3.TextContent));
+                  case NodeNv3.NodeName of
+                    ConstXmlClass:        PTirage.CodeClasse     := Texte;
+                    ConstXmlSpecieV1:     PTirage.Espece         := Texte;
+                    ConstXmlCompetence:
+                      begin
+                        PTirage.CodeCompetence := XmlAttribut(NodeNv3, ConstXmlData);
+                        PTirage.Chance         := StrToIntDef(Texte, 0);
+                      end;
+                  end;
+                  NodeNv3 := XmlElement(NodeNv3.NextSibling);
+                end;
+              ListTirageCompV1.Add(PTirage);
+              NodeNv2 := XmlElement(NodeNv2.NextSibling);
+            end;
+        end;
+      end;
+
+    procedure LitAgesComp;
+      begin
+      NodeNv1 := BookNode.FindNode(ConstXmlDataSkillCountAgeV1);
+      if Assigned(NodeNv1) then
+        begin
+          NodeNv2 := XmlElement(NodeNv1.FirstChild);
+          while Assigned(NodeNv2) do
+            begin
+              PAge := Default(StructureAgeCompV1);
+              NodeNv3 := XmlElement(NodeNv2.FirstChild);
+              while Assigned(NodeNv3) do
+                begin
+                  Texte := RemoveQuotes(UTF8Encode(NodeNv3.TextContent));
+                  case NodeNv3.NodeName of
+                    ConstXmlSpecieV1:        PAge.Espece    := Texte;
+                    ConstXmlAgeMinV1:        PAge.AgeMin    := StrToIntDef(Texte, 0);
+                    ConstXmlAgeMaxV1:        PAge.AgeMax    := StrToIntDef(Texte, 0);
+                    ConstXmlPositifNegatif:  PAge.Modifieur := StrToIntDef(StringReplace(Texte, '+', '', []), 0);
+                  end;
+                  NodeNv3 := XmlElement(NodeNv3.NextSibling);
+                end;
+              ListAgeCompV1.Add(PAge);
+              NodeNv2 := XmlElement(NodeNv2.NextSibling);
+            end;
+        end;
+      end;
+
+    procedure LitGainsMagie;
+      begin
+      // points de magie par niveau : Level absent = tous les niveaux, "1", ou "2-4"
+      NodeNv1 := BookNode.FindNode(ConstXmlDataMagicPointGainV1);
+      if Assigned(NodeNv1) then
+        begin
+          NodeNv2 := XmlElement(NodeNv1.FirstChild);
+          while Assigned(NodeNv2) do
+            begin
+              PGain := Default(StructureGainMagieV1);
+              PGain.NiveauMin := 1;
+              PGain.NiveauMax := 99;
+              NodeNv3 := XmlElement(NodeNv2.FirstChild);
+              while Assigned(NodeNv3) do
+                begin
+                  Texte := RemoveQuotes(UTF8Encode(NodeNv3.TextContent));
+                  case NodeNv3.NodeName of
+                    ConstXmlEspece: PGain.Espece   := Texte;
+                    ConstXmlWork:   PGain.Carriere := Texte;
+                    ConstXmlDice:   PGain.Des      := Texte;
+                    ConstXmlNiveau:
+                      begin
+                        PGain.NiveauMin := StrToIntDef(Copy(Texte, 1, Pos('-', Texte + '-') - 1), 1);
+                        if Pos('-', Texte) > 0 then
+                          PGain.NiveauMax := StrToIntDef(Copy(Texte, Pos('-', Texte) + 1, 5), 99)
+                        else
+                          PGain.NiveauMax := PGain.NiveauMin;
+                      end;
+                  end;
+                  NodeNv3 := XmlElement(NodeNv3.NextSibling);
+                end;
+              ListGainMagieV1.Add(PGain);
+              NodeNv2 := XmlElement(NodeNv2.NextSibling);
+            end;
+        end;
+      end;
+
+    procedure LitApprentissageSorts;
+      begin
+      // apprentissage des sorts : cout en EP et modificateur du test d'Intelligence par niveau de sort
+      NodeNv1 := BookNode.FindNode('DATA_SPELL_LEARNING_V1');
+      if Assigned(NodeNv1) then
+        begin
+          NodeNv2 := XmlElement(NodeNv1.FirstChild);
+          while Assigned(NodeNv2) do
+            begin
+              PApprent := Default(StructureApprentissageSortV1);
+              NodeNv3  := XmlElement(NodeNv2.FirstChild);
+              while Assigned(NodeNv3) do
+                begin
+                  Texte := RemoveQuotes(UTF8Encode(NodeNv3.TextContent));
+                  if NodeNv3.NodeName = 'SpellLevel' then PApprent.Niveau := Texte
+                  else if NodeNv3.NodeName = 'EPCost' then PApprent.CoutEP := StrToIntDef(Texte, 0)
+                  else if NodeNv3.NodeName = 'IntelligenceModifier' then PApprent.ModInt := Texte
+                  else if NodeNv3.NodeName = 'WillPowerModifier' then PApprent.ModFM := Texte
+                  else if NodeNv3.NodeName = 'AlwaysFail' then PApprent.EchecAuto := Texte;
+                  NodeNv3 := XmlElement(NodeNv3.NextSibling);
+                end;
+              ListApprentissageSortV1.Add(PApprent);
+              NodeNv2 := XmlElement(NodeNv2.NextSibling);
+            end;
+        end;
+      end;
+
+    procedure LitHandicaps;
+      var
+        Stade: Integer;
+      begin
+      // handicaps des magiciens : stades 1 a 3 (malus de caracteristiques + texte)
+      NodeNv1 := BookNode.FindNode(ConstXmlDataDisabilityV1);
+      if Assigned(NodeNv1) then
+        begin
+          NodeNv2 := XmlElement(NodeNv1.FirstChild);
+          while Assigned(NodeNv2) do
+            begin
+              PHandicap      := Default(StructureHandicapV1);
+              PHandicap.Code := XmlAttribut(NodeNv2, ConstXmlId);
+              NodeNv3 := XmlElement(NodeNv2.FirstChild);
+              while Assigned(NodeNv3) do
+                begin
+                  if NodeNv3.NodeName = ConstXmlDescription then
+                    PHandicap.Libelle := RemoveQuotes(UTF8Encode(NodeNv3.TextContent))
+                  else if NodeNv3.NodeName = 'Permanent' then
+                    begin
+                      // perte permanente (Strength / Toughness / Wound Loss) : le stade = nombre de fois, la perte s'ajoute
+                      Texte := RemoveQuotes(UTF8Encode(NodeNv3.TextContent));
+                      for Stade := 1 to 3 do
+                        PHandicap.Modif[Stade] := XmlAttribut(NodeNv3, 'name') + '=' + IntToStr(Stade * StrToIntDef(StringReplace(Texte, '+', '', []), 0)) + ';';
+                    end
+                  else if NodeNv3.NodeName = ConstXmlStageV1 then
+                    begin
+                      Stade := StrToIntDef(XmlAttribut(NodeNv3, 'number'), 0);
+                      if (Stade >= 1) and (Stade <= 3) then
+                        begin
+                          NodeNv4 := XmlElement(NodeNv3.FirstChild);
+                          while Assigned(NodeNv4) do
+                            begin
+                              Texte := RemoveQuotes(UTF8Encode(NodeNv4.TextContent));
+                              if NodeNv4.NodeName = ConstXmlSigneModificateur then
+                                PHandicap.Modif[Stade] := PHandicap.Modif[Stade] + XmlAttribut(NodeNv4, 'name') + '=' + Texte + ';'
+                              else if NodeNv4.NodeName = ConstXmlTexte then
+                                PHandicap.Texte[Stade] := Texte;
+                              NodeNv4 := XmlElement(NodeNv4.NextSibling);
+                            end;
+                        end;
+                    end;
+                  NodeNv3 := XmlElement(NodeNv3.NextSibling);
+                end;
+              ListHandicapV1.Add(PHandicap);
+              NodeNv2 := XmlElement(NodeNv2.NextSibling);
+            end;
+        end;
+      end;
+
+    procedure LitTiragesHandicap;
+      begin
+      // tables d100 : plage "01-09" ou "AUTO_LEVEL_1" (obtenu d'office au niveau 1)
+      NodeNv1 := BookNode.FindNode(ConstXmlDataDisabilityRollV1);
+      if Assigned(NodeNv1) then
+        begin
+          NodeNv2 := XmlElement(NodeNv1.FirstChild);
+          while Assigned(NodeNv2) do
+            begin
+              NodeNv3 := XmlElement(NodeNv2.FirstChild);
+              while Assigned(NodeNv3) do
+                begin
+                  Texte    := RemoveQuotes(UTF8Encode(NodeNv3.TextContent));
+                  PTirageH := Default(StructureTirageHandicapV1);
+                  PTirageH.Table := XmlAttribut(NodeNv2, ConstXmlId);
+                  PTirageH.Code  := XmlAttribut(NodeNv3, 'name');
+                  if Pos('AUTO', Texte) = 1 then
+                    PTirageH.Auto := True
+                  else
+                    begin
+                      PTirageH.Min := StrToIntDef(Copy(Texte, 1, Pos('-', Texte + '-') - 1), 0);
+                      PTirageH.Max := StrToIntDef(Copy(Texte, Pos('-', Texte) + 1, 5), PTirageH.Min);
+                    end;
+                  ListTirageHandicapV1.Add(PTirageH);
+                  NodeNv3 := XmlElement(NodeNv3.NextSibling);
+                end;
+              NodeNv2 := XmlElement(NodeNv2.NextSibling);
+            end;
+        end;
+      end;
+
+    procedure LitAvancementPretre;
+      begin
+      // table d'avancement du Cleric (CLERIC) et du Druidic Priest (DRUID)
+      NodeNv1 := BookNode.FindNode(ConstXmlDataPriestAdvanceV1);
+      if Assigned(NodeNv1) then
+        begin
+          NodeNv2 := XmlElement(NodeNv1.FirstChild);
+          while Assigned(NodeNv2) do
+            begin
+              NodeNv3 := XmlElement(NodeNv2.FirstChild);
+              while Assigned(NodeNv3) do
+                begin
+                  PAvancePretre       := Default(StructureAvancementPretreV1);
+                  PAvancePretre.Table := XmlAttribut(NodeNv2, ConstXmlId);
+                  NodeNv4 := XmlElement(NodeNv3.FirstChild);
+                  while Assigned(NodeNv4) do
+                    begin
+                      Texte := RemoveQuotes(UTF8Encode(NodeNv4.TextContent));
+                      if NodeNv4.NodeName = ConstXmlRangeV1 then
+                        begin
+                          PAvancePretre.Min := StrToIntDef(Copy(Texte, 1, Pos('-', Texte + '-') - 1), 0);
+                          PAvancePretre.Max := StrToIntDef(Copy(Texte, Pos('-', Texte) + 1, 5), PAvancePretre.Min);
+                        end
+                      else if NodeNv4.NodeName = ConstXmlResultV1 then
+                        PAvancePretre.Resultat := Texte
+                      else if NodeNv4.NodeName = ConstXmlEPGiftV1 then
+                        PAvancePretre.CadeauEP := True
+                      else if NodeNv4.NodeName = ConstXmlFatePointV1 then
+                        PAvancePretre.Destin := StrToIntDef(Texte, 0)
+                      else if NodeNv4.NodeName = ConstXmlBlessingV1 then
+                        PAvancePretre.Benediction := True
+                      else if NodeNv4.NodeName = ConstXmlExplanation then
+                        PAvancePretre.Explication := Texte;
+                      NodeNv4 := XmlElement(NodeNv4.NextSibling);
+                    end;
+                  ListAvancementPretreV1.Add(PAvancePretre);
+                  NodeNv3 := XmlElement(NodeNv3.NextSibling);
+                end;
+              NodeNv2 := XmlElement(NodeNv2.NextSibling);
+            end;
+        end;
+      end;
+
+    procedure LitFamiliers;
+      begin
+      // table des familiers du Druidic Priest (d100 ; "00" = 100)
+      NodeNv1 := BookNode.FindNode(ConstXmlDataFamiliarV1);
+      if Assigned(NodeNv1) then
+        begin
+          NodeNv2 := XmlElement(NodeNv1.FirstChild);
+          while Assigned(NodeNv2) do
+            begin
+              PFamilier      := Default(StructureFamilierV1);
+              PFamilier.Code := XmlAttribut(NodeNv2, ConstXmlId);
+              NodeNv3 := XmlElement(NodeNv2.FirstChild);
+              while Assigned(NodeNv3) do
+                begin
+                  Texte := RemoveQuotes(UTF8Encode(NodeNv3.TextContent));
+                  if NodeNv3.NodeName = ConstXmlRangeV1 then
+                    begin
+                      PFamilier.Min := StrToIntDef(Copy(Texte, 1, Pos('-', Texte + '-') - 1), 0);
+                      PFamilier.Max := StrToIntDef(Copy(Texte, Pos('-', Texte) + 1, 5), PFamilier.Min);
+                      if PFamilier.Max = 0 then
+                        PFamilier.Max := 100;
+                    end
+                  else if NodeNv3.NodeName = 'Animal' then
+                    PFamilier.Animal := Texte
+                  else if NodeNv3.NodeName = 'Skill1' then
+                    PFamilier.Comp1 := Texte
+                  else if NodeNv3.NodeName = 'Skill2' then
+                    PFamilier.Comp2 := Texte
+                  else if NodeNv3.NodeName = 'Armour' then
+                    PFamilier.Armure := Texte
+                  else if NodeNv3.NodeName = 'Shield' then
+                    PFamilier.Bouclier := Texte = '1'
+                  else if NodeNv3.NodeName = 'ForbiddenWeapons' then
+                    PFamilier.ArmesInterdites := Texte
+                  else if NodeNv3.NodeName = 'TimesPlaces' then
+                    PFamilier.Lieux := Texte
+                  else if NodeNv3.NodeName = 'Diet' then
+                    PFamilier.Regime := Texte;
+                  NodeNv3 := XmlElement(NodeNv3.NextSibling);
+                end;
+              ListFamilierV1.Add(PFamilier);
+              NodeNv2 := XmlElement(NodeNv2.NextSibling);
+            end;
+        end;
+      end;
+
+    procedure LitCultes;
+      begin
+      // cultes de Realm of Divine Magic : listes de prieres par rang (REQUIRED / HONOR) ; les dons restent en texte du livre
+      NodeNv1 := BookNode.FindNode('DATA_CULT_V1');
+      if Assigned(NodeNv1) then
+        begin
+          NodeNv2 := XmlElement(NodeNv1.FirstChild);
+          while Assigned(NodeNv2) do
+            begin
+              PCulte      := Default(StructureCulteV1);
+              PCulte.Code := XmlAttribut(NodeNv2, ConstXmlId);
+              NodeNv3 := XmlElement(NodeNv2.FirstChild);
+              while Assigned(NodeNv3) do
+                begin
+                  Texte := RemoveQuotes(UTF8Encode(NodeNv3.TextContent));
+                  if NodeNv3.NodeName = ConstXmlDescription then
+                    PCulte.Libelle := Texte
+                  else if NodeNv3.NodeName = 'Deity' then
+                    PCulte.Deite := Texte
+                  else if NodeNv3.NodeName = 'Prayer' then
+                    begin
+                      PPriereCulte       := Default(StructurePriereCulteV1);
+                      PPriereCulte.Culte := PCulte.Code;
+                      NodeNv4 := XmlElement(NodeNv3.FirstChild);
+                      while Assigned(NodeNv4) do
+                        begin
+                          Texte := RemoveQuotes(UTF8Encode(NodeNv4.TextContent));
+                          if NodeNv4.NodeName = 'Rank' then PPriereCulte.Rang := Texte
+                          else if NodeNv4.NodeName = 'Kind' then PPriereCulte.Genre := Texte
+                          else if NodeNv4.NodeName = 'Value' then PPriereCulte.CodePriere := Texte;
+                          NodeNv4 := XmlElement(NodeNv4.NextSibling);
+                        end;
+                      ListPriereCulteV1.Add(PPriereCulte);
+                    end;
+                  NodeNv3 := XmlElement(NodeNv3.NextSibling);
+                end;
+              ListCulteV1.Add(PCulte);
+              NodeNv2 := XmlElement(NodeNv2.NextSibling);
+            end;
+        end;
+      end;
+
+    procedure LitObjets;
+      begin
+      // liste de prix : les 216 objets de l'equipement V1
+      NodeNv1 := BookNode.FindNode(ConstXmlDataEquipmentV1);
+      if Assigned(NodeNv1) then
+        begin
+          NodeNv2 := XmlElement(NodeNv1.FirstChild);
+          while Assigned(NodeNv2) do
+            begin
+              PObjet      := Default(StructureObjetV1);
+              PObjet.Code := XmlAttribut(NodeNv2, ConstXmlId);
+              NodeNv3 := XmlElement(NodeNv2.FirstChild);
+              while Assigned(NodeNv3) do
+                begin
+                  Texte := RemoveQuotes(UTF8Encode(NodeNv3.TextContent));
+                  if NodeNv3.NodeName = ConstXmlDescription then
+                    begin
+                      // plusieurs Description (une par langue) : celle de la langue active, sinon la 1re (anglais)
+                      if (PObjet.Libelle = '') or (XmlAttribut(NodeNv3, ConstXmlLanguage) = ValLangue) then
+                        PObjet.Libelle := Texte;
+                    end
+                  else if NodeNv3.NodeName = ConstXmlCategoryV1 then
+                    PObjet.Categorie := Texte
+                  else if NodeNv3.NodeName = ConstXmlSubCategoryV1 then
+                    PObjet.SousCategorie := Texte
+                  else if NodeNv3.NodeName = ConstXmlCostV1 then
+                    PObjet.Cout := Texte
+                  else if NodeNv3.NodeName = ConstXmlEncumbranceV1 then
+                    PObjet.Encombrement := Texte
+                  else if NodeNv3.NodeName = ConstXmlAvailabilityV1 then
+                    PObjet.Disponibilite := Texte
+                  else if NodeNv3.NodeName = ConstXmlCombatModifiersV1 then
+                    begin
+                      // tableau de lignes <CombatModifier><Stat/><Value/></CombatModifier> : « CODE valeur; CODE valeur »
+                      // (le libelle du code est pose a l'affichage, la langue pouvant changer)
+                      Texte := '';
+                      NodeNv4 := XmlElement(NodeNv3.FirstChild);
+                      while Assigned(NodeNv4) do
+                        begin
+                          if Texte <> '' then Texte := Texte + '; ';
+                          Texte := Texte + RemoveQuotes(UTF8Encode(NodeNv4.FindNode('Stat').TextContent)) + ' ' +
+                            RemoveQuotes(UTF8Encode(NodeNv4.FindNode('Value').TextContent));
+                          NodeNv4 := XmlElement(NodeNv4.NextSibling);
+                        end;
+                      PObjet.Combat := Texte;
+                    end
+                  else if NodeNv3.NodeName = ConstXmlArmourPointsV1 then
+                    PObjet.PointsArmure := Texte
+                  else if NodeNv3.NodeName = ConstXmlLocationsV1 then
+                    PObjet.Zones := Texte
+                  else if NodeNv3.NodeName = 'Reload' then
+                    PObjet.Rechargement := Texte
+                  else if NodeNv3.NodeName = 'RangeBands' then
+                    begin
+                      // <RangeBand><Band>RULES-V1RANGE_SHORT|LONG|EXTREME</Band><Distance/><Strength/></RangeBand>
+                      // (le palier se lit au bout du code : le libelle est pose a l'affichage)
+                      NodeNv4 := XmlElement(NodeNv3.FirstChild);
+                      while Assigned(NodeNv4) do
+                        begin
+                          Texte := RemoveQuotes(UTF8Encode(NodeNv4.FindNode('Band').TextContent));
+                          if Pos('SHORT', Texte) > 0 then
+                            PObjet.PorteeCourte := RemoveQuotes(UTF8Encode(NodeNv4.FindNode('Distance').TextContent))
+                          else if Pos('LONG', Texte) > 0 then
+                            PObjet.PorteeLongue := RemoveQuotes(UTF8Encode(NodeNv4.FindNode('Distance').TextContent))
+                          else if Pos('EXTREME', Texte) > 0 then
+                            PObjet.PorteeExtreme := RemoveQuotes(UTF8Encode(NodeNv4.FindNode('Distance').TextContent));
+                          Texte := RemoveQuotes(UTF8Encode(NodeNv4.FindNode('Strength').TextContent));
+                          if PObjet.ForceTir = '' then
+                            PObjet.ForceTir := Texte
+                          else if Pos(Texte, PObjet.ForceTir) = 0 then
+                            PObjet.ForceTir := PObjet.ForceTir + '/' + Texte;
+                          NodeNv4 := XmlElement(NodeNv4.NextSibling);
+                        end;
+                    end;
+                  NodeNv3 := XmlElement(NodeNv3.NextSibling);
+                end;
+              ListObjetV1.Add(PObjet);
+              NodeNv2 := XmlElement(NodeNv2.NextSibling);
+            end;
+        end;
+      end;
+
   begin
     if LangueDef <> ConstAnglais then Exit;
-    NodeNv1 := BookNode.FindNode(ConstXmlDataSkillRollV1);
-    if Assigned(NodeNv1) then
-      begin
-        NodeNv2 := XmlElement(NodeNv1.FirstChild);
-        while Assigned(NodeNv2) do
-          begin
-            PTirage := Default(StructureTirageCompV1);
-            NodeNv3 := XmlElement(NodeNv2.FirstChild);
-            while Assigned(NodeNv3) do
-              begin
-                Texte := RemoveQuotes(UTF8Encode(NodeNv3.TextContent));
-                case NodeNv3.NodeName of
-                  ConstXmlClass:        PTirage.CodeClasse     := Texte;
-                  ConstXmlSpecieV1:     PTirage.Espece         := Texte;
-                  ConstXmlCompetence:
-                    begin
-                      PTirage.CodeCompetence := XmlAttribut(NodeNv3, ConstXmlData);
-                      PTirage.Chance         := StrToIntDef(Texte, 0);
-                    end;
-                end;
-                NodeNv3 := XmlElement(NodeNv3.NextSibling);
-              end;
-            ListTirageCompV1.Add(PTirage);
-            NodeNv2 := XmlElement(NodeNv2.NextSibling);
-          end;
-      end;
-    NodeNv1 := BookNode.FindNode(ConstXmlDataSkillCountAgeV1);
-    if Assigned(NodeNv1) then
-      begin
-        NodeNv2 := XmlElement(NodeNv1.FirstChild);
-        while Assigned(NodeNv2) do
-          begin
-            PAge := Default(StructureAgeCompV1);
-            NodeNv3 := XmlElement(NodeNv2.FirstChild);
-            while Assigned(NodeNv3) do
-              begin
-                Texte := RemoveQuotes(UTF8Encode(NodeNv3.TextContent));
-                case NodeNv3.NodeName of
-                  ConstXmlSpecieV1:        PAge.Espece    := Texte;
-                  ConstXmlAgeMinV1:        PAge.AgeMin    := StrToIntDef(Texte, 0);
-                  ConstXmlAgeMaxV1:        PAge.AgeMax    := StrToIntDef(Texte, 0);
-                  ConstXmlPositifNegatif:  PAge.Modifieur := StrToIntDef(StringReplace(Texte, '+', '', []), 0);
-                end;
-                NodeNv3 := XmlElement(NodeNv3.NextSibling);
-              end;
-            ListAgeCompV1.Add(PAge);
-            NodeNv2 := XmlElement(NodeNv2.NextSibling);
-          end;
-      end;
-    // points de magie par niveau : Level absent = tous les niveaux, "1", ou "2-4"
-    NodeNv1 := BookNode.FindNode(ConstXmlDataMagicPointGainV1);
-    if Assigned(NodeNv1) then
-      begin
-        NodeNv2 := XmlElement(NodeNv1.FirstChild);
-        while Assigned(NodeNv2) do
-          begin
-            PGain := Default(StructureGainMagieV1);
-            PGain.NiveauMin := 1;
-            PGain.NiveauMax := 99;
-            NodeNv3 := XmlElement(NodeNv2.FirstChild);
-            while Assigned(NodeNv3) do
-              begin
-                Texte := RemoveQuotes(UTF8Encode(NodeNv3.TextContent));
-                case NodeNv3.NodeName of
-                  ConstXmlEspece: PGain.Espece   := Texte;
-                  ConstXmlWork:   PGain.Carriere := Texte;
-                  ConstXmlDice:   PGain.Des      := Texte;
-                  ConstXmlNiveau:
-                    begin
-                      PGain.NiveauMin := StrToIntDef(Copy(Texte, 1, Pos('-', Texte + '-') - 1), 1);
-                      if Pos('-', Texte) > 0 then
-                        PGain.NiveauMax := StrToIntDef(Copy(Texte, Pos('-', Texte) + 1, 5), 99)
-                      else
-                        PGain.NiveauMax := PGain.NiveauMin;
-                    end;
-                end;
-                NodeNv3 := XmlElement(NodeNv3.NextSibling);
-              end;
-            ListGainMagieV1.Add(PGain);
-            NodeNv2 := XmlElement(NodeNv2.NextSibling);
-          end;
-      end;
-    // apprentissage des sorts : cout en EP et modificateur du test d'Intelligence par niveau de sort
-    NodeNv1 := BookNode.FindNode('DATA_SPELL_LEARNING_V1');
-    if Assigned(NodeNv1) then
-      begin
-        NodeNv2 := XmlElement(NodeNv1.FirstChild);
-        while Assigned(NodeNv2) do
-          begin
-            PApprent := Default(StructureApprentissageSortV1);
-            NodeNv3  := XmlElement(NodeNv2.FirstChild);
-            while Assigned(NodeNv3) do
-              begin
-                Texte := RemoveQuotes(UTF8Encode(NodeNv3.TextContent));
-                if NodeNv3.NodeName = 'SpellLevel' then PApprent.Niveau := Texte
-                else if NodeNv3.NodeName = 'EPCost' then PApprent.CoutEP := StrToIntDef(Texte, 0)
-                else if NodeNv3.NodeName = 'IntelligenceModifier' then PApprent.ModInt := Texte
-                else if NodeNv3.NodeName = 'WillPowerModifier' then PApprent.ModFM := Texte
-                else if NodeNv3.NodeName = 'AlwaysFail' then PApprent.EchecAuto := Texte;
-                NodeNv3 := XmlElement(NodeNv3.NextSibling);
-              end;
-            ListApprentissageSortV1.Add(PApprent);
-            NodeNv2 := XmlElement(NodeNv2.NextSibling);
-          end;
-      end;
-    // handicaps des magiciens : stades 1 a 3 (malus de caracteristiques + texte)
-    NodeNv1 := BookNode.FindNode(ConstXmlDataDisabilityV1);
-    if Assigned(NodeNv1) then
-      begin
-        NodeNv2 := XmlElement(NodeNv1.FirstChild);
-        while Assigned(NodeNv2) do
-          begin
-            PHandicap      := Default(StructureHandicapV1);
-            PHandicap.Code := XmlAttribut(NodeNv2, ConstXmlId);
-            NodeNv3 := XmlElement(NodeNv2.FirstChild);
-            while Assigned(NodeNv3) do
-              begin
-                if NodeNv3.NodeName = ConstXmlDescription then
-                  PHandicap.Libelle := RemoveQuotes(UTF8Encode(NodeNv3.TextContent))
-                else if NodeNv3.NodeName = 'Permanent' then
-                  begin
-                    // perte permanente (Strength / Toughness / Wound Loss) : le stade = nombre de fois, la perte s'ajoute
-                    Texte := RemoveQuotes(UTF8Encode(NodeNv3.TextContent));
-                    for Stade := 1 to 3 do
-                      PHandicap.Modif[Stade] := XmlAttribut(NodeNv3, 'name') + '=' + IntToStr(Stade * StrToIntDef(StringReplace(Texte, '+', '', []), 0)) + ';';
-                  end
-                else if NodeNv3.NodeName = ConstXmlStageV1 then
-                  begin
-                    Stade := StrToIntDef(XmlAttribut(NodeNv3, 'number'), 0);
-                    if (Stade >= 1) and (Stade <= 3) then
-                      begin
-                        NodeNv4 := XmlElement(NodeNv3.FirstChild);
-                        while Assigned(NodeNv4) do
-                          begin
-                            Texte := RemoveQuotes(UTF8Encode(NodeNv4.TextContent));
-                            if NodeNv4.NodeName = ConstXmlSigneModificateur then
-                              PHandicap.Modif[Stade] := PHandicap.Modif[Stade] + XmlAttribut(NodeNv4, 'name') + '=' + Texte + ';'
-                            else if NodeNv4.NodeName = ConstXmlTexte then
-                              PHandicap.Texte[Stade] := Texte;
-                            NodeNv4 := XmlElement(NodeNv4.NextSibling);
-                          end;
-                      end;
-                  end;
-                NodeNv3 := XmlElement(NodeNv3.NextSibling);
-              end;
-            ListHandicapV1.Add(PHandicap);
-            NodeNv2 := XmlElement(NodeNv2.NextSibling);
-          end;
-      end;
-    // tables d100 : plage "01-09" ou "AUTO_LEVEL_1" (obtenu d'office au niveau 1)
-    NodeNv1 := BookNode.FindNode(ConstXmlDataDisabilityRollV1);
-    if Assigned(NodeNv1) then
-      begin
-        NodeNv2 := XmlElement(NodeNv1.FirstChild);
-        while Assigned(NodeNv2) do
-          begin
-            NodeNv3 := XmlElement(NodeNv2.FirstChild);
-            while Assigned(NodeNv3) do
-              begin
-                Texte    := RemoveQuotes(UTF8Encode(NodeNv3.TextContent));
-                PTirageH := Default(StructureTirageHandicapV1);
-                PTirageH.Table := XmlAttribut(NodeNv2, ConstXmlId);
-                PTirageH.Code  := XmlAttribut(NodeNv3, 'name');
-                if Pos('AUTO', Texte) = 1 then
-                  PTirageH.Auto := True
-                else
-                  begin
-                    PTirageH.Min := StrToIntDef(Copy(Texte, 1, Pos('-', Texte + '-') - 1), 0);
-                    PTirageH.Max := StrToIntDef(Copy(Texte, Pos('-', Texte) + 1, 5), PTirageH.Min);
-                  end;
-                ListTirageHandicapV1.Add(PTirageH);
-                NodeNv3 := XmlElement(NodeNv3.NextSibling);
-              end;
-            NodeNv2 := XmlElement(NodeNv2.NextSibling);
-          end;
-      end;
-    // table d'avancement du Cleric (CLERIC) et du Druidic Priest (DRUID)
-    NodeNv1 := BookNode.FindNode(ConstXmlDataPriestAdvanceV1);
-    if Assigned(NodeNv1) then
-      begin
-        NodeNv2 := XmlElement(NodeNv1.FirstChild);
-        while Assigned(NodeNv2) do
-          begin
-            NodeNv3 := XmlElement(NodeNv2.FirstChild);
-            while Assigned(NodeNv3) do
-              begin
-                PAvancePretre       := Default(StructureAvancementPretreV1);
-                PAvancePretre.Table := XmlAttribut(NodeNv2, ConstXmlId);
-                NodeNv4 := XmlElement(NodeNv3.FirstChild);
-                while Assigned(NodeNv4) do
-                  begin
-                    Texte := RemoveQuotes(UTF8Encode(NodeNv4.TextContent));
-                    if NodeNv4.NodeName = ConstXmlRangeV1 then
-                      begin
-                        PAvancePretre.Min := StrToIntDef(Copy(Texte, 1, Pos('-', Texte + '-') - 1), 0);
-                        PAvancePretre.Max := StrToIntDef(Copy(Texte, Pos('-', Texte) + 1, 5), PAvancePretre.Min);
-                      end
-                    else if NodeNv4.NodeName = ConstXmlResultV1 then
-                      PAvancePretre.Resultat := Texte
-                    else if NodeNv4.NodeName = ConstXmlEPGiftV1 then
-                      PAvancePretre.CadeauEP := True
-                    else if NodeNv4.NodeName = ConstXmlFatePointV1 then
-                      PAvancePretre.Destin := StrToIntDef(Texte, 0)
-                    else if NodeNv4.NodeName = ConstXmlBlessingV1 then
-                      PAvancePretre.Benediction := True
-                    else if NodeNv4.NodeName = ConstXmlExplanation then
-                      PAvancePretre.Explication := Texte;
-                    NodeNv4 := XmlElement(NodeNv4.NextSibling);
-                  end;
-                ListAvancementPretreV1.Add(PAvancePretre);
-                NodeNv3 := XmlElement(NodeNv3.NextSibling);
-              end;
-            NodeNv2 := XmlElement(NodeNv2.NextSibling);
-          end;
-      end;
-    // table des familiers du Druidic Priest (d100 ; "00" = 100)
-    NodeNv1 := BookNode.FindNode(ConstXmlDataFamiliarV1);
-    if Assigned(NodeNv1) then
-      begin
-        NodeNv2 := XmlElement(NodeNv1.FirstChild);
-        while Assigned(NodeNv2) do
-          begin
-            PFamilier      := Default(StructureFamilierV1);
-            PFamilier.Code := XmlAttribut(NodeNv2, ConstXmlId);
-            NodeNv3 := XmlElement(NodeNv2.FirstChild);
-            while Assigned(NodeNv3) do
-              begin
-                Texte := RemoveQuotes(UTF8Encode(NodeNv3.TextContent));
-                if NodeNv3.NodeName = ConstXmlRangeV1 then
-                  begin
-                    PFamilier.Min := StrToIntDef(Copy(Texte, 1, Pos('-', Texte + '-') - 1), 0);
-                    PFamilier.Max := StrToIntDef(Copy(Texte, Pos('-', Texte) + 1, 5), PFamilier.Min);
-                    if PFamilier.Max = 0 then
-                      PFamilier.Max := 100;
-                  end
-                else if NodeNv3.NodeName = 'Animal' then
-                  PFamilier.Animal := Texte
-                else if NodeNv3.NodeName = 'Skill1' then
-                  PFamilier.Comp1 := Texte
-                else if NodeNv3.NodeName = 'Skill2' then
-                  PFamilier.Comp2 := Texte
-                else if NodeNv3.NodeName = 'Armour' then
-                  PFamilier.Armure := Texte
-                else if NodeNv3.NodeName = 'Shield' then
-                  PFamilier.Bouclier := Texte = '1'
-                else if NodeNv3.NodeName = 'ForbiddenWeapons' then
-                  PFamilier.ArmesInterdites := Texte
-                else if NodeNv3.NodeName = 'TimesPlaces' then
-                  PFamilier.Lieux := Texte
-                else if NodeNv3.NodeName = 'Diet' then
-                  PFamilier.Regime := Texte;
-                NodeNv3 := XmlElement(NodeNv3.NextSibling);
-              end;
-            ListFamilierV1.Add(PFamilier);
-            NodeNv2 := XmlElement(NodeNv2.NextSibling);
-          end;
-      end;
-    // cultes de Realm of Divine Magic : listes de prieres par rang (REQUIRED / HONOR) ; les dons restent en texte du livre
-    NodeNv1 := BookNode.FindNode('DATA_CULT_V1');
-    if Assigned(NodeNv1) then
-      begin
-        NodeNv2 := XmlElement(NodeNv1.FirstChild);
-        while Assigned(NodeNv2) do
-          begin
-            PCulte      := Default(StructureCulteV1);
-            PCulte.Code := XmlAttribut(NodeNv2, ConstXmlId);
-            NodeNv3 := XmlElement(NodeNv2.FirstChild);
-            while Assigned(NodeNv3) do
-              begin
-                Texte := RemoveQuotes(UTF8Encode(NodeNv3.TextContent));
-                if NodeNv3.NodeName = ConstXmlDescription then
-                  PCulte.Libelle := Texte
-                else if NodeNv3.NodeName = 'Deity' then
-                  PCulte.Deite := Texte
-                else if NodeNv3.NodeName = 'Prayer' then
-                  begin
-                    PPriereCulte       := Default(StructurePriereCulteV1);
-                    PPriereCulte.Culte := PCulte.Code;
-                    NodeNv4 := XmlElement(NodeNv3.FirstChild);
-                    while Assigned(NodeNv4) do
-                      begin
-                        Texte := RemoveQuotes(UTF8Encode(NodeNv4.TextContent));
-                        if NodeNv4.NodeName = 'Rank' then PPriereCulte.Rang := Texte
-                        else if NodeNv4.NodeName = 'Kind' then PPriereCulte.Genre := Texte
-                        else if NodeNv4.NodeName = 'Value' then PPriereCulte.CodePriere := Texte;
-                        NodeNv4 := XmlElement(NodeNv4.NextSibling);
-                      end;
-                    ListPriereCulteV1.Add(PPriereCulte);
-                  end;
-                NodeNv3 := XmlElement(NodeNv3.NextSibling);
-              end;
-            ListCulteV1.Add(PCulte);
-            NodeNv2 := XmlElement(NodeNv2.NextSibling);
-          end;
-      end;
-    // liste de prix : les 216 objets de l'equipement V1
-    NodeNv1 := BookNode.FindNode(ConstXmlDataEquipmentV1);
-    if Assigned(NodeNv1) then
-      begin
-        NodeNv2 := XmlElement(NodeNv1.FirstChild);
-        while Assigned(NodeNv2) do
-          begin
-            PObjet      := Default(StructureObjetV1);
-            PObjet.Code := XmlAttribut(NodeNv2, ConstXmlId);
-            NodeNv3 := XmlElement(NodeNv2.FirstChild);
-            while Assigned(NodeNv3) do
-              begin
-                Texte := RemoveQuotes(UTF8Encode(NodeNv3.TextContent));
-                if NodeNv3.NodeName = ConstXmlDescription then
-                  begin
-                    // plusieurs Description (une par langue) : celle de la langue active, sinon la 1re (anglais)
-                    if (PObjet.Libelle = '') or (XmlAttribut(NodeNv3, ConstXmlLanguage) = ValLangue) then
-                      PObjet.Libelle := Texte;
-                  end
-                else if NodeNv3.NodeName = ConstXmlCategoryV1 then
-                  PObjet.Categorie := Texte
-                else if NodeNv3.NodeName = ConstXmlSubCategoryV1 then
-                  PObjet.SousCategorie := Texte
-                else if NodeNv3.NodeName = ConstXmlCostV1 then
-                  PObjet.Cout := Texte
-                else if NodeNv3.NodeName = ConstXmlEncumbranceV1 then
-                  PObjet.Encombrement := Texte
-                else if NodeNv3.NodeName = ConstXmlAvailabilityV1 then
-                  PObjet.Disponibilite := Texte
-                else if NodeNv3.NodeName = ConstXmlCombatModifiersV1 then
-                  begin
-                    // tableau de lignes <CombatModifier><Stat/><Value/></CombatModifier> : « CODE valeur; CODE valeur »
-                    // (le libelle du code est pose a l'affichage, la langue pouvant changer)
-                    Texte := '';
-                    NodeNv4 := XmlElement(NodeNv3.FirstChild);
-                    while Assigned(NodeNv4) do
-                      begin
-                        if Texte <> '' then Texte := Texte + '; ';
-                        Texte := Texte + RemoveQuotes(UTF8Encode(NodeNv4.FindNode('Stat').TextContent)) + ' ' +
-                          RemoveQuotes(UTF8Encode(NodeNv4.FindNode('Value').TextContent));
-                        NodeNv4 := XmlElement(NodeNv4.NextSibling);
-                      end;
-                    PObjet.Combat := Texte;
-                  end
-                else if NodeNv3.NodeName = ConstXmlArmourPointsV1 then
-                  PObjet.PointsArmure := Texte
-                else if NodeNv3.NodeName = ConstXmlLocationsV1 then
-                  PObjet.Zones := Texte
-                else if NodeNv3.NodeName = 'Reload' then
-                  PObjet.Rechargement := Texte
-                else if NodeNv3.NodeName = 'RangeBands' then
-                  begin
-                    // <RangeBand><Band>RULES-V1RANGE_SHORT|LONG|EXTREME</Band><Distance/><Strength/></RangeBand>
-                    // (le palier se lit au bout du code : le libelle est pose a l'affichage)
-                    NodeNv4 := XmlElement(NodeNv3.FirstChild);
-                    while Assigned(NodeNv4) do
-                      begin
-                        Texte := RemoveQuotes(UTF8Encode(NodeNv4.FindNode('Band').TextContent));
-                        if Pos('SHORT', Texte) > 0 then
-                          PObjet.PorteeCourte := RemoveQuotes(UTF8Encode(NodeNv4.FindNode('Distance').TextContent))
-                        else if Pos('LONG', Texte) > 0 then
-                          PObjet.PorteeLongue := RemoveQuotes(UTF8Encode(NodeNv4.FindNode('Distance').TextContent))
-                        else if Pos('EXTREME', Texte) > 0 then
-                          PObjet.PorteeExtreme := RemoveQuotes(UTF8Encode(NodeNv4.FindNode('Distance').TextContent));
-                        Texte := RemoveQuotes(UTF8Encode(NodeNv4.FindNode('Strength').TextContent));
-                        if PObjet.ForceTir = '' then
-                          PObjet.ForceTir := Texte
-                        else if Pos(Texte, PObjet.ForceTir) = 0 then
-                          PObjet.ForceTir := PObjet.ForceTir + '/' + Texte;
-                        NodeNv4 := XmlElement(NodeNv4.NextSibling);
-                      end;
-                  end;
-                NodeNv3 := XmlElement(NodeNv3.NextSibling);
-              end;
-            ListObjetV1.Add(PObjet);
-            NodeNv2 := XmlElement(NodeNv2.NextSibling);
-          end;
-      end;
+    LitTiragesComp;
+    LitAgesComp;
+    LitGainsMagie;
+    LitApprentissageSorts;
+    LitHandicaps;
+    LitTiragesHandicap;
+    LitAvancementPretre;
+    LitFamiliers;
+    LitCultes;
+    LitObjets;
   end;
 
 Procedure LitDataCareerBonus(BookNode: TDOMNode; Livre, LangueDef: String; var Langue: String);
@@ -6884,7 +7080,7 @@ Procedure LitDataCorruptionDivineChance(BookNode: TDOMNode; Livre, LangueDef: St
             PCorruptionChance.Livre          := Livre;
             PCorruptionChance.TypeCorruption := CorruptionDivine;
             PCorruptionChance.Chance         := XmlAttribut(NodeNv2, ConstXmlData);
-            PCorruptionChance.Lore           := XmlAttribut(NodeNv2, ConstXmlLoreAttribut);
+            PCorruptionChance.Lore           := XmlAttributFacultatif(NodeNv2, ConstXmlLoreAttribut);
             PCorruptionChance.Code           := RemoveQuotes(UTF8Encode(NodeNv2.TextContent));
 
             if LangueDef = ConstAnglais then
@@ -6987,7 +7183,7 @@ Procedure LitDataCorruptionMutationChance(BookNode: TDOMNode; Livre, LangueDef: 
             PCorruptionChance.TypeCorruption := CorruptionMutation;
             PCorruptionChance.Chance         := XmlAttribut(NodeNv2, ConstXmlData);
             // Table 3-1 : pas de lore. Tables 3-2 a 3-5 : lore = le dieu (Khorne, Nurgle, Slaanesh, Tzeentch).
-            PCorruptionChance.Lore           := XmlAttribut(NodeNv2, ConstXmlLoreAttribut);
+            PCorruptionChance.Lore           := XmlAttributFacultatif(NodeNv2, ConstXmlLoreAttribut);
             PCorruptionChance.Code           := RemoveQuotes(UTF8Encode(NodeNv2.TextContent));
 
             if LangueDef = ConstAnglais then
@@ -7156,6 +7352,226 @@ Procedure XmlImport(FileName: String; OnlyPrimary: Boolean; CheminComplet: Strin
     Complet:                  Integer = 1;
     Disclaimer:               String = '';
     NomAffichage:             String = '';
+  procedure LitEntete;
+  begin
+      LitPagesFiches(BookNode);
+      Livre     := XmlTexte(BookNode, ConstXmlLibelleLivre);
+      LivreImportEnCours := Livre;
+      NodeCode  := BookNode.FindNode(ConstXmlCodeLivre);
+      if Assigned(NodeCode) then
+        CodeLivre := XmlTexte(BookNode, ConstXmlCodeLivre);
+      NodeCode  := BookNode.FindNode(ConstXmlVersionLivre);
+      if Assigned(NodeCode) then
+        Version := XmlTexte(BookNode, ConstXmlVersionLivre);
+      NodeCode  := BookNode.FindNode(ConstXmlOfficielLivre);
+      if Assigned(NodeCode) then
+        Officiel:= StrToInt(XmlTexte(BookNode, ConstXmlOfficielLivre));
+      NodeCode  := BookNode.FindNode(ConstXmlCompletLivre);
+      if Assigned(NodeCode) then
+        Complet := StrToInt(XmlTexte(BookNode, ConstXmlCompletLivre));
+      NodeCode  := BookNode.FindNode(ConstXmlDisclaimerLivre);
+      if Assigned(NodeCode) then
+        Disclaimer := XmlTexte(BookNode, ConstXmlDisclaimerLivre);
+      NodeCode  := BookNode.FindNode(ConstXmlNomLivre);
+      if Assigned(NodeCode) then
+        NomAffichage := XmlTexte(BookNode, ConstXmlNomLivre);
+      Node      := BookNode.FindNode(ConstXmlLanguage);
+      LangueDef := RemoveQuotes(UTF8Encode(Node.TextContent));
+
+      PLIvre.CodeLivre:= '';
+      PLivre := ChercheLivreLibelle(Livre);
+      if PLivre.CodeLivre = '' then
+        begin
+          PLivre.CodeLivre := CodeLivre;
+          PLivre.Libelle   := Livre;
+          PLivre.Version   := Version;
+          PLivre.Officiel  := Officiel;
+          PLivre.Complet   := Complet;
+          PLivre.Disclaimer:= Disclaimer;
+          PLivre.NomAffichage := NomAffichage;
+          ListLivre.add(PLivre);
+          inc(NbLivre);
+        end;
+  end;
+
+  procedure LitCompetencesEtMetiers;
+  begin
+      // Compétences
+      LitDataSkill(BookNode, Livre, LangueDef, Langue);
+
+      // Compétences spécialisée
+      LitDataSkillSpe(BookNode, Livre, LangueDef, Langue);
+
+      // Talent
+      LitDataTalent(BookNode, Livre, LangueDef, Langue);
+
+      // talents spécialisée
+      LitDataTalentSpe(BookNode, Livre, LangueDef, Langue);
+
+      // Talent Création
+      LitDataRandomTalent(BookNode, Livre, LangueDef);
+
+      // Tables de details personnels communes (V2)
+      LitDataTablePersonnelle(BookNode, Livre, LangueDef);
+
+      // Espece (RACE générique regroupant plusieurs ethnies - voir ChargeEspece.pas
+      // pour le vocabulaire : ici <Race>, alors que <Specie> plus bas = ethnie)
+      LitDataEspece(BookNode, Livre, LangueDef, Langue);
+
+      // Nation (bloc DATA_NATION : regroupement POLITIQUE des ethnies, distinct
+      // de DATA_RACE juste au-dessus qui est biologique. CONTEXT.md 2.51.)
+      LitDataNation(BookNode, Livre, LangueDef, Langue);
+
+      // Race
+      LitDataSpecie(BookNode, Livre, LangueDef, Langue);
+
+      // Race au hasard
+      LitDataSpecieCreation(BookNode, Livre, LangueDef);
+
+      // Métier
+      LitDataCareer(BookNode, Livre, LangueDef, Langue);
+      LitDataCareerLinkV1(BookNode, Livre, LangueDef);
+      LitDataTradeV1(BookNode, Livre, LangueDef);
+      LitDataClassV1(BookNode, Livre, LangueDef);
+      LitDataSkillRollV1(BookNode, LangueDef);
+  end;
+
+  procedure LitObjetsEtRegles;
+  begin
+      // Armes
+      LitDataWeapon(BookNode, Livre, LangueDef, Langue);
+
+      // Regles optionnelles du livre (toggle .INI, A FAIRE.txt "TOGGLE .INI PAR
+      // LIVRE", CONTEXT.md 2.89, 22/09/2026) - toujours chargees (definitions),
+      // seul leur EFFET (ci-dessus pour Quick Armour) est conditionne au .INI.
+      LitDataOptionRule(BookNode, Livre, LangueDef);
+
+      // Armures
+      LitDataArmor(BookNode, Livre, LangueDef, Langue);
+
+      // Acces aux sorts par talent - bloc ADDITIF, voir CONTEXT.md 2.39.
+      // N'importe quel livre peut porter des lignes pour des sorts d'un AUTRE
+      // livre : c'est tout l'objet du bloc. Rien n'est ecrase, TalentsDuSort
+      // (ChargeSort) concatene ces lignes au champ <Talent> du sort lui-meme.
+      LitDataSpellTalent(BookNode, Livre, LangueDef);
+
+      // Traits d'ethnie - bloc de LIVRE, voir CONTEXT.md 2.41. Un Trait porte
+      // N Options, chaque Option porte une liste de talents separee par des
+      // virgules ou les formes A/B et RULES-T* restent valables.
+      LitDataSpecieTrait(BookNode, Livre, LangueDef, Langue);
+
+      // Appartenances greffees sur une carriere - bloc de LIVRE, purement
+      // ADDITIF, voir CONTEXT.md 2.44. Un CareerBonus porte N paliers ; chaque
+      // palier porte son numero de niveau et deux listes separees par des
+      // virgules ou la forme A/B reste valable.
+      LitDataCareerBonus(BookNode, Livre, LangueDef, Langue);
+
+      // Adaptations de carriere (Adapting Careers, High Elf Player's Guide p.60-62) -
+      // bloc de LIVRE, additif, comme DATA_CAREER_BONUS. Chaque <Level> porte son
+      // <Order> et, par nature (Skill/Talent/Trapping), un <Remove> et/ou un <Add>.
+      LitDataCareerAdaptation(BookNode, Livre, LangueDef, Langue);
+
+      // Conditions declarees (DATA_CONDITION) : gardees pour l'export seulement
+      LitDataCondition(BookNode, Livre, LangueDef);
+
+      // Fabrication
+      LitDataCraftsmanship(BookNode, Livre, LangueDef, Langue);
+
+      // Signes astraux (Archives of the Empire II)
+      LitDataSigneAstral(BookNode, Livre, LangueDef, Langue);
+  end;
+
+  procedure LitChoixEtRegles;
+  begin
+      // Metier choix race
+      LitDataSpecieCareerChoix(BookNode, Livre, LangueDef);
+
+      // Metier choix race direct (ajout d'une race à un métier existant, ou
+      // inversement, sans passer par <Specie>/<Career> - indépendant de l'ordre
+      // de chargement des livres, comme Metier choix race ci-dessus)
+      LitDataCareerSpecie(BookNode, Livre, LangueDef);
+
+      // Regles de jeu optionnelles apportées par le livre (voir ChargeRegle.pas)
+      LitDataRegle(BookNode, Livre, LangueDef, Langue);
+
+      // Table de tirage des métiers propre à une règle. CodeRace y désigne
+      // indifféremment une ETHNIE ou une RACE (résolution à l'usage, pas au
+      // chargement : l'ordre de lecture des livres n'est pas garanti).
+      LitDataRegleMetier(BookNode, Livre, LangueDef);
+
+      // Competences/talents qu'une regle donne a une ethnie en remplacement
+      LitDataRegleEthnie(BookNode, Livre, LangueDef);
+
+      // Table de tirage du background (d100) par ethnie
+      LitDataRegleFond(BookNode, Livre, LangueDef);
+      LitDataFondTables(BookNode, Livre, LangueDef);
+
+      // Metier Sous Métier
+      LitDataCareerSubChoice(BookNode, Livre, LangueDef);
+
+      // Race Corruption Physique
+      LitDataPhysicalCorruption(BookNode, Livre, LangueDef);
+
+      // Race Corruption Mentale
+      LitDataMentalCorruption(BookNode, Livre, LangueDef);
+  end;
+
+  procedure LitCorruptionsEtMaladies;
+  begin
+      // Catalogue de mutation Physique (Physical Corruption Table, CONTEXT.md §2.7).
+      // Balises <Description language="X">/<Explanation language="X"> (renommées le
+      // 17/08/2026 depuis <Libelle>/<Effet>, à la demande de Nono, pour la même
+      // convention que les autres chapitres - Attribut/Compétence/Talent/etc.) restent
+      // lues dans les champs Pascal .Libelle/.Effet existants (noms internes conservés,
+      // choix de Nono). L'attribut language= n'est pas lu (toujours redondant avec le
+      // <language> de tête du livre - LangueDef - même s'il est maintenant présent dans
+      // le XML pour la cohérence visuelle avec les autres chapitres). Code = code stable
+      // du catalogue (ex. "RULES-CORPHY_001"), décorrélé de la plage D100 - voir
+      // DATA_CORRUPTION_PHYSICAL_CHANCE/DATA_CORRUPTION_MENTAL_CHANCE plus bas pour le
+      // tirage (conception revue avec Nono le 17/08/2026).
+      LitDataCorruptionTablePhys(BookNode, Livre, LangueDef);
+
+      // Catalogue de mutation Mentale (Mental Corruption Table, CONTEXT.md §2.7)
+      LitDataCorruptionTableMent(BookNode, Livre, LangueDef);
+
+      // Catalogue des maladies (The Litany of Pestilence, Rulebook p.186-188), audit du
+      // 23/09/2026. Pas de table de chance (pas de tirage D100) ; <ModifyCarac> optionnel
+      // ajoute le 27/09/2026 pour les effets permanents chiffrables (ChargeDiseaseModificateur).
+      LitDataDisease(BookNode, Livre, LangueDef);
+
+      // Equipement de depart par Classe (Rulebook p.37, "Class Trappings"), audit du
+      // 23/09/2026. Meme format que l'equipement de Carriere (SUBCHAPTER_ITEM/Item),
+      // mais un seul niveau par Classe (pas de DATA_CAREER_LEVEL) : ajoute a la
+      // creation en plus de l'equipement de la Carriere choisie (wincreation.pas, via
+      // <Class> deja charge dans StructureMetier.LibelleGroupe).
+      LitDataClassItem(BookNode, Livre, LangueDef);
+
+      // Table de chance Physique (D100 -> Code), CONTEXT.md §2.7 - propre à ce livre,
+      // pas de traduction (juste une plage et un code), chargée une seule fois comme
+      // DATA_CORRUPTION_PHYSICAL/DATA_CORRUPTION_MENTAL plus haut.
+      LitDataCorruptionPhysChance(BookNode, Livre, LangueDef);
+
+      // Table de chance Mentale (D100 -> Code), CONTEXT.md §2.7
+      LitDataCorruptionMentChance(BookNode, Livre, LangueDef);
+
+      // Marques des Dieux (WFRP2, Tome of Salvation) : catalogue puis plages D100, par lore divin.
+      LitDataCorruptionTableDivine(BookNode, Livre, LangueDef);
+      LitDataCorruptionDivineChance(BookNode, Livre, LangueDef);
+
+      // Mutations du Chaos (WFRP2, Tome of Corruption) : catalogue puis plages D1000.
+      LitDataCorruptionTableMutation(BookNode, Livre, LangueDef);
+      LitDataCorruptionMutationChance(BookNode, Livre, LangueDef);
+
+      // Catalogue des Afflictions (Unofficial Grimoire, fan book, p.30-31,
+      // CONTEXT.md 2.96). Pas de table de chance (contrairement a la
+      // Physical/Mental Corruption Table, qui est officielle) - decision de
+      // Nono du 27/09/2026. Les 3 plages D100 par categorie de lanceur restent
+      // en texte libre dans Effet, faute d'un tirage a cabler. <ModifyCarac>
+      // optionnel ajoute le 27/09/2026 pour les effets permanents chiffrables
+      // (ChargeAfflictionModificateur).
+      LitDataAffliction(BookNode, Livre, LangueDef, Langue);
+  end;
+
   begin
     LivreNbMetier := 0;
     LivreNbRace   := 0;
@@ -7179,44 +7595,7 @@ Procedure XmlImport(FileName: String; OnlyPrimary: Boolean; CheminComplet: Strin
       BookNode := XMLDoc.DocumentElement;
       if Assigned(BookNode) and (BookNode.NodeName = ConstXmlDataBook) then
         Begin
-          LitPagesFiches(BookNode);
-          Livre     := XmlTexte(BookNode, ConstXmlLibelleLivre);
-          LivreImportEnCours := Livre;
-          NodeCode  := BookNode.FindNode(ConstXmlCodeLivre);
-          if Assigned(NodeCode) then
-            CodeLivre := XmlTexte(BookNode, ConstXmlCodeLivre);
-          NodeCode  := BookNode.FindNode(ConstXmlVersionLivre);
-          if Assigned(NodeCode) then
-            Version := XmlTexte(BookNode, ConstXmlVersionLivre);
-          NodeCode  := BookNode.FindNode(ConstXmlOfficielLivre);
-          if Assigned(NodeCode) then
-            Officiel:= StrToInt(XmlTexte(BookNode, ConstXmlOfficielLivre));
-          NodeCode  := BookNode.FindNode(ConstXmlCompletLivre);
-          if Assigned(NodeCode) then
-            Complet := StrToInt(XmlTexte(BookNode, ConstXmlCompletLivre));
-          NodeCode  := BookNode.FindNode(ConstXmlDisclaimerLivre);
-          if Assigned(NodeCode) then
-            Disclaimer := XmlTexte(BookNode, ConstXmlDisclaimerLivre);
-          NodeCode  := BookNode.FindNode(ConstXmlNomLivre);
-          if Assigned(NodeCode) then
-            NomAffichage := XmlTexte(BookNode, ConstXmlNomLivre);
-          Node      := BookNode.FindNode(ConstXmlLanguage);
-          LangueDef := RemoveQuotes(UTF8Encode(Node.TextContent));
-
-          PLIvre.CodeLivre:= '';
-          PLivre := ChercheLivreLibelle(Livre);
-          if PLivre.CodeLivre = '' then
-            begin
-              PLivre.CodeLivre := CodeLivre;
-              PLivre.Libelle   := Livre;
-              PLivre.Version   := Version;
-              PLivre.Officiel  := Officiel;
-              PLivre.Complet   := Complet;
-              PLivre.Disclaimer:= Disclaimer;
-              PLivre.NomAffichage := NomAffichage;
-              ListLivre.add(PLivre);
-              inc(NbLivre);
-            end;
+          LitEntete;
           if OnlyPrimary then
             begin
               if not ImportLibellesSeuls then
@@ -7238,171 +7617,13 @@ Procedure XmlImport(FileName: String; OnlyPrimary: Boolean; CheminComplet: Strin
 
          if Not OnlyPrimary then
             begin
-              // Compétences
-              LitDataSkill(BookNode, Livre, LangueDef, Langue);
+              LitCompetencesEtMetiers;
 
-              // Compétences spécialisée
-              LitDataSkillSpe(BookNode, Livre, LangueDef, Langue);
+              LitObjetsEtRegles;
 
-              // Talent
-              LitDataTalent(BookNode, Livre, LangueDef, Langue);
+              LitChoixEtRegles;
 
-              // talents spécialisée
-              LitDataTalentSpe(BookNode, Livre, LangueDef, Langue);
-
-              // Talent Création
-              LitDataRandomTalent(BookNode, Livre, LangueDef);
-
-              // Tables de details personnels communes (V2)
-              LitDataTablePersonnelle(BookNode, Livre, LangueDef);
-
-              // Espece (RACE générique regroupant plusieurs ethnies - voir ChargeEspece.pas
-              // pour le vocabulaire : ici <Race>, alors que <Specie> plus bas = ethnie)
-              LitDataEspece(BookNode, Livre, LangueDef, Langue);
-
-              // Nation (bloc DATA_NATION : regroupement POLITIQUE des ethnies, distinct
-              // de DATA_RACE juste au-dessus qui est biologique. CONTEXT.md 2.51.)
-              LitDataNation(BookNode, Livre, LangueDef, Langue);
-
-              // Race
-              LitDataSpecie(BookNode, Livre, LangueDef, Langue);
-
-              // Race au hasard
-              LitDataSpecieCreation(BookNode, Livre, LangueDef);
-
-              // Métier
-              LitDataCareer(BookNode, Livre, LangueDef, Langue);
-              LitDataCareerLinkV1(BookNode, Livre, LangueDef);
-              LitDataTradeV1(BookNode, Livre, LangueDef);
-              LitDataClassV1(BookNode, Livre, LangueDef);
-              LitDataSkillRollV1(BookNode, LangueDef);
-
-              // Armes
-              LitDataWeapon(BookNode, Livre, LangueDef, Langue);
-
-              // Regles optionnelles du livre (toggle .INI, A FAIRE.txt "TOGGLE .INI PAR
-              // LIVRE", CONTEXT.md 2.89, 22/09/2026) - toujours chargees (definitions),
-              // seul leur EFFET (ci-dessus pour Quick Armour) est conditionne au .INI.
-              LitDataOptionRule(BookNode, Livre, LangueDef);
-
-              // Armures
-              LitDataArmor(BookNode, Livre, LangueDef, Langue);
-
-              // Acces aux sorts par talent - bloc ADDITIF, voir CONTEXT.md 2.39.
-              // N'importe quel livre peut porter des lignes pour des sorts d'un AUTRE
-              // livre : c'est tout l'objet du bloc. Rien n'est ecrase, TalentsDuSort
-              // (ChargeSort) concatene ces lignes au champ <Talent> du sort lui-meme.
-              LitDataSpellTalent(BookNode, Livre, LangueDef);
-
-              // Traits d'ethnie - bloc de LIVRE, voir CONTEXT.md 2.41. Un Trait porte
-              // N Options, chaque Option porte une liste de talents separee par des
-              // virgules ou les formes A/B et RULES-T* restent valables.
-              LitDataSpecieTrait(BookNode, Livre, LangueDef, Langue);
-
-              // Appartenances greffees sur une carriere - bloc de LIVRE, purement
-              // ADDITIF, voir CONTEXT.md 2.44. Un CareerBonus porte N paliers ; chaque
-              // palier porte son numero de niveau et deux listes separees par des
-              // virgules ou la forme A/B reste valable.
-              LitDataCareerBonus(BookNode, Livre, LangueDef, Langue);
-
-              // Adaptations de carriere (Adapting Careers, High Elf Player's Guide p.60-62) -
-              // bloc de LIVRE, additif, comme DATA_CAREER_BONUS. Chaque <Level> porte son
-              // <Order> et, par nature (Skill/Talent/Trapping), un <Remove> et/ou un <Add>.
-              LitDataCareerAdaptation(BookNode, Livre, LangueDef, Langue);
-
-              // Conditions declarees (DATA_CONDITION) : gardees pour l'export seulement
-              LitDataCondition(BookNode, Livre, LangueDef);
-
-              // Fabrication
-              LitDataCraftsmanship(BookNode, Livre, LangueDef, Langue);
-
-              // Signes astraux (Archives of the Empire II)
-              LitDataSigneAstral(BookNode, Livre, LangueDef, Langue);
-
-              // Metier choix race
-              LitDataSpecieCareerChoix(BookNode, Livre, LangueDef);
-
-              // Metier choix race direct (ajout d'une race à un métier existant, ou
-              // inversement, sans passer par <Specie>/<Career> - indépendant de l'ordre
-              // de chargement des livres, comme Metier choix race ci-dessus)
-              LitDataCareerSpecie(BookNode, Livre, LangueDef);
-
-              // Regles de jeu optionnelles apportées par le livre (voir ChargeRegle.pas)
-              LitDataRegle(BookNode, Livre, LangueDef, Langue);
-
-              // Table de tirage des métiers propre à une règle. CodeRace y désigne
-              // indifféremment une ETHNIE ou une RACE (résolution à l'usage, pas au
-              // chargement : l'ordre de lecture des livres n'est pas garanti).
-              LitDataRegleMetier(BookNode, Livre, LangueDef);
-
-              // Competences/talents qu'une regle donne a une ethnie en remplacement
-              LitDataRegleEthnie(BookNode, Livre, LangueDef);
-
-              // Table de tirage du background (d100) par ethnie
-              LitDataRegleFond(BookNode, Livre, LangueDef);
-              LitDataFondTables(BookNode, Livre, LangueDef);
-
-              // Metier Sous Métier
-              LitDataCareerSubChoice(BookNode, Livre, LangueDef);
-
-              // Race Corruption Physique
-              LitDataPhysicalCorruption(BookNode, Livre, LangueDef);
-
-              // Race Corruption Mentale
-              LitDataMentalCorruption(BookNode, Livre, LangueDef);
-
-              // Catalogue de mutation Physique (Physical Corruption Table, CONTEXT.md §2.7).
-              // Balises <Description language="X">/<Explanation language="X"> (renommées le
-              // 17/08/2026 depuis <Libelle>/<Effet>, à la demande de Nono, pour la même
-              // convention que les autres chapitres - Attribut/Compétence/Talent/etc.) restent
-              // lues dans les champs Pascal .Libelle/.Effet existants (noms internes conservés,
-              // choix de Nono). L'attribut language= n'est pas lu (toujours redondant avec le
-              // <language> de tête du livre - LangueDef - même s'il est maintenant présent dans
-              // le XML pour la cohérence visuelle avec les autres chapitres). Code = code stable
-              // du catalogue (ex. "RULES-CORPHY_001"), décorrélé de la plage D100 - voir
-              // DATA_CORRUPTION_PHYSICAL_CHANCE/DATA_CORRUPTION_MENTAL_CHANCE plus bas pour le
-              // tirage (conception revue avec Nono le 17/08/2026).
-              LitDataCorruptionTablePhys(BookNode, Livre, LangueDef);
-
-              // Catalogue de mutation Mentale (Mental Corruption Table, CONTEXT.md §2.7)
-              LitDataCorruptionTableMent(BookNode, Livre, LangueDef);
-
-              // Catalogue des maladies (The Litany of Pestilence, Rulebook p.186-188), audit du
-              // 23/09/2026. Pas de table de chance (pas de tirage D100) ; <ModifyCarac> optionnel
-              // ajoute le 27/09/2026 pour les effets permanents chiffrables (ChargeDiseaseModificateur).
-              LitDataDisease(BookNode, Livre, LangueDef);
-
-              // Equipement de depart par Classe (Rulebook p.37, "Class Trappings"), audit du
-              // 23/09/2026. Meme format que l'equipement de Carriere (SUBCHAPTER_ITEM/Item),
-              // mais un seul niveau par Classe (pas de DATA_CAREER_LEVEL) : ajoute a la
-              // creation en plus de l'equipement de la Carriere choisie (wincreation.pas, via
-              // <Class> deja charge dans StructureMetier.LibelleGroupe).
-              LitDataClassItem(BookNode, Livre, LangueDef);
-
-              // Table de chance Physique (D100 -> Code), CONTEXT.md §2.7 - propre à ce livre,
-              // pas de traduction (juste une plage et un code), chargée une seule fois comme
-              // DATA_CORRUPTION_PHYSICAL/DATA_CORRUPTION_MENTAL plus haut.
-              LitDataCorruptionPhysChance(BookNode, Livre, LangueDef);
-
-              // Table de chance Mentale (D100 -> Code), CONTEXT.md §2.7
-              LitDataCorruptionMentChance(BookNode, Livre, LangueDef);
-
-              // Marques des Dieux (WFRP2, Tome of Salvation) : catalogue puis plages D100, par lore divin.
-              LitDataCorruptionTableDivine(BookNode, Livre, LangueDef);
-              LitDataCorruptionDivineChance(BookNode, Livre, LangueDef);
-
-              // Mutations du Chaos (WFRP2, Tome of Corruption) : catalogue puis plages D1000.
-              LitDataCorruptionTableMutation(BookNode, Livre, LangueDef);
-              LitDataCorruptionMutationChance(BookNode, Livre, LangueDef);
-
-              // Catalogue des Afflictions (Unofficial Grimoire, fan book, p.30-31,
-              // CONTEXT.md 2.96). Pas de table de chance (contrairement a la
-              // Physical/Mental Corruption Table, qui est officielle) - decision de
-              // Nono du 27/09/2026. Les 3 plages D100 par categorie de lanceur restent
-              // en texte libre dans Effet, faute d'un tirage a cabler. <ModifyCarac>
-              // optionnel ajoute le 27/09/2026 pour les effets permanents chiffrables
-              // (ChargeAfflictionModificateur).
-              LitDataAffliction(BookNode, Livre, LangueDef, Langue);
+              LitCorruptionsEtMaladies;
 
             end;
 

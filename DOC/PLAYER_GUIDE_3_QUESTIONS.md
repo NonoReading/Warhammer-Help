@@ -2,7 +2,7 @@
 
 *WFRP4 rules. French version: `GUIDE_JOUEUR_3_QUESTIONS_FR.md`.*
 
-Each sheet answers one question in a few lines. No sheet "change the rules version": a WFRP1 character never becomes WFRP4 (the only exception is WFRP4 ↔ Momentum, below).
+Each sheet answers one question in a few lines. No sheet "change the rules version": a WFRP1 character never becomes WFRP4 (for now, the only switch allowed is WFRP4 ↔ Momentum, below).
 
 **List of questions**
 
@@ -76,7 +76,7 @@ A familiar is **a character of its own** (species "Familiar") that you created b
 1. Click **+Familiar**.
 2. Choose its name in the list of saved familiars.
 
-A line is added to the equipment; it opens the familiar's own sheet. A mount is added the same way (Mounts category). If the list is empty, create the familiar first (see the creation guide, extra step "Familiar form"). The button only appears in the Mounts category.
+A line is added to the equipment; it opens the familiar's own sheet. A mount is not a familiar: add it with **+Equipment** (Mounts category). If the list is empty, create the familiar first (see the creation guide, extra step "Familiar form"). The button only appears in the Mounts category.
 
 ---
 

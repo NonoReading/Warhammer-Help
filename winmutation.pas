@@ -120,7 +120,9 @@ procedure TWinMutations.FormCreate(Sender: TObject);
 
     // Résultat/Choix (CONTEXT.md §2.7) - mêmes clés déjà utilisées pour ce rôle dans
     // wincreation.pas (Race/Métier).
-    RadioButtonMutationTypeHasard.Caption   := GetTexteLibelle('RULES-LAB_085');
+    GroupBoxMutationType.Caption   := GetTexteLibelle('RULES-LAB_1043');
+    GroupBoxMutationEntree.Caption := GetTexteLibelle('RULES-LAB_1044');
+    RadioButtonMutationTypeHasard.Caption   :=GetTexteLibelle('RULES-LAB_085');
     RadioButtonMutationTypeResultat.Caption := GetTexteLibelle('RULES-LAB_089');
     RadioButtonMutationTypeChoix.Caption    := GetTexteLibelle('RULES-LAB_084');
     ButtonMutationTypeValider.Caption       := GetTexteLibelle('RULES-LAB_086');

@@ -2212,66 +2212,66 @@
 </Sort>
 </DATA_SPELL>
 <DATA_AFFLICTION>
-<Affliction name="GRIM-AFFLICT_01">
+<Affliction name="GRIM-AFFLICT_ALLERGY">
 <Description language="ENGLISH">"Allergy"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Page>31</Page>
 </Affliction>
-<Affliction name="GRIM-AFFLICT_02">
+<Affliction name="GRIM-AFFLICT_AVERSION">
 <Description language="ENGLISH">"Aversion"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Page>31</Page>
 </Affliction>
-<Affliction name="GRIM-AFFLICT_03">
+<Affliction name="GRIM-AFFLICT_CADAVEROUS_APPEARANCE">
 <Description language="ENGLISH">"Cadaverous Appearance"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCaracAleatoire name="RULES-ATTR_Fel">10</ModifyCaracAleatoire>
 <Page>31</Page>
 </Affliction>
-<Affliction name="GRIM-AFFLICT_04">
+<Affliction name="GRIM-AFFLICT_DEBILITATION">
 <Description language="ENGLISH">"Debilitation"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCaracAleatoire name="RULES-ATTR_T">10</ModifyCaracAleatoire>
 <Page>31</Page>
 </Affliction>
-<Affliction name="GRIM-AFFLICT_05">
+<Affliction name="GRIM-AFFLICT_DISEASE">
 <Description language="ENGLISH">"Disease"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Page>31</Page>
 </Affliction>
-<Affliction name="GRIM-AFFLICT_06">
+<Affliction name="GRIM-AFFLICT_DISFIGUREMENT">
 <Description language="ENGLISH">"Disfigurement"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifySkillAttribut name="RULES-ATTR_Fel">-10</ModifySkillAttribut>
 <Page>31</Page>
 </Affliction>
-<Affliction name="GRIM-AFFLICT_07">
+<Affliction name="GRIM-AFFLICT_DISTURBING_PRESENCE">
 <Description language="ENGLISH">"Disturbing Presence"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Page>31</Page>
 </Affliction>
-<Affliction name="GRIM-AFFLICT_08">
+<Affliction name="GRIM-AFFLICT_MADNESS">
 <Description language="ENGLISH">"Madness"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Page>31</Page>
 </Affliction>
-<Affliction name="GRIM-AFFLICT_09">
+<Affliction name="GRIM-AFFLICT_MUTATION">
 <Description language="ENGLISH">"Mutation"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Page>31</Page>
 </Affliction>
-<Affliction name="GRIM-AFFLICT_10">
+<Affliction name="GRIM-AFFLICT_PALSY">
 <Description language="ENGLISH">"Palsy"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Page>31</Page>
 </Affliction>
-<Affliction name="GRIM-AFFLICT_11">
+<Affliction name="GRIM-AFFLICT_STENCH">
 <Description language="ENGLISH">"Stench"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifySkillAttribut name="RULES-ATTR_Fel">-10</ModifySkillAttribut>
 <Page>31</Page>
 </Affliction>
-<Affliction name="GRIM-AFFLICT_12">
+<Affliction name="GRIM-AFFLICT_WEAKNESS">
 <Description language="ENGLISH">"Weakness"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <ModifyCaracAleatoire name="RULES-ATTR_S">10</ModifyCaracAleatoire>

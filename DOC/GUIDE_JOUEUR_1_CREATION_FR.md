@@ -10,7 +10,7 @@ Pour qui : un joueur qui découvre le programme, et un habitué qui veut retrouv
 
 La version (WFRP1, WFRP2, WFRP4) se choisit **avant** de créer le personnage, et elle ne change plus ensuite. Un personnage de WFRP1 ne peut pas devenir un personnage de WFRP4 : les caractéristiques, les carrières et les compétences ne correspondent pas. Si tu changes d'avis, crée un nouveau personnage.
 
-Seule exception : entre WFRP4 et la variante Momentum (WFRP5), voir la fiche « Option Momentum » (phase 3).
+Pour l'instant, le seul passage permis est entre WFRP4 et la variante Momentum (WFRP5), voir la fiche « Option Momentum » (phase 3).
 
 ---
 
@@ -42,8 +42,10 @@ Tu vois la liste des livres actifs (ceux choisis dans le menu principal). Tu ne 
 
 Pourquoi c'est important : les livres cochés ici décident des races, des carrières, des talents et de l'équipement proposés pendant toute la création, et ils sont mémorisés avec le personnage.
 
-- **Au moins un livre doit rester coché**, sinon tu ne peux pas passer à l'étape suivante.
+- **Le Rulebook est toujours coché** et ne peut pas être décoché : c'est la base de tout personnage.
 - Si tu veux utiliser les talents Momentum plus tard, garde le livre Momentum coché.
+
+**Règles optionnelles (tableau de droite).** Il liste les règles optionnelles proposées par les livres cochés (par exemple *Star Signs*, *Second roll for sub-careers*, *Career choice by species*). Une case cochée en colonne **A** signifie que la règle s'applique à ce personnage ; décoche-la pour l'ignorer. Le choix ne vaut que pour le personnage en cours de création ; l'état de départ vient du réglage du menu principal. Sélectionne une ligne pour lire son explication sous le tableau (ou la page du livre quand il ne donne pas de texte). Le tableau suit les livres : décoche un livre et ses règles disparaissent.
 
 ![La liste des livres cochés](IMAGES/creation_02_livres_coches.png)
 
@@ -118,17 +120,19 @@ Les talents de départ viennent de la race. Quand un talent propose un choix («
 
 Un bouton **Au hasard** tire un talent quand la race le prévoit.
 
+Certains peuples de *Nations of Mankind* (Kislev, Cathay, Estalie...) terminent leur liste par un **trait régional** (« Provincial Trait », « Region Trait », « City State Trait »...). Choisis ta région : chacune apporte ses propres talents, souvent avec un talent aléatoire de plus, donc les talents qui suivent dépendent de ce choix.
+
 ![Onglet Talent avec une ligne de choix](IMAGES/creation_06_talent.png)
 
 ---
 
 ## Étape 5 — Les compétences de race
 
-Ta race t'accorde des compétences à répartir. Dans le livre de règles, la plupart des races prennent **3 compétences à +5 et 3 compétences à +3** (le Skink de Lustria en prend 2 et 2).
+Ta race t'accorde des compétences à répartir. Dans le livre de règles, la plupart des races prennent **3 compétences à +5 et 3 compétences à +3** (le Skink de Lustria en prend 2 et 2). Si ton meneur de jeu utilise la règle facultative Xp/25, les compétences à +3 comptent à +5 une fois le personnage ouvert en modification (voir le guide de modification, Expérience).
 
 - Le programme **refuse de continuer** tant que ces nombres ne sont pas exactement respectés.
 - Une compétence « à spécialisation » (par exemple une langue) doit être précisée avant de passer.
-- **Au hasard** répartit pour toi.
+- **Au hasard** répartit pour toi, en favorisant les compétences qui sont aussi dans ton métier : les +5 et +3 vont d'abord à celles-là, les autres ne servent qu'à compléter. Il règle aussi les lignes ouvertes (« (Any) », « A ou B »).
 
 ![Onglet Compétence de race](IMAGES/creation_07_comp_race.png)
 
@@ -136,7 +140,7 @@ Ta race t'accorde des compétences à répartir. Dans le livre de règles, la pl
 
 ## Étape 6 — Les compétences de métier
 
-Tu répartis **40 points** entre les compétences de ta carrière (en WFRP2, cette règle ne s'applique pas). Le compteur affiche « n / 40 Pts » ; il faut exactement 40.
+Tu répartis **40 points** entre les compétences de ta carrière (en WFRP2, cette règle ne s'applique pas). Le compteur affiche « n / 40 Pts » ; il faut exactement 40. Chaque compétence prend de **0 à 10 points** : une valeur plus haute est refusée et la précédente revient. **Au hasard** règle d'abord les lignes ouvertes (« (Any) », « A ou B »), puis répartit les 40 points sur 8 compétences au plus (5 chacune s'il y en a 8 ou plus).
 
 ![Onglet Compétence de métier, avec le compteur « n / 40 Pts »](IMAGES/creation_08_comp_metier.png)
 
@@ -155,7 +159,7 @@ Tu peux aussi saisir ton **argent de départ** (en couronnes d'or).
 ## Étape 8 — Le nom et la fin
 
 - Donne un **nom** au personnage, ou clique sur **Lancer un nom** pour en tirer un.
-- Le nom ne doit pas être vide, ne doit pas déjà exister, et les espaces au début et à la fin sont retirés.
+- Le nom ne doit pas être vide, doit être **unique** (il sert de nom au dossier où sont rangées les données du personnage : deux personnages ne peuvent pas porter le même nom), et les espaces au début et à la fin sont retirés.
 - **Détails physiques** (âge, taille…) : un bouton ouvre la même fenêtre que sur la fiche, avec un tirage selon le Rulebook ou une saisie libre.
 
 Quand tout est complet, le personnage est enregistré avec ses livres, et tu peux l'ouvrir pour le faire évoluer (voir **2. Modifier un personnage**).
@@ -192,6 +196,7 @@ Exemple, l'étape **Signe astral** (bouton « Tirer un signe » ou choix dans la
 | le total des 100 points n'est pas 100 | corrige la répartition |
 | un choix de talent reste ouvert | tranche chaque ligne « A / B » |
 | le nombre de compétences de race est faux | respecte « 3 à +5 et 3 à +3 » (ou ce que dit le message) |
+| une compétence cochée (race) ou dotée de points (métier) n'a pas encore sa spécialisation, elle affiche encore « (Any) » ou « A ou B » | précise-la (une langue, un métier...), ou laisse **Au hasard** la régler |
 | le total des compétences de métier n'est pas 40 | ajuste jusqu'à 40 |
 | un choix d'équipement reste ouvert | choisis ou clique sur **Au hasard** |
 | le nom est vide ou déjà pris | change le nom |
@@ -200,7 +205,7 @@ Exemple, l'étape **Signe astral** (bouton « Tirer un signe » ou choix dans la
 
 ## Différences selon la version
 
-- **WFRP4 :** ce guide.
+- **WFRP4 :** ce guide. Les Xp de départ pour laisser l'espèce, le métier ou les caractéristiques au hasard (20 / 50 / 25 Xp) sont une règle de WFRP4 ; WFRP1 et WFRP2 n'en donnent aucun.
 - **WFRP2 :** pas de répartition de 40 points en compétences de métier, ni de nombre imposé de compétences de race ; les tables de background (Liber Fanatica) et les tables de métier des livres annexes sont plus présentes.
 - **WFRP1** (Rulebook p.14-18) : les étapes suivent l'ordre de la première édition et l'étape des Talents n'existe pas (les compétences remplacent les talents).  1. **Livres**, puis **Espèce**, comme d'habitude.
   2. Les **caractéristiques** viennent *avant* la classe, car la classe en dépend. Pour chaque ligne, tu choisis : tirer les dés, donner ton résultat de dés, ou choisir la valeur ; en mode tirage, un double-clic relance seulement la ligne sélectionnée. Une case applique la règle d'*intelligence supérieure* si les livres chargés la proposent.

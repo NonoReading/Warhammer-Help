@@ -20,6 +20,8 @@ Type
         // metier. Le livre lui-meme fait ce pont : "Night Vision - The creature has the
         // Night Vision Talent". Voir CONTEXT.md 2.15.
         Trait:                Boolean;
+        // Generique dont le joueur peut creer une specialisation libre (balise <FreeSpecialisation>)
+        SpecLibre:            Boolean;
         // Acces aux sorts (voir ConstXmlMagie dans chargeconstantes.pas). Renseignes sur les
         // entrees GENERIQUES (T0012_*, T0080_*, T0088_*, T0089) ; ChercheTalent les reporte
         // sur les specialisations, comme il le fait deja pour Resume.
@@ -38,6 +40,8 @@ Type
         XpDiviseur:           String;
         XpOfferts:            String;
         XpGroupe:             String;
+        // Decalage ajoute au palier (ConstXmlXpDecalage) ; 0 = aucun.
+        XpDecalage:           Integer;
         // "CODE_METIER/NIVEAU" (ConstXmlOctroiCarriere / ConstXmlRetraitCarriere), vide si absent.
         OctroiCarriere:       String;
         RetraitCarriere:      String;
@@ -78,6 +82,10 @@ function CodeTalentVersion(const Code: String; Momentum: Boolean): String;
 // Vrai si le livre Momentum est charge (au moins un de ses talents est dans ListTalent).
 function LivreMomentumCharge: Boolean;
 function RadicalTalent(const Code: String): String;
+// Regle V4 « +1 SL par niveau » (A_FAIRE SL-MOTEUR) : seulement pour les talents dont la ligne Tests n'est QUE
+// un nom de competence (systematique, sans condition de situation), comme la parade. Renvoie '' pour tout autre
+// talent et hors WFRP4, sinon '+N SL <competence precise>' (Niveau = nombre de niveaux possedes).
+function TalentSLTexte(PTalent: StructureTalent; Niveau: Integer): String;
 procedure OublieFamillesTalent;
 
 implementation
@@ -272,6 +280,7 @@ Begin
               Result.XpDiviseur       := PTalent.XpDiviseur;
               Result.XpOfferts        := PTalent.XpOfferts;
               Result.XpGroupe         := PTalent.XpGroupe;
+              Result.XpDecalage       := PTalent.XpDecalage;
             end;
         end;
 end;
@@ -360,6 +369,68 @@ Begin
     Result := PTalent.CodeGenerique
   else if CodeFamilleTalent(PTalent.CodeTalent) <> '' then
     Result := CodeFamilleTalent(PTalent.CodeTalent);
+end;
+
+function TalentSLTexte(PTalent: StructureTalent; Niveau: Integer): String;
+const
+  // Radicaux (RadicalTalent) des 22 talents V4 retenus par Nono le 20/11/2026 : liste produite par
+  // TRAVAIL/rapport_tests_sl_v4.py (marque OK), Sniper exclu (Ranged (Long-Extreme) = condition de portee).
+  Systematiques: array[0..21] of String = (
+    'RULES-T_ANIMAL_AFFINITY', 'RULES-T_ARTISTIC', 'RULES-T_ALLEY_CAT', 'RULES-T_DIRTY_FIGHTING',
+    'RULES-T_CONCOCT', 'RULES-T_SUPER_NUMERATE', 'RULES-T_PANHANDLE', 'RULES-T_AETHYRIC_ATTUNEMENT',
+    'RULES-T_STRONG_BACK', 'RULES-T_LINGUISTICS', 'RULES-T_OLD_SALT', 'RULES-T_CRAFTSMAN',
+    'RULES-T_MENACING', 'RULES-T_DEALMAKER', 'RULES-T_PERFECT_PITCH', 'RULES-T_PHARMACIST',
+    'RULES-T_COMMANDING_PRESENCE', 'RULES-T_SAVANT', 'RULES-T_ETIQUETTE', 'RULES-T_ACUTE_SENSE',
+    'RULES-T_ORIENTATION', 'RULES-T_BRIBER');
+var
+  Radical:   String;
+  Ind:       Integer;
+  Trouve:    Boolean = False;
+  Generique: StructureTalent;
+  Texte:     String;
+  Libelle:   String;
+  Spec:      String;
+  PosO, PosF: Integer;
+  Marque:    String;
+begin
+  Result := '';
+  if (ValVersion <> 'WFRP4') or (Niveau <= 0) then
+    Exit;
+  Radical := RadicalTalent(PTalent.CodeTalent);
+  for Ind := Low(Systematiques) to High(Systematiques) do
+    if Radical = Systematiques[Ind] then
+      Trouve := True;
+  if not Trouve then
+    Exit;
+  // Le texte Tests est porte par l'entree generique (ChercheTalent ne le reporte pas sur les specialisations).
+  Generique := ChercheTalent(CodeTalentGenerique(PTalent));
+  Texte := Trim(Generique.Tests);
+  if Texte = '' then
+    Texte := Trim(PTalent.Tests);
+  if Texte = '' then
+    Exit;
+  // Specialisation reellement prise (ex. « Acute Sense (Sight) ») a la place du placeholder du livre
+  // (« Perception (Sense) », « Art (Any) », « Lore (chosen Lore) »...) : le bonus ne vaut que pour elle.
+  PosO := Pos('(', Texte);
+  PosF := Pos(')', Texte);
+  Libelle := PTalent.Libelle;
+  if (PosO > 0) and (PosF > PosO) and (Pos(',', Texte) = 0) and (Pos(' and ', Texte) = 0) then
+    begin
+      Marque := LowerCase(Copy(Texte, PosO + 1, PosF - PosO - 1));
+      if (Pos('any', Marque) > 0) or (Pos('all', Marque) > 0) or (Pos('sense', Marque) > 0)
+         or (Pos('chosen', Marque) > 0) then
+        begin
+          PosO := LastDelimiter('(', Libelle);
+          PosF := LastDelimiter(')', Libelle);
+          if (PosO > 0) and (PosF > PosO) then
+            begin
+              Spec := Copy(Libelle, PosO, PosF - PosO + 1);
+              Texte := Trim(Copy(Texte, 1, Pos('(', Texte) - 1)) + ' ' + Spec
+                       + Copy(Texte, Pos(')', Texte) + 1, MaxInt);
+            end;
+        end;
+    end;
+  Result := '+' + IntToStr(Niveau) + ' SL ' + Texte;
 end;
 
 initialization

@@ -8,150 +8,174 @@
 <OFFICIAL>"2"</OFFICIAL>
 <COMPLETE>"0"</COMPLETE>
 <DISCLAIMER>"Copyright © Games Workshop Limited 2006. Games Workshop, the Games Workshop logo, Black Industries and their respective logos, Warhammer and all associated marks, logos, places, names, creatures, races and race insignia / devices / logos / symbols, locations, weapons, units, characters, products, illustrations and images from Warhammer are either ®, TM and/or © Games Workshop Ltd 2000-2006, variably registered in the UK and other countries around the world. All Rights Reserved."</DISCLAIMER>
-<DATA_EQUIPMENT_V2>
-<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_SWIVEL_GUN">
+<DATA_WEAPON>
+<Weapon id="CGUN-PROJ_V2_SWIVEL_GUN">
 <Description language="ENGLISH">"Swivel Gun (CG)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"200 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"3/1000"</Reach>
+<Price>"200CO"</Price>
 <Encumbrance>"150"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"3"</Damage>
-<Range>"3/1000"</Range>
+<Quality>"RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"4-6"</Reload>
-<Qualities>"Crew 2, Ball 1/2 lb or 6 musket balls lb, Unreliable"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Other qualities: Crew 2, Ball 1/2 lb or 6 musket balls lb"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_VOLLEY_GUN">
+</Weapon>
+<Weapon id="CGUN-PROJ_V2_VOLLEY_GUN">
 <Description language="ENGLISH">"Volley Gun (CG)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"300 gc + 25% per barrel over 6"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"3/50"</Reach>
+<Price>"300 gc + 25% per barrel over 6"</Price>
 <Encumbrance>"400"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"3"</Damage>
-<Range>"3/50"</Range>
+<Quality>"RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"2 per barrel"</Reload>
-<Qualities>"Crew 2, Unreliable, one BS test per barrel"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Other qualities: Crew 2, one BS test per barrel"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_ESMERELDA">
+</Weapon>
+<Weapon id="CGUN-PROJ_V2_ESMERELDA">
 <Description language="ENGLISH">"Esmerelda (CG)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"100 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"200/750"</Reach>
+<Price>"100CO"</Price>
 <Encumbrance>"100"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"3"</Damage>
-<Range>"200/750"</Range>
+<Quality>"RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"6"</Reload>
-<Qualities>"Crew 2, Ball 1/2 lb, Unreliable"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Other qualities: Crew 2, Ball 1/2 lb"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_FALCONETTE">
+</Weapon>
+<Weapon id="CGUN-PROJ_V2_FALCONETTE">
 <Description language="ENGLISH">"Falconette (CG)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"500 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+5"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"300/1000"</Reach>
+<Price>"500CO"</Price>
 <Encumbrance>"200"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"5"</Damage>
-<Range>"300/1000"</Range>
+<Quality>"RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"6"</Reload>
-<Qualities>"Crew 2, Ball 1 to 2 lb, Unreliable"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Other qualities: Crew 2, Ball 1 to 2 lb"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_FALCON">
+</Weapon>
+<Weapon id="CGUN-PROJ_V2_FALCON">
 <Description language="ENGLISH">"Falcon (CG)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"600 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+5"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"400/2500"</Reach>
+<Price>"600CO"</Price>
 <Encumbrance>"400"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"5"</Damage>
-<Range>"400/2500"</Range>
+<Quality>"RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"6"</Reload>
-<Qualities>"Crew 2, Ball 3 to 4 lb, Unreliable"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Other qualities: Crew 2, Ball 3 to 4 lb"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_SAKER">
+</Weapon>
+<Weapon id="CGUN-PROJ_V2_SAKER">
 <Description language="ENGLISH">"Saker (CG)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"750 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+10"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"400/3750"</Reach>
+<Price>"750CO"</Price>
 <Encumbrance>"600"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"10"</Damage>
-<Range>"400/3750"</Range>
+<Quality>"RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"18"</Reload>
-<Qualities>"Crew 4, Ball 5 to 7 lb, Unreliable"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Other qualities: Crew 4, Ball 5 to 7 lb"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_GROSSE_SAKER">
+</Weapon>
+<Weapon id="CGUN-PROJ_V2_GROSSE_SAKER">
 <Description language="ENGLISH">"Grosse Saker (CG)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"900 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+15"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"600/4500"</Reach>
+<Price>"900CO"</Price>
 <Encumbrance>"900"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"15"</Damage>
-<Range>"600/4500"</Range>
+<Quality>"RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"30"</Reload>
-<Qualities>"Crew 4, Ball 7 to 10 lb, Unreliable"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Other qualities: Crew 4, Ball 7 to 10 lb"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_CULVERIN">
+</Weapon>
+<Weapon id="CGUN-PROJ_V2_CULVERIN">
 <Description language="ENGLISH">"Culverin (CG)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"1500 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+20"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"800/5000"</Reach>
+<Price>"1500CO"</Price>
 <Encumbrance>"1200"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"20"</Damage>
-<Range>"800/5000"</Range>
+<Quality>"RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"150"</Reload>
-<Qualities>"Crew 6, Ball 10 to 18 lb, Unreliable"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Other qualities: Crew 6, Ball 10 to 18 lb"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_GROSSE_CULVERIN">
+</Weapon>
+<Weapon id="CGUN-PROJ_V2_GROSSE_CULVERIN">
 <Description language="ENGLISH">"Grosse Culverin (CG)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"2000 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+25"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"1700/6600"</Reach>
+<Price>"2000CO"</Price>
 <Encumbrance>"2000"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"25"</Damage>
-<Range>"1700/6600"</Range>
+<Quality>"RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"150"</Reload>
-<Qualities>"Crew 6, Ball 24 lb, Unreliable"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Other qualities: Crew 6, Ball 24 lb"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_KONIG_CULVERIN">
+</Weapon>
+<Weapon id="CGUN-PROJ_V2_KONIG_CULVERIN">
 <Description language="ENGLISH">"Konig Culverin (CG)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"2500 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+30"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"650/3700"</Reach>
+<Price>"2500CO"</Price>
 <Encumbrance>"2500"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"30"</Damage>
-<Range>"650/3700"</Range>
+<Quality>"RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"200"</Reload>
-<Qualities>"Crew 6, Ball 24 to 40 lb, Unreliable"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Other qualities: Crew 6, Ball 24 to 40 lb"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="CGUN-EQUI_MISSILE_WEAPONS_IMPERIAL_CULVERIN">
+</Weapon>
+<Weapon id="CGUN-PROJ_V2_IMPERIAL_CULVERIN">
 <Description language="ENGLISH">"Imperial Culverin (CG)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"3500 gc +"</Cost>
-<Encumbrance>"3000"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"35"</Damage>
-<Range>"800/2500"</Range>
-<Reload>"300"</Reload>
-<Qualities>"Crew 8, Ball 40 and up lb, Unreliable"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+35"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"800/2500"</Reach>
+<Price>"3500 gc +"</Price>
+<Encumbrance>"3000"</Encumbrance>
+<Quality>"RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"300"</Reload>
+<Note>"Other qualities: Crew 8, Ball 40 and up lb"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
+</Weapon>
+</DATA_WEAPON>
+<DATA_EQUIPMENT_V2>
 <EquipmentV2 id="CGUN-EQUI_MISCELLANEA_STONE_SHOT">
 <Description language="ENGLISH">"Stone Shot (CG)"</Description>
 <Category>"RULES-EQCAT2_MISCELLANEA"</Category>

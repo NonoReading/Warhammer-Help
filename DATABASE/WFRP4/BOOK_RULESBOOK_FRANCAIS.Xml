@@ -112,6 +112,7 @@
 <Text name="RULES-ARMOT_PLATE">"Plate"</Text>
 <Text name="RULES-ARMOT_SOFTKITS">"Laine"</Text>
 <Text name="RULES-ARMOT_BRIGANDINE">"Brigandine"</Text>
+<Text name="RULES-ARMOT_BONE">"Os"</Text>
 <Text name="RULES-BATTR_WS">"Bonus de combat"</Text>
 <Text name="RULES-BATTR_BS">"Bonus de tir"</Text>
 <Text name="RULES-BATTR_S">"Bonus de force"</Text>
@@ -163,140 +164,12 @@
 <Text name="RULES-TIERS_BRASS">"Bronze"</Text>
 <Text name="RULES-TIERS_SILVER">"Argent"</Text>
 <Text name="RULES-TIERS_GOLD">"Or"</Text>
-<Text name="RULES-PDF_MAIN1_NAME">"Nom"</Text>
-<Text name="RULES-PDF_MAIN1_SPECIES">"Race"</Text>
-<Text name="RULES-PDF_MAIN1_CLASS">"Classe"</Text>
-<Text name="RULES-PDF_MAIN2_CAREER">"Carrire"</Text>
-<Text name="RULES-PDF_MAIN2_CAREERLEVEL">"Echelon"</Text>
-<Text name="RULES-PDF_MAIN3_CAREERPATH">"Schéma de Carrière"</Text>
-<Text name="RULES-PDF_MAIN3_STATUS">"Statut"</Text>
-<Text name="RULES-PDF_MAIN4_AGE">"Age"</Text>
-<Text name="RULES-PDF_MAIN4_HEIGHT">"Taille"</Text>
-<Text name="RULES-PDF_MAIN4_HAIR">"Cheveux"</Text>
-<Text name="RULES-PDF_MAIN4_EYES">"Yeux"</Text>
-<Text name="RULES-PDF_CHARAC1_CHARAC">"CARACTERISTIQUES"</Text>
-<Text name="RULES-PDF_CHARAC3_IMPROV">"Améliorables"</Text>
-<Text name="RULES-PDF_CHARAC3_INITIAL">"Initiales"</Text>
-<Text name="RULES-PDF_CHARAC3_ADVANCES">"Augmentées"</Text>
-<Text name="RULES-PDF_CHARAC3_CURRENT">"Courantes"</Text>
-<Text name="RULES-PDF_CHARAC3_BONUS">"Bonus"</Text>
-<Text name="RULES-PDF_FATE1_FATE">"DESTIN"</Text>
-<Text name="RULES-PDF_FATE2_FATE">"Destin"</Text>
-<Text name="RULES-PDF_FATE3_FORTUNE">"Chance"</Text>
-<Text name="RULES-PDF_RESIL1_RESILIENCE">"RESILIENCE"</Text>
-<Text name="RULES-PDF_RESIL2A_RESILIENCE">"Résilience"</Text>
-<Text name="RULES-PDF_RESIL2B_RESOLVE">"Détermination"</Text>
-<Text name="RULES-PDF_RESIL2C_MOTIVATION">"Motivation"</Text>
-<Text name="RULES-PDF_XP1_EXPERIENCE">"EXPERIENCE"</Text>
-<Text name="RULES-PDF_XP2A_CURRENT">"Actuelle"</Text>
-<Text name="RULES-PDF_XP2B_SPENT">"Dépensée"</Text>
-<Text name="RULES-PDF_XP2C_TOTAL">"Totale"</Text>
-<Text name="RULES-PDF_MV1_MOVEMENT">"MOUVEMENT"</Text>
-<Text name="RULES-PDF_MV2A_MOVEMENT">"Mouvement"</Text>
-<Text name="RULES-PDF_MV2B_WALK">"Marche"</Text>
-<Text name="RULES-PDF_MV2C_RUN">"Course"</Text>
-<Text name="RULES-PDF_SKILLS1_BASIC">"COMPETENCES DE BASE"</Text>
-<Text name="RULES-PDF_SKILLS1_ADVANCED">"COMP. GROUPEES ET AVANCEES"</Text>
-<Text name="RULES-PDF_SKILLS2_NAME">"Nom"</Text>
-<Text name="RULES-PDF_SKILLS2_CHARAC">"Caracteristiques"</Text>
-<Text name="RULES-PDF_SKILLS2_ADV">"Aug"</Text>
-<Text name="RULES-PDF_SKILLS2_SKILL">"Comp"</Text>
-<Text name="RULES-PDF_SKILLS2_TOTAL">"Total"</Text>
-<Text name="RULES-PDF_SKILLS2_GEAR">"Avec Éq."</Text>
-<Text name="RULES-PDF_TALENT1_TALENTS">"TALENTS"</Text>
-<Text name="RULES-PDF_TALENT2_TALENTNAME">"Nom"</Text>
-<Text name="RULES-PDF_TALENT2A_TAKEN">"Nbre"</Text>
-<Text name="RULES-PDF_TALENT2B_TAKEN">"prix"</Text>
-<Text name="RULES-PDF_TALENT2_DESC">"Description"</Text>
-<Text name="RULES-PDF_AMBITION1_AMBITIONS">"AMBITIONS"</Text>
-<Text name="RULES-PDF_AMBITION2A_SHORT">"A court "</Text>
-<Text name="RULES-PDF_AMBITION2B_SHORT">"terme"</Text>
-<Text name="RULES-PDF_AMBITION3A_LONG">"A Long "</Text>
-<Text name="RULES-PDF_AMBITION3B_LONG">"terme"</Text>
-<Text name="RULES-PDF_PARTY1_PARTY">"GROUPE"</Text>
-<Text name="RULES-PDF_PARTY2_PARTYNAME">"Nom du groupe"</Text>
-<Text name="RULES-PDF_PARTY3A_SHORT">"A court"</Text>
-<Text name="RULES-PDF_PARTY3B_SHORT">"terme"</Text>
-<Text name="RULES-PDF_PARTY4A_LONG">"A Long"</Text>
-<Text name="RULES-PDF_PARTY4B_LONG">"terme"</Text>
-<Text name="RULES-PDF_PARTY5_MEMBERS">"Membres"</Text>
-<Text name="RULES-PDF_ARMOUR1_ARMOUR">"ARMURE"</Text>
-<Text name="RULES-PDF_ARMOUR2_NAME">"Nom"</Text>
-<Text name="RULES-PDF_ARMOUR2_LOCATIONS">"Localisations"</Text>
-<Text name="RULES-PDF_ARMOUR2_ENCUMBRANCE">"Enc"</Text>
-<Text name="RULES-PDF_ARMOUR2_ARMOURPOINT">"PA"</Text>
-<Text name="RULES-PDF_ARMOUR2_QUALITIES">"Atoutes / Défauts"</Text>
-<Text name="RULES-PDF_TRAPPING1_TRAPPINGS">"POSSESSIONS"</Text>
-<Text name="RULES-PDF_TRAPPING2_NAME">"Nom"</Text>
-<Text name="RULES-PDF_TRAPPING2_ENCUMBRANCE">"Enc"</Text>
-<Text name="RULES-PDF_PSYCHOLOGY">"PSYCHOLOGIE"</Text>
-<Text name="RULES-PDF_CORRUPTION">"CORRUPTION ET MUTATION"</Text>
-<Text name="RULES-PDF_ARMOURPOINT_ARMOURPOINT">"POINTS D’ARMURE (PA)"</Text>
-<Text name="RULES-PDF_ARMOURPOINT_HEAD">"Tête"</Text>
-<Text name="RULES-PDF_ARMOURPOINT_LEFTARM1">"Bras gauche"</Text>
-<Text name="RULES-PDF_ARMOURPOINT_LEFTARM2">"(ou arme secondaire)"</Text>
-<Text name="RULES-PDF_ARMOURPOINT_RIGHTARM1">"Bras droit"</Text>
-<Text name="RULES-PDF_ARMOURPOINT_RIGHTARM2">"(ou arme principale)"</Text>
-<Text name="RULES-PDF_ARMOURPOINT_BODY">"Corps"</Text>
-<Text name="RULES-PDF_ARMOURPOINT_RIGHTLEG">"Jambe droite"</Text>
-<Text name="RULES-PDF_ARMOURPOINT_LEFTLEG">"Jambe gauche"</Text>
-<Text name="RULES-PDF_ARMOURPOINT_SHIELD">"Bouclier"</Text>
-<Text name="RULES-PDF_ARMOURPOINT_DAMAGE">"Dégâts"</Text>
-<Text name="RULES-PDF_WEALTH1_WEALTH">"RICHESSE"</Text>
-<Text name="RULES-PDF_WEALTH2_D">"SC"</Text>
-<Text name="RULES-PDF_WEALTH3_SS">"PA"</Text>
-<Text name="RULES-PDF_WEALTH4_GC">"CO"</Text>
-<Text name="RULES-PDF_ENCUMBRANCE1_ENCUMBRANCE">"ENCOMBREMENT"</Text>
-<Text name="RULES-PDF_ENCUMBRANCE2_ARMOUR">"Armure"</Text>
-<Text name="RULES-PDF_ENCUMBRANCE3_WEAPONS">"Armes"</Text>
-<Text name="RULES-PDF_ENCUMBRANCE4_TRAPPINGS">"Possessions"</Text>
-<Text name="RULES-PDF_ENCUMBRANCE5_MAXENC">"Enc. Max"</Text>
-<Text name="RULES-PDF_ENCUMBRANCE6_TOTAL">"Total"</Text>
-<Text name="RULES-PDF_WOUNDS1_WOUNDS">"BLESSURE"</Text>
-<Text name="RULES-PDF_WOUNDS2_SB">"BF"</Text>
-<Text name="RULES-PDF_WOUNDS3_TBX2">"BEx2"</Text>
-<Text name="RULES-PDF_WOUNDS4_WPB">"BFM"</Text>
-<Text name="RULES-PDF_WOUNDS5_HARDY">"Dur à cuire"</Text>
-<Text name="RULES-PDF_WOUNDS6_WOUNDS">"Blessures"</Text>
-<Text name="RULES-PDF_WEAPONS1_WEAPONS">"ARMES"</Text>
-<Text name="RULES-PDF_WEAPONS2_NAME">"Nome"</Text>
-<Text name="RULES-PDF_WEAPONS2_GROUP">"Groupe"</Text>
-<Text name="RULES-PDF_WEAPONS2_ENCUMBRANCE">"Enc"</Text>
-<Text name="RULES-PDF_WEAPONS2_RANGE">"Portée/Allonge"</Text>
-<Text name="RULES-PDF_WEAPONS2_DAMAGE">"Dégats"</Text>
-<Text name="RULES-PDF_WEAPONS2_QUALITIES">"Atouts/Défauts"</Text>
-<Text name="RULES-PDF_SPELL1_SPELL">"SORTS ET PRIERES"</Text>
-<Text name="RULES-PDF_SPELL2_NAME">"Nom"</Text>
-<Text name="RULES-PDF_SPELL2_CN">"NI"</Text>
-<Text name="RULES-PDF_SPELL2_RANGE">"Portée"</Text>
-<Text name="RULES-PDF_SPELL2_TARGET">"Cible"</Text>
-<Text name="RULES-PDF_SPELL2_DURATION">"Durée"</Text>
-<Text name="RULES-PDF_SPELL2_EFFECT">"Effets"</Text>
-<Text name="RULES-PDF_SPELL3_SIN">"Péché"</Text>
-<Text name="RULES-PDF_ADVANCE_SCHEME">"Schéma de Progression"</Text>
-<Text name="RULES-PDF_CAREER_PATH">"Evolution de Carrière"</Text>
-<Text name="RULES-PDF_WOUNDS7_BS">"Bonus de Force (BF)"</Text>
-<Text name="RULES-PDF_WOUNDS7_BT">"Bonus d'Endurance (BE) x2"</Text>
-<Text name="RULES-PDF_WOUNDS7_BWP">"Bonus de Force Mentale (BFM)"</Text>
-<Text name="RULES-PDF_WOUNDS7_Tot">"Points de Blessure totaux"</Text>
 <Text name="RULES-TypeSort_Blessing">"Bénédiction"</Text>
 <Text name="RULES-TypeSort_Miracle">"Miracle"</Text>
 <Text name="RULES-TypeSort_Minor_Magic">"Magie Mineure"</Text>
 <Text name="RULES-TypeSort_Arcane_Magic">"Magie des Arcanes"</Text>
 <Text name="RULES-TypeSort_Domain_Magic">"Magie des Domaines"</Text>
 <Text name="RULES-TypeSort_Chaos_Magic">"Magie du Chaos"</Text>
-<Text name="RULES-PDF_SKILLS2_UPG">"Amél."</Text>
-<Text name="RULES-PDF_SKILLS2_UNLEARNED">"Non appris"</Text>
-<Text name="RULES-PDF_TALENT2_LEVEL">"Niv."</Text>
-<Text name="RULES-PDF_TALENT2_UPG">"Amél."</Text>
-<Text name="RULES-PDF_CORRUPTION_TITLE">"CORRUPTION"</Text>
-<Text name="RULES-PDF_CORRUPTION_T">"Bonus E"</Text>
-<Text name="RULES-PDF_CORRUPTION_WP">"Bonus FM"</Text>
-<Text name="RULES-PDF_CORRUPTION_BONUS">"Ame pure"</Text>
-<Text name="RULES-PDF_CORRUPTION_TOTAL">"Total"</Text>
-<Text name="RULES-PDF_CORRUPTION_LOST">"Perdu"</Text>
-<Text name="RULES-PDF_CORRUPTION_LEFT">"Restant"</Text>
-<Text name="RULES-PDF_CORRUPTION_HISTORY">"HISTORIQUE DE CORRUPTION"</Text>
 <Text name="RULES-CORRUPTION_PHYSICAL">"Corruption Physique"</Text>
 <Text name="RULES-CORRUPTION_MENTAL">"Corruption Mentale"</Text>
 <Text name="RULES-DISCLAIMER">""</Text>
@@ -5064,243 +4937,243 @@
 <Description language="FRANCAIS">"Bénédiction de La Chasse"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_MANAMM_01">
+<Sort id="RULES-MIRAC_MANAMM_BECALM">
 <Description language="FRANCAIS">"Encalminé"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_MANAMM_02">
+<Sort id="RULES-MIRAC_MANAMM_MANANN_S_BOUNTY">
 <Description language="FRANCAIS">"Générosité de Manann"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_MANAMM_03">
+<Sort id="RULES-MIRAC_MANAMM_WATERWALK">
 <Description language="FRANCAIS">"Marcher sur les eaux"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_MANAMM_04">
+<Sort id="RULES-MIRAC_MANAMM_SEA_LEGS">
 <Description language="FRANCAIS">"Mer déchaînée"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_MANAMM_05">
+<Sort id="RULES-MIRAC_MANAMM_FAIR_WINDS">
 <Description language="FRANCAIS">"Vents favorables"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_MANAMM_06">
+<Sort id="RULES-MIRAC_MANAMM_DROWNED_MAN_S_FACE">
 <Description language="FRANCAIS">"Visage de l’homme noyé"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_MORR_01">
+<Sort id="RULES-MIRAC_MORR_DESTROY_UNDEAD">
 <Description language="FRANCAIS">"Anéantir les morts-vivants"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_MORR_02">
+<Sort id="RULES-MIRAC_MORR_DOOMING">
 <Description language="FRANCAIS">"Condamné"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_MORR_03">
+<Sort id="RULES-MIRAC_MORR_STAY_MORR_S_HAND">
 <Description language="FRANCAIS">"Main de Morr"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_MORR_04">
+<Sort id="RULES-MIRAC_MORR_DEATH_MASK">
 <Description language="FRANCAIS">"Masque mortuaire"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_MORR_05">
+<Sort id="RULES-MIRAC_MORR_LAST_RITES">
 <Description language="FRANCAIS">"Rites funéraires"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_MORR_06">
+<Sort id="RULES-MIRAC_MORR_PORTAL_S_THRESHOLD">
 <Description language="FRANCAIS">"Seuil du Portail"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_MYRMIDIA_01">
+<Sort id="RULES-MIRAC_MYRMIDIA_FURY_S_CALL">
 <Description language="FRANCAIS">"Appel à la Fureur"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_MYRMIDIA_02">
+<Sort id="RULES-MIRAC_MYRMIDIA_SHIELD_OF_MYRMIDIA">
 <Description language="FRANCAIS">"Bouclier de Myrmidia"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_MYRMIDIA_03">
+<Sort id="RULES-MIRAC_MYRMIDIA_INSPIRING">
 <Description language="FRANCAIS">"Inspirant"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_MYRMIDIA_04">
+<Sort id="RULES-MIRAC_MYRMIDIA_SPEAR_OF_MYRMIDIA">
 <Description language="FRANCAIS">"Lance de Myrmidia"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_MYRMIDIA_05">
+<Sort id="RULES-MIRAC_MYRMIDIA_EAGLE_S_EYE">
 <Description language="FRANCAIS">"Œil de l’aigle"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_MYRMIDIA_06">
+<Sort id="RULES-MIRAC_MYRMIDIA_BLAZING_SUN">
 <Description language="FRANCAIS">"Soleil flamboyant"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_RANALD_01">
+<Sort id="RULES-MIRAC_RANALD_RANALD_S_GRACE">
 <Description language="FRANCAIS">"Grâce de Ranald"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_RANALD_02">
+<Sort id="RULES-MIRAC_RANALD_AN_INVITATION">
 <Description language="FRANCAIS">"Invitation"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_RANALD_03">
+<Sort id="RULES-MIRAC_RANALD_STAY_LUCKY">
 <Description language="FRANCAIS">"Que la chance persiste"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_RANALD_04">
+<Sort id="RULES-MIRAC_RANALD_RICH_MAN_POOR_MAN_BEGGAR_MAN_THIEF">
 <Description language="FRANCAIS">"Riche, pauvre, mendiant, voleur"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_RANALD_05">
+<Sort id="RULES-MIRAC_RANALD_YOU_AIN_T_SEEN_ME_RIGHT">
 <Description language="FRANCAIS">"Vous ne m’avez pas vu, n’est-ce pas ?"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_RANALD_06">
+<Sort id="RULES-MIRAC_RANALD_CAT_S_EYES">
 <Description language="FRANCAIS">"Yeux de chat"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_RHYA_01">
+<Sort id="RULES-MIRAC_RHYA_RHYA_S_SHELTER">
 <Description language="FRANCAIS">"Abri de Rhya"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_RHYA_02">
+<Sort id="RULES-MIRAC_RHYA_RHYA_S_TOUCH">
 <Description language="FRANCAIS">"Caresse de Rhya"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_RHYA_03">
+<Sort id="RULES-MIRAC_RHYA_RHYA_S_CHILDREN">
 <Description language="FRANCAIS">"Enfants de Rhya"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_RHYA_04">
+<Sort id="RULES-MIRAC_RHYA_RHYA_S_HARVEST">
 <Description language="FRANCAIS">"Récolte de Rhya"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_RHYA_05">
+<Sort id="RULES-MIRAC_RHYA_RHYA_S_SUCCOUR">
 <Description language="FRANCAIS">"Secours de Rhya"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_RHYA_06">
+<Sort id="RULES-MIRAC_RHYA_RHYA_S_UNION">
 <Description language="FRANCAIS">"Union de Rhya"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_SHALLYA_01">
+<Sort id="RULES-MIRAC_SHALLYA_BITTER_CATHARSIS">
 <Description language="FRANCAIS">"Amère catharsis"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_SHALLYA_02">
+<Sort id="RULES-MIRAC_SHALLYA_BALM_TO_A_WOUNDED_MIND">
 <Description language="FRANCAIS">"Baume pour un esprit blessé"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_SHALLYA_03">
+<Sort id="RULES-MIRAC_SHALLYA_ANCHORITE_S_ENDURANCE">
 <Description language="FRANCAIS">"Endurance de l’anachorète"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_SHALLYA_04">
+<Sort id="RULES-MIRAC_SHALLYA_UNBLEMISHED_INNOCENCE">
 <Description language="FRANCAIS">"Innocence immaculée"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_SHALLYA_05">
+<Sort id="RULES-MIRAC_SHALLYA_SHALLYA_S_TEARS">
 <Description language="FRANCAIS">"Larmes de Shallya"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_SHALLYA_06">
+<Sort id="RULES-MIRAC_SHALLYA_MARTYR">
 <Description language="FRANCAIS">"Martyr"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_SIGMAR_01">
+<Sort id="RULES-MIRAC_SIGMAR_TWIN_TAILED_COMET">
 <Description language="FRANCAIS">"Comète à Deux Queues"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_SIGMAR_02">
+<Sort id="RULES-MIRAC_SIGMAR_SOULFIRE">
 <Description language="FRANCAIS">"Feu de l’âme"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_SIGMAR_03">
+<Sort id="RULES-MIRAC_SIGMAR_BEACON_OF_RIGHTEOUS_VIRTUE">
 <Description language="FRANCAIS">"Flambeau de Vertu"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_SIGMAR_04">
+<Sort id="RULES-MIRAC_SIGMAR_SIGMAR_S_FIERY_HAMMER">
 <Description language="FRANCAIS">"Marteau ardent de Sigmar"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_SIGMAR_05">
+<Sort id="RULES-MIRAC_SIGMAR_HEED_NOT_THE_WITCH">
 <Description language="FRANCAIS">"N’écoutez point la Sorcière"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_SIGMAR_06">
+<Sort id="RULES-MIRAC_SIGMAR_VANQUISH_THE_UNRIGHTEOUS">
 <Description language="FRANCAIS">"Vaincre les impies"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_TAAL_01">
+<Sort id="RULES-MIRAC_TAAL_LEAPING_STAG">
 <Description language="FRANCAIS">"Bondissant comme un cerf"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_TAAL_02">
+<Sort id="RULES-MIRAC_TAAL_TOOTH_AND_CLAW">
 <Description language="FRANCAIS">"Dent et griffe"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_TAAL_03">
+<Sort id="RULES-MIRAC_TAAL_TANGLEFOOT">
 <Description language="FRANCAIS">"Enchevêtrement"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_TAAL_04">
+<Sort id="RULES-MIRAC_TAAL_ANIMAL_INSTINCTS">
 <Description language="FRANCAIS">"Instincts animaux"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_TAAL_05">
+<Sort id="RULES-MIRAC_TAAL_KING_OF_THE_WILD">
 <Description language="FRANCAIS">"Roi de la Nature"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_TAAL_06">
+<Sort id="RULES-MIRAC_TAAL_LORD_OF_THE_HUNT">
 <Description language="FRANCAIS">"Seigneur de la Chasse"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_ULRIC_01">
+<Sort id="RULES-MIRAC_ULRIC_HOARFROST_S_CHILL">
 <Description language="FRANCAIS">"Frisson du givre"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_ULRIC_02">
+<Sort id="RULES-MIRAC_ULRIC_ULRIC_S_FURY">
 <Description language="FRANCAIS">"Fureur d’ULRIC"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_ULRIC_03">
+<Sort id="RULES-MIRAC_ULRIC_HOWL_OF_THE_WOLF">
 <Description language="FRANCAIS">"Hurlement du loup"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_ULRIC_04">
+<Sort id="RULES-MIRAC_ULRIC_THE_SNOW_KING_S_JUDGEMENT">
 <Description language="FRANCAIS">"Jugement du Roi de la neige"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_ULRIC_05">
+<Sort id="RULES-MIRAC_ULRIC_WINTER_S_BITE">
 <Description language="FRANCAIS">"Morsure de l’hiver"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_ULRIC_06">
+<Sort id="RULES-MIRAC_ULRIC_PELT_OF_THE_WINTER_WOLF">
 <Description language="FRANCAIS">"Peau de loup d’hiver"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_VERENA_01">
+<Sort id="RULES-MIRAC_VERENA_SHACKLES_OF_TRUTH">
 <Description language="FRANCAIS">"Entraves à la vérité"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_VERENA_02">
+<Sort id="RULES-MIRAC_VERENA_SWORD_OF_JUSTICE">
 <Description language="FRANCAIS">"Epée de justice"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_VERENA_03">
+<Sort id="RULES-MIRAC_VERENA_BLIND_JUSTICE">
 <Description language="FRANCAIS">"Justice aveugle"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_VERENA_04">
+<Sort id="RULES-MIRAC_VERENA_TRUTH_WILL_OUT">
 <Description language="FRANCAIS">"La Vérité éclatera"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_VERENA_05">
+<Sort id="RULES-MIRAC_VERENA_WISDOM_OF_THE_OWL">
 <Description language="FRANCAIS">"Sagesse de la chouette"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
-<Sort id="RULES-MIRAC_VERENA_06">
+<Sort id="RULES-MIRAC_VERENA_AS_VERENA_IS_MY_WITNESS">
 <Description language="FRANCAIS">"Verena est mon témoin"</Description>
 <Explanation language="FRANCAIS">""</Explanation>
 </Sort>
@@ -6109,63 +5982,63 @@
 </Corruption>
 </DATA_CORRUPTION_TABLE_MENTAL>
 <DATA_DISEASE>
-<Disease name="RULES-DISEASE_001">
+<Disease name="RULES-DISEASE_BLOOD_ROT">
 <Description language="FRANCAIS">"Putréfaction du Sang"</Description>
 <Contraction language="FRANCAIS">""</Contraction>
 <Incubation language="FRANCAIS">""</Incubation>
 <Duration language="FRANCAIS">"1d10 jours"</Duration>
 <Symptoms language="FRANCAIS">""</Symptoms>
 </Disease>
-<Disease name="RULES-DISEASE_002">
+<Disease name="RULES-DISEASE_THE_BLOODY_FLUX">
 <Description language="FRANCAIS">"Le Flux Sanglant"</Description>
 <Contraction language="FRANCAIS">""</Contraction>
 <Incubation language="FRANCAIS">""</Incubation>
 <Duration language="FRANCAIS">"1d10 jours"</Duration>
 <Symptoms language="FRANCAIS">""</Symptoms>
 </Disease>
-<Disease name="RULES-DISEASE_003">
+<Disease name="RULES-DISEASE_THE_BLACK_PLAGUE">
 <Description language="FRANCAIS">"La Peste Noire"</Description>
 <Contraction language="FRANCAIS">""</Contraction>
 <Incubation language="FRANCAIS">""</Incubation>
 <Duration language="FRANCAIS">"3d10 jours"</Duration>
 <Symptoms language="FRANCAIS">""</Symptoms>
 </Disease>
-<Disease name="RULES-DISEASE_004">
+<Disease name="RULES-DISEASE_FESTERING_WOUND">
 <Description language="FRANCAIS">"Plaie Purulente"</Description>
 <Contraction language="FRANCAIS">""</Contraction>
 <Incubation language="FRANCAIS">""</Incubation>
 <Duration language="FRANCAIS">"1d10 jours"</Duration>
 <Symptoms language="FRANCAIS">""</Symptoms>
 </Disease>
-<Disease name="RULES-DISEASE_005">
+<Disease name="RULES-DISEASE_GALLOPING_TROTS">
 <Description language="FRANCAIS">"Diarrhée Galopante"</Description>
 <Contraction language="FRANCAIS">""</Contraction>
 <Incubation language="FRANCAIS">""</Incubation>
 <Duration language="FRANCAIS">"1d10 jours"</Duration>
 <Symptoms language="FRANCAIS">""</Symptoms>
 </Disease>
-<Disease name="RULES-DISEASE_006">
+<Disease name="RULES-DISEASE_ITCHING_POX">
 <Description language="FRANCAIS">"Vérole Prurigineuse"</Description>
 <Contraction language="FRANCAIS">""</Contraction>
 <Incubation language="FRANCAIS">""</Incubation>
 <Duration language="FRANCAIS">"1d10+7 jours"</Duration>
 <Symptoms language="FRANCAIS">""</Symptoms>
 </Disease>
-<Disease name="RULES-DISEASE_007">
+<Disease name="RULES-DISEASE_MINOR_INFECTION">
 <Description language="FRANCAIS">"Infection Mineure"</Description>
 <Contraction language="FRANCAIS">""</Contraction>
 <Incubation language="FRANCAIS">""</Incubation>
 <Duration language="FRANCAIS">"1d10 jours"</Duration>
 <Symptoms language="FRANCAIS">""</Symptoms>
 </Disease>
-<Disease name="RULES-DISEASE_008">
+<Disease name="RULES-DISEASE_PACKER_S_POX">
 <Description language="FRANCAIS">"Vérole des Peaussiers"</Description>
 <Contraction language="FRANCAIS">""</Contraction>
 <Incubation language="FRANCAIS">""</Incubation>
 <Duration language="FRANCAIS">"5d10 jours"</Duration>
 <Symptoms language="FRANCAIS">""</Symptoms>
 </Disease>
-<Disease name="RULES-DISEASE_009">
+<Disease name="RULES-DISEASE_RATTE_FEVER">
 <Description language="FRANCAIS">"Fièvre des Rats"</Description>
 <Contraction language="FRANCAIS">""</Contraction>
 <Incubation language="FRANCAIS">""</Incubation>

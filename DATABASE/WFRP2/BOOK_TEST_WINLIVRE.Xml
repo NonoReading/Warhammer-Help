@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA_BOOK>
+<CODE_BOOK>"TWLV"</CODE_BOOK>
+<BOOK>"BOOK TEST WINLIVRE"</BOOK>
+<BOOKNAME>"TEST WINLIVRE - WFRP2"</BOOKNAME>
+<language>"ENGLISH"</language>
+<VERSION>"WFRP2"</VERSION>
+<OFFICIAL>"2"</OFFICIAL>
+<COMPLETE>"0"</COMPLETE>
+<DATA_WEAPON>
+<Weapon id="TWLV-COMB_V2_TEST_SWORD">
+<Description language="ENGLISH">"Test Sword"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"1CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Page>"1"</Page>
+</Weapon>
+</DATA_WEAPON>
+</DATA_BOOK>

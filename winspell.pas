@@ -72,6 +72,9 @@ var
   FiltreGroupe: String;     // WFRP2 : listes de sorts (FiltreTalent y porte le Lore)
   FenFiltre:    TWinFiltre;
 
+// Un sort cite-t-il l'un des talents du personnage (explication a l'implementation)
+Function SortTalentAccessible(TalentsDuSort, TalentsDuPersonnage: String): Boolean;
+
 implementation
 
 uses XmlExportImport;
@@ -308,6 +311,7 @@ end;
 procedure TWinSpells.FormCreate(Sender: TObject);
   Begin
       FiltreLivre := SelectWinLivre;
+      SelectWinLivre := '';   // lecture unique (pas de fuite vers la fenetre suivante)
       WinCharger();
     // Panneau des champs propres a la version ; en V2 la fiche perd la place de la rangee de Cible (V4)
     // et le memo de description descend sous le panneau V2.

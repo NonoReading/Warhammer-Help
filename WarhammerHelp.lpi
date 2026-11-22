@@ -344,6 +344,16 @@
         <UnitName Value="ChargePersonnage"/>
       </Unit>
       <Unit>
+        <Filename Value="chargecreationtow.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ChargeCreationTow"/>
+      </Unit>
+      <Unit>
+        <Filename Value="choixoption.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ChoixOption"/>
+      </Unit>
+      <Unit>
         <Filename Value="winfiltre.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="WinFiltre"/>
@@ -380,6 +390,16 @@
         <Filename Value="pdfpersonnage.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="PdfPersonnage"/>
+      </Unit>
+      <Unit>
+        <Filename Value="pdfpersonnagev5.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PdfPersonnageV5"/>
+      </Unit>
+      <Unit>
+        <Filename Value="pdfpersonnagetow.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PdfPersonnageTow"/>
       </Unit>
       <Unit>
         <Filename Value="pdfrace.pas"/>

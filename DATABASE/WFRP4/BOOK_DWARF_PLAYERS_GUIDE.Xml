@@ -3837,7 +3837,7 @@
 <ArmorPoint>"3"</ArmorPoint>
 <Type>"RULES-ARMOT_PLATE"</Type>
 <InherentCraftsmanship>"RULES-QUALITY_04 4,RULES-QUALITY_03 1"</InherentCraftsmanship>
-<Page>70</Page>
+<Page>95</Page>
 </Armor>
 <Armor id="DWARF-ARMO_GROMRIL_OPEN_HELM">
 <Description language="ENGLISH">"Gromril Open Helm"</Description>
@@ -3849,7 +3849,7 @@
 <ArmorPoint>"3"</ArmorPoint>
 <Type>"RULES-ARMOT_PLATE"</Type>
 <InherentCraftsmanship>"RULES-QUALITY_04 4,RULES-QUALITY_03 1"</InherentCraftsmanship>
-<Page>70</Page>
+<Page>95</Page>
 </Armor>
 <Armor id="DWARF-ARMO_GROMRIL_BRACERS">
 <Description language="ENGLISH">"Gromril Bracers"</Description>
@@ -3861,7 +3861,7 @@
 <ArmorPoint>"3"</ArmorPoint>
 <Type>"RULES-ARMOT_PLATE"</Type>
 <InherentCraftsmanship>"RULES-QUALITY_04 4,RULES-QUALITY_03 1"</InherentCraftsmanship>
-<Page>70</Page>
+<Page>95</Page>
 </Armor>
 <Armor id="DWARF-ARMO_GROMRIL_PLATE_LEGGINGS">
 <Description language="ENGLISH">"Gromril Plate Leggings"</Description>
@@ -3873,7 +3873,7 @@
 <ArmorPoint>"3"</ArmorPoint>
 <Type>"RULES-ARMOT_PLATE"</Type>
 <InherentCraftsmanship>"RULES-QUALITY_04 4,RULES-QUALITY_03 1"</InherentCraftsmanship>
-<Page>70</Page>
+<Page>95</Page>
 </Armor>
 <Armor id="DWARF-ARMO_GROMRIL_HELM">
 <Description language="ENGLISH">"Gromril Helm"</Description>
@@ -3885,7 +3885,7 @@
 <ArmorPoint>"3"</ArmorPoint>
 <Type>"RULES-ARMOT_PLATE"</Type>
 <InherentCraftsmanship>"RULES-QUALITY_04 4,RULES-QUALITY_03 1"</InherentCraftsmanship>
-<Page>128</Page>
+<Page>95</Page>
 </Armor>
 <Armor id="DWARF-ARMO_MAIL_SKIRT">
 <Description language="ENGLISH">"Mail Skirt"</Description>
@@ -3949,7 +3949,7 @@
 <Availability>"RULES-DISPO_RARE"</Availability>
 <Price>"10CO"</Price>
 <Encumbrance>"3"</Encumbrance>
-<Page>74</Page>
+<Page>96</Page>
 </Trapping>
 <Trapping id="DWARF-TRAP_STONE_TABLET">
 <Description language="ENGLISH">"Stone Tablet"</Description>
@@ -4119,7 +4119,7 @@
 </Trapping>
 </DATA_TRAPPING>
 <DATA_CRAFTMANSHIP>
-  <Craftsmanship id="DWARF-RUNE_01">
+  <Craftsmanship id="DWARF-RUNE_RUNE_OF_CLEAVING">
 <Description language="ENGLISH">"Rune of Cleaving"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Weapon rune, 10 SLs"</Short>
@@ -4130,7 +4130,7 @@
 <Modifier>""</Modifier>
 <Page>127</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_02">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_RETRIBUTION">
 <Description language="ENGLISH">"Rune of Retribution"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Weapon rune, 12 SLs"</Short>
@@ -4139,7 +4139,7 @@
 <Modifier>""</Modifier>
 <Page>127</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_03">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_CUTTING">
 <Description language="ENGLISH">"Rune of Cutting"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Weapon rune, 10 SLs"</Short>
@@ -4149,7 +4149,7 @@
 <Modifier>""</Modifier>
 <Page>127</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_04">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_DAUNTING">
 <Description language="ENGLISH">"Rune of Daunting"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Weapon rune, 14 SLs"</Short>
@@ -4158,7 +4158,7 @@
 <Modifier>""</Modifier>
 <Page>127</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_05">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_FIRE">
 <Description language="ENGLISH">"Rune of Fire"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Weapon rune, 16 SLs"</Short>
@@ -4167,7 +4167,7 @@
 <Modifier>""</Modifier>
 <Page>127</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_06">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_FURY">
 <Description language="ENGLISH">"Rune of Fury"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Weapon rune, 15 SLs"</Short>
@@ -4176,7 +4176,7 @@
 <Modifier>""</Modifier>
 <Page>127</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_07">
+<Craftsmanship id="DWARF-RUNE_GRUDGE_RUNE">
 <Description language="ENGLISH">"Grudge Rune"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Weapon rune, 10 SLs"</Short>
@@ -4189,7 +4189,7 @@
 <Modifier>""</Modifier>
 <Page>127</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_08">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_MIGHT">
 <Description language="ENGLISH">"Rune of Might"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Weapon rune, 10 SLs"</Short>
@@ -4200,7 +4200,7 @@
 <Modifier>""</Modifier>
 <Page>127</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_09">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_SPEED">
 <Description language="ENGLISH">"Rune of Speed"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Weapon rune, 10 SLs"</Short>
@@ -4210,7 +4210,7 @@
 <Modifier>""</Modifier>
 <Page>127</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_10">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_STRIKING">
 <Description language="ENGLISH">"Rune of Striking"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Weapon rune, 14 SLs"</Short>
@@ -4220,7 +4220,7 @@
 <Modifier>""</Modifier>
 <Page>127</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_11">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_ALARIC_THE_MAD">
 <Description language="ENGLISH">"Master Rune of Alaric the Mad"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Weapon rune, 30 SLs"</Short>
@@ -4229,7 +4229,7 @@
 <Modifier>""</Modifier>
 <Page>127</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_12">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_BREAKING">
 <Description language="ENGLISH">"Master Rune of Breaking"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Weapon rune, 20 SLs"</Short>
@@ -4238,7 +4238,7 @@
 <Modifier>""</Modifier>
 <Page>127</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_13">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_FLIGHT">
 <Description language="ENGLISH">"Master Rune of Flight"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Weapon rune, 20 SLs"</Short>
@@ -4247,7 +4247,7 @@
 <Modifier>""</Modifier>
 <Page>128</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_14">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_SKALF_BLACKHAMMER">
 <Description language="ENGLISH">"Master Rune of Skalf Blackhammer"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Weapon rune, 28 SLs"</Short>
@@ -4256,7 +4256,7 @@
 <Modifier>""</Modifier>
 <Page>128</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_15">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_THE_SLAYER">
 <Description language="ENGLISH">"Master Rune of the Slayer"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Weapon rune, 20 SLs"</Short>
@@ -4265,7 +4265,7 @@
 <Modifier>""</Modifier>
 <Page>128</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_16">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_SNORRI_SPANGELHELM">
 <Description language="ENGLISH">"Master Rune of Snorri Spangelhelm"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Weapon rune, 22 SLs"</Short>
@@ -4274,7 +4274,7 @@
 <Modifier>""</Modifier>
 <Page>128</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_17">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_HASTE">
 <Description language="ENGLISH">"Master Rune of Haste"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Weapon rune, 20 SLs"</Short>
@@ -4283,7 +4283,7 @@
 <Modifier>""</Modifier>
 <Page>128</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_18">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_FORCE">
 <Description language="ENGLISH">"Rune of Force"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Armour rune, 14 SLs"</Short>
@@ -4293,7 +4293,7 @@
 <Modifier>""</Modifier>
 <Page>128</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_19">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_FORTITUDE">
 <Description language="ENGLISH">"Rune of Fortitude"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Armour rune, 14 SLs"</Short>
@@ -4303,7 +4303,7 @@
 <Modifier>""</Modifier>
 <Page>128</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_20">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_IRON">
 <Description language="ENGLISH">"Rune of Iron"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Armour rune, 12 SLs"</Short>
@@ -4313,7 +4313,7 @@
 <Modifier>""</Modifier>
 <Page>128</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_21">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_RESISTANCE">
 <Description language="ENGLISH">"Rune of Resistance"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Armour rune, 12 SLs"</Short>
@@ -4323,7 +4323,7 @@
 <Modifier>""</Modifier>
 <Page>128</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_22">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_SHIELDING">
 <Description language="ENGLISH">"Rune of Shielding"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Armour rune, 12 SLs"</Short>
@@ -4333,7 +4333,7 @@
 <Modifier>""</Modifier>
 <Page>128</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_23">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_STONE">
 <Description language="ENGLISH">"Rune of Stone"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Armour rune, 10 SLs"</Short>
@@ -4346,7 +4346,7 @@
 <Modifier>""</Modifier>
 <Page>128</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_24">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_ADAMANT">
 <Description language="ENGLISH">"Master Rune of Adamant"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Armour rune, 22 SLs"</Short>
@@ -4355,7 +4355,7 @@
 <Modifier>""</Modifier>
 <Page>128</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_25">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_GROMRIL">
 <Description language="ENGLISH">"Master Rune of Gromril"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Armour rune, 20 SLs"</Short>
@@ -4364,7 +4364,7 @@
 <Modifier>""</Modifier>
 <Page>128</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_26">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_STEEL">
 <Description language="ENGLISH">"Master Rune of Steel"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Armour rune, 20 SLs"</Short>
@@ -4373,7 +4373,7 @@
 <Modifier>""</Modifier>
 <Page>129</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_27">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_CLEAR_SIGHT">
 <Description language="ENGLISH">"Rune of Clear Sight"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Talisman rune, 8 SLs"</Short>
@@ -4382,7 +4382,7 @@
 <Modifier>""</Modifier>
 <Page>129</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_28">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_TRUTH">
 <Description language="ENGLISH">"Rune of Truth"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Talisman rune, 8 SLs"</Short>
@@ -4391,7 +4391,7 @@
 <Modifier>""</Modifier>
 <Page>129</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_29">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_FAR_SIGHT">
 <Description language="ENGLISH">"Rune of Far Sight"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Talisman rune, 10 SLs"</Short>
@@ -4400,7 +4400,7 @@
 <Modifier>""</Modifier>
 <Page>129</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_30">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_THE_FURNACE">
 <Description language="ENGLISH">"Rune of the Furnace"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Talisman rune, 10 SLs"</Short>
@@ -4409,7 +4409,7 @@
 <Modifier>""</Modifier>
 <Page>129</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_31">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_LUCK">
 <Description language="ENGLISH">"Rune of Luck"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Talisman rune, 10 SLs"</Short>
@@ -4418,7 +4418,7 @@
 <Modifier>""</Modifier>
 <Page>129</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_32">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_RESTORATION">
 <Description language="ENGLISH">"Rune of Restoration"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Talisman rune, 10 SLs"</Short>
@@ -4427,7 +4427,7 @@
 <Modifier>""</Modifier>
 <Page>129</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_33">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_SPELLBREAKING">
 <Description language="ENGLISH">"Rune of Spellbreaking"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Talisman rune, 10 SLs"</Short>
@@ -4436,7 +4436,7 @@
 <Modifier>""</Modifier>
 <Page>129</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_34">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_SPELLEATING">
 <Description language="ENGLISH">"Rune of Spelleating"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Talisman rune, 10 SLs"</Short>
@@ -4445,7 +4445,7 @@
 <Modifier>""</Modifier>
 <Page>129</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_35">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_WARDING">
 <Description language="ENGLISH">"Rune of Warding"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Talisman rune, 15 SLs"</Short>
@@ -4455,7 +4455,7 @@
 <Modifier>""</Modifier>
 <Page>129</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_36">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_BALANCE">
 <Description language="ENGLISH">"Master Rune of Balance"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Talisman rune, 20 SLs"</Short>
@@ -4464,7 +4464,7 @@
 <Modifier>""</Modifier>
 <Page>129</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_37">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_INDUSTRY">
 <Description language="ENGLISH">"Master Rune of Industry"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Talisman rune, 20 SLs"</Short>
@@ -4473,7 +4473,7 @@
 <Modifier>""</Modifier>
 <Page>129</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_38">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_KINGSHIP">
 <Description language="ENGLISH">"Master Rune of Kingship"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Talisman rune, 24 SLs"</Short>
@@ -4482,7 +4482,7 @@
 <Modifier>""</Modifier>
 <Page>129</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_39">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_PASSAGE">
 <Description language="ENGLISH">"Master Rune of Passage"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Talisman rune, 20 SLs"</Short>
@@ -4491,7 +4491,7 @@
 <Modifier>""</Modifier>
 <Page>130</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_40">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_SPITE">
 <Description language="ENGLISH">"Master Rune of Spite"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Talisman rune, 24 SLs"</Short>
@@ -4500,7 +4500,7 @@
 <Modifier>""</Modifier>
 <Page>130</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_41">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_ALARM">
 <Description language="ENGLISH">"Rune of Alarm"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Protection rune, 8 SLs"</Short>
@@ -4509,7 +4509,7 @@
 <Modifier>""</Modifier>
 <Page>130</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_42">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_BATTLE">
 <Description language="ENGLISH">"Rune of Battle"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Protection rune, 18 SLs"</Short>
@@ -4518,7 +4518,7 @@
 <Modifier>""</Modifier>
 <Page>130</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_43">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_COURAGE">
 <Description language="ENGLISH">"Rune of Courage"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Protection rune, 14 SLs"</Short>
@@ -4527,7 +4527,7 @@
 <Modifier>""</Modifier>
 <Page>130</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_44">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_DISCOVERY">
 <Description language="ENGLISH">"Rune of Discovery"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Protection rune, 8 SLs"</Short>
@@ -4536,7 +4536,7 @@
 <Modifier>""</Modifier>
 <Page>130</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_45">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_ENEMY_DETECTION">
 <Description language="ENGLISH">"Rune of Enemy Detection"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Protection rune, 8 SLs"</Short>
@@ -4545,7 +4545,7 @@
 <Modifier>""</Modifier>
 <Page>130</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_46">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_LOCKING">
 <Description language="ENGLISH">"Rune of Locking"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Protection rune, 6 SLs"</Short>
@@ -4554,7 +4554,7 @@
 <Modifier>""</Modifier>
 <Page>130</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_47">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_PURIFICATION">
 <Description language="ENGLISH">"Rune of Purification"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Protection rune, 10 SLs"</Short>
@@ -4563,7 +4563,7 @@
 <Modifier>""</Modifier>
 <Page>130</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_48">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_RETRIBUTION_PROTECTION">
 <Description language="ENGLISH">"Rune of Retribution (Protection)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Protection rune, 8 SLs"</Short>
@@ -4572,7 +4572,7 @@
 <Modifier>""</Modifier>
 <Page>130</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_49">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_SANCTUARY">
 <Description language="ENGLISH">"Rune of Sanctuary"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Protection rune, 10 SLs"</Short>
@@ -4581,7 +4581,7 @@
 <Modifier>""</Modifier>
 <Page>130</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_50">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_SLOWNESS">
 <Description language="ENGLISH">"Rune of Slowness"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Protection rune, 12 SLs"</Short>
@@ -4590,7 +4590,7 @@
 <Modifier>""</Modifier>
 <Page>131</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_51">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_VERMINKILL">
 <Description language="ENGLISH">"Rune of Verminkill"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Protection rune, 10 SLs"</Short>
@@ -4599,7 +4599,7 @@
 <Modifier>""</Modifier>
 <Page>131</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_52">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_EXPEL_CHAOS">
 <Description language="ENGLISH">"Master Rune of Expel Chaos"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Protection rune, 20 SLs"</Short>
@@ -4608,7 +4608,7 @@
 <Modifier>""</Modifier>
 <Page>131</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_53">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_GRIMNIR">
 <Description language="ENGLISH">"Master Rune of Grimnir"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Protection rune, 22 SLs"</Short>
@@ -4617,7 +4617,7 @@
 <Modifier>""</Modifier>
 <Page>131</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_54">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_GRUNGNI">
 <Description language="ENGLISH">"Master Rune of Grungni"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Protection rune, 22 SLs"</Short>
@@ -4626,7 +4626,7 @@
 <Modifier>""</Modifier>
 <Page>131</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_55">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_STROMNI_REDBEARD">
 <Description language="ENGLISH">"Master Rune of Stromni Redbeard"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Protection rune, 20 SLs"</Short>
@@ -4635,7 +4635,7 @@
 <Modifier>""</Modifier>
 <Page>131</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_56">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_VALAYA">
 <Description language="ENGLISH">"Master Rune of Valaya"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Protection rune, 22 SLs"</Short>
@@ -4644,7 +4644,7 @@
 <Modifier>""</Modifier>
 <Page>131</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_57">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_ACCURACY">
 <Description language="ENGLISH">"Rune of Accuracy"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Engineering rune, 14 SLs"</Short>
@@ -4654,7 +4654,7 @@
 <ModifyAccurate name="ACCURATE">10</ModifyAccurate>
 <Page>131</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_58">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_BURNING">
 <Description language="ENGLISH">"Rune of Burning"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Engineering rune, 16 SLs"</Short>
@@ -4663,7 +4663,7 @@
 <Modifier>""</Modifier>
 <Page>131</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_59">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_FORGING">
 <Description language="ENGLISH">"Rune of Forging"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Engineering rune, 10 SLs"</Short>
@@ -4672,7 +4672,7 @@
 <Modifier>""</Modifier>
 <Page>131</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_60">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_PENETRATING">
 <Description language="ENGLISH">"Rune of Penetrating"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Engineering rune, 14 SLs"</Short>
@@ -4681,7 +4681,7 @@
 <Modifier>""</Modifier>
 <Page>131</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_61">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_RELOADING">
 <Description language="ENGLISH">"Rune of Reloading"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Engineering rune, 12 SLs"</Short>
@@ -4691,7 +4691,7 @@
 <Modifier>""</Modifier>
 <Page>131</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_62">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_SEEKING">
 <Description language="ENGLISH">"Rune of Seeking"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Engineering rune, 10 SLs"</Short>
@@ -4700,7 +4700,7 @@
 <Modifier>""</Modifier>
 <Page>131</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_63">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_THE_STALWART">
 <Description language="ENGLISH">"Rune of the Stalwart"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Engineering rune, 14 SLs"</Short>
@@ -4709,7 +4709,7 @@
 <Modifier>""</Modifier>
 <Page>131</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_64">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_THE_VALIANT">
 <Description language="ENGLISH">"Rune of the Valiant"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Engineering rune, 10 SLs"</Short>
@@ -4718,7 +4718,7 @@
 <Modifier>""</Modifier>
 <Page>132</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_65">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_DEFENCE">
 <Description language="ENGLISH">"Master Rune of Defence"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Engineering rune, 20 SLs"</Short>
@@ -4727,7 +4727,7 @@
 <Modifier>""</Modifier>
 <Page>132</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_66">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_DISGUISE">
 <Description language="ENGLISH">"Master Rune of Disguise"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Engineering rune, 20 SLs"</Short>
@@ -4736,7 +4736,7 @@
 <Modifier>""</Modifier>
 <Page>132</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_67">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_IMMOLATION">
 <Description language="ENGLISH">"Master Rune of Immolation"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Engineering rune, 20 SLs"</Short>
@@ -4745,7 +4745,7 @@
 <Modifier>""</Modifier>
 <Page>132</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_68">
+<Craftsmanship id="DWARF-RUNE_MASTER_RUNE_OF_SKEWERING">
 <Description language="ENGLISH">"Master Rune of Skewering"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Engineering rune, 22 SLs"</Short>
@@ -4754,7 +4754,7 @@
 <Modifier>""</Modifier>
 <Page>132</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_69">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_HEARTH_AND_HOME">
 <Description language="ENGLISH">"Rune of Hearth and Home"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Doom Rune"</Short>
@@ -4763,7 +4763,7 @@
 <Modifier>""</Modifier>
 <Page>132</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_70">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_OATH_AND_STEEL">
 <Description language="ENGLISH">"Rune of Oath and Steel"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Doom Rune"</Short>
@@ -4772,7 +4772,7 @@
 <Modifier>""</Modifier>
 <Page>132</Page>
 </Craftsmanship>
-<Craftsmanship id="DWARF-RUNE_71">
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_WRATH_AND_RUIN">
 <Description language="ENGLISH">"Rune of Wrath and Ruin"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Doom Rune"</Short>

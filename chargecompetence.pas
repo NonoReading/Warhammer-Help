@@ -16,6 +16,8 @@ type
   	SousCompetence:	               boolean;
         // Competence de base (balise <Basic>) : ligne du tableau Competences de base des PDF.
         DeBase:                        boolean;
+        // Generique dont le joueur peut creer une specialisation libre (balise <FreeSpecialisation>)
+        SpecLibre:                     boolean;
         Livre:                         string;
         // Code complet de la competence generique dont celle-ci est une specialisation,
         // lu depuis <Generique> quand present (CONTEXT.md 2.67). Vide si non renseigne

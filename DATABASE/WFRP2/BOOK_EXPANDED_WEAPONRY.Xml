@@ -8,1426 +8,1833 @@
 <OFFICIAL>"2"</OFFICIAL>
 <COMPLETE>"0"</COMPLETE>
 <DISCLAIMER>"This document is completely unofficial and in no way endorsed by Games Workshop Limited. Warhammer Fantasy Roleplay, the Warhammer Fantasy Roleplay logo, WFRP, Chaos, the Chaos device, the Chaos logo, Citadel, Citadel Device, Darkblade, 'Eavy Metal, Forge World, Games Workshop, Games Workshop logo, Golden Demon, Great Unclean One, GW, the Hammer of Sigmar logo, Horned Rat logo, Keeper of Secrets, Khemri, Khorne, the Khorne logo, Lord of Change, Nurgle, the Nurgle logo, Skaven, the Skaven symbol device, Slaanesh, the Slaanesh logo, Tomb Kings, Tzeentch, the Tzeentch logo, Warhammer, Warhammer World logo, White Dwarf, the White Dwarf logo, and all associated marks, names, races, race insignia, characters, vehicles, locations, units, artefacts, illustrations and images from the Warhammer world are either ®, TM and/or © Copyright Games Workshop Ltd 2000-2015, variably registered in the UK and other countries around the world."</DISCLAIMER>
-<DATA_EQUIPMENT_V2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_HAND_BEARDED_THROWING_AXE">
+<DATA_WEAPON>
+<Weapon id="EXWP-COMB_V2_HAND_BEARDED_THROWING_AXE">
 <Description language="ENGLISH">"Hand/Bearded/Throwing Axe (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"5 gc"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Size S/Sh, Notes: Tool"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"5CO"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size S/Sh, Notes: Tool"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_HAND_BEARDED_THROWING_AXE_THROWN">
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_HAND_BEARDED_THROWING_AXE_THROWN">
 <Description language="ENGLISH">"Hand/Bearded/Throwing Axe (thrown) (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"5 gc"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB–2"</Damage>
-<Range>"8/-"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size S/Sh"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Reach>"8/-"</Reach>
+<Price>"5CO"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size S/Sh"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_BATTLE_AXE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_BATTLE_AXE">
 <Description language="ENGLISH">"Battle Axe (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"6 gc"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Size M"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"6CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size M"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_GREAT_AXE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_GREAT_AXE">
 <Description language="ENGLISH">"Great Axe (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"12 gc"</Cost>
-<Encumbrance>"200"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Size L, Impact, Slow"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"12CO"</Price>
+<Encumbrance>"200"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size L"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_ELVEN_BATTLE_AXES">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_ELVEN_BATTLE_AXES">
 <Description language="ENGLISH">"Elven Battle-Axes (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"150"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Size L, Armour Piercing, Best, Elven, Notes: Elven"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Encumbrance>"150"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size L, Best, Elven, Notes: Elven"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_HUGE_AXE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_HUGE_AXE">
 <Description language="ENGLISH">"Huge Axe (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"400"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+2"</Damage>
-<Qualities>"Size H/Lo, Impact, Slow"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+2"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Encumbrance>"400"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size H/Lo"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_GIANT_AXE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_GIANT_AXE">
 <Description language="ENGLISH">"Giant Axe (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"600"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+4"</Damage>
-<Qualities>"Size G/Ve, Impact, Slow"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+4"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Encumbrance>"600"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size G/Ve"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_DAGGER_DIRK_KNIFE_STILETTO">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_DAGGER_DIRK_KNIFE_STILETTO">
 <Description language="ENGLISH">"Dagger/Dirk/Knife/Stiletto (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"1 gc"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Size T/Sh"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"1CO"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size T/Sh"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_DAGGER_DIRK_KNIFE_STILETTO_THROWN">
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_DAGGER_DIRK_KNIFE_STILETTO_THROWN">
 <Description language="ENGLISH">"Dagger/Dirk/Knife/Stiletto (thrown) (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"1 gc"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB–3"</Damage>
-<Range>"6/12"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size T/Sh"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Reach>"6/12"</Reach>
+<Price>"1CO"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size T/Sh"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_MAIN_GAUCHE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_MAIN_GAUCHE">
 <Description language="ENGLISH">"Main Gauche (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"4 gc"</Cost>
-<Encumbrance>"15"</Encumbrance>
-<Group>"RULES-WTYPE2_PARRYING"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Size S/Sh, Balanced, Defensive"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"4CO"</Price>
+<Encumbrance>"15"</Encumbrance>
+<Quality>"RULES-WEAPQ_BALANCED,RULES-WEAPQ_DEFENSIVE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_PARRYING"</Type>
+<Note>"Other qualities: Size S/Sh"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_SWORD_BREAKER">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_SWORD_BREAKER">
 <Description language="ENGLISH">"Sword-breaker (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"5 gc"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_PARRYING"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Size S/Sh, Balanced, Special (Break)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"5CO"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Quality>"RULES-WEAPQ_BALANCED"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_PARRYING"</Type>
+<Note>"Other qualities: Size S/Sh, Special (Break)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_FOIL">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_FOIL">
 <Description language="ENGLISH">"Foil (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"18 gc"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_FENCING"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Size S, Fast, Precise"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"18CO"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Quality>"RULES-WEAPQ_FAST,RULES-WEAPQ_PRECISE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FENCING"</Type>
+<Note>"Other qualities: Size S"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_SHORT_SWORD_MACHETE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_SHORT_SWORD_MACHETE">
 <Description language="ENGLISH">"Short Sword/Machete (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"11 gc"</Cost>
-<Encumbrance>"30"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Size S"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"11CO"</Price>
+<Encumbrance>"30"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size S"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_SCIMITAR_IND_TULWAR">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_SCIMITAR_IND_TULWAR">
 <Description language="ENGLISH">"Scimitar/Ind Tulwar (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–1"</Damage>
-<Qualities>"Size M, Special (Quick), Notes: Araby/Ind"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"15CO"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size M, Special (Quick), Notes: Araby/Ind"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_RAPIER">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_RAPIER">
 <Description language="ENGLISH">"Rapier (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"18 gc"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_FENCING"</Group>
-<Damage>"SB–1"</Damage>
-<Qualities>"Size M, Fast"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"18CO"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Quality>"RULES-WEAPQ_FAST"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FENCING"</Type>
+<Note>"Other qualities: Size M"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_SABRE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_SABRE">
 <Description language="ENGLISH">"Sabre (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"16 gc"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_FENCING"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Size M, Special (Cavalry)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"16CO"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FENCING"</Type>
+<Note>"Other qualities: Size M, Special (Cavalry)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_LONG_SWORD_BROADSWORD_CUTLASS">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_LONG_SWORD_BROADSWORD_CUTLASS">
 <Description language="ENGLISH">"Long Sword/Broadsword/Cutlass (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"14 gc"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Size M"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"14CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size M"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_FALCHION">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_FALCHION">
 <Description language="ENGLISH">"Falchion (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"14 gc"</Cost>
-<Encumbrance>"80"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Size M, Slow"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"14CO"</Price>
+<Encumbrance>"80"</Encumbrance>
+<Quality>"RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size M"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_CLAYMORE_BASTARD_SWORD">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_CLAYMORE_BASTARD_SWORD">
 <Description language="ENGLISH">"Claymore/Bastard Sword (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"30 gc"</Cost>
-<Encumbrance>"150"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Size L, 1h: Slow, Special (1-h); 2h: Impact, Slow, Special (1-h)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"30CO"</Price>
+<Encumbrance>"150"</Encumbrance>
+<Quality>"RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size L, 1h: Slow, Special (1-h), 2h: Impact, Special (1-h)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_GREAT_SWORD_GREAT_SCIMITAR">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_GREAT_SWORD_GREAT_SCIMITAR">
 <Description language="ENGLISH">"Great Sword/Great Scimitar (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"35 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"35CO"</Price>
 <Encumbrance>"280"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Size L, Impact, Precise, Slow"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_PRECISE,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size L"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_PUNCH_DAGGER">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_PUNCH_DAGGER">
 <Description language="ENGLISH">"Punch Dagger (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"15"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–1"</Damage>
-<Qualities>"Size S/Sh, Balanced, Notes: Oriental / (Skaven)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Encumbrance>"15"</Encumbrance>
+<Quality>"RULES-WEAPQ_BALANCED"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size S/Sh, Notes: Oriental / (Skaven)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_KUKRI">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_KUKRI">
 <Description language="ENGLISH">"Kukri (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"20"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Size S/Sh, Precise, Notes: Oriental"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Encumbrance>"20"</Encumbrance>
+<Quality>"RULES-WEAPQ_PRECISE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size S/Sh, Notes: Oriental"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_CATHAYAN_NIPPON_BLADE_JITTE_SAI">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_CATHAYAN_NIPPON_BLADE_JITTE_SAI">
 <Description language="ENGLISH">"Cathayan/Nippon Blade (Jitte/Sai) (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_PARRYING"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Size S/Sh, Balanced, Defensive, Good, Notes: Oriental"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Encumbrance>"10"</Encumbrance>
+<Quality>"RULES-WEAPQ_BALANCED,RULES-WEAPQ_DEFENSIVE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_PARRYING"</Type>
+<Note>"Other qualities: Size S/Sh, Good, Notes: Oriental"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_CATHAYAN_NIPPON_SHORT_SWORD_WAKIZASHI">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_CATHAYAN_NIPPON_SHORT_SWORD_WAKIZASHI">
 <Description language="ENGLISH">"Cathayan/Nippon Short Sword (Wakizashi) (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"25"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Size S, Good, Notes: Oriental"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Encumbrance>"25"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size S, Good, Notes: Oriental"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_WOOD_ELF_HUNTING_KNIVES">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_WOOD_ELF_HUNTING_KNIVES">
 <Description language="ENGLISH">"Wood Elf Hunting Knives (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"30"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–1"</Damage>
-<Qualities>"Size M/Sh, Best, Elven, Fast, Notes: Elven"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Encumbrance>"30"</Encumbrance>
+<Quality>"RULES-WEAPQ_FAST"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size M/Sh, Best, Elven, Notes: Elven"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_WOOD_ELF_SAEARATH_SWORDS">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_WOOD_ELF_SAEARATH_SWORDS">
 <Description language="ENGLISH">"Wood Elf Saearath (Swords) (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Size M, Best, Elven, Special (Saearath), Notes: Elven"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Encumbrance>"50"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size M, Best, Elven, Special (Saearath), Notes: Elven"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_KHOPESH">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_KHOPESH">
 <Description language="ENGLISH">"Khopesh (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"10 gc"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Size M, Slow, Special (Khopesh), Notes: Khemri"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"10CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>"RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size M, Special (Khopesh), Notes: Khemri"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_CATHAYAN_NIPPON_SWORD_KATANA">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_CATHAYAN_NIPPON_SWORD_KATANA">
 <Description language="ENGLISH">"Cathayan/Nippon Sword (Katana) (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
 <Encumbrance>"45"</Encumbrance>
-<Group>"RULES-WTYPE2_SPECIAL"</Group>
-<Damage>"SB(+1)"</Damage>
-<Qualities>"Size M, Armour Piercing, Good, Special (Oriental), Notes: Oriental"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_SPECIAL"</Type>
+<Note>"Other qualities: Size M, Good, Special (Oriental), Notes: Oriental | Damage: SB(+1)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_ORC_CHOPPA">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_ORC_CHOPPA">
 <Description language="ENGLISH">"Orc Choppa (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"150"</Encumbrance>
-<Group>"RULES-WTYPE2_ORC_CHOPPA"</Group>
-<Damage>"SB(+1)"</Damage>
-<Qualities>"Size L, Special (Choppa), Notes: Orc"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Encumbrance>"150"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORC_CHOPPA"</Type>
+<Note>"Other qualities: Size L, Special (Choppa), Notes: Orc | Damage: SB(+1)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_BIG_ORC_CHOPPA">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_BIG_ORC_CHOPPA">
 <Description language="ENGLISH">"Big Orc Choppa (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"300"</Encumbrance>
-<Group>"RULES-WTYPE2_ORC_CHOPPA"</Group>
-<Damage>"SB+1(+2)"</Damage>
-<Qualities>"Size L, Impact, Special (Big choppa), Notes: Orc"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Encumbrance>"300"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORC_CHOPPA"</Type>
+<Note>"Other qualities: Size L, Special (Big choppa), Notes: Orc | Damage: SB+1(+2)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_HUGE_SWORD">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_HUGE_SWORD">
 <Description language="ENGLISH">"Huge Sword (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
 <Encumbrance>"560"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Size H/Lo, Impact, Precise, Slow"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_PRECISE,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size H/Lo"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_GIANT_SWORD">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_GIANT_SWORD">
 <Description language="ENGLISH">"Giant Sword (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+3"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
 <Encumbrance>"840"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+3"</Damage>
-<Qualities>"Size G/Ve, Impact, Precise, Slow"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_PRECISE,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size G/Ve"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_GAUNTLET_KNUCKLE_DUSTER">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_GAUNTLET_KNUCKLE_DUSTER">
 <Description language="ENGLISH">"Gauntlet/Knuckle-duster (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"1 gc"</Cost>
-<Encumbrance>"1"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Size T/Sh, Pummelling"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"1CO"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Quality>"RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size T/Sh"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_CLUB_CUDGEL_BILLY_CLUB">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_CLUB_CUDGEL_BILLY_CLUB">
 <Description language="ENGLISH">"Club/Cudgel/Billy Club (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"3 gc"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Size S, Pummelling"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"3CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>"RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size S"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_LIGHT_THROWING_HAMMER">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_LIGHT_THROWING_HAMMER">
 <Description language="ENGLISH">"Light/Throwing Hammer (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"5 gc"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Size S, Pummelling"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"5CO"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Quality>"RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size S"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_LIGHT_THROWING_HAMMER_THROWN">
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_LIGHT_THROWING_HAMMER_THROWN">
 <Description language="ENGLISH">"Light/Throwing Hammer (thrown) (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"5 gc"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB–2"</Damage>
-<Range>"8/-"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size S, Pummelling"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Reach>"8/-"</Reach>
+<Price>"5CO"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Quality>"RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size S"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_MACE_HAMMER_WARHAMMER">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_MACE_HAMMER_WARHAMMER">
 <Description language="ENGLISH">"Mace/Hammer/Warhammer (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"7 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"7CO"</Price>
 <Encumbrance>"70"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Size M, Pummelling"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Quality>"RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size M"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_GREAT_MACE_GREAT_HAMMER_GREAT_WARHAMMER_MAUL">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_GREAT_MACE_GREAT_HAMMER_GREAT_WARHAMMER_MAUL">
 <Description language="ENGLISH">"Great Mace/Great Hammer/Great Warhammer/Maul (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
-<Encumbrance>"300"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Size L, Impact, Pummelling, Slow"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"15CO"</Price>
+<Encumbrance>"300"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_PUMMELLING,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size L"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_WHITE_WOLF_HAMMER">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_WHITE_WOLF_HAMMER">
 <Description language="ENGLISH">"White Wolf Hammer (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"40 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"40CO"</Price>
 <Encumbrance>"300"</Encumbrance>
-<Group>"RULES-WTYPE2_WHITE_WOLF"</Group>
-<Damage>"SB+1(+2)"</Damage>
-<Qualities>"Size L, Best, Impact, Pummelling, Tiring, Special (Wolf)"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_PUMMELLING,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_WHITE_WOLF"</Type>
+<Note>"Other qualities: Size L, Best, Special (Wolf) | Damage: SB+1(+2)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_HUGE_MACE_HUGE_HAMMER_HUGE_MAUL">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_HUGE_MACE_HUGE_HAMMER_HUGE_MAUL">
 <Description language="ENGLISH">"Huge Mace/Huge Hammer/Huge Maul (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"600"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Size H/Lo, Impact, Pummelling, Slow"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Encumbrance>"600"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_PUMMELLING,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size H/Lo"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_GIANT_MACE_GIANT_HAMMER_GIANT_MAUL">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_GIANT_MACE_GIANT_HAMMER_GIANT_MAUL">
 <Description language="ENGLISH">"Giant Mace/Giant Hammer/Giant Maul (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+3"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
 <Encumbrance>"900"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+3"</Damage>
-<Qualities>"Size G/Ve, Impact, Pummelling, Slow"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_PUMMELLING,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size G/Ve"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_LIGHT_FLAIL_MORNINGSTAR">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_LIGHT_FLAIL_MORNINGSTAR">
 <Description language="ENGLISH">"Light Flail/Morningstar (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
-<Encumbrance>"60"</Encumbrance>
-<Group>"RULES-WTYPE2_FLAIL"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Size M, Impact, Tiring"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"15CO"</Price>
+<Encumbrance>"60"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FLAIL"</Type>
+<Note>"Other qualities: Size M"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_SPIKED_CHAIN">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_SPIKED_CHAIN">
 <Description language="ENGLISH">"Spiked Chain (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
-<Encumbrance>"75"</Encumbrance>
-<Group>"RULES-WTYPE2_FLAIL"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Size L/Lo, Impact, Knock, Tiring"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"15CO"</Price>
+<Encumbrance>"75"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FLAIL"</Type>
+<Note>"Other qualities: Size L/Lo, Knock"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_HEAVY_FLAIL">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_HEAVY_FLAIL">
 <Description language="ENGLISH">"Heavy Flail (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
-<Encumbrance>"95"</Encumbrance>
-<Group>"RULES-WTYPE2_FLAIL"</Group>
-<Damage>"SB+2"</Damage>
-<Qualities>"Size L, Impact, Tiring"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+2"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"15CO"</Price>
+<Encumbrance>"95"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FLAIL"</Type>
+<Note>"Other qualities: Size L"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_CATHAYAN_NIPPON_CHAIN_NUNCHAKU">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_CATHAYAN_NIPPON_CHAIN_NUNCHAKU">
 <Description language="ENGLISH">"Cathayan/Nippon Chain (Nunchaku) (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"30"</Encumbrance>
-<Group>"RULES-WTYPE2_FLAIL"</Group>
-<Damage>"SB–1"</Damage>
-<Qualities>"Size M, Defensive, Special (2-h), Notes: Oriental"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Encumbrance>"30"</Encumbrance>
+<Quality>"RULES-WEAPQ_DEFENSIVE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FLAIL"</Type>
+<Note>"Other qualities: Size M, Special (2-h), Notes: Oriental"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_PLAGUE_CENSER">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_PLAGUE_CENSER">
 <Description language="ENGLISH">"Plague Censer (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+2"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
 <Encumbrance>"85"</Encumbrance>
-<Group>"RULES-WTYPE2_FLAIL"</Group>
-<Damage>"SB+2"</Damage>
-<Qualities>"Size L, Impact, Tiring, Special (Skaven), Notes: Skaven"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FLAIL"</Type>
+<Note>"Other qualities: Size L, Special (Skaven), Notes: Skaven"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_COMET_FLAIL">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_COMET_FLAIL">
 <Description language="ENGLISH">"Comet Flail (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"20 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+2"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"20CO"</Price>
 <Encumbrance>"95"</Encumbrance>
-<Group>"RULES-WTYPE2_FLAIL"</Group>
-<Damage>"SB+2(+4)"</Damage>
-<Qualities>"Size L, Impact, Tiring, Special (Comet)"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FLAIL"</Type>
+<Note>"Other qualities: Size L, Special (Comet) | Damage: SB+2(+4)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_HUGE_FLAIL">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_HUGE_FLAIL">
 <Description language="ENGLISH">"Huge Flail (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+3"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
 <Encumbrance>"190"</Encumbrance>
-<Group>"RULES-WTYPE2_FLAIL"</Group>
-<Damage>"SB+3"</Damage>
-<Qualities>"Size H/Ve, Impact, Tiring"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FLAIL"</Type>
+<Note>"Other qualities: Size H/Ve"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_GIANT_FLAIL">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_GIANT_FLAIL">
 <Description language="ENGLISH">"Giant Flail (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+5"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
 <Encumbrance>"380"</Encumbrance>
-<Group>"RULES-WTYPE2_FLAIL"</Group>
-<Damage>"SB+5"</Damage>
-<Qualities>"Size G/Ve, Impact, Tiring"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FLAIL"</Type>
+<Note>"Other qualities: Size G/Ve"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_CLIMBING_PICK">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_CLIMBING_PICK">
 <Description language="ENGLISH">"Climbing Pick (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"2 gc"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Size S/Sh, Armour Piercing, Slow, Notes: Tool"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"2CO"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size S/Sh, Notes: Tool"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_PICK_MINER_S">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_PICK_MINER_S">
 <Description language="ENGLISH">"Pick (Miner's) (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"5 gc"</Cost>
-<Encumbrance>"20"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Size M, Armour Piercing, Slow, Notes: Tool"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"5CO"</Price>
+<Encumbrance>"20"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size M, Notes: Tool"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_MILITARY_PICK_CROWBILL">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_MILITARY_PICK_CROWBILL">
 <Description language="ENGLISH">"Military Pick/Crowbill (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"9 gc"</Cost>
-<Encumbrance>"65"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Size M, Armour Piercing, Slow"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"9CO"</Price>
+<Encumbrance>"65"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size M"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_GREAT_PICK">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_GREAT_PICK">
 <Description language="ENGLISH">"Great Pick (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"20 gc"</Cost>
-<Encumbrance>"200"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Size L, Armour Piercing, Impact, Slow"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Price>"20CO"</Price>
+<Encumbrance>"200"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_IMPACT,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size L"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_HUGE_PICK">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_HUGE_PICK">
 <Description language="ENGLISH">"Huge Pick (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"400"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Size H/Lo, Armour Piercing, Impact, Slow"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Encumbrance>"400"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_IMPACT,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size H/Lo"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_GIANT_PICK">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_GIANT_PICK">
 <Description language="ENGLISH">"Giant Pick (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"600"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+3"</Damage>
-<Qualities>"Size G/Ve, Armour Piercing, Impact, Slow"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+3"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Encumbrance>"600"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_IMPACT,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size G/Ve"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_QUARTERSTAFF_MEDIUM_FOR_SMALL">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_QUARTERSTAFF_MEDIUM_FOR_SMALL">
 <Description language="ENGLISH">"Quarterstaff, Medium (for Small) (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"1s"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Size M, Defensive, Pummelling, Special (2-h)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Price>"1PA"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Quality>"RULES-WEAPQ_DEFENSIVE,RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size M, Special (2-h)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_QUARTERSTAFF_LARGE_FOR_MEDIUM">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_QUARTERSTAFF_LARGE_FOR_MEDIUM">
 <Description language="ENGLISH">"Quarterstaff, Large (for Medium) (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"3s"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Size L, Defensive, Pummelling, Special (2-h)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Price>"3PA"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>"RULES-WEAPQ_DEFENSIVE,RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size L, Special (2-h)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_BRAYSTAFF_FOR_MEDIUM">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_BRAYSTAFF_FOR_MEDIUM">
 <Description language="ENGLISH">"Braystaff (for Medium) (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"60"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB–1"</Damage>
-<Qualities>"Size L, Defensive, Impact, Pummelling, Slow, Special (2-h), Notes: Beastmen"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Encumbrance>"60"</Encumbrance>
+<Quality>"RULES-WEAPQ_DEFENSIVE,RULES-WEAPQ_IMPACT,RULES-WEAPQ_PUMMELLING,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size L, Special (2-h), Notes: Beastmen"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_QUARTERSTAFF_HUGE_FOR_LARGE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_QUARTERSTAFF_HUGE_FOR_LARGE">
 <Description language="ENGLISH">"Quarterstaff, Huge (for Large) (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"120"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Size H/Ve, Defensive, Impact, Pummelling, Slow, Special (2-h)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Encumbrance>"120"</Encumbrance>
+<Quality>"RULES-WEAPQ_DEFENSIVE,RULES-WEAPQ_IMPACT,RULES-WEAPQ_PUMMELLING,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size H/Ve, Special (2-h)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_QUARTERSTAFF_GIANT_FOR_HUGE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_QUARTERSTAFF_GIANT_FOR_HUGE">
 <Description language="ENGLISH">"Quarterstaff, Giant (for Huge) (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"180"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+2"</Damage>
-<Qualities>"Size G/Ve, Defensive, Impact, Pummelling, Slow, Special (2-h)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+2"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Encumbrance>"180"</Encumbrance>
+<Quality>"RULES-WEAPQ_DEFENSIVE,RULES-WEAPQ_IMPACT,RULES-WEAPQ_PUMMELLING,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size G/Ve, Special (2-h)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_SHIELD_TINY_BUCKLER">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_SHIELD_TINY_BUCKLER">
 <Description language="ENGLISH">"Shield, Tiny (Buckler) (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"2 gc"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_SPECIAL"</Group>
-<Damage>"SB–4"</Damage>
-<Qualities>"Size T/Sh, Armour, Pummelling, Shield, Special (1-h)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-4"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"2CO"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Quality>"RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_SPECIAL"</Type>
+<Note>"Other qualities: Size T/Sh, Armour, Shield, Special (1-h)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_SHIELD_SMALL">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_SHIELD_SMALL">
 <Description language="ENGLISH">"Shield, Small (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"5 gc"</Cost>
-<Encumbrance>"25"</Encumbrance>
-<Group>"RULES-WTYPE2_SPECIAL"</Group>
-<Damage>"SB–4"</Damage>
-<Qualities>"Size S/Sh, Armour, Pummelling, Shield, Special (1-h)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-4"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"5CO"</Price>
+<Encumbrance>"25"</Encumbrance>
+<Quality>"RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_SPECIAL"</Type>
+<Note>"Other qualities: Size S/Sh, Armour, Shield, Special (1-h)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_SHIELD_MEDIUM">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_SHIELD_MEDIUM">
 <Description language="ENGLISH">"Shield, Medium (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"10 gc"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_SPECIAL"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Size M/Sh, Armour, Pummelling, Shield, Special (1-h)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"10CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>"RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_SPECIAL"</Type>
+<Note>"Other qualities: Size M/Sh, Armour, Shield, Special (1-h)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_SHIELD_LARGE_PAVISE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_SHIELD_LARGE_PAVISE">
 <Description language="ENGLISH">"Shield, Large (Pavise) (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"50 gc"</Cost>
-<Encumbrance>"120"</Encumbrance>
-<Group>"RULES-WTYPE2_SPECIAL"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Size L/Sh, Armour, Pummelling, Shield, Special (1-h)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"50CO"</Price>
+<Encumbrance>"120"</Encumbrance>
+<Quality>"RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_SPECIAL"</Type>
+<Note>"Other qualities: Size L/Sh, Armour, Shield, Special (1-h)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_SHIELD_OF_MYRMIDIA">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_SHIELD_OF_MYRMIDIA">
 <Description language="ENGLISH">"Shield of Myrmidia (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"20 gc"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_SPECIAL"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Size M/Sh, Armour, Pummelling, Shield, Special (1-h), Special (Polished)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"20CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>"RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_SPECIAL"</Type>
+<Note>"Other qualities: Size M/Sh, Armour, Shield, Special (1-h), Special (Polished)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_SHIELD_HUGE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_SHIELD_HUGE">
 <Description language="ENGLISH">"Shield, Huge (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"100 gc"</Cost>
-<Encumbrance>"240"</Encumbrance>
-<Group>"RULES-WTYPE2_SPECIAL"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Size H/Sh, Armour, Pummelling, Shield, Special (1-h)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Price>"100CO"</Price>
+<Encumbrance>"240"</Encumbrance>
+<Quality>"RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_SPECIAL"</Type>
+<Note>"Other qualities: Size H/Sh, Armour, Shield, Special (1-h)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_SHIELD_GIGANTIC">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_SHIELD_GIGANTIC">
 <Description language="ENGLISH">"Shield, Gigantic (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"200 gc"</Cost>
-<Encumbrance>"400"</Encumbrance>
-<Group>"RULES-WTYPE2_SPECIAL"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Size G/Sh, Armour, Impact, Pummelling, Shield, Slow, Special (1-h)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Price>"200CO"</Price>
+<Encumbrance>"400"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_PUMMELLING,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_SPECIAL"</Type>
+<Note>"Other qualities: Size G/Sh, Armour, Shield, Special (1-h)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_JAVELIN">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_JAVELIN">
 <Description language="ENGLISH">"Javelin (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"25s"</Cost>
-<Encumbrance>"30"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3(–2)"</Damage>
-<Qualities>"Size S/Lo, 1h: Shaft; 2h: Shaft, SB-2"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"25PA"</Price>
+<Encumbrance>"30"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size S/Lo, 1h: Shaft, 2h: Shaft, SB-2 | Damage: SB-3(-2)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_JAVELIN_THROWN">
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_JAVELIN_THROWN">
 <Description language="ENGLISH">"Javelin (thrown) (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"25s"</Cost>
-<Encumbrance>"30"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB–1"</Damage>
-<Range>"8/16"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size S/Lo"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Reach>"8/16"</Reach>
+<Price>"25PA"</Price>
+<Encumbrance>"30"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size S/Lo"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_SPEAR">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_SPEAR">
 <Description language="ENGLISH">"Spear (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"10 gc"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB(+1)"</Damage>
-<Qualities>"Size M/Lo, 1h: Shaft; 2h: Shaft, SB+1"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"10CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size M/Lo, 1h: Shaft, 2h: Shaft, SB+1 | Damage: SB(+1)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_SPEAR_THROWN">
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_SPEAR_THROWN">
 <Description language="ENGLISH">"Spear (thrown) (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"10 gc"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB"</Damage>
-<Range>"8/-"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size M/Lo"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Reach>"8/-"</Reach>
+<Price>"10CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size M/Lo"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_HARPOON">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_HARPOON">
 <Description language="ENGLISH">"Harpoon (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"10 gc"</Cost>
-<Encumbrance>"75"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Size M/Lo"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"10CO"</Price>
+<Encumbrance>"75"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size M/Lo"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_HARPOON_THROWN">
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_HARPOON_THROWN">
 <Description language="ENGLISH">"Harpoon (thrown) (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"10 gc"</Cost>
-<Encumbrance>"75"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB"</Damage>
-<Range>"8/-"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size M/Lo, Impact, Rope"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Reach>"8/-"</Reach>
+<Price>"10CO"</Price>
+<Encumbrance>"75"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size M/Lo, Rope"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_PIKE_LONG_SPEAR">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_PIKE_LONG_SPEAR">
 <Description language="ENGLISH">"Pike/Long Spear (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"20 gc"</Cost>
-<Encumbrance>"200"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB(+1)"</Damage>
-<Qualities>"Size L/Lo, 1h: Shaft; 2h: Shaft, SB+1, Notes: Tilean"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"20CO"</Price>
+<Encumbrance>"200"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size L/Lo, 1h: Shaft, 2h: Shaft, SB+1, Notes: Tilean | Damage: SB(+1)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_POLEARM_FAUCHARD_GLAIVE_HALBERD_TYPICAL_POLEARM">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_POLEARM_FAUCHARD_GLAIVE_HALBERD_TYPICAL_POLEARM">
 <Description language="ENGLISH">"Polearm:Fauchard/Glaive/Halberd (typical polearm) (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
-<Encumbrance>"200"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Size L/Lo, 1h: Shaft, Slow; 2h: Impact, Shaft, Slow"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"15CO"</Price>
+<Encumbrance>"200"</Encumbrance>
+<Quality>"RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size L/Lo, 1h: Shaft, 2h: Impact, Shaft, Slow"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_POLEARM_BEC_DE_CORBIN">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_POLEARM_BEC_DE_CORBIN">
 <Description language="ENGLISH">"Polearm: Bec de Corbin (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"20 gc"</Cost>
-<Encumbrance>"150"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Size L/Lo, 1h: Shaft, Slow, Special (Bec); 2h: Shaft, Special (Bec)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"20CO"</Price>
+<Encumbrance>"150"</Encumbrance>
+<Quality>"RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size L/Lo, 1h: Shaft, Special (Bec), 2h: Shaft, Special (Bec)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_POLEARM_BERDYSH_BARDICHE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_POLEARM_BERDYSH_BARDICHE">
 <Description language="ENGLISH">"Polearm: Berdysh/Bardiche (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"20 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"20CO"</Price>
 <Encumbrance>"150"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Size L/Lo, 1h: Shaft, Slow, Special (Kislev); 2h: Impact, Tiring, Shaft, Special (Kislev)"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Quality>"RULES-WEAPQ_SLOW,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>""</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_POLEARM_BILL_GUISARME">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_POLEARM_BILL_GUISARME">
 <Description language="ENGLISH">"Polearm: Bill/Guisarme (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
-<Encumbrance>"200"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Size L/Lo, 1h: Precise, Shaft, Slow; 2h: Precise, Shaft"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"15CO"</Price>
+<Encumbrance>"200"</Encumbrance>
+<Quality>"RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size L/Lo, 1h: Precise, Shaft, 2h: Precise, Shaft"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_POLEARM_LOCHABER_AXE_POLE_AXE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_POLEARM_LOCHABER_AXE_POLE_AXE">
 <Description language="ENGLISH">"Polearm: Lochaber Axe/Pole Axe (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"20 gc"</Cost>
-<Encumbrance>"200"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+2"</Damage>
-<Qualities>"Size L/Lo, 1h: Shaft, Slow; 2h: Shaft"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+2"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"20CO"</Price>
+<Encumbrance>"200"</Encumbrance>
+<Quality>"RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size L/Lo, 1h: Shaft, 2h: Shaft"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_POLEARM_PARTISAN_TRIDENT_FORK">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_POLEARM_PARTISAN_TRIDENT_FORK">
 <Description language="ENGLISH">"Polearm: Partisan/Trident/Fork (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"20 gc"</Cost>
-<Encumbrance>"180"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Size L/Lo, 1h: Armour Piercing, Shaft, Slow; 2h: Armour Piercing, Shaft"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"20CO"</Price>
+<Encumbrance>"180"</Encumbrance>
+<Quality>"RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size L/Lo, 1h: Armour Piercing, Shaft, 2h: Armour Piercing, Shaft"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_POLEARM_VOULGE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_POLEARM_VOULGE">
 <Description language="ENGLISH">"Polearm: Voulge (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
-<Encumbrance>"200"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Size L/Lo, 1h: Impact, Tiring, Shaft, Slow; 2h: Impact, Shaft, Tiring"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"15CO"</Price>
+<Encumbrance>"200"</Encumbrance>
+<Quality>"RULES-WEAPQ_TIRING,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size L/Lo, 1h: Impact, Shaft, 2h: Impact, Shaft, Tiring"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_DEMILANCE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_DEMILANCE">
 <Description language="ENGLISH">"Demilance (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"20 gc"</Cost>
-<Encumbrance>"75"</Encumbrance>
-<Group>"RULES-WTYPE2_CAVALRY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Size L/Lo, Fast, Impact, Lance, Tiring"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"20CO"</Price>
+<Encumbrance>"75"</Encumbrance>
+<Quality>"RULES-WEAPQ_FAST,RULES-WEAPQ_IMPACT,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_CAVALRY"</Type>
+<Note>"Other qualities: Size L/Lo, Lance"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_LANCE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_LANCE">
 <Description language="ENGLISH">"Lance (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"40 gc"</Cost>
-<Encumbrance>"100"</Encumbrance>
-<Group>"RULES-WTYPE2_CAVALRY"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Size L/Lo, Fast, Impact, Lance, Tiring"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"40CO"</Price>
+<Encumbrance>"100"</Encumbrance>
+<Quality>"RULES-WEAPQ_FAST,RULES-WEAPQ_IMPACT,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_CAVALRY"</Type>
+<Note>"Other qualities: Size L/Lo, Lance"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_WOOD_ELF_SAEARATH_SPEAR">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_WOOD_ELF_SAEARATH_SPEAR">
 <Description language="ENGLISH">"Wood Elf Saearath (Spear) (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"100"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB(+1)"</Damage>
-<Qualities>"Size L/Lo, 1h: Best, Defensive, Elven, Shaft, Special (Saearath); 2h: Best, Defensive, Elven, Shaft, Special (Saearath), SB+1, Notes: Elven"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Encumbrance>"100"</Encumbrance>
+<Quality>"RULES-WEAPQ_DEFENSIVE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>""</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_WOOD_ELF_HUNTING_SPEAR">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_WOOD_ELF_HUNTING_SPEAR">
 <Description language="ENGLISH">"Wood Elf Hunting Spear (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB+1(+2)"</Damage>
-<Qualities>"Size M/Lo, 1h: Best, Elven, Shaft; 2h: Best, Elven, Shaft, SB+2, Notes: Elven"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Encumbrance>"50"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>""</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_HUGE_SPEAR_HARPOON_POLEARM">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_HUGE_SPEAR_HARPOON_POLEARM">
 <Description language="ENGLISH">"Huge Spear/Harpoon/Polearm (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"400"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+2(+3)"</Damage>
-<Qualities>"Size H/Ve, 1h: Impact, Shaft, Slow; 2h: Impact, Shaft, SB+3"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+2"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Encumbrance>"400"</Encumbrance>
+<Quality>"RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size H/Ve, 1h: Impact, Shaft, 2h: Impact, Shaft, SB+3 | Damage: SB+2(+3)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_HUGE_SPEAR_HARPOON_POLEARM_THROWN">
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_HUGE_SPEAR_HARPOON_POLEARM_THROWN">
 <Description language="ENGLISH">"Huge Spear/Harpoon/Polearm (thrown) (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"-"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+2"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"10/20"</Reach>
 <Encumbrance>"400"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB+2"</Damage>
-<Range>"10/20"</Range>
+<Quality>"RULES-WEAPQ_IMPACT"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Size H/Ve, Impact, Rope"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Other qualities: Size H/Ve, Rope"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_GIANT_PIKE_HARPOON_POLEARM">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_GIANT_PIKE_HARPOON_POLEARM">
 <Description language="ENGLISH">"Giant Pike/Harpoon/Polearm (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+4"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
 <Encumbrance>"600"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+4"</Damage>
-<Qualities>"Size G/Ve, Impact, Shaft, Slow"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size G/Ve, Shaft"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_BOLA">
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_BOLA">
 <Description language="ENGLISH">"Bola (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"7s"</Cost>
-<Encumbrance>"20"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"1"</Damage>
-<Range>"8/16"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size S, Knock, Snare, Special (Bola)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+1"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Reach>"8/16"</Reach>
+<Price>"7PA"</Price>
+<Encumbrance>"20"</Encumbrance>
+<Quality>"RULES-WEAPQ_SNARE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size S, Knock, Special (Bola)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_CAT_O_NINE_TAILS_WHIP">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_CAT_O_NINE_TAILS_WHIP">
 <Description language="ENGLISH">"Cat 'o Nine Tails (Whip) (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"3 gc"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Size S, Armour"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"3CO"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
+<Note>"Other qualities: Size S, Armour"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_GRAPPLING_HOOK_WITH_ROPE">
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_GRAPPLING_HOOK_WITH_ROPE">
 <Description language="ENGLISH">"Grappling Hook with Rope (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"4 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Reach>"8/-"</Reach>
+<Price>"4CO"</Price>
 <Encumbrance>"20"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"SB–3"</Damage>
-<Range>"8/-"</Range>
+<Quality>"RULES-WEAPQ_SNARE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Size M/Lo, Clumsy, Knock, Rope, Snare, Special (2-h)"</Qualities>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Note>"Other qualities: Size M/Lo, Clumsy, Knock, Rope, Special (2-h)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_LASSO">
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_LASSO">
 <Description language="ENGLISH">"Lasso (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"1 gc"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"n/a"</Damage>
-<Range>"8/-"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size M/Lo, Knock, Snare"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
 <Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Reach>"8/-"</Reach>
+<Price>"1CO"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Quality>"RULES-WEAPQ_SNARE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size M/Lo, Knock | Damage: n/a"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_WHIP">
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_WHIP">
 <Description language="ENGLISH">"Whip (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"1 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-4"</Damage>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Reach>"6/-"</Reach>
+<Price>"1CO"</Price>
 <Encumbrance>"15"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"SB–4"</Damage>
-<Range>"6/-"</Range>
+<Quality>"RULES-WEAPQ_SNARE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Size M/Lo, Armour, Knock, Snare, Special (Disarm)"</Qualities>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Note>"Other qualities: Size M/Lo, Armour, Knock, Special (Disarm)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_NET_SMALL">
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_NET_SMALL">
 <Description language="ENGLISH">"Net, Small (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"1 gc"</Cost>
-<Encumbrance>"30"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"n/a"</Damage>
-<Range>"Per size"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size S, Snare, Special (Snare)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Reach>"Per size"</Reach>
+<Price>"1CO"</Price>
+<Encumbrance>"30"</Encumbrance>
+<Quality>"RULES-WEAPQ_SNARE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size S, Special (Snare) | Damage: n/a"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_NET_NORMAL">
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_NET_NORMAL">
 <Description language="ENGLISH">"Net, Normal (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"3 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
+<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Reach>"Per size"</Reach>
+<Price>"3CO"</Price>
 <Encumbrance>"60"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"n/a"</Damage>
-<Range>"Per size"</Range>
+<Quality>"RULES-WEAPQ_SNARE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Size M, Snare, Special (Snare)"</Qualities>
-<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Note>"Other qualities: Size M, Special (Snare) | Damage: n/a"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_CATHAYAN_NIPPON_BLADE_CHAIN_KUSARIGAMA">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_CATHAYAN_NIPPON_BLADE_CHAIN_KUSARIGAMA">
 <Description language="ENGLISH">"Cathayan/Nippon Blade &amp; Chain (Kusarigama) (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
 <Encumbrance>"55"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"SB–1"</Damage>
-<Qualities>"Size M/Lo, Good, Knock, Special (2-h), Special (Disarm), Notes: Oriental"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
+<Note>"Other qualities: Size M/Lo, Good, Knock, Special (2-h), Special (Disarm), Notes: Oriental"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_NET_LARGE">
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_NET_LARGE">
 <Description language="ENGLISH">"Net, Large (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"6 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Reach>"Per size"</Reach>
+<Price>"6CO"</Price>
 <Encumbrance>"120"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"n/a"</Damage>
-<Range>"Per size"</Range>
+<Quality>"RULES-WEAPQ_SNARE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Size L, Snare, Special (Snare)"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Note>"Other qualities: Size L, Special (Snare) | Damage: n/a"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_NET_HUGE">
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_NET_HUGE">
 <Description language="ENGLISH">"Net, Huge (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"12 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Reach>"Per size"</Reach>
+<Price>"12CO"</Price>
 <Encumbrance>"240"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"n/a"</Damage>
-<Range>"Per size"</Range>
+<Quality>"RULES-WEAPQ_SNARE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Size H, Snare, Special (Snare)"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
+<Note>"Other qualities: Size H, Special (Snare) | Damage: n/a"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_BELAYING_PIN">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_BELAYING_PIN">
 <Description language="ENGLISH">"Belaying Pin (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"5d"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"5SB"</Price>
 <Encumbrance>"30"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Size S/Sh, Pummelling, Notes: Sailor tool"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Quality>"RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size S/Sh, Notes: Sailor tool"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_CLIMBING_CLAWS_RAT_CLAWS">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_CLIMBING_CLAWS_RAT_CLAWS">
 <Description language="ENGLISH">"Climbing Claws/Rat Claws (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"10 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"10CO"</Price>
 <Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Size T/Sh, Special (Climb), Notes: (Skaven) tool"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size T/Sh, Special (Climb), Notes: (Skaven) tool"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_CLIMBING_SPIKE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_CLIMBING_SPIKE">
 <Description language="ENGLISH">"Climbing Spike (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"5s"</Cost>
-<Encumbrance>"5"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Size T/Sh, Notes: Tool"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"5PA"</Price>
+<Encumbrance>"5"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size T/Sh, Notes: Tool"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_GARROTTE_STRANGLING_CORD">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_GARROTTE_STRANGLING_CORD">
 <Description language="ENGLISH">"Garrotte (strangling cord) (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"1s"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"1PA"</Price>
 <Encumbrance>"1"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"n/a"</Damage>
-<Qualities>"Size T/Sh, Special (2-h), Special (Garrotte)"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size T/Sh, Special (2-h), Special (Garrotte) | Damage: n/a"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_MEAT_CLEAVER_SMALL">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_MEAT_CLEAVER_SMALL">
 <Description language="ENGLISH">"Meat Cleaver, Small (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"3 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"3CO"</Price>
 <Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Size S/Sh, Clumsy, Notes: Halfling tool"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size S/Sh, Clumsy, Notes: Halfling tool"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_MEAT_CLEAVER_MEDIUM">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_MEAT_CLEAVER_MEDIUM">
 <Description language="ENGLISH">"Meat Cleaver, Medium (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"5 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"5CO"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Size M/Sh, Clumsy, Notes: Human tool"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size M/Sh, Clumsy, Notes: Human tool"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_MEAT_CLEAVER_LARGE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_MEAT_CLEAVER_LARGE">
 <Description language="ENGLISH">"Meat Cleaver, Large (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"10 gc"</Cost>
-<Encumbrance>"100"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Size H/Sh, Clumsy, Impact, Tiring, Notes: Ogre tool"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"10CO"</Price>
+<Encumbrance>"100"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size H/Sh, Clumsy, Notes: Ogre tool"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_PITCHFORK">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_PITCHFORK">
 <Description language="ENGLISH">"Pitchfork (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"1 gc"</Cost>
-<Encumbrance>"100"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–1"</Damage>
-<Qualities>"Size M/Lo, Clumsy, Slow, Notes: Tool"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
 <Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Price>"1CO"</Price>
+<Encumbrance>"100"</Encumbrance>
+<Quality>"RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size M/Lo, Clumsy, Notes: Tool"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_PROSTHETIC_WEAPON_FOR_TINY_SMALL_AND_MEDIUM_SIZED">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_PROSTHETIC_WEAPON_FOR_TINY_SMALL_AND_MEDIUM_SIZED">
 <Description language="ENGLISH">"Prosthetic-weapon (for Tiny-, Small- and Medium-sized) (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"1 gc"</Cost>
-<Encumbrance>"-"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Size T/Sh, Notes: Blade, hook"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"1CO"</Price>
+<Encumbrance>"-"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size T/Sh, Notes: Blade, hook"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_PROSTHETIC_WEAPON_FOR_MEDIUM_AND_LARGE_SIZED">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_PROSTHETIC_WEAPON_FOR_MEDIUM_AND_LARGE_SIZED">
 <Description language="ENGLISH">"Prosthetic-weapon (for Medium- and Large-sized) (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"10 gc"</Cost>
-<Encumbrance>"-"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Size M/Sh, Slow, Notes: Blade, hook"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"10CO"</Price>
+<Encumbrance>"-"</Encumbrance>
+<Quality>"RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size M/Sh, Notes: Blade, hook"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_PROSTHETIC_WEAPON_FOR_HUGE_SIZED">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_PROSTHETIC_WEAPON_FOR_HUGE_SIZED">
 <Description language="ENGLISH">"Prosthetic-weapon (for Huge- sized) (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
 <Encumbrance>"-"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–1"</Damage>
-<Qualities>"Size H/Sh, Impact, Slow, Notes: Blade, hook"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size H/Sh, Notes: Blade, hook"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_SCYTHE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_SCYTHE">
 <Description language="ENGLISH">"Scythe (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"5 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"5CO"</Price>
 <Encumbrance>"200"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB–1"</Damage>
-<Qualities>"Size L/Lo, Clumsy, Impact, Slow, Notes: Tool"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size L/Lo, Clumsy, Notes: Tool"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_SICKLE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_SICKLE">
 <Description language="ENGLISH">"Sickle (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"1 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"1CO"</Price>
 <Encumbrance>"25"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Size S/Sh, Clumsy, Slow, Notes: Tool"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Quality>"RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size S/Sh, Clumsy, Notes: Tool"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_STAKE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_STAKE">
 <Description language="ENGLISH">"Stake (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"1d"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"1SB"</Price>
 <Encumbrance>"5"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Size T/Sh"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size T/Sh"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_THINGS_CATCHER">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_THINGS_CATCHER">
 <Description language="ENGLISH">"Things-Catcher (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
 <Encumbrance>"170"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Size L/Lo, Snare, Notes: (Skaven) tool"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Quality>"RULES-WEAPQ_SNARE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Size L/Lo, Notes: (Skaven) tool"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_IMPROVISED_SMALL">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_IMPROVISED_SMALL">
 <Description language="ENGLISH">"Improvised, Small (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-4"</Damage>
 <Encumbrance>"12"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–4"</Damage>
-<Qualities>"Size S, Clumsy"</Qualities>
-<Availability>"-"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size S, Clumsy"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_IMPROVISED_MEDIUM">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_IMPROVISED_MEDIUM">
 <Description language="ENGLISH">"Improvised, Medium (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Encumbrance>"35"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Size M, Clumsy"</Qualities>
-<Availability>"-"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size M, Clumsy"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_IMPROVISED_LARGE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_IMPROVISED_LARGE">
 <Description language="ENGLISH">"Improvised, Large (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Encumbrance>"105"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Size L, Clumsy"</Qualities>
-<Availability>"-"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size L, Clumsy"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_IMPROVISED_HUGE">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_IMPROVISED_HUGE">
 <Description language="ENGLISH">"Improvised, Huge (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
 <Encumbrance>"315"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–1"</Damage>
-<Qualities>"Size H/Lo, Clumsy, Impact, Slow"</Qualities>
-<Availability>"-"</Availability>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size H/Lo, Clumsy"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MELEE_WEAPONS_IMPROVISED_GIANT">
+</Weapon>
+<Weapon id="EXWP-COMB_V2_IMPROVISED_GIANT">
 <Description language="ENGLISH">"Improvised, Giant (EW)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"-"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Encumbrance>"999"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Size G/Lo, Clumsy, Impact, Slow"</Qualities>
-<Availability>"-"</Availability>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Size G/Lo, Clumsy"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_SHORTBOW">
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_SHORTBOW">
 <Description language="ENGLISH">"Shortbow (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"7 gc"</Cost>
-<Encumbrance>"75"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"3"</Damage>
-<Range>"16/32"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size M, 2-h"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Reach>"16/32"</Reach>
+<Price>"7CO"</Price>
+<Encumbrance>"75"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size M, 2-h"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_BOW">
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_BOW">
 <Description language="ENGLISH">"Bow (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"10 gc"</Cost>
-<Encumbrance>"80"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"3"</Damage>
-<Range>"24/48"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size L, 2-h"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Reach>"24/48"</Reach>
+<Price>"10CO"</Price>
+<Encumbrance>"80"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size L, 2-h"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_LONGBOW">
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_LONGBOW">
 <Description language="ENGLISH">"Longbow (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
-<Encumbrance>"90"</Encumbrance>
-<Group>"RULES-WTYPE2_LONGBOW"</Group>
-<Damage>"3"</Damage>
-<Range>"30/60"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size L, 2-h, Armour Piercing"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Reach>"30/60"</Reach>
+<Price>"15CO"</Price>
+<Encumbrance>"90"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_LONGBOW"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size L, 2-h"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_KISLEVITE_SHORT_BOW">
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_KISLEVITE_SHORT_BOW">
 <Description language="ENGLISH">"Kislevite Short Bow (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"10 gc"</Cost>
-<Encumbrance>"65"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"3"</Damage>
-<Range>"16/32"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size M, 2-h, Precise"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Reach>"16/32"</Reach>
+<Price>"10CO"</Price>
+<Encumbrance>"65"</Encumbrance>
+<Quality>"RULES-WEAPQ_PRECISE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size M, 2-h"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_KISLEVITE_HORSE_BOW">
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_KISLEVITE_HORSE_BOW">
 <Description language="ENGLISH">"Kislevite Horse Bow (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"20 gc"</Cost>
-<Encumbrance>"75"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"3"</Damage>
-<Range>"34/68"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size L, 2-h"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_ELFBOW">
-<Description language="ENGLISH">"Elfbow (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"70 gc"</Cost>
+<Reach>"34/68"</Reach>
+<Price>"20CO"</Price>
 <Encumbrance>"75"</Encumbrance>
-<Group>"RULES-WTYPE2_LONGBOW"</Group>
-<Damage>"3"</Damage>
-<Range>"36/72"</Range>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Size L, 2-h, Armour Piercing, Elfbow, Elven"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Other qualities: Size L, 2-h"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_HUGE_BOW">
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_ELFBOW">
+<Description language="ENGLISH">"Elfbow (EW)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"36/72"</Reach>
+<Price>"70CO"</Price>
+<Encumbrance>"75"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_LONGBOW"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size L, 2-h, Elfbow, Elven"</Note>
+<Page>"1"</Page>
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_HUGE_BOW">
 <Description language="ENGLISH">"Huge Bow (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"180"</Encumbrance>
-<Group>"RULES-WTYPE2_LONGBOW"</Group>
-<Damage>"4"</Damage>
-<Range>"40/80"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size H, 2-h, Armour Piercing, Impact"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+4"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"40/80"</Reach>
+<Encumbrance>"180"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_IMPACT"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_LONGBOW"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size H, 2-h"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_CROSSBOW_PISTOL">
+<Description language="ENGLISH">"Crossbow Pistol (EW)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+2"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Reach>"8/15"</Reach>
+<Price>"35CO"</Price>
+<Encumbrance>"25"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_CROSSBOW"</Type>
+<Reload>"Full"</Reload>
+<Note>"Other qualities: Size S, Special (2-h)"</Note>
+<Page>"1"</Page>
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_CROSSBOW">
+<Description language="ENGLISH">"Crossbow (EW)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+4"</Damage>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Reach>"24/48"</Reach>
+<Price>"25CO"</Price>
+<Encumbrance>"120"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"Full"</Reload>
+<Note>"Other qualities: Size L, Special (2-h)"</Note>
+<Page>"1"</Page>
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_REPEATER_CROSSBOW_10_BOLTS">
+<Description language="ENGLISH">"Repeater Crossbow (10 bolts) (EW)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+2"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"16/32"</Reach>
+<Price>"100CO"</Price>
+<Encumbrance>"150"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_CROSSBOW"</Type>
+<Reload>"special"</Reload>
+<Note>"Other qualities: Size M, Special (Magazine), Special (2-h)"</Note>
+<Page>"1"</Page>
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_OGRE_HARPOON_LAUNCHER">
+<Description language="ENGLISH">"Ogre Harpoon Launcher (EW)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+5"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"25/50"</Reach>
+<Encumbrance>"240"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"Full"</Reload>
+<Note>"Other qualities: Size H, Special (2-h)"</Note>
+<Page>"1"</Page>
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_BLOWGUN">
+<Description language="ENGLISH">"Blowgun (EW)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"8/16"</Reach>
+<Price>"2PA"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_BLOWGUN"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size T, Special (Blowgun), Special (2-h)"</Note>
+<Page>"1"</Page>
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_DART">
+<Description language="ENGLISH">"Dart (EW)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Reach>"8/16"</Reach>
+<Price>"4CO"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size T"</Note>
+<Page>"1"</Page>
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_SLING">
+<Description language="ENGLISH">"Sling (EW)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Reach>"16/32"</Reach>
+<Price>"4CO"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_SLING"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size T"</Note>
+<Page>"1"</Page>
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_STAFF_SLING">
+<Description language="ENGLISH">"Staff Sling (EW)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+4"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Reach>"24/48"</Reach>
+<Price>"6CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_SLING"</Type>
+<Reload>"Full"</Reload>
+<Note>"Other qualities: Size M, Special (2-h)"</Note>
+<Page>"1"</Page>
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_THROWING_STAR">
+<Description language="ENGLISH">"Throwing Star (EW)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Reach>"6/12"</Reach>
+<Price>"3CO"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size T"</Note>
+<Page>"1"</Page>
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_IMPROVISED_SMALL">
+<Description language="ENGLISH">"Improvised, Small (EW)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-4"</Damage>
+<Reach>"Per size"</Reach>
+<Encumbrance>"2"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size S, Clumsy"</Note>
+<Page>"1"</Page>
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_IMPROVISED_MEDIUM">
+<Description language="ENGLISH">"Improvised, Medium (EW)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
+<Reach>"Per size"</Reach>
+<Encumbrance>"10"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size M, Clumsy"</Note>
+<Page>"1"</Page>
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_IMPROVISED_LARGE">
+<Description language="ENGLISH">"Improvised, Large (EW)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
+<Reach>"Per size"</Reach>
+<Encumbrance>"50"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size L, Clumsy"</Note>
+<Page>"1"</Page>
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_IMPROVISED_HUGE">
+<Description language="ENGLISH">"Improvised, Huge (EW)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
+<Reach>"Per size"</Reach>
+<Encumbrance>"250"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size H, Clumsy"</Note>
+<Page>"1"</Page>
+</Weapon>
+<Weapon id="EXWP-PROJ_V2_IMPROVISED_GIANT">
+<Description language="ENGLISH">"Improvised, Giant (EW)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
+<Reach>"Per size"</Reach>
+<Encumbrance>"999"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Size G, Clumsy"</Note>
+<Page>"1"</Page>
+</Weapon>
+</DATA_WEAPON>
+<DATA_EQUIPMENT_V2>
 <EquipmentV2 id="EXWP-EQUI_MISCELLANEA_ARROW_NORMAL_5">
 <Description language="ENGLISH">"Arrow: Normal (5) (EW)"</Description>
 <Category>"RULES-EQCAT2_MISCELLANEA"</Category>
@@ -1480,58 +1887,6 @@
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
 <Page>"1"</Page>
 </EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_CROSSBOW_PISTOL">
-<Description language="ENGLISH">"Crossbow Pistol (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"35 gc"</Cost>
-<Encumbrance>"25"</Encumbrance>
-<Group>"RULES-WTYPE2_CROSSBOW"</Group>
-<Damage>"2"</Damage>
-<Range>"8/15"</Range>
-<Reload>"Full"</Reload>
-<Qualities>"Size S, Special (2-h)"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
-<Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_CROSSBOW">
-<Description language="ENGLISH">"Crossbow (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"25 gc"</Cost>
-<Encumbrance>"120"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"4"</Damage>
-<Range>"24/48"</Range>
-<Reload>"Full"</Reload>
-<Qualities>"Size L, Special (2-h)"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
-<Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_REPEATER_CROSSBOW_10_BOLTS">
-<Description language="ENGLISH">"Repeater Crossbow (10 bolts) (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"100 gc"</Cost>
-<Encumbrance>"150"</Encumbrance>
-<Group>"RULES-WTYPE2_CROSSBOW"</Group>
-<Damage>"2"</Damage>
-<Range>"16/32"</Range>
-<Reload>"special"</Reload>
-<Qualities>"Size M, Special (Magazine), Special (2-h)"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
-<Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_OGRE_HARPOON_LAUNCHER">
-<Description language="ENGLISH">"Ogre Harpoon Launcher (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"240"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"5"</Damage>
-<Range>"25/50"</Range>
-<Reload>"Full"</Reload>
-<Qualities>"Size H, Armour Piercing, Special (2-h)"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
-<Page>"1"</Page>
-</EquipmentV2>
 <EquipmentV2 id="EXWP-EQUI_MISCELLANEA_BOLTS_5">
 <Description language="ENGLISH">"Bolts (5) (EW)"</Description>
 <Category>"RULES-EQCAT2_MISCELLANEA"</Category>
@@ -1550,136 +1905,6 @@
 <Group>"RULES-WTYPE2_AMMUNITION"</Group>
 <Qualities>"Rope"</Qualities>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
-<Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_BLOWGUN">
-<Description language="ENGLISH">"Blowgun (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"2s"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_BLOWGUN"</Group>
-<Damage>"0"</Damage>
-<Range>"8/16"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size T, Special (Blowgun), Special (2-h)"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
-<Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_DART">
-<Description language="ENGLISH">"Dart (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"4 gc"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB–3"</Damage>
-<Range>"8/16"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size T"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
-<Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_SLING">
-<Description language="ENGLISH">"Sling (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"4 gc"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_SLING"</Group>
-<Damage>"3"</Damage>
-<Range>"16/32"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size T"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
-<Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_STAFF_SLING">
-<Description language="ENGLISH">"Staff Sling (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"6 gc"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_SLING"</Group>
-<Damage>"4"</Damage>
-<Range>"24/48"</Range>
-<Reload>"Full"</Reload>
-<Qualities>"Size M, Special (2-h)"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
-<Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_THROWING_STAR">
-<Description language="ENGLISH">"Throwing Star (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"3 gc"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB–3"</Damage>
-<Range>"6/12"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size T"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
-<Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_IMPROVISED_SMALL">
-<Description language="ENGLISH">"Improvised, Small (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"2"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB–4"</Damage>
-<Range>"Per size"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size S, Clumsy"</Qualities>
-<Availability>"-"</Availability>
-<Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_IMPROVISED_MEDIUM">
-<Description language="ENGLISH">"Improvised, Medium (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB–3"</Damage>
-<Range>"Per size"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size M, Clumsy"</Qualities>
-<Availability>"-"</Availability>
-<Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_IMPROVISED_LARGE">
-<Description language="ENGLISH">"Improvised, Large (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB–2"</Damage>
-<Range>"Per size"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size L, Clumsy"</Qualities>
-<Availability>"-"</Availability>
-<Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_IMPROVISED_HUGE">
-<Description language="ENGLISH">"Improvised, Huge (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"250"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB–1"</Damage>
-<Range>"Per size"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size H, Clumsy, Impact, Slow"</Qualities>
-<Availability>"-"</Availability>
-<Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="EXWP-EQUI_MISSILE_WEAPONS_IMPROVISED_GIANT">
-<Description language="ENGLISH">"Improvised, Giant (EW)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"-"</Cost>
-<Encumbrance>"999"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB+1"</Damage>
-<Range>"Per size"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Size G, Clumsy, Impact, Slow"</Qualities>
-<Availability>"-"</Availability>
 <Page>"1"</Page>
 </EquipmentV2>
 </DATA_EQUIPMENT_V2>

@@ -56,6 +56,36 @@ SOURCES = {
     "UNOFFICIAL_TOME_OF_CAREERS": "Tome of Careers V2.0a",
 }
 
+# Textes recopies a la main quand l'extraction automatique echoue (colonnes melangees dans le TXT, ou texte lu sur le
+# PDF). Prioritaires sur SOURCES. Ajoutes le 12/11/2026 (Academics Handbook : colonne « Disclaimer » de la page 1 ;
+# Swords of the South : page 2 « Legal Stuff » du PDF ; Spears of the Maiden : TXT l. 56-60 ; Araby : phrase de statut).
+MANUEL = {
+    "ACADEMICS_HANDBOOK": "This compendium is completely unofficial and in no way endorsed by Games Workshop Limited. "
+    "Chaos, the Chaos device, the Chaos logo, Citadel, Citadel Device, Darkblade, the Double-Headed/Imperial Eagle "
+    "device, 'Eavy Metal, Forge World, Games Workshop, Games Workshop logo, Golden Demon, Great Unclean One, GW, the "
+    "Hammer of Sigmar logo, Horned Rat logo, Keeper of Secrets, Khemri, Khorne, the Khorne logo, Lord of Change, "
+    "Nurgle, the Nurgle logo, Skaven, the Skaven symbol devices, Slaanesh, the Slaanesh logo, Tomb Kings, Trio of "
+    "Warriors, Twin Tailed Comet Logo, Tzeentch, the Tzeentch logo, Warhammer, Warhammer Online, Warhammer World logo, "
+    "White Dwarf, the White Dwarf logo, and all associated marks, names, races, race insignia, characters, vehicles, "
+    "locations, units, illustrations and images from the Warhammer world are either ®, TM and/or © Copyright Games "
+    "Workshop Ltd 2000-2007, variably registered in the UK and other countries around the world. Used without "
+    "permission. No challenge to their status intended. All Rights Reserved to their respective owners.",
+    "SWORDS_OF_THE_SOUTH": "This is a free product shared on the internet. It is not to be sold. Warhammer Fantasy "
+    "Roleplay, the Warhammer Fantasy Roleplay logo, WFRP, Chaos, Tzeentch, Warhammer, and all associated marks, names, "
+    "races, race insignia, characters, vehicles, locations, units, artefacts, illustrations and images from the "
+    "Warhammer world are either ®, TM and/or © Copyright Games Workshop Ltd 2000-2009, variably registered in the UK "
+    "and other countries around the world. Used without permission. No challenge to their status is intended. All "
+    "Rights Reserved to their respective owners.",
+    "SPEARS_OF_THE_MAIDEN": "This project has been compiled with all due respect to Games Workshop and the Licence "
+    "holders of the WFRP and Warhammer lines, all trademarks are the property of Games Workshop and this supplement is "
+    "intended to be entirely unofficial and in no way infringe upon these. The project conforms as much as possible to "
+    "the established background of the WFRP and GW Worlds and does so with the full acknowledgement of all "
+    "intellectual and legal copyright ownership over these worlds by Games Workshop and not the authors of this "
+    "project.",
+    "ARABY_SAND_AND_GOLD": "This is an unofficial rules supplement for Warhammer Fantasy Roleplay 2nd Edition and is "
+    "intended purely as a fan piece.",
+}
+
 MOTIFS_DEBUT = re.compile(r"completely unofficial|unofficial and in no way|Copyright\s*[©�]|[©�]\s*Copyright", re.I)
 MOTIFS_FIN = re.compile(r"respective owners|All rights reserved\.?\s*$|status (is )?intended|ownership to them", re.I)
 
@@ -97,26 +127,28 @@ def main():
         if not nom.startswith("BOOK_") or not nom.endswith(".Xml"):
             continue
         cle = nom[5:-4]
-        if cle not in SOURCES:
+        if cle not in SOURCES and cle not in MANUEL:
             continue
         chemin_xml = os.path.join(DB, nom)
         xml = open(chemin_xml, encoding="utf-8", newline="").read()
         if "<DISCLAIMER>" in xml:
             print("[deja]", cle)
             continue
-        srcs = trouver_source(SOURCES[cle])
-        if not srcs:
-            print("[source introuvable]", cle, "<-", SOURCES[cle])
-            continue
-        texte = ""
-        for s in srcs:
-            texte = extraire(s)
-            if texte:
-                break
+        texte = MANUEL.get(cle, "")
+        s = "(texte recopie a la main)"
+        if not texte:
+            srcs = trouver_source(SOURCES[cle])
+            if not srcs:
+                print("[source introuvable]", cle, "<-", SOURCES[cle])
+                continue
+            for s in srcs:
+                texte = extraire(s)
+                if texte:
+                    break
         if not texte:
             print("[pas de bloc legal]", cle, "(", os.path.basename(srcs[0]), ")")
             continue
-        print("[ok]", cle, "<-", os.path.basename(s))
+        print("[ok]", cle, "<-", os.path.basename(s) if os.sep in s else s)
         print("     ", texte[:260])
         if ecrire:
             m = re.search(r"<COMPLETE>[^\n]*</COMPLETE>(\r?\n)", xml)

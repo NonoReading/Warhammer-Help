@@ -126,11 +126,12 @@ var
   FiltreTalent:     String;
   FiltreAttribut:   String;
   FiltreBase:       Boolean = False;   // V1 / V2 : carrieres de base seulement
+  FiltreTalentOu:   Boolean = False;   // talents coches en OU (un seul suffit) au lieu de ET
   CheminClass:      String;
   ForceClose:       Boolean = false;
 implementation
 
-uses XmlExportImport;
+uses XmlExportImport, ChargeCreationTow;
 
 {$R *.lfm}
 
@@ -238,7 +239,8 @@ begin
 
   if FiltreTalent <> '' then
       begin
-        ResTalent := True;
+        // ET : tous les talents coches ; OU : un seul suffit
+        ResTalent := not FiltreTalentOu;
         Strings   := TStringList.Create;
         ExtractStrings([']'], [], PChar(FiltreTalent), Strings);
         for Ind := 0 to (Strings.count-1) Do
@@ -253,7 +255,15 @@ begin
                       break;
                     end;
               end;
-            if ResOneTalent = False then
+            if FiltreTalentOu then
+              begin
+                if ResOneTalent then
+                  begin
+                    ResTalent := True;
+                    break;
+                  end;
+              end
+            else if ResOneTalent = False then
               begin
                 ResTalent := False;
                 break;
@@ -417,7 +427,8 @@ begin
     finally
       LignesCode.Free;
     end;
-    for Col := NbColBase + 1 to NbColBase + NbColStat do
+    // Bornee au nombre reel de caracteristiques (9 en TOW), pas au maximum de 10.
+    for Col := NbColBase + 1 to NbColBase + NbStat do
       begin
         Vide := true;
         for Lig := 1 to TabMetier.RowCount - 1 do
@@ -448,7 +459,8 @@ begin
         FiltreTalent     := '';
         FiltreAttribut   := '';
         FiltreBase       := False;
-        ForceClose         := true;
+        FiltreTalentOu   := False;
+        ForceClose        := true;
         Close;
       end
     else
@@ -525,6 +537,8 @@ end;
 procedure TWinMetiers.FormCreate(Sender: TObject);
 begin
     FiltreLivre := SelectWinLivre;
+    // Lecture unique : sinon la valeur reste dans la globale et fuit vers la prochaine fenetre ouverte.
+    SelectWinLivre := '';
     TreeViewMetier1.OnDblClick := @TreeViewMetier1DblClick;
     TabMetier.OnCompareCells   := @TabMetierCompareCells;
     WinCharger();
@@ -712,11 +726,13 @@ begin
   SelectWinTalent     := FiltreTalent;
   SelectWinAttribut   := FiltreAttribut;
   SelectWinBase       := FiltreBase;
+  SelectWinTalentOu   := FiltreTalentOu;
   WinFiltreAppelant   := ConstXmlWork;
   FenFiltre           := TWinFiltre.Create(Application);
   FenFiltre.Position  := poOwnerFormCenter;
   FenFiltre.ShowModal;
   if (ChoixWinBase <> FiltreBase)
+     or (ChoixWinTalentOu <> FiltreTalentOu)
      or (ChoixWinLivre <> FiltreLivre)
      or (ChoixWinRace <> FiltreRace)
      or (ChoixWinGroupe <> FiltreGroupe)
@@ -729,6 +745,7 @@ begin
      FiltreTalent     := ChoixWinTalent;
      FiltreAttribut   := ChoixWinAttribut;
      FiltreBase       := ChoixWinBase;
+     FiltreTalentOu   := ChoixWinTalentOu;
      WinVider();
      WinCharger();
      if not ForceClose then
@@ -1399,8 +1416,132 @@ begin
       end;
 end;
 
+// The Old World : arbre d une carriere, lu dans chargecreationtow (pas de DATA_CAREER_* de V4/V5).
+// Chaque feuille porte son code dans Data, pour le texte de droite (TreeViewMetier1Change).
+procedure ChargeMetierTow(TreeViewMetier1: TTreeView; const CodeCarriere: String);
+var
+  Carrieres: TTowCarrieres;
+  Origines:  TTowOrigines;
+  C:         TTowCarriere;
+  I, K, P:   Integer;
+  Br, Sb:    TTreeNode;
+  Pl:        String;
+
+  function Feuille(Parent: TTreeNode; const Txt, Code: String): TTreeNode;
+  var D: TMyNodeData;
+  begin
+    Result            := TreeViewMetier1.Items.AddChild(Parent, Txt);
+    Result.ImageIndex := 0;
+    D                 := TMyNodeData.Create;
+    D.AdditionalData  := Code;
+    Result.Data       := D;
+  end;
+
+  procedure Emplacements(Parent: TTreeNode; const Slots: TTowSlots);
+  var S, J: Integer;
+  begin
+    for S := 0 to High(Slots) do
+      if Length(Slots[S]) = 1 then
+        Feuille(Parent, TowLibelleDe(Slots[S][0]), Slots[S][0])
+      else
+        begin
+          Sb            := TreeViewMetier1.Items.AddChild(Parent, ConstArbreAuChoix);
+          Sb.ImageIndex := 0;
+          for J := 0 to High(Slots[S]) do
+            Feuille(Sb, TowLibelleDe(Slots[S][J]), Slots[S][J]);
+        end;
+  end;
+
+begin
+  Carrieres := TowCarrieresCache;
+  Origines  := TowOriginesCache;
+  P := -1;
+  for I := 0 to High(Carrieres) do
+    if Carrieres[I].Code = CodeCarriere then P := I;
+  if P < 0 then Exit;
+  C := Carrieres[P];
+
+  // origines admises, avec la plage du d100 (rien = choix libre seulement)
+  Br            := TreeViewMetier1.Items.AddChild(Node, ConstArbreRacepossible);
+  Br.ImageIndex := 0;
+  for I := 0 to High(Origines) do
+    if TowCarriereAdmise(C, Origines[I].Code) then
+      begin
+        Pl := '';
+        for K := 0 to High(C.Plages) do
+          if (C.Plages[K].Origine = Origines[I].Code) and (C.Plages[K].De > 0) then
+            begin
+              if C.Plages[K].De = C.Plages[K].A then
+                Pl := ' : ' + IntToStr(C.Plages[K].De)
+              else
+                Pl := ' : ' + IntToStr(C.Plages[K].De) + '-' + IntToStr(C.Plages[K].A);
+            end;
+        Feuille(Br, Origines[I].Libelle + Pl, Origines[I].Code);
+      end;
+
+  // caracteristiques favorisees (3 par carriere)
+  if Length(C.Favoris) > 0 then
+    begin
+      Br            := TreeViewMetier1.Items.AddChild(Node, ConstArbreAttribut);
+      Br.ImageIndex := 0;
+      for K := 0 to High(C.Favoris) do
+        Feuille(Br, ChercheAttribut(C.Favoris[K]).Libelle, C.Favoris[K]);
+    end;
+
+  // statut de depart
+  Br := TreeViewMetier1.Items.AddChild(Node, 'Status');
+  Br.ImageIndex := 0;
+  Feuille(Br, C.Status, 'RULES-STATUS_' + C.Status);
+
+  // competences : N a monter de +1 parmi les candidates
+  Br            := TreeViewMetier1.Items.AddChild(Node, ConstArbreCompetence);
+  Br.ImageIndex := 0;
+  Sb            := TreeViewMetier1.Items.AddChild(Br, IntToStr(C.CompNb) + ' x ' + ConstArbreAuChoix + ' (+1)');
+  Sb.ImageIndex := 0;
+  for K := 0 to High(C.CompChoix) do
+    Feuille(Sb, TowLibelleDe(C.CompChoix[K]), C.CompChoix[K]);
+
+  if Length(C.LoreSlots) > 0 then
+    begin
+      Br            := TreeViewMetier1.Items.AddChild(Node, 'Lores');
+      Br.ImageIndex := 0;
+      Emplacements(Br, C.LoreSlots);
+    end;
+
+  if C.TalentCarriere <> '' then
+    begin
+      Br            := TreeViewMetier1.Items.AddChild(Node, ConstArbreTalent);
+      Br.ImageIndex := 0;
+      Feuille(Br, C.TalentCarriere, 'CAREER-TALENT:' + C.Code);
+    end;
+
+  if Length(C.Familles) > 0 then
+    begin
+      Br            := TreeViewMetier1.Items.AddChild(Node, GetTexteLibelle('RULES-MESS_141'));
+      Br.ImageIndex := 0;
+      for K := 0 to High(C.Familles) do
+        Feuille(Br, TowLibelleDe(C.Familles[K]), C.Familles[K]);
+    end;
+
+  if Length(C.TrappingSlots) > 0 then
+    begin
+      Br            := TreeViewMetier1.Items.AddChild(Node, ConstArbreEquipement);
+      Br.ImageIndex := 0;
+      Emplacements(Br, C.TrappingSlots);
+    end;
+
+  if Length(C.AssetSlots) > 0 then
+    begin
+      Br            := TreeViewMetier1.Items.AddChild(Node, GetTexteLibelle('RULES-MESS_140'));
+      Br.ImageIndex := 0;
+      Emplacements(Br, C.AssetSlots);
+    end;
+end;
+
 // sélectionner un métier
 procedure TWinMetiers.TabMetierSelection(Sender: TObject; aCol, aRow: Integer);
+  var
+    I, J, K: Integer;
   begin
       DeleteData(TreeViewMetier1,TreeViewMetier1.Items.GetFirstNode);
       TreeViewMetier1.Items.Clear;
@@ -1424,11 +1565,27 @@ procedure TWinMetiers.TabMetierSelection(Sender: TObject; aCol, aRow: Integer);
         end;
 
       // charger les éléments
-      ChargeRaceMetier();
-      ChargeAdaptationMetier();
-      ChargeMetierNiveau();
-      ChargeEnchainementMetier();
-      ChargeMetiersArtisan();
+      if ValVersion = 'WFRPTOW' then
+        begin
+          ChargeMetierTow(TreeViewMetier1, MetierEnCours);
+          // bande des caracteristiques : * sur les 3 favorisees de la carriere
+          for I := 1 to TabAttribut.ColCount - 1 do
+            TabAttribut.Cells[I, 1] := '';
+          for J := 0 to High(TowCarrieresCache) do
+            if TowCarrieresCache[J].Code = MetierEnCours then
+              for K := 0 to High(TowCarrieresCache[J].Favoris) do
+                for I := 1 to TabAttribut.ColCount - 1 do
+                  if TabAttribut.Cells[I, 2] = TowCarrieresCache[J].Favoris[K] then
+                    TabAttribut.Cells[I, 1] := '*';
+        end
+      else
+        begin
+          ChargeRaceMetier();
+          ChargeAdaptationMetier();
+          ChargeMetierNiveau();
+          ChargeEnchainementMetier();
+          ChargeMetiersArtisan();
+        end;
       TreeViewMetier1.FullExpand;
 
       // Les ethnies (sous chaque espece de la branche "races possibles") restent
@@ -1517,7 +1674,19 @@ Begin
         AffDescription.Text  := TabMetier.Cells[4, TabMetier.Row];
         // Obtenez le texte du nœud sélectionné
         NodeData             := TMyNodeData(Node.Data);
-        if Node <> TreeViewMetier1.Items.GetFirstNode then
+        if (ValVersion = 'WFRPTOW') and (Node <> TreeViewMetier1.Items.GetFirstNode) then
+          begin
+            // TOW : le code de la feuille est dans Data, libelle et texte viennent du livre TOW
+            AffType.text := Node.Parent.Text;
+            if Node.Data <> nil then
+              begin
+                AffCode.Text := NodeData.AdditionalData;
+                AffLib.Text  := TowLibelleDe(AffCode.Text);
+                if TowExplicationDe(AffCode.Text) <> '' then
+                  AffDescription.Text := TowExplicationDe(AffCode.Text);
+              end;
+          end
+        else if Node <> TreeViewMetier1.Items.GetFirstNode then
           begin
             CheminImage2   := '';
             AffType.text   := Node.Parent.Text;
@@ -1638,6 +1807,12 @@ Begin
               end;
           end;
        end;
+        if ValVersion = 'WFRPTOW' then
+          begin
+            // TOW : une seule illustration par carriere (chemin commun CheminMetierImage), rien d autre a cote
+            CheminImage1 := '';
+            CheminImage2 := '';
+          end;
         if CheminImage1 = '' then
            CheminImage3 := CheminMetierImage(MetierEnCours);
         if FileExists(CheminImage1) then

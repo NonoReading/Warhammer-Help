@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   SCHEMA_WFRP2.xsd
-  Schema de DATABASE/WFRP2/*.Xml (WFRP V2). Cree le 15/10/2026 (CONTEXT.md 2.122).
-  Le 16/10/2026 (CONTEXT.md 2.123, decision de mutualiser) il INCLUT SCHEMA_COMMON.xsd :
-  les donnees V2 qui ont la meme forme qu en V4 (caracteristiques, competences, talents)
-  utilisent les blocs V4 (DATA_ATTRIBUT, DATA_SKILL, DATA_TALENT) ; ici ne restent que les
-  ajouts propres a la V2 (carriere a un niveau, sorts, equipement, races).
+  Schema of DATABASE/WFRP2/*.Xml (WFRP V2).
+  It INCLUDES SCHEMA_COMMON.xsd: the V2 data that has the same shape as in V4 (characteristics,
+  skills, talents) uses the V4 blocks (DATA_ATTRIBUT, DATA_SKILL, DATA_TALENT); only the
+  V2-specific additions remain here (single-level career, spells, equipment, races).
+
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
@@ -17,11 +17,11 @@
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
       <xs:element name="Explanation" type="LangString"/>
-      <!-- Profils en texte tel que le livre : gains non nuls seulement ("WS +5%, Ag +5%"), "-" si aucun. -->
+      <!-- Profiles as text, as in the book: non-zero gains only ("WS +5%, Ag +5%"), "-" if none. -->
       <xs:element name="MainProfile" type="xs:string"/>
       <xs:element name="SecondaryProfile" type="xs:string"/>
-      <!-- Schema d avances en donnees (16/10/2026) : une ligne par gain non nul des deux profils, name =
-           caracteristique (RULES-ATTR_*), valeur telle que le livre (5 = +5 %, 2 = +2 Blessures). -->
+      <!-- Advance scheme as data: one line per non-zero gain of the two profiles, name =
+           characteristic (RULES-ATTR_*), value as in the book (5 = +5 %, 2 = +2 Wounds). -->
       <xs:element name="Advances" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
@@ -37,23 +37,25 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <!-- Listes en texte simple, tel que le livre les donne ("A or B" conserve). -->
-      <!-- Absentes quand le livre n en donne pas (Daemon Prince, carrieres sans materiel) : controle du 10/11/2026. -->
+      <!-- Plain-text lists, as the book gives them ("A or B" kept). -->
+      <!-- Absent when the book gives none (Daemon Prince, careers without equipment). -->
       <xs:element name="Skills" type="xs:string" minOccurs="0"/>
       <xs:element name="Talents" type="xs:string" minOccurs="0"/>
       <xs:element name="Trappings" type="xs:string" minOccurs="0"/>
-      <!-- Materiel de depart structure (forme V4 : Item name=code ou texte, niveau "1", quantite facultative), saisi pour quelques carrieres : structurer_trappings_v2.py. -->
-      <!-- Argent de depart en pieces (formule en couronnes d or : "15CO", "1d10CO"), a la place des lignes "15 gc" du materiel. -->
+      <!-- Structured starting equipment (V4 form: Item name=code or text, level "1", optional quantity), entered for a few careers. -->
+      <!-- Starting money in coins (formula in gold crowns: "15CO", "1d10CO"), in place of the "15 gc" lines of the equipment. -->
       <xs:element name="StartMoney" type="xs:string" minOccurs="0"/>
       <xs:element name="SUBCHAPTER_ITEM" type="SubchapterItem" minOccurs="0"/>
-      <!-- Competences et talents de carriere en codes (structurer_carrieres_v2.py) : Skill/Talent name=code ("A/B" choix, "CODE_*" a choisir), valeur "1". -->
+      <!-- Career skills and talents as codes: Skill/Talent name=code ("A/B" = choice, "CODE_*" = to be chosen), value "1". -->
       <xs:element name="SUBCHAPTER_SKILL" type="SubchapterSkill" minOccurs="0"/>
       <xs:element name="SUBCHAPTER_TALENT" type="SubchapterTalent" minOccurs="0"/>
-      <!-- Ni entrees ni sorties dans la carriere : les liens entre carrieres sont dans DATA_CAREER_LINK_V2. -->
-      <!-- "1" pour les 60 carrieres de BASE du Core (Table 3-2) ; absent sinon. -->
+      <!-- No entries or exits in the career: the links between careers are in DATA_CAREER_LINK_V2. -->
+      <!-- "1" for the 60 BASIC careers of the Core (Table 3-2); absent otherwise. -->
       <xs:element name="Basic" type="xs:string" minOccurs="0"/>
-      <!-- Livre d'origine d'une carriere reimprimee dans le Career Compendium : "ToS 194". -->
+      <!-- Source book of a career reprinted in the Career Compendium: "ToS 194". -->
       <xs:element name="Source" type="xs:string" minOccurs="0"/>
+      <!-- Races (or ethnic groups) the career is open to: one Specie per race code (Codex Greenskins: CGRK-SPECIE_*). -->
+      <xs:element name="Specie" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element name="Page" type="xs:string" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required"/>
@@ -65,7 +67,7 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- LIEN « CARRIERE 1 > CARRIERE 2 » (meme principe qu en V1) : on passe de la carriere name (code) a celle dont le code est la valeur. Entrees = liens qui arrivent, sorties = liens qui partent. Un lien est range dans le livre qui apporte la carriere la plus recente. -->
+  <!-- CAREER 1 > CAREER 2 LINK (same principle as in V1): one moves from the career name (code) to the one whose code is the value. Entries = links that arrive, exits = links that leave. A link is stored in the book that brings the most recent career. -->
   <xs:complexType name="CareerLinkV2Type">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -80,12 +82,12 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Competence V2 (Core, chapitre IV) : tout en texte. Description = nom, Explanation = texte du livre. -->
-  <!-- Competence V2 : forme V4 (SkillType) plus RelatedTalents, propre a la V2. Les talents V2
-       utilisent TalentType de SCHEMA_COMMON.xsd tel quel. -->
+  <!-- V2 skill (Core, chapter IV): everything as text. Description = name, Explanation = text of the book. -->
+  <!-- V2 skill: V4 form (SkillType) plus RelatedTalents, specific to V2. V2 talents
+       use TalentType of SCHEMA_COMMON.xsd as is. -->
   <xs:complexType name="SkillV2Type">
     <xs:sequence>
-      <!-- Vide pour une competence sans caracteristique fixe (Trade Various) : WinLivre n ecrit pas la balise vide. -->
+      <!-- Empty for a skill without a fixed characteristic (Trade Various): WinLivre does not write the empty tag. -->
       <xs:element name="Attribut" type="PlainString" minOccurs="0"/>
       <xs:element name="Description" type="LangString"/>
       <xs:element name="Explanation" type="LangString" minOccurs="0"/>
@@ -112,11 +114,11 @@
       <xs:element name="Ingredient" type="xs:string"/>
       <xs:element name="Page" type="xs:string" minOccurs="0"/>
       <xs:element name="SpellLists" type="xs:string" minOccurs="0"/>
-      <!-- Tome of Salvation : duree, portee et culte (vide pour les prieres de tous les pretres) -->
+      <!-- Tome of Salvation: duration, range and cult (empty for the prayers of all priests) -->
       <xs:element name="Duration" type="xs:string" minOccurs="0"/>
       <xs:element name="Range" type="xs:string" minOccurs="0"/>
       <xs:element name="Cult" type="xs:string" minOccurs="0"/>
-      <!-- Rituels (Lore "Rituals") : champs propres a la fiche d un rituel -->
+      <!-- Rituals (Lore "Rituals"): fields specific to a ritual sheet -->
       <xs:element name="RitualType" type="xs:string" minOccurs="0"/>
       <xs:element name="ArcaneLanguage" type="xs:string" minOccurs="0"/>
       <xs:element name="MagicMin" type="xs:string" minOccurs="0"/>
@@ -156,7 +158,7 @@
       <xs:element name="SpecialRules" type="xs:string" minOccurs="0"/>
       <xs:element name="Note" type="xs:string" minOccurs="0"/>
       <xs:element name="Page" type="xs:string" minOccurs="0"/>
-      <!-- Potions (Realms of Sorcery) : fabrication -->
+      <!-- Potions (Realms of Sorcery): crafting -->
       <xs:element name="LagTime" type="xs:string" minOccurs="0"/>
       <xs:element name="Volatility" type="xs:string" minOccurs="0"/>
       <xs:element name="IngredientCost" type="xs:string" minOccurs="0"/>
@@ -164,12 +166,12 @@
       <xs:element name="IngredientDifficulty" type="xs:string" minOccurs="0"/>
       <xs:element name="CreationDifficulty" type="xs:string" minOccurs="0"/>
       <xs:element name="CreationTime" type="xs:string" minOccurs="0"/>
-      <!-- Objets magiques (Realms of Sorcery) -->
+      <!-- Magic items (Realms of Sorcery) -->
       <xs:element name="AcademicKnowledge" type="xs:string" minOccurs="0"/>
       <xs:element name="Powers" type="xs:string" minOccurs="0"/>
       <xs:element name="SideEffects" type="xs:string" minOccurs="0"/>
       <xs:element name="History" type="xs:string" minOccurs="0"/>
-      <!-- Runes (Realms of Sorcery, chapitre VIII) -->
+      <!-- Runes (Realms of Sorcery, chapter VIII) -->
       <xs:element name="RuneType" type="xs:string" minOccurs="0"/>
       <xs:element name="InscriptionNumber" type="xs:string" minOccurs="0"/>
       <xs:element name="Empowerment" type="xs:string" minOccurs="0"/>
@@ -185,10 +187,10 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Marques des Dieux (Tome of Salvation, regle optionnelle p.242-247) : mutations divines, meme
-       principe que DATA_CORRUPTION_TABLE_PHYSICAL/MENTAL de la V4, mais une table PAR DIEU. Lore = le
-       lore divin (libelle RULES-SPELLV2_LORE_OF_*), il designe la table du personnage via son talent
-       Divine Lore. Les effets chiffres et permanents sont des ModifyCarac ; le reste est en texte. -->
+  <!-- Marks of the Gods (Tome of Salvation, optional rule p.242-247): divine mutations, same
+       principle as DATA_CORRUPTION_TABLE_PHYSICAL/MENTAL of V4, but one table PER GOD. Lore = the
+       divine lore (label RULES-SPELLV2_LORE_OF_*); it designates the character's table through its
+       Divine Lore talent. Numeric and permanent effects are ModifyCarac; the rest is text. -->
   <xs:complexType name="DivineMarkEntryType">
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
@@ -201,12 +203,15 @@
   </xs:complexType>
 
   <xs:complexType name="DataCorruptionTableDivineType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">MARKS OF THE GODS (Tome of Salvation): catalogue, one Corruption per mark, name = code, Lore = divine lore (RULES-SPELLV2_LORE_OF_*), which designates the character's table through its Divine Lore talent.</xs:documentation>
+    </xs:annotation>
     <xs:sequence>
       <xs:element name="Corruption" type="DivineMarkEntryType" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Plage D100 -> code d une marque, pour un lore divin donne. -->
+  <!-- D100 range -> code of a mark, for a given divine lore. -->
   <xs:complexType name="DivineMarkChanceType">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -217,16 +222,19 @@
   </xs:complexType>
 
   <xs:complexType name="DataCorruptionDivineChanceType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">D100 RANGES OF THE MARKS OF THE GODS: one Chance per range (name) and per lore (lore attribute), value = code of a Corruption of DATA_CORRUPTION_TABLE_DIVINE.</xs:documentation>
+    </xs:annotation>
     <xs:sequence>
       <xs:element name="Chance" type="DivineMarkChanceType" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Mutations du Chaos (Tome of Corruption, chapitre III, table 3-1 p.28-29) : un seul tirage D1000.
-       Description = nom, Explanation = texte de la mutation, Fear = points de peur (texte : "1", "0-1",
-       "1/2/3", "Varies"), MutationType = "Single" ou "Multiple N" (nombre de prises), Variations = variantes
-       et sous-tables en texte, Cosmetic = "1" pour une mutation purement esthetique. Les effets chiffres
-       sans de restent a lire en ModifyCarac (pas encore remplis). -->
+  <!-- Chaos Mutations (Tome of Corruption, chapter III, table 3-1 p.28-29): a single D1000 roll.
+       Description = name, Explanation = text of the mutation, Fear = fear points (text: "1", "0-1",
+       "1/2/3", "Varies"), MutationType = "Single" or "Multiple N" (number of takings), Variations = variants
+       and sub-tables as text, Cosmetic = "1" for a purely cosmetic mutation. Numeric effects
+       without dice remain to be read into ModifyCarac (not yet filled). -->
   <xs:complexType name="MutationEntryType">
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
@@ -235,7 +243,7 @@
       <xs:element name="MutationType" type="xs:string" minOccurs="0"/>
       <xs:element name="MutationBase" type="xs:string" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Mutation a effets differents selon le numero de la prise (Growth, Shrink) : les entrees de rang 2, 3... portent le code de la mutation de base ici. Elles ne figurent PAS dans la table de chance ; leur ordre dans le livre donne le rang (la 1re entree liee = 2e prise). A la prise N, le personnage recoit l'entree de rang N ; les effets des prises se cumulent.</xs:documentation>
+          <xs:documentation xml:lang="en">Mutation with different effects depending on the number of the taking (Growth, Shrink): the entries of rank 2, 3... carry the code of the base mutation here. They do NOT appear in the chance table; their order in the book gives the rank (the 1st linked entry = 2nd taking). At taking N, the character receives the entry of rank N; the effects of the takings add up.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="Variations" type="LangString" minOccurs="0"/>
@@ -247,13 +255,16 @@
   </xs:complexType>
 
   <xs:complexType name="DataCorruptionTableMutationType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">CHAOS MUTATIONS (Tome of Corruption, table 3-1): catalogue, one Corruption per mutation, name = code. Fear = fear points (text), MutationType = Single or Multiple N, Cosmetic = 1 if cosmetic, MutationBase = base mutation of a taking of rank 2, 3... (Growth, Shrink).</xs:documentation>
+    </xs:annotation>
     <xs:sequence>
       <xs:element name="Corruption" type="MutationEntryType" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Plage D1000 (attribut name, "001-005") -> code d une mutation. Attribut lore optionnel : absent pour la
-       table 3-1, nom du dieu (Khorne, Nurgle, Slaanesh, Tzeentch) pour les tables 3-2 a 3-5 (plages d100). -->
+  <!-- D1000 range (name attribute, "001-005") -> code of a mutation. Optional lore attribute: absent for
+       table 3-1, name of the god (Khorne, Nurgle, Slaanesh, Tzeentch) for tables 3-2 to 3-5 (d100 ranges). -->
   <xs:complexType name="MutationChanceType">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -264,6 +275,9 @@
   </xs:complexType>
 
   <xs:complexType name="DataCorruptionMutationChanceType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">CHAOS MUTATION RANGES: one Chance per range (name, 001-005 for the d1000 of table 3-1; lore attribute = god for the d100 tables 3-2 to 3-5), value = code of a Corruption of DATA_CORRUPTION_TABLE_MUTATION.</xs:documentation>
+    </xs:annotation>
     <xs:sequence>
       <xs:element name="Chance" type="MutationChanceType" maxOccurs="unbounded"/>
     </xs:sequence>

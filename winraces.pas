@@ -111,7 +111,7 @@ var
 
 implementation
 
-uses XmlExportImport;
+uses XmlExportImport, ChargeCreationTow;
 
 {$R *.lfm}
 
@@ -293,7 +293,8 @@ begin
         // Seules les caracteristiques tirees au de (2d10+20, ...) ont une colonne : pas les valeurs fixes
         // (Mouvement, Attaques, Magie, Folie...), quelle que soit la version.
         For PAttribut in ListeAttribut do
-          If (Nb < 10) and AttributTireAuDe(PAttribut.CodeAttribut) then
+          // TOW : valeurs de depart fixes, une colonne par caracteristique (9)
+          If (Nb < 10) and ((ValVersion = 'WFRPTOW') or AttributTireAuDe(PAttribut.CodeAttribut)) then
             begin
               TabAttribut.Columns.Add;
               TabAttribut.Columns[Nb].Alignment       := taCenter;
@@ -703,6 +704,114 @@ Begin
     Tirage.Free;
 end;
 
+// The Old World : arbre d une origine, lu dans chargecreationtow (le livre TOW n a pas de DATA_RACE_*).
+// Chaque feuille porte son code dans Data, pour le texte de droite (TreeViewRaceChange).
+procedure ChargeRaceTow(TreeViewRace: TTreeView; const CodeOrigine: String);
+var
+  Origines:  TTowOrigines;
+  Carrieres: TTowCarrieres;
+  O:         TTowOrigine;
+  I, K, P:   Integer;
+  Br, Sb:    TTreeNode;
+  Texte, Pl: String;
+
+  function Feuille(Parent: TTreeNode; const Txt, Code: String): TTreeNode;
+  var D: TMyNodeData;
+  begin
+    Result            := TreeViewRace.Items.AddChild(Parent, Txt);
+    Result.ImageIndex := 0;
+    D                 := TMyNodeData.Create;
+    D.AdditionalData  := Code;
+    Result.Data       := D;
+  end;
+
+  function Plage(De, A: Integer): String;
+  begin
+    if De = A then Result := IntToStr(De) else Result := IntToStr(De) + '-' + IntToStr(A);
+  end;
+
+  // Un emplacement : un seul code = fixe ; plusieurs = « au choix », une feuille par option.
+  procedure Emplacement(Parent: TTreeNode; const Slot: array of String);
+  var J: Integer;
+  begin
+    if Length(Slot) = 1 then
+      Feuille(Parent, TowLibelleDe(Slot[0]), Slot[0])
+    else
+      begin
+        Sb            := TreeViewRace.Items.AddChild(Parent, ConstArbreAuChoix);
+        Sb.ImageIndex := 0;
+        for J := 0 to High(Slot) do
+          Feuille(Sb, TowLibelleDe(Slot[J]), Slot[J]);
+      end;
+  end;
+
+begin
+  Origines := TowOriginesCache;
+  Carrieres := TowCarrieresCache;
+  P := -1;
+  for I := 0 to High(Origines) do
+    if Origines[I].Code = CodeOrigine then P := I;
+  if P < 0 then Exit;
+  O := Origines[P];
+
+  // caracteristiques de depart (et maximum)
+  Br            := TreeViewRace.Items.AddChild(Node, ConstArbreAttribut);
+  Br.ImageIndex := 0;
+  for K := 1 to TowNbCarac do
+    begin
+      Texte := ChercheAttribut(TowCodesCarac[K]).Libelle + ' : ' + IntToStr(O.Depart[K]);
+      if O.Maximum[K] > 0 then Texte := Texte + ' (max ' + IntToStr(O.Maximum[K]) + ')';
+      Feuille(Br, Texte, TowCodesCarac[K]);
+    end;
+
+  // competences : fixes au rang de l origine, plus N au choix
+  Br            := TreeViewRace.Items.AddChild(Node, ConstArbreCompetence);
+  Br.ImageIndex := 0;
+  for K := 0 to High(O.CompFixes) do
+    Feuille(Br, TowLibelleDe(O.CompFixes[K]) + ' : ' + IntToStr(O.CompRang), O.CompFixes[K]);
+  if O.CompLibres > 0 then
+    Feuille(Br, IntToStr(O.CompLibres) + ' x ' + ConstArbreAuChoix + ' : ' + IntToStr(O.CompRang), '');
+
+  // lores
+  if Length(O.LoreSlots) > 0 then
+    begin
+      Br            := TreeViewRace.Items.AddChild(Node, 'Lores');
+      Br.ImageIndex := 0;
+      for K := 0 to High(O.LoreSlots) do
+        Emplacement(Br, O.LoreSlots[K]);
+    end;
+
+  // talents : fixes, puis table du d10
+  Br            := TreeViewRace.Items.AddChild(Node, ConstArbreTalent);
+  Br.ImageIndex := 0;
+  for K := 0 to High(O.TalentsFixes) do
+    Feuille(Br, TowLibelleDe(O.TalentsFixes[K]), O.TalentsFixes[K]);
+  if O.TalentTirages > 0 then
+    begin
+      Sb            := TreeViewRace.Items.AddChild(Br, IntToStr(O.TalentTirages) + ' x d10');
+      Sb.ImageIndex := 0;
+      for K := 0 to High(O.TableTalents) do
+        Feuille(Sb, Plage(O.TableTalents[K].De, O.TableTalents[K].A) + ' : ' + TowLibelleDe(O.TableTalents[K].Code),
+                O.TableTalents[K].Code);
+    end;
+  if (O.Echange <> '') and (O.Echange <> 'NONE') and (O.TalentEchange <> '') then
+    Feuille(Br, O.Echange + ' : ' + TowLibelleDe(O.TalentEchange), O.TalentEchange);
+
+  // carrieres accessibles : plage du d100 pour cette origine (0-0 = choix libre seulement)
+  Br            := TreeViewRace.Items.AddChild(Node, ConstArbreMetierPossible);
+  Br.ImageIndex := 0;
+  for I := 0 to High(Carrieres) do
+    if TowCarriereAdmise(Carrieres[I], CodeOrigine) then
+      begin
+        Pl := '';
+        for K := 0 to High(Carrieres[I].Plages) do
+          if Carrieres[I].Plages[K].Origine = CodeOrigine then
+            if Carrieres[I].Plages[K].De > 0 then
+              Pl := ' : ' + Plage(Carrieres[I].Plages[K].De, Carrieres[I].Plages[K].A);
+        Feuille(Br, Carrieres[I].Libelle + Pl, Carrieres[I].Code);
+      end;
+end;
+
 // Niveau 1 : charger les Corruption
 procedure ChargeRaceCorruptionCreation(TreeViewRace: TTreeView);
 var
@@ -779,6 +888,8 @@ begin
 end;
 
 procedure TWinRace.TabRaceSelection(Sender: TObject; aCol, aRow: Integer);
+var
+  I, J, K: Integer;
 begin
   DeleteData(TreeViewRace,TreeViewRace.Items.GetFirstNode);
   TreeViewRace.Items.Clear;
@@ -795,13 +906,30 @@ begin
   AffRace.Text    := TabRace.Cells[3,aRow];
 
   // charger les éléments
-  ChargeRaceAttribut();
-  ChargeRaceCompetence(TreeViewRace);
-  // V1 : pas de talents (ils viennent de la V2)
-  if ValVersion <> 'WFRP1' then
-    ChargeRaceTalent(TreeViewRace);
-  ChargeRaceMetier(TreeViewRace);
-  ChargeRaceCorruptionCreation(TreeViewRace);
+  if ValVersion = 'WFRPTOW' then
+    begin
+      // TOW : donnees d origine propres au livre, pas de corruption a la creation
+      ChargeRaceTow(TreeViewRace, RaceEnCours);
+      // valeurs de depart dans le tableau des caracteristiques
+      for I := 1 to TabAttribut.ColCount - 1 do
+        TabAttribut.Cells[I, 1] := '';
+      for J := 0 to High(TowOriginesCache) do
+        if TowOriginesCache[J].Code = RaceEnCours then
+          for I := 1 to TabAttribut.ColCount - 1 do
+            for K := 1 to TowNbCarac do
+              if TabAttribut.Cells[I, 2] = TowCodesCarac[K] then
+                TabAttribut.Cells[I, 1] := IntToStr(TowOriginesCache[J].Depart[K]);
+    end
+  else
+    begin
+      ChargeRaceAttribut();
+      ChargeRaceCompetence(TreeViewRace);
+      // V1 : pas de talents (ils viennent de la V2)
+      if ValVersion <> 'WFRP1' then
+        ChargeRaceTalent(TreeViewRace);
+      ChargeRaceMetier(TreeViewRace);
+      ChargeRaceCorruptionCreation(TreeViewRace);
+    end;
 
   // mise en forme
   TreeViewRace.FullExpand;
@@ -872,7 +1000,19 @@ Begin
       AffDescription.Text  := TabRace.Cells[4, TabRace.Row];
       AffDescription.Text  := AffDescription.Text + AfficherOpinionsRace(ChercheRace(RaceEnCours).Espece);  // opinions de la RACE de l'ethnie
       // Obtenez le texte du nœud sélectionné
-      if Node <> TreeViewRace.Items.GetFirstNode then
+      if (ValVersion = 'WFRPTOW') and (Node <> TreeViewRace.Items.GetFirstNode) then
+        begin
+          // TOW : le code de la feuille est dans Data, libelle et texte viennent du livre TOW
+          AffType.Text := Node.Parent.Text;
+          if Node.Data <> nil then
+            begin
+              AffCode.Text  := TMyNodeData(Node.Data).AdditionalData;
+              AffLibelle.Text := TowLibelleDe(AffCode.Text);
+              if TowExplicationDe(AffCode.Text) <> '' then
+                AffDescription.Text := TowExplicationDe(AffCode.Text);
+            end;
+        end
+      else if Node <> TreeViewRace.Items.GetFirstNode then
         begin
             CheminImage2   := '';
             AffType.text   := Node.Parent.Text;

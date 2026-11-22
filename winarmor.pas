@@ -87,6 +87,7 @@ end;
 procedure TWinArmors.FormCreate(Sender: TObject);
   begin
     FiltreLivre := SelectWinLivre;
+    SelectWinLivre := '';   // lecture unique (pas de fuite vers la fenetre suivante)
     CheckBoxSimplified.Checked := SelectWinQuickArmor;
     WinCharger();
     // Ancrage proportionnel, meme regle que WinRace (voir AncrageProportionnel).

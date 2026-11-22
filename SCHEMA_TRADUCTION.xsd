@@ -1,24 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   SCHEMA_TRADUCTION.xsd
-  Schema d un LIVRE DE TRADUCTION : un livre qui ne porte que des libelles traduits, jamais de
-  donnee de jeu. Un livre est une traduction s il porte la balise d en-tete TRANSLATION_OF
-  (CODE_BOOK du livre source) ; c est cette balise qui choisit ce schema plutot que
+  Schema of a TRANSLATION BOOK: a book that carries only translated labels, never any
+  game data. A book is a translation if it carries the header tag TRANSLATION_OF
+  (CODE_BOOK of the source book); that tag is what selects this schema rather than
   SCHEMA_WFRP4/WFRP5.
 
-  Regles :
-  - chaque element traduit ne garde que sa cle (id, ou name pour Affliction, Corruption,
-    Disease) et des balises texte portant language= ;
-  - aucun chapitre de donnees de jeu (modificateurs, prix, tirages...) n est accepte ;
-  - l ordre des chapitres et des elements est libre (un livre de traduction peut etre
-    partiel) ; les codes doivent rester uniques dans un chapitre.
-  Le texte lui-meme reste entre guillemets droits comme dans les livres normaux.
+  Rules:
+  - each translated element keeps only its key (id, or name for Affliction, Corruption,
+    Disease) and text tags carrying language=;
+  - no game-data chapter (modifiers, prices, rolls...) is accepted;
+  - the order of chapters and elements is free (a translation book may be
+    partial); codes must stay unique within a chapter.
+  The text itself stays between straight quotation marks, as in normal books.
+
+  What is translated, chapter by chapter (key = id, or name where stated):
+  - DATA_SPELL (Sort), DATA_WEAPON, DATA_ARMOR, DATA_ARMOR_SIMP: Description (the name); Sort and
+    the bonuses also carry Explanation. The values (Target, Duration, Range, Damage, prices...)
+    are not translated: they stay in the source book.
+  - DATA_WEAPON_BONUS / DATA_ARMOR_BONUS (BonusMalus): Description, Explanation, Short.
+  - DATA_CRAFTMANSHIP: Description, Explanation, Short.
+  - DATA_STARSIGN: Description, Title, Appearance, Personality (Range, Classical, Ascendant, Dates,
+    God stay in the source book).
+  - DATA_DISEASE (key name): Description, Contraction, Incubation, Duration, Symptoms.
+  - DATA_AFFLICTION (key name): Description, Explanation.
+  - DATA_CORRUPTION_TABLE_* (Corruption, key name): Description, Explanation. The chapters
+    DATA_CORRUPTION_PHYSICAL / MENTAL and their *_CHANCE (d100 ranges) are not translated.
+  - DATA_OPTION_RULE and DATA_RULE: Description, Explanation. Code (OptionRule) is not translated
+    and therefore does not appear in a translation book.
+  No Page in a translation book: the page stays that of the source book.
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified">
 
-  <!-- Texte traduit : attribut language obligatoire (langue du livre de traduction) -->
+  <!-- Translated text: mandatory language attribute (language of the translation book) -->
   <xs:complexType name="TexteTraduit">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -27,7 +43,7 @@
     </xs:simpleContent>
   </xs:complexType>
 
-  <!-- Balises de texte traduisibles (union de tout le corpus, releve le 08/10/2026) -->
+  <!-- Translatable text tags (union of the whole corpus) -->
   <xs:group name="TextesTraduisibles">
     <xs:choice>
       <xs:element name="Description" type="TexteTraduit"/>
@@ -45,26 +61,26 @@
     </xs:choice>
   </xs:group>
 
-  <!-- Element traduit, cle id -->
+  <!-- Translated element, key id -->
   <xs:complexType name="ElementParId">
     <xs:group ref="TextesTraduisibles" minOccurs="1" maxOccurs="unbounded"/>
     <xs:attribute name="id" type="xs:string" use="required"/>
   </xs:complexType>
 
-  <!-- Element traduit, cle name (Affliction, Corruption, Disease) -->
+  <!-- Translated element, key name (Affliction, Corruption, Disease) -->
   <xs:complexType name="ElementParNom">
     <xs:group ref="TextesTraduisibles" minOccurs="1" maxOccurs="unbounded"/>
     <xs:attribute name="name" type="xs:string" use="required"/>
   </xs:complexType>
 
-  <!-- Niveaux d un metier -->
+  <!-- Levels of a career -->
   <xs:complexType name="NiveauxType">
     <xs:sequence>
       <xs:element name="Level" type="ElementParId" minOccurs="1" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Metier : textes + niveaux -->
+  <!-- Career: texts + levels -->
   <xs:complexType name="MetierTraduit">
     <xs:choice minOccurs="1" maxOccurs="unbounded">
       <xs:group ref="TextesTraduisibles"/>
@@ -73,7 +89,7 @@
     <xs:attribute name="id" type="xs:string" use="required"/>
   </xs:complexType>
 
-  <!-- Trait d espece : textes + options -->
+  <!-- Species trait: texts + options -->
   <xs:complexType name="TraitEspeceTraduit">
     <xs:choice minOccurs="1" maxOccurs="unbounded">
       <xs:group ref="TextesTraduisibles"/>
@@ -82,7 +98,7 @@
     <xs:attribute name="id" type="xs:string" use="required"/>
   </xs:complexType>
 
-  <!-- Libelles : DATA_LABEL/Label language=/Text name= -->
+  <!-- Labels: DATA_LABEL/Label language=/Text name= -->
   <xs:complexType name="TexteLibelle">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -104,7 +120,7 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Fabrique de chapitres : un chapitre = une liste d elements de meme balise -->
+  <!-- Chapter factory: one chapter = a list of elements with the same tag -->
   <xs:complexType name="ChapitreAttribut"><xs:sequence><xs:element name="Attribut" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
   <xs:complexType name="ChapitreArmor"><xs:sequence><xs:element name="Armor" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
   <xs:complexType name="ChapitreArmorSimp"><xs:sequence><xs:element name="ArmorSimp" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
@@ -129,7 +145,7 @@
   <xs:complexType name="ChapitreTrapping"><xs:sequence><xs:element name="Trapping" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
   <xs:complexType name="ChapitreWeapon"><xs:sequence><xs:element name="Weapon" type="ElementParId" maxOccurs="unbounded"/></xs:sequence></xs:complexType>
 
-  <!-- Livre de traduction -->
+  <!-- Translation book -->
   <xs:element name="DATA_BOOK">
     <xs:complexType>
       <xs:sequence>
@@ -174,7 +190,7 @@
       </xs:sequence>
     </xs:complexType>
 
-    <!-- Un code ne se traduit qu une fois par chapitre (Level, Option : unicite dans leur parent) -->
+    <!-- A code is translated only once per chapter (Level, Option: uniqueness within their parent) -->
     <xs:unique name="LabelTexteUnique">
       <xs:selector xpath="DATA_LABEL/Label/Text"/>
       <xs:field xpath="@name"/>

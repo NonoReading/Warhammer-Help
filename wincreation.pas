@@ -6,7 +6,7 @@ interface
 
 uses
   PdfUtils,
-  Classes, SysUtils, StrUtils, Math, Forms, Controls, Graphics, Dialogs, MessageTest, ExtCtrls, Grids,
+  Windows, LCLType, Classes, SysUtils, StrUtils, Math, Forms, Controls, Graphics, Dialogs, MessageTest, ExtCtrls, Grids,
   ComCtrls, StdCtrls, CheckLst, Spin, Buttons, GuideAide, ChargeConstantes,ChargeEspece, GlobalFonts, ChargeRace,
   ChargeRegle, ChargeTirageMetier, ChargeSigneAstral, WinOptionRegle,
   Types, ChargeMetier, ChargeAttribut, ChargeRaceAttribut, ChargeMetierNiveau,
@@ -14,8 +14,8 @@ uses
   ChargeTalentCreation, ChargeRaceCompetence, ChargeCompetence, ChargeRaceCreation,
   ChargeMetierCompetence, ChargeArme, ChargeArmure, ChargeTrapping, ChargeMetierEquipement, ChargeClassEquipement, ChargeFabrication,
   WinMetier, WinRaces, ChargeTexte, WinTalent, WinCompetence, ChargeLivre,
-  ChargeMetierSousMetier, ChargeMetierRaceChoixMetier, WinSpecialisation,
-  ChargeMetierTalent, ChargePersonnage, WinJetPathologie, BGRABitmap, BGRABitmapTypes, BCButton,
+  ChargeMetierSousMetier, ChargeMetierRaceChoixMetier, ChargeRaceMetier, WinSpecialisation,
+  ChargeMetierTalent, ChargePersonnage, ChargeCreationTow, ChoixOption, XmlExportImport, WinJetPathologie, BGRABitmap, BGRABitmapTypes, BCButton,
   BCLabel, WinLanceDe, WinPhysique, ChargeRacePhysique, BCLabelContour, Menus, WinMutation, CreationV1, FenetreApprentissageV1;
 
 type
@@ -234,6 +234,8 @@ type
 
     // XML
     function XmlCalculXp(): Integer;
+    function BonusHasardV5(const Code: String): Integer;
+    function PlafondCompetenceMetierV5(IndLigne: Integer): Integer;
 
     // Race
     procedure ChargeTabRaces(Livre: String='');
@@ -299,6 +301,63 @@ type
       const {%H-}Value: string);
     procedure TabAttributLanceDeClickCombo();
     function RepartitionMax(): Integer;
+    function PlafondBonusCaracV5(): Integer;
+    function TotalBonusCaracV5(): Integer;
+    function BonusCaracV5Possible(): Boolean;
+    procedure MajLabBonusV5();
+    procedure TabAttributEditingDone({%H-}Sender: TObject);
+    // The Old World : caracteristiques de depart de l origine + trois +1 (Player's Guide p.13)
+    procedure TabAttributDblClick({%H-}Sender: TObject);
+    procedure TowRecalculeAttributs();
+    procedure TowInitAttributs();
+    procedure TowTireAttributs();
+    function  TowIndexOrigine(): Integer;
+    // The Old World : talents d origine (fixes, d10 sans doublon, echange)
+    procedure TowInitTalents();
+    procedure TowTireTalents();
+    procedure TowPoseSaisieTalents();
+    procedure TowCreeSaisieDe(Onglet: TTabSheet; const Prefixe, Aide, LibAjoute, LibRetire: String; MaxDe: Integer;
+                              ClicAjoute, ClicRetire: TNotifyEvent; out Lab: TLabel; out Spin: TSpinEdit;
+                              out BAjoute, BRetire: TBCButton);
+    procedure TowPoseSaisieContacts();
+    procedure TowContactParD100(D100: Integer);
+    procedure ButtonTowContactDeClick(Sender: TObject);
+    procedure ButtonTowContactRetireClick(Sender: TObject);
+    procedure TowPoseSaisiePlus();
+    procedure TowPlusParD10(D10: Integer);
+    procedure ButtonTowPlusDeClick(Sender: TObject);
+    procedure ButtonTowPlusRetireClick(Sender: TObject);
+    procedure TowTalentParD10(D10: Integer);
+    procedure ButtonTowTalentDeClick(Sender: TObject);
+    procedure ButtonTowTalentRetireClick(Sender: TObject);
+    procedure TowAfficheTalents();
+    // The Old World : competences d origine (fixes + N au choix, meme rang)
+    procedure TowInitCompRace();
+    procedure TowAfficheCompRace();
+    procedure TowTireCompRace();
+    function  TowCompLibresVoulues(): Integer;
+    // The Old World : competences de carriere (+1 sur N des 6 candidates) et lores (origine + carriere)
+    procedure TowInitCompMetier();
+    procedure TowAfficheCompMetier();
+    procedure TowTireCompMetier();
+    function  TowIndexCarriere(): Integer;
+    function  TowNbSlotsLore(): Integer;
+    function  TowSlotsLore(Index: Integer): TStringArray;
+    function  TowLoresComplets(): Boolean;
+    // The Old World : equipement, atouts, contacts et sorts de depart
+    procedure TowInitEquip();
+    procedure TowAfficheEquip();
+    procedure TowTireEquip(Contacts: Boolean);
+    procedure TowRelanceContact(Index: Integer);
+    function  TowEquipComplet(): Boolean;
+    procedure TowMajRecap();
+    procedure TowInitNom();
+    procedure TowBonusChange(Sender: TObject);
+    procedure TowNomHasardClick(Sender: TObject);
+    procedure TowPoseSaisieOrigine();
+    procedure TowOrigineParD10(D10: Integer);
+    function TowPrepareSauvegarde(out XpTotal, XpActuel: Integer): Boolean;
+    procedure TowPoseDebutPersonnage;
 
     // Talent
     //function TalentTest(Num: Integer; Code: String; Hasard: Boolean): Boolean;
@@ -344,8 +403,11 @@ type
     ButtonArgent:   TBCButton;
     EditArgent:     TEdit;
     FormuleArgent:  String;
+    UniteArgentV5:  Integer;   // 0 laiton, 1 argent, 2 or (V5)
     FEditingCol: Integer;
     FEditingRow: Integer;
+    // V5 : points de depart ajoutes aux 3 caracteristiques de la carriere (par ligne de TabAttribut)
+    BonusCaracV5: array[1..10] of Integer;
     // Phase intermediaire "Background" (Liber Fanatica : DATA_RULE_BACKGROUND, _COUNT, _SKILL_ROLL, _TALENT_ROLL),
     // creee en code : d100 du background, d10 du nombre de competences/talents, tirages, puis ajout au personnage
     TabSheetFond:   TTabSheet;
@@ -370,6 +432,7 @@ type
     procedure AppliqueFond();
     procedure ButtonArgentClick(Sender: TObject);
     procedure AfficheArgentDepart();
+    procedure AfficheArgentDepartV5();
     procedure EditJetNomChange(Sender: TObject);
     procedure EditJetNomKeyPress(Sender: TObject; var Key: Char);
     // V1 : etapes de creation posees sur les onglets (voir CreationV1.pas)
@@ -396,6 +459,9 @@ Const
 
 var
   WinCreations:                  TWinCreations;
+  // --script : si renseigne, chaque ShowMessage de la creation y est aussi note (le texte des boites
+  // systeme n est pas lisible de l exterieur). La boite reste affichee (le script la ferme).
+  JournalMessages:               TStrings = nil;
 
   // Phases
   PhaseEnCours:                  Integer = 0;
@@ -533,6 +599,55 @@ var
   JetBlessureV2, JetDestinV2, JetMouvementV2: Integer;   // d10 des tables V2 2-2 et 2-3, et du Mouvement en table (familier cree) (0 = pas tire)
   ClemenceRow: Integer = 0;               // V2 : ligne remplacee par la Clemence de Shallya (0 = non utilisee)
   ButtonClemence: TBCButton = nil;
+  TowPlus:        array[1..TowNbCarac] of Integer;   // 1 = caracteristique augmentee de +1 (3 au total)
+  TowSauveTalents: array of StructurePersonnageTalent;   // talents / lores de Personnage a la fin de la phase 6
+  TowSauveLores:   array of StructurePersonnageLoreTow;  // (avant le talent de carriere de la phase 7, repose a chaque validation)
+  TowOrigAttr:    String = '';                     // origine pour laquelle TowPlus a ete rempli
+  TowOrigineTiree:  Boolean = False;                 // origine venue d un d10 (+1 XP, phase finale)
+  TowCarriereTiree: Boolean = False;                 // carriere venue d un d100 (+1 XP, phase finale)
+  TowPlusHasard:  Boolean = False;                  // les trois +1 viennent du tirage (+1 XP, phase finale)
+  TowTalOrig:     String = '';                       // origine pour laquelle les talents ont ete tires
+  TowTalTires:    array of String;                   // talents tires au d10 (avant echange)
+  TowTalEchange:  Integer = -1;                      // index (dans TowTalTires) du talent remplace, -1 = aucun
+  TowTalFait:     Boolean = False;                   // le tirage des talents d origine est fait
+  TowCompOrig:    String = '';                       // origine pour laquelle les competences libres ont ete choisies
+  TowCompLibres:  array of String;                   // competences libres choisies (codes)
+  TowMetOrig:     String = '';                       // origine|carriere pour lesquelles les choix de la phase 6 ont ete faits
+  TowCompCar:     array of String;                   // competences de carriere augmentees (codes)
+  TowLoreChoix:   array of String;                   // lore choisi par emplacement (origine puis carriere), '' = pas encore
+  TowEqOrig:      String = '';                       // origine|carriere pour lesquelles la phase 7 a ete remplie
+  TowEqChoix:     array of String;                   // objet choisi par emplacement d equipement
+  TowAtChoix:     array of String;                   // atout choisi par emplacement
+  TowContFam:     array of String;                   // contacts tires : famille, PNJ, relation
+  TowContNpc:     array of String;
+  TowContTxt:     array of String;
+  TowSortsCodes:  array of String;                   // sorts de depart (Arcane / Hedge Wizard)
+  TowPrecCarriere: String = '';                      // precision du Career Talent (Magic Lore du Wizard ou dieu du Priest)
+  TowRelCache:    TTowRelations;
+  TowSortCache:   TTowSorts;
+  TowRelCharge:   Boolean = False;
+  LabTowAideContact: TLabel = nil;                   // phase 7 : saisie des d100 des contacts (table choisie dans la liste)
+  EditTowContactDe: TSpinEdit = nil;
+  ButtonTowContactDe: TBCButton = nil;
+  ButtonTowContactRetire: TBCButton = nil;
+  ComboTowContactTable: TComboBox = nil;
+  LabTowAidePlus: TLabel = nil;                     // phase 3 : meme ensemble pour les trois +1 aux caracteristiques
+  EditTowPlusDe: TSpinEdit = nil;
+  ButtonTowPlusDe: TBCButton = nil;
+  ButtonTowPlusRetire: TBCButton = nil;
+  LabTowAideCompMet: TLabel = nil;                  // phase 6 : aide et compteur des +1 de carriere
+  LabTowAideComp:   TLabel = nil;                  // phase 5 : aide et compteur des competences libres d origine
+  LabTowAideTalent: TLabel = nil;                  // phase 4 : aide, champ du d10 et boutons « ajouter » / « retirer le dernier »
+  EditTowTalentDe: TSpinEdit = nil;
+  ButtonTowTalentDe: TBCButton = nil;
+  ButtonTowTalentRetire: TBCButton = nil;
+  LabTowAideRace: TLabel = nil;                     // phase 1 : phrase d aide au-dessus du champ « resultat du d10 »
+  CheckTowDisgrace: TCheckBox = nil;                // phase 8 : Life in Disgrace (Status d un cran plus bas, +1 XP)
+  TowListeP:        TStringList = nil;               // precisions proposees pour une lore generique (variable de travail)
+  ButtonTowNom:     TButton   = nil;                // phase 8 : nom suggere par le livre, au hasard
+  ComboTowBonus:    TComboBox = nil;                // phase 8 : dernier bonus (Final Steps p.61)
+  LabelTowJet:      TLabel = nil;                    // phase 8 : phrase d aide du de du dernier bonus
+  EditTowJet:       TEdit = nil;                     // phase 8 : resultat du de deja lance (d10 talent, d100 atout), vide = hasard
   GridRace: TStringGrid = nil;            // V2 : grille des races de la phase 2 (a la place de la table de tirage)
   GridAvance: TStringGrid = nil;          // V2 : grille de l'avance gratuite (phase 7)
   AvanceGratuiteCode: String = '';        // V2 : caracteristique de l'avance gratuite (etape 7 du Core p.14)
@@ -541,13 +656,17 @@ var
 
 {$R *.lfm}
 
+// TowChoisitOption (petite fenetre de choix) : unite ChoixOption, partagee avec WinPersonnage
+
 var
-  RapportAuto:  TStrings = nil;           // --creer : recueille les messages au lieu de les afficher
+  RapportAuto: TStrings = nil;           // --creer : recueille les messages au lieu de les afficher
   MessageRecu:  Boolean  = False;
 
 // Remplace Dialogs.ShowMessage dans cette unite : en creation automatique le message est note, pas affiche
 procedure ShowMessage(const Msg: String);
   begin
+    if JournalMessages <> nil then
+      JournalMessages.Add('  MESSAGE creation : ' + Msg);
     if RapportAuto <> nil then
       begin
         RapportAuto.Add('MESSAGE : ' + Msg);
@@ -587,7 +706,8 @@ end;
 // V2 et V1 : pas de table de tirage de la race, une grille des races (double-clic = choisir, Hasard = tirage egal)
 function RaceParGrille(): Boolean;
   begin
-    Result := (ValVersion = 'WFRP2') or (ValVersion = 'WFRP1');
+    // The Old World : origine choisie dans une grille (6 lignes, d10 en colonne) comme la race V2
+    Result := (ValVersion = 'WFRP2') or (ValVersion = 'WFRP1') or (ValVersion = 'WFRPTOW');
   end;
 
 // Libelle d'une ligne de competence : un code "A/B" (choix) n'a pas de fiche, donc pas de
@@ -642,8 +762,348 @@ procedure TWinCreations.ButtonQuestionClick(Sender: TObject);
 procedure TWinCreations.FormCreate(Sender: TObject);
   var
     Bmp: TBGRABitmap;
-    I: Integer;
-    Flux: TMemoryStream;
+    procedure PoseLibellesEtOnglets();
+      begin
+      LabelRace.Caption                          := GetTexteLibelle('RULES-LAB_042');
+      LabelMetier.Caption                        := GetTexteLibelle('RULES-LAB_006');
+      LabelAttribut.Caption                      := GetTexteLibelle('RULES-LAB_008');
+      LabelTalent.Caption                        := GetTexteLibelle('RULES-LAB_007');
+      LabelCompetence.Caption                    := GetTexteLibelle('RULES-LAB_009');
+      Self.Caption                               := GetTexteLibelle('RULES-LAB_081');
+      GroupBoxRace.Caption                       := GetTexteLibelle('RULES-LAB_084');
+      GroupBoxAttribut.Caption                   := GetTexteLibelle('RULES-LAB_084');
+      GroupBoxMetier.Caption                     := GetTexteLibelle('RULES-LAB_084');
+      GroupBoxRegle.Caption                      := GetTexteLibelle('RULES-LAB_618');
+      ButtonAttributHasard .Caption              := GetTexteLibelle('RULES-LAB_085');
+      ButtonRaceHasard.Caption                   := GetTexteLibelle('RULES-LAB_085');
+      ButtonTalentHasard.Caption                 := GetTexteLibelle('RULES-LAB_085');
+      ButtonRaceCompetenceHasard.Caption         := GetTexteLibelle('RULES-LAB_085');
+      ButtonMetierHasard.Caption                 := GetTexteLibelle('RULES-LAB_085');
+      ButtonMetierCompetenceHasard .Caption      := GetTexteLibelle('RULES-LAB_085');
+      ButtonRaceValider.Caption                  := GetTexteLibelle('RULES-LAB_086');
+      ButtonMetierValider.Caption                := GetTexteLibelle('RULES-LAB_086');
+      ButtonRaceSelectionner.Caption             := GetTexteLibelle('RULES-LAB_004');
+      ButtonMetierSelectionner.Caption           := GetTexteLibelle('RULES-LAB_004');
+      TabSheetRace.Caption                       := GetTexteLibelle('RULES-LAB_042');
+      TabSheetMetier.Caption                     := GetTexteLibelle('RULES-LAB_006');
+      TabSheetAttribut.Caption                   := GetTexteLibelle('RULES-LAB_008');
+      TabSheetTalent.Caption                     := GetTexteLibelle('RULES-LAB_007');
+      TabSheetCompRace.Caption                   := GetTexteLibelle('RULES-LAB_087');
+      TabSheetCompMetier.Caption                 := GetTexteLibelle('RULES-LAB_088');
+      TabSheetEquipement.Caption                 := GetTexteLibelle('RULES-LAB_013');
+      TabSheetNom.Caption                        := GetTexteLibelle('RULES-LAB_014');
+      ButtonPhysique.Caption                     := GetTexteLibelle('RULES-LAB_266');
+      ButtonNom.Caption                          := GetTexteLibelle('RULES-LAB_267');
+      LabSigne.Text                              := GetTexteLibelle('RULES-LAB_272');
+      ButtonSigne.Caption                        := GetTexteLibelle('RULES-LAB_273');
+      // Bouton de specialisation du talent generique du signe (Craftsman...), pose en code sous le memo
+      // Les controles du signe quittent l'onglet Nom pour la phase intermediaire 4.1 (memes positions)
+      TabSheetSigne.Caption                      := GetTexteLibelle('RULES-LAB_793');
+      LabSigne.Parent                            := TabSheetSigne;
+      ComboBoxSigne.Parent                       := TabSheetSigne;
+      ButtonSigne.Parent                         := TabSheetSigne;
+      MemoSigne.Parent                           := TabSheetSigne;
+      ButtonSigne.BringToFront;
+      MemoSigne.Height                           := MemoSigne.Height - 36;
+      ButtonSigneSpe                             := TButton.Create(Self);
+      ButtonSigneSpe.Name                        := 'ButtonSigneSpe';   // les scripts d ecran atteignent un controle par son Name
+      ButtonSigneSpe.Parent                      := MemoSigne.Parent;
+      ButtonSigneSpe.SetBounds(MemoSigne.Left, MemoSigne.Top + MemoSigne.Height + 4, MemoSigne.Width, 30);
+      ButtonSigneSpe.Caption                     := GetTexteLibelle('RULES-LAB_275');
+      ButtonSigneSpe.Visible                     := False;
+      ButtonSigneSpe.OnClick                     := @ButtonSigneSpeClick;
+      ButtonMetierEquipementHasard.Caption       := GetTexteLibelle('RULES-LAB_085');
+      ButtonNomHasard.Caption                    := GetTexteLibelle('RULES-LAB_085');
+      ComboBoxSexeNom.Items[0]                   := GetTexteLibelle('RULES-LAB_268');
+      ComboBoxSexeNom.Items[1]                   := GetTexteLibelle('RULES-LAB_269');
+      ComboBoxSexeNom.ItemIndex                  := 0;
+      // Regle de nom (declaree par les livres, <NameRule>) : un combo cree en code remplace la case Noble
+      CheckBoxNoble.Visible                      := False;
+      LabNoble.Visible                           := False;
+      ComboBoxRegleNom                           := TComboBox.Create(Self);
+      ComboBoxRegleNom.Parent                    := CheckBoxNoble.Parent;
+      ComboBoxRegleNom.SetBounds(CheckBoxNoble.Left, CheckBoxNoble.Top, 180, 28);
+      ComboBoxRegleNom.Style                     := csDropDownList;
+      ComboBoxRegleNom.Visible                   := False;
+      CodesRegleNom                              := TStringList.Create;
+      CreeOngletFond();
+      TabSheetNom.OnShow                       := @TabSheetNomShow;
+      TabSheetClan.Caption                       := GetTexteLibelle('RULES-LAB_785');
+      LabClanTexte.Caption                       := GetTexteLibelle('RULES-LAB_786');
+      ButtonClanHasard.Caption                   := GetTexteLibelle('RULES-LAB_085');
+      TabSheetMutation.Caption                   := GetTexteLibelle('RULES-LAB_787');
+      LabMutationTexte.Caption                   := GetTexteLibelle('RULES-LAB_788');
+      ButtonMutationChoix.Caption                := GetTexteLibelle('RULES-LAB_789');
+      TabSheetFamilier.Caption                   := GetTexteLibelle('RULES-LAB_795');
+      LabFamilierTexte.Caption                   := GetTexteLibelle('RULES-LAB_796');
+      ButtonFamilierHasard.Caption               := GetTexteLibelle('RULES-LAB_085');
+      TabSheetAppartenance.Caption               := GetTexteLibelle('RULES-LAB_790');
+      LabAppartenanceTexte.Caption               := GetTexteLibelle('RULES-LAB_791');
+      ButtonAppartenanceChoix.Caption            := GetTexteLibelle('RULES-LAB_792');
+      RadioButtonRaceHasard.Caption              := GetTexteLibelle('RULES-LAB_085')+' (20xp)';
+      RadioButtonMetierHasard.Caption            := GetTexteLibelle('RULES-LAB_085')+' (50xp)';
+      RadioButtonAttributHasard.Caption          := GetTexteLibelle('RULES-LAB_085')+' (50xp)';
+      RadioButtonRaceResultat.Caption            := GetTexteLibelle('RULES-LAB_089')+' (20xp)';
+      RadioButtonMetierResultat.Caption          := GetTexteLibelle('RULES-LAB_089')+' (50xp)';
+      RadioButtonAttributResultat.Caption        := GetTexteLibelle('RULES-LAB_089')+' (50xp)';
+      RadioButtonRaceChoix.Caption               := GetTexteLibelle('RULES-LAB_084')+' (0xp)';
+      RadioButtonMetierChoix.Caption             := GetTexteLibelle('RULES-LAB_084')+' (0xp)';
+      RadioButtonAttributHasardAffecte.Caption   := GetTexteLibelle('RULES-LAB_090')+' (25xp)';
+      RadioButtonAttributResultatAffecte.Caption := GetTexteLibelle('RULES-LAB_091')+' (25xp)';
+      RadioButtonAttributRepartition.Caption     := GetTexteLibelle('RULES-LAB_316')+' (0xp)';
+      LabPointSupp.Caption                       := GetTexteLibelle('RULES-LAB_092');
+      LabDestin.Caption                          := GetTexteLibelle('RULES-LAB_093');
+      LabResilience.Caption                      := GetTexteLibelle('RULES-LAB_094');
+      LabNomPersonnage.Caption                   := GetTexteLibelle('RULES-LAB_095');
+      ButtonMetierSousMetierSelectionner.Caption := GetTexteLibelle('RULES-LAB_004');
+      ButtonPhaseSuivante.Caption                := GetTexteLibelle('RULES-LAB_134');
+      LabRegle.Caption                           := GetTexteLibelle('RULES-LAB_135');
+      LabLivre.Caption                           := GetTexteLibelle('RULES-LAB_137');
+      // V5 : le hasard ne rapporte plus d'XP (Fortune / Fate), aucun montant d'XP dans les libelles
+      if ValVersion = 'WFRP5' then
+        begin
+          RadioButtonRaceHasard.Caption              := GetTexteLibelle('RULES-LAB_085');
+          RadioButtonMetierHasard.Caption            := GetTexteLibelle('RULES-LAB_085');
+          RadioButtonAttributHasard.Caption          := GetTexteLibelle('RULES-LAB_085');
+          RadioButtonRaceResultat.Caption            := GetTexteLibelle('RULES-LAB_089');
+          RadioButtonMetierResultat.Caption          := GetTexteLibelle('RULES-LAB_089');
+          RadioButtonAttributResultat.Caption        := GetTexteLibelle('RULES-LAB_089');
+          RadioButtonRaceChoix.Caption               := GetTexteLibelle('RULES-LAB_084');
+          RadioButtonMetierChoix.Caption             := GetTexteLibelle('RULES-LAB_084');
+          RadioButtonAttributHasardAffecte.Caption   := GetTexteLibelle('RULES-LAB_090');
+          RadioButtonAttributResultatAffecte.Caption := GetTexteLibelle('RULES-LAB_091');
+          RadioButtonAttributRepartition.Caption     := GetTexteLibelle('RULES-LAB_316');
+        end;
+      end;
+
+    procedure PoseOrdreEtFamilier();
+      begin
+      ButtonRaceCompetenceHasard.BringToFront;
+      ButtonMetierCompetenceHasard.BringToFront;
+      ButtonMetierEquipementHasard.BringToFront;
+      ButtonNomHasard.BringToFront;
+      ButtonClanHasard.BringToFront;
+      LabClanTexte.BringToFront;
+      ButtonMutationChoix.BringToFront;
+      LabMutationTexte.BringToFront;
+      LabMutationChoisie.BringToFront;
+      ButtonFamilierHasard.BringToFront;
+      LabFamilierTexte.BringToFront;
+      LabFamilierChoisi.BringToFront;
+      LabFamilierTexte.Height := 32;
+      LabFamilierChoisi.Top    := 330;
+      LabFamilierChoisi.Height := 100;
+      ClbFamilierForme         := TCheckListBox.Create(Self);
+      ClbFamilierAnimal        := TCheckListBox.Create(Self);
+      ClbFamilierParticularite := TCheckListBox.Create(Self);
+      ClbFamilierForme.SetBounds(8, 48, 320, 270);
+      ClbFamilierAnimal.SetBounds(340, 48, 320, 270);
+      ClbFamilierParticularite.SetBounds(672, 48, 320, 270);
+      // Police noire sur fond blanc : la police du formulaire est blanche (meme reflexe que EditJetNom)
+      ClbFamilierForme.ParentFont            := False;
+      ClbFamilierAnimal.ParentFont           := False;
+      ClbFamilierParticularite.ParentFont    := False;
+      ClbFamilierForme.Font.Color            := clBlack;
+      ClbFamilierAnimal.Font.Color           := clBlack;
+      ClbFamilierParticularite.Font.Color    := clBlack;
+      ClbFamilierForme.Color                 := clWhite;
+      ClbFamilierAnimal.Color                := clWhite;
+      ClbFamilierParticularite.Color         := clWhite;
+      ClbFamilierForme.Parent                := TabSheetFamilier;
+      ClbFamilierAnimal.Parent               := TabSheetFamilier;
+      ClbFamilierParticularite.Parent        := TabSheetFamilier;
+      ClbFamilierForme.OnClickCheck          := @ClbFamilierClickCheck;
+      ClbFamilierAnimal.OnClickCheck         := @ClbFamilierClickCheck;
+      ClbFamilierParticularite.OnClickCheck  := @ClbFamilierClickCheck;
+      ButtonAppartenanceChoix.BringToFront;
+      LabAppartenanceTexte.BringToFront;
+      LabAppartenanceChoisie.BringToFront;
+      // Le TShape pose par MiseEnFormeDesChamp sur chaque onglet cache les controles non
+      // fenetres (TBCButton) : meme piege que les boutons ci-dessus (CONTEXT.md 4).
+      ButtonPhysique.BringToFront;
+      // Jet du de du nom (un jet par morceau de table, separes par /) : saisi, le bouton Nom l'utilise ;
+      // vide ou non retouche, le bouton tire. Meme principe que les jets de WinPhysique.
+      EditJetNom := TEdit.Create(Self);
+      EditJetNom.Parent := ButtonNom.Parent;
+      EditJetNom.SetBounds(ButtonNom.Left + ButtonNom.Width + 8, ButtonNom.Top, 90, 28);
+      EditJetNom.ParentFont := False;
+      EditJetNom.Font.Color := clBlack;
+      EditJetNom.OnChange   := @EditJetNomChange;
+      EditJetNom.OnKeyPress := @EditJetNomKeyPress;
+      EditJetNom.Hint       := GetTexteLibelle('RULES-LAB_749');
+      EditJetNom.ShowHint   := True;
+      FJetNomSaisi          := False;
+      ButtonNom.BringToFront;
+      ButtonSigne.BringToFront;
+      end;
+
+    procedure PoseAideF1();
+      begin
+      // Aide F1 (AideContextuelle.pas ; textes RULES-HELP_CREA_xxx)
+      ButtonPhaseSuivante.HelpKeyword              := 'RULES-HELP_CREA_SUIVANT';
+      RadioButtonRaceHasard.HelpKeyword            := 'RULES-HELP_CREA_MODE_HASARD';
+      RadioButtonRaceResultat.HelpKeyword          := 'RULES-HELP_CREA_MODE_RESULTAT';
+      RadioButtonRaceChoix.HelpKeyword             := 'RULES-HELP_CREA_MODE_CHOIX';
+      RadioButtonMetierHasard.HelpKeyword          := 'RULES-HELP_CREA_MODE_HASARD';
+      RadioButtonMetierResultat.HelpKeyword        := 'RULES-HELP_CREA_MODE_RESULTAT';
+      RadioButtonMetierChoix.HelpKeyword           := 'RULES-HELP_CREA_MODE_CHOIX';
+      ButtonRaceHasard.HelpKeyword                 := 'RULES-HELP_CREA_RACE_HASARD';
+      ButtonRaceSelectionner.HelpKeyword           := 'RULES-HELP_CREA_RACE_SELECT';
+      ButtonRaceValider.HelpKeyword                := 'RULES-HELP_CREA_RACE_VALIDE';
+      ButtonMetierHasard.HelpKeyword               := 'RULES-HELP_CREA_METIER_HASARD';
+      ButtonMetierSelectionner.HelpKeyword         := 'RULES-HELP_CREA_METIER_SELECT';
+      ButtonMetierValider.HelpKeyword              := 'RULES-HELP_CREA_METIER_VALIDE';
+      ComboBoxRegle.HelpKeyword                    := 'RULES-HELP_CREA_REGLE';
+      RadioButtonAttributHasard.HelpKeyword        := 'RULES-HELP_CREA_ATTR_HASARD';
+      RadioButtonAttributResultat.HelpKeyword      := 'RULES-HELP_CREA_ATTR_RESULTAT';
+      RadioButtonAttributHasardAffecte.HelpKeyword := 'RULES-HELP_CREA_ATTR_HASARD_AFFECTE';
+      RadioButtonAttributResultatAffecte.HelpKeyword := 'RULES-HELP_CREA_ATTR_RESULTAT_AFFECTE';
+      RadioButtonAttributRepartition.HelpKeyword   := 'RULES-HELP_CREA_ATTR_REPARTITION';
+      ButtonTalentHasard.HelpKeyword               := 'RULES-HELP_CREA_TALENT_HASARD';
+      ButtonRaceCompetenceHasard.HelpKeyword       := 'RULES-HELP_CREA_COMP_HASARD';
+      ButtonMetierCompetenceHasard.HelpKeyword     := 'RULES-HELP_CREA_COMP_HASARD';
+      ButtonMetierEquipementHasard.HelpKeyword     := 'RULES-HELP_CREA_EQUIP_HASARD';
+      ButtonNomHasard.HelpKeyword                  := 'RULES-HELP_CREA_NOM_HASARD';
+      end;
+
+    procedure InitPanneauRegles();
+      begin
+      // Regles optionnelles des livres coches, a droite de la liste des livres : chaque creation
+      // repart avec toutes les regles cochees (le choix ne vaut que pour ce personnage)
+      if Assigned(ReglesDesactiveesCreation) then
+        ReglesDesactiveesCreation.Clear;
+      PanneauRegles              := TPanelOptionRegle.Create(Self, true, 235, 300, 140);
+      PanneauRegles.Parent       := TabSheetLivre;
+      PanneauRegles.Left         := TabLivre.Left + TabLivre.Width + 16;
+      PanneauRegles.Top          := TabLivre.Top;
+      PanneauRegles.Width        := TabSheetLivre.ClientWidth - PanneauRegles.Left - 8;
+      PanneauRegles.Height       := TabLivre.Height;
+      PanneauRegles.Anchors      := [akLeft, akTop, akRight, akBottom];
+      PanneauRegles.FiltreLivres := LivresPersonnages;
+      PanneauRegles.OnChangement := @ReglesChangees;
+      PanneauRegles.Charger();
+      end;
+
+    procedure InitRaceParGrille();
+      var
+        I: Integer;
+      begin
+          RadioButtonRaceHasard.Visible    := false;
+          RadioButtonRaceResultat.Visible  := false;
+          RadioButtonRaceChoix.Checked     := true;
+          // V2 : pas de cout en xp selon la methode (regle propre a V4/V5)
+          for I := 0 to ComponentCount - 1 do
+            if (Components[I] is TRadioButton) and (Pos('xp)', TRadioButton(Components[I]).Caption) > 0) then
+              TRadioButton(Components[I]).Caption :=
+                Trim(Copy(TRadioButton(Components[I]).Caption, 1, LastDelimiter('(', TRadioButton(Components[I]).Caption) - 1));
+          // phase 2 : plus de choix de type, de regles ni de table de tirage ; seul reste le bouton Selectionner
+          GroupBoxRace.Visible             := false;
+          LabRegle.Visible                 := false;
+          ComboRaceCreation.Visible        := false;
+          TabRace.Visible                  := false;
+          // a la place : une grille des races, double-clic = choisir (comme le bouton Selectionner)
+          GridRace := TStringGrid.Create(Self);
+          GridRace.Name         := 'GridRace';
+          GridRace.Parent       := TabRace.Parent;
+          GridRace.Left         := TabRace.Left;
+          GridRace.Top          := TabRace.Top;
+          GridRace.Width        := TabRace.Width;
+          GridRace.Height       := 200;
+          GridRace.ColCount     := 4;
+          GridRace.RowCount     := 1;
+          GridRace.FixedCols    := 0;
+          GridRace.ColWidths[0] := 36;
+          GridRace.ColWidths[1] := 0;
+          GridRace.ColWidths[2] := 220;
+          GridRace.ColWidths[3] := 200;
+          GridRace.Cells[2, 0]  := GetTexteLibelle('RULES-LAB_014');
+          GridRace.Cells[3, 0]  := GetTexteLibelle('RULES-LAB_128');
+          GridRace.OnDblClick   := @GridRaceDblClick;
+          StylesTStringGrid(GridRace);
+          // bouton Hasard visible a sa place habituelle (comme les autres phases), tirage egal entre les races
+          ButtonRaceHasard.Visible := True;
+      end;
+
+    // Argent de depart (phase du materiel, V2 et V5) : bouton clone de celui du tirage de materiel,
+    // sert d'etiquette et de jet ; champ a sa droite ; a droite de la grille du materiel
+    procedure InitArgentDepart();
+      var
+        Flux: TMemoryStream;
+      begin
+          Flux := TMemoryStream.Create;
+          try
+            Flux.WriteComponent(ButtonMetierEquipementHasard);
+            Flux.Position := 0;
+            ButtonArgent := TBCButton(TComponentClass(ButtonMetierEquipementHasard.ClassType).Create(nil));
+            Flux.ReadComponent(ButtonArgent);
+          finally
+            Flux.Free;
+          end;
+          ButtonArgent.Name    := 'ButtonArgent';
+          ButtonArgent.Parent  := TabMetierEquipement.Parent;
+          ButtonArgent.SetBounds(TabMetierEquipement.Left + TabMetierEquipement.Width + 16, TabMetierEquipement.Top, 256, 45);
+          ButtonArgent.Caption := GetTexteLibelle('RULES-LAB_750');
+          ButtonArgent.OnClick := @ButtonArgentClick;
+          ButtonArgent.Visible := false;
+          EditArgent := TEdit.Create(Self);
+          EditArgent.Parent     := TabMetierEquipement.Parent;
+          EditArgent.SetBounds(ButtonArgent.Left, ButtonArgent.Top + ButtonArgent.Height + 8, 120, 28);
+          EditArgent.ParentFont := False;
+          EditArgent.Font.Color := clBlack;
+          EditArgent.Visible    := false;
+      end;
+
+    procedure InitSpecificitesV2();
+      var
+        Flux: TMemoryStream;
+      begin
+          // Clemence de Shallya (Core p.19) : bouton clone de celui du tirage
+          Flux := TMemoryStream.Create;
+          try
+            Flux.WriteComponent(ButtonAttributHasard);
+            Flux.Position := 0;
+            ButtonClemence := TBCButton(TComponentClass(ButtonAttributHasard.ClassType).Create(nil));
+            Flux.ReadComponent(ButtonClemence);
+          finally
+            Flux.Free;
+          end;
+          ButtonClemence.Name    := 'ButtonClemence';
+          ButtonClemence.Parent  := ButtonAttributHasard.Parent;
+          ButtonClemence.Left    := ButtonAttributHasard.Left - ButtonAttributHasard.Width - 16;
+          ButtonClemence.Caption := GetTexteLibelle('RULES-LAB_730');
+          ButtonClemence.OnClick := @ButtonClemenceClick;
+          ButtonClemence.Enabled := false;
+          ButtonClemence.Visible := true;
+          InitArgentDepart();
+          // Avance gratuite (Core p.14, etape 7) : grille a droite des competences de carriere (phase 7)
+          GridAvance := TStringGrid.Create(Self);
+          GridAvance.Parent       := TabMetierCompetence.Parent;
+          GridAvance.Left         := TabMetierCompetence.Left + TabMetierCompetence.Width + 16;
+          GridAvance.Top          := TabMetierCompetence.Top;
+          GridAvance.Width        := TabMetierCompetence.Parent.ClientWidth - GridAvance.Left - 8;
+          GridAvance.Height       := 330;
+          GridAvance.ColCount     := 5;
+          GridAvance.RowCount     := 1;
+          GridAvance.FixedCols    := 0;
+          GridAvance.Options      := GridAvance.Options - [goRangeSelect] + [goRowSelect];
+          GridAvance.ColWidths[0] := 36;
+          GridAvance.ColWidths[1] := 140;
+          GridAvance.ColWidths[2] := 70;
+          GridAvance.ColWidths[3] := 70;
+          GridAvance.ColWidths[4] := 120;
+          GridAvance.Cells[1, 0]  := GetTexteLibelle('RULES-LAB_734');
+          GridAvance.Cells[2, 0]  := GetTexteLibelle('RULES-LAB_735');
+          GridAvance.Cells[3, 0]  := GetTexteLibelle('RULES-LAB_736');
+          GridAvance.Cells[4, 0]  := GetTexteLibelle('RULES-LAB_732');
+          GridAvance.OnDblClick   := @GridAvanceDblClick;
+          // meme apparence que les autres grilles (police, fond, ligne choisie rouge et or)
+          StylesTStringGrid(GridAvance);
+          AvanceGratuiteCode := '';
+          AvanceGratuiteCode2 := '';
+          // le compteur x / 40 Pts de la phase 7 n'a plus d'objet en V2
+          ButtonTotalMetierCompetence.Visible := false;
+      end;
+
   begin
     MiseEnFormeDesChamp(self);
     CreeBoutonGuide(Self, GetTexteLibelle('RULES-HELP_LAB_GUIDE', 'Help'), 'RULES-HELP_BTN_GUIDE',
@@ -684,204 +1144,19 @@ procedure TWinCreations.FormCreate(Sender: TObject);
     LastCheckRaceResultat               := 0;
     LastCheckMetierResultat             := 0;
     LastCheckMetierSousMetierResul      := 0;
-
-    LabelRace.Caption                          := GetTexteLibelle('RULES-LAB_042');
-    LabelMetier.Caption                        := GetTexteLibelle('RULES-LAB_006');
-    LabelAttribut.Caption                      := GetTexteLibelle('RULES-LAB_008');
-    LabelTalent.Caption                        := GetTexteLibelle('RULES-LAB_007');
-    LabelCompetence.Caption                    := GetTexteLibelle('RULES-LAB_009');
-    Self.Caption                               := GetTexteLibelle('RULES-LAB_081');
-    GroupBoxRace.Caption                       := GetTexteLibelle('RULES-LAB_084');
-    GroupBoxAttribut.Caption                   := GetTexteLibelle('RULES-LAB_084');
-    GroupBoxMetier.Caption                     := GetTexteLibelle('RULES-LAB_084');
-    GroupBoxRegle.Caption                      := GetTexteLibelle('RULES-LAB_618');
-    ButtonAttributHasard .Caption              := GetTexteLibelle('RULES-LAB_085');
-    ButtonRaceHasard.Caption                   := GetTexteLibelle('RULES-LAB_085');
-    ButtonTalentHasard.Caption                 := GetTexteLibelle('RULES-LAB_085');
-    ButtonRaceCompetenceHasard.Caption         := GetTexteLibelle('RULES-LAB_085');
-    ButtonMetierHasard.Caption                 := GetTexteLibelle('RULES-LAB_085');
-    ButtonMetierCompetenceHasard .Caption      := GetTexteLibelle('RULES-LAB_085');
-    ButtonRaceValider.Caption                  := GetTexteLibelle('RULES-LAB_086');
-    ButtonMetierValider.Caption                := GetTexteLibelle('RULES-LAB_086');
-    ButtonRaceSelectionner.Caption             := GetTexteLibelle('RULES-LAB_004');
-    ButtonMetierSelectionner.Caption           := GetTexteLibelle('RULES-LAB_004');
-    TabSheetRace.Caption                       := GetTexteLibelle('RULES-LAB_042');
-    TabSheetMetier.Caption                     := GetTexteLibelle('RULES-LAB_006');
-    TabSheetAttribut.Caption                   := GetTexteLibelle('RULES-LAB_008');
-    TabSheetTalent.Caption                     := GetTexteLibelle('RULES-LAB_007');
-    TabSheetCompRace.Caption                   := GetTexteLibelle('RULES-LAB_087');
-    TabSheetCompMetier.Caption                 := GetTexteLibelle('RULES-LAB_088');
-    TabSheetEquipement.Caption                 := GetTexteLibelle('RULES-LAB_013');
-    TabSheetNom.Caption                        := GetTexteLibelle('RULES-LAB_014');
-    ButtonPhysique.Caption                     := GetTexteLibelle('RULES-LAB_266');
-    ButtonNom.Caption                          := GetTexteLibelle('RULES-LAB_267');
-    LabSigne.Text                              := GetTexteLibelle('RULES-LAB_272');
-    ButtonSigne.Caption                        := GetTexteLibelle('RULES-LAB_273');
-    // Bouton de specialisation du talent generique du signe (Craftsman...), pose en code sous le memo
-    // Les controles du signe quittent l'onglet Nom pour la phase intermediaire 4.1 (memes positions)
-    TabSheetSigne.Caption                      := GetTexteLibelle('RULES-LAB_793');
-    LabSigne.Parent                            := TabSheetSigne;
-    ComboBoxSigne.Parent                       := TabSheetSigne;
-    ButtonSigne.Parent                         := TabSheetSigne;
-    MemoSigne.Parent                           := TabSheetSigne;
-    ButtonSigne.BringToFront;
-    MemoSigne.Height                           := MemoSigne.Height - 36;
-    ButtonSigneSpe                             := TButton.Create(Self);
-    ButtonSigneSpe.Parent                      := MemoSigne.Parent;
-    ButtonSigneSpe.SetBounds(MemoSigne.Left, MemoSigne.Top + MemoSigne.Height + 4, MemoSigne.Width, 30);
-    ButtonSigneSpe.Caption                     := GetTexteLibelle('RULES-LAB_275');
-    ButtonSigneSpe.Visible                     := False;
-    ButtonSigneSpe.OnClick                     := @ButtonSigneSpeClick;
-    ButtonMetierEquipementHasard.Caption       := GetTexteLibelle('RULES-LAB_085');
-    ButtonNomHasard.Caption                    := GetTexteLibelle('RULES-LAB_085');
-    ComboBoxSexeNom.Items[0]                   := GetTexteLibelle('RULES-LAB_268');
-    ComboBoxSexeNom.Items[1]                   := GetTexteLibelle('RULES-LAB_269');
-    ComboBoxSexeNom.ItemIndex                  := 0;
-    // Regle de nom (declaree par les livres, <NameRule>) : un combo cree en code remplace la case Noble
-    CheckBoxNoble.Visible                      := False;
-    LabNoble.Visible                           := False;
-    ComboBoxRegleNom                           := TComboBox.Create(Self);
-    ComboBoxRegleNom.Parent                    := CheckBoxNoble.Parent;
-    ComboBoxRegleNom.SetBounds(CheckBoxNoble.Left, CheckBoxNoble.Top, 180, 28);
-    ComboBoxRegleNom.Style                     := csDropDownList;
-    ComboBoxRegleNom.Visible                   := False;
-    CodesRegleNom                              := TStringList.Create;
-    CreeOngletFond();
-    TabSheetNom.OnShow                       := @TabSheetNomShow;
-    TabSheetClan.Caption                       := GetTexteLibelle('RULES-LAB_785');
-    LabClanTexte.Caption                       := GetTexteLibelle('RULES-LAB_786');
-    ButtonClanHasard.Caption                   := GetTexteLibelle('RULES-LAB_085');
-    TabSheetMutation.Caption                   := GetTexteLibelle('RULES-LAB_787');
-    LabMutationTexte.Caption                   := GetTexteLibelle('RULES-LAB_788');
-    ButtonMutationChoix.Caption                := GetTexteLibelle('RULES-LAB_789');
-    TabSheetFamilier.Caption                   := GetTexteLibelle('RULES-LAB_795');
-    LabFamilierTexte.Caption                   := GetTexteLibelle('RULES-LAB_796');
-    ButtonFamilierHasard.Caption               := GetTexteLibelle('RULES-LAB_085');
-    TabSheetAppartenance.Caption               := GetTexteLibelle('RULES-LAB_790');
-    LabAppartenanceTexte.Caption               := GetTexteLibelle('RULES-LAB_791');
-    ButtonAppartenanceChoix.Caption            := GetTexteLibelle('RULES-LAB_792');
-    RadioButtonRaceHasard.Caption              := GetTexteLibelle('RULES-LAB_085')+' (20xp)';
-    RadioButtonMetierHasard.Caption            := GetTexteLibelle('RULES-LAB_085')+' (50xp)';
-    RadioButtonAttributHasard.Caption          := GetTexteLibelle('RULES-LAB_085')+' (50xp)';
-    RadioButtonRaceResultat.Caption            := GetTexteLibelle('RULES-LAB_089')+' (20xp)';
-    RadioButtonMetierResultat.Caption          := GetTexteLibelle('RULES-LAB_089')+' (50xp)';
-    RadioButtonAttributResultat.Caption        := GetTexteLibelle('RULES-LAB_089')+' (50xp)';
-    RadioButtonRaceChoix.Caption               := GetTexteLibelle('RULES-LAB_084')+' (0xp)';
-    RadioButtonMetierChoix.Caption             := GetTexteLibelle('RULES-LAB_084')+' (0xp)';
-    RadioButtonAttributHasardAffecte.Caption   := GetTexteLibelle('RULES-LAB_090')+' (25xp)';
-    RadioButtonAttributResultatAffecte.Caption := GetTexteLibelle('RULES-LAB_091')+' (25xp)';
-    RadioButtonAttributRepartition.Caption     := GetTexteLibelle('RULES-LAB_316')+' (0xp)';
-    LabPointSupp.Caption                       := GetTexteLibelle('RULES-LAB_092');
-    LabDestin.Caption                          := GetTexteLibelle('RULES-LAB_093');
-    LabResilience.Caption                      := GetTexteLibelle('RULES-LAB_094');
-    LabNomPersonnage.Caption                   := GetTexteLibelle('RULES-LAB_095');
-    ButtonMetierSousMetierSelectionner.Caption := GetTexteLibelle('RULES-LAB_004');
-    ButtonPhaseSuivante.Caption                := GetTexteLibelle('RULES-LAB_134');
-    LabRegle.Caption                           := GetTexteLibelle('RULES-LAB_135');
-    LabLivre.Caption                           := GetTexteLibelle('RULES-LAB_137');
-
-    ButtonRaceCompetenceHasard.BringToFront;
-    ButtonMetierCompetenceHasard.BringToFront;
-    ButtonMetierEquipementHasard.BringToFront;
-    ButtonNomHasard.BringToFront;
-    ButtonClanHasard.BringToFront;
-    LabClanTexte.BringToFront;
-    ButtonMutationChoix.BringToFront;
-    LabMutationTexte.BringToFront;
-    LabMutationChoisie.BringToFront;
-    ButtonFamilierHasard.BringToFront;
-    LabFamilierTexte.BringToFront;
-    LabFamilierChoisi.BringToFront;
-    LabFamilierTexte.Height := 32;
-    LabFamilierChoisi.Top    := 330;
-    LabFamilierChoisi.Height := 100;
-    ClbFamilierForme         := TCheckListBox.Create(Self);
-    ClbFamilierAnimal        := TCheckListBox.Create(Self);
-    ClbFamilierParticularite := TCheckListBox.Create(Self);
-    ClbFamilierForme.SetBounds(8, 48, 320, 270);
-    ClbFamilierAnimal.SetBounds(340, 48, 320, 270);
-    ClbFamilierParticularite.SetBounds(672, 48, 320, 270);
-    // Police noire sur fond blanc : la police du formulaire est blanche (meme reflexe que EditJetNom)
-    ClbFamilierForme.ParentFont            := False;
-    ClbFamilierAnimal.ParentFont           := False;
-    ClbFamilierParticularite.ParentFont    := False;
-    ClbFamilierForme.Font.Color            := clBlack;
-    ClbFamilierAnimal.Font.Color           := clBlack;
-    ClbFamilierParticularite.Font.Color    := clBlack;
-    ClbFamilierForme.Color                 := clWhite;
-    ClbFamilierAnimal.Color                := clWhite;
-    ClbFamilierParticularite.Color         := clWhite;
-    ClbFamilierForme.Parent                := TabSheetFamilier;
-    ClbFamilierAnimal.Parent               := TabSheetFamilier;
-    ClbFamilierParticularite.Parent        := TabSheetFamilier;
-    ClbFamilierForme.OnClickCheck          := @ClbFamilierClickCheck;
-    ClbFamilierAnimal.OnClickCheck         := @ClbFamilierClickCheck;
-    ClbFamilierParticularite.OnClickCheck  := @ClbFamilierClickCheck;
-    ButtonAppartenanceChoix.BringToFront;
-    LabAppartenanceTexte.BringToFront;
-    LabAppartenanceChoisie.BringToFront;
-    // Le TShape pose par MiseEnFormeDesChamp sur chaque onglet cache les controles non
-    // fenetres (TBCButton) : meme piege que les boutons ci-dessus (CONTEXT.md 4).
-    ButtonPhysique.BringToFront;
-    // Jet du de du nom (un jet par morceau de table, separes par /) : saisi, le bouton Nom l'utilise ;
-    // vide ou non retouche, le bouton tire. Meme principe que les jets de WinPhysique.
-    EditJetNom := TEdit.Create(Self);
-    EditJetNom.Parent := ButtonNom.Parent;
-    EditJetNom.SetBounds(ButtonNom.Left + ButtonNom.Width + 8, ButtonNom.Top, 90, 28);
-    EditJetNom.ParentFont := False;
-    EditJetNom.Font.Color := clBlack;
-    EditJetNom.OnChange   := @EditJetNomChange;
-    EditJetNom.OnKeyPress := @EditJetNomKeyPress;
-    EditJetNom.Hint       := GetTexteLibelle('RULES-LAB_749');
-    EditJetNom.ShowHint   := True;
-    FJetNomSaisi          := False;
-    ButtonNom.BringToFront;
-    ButtonSigne.BringToFront;
+    // +Specialisation propre permis dans WinSpecialisation tant que la creation est ouverte
+    AjoutSpecialisationLibre            := True;
+    ObjetsPropresChoix                  := '';
+    PoseLibellesEtOnglets();
+    PoseOrdreEtFamilier();
 
     KeyPreview := true;
 
-    // Aide F1 (AideContextuelle.pas ; textes RULES-HELP_CREA_xxx)
-    ButtonPhaseSuivante.HelpKeyword              := 'RULES-HELP_CREA_SUIVANT';
-    RadioButtonRaceHasard.HelpKeyword            := 'RULES-HELP_CREA_MODE_HASARD';
-    RadioButtonRaceResultat.HelpKeyword          := 'RULES-HELP_CREA_MODE_RESULTAT';
-    RadioButtonRaceChoix.HelpKeyword             := 'RULES-HELP_CREA_MODE_CHOIX';
-    RadioButtonMetierHasard.HelpKeyword          := 'RULES-HELP_CREA_MODE_HASARD';
-    RadioButtonMetierResultat.HelpKeyword        := 'RULES-HELP_CREA_MODE_RESULTAT';
-    RadioButtonMetierChoix.HelpKeyword           := 'RULES-HELP_CREA_MODE_CHOIX';
-    ButtonRaceHasard.HelpKeyword                 := 'RULES-HELP_CREA_RACE_HASARD';
-    ButtonRaceSelectionner.HelpKeyword           := 'RULES-HELP_CREA_RACE_SELECT';
-    ButtonRaceValider.HelpKeyword                := 'RULES-HELP_CREA_RACE_VALIDE';
-    ButtonMetierHasard.HelpKeyword               := 'RULES-HELP_CREA_METIER_HASARD';
-    ButtonMetierSelectionner.HelpKeyword         := 'RULES-HELP_CREA_METIER_SELECT';
-    ButtonMetierValider.HelpKeyword              := 'RULES-HELP_CREA_METIER_VALIDE';
-    ComboBoxRegle.HelpKeyword                    := 'RULES-HELP_CREA_REGLE';
-    RadioButtonAttributHasard.HelpKeyword        := 'RULES-HELP_CREA_ATTR_HASARD';
-    RadioButtonAttributResultat.HelpKeyword      := 'RULES-HELP_CREA_ATTR_RESULTAT';
-    RadioButtonAttributHasardAffecte.HelpKeyword := 'RULES-HELP_CREA_ATTR_HASARD_AFFECTE';
-    RadioButtonAttributResultatAffecte.HelpKeyword := 'RULES-HELP_CREA_ATTR_RESULTAT_AFFECTE';
-    RadioButtonAttributRepartition.HelpKeyword   := 'RULES-HELP_CREA_ATTR_REPARTITION';
-    ButtonTalentHasard.HelpKeyword               := 'RULES-HELP_CREA_TALENT_HASARD';
-    ButtonRaceCompetenceHasard.HelpKeyword       := 'RULES-HELP_CREA_COMP_HASARD';
-    ButtonMetierCompetenceHasard.HelpKeyword     := 'RULES-HELP_CREA_COMP_HASARD';
-    ButtonMetierEquipementHasard.HelpKeyword     := 'RULES-HELP_CREA_EQUIP_HASARD';
-    ButtonNomHasard.HelpKeyword                  := 'RULES-HELP_CREA_NOM_HASARD';
+    PoseAideF1();
 
     LivresPersonnages := LivresCharges;
 
-    // Regles optionnelles des livres coches, a droite de la liste des livres : chaque creation
-    // repart avec toutes les regles cochees (le choix ne vaut que pour ce personnage)
-    if Assigned(ReglesDesactiveesCreation) then
-      ReglesDesactiveesCreation.Clear;
-    PanneauRegles              := TPanelOptionRegle.Create(Self, true, 235, 300, 140);
-    PanneauRegles.Parent       := TabSheetLivre;
-    PanneauRegles.Left         := TabLivre.Left + TabLivre.Width + 16;
-    PanneauRegles.Top          := TabLivre.Top;
-    PanneauRegles.Width        := TabSheetLivre.ClientWidth - PanneauRegles.Left - 8;
-    PanneauRegles.Height       := TabLivre.Height;
-    PanneauRegles.Anchors      := [akLeft, akTop, akRight, akBottom];
-    PanneauRegles.FiltreLivres := LivresPersonnages;
-    PanneauRegles.OnChangement := @ReglesChangees;
-    PanneauRegles.Charger();
+    InitPanneauRegles();
 
     // Par defaut, chaque selecteur est sur "au hasard" (le bouton Hasard est donc visible)
     // (OnClick coupe : Checked le declencherait avant qu'une race/un metier existe)
@@ -894,113 +1169,14 @@ procedure TWinCreations.FormCreate(Sender: TObject);
     RadioButtonRaceHasard.OnClick      := @RadioButtonRaceHasardClick;
     RadioButtonMetierHasard.OnClick    := @RadioButtonMetierHasardClick;
     RadioButtonAttributHasard.OnClick  := @RadioButtonAttributClick;
-    // V2 et V1 : la race se choisit (pas de table de tirage), seuls le choix libre reste
+    TabAttribut.OnEditingDone          := @TabAttributEditingDone;
+    // V2 et V1 : la race se choisit (pas de table de tirage), seul le choix libre reste
     if RaceParGrille() then
-      begin
-        RadioButtonRaceHasard.Visible    := false;
-        RadioButtonRaceResultat.Visible  := false;
-        RadioButtonRaceChoix.Checked     := true;
-        // V2 : pas de cout en xp selon la methode (regle propre a V4/V5)
-        for I := 0 to ComponentCount - 1 do
-          if (Components[I] is TRadioButton) and (Pos('xp)', TRadioButton(Components[I]).Caption) > 0) then
-            TRadioButton(Components[I]).Caption :=
-              Trim(Copy(TRadioButton(Components[I]).Caption, 1, LastDelimiter('(', TRadioButton(Components[I]).Caption) - 1));
-        // phase 2 : plus de choix de type, de regles ni de table de tirage ; seul reste le bouton Selectionner
-        GroupBoxRace.Visible             := false;
-        LabRegle.Visible                 := false;
-        ComboRaceCreation.Visible        := false;
-        TabRace.Visible                  := false;
-        // a la place : une grille des races, double-clic = choisir (comme le bouton Selectionner)
-        GridRace := TStringGrid.Create(Self);
-        GridRace.Parent       := TabRace.Parent;
-        GridRace.Left         := TabRace.Left;
-        GridRace.Top          := TabRace.Top;
-        GridRace.Width        := TabRace.Width;
-        GridRace.Height       := 200;
-        GridRace.ColCount     := 4;
-        GridRace.RowCount     := 1;
-        GridRace.FixedCols    := 0;
-        GridRace.ColWidths[0] := 36;
-        GridRace.ColWidths[1] := 0;
-        GridRace.ColWidths[2] := 220;
-        GridRace.ColWidths[3] := 200;
-        GridRace.Cells[2, 0]  := GetTexteLibelle('RULES-LAB_014');
-        GridRace.Cells[3, 0]  := GetTexteLibelle('RULES-LAB_128');
-        GridRace.OnDblClick   := @GridRaceDblClick;
-        StylesTStringGrid(GridRace);
-        // bouton Hasard visible a sa place habituelle (comme les autres phases), tirage egal entre les races
-        ButtonRaceHasard.Visible := True;
-      end;
+      InitRaceParGrille();
     if ValVersion = 'WFRP2' then
-      begin
-        // Clemence de Shallya (Core p.19) : bouton clone de celui du tirage
-        Flux := TMemoryStream.Create;
-        try
-          Flux.WriteComponent(ButtonAttributHasard);
-          Flux.Position := 0;
-          ButtonClemence := TBCButton(TComponentClass(ButtonAttributHasard.ClassType).Create(nil));
-          Flux.ReadComponent(ButtonClemence);
-        finally
-          Flux.Free;
-        end;
-        ButtonClemence.Name    := 'ButtonClemence';
-        ButtonClemence.Parent  := ButtonAttributHasard.Parent;
-        ButtonClemence.Left    := ButtonAttributHasard.Left - ButtonAttributHasard.Width - 16;
-        ButtonClemence.Caption := GetTexteLibelle('RULES-LAB_730');
-        ButtonClemence.OnClick := @ButtonClemenceClick;
-        ButtonClemence.Enabled := false;
-        ButtonClemence.Visible := true;
-        // Argent de depart (phase du materiel) : bouton clone de celui du tirage de materiel, sert d'etiquette
-        // et de jet ; champ a sa droite ; a droite de la grille du materiel
-        Flux := TMemoryStream.Create;
-        try
-          Flux.WriteComponent(ButtonMetierEquipementHasard);
-          Flux.Position := 0;
-          ButtonArgent := TBCButton(TComponentClass(ButtonMetierEquipementHasard.ClassType).Create(nil));
-          Flux.ReadComponent(ButtonArgent);
-        finally
-          Flux.Free;
-        end;
-        ButtonArgent.Name    := 'ButtonArgent';
-        ButtonArgent.Parent  := TabMetierEquipement.Parent;
-        ButtonArgent.SetBounds(TabMetierEquipement.Left + TabMetierEquipement.Width + 16, TabMetierEquipement.Top, 256, 45);
-        ButtonArgent.Caption := GetTexteLibelle('RULES-LAB_750');
-        ButtonArgent.OnClick := @ButtonArgentClick;
-        ButtonArgent.Visible := false;
-        EditArgent := TEdit.Create(Self);
-        EditArgent.Parent     := TabMetierEquipement.Parent;
-        EditArgent.SetBounds(ButtonArgent.Left, ButtonArgent.Top + ButtonArgent.Height + 8, 120, 28);
-        EditArgent.ParentFont := False;
-        EditArgent.Font.Color := clBlack;
-        EditArgent.Visible    := false;
-        // Avance gratuite (Core p.14, etape 7) : grille a droite des competences de carriere (phase 7)
-        GridAvance := TStringGrid.Create(Self);
-        GridAvance.Parent       := TabMetierCompetence.Parent;
-        GridAvance.Left         := TabMetierCompetence.Left + TabMetierCompetence.Width + 16;
-        GridAvance.Top          := TabMetierCompetence.Top;
-        GridAvance.Width        := TabMetierCompetence.Parent.ClientWidth - GridAvance.Left - 8;
-        GridAvance.Height       := 330;
-        GridAvance.ColCount     := 5;
-        GridAvance.RowCount     := 1;
-        GridAvance.FixedCols    := 0;
-        GridAvance.Options      := GridAvance.Options - [goRangeSelect] + [goRowSelect];
-        GridAvance.ColWidths[0] := 36;
-        GridAvance.ColWidths[1] := 140;
-        GridAvance.ColWidths[2] := 70;
-        GridAvance.ColWidths[3] := 70;
-        GridAvance.ColWidths[4] := 120;
-        GridAvance.Cells[1, 0]  := GetTexteLibelle('RULES-LAB_734');
-        GridAvance.Cells[2, 0]  := GetTexteLibelle('RULES-LAB_735');
-        GridAvance.Cells[3, 0]  := GetTexteLibelle('RULES-LAB_736');
-        GridAvance.Cells[4, 0]  := GetTexteLibelle('RULES-LAB_732');
-        GridAvance.OnDblClick   := @GridAvanceDblClick;
-        // meme apparence que les autres grilles (police, fond, ligne choisie rouge et or)
-        StylesTStringGrid(GridAvance);
-        AvanceGratuiteCode := '';
-        AvanceGratuiteCode2 := '';
-        // le compteur x / 40 Pts de la phase 7 n'a plus d'objet en V2
-        ButtonTotalMetierCompetence.Visible := false;
-      end;
+      InitSpecificitesV2()
+    else if ValVersion = 'WFRP5' then
+      InitArgentDepart();
     UpdateSheetRace(false);
     UpdateSheetMetier(false);
     UpdateSheetAttribut(false);
@@ -1249,6 +1425,8 @@ procedure TWinCreations.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
   var
     i: Integer;
   begin
+    AjoutSpecialisationLibre := False;
+    ObjetsPropresChoix       := '';
     ColorLoc := clDefault;
     SetLength(ColorList, 0);
     for i := Low(CompetenceRaceStates) to High(CompetenceRaceStates) do
@@ -1281,13 +1459,22 @@ procedure TWinCreations.ButtonMetierSelectionnerClick(Sender: TObject);
 
     if ChoixWinMetierRace <> '' then
       begin
-        PMetier          := chercheMetier(ChoixWinMetierRace);
-        MetierEnCours    := PMetier.CodeMetier;
-        MetierLibEnCours := PMetier.Libelle;
-        // Le metier vient de changer : les icones de niveau peuvent en dependre.
-        ChargeImagesNiveau();
-        AfficheImageMetier();
-        UpdateSheetMetier(true);
+        if ValVersion = 'WFRPTOW' then
+          begin
+            TabMetierResultat(0);
+            AfficheImageMetier();
+            UpdateSheetMetier(true);
+          end
+        else
+          begin
+            PMetier          := chercheMetier(ChoixWinMetierRace);
+            MetierEnCours    := PMetier.CodeMetier;
+            MetierLibEnCours := PMetier.Libelle;
+            // Le metier vient de changer : les icones de niveau peuvent en dependre.
+            ChargeImagesNiveau();
+            AfficheImageMetier();
+            UpdateSheetMetier(true);
+          end;
       end;
 
     SelectWinMetierRace:= '';
@@ -1386,6 +1573,11 @@ procedure TWinCreations.ButtonTalentHasardClick(Sender: TObject);
     CodeTire: String;
     NbEssai:  Integer;
   begin
+    if ValVersion = 'WFRPTOW' then
+      begin
+        TowTireTalents();
+        Exit;
+      end;
 
     repeat
       // 1 - resoudre les choix
@@ -1485,11 +1677,19 @@ procedure TWinCreations.ChargerImage();
           RecapAttribut.ColCount     := 11;
           RecapAttribut.RowCount     := 2;
           RecapAttribut.ColWidths[0] := 0;
-          for I := 1 to 10 do
+          // TOW : 9 colonnes (8 caracteristiques + Fate), pas 10
+          for I := 1 to Min(10, ListeAttribut.Count) do
             begin
               PAttribut := ListeAttribut.Items[I-1];
               RecapAttribut.ColWidths[I]:= 43;
               RecapAttribut.Cells[I, 0] := PAttribut.Resume;
+            end;
+          if ValVersion = 'WFRPTOW' then
+            begin
+              // 9 colonnes seulement : la colonne en trop et sa barre de defilement cachaient la ligne des valeurs
+              for I := ListeAttribut.Count + 1 to RecapAttribut.ColCount - 1 do
+                RecapAttribut.ColWidths[I] := 0;
+              RecapAttribut.Height := 76;
             end;
           // Talent
           RecapTalent.RowCount       := 10;
@@ -1578,12 +1778,18 @@ procedure TWinCreations.ChargerImage();
           TabAttribut.Columns[4].Title.Caption      := GetTexteLibelle('RULES-LAB_022');
           TabAttribut.ColWidths[5]     := 90;
           TabAttribut.Columns.add;
-          TabAttribut.Columns[5].Title.Caption      := GetTexteLibelle('RULES-LAB_021');
-          TabAttribut.ColWidths[6]     := 90;
+          // colonne 6 : bonus de depart de la carriere (V5 seulement), avant le total (colonne 8)
+          TabAttribut.Columns[5].Title.Caption      := GetTexteLibelle('RULES-LAB_1041');
+          TabAttribut.Columns[5].Alignment          := tacenter;
+          TabAttribut.ColWidths[6]     := 0;
           TabAttribut.Columns.add;
           TabAttribut.Columns[6].Title.Caption      := '';
           TabAttribut.ColWidths[7]     := 0;
-          TabAttribut.Height           := TabAttribut.DefaultRowHeight * TabAttribut.RowCount + 5;
+          // colonne 8 : total
+          TabAttribut.Columns.add;
+          TabAttribut.Columns[7].Title.Caption      := GetTexteLibelle('RULES-LAB_021');
+          TabAttribut.ColWidths[8]     := 90;
+          TabAttribut.Height          := TabAttribut.DefaultRowHeight * TabAttribut.RowCount + 5;
           // Mise en forme du tableau de lancé de dé des attributs
           TabAttributLanceDe.Options     := TabAttributLanceDe.Options + [goEditing, goAlwaysShowEditor];
           TabAttributLanceDe.ColCount    := 12;
@@ -1608,7 +1814,7 @@ procedure TWinCreations.ChargerImage();
              ComboBoxAttribut.DropDownCount  := 10;
              ComboBoxAttribut.Visible        := false; // On le cache initialement
              ComboBoxAttribut.Items.Add(ValeurNonRenseignee);
-             for J := 0 to 9 do
+             for J := 0 to Min(10, ListeAttribut.Count) - 1 do
              begin
                 PAttribut := ListeAttribut.Items[J];
                 ComboBoxAttribut.Items.Add(PAttribut.Resume);
@@ -1862,6 +2068,13 @@ procedure TWinCreations.PhaseSave(NouvellePhase: Integer);
     procedure PhaseSaveRace();
       begin
       Personnage.Race                              := RaceEnCours;
+      // specialisations propres (+Specialisation de WinSpecialisation) : on repart de zero avec les
+      // talents et competences choisis, comme tout le reste de cette phase
+      if ObjetsPropresChoix <> '' then
+        begin
+          ObjetsPropresChoix := '';
+          InjecteObjetsPropres('');
+        end;
       Personnage.CreationAttribut                  := [];
       Personnage.CreationCompetence35              := [];
       Personnage.CreationCompetence40              := [];
@@ -1916,10 +2129,17 @@ procedure TWinCreations.PhaseSave(NouvellePhase: Integer);
       begin
       For IndTab := 1 to (TabAttribut.Rowcount-1) do
         begin
+          // V5 : les choix de metier / caracteristiques ont pu changer depuis le dernier calcul
+          if (ValVersion = 'WFRP5') and ((TabAttribut.Cells[7, IndTab] = ConstCaracFortune)
+             or (TabAttribut.Cells[7, IndTab] = ConstCaracDestin)) then
+            TabAttribut.Cells[5, IndTab] := IntToStr(BonusHasardV5(TabAttribut.Cells[7, IndTab]));
           if TabAttribut.Cells[5, IndTab] <> '' then
             begin
               PersonnageAttribut.CodeAttribut := TabAttribut.Cells[7, IndTab];
               PersonnageAttribut.Valeur       := StrToIntdef(TabAttribut.Cells[5, IndTab],0);
+              // V5 : le bonus de depart de la carriere (colonne 6) fait partie de la valeur enregistree
+              if ValVersion = 'WFRP5' then
+                PersonnageAttribut.Valeur     := PersonnageAttribut.Valeur + StrToIntDef(TabAttribut.Cells[6, IndTab], 0);
               Personnage.CreationAttribut     += [PersonnageAttribut];
             end;
         end;
@@ -1963,6 +2183,8 @@ procedure TWinCreations.PhaseSave(NouvellePhase: Integer);
         IndTab: Integer;
         PCompetence: StructureCompetence;
         PRace: StructureRace;
+        ListeFixes: TStringList;
+        IndFixe: Integer;
       begin
       Prace := chercheRace(RaceEnCours);
       for IndTab := 1 to TabRaceCompetence.RowCount - 1 do
@@ -1985,6 +2207,25 @@ procedure TWinCreations.PhaseSave(NouvellePhase: Integer);
               PersonnageCompetence.Valeur                  := PRAce.Point5;
               Personnage.CreationCompetence35              += [PersonnageCompetence];
             end;
+        end;
+
+      // Competences acquises d'office par l'ethnie (V5 : langues de depart a +30)
+      if PRace.CompetencesFixes <> '' then
+        begin
+          ListeFixes := TStringList.Create;
+          try
+            ListeFixes.Delimiter       := ';';
+            ListeFixes.StrictDelimiter := True;
+            ListeFixes.DelimitedText   := PRace.CompetencesFixes;
+            for IndFixe := 0 to ListeFixes.Count - 1 do
+              begin
+                PersonnageCompetence.CodeCompetence := ListeFixes.Names[IndFixe];
+                PersonnageCompetence.Valeur         := StrToIntDef(ListeFixes.ValueFromIndex[IndFixe], 0);
+                Personnage.CreationCompetence35     += [PersonnageCompetence];
+              end;
+          finally
+            ListeFixes.Free;
+          end;
         end;
 
       IndTab := 0;
@@ -2117,6 +2358,19 @@ procedure TWinCreations.PhaseSave(NouvellePhase: Integer);
         IndEns: Integer;
       begin
       // V2 : argent de depart de la carriere dans la bourse (en couronnes d'or)
+      // V5 : l'argent va dans la bourse selon le palier du Status (laiton / argent / or)
+      if (ValVersion = 'WFRP5') and Assigned(EditArgent) then
+        begin
+          Personnage.MonnaieSB := 0;
+          Personnage.MonnaiePA := 0;
+          Personnage.MonnaieCO := 0;
+          if EditArgent.Visible then
+            case UniteArgentV5 of
+              0: Personnage.MonnaieSB := StrToIntDef(EditArgent.Text, 0);
+              1: Personnage.MonnaiePA := StrToIntDef(EditArgent.Text, 0);
+              2: Personnage.MonnaieCO := StrToIntDef(EditArgent.Text, 0);
+            end;
+        end;
       if (ValVersion = 'WFRP2') and Assigned(EditArgent) then
         if EditArgent.Visible then
           Personnage.MonnaieCO := StrToIntDef(EditArgent.Text, 0)
@@ -2171,18 +2425,29 @@ procedure TWinCreations.PhaseSave(NouvellePhase: Integer);
 
     procedure PhaseSaveSauvegarde();
       var
-        Xp: Integer;
+        Xp, XpActuel: Integer;
         directoryPath: String;
       begin
-      if ValVersion = 'WFRP1' then
+      XpActuel := -1;
+      if ValVersion = 'WFRPTOW' then
+        begin
+          // TOW : perso assemble depuis les choix, XP total / actuel calcules ; ensuite, meme ecriture que V1-V5
+          if not TowPrepareSauvegarde(Xp, XpActuel) then Exit;
+        end
+      else if ValVersion = 'WFRP1' then
         Xp := 0   // V1 : pas encore de calcul d'XP (evolution du personnage a venir dans WinPersonnage)
       else
         begin
           AjouteEffetsClan();
           AjouteEffetsFamilier();
           AjouteTalentSigne();
-          Xp := XmlCalculXp();
+          // V2 : pas de bonus d'Xp de depart (hasard 20 / 50 / 25, signe astral : regles propres a V4 / V5)
+          if ValVersion = 'WFRP2' then
+            Xp := 0
+          else
+            Xp := XmlCalculXp();
         end;
+      if XpActuel < 0 then XpActuel := Xp;   // V1-V5 : XP actuel = XP total a la creation
       Personnage.LivresAcceptes:=LivresPersonnages;
       directoryPath := GetCurrentDir+ConstCheminPersonnage+EditNomPersonnag.text;
       // installation neuve : SAVED_CARACTERS\<version> n'existe pas encore (CreateDir n'est pas recursif)
@@ -2191,7 +2456,9 @@ procedure TWinCreations.PhaseSave(NouvellePhase: Integer);
           ShowMessage(GetTexteLibelle('RULES-MESS_001')+' '+directoryPath)
       else
         begin
-          if PersonnageXmlCreation(Personnage, Xp, Xp, directoryPath + '\' + FormatDateTime('yyyymmdd', Date) + '-' + FormatDateTime('hhnnss', Time) + '.xml', EditNomPersonnag.text) then
+          // specialisations propres creees pendant la creation (+Specialisation de WinSpecialisation)
+          Personnage.ObjetsPropres := ObjetsPropresChoix;
+          if PersonnageXmlCreation(Personnage, Xp, XpActuel, directoryPath + '\' + FormatDateTime('yyyymmdd', Date) + '-' + FormatDateTime('hhnnss', Time) + '.xml', EditNomPersonnag.text) then
             begin
               NeedUpdate          := true;
               RecherchePersonnage := EditNomPersonnag.text;
@@ -2682,8 +2949,95 @@ procedure TWinCreations.ReglesChangees(Sender: TObject);
       ChargeComboRegle();
   end;
 
+function EstDansListe(const Liste: array of String; const Code: String): Boolean; forward;
+
 procedure TWinCreations.TabMetierCompetenceDblClick(Sender: TObject);
+  var
+    C, NbC, Ligne, Slot, J, Idx: Integer;
+    Code: String;
+    Opt: TStringArray;
+    ListeOpt: TStringList;
   begin
+    if ValVersion = 'WFRPTOW' then
+      begin
+        C := TowIndexCarriere();
+        if C < 0 then Exit;
+        NbC   := Length(TowCarrieresCache[C].CompChoix);
+        Ligne := TabMetierCompetence.Row;
+        if (Ligne >= 1) and (Ligne <= NbC) then
+          begin
+            // competence de carriere : choisir / retirer (CompNb au plus)
+            Code := TowCarrieresCache[C].CompChoix[Ligne - 1];
+            if EstDansListe(TowCompCar, Code) then
+              begin
+                for Idx := 0 to High(TowCompCar) do
+                  if TowCompCar[Idx] = Code then
+                    begin
+                      Delete(TowCompCar, Idx, 1);
+                      Break;
+                    end;
+              end
+            else if Length(TowCompCar) < TowCarrieresCache[C].CompNb then
+              begin
+                SetLength(TowCompCar, Length(TowCompCar) + 1);
+                TowCompCar[High(TowCompCar)] := Code;
+              end;
+          end
+        else if Ligne > NbC then
+          begin
+            // lore : fenetre de choix parmi les options de l emplacement
+            Slot := Ligne - NbC - 1;
+            if Slot > High(TowLoreChoix) then Exit;
+            Opt := TowSlotsLore(Slot);
+            if Length(Opt) > 1 then
+              begin
+                Idx := -1;
+                ListeOpt := TStringList.Create;
+                try
+                  for J := 0 to High(Opt) do
+                    begin
+                      ListeOpt.Add(TowLibelleDe(Opt[J]));
+                      if Opt[J] = TowLoreChoix[Slot] then Idx := J;
+                    end;
+                  J := TowChoisitOption(GetTexteLibelle('RULES-MESS_130'), Format(GetTexteLibelle('RULES-MESS_135'), [GetTexteLibelle('RULES-MESS_130')]), ListeOpt, Idx);
+                finally
+                  ListeOpt.Free;
+                end;
+                if J >= 0 then
+                  begin
+                    if TowLoreChoix[Slot] <> Opt[J] then TowLorePrecis[Slot] := '';   // autre lore : l ecole ne vaut plus
+                    TowLoreChoix[Slot] := Opt[J];
+                  end;
+              end;
+            // lore « (specify) » : second choix, la precision (ecole de magie, ville, culte, province...)
+            if TowLoreGenerique(TowLoreChoix[Slot]) then
+              begin
+                TowListeP := TowPrecisionsLore(TowLoreChoix[Slot]);
+                try
+                  if TowListeP.Count > 0 then
+                    begin
+                      Idx := -1;
+                      ListeOpt := TStringList.Create;
+                      try
+                        for J := 0 to TowListeP.Count - 1 do
+                          begin
+                            ListeOpt.Add(TowLibelleDe(TowListeP[J]));
+                            if (Slot <= High(TowLorePrecis)) and (TowListeP[J] = TowLorePrecis[Slot]) then Idx := J;
+                          end;
+                        J := TowChoisitOption(TowLibelleDe(TowLoreChoix[Slot]), GetTexteLibelle('RULES-MESS_136'), ListeOpt, Idx);
+                      finally
+                        ListeOpt.Free;
+                      end;
+                      if (J >= 0) and (Slot <= High(TowLorePrecis)) then TowLorePrecis[Slot] := TowListeP[J];
+                    end;
+                finally
+                  TowListeP.Free;
+                end;
+              end;
+          end;
+        TowAfficheCompMetier();
+        Exit;
+      end;
     if (TabMetierCompetence.Cells[5, TabMetierCompetence.Row] = ConstArbreAuChoix) then
       begin
         ChoixWinTypeFichier         := ConstXmlSousChapitreCompetence;
@@ -2702,13 +3056,220 @@ procedure TWinCreations.TabMetierCompetenceDblClick(Sender: TObject);
       CompetenceFenetre(TabMetierCompetence.Cells[1, TabMetierCompetence.Row]);
   end;
 
+// TOW phase 7, choix a la main (les jets sont deja faits hors du programme, ou on recree un perso existant).
+// 0 = carriere sans magie, 1 = Arcane / Hedge Wizard (Magic Lore + 3 sorts), 2 = Priest (dieu)
+function TowMagie(const C: TTowCarriere): Integer;
+  begin
+    if (C.Code = 'RULES-WORK_ARCANE_WIZARD') or (C.Code = 'RULES-WORK_HEDGE_WIZARD') then Result := 1
+    else if C.Code = 'RULES-WORK_PRIEST' then Result := 2
+    else Result := 0;
+  end;
+
+// Sorts de la Magic Lore choisie pas encore pris (index dans TowSortCache)
+function TowSortsCandidats(): TStringList;
+  var I, J: Integer; Deja: Boolean;
+  begin
+    Result := TStringList.Create;
+    for I := 0 to High(TowSortCache) do
+      if TowSortCache[I].Lore = TowPrecCarriere then
+        begin
+          Deja := False;
+          for J := 0 to High(TowSortsCodes) do
+            if TowSortsCodes[J] = TowSortCache[I].Code then Deja := True;
+          if not Deja then Result.Add(IntToStr(I));
+        end;
+  end;
+
+// Nombre de sorts de depart attendus : 3, ou moins si la Magic Lore en a moins
+function TowSortsVoulus(): Integer;
+  var I: Integer;
+  begin
+    Result := 0;
+    for I := 0 to High(TowSortCache) do
+      if TowSortCache[I].Lore = TowPrecCarriere then Inc(Result);
+    if Result > 3 then Result := 3;
+  end;
+
+// Relations des tables de la carriere pas encore prises (index dans TowRelCache), tant qu il manque un contact
+function TowContactsCandidats(const C: TTowCarriere): TStringList;
+  var I, F, J: Integer; Bon, Deja: Boolean;
+  begin
+    Result := TStringList.Create;
+    if Length(TowContNpc) >= 2 then Exit;
+    for I := 0 to High(TowRelCache) do
+      begin
+        Bon := False;
+        for F := 0 to High(C.Familles) do
+          if C.Familles[F] = TowRelCache[I].Famille then Bon := True;
+        if not Bon then Continue;
+        Deja := False;
+        for J := 0 to High(TowContNpc) do
+          if (TowContFam[J] = TowRelCache[I].Famille) and (TowContNpc[J] = TowRelCache[I].Npc) then Deja := True;
+        if not Deja then Result.Add(IntToStr(I));
+      end;
+  end;
+
+// M = marque de la ligne : c<i> prendre la relation i, p<i> choisir la precision i, s<i> prendre le sort i ;
+// C<i> / S<i> / P retirent un contact / un sort / la precision (avec ses sorts).
+procedure TowEquipManuel(const M: String; C: Integer);
+  var Idx, Mag, J, N: Integer;
+  begin
+    Idx := StrToIntDef(Copy(M, 2, 9), -1);
+    Mag := TowMagie(TowCarrieresCache[C]);
+    case M[1] of
+      'c': if (Idx >= 0) and (Idx <= High(TowRelCache)) and (Length(TowContNpc) < 2) then
+             begin
+               N := Length(TowContNpc);
+               SetLength(TowContFam, N + 1);
+               SetLength(TowContNpc, N + 1);
+               SetLength(TowContTxt, N + 1);
+               TowContFam[N] := TowRelCache[Idx].Famille;
+               TowContNpc[N] := TowRelCache[Idx].Npc;
+               TowContTxt[N] := TowRelCache[Idx].Texte;
+             end;
+      'p': begin
+             if (Mag = 1) and (Idx >= 0) and (Idx <= High(TowLoresMagie)) then TowPrecCarriere := TowLoresMagie[Idx]
+             else if (Mag = 2) and (Idx >= 0) and (Idx <= High(TowDieux)) then TowPrecCarriere := TowDieux[Idx];
+             SetLength(TowSortsCodes, 0);
+           end;
+      's': if (Idx >= 0) and (Idx <= High(TowSortCache)) and (TowSortCache[Idx].Lore = TowPrecCarriere)
+              and (Length(TowSortsCodes) < 3) then
+             begin
+               N := Length(TowSortsCodes);
+               SetLength(TowSortsCodes, N + 1);
+               TowSortsCodes[N] := TowSortCache[Idx].Code;
+             end;
+      'C': if (Idx >= 0) and (Idx <= High(TowContNpc)) then
+             begin
+               for J := Idx to High(TowContNpc) - 1 do
+                 begin
+                   TowContFam[J] := TowContFam[J + 1];
+                   TowContNpc[J] := TowContNpc[J + 1];
+                   TowContTxt[J] := TowContTxt[J + 1];
+                 end;
+               SetLength(TowContFam, Length(TowContFam) - 1);
+               SetLength(TowContNpc, Length(TowContNpc) - 1);
+               SetLength(TowContTxt, Length(TowContTxt) - 1);
+             end;
+      'S': if (Idx >= 0) and (Idx <= High(TowSortsCodes)) then
+             begin
+               for J := Idx to High(TowSortsCodes) - 1 do
+                 TowSortsCodes[J] := TowSortsCodes[J + 1];
+               SetLength(TowSortsCodes, Length(TowSortsCodes) - 1);
+             end;
+      'P': begin
+             TowPrecCarriere := '';
+             SetLength(TowSortsCodes, 0);
+           end;
+    end;
+  end;
+
 procedure TWinCreations.TabMetierEquipementDblClick(Sender: TObject);
 var
   Codes:           TStringList;
   Quantites:       TStringList;
   IndChoix:        Integer;
   QuantiteChoisie: Integer;
+  TowC, TowJ, TowI: Integer;
+  TowM:            String;
+  TowActuel:       String;
+  TowListe, Arm:   TStringList;
+  TowOpt:          array of String;
 begin
+  if ValVersion = 'WFRPTOW' then
+    begin
+      TowC := TowIndexCarriere();
+      if TowC < 0 then Exit;
+      TowM := TabMetierEquipement.Cells[6, TabMetierEquipement.Row];
+      if (TowM <> '') and (TowM[1] in ['E', 'A']) then
+        begin
+          // fenetre de choix parmi les options de l emplacement
+          TowI := StrToIntDef(Copy(TowM, 2, 9), -1);
+          if TowI < 0 then Exit;
+          if TowM[1] = 'E' then
+            begin
+              if TowI > High(TowEqChoix) then Exit;
+              TowOpt := TowCarrieresCache[TowC].TrappingSlots[TowI];
+              TowActuel := TowEqChoix[TowI];
+            end
+          else
+            begin
+              if TowI > High(TowAtChoix) then Exit;
+              TowOpt := TowCarrieresCache[TowC].AssetSlots[TowI];
+              TowActuel := TowAtChoix[TowI];
+            end;
+          if Length(TowOpt) >= 2 then
+            begin
+              IndChoix := -1;
+              TowListe := TStringList.Create;
+              try
+                for TowJ := 0 to High(TowOpt) do
+                  begin
+                    TowListe.Add(TowLibelleDe(TowOpt[TowJ]));
+                    if TowOpt[TowJ] = TowActuel then IndChoix := TowJ;
+                  end;
+                if TowM[1] = 'E' then
+                  TowJ := TowChoisitOption(GetTexteLibelle('RULES-MESS_131'), Format(GetTexteLibelle('RULES-MESS_135'), [GetTexteLibelle('RULES-MESS_131')]), TowListe, IndChoix)
+                else
+                  TowJ := TowChoisitOption(GetTexteLibelle('RULES-MESS_132'), Format(GetTexteLibelle('RULES-MESS_135'), [GetTexteLibelle('RULES-MESS_132')]), TowListe, IndChoix);
+              finally
+                TowListe.Free;
+              end;
+              if TowJ < 0 then Exit;
+              if TowM[1] = 'E' then
+                begin
+                  if TowEqChoix[TowI] <> TowOpt[TowJ] then TowEqPrecis[TowI] := '';   // autre option : l arme nommee ne vaut plus
+                  TowEqChoix[TowI] := TowOpt[TowJ];
+                end
+              else
+                TowAtChoix[TowI] := TowOpt[TowJ];
+            end
+          else if TowM[1] <> 'E' then Exit;
+          // trapping « arme au choix » ou « outils de metier » : second choix, l arme ou les outils nommes,
+          // par la fenetre commune des equipements (comme V1-V5, ChoisirEquipementListe de WinPersonnage)
+          TowLoresPerso := TowLoreChoix;
+          if (TowM[1] = 'E') and (TowEqChoix[TowI] <> '') then
+            begin
+              TowListe := TowArmesPour(TowEqChoix[TowI]);
+              try
+                if TowListe.Count > 0 then
+                  begin
+                    ChoixWinTypeFichier         := ConstXmlChapitreEquipement;
+                    ChoixWinEquipement          := '';
+                    for TowJ := 0 to TowListe.Count - 1 do
+                      begin
+                        if TowJ > 0 then ChoixWinEquipement := ChoixWinEquipement + ',';
+                        ChoixWinEquipement := ChoixWinEquipement + TowListe[TowJ];
+                      end;
+                    SelectWinLivre              := '';
+                    SelectWinEquipement         := '';
+                    FenSpecialisation           := TWinSpecialisations.Create(Application);
+                    FenSpecialisation.Position  := poOwnerFormCenter;
+                    FenSpecialisation.ShowModal;
+                    if SelectWinEquipement <> '' then TowEqPrecis[TowI] := SelectWinEquipement;
+                  end;
+              finally
+                TowListe.Free;
+              end;
+            end;
+          TowAfficheEquip();
+        end
+      else if (TowM <> '') and ((TowM[1] in ['c', 'p', 's']) or
+              ((TowM[1] in ['C', 'S', 'P']) and (Length(TowM) > 1) and (GetKeyState(VK_CONTROL) < 0)) or
+              ((TowM = 'P') and (GetKeyState(VK_CONTROL) < 0))) then
+        begin
+          TowEquipManuel(TowM, TowC);   // choix a la main (c / p / s) ou retrait (Ctrl + double-clic)
+          TowAfficheEquip();
+        end
+      else if (TowM <> '') and (TowM[1] = 'C') and (Length(TowM) > 1) then
+        begin
+          TowRelanceContact(StrToIntDef(Copy(TowM, 2, 9), -1));   // seulement ce contact
+          TowAfficheEquip();
+        end
+      else if TowM <> '' then
+        TowTireEquip(True);   // « Contacts : ? » / sorts / precision : nouveau tirage
+      Exit;
+    end;
   if TabMetierEquipement.Cells[2, TabMetierEquipement.Row] = ConstArbreAuChoix then
     begin
       ChoixWinTypeFichier         := ConstXmlChapitreEquipement;
@@ -2746,12 +3307,41 @@ begin
 end;
 
 procedure TWinCreations.TabRaceCompetenceDblClick(Sender: TObject);
+  var
+    K, Idx: Integer;
+    TowO:   TTowOrigines;
+    Code:   String;
   begin
     // Meme moule que TabMetierCompetenceDblClick, mais SANS colonne technique : un code
     // d'ethnie encore au choix se reconnait a lui seul - il porte ValeurGenerique
     // ("Trade (Any)") ou SeparateurMulti ("Trade (Farming or Mining)"). Une fois resolu il
     // ne porte plus ni l'un ni l'autre, donc la condition s'eteint d'elle-meme.
     // CONTEXT.md 2.45.
+    if ValVersion = 'WFRPTOW' then
+      begin
+        // double-clic = choisir ou retirer une competence libre (les fixes de l origine ne bougent pas)
+        K := TowIndexOrigine();
+        if K < 0 then Exit;
+        TowO  := TowOriginesCache;
+        Code  := TabRaceCompetence.Cells[1, TabRaceCompetence.Row];
+        if (Code = '') or EstDansListe(TowO[K].CompFixes, Code) then Exit;
+        if EstDansListe(TowCompLibres, Code) then
+          begin
+            for Idx := 0 to High(TowCompLibres) do
+              if TowCompLibres[Idx] = Code then
+                begin
+                  Delete(TowCompLibres, Idx, 1);
+                  Break;
+                end;
+          end
+        else if Length(TowCompLibres) < TowCompLibresVoulues() then
+          begin
+            SetLength(TowCompLibres, Length(TowCompLibres) + 1);
+            TowCompLibres[High(TowCompLibres)] := Code;
+          end;
+        TowAfficheCompRace();
+        Exit;
+      end;
     if (Pos(ValeurGenerique, TabRaceCompetence.Cells[1, TabRaceCompetence.Row]) > 0) or
        (Pos(SeparateurMulti, TabRaceCompetence.Cells[1, TabRaceCompetence.Row]) > 0) then
       begin
@@ -2770,8 +3360,83 @@ procedure TWinCreations.TabRaceCompetenceDblClick(Sender: TObject);
       CompetenceFenetre(TabRaceCompetence.Cells[1, TabRaceCompetence.Row]);
   end;
 
-procedure TWinCreations.TabTalentDblClick(Sender: TObject);
+// TOW phase 4, choix a la main : lignes de la table d10 de l origine pas encore prises (index dans TableTalents,
+// un seul par talent), tant que le nombre de talents tires n est pas atteint.
+function TowTalCandidats(const O: TTowOrigine; const Tires: array of String): TStringList;
+  var
+    I, J: Integer;
+    Pris: Boolean;
   begin
+    Result := TStringList.Create;
+    if Length(Tires) >= O.TalentTirages then Exit;
+    for I := 0 to High(O.TableTalents) do
+      begin
+        Pris := False;
+        for J := 0 to High(Tires) do
+          if Tires[J] = O.TableTalents[I].Code then Pris := True;
+        for J := 0 to Result.Count - 1 do
+          if O.TableTalents[StrToInt(Result[J])].Code = O.TableTalents[I].Code then Pris := True;
+        if not Pris then Result.Add(IntToStr(I));
+      end;
+  end;
+
+procedure TWinCreations.TabTalentDblClick(Sender: TObject);
+  var
+    K, Idx, J: Integer;
+    TowO: TTowOrigines;
+    Cand: TStringList;
+  begin
+    if ValVersion = 'WFRPTOW' then
+      begin
+        K := TowIndexOrigine();
+        if K < 0 then Exit;
+        TowO := TowOriginesCache;
+        Idx  := TabTalent.Row - 1 - Length(TowO[K].TalentsFixes);
+        if Idx < 0 then Exit;
+        // ligne de la table d10 : prendre ce talent (le d10 lance hors du programme)
+        if Idx > High(TowTalTires) then
+          begin
+            Cand := TowTalCandidats(TowO[K], TowTalTires);
+            try
+              J := Idx - Length(TowTalTires);
+              if J >= Cand.Count then Exit;
+              SetLength(TowTalTires, Length(TowTalTires) + 1);
+              TowTalTires[High(TowTalTires)] := TowO[K].TableTalents[StrToInt(Cand[J])].Code;
+            finally
+              Cand.Free;
+            end;
+            TowTalFait := Length(TowTalTires) >= TowO[K].TalentTirages;
+            if TowTalFait and (TowO[K].TalentEchange <> '') and (TowO[K].Echange = 'MANDATORY') then
+              TowTalEchange := High(TowTalTires)
+            else
+              TowTalEchange := -1;
+            TowAfficheTalents();
+            Exit;
+          end;
+        // Ctrl + double-clic sur un talent tire = le retirer
+        if GetKeyState(VK_CONTROL) < 0 then
+          begin
+            for J := Idx to High(TowTalTires) - 1 do
+              TowTalTires[J] := TowTalTires[J + 1];
+            SetLength(TowTalTires, Length(TowTalTires) - 1);
+            TowTalFait    := False;
+            TowTalEchange := -1;
+            TowAfficheTalents();
+            Exit;
+          end;
+        // double-clic sur un talent tire = le remplacer par le talent d echange (ou annuler l echange)
+        if not TowTalFait then Exit;
+        if (TowO[K].TalentEchange = '') or (TowO[K].Echange = 'NONE') then Exit;
+        if TowTalEchange = Idx then
+          begin
+            if TowO[K].Echange = 'MANDATORY' then Exit;
+            TowTalEchange := -1;
+          end
+        else
+          TowTalEchange := Idx;
+        TowAfficheTalents();
+        Exit;
+      end;
     TalentFenetre(0, TabTalent.Cells[1, TabTalent.Row]);
   end;
 
@@ -2967,6 +3632,23 @@ procedure TWinCreations.ChangementPhase(Changement: Integer);
     // V2 : la valeur actuelle des caracteristiques n'existe qu'apres la phase 4
     if RaceParGrille() then
       RemplirGridRace();
+    // The Old World : la liste des carrieres depend de l origine, refaite a l arrivee sur la page
+    if (ValVersion = 'WFRPTOW') and (PhaseEnCours = TabSheetMetier.PageIndex) then
+      ChargeTabMetier();
+    if (ValVersion = 'WFRPTOW') and (PhaseEnCours = TabSheetAttribut.PageIndex) then
+      TowInitAttributs();
+    if (ValVersion = 'WFRPTOW') and (PhaseEnCours = TabSheetTalent.PageIndex) then
+      TowInitTalents();
+    if (ValVersion = 'WFRPTOW') and (PhaseEnCours = TabSheetCompRace.PageIndex) then
+      TowInitCompRace();
+    if (ValVersion = 'WFRPTOW') and (PhaseEnCours = TabSheetCompMetier.PageIndex) then
+      TowInitCompMetier();
+    if (ValVersion = 'WFRPTOW') and (PhaseEnCours = TabSheetEquipement.PageIndex) then
+      TowInitEquip();
+    if (ValVersion = 'WFRPTOW') and (PhaseEnCours = TabSheetNom.PageIndex) then
+      TowInitNom();
+    if ValVersion = 'WFRPTOW' then
+      TowMajRecap();
     if ValVersion = 'WFRP2' then
       RemplirGridAvance();
     if ValVersion = 'WFRP1' then
@@ -3024,6 +3706,17 @@ Function TWinCreations.PageEtapesChange(): boolean;
       Vide: Integer;
       IndTab: Integer;
     begin
+      // The Old World : exactement trois +1 (tires ou choisis)
+      if ValVersion = 'WFRPTOW' then
+        begin
+          Vide := 0;
+          for IndTab := 1 to TowNbCarac do
+            Vide := Vide + TowPlus[IndTab];
+          Result := (Vide = 3);
+          if not Result then
+            ShowMessage(GetTexteLibelle('RULES-MESS_004'));
+          Exit;
+        end;
       Vide  := 0;
       for IndTab := 1 to 10 do
         // V2 : seules les caracteristiques a formule de des ont un jet (8 sur 10 lignes)
@@ -3040,6 +3733,13 @@ Function TWinCreations.PageEtapesChange(): boolean;
            ShowMessage(GetTexteLibelle('RULES-MESS_065'));
            Result := False;
           end
+        // V5 : le bonus de depart de la carriere doit etre entierement reparti
+        else if (ValVersion = 'WFRP5') and (TotalBonusCaracV5() < PlafondBonusCaracV5())
+                and BonusCaracV5Possible() then
+          begin
+           ShowMessage(Format(GetTexteLibelle('RULES-MESS_127'), [PlafondBonusCaracV5()]));
+           Result := False;
+          end
         else
            Result := true;
     end;
@@ -3050,7 +3750,13 @@ Function TWinCreations.PageEtapesChange(): boolean;
       Ok: Boolean;
     begin
       Ok := True;
-      if not ChoixCreationComplet() then
+      if (ValVersion = 'WFRPTOW') and not TowTalFait then
+        begin
+          ShowMessage(GetTexteLibelle('RULES-MESS_005'));
+          Result := False;
+          Exit;
+        end;
+      if (ValVersion <> 'WFRPTOW') and not ChoixCreationComplet() then
         begin
           ShowMessage(GetTexteLibelle('RULES-MESS_005'));
           Ok := False;
@@ -3066,6 +3772,13 @@ Function TWinCreations.PageEtapesChange(): boolean;
       PRaceNb: StructureRace;
     begin
       Ok := True;
+      if ValVersion = 'WFRPTOW' then
+        begin
+          Result := (Length(TowCompLibres) >= TowCompLibresVoulues());
+          if not Result then
+            ShowMessage(Format(GetTexteLibelle('RULES-MESS_128'), [TowCompLibresVoulues()]));
+          Exit;
+        end;
       // Le nombre attendu vient de l'ethnie, il n'est plus ecrit en dur : toutes les
       // races du livre de regles en prennent 3 et 3, le Skink de Lustria 2 et 2
       // (CONTEXT.md 2.15). MESS_013/014 portent un %d, d'ou le Format.
@@ -3101,6 +3814,19 @@ Function TWinCreations.PageEtapesChange(): boolean;
       IndTab: Integer;
     begin
       Ok := True;
+      if ValVersion = 'WFRPTOW' then
+        begin
+          Result := False;
+          IndTab := TowIndexCarriere();
+          if IndTab < 0 then Exit;
+          if Length(TowCompCar) < TowCarrieresCache[IndTab].CompNb then
+            ShowMessage(Format(GetTexteLibelle('RULES-MESS_128'), [TowCarrieresCache[IndTab].CompNb]))
+          else if not TowLoresComplets() then
+            ShowMessage(GetTexteLibelle('RULES-MESS_129'))
+          else
+            Result := True;
+          Exit;
+        end;
       if (ValVersion <> 'WFRP2') and (TotalMetierCompetence <> 40) then
         begin
           ShowMessage(GetTexteLibelle('RULES-MESS_015'));
@@ -3122,6 +3848,13 @@ Function TWinCreations.PageEtapesChange(): boolean;
       IndTab: Integer;
     begin
       Ok := True;
+      if ValVersion = 'WFRPTOW' then
+        begin
+          Result := TowEquipComplet();
+          if not Result then
+            ShowMessage(GetTexteLibelle('RULES-MESS_016'));
+          Exit;
+        end;
       for IndTab := 1 to TabMetierEquipement.RowCount - 1 do
         If (TabMetierEquipement.Cells[1, IndTab] = '') then
           begin
@@ -3222,6 +3955,9 @@ Function TWinCreations.PageEtapesChange(): boolean;
       7: Result := VerifEquipement;
       8: Result := VerifNom;
     end;
+    // The Old World : ce que la phase vient de fixer est pose dans Personnage a sa validation
+    if Result and (ValVersion = 'WFRPTOW') and (PhaseEnCours >= 1) and (PhaseEnCours <= 7) then
+      TowPoseDebutPersonnage;
   end;
 
 procedure TWinCreations.ButtonPhaseSuivanteClick(Sender: TObject);
@@ -3533,7 +4269,7 @@ function TWinCreations.TalentMaxCreation(CodeTalent: String): Integer;
     for IndTab := 1 to (TabAttribut.Rowcount-1) do
       if CodeSansLivre(TabAttribut.Cells[7, IndTab]) = Carac then
         begin
-          Total  := StrToIntDef(TabAttribut.Cells[6, IndTab], 0)
+          Total  := StrToIntDef(TabAttribut.Cells[8, IndTab], 0)
                     + SigneAstralAttributModif(Personnage.SigneAstral, Personnage.SigneAstralVariante, TabAttribut.Cells[7, IndTab]);
           Result := Trunc(Total / 10);
           Break;
@@ -3573,7 +4309,7 @@ procedure TWinCreations.MajRecapAttribut();
   begin
     for IndTab := 1 to (TabAttribut.Rowcount-1) do
       if IndTab <= 10 then
-        RecapAttribut.Cells[IndTab, 1] := IntToStr(StrToIntDef(TabAttribut.Cells[6, IndTab], 0)
+        RecapAttribut.Cells[IndTab, 1] := IntToStr(StrToIntDef(TabAttribut.Cells[8, IndTab], 0)
           + SigneAstralAttributModif(Personnage.SigneAstral, Personnage.SigneAstralVariante, TabAttribut.Cells[7, IndTab]));
     RecapAttribut.Visible := True;
   end;
@@ -4149,6 +4885,9 @@ function TWinCreations.XmlCalculXp(): Integer;
     Total: Integer = 0;
 //    RadioGroup1.ItemIndex
   begin
+    // V5 : le hasard ne rapporte plus d'XP (Fortune / Fate, voir BonusHasardV5)
+    if ValVersion = 'WFRP5' then
+      Exit(0);
     if RadioButtonRaceHasard.Checked or RadioButtonRaceResultat.Checked then
       Total := Total + 20;
     if RadioButtonMetierHasard.Checked or RadioButtonMetierResultat.checked then
@@ -4160,6 +4899,43 @@ function TWinCreations.XmlCalculXp(): Integer;
     if SigneTire and (Personnage.SigneAstral <> '') then
       Total := Total + 25;
     Result := Total;
+  end;
+
+// V5 (Rulebook p.22-40) : espece gardee au premier tirage = +1 Fortune ;
+// espece, carriere et caracteristiques gardees au premier tirage (« Oh Fickle Fate ») = +1 Fate.
+function TWinCreations.BonusHasardV5(const Code: String): Integer;
+  var
+    EspeceHasard, MetierHasard, AttributHasard: Boolean;
+  begin
+    Result := 0;
+    if ValVersion <> 'WFRP5' then
+      Exit;
+    EspeceHasard   := RadioButtonRaceHasard.Checked or RadioButtonRaceResultat.Checked;
+    MetierHasard   := RadioButtonMetierHasard.Checked or RadioButtonMetierResultat.Checked;
+    AttributHasard := RadioButtonAttributHasard.Checked or RadioButtonAttributResultat.Checked;
+    if (Code = ConstCaracFortune) and EspeceHasard then
+      Result := 1
+    else if (Code = ConstCaracDestin) and EspeceHasard and MetierHasard and AttributHasard then
+      Result := 1;
+  end;
+
+// V5 (Rulebook p.38-39) : une competence ne recoit pas plus de 3 avances (+15) a la creation,
+// avances d'espece comprises (les langues fixes de depart ne comptent pas). Renvoie le maximum
+// de points encore permis a la ligne IndLigne de la grille des competences de metier.
+function TWinCreations.PlafondCompetenceMetierV5(IndLigne: Integer): Integer;
+  var
+    IndTab:  Integer;
+    PRace:   StructureRace;
+    Deja:    Integer = 0;
+  begin
+    PRace := ChercheRace(RaceEnCours);
+    for IndTab := 1 to TabRaceCompetence.RowCount - 1 do
+      if CompetenceRaceStates[5, IndTab]
+         and (TabRaceCompetence.Cells[1, IndTab] = TabMetierCompetence.Cells[1, IndLigne]) then
+        Deja := Deja + PRace.Point5;
+    Result := 15 - Deja;
+    if Result < 0 then
+      Result := 0;
   end;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -4245,8 +5021,54 @@ Procedure TWinCreations.ChargeTabRaces(Livre: String='');
 // V2 : jet de l'argent de depart (formule "1d10CO") ; sans objet pour un montant fixe
 procedure TWinCreations.ButtonArgentClick(Sender: TObject);
   begin
-    if (Pos('d', FormuleArgent) > 0) and not EditArgent.ReadOnly then
+    if (ValVersion = 'WFRP5') and (Pos('d', FormuleArgent) > 0) then
+      EditArgent.Text := IntToStr(LanceFormule(FormuleArgent, False))
+    else if (Pos('d', FormuleArgent) > 0) and not EditArgent.ReadOnly then
       EditArgent.Text := IntToStr(LanceFormule(Copy(FormuleArgent, 1, Length(FormuleArgent) - 2), False));
+  end;
+
+// V5 (Rulebook p.39) : argent de depart selon le Status du niveau 1 (Standing adapte compris) :
+// Brass 20 + 2d10 par niveau de Standing (pennies), Silver 10 + 1d10 par niveau (shillings),
+// Gold 2 + 1 par niveau (couronnes). Le jet est propose, le joueur peut le refaire ou le saisir.
+procedure TWinCreations.AfficheArgentDepartV5();
+  var
+    Statut, Palier: String;
+    Niveau, Sep:    Integer;
+  begin
+    FormuleArgent := '';
+    UniteArgentV5 := -1;
+    Statut := StatutAdapte(ChercheMetierNiveau(MetierEnCours, 1).SalaireMetier, MetierEnCours,
+                           RaceEnCours, ChoixAdaptationCreation());
+    Sep    := Pos(' ', Statut);
+    if Sep > 0 then
+      begin
+        Palier := Copy(Statut, 1, Sep - 1);
+        if Pos('RULES-', Palier) = 1 then
+          Palier := Copy(Palier, 7, Length(Palier));
+        Niveau := StrToIntDef(Copy(Statut, Sep + 1, 10), 0);
+        if Palier = 'TIERS_BRASS' then
+          begin
+            UniteArgentV5 := 0;
+            FormuleArgent := '20+' + IntToStr(Niveau * 2) + 'd10';
+          end
+        else if Palier = 'TIERS_SILVER' then
+          begin
+            UniteArgentV5 := 1;
+            FormuleArgent := '10+' + IntToStr(Niveau) + 'd10';
+          end
+        else if Palier = 'TIERS_GOLD' then
+          begin
+            UniteArgentV5 := 2;
+            FormuleArgent := IntToStr(2 + Niveau);
+          end;
+      end;
+    ButtonArgent.Visible := FormuleArgent <> '';
+    EditArgent.Visible   := FormuleArgent <> '';
+    if FormuleArgent = '' then Exit;
+    ButtonArgent.Caption := GetTexteLibelle('RULES-LAB_1037') + ' (' + GetTexteLibelle('RULES-LAB_' + IntToStr(1038 + UniteArgentV5)) + ')';
+    EditArgent.ReadOnly  := Pos('d', FormuleArgent) = 0;
+    ButtonArgent.Enabled := Pos('d', FormuleArgent) > 0;
+    EditArgent.Text      := IntToStr(LanceFormule(FormuleArgent, False));
   end;
 
 // V2 : montre l'argent de depart de la carriere choisie (champ et bouton caches s'il n'y en a pas)
@@ -4255,6 +5077,11 @@ procedure TWinCreations.AfficheArgentDepart();
     Base: String;
     EstDe: Boolean;
   begin
+    if (ValVersion = 'WFRP5') and (ButtonArgent <> nil) then
+      begin
+        AfficheArgentDepartV5();
+        Exit;
+      end;
     if (ValVersion <> 'WFRP2') or (ButtonArgent = nil) then Exit;
     FormuleArgent := ArgentDepartMetier(MetierEnCours);
     ButtonArgent.Visible := FormuleArgent <> '';
@@ -4270,14 +5097,53 @@ procedure TWinCreations.AfficheArgentDepart();
       EditArgent.Text := Base;
   end;
 
-procedure TWinCreations.ButtonRaceHasardClick(Sender: TObject);
+// Une race sans aucun metier dans les donnees (ex. les races de Codex Greenskins) mene le joueur
+// a une page Metier vide : le tirage au hasard l'ecarte (le joueur peut toujours la choisir lui-meme).
+function RaceACarrieres(const CodeRace: String): Boolean;
+  var
+    PRaceMetier: StructureRaceMetier;
   begin
+    Result := False;
+    For PRaceMetier in ListRaceMetier do
+      if (PRaceMetier.Chance <> SeparateurChance) and CompareRechercheValeur(PRaceMetier.CodeRace, CodeRace) then
+        begin
+          Result := True;
+          Exit;
+        end;
+  end;
+
+procedure TWinCreations.ButtonRaceHasardClick(Sender: TObject);
+  var
+    Candidates: array of Integer;
+    IndLigne:   Integer;
+    TowO:       TTowOrigines;
+    TowIdx:     Integer;
+  begin
+       // The Old World : d10 sur la table des origines (Player's Guide p.13)
+       if ValVersion = 'WFRPTOW' then
+         begin
+           TowOrigineParD10(Random(10) + 1);
+           Exit;
+         end;
        // V2 et V1 : pas de table de tirage, chaque race de la grille a la meme chance (meme effet qu'un double-clic)
        if RaceParGrille() then
          begin
            if (GridRace <> nil) and (GridRace.RowCount > 1) then
              begin
-               GridRace.Row := Random(GridRace.RowCount - 1) + 1;
+               SetLength(Candidates, 0);
+               For IndLigne := 1 to GridRace.RowCount - 1 do
+                 // un familier lie (Realms of Sorcery) suit un parcours a part : jamais tire au hasard
+                 // les races de Codex Greenskins (CGRK-) sont choisies par le joueur, jamais tirees au hasard (decision Nono 20/11/2026)
+                 if RaceACarrieres(GridRace.Cells[1, IndLigne]) and (Pos('_FAMILIAR_', GridRace.Cells[1, IndLigne]) = 0)
+                    and (Pos('CGRK-', GridRace.Cells[1, IndLigne]) <> 1) then
+                   begin
+                     SetLength(Candidates, Length(Candidates) + 1);
+                     Candidates[High(Candidates)] := IndLigne;
+                   end;
+               if Length(Candidates) > 0 then
+                 GridRace.Row := Candidates[Random(Length(Candidates))]
+               else
+                 GridRace.Row := Random(GridRace.RowCount - 1) + 1;
                GridRaceDblClick(Sender);
              end;
            Exit;
@@ -4288,8 +5154,33 @@ procedure TWinCreations.ButtonRaceHasardClick(Sender: TObject);
        UpdateSheetRace(true);
   end;
 
+// The Old World : l origine qui correspond a un resultat de d10 (tire ou saisi par le joueur)
+procedure TWinCreations.TowOrigineParD10(D10: Integer);
+  var
+    TowO:   TTowOrigines;
+    TowIdx: Integer;
+  begin
+    TowO   := TowOriginesCache;
+    TowIdx := TowOrigineDeD10(TowO, D10);
+    if TowIdx >= 0 then
+      begin
+        ChoixWinRace := TowO[TowIdx].Code;
+        TabRaceResultat(0);
+        AfficheImageRace();
+        UpdateSheetRace(true);
+        RemplirGridRace();
+        ChoixWinRace := '';
+        TowOrigineTiree := True;
+      end;
+  end;
+
 procedure TWinCreations.ButtonRaceValiderClick(Sender: TObject);
   begin
+       if ValVersion = 'WFRPTOW' then
+         begin
+           TowOrigineParD10(EditRaceResultat.Value);
+           Exit;
+         end;
        if (EditRaceResultat.Value = 0) then
           ShowMessage(GetTexteLibelle('RULES-MESS_19'))
        else
@@ -4315,7 +5206,7 @@ Procedure TWinCreations.AfficheImageRace();
     NbRaceCompetenceTab      := 0;
 
 
-    if RaceEnCours <> '' then
+    if (RaceEnCours <> '') then
       begin
        CheminImage1       := CheminRaceImage(RaceEnCours,'2');
        CheminImage2       := CheminRaceImage(RaceEnCours,'1');
@@ -4335,7 +5226,7 @@ Procedure TWinCreations.AfficheImageRace();
     else
        ImageRace2.Picture := nil;
     // ethnie sans illustration : icone de sa race de base, nom de la race au milieu
-    if (RaceEnCours <> '') and not FileExists(CheminImage1) and not FileExists(CheminImage2) then
+    if (RaceEnCours <> '') and (ValVersion <> 'WFRPTOW') and not FileExists(CheminImage1) and not FileExists(CheminImage2) then
       AfficheIconeEspece(ImageRace1, ChercheRace(RaceEnCours).Espece,
                          ChercheEspece(ChercheRace(RaceEnCours).Espece).Libelle);
     // une seule illustration (ou l'icone de race) : elle prend la place des deux
@@ -4364,6 +5255,18 @@ Procedure TWinCreations.AfficheImageRace();
                     TrackBarPointSupp.Frequency := 1;
                   end;
              end;
+
+    // V5 : pas de Resilience, donc rien a repartir entre Destin et Resilience
+    if ValVersion = 'WFRP5' then
+      begin
+        TrackBarPointSupp.Min     := 0;
+        TrackBarPointSupp.Max     := 0;   // sinon Max par defaut (10) ajoute 10 points au Destin
+        TrackBarPointSupp.Position := 0;
+        TrackBarPointSupp.Visible := false;
+        LabDestin.Visible         := false;
+        LabResilience.Visible     := false;
+        LabPointSupp.Visible      := false;
+      end;
 
     // TALENTS
     RemplitTalentsRace();
@@ -4432,7 +5335,22 @@ procedure TWinCreations.TabRaceResultat(Resul: Integer);
     IndS: Integer;
     Trouve: Boolean = false;
     PRace: StructureRace;
+    TowO: TTowOrigines;
+    K: Integer;
   begin
+    // The Old World : l origine choisie (ChoixWinRace) vient du livre TOW, pas de table de race
+    if ValVersion = 'WFRPTOW' then
+      begin
+        TowO := TowOriginesCache;
+        for K := 0 to High(TowO) do
+          if TowO[K].Code = ChoixWinRace then
+            begin
+              RaceEnCours    := TowO[K].Code;
+              RaceLibEnCours := TowO[K].Libelle;
+              Break;
+            end;
+        Exit;
+      end;
     for IndTab := 1 to TabRace.RowCount - 1 do
       begin
         Ch := TabRace.Cells[3, IndTab];
@@ -4519,6 +5437,15 @@ procedure TWinCreations.UpdateSheetRace(Hasard: Boolean);
     ButtonRaceValider.Visible := RadioButtonRaceResultat.Checked;
     ButtonRaceValider.Enabled := (LastCheckRaceResultat = 0);
     ButtonRaceValider.BringToFront;
+    // The Old World : le champ du d10 reste toujours visible et utilisable (on peut le corriger)
+    if (ValVersion = 'WFRPTOW') and (LabTowAideRace <> nil) then
+      begin
+        EditRaceResultat.Visible  := True;
+        EditRaceResultat.Enabled  := True;
+        ButtonRaceValider.Visible := True;
+        ButtonRaceValider.Enabled := True;
+        LabTowAideRace.Visible    := True;
+      end;
 
     // choisir votre race
     ButtonRaceSelectionner.visible := RadioButtonRaceChoix.Checked;
@@ -4955,8 +5882,39 @@ Procedure TWinCreations.ChargeTabMetier();
     PMetier:       StructureMetier;
     Tirage:        TListTirageMetier;
     Ligne:         StructureTirageMetier;
+    TowC:          TTowCarrieres;
+    K, J:          Integer;
 
   Begin
+    // The Old World : carrieres accessibles a l origine choisie, tranche d100 de la table p.25
+    if ValVersion = 'WFRPTOW' then
+      begin
+        TowC := TowCarrieresCache;
+        DesMetier := 100;
+        EditMetierResultat.MaxValue := 100;
+        TabMetier.RowCount := 1;
+        IndTabMetier := 0;
+        for K := 0 to High(TowC) do
+          if TowCarriereAdmise(TowC[K], RaceEnCours) then
+            begin
+              Inc(IndTabMetier);
+              TabMetier.RowCount := IndTabMetier + 1;
+              TabMetier.Cells[1, IndTabMetier] := TowC[K].Code;
+              TabMetier.Cells[2, IndTabMetier] := TowC[K].Libelle;
+              TabMetier.Cells[3, IndTabMetier] := '';
+              TabMetier.Cells[4, IndTabMetier] := '';
+              TabMetier.Cells[5, IndTabMetier] := '999';
+              for J := 0 to High(TowC[K].Plages) do
+                if (TowC[K].Plages[J].Origine = RaceEnCours) and (TowC[K].Plages[J].De > 0) then
+                  begin
+                    TabMetier.Cells[3, IndTabMetier] := IntToStr(TowC[K].Plages[J].De) + '-' + IntToStr(TowC[K].Plages[J].A);
+                    TabMetier.Cells[5, IndTabMetier] := Format('%.3d', [TowC[K].Plages[J].De]);
+                  end;
+            end;
+        ButtonMetierHasard.Enabled := (TabMetier.RowCount > 1);
+        AdjustGridColumnsWidth(TabMetier, TabSheetMetier.ClientHeight, false, false);
+        Exit;
+      end;
     // la liste des règles dépend de la race : la refaire si elle a changé
     if RaceRegleCombo <> RaceEnCours then
       ChargeComboRegle();
@@ -4994,6 +5952,15 @@ Procedure TWinCreations.ChargeTabMetier();
 
 procedure TWinCreations.ButtonMetierHasardClick(Sender: TObject);
   begin
+     // The Old World : d100 sur la colonne de l origine (une plage vide = carriere non tirable)
+     if ValVersion = 'WFRPTOW' then
+       begin
+         ChoixWinMetierRace := '';
+         TabMetierResultat(Random(100) + 1);
+         AfficheImageMetier();
+         UpdateSheetMetier(true);
+         Exit;
+       end;
      LastRandomMetierResultat := (Random(DesMetier) + 1);
      TabMetierResultat(LastRandomMetierResultat);
      AfficheImageMetier();
@@ -5236,6 +6203,8 @@ Procedure TWinCreations.AfficheImageMetier();
       LibMetier.visible         := (MetierLibEnCours <> '');
 
       UpdateSheetMetier(false);
+      // V5 : un autre metier = d'autres caracteristiques marquees, le bonus de depart repart de zero
+      FillChar(BonusCaracV5, SizeOf(BonusCaracV5), 0);
 
       For PMetierAttribut in ListMetierAttribut do
         if CompareRechercheValeur(PMetierAttribut.CodeMetier, MetierEnCours) then
@@ -5260,6 +6229,8 @@ Procedure TWinCreations.AfficheImageMetier();
       PRaceEntete := ChercheRace(RaceEnCours);
       TabRaceCompetence.Columns[3].Title.Caption := Format('%dx %dpts', [PRaceEntete.NbPoint5, PRaceEntete.Point5]);
       TabRaceCompetence.Columns[4].Title.Caption := Format('%dx %dpts', [PRaceEntete.NbPoint3, PRaceEntete.Point3]);
+      // V5 : une seule colonne de choix (5 x +5) ; la colonne 3 pts est cachee quand elle vaut 0
+      TabRaceCompetence.Columns[4].Visible := PRaceEntete.NbPoint3 > 0;
 
       // Les lignes sont recreees : les cases 5pts/3pts, indexees par numero de ligne, le sont
       // aussi (remise a zero). Le tableau est REDIMENSIONNE au nombre reel de competences de
@@ -5341,10 +6312,13 @@ Procedure TWinCreations.AfficheImageMetier();
                PCompetence                  := ChercheCompetence(CodeCompAdapt);
                TabMetierCompetence.Cells[3,NbMetierCompetenceTab] := LibelleCompetenceLigne(CodeCompAdapt);
 
-               if (Pos(ValeurGenerique, PCompetence.CodeCompetence) > 0) or (pos(SeparateurMulti, PCompetence.CodeCompetence) > 0) then
+               // le test porte sur le code de la LIGNE : pour « A ou B » (code « A/B »), la recherche ne renvoie
+               // qu'une des deux competences, jamais le code complet (le double-clic ouvrait alors WinCompetence
+               // sur un code « A/B » : EGridException)
+               if (Pos(ValeurGenerique, CodeCompAdapt) > 0) or (pos(SeparateurMulti, CodeCompAdapt) > 0) then
                  begin
                    TabMetierCompetence.Cells[5,NbMetierCompetenceTab] := ConstArbreAuChoix;
-                   TabMetierCompetence.Cells[6,NbMetierCompetenceTab] := PCompetence.CodeCompetence;
+                   TabMetierCompetence.Cells[6,NbMetierCompetenceTab] := CodeCompAdapt;
                  end;
 
                if CodesRace.IndexOf(CodeCompAdapt) >= 0 then
@@ -5443,6 +6417,8 @@ Procedure TWinCreations.AfficheImageMetier();
 
 begin
   AfficheEnteteMetier();
+  // The Old World : les grilles des phases suivantes sont remplies par leurs propres etapes TOW
+  if ValVersion = 'WFRPTOW' then Exit;
 
   // COMPETENCES
   if MetierEnCours <> '' then
@@ -5685,7 +6661,7 @@ begin
             // Dessiner du texte par défaut si la valeur de l'index d'image est invalide
             TabAttribut.DefaultDrawCell(aCol, aRow, aRect, aState);
         end
-      else if (aCol >= 3) and (aCol <= 6) then
+      else if (aCol >= 3) and (aCol <= 8) then
         begin
           // Obtenir la couleur du pixel en haut à gauche de l'image de la cellule précédente (colonne 2)
           Bitmap := TBitmap.Create;
@@ -5733,6 +6709,10 @@ end;
 procedure TWinCreations.TabAttributSelectEditor(Sender: TObject; aCol, aRow: Integer; var Editor: TWinControl);
   begin
       // seul le lancé de dé est modifiable
+    // V5 : la colonne du bonus de carriere (6), sur les caracteristiques marquees de la carriere
+    if (ValVersion = 'WFRP5') and (aCol = 6) and (aRow >= 1) and (aRow <= 10)
+       and (TabAttribut.Cells[2, aRow] = '1') and (PlafondBonusCaracV5() > 0) then
+      Exit;
     if (aCol <> 5)  then
       Editor := nil;
   end;
@@ -5775,6 +6755,79 @@ function TWinCreations.RepartitionMax(): Integer;
       Result := 18;
   end;
 
+// V5 (Rulebook p.38) : points a ajouter aux 3 caracteristiques de depart de la carriere selon
+// la methode : jet garde tel quel = 6, jet reparti entre les caracteristiques = 3, 100 points = 0.
+function TWinCreations.PlafondBonusCaracV5(): Integer;
+  begin
+    if ValVersion <> 'WFRP5' then
+      Result := 0
+    else if RadioButtonAttributHasard.Checked or RadioButtonAttributResultat.Checked then
+      Result := 6
+    else if RadioButtonAttributHasardAffecte.Checked or RadioButtonAttributResultatAffecte.Checked then
+      Result := 3
+    else
+      Result := 0;
+  end;
+
+// Vrai s'il existe au moins une caracteristique marquee a laquelle le bonus peut aller
+function TWinCreations.BonusCaracV5Possible(): Boolean;
+  var
+    I: Integer;
+  begin
+    Result := False;
+    for I := 1 to 10 do
+      if TabAttribut.Cells[2, I] = '1' then
+        Result := True;
+  end;
+
+function TWinCreations.TotalBonusCaracV5(): Integer;
+  var
+    I: Integer;
+  begin
+    Result := 0;
+    for I := 1 to 10 do
+      Result := Result + BonusCaracV5[I];
+  end;
+
+procedure TWinCreations.MajLabBonusV5();
+  begin
+    if ValVersion <> 'WFRP5' then
+      Exit;
+    // colonne du bonus avant le total, saisissable ; le libelle de colonne donne le compte (saisi / permis)
+    TabAttribut.Options := TabAttribut.Options + [goEditing];
+    if PlafondBonusCaracV5() > 0 then
+      TabAttribut.ColWidths[6] := 150
+    else
+      TabAttribut.ColWidths[6] := 0;
+    TabAttribut.Columns[5].Title.Caption := GetTexteLibelle('RULES-LAB_1041') + ' (' +
+      IntToStr(TotalBonusCaracV5()) + '/' + IntToStr(PlafondBonusCaracV5()) + ')';
+    // tableau assez grand pour tout montrer sans defilement
+    TabAttribut.Width  := 760;
+    TabAttribut.Height := TabAttribut.DefaultRowHeight * TabAttribut.RowCount + 30;
+    // explication au-dessus du tableau, alignee a gauche
+    LabPointSupp.SetBounds(TabAttribut.Left, TabAttribut.Top - 30, TabAttribut.Width, 28);
+    LabPointSupp.Text    := GetTexteLibelle('RULES-LAB_1035');
+    LabPointSupp.Visible := PlafondBonusCaracV5() > 0;
+  end;
+
+// V5 : saisie du bonus de depart dans la colonne « Bonus de carriere » (3 caracteristiques de la carriere)
+procedure TWinCreations.TabAttributEditingDone(Sender: TObject);
+  var
+    Ligne, Reste, Val: Integer;
+  begin
+    Ligne := TabAttribut.Row;
+    if (ValVersion <> 'WFRP5') or (TabAttribut.Col <> 6) or (Ligne < 1) or (Ligne > 10)
+       or (TabAttribut.Cells[2, Ligne] <> '1') then
+      Exit;
+    Reste := PlafondBonusCaracV5() - TotalBonusCaracV5() + BonusCaracV5[Ligne];
+    Val   := StrToIntDef(Trim(TabAttribut.Cells[6, Ligne]), 0);
+    if Val < 0 then Val := 0;
+    if Val > Reste then Val := Reste;
+    BonusCaracV5[Ligne] := Val;
+    TabAttribut.EditorMode := False;
+    CalculTabAttribut(False, not ModDesti);
+  end;
+
 procedure TWinCreations.TabAttributLanceDeClickCombo();
   Var
     CellRect:             TRect;
@@ -5789,8 +6842,1453 @@ procedure TWinCreations.TabAttributLanceDeClickCombo();
       end;
   end;
 
+function TWinCreations.TowIndexOrigine(): Integer;
+  var
+    I: Integer;
+    TowO: TTowOrigines;
+  begin
+    Result := -1;
+    TowO := TowOriginesCache;
+    for I := 0 to High(TowO) do
+      if TowO[I].Code = RaceEnCours then Result := I;
+  end;
+
+// Affiche depart, +1 et total de chaque caracteristique (lignes reperees par le code en colonne 7)
+procedure TWinCreations.TowRecalculeAttributs();
+  var
+    I, R, K: Integer;
+    TowO: TTowOrigines;
+  begin
+    K := TowIndexOrigine();
+    if K < 0 then Exit;
+    TowO := TowOriginesCache;
+    for I := 1 to TowNbCarac do
+      for R := 1 to TabAttribut.RowCount - 1 do
+        if TabAttribut.Cells[7, R] = TowCodesCarac[I] then
+          begin
+            TabAttribut.Cells[4, R] := IntToStr(TowO[K].Depart[I]);
+            if TowPlus[I] > 0 then
+              TabAttribut.Cells[5, R] := '+1'
+            else
+              TabAttribut.Cells[5, R] := '';
+            TabAttribut.Cells[6, R] := '';
+            TabAttribut.Cells[8, R] := IntToStr(TowO[K].Depart[I] + TowPlus[I]);
+          end;
+    TabAttribut.Invalidate;
+    TowMajRecap();
+  end;
+
+// Arrivee sur la page : cache les outils de la V4 (des, repartition) et repart de zero si l origine a change
+procedure TWinCreations.TowInitAttributs();
+  begin
+    if TowOrigAttr <> RaceEnCours then
+      begin
+        FillChar(TowPlus, SizeOf(TowPlus), 0);
+        TowOrigAttr   := RaceEnCours;
+        TowPlusHasard := False;
+      end;
+    GroupBoxAttribut.Visible      := False;
+    TabAttributLanceDe.Visible    := False;
+    TrackBarPointSupp.Visible     := False;
+    LabDestin.Visible             := False;
+    LabResilience.Visible         := False;
+    LabPointSupp.Visible          := False;
+    TabAttribut.Options           := TabAttribut.Options - [goEditing, goAlwaysShowEditor];
+    TabAttribut.Enabled           := True;
+    TabAttribut.OnDblClick        := @TabAttributDblClick;
+    ButtonAttributHasard.Visible  := True;
+    ButtonAttributHasard.Enabled  := True;
+    ButtonAttributHasard.BringToFront;
+    TowPoseSaisiePlus();
+    TowRecalculeAttributs();
+  end;
+
+// Cree, une seule fois, le bloc « saisie du d10 » d une page : phrase d aide, champ, deux boutons clones de celui
+// du hasard de la page (meme style). Position : en haut de la page, au-dessus de la table.
+procedure TWinCreations.TowCreeSaisieDe(Onglet: TTabSheet; const Prefixe, Aide, LibAjoute, LibRetire: String;
+  MaxDe: Integer; ClicAjoute, ClicRetire: TNotifyEvent; out Lab: TLabel; out Spin: TSpinEdit;
+  out BAjoute, BRetire: TBCButton);
+  function Clone(const Nom, Legende: String; Gauche: Integer; Clic: TNotifyEvent): TBCButton;
+    var
+      Flux: TMemoryStream;
+      Modele: TBCButton;
+      I: Integer;
+    begin
+      Modele := nil;
+      for I := 0 to Onglet.ControlCount - 1 do
+        if (Onglet.Controls[I] is TBCButton) and (Pos('Hasard', Onglet.Controls[I].Name) > 0) and (Modele = nil) then
+          Modele := TBCButton(Onglet.Controls[I]);
+      Flux := TMemoryStream.Create;
+      try
+        Flux.WriteComponent(Modele);
+        Flux.Position := 0;
+        Result := TBCButton(TComponentClass(Modele.ClassType).Create(nil));
+        Flux.ReadComponent(Result);
+      finally
+        Flux.Free;
+      end;
+      Result.Name    := Nom;
+      Result.Parent  := Onglet;
+      Result.SetBounds(Gauche, 104, 256, 45);
+      Result.Caption := Legende;
+      Result.OnClick := Clic;
+      Result.Visible := True;
+    end;
+  begin
+    Lab := TLabel.Create(Self);
+    Lab.Name       := 'LabTowAide' + Prefixe;
+    Lab.Parent     := Onglet;
+    Lab.AutoSize   := False;
+    Lab.WordWrap   := True;
+    Lab.Font.Name  := ConstPoliceNom;
+    Lab.Font.Size  := ConstPoliceTaille;
+    Lab.Font.Bold  := True;
+    Lab.Font.Color := clWhite;
+    Lab.Caption    := Aide;
+    Lab.SetBounds(0, 4, 740, 90);
+    Spin := TSpinEdit.Create(Self);
+    Spin.Name       := 'EditTow' + Prefixe + 'De';
+    Spin.Parent     := Onglet;
+    Spin.MinValue   := 1;
+    Spin.MaxValue   := MaxDe;
+    Spin.Value      := 1;
+    Spin.Font.Color := clBlack;
+    Spin.SetBounds(0, 112, 68, 28);
+    BAjoute := Clone('ButtonTow' + Prefixe + 'De', LibAjoute, 80, ClicAjoute);
+    BRetire := Clone('ButtonTow' + Prefixe + 'Retire', LibRetire, 350, ClicRetire);
+    MiseAJourUnContenaire(Onglet);
+    BAjoute.BringToFront;
+    BRetire.BringToFront;
+  end;
+
+procedure TWinCreations.TowPoseSaisiePlus();
+  begin
+    if LabTowAidePlus = nil then
+      TowCreeSaisieDe(TabSheetAttribut, 'Plus',
+        'For each of the three +1 you rolled, type the d10 result (1 to 9 = the characteristic of that number in the ' +
+        'table, 10 = your choice: double-click the characteristic you want) and click Add. A characteristic already ' +
+        'raised or at its maximum must be re-rolled. Or click « Let chance decide ».',
+        'Add this d10 result', 'Clear the three +1', 10, @ButtonTowPlusDeClick, @ButtonTowPlusRetireClick,
+        LabTowAidePlus, EditTowPlusDe, ButtonTowPlusDe, ButtonTowPlusRetire);
+    LabTowAidePlus.Visible      := True;
+    EditTowPlusDe.Visible       := True;
+    ButtonTowPlusDe.Visible     := True;
+    ButtonTowPlusRetire.Visible := True;
+  end;
+
+// Un d10 lance par le joueur pour un +1 : 1 a 9 = la caracteristique du meme numero, 10 = au choix (double-clic).
+procedure TWinCreations.TowPlusParD10(D10: Integer);
+  var
+    I, Nb, K: Integer;
+    TowO: TTowOrigines;
+  begin
+    K := TowIndexOrigine();
+    if K < 0 then Exit;
+    TowO := TowOriginesCache;
+    if D10 = 10 then
+      begin
+        ShowMessage('10 = your choice: double-click the characteristic you want in the table.');
+        Exit;
+      end;
+    Nb := 0;
+    for I := 1 to TowNbCarac do
+      Nb := Nb + TowPlus[I];
+    if Nb >= 3 then
+      begin
+        ShowMessage('The three +1 are already entered. Clear them to change.');
+        Exit;
+      end;
+    if (D10 < 1) or (D10 > TowNbCarac) then Exit;
+    if (TowPlus[D10] > 0) or ((TowO[K].Maximum[D10] > 0) and (TowO[K].Depart[D10] >= TowO[K].Maximum[D10])) then
+      begin
+        ShowMessage('This characteristic is already raised or at its maximum: roll the d10 again.');
+        Exit;
+      end;
+    TowPlus[D10]  := 1;
+    TowPlusHasard := False;
+    TowRecalculeAttributs();
+  end;
+
+procedure TWinCreations.ButtonTowPlusDeClick(Sender: TObject);
+  begin
+    TowPlusParD10(EditTowPlusDe.Value);
+  end;
+
+procedure TWinCreations.ButtonTowPlusRetireClick(Sender: TObject);
+  begin
+    FillChar(TowPlus, SizeOf(TowPlus), 0);
+    TowPlusHasard := False;
+    TowRecalculeAttributs();
+  end;
+
+// Tirage : trois +1 au d10 (les relances et le 10 « au choix » sont geres par TowTireTroisPlus)
+procedure TWinCreations.TowTireAttributs();
+  var
+    K, I: Integer;
+    P: StructurePersonnage;
+    Deja: TStringList;
+    TowO: TTowOrigines;
+  begin
+    K := TowIndexOrigine();
+    if K < 0 then Exit;
+    TowO := TowOriginesCache;
+    P := TowCommencer(TowO[K], '');
+    Deja := TStringList.Create;
+    try
+      TowTireTroisPlus(P, TowO[K], Deja);
+      FillChar(TowPlus, SizeOf(TowPlus), 0);
+      for I := 0 to Deja.Count - 1 do
+        TowPlus[StrToInt(Deja[I])] := 1;
+    finally
+      Deja.Free;
+    end;
+    TowPlusHasard := True;
+    TowRecalculeAttributs();
+  end;
+
+function EstDansListe(const Liste: array of String; const Code: String): Boolean;
+  var I: Integer;
+  begin
+    Result := False;
+    for I := 0 to High(Liste) do
+      if Liste[I] = Code then Result := True;
+  end;
+
+// Nombre de competences libres a choisir (borne par le nombre de competences non fixees)
+function TWinCreations.TowCompLibresVoulues(): Integer;
+  var
+    K, I, Nb: Integer;
+    TowO: TTowOrigines;
+  begin
+    Result := 0;
+    K := TowIndexOrigine();
+    if K < 0 then Exit;
+    TowO := TowOriginesCache;
+    Nb := 0;
+    for I := 1 to TowNbComp do
+      if not EstDansListe(TowO[K].CompFixes, TowCodesComp[I]) then Inc(Nb);
+    Result := TowO[K].CompLibres;
+    if Result > Nb then Result := Nb;
+  end;
+
+// Phase 5 TOW : les 16 competences, avec leur rang apres l origine. Double-clic = choisir / retirer une libre.
+procedure TWinCreations.TowInitCompRace();
+  begin
+    if TowCompOrig <> RaceEnCours then
+      begin
+        SetLength(TowCompLibres, 0);
+        TowCompOrig := RaceEnCours;
+      end;
+    TabRaceCompetence.Options := TabRaceCompetence.Options - [goEditing, goAlwaysShowEditor];
+    // colonnes visibles : 2 = competence, 3 = rang de depart, 4 = rang apres l origine, 5 = provenance ; 1 = code (cache)
+    TabRaceCompetence.ColWidths[2] := 250;
+    TabRaceCompetence.ColWidths[3] := 70;
+    TabRaceCompetence.ColWidths[4] := 70;
+    TabRaceCompetence.ColWidths[5] := 130;
+    TabRaceCompetence.Width        := 560;
+    // les titres viennent des Columns[] de la grille (Columns[k] = colonne k + 1), pas de la ligne 0
+    TabRaceCompetence.Columns[1].Title.Caption := 'Skill';
+    TabRaceCompetence.Columns[2].Title.Caption := 'Base';
+    TabRaceCompetence.Columns[3].Title.Caption := GetTexteLibelle('RULES-LAB_900');
+    TabRaceCompetence.Columns[4].Title.Caption := 'Source';
+    if LabTowAideComp = nil then
+      begin
+        LabTowAideComp := TLabel.Create(Self);
+        LabTowAideComp.Name       := 'LabTowAideComp';
+        LabTowAideComp.Parent     := TabSheetCompRace;
+        LabTowAideComp.AutoSize   := False;
+        LabTowAideComp.WordWrap   := True;
+        LabTowAideComp.Font.Name  := ConstPoliceNom;
+        LabTowAideComp.Font.Size  := ConstPoliceTaille;
+        LabTowAideComp.Font.Bold  := True;
+        LabTowAideComp.Font.Color := clWhite;
+        LabTowAideComp.SetBounds(0, 4, 740, 150);
+      end;
+    LabTowAideComp.Visible := True;
+    ButtonRaceCompetenceHasard.Visible := True;
+    ButtonRaceCompetenceHasard.BringToFront;
+    TowAfficheCompRace();
+  end;
+
+procedure TWinCreations.TowAfficheCompRace();
+  var
+    K, I, Rang: Integer;
+    TowO: TTowOrigines;
+    Marque: String;
+  begin
+    K := TowIndexOrigine();
+    if K < 0 then Exit;
+    TowO := TowOriginesCache;
+    TabRaceCompetence.RowCount := TowNbComp + 1;
+    for I := 1 to TowNbComp do
+      begin
+        Rang   := TowRangDepart;
+        Marque := '';
+        if EstDansListe(TowO[K].CompFixes, TowCodesComp[I]) then
+          begin
+            Rang   := TowO[K].CompRang;
+            Marque := 'Origin';
+          end
+        else if EstDansListe(TowCompLibres, TowCodesComp[I]) then
+          begin
+            Rang   := TowO[K].CompRang;
+            Marque := 'Choice';
+          end;
+        TabRaceCompetence.Cells[1, I] := TowCodesComp[I];
+        TabRaceCompetence.Cells[2, I] := TowLibelleDe(TowCodesComp[I]);
+        TabRaceCompetence.Cells[3, I] := IntToStr(TowRangDepart);
+        TabRaceCompetence.Cells[4, I] := IntToStr(Rang);
+        TabRaceCompetence.Cells[5, I] := Marque;
+      end;
+    if LabTowAideComp <> nil then
+      begin
+        LabTowAideComp.Caption := 'Your origin gives its fixed skills (Source = Origin) and lets you choose ' +
+          IntToStr(TowCompLibresVoulues()) + ' more at rank ' + IntToStr(TowO[K].CompRang) +
+          '. Double-click a skill to choose it (Source = Choice), double-click again to remove it. ' +
+          'Choices left : ' + IntToStr(TowCompLibresVoulues() - Length(TowCompLibres)) + ' of ' +
+          IntToStr(TowCompLibresVoulues()) + '. Or click « Let chance decide ».';
+      end;
+  end;
+
+// Hasard : complete les competences libres manquantes parmi celles encore au rang de depart
+procedure TWinCreations.TowTireCompRace();
+  var
+    K, I, Voulu: Integer;
+    TowO: TTowOrigines;
+    Cand: TStringList;
+  begin
+    K := TowIndexOrigine();
+    if K < 0 then Exit;
+    TowO  := TowOriginesCache;
+    Voulu := TowCompLibresVoulues();
+    while Length(TowCompLibres) < Voulu do
+      begin
+        Cand := TStringList.Create;
+        try
+          for I := 1 to TowNbComp do
+            if not EstDansListe(TowO[K].CompFixes, TowCodesComp[I]) and not EstDansListe(TowCompLibres, TowCodesComp[I]) then
+              Cand.Add(TowCodesComp[I]);
+          if Cand.Count = 0 then Break;
+          SetLength(TowCompLibres, Length(TowCompLibres) + 1);
+          TowCompLibres[High(TowCompLibres)] := Cand[Random(Cand.Count)];
+        finally
+          Cand.Free;
+        end;
+      end;
+    TowAfficheCompRace();
+  end;
+
+function TWinCreations.TowIndexCarriere(): Integer;
+  var
+    TowC: TTowCarrieres;
+    I: Integer;
+  begin
+    Result := -1;
+    TowC := TowCarrieresCache;
+    for I := 0 to High(TowC) do
+      if TowC[I].Code = MetierEnCours then Result := I;
+  end;
+
+// Emplacements de lore : ceux de l origine, puis ceux de la carriere
+function TWinCreations.TowNbSlotsLore(): Integer;
+  var
+    K, C: Integer;
+  begin
+    Result := 0;
+    K := TowIndexOrigine();
+    C := TowIndexCarriere();
+    if K >= 0 then Result := Result + Length(TowOriginesCache[K].LoreSlots);
+    if C >= 0 then Result := Result + Length(TowCarrieresCache[C].LoreSlots);
+  end;
+
+function TWinCreations.TowSlotsLore(Index: Integer): TStringArray;
+  var
+    K, C, NO: Integer;
+  begin
+    SetLength(Result, 0);
+    K := TowIndexOrigine();
+    C := TowIndexCarriere();
+    NO := 0;
+    if K >= 0 then NO := Length(TowOriginesCache[K].LoreSlots);
+    if Index < NO then
+      Result := TowOriginesCache[K].LoreSlots[Index]
+    else if (C >= 0) and (Index - NO < Length(TowCarrieresCache[C].LoreSlots)) then
+      Result := TowCarrieresCache[C].LoreSlots[Index - NO];
+  end;
+
+function TWinCreations.TowLoresComplets(): Boolean;
+  var I: Integer;
+  begin
+    Result := True;
+    for I := 0 to High(TowLoreChoix) do
+      if (TowLoreChoix[I] = '') and (Length(TowSlotsLore(I)) > 0) then Result := False;
+  end;
+
+// Phase 6 TOW : a l arrivee. Un autre couple origine / carriere efface les choix precedents.
+procedure TWinCreations.TowInitCompMetier();
+  var
+    I: Integer;
+    Opt: TStringArray;
+  begin
+    if TowMetOrig <> RaceEnCours + '|' + MetierEnCours then
+      begin
+        SetLength(TowCompCar, 0);
+        SetLength(TowLoreChoix, TowNbSlotsLore());
+        SetLength(TowLorePrecis, 0);
+        SetLength(TowLorePrecis, Length(TowLoreChoix));
+        for I := 0 to High(TowLoreChoix) do
+          begin
+            Opt := TowSlotsLore(I);
+            if Length(Opt) = 1 then TowLoreChoix[I] := Opt[0] else TowLoreChoix[I] := '';
+          end;
+        TowMetOrig := RaceEnCours + '|' + MetierEnCours;
+      end;
+    TabMetierCompetence.Options := TabMetierCompetence.Options - [goEditing, goAlwaysShowEditor];
+    // colonnes visibles : 2 = competence, 3 = rang apres l origine, 4 = rang apres la carriere, 5 = provenance ;
+    // 1 = code et 6 = marque « L » des lores (caches). Titres : Columns[k] = colonne k + 1.
+    TabMetierCompetence.ColWidths[2] := 250;
+    TabMetierCompetence.ColWidths[3] := 70;
+    TabMetierCompetence.ColWidths[4] := 70;
+    TabMetierCompetence.ColWidths[5] := 130;
+    TabMetierCompetence.Width        := 560;
+    TabMetierCompetence.Columns[1].Title.Caption := 'Skill';
+    TabMetierCompetence.Columns[2].Title.Caption := 'Base';
+    TabMetierCompetence.Columns[3].Title.Caption := GetTexteLibelle('RULES-LAB_900');
+    TabMetierCompetence.Columns[4].Title.Caption := 'Source';
+    if LabTowAideCompMet = nil then
+      begin
+        LabTowAideCompMet := TLabel.Create(Self);
+        LabTowAideCompMet.Name       := 'LabTowAideCompMet';
+        LabTowAideCompMet.Parent     := TabSheetCompMetier;
+        LabTowAideCompMet.AutoSize   := False;
+        LabTowAideCompMet.WordWrap   := True;
+        LabTowAideCompMet.Font.Name  := ConstPoliceNom;
+        LabTowAideCompMet.Font.Size  := ConstPoliceTaille;
+        LabTowAideCompMet.Font.Bold  := True;
+        LabTowAideCompMet.Font.Color := clWhite;
+        LabTowAideCompMet.SetBounds(0, 4, 740, 150);
+      end;
+    LabTowAideCompMet.Visible := True;
+    ButtonTotalMetierCompetence.Visible := False;
+    ButtonMetierCompetenceHasard.Visible := True;
+    ButtonMetierCompetenceHasard.BringToFront;
+    TowAfficheCompMetier();
+  end;
+
+procedure TWinCreations.TowAfficheCompMetier();
+  var
+    K, C, I, Rang, NbC, Nb: Integer;
+    TowO: TTowOrigines;
+    Code, Txt: String;
+    Opt: TStringArray;
+  begin
+    K := TowIndexOrigine();
+    C := TowIndexCarriere();
+    if (K < 0) or (C < 0) then Exit;
+    TowO := TowOriginesCache;
+    NbC  := Length(TowCarrieresCache[C].CompChoix);
+    TabMetierCompetence.RowCount := 1 + NbC + Length(TowLoreChoix);
+    for I := 0 to NbC - 1 do
+      begin
+        Code := TowCarrieresCache[C].CompChoix[I];
+        Rang := TowRangDepart;
+        if EstDansListe(TowO[K].CompFixes, Code) or EstDansListe(TowCompLibres, Code) then
+          Rang := TowO[K].CompRang;
+        TabMetierCompetence.Cells[1, I + 1] := Code;
+        TabMetierCompetence.Cells[2, I + 1] := TowLibelleDe(Code);
+        TabMetierCompetence.Cells[3, I + 1] := IntToStr(Rang);
+        if EstDansListe(TowCompCar, Code) then
+          begin
+            TabMetierCompetence.Cells[4, I + 1] := IntToStr(Rang + 1);
+            TabMetierCompetence.Cells[5, I + 1] := 'Career +1';
+          end
+        else
+          begin
+            TabMetierCompetence.Cells[4, I + 1] := IntToStr(Rang);
+            TabMetierCompetence.Cells[5, I + 1] := '';
+          end;
+        TabMetierCompetence.Cells[6, I + 1] := '';
+      end;
+    for I := 0 to High(TowLoreChoix) do
+      begin
+        Opt := TowSlotsLore(I);
+        if TowLoreChoix[I] <> '' then
+          begin
+            Txt := TowLibelleDe(TowLoreChoix[I]);
+            if TowLoreGenerique(TowLoreChoix[I]) then
+              begin
+                if (I <= High(TowLorePrecis)) and (TowLorePrecis[I] <> '') then
+                  Txt := TowLibelleDe(TowLorePrecis[I])
+                else
+                  Txt := Txt + '  - double-click to choose';
+              end;
+          end
+        else
+          Txt := '?  (' + IntToStr(Length(Opt)) + ' ...)';
+        TabMetierCompetence.Cells[1, NbC + I + 1] := TowLoreChoix[I];
+        TabMetierCompetence.Cells[2, NbC + I + 1] := 'Lore : ' + Txt;
+        TabMetierCompetence.Cells[3, NbC + I + 1] := '';
+        TabMetierCompetence.Cells[4, NbC + I + 1] := '';
+        if I < Length(TowO[K].LoreSlots) then
+          TabMetierCompetence.Cells[5, NbC + I + 1] := 'Origin lore'
+        else
+          TabMetierCompetence.Cells[5, NbC + I + 1] := 'Career lore';
+        TabMetierCompetence.Cells[6, NbC + I + 1] := 'L';
+      end;
+    if LabTowAideCompMet <> nil then
+      begin
+        Nb := TowCarrieresCache[C].CompNb;
+        if Nb > NbC then Nb := NbC;
+        LabTowAideCompMet.Caption := 'Your career lets you raise ' + IntToStr(Nb) + ' of its ' + IntToStr(NbC) +
+          ' skills by 1 (Source = Career +1). Double-click a skill to add the +1, double-click again to remove it. ' +
+          '+1 left : ' + IntToStr(Nb - Length(TowCompCar)) + ' of ' + IntToStr(Nb) + '. ' +
+          'Each Lore line is a slot (origin or career) : double-click it to choose among its options. ' +
+          'Or click « Let chance decide ».';
+      end;
+  end;
+
+// Hasard : complete les competences de carriere et les lores manquants
+procedure TWinCreations.TowTireCompMetier();
+  var
+    C, I, Nb: Integer;
+    Cand: TStringList;
+    Opt: TStringArray;
+  begin
+    C := TowIndexCarriere();
+    if C < 0 then Exit;
+    Nb := TowCarrieresCache[C].CompNb;
+    if Nb > Length(TowCarrieresCache[C].CompChoix) then Nb := Length(TowCarrieresCache[C].CompChoix);
+    while Length(TowCompCar) < Nb do
+      begin
+        Cand := TStringList.Create;
+        try
+          for I := 0 to High(TowCarrieresCache[C].CompChoix) do
+            if not EstDansListe(TowCompCar, TowCarrieresCache[C].CompChoix[I]) then
+              Cand.Add(TowCarrieresCache[C].CompChoix[I]);
+          if Cand.Count = 0 then Break;
+          SetLength(TowCompCar, Length(TowCompCar) + 1);
+          TowCompCar[High(TowCompCar)] := Cand[Random(Cand.Count)];
+        finally
+          Cand.Free;
+        end;
+      end;
+    for I := 0 to High(TowLoreChoix) do
+      if TowLoreChoix[I] = '' then
+        begin
+          Opt := TowSlotsLore(I);
+          if Length(Opt) > 0 then TowLoreChoix[I] := Opt[Random(Length(Opt))];
+        end;
+    // lore « (specify) » : une precision au hasard si le joueur n en a pas choisi
+    SetLength(TowLorePrecis, Length(TowLoreChoix));
+    for I := 0 to High(TowLoreChoix) do
+      if TowLoreGenerique(TowLoreChoix[I]) and (TowLorePrecis[I] = '') then
+        begin
+          TowListeP := TowPrecisionsLore(TowLoreChoix[I]);
+          try
+            if TowListeP.Count > 0 then TowLorePrecis[I] := TowListeP[Random(TowListeP.Count)];
+          finally
+            TowListeP.Free;
+          end;
+        end;
+    TowAfficheCompMetier();
+  end;
+
+// Phase 7 TOW : equipement et atouts (un choix par emplacement), 2 contacts, sorts de depart des carrieres magiques
+procedure TWinCreations.TowInitEquip();
+  var
+    C, I: Integer;
+  begin
+    C := TowIndexCarriere();
+    if C < 0 then Exit;
+    if not TowRelCharge then
+      begin
+        TowRelCache  := TowChargeRelations(GetCurrentDir + '/DATABASE/WFRPTOW');
+        TowSortCache := TowChargeSorts(GetCurrentDir + '/DATABASE/WFRPTOW');
+        TowRelCharge := True;
+      end;
+    if TowEqOrig <> RaceEnCours + '|' + MetierEnCours then
+      begin
+        SetLength(TowEqPrecis, 0);
+        SetLength(TowEqPrecis, Length(TowCarrieresCache[C].TrappingSlots));
+        SetLength(TowEqChoix, Length(TowCarrieresCache[C].TrappingSlots));
+        for I := 0 to High(TowEqChoix) do
+          if Length(TowCarrieresCache[C].TrappingSlots[I]) = 1 then
+            TowEqChoix[I] := TowCarrieresCache[C].TrappingSlots[I][0]
+          else
+            TowEqChoix[I] := '';
+        SetLength(TowAtChoix, Length(TowCarrieresCache[C].AssetSlots));
+        for I := 0 to High(TowAtChoix) do
+          if Length(TowCarrieresCache[C].AssetSlots[I]) = 1 then
+            TowAtChoix[I] := TowCarrieresCache[C].AssetSlots[I][0]
+          else
+            TowAtChoix[I] := '';
+        SetLength(TowContFam, 0);
+        SetLength(TowContNpc, 0);
+        SetLength(TowContTxt, 0);
+        SetLength(TowSortsCodes, 0);
+        TowPrecCarriere := '';
+        TowEqOrig := RaceEnCours + '|' + MetierEnCours;
+      end;
+    TabMetierEquipement.Options := TabMetierEquipement.Options - [goEditing, goAlwaysShowEditor];
+    TabMetierEquipement.ColWidths[2] := 440;
+    TabMetierEquipement.ColWidths[4] := 0;
+    ButtonMetierEquipementHasard.Visible := True;
+    ButtonMetierEquipementHasard.BringToFront;
+    TowPoseSaisieContacts();
+    TowAfficheEquip();
+  end;
+
+// Phase 7 TOW : en haut de la page, la saisie des d100 des deux contacts. Un d100 se lance sur une table de relations
+// (une famille de la carriere) : la liste a droite du champ dit sur laquelle.
+procedure TWinCreations.TowPoseSaisieContacts();
+  var
+    C, I: Integer;
+  begin
+    C := TowIndexCarriere();
+    if C < 0 then Exit;
+    if LabTowAideContact = nil then
+      begin
+        TowCreeSaisieDe(TabSheetEquipement, 'Contact',
+          'Contacts: for each d100 you rolled, pick the table you rolled on (list on the right), type the result and ' +
+          'click Add. Trappings and Assets: double-click a line with several options to choose among them. Spells and Magic Lore (magic ' +
+          'careers): double-click a line of the list below. Or click « Let chance decide » for everything left.',
+          'Add this d100 contact', 'Remove the last contact', 100, @ButtonTowContactDeClick, @ButtonTowContactRetireClick,
+          LabTowAideContact, EditTowContactDe, ButtonTowContactDe, ButtonTowContactRetire);
+        ComboTowContactTable := TComboBox.Create(Self);
+        ComboTowContactTable.Name   := 'ComboTowContactTable';
+        ComboTowContactTable.Parent := TabSheetEquipement;
+        ComboTowContactTable.Style  := csDropDownList;
+        ComboTowContactTable.SetBounds(620, 112, 370, 28);
+        MiseAJourUnContenaire(TabSheetEquipement);
+      end;
+    ComboTowContactTable.Items.Clear;
+    for I := 0 to High(TowCarrieresCache[C].Familles) do
+      ComboTowContactTable.Items.Add(TowLibelleDe(TowCarrieresCache[C].Familles[I]));
+    if ComboTowContactTable.Items.Count > 0 then
+      ComboTowContactTable.ItemIndex := 0;
+    LabTowAideContact.Visible      := True;
+    EditTowContactDe.Visible       := True;
+    ButtonTowContactDe.Visible     := True;
+    ButtonTowContactRetire.Visible := True;
+    ComboTowContactTable.Visible   := True;
+  end;
+
+// Un d100 de contact lance par le joueur sur la table choisie : la relation de cette table dont la plage le contient.
+procedure TWinCreations.TowContactParD100(D100: Integer);
+  var
+    C, I, J, N: Integer;
+    Fam: String;
+  begin
+    C := TowIndexCarriere();
+    if (C < 0) or (ComboTowContactTable.ItemIndex < 0) then Exit;
+    if Length(TowContNpc) >= 2 then
+      begin
+        ShowMessage('The two contacts are already entered. Remove the last contact to change it.');
+        Exit;
+      end;
+    Fam := TowCarrieresCache[C].Familles[ComboTowContactTable.ItemIndex];
+    J := -1;
+    for I := 0 to High(TowRelCache) do
+      if (TowRelCache[I].Famille = Fam) and (D100 >= TowRelCache[I].De) and (D100 <= TowRelCache[I].A) then J := I;
+    if J < 0 then Exit;
+    for I := 0 to High(TowContNpc) do
+      if (TowContFam[I] = Fam) and (TowContNpc[I] = TowRelCache[J].Npc) then
+        begin
+          ShowMessage('This contact was already rolled: roll the d100 again.');
+          Exit;
+        end;
+    N := Length(TowContNpc);
+    SetLength(TowContFam, N + 1);
+    SetLength(TowContNpc, N + 1);
+    SetLength(TowContTxt, N + 1);
+    TowContFam[N] := TowRelCache[J].Famille;
+    TowContNpc[N] := TowRelCache[J].Npc;
+    TowContTxt[N] := TowRelCache[J].Texte;
+    TowAfficheEquip();
+  end;
+
+procedure TWinCreations.ButtonTowContactDeClick(Sender: TObject);
+  begin
+    TowContactParD100(EditTowContactDe.Value);
+  end;
+
+procedure TWinCreations.ButtonTowContactRetireClick(Sender: TObject);
+  var
+    N: Integer;
+  begin
+    N := Length(TowContNpc);
+    if N = 0 then Exit;
+    SetLength(TowContFam, N - 1);
+    SetLength(TowContNpc, N - 1);
+    SetLength(TowContTxt, N - 1);
+    TowAfficheEquip();
+  end;
+
+function TWinCreations.TowEquipComplet(): Boolean;
+  var I, C: Integer;
+  begin
+    Result := (Length(TowContNpc) >= 2);
+    C := TowIndexCarriere();
+    if C < 0 then Exit(False);
+    // carrieres magiques : precision du Career Talent, et les sorts de depart d un Wizard
+    if (TowMagie(TowCarrieresCache[C]) > 0) and (TowPrecCarriere = '') then Result := False;
+    if (TowMagie(TowCarrieresCache[C]) = 1) and (Length(TowSortsCodes) < TowSortsVoulus()) then Result := False;
+    // un emplacement sans aucune option (liste vide dans le livre) n'est pas a remplir
+    for I := 0 to High(TowEqChoix) do
+      if (TowEqChoix[I] = '') and (Length(TowCarrieresCache[C].TrappingSlots[I]) > 0) then Result := False;
+    for I := 0 to High(TowAtChoix) do
+      if (TowAtChoix[I] = '') and (Length(TowCarrieresCache[C].AssetSlots[I]) > 0) then Result := False;
+  end;
+
+procedure TWinCreations.TowAfficheEquip();
+  var
+    N, I, J, Nb, C, Mag: Integer;
+    Txt: String;
+    Cand, Arm: TStringList;
+    procedure Ligne(const Code, Marque, Libelle: String);
+      begin
+        Inc(N);
+        if N >= TabMetierEquipement.RowCount then TabMetierEquipement.RowCount := N + 1;
+        TabMetierEquipement.Cells[1, N] := Code;
+        TabMetierEquipement.Cells[2, N] := Libelle;
+        TabMetierEquipement.Cells[3, N] := '';
+        TabMetierEquipement.Cells[4, N] := '';
+        TabMetierEquipement.Cells[5, N] := '';
+        TabMetierEquipement.Cells[6, N] := Marque;
+      end;
+  begin
+    Nb := Length(TowEqChoix) + Length(TowAtChoix) + Length(TowContNpc) + Length(TowSortsCodes) + 1;
+    TabMetierEquipement.RowCount := Nb + 1;
+    N := 0;
+    for I := 1 to TabMetierEquipement.RowCount - 1 do
+      TabMetierEquipement.Cells[6, I] := '';
+    TowLoresPerso := TowLoreChoix;
+    for I := 0 to High(TowEqChoix) do
+      begin
+        if TowEqChoix[I] <> '' then Txt := TowLibelleDe(TowEqChoix[I]) else Txt := '?';
+        // generique d arme : l arme nommee remplace « (choose one) », sinon on le dit
+        if (TowEqChoix[I] <> '') and (I <= High(TowEqPrecis)) and (TowEqPrecis[I] <> '') then
+          Txt := TowLibelleDe(TowEqPrecis[I])   // l arme nommee seule : le generique rallongerait la ligne
+        else if TowEqChoix[I] <> '' then
+          begin
+            Arm := TowArmesPour(TowEqChoix[I]);
+            try
+              if Arm.Count > 0 then
+                begin
+                  if Pos('TRADE_TOOLS', TowEqChoix[I]) > 0 then
+                    Txt := Txt + '  - double-click to choose the tools'
+                  else
+                    Txt := Txt + '  - double-click to name the weapon';
+                end;
+            finally
+              Arm.Free;
+            end;
+          end;
+        Ligne(TowEqChoix[I], 'E' + IntToStr(I), 'Trapping : ' + Txt);
+      end;
+    for I := 0 to High(TowAtChoix) do
+      begin
+        if TowAtChoix[I] <> '' then Txt := TowLibelleDe(TowAtChoix[I]) else Txt := '?';
+        Ligne(TowAtChoix[I], 'A' + IntToStr(I), 'Asset : ' + Txt);
+      end;
+    if Length(TowContNpc) = 0 then
+      Ligne('', 'C', 'Contacts : ? (random button, or double-click a relation below)')
+    else
+      for I := 0 to High(TowContNpc) do
+        Ligne(TowContNpc[I], 'C' + IntToStr(I), 'Contact : ' + TowContNpc[I] + ' - ' + TowContTxt[I]);
+    for I := 0 to High(TowSortsCodes) do
+      Ligne(TowSortsCodes[I], 'S' + IntToStr(I), 'Spell : ' + TowLibelleDe(TowSortsCodes[I]));
+    if TowPrecCarriere <> '' then
+      Ligne(TowPrecCarriere, 'P', 'Career Talent : ' + TowLibelleDe(TowPrecCarriere));
+    // a la main : relations encore a prendre (plage du d100), precision, sorts
+    C := TowIndexCarriere();
+    if C >= 0 then
+      begin
+        Cand := TowContactsCandidats(TowCarrieresCache[C]);
+        try
+          for I := 0 to Cand.Count - 1 do
+            begin
+              J := StrToInt(Cand[I]);
+              if TowRelCache[J].De = TowRelCache[J].A then Txt := IntToStr(TowRelCache[J].De)
+              else Txt := IntToStr(TowRelCache[J].De) + '-' + IntToStr(TowRelCache[J].A);
+              Ligne(TowRelCache[J].Npc, 'c' + IntToStr(J), '[d100 ' + Txt + '] ' + TowLibelleDe(TowRelCache[J].Famille)
+                    + ' : ' + TowRelCache[J].Npc + ' - ' + TowRelCache[J].Texte);
+            end;
+        finally
+          Cand.Free;
+        end;
+        Mag := TowMagie(TowCarrieresCache[C]);
+        if (Mag > 0) and (TowPrecCarriere = '') then
+          begin
+            if Mag = 1 then
+              for I := 0 to High(TowLoresMagie) do
+                Ligne(TowLoresMagie[I], 'p' + IntToStr(I), '[choice] ' + TowLibelleDe(TowLoresMagie[I]))
+            else
+              for I := 0 to High(TowDieux) do
+                Ligne(TowDieux[I], 'p' + IntToStr(I), '[choice] ' + TowLibelleDe(TowDieux[I]));
+          end;
+        if (Mag = 1) and (TowPrecCarriere <> '') and (Length(TowSortsCodes) < TowSortsVoulus()) then
+          begin
+            Cand := TowSortsCandidats();
+            try
+              for I := 0 to Cand.Count - 1 do
+                begin
+                  J := StrToInt(Cand[I]);
+                  Ligne(TowSortCache[J].Code, 's' + IntToStr(J), '[spell] ' + TowLibelleDe(TowSortCache[J].Code));
+                end;
+            finally
+              Cand.Free;
+            end;
+          end;
+      end;
+    TabMetierEquipement.RowCount := N + 1;
+  end;
+
+// Double-clic sur un contact : nouveau d100 sur la table de CE contact, sans doublon avec l autre ; rien d autre ne bouge.
+procedure TWinCreations.TowRelanceContact(Index: Integer);
+  var
+    C, K, I, F: Integer;
+    P: StructurePersonnage;
+    Fam, Npc, Txt: String;
+  begin
+    if (Index < 0) or (Index > High(TowContNpc)) then Exit;
+    C := TowIndexCarriere();
+    K := TowIndexOrigine();
+    if (C < 0) or (K < 0) then Exit;
+    F := -1;
+    for I := 0 to High(TowCarrieresCache[C].Familles) do
+      if TowCarrieresCache[C].Familles[I] = TowContFam[Index] then F := I;
+    if F < 0 then Exit;
+    // les autres contacts comptent comme deja pris (doublon refuse)
+    P := TowCommencer(TowOriginesCache[K], '');
+    SetLength(P.LignesTow, 0);
+    for I := 0 to High(TowContNpc) do
+      if I <> Index then
+        TowAjouteLigne(P, 'CONTACT', TowContNpc[I], TowContFam[I], TowContTxt[I]);
+    I := Length(P.LignesTow);
+    TowTireContacts(P, TowCarrieresCache[C], TowRelCache, F);
+    if Length(P.LignesTow) <= I then Exit;
+    Fam := P.LignesTow[I].Famille;
+    Npc := P.LignesTow[I].Code;
+    Txt := P.LignesTow[I].Texte;
+    TowContFam[Index] := Fam;
+    TowContNpc[Index] := Npc;
+    TowContTxt[Index] := Txt;
+  end;
+
+procedure TWinCreations.TowTireEquip(Contacts: Boolean);
+  var
+    C, I, J: Integer;
+    TowO: TTowOrigines;
+    P: StructurePersonnage;
+    K: Integer;
+    Armes: TStringList;
+  begin
+    C := TowIndexCarriere();
+    K := TowIndexOrigine();
+    if (C < 0) or (K < 0) then Exit;
+    for I := 0 to High(TowEqChoix) do
+      if (TowEqChoix[I] = '') and (Length(TowCarrieresCache[C].TrappingSlots[I]) > 0) then
+        TowEqChoix[I] := TowCarrieresCache[C].TrappingSlots[I][Random(Length(TowCarrieresCache[C].TrappingSlots[I]))];
+    // trapping « arme au choix » encore sans arme nommee : hasard parmi les armes qui conviennent
+    TowLoresPerso := TowLoreChoix;
+    for I := 0 to High(TowEqChoix) do
+      if (TowEqChoix[I] <> '') and (I <= High(TowEqPrecis)) and (TowEqPrecis[I] = '') then
+        begin
+          Armes := TowArmesPour(TowEqChoix[I]);
+          try
+            if Armes.Count > 0 then TowEqPrecis[I] := Armes[Random(Armes.Count)];
+          finally
+            Armes.Free;
+          end;
+        end;
+    for I := 0 to High(TowAtChoix) do
+      if (TowAtChoix[I] = '') and (Length(TowCarrieresCache[C].AssetSlots[I]) > 0) then
+        TowAtChoix[I] := TowCarrieresCache[C].AssetSlots[I][Random(Length(TowCarrieresCache[C].AssetSlots[I]))];
+    if Contacts then
+      begin
+        // nouveau tirage complet : on efface aussi les choix a la main des contacts et de la magie
+        SetLength(TowContFam, 0);
+        SetLength(TowContNpc, 0);
+        SetLength(TowContTxt, 0);
+        TowPrecCarriere := '';
+        SetLength(TowSortsCodes, 0);
+      end;
+    if Length(TowContNpc) < 2 then
+      begin
+        // complete seulement ce qui manque (contacts deja pris a la main conserves)
+        TowO := TowOriginesCache;
+        P := TowCommencer(TowO[K], '');
+        for I := 0 to High(TowContNpc) do
+          TowAjouteLigne(P, 'CONTACT', TowContNpc[I], TowContFam[I], TowContTxt[I]);
+        TowTireContacts(P, TowCarrieresCache[C], TowRelCache, -1);
+        if Length(P.LignesTow) > 2 then SetLength(P.LignesTow, 2);
+        SetLength(TowContFam, Length(P.LignesTow));
+        SetLength(TowContNpc, Length(P.LignesTow));
+        SetLength(TowContTxt, Length(P.LignesTow));
+        for I := 0 to High(P.LignesTow) do
+          begin
+            TowContFam[I] := P.LignesTow[I].Famille;
+            TowContNpc[I] := P.LignesTow[I].Code;
+            TowContTxt[I] := P.LignesTow[I].Texte;
+          end;
+      end;
+    // carrieres magiques : precision du Career Talent (Magic Lore / dieu) et trois sorts de depart
+    if TowMagie(TowCarrieresCache[C]) > 0 then
+      if (TowPrecCarriere = '') or ((TowMagie(TowCarrieresCache[C]) = 1) and (Length(TowSortsCodes) < TowSortsVoulus())) then
+        begin
+          // precision (choisie a la main ou au hasard) et sorts manquants ; les sorts deja pris sont gardes
+          TowO := TowOriginesCache;
+          P := TowCommencer(TowO[K], '');
+          TowTalentCarriere(P, TowCarrieresCache[C], TowPrecCarriere);
+          TowPrecCarriere := '';
+          for J := 0 to High(P.CreationTalent) do
+            if ((P.CreationTalent[J].CodeTalent = 'RULES-T_WIZARD') or (P.CreationTalent[J].CodeTalent = 'RULES-T_FAITH')) then
+              TowPrecCarriere := P.CreationTalent[J].ChoixTow;
+          TowSortsDepart(P, TowSortCache, TowCarrieresCache[C]);
+          for J := 0 to TowNbSorts(P) - 1 do
+            if Length(TowSortsCodes) < TowSortsVoulus() then
+              begin
+                I := 0;
+                while (I < Length(TowSortsCodes)) and (TowSortsCodes[I] <> P.Equipement[TowIndexSort(P, J)].CodeEquipement) do Inc(I);
+                if I >= Length(TowSortsCodes) then
+                  begin
+                    SetLength(TowSortsCodes, Length(TowSortsCodes) + 1);
+                    TowSortsCodes[High(TowSortsCodes)] := P.Equipement[TowIndexSort(P, J)].CodeEquipement;
+                  end;
+              end;
+        end;
+    TowAfficheEquip();
+  end;
+
+// Recapitulatif de gauche en TOW : caracteristiques, talents d origine et competences, d apres les choix deja faits
+// (rien n est tire ici : les listes incompletes ne sont pas rejouees).
+procedure TWinCreations.TowMajRecap();
+  var
+    K, C, I, N, Voulues: Integer;
+    O: TTowOrigine;
+    P: StructurePersonnage;
+    L: TStringList;
+    Code: String;
+    Doublon: Boolean;
+  begin
+    K := TowIndexOrigine();
+    if K < 0 then Exit;
+    O := TowOriginesCache[K];
+    P := TowCommencer(O, '');
+    for I := 1 to TowNbCarac do
+      if TowPlus[I] > 0 then TowAjouteUn(P, O, I);
+    for I := 1 to TowNbCarac do
+      if I < RecapAttribut.ColCount then
+        RecapAttribut.Cells[I, 1] := IntToStr(P.CreationAttribut[I - 1].Valeur);
+    RecapAttribut.Visible := True;
+    // talents d origine
+    // grilles sans ligne d en-tete (FixedRows = 0) : la premiere ligne est la ligne 0
+    N := Length(O.TalentsFixes);
+    N := N + Length(TowTalTires);
+    if N > RecapTalent.RowCount then RecapTalent.RowCount := N;
+    N := 0;
+    for I := 0 to High(O.TalentsFixes) do
+      begin
+        RecapTalent.Cells[1, N] := TowLibelleDe(O.TalentsFixes[I]);
+        RecapTalent.Cells[2, N] := O.TalentsFixes[I];
+        Inc(N);
+      end;
+    for I := 0 to High(TowTalTires) do
+        begin
+          Code := TowTalTires[I];
+          if (I = TowTalEchange) and (O.TalentEchange <> '') then Code := O.TalentEchange;
+          // un talent deja pris (fixe ou tire) n est pas compte deux fois, comme dans TowAjouteTalent
+          Doublon := False;
+          for K := 0 to N - 1 do
+            if RecapTalent.Cells[2, K] = Code then Doublon := True;
+          if Doublon then Continue;
+          RecapTalent.Cells[1, N] := TowLibelleDe(Code);
+          RecapTalent.Cells[2, N] := Code;
+          Inc(N);
+        end;
+    for I := N to RecapTalent.RowCount - 1 do
+      begin
+        RecapTalent.Cells[1, I] := '';
+        RecapTalent.Cells[2, I] := '';
+      end;
+    RecapTalent.Visible := True;
+    // competences : 16 a rang 2, puis origine, puis carriere si les choix sont complets
+    TowInitCompetences(P);
+    // meme calcul que les pages des phases 5 et 6 : rang de l origine pour les fixes et les libres choisies,
+    // puis +1 pour les competences de carriere choisies (ce qui est deja choisi seulement, rien n est tire)
+    for I := 0 to High(P.CreationCompetence35) do
+      begin
+        if EstDansListe(O.CompFixes, P.CreationCompetence35[I].CodeCompetence) then
+          P.CreationCompetence35[I].Valeur := O.CompRang
+        else if (TowCompOrig = RaceEnCours) and EstDansListe(TowCompLibres, P.CreationCompetence35[I].CodeCompetence) then
+          P.CreationCompetence35[I].Valeur := O.CompRang;
+        if (TowMetOrig = RaceEnCours + '|' + MetierEnCours) and EstDansListe(TowCompCar, P.CreationCompetence35[I].CodeCompetence) and
+           (P.CreationCompetence35[I].Valeur < 6) then
+          Inc(P.CreationCompetence35[I].Valeur);
+      end;
+    if Length(P.CreationCompetence35) > RecapComp.RowCount then RecapComp.RowCount := Length(P.CreationCompetence35);
+    for I := 0 to High(P.CreationCompetence35) do
+      begin
+        RecapComp.Cells[1, I] := TowLibelleDe(P.CreationCompetence35[I].CodeCompetence);
+        RecapComp.Cells[2, I] := IntToStr(P.CreationCompetence35[I].Valeur);
+        RecapComp.Cells[3, I] := '';
+        RecapComp.Cells[5, I] := '';
+      end;
+    for I := Length(P.CreationCompetence35) to RecapComp.RowCount - 1 do
+      begin
+        RecapComp.Cells[1, I] := '';
+        RecapComp.Cells[2, I] := '';
+        RecapComp.Cells[3, I] := '';
+        RecapComp.Cells[5, I] := '';
+      end;
+    RecapComp.Visible := True;
+  end;
+
+// Phase 8 TOW : nom (deja la), Life in Disgrace et dernier bonus (Final Steps), poses sous les controles du nom.
+procedure TWinCreations.TowInitNom();
+  var
+    I, Bas: Integer;
+  begin
+    if CheckTowDisgrace = nil then
+      begin
+        Bas := 0;
+        for I := 0 to TabSheetNom.ControlCount - 1 do
+          if TabSheetNom.Controls[I].Visible and (TabSheetNom.Controls[I].Top + TabSheetNom.Controls[I].Height > Bas) then
+            Bas := TabSheetNom.Controls[I].Top + TabSheetNom.Controls[I].Height;
+        ButtonTowNom := TButton.Create(Self);
+        ButtonTowNom.Name    := 'ButtonTowNom';
+        ButtonTowNom.Parent  := TabSheetNom;
+        ButtonTowNom.SetBounds(EditNomPersonnag.Left, Bas + 8, 460, 32);
+        ButtonTowNom.Caption := 'Random name suggested by the Player''s Guide (origin list)';
+        ButtonTowNom.OnClick := @TowNomHasardClick;
+        Bas := Bas + 48;
+        CheckTowDisgrace := TCheckBox.Create(Self);
+        CheckTowDisgrace.Name    := 'CheckTowDisgrace';
+        CheckTowDisgrace.Parent  := TabSheetNom;
+        CheckTowDisgrace.SetBounds(EditNomPersonnag.Left, Bas + 24, 460, 24);
+        CheckTowDisgrace.Caption := 'Life in Disgrace (Status one step lower, +1 XP)';
+        CheckTowDisgrace.Font.Name  := ConstPoliceNom;
+        CheckTowDisgrace.Font.Size  := ConstPoliceTaille;
+        CheckTowDisgrace.Font.Bold  := True;
+        CheckTowDisgrace.Font.Color := clWhite;
+        ComboTowBonus := TComboBox.Create(Self);
+        ComboTowBonus.Name   := 'ComboTowBonus';
+        ComboTowBonus.Parent := TabSheetNom;
+        ComboTowBonus.SetBounds(EditNomPersonnag.Left, Bas + 60, 460, 28);
+        ComboTowBonus.Style := csDropDownList;
+        ComboTowBonus.Items.Add('Final bonus : random');
+        ComboTowBonus.Items.Add('Final bonus : skills (3 -> 4, or two 2 -> 3)');
+        ComboTowBonus.Items.Add('Final bonus : one more origin talent');
+        ComboTowBonus.Items.Add('Final bonus : random asset');
+        ComboTowBonus.Items.Add('Final bonus : random asset, one step up (1 XP)');
+        ComboTowBonus.ItemIndex := 0;
+        ComboTowBonus.OnChange  := @TowBonusChange;
+        LabelTowJet := TLabel.Create(Self);
+        LabelTowJet.Name    := 'LabelTowJet';
+        LabelTowJet.Parent  := TabSheetNom;
+        LabelTowJet.SetBounds(EditNomPersonnag.Left, Bas + 98, 460, 24);
+        LabelTowJet.Font.Name  := ConstPoliceNom;
+        LabelTowJet.Font.Size  := ConstPoliceTaille;
+        LabelTowJet.Font.Bold  := True;
+        LabelTowJet.Font.Color := clWhite;
+        EditTowJet := TEdit.Create(Self);
+        EditTowJet.Name    := 'EditTowJet';
+        EditTowJet.Parent  := TabSheetNom;
+        EditTowJet.SetBounds(EditNomPersonnag.Left, Bas + 126, 120, 28);
+        EditTowJet.NumbersOnly := True;
+        MiseAJourUnContenaire(TabSheetNom);
+        TowBonusChange(nil);
+      end;
+    CheckTowDisgrace.Visible := True;
+    ComboTowBonus.Visible    := True;
+    ButtonTowNom.Visible     := True;
+  end;
+
+// Prenom au hasard dans la liste « Suggested Names » de l origine (le surnom entre parentheses est retire)
+procedure TWinCreations.TowNomHasardClick(Sender: TObject);
+  var
+    K, P:  Integer;
+    Liste: TStringList;
+    Nom:   String;
+  begin
+    K := TowIndexOrigine();
+    if (K < 0) or (TowOriginesCache[K].Noms = '') then Exit;
+    Liste := TStringList.Create;
+    try
+      Liste.Delimiter     := ',';
+      Liste.StrictDelimiter := True;
+      Liste.DelimitedText := TowOriginesCache[K].Noms;
+      if Liste.Count = 0 then Exit;
+      Nom := Trim(Liste[Random(Liste.Count)]);
+      P := Pos(' (', Nom);
+      if P > 0 then Nom := Copy(Nom, 1, P - 1);
+      EditNomPersonnag.Text := Nom;
+    finally
+      Liste.Free;
+    end;
+  end;
+
+// Le champ du de n existe que pour « un talent de plus » (d10) et « atout aleatoire » (d100) ; vide = tirage au hasard.
+procedure TWinCreations.TowBonusChange(Sender: TObject);
+  begin
+    EditTowJet.Text := '';
+    case ComboTowBonus.ItemIndex of
+      2: LabelTowJet.Caption := 'd10 already rolled on your origin Talent table (empty = random) :';
+      3, 4: LabelTowJet.Caption := 'd100 already rolled on the Random Asset Table (empty = random) :';
+    else
+      LabelTowJet.Caption := '';
+    end;
+    LabelTowJet.Visible := ComboTowBonus.ItemIndex in [2, 3, 4];
+    EditTowJet.Visible  := LabelTowJet.Visible;
+  end;
+
+// Phases 1 a 3 TOW : pose dans Personnage l origine, les caracteristiques (depart + 3 x +1) et la carriere choisies
+// (comme V1-V5 posent Race / attributs / metier a chaque phase). Les autres champs de Personnage ne sont pas touches.
+procedure TWinCreations.TowPoseDebutPersonnage;
+  var
+    K, C: Integer;
+  begin
+    K := TowIndexOrigine();
+    if K < 0 then Exit;
+    C := TowIndexCarriere();
+    if C >= 0 then
+      TowPoseDebut(Personnage, TowOriginesCache[K], TowCarrieresCache[C], True, TowPlus)
+    else
+      TowPoseDebut(Personnage, TowOriginesCache[K], TowCarrieresCache[0], False, TowPlus);
+    // phases 4 a 6 : talents d origine, puis competences et lores (la carriere n entre qu a la phase 6)
+    if (PhaseEnCours = 4) and (C >= 0) then
+      TowPoseTalents(Personnage, TowOriginesCache[K], TowTalTires, TowTalEchange);
+    if (PhaseEnCours >= 5) and (PhaseEnCours <= 6) and (C >= 0) then
+      TowPoseCompetences(Personnage, TowOriginesCache[K], TowCarrieresCache[C], PhaseEnCours >= 6,
+                         TowCompLibres, TowCompCar, TowLoreChoix);
+    if (PhaseEnCours = 6) and (C >= 0) then
+      begin
+        TowSauveTalents := Copy(Personnage.CreationTalent);
+        TowSauveLores   := Copy(Personnage.LoresTow);
+      end;
+    // phase 7 : talent de carriere, contacts, equipement, atouts, sorts de depart (le talent de carriere s ajoute
+    // aux talents et lores de la fin de la phase 6, restaures d abord pour qu une revalidation ne le double pas)
+    if (PhaseEnCours = 7) and (C >= 0) then
+      begin
+        Personnage.CreationTalent := Copy(TowSauveTalents);
+        Personnage.LoresTow       := Copy(TowSauveLores);
+        TowPoseEquipement(Personnage, TowCarrieresCache[C], TowEqChoix, TowAtChoix, TowContFam, TowContNpc, TowContTxt,
+                          TowSortsCodes, TowPrecCarriere, TowSortCache);
+      end;
+  end;
+
+// Fin de creation TOW : le personnage est assemble depuis les choix des phases dans Personnage, l XP est calcule ;
+// l ecriture (dossier, livres acceptes, XML, reouverture de la fiche) est celle de V1-V5 (PhaseSaveSauvegarde).
+function TWinCreations.TowPrepareSauvegarde(out XpTotal, XpActuel: Integer): Boolean;
+  var
+    K, C, Mode: Integer;
+    P: StructurePersonnage;
+    Xp: Integer;
+    Paye, Disgrace: Boolean;
+    AvantStatus: String;
+  begin
+    Result  := False;
+    XpTotal := 0;
+    XpActuel := 0;
+    K := TowIndexOrigine();
+    C := TowIndexCarriere();
+    if (K < 0) or (C < 0) then
+      begin
+        ShowMessage(GetTexteLibelle('RULES-MESS_066'));
+        Exit;
+      end;
+    Disgrace := CheckTowDisgrace.Checked;
+    Mode := 0;
+    Paye := False;
+    case ComboTowBonus.ItemIndex of
+      1: Mode := 1;
+      2: Mode := 2;
+      3: Mode := 3;
+      4: begin Mode := 3; Paye := True; end;
+    end;
+    TowJetTalentFinal := 0;
+    TowJetAtoutFinal  := 0;
+    if Mode = 2 then TowJetTalentFinal := StrToIntDef(EditTowJet.Text, 0);
+    if Mode = 3 then TowJetAtoutFinal  := StrToIntDef(EditTowJet.Text, 0);
+    if ((Mode = 2) and (TowJetTalentFinal > 10)) or ((Mode = 3) and (TowJetAtoutFinal > 100)) then
+      begin
+        ShowMessage('The die result is out of range (d10 : 1-10, d100 : 1-100).');
+        Exit;
+      end;
+    // phases 1 a 7 deja posees dans Personnage a leur validation ; reste la phase 8 : nom, disgrace, dernier bonus
+    P := Personnage;
+    TowPoseFin(P, TowOriginesCache[K], EditNomPersonnag.Text,
+               TowChargeAtoutsAleatoires(GetCurrentDir + '/DATABASE/WFRPTOW'), Disgrace, Mode, Paye);
+    // +1 XP : origine au d10, carriere au d100, trois +1 tires au hasard, Life in Disgrace applique
+    Xp := 0;
+    if TowOrigineTiree then Inc(Xp);
+    if TowCarriereTiree then Inc(Xp);
+    if TowPlusHasard then Inc(Xp);
+    AvantStatus := TowCarrieresCache[C].Status;
+    if Disgrace and (P.StatusTow <> AvantStatus) then Inc(Xp);
+    TowFixeXp(P, Xp);
+    Personnage := P;
+    XpTotal    := P.XpTotal;
+    XpActuel   := P.XpActuel;
+    Result     := True;
+  end;
+
+// Phase 4 TOW : a l arrivee sur la page. Un autre choix d origine efface le tirage precedent.
+procedure TWinCreations.TowInitTalents();
+  begin
+    if TowTalOrig <> RaceEnCours then
+      begin
+        SetLength(TowTalTires, 0);
+        TowTalEchange := -1;
+        TowTalFait    := False;
+        TowTalOrig    := RaceEnCours;
+      end;
+    TabTalent.ColWidths[2] := 330;
+    TabTalent.Width        := 365;
+    ButtonTalentHasard.Visible := True;
+    ButtonTalentHasard.BringToFront;
+    TowPoseSaisieTalents();
+    TowAfficheTalents();
+  end;
+
+// Phase 4 TOW : au-dessus de la table, une phrase d aide, le champ « resultat du d10 » et deux boutons
+// (ajouter ce d10 / retirer le dernier tirage). Les boutons sont des clones de celui du hasard (meme style).
+procedure TWinCreations.TowPoseSaisieTalents();
+  function Clone(const Nom, Legende: String; Gauche: Integer; Clic: TNotifyEvent): TBCButton;
+    var
+      Flux: TMemoryStream;
+    begin
+      Flux := TMemoryStream.Create;
+      try
+        Flux.WriteComponent(ButtonTalentHasard);
+        Flux.Position := 0;
+        Result := TBCButton(TComponentClass(ButtonTalentHasard.ClassType).Create(nil));
+        Flux.ReadComponent(Result);
+      finally
+        Flux.Free;
+      end;
+      Result.Name    := Nom;
+      Result.Parent  := TabSheetTalent;
+      Result.SetBounds(Gauche, 104, 256, 45);
+      Result.Caption := Legende;
+      Result.OnClick := Clic;
+      Result.Visible := True;
+    end;
+  begin
+    if LabTowAideTalent = nil then
+      begin
+        LabTowAideTalent := TLabel.Create(Self);
+        LabTowAideTalent.Name       := 'LabTowAideTalent';
+        LabTowAideTalent.Parent     := TabSheetTalent;
+        LabTowAideTalent.AutoSize   := False;
+        LabTowAideTalent.WordWrap   := True;
+        LabTowAideTalent.Font.Name  := ConstPoliceNom;
+        LabTowAideTalent.Font.Size  := ConstPoliceTaille;
+        LabTowAideTalent.Font.Bold  := True;
+        LabTowAideTalent.Font.Color := clWhite;
+        LabTowAideTalent.Caption    := 'For each d10 you rolled for your origin talents, type the result and click Add ' +
+                                       '(a talent already rolled must be re-rolled). Double-click a rolled talent to swap it ' +
+                                       'when your origin allows it. Or click « Let chance decide ».';
+        EditTowTalentDe := TSpinEdit.Create(Self);
+        EditTowTalentDe.Name     := 'EditTowTalentDe';
+        EditTowTalentDe.Parent   := TabSheetTalent;
+        EditTowTalentDe.MinValue := 1;
+        EditTowTalentDe.MaxValue := 10;
+        EditTowTalentDe.Value    := 1;
+        EditTowTalentDe.Font.Color := clBlack;
+        ButtonTowTalentDe     := Clone('ButtonTowTalentDe', 'Add this d10 result', 80, @ButtonTowTalentDeClick);
+        ButtonTowTalentRetire := Clone('ButtonTowTalentRetire', 'Remove the last roll', 350, @ButtonTowTalentRetireClick);
+        MiseAJourUnContenaire(TabSheetTalent);
+      end;
+    LabTowAideTalent.SetBounds(0, 4, 740, 90);
+    EditTowTalentDe.SetBounds(0, 112, 68, 28);
+    LabTowAideTalent.Visible      := True;
+    EditTowTalentDe.Visible       := True;
+    ButtonTowTalentDe.Visible     := True;
+    ButtonTowTalentRetire.Visible := True;
+    ButtonTowTalentDe.BringToFront;
+    ButtonTowTalentRetire.BringToFront;
+  end;
+
+// Un d10 lance par le joueur : le talent correspondant de la table de l origine est pris (sauf doublon).
+procedure TWinCreations.TowTalentParD10(D10: Integer);
+  var
+    K, J, I: Integer;
+    TowO: TTowOrigines;
+    Code: String;
+  begin
+    K := TowIndexOrigine();
+    if K < 0 then Exit;
+    TowO := TowOriginesCache;
+    if Length(TowTalTires) >= TowO[K].TalentTirages then
+      begin
+        ShowMessage('All the d10 rolls are already entered. Remove the last roll to change it.');
+        Exit;
+      end;
+    J := -1;
+    for I := 0 to High(TowO[K].TableTalents) do
+      if (D10 >= TowO[K].TableTalents[I].De) and (D10 <= TowO[K].TableTalents[I].A) then J := I;
+    if J < 0 then Exit;
+    Code := TowO[K].TableTalents[J].Code;
+    for I := 0 to High(TowTalTires) do
+      if TowTalTires[I] = Code then
+        begin
+          ShowMessage('This talent was already rolled: roll the d10 again.');
+          Exit;
+        end;
+    SetLength(TowTalTires, Length(TowTalTires) + 1);
+    TowTalTires[High(TowTalTires)] := Code;
+    TowTalFait := Length(TowTalTires) >= TowO[K].TalentTirages;
+    if TowTalFait and (TowO[K].TalentEchange <> '') and (TowO[K].Echange = 'MANDATORY') then
+      TowTalEchange := High(TowTalTires)
+    else
+      TowTalEchange := -1;
+    TowAfficheTalents();
+  end;
+
+procedure TWinCreations.ButtonTowTalentDeClick(Sender: TObject);
+  begin
+    TowTalentParD10(EditTowTalentDe.Value);
+  end;
+
+procedure TWinCreations.ButtonTowTalentRetireClick(Sender: TObject);
+  begin
+    if Length(TowTalTires) = 0 then Exit;
+    SetLength(TowTalTires, Length(TowTalTires) - 1);
+    TowTalFait    := False;
+    TowTalEchange := -1;
+    TowAfficheTalents();
+  end;
+
+// Tirage : talents fixes de l origine + N d10 sans doublon (table de l origine). L echange (MANDATORY =
+// le dernier tire est remplace ; OPTIONAL = aucun) se change ensuite par double-clic sur un talent tire.
+procedure TWinCreations.TowTireTalents();
+  var
+    K, I: Integer;
+    TowO: TTowOrigines;
+    O:    TTowOrigine;
+    P:    StructurePersonnage;
+  begin
+    K := TowIndexOrigine();
+    if K < 0 then Exit;
+    TowO := TowOriginesCache;
+    O    := TowO[K];
+    O.TalentEchange := '';           // le tirage brut, l echange est gere ici
+    P := TowCommencer(O, '');
+    TowTalentsOrigine(P, O, -1);
+    SetLength(TowTalTires, 0);
+    for I := Length(O.TalentsFixes) to High(P.CreationTalent) do
+      begin
+        SetLength(TowTalTires, Length(TowTalTires) + 1);
+        TowTalTires[High(TowTalTires)] := P.CreationTalent[I].CodeTalent;
+      end;
+    if (TowO[K].TalentEchange <> '') and (TowO[K].Echange = 'MANDATORY') and (Length(TowTalTires) > 0) then
+      TowTalEchange := High(TowTalTires)
+    else
+      TowTalEchange := -1;
+    TowTalFait := True;
+    TowAfficheTalents();
+  end;
+
+procedure TWinCreations.TowAfficheTalents();
+  var
+    K, I, N, J: Integer;
+    TowO: TTowOrigines;
+    Code, Txt: String;
+    Cand: TStringList;
+  begin
+    K := TowIndexOrigine();
+    for I := 1 to TabTalent.RowCount - 1 do
+      begin
+        TabTalent.Cells[1, I] := '';
+        TabTalent.Cells[2, I] := '';
+      end;
+    if K < 0 then Exit;
+    TowO := TowOriginesCache;
+    Cand := TowTalCandidats(TowO[K], TowTalTires);
+    try
+      N := Length(TowO[K].TalentsFixes) + Length(TowTalTires) + Cand.Count;
+      if N + 1 > TabTalent.RowCount then TabTalent.RowCount := N + 1;
+      N := 0;
+      for I := 0 to High(TowO[K].TalentsFixes) do
+        begin
+          Inc(N);
+          Code := TowO[K].TalentsFixes[I];
+          TabTalent.Cells[1, N] := Code;
+          TabTalent.Cells[2, N] := TowLibelleDe(Code);
+        end;
+      N := N + Length(TowTalTires);
+      // lignes de la table d10 encore a prendre (double-clic = ce talent est sorti)
+      for I := 0 to Cand.Count - 1 do
+        begin
+          Inc(N);
+          J := StrToInt(Cand[I]);
+          Code := TowO[K].TableTalents[J].Code;
+          TabTalent.Cells[1, N] := Code;
+          if TowO[K].TableTalents[J].De = TowO[K].TableTalents[J].A then
+            Txt := IntToStr(TowO[K].TableTalents[J].De)
+          else
+            Txt := IntToStr(TowO[K].TableTalents[J].De) + '-' + IntToStr(TowO[K].TableTalents[J].A);
+          TabTalent.Cells[2, N] := '[d10 ' + Txt + ']  ' + TowLibelleDe(Code);
+        end;
+    finally
+      Cand.Free;
+    end;
+    N := Length(TowO[K].TalentsFixes);
+    for I := 0 to High(TowTalTires) do
+      begin
+        Inc(N);
+        Code := TowTalTires[I];
+        Txt  := TowLibelleDe(Code);
+        if I = TowTalEchange then
+          begin
+            Txt  := TowLibelleDe(TowO[K].TalentEchange) + '  (<- ' + Txt + ')';
+            Code := TowO[K].TalentEchange;
+          end;
+        TabTalent.Cells[1, N] := Code;
+        TabTalent.Cells[2, N] := Txt;
+      end;
+    TowMajRecap();
+  end;
+
+// Choix a la main : un double-clic ajoute ou retire le +1 (trois au plus, jamais au-dela du maximum)
+procedure TWinCreations.TabAttributDblClick(Sender: TObject);
+  var
+    I, Nb, K, Ligne: Integer;
+    TowO: TTowOrigines;
+  begin
+    if ValVersion <> 'WFRPTOW' then Exit;
+    K := TowIndexOrigine();
+    if K < 0 then Exit;
+    TowO  := TowOriginesCache;
+    Ligne := TabAttribut.Row;
+    I := 0;
+    for Nb := 1 to TowNbCarac do
+      if TabAttribut.Cells[7, Ligne] = TowCodesCarac[Nb] then I := Nb;
+    if I = 0 then Exit;
+    if TowPlus[I] > 0 then
+      TowPlus[I] := 0
+    else
+      begin
+        Nb := 0;
+        for Ligne := 1 to TowNbCarac do
+          Nb := Nb + TowPlus[Ligne];
+        if Nb >= 3 then Exit;
+        if (TowO[K].Maximum[I] > 0) and (TowO[K].Depart[I] >= TowO[K].Maximum[I]) then Exit;
+        TowPlus[I] := 1;
+      end;
+    TowPlusHasard := False;
+    TowRecalculeAttributs();
+  end;
+
 procedure TWinCreations.ButtonAttributHasardClick(Sender: TObject);
   begin
+    if ValVersion = 'WFRPTOW' then
+      begin
+        TowTireAttributs();
+        Exit;
+      end;
     CalculTabAttribut(True, (RadioButtonAttributHasard.checked));
     UpdateSheetAttribut(true);
   end;
@@ -5807,11 +8305,11 @@ begin
   MenuCl := TPopupMenu.Create(Self);
   for I := 1 to 8 do
     // seulement les caracteristiques que la moyenne ameliore (valeur < base + 11)
-    if StrToIntDef(TabAttribut.Cells[6, I], 0) <
+    if StrToIntDef(TabAttribut.Cells[8, I], 0) <
        StrToIntDef(Copy(TabAttribut.Cells[4, I], Pos('+', TabAttribut.Cells[4, I]) + 1, 9), 0) + 11 then
     begin
       Item         := TMenuItem.Create(MenuCl);
-      Item.Caption := TabAttribut.Cells[3, I] + ' (' + TabAttribut.Cells[6, I] + ' -> ' +
+      Item.Caption := TabAttribut.Cells[3, I] + ' (' + TabAttribut.Cells[8, I] + ' -> ' +
         IntToStr(StrToIntDef(Copy(TabAttribut.Cells[4, I], Pos('+', TabAttribut.Cells[4, I]) + 1, 9), 0) + 11) + ')';
       Item.Tag     := I;
       Item.OnClick := @ClemenceChoisie;
@@ -5873,6 +8371,8 @@ var
   N:     Integer;
   Lignes: TStringList;
   Champs: TStringArray;
+  TowO:  TTowOrigines;
+  K:     Integer;
 begin
   if GridRace = nil then Exit;
   // lignes triees par libelle de race puis par libelle de livre (cle : libelle #1 livre #1 code)
@@ -5902,6 +8402,26 @@ begin
   end;
   if N = 0 then
     GridRace.RowCount := 1;
+  // The Old World : les origines viennent du livre TOW (pas de DATA_RACE), colonne 3 = plage du d10
+  if ValVersion = 'WFRPTOW' then
+    begin
+      TowO := TowOriginesCache;
+      GridRace.Cells[3, 0] := 'd10';
+      GridRace.RowCount    := Length(TowO) + 1;
+      for K := 0 to High(TowO) do
+        begin
+          if TowO[K].Code = RaceEnCours then
+            GridRace.Cells[0, K + 1] := '✔'
+          else
+            GridRace.Cells[0, K + 1] := '';
+          GridRace.Cells[1, K + 1] := TowO[K].Code;
+          GridRace.Cells[2, K + 1] := TowO[K].Libelle;
+          if TowO[K].DeD10 = TowO[K].AuD10 then
+            GridRace.Cells[3, K + 1] := IntToStr(TowO[K].DeD10)
+          else
+            GridRace.Cells[3, K + 1] := IntToStr(TowO[K].DeD10) + '-' + IntToStr(TowO[K].AuD10);
+        end;
+    end;
   // largeur fixee ici (page affichee) : a la creation la page n'a pas encore sa taille
   GridRace.ScrollBars    := ssAutoVertical;
   GridRace.Width         := 520;
@@ -5923,7 +8443,49 @@ begin
   GridRace.Height        := GridRace.DefaultRowHeight * GridRace.RowCount + 5;
   if GridRace.Height > ButtonRaceHasard.Top - GridRace.Top - 8 then
     GridRace.Height      := ButtonRaceHasard.Top - GridRace.Top - 8;
+  if ValVersion = 'WFRPTOW' then
+    TowPoseSaisieOrigine();
 end;
+
+// The Old World, phase 1 : en haut de la page, une phrase d aide et le champ « resultat du d10 » avec son bouton
+// (le cadre « Type de choix » est cache en mode grille) ; Selectionner et la grille descendent d autant.
+procedure TWinCreations.TowPoseSaisieOrigine();
+  begin
+    if LabTowAideRace = nil then
+      begin
+        LabTowAideRace := TLabel.Create(Self);
+        LabTowAideRace.Name       := 'LabTowAideRace';
+        LabTowAideRace.Parent     := TabSheetRace;
+        LabTowAideRace.AutoSize   := False;
+        LabTowAideRace.WordWrap   := True;
+        LabTowAideRace.Font.Name  := ConstPoliceNom;
+        LabTowAideRace.Font.Size  := ConstPoliceTaille;
+        LabTowAideRace.Font.Bold  := True;
+        LabTowAideRace.Font.Color := clWhite;
+        LabTowAideRace.Caption    := 'You rolled a d10? Type the result below and click Validate. ' +
+                                     'Otherwise double-click a line of the table, or click « Let chance decide ».';
+        MiseAJourUnContenaire(TabSheetRace);
+      end;
+    LabTowAideRace.SetBounds(GridRace.Left, 4, GridRace.Width, 52);
+    EditRaceResultat.MinValue := 1;
+    EditRaceResultat.MaxValue := 10;
+    if EditRaceResultat.Value < 1 then
+      EditRaceResultat.Value := 1;
+    EditRaceResultat.SetBounds(GridRace.Left, 60, 68, 28);
+    ButtonRaceValider.SetBounds(GridRace.Left + 80, 56, 180, 36);
+    ButtonRaceSelectionner.Top := 100;
+    GridRace.Top               := ButtonRaceSelectionner.Top + ButtonRaceSelectionner.Height + 8;
+    GridRace.Height            := GridRace.DefaultRowHeight * GridRace.RowCount + 5;
+    if GridRace.Height > ButtonRaceHasard.Top - GridRace.Top - 8 then
+      GridRace.Height          := ButtonRaceHasard.Top - GridRace.Top - 8;
+    LabTowAideRace.Visible     := True;
+    EditRaceResultat.Visible   := True;
+    EditRaceResultat.Enabled   := True;
+    ButtonRaceValider.Visible  := True;
+    ButtonRaceValider.Enabled  := True;
+    ButtonRaceValider.BringToFront;
+    ButtonRaceSelectionner.BringToFront;
+  end;
 
 procedure TWinCreations.GridRaceDblClick(Sender: TObject);
 begin
@@ -5931,6 +8493,7 @@ begin
   ChoixWinRace := GridRace.Cells[1, GridRace.Row];
   if ChoixWinRace <> '' then
     begin
+      if ValVersion = 'WFRPTOW' then TowOrigineTiree := False;
       TabRaceResultat(0);
       AfficheImageRace();
       UpdateSheetRace(true);
@@ -5981,7 +8544,7 @@ begin
             GridAvance.Cells[1, I + 1] := LibelleAttributTab(TabAttribut, Codes[I]);
             for J := 1 to TabAttribut.RowCount - 1 do
               if TabAttribut.Cells[7, J] = Codes[I] then
-                GridAvance.Cells[2, I + 1] := TabAttribut.Cells[6, J];
+                GridAvance.Cells[2, I + 1] := TabAttribut.Cells[8, J];
           end;
         GridAvance.Cells[3, I + 1] := '+' + IntToStr(PlafondAvanceMetier(MetierEnCours, Codes[I])) + Suffixe;
         GridAvance.Cells[4, I + 1] := '+' + IntToStr(PasAvance(Codes[I])) + Suffixe;
@@ -6045,10 +8608,14 @@ var
   Jet:                  PInteger;
 begin
   TotL := 0;
+  // V5 : la methode a pu changer (6 -> 3 -> 0 points) : un bonus devenu trop grand est remis a zero
+  if TotalBonusCaracV5() > PlafondBonusCaracV5() then
+    FillChar(BonusCaracV5, SizeOf(BonusCaracV5), 0);
     // vider les colonnes
     For I:= 1 to TabAttribut.RowCount -1 do
     begin
       TabAttribut.Cells[5, I] := '';
+      TabAttribut.Cells[8, I] := '';
       TabAttribut.Cells[6, I] := '';
     end;
 
@@ -6119,30 +8686,38 @@ begin
           if Index > 0 then
             begin
               TabAttribut.Cells[5, Index] := TabAttributLanceDe.Cells[ColCombo, 1];
-              TabAttribut.Cells[6, Index] := IntToStr(StrToIntDef(TabAttributLanceDe.Cells[Index, 1],0)+ PlusDe);
+              TabAttribut.Cells[8, Index] := IntToStr(StrToIntDef(TabAttributLanceDe.Cells[Index, 1],0)+ PlusDe);
+              // V5 : bonus de depart de la carriere (compte dans la valeur de creation enregistree)
+              if (ValVersion = 'WFRP5') and (Index <= 10) and (TabAttribut.Cells[5, Index] <> '') then
+                begin
+                  // colonne saisissable seulement sur les 3 caracteristiques de la carriere (niveau 1)
+                  if (TabAttribut.Cells[2, Index] = '1') and (PlafondBonusCaracV5() > 0) then
+                    TabAttribut.Cells[6, Index] := IntToStr(BonusCaracV5[Index]);
+                  TabAttribut.Cells[8, Index] := IntToStr(StrToIntDef(TabAttribut.Cells[8, Index], 0) + BonusCaracV5[Index]);
+                end;
               // Clemence de Shallya (V2) : la caracteristique choisie vaut base + 11 (moyenne de 2d10)
               if (ValVersion = 'WFRP2') and (ClemenceRow = Index) then
-                TabAttribut.Cells[6, Index] := IntToStr(PlusDe + 11);
+                TabAttribut.Cells[8, Index] := IntToStr(PlusDe + 11);
               if TabAttribut.Cells[7, Index] = ConstCaracE then
-                BE := StrToInt(TabAttribut.Cells[6, Index])
+                BE := StrToInt(TabAttribut.Cells[8, Index])
               else if TabAttribut.Cells[7, Index] = ConstCaracF then
-                BF := StrToInt(TabAttribut.Cells[6, Index])
+                BF := StrToInt(TabAttribut.Cells[8, Index])
               else if TabAttribut.Cells[7, Index] = ConstCaracFM then
-                BFM := StrToInt(TabAttribut.Cells[6, Index]);
+                BFM := StrToInt(TabAttribut.Cells[8, Index]);
               end
           end
      else if TabAttribut.Cells[7, I] = ConstCaracBlessure then
        begin
-          TabAttribut.Cells[6, I] := IntToStr(CalculBlessure(Ch, BF, BE, BFM));
+          TabAttribut.Cells[8, I] := IntToStr(CalculBlessure(Ch, BF, BE, BFM));
        end
      else if ValVersion = 'WFRP2' then
        begin
          // V2 : bonus = dizaine de la caracteristique ; autres valeurs fixes recopiees
          // (Blessures et Destin : tables 2-2 et 2-3, pas encore structurees)
          if TabAttribut.Cells[7, I] = 'RULES-ATTR_SB' then
-           TabAttribut.Cells[6, I] := IntToStr(BF div 10)
+           TabAttribut.Cells[8, I] := IntToStr(BF div 10)
          else if TabAttribut.Cells[7, I] = 'RULES-ATTR_TB' then
-           TabAttribut.Cells[6, I] := IntToStr(BE div 10)
+           TabAttribut.Cells[8, I] := IntToStr(BE div 10)
          else if ((TabAttribut.Cells[7, I] = 'RULES-ATTR_W') or (TabAttribut.Cells[7, I] = 'RULES-ATTR_FP')
                   or (TabAttribut.Cells[7, I] = 'RULES-ATTR_M'))
                  and (Pos(':', Ch) > 0) then
@@ -6160,21 +8735,29 @@ begin
              if Jet^ > 0 then
                begin
                  TabAttribut.Cells[5, I] := IntToStr(Jet^);
-                 TabAttribut.Cells[6, I] := IntToStr(ValeurTableD10(Ch, Jet^));
+                 TabAttribut.Cells[8, I] := IntToStr(ValeurTableD10(Ch, Jet^));
                end;
            end
          else if StrToIntDef(Ch, -1) >= 0 then
-           TabAttribut.Cells[6, I] := Ch;
+           TabAttribut.Cells[8, I] := Ch;
        end
      else if TabAttribut.Cells[7, I] = ConstCaracDestin then
        begin
-         TabAttribut.Cells[5, I]  := IntToStr(TrackBarPointSupp.Max - TrackBarPointSupp.Position);
-          TabAttribut.Cells[6, I] := IntToStr(StrToInt(TabAttribut.Cells[4, I]) + StrToIntDef(TabAttribut.Cells[5, I],0));
+         if ValVersion = 'WFRP5' then
+           TabAttribut.Cells[5, I] := IntToStr(BonusHasardV5(ConstCaracDestin))
+         else
+           TabAttribut.Cells[5, I] := IntToStr(TrackBarPointSupp.Max - TrackBarPointSupp.Position);
+          TabAttribut.Cells[8, I] := IntToStr(StrToInt(TabAttribut.Cells[4, I]) + StrToIntDef(TabAttribut.Cells[5, I],0));
+       end
+     else if TabAttribut.Cells[7, I] = ConstCaracFortune then
+       begin
+         TabAttribut.Cells[5, I] := IntToStr(BonusHasardV5(ConstCaracFortune));
+         TabAttribut.Cells[8, I] := IntToStr(StrToIntDef(TabAttribut.Cells[4, I], 0) + StrToIntDef(TabAttribut.Cells[5, I], 0));
        end
      else if TabAttribut.Cells[7, I] = ConstCaracResil then
        begin
          TabAttribut.Cells[5, I] := IntToStr(TrackBarPointSupp.Position);
-         TabAttribut.Cells[6, I] := IntToStr(StrToInt(TabAttribut.Cells[4, I]) + StrToIntDef(TabAttribut.Cells[5, I],0));
+         TabAttribut.Cells[8, I] := IntToStr(StrToInt(TabAttribut.Cells[4, I]) + StrToIntDef(TabAttribut.Cells[5, I],0));
        end
     end;
     TabAttributLanceDe.Cells[11, 1] := InttoStr(TotL);
@@ -6182,6 +8765,7 @@ begin
       TabAttributLanceDe.Cells[11, 0] := Format(GetTexteLibelle('RULES-LAB_317'), [100 - TotL])
     else
       TabAttributLanceDe.Cells[11, 0] := GetTexteLibelle('RULES-LAB_021');
+    MajLabBonusV5();
     UpdateSheetAttribut(false);
 end;
 
@@ -6223,6 +8807,7 @@ Var
   I: Integer;
 Begin
   if CreationV1Obj <> nil then Exit;   // V1 : onglet rempli par CreationV1
+  if ValVersion = 'WFRPTOW' then Exit; // The Old World : page geree par TowInitAttributs
   ButtonAttributHasard.Visible    := (RadioButtonAttributHasard.Checked or RadioButtonAttributHasardAffecte.Checked);
   ButtonAttributHasard.BringToFront;
   ModDesti                        := (RadioButtonAttributHasardAffecte.Checked or RadioButtonAttributResultatAffecte.Checked);
@@ -6232,7 +8817,8 @@ Begin
       if Assigned(TabAttributLanceDe.Objects[I, 2]) then
         (TabAttributLanceDe.Objects[I, 2] as TComboBox).Visible := false;
   TabAttributLanceDe.visible      := true;
-  TabAttribut.enabled             := false;
+  // V5 : la grille reste cliquable pour le double-clic du bonus de depart (pas editable : sans goEditing)
+  TabAttribut.enabled             := (ValVersion = 'WFRP5');
   if ValVersion = 'WFRP2' then
     begin
       // V2 : 8 caracteristiques tirees (pas de D9, D10) et ni Destin/Resilience ni
@@ -6248,7 +8834,7 @@ Begin
       RadioButtonAttributResultatAffecte.Visible := false;
       RadioButtonAttributRepartition.Visible     := false;
       if Assigned(ButtonClemence) then
-        ButtonClemence.Enabled := (ClemenceRow = 0) and (TabAttribut.Cells[6, 1] <> '');
+        ButtonClemence.Enabled := (ClemenceRow = 0) and (TabAttribut.Cells[8, 1] <> '');
       TrackBarPointSupp.Visible := false;
       LabDestin.Visible         := false;
       LabResilience.Visible     := false;
@@ -6335,8 +8921,39 @@ procedure TWinCreations.TabMetierResultat(Resul: Integer);
     IndS:     Integer;
     SousM:    Boolean = False;
     RaceC:    Boolean = False;
+    TowC:     TTowCarrieres;
+    TowIdx:   Integer;
   begin
     MemoMetierRegles.Visible := false;
+    // The Old World : choix libre (ChoixWinMetierRace) ou carriere du d100 pour l origine en cours
+    if ValVersion = 'WFRPTOW' then
+      begin
+        TowC := TowCarrieresCache;
+        if ChoixWinMetierRace <> '' then
+          begin
+            TowIdx := -1;
+            for IndTab := 0 to High(TowC) do
+              if TowC[IndTab].Code = ChoixWinMetierRace then TowIdx := IndTab;
+          end
+        else
+          TowIdx := TowCarriereDeD100(TowC, RaceEnCours, Resul);
+        if TowIdx >= 0 then
+          begin
+            TowCarriereTiree := (ChoixWinMetierRace = '') and (Resul > 0);
+            MetierEnCours    := TowC[TowIdx].Code;
+            MetierLibEnCours := TowC[TowIdx].Libelle;
+            for IndTab := 1 to TabMetier.RowCount - 1 do
+              if TabMetier.Cells[1, IndTab] = MetierEnCours then
+                begin
+                  TabMetier.Cells[4, IndTab] := '1';
+                  TabMetier.TopRow := IndTab;
+                end
+              else
+                TabMetier.Cells[4, IndTab] := '';
+            TabMetier.Invalidate;
+          end;
+        Exit;
+      end;
     for IndTab := 1 to TabMetier.RowCount-1 do
       begin
         Ch := TabMetier.Cells[3, IndTab];
@@ -6554,6 +9171,11 @@ procedure TWinCreations.ButtonRaceCompetenceHasardClick(Sender: TObject);
     PRaceNb:   StructureRace;
     Choix:     String;
   begin
+    if ValVersion = 'WFRPTOW' then
+      begin
+        TowTireCompRace();
+        Exit;
+      end;
     // le nombre a atteindre vient de l'ethnie (3 et 3 partout, 2 et 2 pour le Skink)
     PRaceNb := ChercheRace(RaceEnCours);
     // vérifier s'il reste des Cing ou trois
@@ -6778,11 +9400,18 @@ procedure TWinCreations.TabMetierCompetenceValidateEntry(Sender: TObject; aCol,
         if TryStrToInt(NewValue, Value) then
           begin
             // Vérifiez si la valeur est comprise entre 0 et 10
-            if (Value < 0) or (Value > 10) then
+            if (Value < 0) or ((Value > 10) and (ValVersion <> 'WFRP5')) then
               begin
                 // La valeur est en dehors de la plage autorisée, vous pouvez afficher un message d'erreur
                 ShowMessage(GetTexteLibelle('RULES-MESS_022'));
                 // Rétablir la valeur précédente
+                NewValue := OldValue;
+              end
+            // V5 : par avances de +5, 3 avances au plus par competence, espece comprise
+            else if (ValVersion = 'WFRP5')
+                    and ((Value mod 5 <> 0) or (Value > PlafondCompetenceMetierV5(aRow))) then
+              begin
+                ShowMessage(Format(GetTexteLibelle('RULES-MESS_126'), [PlafondCompetenceMetierV5(aRow)]));
                 NewValue := OldValue;
               end;
           end
@@ -6818,6 +9447,11 @@ procedure TWinCreations.ButtonMetierCompetenceHasardClick(Sender: TObject);
     NbLignes: Integer;
     Choix:    String;
   Begin
+    if ValVersion = 'WFRPTOW' then
+      begin
+        TowTireCompMetier();
+        Exit;
+      end;
     // 1 - resoudre les lignes encore au choix ("Trade (Any)", "A or B")
     for IndTab := 1 to TabMetierCompetence.RowCount - 1 do
       if TabMetierCompetence.Cells[5, IndTab] = ConstArbreAuChoix then
@@ -6871,6 +9505,11 @@ procedure TWinCreations.ButtonEquipementHasardClick(Sender: TObject);
     PTrapping:                  StructureTrapping;
     Ok:                         Boolean;
   begin
+    if ValVersion = 'WFRPTOW' then
+      begin
+        TowTireEquip(False);
+        Exit;
+      end;
     for Row := 1 to TabMetierEquipement.RowCount - 1 do
       if TabMetierEquipement.Cells[2, Row] = ConstArbreAuChoix then
         begin

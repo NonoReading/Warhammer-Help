@@ -1735,164 +1735,6 @@
 <Note>""</Note>
 <Page>"105"</Page>
 </EquipmentV2>
-<EquipmentV2 id="CHR-EQUI_MELEE_WEAPONS_PLAGUE_CENSER">
-<Description language="ENGLISH">"Plague Censer"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"10 Warpstone Tokens"</Cost>
-<Encumbrance>"85"</Encumbrance>
-<Group>"RULES-WTYPE2_FLAIL"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Impact, Special, Tiring"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
-<Note>""</Note>
-<Page>"72"</Page>
-</EquipmentV2>
-<EquipmentV2 id="CHR-EQUI_MELEE_WEAPONS_PUNCH_DAGGER">
-<Description language="ENGLISH">"Punch Dagger"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"1 Warpstone Tokens"</Cost>
-<Encumbrance>"15"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB-1"</Damage>
-<Qualities>"Balanced, Defensive"</Qualities>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
-<Note>"Clan Eshin blade held perpendicular to the fist, often used in pairs."</Note>
-<Page>"74"</Page>
-</EquipmentV2>
-<EquipmentV2 id="CHR-EQUI_MELEE_WEAPONS_RAT_CLAWS">
-<Description language="ENGLISH">"Rat Claws"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"2 Warpstone Tokens"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB-3"</Damage>
-<Qualities>"Special"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Note>""</Note>
-<Page>"74"</Page>
-</EquipmentV2>
-<EquipmentV2 id="CHR-EQUI_MELEE_WEAPONS_TAIL_BLADE">
-<Description language="ENGLISH">"Tail Blade"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"2 Warpstone Tokens"</Cost>
-<Encumbrance>"5"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB-2"</Damage>
-<Qualities>"Fast, Special"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
-<Note>""</Note>
-<Page>"74"</Page>
-</EquipmentV2>
-<EquipmentV2 id="CHR-EQUI_MELEE_WEAPONS_THINGS_CATCHER">
-<Description language="ENGLISH">"Things-Catcher"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"13 Warpstone Tokens"</Cost>
-<Encumbrance>"170"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Snare"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Note>""</Note>
-<Page>"74"</Page>
-</EquipmentV2>
-<EquipmentV2 id="CHR-EQUI_MISSILE_WEAPONS_BLOWGUN">
-<Description language="ENGLISH">"Blowgun"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"2 Warpstone Tokens"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_BLOWGUN"</Group>
-<Damage>"0"</Damage>
-<Range>"8/16"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"None"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
-<Note>""</Note>
-<Page>"72"</Page>
-</EquipmentV2>
-<EquipmentV2 id="CHR-EQUI_MISSILE_WEAPONS_POISONED_WIND_GLOBE">
-<Description language="ENGLISH">"Poisoned Wind Globe"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"6 Warpstone Tokens"</Cost>
-<Encumbrance>"5"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"Special"</Damage>
-<Range>"4/20"</Range>
-<Reload>"Full"</Reload>
-<Qualities>"Special"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Note>""</Note>
-<Page>"73"</Page>
-</EquipmentV2>
-<EquipmentV2 id="CHR-EQUI_MISSILE_WEAPONS_RATLING_GUN">
-<Description language="ENGLISH">"Ratling Gun"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"8 Warpstone Tokens"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_ENGINEER"</Group>
-<Damage>"3"</Damage>
-<Range>"10/30"</Range>
-<Reload>"10 Full"</Reload>
-<Qualities>"Experimental, Shrapnel"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
-<Note>""</Note>
-<Page>"74"</Page>
-</EquipmentV2>
-<EquipmentV2 id="CHR-EQUI_MISSILE_WEAPONS_SMOKE_BOMB">
-<Description language="ENGLISH">"Smoke Bomb"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"3 Warpstone Tokens"</Cost>
-<Encumbrance>"5"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"-"</Damage>
-<Range>"4/20"</Range>
-<Reload>"Full"</Reload>
-<Qualities>"Special"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Note>""</Note>
-<Page>"74"</Page>
-</EquipmentV2>
-<EquipmentV2 id="CHR-EQUI_MISSILE_WEAPONS_WARPFIRE_THROWER">
-<Description language="ENGLISH">"Warpfire Thrower"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"10 Warpstone Tokens"</Cost>
-<Encumbrance>"-"</Encumbrance>
-<Group>"RULES-WTYPE2_ENGINEER"</Group>
-<Damage>"4"</Damage>
-<Range>"Special"</Range>
-<Reload>"10 Full"</Reload>
-<Qualities>"Experimental, Special"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
-<Note>""</Note>
-<Page>"74"</Page>
-</EquipmentV2>
-<EquipmentV2 id="CHR-EQUI_MISSILE_WEAPONS_WARPLOCK_JEZZAIL">
-<Description language="ENGLISH">"Warplock Jezzail"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"12 Warpstone Tokens"</Cost>
-<Encumbrance>"60"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"5"</Damage>
-<Range>"48/96"</Range>
-<Reload>"2 Full"</Reload>
-<Qualities>"Armour Piercing, Unreliable"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
-<Note>""</Note>
-<Page>"75"</Page>
-</EquipmentV2>
-<EquipmentV2 id="CHR-EQUI_MISSILE_WEAPONS_WARPLOCK_PISTOL">
-<Description language="ENGLISH">"Warplock Pistol"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"10 Warpstone Tokens"</Cost>
-<Encumbrance>"25"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"5"</Damage>
-<Range>"10/20"</Range>
-<Reload>"2 Full"</Reload>
-<Qualities>"Armour Piercing, Unreliable"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
-<Note>"Used by higher-ranking Skaven. With ordinary gunpowder: Range 8/16 and Damage 4."</Note>
-<Page>"75"</Page>
-</EquipmentV2>
 <EquipmentV2 id="CHR-EQUI_MAGIC_ITEMS_CLAN_SKRYRE_GAS_MASK">
 <Description language="ENGLISH">"Clan Skryre Gas Mask"</Description>
 <Category>"RULES-EQCAT2_MAGIC_ITEMS"</Category>
@@ -2236,6 +2078,7 @@
 <Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_SPECIAL,RULES-WEAPQ_TIRING"</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_FLAIL"</Type>
+<Note>""</Note>
 <Page>"72"</Page>
 </Weapon>
 <Weapon id="CHR-COMB_V2_PUNCH_DAGGER">
@@ -2247,6 +2090,7 @@
 <Quality>"RULES-WEAPQ_BALANCED,RULES-WEAPQ_DEFENSIVE"</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Clan Eshin blade held perpendicular to the fist, often used in pairs."</Note>
 <Page>"74"</Page>
 </Weapon>
 <Weapon id="CHR-COMB_V2_RAT_CLAWS">
@@ -2258,6 +2102,7 @@
 <Quality>"RULES-WEAPQ_SPECIAL"</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>""</Note>
 <Page>"74"</Page>
 </Weapon>
 <Weapon id="CHR-COMB_V2_TAIL_BLADE">
@@ -2269,6 +2114,7 @@
 <Quality>"RULES-WEAPQ_FAST,RULES-WEAPQ_SPECIAL"</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>""</Note>
 <Page>"74"</Page>
 </Weapon>
 <Weapon id="CHR-COMB_V2_THINGS_CATCHER">
@@ -2280,6 +2126,7 @@
 <Quality>"RULES-WEAPQ_SNARE"</Quality>
 <Hand>"2"</Hand>
 <Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>""</Note>
 <Page>"74"</Page>
 </Weapon>
 <Weapon id="CHR-PROJ_V2_BLOWGUN">
@@ -2292,6 +2139,8 @@
 <Quality>""</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_BLOWGUN"</Type>
+<Reload>"Half"</Reload>
+<Note>""</Note>
 <Page>"72"</Page>
 </Weapon>
 <Weapon id="CHR-PROJ_V2_POISONED_WIND_GLOBE">
@@ -2304,6 +2153,8 @@
 <Quality>"RULES-WEAPQ_SPECIAL"</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_THROWING"</Type>
+<Reload>"Full"</Reload>
+<Note>""</Note>
 <Page>"73"</Page>
 </Weapon>
 <Weapon id="CHR-PROJ_V2_RATLING_GUN">
@@ -2316,6 +2167,8 @@
 <Quality>"RULES-WEAPQ_EXPERIMENTAL,RULES-WEAPQ_SHRAPNEL"</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_ENGINEER"</Type>
+<Reload>"10 Full"</Reload>
+<Note>""</Note>
 <Page>"74"</Page>
 </Weapon>
 <Weapon id="CHR-PROJ_V2_SMOKE_BOMB">
@@ -2328,6 +2181,8 @@
 <Quality>"RULES-WEAPQ_SPECIAL"</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_THROWING"</Type>
+<Reload>"Full"</Reload>
+<Note>""</Note>
 <Page>"74"</Page>
 </Weapon>
 <Weapon id="CHR-PROJ_V2_WARPFIRE_THROWER">
@@ -2340,6 +2195,8 @@
 <Quality>"RULES-WEAPQ_EXPERIMENTAL,RULES-WEAPQ_SPECIAL"</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_ENGINEER"</Type>
+<Reload>"10 Full"</Reload>
+<Note>""</Note>
 <Page>"74"</Page>
 </Weapon>
 <Weapon id="CHR-PROJ_V2_WARPLOCK_JEZZAIL">
@@ -2352,6 +2209,8 @@
 <Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_UNRELIABLE"</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_GUNPOWDER"</Type>
+<Reload>"2 Full"</Reload>
+<Note>""</Note>
 <Page>"75"</Page>
 </Weapon>
 <Weapon id="CHR-PROJ_V2_WARPLOCK_PISTOL">
@@ -2364,6 +2223,8 @@
 <Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_UNRELIABLE"</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_GUNPOWDER"</Type>
+<Reload>"2 Full"</Reload>
+<Note>"Used by higher-ranking Skaven. With ordinary gunpowder: Range 8/16 and Damage 4."</Note>
 <Page>"75"</Page>
 </Weapon>
 </DATA_WEAPON>

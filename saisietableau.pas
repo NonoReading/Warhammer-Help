@@ -15,6 +15,9 @@ unit SaisieTableau;
 //       Apres un « = » : les noms proposes (« Nom » ou « Nom<tab>S|N|P » : S specialisation, N nombre, P l'un ou l'autre).
 //   'Q', puis 2 libelles (Fabrication, Niveau) : « CODE niveau,CODE niveau » ; la grille montre le libelle du code.
 //       Apres un « = » : « code<tab>libelle » des fabrications proposees.
+//   'E', puis 1 libelle (en-tete), puis « code=libelle » des valeurs proposees : liste de codes (races d'une carriere) ;
+//       le texte reel les separe par une TABULATION (le code d'une valeur libre peut contenir des virgules) ; une ligne par code,
+//       la grille montre le libelle, boutons Ajouter / Retirer. PanelFiche range chaque ligne dans une balise repetee (Specie, Specie#2...).
 
 interface
 
@@ -35,6 +38,7 @@ type
     FPropositions: TStringList;  // mode T : noms de traits proposes dans la liste deroulante de la premiere colonne
     FExigences: TStringList;     // mode T : « nom=S » (specialisation obligatoire), « =N » (nombre), « =P » (l'un ou l'autre)
     FQual: Boolean;              // mode Q : « CODE niveau,CODE niveau » ; la grille montre le libelle du code
+    FListe: Boolean;             // mode E : une colonne, codes separes par une tabulation ; la grille montre le libelle du code
     FCodesProp: TStringList;     // mode Q : code de chaque nom propose (meme rang que FPropositions)
     function  LibelleDeCode(const Code: String): String;
     function  CodeDeLibelle(const Libelle: String): String;
@@ -216,7 +220,10 @@ begin
     begin
       FSep := ',';
       FQual := (Entrees.Count > 0) and (Copy(Entrees[0], 1, 1) = 'Q');
-      if FQual then FNb := 2 else FNb := 3;
+      FListe := (Entrees.Count > 0) and (Entrees[0] = 'E');
+      if FListe then FNb := 1
+      else if FQual then FNb := 2
+      else FNb := 3;
     end;
     FPanneau := TPanel.Create(Self);
     FPanneau.Parent := Parent;
@@ -236,17 +243,27 @@ begin
     for I := 0 to FNb - 1 do
       if I + 1 < Entrees.Count then FGrille.Cells[I, 0] := Entrees[I + 1];
     // mode T : apres un « = », les noms proposes dans la liste deroulante de la premiere colonne
-    if FQual then
+    if FQual or FListe then
     begin
-      // « code<tab>libelle » : la grille montre le libelle, le texte garde le code
+      // mode Q « code<tab>libelle », mode E « code=libelle » : la grille montre le libelle, le texte garde le code
       FPropositions := TStringList.Create;
       FCodesProp := TStringList.Create;
-      for I := 3 to Entrees.Count - 1 do
-        if Pos(#9, Entrees[I]) > 0 then
-        begin
-          FCodesProp.Add(Copy(Entrees[I], 1, Pos(#9, Entrees[I]) - 1));
-          FPropositions.Add(Copy(Entrees[I], Pos(#9, Entrees[I]) + 1, MaxInt));
-        end;
+      if FListe then
+      begin
+        for I := 2 to Entrees.Count - 1 do
+          if Pos('=', Entrees[I]) > 0 then
+          begin
+            FCodesProp.Add(Copy(Entrees[I], 1, Pos('=', Entrees[I]) - 1));
+            FPropositions.Add(Copy(Entrees[I], Pos('=', Entrees[I]) + 1, MaxInt));
+          end;
+      end
+      else
+        for I := 3 to Entrees.Count - 1 do
+          if Pos(#9, Entrees[I]) > 0 then
+          begin
+            FCodesProp.Add(Copy(Entrees[I], 1, Pos(#9, Entrees[I]) - 1));
+            FPropositions.Add(Copy(Entrees[I], Pos(#9, Entrees[I]) + 1, MaxInt));
+          end;
       FGrille.OnSelectEditor := @GrilleSelectEditor;
     end
     else if not FFixe then
@@ -272,7 +289,9 @@ begin
     else
     begin
       FGrille.SetBounds(0, 0, L, 132);
-      if FQual then
+      if FListe then
+        FGrille.ColWidths[0] := Larg - 24
+      else if FQual then
       begin
         FGrille.ColWidths[0] := (Larg - 24) * 70 div 100;
         FGrille.ColWidths[1] := Larg - 24 - (Larg - 24) * 70 div 100;
@@ -348,6 +367,19 @@ begin
           else if I = FNb - 1 then FGrille.Cells[I, 1] := Morceaux[I]
           else FGrille.Cells[FNb - 1, 1] := FGrille.Cells[FNb - 1, 1] + FSep + Morceaux[I];
       end;
+    end
+    else if FListe then
+    begin
+      // « CODE<tab>CODE » : un code par ligne, la grille montre son libelle
+      Morceaux.Delimiter := #9;
+      Morceaux.StrictDelimiter := True;
+      Morceaux.DelimitedText := S;
+      if S = '' then Morceaux.Clear;
+      FGrille.RowCount := Morceaux.Count + 1;
+      if FGrille.RowCount < 2 then FGrille.RowCount := 2;
+      FGrille.Cells[0, 1] := '';
+      for R := 0 to Morceaux.Count - 1 do
+        FGrille.Cells[0, R + 1] := LibelleDeCode(Trim(Morceaux[R]));
     end
     else if FQual then
     begin
@@ -429,6 +461,15 @@ begin
         if (Cellule = '') and (FSep = ' ') then Cellule := '0';  // une case vide decalerait les valeurs suivantes
         if I > 0 then Resultat := Resultat + FSep;
         Resultat := Resultat + Cellule;
+      end;
+  end
+  else if FListe then
+  begin
+    for R := 1 to FGrille.RowCount - 1 do
+      if Cell(0, R) <> '' then
+      begin
+        if Resultat <> '' then Resultat := Resultat + #9;
+        Resultat := Resultat + CodeDeLibelle(Cell(0, R));
       end;
   end
   else if FQual then

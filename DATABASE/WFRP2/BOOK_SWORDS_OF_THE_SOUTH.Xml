@@ -7,6 +7,7 @@
 <VERSION>"WFRP2"</VERSION>
 <OFFICIAL>"2"</OFFICIAL>
 <COMPLETE>"0"</COMPLETE>
+<DISCLAIMER>"This is a free product shared on the internet. It is not to be sold. Warhammer Fantasy Roleplay, the Warhammer Fantasy Roleplay logo, WFRP, Chaos, Tzeentch, Warhammer, and all associated marks, names, races, race insignia, characters, vehicles, locations, units, artefacts, illustrations and images from the Warhammer world are either ®, TM and/or © Copyright Games Workshop Ltd 2000-2009, variably registered in the UK and other countries around the world. Used without permission. No challenge to their status is intended. All Rights Reserved to their respective owners."</DISCLAIMER>
 <DATA_SPELL_V2>
 <SpellV2 id="SWOS-SPEL_APPRENTICE_TO_MASTER">
 <Description language="ENGLISH">"Apprentice to Master"</Description>
@@ -1069,18 +1070,21 @@
 <Link name="RULES-CARE_SOLDIER">"SWOS-CARE_TERCIO"</Link>
 <Link name="RULES-CARE_CHARCOAL_BURNER">"SWOS-CARE_FALCONER"</Link>
 </DATA_CAREER_LINK_V2>
-<DATA_EQUIPMENT_V2>
-<EquipmentV2 id="SWOS-EQUI_MELEE_WEAPONS_EPEE">
+<DATA_WEAPON>
+<Weapon id="SWOS-COMB_V2_EPEE">
 <Description language="ENGLISH">"Epee"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"10 gc"</Cost>
-<Encumbrance>"25"</Encumbrance>
-<Group>"RULES-WTYPE2_FENCING"</Group>
-<Damage>"SB–4"</Damage>
-<Qualities>"Fast, Precise, Defensive"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-4"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"10CO"</Price>
+<Encumbrance>"25"</Encumbrance>
+<Quality>"RULES-WEAPQ_FAST,RULES-WEAPQ_PRECISE,RULES-WEAPQ_DEFENSIVE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FENCING"</Type>
 <Page>"124"</Page>
-</EquipmentV2>
+</Weapon>
+</DATA_WEAPON>
+<DATA_EQUIPMENT_V2>
 <EquipmentV2 id="SWOS-EQUI_CREATURES_GREAT_CAT">
 <Description language="ENGLISH">"Great Cat"</Description>
 <Category>"RULES-EQCAT2_CREATURES"</Category>

@@ -1,68 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   SCHEMA_COMMON.xsd
-  Types XSD partages entre SCHEMA_WFRP4.xsd et SCHEMA_WFRP5.xsd.
-  Genere le 28/09/2026 a partir de l'audit du corpus DATABASE/WFRP4 et DATABASE/WFRP5,
-  voir GABARIT_LIVRE_XML.md pour les conventions de saisie.
+  Types XSD shared between SCHEMA_WFRP4.xsd and SCHEMA_WFRP5.xsd.
+  Generated from an audit of the DATABASE/WFRP4 and DATABASE/WFRP5 corpus,
+  see GABARIT_LIVRE_XML.md for the entry conventions.
 
-  Convention generale observee dans tout le corpus : le contenu textuel des balises est
-  stocke avec des guillemets anglais litteraux inclus dans le noeud texte (ex: "Nom du
-  talent"), consequence du parseur maison (xmlexportimport.pas) qui les retire a la
-  lecture. Le XSD ne valide QUE la structure/presence des balises, pas ce detail de
-  convention de guillemetage (xs:string accepte les guillemets comme n'importe quel
-  caractere).
+  General convention observed throughout the corpus: the text content of tags is
+  stored with literal English quotation marks included in the text node (e.g. "Talent
+  name"), a consequence of the in-house parser (xmlexportimport.pas) that strips them
+  when reading. The XSD validates ONLY the structure / presence of tags, not this detail of
+  quoting convention (xs:string accepts the quotes like any other character).
+
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified">
 
-  <!-- ===================== Types simples de base ===================== -->
+  <!-- ===================== Base simple types ===================== -->
 
-  <!-- ===================== Modificateurs (table TypesEffet de chargemodificateur.pas) =====================
-       Les 16 balises d'effet lues par LitModificateurNoeud, toutes du meme type souple : name=
-       (cible), skill= (ModifyWeapon), if= (filtre), Type/Cible/Facteur/Filtre (format generique
-       <Modificateur/>). A referencer par <xs:group ref="ModificateursEffets"/> dans tout bloc
-       qui accepte des modificateurs, jamais par des declarations isolees : deux declarations
-       d'une meme balise avec des types differents dans un meme bloc sont refusees. -->
+  <!-- ===================== Modifiers (TypesEffet table of chargemodificateur.pas) =====================
+       The 16 effect tags read by LitModificateurNoeud, all of the same flexible type: name=
+       (target), skill= (ModifyWeapon), if= (filter), Type/Cible/Facteur/Filtre (generic format
+       <Modificateur/>). To be referenced by <xs:group ref="ModificateursEffets"/> in any block
+       that accepts modifiers, never by isolated declarations: two declarations
+       of the same tag with different types in one block are refused. -->
   <xs:complexType name="ModificateurEffetType">
     <xs:annotation>
-      <xs:documentation xml:lang="fr">EFFET NUMERIQUE d'une source (talent, arme, armure, qualite, fabrication, mutation, maladie, bonus de carriere). Le CONTENU est la valeur : entier signe (+10, -1, 1), face de de (10 = 1d10 pour ModifyCaracAleatoire), ou texte ("Bonus" : sens d'affichage de ModifySkill). La BALISE dit ce qui est modifie, name= dit quelle cible. Table unique dans le code : TypesEffet (chargemodificateur.pas). Exemples : &lt;ModifyCarac name="RULES-ATTR_WP"&gt;+10&lt;/ModifyCarac&gt; ; &lt;ModifyWeapon name="RULES-WTYPE_SWORD" skill="RULES-COMPCOMB_BASE"&gt;+10&lt;/ModifyWeapon&gt; ; &lt;ModifyDamage name="CT" if="DWARF-COND_01"&gt;1&lt;/ModifyDamage&gt;.</xs:documentation>
+      <xs:documentation xml:lang="en">NUMERIC EFFECT of a source (talent, weapon, armour, quality, craftsmanship, mutation, disease, career bonus). The CONTENT is the value: signed integer (+10, -1, 1), die face (10 = 1d10 for ModifyCaracAleatoire), or text ("Bonus": display meaning of ModifySkill). The TAG says what is modified, name= says which target. Single table in the code: TypesEffet (chargemodificateur.pas). Examples: &lt;ModifyCarac name="RULES-ATTR_WP"&gt;+10&lt;/ModifyCarac&gt;; &lt;ModifyWeapon name="RULES-WTYPE_SWORD" skill="RULES-COMP_MELEE__BASIC"&gt;+10&lt;/ModifyWeapon&gt;; &lt;ModifyDamage name="CT" if="DWARF-COND_01"&gt;1&lt;/ModifyDamage&gt;.</xs:documentation>
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="xs:string">
         <xs:attribute name="name" type="xs:string" use="optional">
           <xs:annotation>
-            <xs:documentation xml:lang="fr">Cible de l'effet. Son sens depend de la balise : code de caracteristique (RULES-ATTR_WP) pour ModifyCarac ; code de competence (RULES-COMPCHARM, ou famille RULES-COMPFOCAL_*) pour ModifySkill ; code de type d'arme (RULES-WTYPE_SWORD) pour ModifyWeapon ; emplacement d'armure (RULES-ARMOL_HEAD) pour ModifArmour ; CC ou CT (armes de melee ou a distance) pour ModifyDamage ; '*' pour ModifyDamageReceived ; mot fixe pour ModifyAccurate (ACCURATE), ModifyReloadRate/Min (RELOAD), ModifyHands (HANDS).</xs:documentation>
+            <xs:documentation xml:lang="en">Target of the effect. Its meaning depends on the tag: characteristic code (RULES-ATTR_WP) for ModifyCarac; skill code (RULES-COMPCHARM, or family RULES-COMPFOCAL_*) for ModifySkill; weapon type code (RULES-WTYPE_SWORD) for ModifyWeapon; armour location (RULES-ARMOL_HEAD) for ModifArmour; CC or CT (melee or ranged weapons) for ModifyDamage; '*' for ModifyDamageReceived; fixed word for ModifyAccurate (ACCURATE), ModifyReloadRate/Min (RELOAD), ModifyHands (HANDS).</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="skill" type="xs:string" use="optional">
           <xs:annotation>
-            <xs:documentation xml:lang="fr">ModifyWeapon seulement : limite l'effet a UNE competence quand le type d'arme en a plusieurs (code de competence).</xs:documentation>
+            <xs:documentation xml:lang="en">ModifyWeapon only: limits the effect to ONE skill when the weapon type has several (skill code).</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="if" type="xs:string" use="optional">
           <xs:annotation>
-            <xs:documentation xml:lang="fr">Condition d'application : code d'une Condition du livre (DATA_CONDITION, ex. DWARF-COND_02). Un effet conditionnel ne modifie JAMAIS un total : il est affiche en note. Une valeur 0 n'est admise qu'avec if=.</xs:documentation>
+            <xs:documentation xml:lang="en">Condition of application: code of a Condition of the book (DATA_CONDITION, e.g. DWARF-COND_02). A conditional effect NEVER modifies a total: it is displayed as a note. A value of 0 is only allowed with if=.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="Type" type="xs:string" use="optional">
           <xs:annotation>
-            <xs:documentation xml:lang="fr">Format generique &lt;Modificateur/&gt; : balise de l'effet a produire (ModifArmour, ModifySkill, ModifyWeapon...). Sert aux fabrications et aux talents sans balise dediee.</xs:documentation>
+            <xs:documentation xml:lang="en">Generic format &lt;Modificateur/&gt;: tag of the effect to produce (ModifArmour, ModifySkill, ModifyWeapon...). Used for craftsmanships and talents without a dedicated tag.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="Cible" type="xs:string" use="optional">
           <xs:annotation>
-            <xs:documentation xml:lang="fr">Format generique &lt;Modificateur/&gt; : equivalent de name= (le code vise).</xs:documentation>
+            <xs:documentation xml:lang="en">Generic format &lt;Modificateur/&gt;: equivalent of name= (the targeted code).</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="Facteur" type="xs:string" use="optional">
           <xs:annotation>
-            <xs:documentation xml:lang="fr">Format generique &lt;Modificateur/&gt; : la valeur de l'effet (entier signe).</xs:documentation>
+            <xs:documentation xml:lang="en">Generic format &lt;Modificateur/&gt;: the value of the effect (signed integer).</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="Filtre" type="xs:string" use="optional">
           <xs:annotation>
-            <xs:documentation xml:lang="fr">Format generique &lt;Modificateur/&gt; : equivalent de skill=, ou code de condition.</xs:documentation>
+            <xs:documentation xml:lang="en">Generic format &lt;Modificateur/&gt;: equivalent of skill=, or condition code.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -73,108 +73,108 @@
     <xs:choice>
       <xs:element name="ModifyCarac" type="ModificateurEffetType">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Ajoute la valeur a une caracteristique (name = RULES-ATTR_xx). +10 = 10 points.</xs:documentation>
+          <xs:documentation xml:lang="en">Adds the value to a characteristic (name = RULES-ATTR_xx). +10 = 10 points.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ModifyCaracAleatoire" type="ModificateurEffetType">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Comme ModifyCarac, mais la valeur est une FACE DE DE (10 = 1d10), tiree UNE fois a l'ajout de l'element sur la fiche et memorisee (maladies, afflictions).</xs:documentation>
+          <xs:documentation xml:lang="en">Like ModifyCarac, but the value is a DIE FACE (10 = 1d10), rolled ONCE when the element is added to the sheet and remembered (diseases, afflictions).</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ModifySkill" type="ModificateurEffetType">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Bonus chiffre sur une competence (name = code de competence, ou famille _*). Le texte "Bonus" ou une valeur negative ne change que l'affichage.</xs:documentation>
+          <xs:documentation xml:lang="en">Numeric bonus on a skill (name = skill code, or family _*). The text "Bonus" or a negative value only changes the display.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ModifySkillAttribut" type="ModificateurEffetType">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Meme bonus sur TOUTES les competences liees a une caracteristique (name = RULES-ATTR_xx) : diffusion par attribut. Hors du moteur generique.</xs:documentation>
+          <xs:documentation xml:lang="en">Same bonus on ALL the skills linked to a characteristic (name = RULES-ATTR_xx): broadcast by attribute. Outside the generic engine.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ModifyWeapon" type="ModificateurEffetType">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Bonus de competence d'arme pour un TYPE d'arme (name = RULES-WTYPE_xx) ; skill= limite a une competence.</xs:documentation>
+          <xs:documentation xml:lang="en">Weapon skill bonus for a weapon TYPE (name = RULES-WTYPE_xx); skill= limits it to one skill.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ModifyDamage" type="ModificateurEffetType">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Degats : name = CC (melee) ou CT (distance), SORT pour un sort.</xs:documentation>
+          <xs:documentation xml:lang="en">Damage: name = CC (melee) or CT (ranged), SORT for a spell.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="Modificateur" type="ModificateurEffetType">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Format generique a attributs Type/Cible/Facteur/Filtre, pour les effets sans balise propre.</xs:documentation>
+          <xs:documentation xml:lang="en">Generic format with Type/Cible/Facteur/Filtre attributes, for effects without a tag of their own.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ModifArmour" type="ModificateurEffetType">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Points d'armure en plus sur un emplacement (name = RULES-ARMOL_HEAD/ARM/BODY/LEG, ou RULES-ARMOL_SHIELD pour la qualite Shield).</xs:documentation>
+          <xs:documentation xml:lang="en">Extra armour points on a location (name = RULES-ARMOL_HEAD/ARM/BODY/LEG, or RULES-ARMOL_SHIELD for the Shield quality).</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ModifBoat" type="ModificateurEffetType">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Modificateur de bateau (name = M pour la manoeuvrabilite).</xs:documentation>
+          <xs:documentation xml:lang="en">Boat modifier (name = M for manoeuvrability).</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ModifyTestSL" type="ModificateurEffetType">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Bonus de Success Levels sur un test de competence (name = competence ou famille, ex. RULES-COMPFOCAL_*).</xs:documentation>
+          <xs:documentation xml:lang="en">Success Levels bonus on a skill test (name = skill or family, e.g. RULES-COMPFOCAL_*).</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ModifyCN" type="ModificateurEffetType">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Modifie le Casting Number (name = famille de sorts, ex. RULES-LORE_*).</xs:documentation>
+          <xs:documentation xml:lang="en">Modifies the Casting Number (name = spell family, e.g. RULES-LORE_*).</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ModifyDamageReceived" type="ModificateurEffetType">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Modifie les degats recus (name = *).</xs:documentation>
+          <xs:documentation xml:lang="en">Modifies the damage received (name = *).</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ModifyAccurate" type="ModificateurEffetType">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Qualite Accurate : bonus de Test (name = ACCURATE).</xs:documentation>
+          <xs:documentation xml:lang="en">Accurate quality: Test bonus (name = ACCURATE).</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ModifyReloadRate" type="ModificateurEffetType">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Qualite Reload : change le temps de rechargement (name = RELOAD).</xs:documentation>
+          <xs:documentation xml:lang="en">Reload quality: changes the reload time (name = RELOAD).</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ModifyReloadMin" type="ModificateurEffetType">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Plancher du temps de rechargement (name = RELOAD).</xs:documentation>
+          <xs:documentation xml:lang="en">Floor of the reload time (name = RELOAD).</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ModifyGrapple" type="ModificateurEffetType">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Bonus en pour cent aux tests de lutte (name = GRAPPLE). Charge et affiche seulement, jamais calcule.</xs:documentation>
+          <xs:documentation xml:lang="en">Percentage bonus to grapple tests (name = GRAPPLE). Loaded and displayed only, never computed.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ModifyHands" type="ModificateurEffetType">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Nombre de mains necessaires (name = HANDS ; -1 = une main de moins).</xs:documentation>
+          <xs:documentation xml:lang="en">Number of hands needed (name = HANDS; -1 = one hand fewer).</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ModifySkillGear" type="ModificateurEffetType">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Bonus de competence lie a l'equipement : alimente la colonne 'avec equipement' du PDF (Practical/Unreliable), jamais le Total.</xs:documentation>
+          <xs:documentation xml:lang="en">Skill bonus linked to equipment: feeds the "with equipment" column of the PDF (Practical/Unreliable), never the Total.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="AddSkillToCareer" type="ModificateurEffetType">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Ajoute la competence (name) aux competences de metier de TOUTES les carrieres du personnage, au palier donne par la valeur (1 = des le niveau 1). Ex. Perfect Pitch -&gt; Chant.</xs:documentation>
+          <xs:documentation xml:lang="en">Adds the skill (name) to the career skills of ALL the character's careers, at the tier given by the value (1 = from level 1). E.g. Perfect Pitch -&gt; Chant.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:choice>
   </xs:group>
 
-  <!-- Chaine simple, sans attribut (Skill, Attribut, Max, PDF, etc. en position "flat") -->
+  <!-- Simple string, without attribute (Skill, Attribut, Max, PDF, etc. in "flat" position) -->
   <xs:simpleType name="PlainString">
     <xs:restriction base="xs:string"/>
   </xs:simpleType>
 
-  <!-- Element texte avec attribut language obligatoire (Description, Explanation, Test, Short...) -->
+  <!-- Text element with a mandatory language attribute (Description, Explanation, Test, Short...) -->
   <xs:complexType name="LangString">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -183,8 +183,8 @@
     </xs:simpleContent>
   </xs:complexType>
 
-  <!-- Element texte avec attribut language optionnel (rares blocs a echantillon unique
-       ou l'attribut n'est pas systematiquement confirme) -->
+  <!-- Text element with an optional language attribute (rare single-sample blocks
+       where the attribute is not systematically confirmed) -->
   <xs:complexType name="LangStringOpt">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -193,7 +193,7 @@
     </xs:simpleContent>
   </xs:complexType>
 
-  <!-- Element texte avec attribut name obligatoire (Skill name=, Talent name=, Cost name=,
+  <!-- Text element with a mandatory name attribute (Skill name=, Talent name=, Cost name=,
        Chance name=, Specie name=, Attribut name=, Alternative name=...) -->
   <xs:complexType name="NamedString">
     <xs:simpleContent>
@@ -203,10 +203,10 @@
     </xs:simpleContent>
   </xs:complexType>
 
-  <!-- Comme NamedString mais l'attribut name est optionnel (Modifier dans DATA_ARMOR_BONUS :
-       present quand le bonus cible une competence/caracteristique precise, absent sinon).
-       L'attribut if= optionnel est vu sur ModifyDamage/ModifySkill dans DATA_CRAFTMANSHIP
-       (condition d'application de la fabrication, ex: BOOK_DWARF_PLAYERS_GUIDE.Xml). -->
+  <!-- Like NamedString but the name attribute is optional (Modifier in DATA_ARMOR_BONUS:
+       present when the bonus targets a specific skill / characteristic, absent otherwise).
+       The optional if= attribute is seen on ModifyDamage/ModifySkill in DATA_CRAFTMANSHIP
+       (condition of application of the craftsmanship, e.g. BOOK_DWARF_PLAYERS_GUIDE.Xml). -->
   <xs:complexType name="OptionallyNamedString">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -225,9 +225,9 @@
     </xs:simpleContent>
   </xs:complexType>
 
-  <!-- ===================== Blocs recurrents factorisables ===================== -->
+  <!-- ===================== Reusable factorised blocks ===================== -->
 
-  <!-- Description + Explanation, le duo le plus frequent du corpus -->
+  <!-- Description + Explanation, the most frequent pair of the corpus -->
   <xs:group name="DescriptionExplanationGroup">
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
@@ -235,28 +235,28 @@
     </xs:sequence>
   </xs:group>
 
-  <!-- SUBCHAPTER_ITEM : Item name=... valeur = niveau qui debloque l'objet, repetable -->
+  <!-- SUBCHAPTER_ITEM: Item name=... value = level that unlocks the item, repeatable -->
   <xs:complexType name="SubchapterItem">
     <xs:sequence>
       <xs:element name="Item" type="ItemEntryType" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
-  <!-- SUBCHAPTER_SKILL : Skill name=... -->
+  <!-- SUBCHAPTER_SKILL: Skill name=... -->
   <xs:complexType name="SubchapterSkill">
     <xs:sequence>
       <xs:element name="Skill" type="NamedString" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
-  <!-- SUBCHAPTER_TALENT : Talent name=... -->
+  <!-- SUBCHAPTER_TALENT: Talent name=... -->
   <xs:complexType name="SubchapterTalent">
     <xs:sequence>
       <xs:element name="Talent" type="NamedString" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
-  <!-- SUBCHAPTER_ATTR : Attribut name=... -->
+  <!-- SUBCHAPTER_ATTR: Attribut name=... -->
   <xs:complexType name="SubchapterAttr">
     <xs:sequence>
       <xs:element name="Attribut" type="NamedString" minOccurs="0" maxOccurs="unbounded"/>
@@ -265,149 +265,159 @@
 
   <!-- ===================== DATA_TALENT ===================== -->
   <!--
-    Obligatoires (100% du corpus) : Talent[id], Test, Description, PDF, Explanation, Max,
-    Skill, Short. (Attribut retire le 04/10/2026 : ModifyCarac fait foi.)
-    Optionnelles : Trait, XpDivisor, XpMultiplier, XpFloor, Magic, SpellMode (co-occurrent),
-    Modificateur, XpFree, Effet, ModifyCarac, AddSkill, ModifySkill (cas isoles, observes
-    inseres entre Attribut et Description dans l'ordre reel du fichier).
-    IMPORTANT (regle de garde-fou) : <Generique> est INTERDIT dans ce bloc, meme en option.
-    Un talent avec <Generique> est une specialisation mal saisie : elle doit aller dans
-    DATA_TALENT_SPECIALIZATION (voir GABARIT_LIVRE_XML.md, bug corrige le 28/09/2026 sur
-    9 talents HORNE/GRIM/TRIBE). Ce XSD ne declare PAS <Generique> comme element possible
-    de TalentType : tout <Generique> presepnt provoquera une erreur de validation
-    "unexpected element", ce qui est le comportement voulu.
+    Mandatory (100% of the corpus): Talent[id], Test, Description, PDF, Explanation, Max,
+    Skill, Short. (Attribut removed: ModifyCarac is authoritative.)
+    Optional: Trait, XpDivisor, XpMultiplier, XpFloor, Magic, SpellMode (co-occurring),
+    Modificateur, XpFree, Effet, ModifyCarac, AddSkill, ModifySkill (isolated cases, observed
+    inserted between Attribut and Description in the real order of the file).
+    IMPORTANT (safeguard rule): <Generique> is FORBIDDEN in this block, even as an option.
+    A talent with <Generique> is a wrongly entered specialisation: it must go in
+    DATA_TALENT_SPECIALIZATION (see GABARIT_LIVRE_XML.md; a bug fixed on 9 talents of
+    HORNE/GRIM/TRIBE). This XSD does NOT declare <Generique> as a possible element
+    of TalentType: any <Generique> present causes a validation error
+    "unexpected element", which is the intended behaviour.
   -->
   <!--
-    Ordre reel verifie sur BOOK_RULESBOOK.Xml (19 talents parcourus) :
-    Description/Short/Explanation/Skill/Max/PDF/Test (le socle obligatoire, ordre stable),
-    MAIS les extras (Effet, ModifyCarac, AddSkill, ModifySkill, Modificateur, XpFree, Trait,
-    Magic, SpellMode, XpDivisor, XpMultiplier, XpFloor) se sont averes inseres a des
-    positions differentes selon les talents (avant Description, entre Skill et Max, apres
-    Test...) - pas de position fixe unique dans le corpus. Politique retenue : le socle
-    obligatoire reste un xs:sequence strict (garantit la presence et l'ordre du coeur du
-    bloc), les extras sont regroupes en xs:choice repetable APRES le socle plutot que d'etre
-    figes a une position qui casserait la validation de talents deja saisis correctement.
-    C'est un assouplissement deliberement documente par rapport a la consigne "xs:sequence
-    strict partout" : la variance est un fait du corpus (saisie manuelle etalee sur
-    plusieurs mois/livres), pas une erreur a corriger.
+    Real order checked on BOOK_RULESBOOK.Xml (19 talents scanned):
+    Description/Short/Explanation/Skill/Max/PDF/Test (the mandatory base, stable order),
+    BUT the extras (Effet, ModifyCarac, AddSkill, ModifySkill, Modificateur, XpFree, Trait,
+    Magic, SpellMode, XpDivisor, XpMultiplier, XpFloor) turned out to be inserted at
+    different positions depending on the talent (before Description, between Skill and Max, after
+    Test...), with no single fixed position in the corpus. Policy kept: the mandatory
+    base stays a strict xs:sequence (guaranteeing the presence and order of the core of the
+    block), the extras are grouped in a repeatable xs:choice AFTER the base rather than being
+    frozen at a position that would break the validation of talents already entered correctly.
+    This is a deliberately documented relaxation of the rule "strict xs:sequence
+    everywhere": the variance is a fact of the corpus (manual entry spread over
+    several months/books), not an error to fix.
   -->
   <!--
-    Les extras (Effet, ModifyCarac, AddSkill, ModifySkill, Modificateur, XpFree, Trait,
-    Magic, SpellMode, XpDivisor, XpMultiplier, XpFloor) se sont averes inseres a des
-    positions DIFFERENTES selon les talents (avant Description, entre Skill et Max, apres
-    Test...) - verifie sur BOOK_RULESBOOK.Xml, pas de position fixe unique dans le corpus.
-    Une xs:sequence stricte pour le socle (Description/Short/Explanation/Skill/Max/PDF/Test)
-    avec les extras uniquement en fin de bloc rejette a tort des talents deja valides. Le
-    contenu est donc modelise en xs:choice repetable et non ordonne : c'est un
-    ASSOUPLISSEMENT DELIBERE ET DOCUMENTE par rapport a la consigne "xs:sequence strict
-    partout" (voir rapport de la tache XSD), justifie par le fait que la variance est un
-    fait du corpus (saisie manuelle etalee sur plusieurs mois/livres), pas une erreur a
-    corriger. La whitelist de balises valides reste stricte (c'est elle qui bloque
-    <Generique>, le bug cible par cette tache), seule l'ORDRE et le nombre exact
-    d'occurrences des champs obligatoires ne sont plus verifies par le XSD pour ce bloc.
+    The extras (Effet, ModifyCarac, AddSkill, ModifySkill, Modificateur, XpFree, Trait,
+    Magic, SpellMode, XpDivisor, XpMultiplier, XpFloor) turned out to be inserted at
+    DIFFERENT positions depending on the talent (before Description, between Skill and Max, after
+    Test...), checked on BOOK_RULESBOOK.Xml, with no single fixed position in the corpus.
+    A strict xs:sequence for the base (Description/Short/Explanation/Skill/Max/PDF/Test)
+    with the extras only at the end of the block wrongly rejects talents that are already valid. The
+    content is therefore modelled as an unordered, repeatable xs:choice: it is a
+    DELIBERATE AND DOCUMENTED RELAXATION of the rule "strict xs:sequence
+    everywhere", justified by the fact that the variance is a
+    fact of the corpus (manual entry spread over several months/books), not an error to
+    fix. The whitelist of valid tags stays strict (it is what blocks
+    <Generique>, the bug targeted here); only the ORDER and the exact number
+    of occurrences of the mandatory fields are no longer checked by the XSD for this block.
   -->
   <!--
-    GROUPES D'AFFICHAGE DE LA FICHE TALENT DANS WINLIVRE (12/11/2026, A_FAIRE WINLIVRE-FICHES-GROUPES).
-    Le XSD ne pilote rien dans WinLivre : les groupes sont poses en dur (winlivre.pas, EnGroupes). Ils ne
-    changent pas le XML, seulement les champs montres a l'ecran ; un champ deja rempli reste toujours visible.
-      Magie   : Magic, SpellTypes, XpMultiplier, XpFloor, XpDivisor, XpFree, SpellMode (rare : 5 a 7 talents par version)
-      Niveau  : GrantAt, LoseAt (2 occurrences, Nations of Mankind)
-      Moteur  : bloc Effet (Engine effect)
-      V4,V5   : PDF (absent en V2, balise toujours vide en V5), Trait (79 talents V4, 62 V5, jamais en V2)
-    Les trois cases « familles » de la fiche (Magie, Moteur, Niveau) montrent un groupe meme vide.
-    Memes principes pour les autres fiches : Competence (Basic V1,V2,V4 ; RelatedTalents V2) ; Trapping V4
-    (groupes Animal, Vehicule, Commerce, Qualite) ; Carriere V4 / V5 (groupes Espece, Variante) ; Ethnie
-    (Rattachement V4,V5 : Nationality, PictureLevel ; Recit V2 : Background, RoleplayingHints).
+    DISPLAY GROUPS OF THE TALENT SHEET IN WINLIVRE.
+    The XSD drives nothing in WinLivre: the groups are hard-coded (winlivre.pas, EnGroupes). They do not
+    change the XML, only the fields shown on screen; a field that is already filled always stays visible.
+      Magic   : Magic, SpellTypes, XpMultiplier, XpFloor, XpDivisor, XpFree, SpellMode (rare: 5 to 7 talents per version)
+      Level   : GrantAt, LoseAt (2 occurrences, Nations of Mankind)
+      Engine  : Effet block (Engine effect)
+      V4,V5   : PDF (absent in V2, tag always empty in V5), Trait (79 talents V4, 62 V5, never in V2)
+    The three "family" checkboxes of the sheet (Magic, Engine, Level) show a group even when it is empty.
+    Same principles for the other sheets: Skill (Basic V1,V2,V4; RelatedTalents V2); Trapping V4
+    (groups Animal, Vehicle, Trade, Quality); Career V4 / V5 (groups Species, Variant); Ethnicity
+    (Attachment V4,V5: Nationality, PictureLevel; Story V2: Background, RoleplayingHints).
   -->
   <xs:complexType name="TalentType">
     <xs:choice minOccurs="1" maxOccurs="unbounded">
       <xs:element name="Description" type="LangString"/>
       <xs:element name="Short" type="LangString">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Resume d'une ligne pour les listes. Vide la plupart du temps.</xs:documentation>
+          <xs:documentation xml:lang="en">One-line summary for lists. Empty most of the time.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="Explanation" type="LangString"/>
       <xs:element name="Max" type="PlainString">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Nombre de prises maximum : entier ("1"), "99" = sans limite pratique, ou formule sur un bonus de caracteristique, "(BATTR_I)" = Bonus d'Initiative, "(BATTR_Fel)"...</xs:documentation>
+          <xs:documentation xml:lang="en">Maximum number of takings: integer ("1"), "99" = no practical limit, or a formula on a characteristic bonus, "(BATTR_I)" = Initiative Bonus, "(BATTR_Fel)"...</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="PDF" type="PlainString">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Code de competence (COMPCOMB_*, COMPPRECEP) dont le talent est signale par une asterisque sur le PDF. SANS prefixe de livre. Vide = pas d'asterisque.</xs:documentation>
+          <xs:documentation xml:lang="en">Skill code (RULES-COMP_MELEE__*, RULES-COMP_PERFORM__*, etc.) whose talent is flagged by an asterisk on the PDF. WITHOUT book prefix. Empty = no asterisk.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="Test" type="LangString">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Test que le talent modifie, en texte libre ("Melee when defending"). Vide la plupart du temps.</xs:documentation>
+          <xs:documentation xml:lang="en">Test that the talent modifies, as free text ("Melee when defending"). Empty most of the time.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="Effet" type="EffetType">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Effet de talent hors moteur generique : attributs Cible (nom d'effet), Forme (Additif, Drapeau, ProportionnelAttribut), Facteur, Carac (pour ProportionnelAttribut). Ex. &lt;Effet Cible="BonusEncomb" Forme="Additif" Facteur="2"/&gt;.</xs:documentation>
+          <xs:documentation xml:lang="en">Talent effect outside the generic engine: attributes Cible (effect name), Forme (Additif, Drapeau, ProportionnelAttribut), Facteur, Carac (for ProportionnelAttribut). E.g. &lt;Effet Cible="BonusEncomb" Forme="Additif" Facteur="2"/&gt;.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:group ref="ModificateursEffets"/>
       
       <xs:element name="XpFree" type="PlainString">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Nombre de sorts gratuits avant que le tarif ne s'applique : entier ou formule ("(BATTR_WP)").</xs:documentation>
+          <xs:documentation xml:lang="en">Number of free spells before the rate applies: integer or formula ("(BATTR_WP)").</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="Trait" type="PlainString">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">"1" = trait de creature : non selectionnable a la creation (Frightening, Armour...). Sert aussi a un talent d'ethnie.</xs:documentation>
+          <xs:documentation xml:lang="en">"1" = creature trait: not selectable at creation (Frightening, Armour...). Also used for an ethnicity talent.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FreeSpecialisation" type="PlainString">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">"1" = the player may create a specialisation that is not in the book (+Specialisation button): Craftsman, Etiquette, Savant... Absent = refused (Invoke, Arcane Magic, closed lists). On the GENERIC entry only.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="Magic" type="PlainString">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Priorite d'ouverture du catalogue de sorts : 1 = exclusif (un Domaine ecarte le reste) ; 2 = cumulable (Miracle, Magie mineure) ; 0 = n'ouvre jamais (Benediction). Porte par l'entree GENERIQUE, heritee par les specialisations.</xs:documentation>
+          <xs:documentation xml:lang="en">Opening priority of the spell catalogue: 1 = exclusive (a Domain rules out the rest); 2 = cumulative (Miracle, Petty Magic); 0 = never opens (Blessing). Carried by the GENERIC entry, inherited by the specialisations.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="SpellMode" type="PlainString">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Comment les sorts arrivent a l'achat : AUTO = tous les sorts qui citent le talent sont ajoutes (Benedictions) ; CHOICE = une ligne 'a choisir' (Miracles) ; NONE = rien, ils s'achetent (Domaines, Magie mineure).</xs:documentation>
+          <xs:documentation xml:lang="en">How spells arrive at purchase: AUTO = all the spells that cite the talent are added (Blessings); CHOICE = one "to choose" line (Miracles); NONE = nothing, they are bought (Domains, Petty Magic).</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="SpellTypes" type="PlainString">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Valeurs de TypSpell que ce talent ouvre, separees par des virgules, en anglais ("Arcane Magic,Domain Magic,Ritual"). Sur l'entree generique.</xs:documentation>
+          <xs:documentation xml:lang="en">TypSpell values that this talent opens, separated by commas, in English ("Arcane Magic,Domain Magic,Ritual"). On the generic entry.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="XpDivisor" type="PlainString">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Diviseur du tarif des sorts : cout = XpMultiplier x max(XpFloor, plafond(n / XpDivisor)), n = sorts deja connus dans le groupe. Entier ("5") ou formule ("(BATTR_Int)").</xs:documentation>
+          <xs:documentation xml:lang="en">Divisor of the spell rate: cost = XpMultiplier x max(XpFloor, ceiling(n / XpDivisor)), n = spells already known in the group. Integer ("5") or formula ("(BATTR_Int)").</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="XpMultiplier" type="PlainString">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Multiplicateur du cout XP d'un sort (100, 50). ABSENT = gratuit (les Benedictions ne declarent rien) : ne jamais ecrire 0 partout.</xs:documentation>
+          <xs:documentation xml:lang="en">Multiplier of the XP cost of a spell (100, 50). ABSENT = free (Blessings declare nothing): never write 0 everywhere.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="XpFloor" type="PlainString">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Plancher du terme max(XpFloor, plafond(n/XpDivisor)) dans le cout d'un sort.</xs:documentation>
+          <xs:documentation xml:lang="en">Floor of the term max(XpFloor, ceiling(n/XpDivisor)) in the cost of a spell.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="XpOffset" type="PlainString">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Offset added to the tier: cost = XpMultiplier x max(XpFloor, ceiling(n/XpDivisor) + XpOffset). Absent = 0. Used by Witch! (WFRP5): 150 XP for the second spell, then +50 each (XpMultiplier 50, XpDivisor 1, XpOffset 2).</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="GrantAt" type="PlainString">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Octroi automatique par une carriere : "CODE-CARRIERE/NIVEAU" (NATIO-WORK001/3). Le talent est ajoute quand le personnage atteint ce niveau.</xs:documentation>
+          <xs:documentation xml:lang="en">Automatic grant by a career: "CAREER-CODE/LEVEL" (RULES-WORK_APOTHECARY/3). The talent is added when the character reaches that level.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="LoseAt" type="PlainString">
         <xs:annotation>
-          <xs:documentation xml:lang="fr">Retrait automatique : "CODE-CARRIERE/NIVEAU" (NATIO-WORK001/4) : le talent est retire a ce niveau (voir GrantAt).</xs:documentation>
+          <xs:documentation xml:lang="en">Automatic removal: "CAREER-CODE/LEVEL" (RULES-WORK_APOTHECARY/4): the talent is removed at that level (see GrantAt).</xs:documentation>
         </xs:annotation>
       </xs:element>
-          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
+          <!-- Page of the source book that gives the sheet. Free text: "38", "45-46". -->
       <xs:element name="Page" type="PlainString" minOccurs="0"/>
     </xs:choice>
     <xs:attribute name="id" type="xs:string" use="required"/>
   </xs:complexType>
 
-  <!-- <Effet Cible="..." Forme="..." Facteur="..." Carac="..."/> vu sur certains talents
-       (ex: Pure Soul) : attributs libres, tous optionnels selon l'effet decrit. -->
+  <!-- <Effet Cible="..." Forme="..." Facteur="..." Carac="..."/> seen on some talents
+       (e.g. Pure Soul): free attributes, all optional depending on the effect described. -->
   <xs:complexType name="EffetType">
     <xs:attribute name="Cible" type="xs:string" use="optional"/>
     <xs:attribute name="Forme" type="xs:string" use="optional"/>
@@ -423,20 +433,20 @@
 
   <!-- ===================== DATA_TALENT_SPECIALIZATION ===================== -->
   <!--
-    Obligatoires : Talent[id], Description. Quasi-obligatoire : Generique (present dans
-    l'immense majorite des cas ; garde en minOccurs=0 car un cas du corpus en est prive,
-    voir rapport). Optionnelle rare : Trait.
-    Pas de Attribut/Explanation/Skill/Max/PDF/Test dans ce bloc (xmlexportimport.pas
-    ~l.1785-1848 ne les charge pas).
+    Mandatory: Talent[id], Description. Almost mandatory: Generique (present in
+    the vast majority of cases; kept at minOccurs=0 because one case of the corpus lacks it).
+    Rare optional: Trait.
+    No Attribut/Explanation/Skill/Max/PDF/Test in this block (xmlexportimport.pas
+    does not load them).
   -->
-  <!-- Trait, quand present, est vu AVANT Description (ex: RULES-T0AFR_ELF) : regroupe en
-       choix libre plutot que fige a une position unique. -->
+  <!-- Trait, when present, is seen BEFORE Description (e.g. RULES-T_AFRAID__ELF): grouped as a
+       free choice rather than frozen at a single position. -->
   <xs:complexType name="TalentSpecializationType">
     <xs:choice minOccurs="1" maxOccurs="unbounded">
       <xs:element name="Description" type="LangString"/>
       <xs:element name="Generique" type="PlainString"/>
       <xs:element name="Trait" type="PlainString"/>
-          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
+          <!-- Page of the source book that gives the sheet. Free text: "38", "45-46". -->
       <xs:element name="Page" type="PlainString" minOccurs="0"/>
     </xs:choice>
     <xs:attribute name="id" type="xs:string" use="required"/>
@@ -450,16 +460,16 @@
 
   <!-- ===================== DATA_SPELL / DATA_SPELL_TALENT ===================== -->
   <!--
-    Obligatoires : Sort[id], Description, Explanation, Target, Range, Duration, Talent,
+    Mandatory: Sort[id], Description, Explanation, Target, Range, Duration, Talent,
     Level, TypSpell.
-    CULTE optionnelle, WFRP5 seulement (ajoutee via SpellCulteType dans SCHEMA_WFRP5.xsd ;
-    le type de base ici reste le socle commun WFRP4/WFRP5).
+    Optional CULTE, WFRP5 only (added through SpellCulteType in SCHEMA_WFRP5.xsd;
+    the base type here stays the common WFRP4/WFRP5 core).
   -->
   <xs:complexType name="SortType">
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
       <xs:element name="Explanation" type="LangString" minOccurs="0"/>
-      <!-- Vides quand le livre n'en donne pas (rituel, benediction) : WinLivre n'ecrit pas les balises vides. -->
+      <!-- Empty when the book gives none (ritual, blessing): WinLivre does not write empty tags. -->
       <xs:element name="Target" type="PlainString" minOccurs="0"/>
       <xs:element name="Duration" type="PlainString" minOccurs="0"/>
       <xs:element name="Range" type="PlainString" minOccurs="0"/>
@@ -468,21 +478,24 @@
       <xs:element name="TypSpell" type="PlainString"/>
       <xs:element name="XpFixed" type="PlainString" minOccurs="0"/>
       <xs:element name="CULTE" type="PlainString" minOccurs="0"/>
-          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
+          <!-- Page of the source book that gives the sheet. Free text: "38", "45-46". -->
       <xs:element name="Page" type="PlainString" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required"/>
   </xs:complexType>
 
   <xs:complexType name="DataSpellType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">SPELLS: one Sort per spell, id = code (book prefix). Target, Duration, Range, Level (Casting Number), Talent (talent that opens access: domain, petty magic, miracle), TypSpell (magic family, in English). See GABARIT_LIVRE_XML.md, section DATA_SPELL. Spell-talent links added by ANOTHER book are declared in DATA_SPELL_TALENT.</xs:documentation>
+    </xs:annotation>
     <xs:sequence>
       <xs:element name="Sort" type="SortType" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
-  <!-- DATA_SPELL_TALENT : wrapper contenant N Sort[id] repetes, chacun avec un seul Talent
-       interne (verifie sur BOOK_RULESBOOK.Xml : Sort id="RULES-BENED_001" > Talent).
-       Saisie XML a la main uniquement (WinLivre ne l'edite pas), voir GABARIT_LIVRE_XML.md. -->
+  <!-- DATA_SPELL_TALENT: wrapper containing N repeated Sort[id], each with a single inner
+       Talent (checked on BOOK_RULESBOOK.Xml: Sort id="RULES-BENED_BLESSING_OF_RECUPERATION" > Talent).
+       Entered by hand in the XML only (WinLivre does not edit it), see GABARIT_LIVRE_XML.md. -->
   <xs:complexType name="SpellTalentEntryType">
     <xs:sequence>
       <xs:element name="Talent" type="PlainString"/>
@@ -497,12 +510,12 @@
   </xs:complexType>
 
   <!-- ===================== DATA_CONDITION ===================== -->
-  <!-- Conditions (if="id") des modificateurs : une entree par condition, son libelle dans le DATA_LABEL du livre.
-       Kind : Information, Optional ou Conditional. Bloc portable : chaque livre declare les siennes. -->
+  <!-- Conditions (if="id") of the modifiers: one entry per condition, its label in the DATA_LABEL of the book.
+       Kind: Information, Optional or Conditional. Portable block: each book declares its own. -->
   <xs:complexType name="ConditionEntryType">
     <xs:sequence>
       <xs:element name="Kind" type="PlainString"/>
-          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
+          <!-- Page of the source book that gives the sheet. Free text: "38", "45-46". -->
       <xs:element name="Page" type="PlainString" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required"/>
@@ -516,17 +529,17 @@
 
   <!-- ===================== DATA_CAREER ===================== -->
   <!--
-    Obligatoires : Career[id], Description, Explanation, Skill, Class,
+    Mandatory: Career[id], Description, Explanation, Skill, Class,
     SUBCHAPTER_LEVEL(Level/Description/Salary), SUBCHAPTER_ATTR(Attribut),
     SUBCHAPTER_SKILL(Skill), SUBCHAPTER_TALENT(Talent), SUBCHAPTER_ITEM(Item).
-    Optionnelles : Parent, Ammunition, PictureLevel.
-    Class n'est PAS un enum ferme (extensible par livre, prefixe LIVRE-CLASS_xxx) : reste
-    en xs:string libre.
+    Optional: Parent, Ammunition, PictureLevel.
+    Class is NOT a closed enum (extensible per book, prefix BOOK-CLASS_xxx): it stays
+    a free xs:string.
   -->
   <xs:complexType name="CareerLevelType">
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
-      <!-- Forme feminine du nom du niveau (optionnelle). Absente = Description sert aux deux sexes. -->
+      <!-- Feminine form of the level name (optional). Absent = Description serves both sexes. -->
       <xs:element name="DescriptionFeminine" type="LangString" minOccurs="0"/>
       <xs:element name="Salary" type="PlainString"/>
     </xs:sequence>
@@ -539,23 +552,23 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Parent s'est avere positionne pres de Ammunition/PictureLevel (juste avant
-       SUBCHAPTER_LEVEL) sur certains livres (BOOK_DWARF_PLAYERS_GUIDE.Xml) plutot qu'apres
-       Explanation : regroupe avec Ammunition/PictureLevel en choix libre. -->
+  <!-- Parent turned out to be positioned near Ammunition/PictureLevel (just before
+       SUBCHAPTER_LEVEL) in some books (BOOK_DWARF_PLAYERS_GUIDE.Xml) rather than after
+       Explanation: grouped with Ammunition/PictureLevel as a free choice. -->
   <xs:complexType name="CareerType">
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
       <xs:element name="Explanation" type="LangString"/>
-      <!-- Skill (competence "signature") : minOccurs=0 car absente en WFRP5
-           (BOOK_RULESBOOK.Xml WFRP5, verifie sur Apothecary RULES-WORK02), presente et
-           obligatoire dans le corpus WFRP4. -->
+      <!-- Skill ("signature" skill): minOccurs=0 because absent in WFRP5
+           (BOOK_RULESBOOK.Xml WFRP5, checked on Apothecary RULES-WORK_APOTHECARY), present and
+           mandatory in the WFRP4 corpus. -->
       <xs:element name="Skill" type="PlainString" minOccurs="0"/>
       <xs:element name="Class" type="xs:string"/>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="Parent" type="PlainString"/>
         <xs:element name="Ammunition" type="PlainString"/>
         <xs:element name="PictureLevel" type="PlainString"/>
-        <!-- Specie : races ou ethnies ouvertes a ce metier (CONTEXT.md 2.101), repetable. -->
+        <!-- Specie: races or ethnicities open to this career, repeatable. -->
         <xs:element name="Specie" type="PlainString"/>
       </xs:choice>
       <xs:element name="SUBCHAPTER_LEVEL" type="SubchapterLevel"/>
@@ -563,7 +576,7 @@
       <xs:element name="SUBCHAPTER_SKILL" type="SubchapterSkill"/>
       <xs:element name="SUBCHAPTER_TALENT" type="SubchapterTalent"/>
       <xs:element name="SUBCHAPTER_ITEM" type="SubchapterItem"/>
-          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
+          <!-- Page of the source book that gives the sheet. Free text: "38", "45-46". -->
       <xs:element name="Page" type="PlainString" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required"/>
@@ -577,8 +590,8 @@
 
   <!-- ===================== DATA_ARMOR / DATA_ARMOR_SIMP / DATA_ARMOR_BONUS ===================== -->
 
-  <!-- Price : minOccurs=0, certaines pieces d'armure "ne s'achetent pas" (case Price vide
-       dans le livre source, ex: NATIO-ARMO_09 Chaos Breastplate). -->
+  <!-- Price: minOccurs=0, some armour pieces "cannot be bought" (empty Price cell
+       in the source book, e.g. NATIO-ARMO_CHAOS_BREASTPLATE Chaos Breastplate). -->
   <xs:complexType name="ArmorType">
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
@@ -588,23 +601,26 @@
       <xs:element name="Quality" type="PlainString"/>
       <xs:element name="Location" type="PlainString"/>
       <xs:element name="ArmorPoint" type="PlainString"/>
-      <!-- Type : minOccurs=0, absente sur les boucliers WFRP5 (RULES-ARMO_01 Buckler,
+      <!-- Type: minOccurs=0, absent on WFRP5 shields (RULES-COMB_SHIELD_BUCKLER Buckler,
            BOOK_RULESBOOK.Xml WFRP5). -->
       <xs:element name="Type" type="PlainString" minOccurs="0"/>
       <xs:element name="InherentCraftsmanship" type="PlainString" minOccurs="0"/>
-          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
+          <!-- Page of the source book that gives the sheet. Free text: "38", "45-46". -->
       <xs:element name="Page" type="PlainString" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required"/>
   </xs:complexType>
 
   <xs:complexType name="DataArmorType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">ARMOURS: one Armor per piece. Location = zone(s) covered (RULES-ARMOL_HEAD, ARM, BODY, LEG; several separated by a comma), ArmorPoint = armour points, Quality = RULES-ARMOB_* codes of DATA_ARMOR_BONUS separated by commas, Type = material RULES-ARMOT_*, Availability = RULES-DISPO_*, Price = CO / PA / SB. Mandatory order: Description, Availability, Price, Encumbrance, Quality, Location, ArmorPoint, Type, InherentCraftsmanship, Page; Price, Type, InherentCraftsmanship and Page optional. See GABARIT_LIVRE_XML.md, section DATA_ARMOR.</xs:documentation>
+    </xs:annotation>
     <xs:sequence>
       <xs:element name="Armor" type="ArmorType" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Ordre reel verifie sur BOOK_RULESBOOK.Xml : Description, Availability, Price,
+  <!-- Real order checked on BOOK_RULESBOOK.Xml: Description, Availability, Price,
        Encumbrance, Quality, ArmorPoint. -->
   <xs:complexType name="ArmorSimpType">
     <xs:sequence>
@@ -619,17 +635,20 @@
   </xs:complexType>
 
   <xs:complexType name="DataArmorSimpType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">SIMPLIFIED ARMOURS of the optional Quick Armour rule (OptionRule with code QUICKARMOUR): one ArmorSimp = one complete set (Availability, Price, Encumbrance, Quality, ArmorPoint), without Location. Global setting (INI), not per book.</xs:documentation>
+    </xs:annotation>
     <xs:sequence>
       <xs:element name="ArmorSimp" type="ArmorSimpType" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
-  <!-- DATA_ARMOR_BONUS / DATA_WEAPON_BONUS partagent le wrapper BonusMalus -->
-  <!-- Ordre reel verifie sur BOOK_RULESBOOK.Xml : Description, Explanation, Modifier,
-       puis Corruption/Talent/ModifyCarac en option (position non confirmee, regroupees
-       en choix libre). -->
-  <!-- Modifier n'est pas toujours en tete des optionnelles (Talent peut le precede, voir
-       BOOK_ARCHIVES_OF_THE_EMPIRE_II.Xml) : regroupe avec les autres optionnelles. -->
+  <!-- DATA_ARMOR_BONUS / DATA_WEAPON_BONUS share the BonusMalus wrapper -->
+  <!-- Real order checked on BOOK_RULESBOOK.Xml: Description, Explanation, Modifier,
+       then Corruption/Talent/ModifyCarac as options (position not confirmed, grouped
+       as a free choice). -->
+  <!-- Modifier is not always at the head of the optionals (Talent may precede it, see
+       BOOK_ARCHIVES_OF_THE_EMPIRE_II.Xml): grouped with the other optionals. -->
   <xs:complexType name="ArmorBonusType">
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
@@ -641,13 +660,16 @@
         <xs:element name="Talent" type="PlainString"/>
         <xs:group ref="ModificateursEffets"/>
       </xs:choice>
-          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
+          <!-- Page of the source book that gives the sheet. Free text: "38", "45-46". -->
       <xs:element name="Page" type="PlainString" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required"/>
   </xs:complexType>
 
   <xs:complexType name="DataArmorBonusType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">ARMOUR QUALITIES AND FLAWS (catalogue cited by Quality of the DATA_ARMOR): BonusMalus id = RULES-ARMOB_*, Description = name, Explanation = text of the book, Modifier = effect as short free text. Optional numeric effects: ModifyCarac, ModifArmour... of the ModificateursEffets group. NeedsValue = 1 if the quality must receive a rating.</xs:documentation>
+    </xs:annotation>
     <xs:sequence>
       <xs:element name="BonusMalus" type="ArmorBonusType" maxOccurs="unbounded"/>
     </xs:sequence>
@@ -656,12 +678,12 @@
   <!-- ===================== DATA_WEAPON / DATA_WEAPON_BONUS ===================== -->
 
   <!--
-    Description+Skill+Damage restent en tete dans tout le corpus verifie, mais
-    Availability/Reach/Price/Encumbrance/Quality/Hand/Ammunition se sont averes tantot
-    presents, tantot absents, dans un ordre variable selon le livre (ex. BOOK TRIBES AND
-    TRIBULATIONS.Xml omet Availability et Price sur ses armes de siege). Assouplissement
-    documente (meme logique que TalentType/TrappingType) : Description/Skill/Damage fixes
-    en tete, le reste en xs:choice repetable non ordonne.
+    Description+Skill+Damage stay at the head throughout the checked corpus, but
+    Availability/Reach/Price/Encumbrance/Quality/Hand/Ammunition turned out to be sometimes
+    present, sometimes absent, in a variable order depending on the book (e.g. BOOK TRIBES AND
+    TRIBULATIONS.Xml omits Availability and Price on its siege weapons). Documented relaxation
+    (same logic as TalentType/TrappingType): Description/Skill/Damage fixed
+    at the head, the rest in an unordered, repeatable xs:choice.
   -->
   <xs:complexType name="WeaponType">
     <xs:sequence>
@@ -679,46 +701,56 @@
         <xs:element name="Type" type="PlainString"/>
         <xs:element name="InherentCraftsmanship" type="PlainString"/>
         <xs:element name="Clan" type="PlainString"/>
-        <!-- Modificateurs numeriques de l'arme portee (SourceModifArme, 04/10/2026). -->
+        <!-- WFRP2 weapons only: Reload (e.g. "Half", "2 Full") and Note (book remarks and the qualities that are
+             not one of the RULES-WEAPQ_* codes, e.g. "Other qualities: Size M/Lo"). Free text, not read by the game. -->
+        <xs:element name="Reload" type="PlainString"/>
+        <xs:element name="Note" type="PlainString"/>
+        <!-- Numeric modifiers of the carried weapon (SourceModifArme). -->
         <xs:group ref="ModificateursEffets"/>
       </xs:choice>
-          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
+          <!-- Page of the source book that gives the sheet. Free text: "38", "45-46". -->
       <xs:element name="Page" type="PlainString" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required"/>
   </xs:complexType>
 
   <xs:complexType name="DataWeaponType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">WEAPONS AND AMMUNITION: one Weapon per weapon. Description, Skill (optional for the schema, given by all books: combat skill code; - = none) and Damage (formula, e.g. +(BATTR_S)+4) at the head, in that order; Page last; the rest optional and free: Reach (code RULES-WEAPR_* in melee, yards at range), Quality (RULES-WEAPB_* codes of DATA_WEAPON_BONUS, rating after a space: RULES-WEAPB_RELOAD 2), Hand (hands), Ammunition (0 = weapon; number of projectiles of the lot for an ammunition RULES-MUNI_*), Type (RULES-WTYPE_*), InherentCraftsmanship (craftsmanship already built in). See GABARIT_LIVRE_XML.md, section DATA_WEAPON.</xs:documentation>
+    </xs:annotation>
     <xs:sequence>
       <xs:element name="Weapon" type="WeaponType" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Ordre reel verifie sur BOOK_RULESBOOK.Xml : Description, Explanation, Short, Modifier. -->
+  <!-- Real order checked on BOOK_RULESBOOK.Xml: Description, Explanation, Short, Modifier. -->
   <xs:complexType name="WeaponBonusType">
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
       <xs:element name="Explanation" type="LangString"/>
       <xs:element name="Short" type="LangString"/>
-      <!-- Effet de la qualite en donnees (03/10/2026) : Accurate, Reload, Salvo ; Shield = ModifArmour sur l'emplacement RULES-ARMOL_SHIELD (04/10/2026). -->
-      <!-- 17/10/2026 : tout le groupe ModificateursEffets (ModifyCarac, ModifyDamage...) remplace les quatre balises isolees : une qualite d'arme PORTEE modifie le porteur (Might +30 F, Protection +1 PA). -->
+      <!-- Effect of the quality as data: Accurate, Reload, Salvo; Shield = ModifArmour on the location RULES-ARMOL_SHIELD. -->
+      <!-- The whole ModificateursEffets group (ModifyCarac, ModifyDamage...) replaces the four isolated tags: a CARRIED weapon quality modifies the bearer (Might +30 S, Protection +1 AP). -->
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:group ref="ModificateursEffets"/>
-        <!-- Valeur obligatoire (04/10/2026) : "1" = une arme qui cite cette qualite doit donner un niveau (Reload 3, Salvo 1d10). -->
+        <!-- Mandatory value: "1" = a weapon that cites this quality must give a rating (Reload 3, Salvo 1d10). -->
         <xs:element name="NeedsValue" type="PlainString"/>
-        <!-- 17/10/2026 : talent accorde au porteur de l'arme (ListArmeBonusTalent, comme la fabrication Of Rigor Wroth). -->
+        <!-- Talent granted to the bearer of the weapon (ListArmeBonusTalent, like the craftsmanship Of Rigor Wroth). -->
         <xs:element name="Talent" type="PlainString"/>
-        <!-- 18/10/2026 : qualites d'arme accordees par cette qualite (codes separes par des virgules, ex. Parry = Balanced + Defensive) ; affichees dans la colonne Qualites de l'arme PORTEE (FabricationQualitesArme). -->
+        <!-- Weapon qualities granted by this quality (codes separated by commas, e.g. Parry = Balanced + Defensive); displayed in the Qualities column of the CARRIED weapon (FabricationQualitesArme). -->
         <xs:element name="WeaponQuality" type="PlainString"/>
       </xs:choice>
       <xs:element name="Modifier" type="PlainString"/>
-          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
+          <!-- Page of the source book that gives the sheet. Free text: "38", "45-46". -->
       <xs:element name="Page" type="PlainString" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required"/>
   </xs:complexType>
 
   <xs:complexType name="DataWeaponBonusType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">WEAPON QUALITIES AND FLAWS (catalogue cited by Quality of the DATA_WEAPON): BonusMalus id = RULES-WEAPB_*, Description, Explanation, Short (one-line summary for lists and the PDF), mandatory Modifier: + = quality, - = flaw. NeedsValue = 1 if the weapon must give a rating. WeaponQuality = other qualities granted, Talent = talent granted to the bearer, plus the numeric effects of the ModificateursEffets group.</xs:documentation>
+    </xs:annotation>
     <xs:sequence>
       <xs:element name="BonusMalus" type="WeaponBonusType" maxOccurs="unbounded"/>
     </xs:sequence>
@@ -726,13 +758,13 @@
 
   <!-- ===================== DATA_CRAFTMANSHIP ===================== -->
   <!--
-    Bloc fourre-tout selon le type d'objet concerne : toutes les optionnelles restent
-    minOccurs=0, l'ordre reel observe est conserve mais xs:choice/maxOccurs=unbounded
-    est utilise pour ne pas figer une combinaison precise (aucune ne cumule tous les tags).
+    Catch-all block depending on the type of item concerned: all the optionals stay
+    minOccurs=0, the real observed order is kept but xs:choice/maxOccurs=unbounded
+    is used so as not to freeze a precise combination (none accumulates all the tags).
   -->
-  <!-- Ordre reel verifie sur BOOK UNOFFICIAL GRIMOIRE.Xml : Description, Explanation, Short,
-       puis un choix variable selon le type d'objet concerne (Applies/WeaponQuality/Max/
-       Modifier/etc, position non fixe), regroupe en xs:choice repetable. -->
+  <!-- Real order checked on BOOK UNOFFICIAL GRIMOIRE.Xml: Description, Explanation, Short,
+       then a variable choice depending on the type of item concerned (Applies/WeaponQuality/Max/
+       Modifier/etc, no fixed position), grouped as a repeatable xs:choice. -->
   <xs:complexType name="CraftsmanshipType">
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
@@ -749,13 +781,16 @@
         <xs:element name="Max" type="PlainString"/>
         <xs:element name="Modifier" type="PlainString"/>
       </xs:choice>
-          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
+          <!-- Page of the source book that gives the sheet. Free text: "38", "45-46". -->
       <xs:element name="Page" type="PlainString" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required"/>
   </xs:complexType>
 
   <xs:complexType name="DataCraftmanshipType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">CRAFTSMANSHIPS (item qualities, runes, enchantments) chosen in the Craftsmanship column of the equipment: Description, Explanation (optional), Short, then as desired Applies (Weapon, Armour or Misc, filters the list; absent = any item), Max (maximum number on one item), Modifier (BONUS, PRACTICAL, UNRELIABLE, BULKY or empty: nature of the craftsmanship), Encumbrance, RangeBonus, WeaponQuality, AlternateWeapon, Talent and the numeric effects of the ModificateursEffets group (value without quotation marks, sign included: +10; a conditional effect carries if=: code of DATA_CONDITION, display only).</xs:documentation>
+    </xs:annotation>
     <xs:sequence>
       <xs:element name="Craftsmanship" type="CraftsmanshipType" maxOccurs="unbounded"/>
     </xs:sequence>
@@ -763,21 +798,26 @@
 
   <!-- ===================== DATA_SKILL / DATA_SKILL_SPECIALIZATION ===================== -->
   <!--
-    Obligatoires : Skill[id], Attribut, Description. Quasi-obligatoire : Explanation.
-    IMPORTANT (meme garde-fou que DATA_TALENT) : <Generique> a ete trouve dans
-    BOOK UNOFFICIAL GRIMOIRE.Xml (GRIM-COMPFOCAL_WILD, GRIM-COMPSAVOIR_WOOD/FAITH/NATURE) :
-    4 competences de specialisation (Channelling/Lore d'un domaine precis) saisies a tort
-    dans DATA_SKILL au lieu de DATA_SKILL_SPECIALIZATION, exactement le meme bug que celui
-    corrige sur DATA_TALENT le 28/09/2026. <Generique> est donc INTERDIT ici aussi (voir
-    rapport de la tache XSD pour signalement, correction separee a faire par Nono).
+    Mandatory: Skill[id], Attribut, Description. Almost mandatory: Explanation.
+    IMPORTANT (same safeguard as DATA_TALENT): <Generique> was found in
+    BOOK UNOFFICIAL GRIMOIRE.Xml (GRIM-COMPFOCAL_WILD, GRIM-COMPSAVOIR_WOOD/FAITH/NATURE):
+    4 specialisation skills (Channelling/Lore of a specific domain) entered by mistake
+    in DATA_SKILL instead of DATA_SKILL_SPECIALIZATION, exactly the same bug as the one
+    fixed on DATA_TALENT. <Generique> is therefore FORBIDDEN here too (the entries
+    concerned must be corrected in the book).
   -->
   <xs:complexType name="SkillType">
     <xs:sequence>
       <xs:element name="Attribut" type="PlainString"/>
+      <xs:element name="FreeSpecialisation" type="PlainString" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">"1" = the player may create a specialisation that is not in the book (+Specialisation button): Art, Trade, Language, Lore... Absent = refused (weapon-linked combat skills, closed lists). On the GENERIC entry only.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="Description" type="LangString"/>
       <xs:element name="Explanation" type="LangString" minOccurs="0"/>
       <xs:element name="Basic" type="PlainString" minOccurs="0"/>
-          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
+          <!-- Page of the source book that gives the sheet. Free text: "38", "45-46". -->
       <xs:element name="Page" type="PlainString" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required"/>
@@ -789,20 +829,20 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Obligatoires : Skill[id], Description. Generique quasi-partout (minOccurs=0 car un
-       cas du corpus en est prive, point ouvert signale dans le rapport). -->
+  <!-- Mandatory: Skill[id], Description. Generique almost everywhere (minOccurs=0 because one
+       case of the corpus lacks it, open point). -->
   <xs:complexType name="SkillSpecializationType">
       <xs:annotation>
-        <xs:documentation xml:lang="fr">SPECIALISATION d'une competence generique (Lore (Parravon), Language (Strigany)). Generique = code de la competence mere avec _* ("RULES-COMPSAVOIR_*") ; id = &lt;prefixe de la mere&gt;-COMP&lt;MERE&gt;_&lt;SUFFIXE&gt; : une specialisation d'une competence du Rulebook garde le prefixe RULES- meme dans le fichier d'un autre livre. JAMAIS dans DATA_SKILL (ce serait une competence independante). Page = page du livre source.</xs:documentation>
+        <xs:documentation xml:lang="en">SPECIALISATION of a generic skill (Lore (Parravon), Language (Strigany)). Generique = code of the parent skill with _* ("RULES-COMPSAVOIR_*"); id = &lt;parent prefix&gt;-COMP&lt;PARENT&gt;_&lt;SUFFIX&gt;: a specialisation of a Rulebook skill keeps the RULES- prefix even in the file of another book. NEVER in DATA_SKILL (it would be an independent skill). Page = page of the source book.</xs:documentation>
       </xs:annotation>
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
       <xs:element name="Generique" type="PlainString" minOccurs="0"/>
-      <!-- Attribut propre a la specialisation, seulement s'il differe de celui de la mere
-           (ex. Trade (Cook) = Int en V2 : Trade (Various) n'a pas d'attribut). -->
+      <!-- Attribut specific to the specialisation, only if it differs from the parent's
+           (e.g. Trade (Cook) = Int in V2: Trade (Various) has no attribute). -->
       <xs:element name="Attribut" type="PlainString" minOccurs="0"/>
       <xs:element name="Basic" type="PlainString" minOccurs="0"/>
-          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
+          <!-- Page of the source book that gives the sheet. Free text: "38", "45-46". -->
       <xs:element name="Page" type="PlainString" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required"/>
@@ -815,7 +855,7 @@
   </xs:complexType>
 
   <!-- ===================== DATA_SKILL_COST / DATA_ATTRIBUT_COST ===================== -->
-  <!-- Table indexee par position, pas d'id sur le wrapper. Verifie sur BOOK_RULESBOOK.Xml. -->
+  <!-- Table indexed by position, no id on the wrapper. Checked on BOOK_RULESBOOK.Xml. -->
   <xs:complexType name="DataCostType">
     <xs:sequence>
       <xs:element name="Cost" type="NamedString" maxOccurs="unbounded"/>
@@ -823,7 +863,7 @@
   </xs:complexType>
 
   <!-- ===================== DATA_ATTRIBUT ===================== -->
-  <!-- Ordre reel verifie sur BOOK_RULESBOOK.Xml : Description, Explanation, Short, Order. -->
+  <!-- Real order checked on BOOK_RULESBOOK.Xml: Description, Explanation, Short, Order. -->
   <xs:complexType name="AttributType">
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
@@ -843,12 +883,12 @@
 
   <!-- ===================== DATA_SPECIE ===================== -->
   <!--
-    Obligatoires : Specie[id], Talent, SUBCHAPTER_TALENT, Description, SUBCHAPTER_SKILL,
+    Mandatory: Specie[id], Talent, SUBCHAPTER_TALENT, Description, SUBCHAPTER_SKILL,
     Ethnic, SUBCHAPTER_ATTR, Attribut, Skill.
-    Quasi-obligatoire : Explanation, SUBCHAPTER_CAREER+Career.
-    Optionnelles tres variables (voir liste ci-dessous), gardees minOccurs=0 y compris pour
-    WFRP5 (structure la plus simple, Human de base, sans SUBCHAPTER_PHYSICAL dans l'unique
-    echantillon connu, mais champs conserves optionnels pour un futur livre V5).
+    Almost mandatory: Explanation, SUBCHAPTER_CAREER+Career.
+    Very variable optionals (see list below), kept minOccurs=0 including for
+    WFRP5 (simplest structure, base Human, without SUBCHAPTER_PHYSICAL in the only
+    known sample, but fields kept optional for a future V5 book).
   -->
   <xs:complexType name="SubchapterCareer">
     <xs:sequence>
@@ -856,9 +896,9 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Ordre reel verifie sur BOOK_RULESBOOK.Xml : Age, Height, HeightExplode, EyeRolls,
-       Eye[name]* (table de tirage), Hair[name]* (idem), NamePattern parfois en plus :
-       regroupe en choix libre repetable, la table Eye/Hair ayant un nombre de lignes variable. -->
+  <!-- Real order checked on BOOK_RULESBOOK.Xml: Age, Height, HeightExplode, EyeRolls,
+       Eye[name]* (roll table), Hair[name]* (same), NamePattern sometimes in addition:
+       grouped as a repeatable free choice, the Eye/Hair table having a variable number of lines. -->
   <xs:complexType name="SubchapterPhysical">
     <xs:sequence>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -869,10 +909,10 @@
         <xs:element name="Eye" type="NamedString"/>
         <xs:element name="Hair" type="NamedString"/>
         <xs:element name="NamePattern" type="PlainString"/>
-        <!-- V2 (Core, tables 2-6 a 2-17) : taille par sexe en pouces ("50+1d10"), puis tables d100 / d10 :
-             Weight name=livres, AgeRoll name=annees, Siblings name=nombre, Birthplace name=lieu,
-             BirthplaceSettlement name=type de lieu (humain), contenu = plage du de. BirthplaceHuman = plage
-             qui renvoie au tirage de naissance humain. -->
+        <!-- V2 (Core, tables 2-6 to 2-17): height per sex in inches ("50+1d10"), then d100 / d10 tables:
+             Weight name=pounds, AgeRoll name=years, Siblings name=number, Birthplace name=place,
+             BirthplaceSettlement name=type of place (human), content = die range. BirthplaceHuman = range
+             that refers to the human birth roll. -->
         <xs:element name="HeightFemale" type="PlainString"/>
         <xs:element name="HeightMale" type="PlainString"/>
         <xs:element name="Weight" type="NamedString"/>
@@ -881,16 +921,16 @@
         <xs:element name="Birthplace" type="NamedString"/>
         <xs:element name="BirthplaceSettlement" type="NamedString"/>
         <xs:element name="BirthplaceHuman" type="PlainString"/>
-        <!-- Effets d'un lieu de naissance (clan Skaven, Children of the Horned Rat) : name = meme nom que
-             la ligne Birthplace, contenu = liste "Skill:CODE;Talent:CODE;Item:CODE" separee par des
-             points-virgules. -->
+        <!-- Effects of a birthplace (Skaven clan, Children of the Horned Rat): name = same name as
+             the Birthplace line, content = list "Skill:CODE;Talent:CODE;Item:CODE" separated by
+             semicolons. -->
         <xs:element name="BirthplaceEffect" type="NamedString"/>
-        <!-- Effets d'une particularite de forme (familiers, Realms of Sorcery tables 7-1 et 7-2) : name = ligne de
-             la table, contenu = liste "Talent:CODE[=N];Natural:CODE;Grapple:N" (Natural = arme naturelle toujours
-             portee, Grapple = bonus de lutte en pour cent, affiche seulement). -->
+        <!-- Effects of a particular shape (familiars, Realms of Sorcery tables 7-1 and 7-2): name = line of
+             the table, content = list "Talent:CODE[=N];Natural:CODE;Grapple:N" (Natural = natural weapon always
+             carried, Grapple = grapple bonus in percent, displayed only). -->
         <xs:element name="OddityEffect" type="NamedString"/>
-        <!-- Familiers (Realms of Sorcery) : tables tirables, name = ligne, contenu = plage d100 :
-             Form = table 7-1 (forme), FormAnimal = 7-3 (animal), Oddity = 7-2 (particularites). -->
+        <!-- Familiars (Realms of Sorcery): rollable tables, name = line, content = d100 range:
+             Form = table 7-1 (form), FormAnimal = 7-3 (animal), Oddity = 7-2 (oddities). -->
         <xs:element name="Form" type="NamedString"/>
         <xs:element name="FormAnimal" type="NamedString"/>
         <xs:element name="Oddity" type="NamedString"/>
@@ -898,10 +938,10 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Verifie sur BOOK_SEA_OF_CLAWS.Xml et BOOK_RULESBOOK.Xml : NamePattern porte soit
-       sex="M"/"F", soit rule="CODE" (regle de nom declaree par NameRule, ex. NOBLE = "von_"+lieu) : les deux attributs sont donc
-       optionnels ici (au moins l'un des deux est presume present, non verifiable en XSD 1.0
-       sans assertion). Name porte toujours part+name ; sex absent pour part="Surname". -->
+  <!-- Checked on BOOK_SEA_OF_CLAWS.Xml and BOOK_RULESBOOK.Xml: NamePattern carries either
+       sex="M"/"F", or rule="CODE" (name rule declared by NameRule, e.g. NOBLE = "von_"+place): the two attributes are therefore
+       optional here (at least one of the two is presumed present, not verifiable in XSD 1.0
+       without an assertion). Name always carries part+name; sex absent for part="Surname". -->
   <xs:complexType name="NamePatternType">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -921,8 +961,8 @@
     </xs:simpleContent>
   </xs:complexType>
 
-  <!-- NameRule : regle de nom offerte au joueur a la creation ; code= relie les NamePattern
-       rule="CODE", le contenu est un id de libelle (INTERFACE) ou un texte. -->
+  <!-- NameRule: name rule offered to the player at creation; code= links the NamePattern
+       rule="CODE", the content is a label id (INTERFACE) or a text. -->
   <xs:complexType name="NameRuleType">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -939,8 +979,8 @@
     </xs:choice>
   </xs:complexType>
 
-  <!-- DATA_SPECIE utilise Skill/Talent SANS attribut name dans SUBCHAPTER_SKILL/
-       SUBCHAPTER_TALENT (a la difference de DATA_CAREER qui utilise name=...) : types dedies. -->
+  <!-- DATA_SPECIE uses Skill/Talent WITHOUT a name attribute in SUBCHAPTER_SKILL/
+       SUBCHAPTER_TALENT (unlike DATA_CAREER, which uses name=...): dedicated types. -->
   <xs:complexType name="SubchapterSkillPlain">
     <xs:sequence>
       <xs:element name="Skill" type="PlainString" minOccurs="0" maxOccurs="unbounded"/>
@@ -970,37 +1010,37 @@
   </xs:complexType>
 
   <!--
-    Description est toujours en tete (verifie sur tout le corpus WFRP4+WFRP5), mais TOUT
-    le reste (Explanation, OPINIONS, Ethnic, Nationality, SUBCHAPTER_ATTR,
+    Description is always at the head (checked on the whole WFRP4+WFRP5 corpus), but ALL
+    the rest (Explanation, OPINIONS, Ethnic, Nationality, SUBCHAPTER_ATTR,
     SUBCHAPTER_PHYSICAL, SUBCHAPTER_TALENT/Talent, SUBCHAPTER_SKILL/Skill,
-    SUBCHAPTER_CAREER, SUBCHAPTER_NAMES, Skill5/Skill3, Rule, PictureLevel) s'est avere
-    dans un ordre DIFFERENT d'un livre a l'autre, y compris entre les versions ENGLISH et
-    FRANCAIS d'un MEME livre (BOOK_RULESBOOK.Xml vs BOOK_RULESBOOK_FRANCAIS.Xml : la
-    version FR a SUBCHAPTER_PHYSICAL avant Ethnic, la version EN l'a apres SUBCHAPTER_ATTR).
-    Assouplissement documente (meme logique que TalentType) : Description fixe en tete, le
-    reste en xs:choice repetable non ordonne. C'est la structure la plus permissive de ce
-    schema, mais elle reste une whitelist stricte de balises (aucune balise etrangere a
-    DATA_SPECIE n'est acceptee).
+    SUBCHAPTER_CAREER, SUBCHAPTER_NAMES, Skill5/Skill3, Rule, PictureLevel) turned out to be
+    in a DIFFERENT order from one book to another, including between the ENGLISH and
+    FRANCAIS versions of the SAME book (BOOK_RULESBOOK.Xml vs BOOK_RULESBOOK_FRANCAIS.Xml: the
+    FR version has SUBCHAPTER_PHYSICAL before Ethnic, the EN version has it after SUBCHAPTER_ATTR).
+    Documented relaxation (same logic as TalentType): Description fixed at the head, the
+    rest in an unordered, repeatable xs:choice. This is the most permissive structure of this
+    schema, but it remains a strict whitelist of tags (no tag foreign to
+    DATA_SPECIE is accepted).
   -->
   <xs:complexType name="SpecieType">
       <xs:annotation>
-        <xs:documentation xml:lang="fr">ETHNIE (pas une race). PIEGE DE VOCABULAIRE : les balises disent l'inverse des identifiants. DATA_SPECIE porte les ETHNIES (id RULES-RACE_HUM = 'Humans (Reikland)') ; son champ Ethnic remonte a la RACE (RULES-SPECIE_HUMAN) ; DATA_RACE porte les races. Modele : une race, N ethnies. Contenu : Description ; Explanation ; Ethnic = code de la race ; SUBCHAPTER_ATTR = profil, une ligne par caracteristique, valeur = formule de de ("2d10+20"), constante ("2" pour la Chance) ou somme de bonus ("1xBATTR_S+2xBATTR_T+1xBATTR_WP" pour les Blessures) ; SUBCHAPTER_SKILL / SUBCHAPTER_TALENT = competences et talents de depart (SANS attribut name : le code est le contenu). Un code peut etre "A/B" (au choix), "RULES-COMPCHEV_*" (une specialisation au choix a la creation), "RULES-T*" (talent aleatoire, une ligne par tirage) ; SUBCHAPTER_CAREER = table des carrieres : Career name = code de carriere, valeur = POIDS dans le d100 (un entier ; les bornes se deduisent), "X" = eligible hors tirage, "-" = non tirable. Les poids d'une ethnie totalisent 100. Nationality = code d'une nation (DATA_NATION). Commentaires XML entre deux lignes : tolere, voir GABARIT. Un 'stub' (ethnie reduite a SUBCHAPTER_CAREER) ajoute des carrieres a une ethnie d'un AUTRE livre.</xs:documentation>
+        <xs:documentation xml:lang="en">ETHNICITY (not a race). VOCABULARY TRAP: the tags say the opposite of the identifiers. DATA_SPECIE carries the ETHNICITIES (id RULES-RACE_HUM = 'Humans (Reikland)'); its Ethnic field goes up to the RACE (RULES-SPECIE_HUMAN); DATA_RACE carries the races. Model: one race, N ethnicities. Content: Description; Explanation; Ethnic = race code; SUBCHAPTER_ATTR = profile, one line per characteristic, value = die formula ("2d10+20"), constant ("2" for Fate) or sum of bonuses ("1xBATTR_S+2xBATTR_T+1xBATTR_WP" for Wounds); SUBCHAPTER_SKILL / SUBCHAPTER_TALENT = starting skills and talents (WITHOUT a name attribute: the code is the content). A code can be "A/B" (a choice), "RULES-COMPCHEV_*" (a specialisation to choose at creation), "RULES-T*" (random talent, one line per roll); SUBCHAPTER_CAREER = career table: Career name = career code, value = WEIGHT in the d100 (an integer; the bounds are deduced), "X" = eligible outside the roll, "-" = cannot be rolled. The weights of an ethnicity total 100. Nationality = code of a nation (DATA_NATION). XML comments between two lines: tolerated, see the guide. A 'stub' (ethnicity reduced to SUBCHAPTER_CAREER) adds careers to an ethnicity of ANOTHER book.</xs:documentation>
       </xs:annotation>
     <xs:sequence>
-      <!-- Description : minOccurs=0 UNIQUEMENT pour les "stubs" documentes (ex:
-           BOOK_NATIONS_OF_MANKIND.Xml, Specie id="SEAOF-RACE_HBJOR" reduit a
-           SUBCHAPTER_CAREER) : une carriere rattachee a une race definie par un AUTRE
-           livre, sans redeclarer Description/SUBCHAPTER_ATTR/etc. Pour toute autre entree,
-           Description doit rester presente (verification a faire manuellement, le XSD ne
-           peut pas distinguer un stub legitime d'un oubli). -->
+      <!-- Description: minOccurs=0 ONLY for the documented "stubs" (e.g.:
+           BOOK_NATIONS_OF_MANKIND.Xml, Specie id="SEAOF-RACE_HBJOR" reduced to
+           SUBCHAPTER_CAREER): a career attached to a race defined by ANOTHER
+           book, without redeclaring Description/SUBCHAPTER_ATTR/etc. For every other entry,
+           Description must stay present (to be checked manually, the XSD cannot
+           tell a legitimate stub from an omission). -->
       <xs:element name="Description" type="LangString" minOccurs="0"/>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="Explanation" type="LangString"/>
         <xs:element name="Ethnic" type="PlainString"/>
         <xs:element name="Nationality" type="PlainString"/>
-        <!-- V2 (18/10/2026) : "Oui" = l'ethnie recoit une mutation de depart (Mutant, Tome of Corruption p.25) ; declenche la phase 2.2 de WinCreation. -->
+        <!-- V2: "Oui" = the ethnicity receives a starting mutation (Mutant, Tome of Corruption p.25); triggers phase 2.2 of WinCreation. -->
         <xs:element name="StartingMutation" type="PlainString"/>
-        <!-- Propres a la V2 (16/10/2026) : Background et RoleplayingHints = textes du livre ; Wounds et FatePoints = tables de d10 par plage ("1-3: 11; 4-6: 12; ..."), tables 2-2 et 2-3 du Core. -->
+        <!-- Specific to V2: Background and RoleplayingHints = texts of the book; Wounds and FatePoints = d10 tables by range ("1-3: 11; 4-6: 12; ..."), tables 2-2 and 2-3 of the Core. -->
         <xs:element name="Background" type="PlainString"/>
         <xs:element name="RoleplayingHints" type="PlainString"/>
         <xs:element name="Wounds" type="PlainString"/>
@@ -1014,10 +1054,12 @@
         <xs:element name="SUBCHAPTER_NAMES" type="SubchapterNames"/>
         <xs:element name="Skill5" type="PlainString"/>
         <xs:element name="Skill3" type="PlainString"/>
+        <!-- WFRP5: skill the species grants outright, no choice (starting languages, e.g. Reikspiel "30" = six Advances). name = skill code, content = points. -->
+        <xs:element name="FixedSkill" type="NamedString"/>
         <xs:element name="Rule" type="PlainString"/>
         <xs:element name="PictureLevel" type="PlainString"/>
       </xs:choice>
-          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
+          <!-- Page of the source book that gives the sheet. Free text: "38", "45-46". -->
       <xs:element name="Page" type="PlainString" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required"/>
@@ -1030,20 +1072,20 @@
   </xs:complexType>
 
   <!-- ===================== DATA_RACE ===================== -->
-  <!-- Structure minimale et stable, identique WFRP4/WFRP5. NE PAS CONFONDRE avec DATA_SPECIE. -->
+  <!-- Minimal, stable structure, identical WFRP4/WFRP5. DO NOT CONFUSE with DATA_SPECIE. -->
   <xs:complexType name="RaceType">
       <xs:annotation>
-        <xs:documentation xml:lang="fr">RACE (pas une ethnie) : Description, OPINIONS, SUBCHAPTER_PHYSICAL (age, taille, yeux, cheveux, tires pour toutes ses ethnies). Les ethnies sont des DATA_SPECIE dont le champ Ethnic pointe sur cet id (RULES-SPECIE_HUMAN, RULES-SPECIE_DWARF...). Voir l'inversion de vocabulaire expliquee sur SpecieType.</xs:documentation>
+        <xs:documentation xml:lang="en">RACE (not an ethnicity): Description, OPINIONS, SUBCHAPTER_PHYSICAL (age, height, eyes, hair, rolled for all its ethnicities). The ethnicities are DATA_SPECIE entries whose Ethnic field points at this id (RULES-SPECIE_HUMAN, RULES-SPECIE_DWARF...). See the vocabulary inversion explained on SpecieType.</xs:documentation>
       </xs:annotation>
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
-      <!-- Opinions de cette race sur les autres : target = code d'une RACE (pas d'une ethnie), une seule
-           source par race (decision Nono 08/10/2026). -->
+      <!-- Opinions of this race about the others: target = code of a RACE (not an ethnicity), a single
+           source per race. -->
       <xs:element name="OPINIONS" type="OpinionsType" minOccurs="0"/>
-      <!-- Details physiques de la race (age, taille, yeux, cheveux) : portes par la race, pas par une ethnie
-           (decision Nono 08/10/2026). Les ethnies d'une race sans bloc propre n'en ont pas : elles tirent ceux de leur race. -->
+      <!-- Physical details of the race (age, height, eyes, hair): carried by the race, not by an ethnicity.
+           The ethnicities of a race without a block of its own have none: they roll those of their race. -->
       <xs:element name="SUBCHAPTER_PHYSICAL" type="SubchapterPhysical" minOccurs="0"/>
-          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
+          <!-- Page of the source book that gives the sheet. Free text: "38", "45-46". -->
       <xs:element name="Page" type="PlainString" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required"/>
@@ -1056,8 +1098,8 @@
   </xs:complexType>
 
   <!-- ===================== DATA_PERSONAL_TABLE (V2) ===================== -->
-  <!-- Tables de details personnels communes a toutes les races (Core V2 : signes distinctifs 2-10, signe astral 2-12).
-       Entry name = resultat, detail = signification (signe astral), contenu = plage d100 ("01-05"). -->
+  <!-- Personal-detail tables common to all races (Core V2: distinguishing marks 2-10, star sign 2-12).
+       Entry name = result, detail = meaning (star sign), content = d100 range ("01-05"). -->
   <xs:complexType name="PersonalEntryType">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -1081,7 +1123,7 @@
   <!-- ===================== DATA_RANDOM_SPECIE ===================== -->
   <xs:complexType name="DataRandomSpecieType">
       <xs:annotation>
-        <xs:documentation xml:lang="fr">TABLE D100 DE LA RACE ALEATOIRE : Specie name = code de race, valeur = fourchette ("01-89", "98") ; les fourchettes couvrent 01-100 sans chevauchement.</xs:documentation>
+        <xs:documentation xml:lang="en">D100 TABLE OF THE RANDOM RACE: Specie name = race code, value = range ("01-89", "98"); the ranges cover 01-100 without overlap.</xs:documentation>
       </xs:annotation>
     <xs:sequence>
       <xs:element name="Specie" type="NamedString" maxOccurs="unbounded"/>
@@ -1090,12 +1132,12 @@
 
   <!-- ===================== DATA_RANDOM_TALENT ===================== -->
   <!--
-    Structure verifiee reellement imbriquee : le wrapper <DATA_RANDOM_TALENT> contient
-    N elements <DATA_RANDOM_TALENT id="..."> (MEME NOM DE BALISE repete, chacun avec
-    Specie+Talent). Confirme sur BOOK_GREEN_IZ_BEST.Xml et BOOK_RULESBOOK.Xml le 28/09/2026 :
-    ce n'est pas un faux positif de l'audit precedent, c'est la structure reelle et
-    coherente dans tout le corpus (le signalement initial d'imbrication suspecte est donc
-    clos, pas un point ouvert).
+    Structure verified as really nested: the wrapper <DATA_RANDOM_TALENT> contains
+    N elements <DATA_RANDOM_TALENT id="..."> (SAME TAG NAME repeated, each with
+    Specie+Talent). Confirmed on BOOK_GREEN_IZ_BEST.Xml and BOOK_RULESBOOK.Xml:
+    it is not a false positive of the earlier audit, it is the real structure and
+    consistent across the corpus (the initial report of a suspect nesting is therefore
+    closed, not an open point).
   -->
   <xs:complexType name="RandomTalentEntryType">
     <xs:sequence>
@@ -1107,7 +1149,7 @@
 
   <xs:complexType name="DataRandomTalentType">
       <xs:annotation>
-        <xs:documentation xml:lang="fr">TABLE DES TALENTS ALEATOIRES D'UNE ETHNIE. Le wrapper ET les entrees portent le meme nom de balise : DATA_RANDOM_TALENT contient des DATA_RANDOM_TALENT id="..." (voulu, pas une erreur). Une entree = un talent (id = code, ex. RULES-T0139_*) x une ethnie (Specie) ; la valeur de Talent name est le poids dans le d100 ; la somme des poids d'une ethnie vaut 0 ou 100.</xs:documentation>
+        <xs:documentation xml:lang="en">TABLE OF THE RANDOM TALENTS OF AN ETHNICITY. The wrapper AND the entries carry the same tag name: DATA_RANDOM_TALENT contains DATA_RANDOM_TALENT id="..." (intended, not an error). One entry = one talent (id = code, e.g. RULES-T_ACUTE_SENSE__*) x one ethnicity (Specie); the value of Talent name is the weight in the d100; the sum of the weights of an ethnicity is 0 or 100.</xs:documentation>
       </xs:annotation>
     <xs:sequence>
       <xs:element name="DATA_RANDOM_TALENT" type="RandomTalentEntryType" maxOccurs="unbounded"/>
@@ -1118,7 +1160,7 @@
   <xs:complexType name="NationType">
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
-          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
+          <!-- Page of the source book that gives the sheet. Free text: "38", "45-46". -->
       <xs:element name="Page" type="PlainString" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required"/>
@@ -1132,28 +1174,28 @@
 
   <!-- ===================== DATA_TRAPPING ===================== -->
   <!--
-    Obligatoires : Trapping[id], Theme, Description.
-    Quasi-obligatoires : Encumbrance, Price, Availability.
-    Optionnelles selon sous-type (montures, vehicules, marchands...), regroupees en xs:choice
-    repetable pour ne pas figer un ordre unique entre sous-types tres differents.
-    Theme = reference a un code RULES-LAB_nnn (label), pas un enum litteral : xs:string.
+    Mandatory: Trapping[id], Theme, Description.
+    Almost mandatory: Encumbrance, Price, Availability.
+    Optional depending on sub-type (mounts, vehicles, merchants...), grouped in a repeatable
+    xs:choice so as not to freeze a single order between very different sub-types.
+    Theme = reference to a code RULES-LAB_nnn (label), not a literal enum: xs:string.
   -->
   <!--
-    Ordre et presence de Availability/Price/Encumbrance/Carries/etc. se sont averes variables
-    d'un livre a l'autre (Description/Theme toujours en tete, verifie sur 6+ livres, mais le
-    reste diverge : ex. BOOK ENEMY IN SHADOWS COMPANION.Xml a Price avant Availability sans
-    Encumbrance, BOOK_SEA_OF_CLAWS.Xml a Availability avant Price avec Encumbrance toujours
-    presente). Assouplissement documente (meme logique que TalentType) : Description+Theme
-    fixes en tete, le reste en xs:choice repetable non ordonne.
+    Order and presence of Availability/Price/Encumbrance/Carries/etc. turned out to vary
+    from one book to another (Description/Theme always at the head, checked on 6+ books, but the
+    rest diverges: e.g. BOOK ENEMY IN SHADOWS COMPANION.Xml has Price before Availability without
+    Encumbrance, BOOK_SEA_OF_CLAWS.Xml has Availability before Price with Encumbrance always
+    present). Documented relaxation (same logic as TalentType): Description+Theme
+    fixed at the head, the rest in an unordered, repeatable xs:choice.
   -->
   <xs:complexType name="TrappingType">
       <xs:annotation>
-        <xs:documentation xml:lang="fr">OBJET DIVERS (equipement non arme/armure). id = &lt;LIVRE&gt;-TRAP_nnn. Theme = categorie, un CODE de libelle : RULES-LAB_190 Containers, 191 Clothing and Accessories, 192 Food Drink and Lodging, 193 Tools and Kits, 194 Books and Documents, 195 Animals and Vehicles, 196 Miscellaneous, 197 Drugs and Poisons, 198 Herbs and Draughts, 199 Prosthetics and Curiosities, 260 Mounts and animals. Availability = RULES-DISPO_COMMON / _LIMITED / _RARE / _EXOTIC / _UNIQUE. Price = montants concatenes, unites CO (couronne d'or), PA (pistole d'argent), SB (sou de bronze) : "3CO", "4PA 2SB" ; texte libre toléré ("Varies"). Encumbrance = entier ("0" = sans encombrement). Absent du livre = absent du XML : un objet que le livre ne chiffre pas n'a ni Price ni Availability. Les champs de montures (AnimalProfile, AnimalTraits, Carries) et de bateaux (BoatProfile, ModifBoat) sont reserves a ces sous-types.</xs:documentation>
+        <xs:documentation xml:lang="en">MISCELLANEOUS ITEM (equipment that is neither weapon nor armour). id = &lt;BOOK&gt;-TRAP_nnn. Theme = category, a label CODE: RULES-LAB_190 Containers, 191 Clothing and Accessories, 192 Food Drink and Lodging, 193 Tools and Kits, 194 Books and Documents, 195 Animals and Vehicles, 196 Miscellaneous, 197 Drugs and Poisons, 198 Herbs and Draughts, 199 Prosthetics and Curiosities, 260 Mounts and animals. Availability = RULES-DISPO_COMMON / _LIMITED / _RARE / _EXOTIC / _UNIQUE. Price = concatenated amounts, units CO (gold crown), PA (silver pistole), SB (bronze bit): "3CO", "4PA 2SB"; free text tolerated ("Varies"). Encumbrance = integer ("0" = no encumbrance). Absent from the book = absent from the XML: an item that the book does not price has neither Price nor Availability. The fields of mounts (AnimalProfile, AnimalTraits, Carries) and boats (BoatProfile, ModifBoat) are reserved for those sub-types.</xs:documentation>
       </xs:annotation>
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
-      <!-- Theme : minOccurs=0, absente sur certains objets WFRP5 (Buckler/Shield/Backpack
-           dans BOOK_RULESBOOK.Xml WFRP5). -->
+      <!-- Theme: minOccurs=0, absent on some WFRP5 items (Buckler/Shield/Backpack
+           in BOOK_RULESBOOK.Xml WFRP5). -->
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="Theme" type="PlainString"/>
         <xs:element name="Availability" type="PlainString"/>
@@ -1170,7 +1212,7 @@
         <xs:element name="Locality" type="PlainString"/>
         <xs:element name="InherentCraftsmanship" type="PlainString"/>
       </xs:choice>
-          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
+          <!-- Page of the source book that gives the sheet. Free text: "38", "45-46". -->
       <xs:element name="Page" type="PlainString" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required"/>
@@ -1204,9 +1246,9 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Regles de tirage des carrieres (DATA_RULE, DATA_CAREER_ROLL) : deplacees de SCHEMA_WFRP4.xsd le 16/10/2026,
-       partagees avec la V2 (table maitre du Career Compendium). -->
-  <!-- DATA_CAREER_ROLL : Entry repete, pas d'id sur le wrapper (confirme le 28/09/2026). -->
+  <!-- Career roll rules (DATA_RULE, DATA_CAREER_ROLL): moved from SCHEMA_WFRP4.xsd,
+       shared with V2 (master table of the Career Compendium). -->
+  <!-- DATA_CAREER_ROLL: repeated Entry, no id on the wrapper. -->
   <xs:complexType name="CareerRollEntryType">
     <xs:sequence>
       <xs:element name="Rule" type="PlainString"/>
@@ -1217,7 +1259,7 @@
 
   <xs:complexType name="DataCareerRollType">
       <xs:annotation>
-        <xs:documentation xml:lang="fr">TABLE DE TIRAGE D100 DES CARRIERES POUR UNE REGLE (pas pour une ethnie). Une Entry = une carriere dans la colonne d'une ethnie ou race : Rule = code d'une regle (DATA_RULE) qui REMPLACE la table de base, Specie = ethnie OU race (une race vaut pour toutes ses ethnies), Career name = carriere ; la valeur est une CHANCE : un entier = poids (nombre de valeurs de d100 occupees, les bornes 01-03 etc. se deduisent en classant les carrieres par classe puis par libelle), "X" = eligible mais hors tirage. Pas d'id sur le wrapper. Les fourchettes ne se saisissent jamais : voir ChargeTirageMetier.pas. Commentaire XML entre deux Entry : tolere.</xs:documentation>
+        <xs:documentation xml:lang="en">D100 CAREER ROLL TABLE FOR A RULE (not for an ethnicity). One Entry = one career in the column of an ethnicity or race: Rule = code of a rule (DATA_RULE) that REPLACES the base table, Specie = ethnicity OR race (a race applies to all its ethnicities), Career name = career; the value is a CHANCE: an integer = weight (number of d100 values occupied, the bounds 01-03 etc. are deduced by sorting the careers by class then by label), "X" = eligible but outside the roll. No id on the wrapper. The ranges are never entered: see ChargeTirageMetier.pas. XML comment between two Entry: tolerated.</xs:documentation>
       </xs:annotation>
     <xs:sequence>
       <xs:element name="Entry" type="CareerRollEntryType" maxOccurs="unbounded"/>
@@ -1228,32 +1270,35 @@
   <xs:complexType name="RuleType">
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
-      <!-- Ce que la regle implique pour la creation (12/11/2026) : texte montre au joueur dans la fenetre des
-           regles optionnelles, pour qu'il la coche ou la decoche en connaissance de cause. Traductible. -->
+      <!-- What the rule implies for creation: text shown to the player in the optional-rules window, so that
+           they tick or untick it knowingly. Translatable. -->
       <xs:element name="Explanation" type="LangString" minOccurs="0"/>
-      <!-- Classe de base remplacee par une regle PARTIELLE (Seafarer) ; absente = regle totale -->
+      <!-- Base class replaced by a PARTIAL rule (Seafarer); absent = total rule -->
       <xs:element name="Class" type="xs:string" minOccurs="0"/>
-      <!-- Chance (en pour cent, 1 a 99) de commencer le jeu avec une mutation : la creation propose un jet d100
-           apres le metier (Races and Regional Options, lignes Special). -->
+      <!-- Chance (in percent, 1 to 99) of starting the game with a mutation: creation offers a d100 roll
+           after the career (Races and Regional Options, Special lines). -->
       <xs:element name="StartingMutation" type="PlainString" minOccurs="0"/>
-          <!-- Page du livre source qui donne la fiche (12/10/2026). Texte libre : "38", "45-46". -->
+          <!-- Page of the source book that gives the sheet. Free text: "38", "45-46". -->
       <xs:element name="Page" type="PlainString" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required"/>
   </xs:complexType>
 
   <xs:complexType name="DataRuleType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">BOOK RULES: a Rule is a label (id, Description, optional Explanation shown to the player in the rules window) cited by the roll blocks DATA_CAREER_ROLL, DATA_RULE_SPECIE, DATA_RULE_BACKGROUND, DATA_RULE_SKILL_ROLL, DATA_RULE_TALENT_ROLL. Class = class replaced by a partial rule; StartingMutation = percent chance of starting with a mutation. Not to be confused with DATA_OPTION_RULE, which wires an engine switch.</xs:documentation>
+    </xs:annotation>
     <xs:sequence>
       <xs:element name="Rule" type="RuleType" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
-  <!-- DATA_RULE_SPECIE (19/10/2026) : competences et talents qu'une regle (DATA_RULE) donne a une
-       ethnie EN REMPLACEMENT des siens. Une Entry = une competence OU un talent. Specie = ethnie ou
-       race (l'ethnie prime). Si une regle porte au moins une Skill pour l'ethnie, elle remplace tout le
-       bloc competences de l'ethnie ; idem pour Talent. Une valeur peut etre "A/B" (au choix) ou
-       "RULES-T*", comme dans SUBCHAPTER_SKILL / SUBCHAPTER_TALENT. Cas : variantes regionales de
-       Realm of the Ice Queen. Pas d'id sur le wrapper. -->
+  <!-- DATA_RULE_SPECIE: skills and talents that a rule (DATA_RULE) gives to an
+       ethnicity IN REPLACEMENT of its own. One Entry = one skill OR one talent. Specie = ethnicity or
+       race (the ethnicity takes precedence). If a rule carries at least one Skill for the ethnicity, it replaces the whole
+       skill block of the ethnicity; same for Talent. A value may be "A/B" (a choice) or
+       "RULES-T*", as in SUBCHAPTER_SKILL / SUBCHAPTER_TALENT. Case: regional variants of
+       Realm of the Ice Queen. No id on the wrapper. -->
   <xs:complexType name="RuleSpecieEntryType">
     <xs:sequence>
       <xs:element name="Rule" type="PlainString"/>
@@ -1271,12 +1316,12 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- DATA_RULE_BACKGROUND (19/10/2026) : table qui TIRE le background (une DATA_RULE) d'une ethnie ou
-       race. Une Entry = une ethnie (Specie) x une regle (Rule name = code de la regle de background,
-       valeur = poids dans le d100) ; la somme des poids d'une ethnie vaut 100. Meme principe que
-       DATA_CAREER_ROLL (poids, pas de fourchettes) : un multiple de 10 des elfes/nains qui renvoie a un
-       autre background s'ecrit par des poids, pas par un cas particulier. Cas : Liber Fanatica
-       (Character Backgrounds). Pas d'id sur le wrapper. -->
+  <!-- DATA_RULE_BACKGROUND: table that ROLLS the background (a DATA_RULE) of an ethnicity or
+       race. One Entry = one ethnicity (Specie) x one rule (Rule name = code of the background rule,
+       value = weight in the d100); the sum of the weights of an ethnicity is 100. Same principle as
+       DATA_CAREER_ROLL (weights, no ranges): a multiple of 10 of elves/dwarfs that refers to another
+       background is written with weights, not with a special case. Case: Liber Fanatica
+       (Character Backgrounds). No id on the wrapper. -->
   <xs:complexType name="RuleBackgroundEntryType">
     <xs:sequence>
       <xs:element name="Specie" type="PlainString"/>
@@ -1290,9 +1335,9 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- DATA_RULE_BACKGROUND_COUNT (19/10/2026) : le d10 qui donne le nombre de competences et de talents du
-       background. Weight = nombre de faces du d10 couvertes par l'entree (la somme vaut 10). Une Entry sans
-       Skills ni Talents = resultat qui demande un SECOND background (Liber Fanatica : 10). -->
+  <!-- DATA_RULE_BACKGROUND_COUNT: the d10 that gives the number of skills and talents of the
+       background. Weight = number of d10 faces covered by the entry (the sum is 10). An Entry without
+       Skills or Talents = a result that asks for a SECOND background (Liber Fanatica: 10). -->
   <xs:complexType name="RuleBackgroundCountEntryType">
     <xs:sequence>
       <xs:element name="Weight" type="PlainString"/>
@@ -1307,9 +1352,9 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- DATA_RULE_SKILL_ROLL / DATA_RULE_TALENT_ROLL (19/10/2026) : table d100 des competences (ou talents)
-       d'un background. Entry = Rule (le background) + Skill (ou Talent) name=<code> valeur=<poids> ; code
-       generique "..._*" = le joueur choisit la specialisation. Meme principe de poids que DATA_CAREER_ROLL. -->
+  <!-- DATA_RULE_SKILL_ROLL / DATA_RULE_TALENT_ROLL: d100 table of the skills (or talents)
+       of a background. Entry = Rule (the background) + Skill (or Talent) name=<code> value=<weight>; generic
+       code "..._*" = the player chooses the specialisation. Same weight principle as DATA_CAREER_ROLL. -->
   <xs:complexType name="RuleSkillRollEntryType">
     <xs:sequence>
       <xs:element name="Rule" type="PlainString"/>
@@ -1337,12 +1382,12 @@
   </xs:complexType>
 
 
-  <!-- DATA_CAREER_BONUS : deplace de SCHEMA_WFRP4.xsd le 16/10/2026, partage avec la V2 (cultes de l'Initiate).
-       Specie vide = aucune condition d'origine. -->
+  <!-- DATA_CAREER_BONUS: moved from SCHEMA_WFRP4.xsd, shared with V2 (cults of the Initiate).
+       Empty Specie = no condition of origin. -->
   <!--
-    DATA_CAREER_BONUS (1 echantillon) : Level porte un id propre (ex: "..._1"), contenu
-    variable (Order + choix libre parmi SkillChoice/SpecialRule/ModifySkill/ModifyCarac/
-    Skill/ModifyWeapon). Meme note de prudence que DATA_CAREER_ADAPTATION.
+    DATA_CAREER_BONUS (1 sample): Level carries an id of its own (e.g. "..._1"), variable
+    content (Order + free choice among SkillChoice/SpecialRule/ModifySkill/ModifyCarac/
+    Skill/ModifyWeapon). Same note of caution as DATA_CAREER_ADAPTATION.
   -->
   <xs:complexType name="CareerBonusLevelType">
     <xs:sequence>
@@ -1359,14 +1404,14 @@
     <xs:attribute name="id" type="xs:string" use="required"/>
   </xs:complexType>
 
-  <!-- <SkillChoice Count="3" Value="5"/> (element vide, attributs seulement). -->
+  <!-- <SkillChoice Count="3" Value="5"/> (empty element, attributes only). -->
   <xs:complexType name="SkillChoiceType">
     <xs:attribute name="Count" type="xs:string" use="optional"/>
     <xs:attribute name="Value" type="xs:string" use="optional"/>
   </xs:complexType>
 
-  <!-- <ModifyWeapon name="..." skill="...">+10</ModifyWeapon> : skill= optionnel, precise
-       la competence quand l'arme visee en a plusieurs. -->
+  <!-- <ModifyWeapon name="..." skill="...">+10</ModifyWeapon>: optional skill=, specifies
+       the skill when the targeted weapon has several. -->
   <xs:complexType name="ModifyWeaponType">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -1380,7 +1425,7 @@
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
       <xs:element name="Career" type="PlainString"/>
-      <!-- Vide quand le bonus vaut pour toutes les ethnies : WinLivre n ecrit pas la balise vide. -->
+      <!-- Empty when the bonus applies to all ethnicities: WinLivre does not write the empty tag. -->
       <xs:element name="Specie" type="PlainString" minOccurs="0"/>
       <xs:element name="Talent" type="PlainString" minOccurs="0"/>
       <xs:element name="Level" type="CareerBonusLevelType" maxOccurs="unbounded"/>
@@ -1390,10 +1435,96 @@
 
   <xs:complexType name="DataCareerBonusType">
       <xs:annotation>
-        <xs:documentation xml:lang="fr">GREFFON DE DONNEES SUR UNE CARRIERE, selon l'appartenance du personnage (ex. regiments de l'Empire, Nations of Mankind p.6-7 : "treated as if added to their career"). Conditions : Specie (l'ethnie, ex. une province) ET Career (la carriere du Rulebook, ex. Soldier) ; quand elles sont reunies, chaque Level ajoute des competences/talents au niveau Order de la carriere. Dans un Level, &lt;Skill&gt;/&lt;Talent&gt; vides ("") = rien a ce palier ; "A/B" = un choix entre deux ; Level id = &lt;id du bonus&gt;_&lt;numero&gt;. Voir CONTEXT.md 2.44. Un commentaire XML est tolere entre deux CareerBonus mais pas a l'interieur d'une entree.</xs:documentation>
+        <xs:documentation xml:lang="en">DATA GRAFT ON A CAREER, depending on the character's membership (e.g. Empire regiments, Nations of Mankind p.6-7: "treated as if added to their career"). Conditions: Specie (the ethnicity, e.g. a province) AND Career (the Rulebook career, e.g. Soldier); when both are met, each Level adds skills/talents at the Order level of the career. In a Level, empty &lt;Skill&gt;/&lt;Talent&gt; ("") = nothing at this tier; "A/B" = a choice between two; Level id = &lt;bonus id&gt;_&lt;number&gt;. An XML comment is tolerated between two CareerBonus but not inside an entry.</xs:documentation>
       </xs:annotation>
     <xs:sequence>
       <xs:element name="CareerBonus" type="CareerBonusType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ===== Corruption and mutation tables (shared by WFRP4 and WFRP5) ===== -->
+
+  <!-- DATA_CORRUPTION_MENTAL / DATA_CORRUPTION_PHYSICAL: table per race, Specie[name]. -->
+  <xs:complexType name="DataCorruptionMentalType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">MENTAL CORRUPTION PER RACE: one Specie per race, name = race code, value = d100 range that gives a MENTAL corruption (the physical one is in DATA_CORRUPTION_PHYSICAL; the two complement each other). - = never.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Specie" type="NamedString" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DataCorruptionPhysicalType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">PHYSICAL CORRUPTION PER RACE: one Specie per race, name = race code, value = d100 range that gives a PHYSICAL corruption (the mental one is in DATA_CORRUPTION_MENTAL). - = never (elves).</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Specie" type="NamedString" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_CORRUPTION_MENTAL_CHANCE / DATA_CORRUPTION_PHYSICAL_CHANCE: Chance[name]. -->
+  <xs:complexType name="DataCorruptionMentalChanceType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">CHANCE TABLE OF MENTAL MUTATIONS: one Chance per range, name = d100 range (01-05; the final 00 means 100), value = code of a Corruption of DATA_CORRUPTION_TABLE_MENTAL. Separate from the catalogue so that a book can renumber its ranges without changing the stored codes.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Chance" type="NamedString" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DataCorruptionPhysicalChanceType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">CHANCE TABLE OF PHYSICAL MUTATIONS: one Chance per range, name = d100 range, value = code of a Corruption of DATA_CORRUPTION_TABLE_PHYSICAL. Separate from the catalogue (see DATA_CORRUPTION_MENTAL_CHANCE).</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Chance" type="NamedString" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_CORRUPTION_TABLE_MENTAL: Corruption[name] > Description, Explanation, ModifyCarac*. -->
+  <xs:complexType name="CorruptionTableMentalEntryType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Explanation" type="LangString"/>
+      <xs:element name="ModifyCarac" type="NamedString" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataCorruptionTableMentalType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">CATALOGUE OF MENTAL MUTATIONS: one Corruption per mutation, name = stable code (RULES-CORMEN_*, never a range). Optional Description, Explanation, ModifyCarac. The roll goes through DATA_CORRUPTION_MENTAL then DATA_CORRUPTION_MENTAL_CHANCE.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Corruption" type="CorruptionTableMentalEntryType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_CORRUPTION_TABLE_PHYSICAL: Corruption[name] > Description, Explanation, then a
+       variable, repeatable mix of ModifyCarac[name]/ModifArmour[name] (often 1 per
+       location, hence several)/ModifySkill[name]/ModifySkillAttribut[name]/Weapon,
+       checked on BOOK_RULESBOOK.Xml (CORPHY_012, CORPHY_016: 4x ModifArmour). -->
+  <xs:complexType name="CorruptionTablePhysicalEntryType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Explanation" type="LangString"/>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="ModificateursEffets"/>
+        <xs:element name="Weapon" type="PlainString"/>
+      </xs:choice>
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataCorruptionTablePhysicalType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">CATALOGUE OF PHYSICAL MUTATIONS: one Corruption per mutation, name = stable code (RULES-CORPHY_*). Description, Explanation, then a free mix of numeric effects (ModifyCarac, ModifArmour one per location, ModifySkill...) and Weapon (natural weapon). Many effects stay as text.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Corruption" type="CorruptionTablePhysicalEntryType" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 

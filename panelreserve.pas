@@ -33,6 +33,7 @@ type
   public
     constructor Create(AOwner: TComponent); override;
     procedure Initialiser(Modele: TBCButton; const Titre: String);
+    procedure SetTitre(const Titre: String);
     procedure Placer(Largeur: Integer);
     procedure Vider;
     procedure AjouteLigne(Montant: Integer; const Libelle: String);
@@ -76,6 +77,11 @@ begin
   FGrille.FixedCols := 0;
   FGrille.Options := FGrille.Options + [goEditing, goRowSelect] - [goRangeSelect];
   FGrille.OnEditingDone := @GrilleEditingDone;
+end;
+
+procedure TPanelReserve.SetTitre(const Titre: String);
+begin
+  FEtiquette.Caption := Titre;
 end;
 
 procedure TPanelReserve.Initialiser(Modele: TBCButton; const Titre: String);

@@ -2,7 +2,7 @@
 
 *Règles WFRP4. Version anglaise : `PLAYER_GUIDE_3_QUESTIONS.md`.*
 
-Chaque fiche répond à une question en quelques lignes. Il n'y a pas de fiche « changer de version de règles » : un personnage WFRP1 ne devient jamais WFRP4 (seule exception : WFRP4 ↔ Momentum, ci-dessous).
+Chaque fiche répond à une question en quelques lignes. Il n'y a pas de fiche « changer de version de règles » : un personnage WFRP1 ne devient jamais WFRP4 (pour l'instant, le seul passage permis est WFRP4 ↔ Momentum, ci-dessous).
 
 **Liste des questions**
 
@@ -76,7 +76,7 @@ Un familier est **un personnage à part entière** (espèce « Familier ») que 
 1. Clique sur **+Familier**.
 2. Choisis son nom dans la liste des familiers sauvegardés.
 
-Une ligne est ajoutée à l'équipement ; elle ouvre la fiche propre du familier. Une monture s'ajoute de la même façon (catégorie Montures). Si la liste est vide, crée d'abord le familier (voir le guide de création, étape en plus « Forme du familier »). Le bouton n'apparaît que dans la catégorie Montures.
+Une ligne est ajoutée à l'équipement ; elle ouvre la fiche propre du familier. Une monture n'est pas un familier : ajoute-la avec **+Équipement** (catégorie Montures). Si la liste est vide, crée d'abord le familier (voir le guide de création, étape en plus « Forme du familier »). Le bouton n'apparaît que dans la catégorie Montures.
 
 ---
 

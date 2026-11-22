@@ -7,1088 +7,1237 @@
 <VERSION>"WFRP2"</VERSION>
 <OFFICIAL>"2"</OFFICIAL>
 <COMPLETE>"0"</COMPLETE>
-<DATA_EQUIPMENT_V2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_ARMING_SWORD">
+<DATA_WEAPON>
+<Weapon id="STSW-COMB_V2_ARMING_SWORD">
 <Description language="ENGLISH">"Arming Sword (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"19 gc 10s"</Cost>
-<Encumbrance>"60"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Balanced, Defensive"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"19CO 10PA"</Price>
+<Encumbrance>"60"</Encumbrance>
+<Quality>"RULES-WEAPQ_BALANCED,RULES-WEAPQ_DEFENSIVE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_BARDICHE">
+</Weapon>
+<Weapon id="STSW-COMB_V2_BARDICHE">
 <Description language="ENGLISH">"Bardiche (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"8 gc"</Cost>
-<Encumbrance>"170"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+2"</Damage>
-<Qualities>"(Fast or Impact), Unbalanced"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+2"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"8CO"</Price>
+<Encumbrance>"170"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: (Fast or Impact), Unbalanced"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_BATTLE_AXE">
+</Weapon>
+<Weapon id="STSW-COMB_V2_BATTLE_AXE">
 <Description language="ENGLISH">"Battle Axe (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"7 gc"</Cost>
-<Encumbrance>"80"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Unbalanced, Unwieldy"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"7CO"</Price>
+<Encumbrance>"80"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Unbalanced, Unwieldy"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_BEC_DE_CORBIN">
+</Weapon>
+<Weapon id="STSW-COMB_V2_BEC_DE_CORBIN">
 <Description language="ENGLISH">"Bec de Corbin (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"13 gc"</Cost>
-<Encumbrance>"140"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Armour Piercing, (Fast or Impact)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"13CO"</Price>
+<Encumbrance>"140"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: (Fast or Impact)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_BILL">
+</Weapon>
+<Weapon id="STSW-COMB_V2_BILL">
 <Description language="ENGLISH">"Bill (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"7 gc 6s"</Cost>
-<Encumbrance>"150"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Hook, (Fast or Impact)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"7CO 6PA"</Price>
+<Encumbrance>"150"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Hook, (Fast or Impact)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_FALCHION">
+</Weapon>
+<Weapon id="STSW-COMB_V2_FALCHION">
 <Description language="ENGLISH">"Falchion (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"14 gc"</Cost>
-<Encumbrance>"80"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Slow"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"14CO"</Price>
+<Encumbrance>"80"</Encumbrance>
+<Quality>"RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_BUCKLER">
+</Weapon>
+<Weapon id="STSW-COMB_V2_BUCKLER">
 <Description language="ENGLISH">"Buckler (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"2 gc"</Cost>
-<Encumbrance>"30"</Encumbrance>
-<Group>"RULES-WTYPE2_PARRYING"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Defensive, Off-Hand, Pummelling"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"2CO"</Price>
+<Encumbrance>"30"</Encumbrance>
+<Quality>"RULES-WEAPQ_DEFENSIVE,RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_PARRYING"</Type>
+<Note>"Other qualities: Off-Hand"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_CESTUS">
+</Weapon>
+<Weapon id="STSW-COMB_V2_CESTUS">
 <Description language="ENGLISH">"Cestus (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"1 gc"</Cost>
-<Encumbrance>"5"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–4"</Damage>
-<Qualities>"Defensive"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-4"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"1CO"</Price>
+<Encumbrance>"5"</Encumbrance>
+<Quality>"RULES-WEAPQ_DEFENSIVE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_CLUB">
+</Weapon>
+<Weapon id="STSW-COMB_V2_CLUB">
 <Description language="ENGLISH">"Club (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"1 gc"</Cost>
-<Encumbrance>"60"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–1"</Damage>
-<Qualities>"Pummelling"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
 <Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Price>"1CO"</Price>
+<Encumbrance>"60"</Encumbrance>
+<Quality>"RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_CROWBILL">
+</Weapon>
+<Weapon id="STSW-COMB_V2_CROWBILL">
 <Description language="ENGLISH">"Crowbill (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"8 gc"</Cost>
-<Encumbrance>"70"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Armour Piercing, Pummelling, Slow"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"8CO"</Price>
+<Encumbrance>"70"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_PUMMELLING,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_CUTLASS">
+</Weapon>
+<Weapon id="STSW-COMB_V2_CUTLASS">
 <Description language="ENGLISH">"Cutlass (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"17 gc"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Defensive, Precise"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"17CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>"RULES-WEAPQ_DEFENSIVE,RULES-WEAPQ_PRECISE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_DAGGER">
+</Weapon>
+<Weapon id="STSW-COMB_V2_DAGGER">
 <Description language="ENGLISH">"Dagger (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"3 gc"</Cost>
-<Encumbrance>"20"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Fast"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"3CO"</Price>
+<Encumbrance>"20"</Encumbrance>
+<Quality>"RULES-WEAPQ_FAST"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_DEMILANCE">
+</Weapon>
+<Weapon id="STSW-COMB_V2_DEMILANCE">
 <Description language="ENGLISH">"Demilance (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"1 gc 10s"</Cost>
-<Encumbrance>"160"</Encumbrance>
-<Group>"RULES-WTYPE2_CAVALRY"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Fast, Impact, Tiring"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"1CO 10PA"</Price>
+<Encumbrance>"160"</Encumbrance>
+<Quality>"RULES-WEAPQ_FAST,RULES-WEAPQ_IMPACT,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_CAVALRY"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_JANBIYA">
+</Weapon>
+<Weapon id="STSW-COMB_V2_JANBIYA">
 <Description language="ENGLISH">"Janbiya (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"6 gc"</Cost>
-<Encumbrance>"20"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Precise"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Price>"6CO"</Price>
+<Encumbrance>"20"</Encumbrance>
+<Quality>"RULES-WEAPQ_PRECISE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_FLAIL">
+</Weapon>
+<Weapon id="STSW-COMB_V2_FLAIL">
 <Description language="ENGLISH">"Flail (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"5 gc"</Cost>
-<Encumbrance>"120"</Encumbrance>
-<Group>"RULES-WTYPE2_FLAIL"</Group>
-<Damage>"SB+2"</Damage>
-<Qualities>"Fast, Impact, Unbalanced"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+2"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"5CO"</Price>
+<Encumbrance>"120"</Encumbrance>
+<Quality>"RULES-WEAPQ_FAST,RULES-WEAPQ_IMPACT"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FLAIL"</Type>
+<Note>"Other qualities: Unbalanced"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_FOIL">
+</Weapon>
+<Weapon id="STSW-COMB_V2_FOIL">
 <Description language="ENGLISH">"Foil (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"10 gc"</Cost>
-<Encumbrance>"20"</Encumbrance>
-<Group>"RULES-WTYPE2_FENCING"</Group>
-<Damage>"SB–1"</Damage>
-<Qualities>"Balanced, Fast"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"10CO"</Price>
+<Encumbrance>"20"</Encumbrance>
+<Quality>"RULES-WEAPQ_BALANCED,RULES-WEAPQ_FAST"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FENCING"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_GLAIVE">
+</Weapon>
+<Weapon id="STSW-COMB_V2_GLAIVE">
 <Description language="ENGLISH">"Glaive (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"8 gc"</Cost>
-<Encumbrance>"160"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Precise, (Fast or Impact)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"8CO"</Price>
+<Encumbrance>"160"</Encumbrance>
+<Quality>"RULES-WEAPQ_PRECISE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: (Fast or Impact)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_GREAT_AXE">
+</Weapon>
+<Weapon id="STSW-COMB_V2_GREAT_AXE">
 <Description language="ENGLISH">"Great Axe (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"22 gc"</Cost>
-<Encumbrance>"200"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+3"</Damage>
-<Qualities>"Impact, Unbalanced, Unwieldy"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+3"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"22CO"</Price>
+<Encumbrance>"200"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: Unbalanced, Unwieldy"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_GREAT_SWORD">
+</Weapon>
+<Weapon id="STSW-COMB_V2_GREAT_SWORD">
 <Description language="ENGLISH">"Great Sword (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"35 gc"</Cost>
-<Encumbrance>"180"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Balanced, Defensive, Impact"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"35CO"</Price>
+<Encumbrance>"180"</Encumbrance>
+<Quality>"RULES-WEAPQ_BALANCED,RULES-WEAPQ_DEFENSIVE,RULES-WEAPQ_IMPACT"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_HALBERD">
+</Weapon>
+<Weapon id="STSW-COMB_V2_HALBERD">
 <Description language="ENGLISH">"Halberd (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"13 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"13CO"</Price>
 <Encumbrance>"140"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Balanced, (Fast or Impact)"</Qualities>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Quality>"RULES-WEAPQ_BALANCED"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: (Fast or Impact)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_HAMMER_WHITE_WOLF">
+</Weapon>
+<Weapon id="STSW-COMB_V2_HAMMER_WHITE_WOLF">
 <Description language="ENGLISH">"Hammer, White Wolf (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"12 gc"</Cost>
-<Encumbrance>"100"</Encumbrance>
-<Group>"RULES-WTYPE2_WHITE_WOLF"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Impact, Tiring, Unwieldy"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"12CO"</Price>
+<Encumbrance>"100"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_WHITE_WOLF"</Type>
+<Note>"Other qualities: Unwieldy"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_HATCHET_WOOD">
+</Weapon>
+<Weapon id="STSW-COMB_V2_HATCHET_WOOD">
 <Description language="ENGLISH">"Hatchet, Wood (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"16s"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Unbalanced, Unwieldy"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Price>"16PA"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Unbalanced, Unwieldy"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_HORSEMAN_S_AXE">
+</Weapon>
+<Weapon id="STSW-COMB_V2_HORSEMAN_S_AXE">
 <Description language="ENGLISH">"Horseman's Axe (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"9 gc"</Cost>
-<Encumbrance>"120"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Slow, Unwieldy"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"9CO"</Price>
+<Encumbrance>"120"</Encumbrance>
+<Quality>"RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Unwieldy"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_IMPROVISED">
+</Weapon>
+<Weapon id="STSW-COMB_V2_IMPROVISED">
 <Description language="ENGLISH">"Improvised (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"Varies"</Cost>
-<Encumbrance>"Varies"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Varies"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"Varies"</Price>
+<Encumbrance>"Varies"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Varies"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_KHOPESH">
+</Weapon>
+<Weapon id="STSW-COMB_V2_KHOPESH">
 <Description language="ENGLISH">"Khopesh (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"12 gc"</Cost>
-<Encumbrance>"100"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Slow"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"12CO"</Price>
+<Encumbrance>"100"</Encumbrance>
+<Quality>"RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_KNIFE">
+</Weapon>
+<Weapon id="STSW-COMB_V2_KNIFE">
 <Description language="ENGLISH">"Knife (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"15s"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Unwieldy"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Price>"15PA"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Unwieldy"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_KNUCKLE_DUSTER">
+</Weapon>
+<Weapon id="STSW-COMB_V2_KNUCKLE_DUSTER">
 <Description language="ENGLISH">"Knuckle Duster (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"3 gc"</Cost>
-<Encumbrance>"5"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Pummelling"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"3CO"</Price>
+<Encumbrance>"5"</Encumbrance>
+<Quality>"RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_LANCE">
+</Weapon>
+<Weapon id="STSW-COMB_V2_LANCE">
 <Description language="ENGLISH">"Lance (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"2 gc 10s"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+2"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"2CO 10PA"</Price>
 <Encumbrance>"180"</Encumbrance>
-<Group>"RULES-WTYPE2_CAVALRY"</Group>
-<Damage>"SB+2"</Damage>
-<Qualities>"Fast, Impact, Tiring"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
+<Quality>"RULES-WEAPQ_FAST,RULES-WEAPQ_IMPACT,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_CAVALRY"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_LONG_AXE">
+</Weapon>
+<Weapon id="STSW-COMB_V2_LONG_AXE">
 <Description language="ENGLISH">"Long Axe (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"9 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+2"</Damage>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"9CO"</Price>
 <Encumbrance>"170"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+2"</Damage>
-<Qualities>"Impact, Slow"</Qualities>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_LONGSWORD">
+</Weapon>
+<Weapon id="STSW-COMB_V2_LONGSWORD">
 <Description language="ENGLISH">"Longsword (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"29 gc 5s"</Cost>
-<Encumbrance>"100"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Balanced, (Impact)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"29CO 5PA"</Price>
+<Encumbrance>"100"</Encumbrance>
+<Quality>"RULES-WEAPQ_BALANCED"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: (Impact)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_MACE">
+</Weapon>
+<Weapon id="STSW-COMB_V2_MACE">
 <Description language="ENGLISH">"Mace (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"9 gc"</Cost>
-<Encumbrance>"80"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Armour Piercing, Pummelling, Unwieldy"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"9CO"</Price>
+<Encumbrance>"80"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Unwieldy"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_MAIN_GAUCHE">
+</Weapon>
+<Weapon id="STSW-COMB_V2_MAIN_GAUCHE">
 <Description language="ENGLISH">"Main Gauche (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"5 gc"</Cost>
-<Encumbrance>"20"</Encumbrance>
-<Group>"RULES-WTYPE2_PARRYING"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Defensive, Off-Hand"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"5CO"</Price>
+<Encumbrance>"20"</Encumbrance>
+<Quality>"RULES-WEAPQ_DEFENSIVE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_PARRYING"</Type>
+<Note>"Other qualities: Off-Hand"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_MILITARY_HAMMER">
+</Weapon>
+<Weapon id="STSW-COMB_V2_MILITARY_HAMMER">
 <Description language="ENGLISH">"Military Hammer (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"7 gc"</Cost>
-<Encumbrance>"80"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Armour Piercing, Pummelling, Unbalanced"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"7CO"</Price>
+<Encumbrance>"80"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Unbalanced"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_MORNINGSTAR">
+</Weapon>
+<Weapon id="STSW-COMB_V2_MORNINGSTAR">
 <Description language="ENGLISH">"Morningstar (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"14 gc"</Cost>
-<Encumbrance>"80"</Encumbrance>
-<Group>"RULES-WTYPE2_FLAIL"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Fast, Impact, Tiring"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"14CO"</Price>
+<Encumbrance>"80"</Encumbrance>
+<Quality>"RULES-WEAPQ_FAST,RULES-WEAPQ_IMPACT,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FLAIL"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_PARTIZAN">
+</Weapon>
+<Weapon id="STSW-COMB_V2_PARTIZAN">
 <Description language="ENGLISH">"Partizan (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"13 gc"</Cost>
-<Encumbrance>"150"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Defensive, (Fast or Impact)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"13CO"</Price>
+<Encumbrance>"150"</Encumbrance>
+<Quality>"RULES-WEAPQ_DEFENSIVE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: (Fast or Impact)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_PICK">
+</Weapon>
+<Weapon id="STSW-COMB_V2_PICK">
 <Description language="ENGLISH">"Pick (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"8 gc 10s"</Cost>
-<Encumbrance>"200"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB+3"</Damage>
-<Qualities>"Armour Piercing, Slow, Unbalanced"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+3"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"8CO 10PA"</Price>
+<Encumbrance>"200"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Unbalanced"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_PIKE">
+</Weapon>
+<Weapon id="STSW-COMB_V2_PIKE">
 <Description language="ENGLISH">"Pike (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"2 gc 16s"</Cost>
-<Encumbrance>"240"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB+2"</Damage>
-<Qualities>"Special, Unwieldy"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+2"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"2CO 16PA"</Price>
+<Encumbrance>"240"</Encumbrance>
+<Quality>"RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Unwieldy"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_POLEAXE">
+</Weapon>
+<Weapon id="STSW-COMB_V2_POLEAXE">
 <Description language="ENGLISH">"Poleaxe (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"12 gc"</Cost>
-<Encumbrance>"160"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+2"</Damage>
-<Qualities>"(Fast or Impact), Unwieldy"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+2"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"12CO"</Price>
+<Encumbrance>"160"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Other qualities: (Fast or Impact), Unwieldy"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_QUARTERSTAFF">
+</Weapon>
+<Weapon id="STSW-COMB_V2_QUARTERSTAFF">
 <Description language="ENGLISH">"Quarterstaff (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"3s"</Cost>
-<Encumbrance>"80"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–1"</Damage>
-<Qualities>"Defensive, Fast, Pummelling"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
 <Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Price>"3PA"</Price>
+<Encumbrance>"80"</Encumbrance>
+<Quality>"RULES-WEAPQ_DEFENSIVE,RULES-WEAPQ_FAST,RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_RAPIER">
+</Weapon>
+<Weapon id="STSW-COMB_V2_RAPIER">
 <Description language="ENGLISH">"Rapier (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"20 gc"</Cost>
-<Encumbrance>"30"</Encumbrance>
-<Group>"RULES-WTYPE2_FENCING"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Balanced, Defensive, Fast"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"20CO"</Price>
+<Encumbrance>"30"</Encumbrance>
+<Quality>"RULES-WEAPQ_BALANCED,RULES-WEAPQ_DEFENSIVE,RULES-WEAPQ_FAST"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FENCING"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SAP">
+</Weapon>
+<Weapon id="STSW-COMB_V2_SAP">
 <Description language="ENGLISH">"Sap (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"4s"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"4PA"</Price>
 <Encumbrance>"5"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Pummelling, Unwieldy"</Qualities>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Quality>"RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Unwieldy"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SCIMITAR">
+</Weapon>
+<Weapon id="STSW-COMB_V2_SCIMITAR">
 <Description language="ENGLISH">"Scimitar (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"19 gc 10s"</Cost>
-<Encumbrance>"60"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Fast, Precise"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Price>"19CO 10PA"</Price>
+<Encumbrance>"60"</Encumbrance>
+<Quality>"RULES-WEAPQ_FAST,RULES-WEAPQ_PRECISE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SHIELD_HEATER">
+</Weapon>
+<Weapon id="STSW-COMB_V2_SHIELD_HEATER">
 <Description language="ENGLISH">"Shield, Heater (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"7 gc"</Cost>
-<Encumbrance>"60"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–4"</Damage>
-<Qualities>"Cover, Defensive"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-4"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"7CO"</Price>
+<Encumbrance>"60"</Encumbrance>
+<Quality>"RULES-WEAPQ_DEFENSIVE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Cover"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SHIELD_KITE">
+</Weapon>
+<Weapon id="STSW-COMB_V2_SHIELD_KITE">
 <Description language="ENGLISH">"Shield, Kite (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"7 gc 4s"</Cost>
-<Encumbrance>"80"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–4"</Damage>
-<Qualities>"Cover, Defensive"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-4"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"7CO 4PA"</Price>
+<Encumbrance>"80"</Encumbrance>
+<Quality>"RULES-WEAPQ_DEFENSIVE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Cover"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SHIELD_LARGE_ROUND">
+</Weapon>
+<Weapon id="STSW-COMB_V2_SHIELD_LARGE_ROUND">
 <Description language="ENGLISH">"Shield, Large Round (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"9 gc 12s"</Cost>
-<Encumbrance>"100"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Cover, Defensive, Slow"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"9CO 12PA"</Price>
+<Encumbrance>"100"</Encumbrance>
+<Quality>"RULES-WEAPQ_DEFENSIVE,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Cover"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SHIELD_SPIKED">
+</Weapon>
+<Weapon id="STSW-COMB_V2_SHIELD_SPIKED">
 <Description language="ENGLISH">"Shield, Spiked (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"5 gc 8s"</Cost>
-<Encumbrance>"60"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Armour Piercing, Defensive"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"5CO 8PA"</Price>
+<Encumbrance>"60"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_DEFENSIVE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SHIELD_TARGET">
+</Weapon>
+<Weapon id="STSW-COMB_V2_SHIELD_TARGET">
 <Description language="ENGLISH">"Shield, Target (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"4 gc 4s"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Defensive, Pummelling"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"4CO 4PA"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>"RULES-WEAPQ_DEFENSIVE,RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SHIELD_TOWER_PAVISE">
+</Weapon>
+<Weapon id="STSW-COMB_V2_SHIELD_TOWER_PAVISE">
 <Description language="ENGLISH">"Shield, Tower (Pavise) (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"9 gc 12s"</Cost>
-<Encumbrance>"160"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–5"</Damage>
-<Qualities>"Special, Unbalanced, Unwieldy"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-5"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"9CO 12PA"</Price>
+<Encumbrance>"160"</Encumbrance>
+<Quality>"RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Unbalanced, Unwieldy"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SHORTSWORD">
+</Weapon>
+<Weapon id="STSW-COMB_V2_SHORTSWORD">
 <Description language="ENGLISH">"Shortsword (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"14 gc 12s 6d"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–1"</Damage>
-<Qualities>"Balanced, Fast"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"14CO 12PA 6SB"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Quality>"RULES-WEAPQ_BALANCED,RULES-WEAPQ_FAST"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SPEAR_ELVEN">
+</Weapon>
+<Weapon id="STSW-COMB_V2_SPEAR_ELVEN">
 <Description language="ENGLISH">"Spear, Elven (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"20 gc"</Cost>
-<Encumbrance>"80"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB+2"</Damage>
-<Qualities>"Armour Piercing, Balanced, Fast"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+2"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Price>"20CO"</Price>
+<Encumbrance>"80"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_BALANCED,RULES-WEAPQ_FAST"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SPEAR_LONG">
+</Weapon>
+<Weapon id="STSW-COMB_V2_SPEAR_LONG">
 <Description language="ENGLISH">"Spear, Long (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"2 gc 12s 6d"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+2"</Damage>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"2CO 12PA 6SB"</Price>
 <Encumbrance>"150"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB+2"</Damage>
-<Qualities>"Armour Piercing, Fast"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_FAST"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SPEAR_SHORT">
+</Weapon>
+<Weapon id="STSW-COMB_V2_SPEAR_SHORT">
 <Description language="ENGLISH">"Spear, Short (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"1 gc 15s"</Cost>
-<Encumbrance>"100"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Fast, Unwieldy"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"1CO 15PA"</Price>
+<Encumbrance>"100"</Encumbrance>
+<Quality>"RULES-WEAPQ_FAST"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Unwieldy"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SICKLE">
+</Weapon>
+<Weapon id="STSW-COMB_V2_SICKLE">
 <Description language="ENGLISH">"Sickle (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"2 gc 5s"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Unbalanced"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Price>"2CO 5PA"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Unbalanced"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_STILETTO">
+</Weapon>
+<Weapon id="STSW-COMB_V2_STILETTO">
 <Description language="ENGLISH">"Stiletto (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"6 gc"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_FENCING"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Armour Piercing, Off-Hand, Precise"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"6CO"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_PRECISE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FENCING"</Type>
+<Note>"Other qualities: Off-Hand"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_SWORD_BREAKER">
+</Weapon>
+<Weapon id="STSW-COMB_V2_SWORD_BREAKER">
 <Description language="ENGLISH">"Sword-breaker (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"5 gc 10s"</Cost>
-<Encumbrance>"20"</Encumbrance>
-<Group>"RULES-WTYPE2_PARRYING"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Defensive, Off-Hand, Special"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"5CO 10PA"</Price>
+<Encumbrance>"20"</Encumbrance>
+<Quality>"RULES-WEAPQ_DEFENSIVE,RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_PARRYING"</Type>
+<Note>"Other qualities: Off-Hand"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_TRIDENT">
+</Weapon>
+<Weapon id="STSW-COMB_V2_TRIDENT">
 <Description language="ENGLISH">"Trident (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"2 gc"</Cost>
-<Encumbrance>"100"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Armour Piercing, Unbalanced"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Price>"2CO"</Price>
+<Encumbrance>"100"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Unbalanced"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MELEE_WEAPONS_WARHAMMER">
+</Weapon>
+<Weapon id="STSW-COMB_V2_WARHAMMER">
 <Description language="ENGLISH">"Warhammer (STS)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
-<Encumbrance>"200"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB+2"</Damage>
-<Qualities>"Impact, Pummelling"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+2"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"15CO"</Price>
+<Encumbrance>"200"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_ARQUEBUS_FIREARM">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_ARQUEBUS_FIREARM">
 <Description language="ENGLISH">"Arquebus (Firearm) (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"100 gc"</Cost>
-<Encumbrance>"80"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"0"</Damage>
-<Range>"24/48"</Range>
-<Reload>"2 Full"</Reload>
-<Qualities>"Gun, Unreliable"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Reach>"24/48"</Reach>
+<Price>"100CO"</Price>
+<Encumbrance>"80"</Encumbrance>
+<Quality>"RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_GUNPOWDER"</Type>
+<Reload>"2 Full"</Reload>
+<Note>"Other qualities: Gun"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_BLUNDERBUSS">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_BLUNDERBUSS">
 <Description language="ENGLISH">"Blunderbuss (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"40 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Reach>"16/-"</Reach>
+<Price>"40CO"</Price>
 <Encumbrance>"100"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"-1"</Damage>
-<Range>"16/-"</Range>
+<Quality>"RULES-WEAPQ_SHRAPNEL,RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_GUNPOWDER"</Type>
 <Reload>"3 Full"</Reload>
-<Qualities>"Gun, Shrapnel, Unreliable"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
+<Note>"Other qualities: Gun | Damage: -1"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_BOLA">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_BOLA">
 <Description language="ENGLISH">"Bola (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"7s"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"SB–4"</Damage>
-<Range>"8/16"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Pummelling or Snare"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-4"</Damage>
 <Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Reach>"8/16"</Reach>
+<Price>"7PA"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Pummelling or Snare"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_BOW_ELF">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_BOW_ELF">
 <Description language="ENGLISH">"Bow, Elf (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"60 gc"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_BOW"</Group>
-<Damage>"5"</Damage>
-<Range>"48/96"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"(Armour Piercing or Precise)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+5"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"48/96"</Reach>
+<Price>"60CO"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_BOW"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: (Armour Piercing or Precise)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_BOW_KISLEVITE">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_BOW_KISLEVITE">
 <Description language="ENGLISH">"Bow, Kislevite (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_BOW"</Group>
-<Damage>"4"</Damage>
-<Range>"34/68"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"(Armour Piercing or Precise)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+4"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Reach>"34/68"</Reach>
+<Price>"15CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_BOW"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: (Armour Piercing or Precise)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_BOW_LONG">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_BOW_LONG">
 <Description language="ENGLISH">"Bow, Long (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
-<Encumbrance>"60"</Encumbrance>
-<Group>"RULES-WTYPE2_BOW"</Group>
-<Damage>"4"</Damage>
-<Range>"36/72"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"(Armour Piercing or Precise)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+4"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Reach>"36/72"</Reach>
+<Price>"15CO"</Price>
+<Encumbrance>"60"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_BOW"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: (Armour Piercing or Precise)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_BOW_HUNTING">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_BOW_HUNTING">
 <Description language="ENGLISH">"Bow, Hunting (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"11 gc"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"3"</Damage>
-<Range>"24/48"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"(Armour Piercing or Precise)"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Reach>"24/48"</Reach>
+<Price>"11CO"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: (Armour Piercing or Precise)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_CROSSBOW_GOAT_S_FOOT">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_CROSSBOW_GOAT_S_FOOT">
 <Description language="ENGLISH">"Crossbow, Goat's Foot (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"16 gc"</Cost>
-<Encumbrance>"120"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"1"</Damage>
-<Range>"30/60"</Range>
-<Reload>"Full"</Reload>
-<Qualities>"(Armour Piercing or Precise), Impact"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+1"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Reach>"30/60"</Reach>
+<Price>"16CO"</Price>
+<Encumbrance>"120"</Encumbrance>
+<Quality>"RULES-WEAPQ_IMPACT"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"Full"</Reload>
+<Note>"Other qualities: (Armour Piercing or Precise)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_CROSSBOW_CRANEQUIN">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_CROSSBOW_CRANEQUIN">
 <Description language="ENGLISH">"Crossbow, Cranequin (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"32 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+2"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Reach>"38/76"</Reach>
+<Price>"32CO"</Price>
 <Encumbrance>"160"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"2"</Damage>
-<Range>"38/76"</Range>
+<Quality>"RULES-WEAPQ_IMPACT"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"1½ Full"</Reload>
-<Qualities>"(Armour Piercing or Precise), Impact"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Note>"Other qualities: (Armour Piercing or Precise)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_CROSSBOW_WINDLASS">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_CROSSBOW_WINDLASS">
 <Description language="ENGLISH">"Crossbow, Windlass (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"64 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Reach>"40/80"</Reach>
+<Price>"64CO"</Price>
 <Encumbrance>"240"</Encumbrance>
-<Group>"RULES-WTYPE2_CROSSBOW"</Group>
-<Damage>"3"</Damage>
-<Range>"40/80"</Range>
+<Quality>"RULES-WEAPQ_IMPACT"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_CROSSBOW"</Type>
 <Reload>"2 Full"</Reload>
-<Qualities>"(Armour Piercing or Precise), Impact"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
+<Note>"Other qualities: (Armour Piercing or Precise)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_CROSSBOW_PISTOL">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_CROSSBOW_PISTOL">
 <Description language="ENGLISH">"Crossbow, Pistol (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"12 gc"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_CROSSBOW"</Group>
-<Damage>"3"</Damage>
-<Range>"8/16"</Range>
-<Reload>"Full"</Reload>
-<Qualities>"(Armour Piercing or Precise), Balanced"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
+<Reach>"8/16"</Reach>
+<Price>"12CO"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>"RULES-WEAPQ_BALANCED"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_CROSSBOW"</Type>
+<Reload>"Full"</Reload>
+<Note>"Other qualities: (Armour Piercing or Precise)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_DART">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_DART">
 <Description language="ENGLISH">"Dart (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"2 gc"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB–2"</Damage>
-<Range>"8/16"</Range>
-<Reload>"Half"</Reload>
-<Qualities>""</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
 <Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Reach>"8/16"</Reach>
+<Price>"2CO"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
+<Reload>"Half"</Reload>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_DUCKFOOT">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_DUCKFOOT">
 <Description language="ENGLISH">"Duckfoot (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"120 gc"</Cost>
-<Encumbrance>"120"</Encumbrance>
-<Group>"RULES-WTYPE2_ENGINEERING"</Group>
-<Damage>"-1"</Damage>
-<Range>"16/-"</Range>
-<Reload>"4 Full"</Reload>
-<Qualities>"Experimental, Gun, Special"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"16/-"</Reach>
+<Price>"120CO"</Price>
+<Encumbrance>"120"</Encumbrance>
+<Quality>"RULES-WEAPQ_EXPERIMENTAL,RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENGINEERING"</Type>
+<Reload>"4 Full"</Reload>
+<Note>"Other qualities: Gun | Damage: -1"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_DUELLING_PISTOL">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_DUELLING_PISTOL">
 <Description language="ENGLISH">"Duelling Pistol (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"150 gc"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"0"</Damage>
-<Range>"12/24"</Range>
-<Reload>"2 Full"</Reload>
-<Qualities>"Gun, Unreliable"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"12/24"</Reach>
+<Price>"150CO"</Price>
+<Encumbrance>"40"</Encumbrance>
+<Quality>"RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_GUNPOWDER"</Type>
+<Reload>"2 Full"</Reload>
+<Note>"Other qualities: Gun"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_FRANSICA_AXE">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_FRANSICA_AXE">
 <Description language="ENGLISH">"Fransica (Axe) (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"5 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Reach>"8/-"</Reach>
+<Price>"5CO"</Price>
 <Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB"</Damage>
-<Range>"8/-"</Range>
+<Quality>"RULES-WEAPQ_PRECISE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Precise"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_HARPOON">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_HARPOON">
 <Description language="ENGLISH">"Harpoon (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"1 gc 6s"</Cost>
-<Encumbrance>"70"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–1"</Damage>
-<Range>"8/16"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Precise"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Reach>"8/16"</Reach>
+<Price>"1CO 6PA"</Price>
+<Encumbrance>"70"</Encumbrance>
+<Quality>"RULES-WEAPQ_PRECISE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"Half"</Reload>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_HENRICUS_SALUS">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_HENRICUS_SALUS">
 <Description language="ENGLISH">"Henricus Salus (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"175 gc"</Cost>
-<Encumbrance>"60"</Encumbrance>
-<Group>"RULES-WTYPE2_ENGINEERING"</Group>
-<Damage>"1"</Damage>
-<Range>"8/16"</Range>
-<Reload>"2 Full"</Reload>
-<Qualities>"Experimental, Gun"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+1"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"8/16"</Reach>
+<Price>"175CO"</Price>
+<Encumbrance>"60"</Encumbrance>
+<Quality>"RULES-WEAPQ_EXPERIMENTAL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENGINEERING"</Type>
+<Reload>"2 Full"</Reload>
+<Note>"Other qualities: Gun"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_HOCHLAND_LONG_RIFLE">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_HOCHLAND_LONG_RIFLE">
 <Description language="ENGLISH">"Hochland Long Rifle (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"200 gc"</Cost>
-<Encumbrance>"250"</Encumbrance>
-<Group>"RULES-WTYPE2_ENGINEERING"</Group>
-<Damage>"0"</Damage>
-<Range>"48/96"</Range>
-<Reload>"2 Full"</Reload>
-<Qualities>"Gun, Unreliable"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"48/96"</Reach>
+<Price>"200CO"</Price>
+<Encumbrance>"250"</Encumbrance>
+<Quality>"RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENGINEERING"</Type>
+<Reload>"2 Full"</Reload>
+<Note>"Other qualities: Gun"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_IMPROVISED">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_IMPROVISED">
 <Description language="ENGLISH">"Improvised (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"Varies"</Cost>
-<Encumbrance>"Varies"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Range>"6/-"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Unbalanced"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
 <Availability>"RULES-DISPO2_ABUNDANT"</Availability>
+<Reach>"6/-"</Reach>
+<Price>"Varies"</Price>
+<Encumbrance>"Varies"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"Half"</Reload>
+<Note>"Other qualities: Unbalanced"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_JAVELIN">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_JAVELIN">
 <Description language="ENGLISH">"Javelin (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"1 gc 5s"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Reach>"8/16"</Reach>
+<Price>"1CO 5PA"</Price>
 <Encumbrance>"60"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–1"</Damage>
-<Range>"8/16"</Range>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Armour Piercing"</Qualities>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_JEZZAIL">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_JEZZAIL">
 <Description language="ENGLISH">"Jezzail (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"250 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"24/72"</Reach>
+<Price>"250CO"</Price>
 <Encumbrance>"200"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"0"</Damage>
-<Range>"24/72"</Range>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_GUNPOWDER"</Type>
 <Reload>"2 Full"</Reload>
-<Qualities>"Gun"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Other qualities: Gun"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_LASSO">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_LASSO">
 <Description language="ENGLISH">"Lasso (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"1 gc"</Cost>
-<Encumbrance>"30"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"n/a"</Damage>
-<Range>"8/-"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Snare"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
 <Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
+<Reach>"8/-"</Reach>
+<Price>"1CO"</Price>
+<Encumbrance>"30"</Encumbrance>
+<Quality>"RULES-WEAPQ_SNARE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
+<Reload>"Half"</Reload>
+<Note>"Damage: n/a"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_NET_FIGHTING">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_NET_FIGHTING">
 <Description language="ENGLISH">"Net, Fighting (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"1 gc 10s"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Reach>"8/-"</Reach>
+<Price>"1CO 10PA"</Price>
 <Encumbrance>"80"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"n/a"</Damage>
-<Range>"8/-"</Range>
+<Quality>"RULES-WEAPQ_SNARE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Snare"</Qualities>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Note>"Damage: n/a"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_PIKE_GUN">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_PIKE_GUN">
 <Description language="ENGLISH">"Pike Gun (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"80 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"8/16"</Reach>
+<Price>"80CO"</Price>
 <Encumbrance>"250"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"0"</Damage>
-<Range>"8/16"</Range>
+<Quality>"RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_GUNPOWDER"</Type>
 <Reload>"2 Full"</Reload>
-<Qualities>"Gun, Unbalanced, Unreliable"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Note>"Other qualities: Gun, Unbalanced"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_PISTOL">
+</Weapon>
+<Weapon id="STSW-PROJ_V2_PISTOL">
 <Description language="ENGLISH">"Pistol (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"60 gc"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"0"</Damage>
-<Range>"8/16"</Range>
-<Reload>"2 Full"</Reload>
-<Qualities>"Gun, Unreliable"</Qualities>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
 <Availability>"RULES-DISPO2_RARE"</Availability>
-<Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_REPEATER_CROSSBOW">
-<Description language="ENGLISH">"Repeater Crossbow (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"120 gc"</Cost>
-<Encumbrance>"150"</Encumbrance>
-<Group>"RULES-WTYPE2_CROSSBOW"</Group>
-<Damage>"4"</Damage>
-<Range>"16/32"</Range>
-<Reload>"1 Full"</Reload>
-<Qualities>"(Armour Piercing or Precise), Special"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
-<Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_REPEATER_HANDGUN">
-<Description language="ENGLISH">"Repeater Handgun (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"300 gc"</Cost>
-<Encumbrance>"120"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"0"</Damage>
-<Range>"24/48"</Range>
-<Reload>"2 Full"</Reload>
-<Qualities>"Experimental, Gun, Special"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
-<Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_REPEATER_PISTOL">
-<Description language="ENGLISH">"Repeater Pistol (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"250 gc"</Cost>
-<Encumbrance>"70"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"0"</Damage>
-<Range>"8/16"</Range>
-<Reload>"2 Full"</Reload>
-<Qualities>"Experimental, Gun, Special"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
-<Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_SLING">
-<Description language="ENGLISH">"Sling (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"2s"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_SLING"</Group>
-<Damage>"2"</Damage>
-<Range>"16/32"</Range>
-<Reload>"Half"</Reload>
-<Qualities>""</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
-<Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_STAFF_SLING">
-<Description language="ENGLISH">"Staff Sling (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"6s"</Cost>
+<Reach>"8/16"</Reach>
+<Price>"60CO"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_SLING"</Group>
-<Damage>"3"</Damage>
-<Range>"24/48"</Range>
-<Reload>"Full"</Reload>
-<Qualities>""</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Quality>"RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_GUNPOWDER"</Type>
+<Reload>"2 Full"</Reload>
+<Note>"Other qualities: Gun"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_SWIVEL_GUN">
-<Description language="ENGLISH">"Swivel Gun (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"200 gc"</Cost>
-<Encumbrance>"500"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"4"</Damage>
-<Range>"24/72"</Range>
-<Reload>"4 Full"</Reload>
-<Qualities>"Experimental, Gun"</Qualities>
+</Weapon>
+<Weapon id="STSW-PROJ_V2_REPEATER_CROSSBOW">
+<Description language="ENGLISH">"Repeater Crossbow (STS)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+4"</Damage>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"16/32"</Reach>
+<Price>"120CO"</Price>
+<Encumbrance>"150"</Encumbrance>
+<Quality>"RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_CROSSBOW"</Type>
+<Reload>"1 Full"</Reload>
+<Note>"Other qualities: (Armour Piercing or Precise)"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_TABURI_THROWING_KNIFE">
-<Description language="ENGLISH">"Taburi (Throwing Knife) (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"4 gc"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB–2"</Damage>
-<Range>"12/-"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Balanced"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
+</Weapon>
+<Weapon id="STSW-PROJ_V2_REPEATER_HANDGUN">
+<Description language="ENGLISH">"Repeater Handgun (STS)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"24/48"</Reach>
+<Price>"300CO"</Price>
+<Encumbrance>"120"</Encumbrance>
+<Quality>"RULES-WEAPQ_EXPERIMENTAL,RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_GUNPOWDER"</Type>
+<Reload>"2 Full"</Reload>
+<Note>"Other qualities: Gun"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_THROWING_HAMMER">
-<Description language="ENGLISH">"Throwing Hammer (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"8 gc"</Cost>
-<Encumbrance>"20"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB"</Damage>
-<Range>"8/-"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Pummelling"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
+</Weapon>
+<Weapon id="STSW-PROJ_V2_REPEATER_PISTOL">
+<Description language="ENGLISH">"Repeater Pistol (STS)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"8/16"</Reach>
+<Price>"250CO"</Price>
+<Encumbrance>"70"</Encumbrance>
+<Quality>"RULES-WEAPQ_EXPERIMENTAL,RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_GUNPOWDER"</Type>
+<Reload>"2 Full"</Reload>
+<Note>"Other qualities: Gun"</Note>
 <Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_WHIP">
-<Description language="ENGLISH">"Whip (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"15s"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"SB–4"</Damage>
-<Range>"6/-"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Snare"</Qualities>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
-<Page>"1"</Page>
-</EquipmentV2>
-<EquipmentV2 id="STSW-EQUI_MISSILE_WEAPONS_SPEAR_SHORT">
-<Description language="ENGLISH">"Spear, Short (STS)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"1 gc 15s"</Cost>
-<Encumbrance>"100"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–1"</Damage>
-<Range>"7/-"</Range>
-<Reload>"Half"</Reload>
-<Qualities>""</Qualities>
+</Weapon>
+<Weapon id="STSW-PROJ_V2_SLING">
+<Description language="ENGLISH">"Sling (STS)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+2"</Damage>
 <Availability>"RULES-DISPO2_COMMON"</Availability>
+<Reach>"16/32"</Reach>
+<Price>"2PA"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_SLING"</Type>
+<Reload>"Half"</Reload>
 <Page>"1"</Page>
-</EquipmentV2>
-</DATA_EQUIPMENT_V2>
+</Weapon>
+<Weapon id="STSW-PROJ_V2_STAFF_SLING">
+<Description language="ENGLISH">"Staff Sling (STS)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Reach>"24/48"</Reach>
+<Price>"6PA"</Price>
+<Encumbrance>"50"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_SLING"</Type>
+<Reload>"Full"</Reload>
+<Page>"1"</Page>
+</Weapon>
+<Weapon id="STSW-PROJ_V2_SWIVEL_GUN">
+<Description language="ENGLISH">"Swivel Gun (STS)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+4"</Damage>
+<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
+<Reach>"24/72"</Reach>
+<Price>"200CO"</Price>
+<Encumbrance>"500"</Encumbrance>
+<Quality>"RULES-WEAPQ_EXPERIMENTAL"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_GUNPOWDER"</Type>
+<Reload>"4 Full"</Reload>
+<Note>"Other qualities: Gun"</Note>
+<Page>"1"</Page>
+</Weapon>
+<Weapon id="STSW-PROJ_V2_TABURI_THROWING_KNIFE">
+<Description language="ENGLISH">"Taburi (Throwing Knife) (STS)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Reach>"12/-"</Reach>
+<Price>"4CO"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Quality>"RULES-WEAPQ_BALANCED"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
+<Reload>"Half"</Reload>
+<Page>"1"</Page>
+</Weapon>
+<Weapon id="STSW-PROJ_V2_THROWING_HAMMER">
+<Description language="ENGLISH">"Throwing Hammer (STS)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Reach>"8/-"</Reach>
+<Price>"8CO"</Price>
+<Encumbrance>"20"</Encumbrance>
+<Quality>"RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
+<Reload>"Half"</Reload>
+<Page>"1"</Page>
+</Weapon>
+<Weapon id="STSW-PROJ_V2_WHIP">
+<Description language="ENGLISH">"Whip (STS)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-4"</Damage>
+<Availability>"RULES-DISPO2_AVERAGE"</Availability>
+<Reach>"6/-"</Reach>
+<Price>"15PA"</Price>
+<Encumbrance>"10"</Encumbrance>
+<Quality>"RULES-WEAPQ_SNARE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
+<Reload>"Half"</Reload>
+<Page>"1"</Page>
+</Weapon>
+<Weapon id="STSW-PROJ_V2_SPEAR_SHORT">
+<Description language="ENGLISH">"Spear, Short (STS)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
+<Availability>"RULES-DISPO2_COMMON"</Availability>
+<Reach>"7/-"</Reach>
+<Price>"1CO 15PA"</Price>
+<Encumbrance>"100"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"Half"</Reload>
+<Page>"1"</Page>
+</Weapon>
+</DATA_WEAPON>
 </DATA_BOOK>

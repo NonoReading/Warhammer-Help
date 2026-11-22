@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   SCHEMA_WFRP1.xsd
-  Schema de DATABASE/WFRP1/*.Xml (WFRP 1re edition). Cree le 25/10/2026 (CONTEXT.md, section « V1 : schema SCHEMA_WFRP1.xsd »,
-  valide par Nono). Comme SCHEMA_WFRP2.xsd il INCLUT SCHEMA_COMMON.xsd : caracteristiques, races, ethnies, tirages et tables
-  de details personnels gardent les blocs communs ; ici ne restent que les ajouts propres a la V1 (carriere a Advance Scheme,
-  competence a effet, sort a points de magie, divinite, handicap magique, equipement a disponibilite).
-  V1 n a ni talents ni profil secondaire. Le combat, les poisons, les maladies et les critiques restent en texte de regle (DATA_RULE).
-  Codes : LIVRE-TYPE_NOM (RULES-WORK_..., RULES-COMP_..., RULES-SPELL_...).
+  Schema of DATABASE/WFRP1/*.Xml (WFRP 1st edition). Like SCHEMA_WFRP2.xsd it INCLUDES SCHEMA_COMMON.xsd:
+  characteristics, races, ethnicities, rolls and personal-detail tables keep the common blocks; only
+  the V1-specific additions remain here (career with Advance Scheme, skill with an effect,
+  spell with magic points, deity, magical handicap, equipment with availability).
+  V1 has no talents and no secondary profile. Combat, poisons, diseases and criticals stay as rule text (DATA_RULE).
+  Codes: BOOK-TYPE_NAME (RULES-WORK_..., RULES-COMP_..., RULES-SPELL_...).
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
@@ -14,10 +14,10 @@
 
   <xs:include schemaLocation="SCHEMA_COMMON.xsd"/>
 
-  <!-- ===================== CARRIERE V1 ===================== -->
+  <!-- ===================== CAREER V1 ===================== -->
   <xs:complexType name="AdvanceSchemeType">
     <xs:annotation>
-      <xs:documentation xml:lang="fr">ADVANCE SCHEME : une ligne par colonne du profil dont le plafond est non nul. name = caracteristique (RULES-ATTR_*), valeur = PLAFOND cumule tel que le livre (10 = +10 %, 1 = +1 pour M / S / T / A, 2 = +2 Blessures). Ce n est pas un gain : le personnage peut acheter des avances jusqu a ce plafond (100 EP par avance).</xs:documentation>
+      <xs:documentation xml:lang="en">ADVANCE SCHEME: one line per profile column whose ceiling is non-zero. name = characteristic (RULES-ATTR_*), value = cumulative CEILING as in the book (10 = +10 %, 1 = +1 for M / S / T / A, 2 = +2 Wounds). This is not a gain: the character can buy advances up to this ceiling (100 XP per advance).</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Advance" maxOccurs="unbounded">
@@ -36,26 +36,26 @@
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
       <xs:element name="Explanation" type="LangString" minOccurs="0"/>
-      <!-- Warrior / Ranger / Rogue / Academic : classe d origine de la carriere de base ; sert au cout de changement de carriere (100 EP meme classe, 200 EP autre classe). -->
-      <!-- Absent pour une carriere avancee (la classe n existe qu a la creation). -->
+      <!-- Warrior / Ranger / Rogue / Academic: class of origin of the basic career; used for the cost of changing career (100 XP same class, 200 XP other class). -->
+      <!-- Absent for an advanced career (the class only exists at creation). -->
       <xs:element name="Class" type="xs:string" minOccurs="0"/>
-      <!-- "1" pour une carriere de base (tiree a la creation), absent pour une avancee. -->
+      <!-- "1" for a basic career (rolled at creation), absent for an advanced one. -->
       <xs:element name="Basic" type="xs:string" minOccurs="0"/>
-      <!-- Niveau 1 a 4 des carrieres de magie et de pretre (Wizard, Alchemist, Cleric, Druidic Priest...) ; "0" pour un apprenti ; absent sinon. -->
+      <!-- Level 1 to 4 of the magic and priest careers (Wizard, Alchemist, Cleric, Druidic Priest...); "0" for an apprentice; absent otherwise. -->
       <xs:element name="Level" type="xs:string" minOccurs="0"/>
-      <!-- Ecole de magie ou culte lie : Wizard, Alchemist, Demonologist, Elementalist, Illusionist, Necromancer, Cleric, Druidic Priest. -->
+      <!-- Linked school of magic or cult: Wizard, Alchemist, Demonologist, Elementalist, Illusionist, Necromancer, Cleric, Druidic Priest. -->
       <xs:element name="MagicSchool" type="xs:string" minOccurs="0"/>
-      <!-- Cout en EP pour entrer dans la carriere (100 / 200 / 300 / 400 en magie, 800 pour un specialiste de niveau 4...). Absent : cout normal des regles. -->
+      <!-- XP cost to enter the career (100 / 200 / 300 / 400 for magic, 800 for a level 4 specialist...). Absent: normal cost of the rules. -->
       <xs:element name="EntryCost" type="xs:string" minOccurs="0"/>
       <xs:element name="AdvanceScheme" type="AdvanceSchemeType"/>
-      <!-- Texte du livre, "A or B" conserve ; liste en codes dans SUBCHAPTER_SKILL. -->
+      <!-- Text of the book, "A or B" kept; list as codes in SUBCHAPTER_SKILL. -->
       <xs:element name="Skills" type="xs:string" minOccurs="0"/>
       <xs:element name="SUBCHAPTER_SKILL" type="SubchapterSkill" minOccurs="0"/>
       <xs:element name="Trappings" type="xs:string"/>
       <xs:element name="SUBCHAPTER_ITEM" type="SubchapterItem" minOccurs="0"/>
       <xs:element name="StartMoney" type="xs:string" minOccurs="0"/>
-      <!-- Ni entrees ni sorties dans la carriere : les liens entre carrieres sont dans DATA_CAREER_LINK_V1. -->
-      <!-- Livre d origine d une carriere reimprimee ailleurs. -->
+      <!-- No entries or exits in the career: the links between careers are in DATA_CAREER_LINK_V1. -->
+      <!-- Source book of a career reprinted elsewhere. -->
       <xs:element name="Source" type="xs:string" minOccurs="0"/>
       <xs:element name="Page" type="xs:string" minOccurs="0"/>
     </xs:sequence>
@@ -68,10 +68,10 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- ===================== LIENS ENTRE CARRIERES V1 ===================== -->
+  <!-- ===================== LINKS BETWEEN V1 CAREERS ===================== -->
   <xs:complexType name="CareerLinkV1Type">
     <xs:annotation>
-      <xs:documentation xml:lang="fr">LIEN « CARRIERE 1 > CARRIERE 2 » : on peut passer de la carriere name (code) a la carriere dont le code est la valeur. Les entrees d une carriere sont les liens qui y arrivent, ses sorties les liens qui en partent : ni l une ni l autre n est stockee dans la carriere. Un livre ajoute ses liens ici, y compris vers ou depuis une carriere d un autre livre (un supplement ajoute une carriere sans pouvoir modifier celles du Rulebook). Un lien est range dans le livre qui apporte la carriere la plus recente.</xs:documentation>
+      <xs:documentation xml:lang="en">"CAREER 1 > CAREER 2" LINK: one can move from the career name (code) to the career whose code is the value. The entries of a career are the links that arrive at it, its exits the links that leave it: neither is stored in the career. A book adds its links here, including to or from a career of another book (a supplement adds a career without being able to modify those of the Rulebook). A link is stored in the book that brings the most recent career.</xs:documentation>
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -86,10 +86,10 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- ===================== COMPETENCE V1 ===================== -->
+  <!-- ===================== SKILL V1 ===================== -->
   <xs:complexType name="SkillBonusType">
     <xs:annotation>
-      <xs:documentation xml:lang="fr">EFFET CHIFFRE d une competence, applique automatiquement. Kind = TEST (bonus en pourcentage a un test nomme : Target = test, Value = +10), CHARACTERISTIC (Target = RULES-ATTR_*, Value = +1 ou +10, Very Strong F +1, Fleet Footed M +1), ou autre valeur de texte libre non appliquee.</xs:documentation>
+      <xs:documentation xml:lang="en">NUMERIC EFFECT of a skill, applied automatically. Kind = TEST (percentage bonus to a named test: Target = test, Value = +10), CHARACTERISTIC (Target = RULES-ATTR_*, Value = +1 or +10, Very Strong S +1, Fleet Footed M +1), or another free-text value that is not applied.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Kind" type="xs:string"/>
@@ -101,12 +101,12 @@
   <xs:complexType name="SkillV1Type">
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
-      <!-- Effet tel que le livre. -->
+      <!-- Effect as in the book. -->
       <xs:element name="Explanation" type="LangString"/>
       <xs:element name="Bonus" type="SkillBonusType" minOccurs="0" maxOccurs="unbounded"/>
-      <!-- "oui" : se cumule par acquisition multiple (Pick Lock, Pick Pocket) ; absent sinon. -->
+      <!-- "oui": cumulative through multiple acquisition (Pick Lock, Pick Pocket); absent otherwise. -->
       <xs:element name="Cumulative" type="xs:string" minOccurs="0"/>
-      <!-- "1" si la competence est une famille a variantes (Specialist Weapon, Secret Language, Arcane Language, Musicianship) : les variantes sont des DATA_SKILL_SPECIALIZATION de code COMP_FAMILLE__VARIANTE. -->
+      <!-- "1" if the skill is a family with variants (Specialist Weapon, Secret Language, Arcane Language, Musicianship): the variants are DATA_SKILL_SPECIALIZATION of code COMP_FAMILY__VARIANT. -->
       <xs:element name="Variants" type="xs:string" minOccurs="0"/>
       <xs:element name="Page" type="xs:string" minOccurs="0"/>
     </xs:sequence>
@@ -119,24 +119,24 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- ===================== SORT V1 ===================== -->
+  <!-- ===================== SPELL V1 ===================== -->
   <xs:complexType name="SpellV1Type">
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
       <xs:element name="Explanation" type="LangString"/>
-      <!-- Liste du sort : Petty, Battle, Demonic, Elemental, Illusion, Necromantic, Druidic, ou Clerical (sorts reserves a un culte, nommes dans l effet), ou Divine (prieres de Realm of Divine Magic). -->
+      <!-- Spell list: Petty, Battle, Demonic, Elemental, Illusion, Necromantic, Druidic, or Clerical (spells reserved to a cult, named in the effect), or Divine (prayers of Realm of Divine Magic). -->
       <xs:element name="SpellList" type="xs:string"/>
-      <!-- P, 1, 2, 3 ou 4. -->
+      <!-- P, 1, 2, 3 or 4. -->
       <xs:element name="SpellLevel" type="xs:string"/>
-      <!-- Points de magie : nombre, ou texte si variable (« 1 par Fire Ball »). -->
+      <!-- Magic points: a number, or text if variable ("1 per Fire Ball"). -->
       <xs:element name="MagicPoints" type="xs:string"/>
       <xs:element name="Range" type="xs:string"/>
       <xs:element name="Duration" type="xs:string"/>
       <xs:element name="Ingredients" type="xs:string" minOccurs="0"/>
-      <!-- Prieres (Realm of Divine Magic) : zone d effet et resistance (None, WP...). Absents pour les sorts. -->
+      <!-- Prayers (Realm of Divine Magic): area of effect and resistance (None, WP...). Absent for spells. -->
       <xs:element name="AreaOfEffect" type="xs:string" minOccurs="0"/>
       <xs:element name="Resistance" type="xs:string" minOccurs="0"/>
-      <!-- "oui" si la cible a droit a un test de Magie (Volonte), "non" pour un missile magique ; absent : non precise. -->
+      <!-- "oui" if the target is entitled to a Magic test (Willpower), "non" for a magic missile; absent: not specified. -->
       <xs:element name="MagicTest" type="xs:string" minOccurs="0"/>
       <xs:element name="Page" type="xs:string" minOccurs="0"/>
     </xs:sequence>
@@ -149,10 +149,10 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- ===================== DIVINITE V1 ===================== -->
+  <!-- ===================== DEITY V1 ===================== -->
   <xs:complexType name="SpellAccessType">
     <xs:annotation>
-      <xs:documentation xml:lang="fr">REGLE D ACCES AUX SORTS d un culte (pas de liste de sorts propre a chaque dieu) : Kind = LIST (Value = liste entiere, ex. « Petty », « Battle »), SPELL (Value = code d un sort precis), LEVELS (liste limitee a des niveaux, ex. « Elemental 1-2 »), EXCLUDE (sort ou liste interdit), ONE_PER_LEVEL (un seul sort par niveau tire de cette liste, druides), NOTE (sort cite par le livre mais introuvable dans les listes saisies, a verifier). Note = condition particuliere en texte.</xs:documentation>
+      <xs:documentation xml:lang="en">SPELL ACCESS RULE of a cult (no spell list of its own for each god): Kind = LIST (Value = a whole list, e.g. "Petty", "Battle"), SPELL (Value = code of a specific spell), LEVELS (list limited to levels, e.g. "Elemental 1-2"), EXCLUDE (forbidden spell or list), ONE_PER_LEVEL (a single spell per level drawn from this list, druids), NOTE (spell cited by the book but not found in the lists entered, to be checked). Note = particular condition as text.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Kind" type="xs:string"/>
@@ -163,7 +163,7 @@
 
   <xs:complexType name="SkillAccessType">
     <xs:annotation>
-      <xs:documentation xml:lang="fr">COMPETENCES DU CULTE, en plus de celles des carrieres d Initie et de Clerc (achetees 100 EP, sauf INITIATE et CLERIC_FREE). Kind = INITIATE (gagnee gratuitement au niveau d Initie), CLERIC_FREE (gratuite en devenant Clerc), CHOICE (une competence au choix par niveau, Initie et Clerc, parmi toutes celles de ce Kind du culte), FAMILY (une competence au choix d une famille entiere : Value = LANGUAGE, LORE, IDENTIFY), RANGER_CHART (100 EP = un jet sur la table des competences de Ranger, a l Initie et a chaque niveau de Clerc), DOUBLE_EFFECT (la competence a deja ete prise : l effet est double, achat unique), OPTION (achat particulier decrit dans Note). Value = code de competence. Note = precision en texte.</xs:documentation>
+      <xs:documentation xml:lang="en">SKILLS OF THE CULT, in addition to those of the Initiate and Cleric careers (bought for 100 XP, except INITIATE and CLERIC_FREE). Kind = INITIATE (gained free at the Initiate level), CLERIC_FREE (free on becoming a Cleric), CHOICE (one skill of your choice per level, Initiate and Cleric, among all those of this Kind of the cult), FAMILY (one skill of your choice from a whole family: Value = LANGUAGE, LORE, IDENTIFY), RANGER_CHART (100 XP = one roll on the Ranger skill table, at the Initiate level and at each Cleric level), DOUBLE_EFFECT (the skill was already taken: the effect is doubled, single purchase), OPTION (particular purchase described in Note). Value = skill code. Note = clarification as text.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Kind" type="xs:string"/>
@@ -196,10 +196,10 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- ===================== CULTE V1 (Realm of Divine Magic) ===================== -->
+  <!-- ===================== CULT V1 (Realm of Divine Magic) ===================== -->
   <xs:complexType name="CultPrayerType">
     <xs:annotation>
-      <xs:documentation xml:lang="fr">PRIERE D UN CULTE par rang. Rank = INITIATE, 1, 2, 3 ou 4. Kind = REQUIRED (accordee obligatoirement avant le rang suivant) ou HONOR (peut etre accordee, non exigee). Value = id d une priere (liste Divine).</xs:documentation>
+      <xs:documentation xml:lang="en">PRAYER OF A CULT per rank. Rank = INITIATE, 1, 2, 3 or 4. Kind = REQUIRED (must be granted before the next rank) or HONOR (may be granted, not required). Value = id of a prayer (Divine list).</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Rank" type="xs:string"/>
@@ -210,7 +210,7 @@
 
   <xs:complexType name="CultGiftType">
     <xs:annotation>
-      <xs:documentation xml:lang="fr">DON d un culte (Gifts). Rank = 1 a 4, TEMPLAR, DEMAGOGUE (ou autre carriere du culte). Text = effet en texte.</xs:documentation>
+      <xs:documentation xml:lang="en">GIFT of a cult (Gifts). Rank = 1 to 4, TEMPLAR, DEMAGOGUE (or another career of the cult). Text = effect as text.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Rank" type="xs:string"/>
@@ -220,7 +220,7 @@
 
   <xs:complexType name="CultV1Type">
     <xs:annotation>
-      <xs:documentation xml:lang="fr">CULTE du livre Realm of Divine Magic : listes de prieres par rang et dons. Deity = id de la divinite du livre de base (RULES-DEITY_*).</xs:documentation>
+      <xs:documentation xml:lang="en">CULT of the book Realm of Divine Magic: prayer lists per rank and gifts. Deity = id of the deity of the base book (RULES-DEITY_*).</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
@@ -238,10 +238,10 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- ===================== HANDICAP MAGIQUE V1 ===================== -->
+  <!-- ===================== MAGICAL HANDICAP V1 ===================== -->
   <xs:complexType name="DisabilityStageType">
     <xs:annotation>
-      <xs:documentation xml:lang="fr">STADE d un handicap (1 a 3, cumulatifs sauf mention). Modifier name = caracteristique (RULES-ATTR_*), valeur signee (-5, -10, -1) appliquee automatiquement ; une ligne par colonne touchee. Text = effet non chiffre.</xs:documentation>
+      <xs:documentation xml:lang="en">STAGE of a handicap (1 to 3, cumulative unless stated). Modifier name = characteristic (RULES-ATTR_*), signed value (-5, -10, -1) applied automatically; one line per column affected. Text = non-numeric effect.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Modifier" minOccurs="0" maxOccurs="unbounded">
@@ -262,9 +262,9 @@
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
       <xs:element name="Explanation" type="LangString"/>
-      <!-- Trois stades au plus ; un handicap sans stade (Strength Loss, Insanity) n en a aucun et porte son effet dans Permanent. -->
+      <!-- Three stages at most; a handicap without a stage (Strength Loss, Insanity) has none and carries its effect in Permanent. -->
       <xs:element name="Stage" type="DisabilityStageType" minOccurs="0" maxOccurs="3"/>
-      <!-- Perte permanente (Strength Loss : S -1 ; Toughness Loss : T -1 ; Wound Loss : W -1), meme forme que Modifier. -->
+      <!-- Permanent loss (Strength Loss: S -1; Toughness Loss: T -1; Wound Loss: W -1), same form as Modifier. -->
       <xs:element name="Permanent" minOccurs="0" maxOccurs="unbounded">
         <xs:complexType>
           <xs:simpleContent>
@@ -274,7 +274,7 @@
           </xs:simpleContent>
         </xs:complexType>
       </xs:element>
-      <!-- Points de folie gagnes immediatement (Insanity : D6). -->
+      <!-- Insanity points gained immediately (Insanity: D6). -->
       <xs:element name="InsanityPoints" type="xs:string" minOccurs="0"/>
       <xs:element name="Page" type="xs:string" minOccurs="0"/>
     </xs:sequence>
@@ -289,7 +289,7 @@
 
   <xs:complexType name="DisabilityRollType">
     <xs:annotation>
-      <xs:documentation xml:lang="fr">TABLE D100 DES HANDICAPS par type de magicien (Demonologist / Necromancer / EvilChaotic) : Entry name = code du handicap, valeur = plage d100 ("01-09"). id = type de magicien.</xs:documentation>
+      <xs:documentation xml:lang="en">D100 TABLE OF HANDICAPS per type of wizard (Demonologist / Necromancer / EvilChaotic): Entry name = handicap code, value = d100 range ("01-09"). id = wizard type.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Entry" type="NamedString" maxOccurs="unbounded"/>
@@ -303,15 +303,15 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- ===================== MAGIE : REGLES CHIFFREES ===================== -->
+  <!-- ===================== MAGIC: NUMERIC RULES ===================== -->
   <xs:complexType name="MagicPointGainType">
     <xs:annotation>
-      <xs:documentation xml:lang="fr">GAIN DE POINTS DE MAGIE par niveau terminé : Race = RACE (Human / Elf / Dwarf / Halfling, ou ALL pour les pretres), Career = code de carriere, Dice = de ("4D4", "2D4", "2D8", "1D4"), none si aucun. Une seule fois par niveau atteint, jamais deux fois pour un meme niveau dans une autre ecole.</xs:documentation>
+      <xs:documentation xml:lang="en">MAGIC POINT GAIN per level completed: Race = RACE (Human / Elf / Dwarf / Halfling, or ALL for priests), Career = career code, Dice = die ("4D4", "2D4", "2D8", "1D4"), none if none. Only once per level reached, never twice for the same level in another school.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Race" type="xs:string"/>
       <xs:element name="Career" type="xs:string"/>
-      <!-- Niveau concerne : "1" ou "2-4" (Alchimiste, dont le premier niveau rapporte moins) ; absent = tous les niveaux. Career = code de la carriere sans le numero de niveau (RULES-WORK_WIZARD). -->
+      <!-- Level concerned: "1" or "2-4" (Alchemist, whose first level yields less); absent = all levels. Career = career code without the level number (RULES-WORK_WIZARD). -->
       <xs:element name="Level" type="xs:string" minOccurs="0"/>
       <xs:element name="Dice" type="xs:string"/>
     </xs:sequence>
@@ -325,7 +325,7 @@
 
   <xs:complexType name="SpellLearningRuleType">
     <xs:annotation>
-      <xs:documentation xml:lang="fr">REGLE D APPRENTISSAGE d un niveau de sort : SpellLevel (P, 1-4), EPCost (50 pour Petty, 200 x niveau), TestModifier appliquee au test d Intelligence (magicien) ou de Volonte (pretre) : "x2", "x1", "-10", "-20", "-30" ; AlwaysFail = plage d100 toujours ratee ("96-100").</xs:documentation>
+      <xs:documentation xml:lang="en">LEARNING RULE of a spell level: SpellLevel (P, 1-4), EPCost (50 for Petty, 200 x level), TestModifier applied to the Intelligence test (wizard) or Willpower test (priest): "x2", "x1", "-10", "-20", "-30"; AlwaysFail = d100 range that always fails ("96-100").</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="SpellLevel" type="xs:string"/>
@@ -342,9 +342,9 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- ===================== EQUIPEMENT V1 ===================== -->
-  <!-- Une ligne par modificateur de combat. Stat = code RULES-V1MOD_INITIATIVE / TOHIT / DAMAGE / PARRY ;
-       Value = texte du livre (« -10 », « +2 », « +10/+20 », « 0** », « impossible »). -->
+  <!-- ===================== EQUIPMENT V1 ===================== -->
+  <!-- One line per combat modifier. Stat = code RULES-V1MOD_INITIATIVE / TOHIT / DAMAGE / PARRY;
+       Value = text of the book ("-10", "+2", "+10/+20", "0**", "impossible"). -->
   <xs:complexType name="CombatModifierV1Type">
     <xs:sequence>
       <xs:element name="Stat" type="xs:string"/>
@@ -352,8 +352,8 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Band = code RULES-V1RANGE_POINTBLANK / SHORT / LONG / EXTREME ; Distance en yards, « - » si absente ;
-       Strength = force effective (ES) de la bande (« 4 », « C », « - »), recopiee quand le livre n en donne qu une. -->
+  <!-- Band = code RULES-V1RANGE_POINTBLANK / SHORT / LONG / EXTREME; Distance in yards, "-" if absent;
+       Strength = effective strength (ES) of the band ("4", "C", "-"), copied when the book gives only one. -->
   <xs:complexType name="RangeBandV1Type">
     <xs:sequence>
       <xs:element name="Band" type="xs:string"/>
@@ -379,17 +379,17 @@
       <xs:element name="Description" type="LangString" maxOccurs="unbounded"/>
       <xs:element name="Category" type="xs:string"/>
       <xs:element name="SubCategory" type="xs:string" minOccurs="0"/>
-      <!-- Prix en GC / shillings / pence, formule acceptee : "14GC", "35/-", "9d", "5GC 10/-". -->
+      <!-- Price in GC / shillings / pence, formula accepted: "14GC", "35/-", "9d", "5GC 10/-". -->
       <xs:element name="Cost" type="xs:string" minOccurs="0"/>
       <xs:element name="Encumbrance" type="xs:string" minOccurs="0"/>
       <!-- Plentiful, Common, Average, Scarce, Rare, Very Rare. -->
       <xs:element name="Availability" type="xs:string" minOccurs="0"/>
-      <!-- Armes de melee et a distance : modificateurs optionnels de combat tels que le livre (Initiative / toucher / degats / parade). -->
+      <!-- Melee and ranged weapons: optional combat modifiers as in the book (Initiative / to hit / damage / parry). -->
       <xs:element name="CombatModifiers" type="CombatModifiersV1Type" minOccurs="0"/>
-      <!-- Armes a distance : une ligne par bande de portee (point blank, short, long, extreme) ; Reload = texte de rechargement du livre. -->
+      <!-- Ranged weapons: one line per range band (point blank, short, long, extreme); Reload = reload text of the book. -->
       <xs:element name="RangeBands" type="RangeBandsV1Type" minOccurs="0"/>
       <xs:element name="Reload" type="xs:string" minOccurs="0"/>
-      <!-- Armures : points d armure par zone, "0/1" pour le cuir (reduit les coups de 3 degats au plus). -->
+      <!-- Armour: armour points per zone, "0/1" for leather (reduces hits by 3 damage at most). -->
       <xs:element name="ArmourPoints" type="xs:string" minOccurs="0"/>
       <xs:element name="Locations" type="xs:string" minOccurs="0"/>
       <xs:element name="Note" type="xs:string" minOccurs="0"/>
@@ -404,7 +404,7 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Disponibilite selon la population (Core p.292) : chance en % qu un objet de disponibilite donnee soit en vente ; echec = reessai apres une semaine. -->
+  <!-- Availability according to population (Core p.292): % chance that an item of a given availability is on sale; failure = retry after a week. -->
   <xs:complexType name="AvailabilityRuleV1Type">
     <xs:sequence>
       <xs:element name="Availability" type="xs:string"/>
@@ -421,7 +421,7 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Qualite des vetements (Core p.293) : facteur applique au prix, l encombrement s ajuste si besoin. -->
+  <!-- Quality of clothing (Core p.293): factor applied to the price, encumbrance adjusts if needed. -->
   <xs:complexType name="ClothingQualityV1Type">
     <xs:sequence>
       <xs:element name="Quality" type="xs:string"/>
@@ -435,7 +435,7 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Table des metiers de l Artisan (Core p.95) : Roll = plage d100 (aussi pour les Artisans et apprentis tires au hasard), Skill = competence propre au metier (peut manquer), ExitCode = sortie propre au metier (peut manquer). Le metier « Other » (96-00) n a ni competence ni sortie. -->
+  <!-- Artisan trade table (Core p.95): Roll = d100 range (also for randomly rolled Artisans and apprentices), Skill = skill specific to the trade (may be missing), ExitCode = exit specific to the trade (may be missing). The "Other" trade (96-00) has neither skill nor exit. -->
   <xs:complexType name="TradeV1Type">
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
@@ -453,10 +453,10 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- ===================== CREATION V1 (26/10/2026) ===================== -->
+  <!-- ===================== CREATION V1 ===================== -->
   <xs:complexType name="ClassV1Type">
     <xs:annotation>
-      <xs:documentation xml:lang="fr">CLASSE DE CARRIERE a la creation (Warrior / Ranger / Rogue / Academic). Requirement = une ligne par seuil de caracteristique (name = RULES-ATTR_*, valeur = minimum) ; RaceRequirement remplace le seuil pour une race (Elfe Rogue : I 65). Trappings = texte du livre, Money = formule de l argent de depart (3D6 GC).</xs:documentation>
+      <xs:documentation xml:lang="en">CAREER CLASS at creation (Warrior / Ranger / Rogue / Academic). Requirement = one line per characteristic threshold (name = RULES-ATTR_*, value = minimum); RaceRequirement replaces the threshold for a race (Elf Rogue: I 65). Trappings = text of the book, Money = starting money formula (3D6 GC).</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Description" type="LangString"/>
@@ -485,7 +485,7 @@
 
   <xs:complexType name="SkillRollEntryV1Type">
     <xs:annotation>
-      <xs:documentation xml:lang="fr">TABLE D100 DES COMPETENCES INITIALES : une Entry = une competence dans la colonne d une race pour une classe. Class = code de classe, Specie = race (RULES-SPECIE_*), Skill name = code de competence, valeur = CHANCE (nombre de valeurs de d100 occupees, comme DATA_CAREER_ROLL ; les fourchettes ne se saisissent pas). Une competence absente d une colonne est un tiret du livre.</xs:documentation>
+      <xs:documentation xml:lang="en">D100 TABLE OF STARTING SKILLS: one Entry = one skill in the column of a race for a class. Class = class code, Specie = race (RULES-SPECIE_*), Skill name = skill code, value = CHANCE (number of d100 values occupied, like DATA_CAREER_ROLL; ranges are never entered). A skill absent from a column is a dash in the book.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Class" type="xs:string"/>
@@ -502,7 +502,7 @@
 
   <xs:complexType name="SkillCountAgeEntryV1Type">
     <xs:annotation>
-      <xs:documentation xml:lang="fr">NOMBRE DE COMPETENCES INITIALES = D4 + Modifier, selon la race et la tranche d age (non cumulatif : on prend la valeur de la tranche). Une tranche absente = 0.</xs:documentation>
+      <xs:documentation xml:lang="en">NUMBER OF STARTING SKILLS = D4 + Modifier, according to race and age bracket (not cumulative: the value of the bracket is taken). A missing bracket = 0.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Specie" type="xs:string"/>
@@ -518,10 +518,10 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- ===================== FAMILIERS DES DRUIDES ===================== -->
+  <!-- ===================== DRUID FAMILIARS ===================== -->
   <xs:complexType name="FamiliarV1Type">
     <xs:annotation>
-      <xs:documentation xml:lang="fr">TABLE DES FAMILIERS (d100, tiree une fois en devenant Pretre druidique de niveau 1) : Range, Animal (libelle), Skill1 gagnee au niveau 1 et Skill2 au niveau 2 (gratuites, codes de competence ; Note de la competence en texte), Armour (Any / Leather / None), Shield (1 / 0), ForbiddenWeapons (types d armes interdits, ex. 2-h, firearms, blunt, sharp, missile ; vide = aucun), TimesPlaces (moments et lieux de communion, ex. night, forest), Diet = HERBIVORE / PREDATOR / FISH_EATER / OMNIVORE.</xs:documentation>
+      <xs:documentation xml:lang="en">FAMILIAR TABLE (d100, rolled once on becoming a level 1 Druidic Priest): Range, Animal (label), Skill1 gained at level 1 and Skill2 at level 2 (free, skill codes; Note of the skill as text), Armour (Any / Leather / None), Shield (1 / 0), ForbiddenWeapons (forbidden weapon types, e.g. 2-h, firearms, blunt, sharp, missile; empty = none), TimesPlaces (times and places of communion, e.g. night, forest), Diet = HERBIVORE / PREDATOR / FISH_EATER / OMNIVORE.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Range" type="xs:string"/>
@@ -544,10 +544,10 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- ===================== TABLES D AVANCEMENT DES PRETRES ===================== -->
+  <!-- ===================== PRIEST ADVANCEMENT TABLES ===================== -->
   <xs:complexType name="PriestAdvanceEntryType">
     <xs:annotation>
-      <xs:documentation xml:lang="fr">LIGNE D UNE TABLE D AVANCEMENT DE PRETRE (jet d100 modifie, achete 100 EP x niveau) : Range = plage du jet ("01-05", "105-999" pour 105 ou plus), Result = code d effet (WRATH = Courroux des dieux, UNWORTHY = nouvelle carriere de base imposee, TRIAL = epreuve a accomplir, NOT_READY = reessayer apres 100 EP, ADVANCE = niveau suivant), NewCareerClasses = classes de la carriere imposee (une ligne par classe, D6 dans Dice), EPGift = EP offerts ("D10x10"), FatePoint = points de Destin offerts, Blessing = 1 si le personnage est beni, FamiliarSkills = competences du familier gagnees (0, 1 ou 2, druide seulement). La plage du livre « 95-104 » est saisie 96-104 (95 appartient a la ligne 81-95).</xs:documentation>
+      <xs:documentation xml:lang="en">LINE OF A PRIEST ADVANCEMENT TABLE (modified d100 roll, bought for 100 XP x level): Range = roll range ("01-05", "105-999" for 105 or more), Result = effect code (WRATH = Wrath of the gods, UNWORTHY = new basic career imposed, TRIAL = trial to accomplish, NOT_READY = retry after 100 XP, ADVANCE = next level), NewCareerClasses = classes of the imposed career (one line per class, D6 in Dice), EPGift = XP given ("D10x10"), FatePoint = Fate points given, Blessing = 1 if the character is blessed, FamiliarSkills = familiar skills gained (0, 1 or 2, druid only). The range "95-104" of the book is entered as 96-104 (95 belongs to the line 81-95).</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Range" type="xs:string"/>
@@ -563,7 +563,7 @@
 
   <xs:complexType name="PriestAdvanceTableType">
     <xs:annotation>
-      <xs:documentation xml:lang="fr">id = CLERIC ou DRUID. Le jet est modifie par le MJ : +10 % vie exemplaire, -10 % simple lip service, +15 % acte heroique (clerc), +5 % protection d un bois (druide).</xs:documentation>
+      <xs:documentation xml:lang="en">id = CLERIC or DRUID. The roll is modified by the GM: +10 % exemplary life, -10 % mere lip service, +15 % heroic deed (cleric), +5 % protection of a wood (druid).</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Entry" type="PriestAdvanceEntryType" maxOccurs="unbounded"/>
@@ -590,7 +590,7 @@
         <xs:element name="COMPLETE" type="xs:string"/>
         <xs:element name="DISCLAIMER" type="xs:string" minOccurs="0"/>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
-          <!-- Blocs communs -->
+          <!-- Common blocks -->
           <xs:element name="DATA_ATTRIBUT" type="DataAttributType"/>
           <xs:element name="DATA_SKILL_SPECIALIZATION" type="DataSkillSpecializationType"/>
           <xs:element name="DATA_SPECIE" type="DataSpecieType"/>
@@ -600,7 +600,7 @@
           <xs:element name="DATA_RULE_SPECIE" type="DataRuleSpecieType"/>
           <xs:element name="DATA_RULE_SKILL_ROLL" type="DataRuleSkillRollType"/>
           <xs:element name="DATA_CAREER_ROLL" type="DataCareerRollType"/>
-          <!-- Blocs propres a la V1 -->
+          <!-- V1-specific blocks -->
           <xs:element name="DATA_CAREER_V1" type="DataCareerV1Type"/>
           <xs:element name="DATA_CAREER_LINK_V1" type="DataCareerLinkV1Type"/>
           <xs:element name="DATA_SKILL_V1" type="DataSkillV1Type"/>

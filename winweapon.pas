@@ -289,6 +289,7 @@ procedure TWinWeapons.CheckCompetenceChange(Sender: TObject);
 procedure TWinWeapons.FormCreate(Sender: TObject);
 begin
     FiltreLivre := SelectWinLivre;
+    SelectWinLivre := '';   // lecture unique (pas de fuite vers la fenetre suivante)
     // Case "selon mes competences" : seulement quand on vient de WinPersonnage. Elle prend la
     // droite du bouton de filtre, qui est retreci d autant.
     if SelectWinArmeCompetences <> '' then

@@ -27,6 +27,7 @@ type
   public
     OnClic: TNotifyEvent;
     procedure Ajoute(AProprietaire: TComponent; const Legende: String; Largeur: Integer);
+    procedure NommeBoutons(const Prefixe: String);   // Prefixe0, Prefixe1... : pour le mode --script
     property ItemIndex: Integer read FIndex write SetIndex;
   end;
 
@@ -438,6 +439,18 @@ constructor TCreationV1.Create(AProprietaire: TComponent; PageCarac, PageClasse,
     GridCarriere.ColWidths[1] := 80;
     GridCarriere.OnDblClick   := @GridCarriereDblClick;
 
+    // Noms des controles crees en code : sans eux le mode --script (tests d ecran) ne les retrouve pas
+    BtnTirerCarac.Name := 'BtnTirerCarac';   GridCarac.Name    := 'GridCarac';
+    BtnTirerClasse.Name := 'BtnTirerClasse'; GridClasse.Name   := 'GridClasse';  MemoClasse.Name := 'MemoClasse';
+    BtnTirerAge.Name := 'BtnTirerAge';       SpinAge.Name      := 'SpinAge';     SpinNb.Name := 'SpinNb';
+    GridChoix.Name := 'GridChoix';           GridPris.Name     := 'GridPris';    BtnTirerComp.Name := 'BtnTirerComp';
+    BtnTirerCar.Name := 'BtnTirerCar';       GridCar.Name      := 'GridCar';     MemoCar.Name := 'MemoCar';
+    GridArt.Name := 'GridArt';               BtnTirerArt.Name  := 'BtnTirerArt'; ChkGreaterInt.Name := 'ChkGreaterInt';
+    ChkAcadRevise.Name := 'ChkAcadRevise';   MemoEquip.Name    := 'MemoEquip';   SpinArgent.Name := 'SpinArgent';
+    BtnTirerArgent.Name := 'BtnTirerArgent'; GridObjets.Name   := 'GridObjets';  GridObjPris.Name := 'GridObjPris';
+    GridCarriere.Name := 'GridCarriere';
+    RgCarac.NommeBoutons('RgCarac');  RgClasse.NommeBoutons('RgClasse');
+    RgAge.NommeBoutons('RgAge');      RgCar.NommeBoutons('RgCar');
     // charte : memos, libelles, groupes de choix et boutons, puis les controles repassent devant le fond de l'onglet
     StyleSpin(SpinAge);
     StyleSpin(SpinNb);
@@ -511,6 +524,14 @@ procedure TGroupeChoix.Ajoute(AProprietaire: TComponent; const Legende: String; 
     Radio.OnClick := @BoutonClick;
     SetLength(FBoutons, Length(FBoutons) + 1);
     FBoutons[High(FBoutons)] := Radio;
+  end;
+
+procedure TGroupeChoix.NommeBoutons(const Prefixe: String);
+  var
+    I: Integer;
+  begin
+    for I := 0 to High(FBoutons) do
+      FBoutons[I].Name := Prefixe + IntToStr(I);
   end;
 
 function TCreationV1.NouvelleGrille(Conteneur: TWinControl; Gauche, Haut, Largeur, Hauteur, NbCol: Integer): TStringGrid;

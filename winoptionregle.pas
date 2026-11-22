@@ -94,6 +94,8 @@ constructor TPanelOptionRegle.Create(TheOwner: TComponent; AModeRegles: Boolean;
 
     TabOption           := TStringGrid.Create(Self);
     TabOption.Parent     := Self;
+    // Name : sans lui le script d ecran ne peut pas adresser la grille (WinCreation = regles, autre = options)
+    if AModeRegles then TabOption.Name := 'TabRegles' else TabOption.Name := 'TabOptions';
     TabOption.Align      := alClient;
     CouleurSelectionGrille(TabOption);
     TabOption.Options    := TabOption.Options + [goRowSelect] - [goRangeSelect];

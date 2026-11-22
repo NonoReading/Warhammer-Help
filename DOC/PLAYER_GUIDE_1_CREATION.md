@@ -10,7 +10,7 @@ Who it is for: a player discovering the program, and a regular who wants to find
 
 The rules version (WFRP1, WFRP2, WFRP4) is chosen **before** creating the character and does not change afterwards. A WFRP1 character cannot become a WFRP4 character: characteristics, careers and skills do not match. If you change your mind, create a new character.
 
-The only exception is between WFRP4 and the Momentum variant (WFRP5): see the "Momentum option" sheet (phase 3).
+For now, the only switch allowed is between WFRP4 and the Momentum variant (WFRP5): see the "Momentum option" sheet (phase 3).
 
 ---
 
@@ -42,8 +42,10 @@ You see the list of active books (the ones chosen in the main menu). You can onl
 
 Why it matters: the books ticked here decide which species, careers, talents and equipment are offered during the whole creation, and they are stored with the character.
 
-- **At least one book must stay ticked**, otherwise you cannot go to the next step.
+- **The Rulebook is always ticked** and cannot be unticked: it is the base of every character.
 - If you plan to use Momentum talents later, keep the Momentum book ticked.
+
+**Optional rules (table on the right).** It lists the optional rules offered by the ticked books (for example *Star Signs*, *Second roll for sub-careers*, *Career choice by species*). A ticked box in column **A** means the rule applies to this character; untick it to skip the rule. The choice only holds for the character being created; the starting state comes from the main menu's setting. Select a line to read its explanation under the table (or the book page when the book gives no text). The table follows the books: untick a book and its rules disappear.
 
 ![The list of ticked books](IMAGES/creation_02_livres_coches.png)
 
@@ -118,17 +120,19 @@ The starting talents come from the species. When a talent offers a choice ("A or
 
 A **Randomly** button rolls a talent when the species provides for it.
 
+Some peoples of *Nations of Mankind* (Kislev, Cathay, Estalia...) end their list with a **regional trait** ("Provincial Trait", "Region Trait", "City State Trait"...). Pick your region: each region brings its own talents, often with one more random talent, so the talents that follow depend on this choice.
+
 ![Talent tab with a choice line](IMAGES/creation_06_talent.png)
 
 ---
 
 ## Step 5 — Species skills
 
-Your species gives you skills to spread. In the Rulebook most species take **3 skills at +5 and 3 skills at +3** (the Lustrian Skink takes 2 and 2).
+Your species gives you skills to spread. In the Rulebook most species take **3 skills at +5 and 3 skills at +3** (the Lustrian Skink takes 2 and 2). If your game master uses the optional Xp/25 rule, the +3 skills count at +5 once the character is opened for modification (see the modification guide, Experience).
 
 - The program **refuses to continue** until these numbers are exactly respected.
 - A skill with a specialisation (a language, for example) must be specified before moving on.
-- **Randomly** spreads them for you.
+- **Randomly** spreads them for you, and favours the skills that are also in your career: the +5 and +3 go to those first, the others only complete what is missing. It also settles the open lines ("(Any)", "A or B").
 
 ![Specie's Skills tab](IMAGES/creation_07_comp_race.png)
 
@@ -136,7 +140,7 @@ Your species gives you skills to spread. In the Rulebook most species take **3 s
 
 ## Step 6 — Career skills
 
-You spread **40 points** among your career skills (in WFRP2 this rule does not apply). The counter shows "n / 40 Pts"; it must be exactly 40.
+You spread **40 points** among your career skills (in WFRP2 this rule does not apply). The counter shows "n / 40 Pts"; it must be exactly 40. Each skill takes **0 to 10 points**: a higher value is refused and the previous one comes back. **Randomly** first settles the open lines ("(Any)", "A or B"), then spreads the 40 points over the first 8 skills at most (5 each when there are 8 or more).
 
 ![Work's skills tab, with the "n / 40 Pts" counter](IMAGES/creation_08_comp_metier.png)
 
@@ -155,7 +159,7 @@ You can also enter your **starting money** (gold crowns).
 ## Step 8 — Name and finish
 
 - Give the character a **name**, or click **Roll a name** to draw one.
-- The name must not be empty, must not already exist, and leading and trailing spaces are removed.
+- The name must not be empty, must be **unique** (it names the folder where the character's data is kept, so two characters cannot share a name), and leading and trailing spaces are removed.
 - **Physical details** (age, height…): a button opens the same window as on the sheet, with a roll from the Rulebook or free entry.
 
 When everything is complete the character is saved with its books, and you can open it to let it evolve (see **2. Changing a character**).
@@ -192,6 +196,7 @@ Example, the **Star sign** step ("Roll a star sign" button or pick from the list
 | the 100-point total is not 100 | fix the allocation |
 | a talent choice is still open | settle each "A / B" line |
 | the number of species skills is wrong | follow "3 at +5 and 3 at +3" (or what the message says) |
+| a skill you ticked (species) or gave points to (career) has no specialisation yet, it still reads "(Any)" or "A or B" | specify it (a language, a trade...), or let **Randomly** settle it |
 | the career skills total is not 40 | adjust until 40 |
 | an equipment choice is still open | choose, or click **Randomly** |
 | the name is empty or already taken | change the name |
@@ -200,7 +205,7 @@ Example, the **Star sign** step ("Roll a star sign" button or pick from the list
 
 ## Differences by version
 
-- **WFRP4:** this guide.
+- **WFRP4:** this guide. The starting Xp for leaving species, career or characteristics to chance (20 / 50 / 25 Xp) is a WFRP4 rule; WFRP1 and WFRP2 give none.
 - **WFRP2:** no 40-point split of career skills, and no fixed number of species skills; background tables (Liber Fanatica) and the career tables of the side books are more present.
 - **WFRP1** (Rulebook p.14-18): the steps follow the first edition's order and the Talents step does not exist (skills replace talents). Written from the code, **[to check on screen]**:
   1. **Books**, then **Species**, as usual.

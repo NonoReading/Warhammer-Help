@@ -33,6 +33,26 @@ Type
      CodeCompetence:        String;
      Valeur:                Integer;
      Bonus:                 String;
+     // The Old World : ticks accumules vers le rang suivant, attribut ticks de la competence,
+     // ecrit seulement s'il n'est pas nul.
+     TicksTow:              Integer;
+  end;
+
+Type
+  // The Old World : une ligne de ce qui n'entre pas encore dans les structures communes
+  // (Genre = ASSET, CONTACT ; LORE, TALENT_CHOICE, TALENT_SOURCE, SKILL_TICKS, SPELL_TEXT ne sont plus
+  // ecrits, mais lus dans les anciens fichiers).
+  StructurePersonnageLigneTow   = Record
+     Genre:                 String;
+     Code:                  String;
+     Famille:               String;
+     Texte:                 String;
+  end;
+
+  // The Old World : un lore possede (code du livre + precision eventuelle, ex. « City Lore » / Talagaad).
+  StructurePersonnageLoreTow    = Record
+     Code:                  String;
+     Texte:                 String;
   end;
 
 Type
@@ -44,6 +64,11 @@ Type
      // joueur l'a choisi/achete normalement. Pas encore alimente ni serialise en XML : premiere
      // etape du chantier "traits de creature", CONTEXT.md/A FAIRE.txt.
      Source:                String;
+     // The Old World : precision choisie (code d'un dieu, d'une Magic Lore, ou texte libre comme
+     // « Skaven ») et provenance du talent (origin / career...). Ecrits en attributs choice / source
+     // du talent, seulement s'ils ne sont pas vides. Distinct de Source ci-dessus (talents deduits).
+     ChoixTow:              String;
+     SourceTow:             String;
   end;
   // Nomme, requis par le compilateur comme type de retour de fonction (PersonnageMutationTalent) -
   // un "array of ..." anonyme n'est pas accepte a cet endroit.
@@ -54,6 +79,9 @@ Type
      TypeEquipement:        String;
      CodeEquipement:        String;
      QualiteEquipement:     String;
+     // The Old World : precision de l'objet (arme nommee d'un emplacement « Silver weapon »...),
+     // attribut text de la ligne. Distinct de QualiteEquipement, lue comme une liste de qualites.
+     TexteTow:              String;
      CoutXp:                Integer;
      // Meme principe que StructurePersonnageTalent.Source : code de ce qui a accorde cette
      // ligne automatiquement (ex. une mutation), vide si achetee/choisie normalement.
@@ -198,6 +226,18 @@ Type
      CoutXp:                Integer;
   end;
 
+// V5 : une case du tracker de carriere (type ATTR / SKILL / TALENT / ITEM).
+// Code = code de la donnee (ATTR / SKILL / TALENT) ou ligne d'equipement du livre (ITEM).
+// Contenu = choix resolu (ITEM). Ajoute (ITEM) : 0 = pas d'ajout a l'equipement, 1 = a ajouter
+// a la prochaine mise a jour, 2 = deja ajoute.
+Type
+  StructurePersonnageTick = Record
+     TypeTick:              String;
+     Niveau:                Integer;
+     Code:                  String;
+     Contenu:               String;
+     Ajoute:                Integer;
+  end;
 
 Type
   StructurePersonnage = Record
@@ -228,11 +268,23 @@ Type
      XpCoutAttribut:             array of StructurePersonnageXpAttribut;
      XpCoutTalent:               array of StructurePersonnageXpTalent;
      XpCoutCompetence:           array of StructurePersonnageXpCompetence;
+     TrackerCarriere:            array of StructurePersonnageTick;
      LivresObligatoires:         String;
      Options:                    String;
      // Objets propres au personnage (sans livre) : contenu XML de <CUSTOM_ITEMS>, au format
      // d'un DATA_TRAPPING de livre. Vide = aucun. Injecte dans les listes au chargement.
      ObjetsPropres:              String;
+     // The Old World (WFRPTOW) : Status (BRASS / SILVER / GOLD) et son niveau, texte du Grim Portent, notes,
+     // niveau de Wizard, Fate de depart et Fortune courante, lignes sans emplacement commun (voir LignesTow).
+     StatusTow:                  String;
+     StatusNiveauTow:            Integer;
+     GrimPortentTow:             String;
+     NotesTow:                   String;
+     WizardLevelTow:             Integer;
+     FateTow:                    Integer;
+     FortuneTow:                 Integer;
+     LignesTow:                  array of StructurePersonnageLigneTow;
+     LoresTow:                   array of StructurePersonnageLoreTow;
      Age:                     Integer;
      // V1 : points de magie gagnes aux niveaux des carrieres magiques (0 = aucun)
      PointsMagie:                Integer;
@@ -395,6 +447,12 @@ Type
   // mutation disparait un jour de Personnage.Mutations, le talent calcule disparait avec elle
   // sans purge explicite a ecrire. CONTEXT.md, chantier "traits de creature".
   // Renvoie aussi le talent gagne par le signe astral du personnage (meme principe, memes appelants).
+  Procedure TrackerSynchronise(var Personnage: StructurePersonnage;
+    const AvantAttribut: array of StructurePersonnageAttribut;
+    const AvantCompetence: array of StructurePersonnageCompetence;
+    const AvantTalent: array of StructurePersonnageTalent);
+  Function TrackerCompte(const Personnage: StructurePersonnage; Niveau: Integer): Integer;
+  Function TrackerCompteType(const Personnage: StructurePersonnage; Niveau: Integer; const TypeTick: String): Integer;
   Function PersonnageMutationTalent(Personnage: StructurePersonnage): TArrayPersonnageTalent;
   // Vrai si CodeTalent a un lien enregistre dans Personnage.TalentCarriereRequise ET que
   // le personnage n'est plus dans la carriere+niveau requis - le talent reste possede
@@ -419,7 +477,7 @@ Type
   Function XmlAttributEquipementQuantite(Quantite: Integer): String;
   Procedure LitEquipementInstance(Node: TDOMNode; var Equipement: StructurePersonnageEquipement);
   // Meme principe que PersonnageMutationTalent, mais la source est une qualite d'objet porte
-  // (ex. NATIO-ARMOB_16 "Fear" -> RULES-T0049 "Frightening", Skull Trophies) plutot qu'une
+  // (ex. NATIO-ARMOB_FEAR "Fear" -> RULES-T0049 "Frightening", Skull Trophies) plutot qu'une
   // mutation - <Talent> sous <ArmureBonus>, chargearmurebonustalent.pas. Calcule a la volee
   // depuis Personnage.Equipement : le retrait de l'objet porte fait disparaitre le talent
   // accorde sans purge explicite a ecrire. CONTEXT.md, chantier "traits de creature".
@@ -573,6 +631,21 @@ uses
 //                                 XML                                        //
 ////////////////////////////////////////////////////////////////////////////////
 
+// The Old World : attribut ticks d'une competence, vide si nul (donc hors TOW).
+function TicksAttributTow(const Ticks: Integer): String;
+  begin
+    Result := '';
+    if Ticks <> 0 then Result := ' ticks="' + IntToStr(Ticks) + '"';
+  end;
+
+// The Old World : attributs choice / source d'un talent, vides hors TOW.
+function AttributTow(const Choix, Source: String): String;
+  begin
+    Result := '';
+    if Choix <> '' then Result := Result + ' choice="' + StringReplace(Choix, '"', '''', [rfReplaceAll]) + '"';
+    if Source <> '' then Result := Result + ' source="' + StringReplace(Source, '"', '''', [rfReplaceAll]) + '"';
+  end;
+
 
 
 function PersonnageXmlFichierActuel(const Directory: string): string;
@@ -692,6 +765,14 @@ Function XmlAttributEquipementQuantite(Quantite: Integer): String;
       Result := '';
   end;
 
+Function XmlAttributTexteTow(const Texte: String): String;
+  // The Old World : attribut text d'une ligne d'equipement ou de sort, absent si vide.
+  begin
+    Result := '';
+    if Texte <> '' then
+      Result := ' text="' + StringReplace(Texte, '"', '''', [rfReplaceAll]) + '"';
+  end;
+
 Function XmlAttributEquipementInstance(Equipement: StructurePersonnageEquipement): String;
   // Attributs id (animal) et carriedby (objet confie a un animal), absents si vides pour que
   // les fiches deja sauvegardees restent lisibles. Ne passe pas par RemoveQuotes : A1, A2...
@@ -703,6 +784,7 @@ Function XmlAttributEquipementInstance(Equipement: StructurePersonnageEquipement
       Result := Result + ' '+ConstXmlEquipementPortePar+'="'+Equipement.PortePar+'"';
     if Equipement.NomLibre <> '' then
       Result := Result + ' '+ConstXmlNom+'="'+Equipement.NomLibre+'" '+ConstXmlEncombrement+'="'+IntToStr(Equipement.EncLibre)+'"';
+    Result := Result + XmlAttributTexteTow(Equipement.TexteTow);
   end;
 
 Function IdAnimalLibre(const Liste: TArrayPersonnageEquipement): String;
@@ -729,6 +811,9 @@ Procedure LitEquipementInstance(Node: TDOMNode; var Equipement: StructurePersonn
     Equipement.PortePar   := '';
     Equipement.NomLibre   := '';
     Equipement.EncLibre   := 0;
+    Equipement.TexteTow   := '';
+    if Assigned(Node.Attributes.GetNamedItem('text')) then
+      Equipement.TexteTow := UTF8Encode(Node.Attributes.GetNamedItem('text').NodeValue);
     if Assigned(Node.Attributes.GetNamedItem(ConstXmlEquipementId)) then
       Equipement.IdInstance := UTF8Encode(Node.Attributes.GetNamedItem(ConstXmlEquipementId).NodeValue);
     if Assigned(Node.Attributes.GetNamedItem(ConstXmlEquipementPortePar)) then
@@ -1022,6 +1107,21 @@ var
         XMLContent.Add(XmlLigne(ConstXmlMonnaiePA, IntToStr(Personnage.MonnaiePA)));
       if Personnage.MonnaieSB <> 0 then
         XMLContent.Add(XmlLigne(ConstXmlMonnaieSB, IntToStr(Personnage.MonnaieSB)));
+      // The Old World : balises ecrites seulement si renseignees (fiches V1-V5 inchangees)
+      if Personnage.StatusTow <> '' then
+        XMLContent.Add(XmlLigne(ConstXmlStatusTow, Personnage.StatusTow));
+      if Personnage.StatusNiveauTow <> 0 then
+        XMLContent.Add(XmlLigne(ConstXmlStatusNiveauTow, IntToStr(Personnage.StatusNiveauTow)));
+      if Personnage.GrimPortentTow <> '' then
+        XMLContent.Add(XmlLigne(ConstXmlGrimPortentTow, Personnage.GrimPortentTow));
+      if Personnage.NotesTow <> '' then
+        XMLContent.Add(XmlLigne(ConstXmlNotesTow, Personnage.NotesTow));
+      if Personnage.WizardLevelTow <> 0 then
+        XMLContent.Add(XmlLigne(ConstXmlWizardLevelTow, IntToStr(Personnage.WizardLevelTow)));
+      if Personnage.FateTow <> 0 then
+        XMLContent.Add(XmlLigne(ConstXmlFateTow, IntToStr(Personnage.FateTow)));
+      if Personnage.FortuneTow <> 0 then
+        XMLContent.Add(XmlLigne(ConstXmlFortuneTow, IntToStr(Personnage.FortuneTow)));
       if Personnage.SigneAstral <> '' then
         begin
           XMLContent.Add(XmlLigne(ConstXmlSigneAstral, Personnage.SigneAstral));
@@ -1076,7 +1176,8 @@ var
             PCompetence := ChercheCompetence(PersonnageCompetence.CodeCompetence);
             XMLContent.Add(XmlLigneDonnee(ConstXmlCompetence,
               CodeNormalise(PersonnageCompetence.CodeCompetence, PCompetence.Livre),
-              IntToStr(PersonnageCompetence.Valeur)));
+              IntToStr(PersonnageCompetence.Valeur),
+              TicksAttributTow(PersonnageCompetence.TicksTow)));
             ListeLivres:= PersonnageLivre(ListeLivres, PCompetence.livre);
             XMLContent.Add(XmlCommentaire(PCompetence.Libelle));
           end;
@@ -1102,7 +1203,8 @@ var
             PTalent := ChercheTalent(PersonnageTalent.CodeTalent);
             XMLContent.Add(XmlLigneDonnee(ConstXmlTalent,
               CodeNormalise(PersonnageTalent.CodeTalent, PTalent.Livre),
-              IntToStr(PersonnageTalent.Valeur)));
+              IntToStr(PersonnageTalent.Valeur),
+              AttributTow(PersonnageTalent.ChoixTow, PersonnageTalent.SourceTow)));
             ListeLivres:= PersonnageLivre(ListeLivres, PTalent.livre);
             XMLContent.Add(XmlCommentaire(PTalent.Libelle));
           end;
@@ -1156,7 +1258,8 @@ var
             PTalent := ChercheTalent(PersonnageTalent.CodeTalent);
             XMLContent.Add(XmlLigneDonnee(ConstXmlTalent,
               CodeNormalise(PersonnageTalent.CodeTalent, PTalent.Livre),
-              IntToStr(PersonnageTalent.Valeur)));
+              IntToStr(PersonnageTalent.Valeur),
+              AttributTow(PersonnageTalent.ChoixTow, '')));
             ListeLivres:= PersonnageLivre(ListeLivres, PTalent.livre);
             XMLContent.Add(XmlCommentaire(PTalent.Libelle));
           end;
@@ -1298,7 +1401,8 @@ var
              PSort := ChercheSort(PersonnageEquipement.CodeEquipement);
              XMLContent.Add(XmlLigneDonnee(ConstXmlItem,
                CodeNormalise(PersonnageEquipement.CodeEquipement, PSort.Livre),
-               IntToStr(PersonnageEquipement.CoutXp)));
+               IntToStr(PersonnageEquipement.CoutXp),
+               XmlAttributTexteTow(PersonnageEquipement.TexteTow)));
              ListeLivres:= PersonnageLivre(ListeLivres, PSort.livre);
              if (PSort.CodeSort<>'') then
                XMLContent.Add(XmlCommentaire(PSort.Libelle));
@@ -1418,6 +1522,9 @@ var
   PersonnageXpAttribut:   StructurePersonnageXpAttribut;
   PersonnageXpCompetence: StructurePersonnageXpCompetence;
   PersonnageXpTalent:     StructurePersonnageXpTalent;
+  PersonnageTick:         StructurePersonnageTick;
+  LigneTow:               StructurePersonnageLigneTow;
+  LoreTow:                StructurePersonnageLoreTow;
   begin
       // Livres
       XMLContent.Add(XmlLigne(ConstXmlLibelleLivre, ListeLivres));
@@ -1478,6 +1585,17 @@ var
 
       XMLContent.Add(XmlFin(ConstXmlChapitreCoutXp));
 
+      // Tracker de carriere V5 (une ligne par case ; balise absente si aucune case)
+      if Length(Personnage.TrackerCarriere) > 0 then
+        begin
+          XMLContent.Add(XmlDebut(ConstXmlChapitreTracker));
+          For PersonnageTick in Personnage.TrackerCarriere do
+            XMLContent.Add(XmlLigneDonnee(ConstXmlTick, PersonnageTick.Code, PersonnageTick.Contenu,
+              ' type="'+PersonnageTick.TypeTick+'" level="'+IntToStr(PersonnageTick.Niveau)+'"'+
+              ' added="'+IntToStr(PersonnageTick.Ajoute)+'"'));
+          XMLContent.Add(XmlFin(ConstXmlChapitreTracker));
+        end;
+
       // Options
       XMLContent.Add(XmlLigne(ConstXmlOptions, Personnage.Options));
 
@@ -1487,6 +1605,23 @@ var
           XMLContent.Add(XmlDebut(ConstXmlObjetsPropres));
           XMLContent.Add(Personnage.ObjetsPropres);
           XMLContent.Add(XmlFin(ConstXmlObjetsPropres));
+        end;
+
+      // The Old World : lignes sans emplacement commun (bloc absent hors TOW)
+      if Length(Personnage.LignesTow) > 0 then
+        begin
+          XMLContent.Add(XmlDebut(ConstXmlChapitreLignesTow));
+          for LigneTow in Personnage.LignesTow do
+            XMLContent.Add(XmlLigneDonnee(ConstXmlLigneTow, LigneTow.Code, LigneTow.Texte,
+              ' kind="' + LigneTow.Genre + '" family="' + LigneTow.Famille + '"'));
+          XMLContent.Add(XmlFin(ConstXmlChapitreLignesTow));
+        end;
+      if Length(Personnage.LoresTow) > 0 then
+        begin
+          XMLContent.Add(XmlDebut(ConstXmlChapitreLoresTow));
+          for LoreTow in Personnage.LoresTow do
+            XMLContent.Add(XmlLigneDonnee(ConstXmlLoreTow, LoreTow.Code, LoreTow.Texte));
+          XMLContent.Add(XmlFin(ConstXmlChapitreLoresTow));
         end;
 
       // Appartenances - voir CONTEXT.md 2.44.
@@ -1570,10 +1705,13 @@ var
   PersonnageMutation:         StructurePersonnageMutation;
   PersonnagePathologie:       StructurePersonnagePathologie;
   PersonnageTalentCarriere:   StructurePersonnageTalentCarriereRequise;
+  PersonnageTick:             StructurePersonnageTick;
   PersonnageXpAttribut:       StructurePersonnageXpAttribut;
   PersonnageXpCompetence:     StructurePersonnageXpCompetence;
   PersonnageXpTalent:         StructurePersonnageXpTalent;
   Asterisque:                 Integer = 0;
+  LigneTowLue:                StructurePersonnageLigneTow;
+  LoreTowLu:                  StructurePersonnageLoreTow;
   FluxObjets:                 TStringStream;
   procedure LitIdentite;
   begin
@@ -1593,6 +1731,7 @@ var
     Personnage.XpCoutAttribut       := [];
     Personnage.XpCoutCompetence     := [];
     Personnage.XpCoutTalent         := [];
+    Personnage.TrackerCarriere      := [];
     Personnage.CompetenceAppartenance := [];
     Personnage.AvanceGratuiteAttribut := [];
 
@@ -1789,6 +1928,62 @@ var
     if Assigned(PlayerNode.FindNode(ConstXmlSigneTalentPerso)) then
       Personnage.SigneAstralTalent := RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlSigneTalentPerso).TextContent));
     Personnage.Asterisque           := 0;
+    // The Old World : balises absentes des fiches V1-V5, valeurs vides / nulles
+    Personnage.StatusTow            := '';
+    Personnage.StatusNiveauTow      := 0;
+    Personnage.GrimPortentTow       := '';
+    Personnage.NotesTow             := '';
+    Personnage.WizardLevelTow       := 0;
+    Personnage.FateTow              := 0;
+    Personnage.FortuneTow           := 0;
+    Personnage.LignesTow            := [];
+    Personnage.LoresTow             := [];
+    if Assigned(PlayerNode.FindNode(ConstXmlStatusTow)) then
+      Personnage.StatusTow          := RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlStatusTow).TextContent));
+    if Assigned(PlayerNode.FindNode(ConstXmlStatusNiveauTow)) then
+      Personnage.StatusNiveauTow    := StrToIntDef(RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlStatusNiveauTow).TextContent)), 0);
+    if Assigned(PlayerNode.FindNode(ConstXmlGrimPortentTow)) then
+      Personnage.GrimPortentTow     := RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlGrimPortentTow).TextContent));
+    if Assigned(PlayerNode.FindNode(ConstXmlNotesTow)) then
+      Personnage.NotesTow           := RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlNotesTow).TextContent));
+    if Assigned(PlayerNode.FindNode(ConstXmlWizardLevelTow)) then
+      Personnage.WizardLevelTow     := StrToIntDef(RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlWizardLevelTow).TextContent)), 0);
+    if Assigned(PlayerNode.FindNode(ConstXmlFateTow)) then
+      Personnage.FateTow            := StrToIntDef(RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlFateTow).TextContent)), 0);
+    if Assigned(PlayerNode.FindNode(ConstXmlFortuneTow)) then
+      Personnage.FortuneTow         := StrToIntDef(RemoveQuotes(UTF8Encode(PlayerNode.FindNode(ConstXmlFortuneTow).TextContent)), 0);
+    SubChapterNode := PlayerNode.FindNode(ConstXmlChapitreLignesTow);
+    if Assigned(SubChapterNode) then
+      begin
+        Node := SubChapterNode.FirstChild;
+        while Assigned(Node) do
+          begin
+            if Node.NodeName = ConstXmlLigneTow then
+              begin
+                LigneTowLue.Code    := RemoveQuotes(UTF8Encode(Node.Attributes.GetNamedItem(ConstXmlData).NodeValue));
+                LigneTowLue.Genre   := UTF8Encode(Node.Attributes.GetNamedItem('kind').NodeValue);
+                LigneTowLue.Famille := UTF8Encode(Node.Attributes.GetNamedItem('family').NodeValue);
+                LigneTowLue.Texte   := RemoveQuotes(UTF8Encode(Node.TextContent));
+                Personnage.LignesTow += [LigneTowLue];
+              end;
+            Node := Node.NextSibling;
+          end;
+      end;
+    SubChapterNode := PlayerNode.FindNode(ConstXmlChapitreLoresTow);
+    if Assigned(SubChapterNode) then
+      begin
+        Node := SubChapterNode.FirstChild;
+        while Assigned(Node) do
+          begin
+            if Node.NodeName = ConstXmlLoreTow then
+              begin
+                LoreTowLu.Code  := RemoveQuotes(UTF8Encode(Node.Attributes.GetNamedItem(ConstXmlData).NodeValue));
+                LoreTowLu.Texte := RemoveQuotes(UTF8Encode(Node.TextContent));
+                Personnage.LoresTow += [LoreTowLu];
+              end;
+            Node := Node.NextSibling;
+          end;
+      end;
   end;
 
   procedure LitCreation;
@@ -1824,6 +2019,9 @@ var
                   begin
                     PersonnageCompetence.CodeCompetence:= RemoveQuotes(UTF8Encode(Node.Attributes.GetNamedItem(ConstXmlData).NodeValue));
                     PersonnageCompetence.Valeur        := StrToIntDef(RemoveQuotes(UTF8Encode(Node.TextContent)),0);
+                    PersonnageCompetence.TicksTow      := 0;
+                    if Assigned(Node.Attributes.GetNamedItem('ticks')) then
+                      PersonnageCompetence.TicksTow    := StrToIntDef(UTF8Encode(Node.Attributes.GetNamedItem('ticks').NodeValue), 0);
                     Personnage.CreationCompetence35    += [PersonnageCompetence];
                   end;
                 Node := Node.NextSibling;
@@ -1859,6 +2057,12 @@ var
                     PersonnageTalent.CodeTalent     := RemoveQuotes(UTF8Encode(Node.Attributes.GetNamedItem(ConstXmlData).NodeValue));
                     PersonnageTalent.Valeur         := StrToIntDef(RemoveQuotes(UTF8Encode(Node.TextContent)),0);
                     PersonnageTalent.Asterisque     := 0;
+                    PersonnageTalent.ChoixTow       := '';
+                    PersonnageTalent.SourceTow      := '';
+                    if Assigned(Node.Attributes.GetNamedItem('choice')) then
+                      PersonnageTalent.ChoixTow     := UTF8Encode(Node.Attributes.GetNamedItem('choice').NodeValue);
+                    if Assigned(Node.Attributes.GetNamedItem('source')) then
+                      PersonnageTalent.SourceTow    := UTF8Encode(Node.Attributes.GetNamedItem('source').NodeValue);
                     Personnage.CreationTalent       += [PersonnageTalent];
                   end;
                   Node := Node.NextSibling;
@@ -1916,6 +2120,10 @@ var
                   PersonnageTalent.CodeTalent     := RemoveQuotes(UTF8Encode(Node.Attributes.GetNamedItem(ConstXmlData).NodeValue));
                   PersonnageTalent.Valeur         := StrToIntDef(RemoveQuotes(UTF8Encode(Node.TextContent)),0);
                   PersonnageTalent.Asterisque     := 0;
+                  PersonnageTalent.ChoixTow       := '';
+                  PersonnageTalent.SourceTow      := '';
+                  if Assigned(Node.Attributes.GetNamedItem('choice')) then
+                    PersonnageTalent.ChoixTow     := UTF8Encode(Node.Attributes.GetNamedItem('choice').NodeValue);
                   Personnage.AugmentationTalent   += [PersonnageTalent];
                 end;
                 Node := Node.NextSibling;
@@ -2073,6 +2281,9 @@ var
                       PersonnageEquipement.Porte              := False;
                       PersonnageEquipement.IdInstance := '';
                       PersonnageEquipement.PortePar   := '';
+                      PersonnageEquipement.TexteTow           := '';
+                      if Assigned(Node.Attributes.GetNamedItem('text')) then
+                        PersonnageEquipement.TexteTow         := UTF8Encode(Node.Attributes.GetNamedItem('text').NodeValue);
                       Personnage.Equipement                   += [PersonnageEquipement];
                     end;
                   Node := Node.NextSibling;
@@ -2344,6 +2555,32 @@ var
               end;
           end;
       end;
+
+    // Tracker de carriere V5 (journal, une ligne Tick par case)
+    ChapterRaceNode := PlayerNode.FindNode(ConstXmlChapitreTracker);
+    if Assigned(ChapterRaceNode) then
+      begin
+        Node := ChapterRaceNode.FirstChild;
+        while Assigned(Node) do
+          begin
+            if (Node.NodeType = ELEMENT_NODE) and (Node.NodeName = ConstXmlTick) then
+              begin
+                PersonnageTick.Code      := RemoveQuotes(UTF8Encode(Node.Attributes.GetNamedItem(ConstXmlData).NodeValue));
+                PersonnageTick.Contenu   := RemoveQuotes(UTF8Encode(Node.TextContent));
+                PersonnageTick.TypeTick  := '';
+                PersonnageTick.Niveau    := 0;
+                PersonnageTick.Ajoute    := 0;
+                if Assigned(Node.Attributes.GetNamedItem('type')) then
+                  PersonnageTick.TypeTick := UTF8Encode(Node.Attributes.GetNamedItem('type').NodeValue);
+                if Assigned(Node.Attributes.GetNamedItem('level')) then
+                  PersonnageTick.Niveau := StrToIntDef(UTF8Encode(Node.Attributes.GetNamedItem('level').NodeValue),0);
+                if Assigned(Node.Attributes.GetNamedItem('added')) then
+                  PersonnageTick.Ajoute := StrToIntDef(UTF8Encode(Node.Attributes.GetNamedItem('added').NodeValue), 0);
+                Personnage.TrackerCarriere += [PersonnageTick];
+              end;
+            Node := Node.NextSibling;
+          end;
+      end;
   end;
 
   procedure LitAsterisques;
@@ -2525,6 +2762,147 @@ begin
       end;
   finally
     Appartenances.Free;
+  end;
+end;
+
+// ---- Tracker de carriere V5 ----
+// Ajoute (Nombre > 0) ou retire (Nombre < 0, dernieres lignes du niveau en cours) des cases
+// du journal pour un type et un code donnes.
+procedure TrackerAjuste(var Personnage: StructurePersonnage; const TypeTick, Code: String; Nombre: Integer);
+var
+  Tick: StructurePersonnageTick;
+  I, J, N: Integer;
+begin
+  Tick.TypeTick := TypeTick;
+  Tick.Niveau   := Personnage.MetierEnCours.NiveauMetier;
+  Tick.Code     := Code;
+  Tick.Contenu  := '';
+  Tick.Ajoute   := 0;
+  while Nombre > 0 do
+    begin
+      Personnage.TrackerCarriere += [Tick];
+      Dec(Nombre);
+    end;
+  while Nombre < 0 do
+    begin
+      I := -1;
+      for J := High(Personnage.TrackerCarriere) downto 0 do
+        if (Personnage.TrackerCarriere[J].TypeTick = TypeTick) and
+           (Personnage.TrackerCarriere[J].Code = Code) and
+           (Personnage.TrackerCarriere[J].Niveau = Tick.Niveau) then
+          begin
+            I := J;
+            break;
+          end;
+      if I < 0 then break;
+      N := High(Personnage.TrackerCarriere);
+      for J := I to N - 1 do
+        Personnage.TrackerCarriere[J] := Personnage.TrackerCarriere[J + 1];
+      SetLength(Personnage.TrackerCarriere, N);
+      Inc(Nombre);
+    end;
+end;
+
+// Cases deja cochees pour un niveau de carriere (les autres niveaux sont gardes mais ne comptent pas).
+Function TrackerCompte(const Personnage: StructurePersonnage; Niveau: Integer): Integer;
+var
+  I: Integer;
+begin
+  Result := 0;
+  for I := 0 to High(Personnage.TrackerCarriere) do
+    if Personnage.TrackerCarriere[I].Niveau = Niveau then
+      Inc(Result);
+end;
+
+// Idem, pour un seul type de case (ATTR, SKILL, TALENT, ITEM).
+Function TrackerCompteType(const Personnage: StructurePersonnage; Niveau: Integer; const TypeTick: String): Integer;
+var
+  I: Integer;
+begin
+  Result := 0;
+  for I := 0 to High(Personnage.TrackerCarriere) do
+    if (Personnage.TrackerCarriere[I].Niveau = Niveau) and (Personnage.TrackerCarriere[I].TypeTick = TypeTick) then
+      Inc(Result);
+end;
+
+// Alimente le journal par difference : Avant* = achats connus avant la resynchronisation,
+// Personnage.Augmentation* = achats apres. Caracteristique et competence = +5 par case, talent = 1.
+Procedure TrackerSynchronise(var Personnage: StructurePersonnage;
+  const AvantAttribut: array of StructurePersonnageAttribut;
+  const AvantCompetence: array of StructurePersonnageCompetence;
+  const AvantTalent: array of StructurePersonnageTalent);
+var
+  I, J, Avant, Apres: Integer;
+  Codes: TStringList;
+
+  // Cases deja journalisees pour ce code, tous niveaux confondus (les achats restent cumules d'un niveau a l'autre).
+  function DejaJournalise(const TypeTick, Code: String): Integer;
+  var
+    K: Integer;
+  begin
+    Result := 0;
+    for K := 0 to High(Personnage.TrackerCarriere) do
+      if (Personnage.TrackerCarriere[K].TypeTick = TypeTick) and (Personnage.TrackerCarriere[K].Code = Code) then
+        Inc(Result);
+  end;
+
+  // Ajoute ce qui depasse le journal ; ne retire que si l'achat a baisse pendant cette session (Avant > Apres),
+  // jamais au chargement ou au passage de niveau.
+  procedure Ajuste(const TypeTick, Code: String; Avant, Apres, Pas: Integer);
+  var
+    Cible, Deja: Integer;
+  begin
+    Cible := Apres div Pas;
+    Deja  := DejaJournalise(TypeTick, Code);
+    if Cible > Deja then
+      TrackerAjuste(Personnage, TypeTick, Code, Cible - Deja)
+    else if (Cible < Deja) and (Avant > Apres) then
+      TrackerAjuste(Personnage, TypeTick, Code, -((Avant - Apres) div Pas));
+  end;
+
+begin
+  Codes := TStringList.Create;
+  try
+    // Caracteristiques
+    for I := 0 to High(AvantAttribut) do Codes.Add(AvantAttribut[I].CodeAttribut);
+    for I := 0 to High(Personnage.AugmentationAttribut) do Codes.Add(Personnage.AugmentationAttribut[I].CodeAttribut);
+    for J := 0 to Codes.Count - 1 do
+      begin
+        Avant := 0; Apres := 0;
+        for I := 0 to High(AvantAttribut) do
+          if AvantAttribut[I].CodeAttribut = Codes[J] then Avant := AvantAttribut[I].Valeur;
+        for I := 0 to High(Personnage.AugmentationAttribut) do
+          if Personnage.AugmentationAttribut[I].CodeAttribut = Codes[J] then Apres := Personnage.AugmentationAttribut[I].Valeur;
+        Ajuste('ATTR', Codes[J], Avant, Apres, 5);
+      end;
+    // Competences
+    Codes.Clear;
+    for I := 0 to High(AvantCompetence) do Codes.Add(AvantCompetence[I].CodeCompetence);
+    for I := 0 to High(Personnage.AugmentationCompetence) do Codes.Add(Personnage.AugmentationCompetence[I].CodeCompetence);
+    for J := 0 to Codes.Count - 1 do
+      begin
+        Avant := 0; Apres := 0;
+        for I := 0 to High(AvantCompetence) do
+          if AvantCompetence[I].CodeCompetence = Codes[J] then Avant := AvantCompetence[I].Valeur;
+        for I := 0 to High(Personnage.AugmentationCompetence) do
+          if Personnage.AugmentationCompetence[I].CodeCompetence = Codes[J] then Apres := Personnage.AugmentationCompetence[I].Valeur;
+        Ajuste('SKILL', Codes[J], Avant, Apres, 5);
+      end;
+    // Talents
+    Codes.Clear;
+    for I := 0 to High(AvantTalent) do Codes.Add(AvantTalent[I].CodeTalent);
+    for I := 0 to High(Personnage.AugmentationTalent) do Codes.Add(Personnage.AugmentationTalent[I].CodeTalent);
+    for J := 0 to Codes.Count - 1 do
+      begin
+        Avant := 0; Apres := 0;
+        for I := 0 to High(AvantTalent) do
+          if AvantTalent[I].CodeTalent = Codes[J] then Avant := AvantTalent[I].Valeur;
+        for I := 0 to High(Personnage.AugmentationTalent) do
+          if Personnage.AugmentationTalent[I].CodeTalent = Codes[J] then Apres := Personnage.AugmentationTalent[I].Valeur;
+        Ajuste('TALENT', Codes[J], Avant, Apres, 1);
+      end;
+  finally
+    Codes.Free;
   end;
 end;
 
@@ -4086,7 +4464,7 @@ Function PersonnageArmureBonusTalent(Personnage: StructurePersonnage): TArrayPer
            and EquipementCompte(PersonnageEquipement) then
           begin
             // Les qualites d'un objet vivent a deux endroits : celles du catalogue
-            // (StructureArmure/StructureArmureSimplifiee.ListeBonus, ex. NATIO-ARMOB_16 sur
+            // (StructureArmure/StructureArmureSimplifiee.ListeBonus, ex. NATIO-ARMOB_FEAR sur
             // Skull Trophies - c'est CE champ que "Fear 1" affiche sur la fiche, chargearmure.pas)
             // et celles ajoutees par le joueur en fabrication (PersonnageEquipement.QualiteEquipement,
             // TabEquipement colonne Fabrication, winpersonnage.pas). Les deux sont scannees, au cas

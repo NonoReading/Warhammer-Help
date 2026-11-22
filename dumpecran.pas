@@ -9,7 +9,7 @@ unit DumpEcran;
 interface
 
 uses
-  Classes, SysUtils, Controls, StdCtrls, ExtCtrls, Grids, ComCtrls;
+  Classes, SysUtils, Controls, StdCtrls, ExtCtrls, Grids, ComCtrls, BCLabelContour, BCButton, Spin, StrUtils;
 
 // Ajoute a Sortie la description des controles visibles sous Racine (Niveau = indentation de depart).
 procedure DumpControles(Racine: TWinControl; Niveau: Integer; Sortie: TStrings);
@@ -18,7 +18,7 @@ implementation
 
 const
   MAX_CHOIX = 40;
-  MAX_LIGNES = 60;
+  MAX_LIGNES = 200;
 
 function Retrait(Niveau: Integer): String;
 begin
@@ -99,6 +99,16 @@ begin
       if TLabel(Ctl).Caption <> '' then
         Sortie.Add(Retrait(Niveau) + 'LIBELLE "' + Propre(TLabel(Ctl).Caption) + '"');
     end
+    else if Ctl is TLabelContour then
+    begin
+      if TLabelContour(Ctl).Caption <> '' then
+        Sortie.Add(Retrait(Niveau) + 'LIBELLE "' + Propre(TLabelContour(Ctl).Caption) + '"');
+    end
+    else if Ctl is TBCButton then
+      Sortie.Add(Retrait(Niveau) + 'BCBOUTON ' + Ctl.Name + ' "' + Propre(TBCButton(Ctl).Caption) + '"' +
+        IfThen(Ctl.Enabled, '', ' (inactif)'))
+    else if Ctl is TCustomFloatSpinEdit then
+      Sortie.Add(Retrait(Niveau) + 'NOMBRE ' + Ctl.Name + ' = ' + FloatToStr(TCustomFloatSpinEdit(Ctl).Value))
     else if Ctl is TMemo then
       Sortie.Add(Retrait(Niveau) + 'MEMO ' + Ctl.Name + ' = "' + Propre(TMemo(Ctl).Text) + '"' +
         '  (lecture seule : ' + BoolToStr(TMemo(Ctl).ReadOnly, True) + ')')

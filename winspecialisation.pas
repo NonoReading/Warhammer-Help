@@ -5,10 +5,11 @@ unit WinSpecialisation;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Grids, GlobalFonts,
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Grids, StdCtrls, GlobalFonts,
+  WinObjetPropre, XmlExportImport,
   ChargeTalent, ChargeCompetence, UnitCalcul, ChargeConstantes, ChargeTexte,
   ChargeArme, ChargeArmure, ChargeArmureSimplifie, ChargeMetierCompetence, ChargeRace,
-  ChargeMetier;
+  ChargeMetier, ChargeTrapping, BCButton, BCLabelContour;
 
 type
 
@@ -17,10 +18,14 @@ type
   { TWinSpecialisations }
 
   TWinSpecialisations = class(TForm)
+    ButtonAjouter: TBCButtonContour;   // +Specialisation propre au personnage (catalogue ouvert seulement)
     TabSpecialisation: TStringGrid;
     procedure FormCreate({%H-}Sender: TObject);
     procedure FormPaint(Sender: TObject);
     procedure TabSpecialisationDblClick({%H-}Sender: TObject);
+    procedure ButtonAjouterClick({%H-}Sender: TObject);
+    function  AjoutPermis: Boolean;
+    function  FamilleLibreTalent: String;
     Procedure ChargeSpecialisation(CodeGenerique: String);
     Procedure AjouteLigne(Gen: String; Code: String; Lib :string; Typ :String; SansTest :Boolean);
 
@@ -33,6 +38,14 @@ type
 var
   WinSpecialisations: TWinSpecialisations;
   FiltreLivre:        String;
+  // +Specialisation propre : a la creation (WinCreation) et a l'evolution (WinPersonnage).
+  // ObjetsPropresChoix = le fragment <CUSTOM_ITEMS> du personnage en cours de creation, que WinCreation
+  // recopie dans sa fiche avant l'enregistrement. A l'evolution, WinPersonnage pose ObjetsPropresCible
+  // sur Personnage.ObjetsPropres le temps de l'ouverture (nil le reste du temps) : le fragment est alors
+  // lu et ecrit directement dans la fiche.
+  AjoutSpecialisationLibre: Boolean = False;
+  ObjetsPropresChoix:       String  = '';
+  ObjetsPropresCible:       PString = nil;
 
 implementation
 
@@ -75,6 +88,7 @@ Procedure TWinSpecialisations.ChargeSpecialisation(CodeGenerique: String);
     PArme:             StructureArme;
     PArmure:           StructureArmure;
     PArmureSimplifiee: StructureArmureSimplifiee;
+    PTrapping:         StructureTrapping;
     Res:               String;
     NbL:               Integer;
     MaxL:              Integer;
@@ -200,7 +214,12 @@ Procedure TWinSpecialisations.ChargeSpecialisation(CodeGenerique: String);
                   end;
                 else
                   begin
-                    AjouteLigne(CodeGenerique, Res, Res, TypeEquipDi, true);
+                    // objet Divers : libelle de sa fiche Trapping s'il en a une, sinon le code (comme avant)
+                    PTrapping := ChercheTrapping(Res);
+                    if PTrapping.CodeTrapping <> '' then
+                      AjouteLigne(CodeGenerique, Res, PTrapping.Libelle, TypeEquipDi, true)
+                    else
+                      AjouteLigne(CodeGenerique, Res, Res, TypeEquipDi, true);
                   end;
               end;
             end;
@@ -231,6 +250,9 @@ Procedure TWinSpecialisations.ChargeSpecialisation(CodeGenerique: String);
 procedure TWinSpecialisations.FormCreate(Sender: TObject);
 // initialisation
   begin
+    // bouton +Specialisation : TBCButtonContour du .lfm (meme style que les boutons de WinPersonnage),
+    // invisible tant que la liste n'est pas chargee
+    ButtonAjouter.Caption := '+' + GetTexteLibelle('RULES-LAB_689');
     MiseEnFormeDesChamp(self);
     // ligne entiere selectionnee, meme couleur que les autres fenetres de choix
     SelectionGrilleWarhammer(TabSpecialisation);
@@ -247,6 +269,9 @@ procedure TWinSpecialisations.FormCreate(Sender: TObject);
     TabSpecialisation.ColWidths[3]  := 0;
 
     FiltreLivre := SelectWinLivre;
+    // les specialisations propres du personnage vivent dans le livre virtuel des objets propres
+    if FiltreLivre <> '' then
+      FiltreLivre := FiltreLivre + AjouteAccolade(ConstLivreObjetsPropres);
 
     case ChoixWinTypeFichier of
       ConstXmlSousChapitreTalent:       ChargeSpecialisation(ChoixWinTalent);
@@ -257,7 +282,111 @@ procedure TWinSpecialisations.FormCreate(Sender: TObject);
       ConstXmlChapitreEquipement:       ChargeSpecialisation(ChoixWinEquipement);
       ConstXmlDataCareerBonus:          ChargeSpecialisation(ChoixWinCareerBonus);
     end;
+    ButtonAjouter.Visible := AjoutPermis();
+    // mise en page par code (les ancrages du .lfm laissaient la liste recouvrir le bouton) :
+    // bouton en bas, liste juste au-dessus ; sans bouton, la liste prend toute la hauteur
+    if ButtonAjouter.Visible then
+      begin
+        ButtonAjouter.Top := ClientHeight - ButtonAjouter.Height - 11;
+        TabSpecialisation.Height := ButtonAjouter.Top - 8 - TabSpecialisation.Top;
+        ButtonAjouter.BringToFront;
+      end
+    else
+      TabSpecialisation.Height := ClientHeight - 11 - TabSpecialisation.Top;
+  end;
 
+function TWinSpecialisations.FamilleLibreTalent: String;
+// Generique ouvert (<FreeSpecialisation>) auquel se rattache le talent a choisir, '' sinon.
+// ChoixWinTalent est le generique lui-meme, ou une liste « A/B » de specialisations de la MEME famille
+// (carriere : « Etiquette (Nobles) ou Etiquette (Cultists) ») : la fenetre montre alors toute la famille,
+// on peut donc y ajouter la sienne. Une liste de familles differentes reste fermee.
+  var
+    I, N: Integer;
+    Part, Fam: String;
+  begin
+    Result := '';
+    if ChoixWinTalent = '' then exit;
+    N := CountOccurrences(ChoixWinTalent, SeparateurMulti) + 1;
+    for I := 1 to N do
+      begin
+        Part := Trim(ExtractChaine(SeparateurMulti, ChoixWinTalent, I));
+        if Pos(ValeurGenerique, Part) > 0 then Fam := Part else Fam := CodeFamilleTalent(Part);
+        if Fam = '' then begin Result := ''; exit; end;
+        if (I > 1) and (Fam <> Result) then begin Result := ''; exit; end;
+        Result := Fam;
+      end;
+    if not ChercheTalent(Result).SpecLibre then Result := '';
+  end;
+
+function TWinSpecialisations.AjoutPermis: Boolean;
+// +Specialisation seulement sur un catalogue OUVERT (talent ou competence a specialiser) : une liste
+// fermee par le livre (choix A/B, options de trait, Grail Virtue, equipement, appartenance) ne s'ouvre pas
+  begin
+    if not (AjoutSpecialisationLibre or (ObjetsPropresCible <> nil)) then
+      begin
+        Result := False;
+        exit;
+      end;
+    case ChoixWinTypeFichier of
+      ConstXmlSousChapitreTalent:
+        Result := (ChoixWinVertuGrail = '') and (ChercheTrait(ChoixWinTalent).CodeTrait = '')
+                  // seuls les generiques marques <FreeSpecialisation> du livre l'acceptent (Craftsman, Etiquette...) ;
+                  // Invoke (dieux), Arcane Magic (domaines), competences de combat liees aux armes : refuses
+                  and (FamilleLibreTalent <> '');
+      ConstXmlSousChapitreCompetence:
+        Result := (ChoixWinCompetence <> '') and (Pos(SeparateurMulti, ChoixWinCompetence) = 0)
+                  and ChercheCompetence(ChoixWinCompetence).SpecLibre;
+    else
+      Result := False;
+    end;
+  end;
+
+procedure TWinSpecialisations.ButtonAjouterClick(Sender: TObject);
+// cree une specialisation propre au personnage sous le generique, la range dans la fiche (<CUSTOM_ITEMS>)
+// et la prend tout de suite ; un nom deja dans la liste (casse ignoree) est pris tel quel, sans doublon
+  var
+    Nom:       String = '';
+    CodeParent: String;
+    Xml:       String;
+    Code:      String;
+    EstTalent: Boolean;
+    I, P:      Integer;
+    Base:      String;
+  begin
+    EstTalent := (ChoixWinTypeFichier = ConstXmlSousChapitreTalent);
+    if EstTalent then CodeParent := FamilleLibreTalent else CodeParent := ChoixWinCompetence;
+    if not InputQuery(GetTexteLibelle('RULES-LAB_689'), GetTexteLibelle('RULES-LAB_690'), Nom) then exit;
+    Nom := Trim(Nom);
+    if Nom = '' then exit;
+    // le joueur ne donne que le texte qui remplace « (Any) » : « Etiquette » + « test » = « Etiquette (test) »
+    if EstTalent then Base := ChercheTalent(CodeParent).Libelle else Base := ChercheCompetence(CodeParent).Libelle;
+    P := Pos(' (', Base);
+    while (P > 0) and (Pos(' (', Copy(Base, P + 1, MaxInt)) > 0) do
+      P := P + Pos(' (', Copy(Base, P + 1, MaxInt));
+    if P > 0 then Base := Trim(Copy(Base, 1, P - 1));
+    if (Base <> '') and not SameText(Copy(Nom, 1, Length(Base) + 2), Base + ' (') then
+      Nom := Base + ' (' + Nom + ')';
+    for I := 1 to TabSpecialisation.RowCount - 1 do
+      if SameText(Trim(TabSpecialisation.Cells[2, I]), Nom) then
+        begin
+          TabSpecialisation.Row := I;
+          TabSpecialisationDblClick(nil);
+          exit;
+        end;
+    if ObjetsPropresCible <> nil then Xml := ObjetsPropresCible^ else Xml := ObjetsPropresChoix;
+    Code := AjouteSpecialisationPropre(Xml, EstTalent, CodeParent, Nom);
+    if Code = '' then exit;
+    if ObjetsPropresCible <> nil then ObjetsPropresCible^ := Xml else ObjetsPropresChoix := Xml;
+    InjecteObjetsPropres(Xml);
+    TabSpecialisation.RowCount := 1;
+    ChargeSpecialisation(CodeParent);
+    for I := 1 to TabSpecialisation.RowCount - 1 do
+      if TabSpecialisation.Cells[1, I] = Code then
+        begin
+          TabSpecialisation.Row := I;
+          TabSpecialisationDblClick(nil);
+          exit;
+        end;
   end;
 
 procedure TWinSpecialisations.FormPaint(Sender: TObject);

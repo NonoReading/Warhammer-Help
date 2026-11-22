@@ -17,7 +17,7 @@ uses
   ChargeArme, WinWeapon, WinEquipement, ChargeArmeBonus, ChargeMetierEquipement, ChargeArmure,
   ChargeArmureBonus, ChargeArmureBonusTalent, ChargeArmeBonusTalent, WinArmor, ChargeTrapping, ChargeSort, WinSpell, ChargeTexte,
   ChargeFabrication, WinMutationCatalogue, ChargeDisease, WinDiseaseCatalogue, ChargeAffliction, WinAfflictionCatalogue, ChargeClassEquipement, Unitcalcul, ChargeMetierSousMetier, ChargeTirageMetier,
-  ChargeMetierRaceChoixMetier, ChargePersonnage, ChargeRaceCreation,
+  ChargeMetierRaceChoixMetier, ChargePersonnage, ChargeCreationTow, ChargeRaceCreation,
   ChargeTraduction, ChargeArmureSimplifie, ChargeOptionRegle, WinOptionRegle, ChargeLivre,
   ChargeTalentEffet, ChargeTalentCompetenceModif,
   ChargeRaceCorruptionCreation,
@@ -28,7 +28,7 @@ uses
   ChargeArmeModificateur, ChargeArmureBonusModificateur, ChargeCorruptionModificateur,
   ChargeAfflictionCompetenceModif,
   CustomDrawn_Common, BCButton, BCLabel, fpTTF,
-  PdfPersonnage, PdfUtils, PdfMetier, PdfRace, XmlExportImport, fppdf, WinLivre, Process, BCLabelContour;
+  PdfPersonnage, PdfPersonnageV5, PdfPersonnageTow, PdfUtils, PdfMetier, PdfRace, XmlExportImport, fppdf, WinLivre, ScriptEcran, Process, BCLabelContour;
 
 type
 
@@ -196,6 +196,45 @@ implementation
 
 {$R *.lfm}
 
+function CodePersoStable(const S: String): String;
+  // --dump : les codes PERSO-xxx__<hexa> (specialisations propres, suffixe unique a chaque creation) perdent leur
+  // suffixe (remplace par #), pour que la fiche de reference des tests d'ecran reste comparable
+  var
+    P, Q: Integer;
+  begin
+    Result := '';
+    P := 1;
+    while P <= Length(S) do
+      begin
+        if Copy(S, P, 6) = 'PERSO-' then
+          begin
+            Q := P;
+            while (Q <= Length(S)) and not (S[Q] in ['"', ' ', '<', '>', #13, #10]) do
+              begin
+                if (Copy(S, Q, 2) = '__') and (Q > P) then
+                  begin
+                    Result := Result + Copy(S, P, Q + 2 - P) + '#';
+                    Q := Q + 2;
+                    while (Q <= Length(S)) and (S[Q] in ['0'..'9', 'A'..'F']) do Inc(Q);
+                    P := Q;
+                    Break;
+                  end;
+                Inc(Q);
+              end;
+            if P < Q then
+              begin
+                Result := Result + Copy(S, P, Q - P);
+                P := Q;
+              end;
+          end
+        else
+          begin
+            Result := Result + S[P];
+            Inc(P);
+          end;
+      end;
+  end;
+
 function LibelleVersion(const Code: String): String;
   // Code d'édition (WFRP4) -> libellé de la liste déroulante avec l'année de sortie du
   // jeu (Nono, 31/10/2026). La 3e édition n'est pas gérée par le projet.
@@ -204,6 +243,7 @@ function LibelleVersion(const Code: String): String;
     else if Code = 'WFRP2' then Result := Code + ' (2005)'
     else if Code = 'WFRP4' then Result := Code + ' (2018)'
     else if Code = 'WFRP5' then Result := Code + ' (2026)'
+    else if Code = 'WFRPTOW' then Result := Code + ' (2025)'
     else Result := Code;
   end;
 
@@ -613,7 +653,8 @@ procedure TMenu.ComboBoxVersionSelect(Sender: TObject);
                   ValVersion             := Version;
                   ConstCheminLivre       := '\DATABASE\' + ValVersion + '\';
                   ConstCheminPersonnage  := '\SAVED_CARACTERS\' + ValVersion + '\';
-                  ConstCheminImageRace   := '\DATABASE\' + ValVersion + '\PICTURES\SPECIE\';
+                  ForceDirectories(GetCurrentDir + ConstCheminPersonnage);  // absent dans le zip de release
+                  ConstCheminImageRace  := '\DATABASE\' + ValVersion + '\PICTURES\SPECIE\';
                   ConstCheminImageMetier := '\DATABASE\' + ValVersion + '\PICTURES\CLASS\';
                   ConstCheminImageSort   := '\DATABASE\' + ValVersion + '\PICTURES\SPELL\';
                   ConstCheminImageNiveau       := '\PICTURES\' + ValVersion + '\NIV\';
@@ -1288,13 +1329,6 @@ Procedure TMenu.ChargeIni();
 procedure TMenu.ChargerLivre(ForceMaJ: Boolean; ForceLivre: String);
   var
     i:                     Integer = 0;
-    SearchResult:          TSearchRec;
-    DirectoryPath:         string;
-    Nom:                   String;
-    ListeFichiersACharger: TStringList;
-    ListeNomsACharger:     TStringList;
-    Idx:                   Integer;
-    RulesBookIndex:        Integer;
 
     procedure ImporterUnLivre(FileName, NomLivre: String);
       var
@@ -1336,9 +1370,7 @@ procedure TMenu.ChargerLivre(ForceMaJ: Boolean; ForceLivre: String);
             end;
       end;
 
-  begin
-    // Raz des variables
-    if ForceMaj then
+    procedure RazCompteurs;
       begin
         NbRace	                    := 0;
         NbEspece                    := 0;
@@ -1402,7 +1434,12 @@ procedure TMenu.ChargerLivre(ForceMaJ: Boolean; ForceLivre: String);
         NbCareerBonusSpecialRule    := 0;
         NbCareerAdaptation          := 0;
         NbCareerAdaptationLigne     := 0;
+      end;
 
+    procedure ViderListes;
+      var
+        I: Integer;
+      begin
         // vider les données
         ListRace.Clear;
         ListEspece.Clear;
@@ -1520,6 +1557,66 @@ procedure TMenu.ChargerLivre(ForceMaJ: Boolean; ForceLivre: String);
             end;
       end;
 
+    procedure ChargerLesLivres;
+      var
+        SearchResult: TSearchRec;
+        DirectoryPath: string;
+        Nom: String;
+        ListeFichiersACharger: TStringList;
+        ListeNomsACharger: TStringList;
+        Idx: Integer;
+        RulesBookIndex: Integer;
+      begin
+        directoryPath          := GetCurrentDir + ConstCheminLivre;
+        ListeFichiersACharger  := TStringList.Create;
+        ListeNomsACharger      := TStringList.Create;
+        try
+          if FindFirst(directoryPath + '*.xml', faAnyFile, searchResult) = 0 then
+          begin
+            repeat
+              Nom := XmlLivre(ExtractStringBefore(searchResult.Name,'.'));
+              if (pos(AjouteAccolade(Nom), LivresCharges) > 0) and ((ForceLivre = '') or ((LivreComplet = false) and (ForceLivre = Nom))) then
+                begin
+                  ListeFichiersACharger.Add(ExtractStringBefore(searchResult.Name, '.'));
+                  ListeNomsACharger.Add(Nom);
+                end;
+            until FindNext(searchResult) <> 0;
+            FindClose(searchResult);
+          end;
+
+          RulesBookIndex := -1;
+          for Idx := 0 to ListeNomsACharger.Count - 1 do
+            if ListeNomsACharger[Idx] = ConstRulesBook then
+              begin
+                RulesBookIndex := Idx;
+                break;
+              end;
+
+          ChargementDebut(GetTexteLibelle('RULES-MESS_119'), ListeNomsACharger.Count);
+          if RulesBookIndex >= 0 then
+            begin
+              ImporterUnLivre(ListeFichiersACharger[RulesBookIndex], ListeNomsACharger[RulesBookIndex]);
+              ListeFichiersACharger.Delete(RulesBookIndex);
+              ListeNomsACharger.Delete(RulesBookIndex);
+            end;
+
+          for Idx := 0 to ListeFichiersACharger.Count - 1 do
+            ImporterUnLivre(ListeFichiersACharger[Idx], ListeNomsACharger[Idx]);
+        finally
+          ChargementFin;
+          ListeFichiersACharger.Free;
+          ListeNomsACharger.Free;
+        end;
+      end;
+
+  begin
+    // Raz des variables
+    if ForceMaj then
+      begin
+        RazCompteurs;
+        ViderListes;
+      end;
+
     // chercher les livres
     if ForceMaj or (ForceLivre <> '') then
       begin
@@ -1534,46 +1631,7 @@ procedure TMenu.ChargerLivre(ForceMaJ: Boolean; ForceLivre: String);
     // pour la même raison que dans FormCreate (voir xmlexportimport.pas /
     // ChercheRace) : un supplément (ex. BOOK LUSTRIA) peut ajouter un <Specie>
     // qui référence une race déjà définie dans le RULESBOOK.
-    directoryPath          := GetCurrentDir + ConstCheminLivre;
-    ListeFichiersACharger  := TStringList.Create;
-    ListeNomsACharger      := TStringList.Create;
-    try
-      if FindFirst(directoryPath + '*.xml', faAnyFile, searchResult) = 0 then
-      begin
-        repeat
-          Nom := XmlLivre(ExtractStringBefore(searchResult.Name,'.'));
-          if (pos(AjouteAccolade(Nom), LivresCharges) > 0) and ((ForceLivre = '') or ((LivreComplet = false) and (ForceLivre = Nom))) then
-            begin
-              ListeFichiersACharger.Add(ExtractStringBefore(searchResult.Name, '.'));
-              ListeNomsACharger.Add(Nom);
-            end;
-        until FindNext(searchResult) <> 0;
-        FindClose(searchResult);
-      end;
-
-      RulesBookIndex := -1;
-      for Idx := 0 to ListeNomsACharger.Count - 1 do
-        if ListeNomsACharger[Idx] = ConstRulesBook then
-          begin
-            RulesBookIndex := Idx;
-            break;
-          end;
-
-      ChargementDebut(GetTexteLibelle('RULES-MESS_119'), ListeNomsACharger.Count);
-      if RulesBookIndex >= 0 then
-        begin
-          ImporterUnLivre(ListeFichiersACharger[RulesBookIndex], ListeNomsACharger[RulesBookIndex]);
-          ListeFichiersACharger.Delete(RulesBookIndex);
-          ListeNomsACharger.Delete(RulesBookIndex);
-        end;
-
-      for Idx := 0 to ListeFichiersACharger.Count - 1 do
-        ImporterUnLivre(ListeFichiersACharger[Idx], ListeNomsACharger[Idx]);
-    finally
-      ChargementFin;
-      ListeFichiersACharger.Free;
-      ListeNomsACharger.Free;
-    end;
+    ChargerLesLivres;
 
     // Tous les livres sont chargés : propager l'accessibilité des métiers entre ethnies
     // d'une même race (voir ChargeRaceMetier.CompleteRaceMetierParEspece).
@@ -2101,6 +2159,7 @@ procedure TMenu.FormCreate(Sender: TObject);
       if TabBibliotheque = nil then
         begin
           TabBibliotheque              := TStringGrid.Create(Self);
+          TabBibliotheque.Name         := 'TabBibliotheque';  // pour les scripts d'ecran
           TabBibliotheque.Parent       := Self;
           TabBibliotheque.SetBounds(ButtonRace.Left, 564, ButtonRace.Width + 160,
                                     Button1.Top + Button1.Height - 564 - 16);
@@ -2246,6 +2305,10 @@ procedure TMenu.FormCreate(Sender: TObject);
 
   // Modes sans fenetre (--pdf, --reecrit, --dump, --retrait, --export) et --winlivre.
   procedure ModesLot;
+    var
+      TowBase:  String;
+      TowPerso: StructurePersonnage;
+      TowDump:  TStringList;
     begin
      // Mode lot : WarhammerHelp.exe --pdf <dossier personnage> [...] ecrit les PDF puis quitte.
      if (ParamCount >= 1) and (ParamStr(1) = '--pdfmetier') then
@@ -2265,6 +2328,39 @@ procedure TMenu.FormCreate(Sender: TObject);
      if (ParamCount >= 3) and (ParamStr(1) = '--reecrit') then
        begin
          LotReecritPersonnages();
+         Halt(0);
+       end;
+     // WarhammerHelp.exe --towcherche <fichier de sortie> : controle (lecture seule) de ce que le moteur commun
+     // (ChercheRace / Metier / Talent / Competence / Sort / Attribut) sait retrouver pour des codes du livre TOW.
+     if (ParamCount >= 2) and (ParamStr(1) = '--towcherche') then
+       begin
+         TowDump := TStringList.Create;
+         TowDump.Add('RACE      RULES-SPECIE_DWARF       -> [' + ChercheRace('RULES-SPECIE_DWARF').Libelle + '] livre=[' + ChercheRace('RULES-SPECIE_DWARF').Livre + ']');
+         TowDump.Add('METIER    RULES-WORK_APOTHECARY  -> [' + ChercheMetier('RULES-WORK_APOTHECARY').Libelle + '] livre=[' + ChercheMetier('RULES-WORK_APOTHECARY').Livre + ']');
+         TowDump.Add('TALENT    RULES-T_ACROBATIC   -> [' + ChercheTalent('RULES-T_ACROBATIC').Libelle + '] livre=[' + ChercheTalent('RULES-T_ACROBATIC').Livre + ']');
+         TowDump.Add('COMP      RULES-COMP_MELEE         -> [' + ChercheCompetence('RULES-COMP_MELEE').Libelle + '] livre=[' + ChercheCompetence('RULES-COMP_MELEE').Livre + ']');
+         TowDump.Add('SORT      RULES-SPELL_CURSE_OF_COWARDLY_FLIGHT -> [' + ChercheSort('RULES-SPELL_CURSE_OF_COWARDLY_FLIGHT').Libelle + '] livre=[' + ChercheSort('RULES-SPELL_CURSE_OF_COWARDLY_FLIGHT').Livre + ']');
+         TowDump.Add('ATTRIBUT  RULES-ATTR_WS            -> [' + ChercheAttribut('RULES-ATTR_WS').Libelle + '] livre=[' + ChercheAttribut('RULES-ATTR_WS').Livre + ']');
+         TowDump.SaveToFile(ParamStr(2));
+         TowDump.Free;
+         Halt(0);
+       end;
+     // WarhammerHelp.exe --tow <dossier de sortie> <fichier xml TOW> : lit un personnage The Old World,
+     // ecrit <nom>.txt (dump) et <nom>.reecrit.xml, puis relit le XML reecrit et ecrit <nom>.relu.txt.
+     // Les deux .txt doivent etre identiques (aller-retour sans perte, etape 3 du plan TOW).
+     if (ParamCount >= 3) and (ParamStr(1) = '--tow') then
+       begin
+         ForceDirectories(ParamStr(2));
+         TowBase := IncludeTrailingPathDelimiter(ParamStr(2)) + ChangeFileExt(ExtractFileName(ParamStr(3)), '');
+         TowPerso := PersonnageXmlChargement(ParamStr(3));
+         TowDump := PersonnageTowDump(TowPerso);
+         TowDump.SaveToFile(TowBase + '.txt');
+         TowDump.Free;
+         PersonnageXmlCreation(TowPerso, TowPerso.XpTotal, TowPerso.XpActuel, TowBase + '.reecrit.xml', TowPerso.NomPersonnage);
+         TowPerso := PersonnageXmlChargement(TowBase + '.reecrit.xml');
+         TowDump := PersonnageTowDump(TowPerso);
+         TowDump.SaveToFile(TowBase + '.relu.txt');
+         TowDump.Free;
          Halt(0);
        end;
      if (ParamCount >= 3) and (ParamStr(1) = '--dump') then
@@ -2369,6 +2465,13 @@ procedure TMenu.FormCreate(Sender: TObject);
      // WarhammerHelp.exe --winlivre [chemin du livre] : second processus ou WinLivre est seul
      // visible (menu cache). Ses listes sont propres au processus : l Update de WinLivre ne
      // touche jamais celles du jeu principal (CONTEXT.md 2.106).
+     // WarhammerHelp.exe --script <fichier> : rejoue des clics / saisies dans les vraies fenetres
+     // (voir scriptecran.pas), ecrit <fichier>.sortie.txt puis quitte. Menu cache.
+     if (ParamCount >= 2) and (ParamStr(1) = '--script') then
+       begin
+         Application.ShowMainForm := False;
+         LancerScript(ParamStr(2));
+       end;
      if (ParamCount >= 1) and (ParamStr(1) = '--winlivre') then
        begin
          if ParamCount >= 2 then
@@ -2416,6 +2519,7 @@ procedure TMenu.FormCreate(Sender: TObject);
        ChargerListeVersions();
        ConstCheminLivre       := '\DATABASE\' + ValVersion + '\';
        ConstCheminPersonnage  := '\SAVED_CARACTERS\' + ValVersion + '\';
+       ForceDirectories(GetCurrentDir + ConstCheminPersonnage);  // absent dans le zip de release
        // Chemins d'images races/métiers/sorts alignés sur la version comme ConstCheminLivre
        // ci-dessus (Nono, 14/09/2026, CONTEXT.md §2.70) - ne sont plus figés sur WFRP4\ (l'un
        // d'eux, ConstCheminImageMetier, était même figé sur WFRP5\ à tort, indépendamment de
@@ -2844,10 +2948,58 @@ procedure TMenu.ButtonCreationClick(Sender: TObject);
   end;
 
 procedure TMenu.ButtonCreationLivreClick(Sender: TObject);
+var
+  Code, Nom, Chemin, Officiel, Complet: String;
+  F: TStringList;
 begin
-  CodeLivre        := '';
-  NomLivre         := '';
-  LancerWinLivre('');
+  // Cree l en-tete d un livre vide puis l ouvre dans WinLivre. Livre perso : OFFICIAL 2 ;
+  // livre officiel a saisir : OFFICIAL 1 + COMPLETE 0 (modifiable tant qu il est inacheve).
+  Code := '';
+  Nom  := '';
+  if not InputQuery(Caption, 'Code du livre (2 a 6 lettres/chiffres, ex. MYBK)', Code) then Exit;
+  Code := UpperCase(Trim(Code));
+  if (Length(Code) < 2) or (Length(Code) > 6) then
+    begin
+      MessageDlg('Code invalide.', mtWarning, [mbOK], 0);
+      Exit;
+    end;
+  if not InputQuery(Caption, 'Nom du livre', Nom) then Exit;
+  Nom := Trim(StringReplace(Nom, '"', '', [rfReplaceAll]));
+  if Nom = '' then Exit;
+  if MessageDlg('Livre perso (oui) ou nouveau livre officiel a saisir (non) ?',
+       mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+    begin
+      Officiel := '2';
+      Complet  := '1';
+    end
+  else
+    begin
+      Officiel := '1';
+      Complet  := '0';
+    end;
+  Chemin := GetCurrentDir + ConstCheminLivre + 'BOOK ' + UpperCase(Nom) + '.Xml';
+  if FileExists(Chemin) then
+    begin
+      MessageDlg('Ce livre existe deja.', mtWarning, [mbOK], 0);
+      Exit;
+    end;
+  F := TStringList.Create;
+  try
+    F.Add('<?xml version="1.0" encoding="UTF-8"?>');
+    F.Add('<DATA_BOOK>');
+    F.Add('<CODE_BOOK>"' + Code + '"</CODE_BOOK>');
+    F.Add('<BOOK>"BOOK ' + UpperCase(Nom) + '"</BOOK>');
+    F.Add('<BOOKNAME>"' + Nom + '"</BOOKNAME>');
+    F.Add('<language>"ENGLISH"</language>');
+    F.Add('<VERSION>"' + ValVersion + '"</VERSION>');
+    F.Add('<OFFICIAL>"' + Officiel + '"</OFFICIAL>');
+    F.Add('<COMPLETE>"' + Complet + '"</COMPLETE>');
+    F.Add('</DATA_BOOK>');
+    F.SaveToFile(Chemin);
+  finally
+    F.Free;
+  end;
+  LancerWinLivre(Chemin);
 end;
 
 procedure TMenu.ButtonArmeClick(Sender: TObject);
@@ -3193,6 +3345,7 @@ procedure TMenu.TesterCasCreation(const FichierCas: String; Sortie: TStringList;
   //             couvre (regle, ethnie)                  -> 1 / 0 (RegleCouvreRace)
   //             remplace (regle, ethnie, genre S/T)     -> 1 / 0 (RegleRemplaceGenre)
   //             fond   (ethnie, -, jet d100)            -> regle de background (RegleFondTirage)
+  //             talent (ethnie, -, jet d100)            -> talent tire au hasard (CalculeTirageTalent)
   //             sousmetier (metier, -, 2e jet d100)     -> metier du second jet (ResultMetierSousMetier)
   //             choixmetier (ethnie, metier)            -> metier/alternative/... (ResultMetierRaceChoixMetier)
   //             niveaubonus (appartenance, palier 1-4)  -> « competences;talents » du palier (NiveauxDuCareerBonus)
@@ -3213,6 +3366,8 @@ procedure TMenu.TesterCasCreation(const FichierCas: String; Sortie: TStringList;
     NivBonus: StructureCareerBonusNiveau;
     TirageComp: StructureTirageCompV1;
     CumulComp:  Integer;
+    TirageTal:  TListTirageTalent;
+    LigneTal:   StructureTirageTalent;
   begin
     Cas     := TStringList.Create;
     Champs  := TStringList.Create;
@@ -3263,6 +3418,21 @@ procedure TMenu.TesterCasCreation(const FichierCas: String; Sortie: TStringList;
             Obtenu := IntToStr(Ord(RegleRemplaceGenre(Champs[2], Champs[3], Champs[4])))
           else if Fonction = 'fond' then
             Obtenu := RegleFondTirage(Champs[2], StrToIntDef(Champs[4], 0))
+          else if Fonction = 'talent' then
+            // talent tire au hasard a la creation (table de l ethnie, ou generique) pour un jet d100
+            begin
+              Obtenu := '';
+              Jet    := StrToIntDef(Champs[4], 0);
+              TirageTal := TListTirageTalent.Create;
+              try
+                CalculeTirageTalent(Champs[2], TirageTal);
+                for LigneTal in TirageTal do
+                  if (Jet >= LigneTal.Debut) and (Jet <= LigneTal.Fin) then
+                    Obtenu := LigneTal.CodeTalent;
+              finally
+                TirageTal.Free;
+              end;
+            end
           else if Fonction = 'competencev1' then
             begin
               // chances cumulees dans l'ordre des donnees, comme TCreationV1.TirerCompClick
@@ -3499,6 +3669,7 @@ procedure TMenu.LotDumpPersonnages();
     Personnage: StructurePersonnage;
     Copie:      StructurePersonnage;
     Sortie:     TStringList;
+    TowDumpPerso: TStringList;
     Mutation:   StructurePersonnageMutation;
     Pathologie: StructurePersonnagePathologie;
     PersoTalent: StructurePersonnageTalent;
@@ -3506,7 +3677,7 @@ procedure TMenu.LotDumpPersonnages();
   procedure Ligne(Genre, Code: String; Valeurs: String);
     begin
       if Valeurs <> '' then
-        Sortie.Add(Genre + ' ' + Code + ' ' + Valeurs);
+        Sortie.Add(Genre + ' ' + CodePersoStable(Code) + ' ' + Valeurs);
     end;
 
   function Val(Nom: String; Valeur: Integer): String;
@@ -3532,6 +3703,17 @@ procedure TMenu.LotDumpPersonnages();
               Sortie.SaveToFile(IncludeTrailingPathDelimiter(Dossier) + ParamStr(Ind) + '.txt');
               Continue;
             end;
+          if ValVersion = 'WFRPTOW' then
+            begin
+              // format TOW a part : l ancien chargeur plante (access violation)
+              TowDumpPerso := PersonnageTowDump(PersonnageXmlChargement(Chemin));
+              try
+                TowDumpPerso.SaveToFile(IncludeTrailingPathDelimiter(Dossier) + ParamStr(Ind) + '.txt');
+              finally
+                TowDumpPerso.Free;
+              end;
+              Continue;
+            end;
           Personnage := PersonnageXmlChargement(Chemin);
           Sortie.Add('PERSONNAGE ' + Personnage.NomPersonnage);
           // Valeurs STOCKEES dans la fiche (pas de calcul) : identite, naissance, attributs,
@@ -3542,6 +3724,16 @@ procedure TMenu.LotDumpPersonnages();
             + ' poids=' + IntToStr(Personnage.PoidsV2) + ' fratrie=' + Personnage.FratrieV2);
           Sortie.Add('NAISSANCE ' + Personnage.NaissanceV2 + ' | astre=' + Personnage.AstreV2
             + ' | signe=' + Personnage.SigneDistinctifV2);
+          // Signe astral (Archives II, balise StarSign) : ligne ecrite seulement s il y en a un
+          if Personnage.SigneAstral <> '' then
+            begin
+              Sortie.Add('SIGNE-ASTRAL ' + Personnage.SigneAstral + ' variante=' + Personnage.SigneAstralVariante);
+              if Personnage.SigneAstralTalent <> '' then
+                Sortie.Add('SIGNE-ASTRAL-TALENT ' + CodePersoStable(Personnage.SigneAstralTalent));
+            end;
+          // Specialisations propres au personnage (<CUSTOM_ITEMS>, +Specialisation)
+          if Personnage.ObjetsPropres <> '' then
+            Sortie.Add('OBJETS-PROPRES ' + CodePersoStable(Personnage.ObjetsPropres));
           for IndA := 0 to High(Personnage.CreationAttribut) do
             Sortie.Add('STOCK-ATTR-CREATION ' + Personnage.CreationAttribut[IndA].CodeAttribut + ' valeur='
               + IntToStr(Personnage.CreationAttribut[IndA].Valeur) + ' bonus=' + Personnage.CreationAttribut[IndA].Bonus);
@@ -3700,6 +3892,7 @@ procedure TMenu.ChargerPersonnages();
     i:             Integer = 0;
     Chemin:        String;
     Personnage:    StructurePersonnage;
+    PTow:          StructurePersonnage;
     PMetier:       StructureMetier;
     PRace:         StructureRace;
     Livre:         String;
@@ -3753,6 +3946,17 @@ procedure TMenu.ChargerPersonnages();
               // tout tant que le dossier vide restait sur le disque. On ignore la ligne.
               i                      := i - 1;
               TabPersonnage.RowCount := i + 1;
+              Continue;
+            end;
+          if ValVersion = 'WFRPTOW' then
+            begin
+              // perso TOW : le chargeur commun suffit, l ancien chargeur V1-V5 ne lit pas ses champs
+              PTow := PersonnageXmlChargement(Chemin);
+              TabPersonnage.Cells[ColPersoWor, I] := TowLibelleDe(PTow.MetierEnCours.CodeMetier);
+              TabPersonnage.Cells[ColPersoRac, I] := TowLibelleDe(PTow.Race);
+              TabPersonnage.Cells[ColPersoNiv, I] := '1';
+              TabPersonnage.Cells[ColPersoTXp, I] := IntToStr(PTow.XpTotal);
+              TabPersonnage.Cells[ColPersoCXp, I] := IntToStr(PTow.XpActuel);
               Continue;
             end;
           if not PersonnageResumeFichier(Chemin, Personnage) then

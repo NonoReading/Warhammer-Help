@@ -19,6 +19,8 @@
 <Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_UNRELIABLE"</Quality>
 <Hand>"2"</Hand>
 <Type>"RULES-WTYPE2_GUNPOWDER"</Type>
+<Reload>"3 Full"</Reload>
+<Note>""</Note>
 <Page>"43"</Page>
 </Weapon>
 <Weapon id="COMP-PROJ_V2_SWIVEL_GUN_GRAPESHOT">
@@ -32,6 +34,8 @@
 <Quality>"RULES-WEAPQ_SHRAPNEL,RULES-WEAPQ_UNRELIABLE"</Quality>
 <Hand>"2"</Hand>
 <Type>"RULES-WTYPE2_GUNPOWDER"</Type>
+<Reload>"4 Full"</Reload>
+<Note>""</Note>
 <Page>"43"</Page>
 </Weapon>
 </DATA_WEAPON>
@@ -273,34 +277,6 @@
 <Cost>"210 gc"</Cost>
 <Encumbrance>"8,000"</Encumbrance>
 <Availability>"RULES-DISPO2_RARE"</Availability>
-<Note>""</Note>
-<Page>"43"</Page>
-</EquipmentV2>
-<EquipmentV2 id="COMP-EQUI_MISSILE_WEAPONS_SWIVEL_GUN_ROUND_SHOT">
-<Description language="ENGLISH">"Swivel Gun (Round Shot)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"725 gc"</Cost>
-<Encumbrance>"500"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"6"</Damage>
-<Range>"36/108"</Range>
-<Reload>"3 Full"</Reload>
-<Qualities>"Impact, Unreliable"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
-<Note>""</Note>
-<Page>"43"</Page>
-</EquipmentV2>
-<EquipmentV2 id="COMP-EQUI_MISSILE_WEAPONS_SWIVEL_GUN_GRAPESHOT">
-<Description language="ENGLISH">"Swivel Gun (Grapeshot)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"725 gc"</Cost>
-<Encumbrance>"500"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"5"</Damage>
-<Range>"24/-"</Range>
-<Reload>"4 Full"</Reload>
-<Qualities>"Shrapnel, Unreliable"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
 <Note>""</Note>
 <Page>"43"</Page>
 </EquipmentV2>

@@ -51,7 +51,10 @@ type
   private
     CaseBase: TCheckBox;   // creee a l'execution (filtre des carrieres V1 / V2), pas dans le .lfm
     EtiquetteBase: TLabelContour;
+    CaseTalentOu: TCheckBox;   // creee a l'execution (filtre des carrieres : talents en OU)
+    EtiquetteTalentOu: TLabelContour;
     procedure EtiquetteBaseClick({%H-}Sender: TObject);
+    procedure EtiquetteTalentOuClick({%H-}Sender: TObject);
 
   public
 
@@ -67,6 +70,11 @@ implementation
 procedure TWinFiltre.EtiquetteBaseClick(Sender: TObject);
 begin
   CaseBase.Checked := not CaseBase.Checked;
+end;
+
+procedure TWinFiltre.EtiquetteTalentOuClick(Sender: TObject);
+begin
+  CaseTalentOu.Checked := not CaseTalentOu.Checked;
 end;
 
 procedure TWinFiltre.ChargeLivre();
@@ -432,6 +440,7 @@ begin
     NbNon := 0;
 
   ChoixWinBase := Assigned(CaseBase) and CaseBase.Checked;
+  ChoixWinTalentOu := Assigned(CaseTalentOu) and CaseTalentOu.Checked;
 
   ChoixWinAttribut := '';
   if tabAttribut.Visible then
@@ -464,6 +473,7 @@ begin
   if (WinFiltreAppelant = ConstXmlWork) and ((ValVersion = 'WFRP2') or (ValVersion = 'WFRP1')) then
     begin
       CaseBase            := TCheckBox.Create(Self);
+      CaseBase.Name       := 'CaseBase';       // nom pose pour que --script la retrouve
       CaseBase.Parent     := Self;
       CaseBase.Caption    := '';
       CaseBase.Left       := ButtonValider.Left + ButtonValider.Width + 20;
@@ -477,6 +487,22 @@ begin
       EtiquetteBase.Left       := CaseBase.Left + 28;
       EtiquetteBase.Top        := ButtonValider.Top + 4;
       EtiquetteBase.OnClick    := @EtiquetteBaseClick;
+    end;
+  // Carrieres : case « un seul des talents suffit » (OU), sous la grille Talent (placee plus bas).
+  // Creee AVANT MiseEnFormeDesChamp, pour la meme raison que CaseBase.
+  if WinFiltreAppelant = ConstXmlWork then
+    begin
+      CaseTalentOu            := TCheckBox.Create(Self);
+      CaseTalentOu.Name       := 'CaseTalentOu';   // nom pose pour que --script la retrouve
+      CaseTalentOu.Parent     := Self;
+      CaseTalentOu.Caption    := '';
+      CaseTalentOu.Checked    := SelectWinTalentOu;
+      EtiquetteTalentOu            := TLabelContour.Create(Self);
+      EtiquetteTalentOu.Parent     := Self;
+      EtiquetteTalentOu.Caption    := GetTexteLibelle('RULES-LAB_FILTRE_TALENT_OU');
+      EtiquetteTalentOu.Font.Color := clWhite;
+      EtiquetteTalentOu.Font.Height:= -18;
+      EtiquetteTalentOu.OnClick    := @EtiquetteTalentOuClick;
     end;
   MiseEnFormeDesChamp(self);
   // grilles sans saisie : ligne entiere selectionnee, couleur commune
@@ -554,6 +580,14 @@ begin
       LabelTalent.left       := PosX;
       TabTalent.left    := PosX;
       AdjustGridColumnsWidth(TabTalent, 0, false, false);
+      if Assigned(CaseTalentOu) then
+        begin
+          CaseTalentOu.Left        := TabTalent.Left;
+          // au-dessus du titre « Talent » (visible sans agrandir la fenetre)
+          CaseTalentOu.Top         := LabelTalent.Top - 30;
+          EtiquetteTalentOu.Left   := CaseTalentOu.Left + 24;
+          EtiquetteTalentOu.Top    := LabelTalent.Top - 33;
+        end;
       PosX              := 10 + TabTalent.left + TabTalent.Width;
     end;
 

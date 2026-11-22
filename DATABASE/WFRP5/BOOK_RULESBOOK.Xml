@@ -80,11 +80,17 @@
 <Short language="ENGLISH">"Fate"</Short>
 <Order>"12"</Order>
 </Attribut>
+<Attribut id="RULES-ATTR_Fortune">
+<Description language="ENGLISH">"Fortune"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Short language="ENGLISH">"Fortune"</Short>
+<Order>"13"</Order>
+</Attribut>
 <Attribut id="RULES-ATTR_Move">
 <Description language="ENGLISH">"Movement"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Move"</Short>
-<Order>"13"</Order>
+<Order>"14"</Order>
 </Attribut>
 </DATA_ATTRIBUT>
 <DATA_ATTRIBUT_COST>
@@ -144,59 +150,379 @@
 <Text name="RULES-ARMOT_PLATE">"Plate"</Text>
 </Label>
 </DATA_LABEL>
+<DATA_CORRUPTION_PHYSICAL>
+<Specie name="RULES-RACE_HUM">"01-50"</Specie>
+<Specie name="RULES-RACE_HALF">"01-10"</Specie>
+<Specie name="RULES-RACE_DWAR">"01-05"</Specie>
+<Specie name="RULES-RACE_HELF">"-"</Specie>
+<Specie name="RULES-RACE_WELF">"-"</Specie>
+</DATA_CORRUPTION_PHYSICAL>
+<DATA_CORRUPTION_MENTAL>
+<Specie name="RULES-RACE_HUM">"51-100"</Specie>
+<Specie name="RULES-RACE_HALF">"11-100"</Specie>
+<Specie name="RULES-RACE_DWAR">"06-100"</Specie>
+<Specie name="RULES-RACE_HELF">"01-100"</Specie>
+<Specie name="RULES-RACE_WELF">"01-100"</Specie>
+</DATA_CORRUPTION_MENTAL>
+<DATA_CORRUPTION_TABLE_PHYSICAL>
+<Corruption name="RULES-CORPHY_ANIMALISTIC_LEGS">
+<Description language="ENGLISH">"Animalistic Legs"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_Move">+1</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORPHY_CORPULENT">
+<Description language="ENGLISH">"Corpulent"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_S">+5</ModifyCarac>
+<ModifyCarac name="RULES-ATTR_T">+5</ModifyCarac>
+<ModifyCarac name="RULES-ATTR_Move">-1</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORPHY_DISTENDED_DIGITS">
+<Description language="ENGLISH">"Distended Digits"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_Dex">+10</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORPHY_EMACIATED">
+<Description language="ENGLISH">"Emaciated"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_Ag">+5</ModifyCarac>
+<ModifyCarac name="RULES-ATTR_S">-10</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORPHY_ENORMOUS_EYE">
+<Description language="ENGLISH">"Enormous Eye"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORPHY_EXTRA_LEG_JOINTS">
+<Description language="ENGLISH">"Extra Leg Joints"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_Ag">+5</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORPHY_EXTRA_MOUTH">
+<Description language="ENGLISH">"Extra Mouth"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORPHY_FLESHY_TENTACLE">
+<Description language="ENGLISH">"Fleshy Tentacle"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORPHY_GLOWING_SKIN">
+<Description language="ENGLISH">"Glowing Skin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORPHY_INHUMAN_BEAUTY">
+<Description language="ENGLISH">"Inhuman Beauty"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_Fel">+10</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORPHY_INVERTED_FACE">
+<Description language="ENGLISH">"Inverted Face"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_Fel">-20</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORPHY_IRON_SKIN">
+<Description language="ENGLISH">"Iron Skin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifArmour name="RULES-ARMOL_HEAD">2</ModifArmour>
+<ModifArmour name="RULES-ARMOL_ARM">2</ModifArmour>
+<ModifArmour name="RULES-ARMOL_BODY">2</ModifArmour>
+<ModifArmour name="RULES-ARMOL_LEG">2</ModifArmour>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORPHY_LOLLING_TONGUE">
+<Description language="ENGLISH">"Lolling Tongue"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifySkill name="RULES-COMP_LANGUAGE__*">-10</ModifySkill>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORPHY_PATCHY_FEATHERS">
+<Description language="ENGLISH">"Patchy Feathers"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORPHY_SHORT_LEGS">
+<Description language="ENGLISH">"Short Legs"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_Move">-1</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORPHY_SPINY_PROTRUSIONS">
+<Description language="ENGLISH">"Spiny Protrusions"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORPHY_THORNY_SCALES">
+<Description language="ENGLISH">"Thorny Scales"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifArmour name="RULES-ARMOL_HEAD">1</ModifArmour>
+<ModifArmour name="RULES-ARMOL_ARM">1</ModifArmour>
+<ModifArmour name="RULES-ARMOL_BODY">1</ModifArmour>
+<ModifArmour name="RULES-ARMOL_LEG">1</ModifArmour>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORPHY_UNEVEN_HORNS">
+<Description language="ENGLISH">"Uneven Horns"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifArmour name="RULES-ARMOL_HEAD">1</ModifArmour>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORPHY_WEBBED_FEET">
+<Description language="ENGLISH">"Webbed Feet"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORPHY_WHISKERED_SNOUT">
+<Description language="ENGLISH">"Whiskered Snout"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>189</Page>
+</Corruption>
+</DATA_CORRUPTION_TABLE_PHYSICAL>
+<DATA_CORRUPTION_TABLE_MENTAL>
+<Corruption name="RULES-CORMEN_AWFUL_CRAVINGS">
+<Description language="ENGLISH">"Awful Cravings"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_WP">-5</ModifyCarac>
+<ModifyCarac name="RULES-ATTR_Fel">-5</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORMEN_BEAST_WITHIN">
+<Description language="ENGLISH">"Beast Within"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_WP">+10</ModifyCarac>
+<ModifyCarac name="RULES-ATTR_Int">-5</ModifyCarac>
+<ModifyCarac name="RULES-ATTR_Fel">-5</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORMEN_CHAOTIC_DREAMS">
+<Description language="ENGLISH">"Chaotic Dreams"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORMEN_CRAWLING_SKIN">
+<Description language="ENGLISH">"Crawling Skin"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_I">-5</ModifyCarac>
+<ModifyCarac name="RULES-ATTR_Dex">-5</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORMEN_ERRATIC_FANTASIST">
+<Description language="ENGLISH">"Erratic Fantasist"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_I">-5</ModifyCarac>
+<ModifyCarac name="RULES-ATTR_WP">-5</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORMEN_FEARFUL_CONCERN">
+<Description language="ENGLISH">"Fearful Concern"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_WP">-10</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORMEN_HATEFUL_IMPULSES">
+<Description language="ENGLISH">"Hateful Impulses"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORMEN_HOLLOW_HEART">
+<Description language="ENGLISH">"Hollow Heart"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_WP">+10</ModifyCarac>
+<ModifyCarac name="RULES-ATTR_Fel">-10</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORMEN_JEALOUS_THOUGHTS">
+<Description language="ENGLISH">"Jealous Thoughts"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_Fel">-10</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORMEN_LONELY_SPIRIT">
+<Description language="ENGLISH">"Lonely Spirit"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORMEN_MENTAL_BLOCKS">
+<Description language="ENGLISH">"Mental Blocks"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_Int">-10</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORMEN_PROFANE_URGENCY">
+<Description language="ENGLISH">"Profane Urgency"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_Ag">+10</ModifyCarac>
+<ModifyCarac name="RULES-ATTR_WP">-10</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORMEN_SHAKY_MORALE">
+<Description language="ENGLISH">"Shaky Morale"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORMEN_SUSPICIOUS_MIND">
+<Description language="ENGLISH">"Suspicious Mind"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_I">-5</ModifyCarac>
+<ModifyCarac name="RULES-ATTR_Int">-5</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORMEN_THRILL_HUNTER">
+<Description language="ENGLISH">"Thrill Hunter"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_WP">+10</ModifyCarac>
+<ModifyCarac name="RULES-ATTR_I">-10</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORMEN_TORTURED_VISIONS">
+<Description language="ENGLISH">"Tortured Visions"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_I">-10</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORMEN_TOTALLY_UNHINGED">
+<Description language="ENGLISH">"Totally Unhinged"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_WP">+10</ModifyCarac>
+<ModifyCarac name="RULES-ATTR_Fel">-20</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORMEN_UNENDING_MALICE">
+<Description language="ENGLISH">"Unending Malice"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORMEN_UNHOLY_RAGE">
+<Description language="ENGLISH">"Unholy Rage"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_WS">+10</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+<Corruption name="RULES-CORMEN_WORRIED_JITTERS">
+<Description language="ENGLISH">"Worried Jitters"</Description>
+<Explanation language="ENGLISH">""</Explanation>
+<ModifyCarac name="RULES-ATTR_Ag">+5</ModifyCarac>
+<ModifyCarac name="RULES-ATTR_Fel">-5</ModifyCarac>
+<Page>189</Page>
+</Corruption>
+</DATA_CORRUPTION_TABLE_MENTAL>
+<DATA_CORRUPTION_PHYSICAL_CHANCE>
+<Chance name="01-05">"RULES-CORPHY_ANIMALISTIC_LEGS"</Chance>
+<Chance name="06-10">"RULES-CORPHY_CORPULENT"</Chance>
+<Chance name="11-15">"RULES-CORPHY_DISTENDED_DIGITS"</Chance>
+<Chance name="16-20">"RULES-CORPHY_EMACIATED"</Chance>
+<Chance name="21-25">"RULES-CORPHY_ENORMOUS_EYE"</Chance>
+<Chance name="26-30">"RULES-CORPHY_EXTRA_LEG_JOINTS"</Chance>
+<Chance name="31-35">"RULES-CORPHY_EXTRA_MOUTH"</Chance>
+<Chance name="36-40">"RULES-CORPHY_FLESHY_TENTACLE"</Chance>
+<Chance name="41-45">"RULES-CORPHY_GLOWING_SKIN"</Chance>
+<Chance name="46-50">"RULES-CORPHY_INHUMAN_BEAUTY"</Chance>
+<Chance name="51-55">"RULES-CORPHY_INVERTED_FACE"</Chance>
+<Chance name="56-60">"RULES-CORPHY_IRON_SKIN"</Chance>
+<Chance name="61-65">"RULES-CORPHY_LOLLING_TONGUE"</Chance>
+<Chance name="66-70">"RULES-CORPHY_PATCHY_FEATHERS"</Chance>
+<Chance name="71-75">"RULES-CORPHY_SHORT_LEGS"</Chance>
+<Chance name="76-80">"RULES-CORPHY_SPINY_PROTRUSIONS"</Chance>
+<Chance name="81-85">"RULES-CORPHY_THORNY_SCALES"</Chance>
+<Chance name="86-90">"RULES-CORPHY_UNEVEN_HORNS"</Chance>
+<Chance name="91-95">"RULES-CORPHY_WEBBED_FEET"</Chance>
+<Chance name="96-00">"RULES-CORPHY_WHISKERED_SNOUT"</Chance>
+</DATA_CORRUPTION_PHYSICAL_CHANCE>
+<DATA_CORRUPTION_MENTAL_CHANCE>
+<Chance name="01-05">"RULES-CORMEN_AWFUL_CRAVINGS"</Chance>
+<Chance name="06-10">"RULES-CORMEN_BEAST_WITHIN"</Chance>
+<Chance name="11-15">"RULES-CORMEN_CHAOTIC_DREAMS"</Chance>
+<Chance name="16-20">"RULES-CORMEN_CRAWLING_SKIN"</Chance>
+<Chance name="21-25">"RULES-CORMEN_ERRATIC_FANTASIST"</Chance>
+<Chance name="26-30">"RULES-CORMEN_FEARFUL_CONCERN"</Chance>
+<Chance name="31-35">"RULES-CORMEN_HATEFUL_IMPULSES"</Chance>
+<Chance name="36-40">"RULES-CORMEN_HOLLOW_HEART"</Chance>
+<Chance name="41-45">"RULES-CORMEN_JEALOUS_THOUGHTS"</Chance>
+<Chance name="46-50">"RULES-CORMEN_LONELY_SPIRIT"</Chance>
+<Chance name="51-55">"RULES-CORMEN_MENTAL_BLOCKS"</Chance>
+<Chance name="56-60">"RULES-CORMEN_PROFANE_URGENCY"</Chance>
+<Chance name="61-65">"RULES-CORMEN_SHAKY_MORALE"</Chance>
+<Chance name="66-70">"RULES-CORMEN_SUSPICIOUS_MIND"</Chance>
+<Chance name="71-75">"RULES-CORMEN_THRILL_HUNTER"</Chance>
+<Chance name="76-80">"RULES-CORMEN_TORTURED_VISIONS"</Chance>
+<Chance name="81-85">"RULES-CORMEN_TOTALLY_UNHINGED"</Chance>
+<Chance name="86-90">"RULES-CORMEN_UNENDING_MALICE"</Chance>
+<Chance name="91-95">"RULES-CORMEN_UNHOLY_RAGE"</Chance>
+<Chance name="96-00">"RULES-CORMEN_WORRIED_JITTERS"</Chance>
+</DATA_CORRUPTION_MENTAL_CHANCE>
 <DATA_SKILL>
 <Skill id="RULES-COMP_CHARM_ANIMAL">
 <Attribut>"RULES-ATTR_WP"</Attribut>
 <Description language="ENGLISH">"Charm Animal"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>111</Page>
 </Skill>
 <Skill id="RULES-COMP_ART__*">
 <Attribut>"RULES-ATTR_Dex"</Attribut>
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Art (Any)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>111</Page>
 </Skill>
 <Skill id="RULES-COMP_ATHLETICS">
 <Attribut>"RULES-ATTR_Ag"</Attribut>
 <Description language="ENGLISH">"Athletics"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>111</Page>
 </Skill>
 <Skill id="RULES-COMP_COOL">
 <Attribut>"RULES-ATTR_WP"</Attribut>
 <Description language="ENGLISH">"Cool"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>111</Page>
 </Skill>
 <Skill id="RULES-COMP_CHARM">
 <Attribut>"RULES-ATTR_Fel"</Attribut>
 <Description language="ENGLISH">"Charm"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>111</Page>
 </Skill>
 <Skill id="RULES-COMP_RIDE__*">
 <Attribut>"RULES-ATTR_Ag"</Attribut>
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Ride (Any)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>113</Page>
 </Skill>
 <Skill id="RULES-COMP_MELEE__*">
 <Attribut>"RULES-ATTR_WS"</Attribut>
 <Description language="ENGLISH">"Melee (Any)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>112</Page>
 </Skill>
 <Skill id="RULES-COMP_LEADERSHIP">
 <Attribut>"RULES-ATTR_Fel"</Attribut>
 <Description language="ENGLISH">"Leadership"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>112</Page>
 </Skill>
 <Skill id="RULES-COMP_DRIVE">
 <Attribut>"RULES-ATTR_Ag"</Attribut>
 <Description language="ENGLISH">"Drive"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>111</Page>
 </Skill>
 <Skill id="RULES-COMP_PICK_LOCK">
@@ -209,16 +535,20 @@
 <Attribut>"RULES-ATTR_Ag"</Attribut>
 <Description language="ENGLISH">"Stealth (Any)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>114</Page>
 </Skill>
 <Skill id="RULES-COMP_ENTERTAIN__*">
 <Attribut>"RULES-ATTR_Fel"</Attribut>
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Entertain (Any)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>111</Page>
 </Skill>
 <Skill id="RULES-COMP_ANIMAL_TRAINING__*">
 <Attribut>"RULES-ATTR_Int"</Attribut>
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Animal Training (Any)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Page>111</Page>
@@ -227,6 +557,7 @@
 <Attribut>"RULES-ATTR_S"</Attribut>
 <Description language="ENGLISH">"Climb"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>111</Page>
 </Skill>
 <Skill id="RULES-COMP_SLEIGHT_OF_HAND">
@@ -239,6 +570,7 @@
 <Attribut>"RULES-ATTR_Ag"</Attribut>
 <Description language="ENGLISH">"Dodge"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>111</Page>
 </Skill>
 <Skill id="RULES-COMP_EVALUATE">
@@ -263,16 +595,19 @@
 <Attribut>"RULES-ATTR_S"</Attribut>
 <Description language="ENGLISH">"Intimidate"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>112</Page>
 </Skill>
 <Skill id="RULES-COMP_INTUITION">
 <Attribut>"RULES-ATTR_I"</Attribut>
 <Description language="ENGLISH">"Intuition"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>112</Page>
 </Skill>
 <Skill id="RULES-COMP_LANGUAGE__*">
 <Attribut>"RULES-ATTR_Int"</Attribut>
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Language (Any)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Page>112</Page>
@@ -281,22 +616,25 @@
 <Attribut>"RULES-ATTR_Fel"</Attribut>
 <Description language="ENGLISH">"Haggle"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>112</Page>
 </Skill>
 <Skill id="RULES-COMP_TRADE__*">
 <Attribut>"RULES-ATTR_Dex"</Attribut>
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Trade (Any)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Page>114</Page>
 </Skill>
 <Skill id="RULES-COMP_PLAY__*">
 <Attribut>"RULES-ATTR_Dex"</Attribut>
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Play (Any)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Page>113</Page>
 </Skill>
 <Skill id="RULES-COMP_SWIM">
-<Attribut>"RULES-ATTR_WP"</Attribut>
+<Attribut>"RULES-ATTR_S"</Attribut>
 <Description language="ENGLISH">"Swim"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Page>114</Page>
@@ -305,12 +643,14 @@
 <Attribut>"RULES-ATTR_I"</Attribut>
 <Description language="ENGLISH">"Navigation"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>112</Page>
 </Skill>
 <Skill id="RULES-COMP_GAMBLE">
 <Attribut>"RULES-ATTR_Int"</Attribut>
 <Description language="ENGLISH">"Gamble"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>112</Page>
 </Skill>
 <Skill id="RULES-COMP_SET_TRAP">
@@ -329,6 +669,7 @@
 <Attribut>"RULES-ATTR_I"</Attribut>
 <Description language="ENGLISH">"Perception"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>113</Page>
 </Skill>
 <Skill id="RULES-COMP_PRAY">
@@ -347,12 +688,14 @@
 <Attribut>"RULES-ATTR_Fel"</Attribut>
 <Description language="ENGLISH">"Gossip"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>112</Page>
 </Skill>
 <Skill id="RULES-COMP_ROW">
 <Attribut>"RULES-ATTR_S"</Attribut>
 <Description language="ENGLISH">"Row"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>113</Page>
 </Skill>
 <Skill id="RULES-COMP_RESEARCH">
@@ -363,6 +706,7 @@
 </Skill>
 <Skill id="RULES-COMP_PERFORM__*">
 <Attribut>"RULES-ATTR_Ag"</Attribut>
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Perform (Any)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Page>113</Page>
@@ -371,22 +715,26 @@
 <Attribut>"RULES-ATTR_T"</Attribut>
 <Description language="ENGLISH">"Consume Alcohol"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>111</Page>
 </Skill>
 <Skill id="RULES-COMP_ENDURANCE">
 <Attribut>"RULES-ATTR_T"</Attribut>
 <Description language="ENGLISH">"Endurance"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>111</Page>
 </Skill>
 <Skill id="RULES-COMP_LORE__*">
 <Attribut>"RULES-ATTR_Int"</Attribut>
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Lore (Any)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Page>112</Page>
 </Skill>
 <Skill id="RULES-COMP_SECRET_SIGNS__*">
 <Attribut>"RULES-ATTR_Int"</Attribut>
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Secret Signs (Any)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Page>114</Page>
@@ -401,12 +749,14 @@
 <Attribut>"RULES-ATTR_Fel"</Attribut>
 <Description language="ENGLISH">"Bribery"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>111</Page>
 </Skill>
 <Skill id="RULES-COMP_OUTDOOR_SURVIVAL">
 <Attribut>"RULES-ATTR_Int"</Attribut>
 <Description language="ENGLISH">"Outdoor Survival"</Description>
 <Explanation language="ENGLISH">""</Explanation>
+<Basic>"1"</Basic>
 <Page>112</Page>
 </Skill>
 <Skill id="RULES-COMP_SAIL">
@@ -458,7 +808,7 @@
 <Page>111</Page>
 </Skill>
 <Skill id="RULES-COMP_ART__TATTOO">
-<Description language="ENGLISH">"Art (Tattoo)"</Description>
+<Description language="ENGLISH">"Art (Tattooing)"</Description>
 <Generique>"RULES-COMP_ART__*"</Generique>
 <Page>111</Page>
 </Skill>
@@ -510,6 +860,7 @@
 <Skill id="RULES-COMP_MELEE__BASIC">
 <Description language="ENGLISH">"Melee (Basic)"</Description>
 <Generique>"RULES-COMP_MELEE__*"</Generique>
+<Basic>"1"</Basic>
 <Page>112</Page>
 </Skill>
 <Skill id="RULES-COMP_MELEE__CAVALRY">
@@ -859,6 +1210,16 @@
 </Skill>
 <Skill id="RULES-COMP_TRADE__BLACKSMITH">
 <Description language="ENGLISH">"Trade (Blacksmith)"</Description>
+<Generique>"RULES-COMP_TRADE__*"</Generique>
+<Page>114</Page>
+</Skill>
+<Skill id="RULES-COMP_TRADE__SMITH">
+<Description language="ENGLISH">"Trade (Smith)"</Description>
+<Generique>"RULES-COMP_TRADE__*"</Generique>
+<Page>114</Page>
+</Skill>
+<Skill id="RULES-COMP_TRADE__SHIPWRIGHT">
+<Description language="ENGLISH">"Trade (Shipwright)"</Description>
 <Generique>"RULES-COMP_TRADE__*"</Generique>
 <Page>114</Page>
 </Skill>
@@ -1619,6 +1980,7 @@
 <Page>23</Page>
 </Talent>
 <Talent id="RULES-T_ACCURATE_SHOT">
+<Modificateur Type="ModifyDamage" Cible="CT" Facteur="1"/>
 <Description language="ENGLISH">"Accurate Shot"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -1698,6 +2060,7 @@
 <Page>115</Page>
 </Talent>
 <Talent id="RULES-T_ARTISTIC__*">
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Artistic (Art)"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -1904,6 +2267,7 @@
 <Page>117</Page>
 </Talent>
 <Talent id="RULES-T_CRAFTSMAN__*">
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Craftsman (Trade)"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -2030,6 +2394,7 @@
 <Page>119</Page>
 </Talent>
 <Talent id="RULES-T_ETIQUETTE__*">
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Etiquette (Social Group)"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -2057,6 +2422,7 @@
 <Page>119</Page>
 </Talent>
 <Talent id="RULES-T_FEARLESS__*">
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Fearless (Enemy)"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -2111,6 +2477,7 @@
 <Page>120</Page>
 </Talent>
 <Talent id="RULES-T_FLEET_FOOTED">
+<ModifyCarac name="RULES-ATTR_Move">+1</ModifyCarac>
 <Description language="ENGLISH">"Fleet-footed"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -2165,6 +2532,7 @@
 <Page>120</Page>
 </Talent>
 <Talent id="RULES-T_HARDY">
+<Effet Cible="DurACuire" Forme="ProportionnelAttribut" Facteur="1" Carac="RULES-ATTR_T"/>
 <Description language="ENGLISH">"Hardy"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -2174,6 +2542,7 @@
 <Page>120</Page>
 </Talent>
 <Talent id="RULES-T_HATRED__*">
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Hatred (Group)"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -2210,6 +2579,7 @@
 <Page>120</Page>
 </Talent>
 <Talent id="RULES-T_IMPASSIONED_ZEAL__*">
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Impassioned Zeal (Cause)"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -2319,6 +2689,7 @@
 <Page>122</Page>
 </Talent>
 <Talent id="RULES-T_LUCK">
+<ModifyCarac name="RULES-ATTR_Fortune">+1</ModifyCarac>
 <Description language="ENGLISH">"Luck"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -2383,6 +2754,7 @@
 <Page>122</Page>
 </Talent>
 <Talent id="RULES-T_MASTER_TRADESMAN__*">
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Master Tradesman (Trade)"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -2498,7 +2870,7 @@
 <Max>"1"</Max>
 <PDF>""</PDF>
 <Test language="ENGLISH">""</Test>
-  <Magic>"2"</Magic>
+  <Magic>"3"</Magic>
 <SpellMode>"NONE"</SpellMode>
 <SpellTypes>"Petty Magic"</SpellTypes>
 <XpMultiplier>"50"</XpMultiplier>
@@ -2535,6 +2907,8 @@
 <Page>124</Page>
 </Talent>
 <Talent id="RULES-T_PURE_SOUL">
+<Effet Cible="AmePure" Forme="ProportionnelAttribut" Facteur="1" Carac="RULES-ATTR_T"/>
+<Effet Cible="AmePure" Forme="ProportionnelAttribut" Facteur="1" Carac="RULES-ATTR_WP"/>
 <Description language="ENGLISH">"Pure Soul"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -2580,6 +2954,7 @@
 <Page>124</Page>
 </Talent>
 <Talent id="RULES-T_RESISTANT__*">
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Resistant (Threat)"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -2652,6 +3027,7 @@
 <Page>125</Page>
 </Talent>
 <Talent id="RULES-T_SAVANT__*">
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Savant (Lore Specialisation)"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -2834,6 +3210,7 @@
 <Page>127</Page>
 </Talent>
 <Talent id="RULES-T_STRIKE_MIGHTY_BLOW">
+<Modificateur Type="ModifyDamage" Cible="CC" Facteur="1"/>
 <Description language="ENGLISH">"Strike Mighty Blow"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -2943,6 +3320,7 @@
 <Page>127</Page>
 </Talent>
 <Talent id="RULES-T_STURDY">
+<Effet Cible="BonusEncomb" Forme="ProportionnelAttribut" Facteur="1" Carac="RULES-ATTR_S"/>
 <Description language="ENGLISH">"Sturdy"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -3096,6 +3474,14 @@
 <Max>"1"</Max>
 <PDF>""</PDF>
 <Test language="ENGLISH">""</Test>
+<Magic>"1"</Magic>
+<SpellMode>"NONE"</SpellMode>
+<SpellTypes>"Arcane Magic"</SpellTypes>
+<XpMultiplier>"50"</XpMultiplier>
+<XpFloor>"0"</XpFloor>
+<XpDivisor>"1"</XpDivisor>
+<XpOffset>"2"</XpOffset>
+<XpFree>"1"</XpFree>
 <Page>128</Page>
 </Talent>
 <Talent id="RULES-T_SECOND_SIGHT">
@@ -3158,7 +3544,7 @@
 <SpellTypes>"Miracle"</SpellTypes>
 <XpMultiplier>"100"</XpMultiplier>
 <XpFloor>"0"</XpFloor>
-<XpDivisor>"1"</XpDivisor>
+<XpDivisor>"5"</XpDivisor>
 <Page>121</Page>
 </Talent>
 <Talent id="RULES-T_AFRAID__*">
@@ -3183,6 +3569,7 @@
 </Talent>
 <Talent id="RULES-T_ANIMOSITY__*">
 <Trait>"1"</Trait>
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Animosity (Any)"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -3443,6 +3830,7 @@
 </Talent>
 <Talent id="RULES-T_IMMUNITY__*">
 <Trait>"1"</Trait>
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Immunity (Any)"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -3851,6 +4239,66 @@
 <Talent id="RULES-T_ARCANE_MAGIC__WITCHCRAFT">
 <Description language="ENGLISH">"Arcane Magic (Witchcraft)"</Description>
 <Generique>"RULES-T_ARCANE_MAGIC__*"</Generique>
+<Page>115</Page>
+</Talent>
+<Talent id="RULES-T_ARTISTIC__CALLIGRAPHY">
+<Description language="ENGLISH">"Artistic (Calligraphy)"</Description>
+<Generique>"RULES-T_ARTISTIC__*"</Generique>
+<Page>115</Page>
+</Talent>
+<Talent id="RULES-T_ARTISTIC__WRITING">
+<Description language="ENGLISH">"Artistic (Writing)"</Description>
+<Generique>"RULES-T_ARTISTIC__*"</Generique>
+<Page>115</Page>
+</Talent>
+<Talent id="RULES-T_ARTISTIC__ICONS">
+<Description language="ENGLISH">"Artistic (Icons)"</Description>
+<Generique>"RULES-T_ARTISTIC__*"</Generique>
+<Page>115</Page>
+</Talent>
+<Talent id="RULES-T_ARTISTIC__CARTOGRAPHY">
+<Description language="ENGLISH">"Artistic (Cartography)"</Description>
+<Generique>"RULES-T_ARTISTIC__*"</Generique>
+<Page>115</Page>
+</Talent>
+<Talent id="RULES-T_ARTISTIC__ENGRAVING">
+<Description language="ENGLISH">"Artistic (Engraving)"</Description>
+<Generique>"RULES-T_ARTISTIC__*"</Generique>
+<Page>115</Page>
+</Talent>
+<Talent id="RULES-T_ARTISTIC__MOSAICS">
+<Description language="ENGLISH">"Artistic (Mosaics)"</Description>
+<Generique>"RULES-T_ARTISTIC__*"</Generique>
+<Page>115</Page>
+</Talent>
+<Talent id="RULES-T_ARTISTIC__PAINTING">
+<Description language="ENGLISH">"Artistic (Painting)"</Description>
+<Generique>"RULES-T_ARTISTIC__*"</Generique>
+<Page>115</Page>
+</Talent>
+<Talent id="RULES-T_ARTISTIC__SCULPTURE">
+<Description language="ENGLISH">"Artistic (Sculpture)"</Description>
+<Generique>"RULES-T_ARTISTIC__*"</Generique>
+<Page>115</Page>
+</Talent>
+<Talent id="RULES-T_ARTISTIC__TATTOO">
+<Description language="ENGLISH">"Artistic (Tattoo)"</Description>
+<Generique>"RULES-T_ARTISTIC__*"</Generique>
+<Page>115</Page>
+</Talent>
+<Talent id="RULES-T_ARTISTIC__WEAVING">
+<Description language="ENGLISH">"Artistic (Weaving)"</Description>
+<Generique>"RULES-T_ARTISTIC__*"</Generique>
+<Page>115</Page>
+</Talent>
+<Talent id="RULES-T_ARTISTIC__BUTCHERY">
+<Description language="ENGLISH">"Artistic (Butchery)"</Description>
+<Generique>"RULES-T_ARTISTIC__*"</Generique>
+<Page>115</Page>
+</Talent>
+<Talent id="RULES-T_ARTISTIC__DRAWING">
+<Description language="ENGLISH">"Artistic (Drawing)"</Description>
+<Generique>"RULES-T_ARTISTIC__*"</Generique>
 <Page>115</Page>
 </Talent>
 <Talent id="RULES-T_CRAFTSMAN__APOTHECARY">
@@ -4696,6 +5144,9 @@
 <Description language="ENGLISH">"Humans (Reiklanders)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>
+<Skill5>"5"</Skill5>
+<Skill3>"0"</Skill3>
+<FixedSkill name="RULES-COMP_LANGUAGE__REIKSPIEL">"30"</FixedSkill>
 <Nationality>"RULES-NATION_EMPIRE"</Nationality>
 <SUBCHAPTER_ATTR>
 <Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>
@@ -4709,6 +5160,7 @@
 <Attribut name="RULES-ATTR_WP">"2d10+20"</Attribut>
 <Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
 <Attribut name="RULES-ATTR_Fate">"4"</Attribut>
+<Attribut name="RULES-ATTR_Fortune">"3"</Attribut>
 <Attribut name="RULES-ATTR_Wound">"1xBATTR_S+2xBATTR_T+1xBATTR_WP"</Attribut>
 <Attribut name="RULES-ATTR_Move">"4"</Attribut>
 </SUBCHAPTER_ATTR>
@@ -4721,7 +5173,6 @@
   <Skill>"RULES-COMP_HAGGLE"</Skill>
   <Skill>"RULES-COMP_LANGUAGE__BRETONNIAN"</Skill>
   <Skill>"RULES-COMP_LANGUAGE__WASTELANDER"</Skill>
-  <Skill>"RULES-COMP_LANGUAGE__REIKSPIEL"</Skill>
   <Skill>"RULES-COMP_LEADERSHIP"</Skill>
   <Skill>"RULES-COMP_LORE__EMPIRE"</Skill>
   <Skill>"RULES-COMP_MELEE__BASIC"</Skill>
@@ -4734,12 +5185,81 @@
   <Talent>"RULES-T*"</Talent>
   <Talent>"RULES-T*"</Talent>
   </SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-WORK_APOTHECARY">"1"</Career>
+  <Career name="RULES-WORK_ENGINEER">"1"</Career>
+  <Career name="RULES-WORK_LAWYER">"1"</Career>
+  <Career name="RULES-WORK_NUN">"2"</Career>
+  <Career name="RULES-WORK_PHYSICIAN">"1"</Career>
+  <Career name="RULES-WORK_PRIEST">"5"</Career>
+  <Career name="RULES-WORK_SCHOLAR">"2"</Career>
+  <Career name="RULES-WORK_WIZARD">"1"</Career>
+  <Career name="RULES-WORK_AGITATOR">"1"</Career>
+  <Career name="RULES-WORK_ARTISAN">"2"</Career>
+  <Career name="RULES-WORK_BEGGAR">"2"</Career>
+  <Career name="RULES-WORK_INVESTIGATOR">"1"</Career>
+  <Career name="RULES-WORK_MERCHANT">"1"</Career>
+  <Career name="RULES-WORK_RAT_CATCHER">"2"</Career>
+  <Career name="RULES-WORK_TOWNSMAN">"3"</Career>
+  <Career name="RULES-WORK_WATCHMAN">"1"</Career>
+  <Career name="RULES-WORK_ADVISER">"1"</Career>
+  <Career name="RULES-WORK_ARTIST">"1"</Career>
+  <Career name="RULES-WORK_DUELLIST">"1"</Career>
+  <Career name="RULES-WORK_ENVOY">"1"</Career>
+  <Career name="RULES-WORK_NOBLE">"1"</Career>
+  <Career name="RULES-WORK_SERVANT">"3"</Career>
+  <Career name="RULES-WORK_SPY">"1"</Career>
+  <Career name="RULES-WORK_WARDEN">"1"</Career>
+  <Career name="RULES-WORK_BAILIFF">"1"</Career>
+  <Career name="RULES-WORK_HEDGE_WITCH">"1"</Career>
+  <Career name="RULES-WORK_HERBALIST">"1"</Career>
+  <Career name="RULES-WORK_HUNTER">"2"</Career>
+  <Career name="RULES-WORK_MINER">"1"</Career>
+  <Career name="RULES-WORK_MYSTIC">"1"</Career>
+  <Career name="RULES-WORK_SCOUT">"1"</Career>
+  <Career name="RULES-WORK_VILLAGER">"5"</Career>
+  <Career name="RULES-WORK_BOUNTY_HUNTER">"1"</Career>
+  <Career name="RULES-WORK_COACHMAN">"1"</Career>
+  <Career name="RULES-WORK_ENTERTAINER">"2"</Career>
+  <Career name="RULES-WORK_FLAGELLANT">"2"</Career>
+  <Career name="RULES-WORK_MESSENGER">"1"</Career>
+  <Career name="RULES-WORK_PEDLAR">"1"</Career>
+  <Career name="RULES-WORK_ROADWARDEN">"1"</Career>
+  <Career name="RULES-WORK_WITCH_HUNTER">"1"</Career>
+  <Career name="RULES-WORK_BOATMAN">"2"</Career>
+  <Career name="RULES-WORK_PILOT">"1"</Career>
+  <Career name="RULES-WORK_RIVERWARDEN">"2"</Career>
+  <Career name="RULES-WORK_RIVERWOMAN">"3"</Career>
+  <Career name="RULES-WORK_SAILOR">"2"</Career>
+  <Career name="RULES-WORK_SMUGGLER">"1"</Career>
+  <Career name="RULES-WORK_STEVEDORE">"2"</Career>
+  <Career name="RULES-WORK_WRECKER">"1"</Career>
+  <Career name="RULES-WORK_CHARLATAN">"1"</Career>
+  <Career name="RULES-WORK_FENCE">"1"</Career>
+  <Career name="RULES-WORK_GRAVE_ROBBER">"1"</Career>
+  <Career name="RULES-WORK_KNAVE">"2"</Career>
+  <Career name="RULES-WORK_OUTLAW">"4"</Career>
+  <Career name="RULES-WORK_RACKETEER">"1"</Career>
+  <Career name="RULES-WORK_THIEF">"3"</Career>
+  <Career name="RULES-WORK_WITCH">"1"</Career>
+  <Career name="RULES-WORK_CAVALRYMAN">"2"</Career>
+  <Career name="RULES-WORK_GUARD">"2"</Career>
+  <Career name="RULES-WORK_KNIGHT">"1"</Career>
+  <Career name="RULES-WORK_PIT_FIGHTER">"1"</Career>
+  <Career name="RULES-WORK_PROTAGONIST">"1"</Career>
+  <Career name="RULES-WORK_SOLDIER">"4"</Career>
+  <Career name="RULES-WORK_WARRIOR_PRIEST">"1"</Career>
+  </SUBCHAPTER_CAREER>
 <Page>26</Page>
 </Specie>
 <Specie id="RULES-RACE_DWAR">
 <Description language="ENGLISH">"Dwarfs"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Ethnic>"RULES-SPECIE_DWARF"</Ethnic>
+<Skill5>"5"</Skill5>
+<Skill3>"0"</Skill3>
+<FixedSkill name="RULES-COMP_LANGUAGE__KHAZALID">"30"</FixedSkill>
+<FixedSkill name="RULES-COMP_LANGUAGE__REIKSPIEL">"30"</FixedSkill>
 <SUBCHAPTER_ATTR>
 <Attribut name="RULES-ATTR_WS">"2d10+30"</Attribut>
 <Attribut name="RULES-ATTR_BS">"2d10+20"</Attribut>
@@ -4752,6 +5272,7 @@
 <Attribut name="RULES-ATTR_WP">"2d10+40"</Attribut>
 <Attribut name="RULES-ATTR_Fel">"2d10+10"</Attribut>
 <Attribut name="RULES-ATTR_Fate">"2"</Attribut>
+<Attribut name="RULES-ATTR_Fortune">"2"</Attribut>
 <Attribut name="RULES-ATTR_Wound">"1xBATTR_S+2xBATTR_T+1xBATTR_WP"</Attribut>
 <Attribut name="RULES-ATTR_Move">"3"</Attribut>
 </SUBCHAPTER_ATTR>
@@ -4762,8 +5283,6 @@
   <Skill>"RULES-COMP_ENTERTAIN__STORYTELLING"</Skill>
   <Skill>"RULES-COMP_EVALUATE"</Skill>
   <Skill>"RULES-COMP_INTIMIDATE"</Skill>
-  <Skill>"RULES-COMP_LANGUAGE__KHAZALID"</Skill>
-  <Skill>"RULES-COMP_LANGUAGE__REIKSPIEL"</Skill>
   <Skill>"RULES-COMP_LORE__DWARFS"</Skill>
   <Skill>"RULES-COMP_LORE__GEOLOGY"</Skill>
   <Skill>"RULES-COMP_LORE__METALLURGY"</Skill>
@@ -4777,12 +5296,65 @@
   <Talent>"RULES-T_RESOLUTE/RULES-T_STRONG_MINDED"</Talent>
   <Talent>"RULES-T_STURDY"</Talent>
   </SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-WORK_APOTHECARY">"1"</Career>
+  <Career name="RULES-WORK_ENGINEER">"3"</Career>
+  <Career name="RULES-WORK_LAWYER">"2"</Career>
+  <Career name="RULES-WORK_PHYSICIAN">"1"</Career>
+  <Career name="RULES-WORK_SCHOLAR">"2"</Career>
+  <Career name="RULES-WORK_AGITATOR">"2"</Career>
+  <Career name="RULES-WORK_ARTISAN">"6"</Career>
+  <Career name="RULES-WORK_BEGGAR">"1"</Career>
+  <Career name="RULES-WORK_INVESTIGATOR">"2"</Career>
+  <Career name="RULES-WORK_MERCHANT">"4"</Career>
+  <Career name="RULES-WORK_RAT_CATCHER">"1"</Career>
+  <Career name="RULES-WORK_TOWNSMAN">"6"</Career>
+  <Career name="RULES-WORK_WATCHMAN">"3"</Career>
+  <Career name="RULES-WORK_ADVISER">"2"</Career>
+  <Career name="RULES-WORK_ARTIST">"1"</Career>
+  <Career name="RULES-WORK_DUELLIST">"1"</Career>
+  <Career name="RULES-WORK_ENVOY">"2"</Career>
+  <Career name="RULES-WORK_NOBLE">"1"</Career>
+  <Career name="RULES-WORK_SERVANT">"1"</Career>
+  <Career name="RULES-WORK_SPY">"1"</Career>
+  <Career name="RULES-WORK_WARDEN">"2"</Career>
+  <Career name="RULES-WORK_BAILIFF">"2"</Career>
+  <Career name="RULES-WORK_HUNTER">"2"</Career>
+  <Career name="RULES-WORK_MINER">"5"</Career>
+  <Career name="RULES-WORK_SCOUT">"1"</Career>
+  <Career name="RULES-WORK_VILLAGER">"1"</Career>
+  <Career name="RULES-WORK_BOUNTY_HUNTER">"4"</Career>
+  <Career name="RULES-WORK_COACHMAN">"1"</Career>
+  <Career name="RULES-WORK_ENTERTAINER">"2"</Career>
+  <Career name="RULES-WORK_MESSENGER">"2"</Career>
+  <Career name="RULES-WORK_PEDLAR">"2"</Career>
+  <Career name="RULES-WORK_BOATMAN">"2"</Career>
+  <Career name="RULES-WORK_PILOT">"1"</Career>
+  <Career name="RULES-WORK_RIVERWOMAN">"2"</Career>
+  <Career name="RULES-WORK_SAILOR">"1"</Career>
+  <Career name="RULES-WORK_SMUGGLER">"2"</Career>
+  <Career name="RULES-WORK_STEVEDORE">"2"</Career>
+  <Career name="RULES-WORK_WRECKER">"1"</Career>
+  <Career name="RULES-WORK_FENCE">"1"</Career>
+  <Career name="RULES-WORK_OUTLAW">"3"</Career>
+  <Career name="RULES-WORK_RACKETEER">"1"</Career>
+  <Career name="RULES-WORK_THIEF">"1"</Career>
+  <Career name="RULES-WORK_GUARD">"3"</Career>
+  <Career name="RULES-WORK_PIT_FIGHTER">"3"</Career>
+  <Career name="RULES-WORK_PROTAGONIST">"3"</Career>
+  <Career name="RULES-WORK_SOLDIER">"3"</Career>
+  <Career name="RULES-WORK_SLAYER">"4"</Career>
+  </SUBCHAPTER_CAREER>
 <Page>28</Page>
 </Specie>
 <Specie id="RULES-RACE_HALF">
 <Description language="ENGLISH">"Halflings"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Ethnic>"RULES-SPECIE_HALFLING"</Ethnic>
+<Skill5>"5"</Skill5>
+<Skill3>"0"</Skill3>
+<FixedSkill name="RULES-COMP_LANGUAGE__HALFLING">"30"</FixedSkill>
+<FixedSkill name="RULES-COMP_LANGUAGE__REIKSPIEL">"30"</FixedSkill>
 <SUBCHAPTER_ATTR>
 <Attribut name="RULES-ATTR_WS">"2d10+10"</Attribut>
 <Attribut name="RULES-ATTR_BS">"2d10+30"</Attribut>
@@ -4795,6 +5367,7 @@
 <Attribut name="RULES-ATTR_WP">"2d10+30"</Attribut>
 <Attribut name="RULES-ATTR_Fel">"2d10+30"</Attribut>
 <Attribut name="RULES-ATTR_Fate">"2"</Attribut>
+<Attribut name="RULES-ATTR_Fortune">"3"</Attribut>
 <Attribut name="RULES-ATTR_Wound">"1xBATTR_S+2xBATTR_T+1xBATTR_WP"</Attribut>
 <Attribut name="RULES-ATTR_Move">"3"</Attribut>
 </SUBCHAPTER_ATTR>
@@ -4805,8 +5378,6 @@
   <Skill>"RULES-COMP_GAMBLE"</Skill>
   <Skill>"RULES-COMP_HAGGLE"</Skill>
   <Skill>"RULES-COMP_INTUITION"</Skill>
-  <Skill>"RULES-COMP_LANGUAGE__HALFLING"</Skill>
-  <Skill>"RULES-COMP_LANGUAGE__REIKSPIEL"</Skill>
   <Skill>"RULES-COMP_LORE__EMPIRE"</Skill>
   <Skill>"RULES-COMP_PERCEPTION"</Skill>
   <Skill>"RULES-COMP_SLEIGHT_OF_HAND"</Skill>
@@ -4820,12 +5391,66 @@
   <Talent>"RULES-T*"</Talent>
   <Talent>"RULES-T*"</Talent>
   </SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-WORK_APOTHECARY">"1"</Career>
+  <Career name="RULES-WORK_ENGINEER">"1"</Career>
+  <Career name="RULES-WORK_LAWYER">"2"</Career>
+  <Career name="RULES-WORK_PHYSICIAN">"2"</Career>
+  <Career name="RULES-WORK_SCHOLAR">"2"</Career>
+  <Career name="RULES-WORK_AGITATOR">"2"</Career>
+  <Career name="RULES-WORK_ARTISAN">"5"</Career>
+  <Career name="RULES-WORK_BEGGAR">"4"</Career>
+  <Career name="RULES-WORK_INVESTIGATOR">"2"</Career>
+  <Career name="RULES-WORK_MERCHANT">"4"</Career>
+  <Career name="RULES-WORK_RAT_CATCHER">"3"</Career>
+  <Career name="RULES-WORK_TOWNSMAN">"3"</Career>
+  <Career name="RULES-WORK_WATCHMAN">"2"</Career>
+  <Career name="RULES-WORK_ADVISER">"1"</Career>
+  <Career name="RULES-WORK_ARTIST">"2"</Career>
+  <Career name="RULES-WORK_ENVOY">"1"</Career>
+  <Career name="RULES-WORK_SERVANT">"6"</Career>
+  <Career name="RULES-WORK_SPY">"1"</Career>
+  <Career name="RULES-WORK_WARDEN">"2"</Career>
+  <Career name="RULES-WORK_BAILIFF">"1"</Career>
+  <Career name="RULES-WORK_HERBALIST">"3"</Career>
+  <Career name="RULES-WORK_HUNTER">"2"</Career>
+  <Career name="RULES-WORK_MINER">"1"</Career>
+  <Career name="RULES-WORK_SCOUT">"1"</Career>
+  <Career name="RULES-WORK_VILLAGER">"3"</Career>
+  <Career name="RULES-WORK_BOUNTY_HUNTER">"1"</Career>
+  <Career name="RULES-WORK_COACHMAN">"2"</Career>
+  <Career name="RULES-WORK_ENTERTAINER">"3"</Career>
+  <Career name="RULES-WORK_MESSENGER">"2"</Career>
+  <Career name="RULES-WORK_PEDLAR">"2"</Career>
+  <Career name="RULES-WORK_ROADWARDEN">"1"</Career>
+  <Career name="RULES-WORK_BOATMAN">"1"</Career>
+  <Career name="RULES-WORK_PILOT">"1"</Career>
+  <Career name="RULES-WORK_RIVERWARDEN">"1"</Career>
+  <Career name="RULES-WORK_RIVERWOMAN">"3"</Career>
+  <Career name="RULES-WORK_SAILOR">"1"</Career>
+  <Career name="RULES-WORK_SMUGGLER">"4"</Career>
+  <Career name="RULES-WORK_STEVEDORE">"3"</Career>
+  <Career name="RULES-WORK_CHARLATAN">"1"</Career>
+  <Career name="RULES-WORK_FENCE">"1"</Career>
+  <Career name="RULES-WORK_GRAVE_ROBBER">"1"</Career>
+  <Career name="RULES-WORK_KNAVE">"3"</Career>
+  <Career name="RULES-WORK_OUTLAW">"1"</Career>
+  <Career name="RULES-WORK_RACKETEER">"1"</Career>
+  <Career name="RULES-WORK_THIEF">"4"</Career>
+  <Career name="RULES-WORK_GUARD">"2"</Career>
+  <Career name="RULES-WORK_PIT_FIGHTER">"1"</Career>
+  <Career name="RULES-WORK_SOLDIER">"3"</Career>
+  </SUBCHAPTER_CAREER>
 <Page>30</Page>
 </Specie>
 <Specie id="RULES-RACE_HELF">
 <Description language="ENGLISH">"High Elves"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Ethnic>"RULES-SPECIE_HELF"</Ethnic>
+<Skill5>"5"</Skill5>
+<Skill3>"0"</Skill3>
+<FixedSkill name="RULES-COMP_LANGUAGE__ELTHARIN">"30"</FixedSkill>
+<FixedSkill name="RULES-COMP_LANGUAGE__REIKSPIEL">"30"</FixedSkill>
 <SUBCHAPTER_ATTR>
 <Attribut name="RULES-ATTR_WS">"2d10+30"</Attribut>
 <Attribut name="RULES-ATTR_BS">"2d10+30"</Attribut>
@@ -4838,6 +5463,7 @@
 <Attribut name="RULES-ATTR_WP">"2d10+30"</Attribut>
 <Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
 <Attribut name="RULES-ATTR_Fate">"1"</Attribut>
+<Attribut name="RULES-ATTR_Fortune">"2"</Attribut>
 <Attribut name="RULES-ATTR_Wound">"1xBATTR_S+2xBATTR_T+1xBATTR_WP"</Attribut>
 <Attribut name="RULES-ATTR_Move">"5"</Attribut>
 </SUBCHAPTER_ATTR>
@@ -4845,8 +5471,6 @@
 <Skill>"RULES-COMP_COOL"</Skill>
   <Skill>"RULES-COMP_ENTERTAIN__SINGING"</Skill>
   <Skill>"RULES-COMP_EVALUATE"</Skill>
-  <Skill>"RULES-COMP_LANGUAGE__ELTHARIN"</Skill>
-  <Skill>"RULES-COMP_LANGUAGE__REIKSPIEL"</Skill>
   <Skill>"RULES-COMP_LEADERSHIP"</Skill>
   <Skill>"RULES-COMP_MELEE__BASIC"</Skill>
   <Skill>"RULES-COMP_NAVIGATION"</Skill>
@@ -4863,12 +5487,53 @@
   <Talent>"RULES-T_SECOND_SIGHT/RULES-T_SIXTH_SENSE"</Talent>
   <Talent>"RULES-T_READ_WRITE"</Talent>
   </SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-WORK_APOTHECARY">"2"</Career>
+  <Career name="RULES-WORK_LAWYER">"4"</Career>
+  <Career name="RULES-WORK_PHYSICIAN">"2"</Career>
+  <Career name="RULES-WORK_SCHOLAR">"4"</Career>
+  <Career name="RULES-WORK_WIZARD">"4"</Career>
+  <Career name="RULES-WORK_ARTISAN">"3"</Career>
+  <Career name="RULES-WORK_INVESTIGATOR">"2"</Career>
+  <Career name="RULES-WORK_MERCHANT">"5"</Career>
+  <Career name="RULES-WORK_TOWNSMAN">"2"</Career>
+  <Career name="RULES-WORK_WATCHMAN">"1"</Career>
+  <Career name="RULES-WORK_ADVISER">"2"</Career>
+  <Career name="RULES-WORK_ARTIST">"1"</Career>
+  <Career name="RULES-WORK_DUELLIST">"2"</Career>
+  <Career name="RULES-WORK_ENVOY">"3"</Career>
+  <Career name="RULES-WORK_NOBLE">"3"</Career>
+  <Career name="RULES-WORK_SPY">"3"</Career>
+  <Career name="RULES-WORK_WARDEN">"2"</Career>
+  <Career name="RULES-WORK_HERBALIST">"2"</Career>
+  <Career name="RULES-WORK_HUNTER">"3"</Career>
+  <Career name="RULES-WORK_SCOUT">"6"</Career>
+  <Career name="RULES-WORK_BOUNTY_HUNTER">"3"</Career>
+  <Career name="RULES-WORK_ENTERTAINER">"3"</Career>
+  <Career name="RULES-WORK_MESSENGER">"1"</Career>
+  <Career name="RULES-WORK_BOATMAN">"1"</Career>
+  <Career name="RULES-WORK_SAILOR">"15"</Career>
+  <Career name="RULES-WORK_SMUGGLER">"1"</Career>
+  <Career name="RULES-WORK_CHARLATAN">"3"</Career>
+  <Career name="RULES-WORK_KNAVE">"2"</Career>
+  <Career name="RULES-WORK_OUTLAW">"3"</Career>
+  <Career name="RULES-WORK_CAVALRYMAN">"4"</Career>
+  <Career name="RULES-WORK_GUARD">"2"</Career>
+  <Career name="RULES-WORK_KNIGHT">"1"</Career>
+  <Career name="RULES-WORK_PIT_FIGHTER">"2"</Career>
+  <Career name="RULES-WORK_PROTAGONIST">"1"</Career>
+  <Career name="RULES-WORK_SOLDIER">"2"</Career>
+  </SUBCHAPTER_CAREER>
 <Page>32</Page>
 </Specie>
 <Specie id="RULES-RACE_WELF">
 <Description language="ENGLISH">"Wood Elves"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Ethnic>"RULES-SPECIE_WELF"</Ethnic>
+<Skill5>"5"</Skill5>
+<Skill3>"0"</Skill3>
+<FixedSkill name="RULES-COMP_LANGUAGE__ELTHARIN">"30"</FixedSkill>
+<FixedSkill name="RULES-COMP_LANGUAGE__REIKSPIEL">"30"</FixedSkill>
 <SUBCHAPTER_ATTR>
 <Attribut name="RULES-ATTR_WS">"2d10+30"</Attribut>
 <Attribut name="RULES-ATTR_BS">"2d10+30"</Attribut>
@@ -4881,6 +5546,7 @@
 <Attribut name="RULES-ATTR_WP">"2d10+30"</Attribut>
 <Attribut name="RULES-ATTR_Fel">"2d10+20"</Attribut>
 <Attribut name="RULES-ATTR_Fate">"1"</Attribut>
+<Attribut name="RULES-ATTR_Fortune">"2"</Attribut>
 <Attribut name="RULES-ATTR_Wound">"1xBATTR_S+2xBATTR_T+1xBATTR_WP"</Attribut>
 <Attribut name="RULES-ATTR_Move">"5"</Attribut>
 </SUBCHAPTER_ATTR>
@@ -4890,8 +5556,6 @@
   <Skill>"RULES-COMP_ENDURANCE"</Skill>
   <Skill>"RULES-COMP_ENTERTAIN__SINGING"</Skill>
   <Skill>"RULES-COMP_INTIMIDATE"</Skill>
-  <Skill>"RULES-COMP_LANGUAGE__ELTHARIN"</Skill>
-  <Skill>"RULES-COMP_LANGUAGE__REIKSPIEL"</Skill>
   <Skill>"RULES-COMP_MELEE__BASIC"</Skill>
   <Skill>"RULES-COMP_OUTDOOR_SURVIVAL"</Skill>
   <Skill>"RULES-COMP_PERCEPTION"</Skill>
@@ -4906,6 +5570,30 @@
   <Talent>"RULES-T_READ_WRITE/RULES-T_VERY_RESILIENT"</Talent>
   <Talent>"RULES-T_ROVER"</Talent>
   </SUBCHAPTER_TALENT>
+<SUBCHAPTER_CAREER>
+<Career name="RULES-WORK_SCHOLAR">"1"</Career>
+  <Career name="RULES-WORK_WIZARD">"4"</Career>
+  <Career name="RULES-WORK_ARTISAN">"5"</Career>
+  <Career name="RULES-WORK_ADVISER">"4"</Career>
+  <Career name="RULES-WORK_ARTIST">"4"</Career>
+  <Career name="RULES-WORK_ENVOY">"7"</Career>
+  <Career name="RULES-WORK_NOBLE">"6"</Career>
+  <Career name="RULES-WORK_SPY">"4"</Career>
+  <Career name="RULES-WORK_HERBALIST">"7"</Career>
+  <Career name="RULES-WORK_HUNTER">"10"</Career>
+  <Career name="RULES-WORK_MYSTIC">"5"</Career>
+  <Career name="RULES-WORK_SCOUT">"11"</Career>
+  <Career name="RULES-WORK_BOUNTY_HUNTER">"2"</Career>
+  <Career name="RULES-WORK_ENTERTAINER">"5"</Career>
+  <Career name="RULES-WORK_MESSENGER">"3"</Career>
+  <Career name="RULES-WORK_WRECKER">"1"</Career>
+  <Career name="RULES-WORK_OUTLAW">"6"</Career>
+  <Career name="RULES-WORK_CAVALRYMAN">"5"</Career>
+  <Career name="RULES-WORK_GUARD">"2"</Career>
+  <Career name="RULES-WORK_KNIGHT">"2"</Career>
+  <Career name="RULES-WORK_PIT_FIGHTER">"2"</Career>
+  <Career name="RULES-WORK_SOLDIER">"4"</Career>
+  </SUBCHAPTER_CAREER>
 <Page>34</Page>
 </Specie>
 </DATA_SPECIE>
@@ -4994,17 +5682,17 @@
   <Talent name="RULES-T_SAVVY">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="Book (Blank)">"1"</Item>
-<Item name="RULES-ARMO_LEATHER_JERKIN">"1"</Item>
+<Item name="RULES-TRAP_BOOK_BLANK">"1"</Item>
+  <Item name="RULES-ARMO_LEATHER_JERKIN">"1"</Item>
 <Item name="RULES-TRAP_PESTLE_AND_MORTAR">"1"</Item>
 <Item name="RULES-TRAP_GUILD_LICENCE">"2"</Item>
 <Item name="RULES-TRAP_TRADE_TOOLS">"2"</Item>
-<Item name="Apprentice">"3"</Item>
-<Item name="RULES-TRAP_BOOK_APOTHECARY">"3"</Item>
+<Item name="RULES-TRAP_APPRENTICE">"3"</Item>
+  <Item name="RULES-TRAP_BOOK_APOTHECARY">"3"</Item>
 <Item name="RULES-TRAP_WORKSHOP">"3"</Item>
-<Item name="Commission Papers">"4"</Item>
-<Item name="Large Workshop (Apothecary)">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_COMMISSION_PAPERS">"4"</Item>
+  <Item name="RULES-TRAP_LARGE_WORKSHOP_APOTHECARY">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>47</Page>
 </Career>
 <Career id="RULES-WORK_ENGINEER">
@@ -5089,10 +5777,10 @@
 <Item name="RULES-TRAP_GUILD_LICENCE">"2"</Item>
 <Item name="RULES-TRAP_TRADE_TOOLS">"2"</Item>
 <Item name="RULES-TRAP_WORKSHOP">"3"</Item>
-<Item name="Library (Engineering)">"4"</Item>
-<Item name="RULES-TRAP_TRADE_TOOLS (Q)">"4"</Item>
-<Item name="Large Workshop (Engineer)">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_LIBRARY_ENGINEERING">"4"</Item>
+  <Item name="RULES-TRAP_TRADE_TOOLS (Q)">"4"</Item>
+<Item name="RULES-TRAP_LARGE_WORKSHOP_ENGINEER">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>58</Page>
 </Career>
 <Career id="RULES-WORK_LAWYER">
@@ -5174,14 +5862,14 @@
 <SUBCHAPTER_ITEM>
 <Item name="RULES-TRAP_BOOK_LAW">"1"</Item>
 <Item name="RULES-TRAP_READING_LENS">"1"</Item>
-<Item name="Court Robes">"2"</Item>
-<Item name="RULES-TRAP_GUILD_LICENCE">"2"</Item>
+<Item name="RULES-TRAP_COURT_ROBES">"2"</Item>
+  <Item name="RULES-TRAP_GUILD_LICENCE">"2"</Item>
 <Item name="RULES-TRAP_WRITING_KIT">"2"</Item>
-<Item name="Assistant (Student or Servant)">"3"</Item>
-<Item name="Office">"3"</Item>
-<Item name="RULES-TRAP_GAVEL">"4"</Item>
-<Item name="Ostentatious Wig">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_ASSISTANT_STUDENT_OR_SERVANT">"3"</Item>
+  <Item name="RULES-TRAP_OFFICE">"3"</Item>
+  <Item name="RULES-TRAP_GAVEL">"4"</Item>
+<Item name="RULES-TRAP_OSTENTATIOUS_WIG">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>71</Page>
 </Career>
 <Career id="RULES-WORK_NUN">
@@ -5264,11 +5952,11 @@
 <Item name="RULES-TRAP_RELIGIOUS_SYMBOL">"1"</Item>
 <Item name="RULES-TRAP_ROBES">"1"</Item>
 <Item name="RULES-TRAP_BOOK_RELIGION">"2"</Item>
-<Item name="Religious Relic">"2"</Item>
-<Item name="Abbey">"3"</Item>
-<Item name="Library (Theology)">"3"</Item>
-<Item name="Religious Order">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_RELIGIOUS_RELIC">"2"</Item>
+  <Item name="RULES-TRAP_ABBEY">"3"</Item>
+  <Item name="RULES-TRAP_LIBRARY_THEOLOGY">"3"</Item>
+  <Item name="RULES-TRAP_RELIGIOUS_ORDER">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>77</Page>
 </Career>
 <Career id="RULES-WORK_PHYSICIAN">
@@ -5349,15 +6037,15 @@
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="RULES-TRAP_BANDAGE">"1"</Item>
-<Item name="Healing Draught">"1"</Item>
-<Item name="RULES-TRAP_BOOK_MEDICINE">"2"</Item>
+<Item name="RULES-TRAP_HEALING_DRAUGHT">"1"</Item>
+  <Item name="RULES-TRAP_BOOK_MEDICINE">"2"</Item>
 <Item name="RULES-TRAP_GUILD_LICENCE">"2"</Item>
 <Item name="RULES-TRAP_TRADE_TOOLS">"2"</Item>
-<Item name="Apprentice">"3"</Item>
-<Item name="RULES-TRAP_WORKSHOP">"3"</Item>
-<Item name="Courtly Attire">"4"</Item>
-<Item name="Letter of Appointment">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_APPRENTICE">"3"</Item>
+  <Item name="RULES-TRAP_WORKSHOP">"3"</Item>
+<Item name="RULES-TRAP_COURTLY_ATTIRE">"4"</Item>
+  <Item name="RULES-TRAP_LETTER_OF_APPOINTMENT">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>80</Page>
 </Career>
 <Career id="RULES-WORK_PRIEST">
@@ -5440,14 +6128,14 @@
 <Item name="RULES-TRAP_RELIGIOUS_SYMBOL">"1"</Item>
 <Item name="RULES-TRAP_ROBES">"1"</Item>
 <Item name="RULES-TRAP_BOOK_RELIGION">"2"</Item>
-<Item name="Ceremonial Robes">"2"</Item>
-<Item name="RULES-TRAP_ROBES (Q)">"3"</Item>
-<Item name="Religious Relic">"3"</Item>
-<Item name="Subordinate Priests">"3"</Item>
-<Item name="Temple">"3"</Item>
-<Item name="Library (Theology)">"4"</Item>
-<Item name="Subordinate High Priests">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_CEREMONIAL_ROBES">"2"</Item>
+  <Item name="RULES-TRAP_ROBES (Q)">"3"</Item>
+<Item name="RULES-TRAP_RELIGIOUS_RELIC">"3"</Item>
+  <Item name="RULES-TRAP_SUBORDINATE_PRIESTS">"3"</Item>
+  <Item name="RULES-TRAP_TEMPLE">"3"</Item>
+  <Item name="RULES-TRAP_LIBRARY_THEOLOGY">"4"</Item>
+  <Item name="RULES-TRAP_SUBORDINATE_HIGH_PRIESTS">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>83</Page>
 </Career>
 <Career id="RULES-WORK_SCHOLAR">
@@ -5527,14 +6215,14 @@
   <Talent name="RULES-T_SAVANT__*">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="RULES-TRAP_SPIRITS_PINT">"1"</Item>
-<Item name="Book">"1"</Item>
-<Item name="Access to a Library">"2"</Item>
-<Item name="Degree">"2"</Item>
-<Item name="Mortarboard">"3"</Item>
-<Item name="RULES-TRAP_ROBES">"3"</Item>
-<Item name="Study">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_ALCOHOL">"1"</Item>
+<Item name="RULES-TRAP_BOOK">"1"</Item>
+  <Item name="RULES-TRAP_ACCESS_TO_A_LIBRARY">"2"</Item>
+  <Item name="RULES-TRAP_DEGREE">"2"</Item>
+  <Item name="RULES-TRAP_MORTARBOARD">"3"</Item>
+  <Item name="RULES-TRAP_ROBES">"3"</Item>
+<Item name="RULES-TRAP_STUDY">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>91</Page>
 </Career>
 <Career id="RULES-WORK_WIZARD">
@@ -5614,16 +6302,16 @@
   <Talent name="RULES-T_WAR_WIZARD">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="Grimoire">"1"</Item>
-<Item name="RULES-COMB_QUARTERSTAFF">"1"</Item>
+<Item name="RULES-TRAP_GRIMOIRE">"1"</Item>
+  <Item name="RULES-COMB_QUARTERSTAFF">"1"</Item>
 <Item name="RULES-TRAP_ENCHANTED_STAFF">"2"</Item>
-<Item name="RULES-TRAP_GUILD_LICENCE">"2"</Item>
+<Item name="RULES-TRAP_MAGIC_LICENCE">"2"</Item>
 <Item name="RULES-TRAP_ROBES">"2"</Item>
-<Item name="Apprentice">"3"</Item>
-<Item name="RULES-TRAP_LIGHT_WARHORSE">"3"</Item>
-<Item name="Magical Item">"3"</Item>
-<Item name="Library (Magic)">"4"</Item>
-<Item name="RULES-TRAP_WORKSHOP">"4"</Item>
+<Item name="RULES-TRAP_APPRENTICE">"3"</Item>
+  <Item name="RULES-TRAP_LIGHT_WARHORSE">"3"</Item>
+<Item name="RULES-TRAP_MAGICAL_ITEM">"3"</Item>
+  <Item name="RULES-TRAP_LIBRARY_MAGIC">"4"</Item>
+  <Item name="RULES-TRAP_WORKSHOP">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>107</Page>
 </Career>
@@ -5708,14 +6396,14 @@
 <Item name="RULES-TRAP_LEAFLET">"1"</Item>
 <Item name="RULES-TRAP_WRITING_KIT">"1"</Item>
 <Item name="RULES-ARMO_LEATHER_JACK">"2"</Item>
-<Item name="Sturdy Crate">"2"</Item>
-<Item name="RULES-COMB_HAND_WEAPON">"3"</Item>
-<Item name="Pamphleteer">"3"</Item>
-<Item name="Impressive Hat">"4"</Item>
-<Item name="3 Pamphleteers">"4"</Item>
-<Item name="Patron">"4"</Item>
-<Item name="Printing Press">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_STURDY_CRATE">"2"</Item>
+  <Item name="RULES-COMB_HAND_WEAPON">"3"</Item>
+<Item name="RULES-TRAP_PAMPHLETEER">"3"</Item>
+  <Item name="RULES-TRAP_IMPRESSIVE_HAT">"4"</Item>
+  <Item name="RULES-TRAP_PAMPHLETEER" quantite="3">"4"</Item>
+  <Item name="RULES-TRAP_PATRON">"4"</Item>
+  <Item name="RULES-TRAP_PRINTING_PRESS">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>46</Page>
 </Career>
 <Career id="RULES-WORK_ARTISAN">
@@ -5800,10 +6488,10 @@
 <Item name="RULES-TRAP_RAGS">"1"</Item>
 <Item name="RULES-TRAP_GUILD_LICENCE">"2"</Item>
 <Item name="RULES-TRAP_TRADE_TOOLS">"2"</Item>
-<Item name="Apprentice">"3"</Item>
-<Item name="RULES-TRAP_WORKSHOP">"3"</Item>
-<Item name="Guild">"4"</Item>
-<Item name="RULES-TRAP_CLOTHING (Q)">"4"</Item>
+<Item name="RULES-TRAP_APPRENTICE">"3"</Item>
+  <Item name="RULES-TRAP_WORKSHOP">"3"</Item>
+<Item name="RULES-TRAP_GUILD">"4"</Item>
+  <Item name="RULES-TRAP_CLOTHING (Q)">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>48</Page>
 </Career>
@@ -5885,15 +6573,15 @@
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="RULES-TRAP_CUP">"1"</Item>
-<Item name="Poor Quality Blanket">"1"</Item>
-<Item name="RULES-TRAP_BOWL">"2"</Item>
+<Item name="RULES-TRAP_POOR_QUALITY_BLANKET">"1"</Item>
+  <Item name="RULES-TRAP_BOWL">"2"</Item>
 <Item name="RULES-TRAP_CRUTCH">"2"</Item>
 <Item name="RULES-TRAP_DISGUISE_KIT">"3"</Item>
-<Item name="Hiding Place">"3"</Item>
-<Item name="Pauper Follower">"3"</Item>
-<Item name="Lair">"4"</Item>
-<Item name="Large Group of Beggar Followers">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_HIDING_PLACE">"3"</Item>
+  <Item name="RULES-TRAP_PAUPER_FOLLOWER">"3"</Item>
+  <Item name="RULES-TRAP_LAIR">"4"</Item>
+  <Item name="RULES-TRAP_LARGE_GROUP_OF_BEGGAR_FOLLOWERS">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>51</Page>
 </Career>
 <Career id="RULES-WORK_INVESTIGATOR">
@@ -5975,16 +6663,16 @@
 <SUBCHAPTER_ITEM>
 <Item name="RULES-TRAP_LAMP_OIL">"1"</Item>
 <Item name="RULES-TRAP_LANTERN">"1"</Item>
-<Item name="Journal">"1"</Item>
-<Item name="RULES-TRAP_WRITING_KIT">"1"</Item>
+<Item name="RULES-TRAP_JOURNAL">"1"</Item>
+  <Item name="RULES-TRAP_WRITING_KIT">"1"</Item>
 <Item name="RULES-ARMO_LEATHER_JACK">"2"</Item>
 <Item name="RULES-COMB_HAND_WEAPON">"2"</Item>
 <Item name="RULES-TRAP_READING_LENS">"2"</Item>
 <Item name="RULES-TRAP_LOCKPICKS">"2"</Item>
-<Item name="Assistant">"3"</Item>
-<Item name="Office">"3"</Item>
-<Item name="Network of Informers">"4"</Item>
-<Item name="RULES-TRAP_TELESCOPE">"4"</Item>
+<Item name="RULES-TRAP_ASSISTANT">"3"</Item>
+  <Item name="RULES-TRAP_OFFICE">"3"</Item>
+  <Item name="RULES-TRAP_NETWORK_OF_INFORMERS">"4"</Item>
+  <Item name="RULES-TRAP_SPYGLASS">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>68</Page>
 </Career>
@@ -6066,21 +6754,23 @@
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="RULES-TRAP_ABACUS">"1"</Item>
-<Item name="RULES-TRAP_CANVAS_TARP">"1"</Item>
+<Item name="RULES-TRAP_CANVAS_TARPAULIN">"1"</Item>
 <Item name="RULES-TRAP_MULE+RULES-TRAP_CART">"1"</Item>
-<Item name="3d10 Shillings">"1"</Item>
-<Item name="Barge or 2 Wagons">"2"</Item>
-<Item name="20 GC">"2"</Item>
-<Item name="RULES-TRAP_GUILD_LICENCE">"2"</Item>
-<Item name="100 GC">"3"</Item>
-<Item name="Townhouse with Servants">"3"</Item>
-<Item name="Warehouse">"3"</Item>
-<Item name="2 Barges and 4 Wagons">"4"</Item>
-<Item name="Large Town Estate">"4"</Item>
-<Item name="1000 GC">"4"</Item>
-<Item name="RULES-TRAP_CLOTHING (Q)">"4"</Item>
-<Item name="2 Warehouses">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_3D10_SHILLINGS">"1"</Item>
+  <Item name="RULES-TRAP_BARGE/RULES-TRAP_WAGON">"2"</Item>
+  <Item name="RULES-TRAP_MONEY_GC" quantite="20">"2"</Item>
+  <Item name="RULES-TRAP_GUILD_LICENCE">"2"</Item>
+<Item name="RULES-TRAP_MONEY_GC" quantite="100">"3"</Item>
+  <Item name="RULES-TRAP_TOWNHOUSE">"3"</Item>
+<Item name="RULES-TRAP_SERVANTS">"3"</Item>
+  <Item name="RULES-TRAP_WAREHOUSE">"3"</Item>
+  <Item name="RULES-TRAP_BARGE" quantite="2">"4"</Item>
+<Item name="RULES-TRAP_WAGON" quantite="4">"4"</Item>
+  <Item name="RULES-TRAP_LARGE_TOWN_ESTATE">"4"</Item>
+  <Item name="RULES-TRAP_MONEY_GC" quantite="1000">"4"</Item>
+  <Item name="RULES-TRAP_CLOTHING (Q)">"4"</Item>
+<Item name="RULES-TRAP_WAREHOUSE" quantite="2">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>72</Page>
 </Career>
 <Career id="RULES-WORK_RAT_CATCHER">
@@ -6163,15 +6853,15 @@
 <Item name="RULES-COMB_HAND_WEAPON">"1"</Item>
 <Item name="RULES-TRAP_SACK">"1"</Item>
 <Item name="RULES-TRAP_ANIMAL_TRAP">"1"</Item>
-<Item name="Small but Vicious Dog">"1"</Item>
-<Item name="RULES-TRAP_POLE_3_YARDS">"2"</Item>
+<Item name="RULES-TRAP_SMALL_BUT_VICIOUS_DOG">"1"</Item>
+  <Item name="RULES-TRAP_POLE_FOR_DEAD_RATS">"2"</Item>
 <Item name="RULES-TRAP_RAT_POISON">"2"</Item>
 <Item name="RULES-PROJ_CROSSBOW/RULES-COMB_SPEAR">"3"</Item>
 <Item name="RULES-TRAP_FEINKOPF_LAMP">"3"</Item>
 <Item name="RULES-ARMO_LEATHER_JACK">"3"</Item>
-<Item name="Assistant">"4"</Item>
-<Item name="Sack of Poisoned Bait">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_ASSISTANT">"4"</Item>
+  <Item name="RULES-TRAP_SACK_OF_POISONED_BAIT">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>86</Page>
 </Career>
 <Career id="RULES-WORK_TOWNSMAN">
@@ -6251,15 +6941,17 @@
   <Talent name="RULES-T_WEALTHY">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="Lodgings">"1"</Item>
-<Item name="Modest Shop">"2"</Item>
-<Item name="RULES-PROJ_BLUNDERBUSS">"3"</Item>
-<Item name="Inn or Townhouse">"3"</Item>
-<Item name="Staff">"3"</Item>
-<Item name="Chains of Office">"4"</Item>
-<Item name="Coach and Footman">"4"</Item>
-<Item name="Large Townhouse with Gardens and Servants">"4"</Item>
-<Item name="RULES-TRAP_CLOTHING (Q)">"4"</Item>
+<Item name="RULES-TRAP_LODGINGS">"1"</Item>
+  <Item name="RULES-TRAP_MODEST_SHOP">"2"</Item>
+  <Item name="RULES-PROJ_BLUNDERBUSS">"3"</Item>
+<Item name="RULES-TRAP_INN/RULES-TRAP_TOWNHOUSE">"3"</Item>
+  <Item name="RULES-TRAP_STAFF">"3"</Item>
+  <Item name="RULES-TRAP_CHAINS_OF_OFFICE">"4"</Item>
+  <Item name="RULES-TRAP_COACH">"4"</Item>
+<Item name="RULES-TRAP_FOOTMAN">"4"</Item>
+  <Item name="RULES-TRAP_LARGE_TOWNHOUSE_WITH_GARDENS">"4"</Item>
+<Item name="RULES-TRAP_SERVANTS">"4"</Item>
+  <Item name="RULES-TRAP_CLOTHING (Q)">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>100</Page>
 </Career>
@@ -6343,16 +7035,16 @@
 <Item name="RULES-COMB_HAND_WEAPON">"1"</Item>
 <Item name="RULES-ARMO_LEATHER_JACK">"1"</Item>
 <Item name="RULES-TRAP_UNIFORM">"1"</Item>
-<Item name="Copper Badge">"2"</Item>
-<Item name="RULES-TRAP_LAMP_OIL">"2"</Item>
+<Item name="RULES-TRAP_COPPER_BADGE">"2"</Item>
+  <Item name="RULES-TRAP_LAMP_OIL">"2"</Item>
 <Item name="RULES-TRAP_LANTERN+RULES-TRAP_POLE_3_YARDS">"2"</Item>
 <Item name="RULES-ARMO_BREASTPLATE">"3"</Item>
 <Item name="RULES-ARMO_OPEN_HELM">"3"</Item>
-<Item name="Symbol of Rank">"3"</Item>
-<Item name="RULES-COMB_* (Q)">"4"</Item>
+<Item name="RULES-TRAP_SYMBOL_OF_RANK">"3"</Item>
+  <Item name="RULES-COMB_* (Q)">"4"</Item>
 <Item name="RULES-TRAP_HAT (Q)">"4"</Item>
-<Item name="Quality Symbol of Rank">"4"</Item>
-<Item name="RULES-TRAP_RIDING_HORSE">"4"</Item>
+<Item name="RULES-TRAP_QUALITY_SYMBOL_OF_RANK">"4"</Item>
+  <Item name="RULES-TRAP_RIDING_HORSE">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>104</Page>
 </Career>
@@ -6434,13 +7126,13 @@
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="RULES-TRAP_WRITING_KIT">"1"</Item>
-<Item name="RULES-TRAP_UNIFORM">"2"</Item>
-<Item name="Aide">"3"</Item>
-<Item name="RULES-TRAP_CLOTHING (Q)">"3"</Item>
+<Item name="RULES-TRAP_LIVERY">"2"</Item>
+<Item name="RULES-TRAP_AIDE">"3"</Item>
+  <Item name="RULES-TRAP_CLOTHING (Q)">"3"</Item>
 <Item name="RULES-TRAP_COURTLY_GARB (Q)">"4"</Item>
 <Item name="RULES-TRAP_RIDING_HORSE">"4"</Item>
-<Item name="Staff of Advisers and Aides">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_STAFF_OF_ADVISERS_AND_AIDES">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>45</Page>
 </Career>
 <Career id="RULES-WORK_ARTIST">
@@ -6521,14 +7213,15 @@
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="RULES-TRAP_PAINT_BRUSH/RULES-TRAP_CHISEL/RULES-TRAP_WRITING_KIT">"1"</Item>
-<Item name="Sling Bag containing Trade Tools (Artist)">"2"</Item>
-<Item name="Apprentice">"3"</Item>
-<Item name="Patron">"3"</Item>
-<Item name="RULES-TRAP_WORKSHOP">"3"</Item>
-<Item name="3 Apprentices">"4"</Item>
-<Item name="Large Workshop (Artist)">"4"</Item>
-<Item name="Library (Art)">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_SLING_BAG">"2"</Item>
+<Item name="RULES-TRAP_TRADE_TOOLS_ARTIST">"2"</Item>
+  <Item name="RULES-TRAP_APPRENTICE">"3"</Item>
+  <Item name="RULES-TRAP_PATRON">"3"</Item>
+  <Item name="RULES-TRAP_WORKSHOP">"3"</Item>
+<Item name="RULES-TRAP_APPRENTICE" quantite="3">"4"</Item>
+  <Item name="RULES-TRAP_LARGE_WORKSHOP_ARTIST">"4"</Item>
+  <Item name="RULES-TRAP_LIBRARY_ART">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>49</Page>
 </Career>
 <Career id="RULES-WORK_DUELLIST">
@@ -6609,15 +7302,17 @@
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="RULES-COMB_*">"1"</Item>
-<Item name="Sling Bag containing Clothing and 1d10 Bandages">"1"</Item>
-<Item name="RULES-COMB_MAIN_GAUCHE/RULES-COMB_SWORDBREAKER">"2"</Item>
+<Item name="RULES-TRAP_SLING_BAG">"1"</Item>
+<Item name="RULES-TRAP_CLOTHING">"1"</Item>
+<Item name="RULES-TRAP_1D10_BANDAGES">"1"</Item>
+  <Item name="RULES-COMB_MAIN_GAUCHE/RULES-COMB_SWORDBREAKER">"2"</Item>
 <Item name="RULES-PROJ_PISTOL">"2"</Item>
 <Item name="RULES-COMB_HAND_WEAPON">"3"</Item>
-<Item name="Quality Rapier">"3"</Item>
-<Item name="Trusty Second">"3"</Item>
-<Item name="2 Wooden Training Swords">"3"</Item>
-<Item name="2 Quality Weapons">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_QUALITY_RAPIER">"3"</Item>
+  <Item name="RULES-TRAP_TRUSTY_SECOND">"3"</Item>
+  <Item name="RULES-TRAP_WOODEN_TRAINING_SWORD" quantite="2">"3"</Item>
+  <Item name="RULES-TRAP_QUALITY_WEAPON" quantite="2">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>57</Page>
 </Career>
 <Career id="RULES-WORK_ENVOY">
@@ -6698,17 +7393,17 @@
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="RULES-ARMO_LEATHER_JACK">"1"</Item>
-<Item name="RULES-TRAP_UNIFORM">"1"</Item>
+<Item name="RULES-TRAP_LIVERY">"1"</Item>
 <Item name="RULES-TRAP_SCROLL_CASE">"1"</Item>
-<Item name="10 Sheets of Parchment">"2"</Item>
-<Item name="RULES-TRAP_WRITING_KIT">"2"</Item>
-<Item name="Aide">"3"</Item>
-<Item name="RULES-TRAP_CLOTHING (Q)">"3"</Item>
+<Item name="RULES-TRAP_SHEETS_OF_PARCHMENT" quantite="10">"2"</Item>
+  <Item name="RULES-TRAP_WRITING_KIT">"2"</Item>
+<Item name="RULES-TRAP_AIDE">"3"</Item>
+  <Item name="RULES-TRAP_CLOTHING (Q)">"3"</Item>
 <Item name="RULES-TRAP_MAP">"3"</Item>
-<Item name="Best Quality Courtly Clothes">"4"</Item>
-<Item name="Herald">"4"</Item>
-<Item name="Staff of Diplomats">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_BEST_QUALITY_COURTLY_CLOTHES">"4"</Item>
+  <Item name="RULES-TRAP_HERALD">"4"</Item>
+  <Item name="RULES-TRAP_STAFF_OF_DIPLOMATS">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>60</Page>
 </Career>
 <Career id="RULES-WORK_NOBLE">
@@ -6791,22 +7486,22 @@
 <Item name="RULES-TRAP_COURTLY_GARB">"1"</Item>
 <Item name="RULES-COMB_FOIL/RULES-TRAP_HAND_MIRROR">"1"</Item>
 <Item name="RULES-TRAP_VELVET_CLOAK">"1"</Item>
-<Item name="Jewellery worth 3d10 GC">"1"</Item>
-<Item name="Personal Servant">"1"</Item>
-<Item name="RULES-TRAP_COACH/RULES-TRAP_RIDING_HORSE">"2"</Item>
-<Item name="4 Household Servants">"2"</Item>
-<Item name="Jewellery worth 50 GC">"2"</Item>
-<Item name="RULES-COMB_MAIN_GAUCHE/RULES-PROJ_PISTOL">"2"</Item>
+<Item name="RULES-TRAP_JEWELLERY_WORTH_3D10_GC">"1"</Item>
+  <Item name="RULES-TRAP_PERSONAL_SERVANT">"1"</Item>
+  <Item name="RULES-TRAP_COACH/RULES-TRAP_RIDING_HORSE">"2"</Item>
+<Item name="RULES-TRAP_HOUSEHOLD_SERVANT" quantite="4">"2"</Item>
+  <Item name="RULES-TRAP_JEWELLERY_WORTH_50_GC">"2"</Item>
+  <Item name="RULES-COMB_MAIN_GAUCHE/RULES-PROJ_PISTOL">"2"</Item>
 <Item name="RULES-TRAP_COURTLY_GARB (Q)">"2"</Item>
-<Item name="Fiefdom">"3"</Item>
-<Item name="200 GC">"3"</Item>
-<Item name="Jewellery worth 200 GC">"3"</Item>
-<Item name="RULES-TRAP_COURTLY_GARB (Q)">"3"</Item>
+<Item name="RULES-TRAP_FIEFDOM">"3"</Item>
+  <Item name="RULES-TRAP_MONEY_GC" quantite="200">"3"</Item>
+  <Item name="RULES-TRAP_JEWELLERY_WORTH_200_GC">"3"</Item>
+  <Item name="RULES-TRAP_COURTLY_GARB (Q)">"3"</Item>
 <Item name="RULES-TRAP_SIGNET_RING">"3"</Item>
-<Item name="500 GC">"4"</Item>
-<Item name="Jewellery worth 500 GC">"4"</Item>
-<Item name="Province">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_MONEY_GC" quantite="500">"4"</Item>
+  <Item name="RULES-TRAP_JEWELLERY_WORTH_500_GC">"4"</Item>
+  <Item name="RULES-TRAP_PROVINCE">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>76</Page>
 </Career>
 <Career id="RULES-WORK_SERVANT">
@@ -6887,15 +7582,15 @@
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="RULES-TRAP_FLOOR_BRUSH">"1"</Item>
-<Item name="RULES-TRAP_UNIFORM">"2"</Item>
+<Item name="RULES-TRAP_LIVERY">"2"</Item>
 <Item name="RULES-TRAP_LAMP_OIL">"3"</Item>
-<Item name="Quality Livery">"3"</Item>
-<Item name="RULES-TRAP_STORM_LANTERN">"3"</Item>
+<Item name="RULES-TRAP_QUALITY_LIVERY">"3"</Item>
+  <Item name="RULES-TRAP_STORM_LANTERN">"3"</Item>
 <Item name="RULES-TRAP_TINDERBOX">"3"</Item>
 <Item name="RULES-COMB_HAND_WEAPON">"4"</Item>
 <Item name="RULES-TRAP_CLOTHING">"4"</Item>
-<Item name="Servant">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_SERVANT">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>93</Page>
 </Career>
 <Career id="RULES-WORK_SPY">
@@ -6976,16 +7671,19 @@
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="RULES-TRAP_CHARCOAL_STICK">"1"</Item>
-<Item name="Sling Bag containing 2 different sets of Clothing and Hooded Cloak">"1"</Item>
-<Item name="RULES-TRAP_DISGUISE_KIT">"2"</Item>
-<Item name="Informer">"2"</Item>
-<Item name="RULES-TRAP_TELESCOPE">"2"</Item>
+<Item name="RULES-TRAP_SLING_BAG">"1"</Item>
+<Item name="RULES-TRAP_CLOTHING" quantite="2">"1"</Item>
+<Item name="RULES-TRAP_HOODED_CLOAK">"1"</Item>
+  <Item name="RULES-TRAP_DISGUISE_KIT">"2"</Item>
+<Item name="RULES-TRAP_INFORMER">"2"</Item>
+  <Item name="RULES-TRAP_TELESCOPE">"2"</Item>
 <Item name="RULES-TRAP_BOOK_CRYPTOGRAPHY">"3"</Item>
-<Item name="Loft of Homing Pigeons">"3"</Item>
-<Item name="Ring of Spies and Informers">"3"</Item>
-<Item name="RULES-TRAP_WRITING_KIT">"3"</Item>
-<Item name="Office and Staff">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_LOFT_OF_HOMING_PIGEONS">"3"</Item>
+  <Item name="RULES-TRAP_RING_OF_SPIES_AND_INFORMERS">"3"</Item>
+  <Item name="RULES-TRAP_WRITING_KIT">"3"</Item>
+<Item name="RULES-TRAP_OFFICE">"4"</Item>
+<Item name="RULES-TRAP_STAFF">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>97</Page>
 </Career>
 <Career id="RULES-WORK_WARDEN">
@@ -7068,17 +7766,17 @@
 <Item name="RULES-TRAP_KEY">"1"</Item>
 <Item name="RULES-TRAP_LAMP_OIL">"1"</Item>
 <Item name="RULES-TRAP_LANTERN">"1"</Item>
-<Item name="RULES-TRAP_UNIFORM">"1"</Item>
+<Item name="RULES-TRAP_LIVERY">"1"</Item>
 <Item name="RULES-PROJ_BOW/RULES-COMB_HAND_WEAPON">"2"</Item>
 <Item name="RULES-ARMO_LEATHER_JACK">"2"</Item>
 <Item name="RULES-TRAP_RIDING_HORSE">"2"</Item>
 <Item name="RULES-ARMO_BREASTPLATE">"3"</Item>
-<Item name="Rod of Office">"3"</Item>
-<Item name="Staff of Custodians">"3"</Item>
-<Item name="Aide">"4"</Item>
-<Item name="Governor's Residence">"4"</Item>
-<Item name="Servant">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_ROD_OF_OFFICE">"3"</Item>
+  <Item name="RULES-TRAP_STAFF_OF_CUSTODIANS">"3"</Item>
+  <Item name="RULES-TRAP_AIDE">"4"</Item>
+  <Item name="RULES-TRAP_GOVERNORS_RESIDENCE">"4"</Item>
+  <Item name="RULES-TRAP_SERVANT">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>102</Page>
 </Career>
 <Career id="RULES-WORK_BAILIFF">
@@ -7159,16 +7857,16 @@
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="RULES-COMB_HAND_WEAPON">"1"</Item>
-<Item name="Small Lock Box">"1"</Item>
-<Item name="RULES-ARMO_LEATHER_JACK">"2"</Item>
-<Item name="3 Tax Collectors">"2"</Item>
-<Item name="Bailiff">"3"</Item>
-<Item name="RULES-ARMO_BREASTPLATE">"3"</Item>
+<Item name="RULES-TRAP_SMALL_LOCK_BOX">"1"</Item>
+  <Item name="RULES-ARMO_LEATHER_JACK">"2"</Item>
+<Item name="RULES-TRAP_TAX_COLLECTOR" quantite="3">"2"</Item>
+  <Item name="RULES-TRAP_BAILIFF">"3"</Item>
+  <Item name="RULES-ARMO_BREASTPLATE">"3"</Item>
 <Item name="RULES-TRAP_RIDING_HORSE">"3"</Item>
-<Item name="Library (Law)">"4"</Item>
-<Item name="RULES-TRAP_ROBES (Q)">"4"</Item>
-<Item name="Seal of Office">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_LIBRARY_LAW">"4"</Item>
+  <Item name="RULES-TRAP_ROBES (Q)">"4"</Item>
+<Item name="RULES-TRAP_SEAL_OF_OFFICE">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>50</Page>
 </Career>
 <Career id="RULES-WORK_HEDGE_WITCH">
@@ -7253,11 +7951,11 @@
 <Item name="RULES-COMB_QUARTERSTAFF">"1"</Item>
 <Item name="RULES-TRAP_HEALING_POULTICE">"2"</Item>
 <Item name="RULES-TRAP_TRADE_TOOLS">"2"</Item>
-<Item name="Apprentice">"3"</Item>
-<Item name="Isolated Hut">"3"</Item>
-<Item name="Assortment of Animal Skulls">"4"</Item>
-<Item name="Ceremonial Cloak and Garland">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_APPRENTICE">"3"</Item>
+  <Item name="RULES-TRAP_ISOLATED_HUT">"3"</Item>
+  <Item name="RULES-TRAP_ASSORTMENT_OF_ANIMAL_SKULLS">"4"</Item>
+  <Item name="RULES-TRAP_CEREMONIAL_CLOAK_AND_GARLAND">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>65</Page>
 </Career>
 <Career id="RULES-WORK_HERBALIST">
@@ -7340,13 +8038,14 @@
 <Item name="RULES-TRAP_BOOTS">"1"</Item>
 <Item name="RULES-TRAP_CLOAK">"1"</Item>
 <Item name="RULES-COMB_HAND_WEAPON">"1"</Item>
-<Item name="Sling Bag containing Assortment of Herbs">"1"</Item>
-<Item name="RULES-TRAP_TRADE_TOOLS">"2"</Item>
-<Item name="3 Herbal Remedies">"3"</Item>
-<Item name="Herb Gatherer">"3"</Item>
-<Item name="RULES-TRAP_WORKSHOP">"3"</Item>
-<Item name="Book (Herbs)">"4"</Item>
-<Item name="RULES-TRAP_PONY+RULES-TRAP_CART">"4"</Item>
+<Item name="RULES-TRAP_SLING_BAG">"1"</Item>
+<Item name="RULES-TRAP_ASSORTMENT_OF_HERBS">"1"</Item>
+  <Item name="RULES-TRAP_TRADE_TOOLS">"2"</Item>
+<Item name="RULES-TRAP_HERBAL_REMEDY" quantite="3">"3"</Item>
+  <Item name="RULES-TRAP_HERB_GATHERER">"3"</Item>
+  <Item name="RULES-TRAP_WORKSHOP">"3"</Item>
+<Item name="RULES-TRAP_BOOK_HERBS">"4"</Item>
+  <Item name="RULES-TRAP_PONY+RULES-TRAP_CART">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>66</Page>
 </Career>
@@ -7436,8 +8135,8 @@
 <Item name="RULES-TRAP_BACKPACK">"3"</Item>
 <Item name="RULES-TRAP_BEDROLL">"3"</Item>
 <Item name="RULES-TRAP_TENT">"3"</Item>
-<Item name="Hawk Mews or Kennel of Hunting Dogs">"4"</Item>
-<Item name="RULES-TRAP_RIDING_HORSE">"4"</Item>
+<Item name="RULES-TRAP_HAWK_MEWS/RULES-TRAP_KENNEL_OF_HUNTING_DOGS">"4"</Item>
+  <Item name="RULES-TRAP_RIDING_HORSE">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>67</Page>
 </Career>
@@ -7524,13 +8223,13 @@
 <Item name="RULES-COMB_HAND_WEAPON">"1"</Item>
 <Item name="RULES-TRAP_PAN">"1"</Item>
 <Item name="RULES-TRAP_SPADE">"1"</Item>
-<Item name="Davrich Lamp">"2"</Item>
-<Item name="RULES-TRAP_LAMP_OIL">"2"</Item>
+<Item name="RULES-TRAP_DAVRICH_LAMP">"2"</Item>
+  <Item name="RULES-TRAP_LAMP_OIL">"2"</Item>
 <Item name="RULES-ARMO_LEATHER_JACK">"2"</Item>
 <Item name="RULES-ARMO_OPEN_HELM">"2"</Item>
 <Item name="RULES-TRAP_TRADE_TOOLS">"3"</Item>
-<Item name="Crew of Miners">"4"</Item>
-<Item name="RULES-TRAP_WRITING_KIT">"4"</Item>
+<Item name="RULES-TRAP_CREW_OF_MINERS">"4"</Item>
+  <Item name="RULES-TRAP_WRITING_KIT">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>74</Page>
 </Career>
@@ -7705,8 +8404,8 @@
 <Item name="RULES-ARMO_MAIL_SHIRT">"2"</Item>
 <Item name="RULES-TRAP_MAP">"3"</Item>
 <Item name="RULES-TRAP_RIDING_HORSE">"3"</Item>
-<Item name="Saddlebags with 2 weeks' Rations">"3"</Item>
-<Item name="RULES-TRAP_TENT">"3"</Item>
+<Item name="RULES-TRAP_SADDLEBAGS_WITH_2_WEEKS_RATIONS">"3"</Item>
+  <Item name="RULES-TRAP_TENT">"3"</Item>
 <Item name="RULES-TRAP_MAP">"4"</Item>
 <Item name="RULES-TRAP_TRADE_TOOLS">"4"</Item>
 </SUBCHAPTER_ITEM>
@@ -7789,16 +8488,16 @@
   <Talent name="RULES-T_SAVANT__LOCAL">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="None">"1"</Item>
-<Item name="RULES-COMB_HAND_WEAPON">"2"</Item>
+
+  <Item name="RULES-COMB_HAND_WEAPON">"2"</Item>
 <Item name="RULES-PROJ_LASSO/RULES-PROJ_SLING">"2"</Item>
 <Item name="RULES-ARMO_LEATHER_JERKIN">"2"</Item>
 <Item name="RULES-TRAP_TRADE_TOOLS">"2"</Item>
-<Item name="Cottage">"3"</Item>
-<Item name="RULES-TRAP_MULE+RULES-TRAP_CART">"3"</Item>
+<Item name="RULES-TRAP_COTTAGE">"3"</Item>
+  <Item name="RULES-TRAP_MULE+RULES-TRAP_CART">"3"</Item>
 <Item name="RULES-TRAP_WORKSHOP">"3"</Item>
-<Item name="The Respect of the Village">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_THE_RESPECT_OF_THE_VILLAGE">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>101</Page>
 </Career>
 <Career id="RULES-WORK_BOUNTY_HUNTER">
@@ -7882,11 +8581,11 @@
 <Item name="RULES-ARMO_LEATHER_JERKIN">"1"</Item>
 <Item name="RULES-TRAP_ROPE_10_YARDS">"1"</Item>
 <Item name="RULES-PROJ_BOLAS/RULES-PROJ_CROSSBOW/RULES-PROJ_LASSO" quantite="2/1/1">"2"</Item>
-<Item name="Leather Skullcap">"2"</Item>
-<Item name="RULES-TRAP_MANACLES">"2"</Item>
+<Item name="RULES-TRAP_LEATHER_SKULLCAP">"2"</Item>
+  <Item name="RULES-TRAP_MANACLES">"2"</Item>
 <Item name="RULES-PROJ_NET">"2"</Item>
-<Item name="Warrant Papers">"2"</Item>
-<Item name="RULES-ARMO_MAIL_SHIRT">"3"</Item>
+<Item name="RULES-TRAP_WARRANT_PAPERS">"2"</Item>
+  <Item name="RULES-ARMO_MAIL_SHIRT">"3"</Item>
 <Item name="RULES-TRAP_RIDING_HORSE">"3"</Item>
 <Item name="RULES-TRAP_DRAUGHT_HORSE+RULES-TRAP_CART">"4"</Item>
 <Item name="RULES-TRAP_MANACLES" quantite="4">"4"</Item>
@@ -7970,16 +8669,16 @@
   <Talent name="RULES-T_READ_WRITE">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="Coach Horn">"1"</Item>
-<Item name="RULES-TRAP_HAT">"1"</Item>
+<Item name="RULES-TRAP_COACH_HORN">"1"</Item>
+  <Item name="RULES-TRAP_HAT">"1"</Item>
 <Item name="RULES-ARMO_LEATHER_JERKIN">"1"</Item>
 <Item name="RULES-TRAP_COAT">"1"</Item>
 <Item name="RULES-PROJ_BLUNDERBUSS">"2"</Item>
 <Item name="RULES-COMB_WHIP">"2"</Item>
 <Item name="RULES-PROJ_PISTOL">"3"</Item>
 <Item name="RULES-TRAP_CLOAK (Q)">"3"</Item>
-<Item name="Fleet of Coaches and Horses">"4"</Item>
-<Item name="RULES-TRAP_MAP">"4"</Item>
+<Item name="RULES-TRAP_FLEET_OF_COACHES_AND_HORSES">"4"</Item>
+  <Item name="RULES-TRAP_MAP">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>56</Page>
 </Career>
@@ -8065,12 +8764,12 @@
 <Item name="RULES-TRAP_COSTUME">"2"</Item>
 <Item name="RULES-TRAP_INSTRUMENT">"2"</Item>
 <Item name="RULES-PROJ_THROWING_KNIFE" quantite="5">"2"</Item>
-<Item name="Trained Animal">"3"</Item>
-<Item name="RULES-TRAP_WRITING_KIT">"3"</Item>
-<Item name="Draught Horses and Wagon (Stage)">"4"</Item>
-<Item name="Troupe of Entertainers">"4"</Item>
-<Item name="Wardrobe of Costumes and Props">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_TRAINED_ANIMAL">"3"</Item>
+  <Item name="RULES-TRAP_WRITING_KIT">"3"</Item>
+<Item name="RULES-TRAP_DRAUGHT_HORSES_AND_WAGON_STAGE">"4"</Item>
+  <Item name="RULES-TRAP_TROUPE_OF_ENTERTAINERS">"4"</Item>
+  <Item name="RULES-TRAP_WARDROBE_OF_COSTUMES_AND_PROPS">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>59</Page>
 </Career>
 <Career id="RULES-WORK_FLAGELLANT">
@@ -8151,13 +8850,13 @@
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="RULES-COMB_FLAIL">"1"</Item>
-<Item name="Tattered Robes">"1"</Item>
-<Item name="RULES-COMB_MILITARY_FLAIL">"2"</Item>
+<Item name="RULES-TRAP_TATTERED_ROBES">"1"</Item>
+  <Item name="RULES-COMB_MILITARY_FLAIL">"2"</Item>
 <Item name="RULES-TRAP_RELIGIOUS_SYMBOL">"2"</Item>
-<Item name="Religious Relic">"3"</Item>
-<Item name="RULES-TRAP_BOOK_RELIGION">"4"</Item>
-<Item name="Followers (including Penitents, Flagellants, and Zealots)">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_RELIGIOUS_RELIC">"3"</Item>
+  <Item name="RULES-TRAP_BOOK_RELIGION">"4"</Item>
+<Item name="RULES-TRAP_FOLLOWERS_INCLUDING_PENITENTS_FLAGELLANTS_AND_ZEALOTS">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>62</Page>
 </Career>
 <Career id="RULES-WORK_MESSENGER">
@@ -8244,8 +8943,8 @@
 <Item name="RULES-TRAP_BACKPACK">"3"</Item>
 <Item name="RULES-TRAP_SADDLEBAGS">"3"</Item>
 <Item name="RULES-ARMO_SHIELD">"3"</Item>
-<Item name="Couriers">"4"</Item>
-<Item name="RULES-ARMO_MAIL_SHIRT">"4"</Item>
+<Item name="RULES-TRAP_COURIERS">"4"</Item>
+  <Item name="RULES-ARMO_MAIL_SHIRT">"4"</Item>
 <Item name="RULES-TRAP_WRITING_KIT">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>73</Page>
@@ -8327,22 +9026,22 @@
   <Talent name="RULES-T_SUAVE">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="Basket">"1"</Item>
-<Item name="RULES-TRAP_BLANKET">"1"</Item>
-<Item name="Goods worth 2d10 Pennies">"1"</Item>
-<Item name="RULES-TRAP_TENT">"1"</Item>
-<Item name="Backpack or Handcart">"2"</Item>
-<Item name="RULES-TRAP_BEDROLL">"2"</Item>
-<Item name="Goods worth 8d20 Pennies">"2"</Item>
-<Item name="Pots and Pans">"2"</Item>
-<Item name="RULES-TRAP_TRADE_TOOLS">"2"</Item>
+<Item name="RULES-TRAP_BASKET">"1"</Item>
+  <Item name="RULES-TRAP_BLANKET">"1"</Item>
+<Item name="RULES-TRAP_GOODS_WORTH_2D10_PENNIES">"1"</Item>
+  <Item name="RULES-TRAP_TENT">"1"</Item>
+<Item name="RULES-TRAP_BACKPACK/RULES-TRAP_HANDCART">"2"</Item>
+  <Item name="RULES-TRAP_BEDROLL">"2"</Item>
+<Item name="RULES-TRAP_GOODS_WORTH_8D20_PENNIES">"2"</Item>
+  <Item name="RULES-TRAP_POTS_AND_PANS">"2"</Item>
+  <Item name="RULES-TRAP_TRADE_TOOLS">"2"</Item>
 <Item name="RULES-TRAP_MULE+RULES-TRAP_CART">"3"</Item>
-<Item name="Goods worth at least 2d10 Shillings">"3"</Item>
-<Item name="RULES-PROJ_SLING">"3"</Item>
+<Item name="RULES-TRAP_GOODS_WORTH_AT_LEAST_2D10_SHILLINGS">"3"</Item>
+  <Item name="RULES-PROJ_SLING">"3"</Item>
 <Item name="RULES-TRAP_DRAUGHT_HORSE+RULES-TRAP_WAGON">"4"</Item>
-<Item name="Goods worth at least 3d10 Shillings">"4"</Item>
-<Item name="4d10 Shillings">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_GOODS_WORTH_AT_LEAST_3D10_SHILLINGS">"4"</Item>
+  <Item name="RULES-TRAP_4D10_SHILLINGS">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>79</Page>
 </Career>
 <Career id="RULES-WORK_ROADWARDEN">
@@ -8429,11 +9128,11 @@
 <Item name="RULES-ARMO_MAIL_SHIRT">"2"</Item>
 <Item name="RULES-PROJ_PISTOL">"2"</Item>
 <Item name="RULES-TRAP_ROPE_10_YARDS">"2"</Item>
-<Item name="Squad of Roadwardens">"3"</Item>
-<Item name="Symbol of Rank">"3"</Item>
-<Item name="Quality Hat and Cloak">"4"</Item>
-<Item name="Unit of Roadwardens">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_SQUAD_OF_ROADWARDENS">"3"</Item>
+  <Item name="RULES-TRAP_SYMBOL_OF_RANK">"3"</Item>
+  <Item name="RULES-TRAP_QUALITY_HAT_AND_CLOAK">"4"</Item>
+  <Item name="RULES-TRAP_UNIT_OF_ROADWARDENS">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>89</Page>
 </Career>
 <Career id="RULES-WORK_WITCH_HUNTER">
@@ -8514,18 +9213,18 @@
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="RULES-COMB_HAND_WEAPON">"1"</Item>
-<Item name="Instruments of Torture">"1"</Item>
-<Item name="RULES-PROJ_PISTOL">"2"</Item>
+<Item name="RULES-TRAP_INSTRUMENTS_OF_TORTURE">"1"</Item>
+  <Item name="RULES-PROJ_PISTOL">"2"</Item>
 <Item name="RULES-TRAP_HAT">"2"</Item>
 <Item name="RULES-ARMO_LEATHER_JACK">"2"</Item>
 <Item name="RULES-TRAP_RIDING_HORSE">"2"</Item>
 <Item name="RULES-COMB_RAPIER/RULES-COMB_SILVERED_SWORD">"2"</Item>
 <Item name="RULES-TRAP_ROPE_10_YARDS">"2"</Item>
 <Item name="RULES-TRAP_CLOTHING (Q)">"3"</Item>
-<Item name="Subordinate Interrogators">"3"</Item>
-<Item name="RULES-TRAP_COURTLY_GARB (Q)">"4"</Item>
-<Item name="Subordinate Witch Hunters">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_SUBORDINATE_INTERROGATORS">"3"</Item>
+  <Item name="RULES-TRAP_COURTLY_GARB (Q)">"4"</Item>
+<Item name="RULES-TRAP_SUBORDINATE_WITCH_HUNTERS">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>106</Page>
 </Career>
 <Career id="RULES-WORK_CAVALRYMAN">
@@ -8598,7 +9297,7 @@
   <Talent name="RULES-T_COMBAT_REFLEXES">"3"</Talent>
   <Talent name="RULES-T_FAST_SHOT">"3"</Talent>
   <Talent name="RULES-T_HATRED__*">"3"</Talent>
-  <Talent name="RULES-T_WAR_WIZARD">"3"</Talent>
+  <Talent name="RULES-T_WAR_LEADER">"3"</Talent>
   <Talent name="RULES-T_ACCURATE_SHOT">"4"</Talent>
   <Talent name="RULES-T_INSPIRING">"4"</Talent>
   <Talent name="RULES-T_READ_WRITE">"4"</Talent>
@@ -8610,8 +9309,8 @@
 <Item name="RULES-TRAP_LIGHT_WARHORSE">"1"</Item>
 <Item name="RULES-ARMO_BREASTPLATE">"2"</Item>
 <Item name="RULES-ARMO_OPEN_HELM">"2"</Item>
-<Item name="Sash">"3"</Item>
-<Item name="RULES-TRAP_DECK_OF_CARDS">"4"</Item>
+<Item name="RULES-TRAP_SASH">"3"</Item>
+  <Item name="RULES-TRAP_DECK_OF_CARDS">"4"</Item>
 <Item name="RULES-TRAP_CLOTHING (Q)">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>54</Page>
@@ -8704,8 +9403,8 @@
 <Item name="RULES-ARMO_HELM">"3"</Item>
 <Item name="RULES-TRAP_UNIFORM">"3"</Item>
 <Item name="RULES-ARMO_BREASTPLATE">"4"</Item>
-<Item name="Squad of Guards">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_SQUAD_OF_GUARDS">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>64</Page>
 </Career>
 <Career id="RULES-WORK_KNIGHT">
@@ -8768,7 +9467,7 @@
   </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
 <Talent name="RULES-T_ETIQUETTE__NOBLES/RULES-T_ETIQUETTE__SOLDIERS">"1"</Talent>
-  <Talent name="RULES-T_NIMBLE_FINGERED">"1"</Talent>
+  <Talent name="RULES-T_NOBLE_BLOOD">"1"</Talent>
   <Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"1"</Talent>
   <Talent name="RULES-T_WARRIOR_BORN">"1"</Talent>
   <Talent name="RULES-T_COOLHEADED">"2"</Talent>
@@ -8778,7 +9477,7 @@
   <Talent name="RULES-T_FEARLESS__*">"3"</Talent>
   <Talent name="RULES-T_STOUT_HEARTED">"3"</Talent>
   <Talent name="RULES-T_UNSHAKEABLE">"3"</Talent>
-  <Talent name="RULES-T_WAR_WIZARD">"3"</Talent>
+  <Talent name="RULES-T_WAR_LEADER">"3"</Talent>
   <Talent name="RULES-T_INSPIRING">"4"</Talent>
   <Talent name="RULES-T_IRON_WILL">"4"</Talent>
   <Talent name="RULES-T_READ_WRITE">"4"</Talent>
@@ -8793,14 +9492,14 @@
 <Item name="RULES-TRAP_DESTRIER">"2"</Item>
 <Item name="RULES-COMB_*">"2"</Item>
 <Item name="RULES-COMB_LANCE">"2"</Item>
-<Item name="Plate Armour">"2"</Item>
-<Item name="RULES-COMB_SWORD">"2"</Item>
-<Item name="Barding">"3"</Item>
-<Item name="Small Unit of Knights">"3"</Item>
-<Item name="Large Unit of Knights or Several Small Units of Knights">"4"</Item>
-<Item name="RULES-ARMO_HELM">"4"</Item>
-<Item name="Squire">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_PLATE_ARMOUR">"2"</Item>
+  <Item name="RULES-COMB_SWORD">"2"</Item>
+<Item name="RULES-TRAP_BARDING">"3"</Item>
+  <Item name="RULES-TRAP_SMALL_UNIT_OF_KNIGHTS">"3"</Item>
+  <Item name="RULES-TRAP_LARGE_UNIT_OF_KNIGHTS/RULES-TRAP_SEVERAL_SMALL_UNITS_OF_KNIGHTS">"4"</Item>
+  <Item name="RULES-ARMO_HELM">"4"</Item>
+<Item name="RULES-TRAP_SQUIRE">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>70</Page>
 </Career>
 <Career id="RULES-WORK_PIT_FIGHTER">
@@ -8842,6 +9541,7 @@
   <Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
   <Skill name="RULES-COMP_COOL">"1"</Skill>
   <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"1"</Skill>
   <Skill name="RULES-COMP_ENTERTAIN__TAUNT">"1"</Skill>
   <Skill name="RULES-COMP_GAMBLE">"1"</Skill>
   <Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
@@ -8930,6 +9630,7 @@
   <Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
   <Skill name="RULES-COMP_COOL">"1"</Skill>
   <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"1"</Skill>
   <Skill name="RULES-COMP_ENTERTAIN__TAUNT">"1"</Skill>
   <Skill name="RULES-COMP_GOSSIP">"1"</Skill>
   <Skill name="RULES-COMP_INTIMIDATE">"1"</Skill>
@@ -8957,7 +9658,7 @@
   <Talent name="RULES-T_ETIQUETTE__CRIMINALS">"2"</Talent>
   <Talent name="RULES-T_STRIKE_TO_STUN">"2"</Talent>
   <Talent name="RULES-T_WARRIOR_BORN">"2"</Talent>
-  <Talent name="RULES-T_AETHYRIC_ATTUNEMENT">"3"</Talent>
+  <Talent name="RULES-T_ALLEY_CAT">"3"</Talent>
   <Talent name="RULES-T_CAREFUL_STRIKE">"3"</Talent>
   <Talent name="RULES-T_SHADOW">"3"</Talent>
   <Talent name="RULES-T_STRIKE_TO_INJURE">"3"</Talent>
@@ -8975,9 +9676,9 @@
 <Item name="RULES-ARMO_SHIELD">"2"</Item>
 <Item name="RULES-TRAP_CLOAK">"3"</Item>
 <Item name="RULES-PROJ_CROSSBOW/RULES-PROJ_PISTOL/RULES-PROJ_THROWING_KNIFE" quantite="1/1/5">"3"</Item>
-<Item name="Garotte">"3"</Item>
-<Item name="Poison">"3"</Item>
-<Item name="RULES-TRAP_DISGUISE_KIT">"4"</Item>
+<Item name="RULES-TRAP_GAROTTE">"3"</Item>
+  <Item name="RULES-TRAP_POISON">"3"</Item>
+  <Item name="RULES-TRAP_DISGUISE_KIT">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>84</Page>
 </Career>
@@ -9063,8 +9764,8 @@
 <Item name="RULES-TRAP_TATTOO">"1"</Item>
 <Item name="RULES-COMB_GREATAXE">"2"</Item>
 <Item name="RULES-PROJ_THROWING_AXE" quantite="2">"3"</Item>
-<Item name="Rune Axe">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_RUNE_AXE">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>94</Page>
 </Career>
 <Career id="RULES-WORK_SOLDIER">
@@ -9137,28 +9838,28 @@
   <Talent name="RULES-T_COMBAT_AWARE">"3"</Talent>
   <Talent name="RULES-T_ENCLOSED_FIGHTER">"3"</Talent>
   <Talent name="RULES-T_UNSHAKEABLE">"3"</Talent>
-  <Talent name="RULES-T_WAR_WIZARD">"3"</Talent>
+  <Talent name="RULES-T_WAR_LEADER">"3"</Talent>
   <Talent name="RULES-T_INSPIRING">"4"</Talent>
   <Talent name="RULES-T_PUBLIC_SPEAKER">"4"</Talent>
   <Talent name="RULES-T_READ_WRITE">"4"</Talent>
   <Talent name="RULES-T_STOUT_HEARTED">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="Leather Breastplate">"1"</Item>
-<Item name="RULES-TRAP_UNIFORM">"1"</Item>
+<Item name="RULES-TRAP_LEATHER_BREASTPLATE">"1"</Item>
+  <Item name="RULES-TRAP_UNIFORM">"1"</Item>
 <Item name="RULES-COMB_*">"1"</Item>
 <Item name="RULES-ARMO_BREASTPLATE">"2"</Item>
 <Item name="RULES-ARMO_HELM">"2"</Item>
 <Item name="RULES-COMB_*">"2"</Item>
-<Item name="Symbol of Rank">"3"</Item>
-<Item name="Regiment of Recruits">"3"</Item>
-<Item name="Letter of Commission">"4"</Item>
-<Item name="RULES-TRAP_LIGHT_WARHORSE">"4"</Item>
+<Item name="RULES-TRAP_SYMBOL_OF_RANK">"3"</Item>
+  <Item name="RULES-TRAP_REGIMENT_OF_RECRUITS">"3"</Item>
+  <Item name="RULES-TRAP_LETTER_OF_COMMISSION">"4"</Item>
+  <Item name="RULES-TRAP_LIGHT_WARHORSE">"4"</Item>
 <Item name="RULES-TRAP_MAP">"4"</Item>
-<Item name="Orders">"4"</Item>
-<Item name="RULES-TRAP_UNIFORM (Q)">"4"</Item>
-<Item name="Regiment of Soldiers">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_ORDERS">"4"</Item>
+  <Item name="RULES-TRAP_UNIFORM (Q)">"4"</Item>
+<Item name="RULES-TRAP_REGIMENT_OF_SOLDIERS">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>96</Page>
 </Career>
 <Career id="RULES-WORK_WARRIOR_PRIEST">
@@ -9235,7 +9936,7 @@
   <Talent name="RULES-T_FEARLESS__*">"4"</Talent>
   <Talent name="RULES-T_FURIOUS_ASSAULT">"4"</Talent>
   <Talent name="RULES-T_HOLY_HATRED">"4"</Talent>
-  <Talent name="RULES-T_WAR_WIZARD">"4"</Talent>
+  <Talent name="RULES-T_WAR_LEADER">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="RULES-TRAP_BOOK_RELIGION">"1"</Item>
@@ -9246,8 +9947,8 @@
 <Item name="RULES-ARMO_BREASTPLATE">"2"</Item>
 <Item name="RULES-COMB_*">"2"</Item>
 <Item name="RULES-TRAP_LIGHT_WARHORSE">"3"</Item>
-<Item name="Religious Relic">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_RELIGIOUS_RELIC">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>103</Page>
 </Career>
 <Career id="RULES-WORK_CHARLATAN">
@@ -9331,9 +10032,9 @@
 <Item name="RULES-TRAP_DICE">"1"</Item>
 <Item name="RULES-TRAP_CLOTHING" quantite="2">"1"</Item>
 <Item name="RULES-TRAP_LEGAL_DOCUMENT">"2"</Item>
-<Item name="Colourful Mixtures">"2"</Item>
-<Item name="Trinkets and Charms">"2"</Item>
-<Item name="RULES-TRAP_CLOTHING (Q)">"2"</Item>
+<Item name="RULES-TRAP_COLOURFUL_MIXTURES">"2"</Item>
+  <Item name="RULES-TRAP_TRINKETS_AND_CHARMS">"2"</Item>
+  <Item name="RULES-TRAP_CLOTHING (Q)">"2"</Item>
 <Item name="RULES-TRAP_DISGUISE_KIT">"3"</Item>
 <Item name="RULES-TRAP_LEGAL_DOCUMENT">"3"</Item>
 <Item name="RULES-TRAP_STAMP_ENGRAVED">"4"</Item>
@@ -9419,16 +10120,16 @@
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="RULES-COMB_HAND_WEAPON">"1"</Item>
-<Item name="Stolen Goods worth 1d10 Shillings">"1"</Item>
-<Item name="Eyeglass">"2"</Item>
-<Item name="RULES-TRAP_TRADE_TOOLS">"2"</Item>
+<Item name="RULES-TRAP_STOLEN_GOODS_WORTH_1D10_SHILLINGS">"1"</Item>
+  <Item name="RULES-TRAP_EYEGLASS">"2"</Item>
+  <Item name="RULES-TRAP_TRADE_TOOLS">"2"</Item>
 <Item name="RULES-TRAP_WRITING_KIT">"2"</Item>
 <Item name="RULES-TRAP_DRAUGHT_HORSE+RULES-TRAP_CART">"3"</Item>
-<Item name="Pawnbroker's Shop">"3"</Item>
-<Item name="Gang of Racketeers">"4"</Item>
-<Item name="Network of Informers">"4"</Item>
-<Item name="Warehouse">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_PAWNBROKERS_SHOP">"3"</Item>
+  <Item name="RULES-TRAP_GANG_OF_RACKETEERS">"4"</Item>
+  <Item name="RULES-TRAP_NETWORK_OF_INFORMERS">"4"</Item>
+  <Item name="RULES-TRAP_WAREHOUSE">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>61</Page>
 </Career>
 <Career id="RULES-WORK_GRAVE_ROBBER">
@@ -9471,6 +10172,7 @@
   <Skill name="RULES-COMP_CONSUME_ALCOHOL">"1"</Skill>
   <Skill name="RULES-COMP_COOL">"1"</Skill>
   <Skill name="RULES-COMP_DODGE">"1"</Skill>
+  <Skill name="RULES-COMP_ENDURANCE">"1"</Skill>
   <Skill name="RULES-COMP_GOSSIP">"1"</Skill>
   <Skill name="RULES-COMP_MELEE__BASIC">"1"</Skill>
   <Skill name="RULES-COMP_PERCEPTION">"1"</Skill>
@@ -9609,10 +10311,10 @@
 <Item name="RULES-TRAP_FLASK+RULES-TRAP_SPIRITS_PINT">"1"</Item>
 <Item name="RULES-TRAP_WEIRDROOT">"2"</Item>
 <Item name="RULES-TRAP_CLOTHING (Q)">"2"</Item>
-<Item name="A Ring of Hustlers">"3"</Item>
-<Item name="A Ring of Knaves">"4"</Item>
-<Item name="Townhouse with Discreet Back Entrance">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_A_RING_OF_HUSTLERS">"3"</Item>
+  <Item name="RULES-TRAP_A_RING_OF_KNAVES">"4"</Item>
+  <Item name="RULES-TRAP_TOWNHOUSE_WITH_DISCREET_BACK_ENTRANCE">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>69</Page>
 </Career>
 <Career id="RULES-WORK_OUTLAW">
@@ -9698,12 +10400,12 @@
 <Item name="RULES-TRAP_TINDERBOX">"1"</Item>
 <Item name="RULES-PROJ_BOW/RULES-PROJ_CROSSBOW/RULES-ARMO_SHIELD">"2"</Item>
 <Item name="RULES-TRAP_TENT">"2"</Item>
-<Item name="Band of Outlaws">"3"</Item>
-<Item name="RULES-ARMO_HELM">"3"</Item>
+<Item name="RULES-TRAP_BAND_OF_OUTLAWS">"3"</Item>
+  <Item name="RULES-ARMO_HELM">"3"</Item>
 <Item name="RULES-ARMO_MAIL_SHIRT">"3"</Item>
-<Item name="'Fiefdom' of Outlaw Chiefs">"4"</Item>
-<Item name="Lair">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_FIEFDOM_OF_OUTLAW_CHIEFS">"4"</Item>
+  <Item name="RULES-TRAP_LAIR">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>78</Page>
 </Career>
 <Career id="RULES-WORK_RACKETEER">
@@ -9789,12 +10491,12 @@
 <Item name="RULES-TRAP_HAT">"2"</Item>
 <Item name="RULES-ARMO_MAIL_SHIRT">"2"</Item>
 <Item name="RULES-PROJ_CROSSBOW_PISTOL">"3"</Item>
-<Item name="Gang of Thugs and Racketeers">"3"</Item>
-<Item name="Lair">"3"</Item>
-<Item name="Network of Informers">"4"</Item>
-<Item name="Quality Clothing and Hat">"4"</Item>
-<Item name="Subordinate Gang Bosses">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_GANG_OF_THUGS_AND_RACKETEERS">"3"</Item>
+  <Item name="RULES-TRAP_LAIR">"3"</Item>
+  <Item name="RULES-TRAP_NETWORK_OF_INFORMERS">"4"</Item>
+  <Item name="RULES-TRAP_QUALITY_CLOTHING_AND_HAT">"4"</Item>
+  <Item name="RULES-TRAP_SUBORDINATE_GANG_BOSSES">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>85</Page>
 </Career>
 <Career id="RULES-WORK_THIEF">
@@ -9877,14 +10579,14 @@
 <Item name="RULES-TRAP_CROWBAR">"1"</Item>
 <Item name="RULES-ARMO_LEATHER_JERKIN">"1"</Item>
 <Item name="RULES-TRAP_SACK">"1"</Item>
-<Item name="Fence Contact">"2"</Item>
-<Item name="RULES-TRAP_ROPE_10_YARDS">"2"</Item>
+<Item name="RULES-TRAP_FENCE_CONTACT">"2"</Item>
+  <Item name="RULES-TRAP_ROPE_10_YARDS">"2"</Item>
 <Item name="RULES-TRAP_TRADE_TOOLS">"2"</Item>
 <Item name="RULES-PROJ_CROSSBOW_PISTOL">"3"</Item>
 <Item name="RULES-TRAP_GRAPPLING_HOOK">"3"</Item>
-<Item name="Several Fence Contacts">"3"</Item>
-<Item name="Calling Card">"4"</Item>
-<Item name="RULES-TRAP_CLOTHING">"4"</Item>
+<Item name="RULES-TRAP_SEVERAL_FENCE_CONTACTS">"3"</Item>
+  <Item name="RULES-TRAP_CALLING_CARD">"4"</Item>
+  <Item name="RULES-TRAP_CLOTHING">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>99</Page>
 </Career>
@@ -9964,17 +10666,17 @@
   <Talent name="RULES-T_KINGPIN">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="Notes Stuffed in Locked Drawer">"1"</Item>
-<Item name="RULES-TRAP_WRITING_KIT">"1"</Item>
-<Item name="Grimoire">"2"</Item>
-<Item name="RULES-COMB_HAND_WEAPON/RULES-COMB_QUARTERSTAFF">"2"</Item>
-<Item name="Assistant">"3"</Item>
-<Item name="RULES-TRAP_ENCHANTED_STAFF">"3"</Item>
-<Item name="Tomes of Forbidden Knowledge">"3"</Item>
-<Item name="Minions">"4"</Item>
-<Item name="Library (Magic)">"4"</Item>
-<Item name="Remote Lair">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_NOTES_STUFFED_IN_LOCKED_DRAWER">"1"</Item>
+  <Item name="RULES-TRAP_WRITING_KIT">"1"</Item>
+<Item name="RULES-TRAP_GRIMOIRE">"2"</Item>
+  <Item name="RULES-COMB_HAND_WEAPON/RULES-COMB_QUARTERSTAFF">"2"</Item>
+<Item name="RULES-TRAP_ASSISTANT">"3"</Item>
+  <Item name="RULES-TRAP_ENCHANTED_STAFF">"3"</Item>
+<Item name="RULES-TRAP_TOMES_OF_FORBIDDEN_KNOWLEDGE">"3"</Item>
+  <Item name="RULES-TRAP_MINIONS">"4"</Item>
+  <Item name="RULES-TRAP_LIBRARY_MAGIC">"4"</Item>
+  <Item name="RULES-TRAP_REMOTE_LAIR">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>105</Page>
 </Career>
 <Career id="RULES-WORK_BOATMAN">
@@ -10049,7 +10751,7 @@
   <Talent name="RULES-T_EMBEZZLE">"3"</Talent>
   <Talent name="RULES-T_NOSE_FOR_TROUBLE">"3"</Talent>
   <Talent name="RULES-T_ORIENTATION">"4"</Talent>
-  <Talent name="RULES-T_PHARMACIST">"4"</Talent>
+  <Talent name="RULES-T_PILOT">"4"</Talent>
   <Talent name="RULES-T_PUBLIC_SPEAKER">"4"</Talent>
   <Talent name="RULES-T_SAVANT__RIVERWAYS">"4"</Talent>
   </SUBCHAPTER_TALENT>
@@ -10062,8 +10764,9 @@
 <Item name="RULES-TRAP_BACKPACK">"3"</Item>
 <Item name="RULES-TRAP_TRADE_TOOLS">"3"</Item>
 <Item name="RULES-TRAP_TRADE_TOOLS">"3"</Item>
-<Item name="Barge and Crew">"4"</Item>
-<Item name="RULES-TRAP_HAT">"4"</Item>
+<Item name="RULES-TRAP_BARGE">"4"</Item>
+<Item name="RULES-TRAP_CREW">"4"</Item>
+  <Item name="RULES-TRAP_HAT">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>52</Page>
 </Career>
@@ -10133,7 +10836,7 @@
   <Talent name="RULES-T_ETIQUETTE__GUILDER">"2"</Talent>
   <Talent name="RULES-T_NIGHT_VISION">"2"</Talent>
   <Talent name="RULES-T_NOSE_FOR_TROUBLE">"2"</Talent>
-  <Talent name="RULES-T_PHARMACIST">"2"</Talent>
+  <Talent name="RULES-T_PILOT">"2"</Talent>
   <Talent name="RULES-T_ACUTE_SENSE__SIGHT">"3"</Talent>
   <Talent name="RULES-T_DEALMAKER">"3"</Talent>
   <Talent name="RULES-T_SAVANT__RIVERWAYS">"3"</Talent>
@@ -10150,9 +10853,9 @@
 <Item name="RULES-TRAP_ROW_BOAT">"2"</Item>
 <Item name="RULES-TRAP_POLE_3_YARDS">"3"</Item>
 <Item name="RULES-TRAP_STORM_LANTERN+RULES-TRAP_LAMP_OIL">"3"</Item>
-<Item name="Boathand">"4"</Item>
-<Item name="Small Riverboat">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_BOATHAND">"4"</Item>
+  <Item name="RULES-TRAP_SMALL_RIVERBOAT">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>81</Page>
 </Career>
 <Career id="RULES-WORK_RIVERWARDEN">
@@ -10241,9 +10944,10 @@
 <Item name="RULES-TRAP_GRAPPLING_HOOK">"3"</Item>
 <Item name="RULES-ARMO_HELM">"3"</Item>
 <Item name="RULES-ARMO_MAIL_SHIRT">"3"</Item>
-<Item name="Patrol Boats and Crew">"4"</Item>
-<Item name="Symbol of Rank">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_PATROL_BOATS">"4"</Item>
+<Item name="RULES-TRAP_CREW">"4"</Item>
+  <Item name="RULES-TRAP_SYMBOL_OF_RANK">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>87</Page>
 </Career>
 <Career id="RULES-WORK_RIVERWOMAN">
@@ -10324,16 +11028,16 @@
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
 <Item name="RULES-TRAP_BUCKET">"1"</Item>
-<Item name="Fishing Rod and Bait">"1"</Item>
-<Item name="RULES-ARMO_LEATHER_LEGGINGS">"1"</Item>
+<Item name="RULES-TRAP_FISHING_ROD_AND_BAIT">"1"</Item>
+  <Item name="RULES-ARMO_LEATHER_LEGGINGS">"1"</Item>
 <Item name="RULES-TRAP_ANIMAL_TRAP">"2"</Item>
 <Item name="RULES-ARMO_LEATHER_JERKIN">"2"</Item>
 <Item name="RULES-PROJ_NET">"2"</Item>
 <Item name="RULES-COMB_SPEAR">"2"</Item>
 <Item name="RULES-TRAP_ROW_BOAT">"3"</Item>
 <Item name="RULES-TRAP_STORM_LANTERN+RULES-TRAP_LAMP_OIL">"3"</Item>
-<Item name="Barge or Hut">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_BARGE/RULES-TRAP_HUT">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>88</Page>
 </Career>
 <Career id="RULES-WORK_SAILOR">
@@ -10408,22 +11112,23 @@
   <Talent name="RULES-T_STRIKE_MIGHTY_BLOW">"3"</Talent>
   <Talent name="RULES-T_SURGERY">"3"</Talent>
   <Talent name="RULES-T_ORIENTATION">"4"</Talent>
-  <Talent name="RULES-T_PHARMACIST">"4"</Talent>
+  <Talent name="RULES-T_PILOT">"4"</Talent>
   <Talent name="RULES-T_PUBLIC_SPEAKER">"4"</Talent>
   <Talent name="RULES-T_SAVVY">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="Brush">"1"</Item>
-<Item name="RULES-TRAP_BUCKET">"1"</Item>
+<Item name="RULES-TRAP_BRUSH">"1"</Item>
+  <Item name="RULES-TRAP_BUCKET">"1"</Item>
 <Item name="RULES-TRAP_MOP">"1"</Item>
 <Item name="RULES-COMB_HAND_WEAPON">"2"</Item>
 <Item name="RULES-ARMO_LEATHER_JERKIN">"2"</Item>
 <Item name="RULES-TRAP_TRADE_TOOLS">"3"</Item>
 <Item name="RULES-TRAP_TRADE_TOOLS">"3"</Item>
-<Item name="Sailing Ship and Crew">"4"</Item>
-<Item name="Sextant">"4"</Item>
-<Item name="Shipping Charts">"4"</Item>
-<Item name="RULES-TRAP_TELESCOPE">"4"</Item>
+<Item name="RULES-TRAP_SAILING_SHIP">"4"</Item>
+<Item name="RULES-TRAP_CREW">"4"</Item>
+  <Item name="RULES-TRAP_SEXTANT">"4"</Item>
+  <Item name="RULES-TRAP_SHIPPING_CHARTS">"4"</Item>
+  <Item name="RULES-TRAP_TELESCOPE">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>90</Page>
 </Career>
@@ -10496,7 +11201,7 @@
   <Talent name="RULES-T_WATERMAN">"2"</Talent>
   <Talent name="RULES-T_DEALMAKER">"3"</Talent>
   <Talent name="RULES-T_FAST_SHOT">"3"</Talent>
-  <Talent name="RULES-T_PHARMACIST">"3"</Talent>
+  <Talent name="RULES-T_PILOT">"3"</Talent>
   <Talent name="RULES-T_SEASONED_TRAVELLER">"3"</Talent>
   <Talent name="RULES-T_FEARLESS__RIVERWARDENS">"4"</Talent>
   <Talent name="RULES-T_KINGPIN">"4"</Talent>
@@ -10512,11 +11217,11 @@
 <Item name="RULES-COMB_HAND_WEAPON">"2"</Item>
 <Item name="RULES-TRAP_ROW_BOAT">"2"</Item>
 <Item name="RULES-PROJ_PISTOL">"3"</Item>
-<Item name="River Runners">"3"</Item>
-<Item name="Speedy Barge">"3"</Item>
-<Item name="RULES-TRAP_DISGUISE_KIT">"4"</Item>
-<Item name="Small Fleet of Barges">"4"</Item>
-</SUBCHAPTER_ITEM>
+<Item name="RULES-TRAP_RIVER_RUNNERS">"3"</Item>
+  <Item name="RULES-TRAP_SPEEDY_BARGE">"3"</Item>
+  <Item name="RULES-TRAP_DISGUISE_KIT">"4"</Item>
+<Item name="RULES-TRAP_SMALL_FLEET_OF_BARGES">"4"</Item>
+  </SUBCHAPTER_ITEM>
 <Page>95</Page>
 </Career>
 <Career id="RULES-WORK_STEVEDORE">
@@ -10601,11 +11306,12 @@
 <Item name="RULES-TRAP_GUILD_LICENCE">"2"</Item>
 <Item name="RULES-ARMO_LEATHER_JERKIN">"2"</Item>
 <Item name="RULES-TRAP_PIPE_AND_TOBACCO">"2"</Item>
-<Item name="Porter Cap">"2"</Item>
-<Item name="Gang of Stevedores">"3"</Item>
-<Item name="Whistle">"3"</Item>
-<Item name="Office and Staff">"4"</Item>
-<Item name="RULES-TRAP_WRITING_KIT">"4"</Item>
+<Item name="RULES-TRAP_PORTER_CAP">"2"</Item>
+  <Item name="RULES-TRAP_GANG_OF_STEVEDORES">"3"</Item>
+  <Item name="RULES-TRAP_WHISTLE">"3"</Item>
+  <Item name="RULES-TRAP_OFFICE">"4"</Item>
+<Item name="RULES-TRAP_STAFF">"4"</Item>
+  <Item name="RULES-TRAP_WRITING_KIT">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>98</Page>
 </Career>
@@ -10682,7 +11388,7 @@
   <Talent name="RULES-T_WATERMAN">"3"</Talent>
   <Talent name="RULES-T_FRIGHTENING">"4"</Talent>
   <Talent name="RULES-T_FURIOUS_ASSAULT">"4"</Talent>
-  <Talent name="RULES-T_PHARMACIST">"4"</Talent>
+  <Talent name="RULES-T_PILOT">"4"</Talent>
   <Talent name="RULES-T_WARRIOR_BORN">"4"</Talent>
   </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
@@ -10694,8 +11400,9 @@
 <Item name="RULES-TRAP_STORM_LANTERN+RULES-TRAP_LAMP_OIL">"2"</Item>
 <Item name="RULES-PROJ_CROSSBOW/RULES-PROJ_JAVELIN">"3"</Item>
 <Item name="RULES-TRAP_GRAPPLING_HOOK+RULES-TRAP_ROPE_10_YARDS">"3"</Item>
-<Item name="Barge and Wrecker Crew">"4"</Item>
-<Item name="RULES-TRAP_ALE_KEG">"4"</Item>
+<Item name="RULES-TRAP_BARGE">"4"</Item>
+<Item name="RULES-TRAP_WRECKER_CREW">"4"</Item>
+  <Item name="RULES-TRAP_ALE_KEG">"4"</Item>
 <Item name="RULES-TRAP_MANACLES">"4"</Item>
 </SUBCHAPTER_ITEM>
 <Page>108</Page>
@@ -10725,7 +11432,7 @@
 <Quality>"-"</Quality>
 <Hand>"1"</Hand>
 <Ammunition>"0"</Ammunition>
-<Page>25</Page>
+<Page>301</Page>
 </Weapon>
 <Weapon id="RULES-COMB_KNIFE">
 <Description language="ENGLISH">"Knife"</Description>
@@ -10943,7 +11650,7 @@
 <Quality>"RULES-WEAPB_PUMMEL,RULES-WEAPB_WRAP,RULES-WEAPB_UNBALANCED"</Quality>
 <Hand>"1"</Hand>
 <Ammunition>"0"</Ammunition>
-<Page>300</Page>
+<Page>301</Page>
 </Weapon>
 <Weapon id="RULES-COMB_GRAIN_FLAIL">
 <Description language="ENGLISH">"Grain Flail"</Description>
@@ -10995,7 +11702,7 @@
 <Quality>"RULES-WEAPB_DEFENSIVE,RULES-WEAPB_HACK,RULES-WEAPB_IMPALE"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
-<Page>64</Page>
+<Page>301</Page>
 </Weapon>
 <Weapon id="RULES-COMB_PIKE">
 <Description language="ENGLISH">"Pike"</Description>
@@ -11034,7 +11741,7 @@
 <Quality>"RULES-WEAPB_FAST,RULES-WEAPB_IMPALE"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
-<Page>67</Page>
+<Page>301</Page>
 </Weapon>
 <Weapon id="RULES-COMB_BASTARD_SWORD">
 <Description language="ENGLISH">"Bastard Sword"</Description>
@@ -11047,7 +11754,7 @@
 <Quality>"RULES-WEAPB_DAMAGING,RULES-WEAPB_DEFENSIVE"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
-<Page>299</Page>
+<Page>301</Page>
 </Weapon>
 <Weapon id="RULES-COMB_GREATAXE">
 <Description language="ENGLISH">"Greataxe"</Description>
@@ -11073,7 +11780,7 @@
 <Quality>"RULES-WEAPB_DAMAGING,RULES-WEAPB_PENETRATING,RULES-WEAPB_UNBALANCED"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
-<Page>310</Page>
+<Page>301</Page>
 </Weapon>
 <Weapon id="RULES-COMB_WARHAMMER">
 <Description language="ENGLISH">"Warhammer"</Description>
@@ -11099,7 +11806,7 @@
 <Quality>"RULES-WEAPB_DAMAGING,RULES-WEAPB_HACK"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
-<Page>5</Page>
+<Page>301</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_*">
 <Description language="ENGLISH">"Ranged weapon (Any)"</Description>
@@ -11267,7 +11974,7 @@
 <Quality>"RULES-WEAPB_PRECISE,RULES-WEAPB_RELOAD 4"</Quality>
 <Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
-<Page>298</Page>
+<Page>303</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_BOLAS">
 <Description language="ENGLISH">"Bolas"</Description>
@@ -11461,7 +12168,7 @@
 <Quality>"RULES-WEAPB_IMPALE"</Quality>
 <Hand>"0"</Hand>
 <Ammunition>"12"</Ammunition>
-<Page>125</Page>
+<Page>302</Page>
 </Weapon>
 <Weapon id="RULES-MUNI_ELF_ARROW">
 <Description language="ENGLISH">"Elf Arrow"</Description>
@@ -11487,7 +12194,7 @@
 <Quality>"RULES-WEAPB_IMPALE"</Quality>
 <Hand>"0"</Hand>
 <Ammunition>"12"</Ammunition>
-<Page>243</Page>
+<Page>302</Page>
 </Weapon>
 <Weapon id="RULES-MUNI_LEAD_BULLET">
 <Description language="ENGLISH">"Lead Bullet"</Description>
@@ -11731,7 +12438,7 @@
 <Armor id="RULES-ARMO_LEATHER_JERKIN">
 <Description language="ENGLISH">"Leather Jerkin"</Description>
 <Availability>"RULES-DISPO_COMMON"</Availability>
-<Price>"2CO"</Price>
+<Price>"2CO 10PA"</Price>
 <Encumbrance>"1"</Encumbrance>
 <Quality>"-"</Quality>
 <Location>"RULES-ARMOL_BODY"</Location>
@@ -11907,6 +12614,14 @@
 <Encumbrance>"1"</Encumbrance>
 <Page>316</Page>
 </Trapping>
+<Trapping id="RULES-TRAP_CANVAS_TARPAULIN">
+<Description language="ENGLISH">"Canvas Tarpaulin"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"8PA"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Page>316</Page>
+</Trapping>
 <Trapping id="RULES-TRAP_CHALK">
 <Description language="ENGLISH">"Chalk"</Description>
 <Theme>"RULES-LAB_196"</Theme>
@@ -11972,7 +12687,7 @@
 <Page>316</Page>
 </Trapping>
 <Trapping id="RULES-TRAP_FEINKOPF_LAMP">
-<Description language="ENGLISH">"Feinkopf Lamp"</Description>
+<Description language="ENGLISH">"Feinkopf Lantern"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Availability>"RULES-DISPO_RARE"</Availability>
 <Price>"2CO"</Price>
@@ -11983,7 +12698,7 @@
 <Description language="ENGLISH">"Grappling Hook"</Description>
 <Theme>"RULES-LAB_196"</Theme>
 <Availability>"RULES-DISPO_SCARCE"</Availability>
-<Price>"1CO"</Price>
+<Price>"1CO 10SB"</Price>
 <Encumbrance>"1"</Encumbrance>
 <Page>316</Page>
 </Trapping>
@@ -12161,7 +12876,7 @@
 <Price>"4SB"</Price>
 <Encumbrance>"0"</Encumbrance>
 <Carries>"1"</Carries>
-<Page>25</Page>
+<Page>308</Page>
 </Trapping>
 <Trapping id="RULES-TRAP_SACK">
 <Description language="ENGLISH">"Sack"</Description>
@@ -12365,6 +13080,13 @@
 <Encumbrance>"1"</Encumbrance>
 <Page>308</Page>
 </Trapping>
+<Trapping id="RULES-TRAP_LIVERY">
+<Description language="ENGLISH">"Livery"</Description>
+<Availability>"RULES-DISPO_SCARCE"</Availability>
+<Price>"2CO"</Price>
+<Encumbrance>"1"</Encumbrance>
+<Page>308</Page>
+</Trapping>
 <Trapping id="RULES-TRAP_WALKING_CANE">
 <Description language="ENGLISH">"Walking Cane"</Description>
 <Availability>"RULES-DISPO_COMMON"</Availability>
@@ -12430,6 +13152,13 @@
 </Trapping>
 <Trapping id="RULES-TRAP_SPIRITS_PINT">
 <Description language="ENGLISH">"Spirits, pint"</Description>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"2PA"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>309</Page>
+</Trapping>
+<Trapping id="RULES-TRAP_ALCOHOL">
+<Description language="ENGLISH">"Alcohol"</Description>
 <Availability>"RULES-DISPO_COMMON"</Availability>
 <Price>"2PA"</Price>
 <Encumbrance>"0"</Encumbrance>
@@ -12629,7 +13358,7 @@
 <Availability>"RULES-DISPO_COMMON"</Availability>
 <Price>"2SB"</Price>
 <Encumbrance>"0"</Encumbrance>
-<Page>46</Page>
+<Page>310</Page>
 </Trapping>
 <Trapping id="RULES-TRAP_PAINT_BRUSH">
 <Description language="ENGLISH">"Paint Brush"</Description>
@@ -12657,7 +13386,14 @@
 <Availability>"RULES-DISPO_COMMON"</Availability>
 <Price>"5PA"</Price>
 <Encumbrance>"3"</Encumbrance>
-<Page>25</Page>
+<Page>310</Page>
+</Trapping>
+<Trapping id="RULES-TRAP_POLE_FOR_DEAD_RATS">
+<Description language="ENGLISH">"Pole for Dead Rats"</Description>
+<Availability>"RULES-DISPO_COMMON"</Availability>
+<Price>"5PA"</Price>
+<Encumbrance>"3"</Encumbrance>
+<Page>310</Page>
 </Trapping>
 <Trapping id="RULES-TRAP_QUILL_PEN">
 <Description language="ENGLISH">"Quill Pen"</Description>
@@ -12674,7 +13410,7 @@
 <Page>310</Page>
 </Trapping>
 <Trapping id="RULES-TRAP_READING_LENS">
-<Description language="ENGLISH">"Reading Lens"</Description>
+<Description language="ENGLISH">"Magnifying Glass"</Description>
 <Availability>"RULES-DISPO_RARE"</Availability>
 <Price>"3CO"</Price>
 <Encumbrance>"0"</Encumbrance>
@@ -12729,6 +13465,13 @@
 <Encumbrance>"0"</Encumbrance>
 <Page>310</Page>
 </Trapping>
+<Trapping id="RULES-TRAP_SPYGLASS">
+<Description language="ENGLISH">"Spyglass"</Description>
+<Availability>"RULES-DISPO_RARE"</Availability>
+<Price>"5CO"</Price>
+<Encumbrance>"0"</Encumbrance>
+<Page>310</Page>
+</Trapping>
 <Trapping id="RULES-TRAP_TWEEZERS">
 <Description language="ENGLISH">"Tweezers"</Description>
 <Availability>"RULES-DISPO_SCARCE"</Availability>
@@ -12762,7 +13505,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"8CO"</Price>
 <Encumbrance>"1"</Encumbrance>
-<Page>97</Page>
+<Page>311</Page>
 </Trapping>
 <Trapping id="RULES-TRAP_BOOK_ENGINEER">
 <Description language="ENGLISH">"Book, Engineer"</Description>
@@ -12801,6 +13544,12 @@
 </Trapping>
 <Trapping id="RULES-TRAP_GUILD_LICENCE">
 <Description language="ENGLISH">"Guild Licence"</Description>
+<Availability>"n/a"</Availability>
+<Encumbrance>"0"</Encumbrance>
+<Page>311</Page>
+</Trapping>
+<Trapping id="RULES-TRAP_MAGIC_LICENCE">
+<Description language="ENGLISH">"Magic Licence"</Description>
 <Availability>"n/a"</Availability>
 <Encumbrance>"0"</Encumbrance>
 <Page>311</Page>
@@ -13008,14 +13757,14 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"6PA"</Price>
 <Encumbrance>"0"</Encumbrance>
-<Page>155</Page>
+<Page>313</Page>
 </Trapping>
 <Trapping id="RULES-TRAP_BLACK_LOTUS_SAP">
 <Description language="ENGLISH">"Black lotus (sap)"</Description>
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"20CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<Page>155</Page>
+<Page>313</Page>
 </Trapping>
 <Trapping id="RULES-TRAP_DAEMON_S_TAND">
 <Description language="ENGLISH">"Daemon's tand"</Description>
@@ -13099,21 +13848,21 @@
 <Availability>"RULES-DISPO_COMMON"</Availability>
 <Price>"2PA"</Price>
 <Encumbrance>"0"</Encumbrance>
-<Page>182</Page>
+<Page>314</Page>
 </Trapping>
 <Trapping id="RULES-TRAP_REMEDY_COUGHS_AND_SNEEZES_FEVER_FLUX">
 <Description language="ENGLISH">"Remedy (Coughs and Sneezes, Fever, Flux)"</Description>
 <Availability>"RULES-DISPO_COMMON"</Availability>
 <Price>"3PA"</Price>
 <Encumbrance>"0"</Encumbrance>
-<Page>182</Page>
+<Page>314</Page>
 </Trapping>
 <Trapping id="RULES-TRAP_REMEDY_BLIGHT_BUBOES_CONVULSIONS_GANGRENE">
 <Description language="ENGLISH">"Remedy (Blight, Buboes, Convulsions, Gangrene)"</Description>
 <Availability>"RULES-DISPO_COMMON"</Availability>
 <Price>"4PA"</Price>
 <Encumbrance>"0"</Encumbrance>
-<Page>182</Page>
+<Page>314</Page>
 </Trapping>
 <Trapping id="RULES-TRAP_SALWORT">
 <Description language="ENGLISH">"Salwort"</Description>
@@ -13202,6 +13951,770 @@
 <Price>"27CO"</Price>
 <Encumbrance>"3"</Encumbrance>
 <Page>315</Page>
+</Trapping>
+<Trapping id="RULES-TRAP_1D10_BANDAGES">
+<Description language="ENGLISH">"1d10 Bandages"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_3D10_SHILLINGS">
+<Description language="ENGLISH">"3d10 Shillings"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_4D10_SHILLINGS">
+<Description language="ENGLISH">"4d10 Shillings"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_ABBEY">
+<Description language="ENGLISH">"Abbey"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_ACCESS_TO_A_LIBRARY">
+<Description language="ENGLISH">"Access to a Library"</Description>
+<Theme>"RULES-LAB_1022"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_AIDE">
+<Description language="ENGLISH">"Aide"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_APPRENTICE">
+<Description language="ENGLISH">"Apprentice"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_ASSISTANT">
+<Description language="ENGLISH">"Assistant"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_ASSISTANT_STUDENT_OR_SERVANT">
+<Description language="ENGLISH">"Assistant (Student or Servant)"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_ASSORTMENT_OF_ANIMAL_SKULLS">
+<Description language="ENGLISH">"Assortment of Animal Skulls"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_ASSORTMENT_OF_HERBS">
+<Description language="ENGLISH">"Assortment of Herbs"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_A_RING_OF_HUSTLERS">
+<Description language="ENGLISH">"A Ring of Hustlers"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_A_RING_OF_KNAVES">
+<Description language="ENGLISH">"A Ring of Knaves"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_BAILIFF">
+<Description language="ENGLISH">"Bailiff"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_BAND_OF_OUTLAWS">
+<Description language="ENGLISH">"Band of Outlaws"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_BARDING">
+<Description language="ENGLISH">"Barding"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_BARGE">
+<Description language="ENGLISH">"Barge"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_BASKET">
+<Description language="ENGLISH">"Basket"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_BEST_QUALITY_COURTLY_CLOTHES">
+<Description language="ENGLISH">"Best Quality Courtly Clothes"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_BOATHAND">
+<Description language="ENGLISH">"Boathand"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_BOOK">
+<Description language="ENGLISH">"Book"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_BOOK_BLANK">
+<Description language="ENGLISH">"Book (Blank)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_BOOK_HERBS">
+<Description language="ENGLISH">"Book (Herbs)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_BRUSH">
+<Description language="ENGLISH">"Brush"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_CALLING_CARD">
+<Description language="ENGLISH">"Calling Card"</Description>
+<Theme>"RULES-LAB_1022"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_CEREMONIAL_CLOAK_AND_GARLAND">
+<Description language="ENGLISH">"Ceremonial Cloak and Garland"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_CEREMONIAL_ROBES">
+<Description language="ENGLISH">"Ceremonial Robes"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_CHAINS_OF_OFFICE">
+<Description language="ENGLISH">"Chains of Office"</Description>
+<Theme>"RULES-LAB_1022"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_COACH_HORN">
+<Description language="ENGLISH">"Coach Horn"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_COLOURFUL_MIXTURES">
+<Description language="ENGLISH">"Colourful Mixtures"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_COMMISSION_PAPERS">
+<Description language="ENGLISH">"Commission Papers"</Description>
+<Theme>"RULES-LAB_1022"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_COPPER_BADGE">
+<Description language="ENGLISH">"Copper Badge"</Description>
+<Theme>"RULES-LAB_1022"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_COTTAGE">
+<Description language="ENGLISH">"Cottage"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_COURIERS">
+<Description language="ENGLISH">"Couriers"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_COURTLY_ATTIRE">
+<Description language="ENGLISH">"Courtly Attire"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_COURT_ROBES">
+<Description language="ENGLISH">"Court Robes"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_CREW">
+<Description language="ENGLISH">"Crew"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_CREW_OF_MINERS">
+<Description language="ENGLISH">"Crew of Miners"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_DAVRICH_LAMP">
+<Description language="ENGLISH">"Davrich Lamp"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_DEGREE">
+<Description language="ENGLISH">"Degree"</Description>
+<Theme>"RULES-LAB_1022"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_DRAUGHT_HORSES_AND_WAGON_STAGE">
+<Description language="ENGLISH">"Draught Horses and Wagon (Stage)"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_EYEGLASS">
+<Description language="ENGLISH">"Eyeglass"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_FENCE_CONTACT">
+<Description language="ENGLISH">"Fence Contact"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_FIEFDOM">
+<Description language="ENGLISH">"Fiefdom"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_FIEFDOM_OF_OUTLAW_CHIEFS">
+<Description language="ENGLISH">"'Fiefdom' of Outlaw Chiefs"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_FISHING_ROD_AND_BAIT">
+<Description language="ENGLISH">"Fishing Rod and Bait"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_FLEET_OF_COACHES_AND_HORSES">
+<Description language="ENGLISH">"Fleet of Coaches and Horses"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_FOLLOWERS_INCLUDING_PENITENTS_FLAGELLANTS_AND_ZEALOTS">
+<Description language="ENGLISH">"Followers (including Penitents, Flagellants, and Zealots)"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_FOOTMAN">
+<Description language="ENGLISH">"Footman"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_GANG_OF_RACKETEERS">
+<Description language="ENGLISH">"Gang of Racketeers"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_GANG_OF_STEVEDORES">
+<Description language="ENGLISH">"Gang of Stevedores"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_GANG_OF_THUGS_AND_RACKETEERS">
+<Description language="ENGLISH">"Gang of Thugs and Racketeers"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_GAROTTE">
+<Description language="ENGLISH">"Garotte"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_GOODS_WORTH_2D10_PENNIES">
+<Description language="ENGLISH">"Goods worth 2d10 Pennies"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_GOODS_WORTH_8D20_PENNIES">
+<Description language="ENGLISH">"Goods worth 8d20 Pennies"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_GOODS_WORTH_AT_LEAST_2D10_SHILLINGS">
+<Description language="ENGLISH">"Goods worth at least 2d10 Shillings"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_GOODS_WORTH_AT_LEAST_3D10_SHILLINGS">
+<Description language="ENGLISH">"Goods worth at least 3d10 Shillings"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_GOVERNORS_RESIDENCE">
+<Description language="ENGLISH">"Governor's Residence"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_GRIMOIRE">
+<Description language="ENGLISH">"Grimoire"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_GUILD">
+<Description language="ENGLISH">"Guild"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_HANDCART">
+<Description language="ENGLISH">"Handcart"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_HAWK_MEWS">
+<Description language="ENGLISH">"Hawk Mews"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_HEALING_DRAUGHT">
+<Description language="ENGLISH">"Healing Draught"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_HERALD">
+<Description language="ENGLISH">"Herald"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_HERBAL_REMEDY">
+<Description language="ENGLISH">"Herbal Remedy"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_HERB_GATHERER">
+<Description language="ENGLISH">"Herb Gatherer"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_HIDING_PLACE">
+<Description language="ENGLISH">"Hiding Place"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_HOODED_CLOAK">
+<Description language="ENGLISH">"Hooded Cloak"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_HOUSEHOLD_SERVANT">
+<Description language="ENGLISH">"Household Servant"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_HUT">
+<Description language="ENGLISH">"Hut"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_IMPRESSIVE_HAT">
+<Description language="ENGLISH">"Impressive Hat"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_INFORMER">
+<Description language="ENGLISH">"Informer"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_INN">
+<Description language="ENGLISH">"Inn"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_INSTRUMENTS_OF_TORTURE">
+<Description language="ENGLISH">"Instruments of Torture"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_ISOLATED_HUT">
+<Description language="ENGLISH">"Isolated Hut"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_JEWELLERY_WORTH_200_GC">
+<Description language="ENGLISH">"Jewellery worth 200 GC"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_JEWELLERY_WORTH_3D10_GC">
+<Description language="ENGLISH">"Jewellery worth 3d10 GC"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_JEWELLERY_WORTH_500_GC">
+<Description language="ENGLISH">"Jewellery worth 500 GC"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_JEWELLERY_WORTH_50_GC">
+<Description language="ENGLISH">"Jewellery worth 50 GC"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_JOURNAL">
+<Description language="ENGLISH">"Journal"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_KENNEL_OF_HUNTING_DOGS">
+<Description language="ENGLISH">"Kennel Of Hunting Dogs"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_LAIR">
+<Description language="ENGLISH">"Lair"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_LARGE_GROUP_OF_BEGGAR_FOLLOWERS">
+<Description language="ENGLISH">"Large Group of Beggar Followers"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_LARGE_TOWNHOUSE_WITH_GARDENS">
+<Description language="ENGLISH">"Large Townhouse with Gardens"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_LARGE_TOWN_ESTATE">
+<Description language="ENGLISH">"Large Town Estate"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_LARGE_UNIT_OF_KNIGHTS">
+<Description language="ENGLISH">"Large Unit Of Knights"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_LARGE_WORKSHOP_APOTHECARY">
+<Description language="ENGLISH">"Large Workshop (Apothecary)"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_LARGE_WORKSHOP_ARTIST">
+<Description language="ENGLISH">"Large Workshop (Artist)"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_LARGE_WORKSHOP_ENGINEER">
+<Description language="ENGLISH">"Large Workshop (Engineer)"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_LEATHER_BREASTPLATE">
+<Description language="ENGLISH">"Leather Breastplate"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_LEATHER_SKULLCAP">
+<Description language="ENGLISH">"Leather Skullcap"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_LETTER_OF_APPOINTMENT">
+<Description language="ENGLISH">"Letter of Appointment"</Description>
+<Theme>"RULES-LAB_1022"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_LETTER_OF_COMMISSION">
+<Description language="ENGLISH">"Letter of Commission"</Description>
+<Theme>"RULES-LAB_1022"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_LIBRARY_ART">
+<Description language="ENGLISH">"Library (Art)"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_LIBRARY_ENGINEERING">
+<Description language="ENGLISH">"Library (Engineering)"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_LIBRARY_LAW">
+<Description language="ENGLISH">"Library (Law)"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_LIBRARY_MAGIC">
+<Description language="ENGLISH">"Library (Magic)"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_LIBRARY_THEOLOGY">
+<Description language="ENGLISH">"Library (Theology)"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_LODGINGS">
+<Description language="ENGLISH">"Lodgings"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_LOFT_OF_HOMING_PIGEONS">
+<Description language="ENGLISH">"Loft of Homing Pigeons"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_MAGICAL_ITEM">
+<Description language="ENGLISH">"Magical Item"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_MINIONS">
+<Description language="ENGLISH">"Minions"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_MODEST_SHOP">
+<Description language="ENGLISH">"Modest Shop"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_MONEY_GC">
+<Description language="ENGLISH">"Gold Crowns"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_MORTARBOARD">
+<Description language="ENGLISH">"Mortarboard"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_NETWORK_OF_INFORMERS">
+<Description language="ENGLISH">"Network of Informers"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_NOTES_STUFFED_IN_LOCKED_DRAWER">
+<Description language="ENGLISH">"Notes Stuffed in Locked Drawer"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_OFFICE">
+<Description language="ENGLISH">"Office"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_ORDERS">
+<Description language="ENGLISH">"Orders"</Description>
+<Theme>"RULES-LAB_1022"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_OSTENTATIOUS_WIG">
+<Description language="ENGLISH">"Ostentatious Wig"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_PAMPHLETEER">
+<Description language="ENGLISH">"Pamphleteer"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_PATROL_BOATS">
+<Description language="ENGLISH">"Patrol Boats"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_PATRON">
+<Description language="ENGLISH">"Patron"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_PAUPER_FOLLOWER">
+<Description language="ENGLISH">"Pauper Follower"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_PAWNBROKERS_SHOP">
+<Description language="ENGLISH">"Pawnbroker's Shop"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_PERSONAL_SERVANT">
+<Description language="ENGLISH">"Personal Servant"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_PLATE_ARMOUR">
+<Description language="ENGLISH">"Plate Armour"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_POISON">
+<Description language="ENGLISH">"Poison"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_POOR_QUALITY_BLANKET">
+<Description language="ENGLISH">"Poor Quality Blanket"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_PORTER_CAP">
+<Description language="ENGLISH">"Porter Cap"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_POTS_AND_PANS">
+<Description language="ENGLISH">"Pots and Pans"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_PRINTING_PRESS">
+<Description language="ENGLISH">"Printing Press"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_PROVINCE">
+<Description language="ENGLISH">"Province"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_QUALITY_CLOTHING_AND_HAT">
+<Description language="ENGLISH">"Quality Clothing and Hat"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_QUALITY_HAT_AND_CLOAK">
+<Description language="ENGLISH">"Quality Hat and Cloak"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_QUALITY_LIVERY">
+<Description language="ENGLISH">"Quality Livery"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_QUALITY_RAPIER">
+<Description language="ENGLISH">"Quality Rapier"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_QUALITY_SYMBOL_OF_RANK">
+<Description language="ENGLISH">"Quality Symbol of Rank"</Description>
+<Theme>"RULES-LAB_1022"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_QUALITY_WEAPON">
+<Description language="ENGLISH">"Quality Weapon"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_REGIMENT_OF_RECRUITS">
+<Description language="ENGLISH">"Regiment of Recruits"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_REGIMENT_OF_SOLDIERS">
+<Description language="ENGLISH">"Regiment of Soldiers"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_RELIGIOUS_ORDER">
+<Description language="ENGLISH">"Religious Order"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_RELIGIOUS_RELIC">
+<Description language="ENGLISH">"Religious Relic"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_REMOTE_LAIR">
+<Description language="ENGLISH">"Remote Lair"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_RING_OF_SPIES_AND_INFORMERS">
+<Description language="ENGLISH">"Ring of Spies and Informers"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_RIVER_RUNNERS">
+<Description language="ENGLISH">"River Runners"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_ROD_OF_OFFICE">
+<Description language="ENGLISH">"Rod of Office"</Description>
+<Theme>"RULES-LAB_1022"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_RUNE_AXE">
+<Description language="ENGLISH">"Rune Axe"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SACK_OF_POISONED_BAIT">
+<Description language="ENGLISH">"Sack of Poisoned Bait"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SADDLEBAGS_WITH_2_WEEKS_RATIONS">
+<Description language="ENGLISH">"Saddlebags with 2 weeks' Rations"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SAILING_SHIP">
+<Description language="ENGLISH">"Sailing Ship"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SASH">
+<Description language="ENGLISH">"Sash"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SEAL_OF_OFFICE">
+<Description language="ENGLISH">"Seal of Office"</Description>
+<Theme>"RULES-LAB_1022"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SERVANT">
+<Description language="ENGLISH">"Servant"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SERVANTS">
+<Description language="ENGLISH">"Servants"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SEVERAL_FENCE_CONTACTS">
+<Description language="ENGLISH">"Several Fence Contacts"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SEVERAL_SMALL_UNITS_OF_KNIGHTS">
+<Description language="ENGLISH">"Several Small Units Of Knights"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SEXTANT">
+<Description language="ENGLISH">"Sextant"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SHEETS_OF_PARCHMENT">
+<Description language="ENGLISH">"Sheets of Parchment"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SHIPPING_CHARTS">
+<Description language="ENGLISH">"Shipping Charts"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SMALL_BUT_VICIOUS_DOG">
+<Description language="ENGLISH">"Small but Vicious Dog"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SMALL_FLEET_OF_BARGES">
+<Description language="ENGLISH">"Small Fleet of Barges"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SMALL_LOCK_BOX">
+<Description language="ENGLISH">"Small Lock Box"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SMALL_RIVERBOAT">
+<Description language="ENGLISH">"Small Riverboat"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SMALL_UNIT_OF_KNIGHTS">
+<Description language="ENGLISH">"Small Unit of Knights"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SPEEDY_BARGE">
+<Description language="ENGLISH">"Speedy Barge"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SQUAD_OF_GUARDS">
+<Description language="ENGLISH">"Squad of Guards"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SQUAD_OF_ROADWARDENS">
+<Description language="ENGLISH">"Squad of Roadwardens"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SQUIRE">
+<Description language="ENGLISH">"Squire"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_STAFF">
+<Description language="ENGLISH">"Staff"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_STAFF_OF_ADVISERS_AND_AIDES">
+<Description language="ENGLISH">"Staff of Advisers and Aides"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_STAFF_OF_CUSTODIANS">
+<Description language="ENGLISH">"Staff of Custodians"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_STAFF_OF_DIPLOMATS">
+<Description language="ENGLISH">"Staff of Diplomats"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_STOLEN_GOODS_WORTH_1D10_SHILLINGS">
+<Description language="ENGLISH">"Stolen Goods worth 1d10 Shillings"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_STUDY">
+<Description language="ENGLISH">"Study"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_STURDY_CRATE">
+<Description language="ENGLISH">"Sturdy Crate"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SUBORDINATE_GANG_BOSSES">
+<Description language="ENGLISH">"Subordinate Gang Bosses"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SUBORDINATE_HIGH_PRIESTS">
+<Description language="ENGLISH">"Subordinate High Priests"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SUBORDINATE_INTERROGATORS">
+<Description language="ENGLISH">"Subordinate Interrogators"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SUBORDINATE_PRIESTS">
+<Description language="ENGLISH">"Subordinate Priests"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SUBORDINATE_WITCH_HUNTERS">
+<Description language="ENGLISH">"Subordinate Witch Hunters"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_SYMBOL_OF_RANK">
+<Description language="ENGLISH">"Symbol of Rank"</Description>
+<Theme>"RULES-LAB_1022"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_TATTERED_ROBES">
+<Description language="ENGLISH">"Tattered Robes"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_TAX_COLLECTOR">
+<Description language="ENGLISH">"Tax Collector"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_TEMPLE">
+<Description language="ENGLISH">"Temple"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_THE_RESPECT_OF_THE_VILLAGE">
+<Description language="ENGLISH">"The Respect of the Village"</Description>
+<Theme>"RULES-LAB_1022"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_TOMES_OF_FORBIDDEN_KNOWLEDGE">
+<Description language="ENGLISH">"Tomes of Forbidden Knowledge"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_TOWNHOUSE">
+<Description language="ENGLISH">"Townhouse"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_TOWNHOUSE_WITH_DISCREET_BACK_ENTRANCE">
+<Description language="ENGLISH">"Townhouse with Discreet Back Entrance"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_TRADE_TOOLS_ARTIST">
+<Description language="ENGLISH">"Trade Tools (Artist)"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_TRAINED_ANIMAL">
+<Description language="ENGLISH">"Trained Animal"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_TRINKETS_AND_CHARMS">
+<Description language="ENGLISH">"Trinkets and Charms"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_TROUPE_OF_ENTERTAINERS">
+<Description language="ENGLISH">"Troupe of Entertainers"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_TRUSTY_SECOND">
+<Description language="ENGLISH">"Trusty Second"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_UNIT_OF_ROADWARDENS">
+<Description language="ENGLISH">"Unit of Roadwardens"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_WARDROBE_OF_COSTUMES_AND_PROPS">
+<Description language="ENGLISH">"Wardrobe of Costumes and Props"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_WAREHOUSE">
+<Description language="ENGLISH">"Warehouse"</Description>
+<Theme>"RULES-LAB_1021"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_WARRANT_PAPERS">
+<Description language="ENGLISH">"Warrant Papers"</Description>
+<Theme>"RULES-LAB_1022"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_WHISTLE">
+<Description language="ENGLISH">"Whistle"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_WOODEN_TRAINING_SWORD">
+<Description language="ENGLISH">"Wooden Training Sword"</Description>
+<Theme>"RULES-LAB_196"</Theme>
+</Trapping>
+<Trapping id="RULES-TRAP_WRECKER_CREW">
+<Description language="ENGLISH">"Wrecker Crew"</Description>
+<Theme>"RULES-LAB_1020"</Theme>
 </Trapping>
 </DATA_TRAPPING>
 <DATA_ARMOR_SIMP>
@@ -15752,6 +17265,216 @@
 </Sort>
 <Sort id="RULES-SPEL_BLESSING_19">
 <Talent>"RULES-T_BLESS__RANALD,RULES-T_BLESS__VERENA"</Talent>
+</Sort>
+    <Sort id="RULES-SPEL_BEASTS_01">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_BEASTS_02">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_BEASTS_03">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_BEASTS_04">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_BEASTS_05">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_BEASTS_06">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_BEASTS_07">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_BEASTS_08">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_DEATH_01">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_DEATH_02">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_DEATH_03">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_DEATH_04">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_DEATH_05">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_DEATH_06">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_DEATH_07">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_DEATH_08">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_FIRE_01">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_FIRE_02">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_FIRE_03">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_FIRE_04">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_FIRE_05">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_FIRE_06">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_FIRE_07">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_FIRE_08">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_HEAVENS_01">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_HEAVENS_02">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_HEAVENS_03">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_HEAVENS_04">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_HEAVENS_05">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_HEAVENS_06">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_HEAVENS_07">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_HEAVENS_08">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_LIFE_01">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_LIFE_02">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_LIFE_03">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_LIFE_04">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_LIFE_05">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_LIFE_06">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_LIFE_07">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_LIFE_08">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_LIGHT_01">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_LIGHT_02">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_LIGHT_03">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_LIGHT_04">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_LIGHT_05">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_LIGHT_06">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_LIGHT_07">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_LIGHT_08">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_METAL_01">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_METAL_02">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_METAL_03">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_METAL_04">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_METAL_05">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_METAL_06">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_METAL_07">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_METAL_08">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_SHADOWS_01">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_SHADOWS_02">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_SHADOWS_03">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_SHADOWS_04">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_SHADOWS_05">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_SHADOWS_06">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_SHADOWS_07">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_SHADOWS_08">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_WITCHCRAFT_01">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_WITCHCRAFT_02">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_WITCHCRAFT_03">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_WITCHCRAFT_04">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_WITCHCRAFT_05">
+<Talent>"RULES-T_WITCH"</Talent>
+</Sort>
+<Sort id="RULES-SPEL_WITCHCRAFT_06">
+<Talent>"RULES-T_WITCH"</Talent>
 </Sort>
 </DATA_SPELL_TALENT>
 <DATA_CRAFTMANSHIP>

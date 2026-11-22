@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   SCHEMA_WFRP5.xsd
-  Schema de validation strict pour DATABASE/WFRP5/*.Xml.
-  Genere le 28/09/2026, meme methode et memes types partages que SCHEMA_WFRP4.xsd
-  (voir SCHEMA_COMMON.xsd). Ne couvre QUE les blocs confirmes presents en WFRP5 :
-  DATA_TALENT, DATA_TALENT_SPECIALIZATION, DATA_SPELL (+ CULTE en option, specifique
+  Strict validation schema for DATABASE/WFRP5/*.Xml.
+  Same method and same shared types as SCHEMA_WFRP4.xsd
+  (see SCHEMA_COMMON.xsd). Covers ONLY the blocks confirmed present in WFRP5:
+  DATA_TALENT, DATA_TALENT_SPECIALIZATION, DATA_SPELL (+ optional CULTE, specific to
   WFRP5), DATA_SPELL_TALENT, DATA_CAREER, DATA_ARMOR, DATA_ARMOR_SIMP, DATA_ARMOR_BONUS,
   DATA_WEAPON, DATA_WEAPON_BONUS, DATA_CRAFTMANSHIP, DATA_SKILL, DATA_SKILL_SPECIALIZATION,
   DATA_SKILL_COST, DATA_ATTRIBUT_COST, DATA_ATTRIBUT, DATA_SPECIE, DATA_RACE,
-  DATA_RANDOM_SPECIE, DATA_RANDOM_TALENT, DATA_NATION, DATA_TRAPPING, DATA_LABEL.
+  DATA_RANDOM_SPECIE, DATA_RANDOM_TALENT, DATA_NATION, DATA_TRAPPING, DATA_LABEL,
+  DATA_CORRUPTION_* (6 blocks, types in SCHEMA_COMMON.xsd).
 
   Usage : xmllint (no-out flag) (schema flag) SCHEMA_WFRP5.xsd "DATABASE/WFRP5/BOOK_XXX.Xml"
 -->
@@ -18,11 +19,11 @@
 
   <xs:include schemaLocation="SCHEMA_COMMON.xsd"/>
 
-  <!-- ===================== DATA_BOOK (racine) ===================== -->
+  <!-- ===================== DATA_BOOK (root) ===================== -->
   <!--
-    DISCLAIMER : minOccurs="0" par coherence avec SCHEMA_WFRP4.xsd (dette DISCLAIMER
-    documentee dans GABARIT_LIVRE_XML.md ; aucun livre WFRP5 n'en manquait au 28/09/2026,
-    mais on garde la meme tolerance pour ne pas diverger inutilement des deux schemas).
+    DISCLAIMER: minOccurs="0" for consistency with SCHEMA_WFRP4.xsd (the DISCLAIMER debt
+    is documented in GABARIT_LIVRE_XML.md; no WFRP5 book lacked one,
+    but the same tolerance is kept so the two schemas do not diverge needlessly).
   -->
   <xs:element name="DATA_BOOK">
     <xs:complexType>
@@ -60,6 +61,12 @@
           <xs:element name="DATA_RANDOM_TALENT" type="DataRandomTalentType"/>
           <xs:element name="DATA_NATION" type="DataNationType"/>
           <xs:element name="DATA_TRAPPING" type="DataTrappingType"/>
+          <xs:element name="DATA_CORRUPTION_MENTAL" type="DataCorruptionMentalType"/>
+          <xs:element name="DATA_CORRUPTION_PHYSICAL" type="DataCorruptionPhysicalType"/>
+          <xs:element name="DATA_CORRUPTION_MENTAL_CHANCE" type="DataCorruptionMentalChanceType"/>
+          <xs:element name="DATA_CORRUPTION_PHYSICAL_CHANCE" type="DataCorruptionPhysicalChanceType"/>
+          <xs:element name="DATA_CORRUPTION_TABLE_MENTAL" type="DataCorruptionTableMentalType"/>
+          <xs:element name="DATA_CORRUPTION_TABLE_PHYSICAL" type="DataCorruptionTablePhysicalType"/>
         </xs:choice>
       </xs:sequence>
     </xs:complexType>

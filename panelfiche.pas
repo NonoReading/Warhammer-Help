@@ -89,11 +89,12 @@ type
     FYGrille: Integer;
     FHauteurPleine: Integer;  // hauteur avec Valider/Annuler (la lecture seule les retire)
     FLectureSeule: Boolean;
-    FBaliseLibre: String;  // champ de cases reste modifiable dans une lecture seule partielle
+    FBaliseLibre: String;  // champ(s) restant modifiable(s) dans une lecture seule partielle (balises separees par des virgules)
     FSansGrille: Boolean;  // element sans modificateurs : la grille n'est ni montree ni ecrite
     FVerrous: String;      // codes de cases qu'on ne peut pas decocher, separes par des virgules
     FOrdre: String;        // ordre des balises du schema (virgules) ; '*Balise' = facultative, retiree de l'element si vide
     function  IndiceOrdre(const Balise: String; out Facultative: Boolean): Integer;
+    function  BaliseEstLibre(I: Integer): Boolean;
     procedure SetLectureSeule(Valeur: Boolean);
     procedure AppliquerLectureSeule(Valeur: Boolean; const BaliseLibre: String);
     procedure Vider;
@@ -266,6 +267,17 @@ begin
     end;
     Result := Suivant;
   end;
+end;
+
+// Tableau en mode E (voir saisietableau.pas) : la liste des valeurs est rangee dans des balises repetees (Base, Base#2, Base#3...)
+function ChampListeBalises(const Champ: StructureChampFiche): Boolean;
+begin
+  Result := (Champ.Genre = gfTableau) and (Copy(Champ.Choix, 1, 2) = 'E|');
+end;
+
+function NomBaliseRepetee(const Base: String; K: Integer): String;
+begin
+  if K <= 1 then Result := Base else Result := Base + '#' + IntToStr(K);
 end;
 
 const
@@ -494,6 +506,7 @@ begin
   FBoutonValider.Assign(Modele);
   FBoutonValider.Parent := FDefil;
   FBoutonValider.OnClick := @BoutonValiderClick;
+  if Self.FindComponent('FicheValider') = nil then FBoutonValider.Name := 'FicheValider';  // pour les scripts d'ecran
   FBoutonAnnuler := TBCButtonContour.Create(Self);
   FBoutonAnnuler.Assign(Modele);
   FBoutonAnnuler.Parent := FDefil;
@@ -622,6 +635,9 @@ begin
       Saisie := TEdit.Create(Self);
     end;
     Saisie.Parent := FDefil;
+    // nom « Saisie_<balise> » pour que les scripts d'ecran (--script) puissent viser le champ ; ignore si doublon / balise composee
+    if IsValidIdent('Saisie_' + Champs[I].Balise) and (Self.FindComponent('Saisie_' + Champs[I].Balise) = nil) then
+      Saisie.Name := 'Saisie_' + Champs[I].Balise;
     Saisie.SetBounds(X, Y + 22, L, H);
     FSaisies[I] := Saisie;
     if Champs[I].Genre = gfTableau then TSaisieTableau(Saisie).Monter(FModele, Champs[I].Choix, X, Y, L, H);
@@ -962,13 +978,28 @@ end;
 
 procedure TPanelFiche.Charger(Element: TDOMElement);
 var
-  I: Integer;
-  Valeur: String;
+  I, K: Integer;
+  Valeur, Unique: String;
 begin
   FChargement := True;
   for I := 0 to High(FChamps) do
   begin
-    if Pos('@', FChamps[I].Balise) > 0 then  // "Balise@attribut" : valeur d'un attribut de la balise
+    if ChampListeBalises(FChamps[I]) then  // liste en tableau : une valeur par balise repetee, separees par une tabulation
+    begin
+      Valeur := '';
+      K := 1;
+      while NoeudDeBalise(Element, NomBaliseRepetee(FChamps[I].Balise, K)) <> nil do
+      begin
+        Unique := Trim(ValeurXML(NoeudDeBalise(Element, NomBaliseRepetee(FChamps[I].Balise, K))));
+        if Unique <> '' then
+        begin
+          if Valeur <> '' then Valeur := Valeur + #9;
+          Valeur := Valeur + Unique;
+        end;
+        Inc(K);
+      end;
+    end
+    else if Pos('@', FChamps[I].Balise) > 0 then  // "Balise@attribut" : valeur d'un attribut de la balise
     begin
       Valeur := '';
       if NoeudDeBalise(Element, FChamps[I].Balise) <> nil then
@@ -1129,7 +1160,7 @@ begin
   for I := 0 to High(FSaisies) do
     if FSaisies[I] = L then
     begin
-      if FLectureSeule and (FChamps[I].Balise <> FBaliseLibre) then
+      if FLectureSeule and not BaliseEstLibre(I) then
         L.Checked[Rang] := not L.Checked[Rang]
       else
       begin
@@ -1267,6 +1298,13 @@ begin
   FVerrous := Codes;
 end;
 
+// Vrai si la balise du champ I figure dans la liste (separee par des virgules) des champs laisses modifiables.
+function TPanelFiche.BaliseEstLibre(I: Integer): Boolean;
+begin
+  Result := (FBaliseLibre <> '') and (I <= High(FChamps))
+    and (Pos(',' + FChamps[I].Balise + ',', ',' + FBaliseLibre + ',') > 0);
+end;
+
 procedure TPanelFiche.AppliquerLectureSeule(Valeur: Boolean; const BaliseLibre: String);
 var
   I: Integer;
@@ -1278,8 +1316,8 @@ begin
     if FSaisies[I] = nil then Continue;  // champ gfQualites : pas de controle en haut, le bloc des qualites est a part
     if FSaisies[I] is TSaisieTableau then TSaisieTableau(FSaisies[I]).MettreLectureSeule(Valeur and (BaliseLibre <> FChamps[I].Balise))
     else if (FSaisies[I] is TEdit) and (I <= High(FChamps)) and FChamps[I].AffichageSeul then TEdit(FSaisies[I]).ReadOnly := True
-    else if FSaisies[I] is TEdit then TEdit(FSaisies[I]).ReadOnly := Valeur
-    else if FSaisies[I] is TMemo then TMemo(FSaisies[I]).ReadOnly := Valeur
+    else if FSaisies[I] is TEdit then TEdit(FSaisies[I]).ReadOnly := Valeur and not BaliseEstLibre(I)
+    else if FSaisies[I] is TMemo then TMemo(FSaisies[I]).ReadOnly := Valeur and not BaliseEstLibre(I)
     else if FSaisies[I] is TCheckListBox then FSaisies[I].Enabled := True  // ascenseur actif ; ClicCase annule les clics
     else FSaisies[I].Enabled := not Valeur;
     if FSaisies2[I] <> nil then TEdit(FSaisies2[I]).ReadOnly := Valeur;
@@ -1333,11 +1371,12 @@ end;
 
 function TPanelFiche.Ecrire(Element: TDOMElement; const Langue: String): Boolean;
 var
-  I: Integer;
+  I, Rep, NRep: Integer;
   Facult: Boolean;
-  Valeur, MessageTableau: String;
+  Valeur, MessageTableau, BaseListe: String;
   Noeud, Suivant: TDOMNode;
   Nouveau: TDOMElement;
+  Liste: TStringList;
 begin
   Result := False;
   for I := 0 to High(FChamps) do
@@ -1404,7 +1443,35 @@ begin
   for I := 0 to High(FChamps) do
   begin
     if FChamps[I].Virtuel then Continue;
-    Valeur := TexteSaisie(I);
+    BaseListe := FChamps[I].Balise;
+    Liste := nil;
+    NRep := 1;
+    if ChampListeBalises(FChamps[I]) then
+    begin
+      // liste en tableau : une balise par valeur (Base, Base#2...), les balises en trop disparaissent
+      Liste := TStringList.Create;
+      Liste.Delimiter := #9;
+      Liste.StrictDelimiter := True;
+      Liste.DelimitedText := TexteSaisie(I);
+      for Rep := Liste.Count - 1 downto 0 do
+        if Trim(Liste[Rep]) = '' then Liste.Delete(Rep);
+      NRep := Liste.Count;
+      if NRep < 1 then NRep := 1;
+      Noeud := NoeudDeBalise(Element, NomBaliseRepetee(BaseListe, NRep + 1));
+      while Noeud <> nil do
+      begin
+        Noeud.ParentNode.RemoveChild(Noeud);
+        Noeud := NoeudDeBalise(Element, NomBaliseRepetee(BaseListe, NRep + 1));
+      end;
+    end;
+    for Rep := 1 to NRep do
+    begin
+    if Liste <> nil then
+    begin
+      FChamps[I].Balise := NomBaliseRepetee(BaseListe, Rep);
+      if Liste.Count > 0 then Valeur := Liste[Rep - 1] else Valeur := '';
+    end
+    else Valeur := TexteSaisie(I);
     if FChamps[I].Controle = cfPrix then Valeur := NormaliserPrixFiche(Valeur);
     // liste fermee non obligatoire laissee vide : la balise existante n'est pas touchee
     if (FChamps[I].Genre = gfCode) and (Valeur = '') then Continue;
@@ -1450,6 +1517,9 @@ begin
       Continue;
     end;
     EcrireValeurXML(TDOMElement(Noeud), Valeur);
+    end;  // fin de la boucle sur les balises repetees
+    FChamps[I].Balise := BaseListe;
+    Liste.Free;
   end;
   if not FSansGrille then FGrille.Ecrire(Element);
   if FExtra <> nil then FExtra.Ecrire(Element);

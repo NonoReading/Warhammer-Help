@@ -23,6 +23,7 @@ uses
 type
   TBlocSousBlocs = record
     Balise: String;
+    Cont: String;  // conteneur propre au bloc (spec « Conteneur/Balise ») ; '' = celui du panneau
     Annexe: String;  // balise rattachee au tableau (BirthplaceHuman) : une ligne « suffixe / valeur » (spec « Balise+Annexe »)
     BaliseLigne: TStringList;  // pour chaque ligne : '' = balise du bloc, sinon l'annexe
     Titre: TLabel;
@@ -45,6 +46,8 @@ type
     FOrdre: String;  // ordre des balises de l'element (virgules) : un bloc neuf se range a sa place
     function  RangOrdre(const Balise: String): Integer;
     function  Portee(Element: TDOMElement): TDOMElement;
+    function  ConteneurDuBloc(I: Integer): String;
+    function  PorteeBloc(I: Integer; Element: TDOMElement): TDOMElement;
     procedure ChargerBloc(I: Integer; Element: TDOMElement);
     procedure EcrireBloc(I: Integer; Element: TDOMElement);
     function  CodeDeLaCellule(I, C, R: Integer): String;
@@ -142,6 +145,12 @@ begin
       Haut := I * Pas;
       Morceaux.DelimitedText := Specs[I];
       Colonnes.DelimitedText := Morceaux[2];
+      FBlocs[I].Cont := '';
+      if Pos('/', Morceaux[0]) > 0 then
+      begin
+        FBlocs[I].Cont := Copy(Morceaux[0], 1, Pos('/', Morceaux[0]) - 1);
+        Morceaux[0] := Copy(Morceaux[0], Pos('/', Morceaux[0]) + 1, MaxInt);
+      end;
       FBlocs[I].Balise := Morceaux[0];
       FBlocs[I].Annexe := '';
       if Pos('+', Morceaux[0]) > 0 then
@@ -316,14 +325,31 @@ begin
   if N = nil then Result := nil else Result := TDOMElement(N);
 end;
 
+function TPanelSousBlocs.ConteneurDuBloc(I: Integer): String;
+begin
+  if FBlocs[I].Cont <> '' then Result := FBlocs[I].Cont else Result := FConteneur;
+end;
+
+function TPanelSousBlocs.PorteeBloc(I: Integer; Element: TDOMElement): TDOMElement;
+var
+  N: TDOMNode;
+begin
+  if ConteneurDuBloc(I) = '' then Exit(Element);
+  N := Element.FindNode(ConteneurDuBloc(I));
+  if N = nil then Result := nil else Result := TDOMElement(N);
+end;
+
 procedure TPanelSousBlocs.Charger(Element: TDOMElement);
 var
   I: Integer;
+  Cible: TDOMElement;
 begin
-  Element := Portee(Element);
   for I := 0 to High(FBlocs) do
-    if Element <> nil then ChargerBloc(I, Element)
+  begin
+    Cible := PorteeBloc(I, Element);
+    if Cible <> nil then ChargerBloc(I, Cible)
     else FBlocs[I].Grille.RowCount := 1;
+  end;
 end;
 
 function TPanelSousBlocs.Controler: Boolean;
@@ -563,24 +589,23 @@ end;
 procedure TPanelSousBlocs.Ecrire(Element: TDOMElement);
 var
   I: Integer;
-  Mere: TDOMElement;
-  Present: Boolean;
+  Mere, Cible: TDOMElement;
 begin
   Mere := Element;
-  Element := Portee(Mere);
-  if Element = nil then
+  for I := 0 to High(FBlocs) do
   begin
-    // conteneur absent (element neuf, ou bloc qui ne porte que ces tableaux) : on le cree s'il y a des lignes a ecrire
-    Present := False;
-    for I := 0 to High(FBlocs) do
-      if FBlocs[I].Grille.RowCount > 1 then Present := True;
-    if not Present then Exit;
-    Element := Mere.OwnerDocument.CreateElement(FConteneur);
-    // Page est la derniere balise (schema) : le conteneur neuf se place avant elle
-    if Mere.FindNode('Page') <> nil then Mere.InsertBefore(Element, Mere.FindNode('Page'))
-    else Mere.AppendChild(Element);
+    Cible := PorteeBloc(I, Mere);
+    if Cible = nil then
+    begin
+      // conteneur absent (element neuf, ou bloc qui ne porte que ces tableaux) : on le cree s'il y a des lignes a ecrire
+      if FBlocs[I].Grille.RowCount <= 1 then Continue;
+      Cible := Mere.OwnerDocument.CreateElement(ConteneurDuBloc(I));
+      // Page est la derniere balise (schema) : le conteneur neuf se place avant elle
+      if Mere.FindNode('Page') <> nil then Mere.InsertBefore(Cible, Mere.FindNode('Page'))
+      else Mere.AppendChild(Cible);
+    end;
+    EcrireBloc(I, Cible);
   end;
-  for I := 0 to High(FBlocs) do EcrireBloc(I, Element);
 end;
 
 function TPanelSousBlocs.Signature(const Sep: String): String;

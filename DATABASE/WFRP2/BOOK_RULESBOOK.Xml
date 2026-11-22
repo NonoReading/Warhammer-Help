@@ -7702,541 +7702,6 @@
 </Sort>
 </DATA_SPELL_TALENT>
 <DATA_EQUIPMENT_V2>
-<EquipmentV2 id="RULES-EQUI_MELEE_WEAPONS_BUCKLER">
-<Description language="ENGLISH">"Buckler"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"2 gc"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_PARRYING"</Group>
-<Damage>"SB–4"</Damage>
-<Qualities>"Balanced, Defensive, Pummelling"</Qualities>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MELEE_WEAPONS_DAGGER">
-<Description language="ENGLISH">"Dagger"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"1 gc"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"None"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MELEE_WEAPONS_DEMILANCE_CAVALRY_SPEAR">
-<Description language="ENGLISH">"Demilance (Cavalry Spear)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"20 gc"</Cost>
-<Encumbrance>"75"</Encumbrance>
-<Group>"RULES-WTYPE2_CAVALRY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Fast, Impact, Tiring"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MELEE_WEAPONS_FLAIL">
-<Description language="ENGLISH">"Flail"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
-<Encumbrance>"95"</Encumbrance>
-<Group>"RULES-WTYPE2_FLAIL"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Impact, Tiring"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Note>""</Note>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MELEE_WEAPONS_FOIL">
-<Description language="ENGLISH">"Foil"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"18 gc"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_FENCING"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Fast, Precise"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MELEE_WEAPONS_GAUNTLET_KNUCKLE_DUSTER">
-<Description language="ENGLISH">"Gauntlet/Knuckle-duster"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"1 gc"</Cost>
-<Encumbrance>"1"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Pummelling"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MELEE_WEAPONS_GREAT_WEAPON">
-<Description language="ENGLISH">"Great Weapon"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"20 gc"</Cost>
-<Encumbrance>"200"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Impact, Slow"</Qualities>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
-<Note>""</Note>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MELEE_WEAPONS_HALBERD">
-<Description language="ENGLISH">"Halberd"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
-<Encumbrance>"175"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Special"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
-<Note>""</Note>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MELEE_WEAPONS_HAND_WEAPON_SWORD_ETC">
-<Description language="ENGLISH">"Hand Weapon (sword etc)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"10 gc"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"None"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MELEE_WEAPONS_IMPROVISED">
-<Description language="ENGLISH">"Improvised"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"—"</Cost>
-<Encumbrance>"35"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–4"</Damage>
-<Qualities>"None"</Qualities>
-<Availability>"—"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MELEE_WEAPONS_LANCE">
-<Description language="ENGLISH">"Lance"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
-<Encumbrance>"100"</Encumbrance>
-<Group>"RULES-WTYPE2_CAVALRY"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Fast, Impact, Tiring"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MELEE_WEAPONS_MAIN_GAUCHE">
-<Description language="ENGLISH">"Main Gauche"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"4 gc"</Cost>
-<Encumbrance>"15"</Encumbrance>
-<Group>"RULES-WTYPE2_PARRYING"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Balanced, Defensive"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MELEE_WEAPONS_MORNING_STAR">
-<Description language="ENGLISH">"Morning Star"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
-<Encumbrance>"60"</Encumbrance>
-<Group>"RULES-WTYPE2_FLAIL"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Impact, Tiring"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MELEE_WEAPONS_QUARTER_STAFF">
-<Description language="ENGLISH">"Quarter Staff"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"3s"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Defensive, Pummelling"</Qualities>
-<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
-<Note>""</Note>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MELEE_WEAPONS_RAPIER">
-<Description language="ENGLISH">"Rapier"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"18 gc"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_FENCING"</Group>
-<Damage>"SB–1"</Damage>
-<Qualities>"Fast"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MELEE_WEAPONS_SHIELD">
-<Description language="ENGLISH">"Shield"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"10 gc"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Defensive, Special"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MELEE_WEAPONS_SPEAR">
-<Description language="ENGLISH">"Spear"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"10 gc"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Fast"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MELEE_WEAPONS_SWORD_BREAKER">
-<Description language="ENGLISH">"Sword-breaker"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"5 gc"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_PARRYING"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Balanced, Special"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MELEE_WEAPONS_UNARMED">
-<Description language="ENGLISH">"Unarmed"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"—"</Cost>
-<Encumbrance>"—"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–4"</Damage>
-<Qualities>"Special"</Qualities>
-<Availability>"—"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_BLUNDERBUSS">
-<Description language="ENGLISH">"Blunderbuss"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"70 gc"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"3"</Damage>
-<Range>"32/-"</Range>
-<Reload>"3 Full/6 Full"</Reload>
-<Qualities>"Shrapnel, Unreliable"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_BOLA">
-<Description language="ENGLISH">"Bola"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"7s"</Cost>
-<Encumbrance>"20"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"1"</Damage>
-<Range>"8/16"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Snare"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_BOW">
-<Description language="ENGLISH">"Bow"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"10 gc"</Cost>
-<Encumbrance>"80"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"3"</Damage>
-<Range>"24/48"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"None"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
-<Note>""</Note>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_CROSSBOW">
-<Description language="ENGLISH">"Crossbow"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"25 gc"</Cost>
-<Encumbrance>"120"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"4"</Damage>
-<Range>"30/60"</Range>
-<Reload>"Full"</Reload>
-<Qualities>"None"</Qualities>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
-<Note>""</Note>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_CROSSBOW_PISTOL">
-<Description language="ENGLISH">"Crossbow Pistol"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"35 gc"</Cost>
-<Encumbrance>"25"</Encumbrance>
-<Group>"RULES-WTYPE2_CROSSBOW"</Group>
-<Damage>"2"</Damage>
-<Range>"8/16"</Range>
-<Reload>"Full"</Reload>
-<Qualities>"None"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_ELFBOW">
-<Description language="ENGLISH">"Elfbow"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"70 gc"</Cost>
-<Encumbrance>"75"</Encumbrance>
-<Group>"RULES-WTYPE2_LONGBOW"</Group>
-<Damage>"3"</Damage>
-<Range>"36/72"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Armour Piercing"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
-<Note>""</Note>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_FIREARM">
-<Description language="ENGLISH">"Firearm"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"300 gc"</Cost>
-<Encumbrance>"30"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"4"</Damage>
-<Range>"24/48"</Range>
-<Reload>"2 Full"</Reload>
-<Qualities>"Impact, Unreliable"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
-<Note>""</Note>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_HOCHLAND_LONG_RIFLE">
-<Description language="ENGLISH">"Hochland Long Rifle"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"450 gc"</Cost>
-<Encumbrance>"70"</Encumbrance>
-<Group>"RULES-WTYPE2_ENGINEER"</Group>
-<Damage>"4"</Damage>
-<Range>"48/96"</Range>
-<Reload>"2 Full"</Reload>
-<Qualities>"Impact, Unreliable"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_IMPROVISED">
-<Description language="ENGLISH">"Improvised"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"—"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–4"</Damage>
-<Range>"6/–"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"None"</Qualities>
-<Availability>"—"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_JAVELIN">
-<Description language="ENGLISH">"Javelin"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"25 s"</Cost>
-<Encumbrance>"30"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–1"</Damage>
-<Range>"8/16"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"None"</Qualities>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_LASSO">
-<Description language="ENGLISH">"Lasso"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"1 gc"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"n/a"</Damage>
-<Range>"8/–"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Snare"</Qualities>
-<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
-<Note>""</Note>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_LONGBOW">
-<Description language="ENGLISH">"Longbow"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
-<Encumbrance>"90"</Encumbrance>
-<Group>"RULES-WTYPE2_LONGBOW"</Group>
-<Damage>"3"</Damage>
-<Range>"30/60"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Armour Piercing"</Qualities>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
-<Note>""</Note>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_NET">
-<Description language="ENGLISH">"Net"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"3 gc"</Cost>
-<Encumbrance>"60"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"n/a"</Damage>
-<Range>"4/8"</Range>
-<Reload>"Full"</Reload>
-<Qualities>"Snare"</Qualities>
-<Availability>"RULES-DISPO2_PLENTIFUL"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_PISTOL">
-<Description language="ENGLISH">"Pistol"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"200 gc"</Cost>
-<Encumbrance>"25"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"4"</Damage>
-<Range>"8/16"</Range>
-<Reload>"2 Full"</Reload>
-<Qualities>"Impact, Unreliable"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_REPEATER_CROSSBOW">
-<Description language="ENGLISH">"Repeater Crossbow"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"100 gc"</Cost>
-<Encumbrance>"150"</Encumbrance>
-<Group>"RULES-WTYPE2_CROSSBOW"</Group>
-<Damage>"2"</Damage>
-<Range>"16/32"</Range>
-<Reload>"Free"</Reload>
-<Qualities>"Special"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
-<Note>""</Note>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_REPEATER_FIREARM">
-<Description language="ENGLISH">"Repeater Firearm"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"600 gc"</Cost>
-<Encumbrance>"30"</Encumbrance>
-<Group>"RULES-WTYPE2_ENGINEER"</Group>
-<Damage>"4"</Damage>
-<Range>"24/48"</Range>
-<Reload>"Free"</Reload>
-<Qualities>"Experimental, Special"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
-<Note>""</Note>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_REPEATER_PISTOL">
-<Description language="ENGLISH">"Repeater Pistol"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"400 gc"</Cost>
-<Encumbrance>"25"</Encumbrance>
-<Group>"RULES-WTYPE2_ENGINEER"</Group>
-<Damage>"4"</Damage>
-<Range>"8/16"</Range>
-<Reload>"Free"</Reload>
-<Qualities>"Experimental, Special"</Qualities>
-<Availability>"RULES-DISPO2_VERY_RARE"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_SHORTBOW">
-<Description language="ENGLISH">"Shortbow"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"7 gc"</Cost>
-<Encumbrance>"75"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"3"</Damage>
-<Range>"16/32"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"None"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
-<Note>""</Note>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_SLING">
-<Description language="ENGLISH">"Sling"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"4 gc"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_SLING"</Group>
-<Damage>"3"</Damage>
-<Range>"16/32"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"None"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_SPEAR">
-<Description language="ENGLISH">"Spear"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"10 gc"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Range>"8/-"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"None"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_STAFF_SLING">
-<Description language="ENGLISH">"Staff Sling"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"6 gc"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_SLING"</Group>
-<Damage>"4"</Damage>
-<Range>"24/48"</Range>
-<Reload>"Full"</Reload>
-<Qualities>"None"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
-<Note>""</Note>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_THROWING_AXE_HAMMER">
-<Description language="ENGLISH">"Throwing Axe/Hammer"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"5 gc"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB–2"</Damage>
-<Range>"8/-"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"None"</Qualities>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_THROWING_DAGGER_STAR">
-<Description language="ENGLISH">"Throwing Dagger/Star"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"3 gc"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB–3"</Damage>
-<Range>"6/12"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"None"</Qualities>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_WHIP">
-<Description language="ENGLISH">"Whip"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"2 gc"</Cost>
-<Encumbrance>"15"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"SB–4"</Damage>
-<Range>"6/-"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Snare"</Qualities>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
-<Page>"108"</Page>
-</EquipmentV2>
 <EquipmentV2 id="RULES-EQUI_MISSILE_WEAPONS_AMMUNITION_ARROWS_5">
 <Description language="ENGLISH">"Arrows (5)"</Description>
 <Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
@@ -8292,193 +7757,6 @@
 <Qualities>"—"</Qualities>
 <Availability>"RULES-DISPO2_VERY_RARE"</Availability>
 <Page>"108"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_ADVANCED_ARMOUR_LEATHER_LEATHER_SKULLCAP">
-<Description language="ENGLISH">"Leather Skullcap"</Description>
-<Category>"RULES-EQCAT2_ADVANCED_ARMOUR"</Category>
-<SubCategory>"RULES-EQCAT2_LEATHER"</SubCategory>
-<Cost>"3 gc"</Cost>
-<Encumbrance>"10"</Encumbrance>
-<Locations>"RULES-V1LOC_HEAD"</Locations>
-<ArmourPoints>"1"</ArmourPoints>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
-<Page>"112"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_ADVANCED_ARMOUR_LEATHER_LEATHER_JERKIN">
-<Description language="ENGLISH">"Leather Jerkin"</Description>
-<Category>"RULES-EQCAT2_ADVANCED_ARMOUR"</Category>
-<SubCategory>"RULES-EQCAT2_LEATHER"</SubCategory>
-<Cost>"6 gc"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Locations>"RULES-V1LOC_BODY"</Locations>
-<ArmourPoints>"1"</ArmourPoints>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
-<Page>"112"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_ADVANCED_ARMOUR_LEATHER_LEATHER_JACK">
-<Description language="ENGLISH">"Leather Jack"</Description>
-<Category>"RULES-EQCAT2_ADVANCED_ARMOUR"</Category>
-<SubCategory>"RULES-EQCAT2_LEATHER"</SubCategory>
-<Cost>"12 gc"</Cost>
-<Encumbrance>"50"</Encumbrance>
-<Locations>"RULES-V1LOC_BODY, RULES-V1LOC_ARMS"</Locations>
-<ArmourPoints>"1"</ArmourPoints>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
-<Page>"112"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_ADVANCED_ARMOUR_LEATHER_LEATHER_LEGGINGS">
-<Description language="ENGLISH">"Leather Leggings"</Description>
-<Category>"RULES-EQCAT2_ADVANCED_ARMOUR"</Category>
-<SubCategory>"RULES-EQCAT2_LEATHER"</SubCategory>
-<Cost>"10 gc"</Cost>
-<Encumbrance>"20"</Encumbrance>
-<Locations>"RULES-V1LOC_LEGS"</Locations>
-<ArmourPoints>"1"</ArmourPoints>
-<Availability>"RULES-DISPO2_COMMON"</Availability>
-<Page>"112"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_ADVANCED_ARMOUR_LEATHER_FULL_LEATHER_ARMOUR">
-<Description language="ENGLISH">"Full Leather Armour"</Description>
-<Category>"RULES-EQCAT2_ADVANCED_ARMOUR"</Category>
-<SubCategory>"RULES-EQCAT2_LEATHER"</SubCategory>
-<Cost>"25 gc"</Cost>
-<Encumbrance>"80"</Encumbrance>
-<Locations>"RULES-V1LOC_ALL"</Locations>
-<ArmourPoints>"1"</ArmourPoints>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
-<Page>"112"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_ADVANCED_ARMOUR_CHAIN_MAIL_COIF">
-<Description language="ENGLISH">"Mail Coif"</Description>
-<Category>"RULES-EQCAT2_ADVANCED_ARMOUR"</Category>
-<SubCategory>"RULES-EQCAT2_CHAIN"</SubCategory>
-<Cost>"20 gc"</Cost>
-<Encumbrance>"30"</Encumbrance>
-<Locations>"RULES-V1LOC_HEAD"</Locations>
-<ArmourPoints>"2"</ArmourPoints>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
-<Page>"112"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_ADVANCED_ARMOUR_CHAIN_MAIL_SHIRT">
-<Description language="ENGLISH">"Mail Shirt"</Description>
-<Category>"RULES-EQCAT2_ADVANCED_ARMOUR"</Category>
-<SubCategory>"RULES-EQCAT2_CHAIN"</SubCategory>
-<Cost>"60 gc"</Cost>
-<Encumbrance>"60"</Encumbrance>
-<Locations>"RULES-V1LOC_BODY"</Locations>
-<ArmourPoints>"2"</ArmourPoints>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
-<Page>"112"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_ADVANCED_ARMOUR_CHAIN_SLEEVED_MAIL_SHIRT">
-<Description language="ENGLISH">"Sleeved Mail Shirt"</Description>
-<Category>"RULES-EQCAT2_ADVANCED_ARMOUR"</Category>
-<SubCategory>"RULES-EQCAT2_CHAIN"</SubCategory>
-<Cost>"95 gc"</Cost>
-<Encumbrance>"80"</Encumbrance>
-<Locations>"RULES-V1LOC_BODY, RULES-V1LOC_ARMS"</Locations>
-<ArmourPoints>"2"</ArmourPoints>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
-<Page>"112"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_ADVANCED_ARMOUR_CHAIN_MAIL_COAT">
-<Description language="ENGLISH">"Mail Coat"</Description>
-<Category>"RULES-EQCAT2_ADVANCED_ARMOUR"</Category>
-<SubCategory>"RULES-EQCAT2_CHAIN"</SubCategory>
-<Cost>"75 gc"</Cost>
-<Encumbrance>"80"</Encumbrance>
-<Locations>"RULES-V1LOC_BODY, RULES-V1LOC_LEGS"</Locations>
-<ArmourPoints>"2"</ArmourPoints>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
-<Page>"112"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_ADVANCED_ARMOUR_CHAIN_SLEEVED_MAIL_COAT">
-<Description language="ENGLISH">"Sleeved Mail Coat"</Description>
-<Category>"RULES-EQCAT2_ADVANCED_ARMOUR"</Category>
-<SubCategory>"RULES-EQCAT2_CHAIN"</SubCategory>
-<Cost>"130 gc"</Cost>
-<Encumbrance>"100"</Encumbrance>
-<Locations>"RULES-V1LOC_BODY, RULES-V1LOC_ARMS, RULES-V1LOC_LEGS"</Locations>
-<ArmourPoints>"2"</ArmourPoints>
-<Availability>"RULES-DISPO2_AVERAGE"</Availability>
-<Page>"112"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_ADVANCED_ARMOUR_CHAIN_MAIL_LEGGINGS">
-<Description language="ENGLISH">"Mail Leggings"</Description>
-<Category>"RULES-EQCAT2_ADVANCED_ARMOUR"</Category>
-<SubCategory>"RULES-EQCAT2_CHAIN"</SubCategory>
-<Cost>"20 gc"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Locations>"RULES-V1LOC_LEGS"</Locations>
-<ArmourPoints>"2"</ArmourPoints>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Page>"112"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_ADVANCED_ARMOUR_CHAIN_FULL_MAIL_ARMOUR">
-<Description language="ENGLISH">"Full Mail Armour"</Description>
-<Category>"RULES-EQCAT2_ADVANCED_ARMOUR"</Category>
-<SubCategory>"RULES-EQCAT2_CHAIN"</SubCategory>
-<Cost>"170 gc"</Cost>
-<Encumbrance>"210"</Encumbrance>
-<Locations>"RULES-V1LOC_ALL"</Locations>
-<ArmourPoints>"3"</ArmourPoints>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Page>"112"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_ADVANCED_ARMOUR_PLATE_HELMET">
-<Description language="ENGLISH">"Helmet"</Description>
-<Category>"RULES-EQCAT2_ADVANCED_ARMOUR"</Category>
-<SubCategory>"RULES-EQCAT2_PLATE"</SubCategory>
-<Cost>"30 gc"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Locations>"RULES-V1LOC_HEAD"</Locations>
-<ArmourPoints>"2"</ArmourPoints>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Page>"112"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_ADVANCED_ARMOUR_PLATE_BREASTPLATE">
-<Description language="ENGLISH">"Breastplate"</Description>
-<Category>"RULES-EQCAT2_ADVANCED_ARMOUR"</Category>
-<SubCategory>"RULES-EQCAT2_PLATE"</SubCategory>
-<Cost>"70 gc"</Cost>
-<Encumbrance>"75"</Encumbrance>
-<Locations>"RULES-V1LOC_BODY"</Locations>
-<ArmourPoints>"2"</ArmourPoints>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Page>"112"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_ADVANCED_ARMOUR_PLATE_PLATE_BRACERS">
-<Description language="ENGLISH">"Plate Bracers"</Description>
-<Category>"RULES-EQCAT2_ADVANCED_ARMOUR"</Category>
-<SubCategory>"RULES-EQCAT2_PLATE"</SubCategory>
-<Cost>"60 gc"</Cost>
-<Encumbrance>"30"</Encumbrance>
-<Locations>"RULES-V1LOC_ARMS"</Locations>
-<ArmourPoints>"2"</ArmourPoints>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Page>"112"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_ADVANCED_ARMOUR_PLATE_PLATE_LEGGINGS">
-<Description language="ENGLISH">"Plate Leggings"</Description>
-<Category>"RULES-EQCAT2_ADVANCED_ARMOUR"</Category>
-<SubCategory>"RULES-EQCAT2_PLATE"</SubCategory>
-<Cost>"70 gc"</Cost>
-<Encumbrance>"40"</Encumbrance>
-<Locations>"RULES-V1LOC_LEGS"</Locations>
-<ArmourPoints>"2"</ArmourPoints>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Page>"112"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RULES-EQUI_ADVANCED_ARMOUR_PLATE_FULL_PLATE_ARMOUR">
-<Description language="ENGLISH">"Full Plate Armour"</Description>
-<Category>"RULES-EQCAT2_ADVANCED_ARMOUR"</Category>
-<SubCategory>"RULES-EQCAT2_PLATE"</SubCategory>
-<Cost>"400 gc"</Cost>
-<Encumbrance>"395"</Encumbrance>
-<Locations>"RULES-V1LOC_ALL"</Locations>
-<ArmourPoints>"5"</ArmourPoints>
-<Availability>"RULES-DISPO2_RARE"</Availability>
-<Page>"112"</Page>
 </EquipmentV2>
 <EquipmentV2 id="RULES-EQUI_CLOTHING_RAGS">
 <Description language="ENGLISH">"Rags"</Description>
@@ -9957,6 +9235,7 @@
 <DATA_SKILL>
 <Skill id="RULES-COMP_ACADEMIC_KNOWLEDGE_*">
 <Attribut>"RULES-ATTR_Int"</Attribut>
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Academic Knowledge (Various)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <RelatedTalents>""</RelatedTalents>
@@ -10017,6 +9296,7 @@
 </Skill>
 <Skill id="RULES-COMP_COMMON_KNOWLEDGE_*">
 <Attribut>"RULES-ATTR_Int"</Attribut>
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Common Knowledge (Various)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <RelatedTalents>"RULES-T_SEASONED_TRAVELLER"</RelatedTalents>
@@ -10161,6 +9441,7 @@
 </Skill>
 <Skill id="RULES-COMP_PERFORMER_*">
 <Attribut>"RULES-ATTR_Fel"</Attribut>
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Performer (Various)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <RelatedTalents>"RULES-T_CONTORTIONIST,RULES-T_MIMIC"</RelatedTalents>
@@ -10228,6 +9509,7 @@
 </Skill>
 <Skill id="RULES-COMP_SECRET_LANGUAGE_*">
 <Attribut>"RULES-ATTR_Int"</Attribut>
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Secret Language (Various)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <RelatedTalents>""</RelatedTalents>
@@ -10235,6 +9517,7 @@
 </Skill>
 <Skill id="RULES-COMP_SECRET_SIGNS_*">
 <Attribut>"RULES-ATTR_Int"</Attribut>
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Secret Signs (Various)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <RelatedTalents>""</RelatedTalents>
@@ -10278,6 +9561,7 @@
 </Skill>
 <Skill id="RULES-COMP_SPEAK_LANGUAGE_*">
 <Attribut>"RULES-ATTR_Int"</Attribut>
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Speak Language (Various)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <RelatedTalents>"RULES-T_LINGUISTICS,RULES-T_MIMIC,RULES-T_SEASONED_TRAVELLER"</RelatedTalents>
@@ -10300,6 +9584,7 @@
 </Skill>
 <Skill id="RULES-COMP_TRADE_*">
 <Attribut>""</Attribut>
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Trade (Various)"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <RelatedTalents>"RULES-T_ARTISTIC,RULES-T_DWARFCRAFT"</RelatedTalents>
@@ -12407,6 +11692,7 @@
 <Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_TIRING"</Quality>
 <Hand>"2"</Hand>
 <Type>"RULES-WTYPE2_FLAIL"</Type>
+<Note>""</Note>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-COMB_V2_FOIL">
@@ -12443,6 +11729,7 @@
 <Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_SLOW"</Quality>
 <Hand>"2"</Hand>
 <Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>""</Note>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-COMB_V2_HALBERD">
@@ -12455,6 +11742,7 @@
 <Quality>"RULES-WEAPQ_SPECIAL"</Quality>
 <Hand>"2"</Hand>
 <Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>""</Note>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-COMB_V2_HAND_WEAPON_SWORD_ETC">
@@ -12478,6 +11766,7 @@
 <Quality>""</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"Half"</Reload>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-COMB_V2_LANCE">
@@ -12548,6 +11837,7 @@
 <Quality>"RULES-WEAPQ_DEFENSIVE,RULES-WEAPQ_PUMMELLING"</Quality>
 <Hand>"2"</Hand>
 <Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>""</Note>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-COMB_V2_RAPIER">
@@ -12584,6 +11874,7 @@
 <Quality>"RULES-WEAPQ_FAST"</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"Half"</Reload>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-COMB_V2_SWORD_BREAKER">
@@ -12620,6 +11911,7 @@
 <Quality>"RULES-WEAPQ_SHRAPNEL,RULES-WEAPQ_UNRELIABLE"</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_GUNPOWDER"</Type>
+<Reload>"3 Full/6 Full"</Reload>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_BOLA">
@@ -12633,6 +11925,7 @@
 <Quality>"RULES-WEAPQ_SNARE"</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_ENTANGLING"</Type>
+<Reload>"Half"</Reload>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_BOW">
@@ -12646,6 +11939,8 @@
 <Quality>""</Quality>
 <Hand>"2"</Hand>
 <Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"Half"</Reload>
+<Note>""</Note>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_CROSSBOW">
@@ -12659,6 +11954,8 @@
 <Quality>""</Quality>
 <Hand>"2"</Hand>
 <Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"Full"</Reload>
+<Note>""</Note>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_CROSSBOW_PISTOL">
@@ -12672,6 +11969,7 @@
 <Quality>""</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_CROSSBOW"</Type>
+<Reload>"Full"</Reload>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_ELFBOW">
@@ -12685,6 +11983,8 @@
 <Quality>"RULES-WEAPQ_ARMOUR_PIERCING"</Quality>
 <Hand>"2"</Hand>
 <Type>"RULES-WTYPE2_LONGBOW"</Type>
+<Reload>"Half"</Reload>
+<Note>""</Note>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_FIREARM">
@@ -12698,6 +11998,8 @@
 <Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_UNRELIABLE"</Quality>
 <Hand>"2"</Hand>
 <Type>"RULES-WTYPE2_GUNPOWDER"</Type>
+<Reload>"2 Full"</Reload>
+<Note>""</Note>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_HOCHLAND_LONG_RIFLE">
@@ -12711,6 +12013,7 @@
 <Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_UNRELIABLE"</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_ENGINEER"</Type>
+<Reload>"2 Full"</Reload>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_IMPROVISED">
@@ -12723,6 +12026,7 @@
 <Quality>""</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"Half"</Reload>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_JAVELIN">
@@ -12736,6 +12040,7 @@
 <Quality>""</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"Half"</Reload>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_LASSO">
@@ -12749,6 +12054,8 @@
 <Quality>"RULES-WEAPQ_SNARE"</Quality>
 <Hand>"2"</Hand>
 <Type>"RULES-WTYPE2_ENTANGLING"</Type>
+<Reload>"Half"</Reload>
+<Note>""</Note>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_LONGBOW">
@@ -12762,6 +12069,8 @@
 <Quality>"RULES-WEAPQ_ARMOUR_PIERCING"</Quality>
 <Hand>"2"</Hand>
 <Type>"RULES-WTYPE2_LONGBOW"</Type>
+<Reload>"Half"</Reload>
+<Note>""</Note>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_NET">
@@ -12775,6 +12084,7 @@
 <Quality>"RULES-WEAPQ_SNARE"</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_ENTANGLING"</Type>
+<Reload>"Full"</Reload>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_PISTOL">
@@ -12788,6 +12098,7 @@
 <Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_UNRELIABLE"</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_GUNPOWDER"</Type>
+<Reload>"2 Full"</Reload>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_REPEATER_CROSSBOW">
@@ -12801,6 +12112,8 @@
 <Quality>"RULES-WEAPQ_SPECIAL"</Quality>
 <Hand>"2"</Hand>
 <Type>"RULES-WTYPE2_CROSSBOW"</Type>
+<Reload>"Free"</Reload>
+<Note>""</Note>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_REPEATER_FIREARM">
@@ -12814,6 +12127,8 @@
 <Quality>"RULES-WEAPQ_EXPERIMENTAL,RULES-WEAPQ_SPECIAL"</Quality>
 <Hand>"2"</Hand>
 <Type>"RULES-WTYPE2_ENGINEER"</Type>
+<Reload>"Free"</Reload>
+<Note>""</Note>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_REPEATER_PISTOL">
@@ -12827,6 +12142,7 @@
 <Quality>"RULES-WEAPQ_EXPERIMENTAL,RULES-WEAPQ_SPECIAL"</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_ENGINEER"</Type>
+<Reload>"Free"</Reload>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_SHORTBOW">
@@ -12840,6 +12156,8 @@
 <Quality>""</Quality>
 <Hand>"2"</Hand>
 <Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"Half"</Reload>
+<Note>""</Note>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_SLING">
@@ -12853,6 +12171,7 @@
 <Quality>""</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_SLING"</Type>
+<Reload>"Half"</Reload>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_SPEAR">
@@ -12866,6 +12185,7 @@
 <Quality>""</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"Half"</Reload>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_STAFF_SLING">
@@ -12879,6 +12199,8 @@
 <Quality>""</Quality>
 <Hand>"2"</Hand>
 <Type>"RULES-WTYPE2_SLING"</Type>
+<Reload>"Full"</Reload>
+<Note>""</Note>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_THROWING_AXE_HAMMER">
@@ -12892,6 +12214,7 @@
 <Quality>""</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_THROWING"</Type>
+<Reload>"Half"</Reload>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_THROWING_DAGGER_STAR">
@@ -12905,6 +12228,7 @@
 <Quality>""</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_THROWING"</Type>
+<Reload>"Half"</Reload>
 <Page>"108"</Page>
 </Weapon>
 <Weapon id="RULES-PROJ_V2_WHIP">
@@ -12918,6 +12242,7 @@
 <Quality>"RULES-WEAPQ_SNARE"</Quality>
 <Hand>"1"</Hand>
 <Type>"RULES-WTYPE2_ENTANGLING"</Type>
+<Reload>"Half"</Reload>
 <Page>"108"</Page>
 </Weapon>
 </DATA_WEAPON>

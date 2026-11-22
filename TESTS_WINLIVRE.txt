@@ -1,0 +1,42 @@
+TESTS A L ECRAN - WINLIVRE (prepare le 15/11/2026, source : A_FAIRE.xml)
+Cocher [x] quand fait ; dire a Claude le resultat, il met A_FAIRE.xml et Log a jour.
+
+PRINCIPE COMMUN
+- Travailler sur un livre de TEST (jamais un livre officiel) : dans WinLivre, choisir
+  la bonne version (V1 / V2 / V4) puis creer ou ouvrir un livre jetable.
+- Les fiches « Nouveau... » s ouvrent par CLIC DROIT sur la branche du chapitre (menu contextuel).
+- Apres chaque creation : verifier la fiche, enregistrer, FERMER puis ROUVRIR le livre,
+  et controler que l element est toujours la avec ses valeurs.
+- Noter tout champ vide, libelle brut (RULES-...) ou message d erreur.
+
+A. CREATIONS NEUVES (A_FAIRE : WINLIVRE-CREATION-PAR-VERSION / WINLIVRE-EDITION)
+[x] A1. (FAIT 15/11/2026, valide par Nono) ARME V2 neuve : version V2, clic droit sur la branche des armes > nouvelle arme.
+        Faire une arme de corps a corps ET une arme de tir (codes COMB_V2_ / PROJ_V2_).
+        Verifier : libelle de la categorie de tir, valeurs gardees apres reouverture.
+[x] A2. (FAIT 15/11/2026, valide par Nono ; livre DATABASE/WFRP1/BOOK_TEST_WINLIVRE.Xml) ETHNIE V1 SANS SOUS-BRANCHE : version V1, nouvelle ethnie, ne creer aucune
+        sous-branche. Verifier : Rule, Wounds, FatePoints, Page ; reouverture sans plantage.
+[x] A3. (FAIT 15/11/2026, valide par Nono) ETHNIE NEUVE EN V2, puis EN V4 : codes d attributs, Page ; (V4 : panneau de noms
+        deja valide, juste verifier que rien n a bouge).
+[x] A4. (FAIT 15/11/2026, valide par Nono, tout OK) AUTRES BOUTONS « NOUVEAU » (un essai chacun, en V4 sauf mention) :
+        [ ] sort        [ ] armure      [ ] qualite     [ ] trapping
+        [ ] maladie     [ ] affliction  [ ] race        [ ] competence
+        [ ] talent      [ ] specialisation de competence / de talent
+        V1 : [ ] divinite [ ] culte [ ] sort V1 [ ] objet V1 [ ] classe [ ] handicap [ ] familier
+        Pour chacun : la fiche s ouvre, on saisit un nom, enregistrement OK, relecture OK.
+
+B. LIVRES OFFICIELS (A_FAIRE : WINLIVRE-LIVRES-OFFICIELS)
+[x] B1. (FAIT 15/11/2026, valide par Nono) Ouvrir le Rulebook (officiel) : fiche d ETHNIE et fiche de CARRIERE en LECTURE SEULE
+        (aucun champ modifiable, pas de bouton Nouveau). Puis dans un livre non officiel :
+        les memes fiches sont modifiables.
+[x] B2. (FAIT 15/11/2026, valide par Nono) TYPE DE SORT sur un livre officiel : la fiche de sort affiche le type, non modifiable.
+[x] B3. (FAIT 15/11/2026, valide par Nono) UPDATE sur le Rulebook anglais : lancer Update (ou « mise a jour ») et verifier que
+        le livre se recharge sans perte (nombre de carrieres / talents identique avant et apres).
+        ATTENTION : faire une copie du dossier DATABASE avant (git status doit rester propre).
+
+C. AFFICHAGE (A_FAIRE : CHAPITRE-II-WINLIVRE)
+[x] C1. (FAIT 15/11/2026, valide par Nono) Livre « Races and Regional Options » : chapitre II, les 31 talents et traits
+        s affichent en texte (Explanation + page), sans erreur.
+
+D. AU PASSAGE
+[x] D1. (FAIT 15/11/2026, valide par Nono) Ouvrir un autre livre APRES un Update : plus d ebauche parasite dans les listes
+        (A_FAIRE WINLIVRE-LISTES-LOCALES, limite connue, juste a observer).

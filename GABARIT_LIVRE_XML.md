@@ -1,229 +1,562 @@
-# Gabarit de reference pour saisir un nouveau livre (BOOK_*.Xml)
+# Template for entering a new book (BOOK_*.Xml)
 
-Ce fichier n'est PAS un des trois fichiers de suivi (CONTEXT.md/Log.txt/A FAIRE.txt) : c'est
-une reference technique de structure XML, a consulter avant de saisir un nouveau livre au lieu
-de rouvrir un livre existant pour retrouver le format a chaque fois. Extension .md volontaire
-(pas .Xml) pour ne jamais etre charge comme un livre par le programme.
+A technical reference for the XML structure of a book. Use it when you enter a new book, instead of
+reopening an existing book to find the format again. The `.md` extension is deliberate (not
+`.Xml`) so the program never loads this file as a book. The schemas (`SCHEMA_*.xsd`) carry the
+per-block annotations; this guide gives the overview and the conventions.
 
-A METTRE A JOUR si un bloc DATA_* nouveau est rencontre, ou si un champ change de convention.
-
-## En-tete obligatoire de tout BOOK_*.Xml
+## Required header of every BOOK_*.Xml
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <DATA_BOOK>
 <CODE_BOOK>"XXXX"</CODE_BOOK>
-<BOOK>"BOOK NOM EN MAJUSCULES SANS PONCTUATION"</BOOK>
+<BOOK>"BOOK NAME IN CAPITALS WITHOUT PUNCTUATION"</BOOK>
 <language>"ENGLISH"</language>
 <VERSION>"WFRP4"</VERSION>
-<OFFICIAL>"1"</OFFICIAL>       <!-- 1 = Cubicle7 officiel, 2 = fan/Community Content -->
-<COMPLETE>"1"</COMPLETE>       <!-- 0 tant que la saisie n'est pas finie -->
-<REVISION>"AAAAMMJJ"</REVISION>  <!-- facultatif, ecrit par WinLivre (Publier une revision) ; distinct de VERSION -->
-<REVISION_LABEL>"Texte libre"</REVISION_LABEL>  <!-- facultatif, libelle saisi a la publication, juste apres REVISION -->
-<DISCLAIMER>"..."</DISCLAIMER> <!-- A NE JAMAIS OUBLIER (rate deux fois de suite, 26/09/2026) :
-     copier le texte exact de la page de copyright du livre source (page 2 en general,
-     "No part of this publication may be reproduced..." + "(c) Copyright Games Workshop
-     Limited [annee]..."). Un livre existant qui n'en a pas est un oubli a corriger, pas
-     un exemple a suivre. -->
+<OFFICIAL>"1"</OFFICIAL>       <!-- 1 = official Cubicle 7 book, 2 = fan / Community Content -->
+<COMPLETE>"1"</COMPLETE>       <!-- 0 while the entry is not finished -->
+<REVISION>"YYYYMMDD"</REVISION>  <!-- optional, written by WinLivre (Publish a revision); distinct from VERSION -->
+<REVISION_LABEL>"Free text"</REVISION_LABEL>  <!-- optional, label typed at publication, right after REVISION -->
+<DISCLAIMER>"..."</DISCLAIMER> <!-- DO NOT FORGET: copy the exact text of the copyright page of the
+     source book (usually page 2: "No part of this publication may be reproduced..." +
+     "(c) Copyright Games Workshop Limited [year]..."). An existing book without one is an
+     omission to fix, not an example to follow. -->
 <DATA_LABEL>
 <Label language="ENGLISH">
-<Text name="XXXX-BOOK NOM EN MAJUSCULES SANS PONCTUATION">"Titre affiche"</Text>
+<Text name="XXXX-BOOK BOOK NAME IN CAPITALS WITHOUT PUNCTUATION">"Displayed title"</Text>
 </Label>
 <Label language="FRANCAIS">
-<Text name="XXXX-BOOK NOM EN MAJUSCULES SANS PONCTUATION">"Titre affiche"</Text>
+<Text name="XXXX-BOOK BOOK NAME IN CAPITALS WITHOUT PUNCTUATION">"Displayed title"</Text>
 </Label>
 </DATA_LABEL>
-... blocs DATA_* du contenu ...
+... DATA_* content blocks ...
 </DATA_BOOK>
 ```
 
-- `CODE_BOOK` : prefixe court unique (4-6 lettres), reutilise devant chaque id (`XXXX-...`).
-- Le nom du fichier peut avoir des underscores OU des espaces (les deux existent deja dans
-  DATABASE/WFRP4) ; la valeur de `<BOOK>` doit correspondre exactement a l'entree ajoutee dans
-  `INI.TXT` (cle `BOOKWFRP4=`, liste `[BOOK ...]` concatenee sans separateur) pour que le livre
-  soit cochable dans le menu.
-- Pas d'apostrophe dans `<BOOK>`/`CODE_BOOK` (aucun livre existant n'en a).
+- `CODE_BOOK`: unique short prefix (4-6 letters), reused in front of every id (`XXXX-...`).
+- The file name may contain underscores OR spaces (both exist in DATABASE/WFRP4); the value of
+  `<BOOK>` must match exactly the entry added to `INI.TXT` (key `BOOKWFRP4=`, the `[BOOK ...]`
+  list concatenated without a separator) for the book to be tickable in the menu.
+- No apostrophe in `<BOOK>` / `CODE_BOOK` (no existing book has one).
+- Every new book also carries `<BOOKNAME>` (display name without "BOOK", placed under `<BOOK>` in
+  the header). `<BOOK>` stays the KEY used by characters, by INI and by `Text`; `BOOKNAME` is only
+  a fallback shown when no translated label exists (menu book grid, WinLivre root).
 
-## DATA_SPELL (sorts)
+## DATA_SPELL (spells)
 
 ```xml
 <DATA_SPELL>
 <Sort id="XXXX-CODE_01">
-<Description language="ENGLISH">"Nom du sort"</Description>
-<Explanation language="ENGLISH">"Texte integral en anglais, guillemets internes sans echappement particulier."</Explanation>
-<Target>"1"</Target>                    <!-- ou "You", "AoE (BATTR_WP)m", "AoE (ATTR_WP) miles" -->
-<Duration>"Instant"</Duration>          <!-- ou "(BATTR_WP) Rounds/minutes/hours", "(ATTR_WP) days", "Special" -->
-<Range>"Touch"</Range>                  <!-- ou "You", "(ATTR_WP)m" -->
-<Talent>"RULES-T0088_XXX"</Talent>      <!-- Talent qui donne acces (Domain Magic) ou RULES-T0089 (Minor Magic) -->
-<Level>"3"</Level>                      <!-- Casting Number (CN) du livre -->
-<TypSpell>"Domain Magic"</TypSpell>     <!-- ou "Minor Magic" pour les Petty Spells -->
+<Description language="ENGLISH">"Spell name"</Description>
+<Explanation language="ENGLISH">"Full English text, inner quotation marks need no special escaping."</Explanation>
+<Target>"1"</Target>                    <!-- or "You", "AoE (BATTR_WP)m", "AoE (ATTR_WP) miles" -->
+<Duration>"Instant"</Duration>          <!-- or "(BATTR_WP) Rounds/minutes/hours", "(ATTR_WP) days", "Special" -->
+<Range>"Touch"</Range>                  <!-- or "You", "(ATTR_WP)m" -->
+<Talent>"RULES-T0088_XXX"</Talent>      <!-- Talent that gives access (Arcane Magic) or RULES-T0089 (Petty Magic) -->
+<Level>"3"</Level>                      <!-- Casting Number (CN) from the book -->
+<TypSpell>"Domain Magic"</TypSpell>     <!-- or "Minor Magic" for Petty Spells -->
 </Sort>
 </DATA_SPELL>
 ```
 
-- `(ATTR_WP)` = valeur pleine de Volonte, `(BATTR_WP)` = Bonus de Volonte (meme logique pour
-  les autres caracteristiques : `ATTR_S`, `BATTR_S`, etc., a verifier au cas par cas).
-- Les 8 Lores arcaniques du Rulebook ont deja leur Talent, pas besoin d'en creer :
+- `(ATTR_WP)` = full Willpower value, `(BATTR_WP)` = Willpower Bonus (same logic for the other
+  characteristics: `ATTR_S`, `BATTR_S`, etc.; check case by case).
+- The 8 arcane Lores of the Rulebook already have their Talent, no need to create one:
   `RULES-T0088_BETE` (Beasts), `RULES-T0088_MORT` (Death), `RULES-T0088_FEU` (Fire),
   `RULES-T0088_CIEUX` (Heavens), `RULES-T0088_METAL` (Metal), `RULES-T0088_VIE` (Life),
-  `RULES-T0088_LUMIERE` (Light), `RULES-T0088_OMBRE` (Shadows). Pour une Lore qui n'existe nulle
-  part encore (culte, domaine specifique), creer un Talent de **specialisation** dedie (voir
-  `DATA_TALENT_SPECIALIZATION` ci-dessous, PAS `DATA_TALENT`) et y rattacher les sorts, **avec
-  un id `RULES-T0088_XXX`** (jamais le prefixe du livre courant) : le prefixe de livre est
-  retire avant toute comparaison de regroupement (`CodeSansLivre`), donc il ne protege
-  d'aucune collision ; seul le code apres le livre (`T0088`) identifie la famille, dans les
-  DEUX mecanismes qui en dependent (calcul XP via `<Generique>`, ET classification
-  liste-maitre/popup via le bloc XML parent - voir juste en dessous). Bug trouve et corrige le
-  28/09/2026 sur 9 talents (HORNE-T0197/198/199, GRIM-T0203/204/205/206, TRIBE-T0207/208) :
-  saisis a tort dans `DATA_TALENT`, ils apparaissaient comme des Talents independants dans
-  WinTalents au lieu de rejoindre le popup de choix de specialisation. Detail dans CONTEXT.md §4.
-- Petty Spells : `Talent = "RULES-T0089"`, `TypSpell = "Minor Magic"`.
+  `RULES-T0088_LUMIERE` (Light), `RULES-T0088_OMBRE` (Shadows). For a Lore that exists nowhere yet
+  (a cult, a specific domain), create a dedicated **specialisation** Talent (see
+  `DATA_TALENT_SPECIALIZATION` below, NOT `DATA_TALENT`) and attach the spells to it, **with an id
+  `RULES-T0088_XXX`** (never the prefix of the current book). The book prefix is stripped before
+  any grouping comparison (`CodeSansLivre`), so it protects against no collision; only the code
+  after the book prefix (`T0088`) identifies the family, in BOTH mechanisms that depend on it (XP
+  calculation through `<Generique>`, AND master-list / popup classification through the parent
+  XML block). A talent entered by mistake in `DATA_TALENT` appears as an independent Talent in
+  WinTalents instead of joining the specialisation popup.
+- Petty Spells: `Talent = "RULES-T0089"`, `TypSpell = "Minor Magic"`.
 
-## DATA_TALENT (nouveau talent INDEPENDANT, PAS une specialisation)
+## DATA_TALENT (a new INDEPENDENT talent, NOT a specialisation)
 
 ```xml
 <DATA_TALENT>
 <Talent id="XXXX-T0000">
 <Attribut>""</Attribut>
-<Description language="ENGLISH">"Nom du talent"</Description>
+<Description language="ENGLISH">"Talent name"</Description>
 <Short language="ENGLISH">""</Short>
-<Explanation language="ENGLISH">"Texte integral."</Explanation>
+<Explanation language="ENGLISH">"Full text."</Explanation>
 <Skill>""</Skill>
 <Max>"1"</Max>
 <PDF>""</PDF>
-<Test language="ENGLISH">"Attribut ou competence testee, ou vide"</Test>
+<Test language="ENGLISH">"Characteristic or skill tested, or empty"</Test>
 </Talent>
 </DATA_TALENT>
 ```
 
-## DATA_TALENT_SPECIALIZATION (specialisation d'un talent generique existant)
+## DATA_TALENT_SPECIALIZATION (specialisation of an existing generic talent)
 
-**A utiliser des qu'un talent est une variante/domaine d'un talent generique deja en base**
-(Arcane Magic (Domaine), Bless (Dieu), Vice (Type), Rune Magic (Type), etc.) - JAMAIS
-`DATA_TALENT` pour ce cas, meme si le talent generique lui-meme vient d'un autre livre. Ce bloc
-ne charge que `Description` et `Generique` (xmlexportimport.pas ~l.1785-1848) - pas de
-`Attribut`/`Explanation`/`Skill`/`Max`/`PDF`/`Test` : si le livre source a un texte de saveur,
-le garder en commentaire XML juste au-dessus de l'entree plutot que de l'inventer un champ.
-Une entree ici est invisible dans la liste maitre de WinTalents (winpersonnage.pas/wintalent.pas
-filtrent `SousTalent = false`) : elle n'apparait que via le popup de choix de specialisation
-du talent generique, exactement comme les 8 Lores du Rulebook.
+**Use it whenever a talent is a variant / domain of a generic talent already in the database**
+(Arcane Magic (Domain), Bless (God), Vice (Type), Rune Magic (Type), etc.). NEVER use
+`DATA_TALENT` for this case, even if the generic talent itself comes from another book. This
+block loads only `Description` and `Generique`: no `Attribut` / `Explanation` / `Skill` / `Max` /
+`PDF` / `Test`. If the source book has flavour text, keep it as an XML comment just above the
+entry rather than inventing a field. An entry here is invisible in the WinTalents master list
+(it is filtered as a sub-talent): it only appears through the specialisation popup of the generic
+talent, exactly like the 8 Lores of the Rulebook.
 
 ```xml
 <DATA_TALENT_SPECIALIZATION>
 <Talent id="RULES-T0088_XXX">
-<Description language="ENGLISH">"Arcane Magic (Nom du domaine)"</Description>
-  <!-- Texte de saveur du livre source, garde en commentaire (non charge par ce bloc). -->
+<Description language="ENGLISH">"Arcane Magic (Domain name)"</Description>
+  <!-- Flavour text from the source book, kept as a comment (not loaded by this block). -->
 <Generique>"RULES-T0088_*"</Generique>
 </Talent>
 </DATA_TALENT_SPECIALIZATION>
 ```
 
-## DATA_CAREER (nouvelle carriere)
+## DATA_CAREER (a new career)
 
 ```xml
 <DATA_CAREER>
 <Career id="XXXX-WORKnnn">
-<Description language="ENGLISH">"Nom de la carriere"</Description>
-<Explanation language="ENGLISH">"Texte integral."</Explanation>
-<Skill>"RULES-COMPCOMB_BASE"</Skill>   <!-- competence "signature" utilisee ailleurs -->
-<Class>"RULES-CLASS_WARR"</Class>     <!-- classe (Warrior, Academic, Rogue, etc.) -->
+<Description language="ENGLISH">"Career name"</Description>
+<Explanation language="ENGLISH">"Full text."</Explanation>
+<Skill>"RULES-COMPCOMB_BASE"</Skill>   <!-- "signature" skill used elsewhere -->
+<Class>"RULES-CLASS_WARR"</Class>     <!-- class (Warrior, Academic, Rogue, etc.) -->
 <SUBCHAPTER_LEVEL>
 <Level id="1">
-<Description language="ENGLISH">"Nom du niveau 1"</Description>
+<Description language="ENGLISH">"Level 1 name"</Description>
 <Salary>"TIERS_BRASS 1"</Salary>
 </Level>
 <!-- Level id="2", "3", "4"... -->
 </SUBCHAPTER_LEVEL>
 <SUBCHAPTER_ATTR>
 <Attribut name="RULES-ATTR_WS">"1"</Attribut>
-<!-- une ligne par caracteristique, valeur = nombre d'avancees offertes -->
+<!-- one line per characteristic, value = number of advances offered -->
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
 <Skill name="RULES-COMPXXX">"1"</Skill>
-  <!-- commentaire = nom anglais de la competence, niveau = numero du Level qui la debloque -->
+  <!-- comment = English name of the skill, value = number of the Level that unlocks it -->
 </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
 <Talent name="RULES-T0000">"1"</Talent>
-  <!-- idem, "/" pour un choix ("RULES-T0096/RULES-T0121"), "_*" pour une famille -->
+  <!-- same; "/" for a choice ("RULES-T0096/RULES-T0121"), "_*" for a family -->
 </SUBCHAPTER_TALENT>
 <SUBCHAPTER_ITEM>
-<Item name="Nom de l'objet ou code RULES-...">"1"</Item>
-  <!-- niveau qui debloque l'objet ; repeter la ligne = plusieurs exemplaires -->
+<Item name="Item name or RULES-... code">"1"</Item>
+  <!-- level that unlocks the item; repeat the line = several copies -->
 </SUBCHAPTER_ITEM>
 </Career>
 </DATA_CAREER>
 ```
 
-### Equipement generique d'une carriere (« une arme au choix »)
+### Generic career equipment ("a weapon of your choice")
 
-Une ligne `Item` de `SUBCHAPTER_ITEM` peut etre un objet precis ou un choix. Trois formes pour les armes :
+An `Item` line of `SUBCHAPTER_ITEM` can be a specific item or a choice. Three forms for weapons:
 
-| Ligne `Item name=` | Sens pour le joueur | Condition |
+| `Item name=` line | Meaning for the player | Condition |
 |---|---|---|
-| code d'une arme (`RULES-COMB_SWORD`) | cette arme | la fiche `Weapon` existe |
-| code de competence de combat (`RULES-COMP_MELEE__BASIC`, `RULES-COMP_RANGED__BOW`) | une arme de cette competence | les armes portent cette competence dans leur `Skill` ; les munitions sont exclues |
-| `..._*` de competence (`RULES-COMP_MELEE__*`) | une arme de n'importe quelle specialisation de cette famille | idem |
-| `RULES-COMB_*` / `RULES-PROJ_*` (ancien joker) | n'importe quelle arme (corps a corps / tir), choisie par prefixe de code | exige une fiche `Weapon id="RULES-COMB_*"` : son `Description` est le libelle affiche (« Melee Weapon (Any) ») ; a ne creer que si aucune competence ne convient |
+| a weapon code (`RULES-COMB_SWORD`) | that weapon | the `Weapon` entry exists |
+| a combat skill code (`RULES-COMP_MELEE__BASIC`, `RULES-COMP_RANGED__BOW`) | a weapon of that skill | the weapons carry that skill in their `Skill`; ammunition is excluded |
+| a skill `..._*` (`RULES-COMP_MELEE__*`) | a weapon of any specialisation of that family | same |
+| `RULES-COMB_*` / `RULES-PROJ_*` (old wildcard) | any weapon (melee / ranged), chosen by code prefix | needs a `Weapon id="RULES-COMB_*"` entry: its `Description` is the displayed label ("Melee Weapon (Any)"); create it only when no skill fits |
 
-Preferer le code de competence : le libelle vient de la competence et aucune fiche factice n'est a creer. Dans WinLivre le choix se fait dans une liste de libelles ; le code reste dans le XML (la liste ne propose pas encore la forme `__*`, qui se saisit a la main pour l'instant).
+Prefer the skill code: the label comes from the skill and no dummy entry has to be created. In
+WinLivre the choice is made from a list of labels; the code stays in the XML (the list does not
+yet offer the `__*` form, which is typed by hand for now).
 
-## Autres blocs deja rencontres (a detailler ici la prochaine fois qu'on les utilise)
+## DATA_WEAPON (weapon)
 
-`DATA_WEAPON`, `DATA_ARMOR`, `DATA_TRAPPING`, `DATA_CAREER_SPECIE` (rattacher une
-carriere a une Race entiere), `DATA_SPECIE_CAREER_CHOICE`, `DATA_SKILL`, `DATA_RACE`,
-`DATA_SPECIE`, `DATA_NATION`, `DATA_SPELL_TALENT`. Liste complete des DATA_* existants :
-voir `grep -hoE "^<DATA_[A-Z_]+>" DATABASE/WFRP4/*.Xml | sort -u`.
+```xml
+<DATA_WEAPON>
+<Weapon id="RULES-COMB_SWORD">
+<Description language="ENGLISH">"Sword"</Description>
+<Skill>"RULES-COMP_MELEE__BASIC"</Skill>   <!-- combat skill; "-" = no skill (ammunition) -->
+<Damage>"+(BATTR_S)+4"</Damage>            <!-- formula: characteristic bonus + constant -->
+<Availability>"RULES-DISPO_COMMON"</Availability>   <!-- COMMON / LIMITED / RARE / EXOTIC -->
+<Reach>"RULES-WEAPR_MID"</Reach>
+<Price>"1CO"</Price>                       <!-- CO, PA, SB -->
+<Encumbrance>"1"</Encumbrance>
+<Quality>"RULES-WEAPB_DEFENSIVE,RULES-WEAPB_UNDAMAGING"</Quality>   <!-- see DATA_WEAPON_BONUS; "-" = none -->
+<Hand>"1"</Hand>
+<Ammunition>"0"</Ammunition>
+<Type>"RULES-WTYPE_SWORD"</Type>
+<Page>92</Page>
+</Weapon>
+</DATA_WEAPON>
+```
 
-## Conventions de codes (a lire avant de saisir quoi que ce soit)
+- **`Description` and `Damage` are mandatory**, with `Description`, `Skill`, `Damage` first, in that
+  order (`Skill` is optional for the schema, but every book gives it: `-` = no skill). The rest is
+  optional and in any order (a book may omit `Availability` and `Price`), except `Page`, which
+  comes last.
+- **`Skill`**: combat skill code (`RULES-COMP_MELEE__BASIC`, `__PARRY`, `RULES-COMP_RANGED__*`...),
+  see `DATA_SKILL_SPECIALIZATION`. `-` = no skill: the weapon sheet then shows no skill line.
+- **`Damage`**: formula evaluated at use. `(BATTR_S)` = Strength Bonus, `+4` = constant.
+- **`Reach`**: melee weapon = reach code `RULES-WEAPR_*` (PERSO, SHORT, CLOSE, MID, LONG, BIG, HUGE);
+  ranged weapon = range in yards (`"100"`) or a Strength formula (`"(BATTR_S)X3"` in the Rulebook,
+  `"(BATTR_S)x3"` in Archives II: the text is displayed as is, upper or lower case).
+- **Ammunition**: an arrow, bolt or bullet is a `Weapon` with an id `RULES-MUNI_*`
+  (`RULES-MUNI_ARROW`): `Skill` = skill of the weapon that fires it (`RULES-COMP_RANGED__BOW`),
+  `Ammunition` = number of projectiles in the lot (12), `Damage` and `Reach` = modifiers added to
+  those of the weapon (`"+1"`, `"+50"`, `"-10"`, `"/2"`), `Hand` = 0. The sheet of an ammunition
+  does not show the skill.
+- **`Quality`**: codes separated by commas, from the `DATA_WEAPON_BONUS` catalogue
+  (`RULES-WEAPB_*`); a rated quality takes its value after a space (`RULES-WEAPB_RELOAD 2`,
+  `RULES-WEAPB_SHIELD 3`). A numeric quality carried by the weapon (Might, Protection) also
+  modifies the bearer.
+- **`Hand`**: number of hands (`1` or `2`; 0 for ammunition). **`Ammunition`**: 0 for an ordinary
+  weapon, number of projectiles of the lot for ammunition. **`Type`**: `RULES-WTYPE_*` code
+  (weapon family, e.g. sword, axe; used by per-weapon-type bonuses).
+- **`InherentCraftsmanship`**: code of a craftsmanship (`DATA_CRAFTMANSHIP`) already built into the
+  weapon.
+- **Modifiers** (`ModifyCarac`, `ModifyDamage`...): the numeric effects of the carried weapon, as in
+  the XSD (`ModificateursEffets`).
+- The Rulebook weapons are the most complete: use them as a model (`RULES-COMB_SWORD` for melee, a
+  bow for ranged).
 
-- **Identifiant** = `<CODE_BOOK>-<TYPE>_<n>` : `PARRA-RACE_HPARR` (ethnie), `PARRA-TRAP_001` (objet), `LUSTR-WORK123` (carriere), `NATIO-T0017` (talent). Le prefixe est celui du livre qui DEFINIT la fiche.
-- **Exception** : une specialisation d'un element du Rulebook garde `RULES-` meme dans un autre livre (`RULES-COMPLANG_STRIG`, `RULES-T0088_XXX`) ; seul le code apres le prefixe identifie la famille.
-- **Separateurs** : `/` = au choix (`RULES-T0103/RULES-T0078`), `_*` = une specialisation a choisir (`RULES-COMPCHEV_*`), `RULES-T*` = talent aleatoire, `,` = liste (`SpellTypes`, talents d'un trait).
-- **Libelles** : tout texte affiche est un `Text name="..."` de `DATA_LABEL` ou de INTERFACE.Xml ; les champs ne portent que le code (`RULES-LAB_193`).
-- **Races et ethnies, vocabulaire inverse** : `DATA_SPECIE` = les ETHNIES (`RULES-RACE_HUM`), son champ `Ethnic` = la RACE (`RULES-SPECIE_HUMAN`) ; `DATA_RACE` = les races.
-- **Guillemets** : le texte d'une balise est entre guillemets doubles litteraux, `<Max>"1"</Max>`, sauf `<Page>` (`<Page>38</Page>`).
-- **`<Page>`** : page du livre anglais source, `"45-46"` pour plusieurs pages ; sert d'affichage quand le texte est absent (version sans licence).
+### DATA_WEAPON_BONUS (weapon qualities and flaws)
 
-## DATA_SPECIE (ethnie), modele : BOOK_PARRAVONESE_STRIGANY_SIGNALLER.Xml
+```xml
+<DATA_WEAPON_BONUS>
+<BonusMalus id="RULES-WEAPB_DEFENSIVE">
+<Description language="ENGLISH">"Defensive"</Description>
+<Explanation language="ENGLISH">"Defensive weapons are designed to parry..."</Explanation>
+<Short language="ENGLISH">"+1 SL when opposing an attack"</Short>
+<Modifier>"+"</Modifier>
+<Page>298</Page>
+</BonusMalus>
+</DATA_WEAPON_BONUS>
+```
+
+- `Description` = name, `Explanation` = text of the book, `Short` = one-line summary shown in lists
+  and on the PDF.
+- **`Modifier`**: `+` = quality, `-` = flaw (Slow, Undamaging...). Mandatory.
+- **`NeedsValue` `"1"`**: the quality must receive a rating when a weapon cites it (`Reload 3`,
+  `Blast 5`, `Repeater`).
+- `WeaponQuality`: other qualities granted by this one (`Parry` = Balanced + Defensive), shown with
+  the carried weapon. `Talent`: talent granted to the bearer.
+- Numeric effect = `ModifyCarac`, `ModifyDamage`... from the common group (a CARRIED weapon quality
+  modifies the bearer). Without a numeric effect, the quality is only text.
+
+## DATA_ARMOR (armour)
+
+```xml
+<DATA_ARMOR>
+<Armor id="RULES-ARMO_MAIL_SHIRT">
+<Description language="ENGLISH">"Mail Shirt"</Description>
+<Availability>"RULES-DISPO_LIMITED"</Availability>
+<Price>"2CO"</Price>                       <!-- optional: pieces that cannot be bought -->
+<Encumbrance>"2"</Encumbrance>
+<Quality>"RULES-ARMOB_FLEXIBLE,RULES-ARMOB_NOT_DISCREET"</Quality>
+<Location>"RULES-ARMOL_BODY"</Location>
+<ArmorPoint>"2"</ArmorPoint>
+<Type>"RULES-ARMOT_MAIL"</Type>
+<Page>300</Page>
+</Armor>
+</DATA_ARMOR>
+```
+
+- **Mandatory order** (the schema tolerates no other): `Description`, `Availability`, `Price`,
+  `Encumbrance`, `Quality`, `Location`, `ArmorPoint`, `Type`, `InherentCraftsmanship`, `Page`.
+  Mandatory: everything except `Price`, `Type`, `InherentCraftsmanship` and `Page`. A piece without
+  a quality writes `"-"`.
+- **`Location`**: `RULES-ARMOL_HEAD`, `_ARM`, `_BODY`, `_LEG` (and `_SHIELD` for a shield); a piece
+  covering several zones lists them separated by a comma (`RULES-ARMOL_ARM,RULES-ARMOL_BODY`).
+- **`ArmorPoint`**: armour points (AP) of the piece, per zone covered.
+- **`Quality`**: `RULES-ARMOB_*` codes from the `DATA_ARMOR_BONUS` catalogue, separated by commas.
+- **`Type`**: material `RULES-ARMOT_*` (`SOFTLEATHER`, `BOILLEDLEATHER`, `MAIL`, `PLATE`); absent
+  on WFRP5 shields.
+- **`InherentCraftsmanship`**: craftsmanship already built in (as for weapons).
+- `DATA_ARMOR_BONUS` (armour qualities, `BonusMalus` `RULES-ARMOB_*`): `Description`,
+  `Explanation`, then `Modifier` = **short free text** of the effect (`"combinable with Plate"`,
+  not a `+` / `-` as for weapons) and optionally `NeedsValue`, `Corruption`, `Talent`,
+  `ModifyCarac`...
+- `DATA_ARMOR_SIMP`: armours of the optional "Quick Armour" rule (one line = a complete set:
+  `Availability`, `Price`, `Encumbrance`, `Quality`, `ArmorPoint`, no `Location`). The setting is
+  global (INI); it is not decided per book.
+
+## DATA_CRAFTMANSHIP (craftsmanship: item quality, rune, enchantment)
+
+```xml
+<DATA_CRAFTMANSHIP>
+<Craftsmanship id="DWARF-RUNE_RUNE_OF_CLEAVING">
+<Description language="ENGLISH">"Rune of Cleaving"</Description>
+<Explanation language="ENGLISH">"The weapon inflicts +1 Damage for each Rune of Cleaving."</Explanation>
+<Short language="ENGLISH">"Weapon rune, 10 SLs"</Short>
+<Max>"3"</Max>                              <!-- maximum number that can be placed on one item -->
+<Applies>Weapon</Applies>                   <!-- Weapon / Armour / Misc; absent = any item -->
+<ModifyDamage name="CC">1</ModifyDamage>
+<Modifier>""</Modifier>
+<Page>127</Page>
+</Craftsmanship>
+</DATA_CRAFTMANSHIP>
+```
+
+- This is what the player picks in the **Craftsmanship** column of the equipment; `Applies` filters
+  the proposed list according to the item (weapon, armour, miscellaneous).
+- **`Modifier`**: nature of the craftsmanship: `BONUS`, `PRACTICAL`, `UNRELIABLE`, `BULKY` or empty
+  (rune, enchantment). It drives the "with equipment" column of the PDF, never the total
+  (Practical / Unreliable).
+- **`Encumbrance`**: added encumbrance. **`RangeBonus`**: range bonus of ranged weapons.
+  **`WeaponQuality`**: added weapon qualities (`RULES-WEAPB_*` codes). **`AlternateWeapon`**: code
+  of another weapon the item becomes. **`Talent`**: talent granted (set on the chosen weapon or
+  armour).
+- Numeric effects: `ModifyDamage`, `ModifyCarac`, `ModifArmour`... from the common group; a
+  conditional effect carries `if="CODE-COND_xx"` (`DATA_CONDITION`) and is only displayed.
+- `Explanation` is optional, `Short` is mandatory. Order: `Description`, `Explanation`, `Short`,
+  then the other tags in any order, `Page` last.
+- **Value of numeric effects**: without quotation marks, sign included
+  (`<ModifyCarac name="RULES-ATTR_I">+10</ModifyCarac>`, `<ModifyDamage name="CC">1</ModifyDamage>`),
+  unlike text tags (`Max`, `Modifier`, `Talent`, `WeaponQuality` in quotation marks; `Applies`
+  without: `<Applies>Weapon</Applies>`). The `name` of a `ModifyDamage` = `CC` (melee) or `CT`
+  (ranged).
+- One magical ability with two versions (melee / ranged) = **two entries** (`..._05A` and `..._05B`
+  in Archives II, name followed by "(Melee)" / "(Ranged)").
+- A craftsmanship that only adds a **standard** weapon quality (Fast, Precise...) creates no
+  `WeaponQuality`: the book writes the code in `Explanation` / `Short` ("add RULES-WEAPB_FAST") and
+  the player adds it by hand.
+
+## DATA_STARSIGN (star signs, optional rule)
+
+```xml
+<DATA_STARSIGN>
+<StarSign id="ARCH2-STAR_WYMUND_THE_ANCHORITE">
+<Range>"01-05"</Range>                      <!-- d100 range that designates this sign -->
+<Description language="ENGLISH">"Wymund the Anchorite"</Description>
+<Title language="ENGLISH">"Sign of Enduring"</Title>
+<Classical>"Wymenos"</Classical>            <!-- classical name -->
+<Ascendant>"Midwinter"</Ascendant>
+<Dates>"Vorhexen 12th - Vorhexen 27th"</Dates>
+<God>"Manaan"</God>
+<Appearance language="ENGLISH">"A stern face"</Appearance>
+<Personality language="ENGLISH">"People born under..."</Personality>
+<Modifier name="RULES-ATTR_Fel">"2"</Modifier>      <!-- one line per modified characteristic -->
+<Modifier name="RULES-ATTR_Int">"-3"</Modifier>
+<Page>39</Page>
+</StarSign>
+</DATA_STARSIGN>
+```
+
+- The nine description tags (`Range` to `Personality`) are all mandatory, in that order; `Title`,
+  `Appearance` and `Personality` are translatable. Full order: those nine, then the `Variant`s, then
+  the `Modifier` / `Talent` (mixed), then `Page`. `Range`: `"96-00"` (the final 00 means 100);
+  `God`, `Dates`, `Ascendant` are free text (`"Vallich (Smithing and Ship Building (Nordland))"`).
+- The `Modifier` of a sign is **in quotation marks** (`"2"`, `"-3"`), unlike the `ModifyCarac` of
+  other blocks. A characteristic of the sign = `RULES-ATTR_*` code (`_S`, `_T`, `_Ag`, `_Int`,
+  `_WP`, `_Fel`, `_I`, `_WS`, `_BS`). A `Talent` may be a specialisation to choose
+  (`"RULES-T_CRAFTSMAN__*"`).
+- **Effects**: `Modifier name="RULES-ATTR_xx"` (signed value added to the characteristic) and/or
+  `Talent` (code of a granted talent). No effect = a purely narrative sign.
+- **`Variant range="1-3"`**: a sign with variants (Witchling Star) triggers a **d10 sub-roll**; each
+  `Variant` carries the range that selects it (`"1-3"`, or a single digit: `range="10"`) and its own
+  `Talent` / `Modifier` (the `Talent` before the `Modifier`). Effects outside a `Variant` apply to
+  every variant.
+- The block applies only if the book carries the `STARSIGN` option (see `DATA_OPTION_RULE`); the
+  "Star signs" checkbox of the Book step of WinCreation decides for the character being created.
+
+## DATA_DISEASE (diseases) and DATA_AFFLICTION (afflictions)
+
+```xml
+<DATA_DISEASE>
+<Disease name="RULES-DISEASE_BLOOD_ROT">             <!-- attribute name = the code (no id) -->
+<Description language="ENGLISH">"Blood Rot"</Description>
+<Contraction language="ENGLISH">"As a development of another disease or a Critical Wound."</Contraction>
+<Incubation language="ENGLISH">"Instant"</Incubation>
+<Duration language="ENGLISH">"1d10 days"</Duration>
+<Symptoms language="ENGLISH">"Blight, Fever (Severe), Malaise"</Symptoms>   <!-- optional -->
+<Page>186</Page>
+</Disease>
+</DATA_DISEASE>
+
+<DATA_AFFLICTION>
+<Affliction name="GRIM-AFFLICT_ALLERGY">
+<Description language="ENGLISH">"Allergy"</Description>
+<Explanation language="ENGLISH">"(Chaos Lore 01-05 / ...) You develop a severe allergic response..."</Explanation>
+<Page>31</Page>
+</Affliction>
+</DATA_AFFLICTION>
+```
+
+- These two catalogues feed the **Pathology** tab of WinPersonnage ("+ Affliction" / "+ Disease"
+  buttons). The **`name`** attribute is the code stored on the character (`BOOK-DISEASE_NAME`,
+  `BOOK-AFFLICT_NAME`): never rename it afterwards.
+- Numeric effects are **without quotation marks**
+  (`<ModifyCaracAleatoire name="RULES-ATTR_T">10</ModifyCaracAleatoire>`,
+  `<ModifySkillAttribut name="RULES-ATTR_Fel">-10</ModifySkillAttribut>`); an affliction with an
+  effect carries a single one of these tags in the Grimoire.
+- **Disease**: `Contraction`, `Incubation`, `Duration` are mandatory (text of the book,
+  translatable), `Symptoms` optional. No chance table (the book has no d100 roll).
+- **Affliction**: `Description` + `Explanation`; the d100 ranges per caster category stay as text in
+  `Explanation`.
+- **Permanent numeric effects** (optional, after the texts): `ModifyCarac` (fixed value) or
+  `ModifyCaracAleatoire` (value = a die face, rolled once when added and remembered),
+  `ModifySkillAttribut`... from the common group. A disease without a numeric effect is only text.
+
+## DATA_CORRUPTION_* (Chaos corruption and mutations)
+
+Five blocks work together for the Rulebook V4 corruption roll:
+
+```xml
+<DATA_CORRUPTION_PHYSICAL>                     <!-- per race: d100 range that gives a PHYSICAL corruption -->
+<Specie name="RULES-RACE_HUM">"01-50"</Specie>
+<Specie name="RULES-RACE_HELF">"-"</Specie>    <!-- "-" = never physical -->
+</DATA_CORRUPTION_PHYSICAL>
+<DATA_CORRUPTION_MENTAL>                       <!-- same, MENTAL: the two ranges complement each other -->
+<Specie name="RULES-RACE_HUM">"51-100"</Specie>
+</DATA_CORRUPTION_MENTAL>
+
+<DATA_CORRUPTION_PHYSICAL_CHANCE>              <!-- 2nd roll: d100 range -> mutation code -->
+<Chance name="01-05">"RULES-CORPHY_ANIMALISTIC_LEGS"</Chance>
+</DATA_CORRUPTION_PHYSICAL_CHANCE>
+<DATA_CORRUPTION_TABLE_PHYSICAL>               <!-- catalogue: code -> name, text, effects -->
+<Corruption name="RULES-CORPHY_ANIMALISTIC_LEGS">
+<Description language="ENGLISH">"Animalistic Legs"</Description>
+<Explanation language="ENGLISH">"+1 Movement"</Explanation>
+<ModifyCarac name="RULES-ATTR_Move">+1</ModifyCarac>
+<Page>184</Page>
+</Corruption>
+</DATA_CORRUPTION_TABLE_PHYSICAL>
+```
+
+- The catalogue (`*_TABLE_*`) and the chance table (`*_CHANCE`) are **deliberately separate**: a book
+  can renumber its chance table without changing the codes already stored on characters. The
+  **code** (`name` of `Corruption`, `RULES-CORPHY_*` / `RULES-CORMEN_*`) is therefore stable, never
+  a range.
+- **A book that adds a race** (Archives II, Ogre): only `DATA_CORRUPTION_PHYSICAL` and
+  `DATA_CORRUPTION_MENTAL` are needed, with one `Specie name="<race code>"` line (`"01-10"`
+  physical, `"11-100"` mental: the two ranges cover 1 to 100 with no gap). The chance tables and
+  catalogues stay those of the Rulebook.
+- Ranges: `"01-05"`; the final `00` means 100 (`"96-00"`); `"-"` = no range (the race never has
+  that type).
+- `DATA_CORRUPTION_TABLE_MENTAL`: `Description`, `Explanation`, `ModifyCarac*`.
+  `DATA_CORRUPTION_TABLE_PHYSICAL`: `Description`, `Explanation`, then a mix of `ModifyCarac` /
+  `ModifArmour` (one per location) / `ModifySkill` / `ModifySkillAttribut` / `Weapon` (natural
+  weapon). Many effects stay as text: only the simple deltas are numeric.
+- **WFRP2** (`SCHEMA_WFRP2.xsd`): `DATA_CORRUPTION_TABLE_DIVINE` + `DATA_CORRUPTION_DIVINE_CHANCE`
+  (Marks of the Gods: one table **per god**, `Lore` = divine lore, d100 range carried by
+  `Chance name lore`) and `DATA_CORRUPTION_TABLE_MUTATION` + `DATA_CORRUPTION_MUTATION_CHANCE`
+  (Chaos Mutations: a **d1000** roll `"001-005"`; `Fear` = fear points, `MutationType` = `Single` /
+  `Multiple N`, `Cosmetic`, `MutationBase` for successive takings of a mutation with per-rank
+  effects).
+
+## DATA_OPTION_RULE (optional rule wired to the engine)
+
+```xml
+<DATA_OPTION_RULE>
+<OptionRule id="ARCH2-OPTR_01">
+<Code>"STARSIGN"</Code>
+<Description language="ENGLISH">"Star Signs"</Description>
+<Explanation language="ENGLISH">"The following is an optional system..."</Explanation>
+<Page>39</Page>
+</OptionRule>
+</DATA_OPTION_RULE>
+```
+
+- **`Code`** = a switch known to the engine; there are only three: `QUICKARMOUR` (simplified
+  armours, Rulebook), `STARSIGN` (star signs, `DATA_STARSIGN`) and `CAREERALT` (alternative class and
+  career table, `DATA_RULE` + `DATA_CAREER_ROLL`). A new code has no effect until the engine reads it.
+- The user's choice is global (an `OPTION...` line of `INI.TXT`, remembered per book); for
+  `STARSIGN` and `CAREERALT` the Book step of WinCreation also lets the user decide for the
+  character being created. `QUICKARMOUR` stays global (it is decided per campaign).
+- `Code`, `Description` and `Explanation` are all three mandatory, in that order, `Page` last.
+  `Description` / `Explanation` are shown to the player in the options window: write there what the
+  option changes for them (Archives II copies the introduction of the book, with "(p.39)" at the
+  end).
+
+## DATA_RULE (book rule: career roll, background, ethnicity)
+
+```xml
+<DATA_RULE>
+<Rule id="LUSTR-RULE_LUSTRIA">
+<Description language="ENGLISH">"Lustrian Class and Career Table"</Description>
+<Explanation language="ENGLISH">"Offers a Lustria-specific table to roll your starting Class and Career..."</Explanation>
+<Page>192</Page>
+</Rule>
+</DATA_RULE>
+```
+
+- A `Rule` is a **label** (id + text) that other blocks cite: `DATA_CAREER_ROLL` (a d100 career table
+  that REPLACES the Rulebook's), `DATA_RULE_SPECIE` (skills / talents given to an ethnicity),
+  `DATA_RULE_BACKGROUND` (background roll), `DATA_RULE_BACKGROUND_COUNT`, `DATA_RULE_SKILL_ROLL`,
+  `DATA_RULE_TALENT_ROLL`. See the XSD annotations for the form of each.
+- `Explanation` (optional, translatable) = what the rule implies for creation: the player reads it
+  in the rules window and ticks or unticks it (one checkbox per book in the Book step).
+- `Class`: base class replaced by a **partial** rule (Seafarer); absent = a total rule.
+  `StartingMutation`: chance in % (1 to 99) of starting with a mutation, a d100 roll offered after
+  the career ("Special" lines of Races and Regional Options).
+- Order: `Description`, `Explanation`, `Class`, `StartingMutation`, `Page`; only `Description` is
+  mandatory. `Class` = class code (`"RULES-CLASS_RIVE"` in Sea of Claws, Seafarer rule).
+- Not to be confused with `DATA_OPTION_RULE`: that one wires an engine switch (`Code`), `DATA_RULE`
+  carries data only.
+
+## Other blocks (to be detailed here the next time they are used)
+
+`DATA_TRAPPING`, `DATA_CAREER_SPECIE` (attach a career to a whole Race), `DATA_SPECIE_CAREER_CHOICE`,
+`DATA_SKILL`, `DATA_RACE`, `DATA_SPECIE`, `DATA_NATION`, `DATA_SPELL_TALENT`. The complete list of
+existing DATA_* blocks is in the `xs:element` declarations of the schemas.
+
+## Code conventions (read before entering anything)
+
+- **Identifier** = `<CODE_BOOK>-<TYPE>_<n>`: `PARRA-RACE_HPARR` (ethnicity), `PARRA-TRAP_001` (item),
+  `LUSTR-WORK123` (career), `NATIO-T0017` (talent). The prefix is that of the book that DEFINES the
+  entry.
+- **Exception**: a specialisation of a Rulebook element keeps `RULES-` even in another book
+  (`RULES-COMPLANG_STRIG`, `RULES-T0088_XXX`); only the code after the prefix identifies the family.
+- **Separators**: `/` = either (`RULES-T0103/RULES-T0078`), `_*` = a specialisation to choose
+  (`RULES-COMPCHEV_*`), `RULES-T*` = random talent, `,` = list (`SpellTypes`, talents of a trait).
+- **Labels**: every displayed text is a `Text name="..."` of `DATA_LABEL` or of INTERFACE.Xml; fields
+  carry only the code (`RULES-LAB_193`).
+- **Races and ethnicities, inverted vocabulary**: `DATA_SPECIE` = the ETHNICITIES
+  (`RULES-RACE_HUM`), its `Ethnic` field = the RACE (`RULES-SPECIE_HUMAN`); `DATA_RACE` = the races.
+- **Quotation marks**: the text of a tag is between literal double quotes, `<Max>"1"</Max>`, except
+  `<Page>` (`<Page>38</Page>`), `<Applies>Weapon</Applies>` and the value of numeric effects
+  `ModifyCarac` / `ModifyDamage`... (`<ModifyCarac name="RULES-ATTR_Move">+1</ModifyCarac>`). The
+  `Modifier name=...` of a star sign, however, is between quotation marks.
+- **`<Page>`**: page of the English source book, `"45-46"` for several pages; it is what is shown
+  when the text is absent (version without licensed text).
+
+## DATA_SPECIE (ethnicity), model: BOOK_PARRAVONESE_STRIGANY_SIGNALLER.Xml
 
 ```xml
 <DATA_SPECIE>
 <Specie id="PARRA-RACE_HPARR">
 <Description language="ENGLISH">"Humans (Parravonese)"</Description>
-<Explanation language="ENGLISH">"Texte du livre."</Explanation>
-<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>          <!-- la RACE -->
+<Explanation language="ENGLISH">"Text of the book."</Explanation>
+<Ethnic>"RULES-SPECIE_HUMAN"</Ethnic>          <!-- the RACE -->
 <SUBCHAPTER_ATTR>
-<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>   <!-- une ligne par caracteristique -->
+<Attribut name="RULES-ATTR_WS">"2d10+20"</Attribut>   <!-- one line per characteristic -->
 <Attribut name="RULES-ATTR_Fate">"2"</Attribut>
 <Attribut name="RULES-ATTR_Wound">"1xBATTR_S+2xBATTR_T+1xBATTR_WP"</Attribut>
 </SUBCHAPTER_ATTR>
 <SUBCHAPTER_SKILL>
-<Skill>"RULES-COMPSOINANI"</Skill>             <!-- pas d'attribut name ici -->
-<Skill>"RULES-COMPCHEV_*"</Skill>              <!-- Ride (Any) : choix a la creation -->
+<Skill>"RULES-COMPSOINANI"</Skill>             <!-- no name attribute here -->
+<Skill>"RULES-COMPCHEV_*"</Skill>              <!-- Ride (Any): a choice at creation -->
 </SUBCHAPTER_SKILL>
 <SUBCHAPTER_TALENT>
-<Talent>"RULES-T0103/RULES-T0078"</Talent>     <!-- A ou B -->
-<Talent>"RULES-T*"</Talent>                    <!-- un talent aleatoire par ligne -->
+<Talent>"RULES-T0103/RULES-T0078"</Talent>     <!-- A or B -->
+<Talent>"RULES-T*"</Talent>                    <!-- one random talent per line -->
 </SUBCHAPTER_TALENT>
 <SUBCHAPTER_CAREER>
-<Career name="RULES-WORK02">"1"</Career>       <!-- poids dans le d100 ; X = hors tirage ; - = non tirable -->
+<Career name="RULES-WORK02">"1"</Career>       <!-- weight in the d100; X = outside the roll; - = cannot be rolled -->
 </SUBCHAPTER_CAREER>
 <Page>1</Page>
 </Specie>
 </DATA_SPECIE>
 ```
 
-Les poids de `SUBCHAPTER_CAREER` totalisent 100 par ethnie ; les fourchettes ne se saisissent jamais. Race du Rulebook : copier les caracteristiques de `RULES-RACE_HUM` quand le livre n'en donne pas.
+The weights of `SUBCHAPTER_CAREER` total 100 per ethnicity; the ranges are never entered. For a
+Rulebook race: copy the characteristics of `RULES-RACE_HUM` when the book gives none.
 
-## DATA_TRAPPING (objet divers)
+## DATA_TRAPPING (miscellaneous item)
 
 ```xml
 <DATA_TRAPPING>
 <Trapping id="PARRA-TRAP_001">
 <Description language="ENGLISH">"Signal Tower"</Description>
-<Theme>"RULES-LAB_193"</Theme>      <!-- Tools and Kits ; liste des codes dans le XSD -->
-<Availability>"RULES-DISPO_COMMON"</Availability>   <!-- facultatif -->
-<Price>"3PA 2SB"</Price>            <!-- facultatif : CO, PA, SB -->
+<Theme>"RULES-LAB_193"</Theme>      <!-- Tools and Kits; the list of codes is in the XSD -->
+<Availability>"RULES-DISPO_COMMON"</Availability>   <!-- optional -->
+<Price>"3PA 2SB"</Price>            <!-- optional: CO, PA, SB -->
 <Encumbrance>"0"</Encumbrance>
 <Page>2</Page>
 </Trapping>
@@ -242,22 +575,20 @@ Les poids de `SUBCHAPTER_CAREER` totalisent 100 par ethnie ; les fourchettes ne 
 </DATA_SKILL_SPECIALIZATION>
 ```
 
-Jamais dans `DATA_SKILL` : une competence qui a un `Generique` y serait une competence independante.
+Never in `DATA_SKILL`: a skill that has a `Generique` would become an independent skill there.
 
-## Blocs de carriere et de tirage
+## Career and roll blocks
 
-Voir les annotations `xs:documentation` de `SCHEMA_WFRP4.xsd` et `SCHEMA_COMMON.xsd` : `DATA_CAREER_SPECIE`, `DATA_CAREER_ROLL`, `DATA_CAREER_SUBCHOICE`, `DATA_SPECIE_CAREER_CHOICE`, `DATA_CAREER_BONUS`, `DATA_CAREER_ADAPTATION`, `DATA_CLASS_ITEM`, `DATA_SPECIE_TRAIT`, `DATA_RANDOM_TALENT`, `DATA_RANDOM_SPECIE`, et les effets (`ModifyCarac`, `ModifySkill`...).
+See the `xs:documentation` annotations of `SCHEMA_WFRP4.xsd` and `SCHEMA_COMMON.xsd`:
+`DATA_CAREER_SPECIE`, `DATA_CAREER_ROLL`, `DATA_CAREER_SUBCHOICE`, `DATA_SPECIE_CAREER_CHOICE`,
+`DATA_CAREER_BONUS`, `DATA_CAREER_ADAPTATION`, `DATA_CLASS_ITEM`, `DATA_SPECIE_TRAIT`,
+`DATA_RANDOM_TALENT`, `DATA_RANDOM_SPECIE`, and the effects (`ModifyCarac`, `ModifySkill`...).
 
-## Pieges connus (voir aussi A FAIRE.txt "REGLES DE METHODE")
+## Known pitfalls
 
-- Les commentaires XML `<!-- ... -->` a l'interieur d'un bloc peuvent faire planter le parseur
-  ou dupliquer une entree sur certains blocs (DATA_LABEL, DATA_SPECIE_CAREER_CHOICE,
-  DATA_SKILL_SPECIALIZATION touches, DATA_ROLL non confirme) : mettre le commentaire de synthese
-  AVANT le bloc `<DATA_...>`, pas a l'interieur, sauf sur les blocs deja verifies surs
-  (DATA_RACE, DATA_RULE, DATA_CAREER_ROLL, DATA_CAREER_SPECIE, DATA_TALENT,
-  DATA_CAREER, DATA_SPELL - tous utilises avec commentaires inline dans les livres existants).
-- WinLivre ne sait pas editer `DATA_SPELL_TALENT` : saisie XML a la main uniquement.
-
-## BOOKNAME
-
-Tout nouveau livre porte `<BOOKNAME>` (nom d affichage sans BOOK, sous `<BOOK>` dans l en-tete). `<BOOK>` reste la CLE des personnages, de l INI et des Text ; BOOKNAME n est lu que par XmlNomAffichageLivre, en repli quand aucun libelle traduit n existe (grille Livres du menu, racine de WinLivre).
+- XML comments `<!-- ... -->` inside a block can crash the parser or duplicate an entry on some
+  blocks (DATA_LABEL, DATA_SPECIE_CAREER_CHOICE, DATA_SKILL_SPECIALIZATION affected, DATA_ROLL not
+  confirmed): put the summary comment BEFORE the `<DATA_...>` block, not inside it, except on blocks
+  already verified safe (DATA_RACE, DATA_RULE, DATA_CAREER_ROLL, DATA_CAREER_SPECIE, DATA_TALENT,
+  DATA_CAREER, DATA_SPELL: all used with inline comments in existing books).
+- WinLivre cannot edit `DATA_SPELL_TALENT`: enter it by hand in the XML only.

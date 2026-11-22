@@ -25,10 +25,53 @@ uses
 
 Function CoutReelTalent(Cout: Integer; HorsCarriere: Boolean; AjoutMj: Boolean): Integer;
   begin
-    if ((ValVersion <> 'WFRP2') and HorsCarriere) or ((ValVersion = 'WFRP2') and AjoutMj) then
+    // V5 : seuls les talents de la carriere (niveau actuel ou inferieur) s'achetent, pas de double cout (p.191)
+    if (ValVersion = 'WFRP5') and not AjoutMj then
+      Result := Cout
+    else if ((ValVersion <> 'WFRP2') and HorsCarriere) or ((ValVersion = 'WFRP2') and AjoutMj) then
       Result := Cout * 2
     else
       Result := Cout;
+  end;
+
+// V5 (Rulebook p.191) : le tableau donne le cout de CHAQUE avance de +5 (name = +5, +10, ... = rang de l'avance x 5),
+// pas des paliers. Au-dela de la derniere ligne du livre, on garde le dernier cout.
+Function CoutAvanceV5(TypeXp: String; Increase: Integer): Integer;
+  var
+    PAttr:    StructureAttributAugmentation;
+    PComp:    StructureCompetenceAugmentation;
+    Dernier:  Integer = 0;
+    Meilleur: Integer = 0;
+    Valeur:   Integer;
+  begin
+    Result := 0;
+    if TypeXp = ConstXmlCarac then
+      begin
+        for PAttr in ListeAttributAugmentation do
+          begin
+            Valeur := StrToIntDef(PAttr.MinMax, 0);
+            if Valeur = Increase then
+              Exit(PAttr.Cout);
+            if Valeur > Dernier then
+              begin
+                Dernier  := Valeur;
+                Meilleur := PAttr.Cout;
+              end;
+          end;
+      end
+    else
+      for PComp in ListeCompetenceAugmentation do
+        begin
+          Valeur := StrToIntDef(PComp.MinMax, 0);
+          if Valeur = Increase then
+            Exit(PComp.Cout);
+          if Valeur > Dernier then
+            begin
+              Dernier  := Valeur;
+              Meilleur := PComp.Cout;
+            end;
+        end;
+    Result := Meilleur;
   end;
 
 Function CoutXpBase(TypeXp: String; Gratuit: Integer; Total: Integer; Code: String): Integer;
@@ -56,11 +99,22 @@ Function CoutXpBase(TypeXp: String; Gratuit: Integer; Total: Integer; Code: Stri
         if (Total > Gratuit) and (Code <> '') then
           Xp := 100 * ((Total - Gratuit) div PasAvance(Code));
       end
+    // V5 : avances de +5, cout de l'avance numero n lu dans le tableau (n = valeur atteinte / 5)
+    else if (ValVersion = 'WFRP5') and ((TypeXp = ConstXmlCarac) or (TypeXp = ConstXmlCompetence)) then
+      begin
+        for i := (Gratuit div 5) + 1 to (Total div 5) do
+          Xp := Xp + CoutAvanceV5(TypeXp, 5 * i);
+      end
     else if TypeXp = ConstXmlTalent then
       begin
+        // V5 (Rulebook p.191) : chaque talent coute 100 XP, repris autant de fois que voulu a 100 XP chacune ;
+        // V1 / V2 / V4 : 100 XP le premier, puis 100 de plus par talent deja pris
         if Total > Gratuit then
           for i := Gratuit to (Total - 1) do
-            Xp := Xp + 100 + (100 * i);
+            if ValVersion = 'WFRP5' then
+              Xp := Xp + 100
+            else
+              Xp := Xp + 100 + (100 * i);
       end
     else
       begin

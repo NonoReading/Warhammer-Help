@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SCHEMA_WFRPTOW.xsd
+  Validation schema for DATABASE/WFRPTOW/*.Xml (Warhammer: The Old World RPG, Cubicle 7 2025).
+  Step 2 of PLAN_THE_OLD_WORLD.md, batch 1: characteristics, skills, origins.
+  Reuses the shared types of SCHEMA_COMMON.xsd (PlainString, LangString, NamedString,
+  AttributType, SkillType) so that the same codes (RULES-ATTR_*, RULES-COMP_*) are used.
+  The blocks of the next batches (talents, lores, careers, equipment, spells) are added here.
+
+  Usage : xmllint (no-out flag) (schema flag) SCHEMA_WFRPTOW.xsd "DATABASE/WFRPTOW/BOOK_RULESBOOK.Xml"
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <xs:include schemaLocation="SCHEMA_COMMON.xsd"/>
+
+  <!-- ===================== DATA_ORIGIN ===================== -->
+  <!--
+    ORIGIN (replaces Race / Specie / Career-less start of the other versions). One entry per origin of the
+    Player's Guide p.13 and p.22-23.
+      RandomRange      range of the random origin table, d10 ("1", "2-3", "4-7"...).
+      Family           group of the starting / maximum characteristics tables: DWARF, ELF, HALFLING, HUMAN.
+      SUBCHAPTER_ATTR  starting characteristics (code, value) + Fate. Same codes as DATA_ATTRIBUT.
+      SUBCHAPTER_MAX   maximum characteristics (p.66), 8 values (no Fate).
+      SUBCHAPTER_SKILL Skill: fixed skill raised to the value (name = code). SkillFree: number of skills of
+                       the player's choice raised to the same value. Every other skill starts at the base rank.
+      SUBCHAPTER_LORE  LoreSlot = one slot, Option = one possible lore (code, generic _* = to be specified).
+                       The player picks ONE option per slot; a slot with one option is a fixed lore.
+      SUBCHAPTER_TALENT TalentRolls = number of d10 rolls (duplicates rerolled); SwapMode = NONE / OPTIONAL /
+                       MANDATORY and SwapTalent = the talent given in exchange for one rolled; FixedTalent =
+                       talents received without a roll; Roll name = talent code, content = d10 result.
+  -->
+  <xs:complexType name="OriginAttrType">
+    <xs:sequence>
+      <xs:element name="Attribut" type="NamedString" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="OriginSkillType">
+    <xs:sequence>
+      <xs:element name="Skill" type="NamedString" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="SkillFree" type="PlainString" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="LoreSlotType">
+    <xs:sequence>
+      <xs:element name="Option" type="NamedString" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="OriginLoreType">
+    <xs:sequence>
+      <xs:element name="LoreSlot" type="LoreSlotType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="OriginTalentType">
+    <xs:sequence>
+      <xs:element name="TalentRolls" type="PlainString"/>
+      <xs:element name="SwapMode" type="PlainString"/>
+      <xs:element name="SwapTalent" type="PlainString" minOccurs="0"/>
+      <xs:element name="FixedTalent" type="PlainString" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="Roll" type="NamedString" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="OriginType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Explanation" type="LangString" minOccurs="0"/>
+      <xs:element name="RandomRange" type="PlainString"/>
+      <xs:element name="Family" type="PlainString"/>
+      <xs:element name="SUBCHAPTER_ATTR" type="OriginAttrType"/>
+      <xs:element name="SUBCHAPTER_MAX" type="OriginAttrType"/>
+      <xs:element name="SUBCHAPTER_SKILL" type="OriginSkillType"/>
+      <xs:element name="SUBCHAPTER_LORE" type="OriginLoreType"/>
+      <xs:element name="SUBCHAPTER_TALENT" type="OriginTalentType"/>
+      <xs:element name="Names" type="PlainString" minOccurs="0"/>
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataOriginType">
+    <xs:sequence>
+      <xs:element name="Origin" type="OriginType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DATA_SPECIE / DATA_RANDOM_SPECIE : vue des origines pour l onglet Race de WinCreation.
+       Une Specie par Origin, MEME id ; la fiche complete reste dans DATA_ORIGIN.
+       DATA_RANDOM_SPECIE : plage du d10 de la table des origines (texte affiche tel quel). -->
+  <xs:complexType name="TowSpecieType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="DataTowSpecieType">
+    <xs:sequence>
+      <xs:element name="Specie" type="TowSpecieType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DataTowRandomSpecieType">
+    <xs:sequence>
+      <xs:element name="Specie" type="NamedString" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ===================== DATA_TALENT ===================== -->
+  <!--
+    TALENT (Player's Guide p.73-81): fixed XP cost (2 to 4), no ranks except Wizard / Faith / Familiar.
+      Cost          XP cost.
+      Requirement   one per condition, ALL must hold (a talent given free at creation ignores them).
+                    type = ATTR (name = characteristic code, content = minimum value),
+                           ORIGIN (name = origin code, content "ONLY" = this origin required),
+                           ORIGIN_NOT (name = origin code excluded),
+                           LORE (name = lore code; generic _* = any lore of the family),
+                           TALENT (name = talent code), ITEM (name = trapping code),
+                           STATUS (content = "SILVER_OR_GOLD").
+      CreationOnly  "1" = can only be taken during Character Creation.
+      MaxPurchases  number of times it can be bought ("4" Wizard, "0" = no fixed limit, e.g. Faith); absent = once.
+      Choice        what the player specifies at purchase: TEXT (free text), MAGIC_LORE, GOD, FAMILIAR_EFFECT.
+      Option        possible values of the choice when it is a list (Familiar effects).
+      Effect text is a short summary, the book stays the reference (rules are played at the table, not computed).
+  -->
+  <xs:complexType name="RequirementType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="TowTalentType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Explanation" type="LangString"/>
+      <xs:element name="Cost" type="PlainString"/>
+      <xs:element name="Requirement" type="RequirementType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="CreationOnly" type="PlainString" minOccurs="0"/>
+      <xs:element name="MaxPurchases" type="PlainString" minOccurs="0"/>
+      <xs:element name="Choice" type="PlainString" minOccurs="0"/>
+      <xs:element name="Option" type="NamedString" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataTowTalentType">
+    <xs:sequence>
+      <xs:element name="Talent" type="TowTalentType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ===================== DATA_LORE ===================== -->
+  <!--
+    LORE (Player's Guide p.82-88). Family = ACADEMIC / CULTURAL / ENEMY / ENVIRONMENT / MAGIC / TRADE.
+      Specify  "1" = generic lore the player specifies (City, Cult, Provincial, Monster Slayer, Arts...):
+               the code ends with "__" and the careers refer to it as "__*"; Option = suggested values of the book.
+      Parent   code of the generic lore this lore is a ready-made value of (Mootland = Provincial).
+      GodsFavoured / Magic families are open lists: the careers use the generic code "__*".
+  -->
+  <xs:complexType name="LoreType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Explanation" type="LangString"/>
+      <xs:element name="Family" type="PlainString"/>
+      <xs:element name="Specify" type="PlainString" minOccurs="0"/>
+      <xs:element name="Parent" type="PlainString" minOccurs="0"/>
+      <xs:element name="Option" type="NamedString" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataLoreType">
+    <xs:sequence>
+      <xs:element name="Lore" type="LoreType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ===================== DATA_TRAPPING ===================== -->
+  <!--
+    TRAPPING (Player's Guide p.92-99: clothing, tools and kits, and the generic slots of the careers).
+    Weapons (melee, ranged, thrown) are Weapon of DATA_WEAPON and armour pieces are Armor of DATA_ARMOR,
+    like the other books (same ids RULES-TRAP_*; Damage written +(BATTR_S)-1, ArmorPoint = numeric part of the
+    book's Resilience, Quality = RULES-WEAPB_* / RULES-ARMOB_* codes whose text is the trait of the book).
+      Category   OUTFIT / KIT / TRADE_TOOLS, and MELEE for the generic weapon slots (Specify = 1, Parent).
+      Cost       minimum Status: BRASS / SILVER / GOLD ("N/A" for Unarmed and Rock).
+      Damage     "S", "S-1", "S+3" (melee, thrown) or a fixed number ("3", ranged).  Hands "1H" / "2H".
+      MaxRange   melee max range (Close / Short).  Range = optimum range (ranged and thrown).
+      Resilience "T", "T+1", "T+2", "+1" (shield, barding).
+      Traits     rules text of the table, summarised (the book stays the reference).
+      Contents   example contents of a kit.  RequiredLore = lore code needed to use it (generic "__*" = any of the family).
+      Specify "1" = generic slot of the careers (silver weapon, trade tools...).  Parent = trapping this one stands for.
+  -->
+  <xs:complexType name="TowTrappingType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Explanation" type="LangString" minOccurs="0"/>
+      <xs:element name="Category" type="PlainString"/>
+      <xs:element name="Cost" type="PlainString" minOccurs="0"/>
+      <xs:element name="Damage" type="PlainString" minOccurs="0"/>
+      <xs:element name="Hands" type="PlainString" minOccurs="0"/>
+      <xs:element name="MaxRange" type="PlainString" minOccurs="0"/>
+      <xs:element name="Range" type="PlainString" minOccurs="0"/>
+      <xs:element name="Resilience" type="PlainString" minOccurs="0"/>
+      <xs:element name="Traits" type="PlainString" minOccurs="0"/>
+      <xs:element name="Contents" type="PlainString" minOccurs="0"/>
+      <xs:element name="RequiredLore" type="PlainString" minOccurs="0"/>
+      <xs:element name="Specify" type="PlainString" minOccurs="0"/>
+      <xs:element name="Parent" type="PlainString" minOccurs="0"/>
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataTowTrappingType">
+    <xs:sequence>
+      <xs:element name="Trapping" type="TowTrappingType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ===================== DATA_ASSET ===================== -->
+  <!--
+    ASSET (Player's Guide p.102-105): animals and vehicles, buildings, other assets.
+      Category   ANIMAL_VEHICLE / BUILDING / OTHER.   MinStatus  lowest tier (BRASS / SILVER / GOLD).
+      Explanation summary of the three tiers (the book stays the reference).   Parent = asset it is a variant of.
+      GrantsItem code of the Weapon / Armor sheet the asset puts in the character's equipment (Full Plate Armour
+                 -> RULES-ARMO_FULL_PLATE_ARMOUR); not stored in the character file, recomputed like a mutation item.
+  -->
+  <xs:complexType name="AssetType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Explanation" type="LangString"/>
+      <xs:element name="Category" type="PlainString"/>
+      <xs:element name="MinStatus" type="PlainString"/>
+      <xs:element name="Parent" type="PlainString" minOccurs="0"/>
+      <xs:element name="GrantsItem" type="PlainString" minOccurs="0"/>
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataTowAssetType">
+    <xs:sequence>
+      <xs:element name="Asset" type="AssetType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ===================== DATA_CONTACT / DATA_RANDOM_ASSET ===================== -->
+  <!--
+    CONTACT (Player's Guide p.56-60, Talagaad setting): 4 families (the careers cite them by code), each with
+    5 Npc; each Npc has 4 Relation entries, the range attribute being the d100 range of the family table.
+    Archetype = Npc role tag printed in the book.
+    RANDOM_ASSET (p.61, Final Steps): Row range = d100; Brass / Silver / Gold = asset code (name) and the
+    flavour text of the column (content).
+  -->
+  <xs:complexType name="RelationType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="range" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="NpcType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Explanation" type="LangString"/>
+      <xs:element name="Archetype" type="PlainString"/>
+      <xs:element name="Relation" type="RelationType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TowContactType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Explanation" type="LangString"/>
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
+      <xs:element name="Npc" type="NpcType" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataTowContactType">
+    <xs:sequence>
+      <xs:element name="Contact" type="TowContactType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RandomAssetRowType">
+    <xs:sequence>
+      <xs:element name="Brass" type="NamedString"/>
+      <xs:element name="Silver" type="NamedString"/>
+      <xs:element name="Gold" type="NamedString"/>
+    </xs:sequence>
+    <xs:attribute name="range" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataRandomAssetType">
+    <xs:sequence>
+      <xs:element name="Row" type="RandomAssetRowType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ===================== DATA_GOD ===================== -->
+  <!--
+    GOD (Player's Guide chapter 7, p.137-149; 10 gods). Same format for all:
+      FavouredLore  1 or 2 lores (name = lore code) of which the Priest picks one.
+      Stricture     5 or 6 strictures (text).   Favour = the god's Favour.   Prayer = 3 prayers (name + text).
+      Miracles      text of the Miracles (one-use, played with the GM).
+    Faith talent: rank 1 = Favour, rank 2 = Prayers, rank 3+ = a Miracle. All effects are text, not computed.
+  -->
+  <xs:complexType name="GodType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Explanation" type="LangString"/>
+      <xs:element name="FavouredLore" type="NamedString" maxOccurs="unbounded"/>
+      <xs:element name="Stricture" type="PlainString" maxOccurs="unbounded"/>
+      <xs:element name="Favour" type="CareerTalentType"/>
+      <xs:element name="Prayer" type="CareerTalentType" maxOccurs="unbounded"/>
+      <xs:element name="Miracles" type="CareerTalentType"/>
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataGodType">
+    <xs:sequence>
+      <xs:element name="God" type="GodType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ===================== DATA_SPELL / DATA_IMPROVISED / DATA_MISCAST ===================== -->
+  <!--
+    SPELL (Player's Guide p.162-173): 42 formal spells of the 4 Magic Lores (Battle Magic, Elementalism,
+    Illusion, Necromancy). Lore name = lore code (RULES-LORE_MAGIC_*), CV = Casting Value ("Varies" for
+    Shimmering Beast), Target, Range, Duration as printed; Explanation = effect summary (text, not computed).
+    IMPROVISED (p.161): Effect = Petty / Cardinal / Advanced / Master with CV and required Wizard level;
+    Modifier = CV modifier (name = "+1", "+2", "+3", "DOUBLE").
+    MISCAST (p.159): Row range = total of the Miscast Pool roll; content = result.
+  -->
+  <xs:complexType name="TowSpellType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Explanation" type="LangString"/>
+      <xs:element name="Lore" type="NamedString"/>
+      <xs:element name="Level" type="PlainString"/>
+      <xs:element name="Target" type="PlainString"/>
+      <xs:element name="Range" type="PlainString"/>
+      <xs:element name="Duration" type="PlainString"/>
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataTowSpellType">
+    <xs:sequence>
+      <xs:element name="Spell" type="TowSpellType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ImprovisedEffectType">
+    <xs:sequence>
+      <xs:element name="Explanation" type="LangString"/>
+      <xs:element name="CV" type="PlainString"/>
+      <xs:element name="WizardLevel" type="PlainString"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataImprovisedType">
+    <xs:sequence>
+      <xs:element name="Effect" type="ImprovisedEffectType" maxOccurs="unbounded"/>
+      <xs:element name="Modifier" type="NamedString" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DataMiscastType">
+    <xs:sequence>
+      <xs:element name="Row" type="RelationType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ===================== DATA_CAREER ===================== -->
+  <!--
+    CAREER (Player's Guide p.24-55, 30 careers). Fields as printed on the career sheet.
+      Status            BRASS / SILVER / GOLD.
+      SUBCHAPTER_ORIGIN Origin name = origin code (one per admitted origin), content = d100 range of the Random
+                        Career Table p.25 ("01-05"), "0" if the origin may choose it but cannot roll it.
+      SUBCHAPTER_FAVOURED  the 3 favoured characteristics (Attribut name = code, content "1").
+      SUBCHAPTER_SKILL  SkillPick = number of skills raised by 1 among the listed ones (always 4); Skill = the
+                        6 candidate skills (name = code, content "1").
+      SUBCHAPTER_LORE / _TRAPPING / _ASSET
+                        Slot syntax of the book: the COMMA separates fixed slots (all received), "or" separates
+                        the options of ONE slot (the player picks one). Option name = code, content = quantity
+                        ("2" = two pistols). A code ending in "__*" means "choose one of that family / specify"
+                        (RULES-LORE_PROVINCIAL__*, RULES-TRAP_MELEE_WEAPON__*).
+      SUBCHAPTER_CONTACT  the 2 contact families (name = code).
+      CareerTalent      name of the career talent + short summary of its effect (the book stays the reference).
+      Note              point to check in the book (printed text cut or odd).
+  -->
+  <xs:complexType name="SlotListType">
+    <xs:sequence>
+      <xs:element name="Slot" type="LoreSlotType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CareerSkillType">
+    <xs:sequence>
+      <xs:element name="SkillPick" type="PlainString"/>
+      <xs:element name="Skill" type="NamedString" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CareerOriginType">
+    <xs:sequence>
+      <xs:element name="Origin" type="NamedString" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CareerContactType">
+    <xs:sequence>
+      <xs:element name="Contact" type="NamedString" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CareerTalentType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Explanation" type="LangString"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TowCareerType">
+    <xs:sequence>
+      <xs:element name="Description" type="LangString"/>
+      <xs:element name="Status" type="PlainString"/>
+      <xs:element name="SUBCHAPTER_ORIGIN" type="CareerOriginType"/>
+      <xs:element name="SUBCHAPTER_FAVOURED" type="OriginAttrType"/>
+      <xs:element name="SUBCHAPTER_SKILL" type="CareerSkillType"/>
+      <xs:element name="SUBCHAPTER_LORE" type="SlotListType"/>
+      <xs:element name="SUBCHAPTER_TRAPPING" type="SlotListType"/>
+      <xs:element name="SUBCHAPTER_ASSET" type="SlotListType"/>
+      <xs:element name="SUBCHAPTER_CONTACT" type="CareerContactType"/>
+      <xs:element name="CareerTalent" type="CareerTalentType"/>
+      <xs:element name="Note" type="PlainString" minOccurs="0"/>
+      <xs:element name="Page" type="PlainString" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DataTowCareerType">
+    <xs:sequence>
+      <xs:element name="Career" type="TowCareerType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ===================== DATA_BOOK (root) ===================== -->
+  <xs:element name="DATA_BOOK">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CODE_BOOK" type="PlainString"/>
+        <xs:element name="BOOK" type="PlainString"/>
+        <xs:element name="BOOKNAME" type="PlainString" minOccurs="0"/>
+        <xs:element name="language" type="PlainString"/>
+        <xs:element name="VERSION" type="PlainString"/>
+        <xs:element name="OFFICIAL" type="PlainString"/>
+        <xs:element name="COMPLETE" type="PlainString"/>
+        <xs:element name="DISCLAIMER" type="PlainString" minOccurs="0"/>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="DATA_LABEL" type="DataLabelType"/>
+          <xs:element name="DATA_ATTRIBUT" type="DataAttributType"/>
+          <xs:element name="DATA_SKILL" type="DataSkillType"/>
+          <xs:element name="DATA_ORIGIN" type="DataOriginType"/>
+          <xs:element name="DATA_SPECIE" type="DataTowSpecieType"/>
+          <xs:element name="DATA_RANDOM_SPECIE" type="DataTowRandomSpecieType"/>
+          <xs:element name="DATA_TALENT" type="DataTowTalentType"/>
+          <xs:element name="DATA_LORE" type="DataLoreType"/>
+          <xs:element name="DATA_TRAPPING" type="DataTowTrappingType"/>
+          <!-- Weapons and armour use the common types (SCHEMA_COMMON.xsd), like the other books. -->
+          <xs:element name="DATA_WEAPON" type="DataWeaponType"/>
+          <xs:element name="DATA_WEAPON_BONUS" type="DataWeaponBonusType"/>
+          <xs:element name="DATA_ARMOR" type="DataArmorType"/>
+          <xs:element name="DATA_ARMOR_BONUS" type="DataArmorBonusType"/>
+          <xs:element name="DATA_ASSET" type="DataTowAssetType"/>
+          <xs:element name="DATA_CONTACT" type="DataTowContactType"/>
+          <xs:element name="DATA_RANDOM_ASSET" type="DataRandomAssetType"/>
+          <xs:element name="DATA_GOD" type="DataGodType"/>
+          <xs:element name="DATA_SPELL" type="DataTowSpellType"/>
+          <xs:element name="DATA_IMPROVISED" type="DataImprovisedType"/>
+          <xs:element name="DATA_MISCAST" type="DataMiscastType"/>
+          <xs:element name="DATA_CAREER" type="DataTowCareerType"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

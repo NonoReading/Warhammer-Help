@@ -68,7 +68,7 @@ DATA_ATTRIBUT (15 attributes)
 DATA_SKILL (295 skills total)
 ├─ Combat Skills
 │  ├─ RULES-COMPCOMB_BASE (Melee Basic)
-│  ├─ RULES-COMPCOMB_HAST (Melee Polearm)
+│  ├─ RULES-COMP_MELEE__POLEARM (Melee Polearm)
 │  ├─ RULES-COMPCOMB_ESCR (Melee Fencing)
 │  ├─ RULES-COMPCOMB_FLEAU (Melee Scourge)
 │  ├─ RULES-COMPCOMB_CAVAL (Melee Cavalry)
@@ -193,7 +193,7 @@ DATA_WEAPON (70 weapons total)
 ├─ RULES-COMB_* (melee weapons)
 │  ├─ RULES-COMB_HAST_01 "Quarter Staff"
 │  │  ├─ Description
-│  │  ├─ Skill: RULES-COMPCOMB_HAST
+│  │  ├─ Skill: RULES-COMP_MELEE__POLEARM
 │  │  ├─ Damage: +(STR)+4
 │  │  ├─ Reach: LONG
 │  │  ├─ Price: 3/-

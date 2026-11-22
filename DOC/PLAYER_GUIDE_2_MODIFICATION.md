@@ -10,7 +10,14 @@ Tip: on almost every button and tick box, **F1** shows a short explanation of wh
 
 ## Opening a character
 
-Open the character from the main menu. The sheet is split in two: the **sheet tables** (characteristics, skills, talents, spells, equipment) and, on the side, a list of **pages** for everything that evolves: Attribute, Skill, Talent, Total experience (the Xp), Advancement, History, Book, GM XP, Corruption, Mutations, Afflictions/Diseases, Ambitions, Group, Fate / Resilience, Money and PDF. Depending on the rules version, some pages do not appear.
+Open the character from the main menu. The sheet is split in two: the **sheet tables** (characteristics, skills, talents, spells, equipment) and, on the side, a tree of **pages** for everything that evolves, in four branches:
+
+- **Evolution**: Attribute, Skill, Talent, Advancement (with the Total experience, the Xp) and, in WFRP5 only, Next level equipment.
+- **Character**: Group, Ambitions, Fate / Resilience.
+- **Condition**: Corruption, Mutations, Afflictions/Diseases.
+- **Miscellaneous**: Book, Options (the PDF and the Momentum option), GM XP, History.
+
+Money is in the equipment table. Depending on the rules version, some pages do not appear.
 
 ![The character window with the list of pages](IMAGES/modif_01_fenetre.png)
 
@@ -24,10 +31,14 @@ Two rules to keep in mind:
 <a id="xp"></a>
 ## Experience (Xp)
 
-On the **Total experience** page:
+On the **Advancement** page, in the **Total experience** block:
 
 - **Total Xp**: enter the total Xp earned by the character, in raw units, as written on the sheet. The spent and remaining Xp are computed for you.
-- **Opt : XP/25**: tick it if you count Xp in the new unit (total divided by 25, rounded down). Spent and remaining follow the same unit.
+- **Opt : XP/25**: an optional table rule, not part of the standard rules: tick it only if your game master counts Xp this way. It makes the calculations easier by counting in smaller numbers (total divided by 25, rounded down). Spent and remaining follow the same unit.
+  - **Effect on creation**: the species skills (3 at +5 and 3 at +3) become **3 at +5 and 3 at +5**, so all six count at +5. The creation window itself does not offer the option: the six skills are chosen as usual, and the +3 ones show as +5 once the character is opened here with Xp/25 ticked.
+  - With this option you type the total in the **Total Xp/25** box (the raw box is locked), and each cost is the usual cost divided by 25, rounded down.
+  - **How to advance**: in the Attribute and Skill pages the **New** column can no longer be typed in. Click the **+** (or **-**) cell of the line instead: each click moves by one step (5 on the Attribute and Skill lines in WFRP4; one step of the career's advance scheme in WFRP2). Cost and Real cost update at each click. Talents are unchanged.
+  - **Real cost** can still be typed on every line, in the new unit.
 - **Show Xp** (cost columns) and **calculation detail** can be shown or hidden in the sheet tables; this changes the display only.
 
 ![The Total experience page](IMAGES/modif_02_xp.png)
@@ -72,10 +83,10 @@ The buttons under the equipment table add what the character carries. Each butto
 | **+Weapon** | a weapon |
 | **+Armor** | a piece of armour (tick *Quick Armor* to get simplified choices) |
 | **+Spell** | a spell to the list |
-| **+Equipment** | an item from the books |
+| **+Equipment** | an item from the books (in Mounts: a mount, for example) |
 | **+Text item** | a free-text line |
 | **+Item** | an item found in no book (Weapon, Armor and Various categories) |
-| **+Familiar** | a familiar or a mount |
+| **+Familiar** | a familiar (a character of its own) |
 | **+Crafting** | a crafting quality on the selected item (weapon, armour or other) |
 | **-Remove** | removes the selected item (with confirmation) |
 
@@ -122,7 +133,15 @@ On the **Afflictions / Diseases** page:
 
 ## The GM and the rules
 
-- **GM XP** page: the Xp the game master hands out; you can follow the amounts there.
+- **Cost and Real cost** (Attribute, Skill and Talent pages): **Cost** is the price given by the rules; **Real cost** is what is actually charged. When you choose a **New** value, the program fills both columns itself. Real cost equals Cost, except for a line outside the career (shown in red): there it is doubled, for characteristics, skills and talents in WFRP1 and WFRP4. In WFRP2 a skill outside the career cannot be advanced, and a talent costs double only when the game master added it.
+
+  To give the character a discount or a surcharge, click the **Real cost** cell and type the amount agreed with the game master. The Xp spent (and so the Xp remaining) then follows the real cost, not the Cost. Examples, for an advance whose Cost is 100:
+  - the game master gives it for free: Real cost **0**;
+  - a discount for good roleplay: Real cost **50**;
+  - a penalty or a rule of the table: Real cost **150**.
+
+  Set the **New** value first: changing it again recomputes Real cost and erases what you typed. With the Xp/25 option ticked (not offered in WFRP1), Xp are counted in units of 25: spent and remaining Xp, and so the Real cost you type, follow the same unit.
+- **GM XP** page: the list of these exceptions. Every advance whose Real cost differs from its Cost is recorded there (type, code, from, to, cost, real cost), so you can follow what the game master granted or charged. You do not fill this page in: it fills itself from the Real cost column. This includes the automatic doubling outside the career, since there too the real cost differs from the cost.
 - **Everything is editable outside an official book**: when a character or a sheet does not come from an official book, nothing is locked. Phase 3 explains how to use this for house rules.
 
 ---
@@ -130,7 +149,7 @@ On the **Afflictions / Diseases** page:
 <a id="pdf"></a>
 ## The PDF sheet
 
-The **PDF** button creates the character sheet with the values shown on screen. Options (tick boxes under the button):
+The **Options** page (Miscellaneous branch, formerly called PDF) creates the character sheet with the values shown on screen. Options (tick boxes):
 
 | Option | Effect |
 |---|---|
@@ -149,7 +168,7 @@ The **PDF** button creates the character sheet with the values shown on screen. 
 
 ## Momentum option (WFRP4 ↔ WFRP5)
 
-A tick box on the Total experience page replaces the Rulebook (WFRP4) talents by their Momentum (WFRP5) versions. The Momentum book must be among the character's books, otherwise a message tells you so. Details in the phase 3 sheet.
+A tick box on the Options page replaces the Rulebook (WFRP4) talents by their Momentum (WFRP5) versions. The Momentum book must be among the character's books, otherwise a message tells you so. Details in the phase 3 sheet.
 
 ---
 

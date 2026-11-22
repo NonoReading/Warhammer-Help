@@ -1159,6 +1159,7 @@
 <Quality>"RULES-WEAPQ_FAST,RULES-WEAPQ_IMPACT,RULES-WEAPQ_TIRING"</Quality>
 <Hand>"2"</Hand>
 <Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>""</Note>
 <Page>"96"</Page>
 </Weapon>
 <Weapon id="RIQ-PROJ_V2_KISLEVITE_HORSE_BOW">
@@ -1187,84 +1188,78 @@
 <Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Page>"96"</Page>
 </Weapon>
+<Weapon id="RIQ-PROJ_V2_KISLEVITE_HORSE_BOW2">
+<Description language="ENGLISH">"Bow (Kislevite Horse)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Reach>"34/68"</Reach>
+<Price>"20CO"</Price>
+<Encumbrance>"75"</Encumbrance>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"Half"</Reload>
+<Note>""</Note>
+<Page>"96"</Page>
+</Weapon>
+<Weapon id="RIQ-PROJ_V2_KISLEVITE_SHORT_BOW2">
+<Description language="ENGLISH">"Bow (Kislevite Short)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Reach>"16/32"</Reach>
+<Price>"10CO"</Price>
+<Encumbrance>"65"</Encumbrance>
+<Quality>"RULES-WEAPQ_PRECISE"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"Half"</Reload>
+<Note>""</Note>
+<Page>"96"</Page>
+</Weapon>
+<Weapon id="RIQ-PROJ_V2_AMMUNITION_ARROW_ARMOUR_PIERCING">
+<Description language="ENGLISH">"Arrow (Armour Piercing)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"5SB"</Price>
+<Encumbrance>"2"</Encumbrance>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>""</Note>
+<Page>"96"</Page>
+</Weapon>
+<Weapon id="RIQ-PROJ_V2_AMMUNITION_ARROW_INCENDIARY">
+<Description language="ENGLISH">"Arrow (Incendiary)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
+<Availability>"RULES-DISPO2_SCARCE"</Availability>
+<Price>"4SB"</Price>
+<Encumbrance>"3"</Encumbrance>
+<Quality>"RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Reload>"+Half"</Reload>
+<Note>""</Note>
+<Page>"96"</Page>
+</Weapon>
+<Weapon id="RIQ-PROJ_V2_AMMUNITION_ARROW_SCREAMER">
+<Description language="ENGLISH">"Arrow (Screamer)"</Description>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
+<Availability>"RULES-DISPO2_RARE"</Availability>
+<Price>"6SB"</Price>
+<Encumbrance>"3"</Encumbrance>
+<Quality>"RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>""</Note>
+<Page>"96"</Page>
+</Weapon>
 </DATA_WEAPON>
 <DATA_EQUIPMENT_V2>
-<EquipmentV2 id="RIQ-EQUI_MELEE_WEAPONS_BERDYSH">
-<Description language="ENGLISH">"Berdysh"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"20 gc"</Cost>
-<Encumbrance>"100"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Fast, Impact, Tiring"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Note>""</Note>
-<Page>"96"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RIQ-EQUI_MISSILE_WEAPONS_KISLEVITE_HORSE_BOW">
-<Description language="ENGLISH">"Bow (Kislevite Horse)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"20 gc"</Cost>
-<Encumbrance>"75"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"3"</Damage>
-<Range>"34/68"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"None"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Note>""</Note>
-<Page>"96"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RIQ-EQUI_MISSILE_WEAPONS_KISLEVITE_SHORT_BOW">
-<Description language="ENGLISH">"Bow (Kislevite Short)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"10 gc"</Cost>
-<Encumbrance>"65"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"3"</Damage>
-<Range>"16/32"</Range>
-<Reload>"Half"</Reload>
-<Qualities>"Precise"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
-<Note>""</Note>
-<Page>"96"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RIQ-EQUI_MISSILE_WEAPONS_AMMUNITION_ARROW_ARMOUR_PIERCING">
-<Description language="ENGLISH">"Arrow (Armour Piercing)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<SubCategory>"RULES-EQCAT2_AMMUNITION"</SubCategory>
-<Cost>"5 p"</Cost>
-<Encumbrance>"2"</Encumbrance>
-<Qualities>"Armour Piercing"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
-<Note>""</Note>
-<Page>"96"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RIQ-EQUI_MISSILE_WEAPONS_AMMUNITION_ARROW_INCENDIARY">
-<Description language="ENGLISH">"Arrow (Incendiary)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<SubCategory>"RULES-EQCAT2_AMMUNITION"</SubCategory>
-<Cost>"4 p"</Cost>
-<Encumbrance>"3"</Encumbrance>
-<Damage>"-1"</Damage>
-<Reload>"+Half"</Reload>
-<Qualities>"Special"</Qualities>
-<Availability>"RULES-DISPO2_SCARCE"</Availability>
-<Note>""</Note>
-<Page>"96"</Page>
-</EquipmentV2>
-<EquipmentV2 id="RIQ-EQUI_MISSILE_WEAPONS_AMMUNITION_ARROW_SCREAMER">
-<Description language="ENGLISH">"Arrow (Screamer)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<SubCategory>"RULES-EQCAT2_AMMUNITION"</SubCategory>
-<Cost>"6 p"</Cost>
-<Encumbrance>"3"</Encumbrance>
-<Damage>"-2"</Damage>
-<Qualities>"Special"</Qualities>
-<Availability>"RULES-DISPO2_RARE"</Availability>
-<Note>""</Note>
-<Page>"96"</Page>
-</EquipmentV2>
 <EquipmentV2 id="RIQ-EQUI_LIVESTOCK_HERD_DOG">
 <Description language="ENGLISH">"Herd Dog"</Description>
 <Category>"RULES-EQCAT2_LIVESTOCK"</Category>

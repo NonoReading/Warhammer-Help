@@ -19,7 +19,18 @@ em{color:#555}
 <p>Tip: on almost every button and tick box, <strong>F1</strong> shows a short explanation of what it does.</p>
 <hr>
 <h2 id="opening-a-character">Opening a character</h2>
-<p>Open the character from the main menu. The sheet is split in two: the <strong>sheet tables</strong> (characteristics, skills, talents, spells, equipment) and, on the side, a list of <strong>pages</strong> for everything that evolves: Attribute, Skill, Talent, Total experience (the Xp), Advancement, History, Book, GM XP, Corruption, Mutations, Afflictions/Diseases, Ambitions, Group, Fate / Resilience, Money and PDF. Depending on the rules version, some pages do not appear.</p>
+<p>Open the character from the main menu. The sheet is split in two: the <strong>sheet tables</strong> (characteristics, skills, talents, spells, equipment) and, on the side, a tree of <strong>pages</strong> for everything that evolves, in four branches:</p>
+<ul>
+<li><strong>Evolution</strong>: Attribute, Skill, Talent, Advancement (with the Total experience, the Xp) and, in WFRP5 only, Next level equipment.
+</li>
+<li><strong>Character</strong>: Group, Ambitions, Fate / Resilience.
+</li>
+<li><strong>Condition</strong>: Corruption, Mutations, Afflictions/Diseases.
+</li>
+<li><strong>Miscellaneous</strong>: Book, Options (the PDF and the Momentum option), GM XP, History.
+</li>
+</ul>
+<p>Money is in the equipment table. Depending on the rules version, some pages do not appear.</p>
 <p><img src="../IMAGES/modif_01_fenetre.png" alt="The character window with the list of pages"></p>
 <p>Two rules to keep in mind:</p>
 <ul>
@@ -31,11 +42,21 @@ em{color:#555}
 <hr>
 <a id="xp"></a>
 <h2 id="experience-xp">Experience (Xp)</h2>
-<p>On the <strong>Total experience</strong> page:</p>
+<p>On the <strong>Advancement</strong> page, in the <strong>Total experience</strong> block:</p>
 <ul>
 <li><strong>Total Xp</strong>: enter the total Xp earned by the character, in raw units, as written on the sheet. The spent and remaining Xp are computed for you.
 </li>
-<li><strong>Opt : XP/25</strong>: tick it if you count Xp in the new unit (total divided by 25, rounded down). Spent and remaining follow the same unit.
+<li><strong>Opt : XP/25</strong>: an optional table rule, not part of the standard rules: tick it only if your game master counts Xp this way. It makes the calculations easier by counting in smaller numbers (total divided by 25, rounded down). Spent and remaining follow the same unit.
+<ul>
+<li><strong>Effect on creation</strong>: the species skills (3 at +5 and 3 at +3) become <strong>3 at +5 and 3 at +5</strong>, so all six count at +5. The creation window itself does not offer the option: the six skills are chosen as usual, and the +3 ones show as +5 once the character is opened here with Xp/25 ticked.
+</li>
+<li>With this option you type the total in the <strong>Total Xp/25</strong> box (the raw box is locked), and each cost is the usual cost divided by 25, rounded down.
+</li>
+<li><strong>How to advance</strong>: in the Attribute and Skill pages the <strong>New</strong> column can no longer be typed in. Click the <strong>+</strong> (or <strong>-</strong>) cell of the line instead: each click moves by one step (5 on the Attribute and Skill lines in WFRP4; one step of the career's advance scheme in WFRP2). Cost and Real cost update at each click. Talents are unchanged.
+</li>
+<li><strong>Real cost</strong> can still be typed on every line, in the new unit.
+</li>
+</ul>
 </li>
 <li><strong>Show Xp</strong> (cost columns) and <strong>calculation detail</strong> can be shown or hidden in the sheet tables; this changes the display only.
 </li>
@@ -82,10 +103,10 @@ em{color:#555}
 <tr><td><strong>+Weapon</strong></td><td>a weapon</td></tr>
 <tr><td><strong>+Armor</strong></td><td>a piece of armour (tick <em>Quick Armor</em> to get simplified choices)</td></tr>
 <tr><td><strong>+Spell</strong></td><td>a spell to the list</td></tr>
-<tr><td><strong>+Equipment</strong></td><td>an item from the books</td></tr>
+<tr><td><strong>+Equipment</strong></td><td>an item from the books (in Mounts: a mount, for example)</td></tr>
 <tr><td><strong>+Text item</strong></td><td>a free-text line</td></tr>
 <tr><td><strong>+Item</strong></td><td>an item found in no book (Weapon, Armor and Various categories)</td></tr>
-<tr><td><strong>+Familiar</strong></td><td>a familiar or a mount</td></tr>
+<tr><td><strong>+Familiar</strong></td><td>a familiar (a character of its own)</td></tr>
 <tr><td><strong>+Crafting</strong></td><td>a crafting quality on the selected item (weapon, armour or other)</td></tr>
 <tr><td><strong>-Remove</strong></td><td>removes the selected item (with confirmation)</td></tr>
 </tbody></table>
@@ -134,7 +155,21 @@ em{color:#555}
 <hr>
 <h2 id="the-gm-and-the-rules">The GM and the rules</h2>
 <ul>
-<li><strong>GM XP</strong> page: the Xp the game master hands out; you can follow the amounts there.
+<li><strong>Cost and Real cost</strong> (Attribute, Skill and Talent pages): <strong>Cost</strong> is the price given by the rules; <strong>Real cost</strong> is what is actually charged. When you choose a <strong>New</strong> value, the program fills both columns itself. Real cost equals Cost, except for a line outside the career (shown in red): there it is doubled, for characteristics, skills and talents in WFRP1 and WFRP4. In WFRP2 a skill outside the career cannot be advanced, and a talent costs double only when the game master added it.
+</li>
+</ul>
+<p>To give the character a discount or a surcharge, click the <strong>Real cost</strong> cell and type the amount agreed with the game master. The Xp spent (and so the Xp remaining) then follows the real cost, not the Cost. Examples, for an advance whose Cost is 100:</p>
+<ul>
+<li>the game master gives it for free: Real cost <strong>0</strong>;
+</li>
+<li>a discount for good roleplay: Real cost <strong>50</strong>;
+</li>
+<li>a penalty or a rule of the table: Real cost <strong>150</strong>.
+</li>
+</ul>
+<p>Set the <strong>New</strong> value first: changing it again recomputes Real cost and erases what you typed. With the Xp/25 option ticked (not offered in WFRP1), Xp are counted in units of 25: spent and remaining Xp, and so the Real cost you type, follow the same unit.</p>
+<ul>
+<li><strong>GM XP</strong> page: the list of these exceptions. Every advance whose Real cost differs from its Cost is recorded there (type, code, from, to, cost, real cost), so you can follow what the game master granted or charged. You do not fill this page in: it fills itself from the Real cost column. This includes the automatic doubling outside the career, since there too the real cost differs from the cost.
 </li>
 <li><strong>Everything is editable outside an official book</strong>: when a character or a sheet does not come from an official book, nothing is locked. Phase 3 explains how to use this for house rules.
 </li>
@@ -142,7 +177,7 @@ em{color:#555}
 <hr>
 <a id="pdf"></a>
 <h2 id="the-pdf-sheet">The PDF sheet</h2>
-<p>The <strong>PDF</strong> button creates the character sheet with the values shown on screen. Options (tick boxes under the button):</p>
+<p>The <strong>Options</strong> page (Miscellaneous branch, formerly called PDF) creates the character sheet with the values shown on screen. Options (tick boxes):</p>
 <table><thead><tr><th>Option</th><th>Effect</th></tr></thead><tbody>
 <tr><td><strong>Two-page PDF (Feldo)</strong></td><td>the two-page sheet instead of the usual one</td></tr>
 <tr><td><strong>Without asterisks</strong></td><td>hides the marks pointing to notes</td></tr>
@@ -155,7 +190,7 @@ em{color:#555}
 <p><img src="../IMAGES/modif_06_pdf.png" alt="The PDF options"></p>
 <hr>
 <h2 id="momentum-option-wfrp4-wfrp5">Momentum option (WFRP4 ↔ WFRP5)</h2>
-<p>A tick box on the Total experience page replaces the Rulebook (WFRP4) talents by their Momentum (WFRP5) versions. The Momentum book must be among the character's books, otherwise a message tells you so. Details in the phase 3 sheet.</p>
+<p>A tick box on the Options page replaces the Rulebook (WFRP4) talents by their Momentum (WFRP5) versions. The Momentum book must be among the character's books, otherwise a message tells you so. Details in the phase 3 sheet.</p>
 <hr>
 <h2 id="if-you-are-stuck">If you are stuck</h2>
 <table><thead><tr><th>You cannot…</th><th>What to do</th></tr></thead><tbody>

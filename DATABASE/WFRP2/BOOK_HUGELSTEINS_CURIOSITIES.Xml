@@ -8,1242 +8,1254 @@
 <OFFICIAL>"2"</OFFICIAL>
 <COMPLETE>"0"</COMPLETE>
 <DISCLAIMER>"DISCLAIMER: This document and its content are completely unofficial and in no way endorsed by Games Workshop Limited. Warhammer Fantasy Roleplay, the Warhammer Fantasy Roleplay logo, WFRP, Chaos, the Chaos device, the Chaos logo, Citadel, Citadel Device, Darkblade, ‘Eavy Metal, Forge World, Games Workshop, Games Workshop logo, Golden Demon, Great Unclean One, GW, the Hammer of Sigmar logo, Horned Rat logo, Keeper of Secrets, Khemri, Khorne, the Khorne logo, Lord of Change, Nurgle, the Nurgle logo, Skaven, the Skaven symbol device, Slaanesh, the Slaanesh logo, Tomb Kings, Tzeentch, the Tzeentch logo, Warhammer, Warhammer World logo, White Dwarf, the White Dwarf logo, and all associated marks, names, races, race insignia, characters, vehicles, loca- tions, units, artefacts, illustrations and images from the Warhammer world are either ®, TM and/or © Copyright Games Workshop Ltd 2000-2008, variably regis- tered in the UK and other countries around the world. Used without permission. No challenge to their status intended. All Rights Reserved to their respective owners."</DISCLAIMER>
-<DATA_EQUIPMENT_V2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_BLACK_MACE_HC">
+<DATA_WEAPON>
+<Weapon id="HUCU-COMB_V2_BLACK_MACE_HC">
 <Description language="ENGLISH">"Black Mace (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"10 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"10CO"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>""</Qualities>
-<Availability>"-"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Note>"Spiked head, enamelled black; the enamel flakes off in combat."</Note>
 <Page>"4"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_DEAD_EYE_S_MAIN_GAUCHE_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_DEAD_EYE_S_MAIN_GAUCHE_HC">
 <Description language="ENGLISH">"Dead-Eye's Main Gauche (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
+<Price>"15CO"</Price>
 <Encumbrance>"12"</Encumbrance>
-<Group>"RULES-WTYPE2_PARRYING"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Craftsmanship Good, Defensive"</Qualities>
-<Availability>"-"</Availability>
-<Note>"From Dead-Eye Pierre's Deadly Duo; with its scabbard."</Note>
+<Quality>"RULES-WEAPQ_DEFENSIVE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_PARRYING"</Type>
+<Note>""</Note>
 <Page>"4"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_DEAD_EYE_S_RAPIER_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_DEAD_EYE_S_RAPIER_HC">
 <Description language="ENGLISH">"Dead-Eye's Rapier (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"60 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
+<Price>"60CO"</Price>
 <Encumbrance>"33"</Encumbrance>
-<Group>"RULES-WTYPE2_FENCING"</Group>
-<Damage>"SB–1"</Damage>
-<Qualities>"Craftsmanship Good, Fast"</Qualities>
-<Availability>"-"</Availability>
-<Note>"From Dead-Eye Pierre's Deadly Duo; with its scabbard."</Note>
+<Quality>"RULES-WEAPQ_FAST"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FENCING"</Type>
+<Note>""</Note>
 <Page>"4"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_IMPERIAL_GREATSWORD_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_IMPERIAL_GREATSWORD_HC">
 <Description language="ENGLISH">"Imperial Greatsword (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"70 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"70CO"</Price>
 <Encumbrance>"180"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Craftsmanship Good, Impact, Slow"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Unused sword of the Carroburg Greatswords, with scabbard."</Note>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>""</Note>
 <Page>"4"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_IMPERIAL_BROADSWORD_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_IMPERIAL_BROADSWORD_HC">
 <Description language="ENGLISH">"Imperial Broadsword (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"30 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"30CO"</Price>
 <Encumbrance>"45"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Craftsmanship Good"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Standard side arm of the Carroburg Greatswords, with scabbard."</Note>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>""</Note>
 <Page>"4"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_DRAGON_TRIDENT_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_DRAGON_TRIDENT_HC">
 <Description language="ENGLISH">"Dragon Trident (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"80 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
+<Price>"80CO"</Price>
 <Encumbrance>"85"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB–1"</Damage>
-<Qualities>"Craftsmanship Poor, Defensive, Impact, Tiring"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Dragon Trident of Lung Wai-Toh: nine blades on a bronze head, in fact made in Marienburg."</Note>
+<Quality>"RULES-WEAPQ_DEFENSIVE,RULES-WEAPQ_IMPACT,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>""</Note>
 <Page>"4"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_JADE_KNIFE_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_JADE_KNIFE_HC">
 <Description language="ENGLISH">"Jade Knife (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"50 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
+<Price>"50CO"</Price>
 <Encumbrance>"8"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Craftsmanship Good"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Jade Knife of Lustria; the handle is jadeite, more an artefact than a weapon."</Note>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>""</Note>
 <Page>"5"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_KHOPESH_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_KHOPESH_HC">
 <Description language="ENGLISH">"Khopesh (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"15CO"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>""</Qualities>
-<Availability>"-"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Note>"Arched one-handed sword of Araby, old enough to be an antique."</Note>
 <Page>"5"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_MIDDENHAMMER_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_MIDDENHAMMER_HC">
 <Description language="ENGLISH">"Middenhammer (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"40 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"40CO"</Price>
 <Encumbrance>"220"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Armour Piercing or Impact, Slow"</Qualities>
-<Availability>"-"</Availability>
+<Quality>"RULES-WEAPQ_SLOW"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
 <Note>""</Note>
 <Page>"5"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_FAHR_S_LONGSWORD_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_FAHR_S_LONGSWORD_HC">
 <Description language="ENGLISH">"Fahr's Longsword (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"22 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"22CO"</Price>
 <Encumbrance>"45"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Craftsmanship Good"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Worn but well-balanced, gold filigree and sapphires; comes with the Fahr family scabbard."</Note>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>""</Note>
 <Page>"5"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_RANALD_PRIEST_S_DAGGER_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_RANALD_PRIEST_S_DAGGER_HC">
 <Description language="ENGLISH">"Ranald Priest's Dagger (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"8 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
+<Price>"8CO"</Price>
 <Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Craftsmanship Best, Special"</Qualities>
-<Availability>"-"</Availability>
+<Quality>"RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Note>""</Note>
 <Page>"6"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_RANALD_PRIEST_S_DAGGER_THROWN_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_RANALD_PRIEST_S_DAGGER_THROWN_HC">
 <Description language="ENGLISH">"Ranald Priest's Dagger (thrown) (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"8 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
+<Reach>"4/8"</Reach>
+<Price>"8CO"</Price>
 <Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB–3"</Damage>
-<Range>"4/8"</Range>
+<Quality>"RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Craftsmanship Best, Special"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Same dagger thrown; see Ranald Priest's Dagger."</Note>
+<Note>"Same dagger thrown; see Ranald Priest's Dagger. | Other qualities: Craftsmanship Best"</Note>
 <Page>"6"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_SIGMARITE_WHIP_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_SIGMARITE_WHIP_HC">
 <Description language="ENGLISH">"Sigmarite Whip (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"40 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Reach>"4/-"</Reach>
+<Price>"40CO"</Price>
 <Encumbrance>"65"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"SB"</Damage>
-<Range>"4/-"</Range>
+<Quality>"RULES-WEAPQ_SNARE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Craftsmanship Good, Snare"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Chain whip with hammer-shaped links, handle engraved with a two-tailed comet."</Note>
+<Note>""</Note>
 <Page>"6"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_SINGING_SWORD_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_SINGING_SWORD_HC">
 <Description language="ENGLISH">"Singing Sword (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"35 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"35CO"</Price>
 <Encumbrance>"45"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Craftsmanship Good"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Pierced pommel whistles when swung; can be muffled with cotton wadding."</Note>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>""</Note>
 <Page>"6"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_VERENA_S_GAVEL_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_VERENA_S_GAVEL_HC">
 <Description language="ENGLISH">"Verena's Gavel (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"30 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"30CO"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Craftsmanship Good"</Qualities>
-<Availability>"-"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Note>""</Note>
 <Page>"6"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_WAR_ENDER_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_WAR_ENDER_HC">
 <Description language="ENGLISH">"War Ender (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"100 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
+<Price>"100CO"</Price>
 <Encumbrance>"70"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Craftsmanship Best"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Dwarf axe usable in one or both hands; keeps its edge after many battles."</Note>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>""</Note>
 <Page>"6"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_BLADED_BOW_MELEE_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_BLADED_BOW_MELEE_HC">
 <Description language="ENGLISH">"Bladed Bow (melee) (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"30 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"30CO"</Price>
 <Encumbrance>"200"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Craftsmanship Poor, Slow"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Orc bow with a serrated blade at each end."</Note>
+<Quality>"RULES-WEAPQ_SLOW"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Orc bow with a serrated blade at each end. | Other qualities: Craftsmanship Poor"</Note>
 <Page>"8"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_BLADED_BOW_RANGED_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_BLADED_BOW_RANGED_HC">
 <Description language="ENGLISH">"Bladed Bow (ranged) (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"30 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Reach>"20/40"</Reach>
+<Price>"30CO"</Price>
 <Encumbrance>"200"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"3"</Damage>
-<Range>"20/40"</Range>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Craftsmanship Poor"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Fires standard arrows."</Note>
+<Note>"Fires standard arrows. | Other qualities: Craftsmanship Poor"</Note>
 <Page>"8"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_HALFLING_BOW_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_HALFLING_BOW_HC">
 <Description language="ENGLISH">"Halfling Bow (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"25 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Reach>"16/32"</Reach>
+<Price>"25CO"</Price>
 <Encumbrance>"70"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"3"</Damage>
-<Range>"16/32"</Range>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Craftsmanship Good"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Cathayan bow, nothing to do with Halflings; fires sling ammunition."</Note>
+<Note>""</Note>
 <Page>"8"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_LUSTRIAN_BLOWGUN_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_LUSTRIAN_BLOWGUN_HC">
 <Description language="ENGLISH">"Lustrian Blowgun (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"50 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
+<Reach>"12/16"</Reach>
+<Price>"50CO"</Price>
 <Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_BLOWGUN"</Group>
-<Range>"12/16"</Range>
+<Quality>"RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_BLOWGUN"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Craftsmanship Good, Special"</Qualities>
-<Availability>"-"</Availability>
 <Note>""</Note>
 <Page>"8"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_MILITARY_CROSSBOW_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_MILITARY_CROSSBOW_HC">
 <Description language="ENGLISH">"Military Crossbow (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"80 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+4"</Damage>
+<Reach>"30/60"</Reach>
+<Price>"80CO"</Price>
 <Encumbrance>"105"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"4"</Damage>
-<Range>"30/60"</Range>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"Full"</Reload>
-<Qualities>"Craftsmanship Good"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Imperial army crossbow with the serial numbers filed off."</Note>
+<Note>""</Note>
 <Page>"8"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_SLAYER_S_CROSSBOW_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_SLAYER_S_CROSSBOW_HC">
 <Description language="ENGLISH">"Slayer's Crossbow (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"500 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Reach>"8/16"</Reach>
+<Price>"500CO"</Price>
 <Encumbrance>"180"</Encumbrance>
-<Group>"RULES-WTYPE2_CROSSBOW"</Group>
-<Damage>"3"</Damage>
-<Range>"8/16"</Range>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_CROSSBOW"</Type>
 <Reload>"Free"</Reload>
-<Qualities>"Craftsmanship Good, Armour Piercing, Special"</Qualities>
-<Availability>"-"</Availability>
 <Note>""</Note>
 <Page>"8"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_COACHMAN_S_BLUNDERBUSS_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_COACHMAN_S_BLUNDERBUSS_HC">
 <Description language="ENGLISH">"Coachman's Blunderbuss (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"30 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+4"</Damage>
+<Reach>"16/-"</Reach>
+<Price>"30CO"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"4"</Damage>
-<Range>"16/-"</Range>
+<Quality>"RULES-WEAPQ_EXPERIMENTAL,RULES-WEAPQ_SHRAPNEL,RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_GUNPOWDER"</Type>
 <Reload>"3 Full"</Reload>
-<Qualities>"Craftsmanship Poor, Experimental, Shrapnel, Special"</Qualities>
-<Availability>"-"</Availability>
 <Note>""</Note>
 <Page>"11"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_ESTALIAN_NOBLE_S_PISTOL_MELEE_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_ESTALIAN_NOBLE_S_PISTOL_MELEE_HC">
 <Description language="ENGLISH">"Estalian Noble's Pistol (melee) (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"675 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
+<Price>"675CO"</Price>
 <Encumbrance>"32"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Craftsmanship Good"</Qualities>
-<Availability>"-"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Note>""</Note>
 <Page>"11"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_ESTALIAN_NOBLE_S_PISTOL_RANGED_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_ESTALIAN_NOBLE_S_PISTOL_RANGED_HC">
 <Description language="ENGLISH">"Estalian Noble's Pistol (ranged) (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"675 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+4"</Damage>
+<Reach>"8/16"</Reach>
+<Price>"675CO"</Price>
 <Encumbrance>"32"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"4"</Damage>
-<Range>"8/16"</Range>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_UNRELIABLE,RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_GUNPOWDER"</Type>
 <Reload>"2 Full"</Reload>
-<Qualities>"Craftsmanship Good, Impact, Unreliable, Special"</Qualities>
-<Availability>"-"</Availability>
-<Note>"See the melee entry for the spike."</Note>
+<Note>"See the melee entry for the spike. | Other qualities: Craftsmanship Good"</Note>
 <Page>"11"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_GAMBLER_S_PISTOL_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_GAMBLER_S_PISTOL_HC">
 <Description language="ENGLISH">"Gambler's Pistol (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"80 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+4"</Damage>
+<Reach>"8/16"</Reach>
+<Price>"80CO"</Price>
 <Encumbrance>"25"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"4"</Damage>
-<Range>"8/16"</Range>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_GUNPOWDER"</Type>
 <Reload>"2 Full"</Reload>
-<Qualities>"Craftsmanship Poor, Impact, Unreliable"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Pair of playing cards scratched into the handle."</Note>
+<Note>"Pair of playing cards scratched into the handle. | Other qualities: Craftsmanship Poor"</Note>
 <Page>"11"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_DWARF_LONG_GUN_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_DWARF_LONG_GUN_HC">
 <Description language="ENGLISH">"Dwarf Long Gun (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"975 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+4"</Damage>
+<Reach>"26/52"</Reach>
+<Price>"975CO"</Price>
 <Encumbrance>"27"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"4"</Damage>
-<Range>"26/52"</Range>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING,RULES-WEAPQ_IMPACT,RULES-WEAPQ_UNRELIABLE,RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_GUNPOWDER"</Type>
 <Reload>"2 Full"</Reload>
-<Qualities>"Craftsmanship Good, Armour Piercing, Impact, Unreliable, Special"</Qualities>
-<Availability>"-"</Availability>
 <Note>""</Note>
 <Page>"11"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_IMPERIAL_BOARDING_GUN_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_IMPERIAL_BOARDING_GUN_HC">
 <Description language="ENGLISH">"Imperial Boarding Gun (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"600 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+5"</Damage>
+<Reach>"24/-"</Reach>
+<Price>"600CO"</Price>
 <Encumbrance>"75"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"5"</Damage>
-<Range>"24/-"</Range>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_EXPERIMENTAL,RULES-WEAPQ_SHRAPNEL,RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_GUNPOWDER"</Type>
 <Reload>"14 Full"</Reload>
-<Qualities>"Impact, Experimental, Shrapnel, Special"</Qualities>
-<Availability>"-"</Availability>
 <Note>""</Note>
 <Page>"11"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_REPEATER_HANDGUN_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_REPEATER_HANDGUN_HC">
 <Description language="ENGLISH">"Repeater Handgun (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"300 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+4"</Damage>
+<Reach>"24/48"</Reach>
+<Price>"300CO"</Price>
 <Encumbrance>"30"</Encumbrance>
-<Group>"RULES-WTYPE2_ENGINEER"</Group>
-<Damage>"4"</Damage>
-<Range>"24/48"</Range>
+<Quality>"RULES-WEAPQ_EXPERIMENTAL,RULES-WEAPQ_SPECIAL"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ENGINEER"</Type>
 <Reload>"Free"</Reload>
-<Qualities>"Experimental, Special"</Qualities>
-<Availability>"-"</Availability>
 <Note>"Use the standard reload rules for repeater handguns, WFRP p.111."</Note>
 <Page>"12"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_RUEGGER_S_PISTOL_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_RUEGGER_S_PISTOL_HC">
 <Description language="ENGLISH">"Ruegger's Pistol (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"250 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+4"</Damage>
+<Reach>"8/16"</Reach>
+<Price>"250CO"</Price>
 <Encumbrance>"25"</Encumbrance>
-<Group>"RULES-WTYPE2_GUNPOWDER"</Group>
-<Damage>"4"</Damage>
-<Range>"8/16"</Range>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_UNRELIABLE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_GUNPOWDER"</Type>
 <Reload>"2 Full"</Reload>
-<Qualities>"Impact, Unreliable"</Qualities>
-<Availability>"-"</Availability>
 <Note>"Duelling pistol in a varnished case with powder, jam-rod, cleaning kit and 6 lead balls."</Note>
 <Page>"12"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_BASTARD_SWORD_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_BASTARD_SWORD_HC">
 <Description language="ENGLISH">"Bastard Sword (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"12 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"12CO"</Price>
 <Encumbrance>"150"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Craftsmanship Poor, Slow (one-handed) or Impact &amp; Slow (two-handed)"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 1."</Note>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>""</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_BILL_HOOK_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_BILL_HOOK_HC">
 <Description language="ENGLISH">"Bill Hook (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"16 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"16CO"</Price>
 <Encumbrance>"170"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Fast or Impact &amp; Slow"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 1."</Note>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Shop stock: 1. | Other qualities: Fast or Impact &amp; Slow"</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_BRASS_HILTED_CUTLASS_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_BRASS_HILTED_CUTLASS_HC">
 <Description language="ENGLISH">"Brass-hilted Cutlass (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"12 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"12CO"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>""</Qualities>
-<Availability>"-"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Note>"Shop stock: 1."</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_BRASS_KNUCKLES_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_BRASS_KNUCKLES_HC">
 <Description language="ENGLISH">"Brass Knuckles (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"1 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
+<Price>"1CO"</Price>
 <Encumbrance>"1"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Pummelling"</Qualities>
-<Availability>"-"</Availability>
+<Quality>"RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Note>"Shop stock: 2 pairs."</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_BROADSWORD_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_BROADSWORD_HC">
 <Description language="ENGLISH">"Broadsword (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"9 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"9CO"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>""</Qualities>
-<Availability>"-"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Note>"Shop stock: 3."</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_CAVALRY_SPEAR_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_CAVALRY_SPEAR_HC">
 <Description language="ENGLISH">"Cavalry Spear (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"18 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"18CO"</Price>
 <Encumbrance>"75"</Encumbrance>
-<Group>"RULES-WTYPE2_CAVALRY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Fast &amp; Impact &amp; Tiring"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 2."</Note>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_CAVALRY"</Type>
+<Note>"Shop stock: 2. | Other qualities: Fast &amp; Impact &amp; Tiring"</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_CLAYMORE_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_CLAYMORE_HC">
 <Description language="ENGLISH">"Claymore (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"30 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"30CO"</Price>
 <Encumbrance>"150"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Slow (one-handed) or Impact &amp; Slow (two-handed)"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 1."</Note>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Shop stock: 1. | Other qualities: Slow (one-handed) or Impact &amp; Slow (two-handed)"</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_CROW_HEADED_MACE_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_CROW_HEADED_MACE_HC">
 <Description language="ENGLISH">"Crow-headed Mace (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"8 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"8CO"</Price>
 <Encumbrance>"55"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>""</Qualities>
-<Availability>"-"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Note>"Shop stock: 1."</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_DAGGERS_KNIVES_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_DAGGERS_KNIVES_HC">
 <Description language="ENGLISH">"Daggers &amp; Knives (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"1 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
+<Price>"1CO"</Price>
 <Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>""</Qualities>
-<Availability>"-"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Note>"Shop stock: 2d10."</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_FLAIL_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_FLAIL_HC">
 <Description language="ENGLISH">"Flail (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
+<Price>"15CO"</Price>
 <Encumbrance>"95"</Encumbrance>
-<Group>"RULES-WTYPE2_FLAIL"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Impact &amp; Tiring"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 2."</Note>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FLAIL"</Type>
+<Note>"Shop stock: 2. | Other qualities: Impact &amp; Tiring"</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_IMPERIAL_HAMMER_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_IMPERIAL_HAMMER_HC">
 <Description language="ENGLISH">"Imperial Hammer (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"11 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"11CO"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>""</Qualities>
-<Availability>"-"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Note>"Shop stock: 1."</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_IMPERIAL_PAVISE_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_IMPERIAL_PAVISE_HC">
 <Description language="ENGLISH">"Imperial Pavise (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"20 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
+<Price>"20CO"</Price>
 <Encumbrance>"120"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Qualities>"Special (see Old World Armoury p.32)"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 1."</Note>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Shop stock: 1. | Other qualities: Special (see Old World Armoury p.32) | Damage: n/a"</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_INFANTRY_HALBERD_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_INFANTRY_HALBERD_HC">
 <Description language="ENGLISH">"Infantry Halberd (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"15CO"</Price>
 <Encumbrance>"175"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Fast or Impact &amp; Slow"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 2."</Note>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Shop stock: 2. | Other qualities: Fast or Impact &amp; Slow"</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_LANCE_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_LANCE_HC">
 <Description language="ENGLISH">"Lance (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"40 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
+<Price>"40CO"</Price>
 <Encumbrance>"100"</Encumbrance>
-<Group>"RULES-WTYPE2_CAVALRY"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Fast &amp; Impact &amp; Tiring"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 2."</Note>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_CAVALRY"</Type>
+<Note>"Shop stock: 2. | Other qualities: Fast &amp; Impact &amp; Tiring"</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_LARGE_SHIELD_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_LARGE_SHIELD_HC">
 <Description language="ENGLISH">"Large Shield (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"30 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
+<Price>"30CO"</Price>
 <Encumbrance>"45"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Craftsmanship Good, Defensive"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 2."</Note>
+<Quality>"RULES-WEAPQ_DEFENSIVE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Shop stock: 2. | Other qualities: Craftsmanship Good"</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_LEAF_BLADED_BROADSWORD_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_LEAF_BLADED_BROADSWORD_HC">
 <Description language="ENGLISH">"Leaf-bladed Broadsword (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"35 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"35CO"</Price>
 <Encumbrance>"45"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Craftsmanship Good"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 1."</Note>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Shop stock: 1. | Other qualities: Craftsmanship Good"</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_LONGSWORD_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_LONGSWORD_HC">
 <Description language="ENGLISH">"Longsword (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"11 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"11CO"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>""</Qualities>
-<Availability>"-"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Note>"Shop stock: 2."</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_MARLINSPIKE_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_MARLINSPIKE_HC">
 <Description language="ENGLISH">"Marlinspike (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"5 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
+<Price>"5CO"</Price>
 <Encumbrance>"45"</Encumbrance>
-<Group>"RULES-WTYPE2_PARRYING"</Group>
-<Damage>"SB–1"</Damage>
-<Qualities>"Balanced"</Qualities>
-<Availability>"-"</Availability>
+<Quality>"RULES-WEAPQ_BALANCED"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_PARRYING"</Type>
 <Note>"Shop stock: 2."</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_MEAT_HOOK_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_MEAT_HOOK_HC">
 <Description language="ENGLISH">"Meat Hook (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"10s"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
+<Price>"10PA"</Price>
 <Encumbrance>"1"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–3"</Damage>
-<Qualities>"Craftsmanship Poor, Pummelling"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 1."</Note>
+<Quality>"RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Shop stock: 1. | Other qualities: Craftsmanship Poor"</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_NORSCAN_GREAT_AXE_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_NORSCAN_GREAT_AXE_HC">
 <Description language="ENGLISH">"Norscan Great Axe (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"60 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"60CO"</Price>
 <Encumbrance>"90"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Craftsmanship Good, Impact &amp; Slow"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 1."</Note>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Shop stock: 1. | Other qualities: Craftsmanship Good, Impact &amp; Slow"</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_PIKE_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_PIKE_HC">
 <Description language="ENGLISH">"Pike (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"17 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"17CO"</Price>
 <Encumbrance>"200"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Fast &amp; Special (see Old World Armoury p.32)"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 2."</Note>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Shop stock: 2. | Other qualities: Fast &amp; Special (see Old World Armoury p.32)"</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_PIT_FIGHTER_S_HALBERD_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_PIT_FIGHTER_S_HALBERD_HC">
 <Description language="ENGLISH">"Pit Fighter's Halberd (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"50 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"50CO"</Price>
 <Encumbrance>"155"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Craftsmanship Good, Fast or Impact &amp; Slow"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 1."</Note>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Shop stock: 1. | Other qualities: Craftsmanship Good, Fast or Impact &amp; Slow"</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_QUARTERSTAFF_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_QUARTERSTAFF_HC">
 <Description language="ENGLISH">"Quarterstaff (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"2s"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
+<Price>"2PA"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Defensive &amp; Pummelling"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 1d10."</Note>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Shop stock: 1d10. | Other qualities: Defensive &amp; Pummelling"</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_ROUND_SHIELD_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_ROUND_SHIELD_HC">
 <Description language="ENGLISH">"Round Shield (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"8 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
+<Price>"8CO"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Defensive"</Qualities>
-<Availability>"-"</Availability>
+<Quality>"RULES-WEAPQ_DEFENSIVE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Note>"Shop stock: 1d10."</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_RUSTED_PICK_AXE_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_RUSTED_PICK_AXE_HC">
 <Description language="ENGLISH">"Rusted Pick-axe (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"4 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"4CO"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Craftsmanship Poor"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 1."</Note>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Shop stock: 1. | Other qualities: Craftsmanship Poor"</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_SMALLSWORD_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_SMALLSWORD_HC">
 <Description language="ENGLISH">"Smallsword (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"30 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
+<Price>"30CO"</Price>
 <Encumbrance>"35"</Encumbrance>
-<Group>"RULES-WTYPE2_FENCING"</Group>
-<Damage>"SB–1"</Damage>
-<Qualities>"Craftsmanship Good, Precise"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 1."</Note>
+<Quality>"RULES-WEAPQ_PRECISE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FENCING"</Type>
+<Note>"Shop stock: 1. | Other qualities: Craftsmanship Good"</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_SHORTSWORD_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_SHORTSWORD_HC">
 <Description language="ENGLISH">"Shortsword (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"8 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
+<Price>"8CO"</Price>
 <Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–1"</Damage>
-<Qualities>""</Qualities>
-<Availability>"-"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Note>"Shop stock: 3."</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_SPEAR_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_SPEAR_HC">
 <Description language="ENGLISH">"Spear (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"8 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"8CO"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Fast"</Qualities>
-<Availability>"-"</Availability>
+<Quality>"RULES-WEAPQ_FAST"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Note>"Shop stock: 1d10."</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_ULRICAN_WARHAMMER_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_ULRICAN_WARHAMMER_HC">
 <Description language="ENGLISH">"Ulrican Warhammer (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"13 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"13CO"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>""</Qualities>
-<Availability>"-"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Note>"Shop stock: 1."</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_UNRIMMED_SHIELD_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_UNRIMMED_SHIELD_HC">
 <Description language="ENGLISH">"Unrimmed Shield (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"3 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
+<Price>"3CO"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Craftsmanship Poor, Special (see Old World Armoury p.32)"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 3."</Note>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>""</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_VOULGE_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_VOULGE_HC">
 <Description language="ENGLISH">"Voulge (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"13 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"13CO"</Price>
 <Encumbrance>"180"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Fast or Impact &amp; Slow"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 1."</Note>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Shop stock: 1. | Other qualities: Fast or Impact &amp; Slow"</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_WOODEN_CLUB_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_WOODEN_CLUB_HC">
 <Description language="ENGLISH">"Wooden Club (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"3 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"3CO"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Craftsmanship Poor"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 3."</Note>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Shop stock: 3. | Other qualities: Craftsmanship Poor"</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_WOODEN_LANCE_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_WOODEN_LANCE_HC">
 <Description language="ENGLISH">"Wooden Lance (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"20 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
+<Price>"20CO"</Price>
 <Encumbrance>"100"</Encumbrance>
-<Group>"RULES-WTYPE2_CAVALRY"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Craftsmanship Poor, Fast &amp; Impact &amp; Tiring"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 1d10."</Note>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_CAVALRY"</Type>
+<Note>"Shop stock: 1d10. | Other qualities: Craftsmanship Poor, Fast &amp; Impact &amp; Tiring"</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_WOODEN_STAFF_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_WOODEN_STAFF_HC">
 <Description language="ENGLISH">"Wooden Staff (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"1s"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
+<Price>"1PA"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–2"</Damage>
-<Qualities>"Craftsmanship Poor, Defensive &amp; Pummelling"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 1d10."</Note>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Shop stock: 1d10. | Other qualities: Craftsmanship Poor, Defensive &amp; Pummelling"</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_WOODSMAN_S_AXE_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_WOODSMAN_S_AXE_HC">
 <Description language="ENGLISH">"Woodsman's Axe (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"10 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"10CO"</Price>
 <Encumbrance>"200"</Encumbrance>
-<Group>"RULES-WTYPE2_TWO_HANDED"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Craftsmanship Poor, Impact &amp; Slow"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 2."</Note>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_TWO_HANDED"</Type>
+<Note>"Shop stock: 2. | Other qualities: Craftsmanship Poor, Impact &amp; Slow"</Note>
 <Page>"7"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_BOLA_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_BOLA_HC">
 <Description language="ENGLISH">"Bola (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"8s"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+1"</Damage>
+<Reach>"8/16"</Reach>
+<Price>"8PA"</Price>
 <Encumbrance>"20"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"1"</Damage>
-<Range>"8/16"</Range>
+<Quality>"RULES-WEAPQ_SNARE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Snare"</Qualities>
-<Availability>"-"</Availability>
 <Note>"Shop stock: 2."</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_BORDERMAN_S_BOW_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_BORDERMAN_S_BOW_HC">
 <Description language="ENGLISH">"Borderman's Bow (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"40 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Reach>"24/48"</Reach>
+<Price>"40CO"</Price>
 <Encumbrance>"60"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Range>"24/48"</Range>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Craftsmanship Good"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 1."</Note>
+<Note>"Shop stock: 1. | Other qualities: Craftsmanship Good"</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_BULLWHIP_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_BULLWHIP_HC">
 <Description language="ENGLISH">"Bullwhip (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"2 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-4"</Damage>
+<Reach>"6/-"</Reach>
+<Price>"2CO"</Price>
 <Encumbrance>"40"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"SB–4"</Damage>
-<Range>"6/-"</Range>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Fast &amp; Snare"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 4."</Note>
+<Note>"Shop stock: 4. | Other qualities: Fast &amp; Snare"</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_COMPETITION_BOW_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_COMPETITION_BOW_HC">
 <Description language="ENGLISH">"Competition Bow (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"30 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+2"</Damage>
+<Reach>"30/60"</Reach>
+<Price>"30CO"</Price>
 <Encumbrance>"60"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"2"</Damage>
-<Range>"30/60"</Range>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Craftsmanship Good"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 1."</Note>
+<Note>"Shop stock: 1. | Other qualities: Craftsmanship Good"</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_CREAKY_LONGBOW_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_CREAKY_LONGBOW_HC">
 <Description language="ENGLISH">"Creaky Longbow (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"8 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Reach>"30/60"</Reach>
+<Price>"8CO"</Price>
 <Encumbrance>"90"</Encumbrance>
-<Group>"RULES-WTYPE2_LONGBOW"</Group>
-<Damage>"3"</Damage>
-<Range>"30/60"</Range>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_LONGBOW"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Craftsmanship Poor, Armour Piercing"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 2."</Note>
+<Note>"Shop stock: 2. | Other qualities: Craftsmanship Poor"</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_FARMER_S_BOW_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_FARMER_S_BOW_HC">
 <Description language="ENGLISH">"Farmer's Bow (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"8 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Reach>"24/48"</Reach>
+<Price>"8CO"</Price>
 <Encumbrance>"80"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"3"</Damage>
-<Range>"24/48"</Range>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Craftsmanship Poor"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 4."</Note>
+<Note>"Shop stock: 4. | Other qualities: Craftsmanship Poor"</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_HALFLING_STAFF_SLING_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_HALFLING_STAFF_SLING_HC">
 <Description language="ENGLISH">"Halfling Staff Sling (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"18 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+4"</Damage>
+<Reach>"24/48"</Reach>
+<Price>"18CO"</Price>
 <Encumbrance>"45"</Encumbrance>
-<Group>"RULES-WTYPE2_SLING"</Group>
-<Damage>"4"</Damage>
-<Range>"24/48"</Range>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_SLING"</Type>
 <Reload>"Full"</Reload>
-<Qualities>"Craftsmanship Good"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 1."</Note>
+<Note>"Shop stock: 1. | Other qualities: Craftsmanship Good"</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_HUNTING_BOW_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_HUNTING_BOW_HC">
 <Description language="ENGLISH">"Hunting Bow (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"11 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Reach>"24/48"</Reach>
+<Price>"11CO"</Price>
 <Encumbrance>"80"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"3"</Damage>
-<Range>"24/48"</Range>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"Half"</Reload>
-<Qualities>""</Qualities>
-<Availability>"-"</Availability>
 <Note>"Shop stock: 3."</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_JAVELIN_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_JAVELIN_HC">
 <Description language="ENGLISH">"Javelin (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"20s"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-1"</Damage>
+<Reach>"8/16"</Reach>
+<Price>"20PA"</Price>
 <Encumbrance>"30"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB–1"</Damage>
-<Range>"8/16"</Range>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"Half"</Reload>
-<Qualities>""</Qualities>
-<Availability>"-"</Availability>
 <Note>"Shop stock: 6."</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_KISLEVIAN_SHORTBOW_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_KISLEVIAN_SHORTBOW_HC">
 <Description language="ENGLISH">"Kislevian Shortbow (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"12 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Reach>"24/48"</Reach>
+<Price>"12CO"</Price>
 <Encumbrance>"80"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"3"</Damage>
-<Range>"24/48"</Range>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Craftsmanship Poor"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 1."</Note>
+<Note>"Shop stock: 1. | Other qualities: Craftsmanship Poor"</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_LASSO_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_LASSO_HC">
 <Description language="ENGLISH">"Lasso (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"1 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
+<Reach>"8/-"</Reach>
+<Price>"1CO"</Price>
 <Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Range>"8/-"</Range>
+<Quality>"RULES-WEAPQ_SNARE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Snare"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 4."</Note>
+<Note>"Shop stock: 4. | Damage: n/a"</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_MULESKINNER_S_WHIP_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_MULESKINNER_S_WHIP_HC">
 <Description language="ENGLISH">"Muleskinner's Whip (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"7 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-4"</Damage>
+<Reach>"6/-"</Reach>
+<Price>"7CO"</Price>
 <Encumbrance>"35"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"SB–4"</Damage>
-<Range>"6/-"</Range>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Craftsmanship Good, Fast &amp; Snare"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 2."</Note>
+<Note>"Shop stock: 2. | Other qualities: Craftsmanship Good, Fast &amp; Snare"</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_OUTLAW_S_CROSSBOW_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_OUTLAW_S_CROSSBOW_HC">
 <Description language="ENGLISH">"Outlaw's Crossbow (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"11 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Reach>"30/60"</Reach>
+<Price>"11CO"</Price>
 <Encumbrance>"120"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"3"</Damage>
-<Range>"30/60"</Range>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"Full"</Reload>
-<Qualities>"Craftsmanship Poor"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 2."</Note>
+<Note>"Shop stock: 2. | Other qualities: Craftsmanship Poor"</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_ROPE_NET_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_ROPE_NET_HC">
 <Description language="ENGLISH">"Rope Net (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"2 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
+<Reach>"4/8"</Reach>
+<Price>"2CO"</Price>
 <Encumbrance>"60"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Range>"4/8"</Range>
+<Quality>"RULES-WEAPQ_SNARE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
 <Reload>"Full"</Reload>
-<Qualities>"Snare"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 4."</Note>
+<Note>"Shop stock: 4. | Damage: n/a"</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_SHORTBOW_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_SHORTBOW_HC">
 <Description language="ENGLISH">"Shortbow (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"9 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Reach>"24/48"</Reach>
+<Price>"9CO"</Price>
 <Encumbrance>"80"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"3"</Damage>
-<Range>"24/48"</Range>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"Half"</Reload>
-<Qualities>""</Qualities>
-<Availability>"-"</Availability>
 <Note>"Shop stock: 3."</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_SLING_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_SLING_HC">
 <Description language="ENGLISH">"Sling (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"4 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Reach>"16/32"</Reach>
+<Price>"4CO"</Price>
 <Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_SLING"</Group>
-<Damage>"3"</Damage>
-<Range>"16/32"</Range>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_SLING"</Type>
 <Reload>"Half"</Reload>
-<Qualities>""</Qualities>
-<Availability>"-"</Availability>
 <Note>"Shop stock: 5."</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_SMALLBOW_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_SMALLBOW_HC">
 <Description language="ENGLISH">"Smallbow (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"3 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Reach>"20/40"</Reach>
+<Price>"3CO"</Price>
 <Encumbrance>"35"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"3"</Damage>
-<Range>"20/40"</Range>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Craftsmanship Poor"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 1."</Note>
+<Note>"Shop stock: 1. | Other qualities: Craftsmanship Poor"</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_STAFF_SLING_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_STAFF_SLING_HC">
 <Description language="ENGLISH">"Staff Sling (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"5 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+4"</Damage>
+<Reach>"24/48"</Reach>
+<Price>"5CO"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_SLING"</Group>
-<Damage>"4"</Damage>
-<Range>"24/48"</Range>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_SLING"</Type>
 <Reload>"Full"</Reload>
-<Qualities>""</Qualities>
-<Availability>"-"</Availability>
 <Note>"Shop stock: 3."</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_TARGETEER_S_BOW_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_TARGETEER_S_BOW_HC">
 <Description language="ENGLISH">"Targeteer's Bow (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"35 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Reach>"24/48"</Reach>
+<Price>"35CO"</Price>
 <Encumbrance>"70"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"3"</Damage>
-<Range>"24/48"</Range>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Craftsmanship Good"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 1."</Note>
+<Note>"Shop stock: 1. | Other qualities: Craftsmanship Good"</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_THROWING_HAMMER_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_THROWING_HAMMER_HC">
 <Description language="ENGLISH">"Throwing Hammer (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"13 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
+<Reach>"8/-"</Reach>
+<Price>"13CO"</Price>
 <Encumbrance>"35"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB–2"</Damage>
-<Range>"8/-"</Range>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Craftsmanship Good"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 3."</Note>
+<Note>"Shop stock: 3. | Other qualities: Craftsmanship Good"</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_THROWING_KNIFE_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_THROWING_KNIFE_HC">
 <Description language="ENGLISH">"Throwing Knife (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"3 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-3"</Damage>
+<Reach>"6/12"</Reach>
+<Price>"3CO"</Price>
 <Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB–3"</Damage>
-<Range>"6/12"</Range>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
 <Reload>"Half"</Reload>
-<Qualities>""</Qualities>
-<Availability>"-"</Availability>
 <Note>"Shop stock: 5."</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_WAR_QUOITS_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_WAR_QUOITS_HC">
 <Description language="ENGLISH">"War Quoits (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"5 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-2"</Damage>
+<Reach>"6/12"</Reach>
+<Price>"5CO"</Price>
 <Encumbrance>"25"</Encumbrance>
-<Group>"RULES-WTYPE2_THROWING"</Group>
-<Damage>"SB–2"</Damage>
-<Range>"6/12"</Range>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_THROWING"</Type>
 <Reload>"Full"</Reload>
-<Qualities>""</Qualities>
-<Availability>"-"</Availability>
 <Note>"Shop stock: 12."</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_WATCHMAN_S_CROSSBOW_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_WATCHMAN_S_CROSSBOW_HC">
 <Description language="ENGLISH">"Watchman's Crossbow (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"27 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+4"</Damage>
+<Reach>"30/60"</Reach>
+<Price>"27CO"</Price>
 <Encumbrance>"120"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"4"</Damage>
-<Range>"30/60"</Range>
+<Quality>""</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
 <Reload>"Full"</Reload>
-<Qualities>""</Qualities>
-<Availability>"-"</Availability>
 <Note>"Shop stock: 1."</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_WEIGHTED_NET_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_WEIGHTED_NET_HC">
 <Description language="ENGLISH">"Weighted Net (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"5 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
+<Reach>"4/8"</Reach>
+<Price>"5CO"</Price>
 <Encumbrance>"55"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Range>"4/8"</Range>
+<Quality>"RULES-WEAPQ_SNARE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
 <Reload>"Full"</Reload>
-<Qualities>"Craftsmanship Good, Snare"</Qualities>
-<Availability>"-"</Availability>
-<Note>"Shop stock: 2."</Note>
+<Note>"Shop stock: 2. | Other qualities: Craftsmanship Good | Damage: n/a"</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_YEW_LONGBOW_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_YEW_LONGBOW_HC">
 <Description language="ENGLISH">"Yew Longbow (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"17 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+3"</Damage>
+<Reach>"30/60"</Reach>
+<Price>"17CO"</Price>
 <Encumbrance>"90"</Encumbrance>
-<Group>"RULES-WTYPE2_LONGBOW"</Group>
-<Damage>"3"</Damage>
-<Range>"30/60"</Range>
+<Quality>"RULES-WEAPQ_ARMOUR_PIERCING"</Quality>
+<Hand>"2"</Hand>
+<Type>"RULES-WTYPE2_LONGBOW"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Armour Piercing"</Qualities>
-<Availability>"-"</Availability>
 <Note>"Shop stock: 2."</Note>
 <Page>"9"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_BUCKLER_DAGMARSSEN_S_GEAR_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_BUCKLER_DAGMARSSEN_S_GEAR_HC">
 <Description language="ENGLISH">"Buckler (Dagmarssen's Gear) (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"7 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)-4"</Damage>
+<Price>"7CO"</Price>
 <Encumbrance>"10"</Encumbrance>
-<Group>"RULES-WTYPE2_PARRYING"</Group>
-<Damage>"SB–4"</Damage>
-<Qualities>"Craftsmanship Good, Defensive, Pummelling"</Qualities>
-<Availability>"-"</Availability>
+<Quality>"RULES-WEAPQ_DEFENSIVE,RULES-WEAPQ_PUMMELLING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_PARRYING"</Type>
+<Note>"Other qualities: Craftsmanship Good"</Note>
 <Page>"15"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_MORNING_STAR_DAGMARSSEN_S_GEAR_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_MORNING_STAR_DAGMARSSEN_S_GEAR_HC">
 <Description language="ENGLISH">"Morning Star (Dagmarssen's Gear) (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"50 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"50CO"</Price>
 <Encumbrance>"55"</Encumbrance>
-<Group>"RULES-WTYPE2_FLAIL"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Craftsmanship Good, Impact, Tiring"</Qualities>
-<Availability>"-"</Availability>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FLAIL"</Type>
+<Note>"Other qualities: Craftsmanship Good"</Note>
 <Page>"15"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_SHORT_SWORD_DAGMARSSEN_S_GEAR_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_SHORT_SWORD_DAGMARSSEN_S_GEAR_HC">
 <Description language="ENGLISH">"Short Sword (Dagmarssen's Gear) (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"28 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"28CO"</Price>
 <Encumbrance>"45"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Craftsmanship Good"</Qualities>
-<Availability>"-"</Availability>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>"Other qualities: Craftsmanship Good"</Note>
 <Page>"15"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_BOLA_BOUNTY_HUNTER_S_PACK_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_BOLA_BOUNTY_HUNTER_S_PACK_HC">
 <Description language="ENGLISH">"Bola (Bounty Hunter's Pack) (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"5s"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+1"</Damage>
+<Reach>"8/16"</Reach>
+<Price>"5PA"</Price>
 <Encumbrance>"20"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Damage>"1"</Damage>
-<Range>"8/16"</Range>
+<Quality>"RULES-WEAPQ_SNARE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
 <Reload>"Half"</Reload>
-<Qualities>"Snare"</Qualities>
-<Availability>"-"</Availability>
 <Page>"15"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MISSILE_WEAPONS_WEIGHTED_NET_BOUNTY_HUNTER_S_PACK_HC">
+</Weapon>
+<Weapon id="HUCU-PROJ_V2_WEIGHTED_NET_BOUNTY_HUNTER_S_PACK_HC">
 <Description language="ENGLISH">"Weighted Net (Bounty Hunter's Pack) (HC)"</Description>
-<Category>"RULES-EQCAT2_MISSILE_WEAPONS"</Category>
-<Cost>"2 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+0"</Damage>
+<Reach>"4/8"</Reach>
+<Price>"2CO"</Price>
 <Encumbrance>"60"</Encumbrance>
-<Group>"RULES-WTYPE2_ENTANGLING"</Group>
-<Range>"4/8"</Range>
+<Quality>"RULES-WEAPQ_SNARE"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ENTANGLING"</Type>
 <Reload>"Full"</Reload>
-<Qualities>"Snare"</Qualities>
-<Availability>"-"</Availability>
+<Note>"Damage: n/a"</Note>
 <Page>"15"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_ZEALOT_S_FLAIL_ZEALOT_S_LOT_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_ZEALOT_S_FLAIL_ZEALOT_S_LOT_HC">
 <Description language="ENGLISH">"Zealot's Flail (Zealot's Lot) (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"15 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)+1"</Damage>
+<Price>"15CO"</Price>
 <Encumbrance>"95"</Encumbrance>
-<Group>"RULES-WTYPE2_FLAIL"</Group>
-<Damage>"SB+1"</Damage>
-<Qualities>"Impact, Tiring"</Qualities>
-<Availability>"-"</Availability>
+<Quality>"RULES-WEAPQ_IMPACT,RULES-WEAPQ_TIRING"</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_FLAIL"</Type>
 <Note>"Twin-tailed comet carved into the wooden staff."</Note>
 <Page>"16"</Page>
-</EquipmentV2>
-<EquipmentV2 id="HUCU-EQUI_MELEE_WEAPONS_BRONZE_SWORD_HC">
+</Weapon>
+<Weapon id="HUCU-COMB_V2_BRONZE_SWORD_HC">
 <Description language="ENGLISH">"Bronze Sword (HC)"</Description>
-<Category>"RULES-EQCAT2_MELEE_WEAPONS"</Category>
-<Cost>"35 gc"</Cost>
+<Skill>"-"</Skill>
+<Damage>"+(BATTR_S)"</Damage>
+<Price>"35CO"</Price>
 <Encumbrance>"50"</Encumbrance>
-<Group>"RULES-WTYPE2_ORDINARY"</Group>
-<Damage>"SB"</Damage>
-<Qualities>"Craftsmanship Poor"</Qualities>
-<Availability>"-"</Availability>
-<Note>"From before the time of Sigmar, by its looks; treat as a hand weapon. Shop stock: 1."</Note>
+<Quality>""</Quality>
+<Hand>"1"</Hand>
+<Type>"RULES-WTYPE2_ORDINARY"</Type>
+<Note>""</Note>
 <Page>"17"</Page>
-</EquipmentV2>
+</Weapon>
+</DATA_WEAPON>
+<DATA_EQUIPMENT_V2>
 <EquipmentV2 id="HUCU-EQUI_MISCELLANEA_COMMON_ARROW_ARROW_HC">
 <Description language="ENGLISH">"Common Arrow (arrow) (HC)"</Description>
 <Category>"RULES-EQCAT2_MISCELLANEA"</Category>

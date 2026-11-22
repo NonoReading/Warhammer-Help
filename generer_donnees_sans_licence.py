@@ -20,7 +20,7 @@ from collections import Counter
 from pathlib import Path
 
 RACINE = Path(__file__).resolve().parent
-VERSIONS = ["WFRP1", "WFRP2", "WFRP4", "WFRP5"]
+VERSIONS = ["WFRP1", "WFRP2", "WFRP4", "WFRP5", "WFRPTOW"]
 PROSE = ["Explanation", "Personality", "Contraction", "Symptoms", "SpecialRule",
          "Incubation", "Treatment", "Cure", "Effect", "Special", "Rules"]
 SEUIL_RESTE = 90  # caracteres : au-dela, un texte non vide est signale

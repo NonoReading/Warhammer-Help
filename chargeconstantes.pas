@@ -60,6 +60,9 @@ Const
       ConstXmlChapitreCompetence	= 'CHAPTER_SKILL';
       ConstXmlChapitreTalent            = 'CHAPTER_TALENT';
       ConstXmlChapitreCoutXp            = 'CHAPTER_XP';
+      // V5 : journal du tracker de carriere, une ligne Tick par case cochee.
+      ConstXmlChapitreTracker           = 'CHAPTER_TRACKER';
+      ConstXmlTick                      = 'Tick';
       ConstXmlSousChapitreCarac	        = 'SUBCHAPTER_ATTR';
       // V2 : <Advances><Advance name="RULES-ATTR_xx">"5"</Advance></Advances> d'une carriere
       ConstXmlAdvances                  = 'Advances';
@@ -314,6 +317,11 @@ Const
       // Marque un talent comme TRAIT DE CREATURE (Rulebook p.338-341) : acquis a la naissance
       // par la race, jamais achete ni choisi. Voir CONTEXT.md 2.15.
       ConstXmlTrait                     = 'Trait';
+      // <FreeSpecialisation>1</...> sur la fiche GENERIQUE d'une competence ou d'un talent : le
+      // joueur peut y creer une specialisation qui n'est pas dans le livre (bouton +Specialisation de
+      // WinSpecialisation). Absent = refuse (competences de combat liees aux armes, dieux, domaines
+      // de magie, traits...). Decision Nono 20/11/2026.
+      ConstXmlSpecLibre                 = 'FreeSpecialisation';
       // Acces aux sorts porte par le TALENT, en donnees, a la place des quatre constantes
       // TalentSortXxx comparees par prefixe (winpersonnage.pas). Deux axes independants :
       //  <Magic>     priorite d'ouverture du catalogue de sorts
@@ -354,6 +362,10 @@ Const
       ConstXmlXpDiviseur                = 'XpDivisor';
       ConstXmlXpOfferts                 = 'XpFree';
       ConstXmlXpGroupe                  = 'XpPool';
+      //  XpOffset : decalage AJOUTE au palier, cout = XpMultiplier x max(XpFloor, ceil(n / XpDivisor) + XpOffset).
+      //  Sert a Witch! (Rulebook V5 p.128) : 150 XP le 2e sort, puis 50 de plus a chaque fois
+      //  (XpMultiplier 50, XpDivisor 1, XpOffset 2). Absent = 0.
+      ConstXmlXpDecalage                = 'XpOffset';
       ConstModeSortAuto                 = 'AUTO';
       ConstModeSortChoix                = 'CHOICE';
       ConstModeSortAucun                = 'NONE';
@@ -361,6 +373,9 @@ Const
       ConstMagieAucune                  = 0;
       ConstMagieExclusive               = 1;
       ConstMagieCumulable               = 2;
+      // 3 = s'ajoute TOUJOURS, meme avec un Domaine (Petty Magic : le livre V4 comme V5 ne
+      // l'exclut pas, et plusieurs carrieres melangent Petty Magic et Arcane Magic). Invoke reste en 2.
+      ConstMagieToujours                = 3;
       // Valeur "vrai" d'une balise XML booleenne (meme convention que <OFFICIAL>/<COMPLETE>).
       ConstVrai                         = '1';
       ConstXmlEthnic                    = 'Ethnic';
@@ -442,6 +457,8 @@ Const
       // le Skink de Lustria qui en prend 2 et 2). Absentes = 3. Voir CONTEXT.md 2.15.
       ConstXmlNbSkill5                  = 'Skill5';
       ConstXmlNbSkill3                  = 'Skill3';
+      // V5 : competence acquise d'office par l'ethnie (langues de depart : Reikspiel +30...)
+      ConstXmlFixedSkill                = 'FixedSkill';
       // Dossier d'icones de niveau propre a l'ethnie, sous \PICTURES\. Balise absente ou
       // vide = dossier NIV generique. Voir CheminNiveauImage dans ChargeRace.
       ConstXmlPictureLevel              = 'PictureLevel';
@@ -533,6 +550,9 @@ Const
       // Present = habillage Warhammer en niveaux de gris (absent = en couleurs, fiches existantes).
       ConstXmlOptionPdfSansCouleur      = 'PdfNoColor';
       ConstXmlOptionPdfEconomie         = 'PdfInkSaver';
+      // Present = PDF V5 « donnees seules » : ni filet, ni libelle, pour une feuille officielle deja imprimee.
+      ConstXmlOptionPdfDonneesSeules    = 'PdfDataOnly';
+      ConstXmlOptionPdfFondOfficiel     = 'PdfOfficialBackground';
       // Present = le personnage utilise les talents Momentum (regles WFRP5 en WFRP4) : ses talents
       // portent le code MOMENTUM-T_xxx du livre BOOK_MOMENTUM au lieu de RULES-T_xxx.
       ConstXmlOptionMomentum            = 'Momentum';
@@ -557,6 +577,21 @@ Const
       // Nom du fichier GROUPE_<Nom>.xml auquel ce personnage appartient, absent = solo.
       // Etape 1 de la conception CONTEXT.md 2.100, 27/09/2026.
       ConstXmlGroupeId                   = 'GroupeId';
+      // The Old World (WFRPTOW) : champs propres a TOW, balises ecrites seulement si non vides / non nulles.
+      // Les lignes (lores, atouts, contacts, precisions, ticks...) tiennent dans un bloc unique, voir
+      // StructurePersonnage.LignesTow.
+      ConstXmlStatusTow                  = 'StatusTow';
+      ConstXmlStatusNiveauTow            = 'StatusLevelTow';
+      ConstXmlGrimPortentTow             = 'GrimPortentTow';
+      ConstXmlNotesTow                   = 'NotesTow';
+      ConstXmlWizardLevelTow             = 'WizardLevelTow';
+      ConstXmlFateTow                    = 'FateTow';
+      ConstXmlFortuneTow                 = 'FortuneTow';
+      ConstXmlChapitreLignesTow          = 'TOW_LINES';
+      ConstXmlLigneTow                   = 'Line';
+      // Lores TOW : une chose possedee (ni rang ni ticks, Player's Guide p.82), bloc a part.
+      ConstXmlChapitreLoresTow           = 'TOW_LORES';
+      ConstXmlLoreTow                    = 'Lore';
       // Objets crees dans WinPersonnage, propres au personnage (sans livre) : bloc de fiche
       // dont le contenu a le format d'un DATA_TRAPPING de livre. Ils sont injectes dans les
       // listes sous ce libelle de livre a chaque chargement de la fiche. 08/10/2026.
@@ -747,6 +782,7 @@ Const
       ConstCaracSoc			= 'RULES-ATTR_Fel';
       ConstCaracDestin		        = 'RULES-ATTR_Fate';
       ConstCaracResil			= 'RULES-ATTR_Resil';
+      ConstCaracFortune                 = 'RULES-ATTR_Fortune';
       ConstCaracPointSupp               = 'RULES-ATTR_Supp';
       ConstCaracBlessure                = 'RULES-ATTR_Wound';
       ConstCaracMouvement               = 'RULES-ATTR_Move';
@@ -1047,6 +1083,8 @@ Var
   ChoixWinAttribut:    String = '';
   SelectWinBase:       Boolean = False;   // filtre des carrieres V1 / V2 : carrieres de base seulement
   ChoixWinBase:        Boolean = False;
+  SelectWinTalentOu:   Boolean = False;   // filtre des carrieres : talents coches en OU (un seul suffit) au lieu de ET
+  ChoixWinTalentOu:    Boolean = False;
   SelectWinCompetence: String = '';
   ChoixWinCompetence:  String = '';
   RecherchePersonnage: String = '';

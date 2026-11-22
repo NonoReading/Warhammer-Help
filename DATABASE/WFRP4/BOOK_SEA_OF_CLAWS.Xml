@@ -2162,7 +2162,7 @@
 </Weapon>
 </DATA_WEAPON>
 <DATA_SPELL>
-<Sort id="SEAOF-MIRAC_MANAMM_07">
+<Sort id="SEAOF-MIRAC_MANAMM_BLESSED_VOYAGE">
 <Description language="ENGLISH">"Blessed Voyage"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 ship"</Target>
@@ -2173,7 +2173,7 @@
 <TypSpell>"Miracle"</TypSpell>
 <Page>87</Page>
 </Sort>
-<Sort id="SEAOF-MIRAC_MANAMM_13">
+<Sort id="SEAOF-MIRAC_MANAMM_BLESSING_OF_THE_ALBATROSS">
 <Description language="ENGLISH">"Blessing of the Albatross"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 ship"</Target>
@@ -2184,7 +2184,7 @@
 <TypSpell>"Miracle"</TypSpell>
   <Page>87</Page>
 </Sort>
-<Sort id="SEAOF-MIRAC_MANAMM_14">
+<Sort id="SEAOF-MIRAC_MANAMM_BLESSING_OF_THE_MARINER">
 <Description language="ENGLISH">"Blessing of the Mariner"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
@@ -2195,7 +2195,7 @@
 <TypSpell>"Miracle"</TypSpell>
   <Page>87</Page>
 </Sort>
-<Sort id="SEAOF-MIRAC_MANAMM_08">
+<Sort id="SEAOF-MIRAC_MANAMM_BREATHE_WATER">
 <Description language="ENGLISH">"Breathe Water"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
@@ -2206,7 +2206,7 @@
 <TypSpell>"Miracle"</TypSpell>
 <Page>87</Page>
 </Sort>
-<Sort id="SEAOF-MIRAC_MANAMM_09">
+<Sort id="SEAOF-MIRAC_MANAMM_QUELL_WATERS">
 <Description language="ENGLISH">"Quell Waters"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 strait or whirlpool"</Target>
@@ -2217,7 +2217,7 @@
 <TypSpell>"Miracle"</TypSpell>
 <Page>87</Page>
 </Sort>
-<Sort id="SEAOF-MIRAC_MANAMM_10">
+<Sort id="SEAOF-MIRAC_MANAMM_SEA_CURSE">
 <Description language="ENGLISH">"Sea Curse"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 ship"</Target>
@@ -2228,7 +2228,7 @@
 <TypSpell>"Miracle"</TypSpell>
 <Page>87</Page>
 </Sort>
-<Sort id="SEAOF-MIRAC_MANAMM_11">
+<Sort id="SEAOF-MIRAC_MANAMM_REPEL_SEA_BEAST">
 <Description language="ENGLISH">"Repel Sea Beast"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 creature with the Aquatic or the Marine Trait"</Target>
@@ -2239,7 +2239,7 @@
 <TypSpell>"Miracle"</TypSpell>
 <Page>87</Page>
 </Sort>
-<Sort id="SEAOF-MIRAC_MANAMM_12">
+<Sort id="SEAOF-MIRAC_MANAMM_RIP_TIDES">
 <Description language="ENGLISH">"Rip Tides"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 ship"</Target>
@@ -2250,7 +2250,7 @@
 <TypSpell>"Miracle"</TypSpell>
 <Page>87</Page>
 </Sort>
-<Sort id="SEAOF-MIRAC_STROMFELS_01">
+<Sort id="SEAOF-MIRAC_STROMFELS_BLOOD_TRAIL">
 <Description language="ENGLISH">"Blood Trail"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"You"</Target>
@@ -2261,7 +2261,7 @@
 <TypSpell>"Miracle"</TypSpell>
 <Page>91</Page>
 </Sort>
-<Sort id="SEAOF-MIRAC_STROMFELS_02">
+<Sort id="SEAOF-MIRAC_STROMFELS_CURSE_OF_THE_HARSH_MISTRESS">
 <Description language="ENGLISH">"Curse of the Harsh Mistress"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
@@ -2272,7 +2272,7 @@
 <TypSpell>"Miracle"</TypSpell>
 <Page>91</Page>
 </Sort>
-<Sort id="SEAOF-MIRAC_STROMFELS_03">
+<Sort id="SEAOF-MIRAC_STROMFELS_MANANN_S_MOOD_MADE_MEANINGLESS">
 <Description language="ENGLISH">"Manann’s Mood Made Meaningless"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"See text"</Target>
@@ -2283,7 +2283,7 @@
 <TypSpell>"Miracle"</TypSpell>
 <Page>91</Page>
 </Sort>
-<Sort id="SEAOF-MIRAC_STROMFELS_04">
+<Sort id="SEAOF-MIRAC_STROMFELS_RAGING_SEAS">
 <Description language="ENGLISH">"Raging Seas"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"See text"</Target>
@@ -2294,7 +2294,7 @@
 <TypSpell>"Miracle"</TypSpell>
 <Page>91</Page>
 </Sort>
-<Sort id="SEAOF-MIRAC_STROMFELS_05">
+<Sort id="SEAOF-MIRAC_STROMFELS_SEASICKNESS">
 <Description language="ENGLISH">"Seasickness"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1"</Target>
@@ -2305,7 +2305,7 @@
 <TypSpell>"Miracle"</TypSpell>
 <Page>91</Page>
 </Sort>
-<Sort id="SEAOF-MIRAC_STROMFELS_06">
+<Sort id="SEAOF-MIRAC_STROMFELS_SEND_EM_TO_STROMFELS">
 <Description language="ENGLISH">"Send ‘em to Stromfels"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 ship with a Holed Rating"</Target>
@@ -2316,7 +2316,7 @@
 <TypSpell>"Miracle"</TypSpell>
 <Page>91</Page>
 </Sort>
-<Sort id="SEAOF-MIRAC_STROMFELS_07">
+<Sort id="SEAOF-MIRAC_STROMFELS_STORM_WINDS">
 <Description language="ENGLISH">"Storm Winds"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Target>"1 ship"</Target>

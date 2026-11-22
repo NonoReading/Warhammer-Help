@@ -102,6 +102,7 @@ procedure TWinEquipements.FormCreate(Sender: TObject);
 begin
   EnRemplissage := false;
   FiltreLivre   := SelectWinLivre;
+  SelectWinLivre := '';   // lecture unique (pas de fuite vers la fenetre suivante)
   ListeThemes   := TStringList.Create;
 
   MiseEnFormeDesChamp(Self);
@@ -188,6 +189,8 @@ end;
 
 function TWinEquipements.Retenu(PTrapping: StructureTrapping): Boolean;
 begin
+  // The Old World : un code en '__' est un emplacement « au choix » (Silver weapon, Trade tools...), pas un objet
+  if Copy(PTrapping.CodeTrapping, Length(PTrapping.CodeTrapping) - 1, 2) = '__' then Exit(False);
   case Mode of
     meHorsVehicules: Result := not EstThemeAnimauxVehicules(PTrapping.Theme);
     meVehicules:     Result := EstThemeAnimauxVehicules(PTrapping.Theme);

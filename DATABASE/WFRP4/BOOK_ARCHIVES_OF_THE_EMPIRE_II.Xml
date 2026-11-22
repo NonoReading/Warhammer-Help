@@ -27,6 +27,7 @@
 <Page>20</Page>
 </Talent>
 <Talent id="ARCH2-T_VICE__*">
+<FreeSpecialisation>"1"</FreeSpecialisation>
 <Description language="ENGLISH">"Vice (Any)"</Description>
 <Short language="ENGLISH">""</Short>
 <Explanation language="ENGLISH">""</Explanation>
@@ -502,7 +503,7 @@
 <Price>"14CO"</Price>
 <Encumbrance>"8"</Encumbrance>
 <Quality>"RULES-WEAPB_DANGEROUS,RULES-WEAPB_RELOAD 5"</Quality>
-<Hand>"0"</Hand>
+<Hand>"2"</Hand>
 <Ammunition>"0"</Ammunition>
 <Page>29</Page>
 </Weapon>
@@ -592,7 +593,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_01 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_SPELL_RING 1"</InherentCraftsmanship>
 <Page>66</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_STRIKING_RING">
@@ -601,7 +602,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_02 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_STRIKING_RING 1"</InherentCraftsmanship>
 <Page>66</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_RUBY_RING_OF_RUIN">
@@ -610,7 +611,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_03 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_RUBY_RING_OF_RUIN 1"</InherentCraftsmanship>
 <Page>66</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_PROTECTION_RING">
@@ -619,7 +620,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_04 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_PROTECTION_RING 1"</InherentCraftsmanship>
 <Page>66</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_OBSIDIAN_LODESTONE">
@@ -628,7 +629,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_05 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_OBSIDIAN_LODESTONE 1"</InherentCraftsmanship>
 <Page>66</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_DAWNSTONE">
@@ -637,7 +638,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_06 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_DAWNSTONE 1"</InherentCraftsmanship>
 <Page>66</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_OPAL_AMULET">
@@ -646,7 +647,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_07 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_OPAL_AMULET 1"</InherentCraftsmanship>
 <Page>66</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_SEED_OF_REBIRTH">
@@ -655,7 +656,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_08 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_SEED_OF_REBIRTH 1"</InherentCraftsmanship>
 <Page>66</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_AMULET_OF_THRICE_BLESSED_COPPER">
@@ -664,7 +665,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_09 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_AMULET_OF_THRICE_BLESSED_COPPER 1"</InherentCraftsmanship>
 <Page>66</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_AMULET_OF_RIGHTEOUS_SILVER">
@@ -673,7 +674,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_10 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_AMULET_OF_RIGHTEOUS_SILVER 1"</InherentCraftsmanship>
 <Page>66</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_WANDERER_S_CHARM">
@@ -682,7 +683,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_11 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_WANDERER_S_CHARM 1"</InherentCraftsmanship>
 <Page>66</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_SELF_CLEANING_COMMODE">
@@ -691,7 +692,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_12 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_SELF_CLEANING_COMMODE 1"</InherentCraftsmanship>
 <Page>67</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_ILLUSORY_WEAPON">
@@ -700,7 +701,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_13 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_ILLUSORY_WEAPON 1"</InherentCraftsmanship>
 <Page>67</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_SELF_TUNING_LUTE">
@@ -709,7 +710,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_14 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_SELF_TUNING_LUTE 1"</InherentCraftsmanship>
 <Page>67</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_SAND_OF_FLINGING">
@@ -718,7 +719,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_15 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_SAND_OF_FLINGING 1"</InherentCraftsmanship>
 <Page>67</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_WRIT_OF_THE_FIFTH_LORE">
@@ -727,7 +728,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_16 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_WRIT_OF_THE_FIFTH_LORE 1"</InherentCraftsmanship>
 <Page>67</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_DAZH_S_FLINT">
@@ -736,7 +737,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_17 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_DAZH_S_FLINT 1"</InherentCraftsmanship>
 <Page>67</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_SCREAMING_STONE">
@@ -745,7 +746,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_18 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_SCREAMING_STONE 1"</InherentCraftsmanship>
 <Page>67</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_TRACKLESS_BOOTS">
@@ -754,7 +755,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_19 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_TRACKLESS_BOOTS 1"</InherentCraftsmanship>
 <Page>67</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_ALL_SEEING_MIRROR">
@@ -763,7 +764,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_20 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_ALL_SEEING_MIRROR 1"</InherentCraftsmanship>
 <Page>67</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_BELLICOSE_CUP">
@@ -772,7 +773,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_21 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_BELLICOSE_CUP 1"</InherentCraftsmanship>
 <Page>67</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_ELVEN_CLOAK">
@@ -781,7 +782,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_22 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_ELVEN_CLOAK 1"</InherentCraftsmanship>
 <Page>67</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_CROWN_OF_COMMAND">
@@ -790,7 +791,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_23 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_CROWN_OF_COMMAND 1"</InherentCraftsmanship>
 <Page>67</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_WIZARD_S_STAFF">
@@ -799,7 +800,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_24 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_WIZARD_S_STAFF 1"</InherentCraftsmanship>
 <Page>65</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_WAND_OF_JADE">
@@ -808,7 +809,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_25 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_WAND_OF_JADE 1"</InherentCraftsmanship>
 <Page>65</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_WAND_OF_JET">
@@ -817,7 +818,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_26 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_WAND_OF_JET 1"</InherentCraftsmanship>
 <Page>65</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_EARTHING_ROD">
@@ -826,7 +827,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_27 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_EARTHING_ROD 1"</InherentCraftsmanship>
 <Page>65</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_WAND_OF_THE_WINDS">
@@ -835,7 +836,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_28 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_WAND_OF_THE_WINDS 1"</InherentCraftsmanship>
 <Page>65</Page>
 </Trapping>
 <Trapping id="ARCH2-TRAP_FORBIDDEN_ROD">
@@ -844,7 +845,7 @@
 <Availability>"RULES-DISPO_EXOTIC"</Availability>
 <Price>"0CO"</Price>
 <Encumbrance>"0"</Encumbrance>
-<InherentCraftsmanship>"ARCH2-MAGIC_29 1"</InherentCraftsmanship>
+<InherentCraftsmanship>"ARCH2-MAGIC_FORBIDDEN_ROD 1"</InherentCraftsmanship>
 <Page>65</Page>
 </Trapping>
 </DATA_TRAPPING>
@@ -1238,7 +1239,7 @@
 <Modifier>""</Modifier>
 <Page>63</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_01">
+<Craftsmanship id="ARCH2-MAGIC_SPELL_RING">
 <Description language="ENGLISH">"Spell Ring"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Casts one spell, once per 24 hours"</Short>
@@ -1247,7 +1248,7 @@
 <Modifier>""</Modifier>
 <Page>66</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_02">
+<Craftsmanship id="ARCH2-MAGIC_STRIKING_RING">
 <Description language="ENGLISH">"Striking Ring"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"One Strike talent per 24 hours"</Short>
@@ -1256,7 +1257,7 @@
 <Modifier>""</Modifier>
 <Page>66</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_03">
+<Craftsmanship id="ARCH2-MAGIC_RUBY_RING_OF_RUIN">
 <Description language="ENGLISH">"Ruby Ring of Ruin"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Casts Great Fires of U'Zhul 3 times per 24 hours"</Short>
@@ -1265,7 +1266,7 @@
 <Modifier>""</Modifier>
 <Page>66</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_04">
+<Craftsmanship id="ARCH2-MAGIC_PROTECTION_RING">
 <Description language="ENGLISH">"Protection Ring"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Halves Wounds from one type of Creature"</Short>
@@ -1274,7 +1275,7 @@
 <Modifier>""</Modifier>
 <Page>66</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_05">
+<Craftsmanship id="ARCH2-MAGIC_OBSIDIAN_LODESTONE">
 <Description language="ENGLISH">"Obsidian Lodestone"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Dispel attempt against spells targeting the wearer"</Short>
@@ -1283,7 +1284,7 @@
 <Modifier>""</Modifier>
 <Page>66</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_06">
+<Craftsmanship id="ARCH2-MAGIC_DAWNSTONE">
 <Description language="ENGLISH">"Dawnstone"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Ignores damage to an armour piece once"</Short>
@@ -1292,7 +1293,7 @@
 <Modifier>""</Modifier>
 <Page>66</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_07">
+<Craftsmanship id="ARCH2-MAGIC_OPAL_AMULET">
 <Description language="ENGLISH">"Opal Amulet"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Removes 1d10 Wounds from the first attack, once per 24 hours"</Short>
@@ -1301,7 +1302,7 @@
 <Modifier>""</Modifier>
 <Page>66</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_08">
+<Craftsmanship id="ARCH2-MAGIC_SEED_OF_REBIRTH">
 <Description language="ENGLISH">"Seed of Rebirth"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Wearer counts as having Regenerate"</Short>
@@ -1311,7 +1312,7 @@
 <Modifier>""</Modifier>
 <Page>66</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_09">
+<Craftsmanship id="ARCH2-MAGIC_AMULET_OF_THRICE_BLESSED_COPPER">
 <Description language="ENGLISH">"Amulet of Thrice-Blessed Copper"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"-1 Damage from all attacks, +30 Endurance vs Poison"</Short>
@@ -1321,7 +1322,7 @@
 <Modifier>""</Modifier>
 <Page>66</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_10">
+<Craftsmanship id="ARCH2-MAGIC_AMULET_OF_RIGHTEOUS_SILVER">
 <Description language="ENGLISH">"Amulet of Righteous Silver"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"No Fear, +2 SL vs Terror"</Short>
@@ -1330,7 +1331,7 @@
 <Modifier>""</Modifier>
 <Page>66</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_11">
+<Craftsmanship id="ARCH2-MAGIC_WANDERER_S_CHARM">
 <Description language="ENGLISH">"Wanderer's Charm"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Ignores the first Fatigued Condition each day"</Short>
@@ -1339,7 +1340,7 @@
 <Modifier>""</Modifier>
 <Page>66</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_12">
+<Craftsmanship id="ARCH2-MAGIC_SELF_CLEANING_COMMODE">
 <Description language="ENGLISH">"Self-Cleaning Commode"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"+10 Endurance vs disease"</Short>
@@ -1348,7 +1349,7 @@
 <Modifier>""</Modifier>
 <Page>67</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_13">
+<Craftsmanship id="ARCH2-MAGIC_ILLUSORY_WEAPON">
 <Description language="ENGLISH">"Illusory Weapon"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Looks real but inflicts no damage"</Short>
@@ -1357,7 +1358,7 @@
 <Modifier>""</Modifier>
 <Page>67</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_14">
+<Craftsmanship id="ARCH2-MAGIC_SELF_TUNING_LUTE">
 <Description language="ENGLISH">"Self-Tuning Lute"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"+10 Play (Lute)"</Short>
@@ -1367,7 +1368,7 @@
 <Modifier>""</Modifier>
 <Page>67</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_15">
+<Craftsmanship id="ARCH2-MAGIC_SAND_OF_FLINGING">
 <Description language="ENGLISH">"Sand of Flinging"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Thrown like a dart, Blinded on a head hit"</Short>
@@ -1376,7 +1377,7 @@
 <Modifier>""</Modifier>
 <Page>67</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_16">
+<Craftsmanship id="ARCH2-MAGIC_WRIT_OF_THE_FIFTH_LORE">
 <Description language="ENGLISH">"Writ of the Fifth Lore"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Passes as a licence or letter (Very Difficult Perception)"</Short>
@@ -1385,7 +1386,7 @@
 <Modifier>""</Modifier>
 <Page>67</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_17">
+<Craftsmanship id="ARCH2-MAGIC_DAZH_S_FLINT">
 <Description language="ENGLISH">"Dazh's Flint"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Sets a flammable source on fire"</Short>
@@ -1394,7 +1395,7 @@
 <Modifier>""</Modifier>
 <Page>67</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_18">
+<Craftsmanship id="ARCH2-MAGIC_SCREAMING_STONE">
 <Description language="ENGLISH">"Screaming Stone"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Screams when a living creature is in view"</Short>
@@ -1403,7 +1404,7 @@
 <Modifier>""</Modifier>
 <Page>67</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_19">
+<Craftsmanship id="ARCH2-MAGIC_TRACKLESS_BOOTS">
 <Description language="ENGLISH">"Trackless Boots"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"-20 to Track Tests made against the wearer"</Short>
@@ -1412,7 +1413,7 @@
 <Modifier>""</Modifier>
 <Page>67</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_20">
+<Craftsmanship id="ARCH2-MAGIC_ALL_SEEING_MIRROR">
 <Description language="ENGLISH">"All-Seeing Mirror"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Shows what its sister mirror sees"</Short>
@@ -1421,7 +1422,7 @@
 <Modifier>""</Modifier>
 <Page>67</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_21">
+<Craftsmanship id="ARCH2-MAGIC_BELLICOSE_CUP">
 <Description language="ENGLISH">"Bellicose Cup"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Once a day: ignore Bleeding, or a Critical Wound, or gain 100 XP"</Short>
@@ -1430,7 +1431,7 @@
 <Modifier>""</Modifier>
 <Page>67</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_22">
+<Craftsmanship id="ARCH2-MAGIC_ELVEN_CLOAK">
 <Description language="ENGLISH">"Elven Cloak"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"-20 to sight-based Perception or BS Tests against the wearer"</Short>
@@ -1439,7 +1440,7 @@
 <Modifier>""</Modifier>
 <Page>67</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_23">
+<Craftsmanship id="ARCH2-MAGIC_CROWN_OF_COMMAND">
 <Description language="ENGLISH">"Crown of Command"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"+20 Leadership"</Short>
@@ -1449,7 +1450,7 @@
 <Modifier>""</Modifier>
 <Page>67</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_24">
+<Craftsmanship id="ARCH2-MAGIC_WIZARD_S_STAFF">
 <Description language="ENGLISH">"Wizard's Staff"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"-1 CN to spells of the associated Lore"</Short>
@@ -1459,7 +1460,7 @@
 <Modifier>""</Modifier>
 <Page>65</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_25">
+<Craftsmanship id="ARCH2-MAGIC_WAND_OF_JADE">
 <Description language="ENGLISH">"Wand of Jade"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Doubles the range of spells cast"</Short>
@@ -1468,7 +1469,7 @@
 <Modifier>""</Modifier>
 <Page>65</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_26">
+<Craftsmanship id="ARCH2-MAGIC_WAND_OF_JET">
 <Description language="ENGLISH">"Wand of Jet"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Doubles the duration of spells cast"</Short>
@@ -1477,7 +1478,7 @@
 <Modifier>""</Modifier>
 <Page>65</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_27">
+<Craftsmanship id="ARCH2-MAGIC_EARTHING_ROD">
 <Description language="ENGLISH">"Earthing Rod"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Ignores one Minor Miscast per 24 hours"</Short>
@@ -1486,7 +1487,7 @@
 <Modifier>""</Modifier>
 <Page>65</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_28">
+<Craftsmanship id="ARCH2-MAGIC_WAND_OF_THE_WINDS">
 <Description language="ENGLISH">"Wand of the Winds"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Ignores Swirling Winds penalties for 1d10 Rounds, once per 24 hours"</Short>
@@ -1495,7 +1496,7 @@
 <Modifier>""</Modifier>
 <Page>65</Page>
 </Craftsmanship>
-<Craftsmanship id="ARCH2-MAGIC_29">
+<Craftsmanship id="ARCH2-MAGIC_FORBIDDEN_ROD">
 <Description language="ENGLISH">"Forbidden Rod"</Description>
 <Explanation language="ENGLISH">""</Explanation>
 <Short language="ENGLISH">"Lose up to 3 Wounds for +1 SL each on a failed Cast, once per 24 hours"</Short>
@@ -1591,7 +1592,7 @@
 <Specie name="ARCH2-RACE_OGRE">"11-100"</Specie>
 </DATA_CORRUPTION_MENTAL>
 <DATA_STARSIGN>
-<StarSign id="ARCH2-STAR01">
+<StarSign id="ARCH2-STAR_WYMUND_THE_ANCHORITE">
 <Range>"01-05"</Range>
 <Description language="ENGLISH">"Wymund the Anchorite"</Description>
 <Title language="ENGLISH">"Sign of Enduring"</Title>
@@ -1606,7 +1607,7 @@
 <Modifier name="RULES-ATTR_Int">"-3"</Modifier>
 <Page>39</Page>
 </StarSign>
-<StarSign id="ARCH2-STAR02">
+<StarSign id="ARCH2-STAR_THE_BIG_CROSS">
 <Range>"06-10"</Range>
 <Description language="ENGLISH">"The Big Cross"</Description>
 <Title language="ENGLISH">"Sign of Clarity"</Title>
@@ -1621,7 +1622,7 @@
 <Modifier name="RULES-ATTR_I">"-3"</Modifier>
 <Page>39</Page>
 </StarSign>
-<StarSign id="ARCH2-STAR03">
+<StarSign id="ARCH2-STAR_THE_LIMNER_S_LINE">
 <Range>"11-15"</Range>
 <Description language="ENGLISH">"The Limner's Line"</Description>
 <Title language="ENGLISH">"Sign of Precision"</Title>
@@ -1636,7 +1637,7 @@
 <Modifier name="RULES-ATTR_WS">"-3"</Modifier>
 <Page>39</Page>
 </StarSign>
-<StarSign id="ARCH2-STAR04">
+<StarSign id="ARCH2-STAR_GNUTHUS_THE_OX">
 <Range>"16-20"</Range>
 <Description language="ENGLISH">"Gnuthus the Ox"</Description>
 <Title language="ENGLISH">"Sign of Dutiful Service"</Title>
@@ -1651,7 +1652,7 @@
 <Modifier name="RULES-ATTR_Int">"-3"</Modifier>
 <Page>39</Page>
 </StarSign>
-<StarSign id="ARCH2-STAR05">
+<StarSign id="ARCH2-STAR_DRAGOMAS_THE_DRAKE">
 <Range>"21-25"</Range>
 <Description language="ENGLISH">"Dragomas the Drake"</Description>
 <Title language="ENGLISH">"Sign of Courage"</Title>
@@ -1666,7 +1667,7 @@
 <Modifier name="RULES-ATTR_Dex">"-3"</Modifier>
 <Page>39</Page>
 </StarSign>
-<StarSign id="ARCH2-STAR06">
+<StarSign id="ARCH2-STAR_THE_GLOAMING">
 <Range>"26-30"</Range>
 <Description language="ENGLISH">"The Gloaming"</Description>
 <Title language="ENGLISH">"Sign of Illusion and Mystery"</Title>
@@ -1681,7 +1682,7 @@
 <Modifier name="RULES-ATTR_WP">"-3"</Modifier>
 <Page>39</Page>
 </StarSign>
-<StarSign id="ARCH2-STAR07">
+<StarSign id="ARCH2-STAR_GRUNGNI_S_BALDRIC">
 <Range>"31-35"</Range>
 <Description language="ENGLISH">"Grungni's Baldric"</Description>
 <Title language="ENGLISH">"Sign of Martial Pursuits"</Title>
@@ -1696,7 +1697,7 @@
 <Modifier name="RULES-ATTR_Fel">"-3"</Modifier>
 <Page>42</Page>
 </StarSign>
-<StarSign id="ARCH2-STAR08">
+<StarSign id="ARCH2-STAR_MAMMIT_THE_WISE">
 <Range>"36-40"</Range>
 <Description language="ENGLISH">"Mammit the Wise"</Description>
 <Title language="ENGLISH">"Sign of Wisdom"</Title>
@@ -1711,7 +1712,7 @@
 <Modifier name="RULES-ATTR_Fel">"-3"</Modifier>
 <Page>39</Page>
 </StarSign>
-<StarSign id="ARCH2-STAR09">
+<StarSign id="ARCH2-STAR_MUMMIT_THE_FOOL">
 <Range>"41-45"</Range>
 <Description language="ENGLISH">"Mummit the Fool"</Description>
 <Title language="ENGLISH">"Sign of the Indistinct"</Title>
@@ -1725,7 +1726,7 @@
 <Talent>"RULES-T_LUCK"</Talent>
 <Page>39</Page>
 </StarSign>
-<StarSign id="ARCH2-STAR10">
+<StarSign id="ARCH2-STAR_THE_TWO_BULLOCKS">
 <Range>"46-50"</Range>
 <Description language="ENGLISH">"The Two Bullocks"</Description>
 <Title language="ENGLISH">"Sign of Fertility and Craftsmanship"</Title>
@@ -1739,7 +1740,7 @@
 <Talent>"RULES-T_CRAFTSMAN__*"</Talent>
 <Page>39</Page>
 </StarSign>
-<StarSign id="ARCH2-STAR11">
+<StarSign id="ARCH2-STAR_THE_DANCER">
 <Range>"51-55"</Range>
 <Description language="ENGLISH">"The Dancer"</Description>
 <Title language="ENGLISH">"Sign of Love and Attraction"</Title>
@@ -1753,7 +1754,7 @@
 <Talent>"RULES-T_IMPASSIONED_ZEAL"</Talent>
 <Page>39</Page>
 </StarSign>
-<StarSign id="ARCH2-STAR12">
+<StarSign id="ARCH2-STAR_THE_DRUMMER">
 <Range>"56-60"</Range>
 <Description language="ENGLISH">"The Drummer"</Description>
 <Title language="ENGLISH">"Sign of Excess and Hedonism"</Title>
@@ -1767,7 +1768,7 @@
 <Talent>"RULES-T_CAROUSER"</Talent>
 <Page>39</Page>
 </StarSign>
-<StarSign id="ARCH2-STAR13">
+<StarSign id="ARCH2-STAR_THE_PIPER">
 <Range>"61-65"</Range>
 <Description language="ENGLISH">"The Piper"</Description>
 <Title language="ENGLISH">"Sign of the Trickster"</Title>
@@ -1782,7 +1783,7 @@
 <Modifier name="RULES-ATTR_WS">"-3"</Modifier>
 <Page>39</Page>
 </StarSign>
-<StarSign id="ARCH2-STAR14">
+<StarSign id="ARCH2-STAR_VOBIST_THE_FAINT">
 <Range>"66-70"</Range>
 <Description language="ENGLISH">"Vobist the Faint"</Description>
 <Title language="ENGLISH">"Sign of Darkness and Uncertainty"</Title>
@@ -1796,7 +1797,7 @@
 <Talent>"RULES-T_SIXTH_SENSE"</Talent>
 <Page>39</Page>
 </StarSign>
-<StarSign id="ARCH2-STAR15">
+<StarSign id="ARCH2-STAR_THE_BROKEN_CART">
 <Range>"71-75"</Range>
 <Description language="ENGLISH">"The Broken Cart"</Description>
 <Title language="ENGLISH">"Sign of Pride"</Title>
@@ -1810,7 +1811,7 @@
 <Talent>"RULES-T_RESISTANCE__MALA"</Talent>
 <Page>39</Page>
 </StarSign>
-<StarSign id="ARCH2-STAR16">
+<StarSign id="ARCH2-STAR_THE_GREASED_GOAT">
 <Range>"76-80"</Range>
 <Description language="ENGLISH">"The Greased Goat"</Description>
 <Title language="ENGLISH">"Sign of Denied Passions"</Title>
@@ -1824,7 +1825,7 @@
 <Talent>"RULES-T_ANIMAL_AFFINITY"</Talent>
 <Page>39</Page>
 </StarSign>
-<StarSign id="ARCH2-STAR17">
+<StarSign id="ARCH2-STAR_RHYA_S_CAULDRON">
 <Range>"81-85"</Range>
 <Description language="ENGLISH">"Rhya's Cauldron"</Description>
 <Title language="ENGLISH">"Sign of Mercy, Death, and Creation"</Title>
@@ -1838,7 +1839,7 @@
 <Talent>"RULES-T_IRON_WILL"</Talent>
 <Page>39</Page>
 </StarSign>
-<StarSign id="ARCH2-STAR18">
+<StarSign id="ARCH2-STAR_CACKELFAX_THE_COCKEREL">
 <Range>"86-90"</Range>
 <Description language="ENGLISH">"Cackelfax the Cockerel"</Description>
 <Title language="ENGLISH">"Sign of Money and Merchants"</Title>
@@ -1852,7 +1853,7 @@
 <Talent>"RULES-T_DEALMAKER"</Talent>
 <Page>39</Page>
 </StarSign>
-<StarSign id="ARCH2-STAR19">
+<StarSign id="ARCH2-STAR_THE_BONESAW">
 <Range>"91-95"</Range>
 <Description language="ENGLISH">"The Bonesaw"</Description>
 <Title language="ENGLISH">"Sign of Skill and Learning"</Title>
@@ -1867,7 +1868,7 @@
 <Modifier name="RULES-ATTR_WS">"-3"</Modifier>
 <Page>39</Page>
 </StarSign>
-<StarSign id="ARCH2-STAR20">
+<StarSign id="ARCH2-STAR_THE_WITCHLING_STAR">
 <Range>"96-00"</Range>
 <Description language="ENGLISH">"The Witchling Star"</Description>
 <Title language="ENGLISH">"Sign of Magic"</Title>

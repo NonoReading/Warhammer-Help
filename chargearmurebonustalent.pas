@@ -8,7 +8,7 @@ uses
   Classes, SysUtils, ChargeConstantes, Generics.Collections;
 
 Type
-  // Talent accorde automatiquement par une qualite d'objet (ex. NATIO-ARMOB_16 "Fear" ->
+  // Talent accorde automatiquement par une qualite d'objet (ex. NATIO-ARMOB_FEAR "Fear" ->
   // RULES-T0049 "Frightening", Skull Trophies), chantier "traits de creature",
   // CONTEXT.md/A FAIRE.txt. Meme moule que StructureCorruptionTalent
   // (chargecorruptiontalent.pas), qui accorde un talent depuis une mutation plutot que

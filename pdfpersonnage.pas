@@ -143,7 +143,14 @@ Function PersonnageTalentEffetRang(Personnage: StructurePersonnage; Cible: Strin
 // indépendante pour ne rien risquer sur le PDF existant.
 Function PersonnageCorruptionTotal(Personnage: StructurePersonnage): Integer;
 // Mode lot (WarhammerHelp.exe --pdf) : ne pas ouvrir le lecteur PDF apres l'ecriture.
+// V5 : le PDF est ecrit par pdfpersonnagev5.pas, qui s'enregistre ici (initialization) pour eviter une
+// reference circulaire entre les deux unites.
+Type
+  TPdfPersonnageV5Proc = Procedure(Personnage: StructurePersonnage);
 Var
+  PdfPersonnageV5Hook: TPdfPersonnageV5Proc = nil;
+  // The Old World : pdfpersonnagetow.pas (feuille officielle TOW), meme principe
+  PdfPersonnageTowHook: TPdfPersonnageV5Proc = nil;
   PdfSansOuverture: Boolean = False;
   // Habillage Warhammer du PDF Feldo (option {PdfStyle}) : fonds et couleurs seulement, le texte
   // et la geometrie restent identiques. Pose par PdfPersonnageCreationFeldo2P.
@@ -340,6 +347,7 @@ Procedure PdfBlocDiversDonnees(PdfPage: TPDFPage; Personnage: StructurePersonnag
 // Encombrement brut d'UNE ligne (sans reduction Worn Items), utilise pour la charge d'un animal.
 Function PdfEquipementEncombrementBrut(PersonnageEquipement: StructurePersonnageEquipement): Integer;
 Function PdfAnimalCharge(Personnage: StructurePersonnage; IdAnimal: String): Integer;
+Function PdfPersonnageArmureModif(Personnage: StructurePersonnage; Emplacement: String): Integer;
 // Libelle (catalogue si le code est un Trapping, sinon le code brut) et encombrement total
 // (unitaire x quantite) d'une ligne Divers.
 Function PdfDiversLibelle(PersonnageEquipement: StructurePersonnageEquipement): String;
@@ -679,7 +687,8 @@ Function PdfPersonnageAttribut(Personnage: StructurePersonnage; Attribut: String
 
     PRaceAttribut := ChercheRaceAttribut(Personnage.Race, Attribut);
     // V1 : la valeur enregistree a la creation contient deja la base de la race
-    if ValVersion <> 'WFRP1' then
+    // The Old World : meme chose, la valeur enregistree est la valeur finale
+    if (ValVersion <> 'WFRP1') and (ValVersion <> 'WFRPTOW') then
       Res.Base    := StrToIntDef(ExtractStringAfter(PRaceAttribut.CalculRace,'+'),0);
 
     Bonus := '';
@@ -2262,6 +2271,16 @@ Procedure PdfPersonnageCreation(Personnage: StructurePersonnage; BackGround: Boo
        not FileExists(CheminImage(GetCurrentDir + '\PICTURES\' + ValVersion + '\PDF\FRONT.png')) then
       begin
         ShowMessage(GetTexteLibelle('RULES-MESS_122') + LineEnding + 'PICTURES\' + ValVersion + '\PDF\');
+        Exit;
+      end;
+    if (ValVersion = 'WFRP5') and Assigned(PdfPersonnageV5Hook) then
+      begin
+        PdfPersonnageV5Hook(Personnage);
+        Exit;
+      end;
+    if (ValVersion = 'WFRPTOW') and Assigned(PdfPersonnageTowHook) then
+      begin
+        PdfPersonnageTowHook(Personnage);
         Exit;
       end;
     if ValVersion = 'WFRP2' then
@@ -4349,6 +4368,7 @@ Function PdfBlocTalents(PdfPage: TPDFPage; Personnage: StructurePersonnage; XGau
     BranchesChoix: TStringList;
     IndBranche:    Integer;
     LibelleChoix:  String;
+    TexteDesc:     String;
 
   // Vrai si le talent de carriere (ou l'une des branches d'un choix "A/B") est deja possede.
   function TalentCarriereDejaPris(CodeCarriere: String): Boolean;
@@ -4435,14 +4455,19 @@ Function PdfBlocTalents(PdfPage: TPDFPage; Personnage: StructurePersonnage; XGau
                 PdfPage.SetColor(clBlack, False);
               end;
             PdfCentre(PdfPage, XGauche + 47, XGauche + 53, Y - ((NbLigne + 2) * HauteurLigne) + 1, IntToStr(TalentDonnee.Total));
+            // Regle V4 « +N SL » systematique (A_FAIRE SL-MOTEUR), calculee sur le talent possede (specialisation comprise)
+            // avant de passer au generique ; ajoutee apres le Resume du talent.
+            TexteDesc := TalentSLTexte(PTalent, TalentDonnee.Total);
             if PTalent.SousTalent then
               PTalent := ChercheTalent(CodeTalentGenerique(PTalent));
             if PTalent.Resume <> '' then
+              TexteDesc := Trim(PTalent.Resume + ' ' + TexteDesc);
+            if TexteDesc <> '' then
               begin
-                if Length(PTalent.Resume) > 20 then
-                  PdfEcrit(PdfPage, XGauche + 54, XDroite, Y - ((NbLigne + 2) * HauteurLigne) + 1.5, PTalent.Resume, MinPolice)
+                if Length(TexteDesc) > 20 then
+                  PdfEcrit(PdfPage, XGauche + 54, XDroite, Y - ((NbLigne + 2) * HauteurLigne) + 1.5, TexteDesc, MinPolice)
                 else
-                  PdfEcrit(PdfPage, XGauche + 54, XDroite, Y - ((NbLigne + 2) * HauteurLigne) + 1, PTalent.Resume, MinPolice);
+                  PdfEcrit(PdfPage, XGauche + 54, XDroite, Y - ((NbLigne + 2) * HauteurLigne) + 1, TexteDesc, MinPolice);
                 PdfTaillePolice(PdfPage, PdfFontValue, ConstPoliceArial, 9);
               end;
             ListeTalent += AjouteAccolade(PTalent.CodeTalent);
@@ -4493,7 +4518,7 @@ Function PdfBlocTalents(PdfPage: TPDFPage; Personnage: StructurePersonnage; XGau
           end;
       end;
 
-    // Talents accordes par une qualite d'objet porte (ex. NATIO-ARMOB_16 "Fear" -> Frightening,
+    // Talents accordes par une qualite d'objet porte (ex. NATIO-ARMOB_FEAR "Fear" -> Frightening,
     // Skull Trophies), meme bloc, meme mise en forme que les talents de mutation juste au-dessus.
     // Calcule a la volee (PersonnageArmureBonusTalent, chargepersonnage.pas) - CONTEXT.md,
     // chantier "traits de creature".
@@ -4654,6 +4679,7 @@ Function PdfBlocArmes(PdfPage: TPDFPage; XGauche, XDroite, Y, HauteurLigne: Sing
     PdfPage.DrawLine( XGauche +  71, Y - (1 * HauteurLigne), XGauche +  71, Y - ((NbLignes + 1) * HauteurLigne), 1);
     PdfPage.DrawLine( XGauche +  96, Y - (1 * HauteurLigne), XGauche +  96, Y - ((NbLignes + 1) * HauteurLigne), 1);
     PdfPage.DrawLine( XGauche + 113, Y - (1 * HauteurLigne), XGauche + 113, Y - ((NbLignes + 1) * HauteurLigne), 1);
+    PdfPage.DrawLine( XGauche + 126, Y - (1 * HauteurLigne), XGauche + 126, Y - ((NbLignes + 1) * HauteurLigne), 1);
     PdfPage.DrawLine( XDroite,       Y,                     XDroite,       Y - ((NbLignes + 1) * HauteurLigne), 1);
     for IndC := 0 to (NbLignes + 1) do
       PdfPage.DrawLine(XGauche, Y - (IndC * HauteurLigne), XDroite, Y - (IndC * HauteurLigne), 1);
@@ -4665,7 +4691,8 @@ Function PdfBlocArmes(PdfPage: TPDFPage; XGauche, XDroite, Y, HauteurLigne: Sing
     PdfCentre(PdfPage, XGauche +  64, XGauche +  71, Y - (2 * HauteurLigne) + 1, GetTexteLibelle('RULES-PDF_WEAPONS2_ENCUMBRANCE'));
     PdfCentre(PdfPage, XGauche +  71, XGauche +  96, Y - (2 * HauteurLigne) + 1, GetTexteLibelle('RULES-PDF_WEAPONS2_RANGE'));
     PdfCentre(PdfPage, XGauche +  96, XGauche + 113, Y - (2 * HauteurLigne) + 1, GetTexteLibelle('RULES-PDF_WEAPONS2_DAMAGE'));
-    PdfCentre(PdfPage, XGauche + 113, XDroite,       Y - (2 * HauteurLigne) + 1, GetTexteLibelle('RULES-PDF_WEAPONS2_QUALITIES'));
+    PdfCentre(PdfPage, XGauche + 113, XGauche + 126, Y - (2 * HauteurLigne) + 1, GetTexteLibelle('RULES-PDF_WEAPONS2_PARRY'));
+    PdfCentre(PdfPage, XGauche + 126, XDroite,       Y - (2 * HauteurLigne) + 1, GetTexteLibelle('RULES-PDF_WEAPONS2_QUALITIES'));
 
     Result := Y - ((NbLignes + 1) * HauteurLigne);
   end;
@@ -5143,9 +5170,46 @@ Procedure PdfBlocArmesDonnees(PdfPage: TPDFPage; Personnage: StructurePersonnage
             if (LigneBonus <> '') and (LigneBonus[Length(LigneBonus)] = ',') then Delete(LigneBonus, Length(LigneBonus), 1);
           end;
         if (TexteRange1 = '') then
-          PdfEcrit(PdfPage, XGauche + 113 + 1, XDroite, Y - ((NbArme + 2) * HauteurLigne) + 2.3, LigneBonus, MinPolice)
+          PdfEcrit(PdfPage, XGauche + 126 + 1, XDroite, Y - ((NbArme + 2) * HauteurLigne) + 2.3, LigneBonus, MinPolice)
         else
-          PdfEcrit(PdfPage, XGauche + 113 + 1, RangeX - 1, Y - ((NbArme + 2) * HauteurLigne) + 2.3, LigneBonus, MinPolice);
+          PdfEcrit(PdfPage, XGauche + 126 + 1, RangeX - 1, Y - ((NbArme + 2) * HauteurLigne) + 2.3, LigneBonus, MinPolice);
+      end;
+
+    // Colonne Parade : ce que l arme apporte quand on s en sert pour s opposer a une attaque.
+    // Seul le bonus de SL compte : Defensive = +1 SL (Rulebook), plus +1 SL par niveau de
+    // Shieldsman sur une arme Shield (regle lue sur des forums, demandee par Nono, absente du
+    // Rulebook qui donne de l Avantage en cas d echec). Vide si le total est 0.
+    procedure DessineParade;
+      var
+        NbLoca, IndLoca, Total, Niveau: Integer;
+        LocData: String;
+        Defensive, Shield: Boolean;
+      begin
+        Defensive := False;
+        Shield    := False;
+        if (PArme.ListeBonus <> '') and (PArme.ListeBonus <> '-') then
+          begin
+            NbLoca := CountOccurrences(PArme.ListeBonus, ',') + 1;
+            for IndLoca := 1 to NbLoca do
+              begin
+                LocData := Trim(ExtractChaine(',', PArme.ListeBonus, IndLoca));
+                if Pos('WEAPB_DEFENSIVE', LocData) > 0 then
+                  Defensive := True
+                else if Pos('WEAPB_SHIELD', LocData) > 0 then
+                  Shield := True;
+              end;
+          end;
+        Total := 0;
+        if Defensive then
+          Inc(Total);
+        if Shield then
+          Total := Total + PdfPersonnageTalent(Personnage, 'RULES-T_SHIELDSMAN', Niveau).Total;
+        // Reversal et Riposte : « Tests: Melee when defending », +1 SL par niveau sur toute arme de melee
+        if Pos(EquipementCC, PArme.CodeArme) > 0 then
+          Total := Total + PdfPersonnageTalent(Personnage, 'RULES-T_REVERSAL', Niveau).Total
+                         + PdfPersonnageTalent(Personnage, 'RULES-T_RIPOSTE', Niveau).Total;
+        if Total > 0 then
+          PdfCentre(PdfPage, XGauche + 113, XGauche + 126, Y - ((NbArme + 2) * HauteurLigne) + 0.6, '+' + IntToStr(Total) + ' SL');
       end;
 
     // Malus de l arme (competence non maitrisee).
@@ -5184,9 +5248,9 @@ Procedure PdfBlocArmesDonnees(PdfPage: TPDFPage; Personnage: StructurePersonnage
         FabricationDetail(PersonnageEquipement.QualiteEquipement, ListMalii, FabricationBonii);
 
         if (TexteRange1 = '') then
-          PdfEcrit(PdfPage, XGauche + 113 + 1, XDroite, Y - ((NbArme + 2) * HauteurLigne) + 2.3, ListMalii, MinPolice)
+          PdfEcrit(PdfPage, XGauche + 126 + 1, XDroite, Y - ((NbArme + 2) * HauteurLigne) + 2.3, ListMalii, MinPolice)
         else
-          PdfEcrit(PdfPage, XGauche + 113 + 1, RangeX - 1, Y - ((NbArme + 2) * HauteurLigne) + 2, ListMalii, MinPolice);
+          PdfEcrit(PdfPage, XGauche + 126 + 1, RangeX - 1, Y - ((NbArme + 2) * HauteurLigne) + 2, ListMalii, MinPolice);
       end;
 
   begin
@@ -5212,6 +5276,8 @@ Procedure PdfBlocArmesDonnees(PdfPage: TPDFPage; Personnage: StructurePersonnage
           DessineNomEtStats;
 
           DessinePortees;
+
+          DessineParade;
 
           if PasBonus = false then
             DessineQualites
@@ -7841,6 +7907,17 @@ Procedure PdfPersonnageCreationFeldo2P(Personnage: StructurePersonnage);
     end;
 
   begin
+    // V5 : fiche propre (pdfpersonnagev5.pas), pas de gabarit V4
+    if (ValVersion = 'WFRP5') and Assigned(PdfPersonnageV5Hook) then
+      begin
+        PdfPersonnageV5Hook(Personnage);
+        Exit;
+      end;
+    if (ValVersion = 'WFRPTOW') and Assigned(PdfPersonnageTowHook) then
+      begin
+        PdfPersonnageTowHook(Personnage);
+        Exit;
+      end;
     PdfPreparation;
     PdfPage1;
     PdfPage2;

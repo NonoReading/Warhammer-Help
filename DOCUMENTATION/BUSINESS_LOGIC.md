@@ -112,7 +112,7 @@ Combat Skills:
   │  ├─ Attribute: WS (Weapon Skill)
   │  └─ Used for: Unarmed, hand weapons, improvised
   │
-  ├─ RULES-COMPCOMB_HAST "Melee (Polearm)"
+  ├─ RULES-COMP_MELEE__POLEARM "Melee (Polearm)"
   │  ├─ Attribute: WS
   │  └─ Used for: Spears, halberds, pikes
   │
@@ -195,7 +195,7 @@ Combat Talents:
 
 ```
 Quarter Staff (RULES-COMB_HAST_01)
-├─ Skill Required: RULES-COMPCOMB_HAST (Melee Polearm)
+├─ Skill Required: RULES-COMP_MELEE__POLEARM (Melee Polearm)
 ├─ Damage: +(Strength)+4
 ├─ Reach: LONG (can attack from distance)
 ├─ Price: 3 Shillings (cheap)
@@ -205,7 +205,7 @@ Quarter Staff (RULES-COMB_HAST_01)
 └─ Ammo: None
 
 Halberd (RULES-COMB_HAST_02)
-├─ Skill Required: RULES-COMPCOMB_HAST
+├─ Skill Required: RULES-COMP_MELEE__POLEARM
 ├─ Damage: +(Strength)+4
 ├─ Reach: LONG
 ├─ Price: 2 Crowns (expensive)

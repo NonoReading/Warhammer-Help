@@ -34,6 +34,9 @@ Type
         // (p.160) en prend 2 et 2, d'ou ces champs. Defaut 3 si la balise est absente.
         NbPoint3:       Integer;
         NbPoint5:       Integer;
+        // Competences acquises d'office, sans choix (V5 : langues de depart a +30).
+        // Format "CODE=30;CODE=30" ; vide = aucune. Balise FixedSkill name="CODE".
+        CompetencesFixes: String;
         // Dossier d'icones de niveau propre a cette ethnie, sous \PICTURES\ (ex :
         // 'NIV_HELF'). Vide = dossier generique NIV. Voir CheminNiveauImage.
         DossierNiveau:  String;

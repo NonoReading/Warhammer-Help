@@ -19,7 +19,18 @@ em{color:#555}
 <p>Astuce : sur presque tous les boutons et cases à cocher, <strong>F1</strong> affiche une courte explication.</p>
 <hr>
 <h2 id="ouvrir-un-personnage">Ouvrir un personnage</h2>
-<p>Ouvre le personnage depuis le menu principal. La fiche se partage en deux : les <strong>tableaux de la fiche</strong> (caractéristiques, compétences, talents, sorts, équipement) et, sur le côté, une liste de <strong>pages</strong> pour tout ce qui évolue : Attribut, Compétence, Talent, Total expérience (les Xp), Evolution (l'avancement), Historiques, Livre, MJ XP, Corruption, Mutations, Afflictions/Maladies, Ambitions, Groupe, Destin / Résilience, Monnaie et PDF. Selon la version de règles, certaines pages n'apparaissent pas.</p>
+<p>Ouvre le personnage depuis le menu principal. La fiche se partage en deux : les <strong>tableaux de la fiche</strong> (caractéristiques, compétences, talents, sorts, équipement) et, sur le côté, un arbre de <strong>pages</strong> pour tout ce qui évolue, en quatre branches :</p>
+<ul>
+<li><strong>Évolution</strong> : Attribut, Compétence, Talent, Evolution (l'avancement, avec le Total expérience, les Xp) et, en WFRP5 seulement, l'équipement du niveau suivant.
+</li>
+<li><strong>Personnage</strong> : Groupe, Ambitions, Destin / Résilience.
+</li>
+<li><strong>État</strong> : Corruption, Mutations, Afflictions/Maladies.
+</li>
+<li><strong>Divers</strong> : Livre, Options (le PDF et l'option Momentum), MJ XP, Historiques.
+</li>
+</ul>
+<p>La monnaie se trouve dans le tableau d'équipement. Selon la version de règles, certaines pages n'apparaissent pas.</p>
 <p><img src="../IMAGES/modif_01_fenetre.png" alt="La fenêtre du personnage avec la liste des pages"></p>
 <p>Deux règles à retenir :</p>
 <ul>
@@ -31,11 +42,21 @@ em{color:#555}
 <hr>
 <a id="xp"></a>
 <h2 id="l-experience-xp">L'expérience (Xp)</h2>
-<p>Sur la page <strong>Total expérience</strong> :</p>
+<p>Sur la page <strong>Evolution</strong>, dans le bloc <strong>Total expérience</strong> :</p>
 <ul>
 <li><strong>Xp total</strong> : saisis le total d'Xp gagnés par le personnage, en unités brutes, comme sur la fiche. Les Xp dépensés et restants sont calculés pour toi.
 </li>
-<li><strong>Opt : XP/25</strong> : coche-la si tu comptes les Xp dans la nouvelle unité (total divisé par 25, arrondi vers le bas). Dépensés et restants suivent la même unité.
+<li><strong>Opt : XP/25</strong> : règle de table facultative, hors des règles standard : coche-la seulement si ton meneur de jeu compte les Xp ainsi. Elle rend les calculs plus faciles en comptant avec de plus petits nombres (total divisé par 25, arrondi vers le bas). Dépensés et restants suivent la même unité.
+<ul>
+<li><strong>Effet sur la création</strong> : les compétences de race (3 à +5 et 3 à +3) deviennent <strong>3 à +5 et 3 à +5</strong>, donc les six comptent à +5. La fenêtre de création ne propose pas l'option : les six compétences se choisissent comme d'habitude, et celles à +3 s'affichent à +5 une fois le personnage ouvert ici avec Xp/25 coché.
+</li>
+<li>Avec cette option, tu saisis le total dans la case <strong>Total Xp/25</strong> (la case en unités brutes est verrouillée), et chaque coût est le coût habituel divisé par 25, arrondi vers le bas.
+</li>
+<li><strong>Pour avancer</strong> : dans les pages Attribut et Compétence, la colonne <strong>Nouveau</strong> ne se saisit plus. Clique plutôt dans la cellule <strong>+</strong> (ou <strong>-</strong>) de la ligne : chaque clic avance d'un pas (5 pour les lignes Attribut et Compétence en WFRP4 ; un pas du schéma d'avances de la carrière en WFRP2). Coût et Coût réel se mettent à jour à chaque clic. Les talents ne changent pas.
+</li>
+<li>Le <strong>Coût réel</strong> reste saisissable sur chaque ligne, dans la nouvelle unité.
+</li>
+</ul>
 </li>
 <li>Les colonnes de <strong>coût en Xp</strong> et de <strong>détail du calcul</strong> peuvent être affichées ou cachées dans les tableaux ; cela ne change que l'affichage.
 </li>
@@ -82,10 +103,10 @@ em{color:#555}
 <tr><td><strong>+Arme</strong></td><td>une arme</td></tr>
 <tr><td><strong>+Armure</strong></td><td>une pièce d'armure (coche <em>armure simplifiée</em> pour des choix simplifiés)</td></tr>
 <tr><td><strong>+Sort</strong></td><td>un sort à la liste</td></tr>
-<tr><td><strong>+Équipement</strong></td><td>un objet des livres</td></tr>
+<tr><td><strong>+Équipement</strong></td><td>un objet des livres (dans Montures : une monture, par exemple)</td></tr>
 <tr><td><strong>+Objet texte</strong></td><td>une ligne de texte libre</td></tr>
 <tr><td><strong>+Objet</strong></td><td>un objet qui n'est dans aucun livre (catégories Armes, Armures et Divers)</td></tr>
-<tr><td><strong>+Familier</strong></td><td>un familier ou une monture</td></tr>
+<tr><td><strong>+Familier</strong></td><td>un familier (un personnage à part entière)</td></tr>
 <tr><td><strong>+Qualité</strong></td><td>une qualité de fabrication sur l'objet sélectionné (arme, armure ou autre)</td></tr>
 <tr><td><strong>-Supprime</strong></td><td>retire l'objet sélectionné (avec confirmation)</td></tr>
 </tbody></table>
@@ -134,7 +155,21 @@ em{color:#555}
 <hr>
 <h2 id="le-mj-et-les-regles">Le MJ et les règles</h2>
 <ul>
-<li>Page <strong>MJ XP</strong> : les Xp que distribue le meneur de jeu ; tu peux y suivre les montants.
+<li><strong>Coût et Coût réel</strong> (pages Attribut, Compétence et Talent) : <strong>Coût</strong> est le prix donné par les règles ; <strong>Coût réel</strong> est ce qui est vraiment facturé. Quand tu choisis une valeur <strong>Nouveau</strong>, le programme remplit lui-même les deux colonnes. Le Coût réel est égal au Coût, sauf pour une ligne hors carrière (affichée en rouge) : il est alors doublé, pour les caractéristiques, compétences et talents en WFRP1 et WFRP4. En WFRP2, une compétence hors carrière ne peut pas être augmentée, et un talent ne coûte le double que si le meneur de jeu l'a ajouté.
+</li>
+</ul>
+<p>Pour accorder une réduction ou imposer un supplément, clique dans la cellule <strong>Coût réel</strong> et saisis le montant convenu avec le meneur de jeu. Les Xp dépensés (donc les Xp restants) suivent alors le coût réel, pas le Coût. Exemples, pour une progression dont le Coût est 100 :</p>
+<ul>
+<li>le meneur de jeu l'offre : Coût réel <strong>0</strong> ;
+</li>
+<li>une réduction pour un beau rôle : Coût réel <strong>50</strong> ;
+</li>
+<li>une pénalité ou une règle de table : Coût réel <strong>150</strong>.
+</li>
+</ul>
+<p>Choisis d'abord la valeur <strong>Nouveau</strong> : la modifier de nouveau recalcule le Coût réel et efface ce que tu avais saisi. Avec l'option Xp/25 cochée (absente en WFRP1), les Xp sont comptés par unités de 25 : les Xp dépensés et restants, donc le Coût réel que tu saisis, suivent la même unité.</p>
+<ul>
+<li>Page <strong>MJ XP</strong> : la liste de ces exceptions. Chaque progression dont le Coût réel diffère du Coût y est enregistrée (type, code, de, à, coût, coût réel), pour suivre ce que le meneur de jeu a accordé ou facturé. Tu ne la remplis pas : elle se remplit seule à partir de la colonne Coût réel. Elle inclut le doublement automatique hors carrière, puisque là aussi le coût réel diffère du coût.
 </li>
 <li><strong>Tout est modifiable hors livre officiel</strong> : quand un personnage ou une fiche ne vient pas d'un livre officiel, rien n'est verrouillé. La phase 3 explique comment s'en servir pour des règles maison.
 </li>
@@ -142,7 +177,7 @@ em{color:#555}
 <hr>
 <a id="pdf"></a>
 <h2 id="la-fiche-pdf">La fiche PDF</h2>
-<p>Le bouton <strong>PDF</strong> crée la fiche du personnage avec les valeurs affichées à l'écran. Options (cases sous le bouton) :</p>
+<p>La page <strong>Options</strong> (branche Divers, anciennement nommée PDF) crée la fiche du personnage avec les valeurs affichées à l'écran. Options (cases à cocher) :</p>
 <table><thead><tr><th>Option</th><th>Effet</th></tr></thead><tbody>
 <tr><td><strong>PDF 2 pages (Feldo)</strong></td><td>la fiche de deux pages au lieu de la fiche habituelle</td></tr>
 <tr><td><strong>Sans astérisque</strong></td><td>cache les marques qui renvoient aux notes</td></tr>
@@ -155,7 +190,7 @@ em{color:#555}
 <p><img src="../IMAGES/modif_06_pdf.png" alt="Les options du PDF"></p>
 <hr>
 <h2 id="l-option-momentum-wfrp4-wfrp5">L'option Momentum (WFRP4 ↔ WFRP5)</h2>
-<p>Une case sur la page Total expérience remplace les talents du livre de règles (WFRP4) par leurs versions Momentum (WFRP5). Le livre Momentum doit faire partie des livres du personnage, sinon un message te le dit. Détails dans la fiche de la phase 3.</p>
+<p>Une case sur la page Options remplace les talents du livre de règles (WFRP4) par leurs versions Momentum (WFRP5). Le livre Momentum doit faire partie des livres du personnage, sinon un message te le dit. Détails dans la fiche de la phase 3.</p>
 <hr>
 <h2 id="si-tu-es-bloque">Si tu es bloqué</h2>
 <table><thead><tr><th>Tu n'arrives pas à…</th><th>Que faire</th></tr></thead><tbody>

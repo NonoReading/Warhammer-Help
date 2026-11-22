@@ -108,6 +108,7 @@ end;
 procedure TWinCompetence.FormCreate(Sender: TObject);
 begin
     FiltreLivre := SelectWinLivre;
+    SelectWinLivre := '';   // lecture unique (pas de fuite vers la fenetre suivante)
     WinCharger();
     // Ancrage proportionnel, meme regle que WinRace (voir AncrageProportionnel).
     Ancrage := TAncrageProportionnel.Create(Self);
