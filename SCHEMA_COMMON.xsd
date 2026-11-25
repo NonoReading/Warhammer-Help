@@ -1399,6 +1399,9 @@
         <xs:group ref="ModificateursEffets"/>
         <xs:element name="Skill" type="xs:anyType"/>
         <xs:element name="Talent" type="xs:anyType"/>
+        <!-- Talents the membership only lets the character LEARN (purchase menu, comma-separated
+             like Talent). Not printed as possessed on the V2 sheet; Talent stays a gain. -->
+        <xs:element name="TalentLearnable" type="xs:anyType"/>
       </xs:choice>
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required"/>

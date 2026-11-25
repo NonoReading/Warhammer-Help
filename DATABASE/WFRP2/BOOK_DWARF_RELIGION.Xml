@@ -782,4 +782,60 @@
 <TemporaryEffect>"As permanent, but can only be used once."</TemporaryEffect>
 </EquipmentV2>
 </DATA_EQUIPMENT_V2>
+<DATA_CAREER_BONUS>
+<CareerBonus id="DWRL-CULT_GRUNGNI">
+<Description language="ENGLISH">"Cult of Grungni"</Description>
+<Career>"JCE-CARE_DWARF_INITIATE"</Career>
+<Specie>""</Specie>
+<Level id="DWRL-CULT_GRUNGNI_1">
+<Order>"1"</Order>
+<TalentLearnable>"RULES-T_ORIENTATION,RULES-T_STRONG_MINDED"</TalentLearnable>
+</Level>
+</CareerBonus>
+<CareerBonus id="DWRL-CULT_VALAYA">
+<Description language="ENGLISH">"Cult of Valaya"</Description>
+<Career>"JCE-CARE_DWARF_INITIATE"</Career>
+<Specie>""</Specie>
+<Level id="DWRL-CULT_VALAYA_1">
+<Order>"1"</Order>
+<TalentLearnable>"RULES-T_RESISTANCE_TO_DISEASE,RULES-T_SURGERY"</TalentLearnable>
+</Level>
+</CareerBonus>
+<CareerBonus id="DWRL-CULT_GRIMNIR">
+<Description language="ENGLISH">"Cult of Grimnir"</Description>
+<Career>"JCE-CARE_DWARF_INITIATE"</Career>
+<Specie>""</Specie>
+<Level id="DWRL-CULT_GRIMNIR_1">
+<Order>"1"</Order>
+<TalentLearnable>"RULES-T_STRIKE_MIGHTY_BLOW,RULES-T_STRONG_MINDED"</TalentLearnable>
+</Level>
+</CareerBonus>
+<CareerBonus id="DWRL-CULT_GAZUL">
+<Description language="ENGLISH">"Cult of Gazul"</Description>
+<Career>"JCE-CARE_DWARF_INITIATE"</Career>
+<Specie>""</Specie>
+<Level id="DWRL-CULT_GAZUL_1">
+<Order>"1"</Order>
+<TalentLearnable>"RULES-T_MENACING,RULES-T_RESISTANCE_TO_DISEASE,RULES-T_RESISTANCE_TO_POISON"</TalentLearnable>
+</Level>
+</CareerBonus>
+<CareerBonus id="DWRL-CULT_SMEDNIR">
+<Description language="ENGLISH">"Cult of Smednir"</Description>
+<Career>"JCE-CARE_DWARF_INITIATE"</Career>
+<Specie>""</Specie>
+<Level id="DWRL-CULT_SMEDNIR_1">
+<Order>"1"</Order>
+<TalentLearnable>"RULES-T_AMBIDEXTROUS"</TalentLearnable>
+</Level>
+</CareerBonus>
+<CareerBonus id="DWRL-CULT_MORGRIM">
+<Description language="ENGLISH">"Cult of Morgrim"</Description>
+<Career>"JCE-CARE_DWARF_INITIATE"</Career>
+<Specie>""</Specie>
+<Level id="DWRL-CULT_MORGRIM_1">
+<Order>"1"</Order>
+<TalentLearnable>"RULES-T_ACUTE_HEARING,RULES-T_MASTER_GUNNER"</TalentLearnable>
+</Level>
+</CareerBonus>
+</DATA_CAREER_BONUS>
 </DATA_BOOK>

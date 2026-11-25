@@ -181,15 +181,10 @@
 <Talents>"Dealmaker or Schemer, Etiquette, Linguistics or Suave, Master Orator or Savvy, Public Speaking"</Talents>
 <Trappings>"Ambassadors are representatives of their governments, empowered to deal on behalf of their lands.As such, they must look the part. Ambassadors must have several sets of superior noble’s garb, and many also have valuable jewellery to enhance their ensemble. An ambassador should keep a contingent of guards (no fewer than six). Finally, ambassadors are often quite wealthy and must have coin, jewellery, art objects, property, and so on worth no less than 1,000 gc."</Trappings>
 <SUBCHAPTER_ITEM>
-<Item name="Ambassadors are representatives of their governments">"1"</Item>
-<Item name="Empowered to deal on behalf of their lands.As such">"1"</Item>
-<Item name="They must look the part. Ambassadors must have several sets of superior noble’s garb">"1"</Item>
-<Item name="And many also have valuable jewellery to enhance their ensemble. An ambassador should keep a contingent of guards (no fewer than six). Finally">"1"</Item>
-<Item name="Ambassadors are often quite wealthy and must have coin">"1"</Item>
+<Item name="Superior noble’s garb (several sets)">"1"</Item>
 <Item name="Jewellery">"1"</Item>
-<Item name="Art objects">"1"</Item>
-<Item name="Property">"1"</Item>
-<Item name="And so on worth no less than 1,000 gc">"1"</Item>
+<Item name="Guards (contingent, no fewer than six)">"1"</Item>
+<Item name="Coin, jewellery, art objects, property (worth no less than 1,000 gc)">"1"</Item>
 </SUBCHAPTER_ITEM>
 <SUBCHAPTER_SKILL>
 <Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_GENEALOGY/RULES-COMP_ACADEMIC_KNOWLEDGE_HERALDRY/RULES-COMP_ACADEMIC_KNOWLEDGE_HISTORY_INT">"1"</Skill>
@@ -388,12 +383,10 @@
 <Talents>"Aethyric Attunement or Lesser Magic (any one), Hardy or Very Resilient, Petty Magic (Ice)"</Talents>
 <Trappings>"Given the harsh conditions of their training, apprentice witches need survival gear, generally consisting of a sturdy suit of winter clothing, a pack or sling bag, a flask of kvas to warm their bones, and a few days of rations."</Trappings>
 <SUBCHAPTER_ITEM>
-<Item name="Given the harsh conditions of their training">"1"</Item>
-<Item name="Apprentice witches need survival gear">"1"</Item>
-<Item name="Generally consisting of a sturdy suit of winter clothing">"1"</Item>
-<Item name="A pack/Sling bag">"1"</Item>
-<Item name="A flask of kvas to warm their bones">"1"</Item>
-<Item name="And a few days of rations">"1"</Item>
+<Item name="Sturdy suit of winter clothing">"1"</Item>
+<Item name="Pack/Sling bag">"1"</Item>
+<Item name="Flask of kvas">"1"</Item>
+<Item name="Rations (a few days)">"1"</Item>
 </SUBCHAPTER_ITEM>
 <SUBCHAPTER_SKILL>
 <Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC_INT/RULES-COMP_INTIMIDATE_S">"1"</Skill>
@@ -523,9 +516,7 @@
 <Talents>"Coolheaded or Suave, Public Speaking"</Talents>
 <Trappings>"An ataman must be a distinguished member of a Kislevite community. To stand out from the rest of their people, atamans wield a bulava, a ceremonial mace (Superior Hand Weapon) recognised as a symbol of authority throughout Kislev."</Trappings>
 <SUBCHAPTER_ITEM>
-<Item name="An ataman must be a distinguished member of a Kislevite community. To stand out from the rest of their people">"1"</Item>
-<Item name="Atamans wield a bulava">"1"</Item>
-<Item name="A ceremonial mace (Superior Hand Weapon) recognised as a symbol of authority throughout Kislev">"1"</Item>
+<Item name="Bulava (ceremonial mace, Superior Hand Weapon)">"1"</Item>
 </SUBCHAPTER_ITEM>
 <SUBCHAPTER_SKILL>
 <Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_HISTORY/RULES-COMP_ACADEMIC_KNOWLEDGE_LAW/RULES-COMP_ACADEMIC_KNOWLEDGE_STRATEGY_TACTICS/RULES-COMP_ACADEMIC_KNOWLEDGE_THEOLOGY_INT">"1"</Skill>
@@ -694,10 +685,10 @@
 <Talents>"Coolheaded or Very Strong, Lightning Reflexes or Public Speaking, Very Resilient or Wrestling"</Talents>
 <Trappings>"Bear tamers find that a bit of armour goes a long way towards deflecting the claws of an unruly or grouchy bear and so most wear at least leather jacks. As well, every bear tamer needs a collar and chain for his beast, and a whip or goad can’t hurt. A starting bear tamer must also have a bear, which he can train over the course of his career."</Trappings>
 <SUBCHAPTER_ITEM>
-<Item name="Bear tamers find that a bit of armour goes a long way towards deflecting the claws of an unruly/Grouchy bear and so most wear at least leather jacks. As well">"1"</Item>
-<Item name="Every bear tamer needs a collar and chain for his beast">"1"</Item>
-<Item name="And a whip/Goad can’t hurt. A starting bear tamer must also have a bear">"1"</Item>
-<Item name="Which he can train over the course of his career">"1"</Item>
+<Item name="Leather jack (at least)">"1"</Item>
+<Item name="Collar and chain">"1"</Item>
+<Item name="Whip/Goad">"1"</Item>
+<Item name="Bear">"1"</Item>
 </SUBCHAPTER_ITEM>
 <SUBCHAPTER_SKILL>
 <Skill name="RULES-COMP_ANIMAL_CARE_INT">"1"</Skill>
@@ -1105,10 +1096,15 @@
 <Talents>"Disarm or Specialist Weapon Group (Gunpowder), Menacing, Strike Mighty Blow or Strike to Stun"</Talents>
 <Trappings>"Chekist are all identifiable by their black uniforms. Most wear leather jacks and leggings, and they all have distinctive helmets. Chekist are armed with bronze-tipped cudgels (Hand Weapon) and ride black Kislevite horses equipped with saddle, harness, and saddlebags."</Trappings>
 <SUBCHAPTER_ITEM>
-<Item name="Chekist are all identifiable by their black uniforms. Most wear leather jacks and leggings">"1"</Item>
-<Item name="And they all have distinctive helmets. Chekist are armed with bronze-tipped cudgels (Hand Weapon) and ride black Kislevite horses equipped with saddle">"1"</Item>
+<Item name="Black uniform">"1"</Item>
+<Item name="Leather jack">"1"</Item>
+<Item name="Leggings">"1"</Item>
+<Item name="Helmet">"1"</Item>
+<Item name="Bronze-tipped cudgel (Hand Weapon)">"1"</Item>
+<Item name="Black Kislevite horse">"1"</Item>
+<Item name="Saddle">"1"</Item>
 <Item name="Harness">"1"</Item>
-<Item name="And saddlebags">"1"</Item>
+<Item name="Saddlebags">"1"</Item>
 </SUBCHAPTER_ITEM>
 <SUBCHAPTER_SKILL>
 <Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_LAW/RULES-COMP_ACADEMIC_KNOWLEDGE_INTIMIDATE_INT">"1"</Skill>
@@ -1415,10 +1411,16 @@
 <Talents>"Orientation, Rover or Seasoned Traveller, Specialist Weapon Group (Entangling)"</Talents>
 <Trappings>"Drovers all have at least one herd dog and a Kislevite horse equipped with a saddle and harness. They use a lasso to round up errant herd animals. For personal equipment, drovers always have several days of rations and a couple of skins for water or kvas, as well as a yurta for shelter. The often dangerous environment necessitates some armour, usually a leather jack and leggings."</Trappings>
 <SUBCHAPTER_ITEM>
-<Item name="Drovers all have at least one herd dog and a Kislevite horse equipped with a saddle and harness. They use a lasso to round up errant herd animals. For personal equipment">"1"</Item>
-<Item name="Drovers always have several days of rations and a couple of skins for water/Kvas">"1"</Item>
-<Item name="As well as a yurta for shelter. The often dangerous environment necessitates some armour">"1"</Item>
-<Item name="Usually a leather jack and leggings">"1"</Item>
+<Item name="Herd dog (at least one)">"1"</Item>
+<Item name="Kislevite horse">"1"</Item>
+<Item name="Saddle">"1"</Item>
+<Item name="Harness">"1"</Item>
+<Item name="Lasso">"1"</Item>
+<Item name="Rations (several days)">"1"</Item>
+<Item name="Skins for water/Kvas (a couple)">"1"</Item>
+<Item name="Yurta">"1"</Item>
+<Item name="Leather jack">"1"</Item>
+<Item name="Leggings">"1"</Item>
 </SUBCHAPTER_ITEM>
 <SUBCHAPTER_SKILL>
 <Skill name="RULES-COMP_ANIMAL_CARE_INT">"1"</Skill>
@@ -2194,12 +2196,14 @@
 <Talents>"Aethyric Attunement, Excellent Vision or Luck, Lesser Magic (any three), Rover or Sixth Sense, Witch Lore (Hag)"</Talents>
 <Trappings>"Like other hags, hag mothers are talented healers, and they are never without the accoutrements of the trade. A hag mother usually carries an antitoxin kit, an apothecary kit, and at least three healing draughts and healing poultices. Most also have three or more potions (RoS, page 192). To ward away the chill that infiltrates everything, they also are never far from a skin of koumiss. Hag mothers wear the distinctive shawl and often carry walking sticks."</Trappings>
 <SUBCHAPTER_ITEM>
-<Item name="Like other hags">"1"</Item>
-<Item name="Hag mothers are talented healers">"1"</Item>
-<Item name="And they are never without the accoutrements of the trade. A hag mother usually carries an antitoxin kit">"1"</Item>
-<Item name="An apothecary kit">"1"</Item>
-<Item name="And at least three healing draughts and healing poultices. Most also have three/More potions (RoS, page 192). To ward away the chill that infiltrates everything">"1"</Item>
-<Item name="They also are never far from a skin of koumiss. Hag mothers wear the distinctive shawl and often carry walking sticks">"1"</Item>
+<Item name="Antitoxin kit">"1"</Item>
+<Item name="Apothecary kit">"1"</Item>
+<Item name="Healing draught (at least three)">"1"</Item>
+<Item name="Healing poultice (at least three)">"1"</Item>
+<Item name="Potions (three or more, RoS, page 192)">"1"</Item>
+<Item name="Skin of koumiss">"1"</Item>
+<Item name="Shawl">"1"</Item>
+<Item name="Walking stick (often)">"1"</Item>
 </SUBCHAPTER_ITEM>
 <SUBCHAPTER_SKILL>
 <Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_DAEMONOLOGY/RULES-COMP_ACADEMIC_KNOWLEDGE_SPIRITS/RULES-COMP_ACADEMIC_KNOWLEDGE_HISTORY/RULES-COMP_ACADEMIC_KNOWLEDGE_NECROMANCY/RULES-COMP_ACADEMIC_KNOWLEDGE_PLUS_ANY_ONE_INT">"1"</Skill>
@@ -2245,16 +2249,12 @@
 <Talents>"Fast Hands, Hardy or Strong-minded, Lesser Magic (any three), Meditation, Petty Magic (Hag)"</Talents>
 <Trappings>"Hag witches are gifted healers, so they always have at least one antitoxin kit, a healing draught, a healing poultice, and a skin of koumiss to fight the cold. They are also quite superstitious and, thus, carry a number of small charms that include bits of bone, locks of hair, unusual stones, and so on. They mark their station with the tell-tale shawl."</Trappings>
 <SUBCHAPTER_ITEM>
-<Item name="Hag witches are gifted healers">"1"</Item>
-<Item name="So they always have at least one antitoxin kit">"1"</Item>
-<Item name="A healing draught">"1"</Item>
-<Item name="A healing poultice">"1"</Item>
-<Item name="And a skin of koumiss to fight the cold. They are also quite superstitious and">"1"</Item>
-<Item name="Thus">"1"</Item>
-<Item name="Carry a number of small charms that include bits of bone">"1"</Item>
-<Item name="Locks of hair">"1"</Item>
-<Item name="Unusual stones">"1"</Item>
-<Item name="And so on. They mark their station with the tell-tale shawl">"1"</Item>
+<Item name="Antitoxin kit (at least one)">"1"</Item>
+<Item name="Healing draught">"1"</Item>
+<Item name="Healing poultice">"1"</Item>
+<Item name="Skin of koumiss">"1"</Item>
+<Item name="Small charms (bits of bone, locks of hair, unusual stones)">"1"</Item>
+<Item name="Shawl">"1"</Item>
 </SUBCHAPTER_ITEM>
 <SUBCHAPTER_SKILL>
 <Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_HISTORY/RULES-COMP_ACADEMIC_KNOWLEDGE_SPIRITS_INT">"1"</Skill>
@@ -2525,14 +2525,20 @@
 <Talents>"Coolheaded or Hardy, Mighty Shot or Sure Shot, Rapid Reload or Quick Draw, Specialist Weapon Group (Cavalry)"</Talents>
 <Trappings>"Horse archers are warriors all. They wear leather jacks and leggings that often feature good luck charms made from of locks of hair or pieces of lightning-struck metal. Horse archers are also well-armed, as they are equipped with cavalry spears (as demilance), Kislevite horse bows with quivers containing 20 arrows, 20 armour-piercing arrows, and at least 5 screamer and 5 incendiary arrows. They ride Kislevite warhorses equipped with saddles and harnesses and common gear to survive in the oblast, such as saddle bags filled with rations, water skins, and a yurta."</Trappings>
 <SUBCHAPTER_ITEM>
-<Item name="Horse archers are warriors all. They wear leather jacks and leggings that often feature good luck charms made from of locks of hair/Pieces of lightning-struck metal. Horse archers are also well-armed">"1"</Item>
-<Item name="As they are equipped with cavalry spears (as demilance)">"1"</Item>
-<Item name="Kislevite horse bows with quivers containing 20 arrows">"1"</Item>
+<Item name="Leather jack">"1"</Item>
+<Item name="Leggings">"1"</Item>
+<Item name="Cavalry spear (as demilance)">"1"</Item>
+<Item name="Kislevite horse bow">"1"</Item>
+<Item name="Arrows" quantite="20">"1"</Item>
 <Item name="Armour-piercing arrows" quantite="20">"1"</Item>
-<Item name="And at least 5 screamer and 5 incendiary arrows. They ride Kislevite warhorses equipped with saddles and harnesses and common gear to survive in the oblast">"1"</Item>
-<Item name="Such as saddle bags filled with rations">"1"</Item>
+<Item name="Screamer arrows (at least)" quantite="5">"1"</Item>
+<Item name="Incendiary arrows (at least)" quantite="5">"1"</Item>
+<Item name="Kislevite warhorse">"1"</Item>
+<Item name="Saddle">"1"</Item>
+<Item name="Harness">"1"</Item>
+<Item name="Saddle bags filled with rations">"1"</Item>
 <Item name="Water skins">"1"</Item>
-<Item name="And a yurta">"1"</Item>
+<Item name="Yurta">"1"</Item>
 </SUBCHAPTER_ITEM>
 <SUBCHAPTER_SKILL>
 <Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_STRATEGY/RULES-COMP_ACADEMIC_KNOWLEDGE_TACTICS_INT">"1"</Skill>
@@ -2571,12 +2577,10 @@
 <Talents>"Dealmaker or Flee!, Specialist Weapon Group (Entangling), Suave"</Talents>
 <Trappings>"It wouldn’t do to look shabby when trying to sell goods, so horse copers always have a set of superior clothing. To control their beasts, copers also carry a lasso or whip. In addition, they have a number of horses ready for sale (1d5 of varying quality) and have a bit of coin for bribes, feed, and stabling (1d10 gc)."</Trappings>
 <SUBCHAPTER_ITEM>
-<Item name="It wouldn’t do to look shabby when trying to sell goods">"1"</Item>
-<Item name="So horse copers always have a set of superior clothing. To control their beasts">"1"</Item>
-<Item name="Copers also carry a lasso/Whip. In addition">"1"</Item>
-<Item name="They have a number of horses ready for sale (1d5 of varying quality) and have a bit of coin for bribes">"1"</Item>
-<Item name="Feed">"1"</Item>
-<Item name="And stabling (1d10 gc)">"1"</Item>
+<Item name="Superior clothing">"1"</Item>
+<Item name="Lasso/Whip">"1"</Item>
+<Item name="Horses for sale (1d5 of varying quality)">"1"</Item>
+<Item name="Coin for bribes, feed and stabling (1d10 gc)">"1"</Item>
 </SUBCHAPTER_ITEM>
 <SUBCHAPTER_SKILL>
 <Skill name="RULES-COMP_ANIMAL_CARE_INT">"1"</Skill>
@@ -2617,11 +2621,15 @@
 <Talents>"Coolheaded or Hardy, Specialist Weapon Group (Entangling), Very Strong"</Talents>
 <Trappings>"The horsemaster naturally rides a Kislevite horse or warhorse equipped with saddle, harness, and at least one saddlebag to carry a grooming kit and extra feed. Horsemasters also find lassos or whips useful, and like most Kislevites, they wear leather jacks and leggings."</Trappings>
 <SUBCHAPTER_ITEM>
-<Item name="The horsemaster naturally rides a Kislevite horse/Warhorse equipped with saddle">"1"</Item>
+<Item name="Kislevite horse/Warhorse">"1"</Item>
+<Item name="Saddle">"1"</Item>
 <Item name="Harness">"1"</Item>
-<Item name="And at least one saddlebag to carry a grooming kit and extra feed. Horsemasters also find lassos/Whips useful">"1"</Item>
-<Item name="And like most Kislevites">"1"</Item>
-<Item name="They wear leather jacks and leggings">"1"</Item>
+<Item name="Saddlebag (at least one)">"1"</Item>
+<Item name="Grooming kit">"1"</Item>
+<Item name="Extra feed">"1"</Item>
+<Item name="Lasso/Whip">"1"</Item>
+<Item name="Leather jack">"1"</Item>
+<Item name="Leggings">"1"</Item>
 </SUBCHAPTER_ITEM>
 <SUBCHAPTER_SKILL>
 <Skill name="RULES-COMP_ANIMAL_CARE_INT">"1"</Skill>
@@ -2659,7 +2667,8 @@
 <Talents>"Coolheaded, Lesser Magic (any three), Meditation or Mighty Missile, Stout-hearted or Strong-minded, Witch Lore (Ice)"</Talents>
 <Trappings>"Ice Maidens have few belongings and are equipped with sturdy winter clothing and a flask of kvas to keep the warm."</Trappings>
 <SUBCHAPTER_ITEM>
-<Item name="Ice Maidens have few belongings and are equipped with sturdy winter clothing and a flask of kvas to keep the warm">"1"</Item>
+<Item name="Sturdy winter clothing">"1"</Item>
+<Item name="Flask of kvas">"1"</Item>
 </SUBCHAPTER_ITEM>
 <SUBCHAPTER_SKILL>
 <Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC_INT">"1"</Skill>
@@ -2704,8 +2713,9 @@
 <Talents>"Fast Hands, Lesser Magic (any three), Menacing or Unsettling"</Talents>
 <Trappings>"Ice witches all wear superior winter clothing and often accent their attire with a few bits of jewellery studded with diamonds or sapphires. As well, ice witches carry at least one magic item found during their wanderings as ice maidens."</Trappings>
 <SUBCHAPTER_ITEM>
-<Item name="Ice witches all wear superior winter clothing and often accent their attire with a few bits of jewellery studded with diamonds/Sapphires. As well">"1"</Item>
-<Item name="Ice witches carry at least one magic item found during their wanderings as ice maidens">"1"</Item>
+<Item name="Superior winter clothing">"1"</Item>
+<Item name="Jewellery studded with diamonds/Sapphires (a few bits)">"1"</Item>
+<Item name="Magic item (at least one)">"1"</Item>
 </SUBCHAPTER_ITEM>
 <SUBCHAPTER_SKILL>
 <Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_MAGIC/RULES-COMP_ACADEMIC_KNOWLEDGE_PLUS_ANY_ONE_INT">"1"</Skill>
@@ -2907,7 +2917,7 @@
 <Item name="RULES-COMB_V2_SHIELD">"1"</Item>
 <Item name="Destrier with Full Plate Barding">"1"</Item>
 <Item name="Saddle">"1"</Item>
-<Item name="And Harness">"1"</Item>
+<Item name="Harness">"1"</Item>
 </SUBCHAPTER_ITEM>
 <SUBCHAPTER_SKILL>
 <Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_GENEALOGY/RULES-COMP_ACADEMIC_KNOWLEDGE_HERALDRY">"1"</Skill>
@@ -4388,12 +4398,16 @@
 <Talents>"Hardy or Rover"</Talents>
 <Trappings>"Steppe nomads are accustomed to the harshness of their environment, so they are equipped accordingly. A sturdy Kislevite horse with saddle and harness laden with at least a week of ration, a few skins of water and koumiss, and a yurta ensure the steppe nomad survives the biting winds and the frigid temperatures. The steppe is also home to ravenous beasts and terrifying monsters, so steppe nomads wear leather jacks and leggings for protection, and all carry at least a Kislevite horse bow with a quiver of 10 arrows."</Trappings>
 <SUBCHAPTER_ITEM>
-<Item name="Steppe nomads are accustomed to the harshness of their environment">"1"</Item>
-<Item name="So they are equipped accordingly. A sturdy Kislevite horse with saddle and harness laden with at least a week of ration">"1"</Item>
-<Item name="A few skins of water and koumiss">"1"</Item>
-<Item name="And a yurta ensure the steppe nomad survives the biting winds and the frigid temperatures. The steppe is also home to ravenous beasts and terrifying monsters">"1"</Item>
-<Item name="So steppe nomads wear leather jacks and leggings for protection">"1"</Item>
-<Item name="And all carry at least a Kislevite horse bow with a quiver of 10 arrows">"1"</Item>
+<Item name="Sturdy Kislevite horse">"1"</Item>
+<Item name="Saddle">"1"</Item>
+<Item name="Harness">"1"</Item>
+<Item name="Rations (at least a week)">"1"</Item>
+<Item name="Skins of water and koumiss (a few)">"1"</Item>
+<Item name="Yurta">"1"</Item>
+<Item name="Leather jack">"1"</Item>
+<Item name="Leggings">"1"</Item>
+<Item name="Kislevite horse bow">"1"</Item>
+<Item name="Arrows" quantite="10">"1"</Item>
 </SUBCHAPTER_ITEM>
 <SUBCHAPTER_SKILL>
 <Skill name="RULES-COMP_ANIMAL_CARE_INT">"1"</Skill>
@@ -4469,9 +4483,13 @@
 <Talents>"Marksman or Sharpshooter, Master Gunner or Quick Draw, Mighty Shot or Rapid Reload, Specialist Weapon Group (Gunpowder, Two-handed)"</Talents>
 <Trappings>"The streltsi are all distinguishable by the smart uniforms they wear beneath a leather jerkin, leggings, and helmet. They carry berdysh – special pole-arms designed to improve accuracy with the firearms they also carry. Streltsi keep enough powder and shot to shoot their firearm up to 10 times."</Trappings>
 <SUBCHAPTER_ITEM>
-<Item name="The streltsi are all distinguishable by the smart uniforms they wear beneath a leather jerkin">"1"</Item>
+<Item name="Smart uniform">"1"</Item>
+<Item name="Leather jerkin">"1"</Item>
 <Item name="Leggings">"1"</Item>
-<Item name="And helmet. They carry berdysh – special pole-arms designed to improve accuracy with the firearms they also carry. Streltsi keep enough powder and shot to shoot their firearm up to 10 times">"1"</Item>
+<Item name="Helmet">"1"</Item>
+<Item name="Berdysh (pole-arm)">"1"</Item>
+<Item name="Firearm">"1"</Item>
+<Item name="Powder and shot (enough for 10 shots)">"1"</Item>
 </SUBCHAPTER_ITEM>
 <SUBCHAPTER_SKILL>
 <Skill name="RULES-COMP_COMMON_KNOWLEDGE_KISLEV_INT/RULES-COMP_PERCEPTION_INT">"1"</Skill>
@@ -4984,16 +5002,16 @@
 <Talents>"Hardy or Very Resilient, Specialist Weapon Group (Cavalry), Strike Mighty Blow or Strike to Injure"</Talents>
 <Trappings>"Winged lancers are fearsome warriors, and they dress the part. All winged lancers have at least full suits of mail, though some accent their armour with bits of plate. From their backs fly winged banners. In battle, they thunder across the field, riding Kislevite warhorses equipped with saddles and harnesses. For arms, they carry lances, scimitars (Hand Weapons), shields, and at least two javelins. Finally, such heroes keep a bottle of kvas to help them through the icy nights."</Trappings>
 <SUBCHAPTER_ITEM>
-<Item name="Winged lancers are fearsome warriors">"1"</Item>
-<Item name="And they dress the part. All winged lancers have at least full suits of mail">"1"</Item>
-<Item name="Though some accent their armour with bits of plate. From their backs fly winged banners. In battle">"1"</Item>
-<Item name="They thunder across the field">"1"</Item>
-<Item name="Riding Kislevite warhorses equipped with saddles and harnesses. For arms">"1"</Item>
-<Item name="They carry lances">"1"</Item>
-<Item name="Scimitars (Hand Weapons)">"1"</Item>
-<Item name="RULES-COMB_V2_SHIELD">"1"</Item>
-<Item name="And at least two javelins. Finally">"1"</Item>
-<Item name="Such heroes keep a bottle of kvas to help them through the icy nights">"1"</Item>
+<Item name="Full suit of mail (some with bits of plate)">"1"</Item>
+<Item name="Winged banner">"1"</Item>
+<Item name="Kislevite warhorse">"1"</Item>
+<Item name="Saddle">"1"</Item>
+<Item name="Harness">"1"</Item>
+<Item name="Lance">"1"</Item>
+<Item name="Scimitar (Hand Weapon)">"1"</Item>
+<Item name="Shield">"1"</Item>
+<Item name="Javelins (at least)" quantite="2">"1"</Item>
+<Item name="Bottle of kvas">"1"</Item>
 </SUBCHAPTER_ITEM>
 <SUBCHAPTER_SKILL>
 <Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_STRATEGY/RULES-COMP_ACADEMIC_KNOWLEDGE_TACTICS_INT">"1"</Skill>
@@ -5030,17 +5048,12 @@
 <Talents>"Coolheaded or Savvy"</Talents>
 <Trappings>"Wise women are gifted healers, so they always have at least one antitoxin kit, healing draught, a healing poultice, and a skin of koumiss to ease other sorts of hurts. They are also quite superstitious and, thus, carry a number of small charms that include bits of bone, locks of hair, unusual stones, and so on. They mark their station with the tell-tale shawl, a beautifully woven length of cloth they wear draped from their heads or around their necks."</Trappings>
 <SUBCHAPTER_ITEM>
-<Item name="Wise women are gifted healers">"1"</Item>
-<Item name="So they always have at least one antitoxin kit">"1"</Item>
+<Item name="Antitoxin kit (at least one)">"1"</Item>
 <Item name="Healing draught">"1"</Item>
-<Item name="A healing poultice">"1"</Item>
-<Item name="And a skin of koumiss to ease other sorts of hurts. They are also quite superstitious and">"1"</Item>
-<Item name="Thus">"1"</Item>
-<Item name="Carry a number of small charms that include bits of bone">"1"</Item>
-<Item name="Locks of hair">"1"</Item>
-<Item name="Unusual stones">"1"</Item>
-<Item name="And so on. They mark their station with the tell-tale shawl">"1"</Item>
-<Item name="A beautifully woven length of cloth they wear draped from their heads/Around their necks">"1"</Item>
+<Item name="Healing poultice">"1"</Item>
+<Item name="Skin of koumiss">"1"</Item>
+<Item name="Small charms (bits of bone, locks of hair, unusual stones)">"1"</Item>
+<Item name="Shawl">"1"</Item>
 </SUBCHAPTER_ITEM>
 <SUBCHAPTER_SKILL>
 <Skill name="RULES-COMP_ACADEMIC_KNOWLEDGE_HISTORY/RULES-COMP_ACADEMIC_KNOWLEDGE_SPIRITS_INT">"1"</Skill>

@@ -10956,6 +10956,7 @@ procedure TWinPersonnages.MajTablesEvolutionCarriere();
             // calcul de degats) est corrige au point de consommation, dans
             // PersonnageTalentModificateur (chargepersonnage.pas), pas ici.
             PersonnageTalent.Valeur     := PMetierTalent.NiveauMetier;
+            PersonnageTalent.Apprenable := False;
             Personnage.MetierTalent     += [PersonnageTalent];
           end;
       // Option Momentum : le menu de la nouvelle carriere suit la version choisie (V5 si cochee)

@@ -60,6 +60,11 @@ Type
      CodeTalent:            String;
      Valeur:                Integer;
      Asterisque:            Integer;
+     // True = talent seulement PROPOSE (greffe <TalentLearnable> d'une appartenance) : il reste
+     // dans le menu d'achat de MetierTalent mais n'est pas un talent possede (PDF V2).
+     // Serialise par l'attribut learnable="1" ; absent = possede (fiches deja sauvegardees).
+     // ATTENTION : record reutilise dans des boucles, toujours l'affecter explicitement.
+     Apprenable:            Boolean;
      // Code de ce qui a accorde ce talent automatiquement (ex. une mutation), vide si le
      // joueur l'a choisi/achete normalement. Pas encore alimente ni serialise en XML : premiere
      // etape du chantier "traits de creature", CONTEXT.md/A FAIRE.txt.
@@ -755,6 +760,16 @@ Function XmlAttributEquipementPorte(Porte: Boolean): String;
       Result := '';
   end;
 
+Function XmlAttributTalentApprenable(Apprenable: Boolean): String;
+  // Meme principe que XmlAttributEquipementPorte : absent si le talent est possede, pour que
+  // les fiches deja sauvegardees (sans l'attribut) soient lues comme "talent possede".
+  begin
+    if Apprenable then
+      Result := ' '+ConstXmlTalentApprenable+'="1"'
+    else
+      Result := '';
+  end;
+
 Function XmlAttributEquipementQuantite(Quantite: Integer): String;
   // Meme principe que XmlAttributEquipementPorte : absent si Quantite=1 (cas normal), pour
   // que les fiches deja sauvegardees (sans le champ) soient lues comme "un seul exemplaire".
@@ -1296,7 +1311,9 @@ var
             PTalent     := ChercheTalent(PersonnageTalent.CodeTalent);
             XMLContent.Add(XmlLigneDonnee(ConstXmlTalent,
               CodeNormalise(PersonnageTalent.CodeTalent, PTalent.Livre),
-              IntToStr(PersonnageTalent.Valeur)));
+              IntToStr(PersonnageTalent.Valeur),
+              // absent = possede : les fiches deja sauvegardees se relisent comme avant
+              XmlAttributTalentApprenable(PersonnageTalent.Apprenable)));
             ListeLivres := PersonnageLivre(ListeLivres, PTalent.livre);
             XMLContent.Add(XmlCommentaire(PTalent.Libelle));
           end;
@@ -2484,6 +2501,7 @@ var
                     PersonnageTalent.CodeTalent := RemoveQuotes(UTF8Encode(Node.Attributes.GetNamedItem(ConstXmlData).NodeValue));
                     PersonnageTalent.Valeur     := StrToIntDef(RemoveQuotes(UTF8Encode(Node.TextContent)),0);
                     PersonnageTalent.Asterisque := 0;
+                    PersonnageTalent.Apprenable := Assigned(Node.Attributes.GetNamedItem(ConstXmlTalentApprenable));
                     Personnage.MetierTalent     += [PersonnageTalent];
                   end;
                 Node := Node.NextSibling;
@@ -2748,6 +2766,41 @@ begin
                             PersonnageTalent            := Default(StructurePersonnageTalent);
                             PersonnageTalent.CodeTalent := Code;
                             PersonnageTalent.Valeur     := PNiveau;
+                            PersonnageTalent.Apprenable := False;
+                            Personnage.MetierTalent     += [PersonnageTalent];
+                          end;
+                      end;
+                  finally
+                    Liste.Free;
+                  end;
+                end;
+
+              // Talents que le palier permet seulement d'APPRENDRE (<TalentLearnable>) : meme menu
+              // MetierTalent, mais marques Apprenable pour que le PDF V2 ne les imprime pas comme
+              // possedes. Un talent deja present (possede ou deja propose) n'est pas ajoute.
+              if Trim(Palier.ListeTalentApprenable) <> '' then
+                begin
+                  Liste := TStringList.Create;
+                  try
+                    ExtractStrings([','], [], PChar(Palier.ListeTalentApprenable), Liste);
+                    for Ind := 0 to Liste.Count - 1 do
+                      begin
+                        Code := Trim(Liste[Ind]);
+                        if Code = '' then
+                          continue;
+                        Trouve := false;
+                        for PersonnageTalent in Personnage.MetierTalent do
+                          if CompareRechercheValeur(PersonnageTalent.CodeTalent, Code) then
+                            begin
+                              Trouve := true;
+                              break;
+                            end;
+                        if not Trouve then
+                          begin
+                            PersonnageTalent            := Default(StructurePersonnageTalent);
+                            PersonnageTalent.CodeTalent := Code;
+                            PersonnageTalent.Valeur     := PNiveau;
+                            PersonnageTalent.Apprenable := True;
                             Personnage.MetierTalent     += [PersonnageTalent];
                           end;
                       end;

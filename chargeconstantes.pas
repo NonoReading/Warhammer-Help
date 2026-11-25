@@ -710,6 +710,11 @@ Const
       // accordees a CHACUNE (donc Count x Value avancees au total). Champ dedie prevu cote
       // fiche personnage (pas CreationCompetence35/SUBCHAPTER_SKILLSPECIE, qui vient de la
       // creation et non d'une appartenance) - a faire dans un point de compilation suivant.
+      // <TalentLearnable> dans un palier de CareerBonus : talents que l'appartenance PERMET
+      // d'apprendre (menu d'achat), par opposition a <Talent> qui est un gain (possede).
+      // Le talent greffe porte l'attribut learnable="1" dans le XML du personnage.
+      ConstXmlTalentLearnable           = 'TalentLearnable';
+      ConstXmlTalentApprenable          = 'learnable';
       ConstXmlSkillChoice               = 'SkillChoice';
       ConstXmlSkillChoiceCount          = 'Count';
       ConstXmlSkillChoiceValue          = 'Value';

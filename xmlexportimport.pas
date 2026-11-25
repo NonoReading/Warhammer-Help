@@ -1648,6 +1648,8 @@ Procedure EcritCareerBonus(XMLContent: TStringList; Livre: String; Langue: Strin
                 XmlContent.Add(XmlLigne(ConstXmlOrder, IntToStr(PCareerBonusNiveau.Niveau)));
                 XmlContent.Add(XmlLigne(ConstXmlCompetence, PCareerBonusNiveau.ListeCompetence));
                 XmlContent.Add(XmlLigne(ConstXmlTalent, PCareerBonusNiveau.ListeTalent));
+                if PCareerBonusNiveau.ListeTalentApprenable <> '' then
+                  XmlContent.Add(XmlLigne(ConstXmlTalentLearnable, PCareerBonusNiveau.ListeTalentApprenable));
                 XmlAjouteModificateurs(XmlContent, SourceModifCareerBonus, PCareerBonus.CodeBonus, Langue, PCareerBonusNiveau.Niveau);
                 if PCareerBonusNiveau.NbChoixCompetence > 0 then
                   XmlContent.Add('<' + ConstXmlSkillChoice + ' ' + ConstXmlSkillChoiceCount + '="' + IntToStr(PCareerBonusNiveau.NbChoixCompetence)
@@ -5690,6 +5692,7 @@ Procedure LitDataCareerBonus(BookNode: TDOMNode; Livre, LangueDef: String; var L
                           PCareerBonusNiveau.Niveau                := 0;
                           PCareerBonusNiveau.ListeCompetence       := '';
                           PCareerBonusNiveau.ListeTalent           := '';
+                          PCareerBonusNiveau.ListeTalentApprenable := '';
                           PCareerBonusNiveau.NbChoixCompetence     := 0;
                           PCareerBonusNiveau.ValeurChoixCompetence := 0;
                           PCareerBonusNiveau.CodeNiveau      := XmlAttribut(NodeNv3, ConstXmlId);
@@ -5734,6 +5737,8 @@ Procedure LitDataCareerBonus(BookNode: TDOMNode; Livre, LangueDef: String; var L
                                   PCareerBonusNiveau.ListeCompetence := RemoveQuotes(UTF8Encode(Node.TextContent));
                                 ConstXmlTalent:
                                   PCareerBonusNiveau.ListeTalent     := RemoveQuotes(UTF8Encode(Node.TextContent));
+                                ConstXmlTalentLearnable:
+                                  PCareerBonusNiveau.ListeTalentApprenable := RemoveQuotes(UTF8Encode(Node.TextContent));
                                 ConstXmlSpecialRule:
                                   begin
                                     PCareerBonusSpecialRule.CodeBonus := PCareerBonus.CodeBonus;

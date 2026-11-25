@@ -2685,8 +2685,10 @@ Procedure PdfPersonnageV2(Personnage: StructurePersonnage);
         for PerTal in Personnage.CreationTalent do
           if (Pos('/', PerTal.CodeTalent) = 0) and (Talents.IndexOf(PerTal.CodeTalent) < 0) then
             Talents.Add(PerTal.CodeTalent);
+        // Apprenable = simplement propose par une appartenance (<TalentLearnable>) : reste dans
+        // le menu d'achat, pas un talent possede.
         for PerTal in Personnage.MetierTalent do
-          if (Pos('/', PerTal.CodeTalent) = 0) and (Talents.IndexOf(PerTal.CodeTalent) < 0) then
+          if (not PerTal.Apprenable) and (Pos('/', PerTal.CodeTalent) = 0) and (Talents.IndexOf(PerTal.CodeTalent) < 0) then
             Talents.Add(PerTal.CodeTalent);
         for PerTal in Personnage.AugmentationTalent do
           if (Pos('/', PerTal.CodeTalent) = 0) and (Talents.IndexOf(PerTal.CodeTalent) < 0) then

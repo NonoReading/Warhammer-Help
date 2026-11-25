@@ -972,9 +972,11 @@ Begin
     NodeSBrance.ImageIndex := Niveau;
     For PMetierTalent in ListMetierTalent do
       if (PMetierTalent.CodeMetier = MetierEnCours) and (PMetierTalent.NiveauMetier = Niveau) then
-        if Pos(SeparateurMulti, PMetierTalent.CodeTalent) > 0 then
+        if (Pos(SeparateurMulti, PMetierTalent.CodeTalent) > 0) or
+           ((Pos(ValeurGenerique, PMetierTalent.CodeTalent) > 0) and (ChercheTalent(PMetierTalent.CodeTalent).CodeTalent = '')) then
           Begin
-            // choix multiple : une sous-branche, une feuille par option (meme motif que
+            // choix multiple, ou famille a etoile sans fiche (ROS-T_RUNE__*, deplie par ListeTalent comme
+            // a la creation) : une sous-branche, une feuille par option (meme motif que
             // ChargeMetierCompetence ci-dessus)
             NodeSTBranche            := TreeViewMetier1.Items.AddChild(NodeSBrance, ConstArbreAuChoix);
             NodeSTBranche.ImageIndex := 0;
@@ -1076,7 +1078,7 @@ Begin
                             NodeSTFeuille.Data       := NodeData;
                           end
                         else
-                          NodeSTFeuille := TreeViewMetier1.Items.AddChild(NodeSTBranche, stringsI[IndL]);
+                          NodeSTFeuille := TreeViewMetier1.Items.AddChild(NodeSTBranche, LibelleEquipementV1(stringsI[IndL]));
                         NodeSTFeuille.ImageIndex := 0;
                       end
                    end;
@@ -1136,7 +1138,7 @@ Begin
                             NodeSTFeuille.Data       := NodeData;
                           end
                         else
-                          NodeSTFeuille := TreeViewMetier1.Items.AddChild(NodeSTBranche, stringsI[IndL]);
+                          NodeSTFeuille := TreeViewMetier1.Items.AddChild(NodeSTBranche, LibelleEquipementV1(stringsI[IndL]));
                         NodeSTFeuille.ImageIndex := 0;
                       end
                    end;
@@ -1206,7 +1208,7 @@ Begin
                       NodeSFeuille.Data       := NodeData;
                     end
                   else
-                    NodeSFeuille := TreeViewMetier1.Items.AddChild(NodeSBrance, PMetierEquipement.Equipement);
+                    NodeSFeuille := TreeViewMetier1.Items.AddChild(NodeSBrance, LibelleEquipementV1(PMetierEquipement.Equipement));
                   NodeSFeuille.ImageIndex := 0;
                 end;
 end;

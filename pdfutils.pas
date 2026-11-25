@@ -12,6 +12,11 @@ uses
 // note (x et y en mm de la page, texte). Nil en usage normal.
 Var
   PdfTrace: TStringList = nil;
+  // Mode liste (colonne de droite du PDF metier) : une ligne trop longue passe sur 2 ou 3 lignes,
+  // coupee de preference apres un « / » (separateur de choix), et PdfRangeesSupp dit combien de
+  // rangees supplementaires elle a prises (a ajouter par l appelant avant la ligne suivante).
+  PdfModeListe: Boolean = false;
+  PdfRangeesSupp: Integer = 0;
 
 Procedure PdfTraceTexte(X, Y: Single; const Texte: String);
 Procedure PdfEncadre(PdfPage: TPDFPage; X: Single; Y: Single; Bouclier: Boolean; TB1: String; TB2: String; TH: String);
@@ -37,6 +42,9 @@ procedure RemplacerPixelParTransparent(const FileOrig: string; Const FileDest: S
 function TestCouleur(img: TBGRABitmap; x: integer;y: integer; VerifTrans: Boolean):boolean;
 Function TailleTexte(Texte: String; FontTaille: Integer): TPDFFloat;
 Function TestPixelZeroZero(Const Filename: String): Boolean;
+// Vrai si les coins haut-gauche et bas-droit de l'image sont transparents (alpha < 128) : une
+// illustration detouree, qui peut deborder sur un titre sans le cacher. Faux si le fond est plein.
+Function ImageAFondTransparent(Const Filename: String): Boolean;
 // Garamond (italique et gras) pour l'habillage du PDF Feldo : chemins des fichiers et presence
 // dans le cache de polices. Faux si une des deux variantes manque (on reste alors en Arial).
 Function PdfGaramondChemins(out Italique, Gras, Famille: String): Boolean;
@@ -105,9 +113,50 @@ Function TailleTexte(Texte: String; FontTaille: Integer): TPDFFloat;
     Result  := PosTemp;
   end;
 
+// Premiere ligne de Texte qui tient dans Diff a la police Taille ; Reste = ce qui suit.
+// Coupe de preference apres un « / » (entre deux choix), sinon a la derniere espace, '|' ou ','.
+Function CoupeLigne(const Texte: String; Taille: Integer; Diff: Float; out Reste: String): String;
+  var
+    N, K, P, I: Integer;
+    C: String;
+  begin
+    N := UTF8Length(Texte);
+    K := N;
+    while (K > 1) and (TailleTexte(UTF8Copy(Texte, 1, K), Taille) > Diff) do
+      Dec(K);
+    if K >= N then
+      begin
+        Reste := '';
+        Result := Texte;
+        Exit;
+      end;
+    P := 0;
+    I := K;
+    while (I >= 2) and (P = 0) do   // choix : « ... / » avec une espace avant
+      begin
+        if (UTF8Copy(Texte, I, 1) = '/') and (UTF8Copy(Texte, I - 1, 1) = ' ') then
+          P := I;
+        Dec(I);
+      end;
+    I := K;
+    while (I >= 1) and (P = 0) do
+      begin
+        C := UTF8Copy(Texte, I, 1);
+        if (C = ' ') or (C = '|') or (C = ',') then
+          P := I;
+        Dec(I);
+      end;
+    if P = 0 then P := K;
+    Result := Trim(UTF8Copy(Texte, 1, P));
+    Reste := Trim(UTF8Copy(Texte, P + 1, N));
+  end;
+
 Procedure PdfEcrit(PdfPage: TPDFPage; Min: Single; Max: Single; Y: Single; Texte: String; MinPolice: Integer);
   var
     TailleTemp:   Integer = 0;
+    Suite:        String;
+    Piece:        String;
+    NbPieces:     Integer;
     DeuxLignes:   Boolean = false;
     Ligne1:       String;
     Ligne2:       String;
@@ -119,6 +168,7 @@ Procedure PdfEcrit(PdfPage: TPDFPage; Min: Single; Max: Single; Y: Single; Texte
 
   BEgin
     PdfTraceTexte(Min, Y, Texte);
+    PdfRangeesSupp := 0;
     Diff := (Max - Min) * 1.15;
     PosTemp := TailleTexte(Texte, PdfFontTaille);
     if PosTemp > Diff then
@@ -137,7 +187,27 @@ Procedure PdfEcrit(PdfPage: TPDFPage; Min: Single; Max: Single; Y: Single; Texte
           PdfPage.SetFont(PdfFontEnCours, Tailletemp);
       end;
 
-    if DeuxLignes = true then
+    if DeuxLignes and PdfModeListe then
+      begin
+        // Liste : jusqu'a 3 lignes espacees de 2,6 mm ; chaque ligne en plus prend une rangee
+        // de la liste (PdfRangeesSupp), les lignes suivantes sont decalees par l'appelant.
+        Suite := Texte;
+        NbPieces := 0;
+        while Suite <> '' do
+          begin
+            if NbPieces >= 2 then
+              Piece := Suite   // 3e ligne : le reste, quoi qu'il arrive
+            else
+              Piece := CoupeLigne(Suite, TailleTemp, Diff, Texte2);
+            if NbPieces >= 2 then Texte2 := '';
+            if NbPieces > 0 then Piece := '   ' + Piece;
+            PdfPage.WriteText(Min, Y + 0.4 - NbPieces * 2.6, Piece);
+            Suite := Texte2;
+            Inc(NbPieces);
+          end;
+        PdfRangeesSupp := NbPieces - 1;
+      end
+    else if DeuxLignes = true then
       begin
         SousTrait := 1;
         // Bornage du 06/09/2026 (CONTEXT.md - regression Feldo2P) : sans le test sur
@@ -531,6 +601,22 @@ Function TestPixelZeroZero(Const Filename: String): Boolean;
   end;
   Result := Res;
 end;
+
+Function ImageAFondTransparent(Const Filename: String): Boolean;
+  var
+    Img: TBGRABitmap;
+  begin
+    Result := False;
+    if not FileExists(Filename) then
+      Exit;
+    Img := TBGRABitmap.Create(Filename);
+    try
+      if (Img.Width > 1) and (Img.Height > 1) then
+        Result := (Img.GetPixel(0, 0).alpha < 128) and (Img.GetPixel(Img.Width - 1, Img.Height - 1).alpha < 128);
+    finally
+      Img.Free;
+    end;
+  end;
 
 
 // Rend transparent tout pixel proche de la couleur du coin (0,0).

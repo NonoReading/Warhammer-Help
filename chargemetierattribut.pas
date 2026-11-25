@@ -288,6 +288,7 @@ function LibelleClasseV1(Code: String): String;
 // V1 : metier de l'Artisan pour ce jet d100 (CodeMetier = '' si aucun)
 function MetierArtisanDuJetV1(Jet: Integer): StructureArtisanMetier;
 function ChercheObjetV1(Code: String): StructureObjetV1;
+function LibelleEquipementV1(Code: String): String;
 // V1 : vrai si l'objet (code EquipmentV1) est interdit par les strictures du familier (armes, armure, bouclier)
 function ObjetInterditFamilierV1(const PFamilier: StructureFamilierV1; const CodeObjet: String): Boolean;
 // V1 : "CODE=stade;CODE=stade;CODE=stade" -> augmente le stade du handicap (le cree au stade 1), 3 au maximum ; rend le nouveau stade
@@ -533,6 +534,19 @@ begin
   for PObjet in ListObjetV1 do
     if PObjet.Code = Code then
       Exit(PObjet);
+end;
+
+// Equipement de carriere V1 : le code RULES-EQUIP_... / BOTR-EQUIP_... est un EquipmentV1 de la
+// liste de prix ; on affiche son libelle. Texte libre ("2D10 leaflets...") ou code inconnu : tel quel.
+function LibelleEquipementV1(Code: String): String;
+var
+  Libelle: String;
+begin
+  Libelle := ChercheObjetV1(Code).Libelle;
+  if Libelle <> '' then
+    Result := Libelle
+  else
+    Result := Code;
 end;
 
 // Classement des armes selon les mots du livre (Core p.206) : le livre ne dit pas quelle arme est contondante

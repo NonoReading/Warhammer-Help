@@ -8,7 +8,7 @@ uses
   Classes, SysUtils, fpPDF, Dialogs, MessageTest, PicsLib, Graphics, LCLIntf,
   ChargeRace, ChargeEspece, ChargeConstantes, ChargeAttribut, ChargeRaceAttribut,
   ChargeRaceCompetence, ChargeCompetence, ChargeRaceTalent, ChargeTalent,
-  ChargeRaceMetier, ChargeTirageMetier, ChargeMetier, PdfPersonnage,
+  ChargeRaceMetier, ChargeTirageMetier, ChargeMetier, ChargeMetierAttribut, ChargeCreationTow, PdfPersonnage,
   ChargeTexte, PdfUtils, UnitCalcul;
 
 Procedure PdfRaceCreation(RaceEnCours: String);
@@ -46,12 +46,29 @@ Procedure PdfRaceCreation(RaceEnCours: String);
     NbLigne:            Integer = 0;
     DebutTexte:         Integer = 265;
     MargeDroite:        Integer = 5;
-    DecAuchoix:         Integer;
+    DecAuchoix:         Integer = 0;
     DebutCompetence:    Integer;
     NbTalent:           Integer;
     Totaltalent:        Integer = 0;
     MaxTailleDetail:    Integer = 110;
     ListPage:           TStringList;
+
+    // The Old World : donnees de l'origine (le livre TOW n'a pas de DATA_RACE_*), comme WinRace.
+    function TrouveOrigineTow(out O: TTowOrigine): Boolean;
+      var
+        Orig: TTowOrigines;
+        I: Integer;
+      begin
+      Result := False;
+      Orig   := TowOriginesCache;
+      for I := 0 to High(Orig) do
+        if Orig[I].Code = RaceEnCours then
+          begin
+            O      := Orig[I];
+            Result := True;
+            Exit;
+          end;
+      end;
 
     // Fond, filets, titre et image de feuille.
     procedure DessineFondEntete;
@@ -110,6 +127,8 @@ Procedure PdfRaceCreation(RaceEnCours: String);
         PRaceAttribut: StructureRaceAttribut;
         StringAttribut: TStringList;
         IndAttribut: Integer;
+        OTow: TTowOrigine;
+        KTow: Integer;
       begin
       // Attributs complémentaires
       // rectangle
@@ -129,6 +148,18 @@ Procedure PdfRaceCreation(RaceEnCours: String);
           if Ind <= 10 then
             begin
               PdfCentre(PdfPage,DebutImgMetier + ((Ind-1)*TailleCellule),DebutImgMetier + (ind*TailleCellule),267-HautAttribut,PAttribut.Resume);
+              if ValVersion = 'WFRPTOW' then
+                begin
+                  // TOW : valeur de depart, et maximum entre parentheses sur la ligne du dessous
+                  KTow := TowIndexCarac(PAttribut.CodeAttribut);
+                  if (KTow > 0) and TrouveOrigineTow(OTow) then
+                    begin
+                      PdfCentre(PdfPage,DebutImgMetier + ((Ind-1)*TailleCellule),DebutImgMetier + (ind*TailleCellule),262-HautAttribut,IntToStr(OTow.Depart[KTow]));
+                      if OTow.Maximum[KTow] > 0 then
+                        PdfCentre(PdfPage,DebutImgMetier + ((Ind-1)*TailleCellule),DebutImgMetier + (ind*TailleCellule),257-HautAttribut,'('+IntToStr(OTow.Maximum[KTow])+')');
+                    end;
+                end
+              else
               for PRaceAttribut in ListRaceAttribut do
                 if (PRaceAttribut.CodeRace = RaceEnCours) and (PRaceAttribut.CodeAttribut = PAttribut.CodeAttribut) then
                   begin
@@ -173,6 +204,8 @@ Procedure PdfRaceCreation(RaceEnCours: String);
         TexteCompetence: String;
         IndC: Integer;
         Trouve: Boolean;
+        OTow: TTowOrigine;
+        KTow, JTow: Integer;
       begin
       // Compétences
       // rectangle
@@ -187,13 +220,55 @@ Procedure PdfRaceCreation(RaceEnCours: String);
       PdfTaillePolice(PdfPage, PdfFontBold, ConstPoliceCarlson+ConstPoliceGras, 10);
       PdfEcrit(PdfPage,DebutFeuille + DebutSous - 5, 999, PdfPositionFeuille(DebutTexte,NbLigne) + 0.5, GetTexteLibelle('RULES-LAB_009')+' : ',MinPolice);
 
+      if ValVersion = 'WFRPTOW' then
+        begin
+          // TOW : competences fixes au rang de l'origine, N au choix, puis les lores
+          if TrouveOrigineTow(OTow) then
+            begin
+              for KTow := 0 to High(OTow.CompFixes) do
+                begin
+                  Inc(NbLigne);
+                  PdfEcrit(PdfPage,DebutFeuille + DebutSous, 999, PdfPositionFeuille(DebutTexte,NbLigne), '¤ '+TowLibelleDe(OTow.CompFixes[KTow])+' : '+IntToStr(OTow.CompRang), MinPolice);
+                end;
+              if OTow.CompLibres > 0 then
+                begin
+                  Inc(NbLigne);
+                  PdfEcrit(PdfPage,DebutFeuille + DebutSous, 999, PdfPositionFeuille(DebutTexte,NbLigne), '¤ '+IntToStr(OTow.CompLibres)+' x '+ConstArbreAuChoix+' : '+IntToStr(OTow.CompRang), MinPolice);
+                end;
+              if Length(OTow.LoreSlots) > 0 then
+                begin
+                  Inc(NbLigne);
+                  PdfEcrit(PdfPage,DebutFeuille + DebutSous, 999, PdfPositionFeuille(DebutTexte,NbLigne), 'Lores :', MinPolice);
+                  for KTow := 0 to High(OTow.LoreSlots) do
+                    if Length(OTow.LoreSlots[KTow]) = 1 then
+                      begin
+                        Inc(NbLigne);
+                        PdfEcrit(PdfPage,DebutFeuille + DebutSous, 999, PdfPositionFeuille(DebutTexte,NbLigne), '¤ '+TowLibelleDe(OTow.LoreSlots[KTow][0]), MinPolice);
+                      end
+                    else
+                      begin
+                        Inc(NbLigne);
+                        PdfEcrit(PdfPage,DebutFeuille + DebutSous, 999, PdfPositionFeuille(DebutTexte,NbLigne), '¤ '+ConstArbreAuChoix, MinPolice);
+                        for JTow := 0 to High(OTow.LoreSlots[KTow]) do
+                          begin
+                            Inc(NbLigne);
+                            PdfEcrit(PdfPage,DebutFeuille + DebutSous + 5, 999, PdfPositionFeuille(DebutTexte,NbLigne), '- '+TowLibelleDe(OTow.LoreSlots[KTow][JTow]), MinPolice);
+                          end;
+                      end;
+                end;
+            end;
+        end
+      else
       For PRaceCompetence in ListRaceCompetence do
         if (PRaceCompetence.CodeRace = RaceEnCours) then
           begin
             Inc(NbLigne);
             PCompetence := ChercheCompetence(PRaceCompetence.CodeCompetence);
             PAttribut := ChercheAttribut(PCompetence.CodeAttribut);
-            TexteCompetence := Trim(PCompetence.Libelle) + ' ['+GetTexteLibelle(PAttribut.Resume)+']';
+            TexteCompetence := Trim(PCompetence.Libelle);
+            // V1 : pas de caracteristique liee, donc pas de crochets vides.
+            if GetTexteLibelle(PAttribut.Resume) <> '' then
+              TexteCompetence := TexteCompetence + ' ['+GetTexteLibelle(PAttribut.Resume)+']';
             Trouve          := false;
             for IndC := 0 to ListPage.count-1 do
               if ListPage[IndC] = PCompetence.CodeCompetence then
@@ -217,6 +292,8 @@ Procedure PdfRaceCreation(RaceEnCours: String);
         PTalent: StructureTalent;
         StringTalent: TStringList;
         IndTalent: Integer;
+        OTow: TTowOrigine;
+        KTow: Integer;
       begin
       // Talents
       // rectangle
@@ -229,6 +306,37 @@ Procedure PdfRaceCreation(RaceEnCours: String);
       PdfTaillePolice(PdfPage, PdfFontBold, ConstPoliceCarlson+ConstPoliceGras, 10);
       PdfEcrit(PdfPage,DebutFeuille + DebutTalent - 5, 999, PdfPositionFeuille(DebutTexte,NbTalent) + 0.5, GetTexteLibelle('RULES-LAB_007')+' : ',MinPolice);
 
+      if ValVersion = 'WFRPTOW' then
+        begin
+          // TOW : talents fixes, table du d10, echange
+          if TrouveOrigineTow(OTow) then
+            begin
+              for KTow := 0 to High(OTow.TalentsFixes) do
+                begin
+                  Inc(NbTalent);
+                  PdfEcrit(PdfPage,DebutFeuille + DebutTalent, DebutFeuille + LargeurFeuille - MargeDroite - 5, PdfPositionFeuille(DebutTexte,NbTalent), '¤ '+TowLibelleDe(OTow.TalentsFixes[KTow]), MinPolice);
+                end;
+              if OTow.TalentTirages > 0 then
+                begin
+                  Inc(NbTalent);
+                  PdfEcrit(PdfPage,DebutFeuille + DebutTalent, 999, PdfPositionFeuille(DebutTexte,NbTalent), '¤ '+IntToStr(OTow.TalentTirages)+' x d10', MinPolice);
+                  for KTow := 0 to High(OTow.TableTalents) do
+                    begin
+                      Inc(NbTalent);
+                      if OTow.TableTalents[KTow].De = OTow.TableTalents[KTow].A then
+                        PdfEcrit(PdfPage,DebutFeuille + DebutTalent + 5, DebutFeuille + LargeurFeuille - MargeDroite - 5, PdfPositionFeuille(DebutTexte,NbTalent), IntToStr(OTow.TableTalents[KTow].De)+' : '+TowLibelleDe(OTow.TableTalents[KTow].Code), MinPolice)
+                      else
+                        PdfEcrit(PdfPage,DebutFeuille + DebutTalent + 5, DebutFeuille + LargeurFeuille - MargeDroite - 5, PdfPositionFeuille(DebutTexte,NbTalent), IntToStr(OTow.TableTalents[KTow].De)+'-'+IntToStr(OTow.TableTalents[KTow].A)+' : '+TowLibelleDe(OTow.TableTalents[KTow].Code), MinPolice);
+                    end;
+                end;
+              if (OTow.Echange <> '') and (OTow.Echange <> 'NONE') and (OTow.TalentEchange <> '') then
+                begin
+                  Inc(NbTalent);
+                  PdfEcrit(PdfPage,DebutFeuille + DebutTalent, DebutFeuille + LargeurFeuille - MargeDroite - 5, PdfPositionFeuille(DebutTexte,NbTalent), OTow.Echange+' : '+TowLibelleDe(OTow.TalentEchange), MinPolice);
+                end;
+            end;
+        end
+      else
       For PRaceTalent in ListRaceTalent do
         if (PRaceTalent.CodeRace = RaceEnCours) then
           begin
@@ -264,6 +372,12 @@ Procedure PdfRaceCreation(RaceEnCours: String);
         PMetier: StructureMetier;
         DerniereClasse: String;
         TirageMetier: TListTirageMetier;
+        PClasse: StructureClasseV1;
+        LigneTirage: StructureTirageMetier;
+        Des: Integer;
+        CarrieresTow: TTowCarrieres;
+        ITow, KTow: Integer;
+        PlageTow: String;
       begin
       // CArrières
       // rectangle
@@ -282,6 +396,66 @@ Procedure PdfRaceCreation(RaceEnCours: String);
       TirageMetier    := TListTirageMetier.Create;
       CalculeTirageMetier(RaceEnCours, '', TirageMetier);
       DebutCompetence := NbLigne;
+      if ValVersion = 'WFRPTOW' then
+        begin
+          // TOW : carrieres admises pour l'origine, avec la plage du d100 (rien = choix libre seulement)
+          CarrieresTow := TowCarrieresCache;
+          For ITow := 0 to High(CarrieresTow) do
+            if TowCarriereAdmise(CarrieresTow[ITow], RaceEnCours) then
+              begin
+                PlageTow := '';
+                For KTow := 0 to High(CarrieresTow[ITow].Plages) do
+                  if (CarrieresTow[ITow].Plages[KTow].Origine = RaceEnCours) and (CarrieresTow[ITow].Plages[KTow].De > 0) then
+                    if CarrieresTow[ITow].Plages[KTow].De = CarrieresTow[ITow].Plages[KTow].A then
+                      PlageTow := IntToStr(CarrieresTow[ITow].Plages[KTow].De)
+                    else
+                      PlageTow := IntToStr(CarrieresTow[ITow].Plages[KTow].De)+'-'+IntToStr(CarrieresTow[ITow].Plages[KTow].A);
+                if (DebutSous < 50) and (PdfPositionFeuille(DebutTexte,NbLigne + 2) < 20) then
+                  begin
+                    NbLigne   := DebutCompetence;
+                    DebutSous := 50;
+                  end;
+                Inc(NbLigne);
+                PdfEcrit(PdfPage,DebutFeuille + DebutSous + DecAuchoix, 999, PdfPositionFeuille(DebutTexte,NbLigne), '¤ '+CarrieresTow[ITow].Libelle, MinPolice);
+                if (PlageTow <> '') and (TailleTexte(CarrieresTow[ITow].Libelle+'  ', PdfFontTaille) < 30) then
+                  PdfPage.DrawLine(DebutFeuille + DebutSous + DecAuchoix + TailleTexte(CarrieresTow[ITow].Libelle+'  ', PdfFontTaille),PdfPositionFeuille(DebutTexte,NbLigne),DebutFeuille + DebutSous + DecAuchoix + 30,PdfPositionFeuille(DebutTexte,NbLigne),1);
+                if PlageTow <> '' then
+                  PdfEcrit(PdfPage,DebutFeuille + DebutSous + DecAuchoix + 30, 999, PdfPositionFeuille(DebutTexte,NbLigne), ' '+PlageTow, MinPolice);
+              end;
+        end
+      else if ValVersion = 'WFRP1' then
+        begin
+          // V1 : une table de tirage par classe (regle CAREER_CHART_<CLASSE>), comme la creation V1
+          For PClasse in ListClasseV1 do
+            begin
+              CalculeTirageMetier(RaceEnCours, StringReplace(PClasse.CodeClasse, 'CLASS_', 'RULE_CAREER_CHART_', []), TirageMetier);
+              if TirageMetier.Count = 0 then Continue;
+              Des := DesDuTirage(TirageMetier);
+              if (DebutSous < 50) and (PdfPositionFeuille(DebutTexte,NbLigne + 4) < 20) then
+                begin
+                  NbLigne   := DebutCompetence;
+                  DebutSous := 50;
+                end;
+              Inc(NbLigne);
+              Inc(NbLigne);
+              PdfEcrit(PdfPage,DebutFeuille + DebutSous + DecAuchoix, 999, PdfPositionFeuille(DebutTexte,NbLigne), ' '+LibelleClasse(PClasse.CodeClasse), MinPolice);
+              For LigneTirage in TirageMetier do
+                begin
+                  PMetier := ChercheMetier(LigneTirage.CodeMetier);
+                  if (DebutSous < 50) and (PdfPositionFeuille(DebutTexte,NbLigne + 2) < 20) then
+                    begin
+                      NbLigne   := DebutCompetence;
+                      DebutSous := 50;
+                    end;
+                  Inc(NbLigne);
+                  PdfEcrit(PdfPage,DebutFeuille + DebutSous + DecAuchoix, 999, PdfPositionFeuille(DebutTexte,NbLigne), '   ¤ '+PMetier.Libelle, MinPolice);
+                  if TailleTexte(PMetier.Libelle+'  ', PdfFontTaille) < 30 then
+                    PdfPage.DrawLine(DebutFeuille + DebutSous + DecAuchoix + TailleTexte(PMetier.Libelle+'  ', PdfFontTaille),PdfPositionFeuille(DebutTexte,NbLigne),DebutFeuille + DebutSous + DecAuchoix + 30,PdfPositionFeuille(DebutTexte,NbLigne),1);
+                  PdfEcrit(PdfPage,DebutFeuille + DebutSous + DecAuchoix + 30, 999, PdfPositionFeuille(DebutTexte,NbLigne), ' '+FormateTranche(LigneTirage.Debut, LigneTirage.Fin, Des), MinPolice);
+                end;
+            end;
+        end
+      else
       For PRaceMetier in ListRaceMetier do
         if (PRaceMetier.CodeRace = RaceEnCours) and (PRaceMetier.Chance <> 'X') then
           begin
@@ -376,6 +550,8 @@ Procedure PdfRaceCreation(RaceEnCours: String);
         IWidth, IHeight: dword;
         CWidth, cHeight: dword;
         NbImages: Integer;
+        Opaque: Boolean;
+        XImage: Integer;
       begin
     // Une seule illustration : elle prend la zone cumulee des deux emplacements
     // (x 0..125, y 105..230), centree, au lieu de rester a la taille d'une moitie.
@@ -404,15 +580,35 @@ Procedure PdfRaceCreation(RaceEnCours: String);
           begin
             PdfImgRace        := PdfDoc.Images.AddFromFile(Path,false);
             GetImageSize(Path, IWidth, IHeight);
+            // Fond plein : l'image ne doit pas deborder sur la colonne de droite (elle cacherait
+            // les titres). Fond transparent : le debordement voulu en V4 est conserve.
+            Opaque := not ImageAFondTransparent(Path);
             if NbImages = 1 then
               begin
-                RedimensionneImage(IWidth, IHeight, 125, 125, CWidth, cHeight);
-                PdfPage.DrawImage(Round((125 - cWidth) / 2), 105 + Round((125 - cHeight) / 2), cWidth, cHeight, PdfImgRace);
+                if Opaque then
+                  begin
+                    RedimensionneImage(IWidth, IHeight, 85, 125, CWidth, cHeight);
+                    PdfPage.DrawImage(13, 105 + Round((125 - cHeight) / 2), cWidth, cHeight, PdfImgRace);
+                  end
+                else
+                  begin
+                    RedimensionneImage(IWidth, IHeight, 125, 125, CWidth, cHeight);
+                    PdfPage.DrawImage(Round((125 - cWidth) / 2), 105 + Round((125 - cHeight) / 2), cWidth, cHeight, PdfImgRace);
+                  end;
               end
             else
               begin
-                RedimensionneImage(IWidth, IHeight, 95, 80, CWidth, cHeight);
-                PdfPage.DrawImage(30 - ((ind-1) * 35), 150 - ((ind-1)*45), cWidth, cHeight, PdfImgRace);
+                if Opaque then
+                  begin
+                    RedimensionneImage(IWidth, IHeight, 85, 80, CWidth, cHeight);
+                    XImage := 13;
+                  end
+                else
+                  begin
+                    RedimensionneImage(IWidth, IHeight, 95, 80, CWidth, cHeight);
+                    XImage := 30;
+                  end;
+                PdfPage.DrawImage(XImage - ((ind-1) * 35), 150 - ((ind-1)*45), cWidth, cHeight, PdfImgRace);
               end;
           end;
       end;

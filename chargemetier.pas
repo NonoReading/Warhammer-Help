@@ -65,6 +65,9 @@ Type
         Niveau:           Integer;
         ListeCompetence:  String;
         ListeTalent:      String;
+        // <TalentLearnable> : talents que l'appartenance permet d'APPRENDRE (menu d'achat,
+        // non imprimes comme possedes au PDF V2). Meme forme que ListeTalent. Vide = aucun.
+        ListeTalentApprenable: String;
         Livre:            String;
         // <SkillChoice Count="N" Value="V"/> - voir ConstXmlSkillChoice, ChargeConstantes.
         // NbChoixCompetence = 0 : aucun choix sur ce palier (cas normal, quasi tous les

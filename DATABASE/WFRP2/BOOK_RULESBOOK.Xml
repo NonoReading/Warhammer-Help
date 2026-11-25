@@ -12454,6 +12454,7 @@
 <Order>"1"</Order>
 <Skill>"RULES-COMP_INTIMIDATE"</Skill>
 <Talent>""</Talent>
+<TalentLearnable>"RULES-T_MENACING"</TalentLearnable>
 </Level>
 </CareerBonus>
 <CareerBonus id="RULES-CULT_MYRMIDIA">
@@ -12474,6 +12475,7 @@
 <Order>"1"</Order>
 <Skill>"RULES-COMP_SLEIGHT_OF_HAND"</Skill>
 <Talent>""</Talent>
+<TalentLearnable>"RULES-T_LUCK"</TalentLearnable>
 </Level>
 </CareerBonus>
 <CareerBonus id="RULES-CULT_SHALLYA">
@@ -12484,6 +12486,7 @@
 <Order>"1"</Order>
 <Skill>"RULES-COMP_HEAL"</Skill>
 <Talent>""</Talent>
+<TalentLearnable>"RULES-T_RESISTANCE_TO_DISEASE"</TalentLearnable>
 </Level>
 </CareerBonus>
 <CareerBonus id="RULES-CULT_SIGMAR">
@@ -12494,6 +12497,7 @@
 <Order>"1"</Order>
 <Skill>"RULES-COMP_COMMON_KNOWLEDGE_DWARFS"</Skill>
 <Talent>""</Talent>
+<TalentLearnable>"RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED"</TalentLearnable>
 </Level>
 </CareerBonus>
 <CareerBonus id="RULES-CULT_TAAL">
@@ -12514,6 +12518,7 @@
 <Order>"1"</Order>
 <Skill>""</Skill>
 <Talent>"RULES-T_STRIKE_MIGHTY_BLOW"</Talent>
+<TalentLearnable>"RULES-T_FRENZY,RULES-T_SPECIALIST_WEAPON_GROUP__TWO_HANDED"</TalentLearnable>
 </Level>
 </CareerBonus>
 <CareerBonus id="RULES-CULT_VERENA">

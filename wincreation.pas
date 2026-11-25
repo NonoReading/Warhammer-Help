@@ -2340,6 +2340,7 @@ procedure TWinCreations.PhaseSave(NouvellePhase: Integer);
              if PersonnageTalent.CodeTalent = '' then
                continue;
              PersonnageTalent.Valeur     := PMetierTalent.NiveauMetier;
+             PersonnageTalent.Apprenable := False;
              Personnage.MetierTalent     += [PersonnageTalent];
            end;
 
